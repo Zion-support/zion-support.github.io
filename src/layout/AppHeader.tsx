@@ -38,7 +38,7 @@ export function AppHeader() {
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/ai-solutions', current: false, hasDropdown: true },
     { name: 'Pricing', href: '/pricing-guide', current: false },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
@@ -150,10 +150,21 @@ export function AppHeader() {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       solutions: [
+        { name: 'AI Solutions Overview', href: '/ai-solutions', description: 'Comprehensive AI solutions' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+      ]
+    },
+    {
+      name: 'Industry Solutions',
+      icon: Building,
+      color: 'from-blue-600 to-cyan-600',
+      solutions: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Enterprise-grade solutions' },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare', description: 'Healthcare technology solutions' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
       ]
     },
     {
@@ -163,17 +174,8 @@ export function AppHeader() {
       solutions: [
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
-      ]
-    },
-    {
-      name: 'Innovation Showcase',
-      icon: TrendingUp,
-      color: 'from-green-600 to-emerald-600',
-      solutions: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-        { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' }
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Latest cutting-edge solutions' },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', description: 'Future-ready services' }
       ]
     }
   ];

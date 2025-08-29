@@ -2,16 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Brain,
-  Zap,
+  Building,
+  Users,
   Shield,
   Cloud,
-  Rocket,
-  Users,
-  TrendingUp,
-  BarChart3,
-  Cpu,
   Database,
+  Network,
   Lock,
   Globe,
   Star,
@@ -21,120 +17,165 @@ import {
   Target,
   Award,
   Clock,
-  DollarSign
+  DollarSign,
+  Zap,
+  Brain,
+  Rocket,
+  Cpu,
+  Server,
+  BarChart3,
+  TrendingUp,
+  Settings,
+  Activity,
+  ShoppingCart
 } from 'lucide-react';
 
-export default function AISolutions() {
-  const aiSolutions = [
+export default function Enterprise() {
+  const enterpriseSolutions = [
     {
-      category: 'AI Business Intelligence',
+      category: 'Digital Transformation',
       solutions: [
         {
-          name: 'AI Business Intelligence',
-          description: 'Transform your data into actionable insights with our advanced AI-powered business intelligence platform.',
-          features: ['Predictive Analytics', 'Real-time Dashboards', 'Natural Language Queries', 'Automated Reporting'],
-          icon: BarChart3,
-          href: '/services/ai-business-intelligence',
-          color: 'from-purple-600 to-pink-600'
-        },
-        {
-          name: 'AI Workflow Orchestrator',
-          description: 'Automate complex business processes with intelligent workflow orchestration powered by AI.',
-          features: ['Process Automation', 'Intelligent Routing', 'Performance Optimization', 'Real-time Monitoring'],
-          icon: Zap,
-          href: '/services/ai-workflow-orchestrator',
+          name: 'Digital Transformation',
+          description: 'Transform your organization with comprehensive digital transformation strategies and implementation.',
+          features: ['Process Automation', 'Cloud Migration', 'Data Modernization', 'Change Management'],
+          icon: Rocket,
+          href: '/services/digital-transformation',
           color: 'from-blue-600 to-cyan-600'
         },
         {
-          name: 'AI Data Governance',
-          description: 'Ensure data quality, security, and compliance with our AI-powered data governance platform.',
-          features: ['Data Quality Management', 'Privacy Protection', 'Compliance Monitoring', 'Risk Assessment'],
-          icon: Shield,
-          href: '/services/ai-data-governance',
+          name: 'IT Infrastructure',
+          description: 'Build robust, scalable IT infrastructure that supports your business growth and innovation.',
+          features: ['Network Architecture', 'Data Centers', 'Cloud Infrastructure', 'Security Framework'],
+          icon: Server,
+          href: '/services/it-infrastructure',
           color: 'from-green-600 to-emerald-600'
+        },
+        {
+          name: 'Cloud & DevOps',
+          description: 'Accelerate development and deployment with modern cloud and DevOps practices.',
+          features: ['Cloud Strategy', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting'],
+          icon: Cloud,
+          href: '/services/cloud-devops',
+          color: 'from-purple-600 to-pink-600'
         }
       ]
     },
     {
-      category: 'AI Customer Experience',
+      category: 'Data & Analytics',
       solutions: [
         {
-          name: 'AI Customer Success Platform',
-          description: 'Drive customer engagement and retention with proactive AI-powered customer success tools.',
-          features: ['Predictive Churn Analysis', 'Personalized Engagement', 'Success Metrics Tracking', 'Automated Outreach'],
-          icon: Users,
-          href: '/services/ai-customer-success-platform',
-          color: 'from-orange-600 to-red-600'
-        },
-        {
-          name: 'AI Sales Copilot',
-          description: 'Enhance sales performance with AI-powered insights, automation, and predictive analytics.',
-          features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization', 'Performance Analytics'],
-          icon: TrendingUp,
-          href: '/services/ai-sales-copilot',
+          name: 'Data Analytics',
+          description: 'Unlock the power of your data with advanced analytics and business intelligence solutions.',
+          features: ['Data Warehousing', 'Business Intelligence', 'Predictive Analytics', 'Real-time Dashboards'],
+          icon: BarChart3,
+          href: '/services/data-analytics',
           color: 'from-indigo-600 to-purple-600'
         },
         {
-          name: 'AI Content Generator',
-          description: 'Create high-quality, engaging content at scale with our AI-powered content generation platform.',
-          features: ['Multi-format Content', 'Brand Voice Consistency', 'SEO Optimization', 'Performance Analytics'],
-          icon: Lightbulb,
-          href: '/services/ai-content-generator',
-          color: 'from-yellow-600 to-orange-600'
+          name: 'AI Business Intelligence',
+          description: 'Leverage AI to transform your data into actionable business insights and predictions.',
+          features: ['Machine Learning', 'Predictive Modeling', 'Natural Language Processing', 'Automated Insights'],
+          icon: Brain,
+          href: '/services/ai-business-intelligence',
+          color: 'from-orange-600 to-red-600'
+        },
+        {
+          name: 'Data Governance',
+          description: 'Ensure data quality, security, and compliance across your organization.',
+          features: ['Data Quality Management', 'Privacy Protection', 'Compliance Monitoring', 'Risk Assessment'],
+          icon: Shield,
+          href: '/services/ai-data-governance',
+          color: 'from-gray-600 to-slate-600'
         }
       ]
     },
     {
-      category: 'AI Compliance & Security',
+      category: 'Cybersecurity & Compliance',
       solutions: [
         {
-          name: 'AI Compliance Assistant',
-          description: 'Streamline regulatory compliance with AI-powered automation and monitoring tools.',
-          features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Compliance Tracking'],
-          icon: Shield,
-          href: '/services/ai-compliance-assistant',
-          color: 'from-red-600 to-pink-600'
-        },
-        {
           name: 'AI Cybersecurity Suite',
-          description: 'Protect your organization with next-generation AI-powered cybersecurity solutions.',
+          description: 'Protect your enterprise with next-generation AI-powered cybersecurity solutions.',
           features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Security Automation'],
           icon: Lock,
           href: '/services/ai-cybersecurity-suite',
-          color: 'from-gray-600 to-slate-600'
+          color: 'from-red-600 to-pink-600'
         },
         {
-          name: 'Zero Trust Network Architecture',
-          description: 'Implement comprehensive zero-trust security with AI-powered monitoring and enforcement.',
+          name: 'Zero Trust Architecture',
+          description: 'Implement comprehensive zero-trust security with continuous monitoring and verification.',
           features: ['Identity Verification', 'Continuous Monitoring', 'Access Control', 'Threat Prevention'],
           icon: Shield,
           href: '/services/zero-trust-network-architecture',
           color: 'from-blue-600 to-indigo-600'
+        },
+        {
+          name: 'Compliance Management',
+          description: 'Streamline regulatory compliance with automated monitoring and reporting tools.',
+          features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Compliance Tracking'],
+          icon: CheckCircle,
+          href: '/services/ai-compliance-copilot',
+          color: 'from-green-600 to-teal-600'
         }
       ]
+    }
+  ];
+
+  const industrySolutions = [
+    {
+      industry: 'Healthcare',
+      description: 'Transform healthcare delivery with AI-powered diagnostics, patient care, and operational efficiency.',
+      solutions: ['AI Healthcare Analytics', 'Digital Twin Solutions', 'IoT Edge Computing', 'Cybersecurity'],
+      icon: Users,
+      color: 'from-blue-600 to-cyan-600',
+      href: '/solutions/healthcare'
+    },
+    {
+      industry: 'Finance',
+      description: 'Drive innovation in financial services with AI, blockchain, and advanced analytics solutions.',
+      solutions: ['AI Fraud Detection', 'Blockchain Solutions', 'Quantum Computing', 'RegTech'],
+      icon: DollarSign,
+      color: 'from-green-600 to-emerald-600',
+      href: '/solutions/finance'
+    },
+    {
+      industry: 'Manufacturing',
+      description: 'Optimize manufacturing operations with IoT, AI, and digital twin technologies.',
+      solutions: ['Digital Twin', 'IoT Edge Computing', 'Predictive Maintenance', 'Supply Chain Optimization'],
+      icon: Cpu,
+      color: 'from-orange-600 to-red-600',
+      href: '/solutions/manufacturing'
+    },
+    {
+      industry: 'Retail',
+      description: 'Enhance customer experience and operational efficiency with AI and data analytics.',
+      solutions: ['AI Personalization', 'Customer Analytics', 'Inventory Optimization', 'Omnichannel Solutions'],
+      icon: ShoppingCart,
+      color: 'from-purple-600 to-pink-600',
+      href: '/solutions/retail'
     }
   ];
 
   const benefits = [
     {
       icon: Zap,
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize workflows to boost productivity by up to 300%.'
+      title: 'Operational Excellence',
+      description: 'Streamline operations and improve efficiency with intelligent automation and optimization.'
     },
     {
       icon: Brain,
-      title: 'Intelligent Insights',
-      description: 'Gain deep insights from your data with advanced AI algorithms and predictive analytics.'
+      title: 'Data-Driven Decisions',
+      description: 'Make informed decisions with real-time analytics and AI-powered insights.'
     },
     {
       icon: Shield,
       title: 'Enhanced Security',
-      description: 'Protect your organization with AI-powered threat detection and security automation.'
+      description: 'Protect your enterprise with advanced cybersecurity and compliance solutions.'
     },
     {
       icon: Users,
-      title: 'Better Customer Experience',
-      description: 'Deliver personalized, proactive customer experiences that drive engagement and retention.'
+      title: 'Improved Customer Experience',
+      description: 'Deliver exceptional customer experiences with personalized and proactive solutions.'
     },
     {
       icon: DollarSign,
@@ -144,7 +185,7 @@ export default function AISolutions() {
     {
       icon: Rocket,
       title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition with cutting-edge AI solutions and innovation.'
+      description: 'Stay ahead of the competition with cutting-edge technology and innovation.'
     }
   ];
 
@@ -161,11 +202,11 @@ export default function AISolutions() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Solutions
+              Enterprise Solutions
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-200 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge AI solutions that drive innovation, 
-              efficiency, and competitive advantage.
+              Transform your enterprise with comprehensive solutions that drive innovation, 
+              efficiency, and sustainable growth across all business functions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -186,7 +227,7 @@ export default function AISolutions() {
         </div>
       </section>
 
-      {/* AI Solutions Grid */}
+      {/* Enterprise Solutions Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -196,16 +237,16 @@ export default function AISolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-zion-slate-900 mb-4">
-              Comprehensive AI Solutions
+              Comprehensive Enterprise Solutions
             </h2>
             <p className="text-xl text-zion-slate-600 max-w-3xl mx-auto">
-              From business intelligence to cybersecurity, our AI solutions cover every aspect 
-              of modern business operations.
+              From digital transformation to cybersecurity, our enterprise solutions cover every aspect 
+              of modern business operations and technology infrastructure.
             </p>
           </motion.div>
 
           <div className="space-y-16">
-            {aiSolutions.map((category, categoryIndex) => (
+            {enterpriseSolutions.map((category, categoryIndex) => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -258,7 +299,7 @@ export default function AISolutions() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Industry Solutions */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-50 to-zion-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -268,10 +309,67 @@ export default function AISolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-zion-slate-900 mb-4">
-              Why Choose Our AI Solutions?
+              Industry-Specific Solutions
             </h2>
             <p className="text-xl text-zion-slate-600 max-w-3xl mx-auto">
-              Experience the transformative power of AI with solutions designed for the modern enterprise.
+              Tailored solutions designed for the unique challenges and opportunities of your industry.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {industrySolutions.map((industry, index) => (
+              <motion.div
+                key={industry.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} text-white mb-6`}>
+                  <industry.icon className="h-8 w-8" />
+                </div>
+                <h3 className="text-2xl font-bold text-zion-slate-900 mb-4">
+                  {industry.industry}
+                </h3>
+                <p className="text-zion-slate-600 mb-6">
+                  {industry.description}
+                </p>
+                <div className="space-y-2 mb-6">
+                  {industry.solutions.map((solution, solutionIndex) => (
+                    <li key={solutionIndex} className="flex items-center text-sm text-zion-slate-600">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      {solution}
+                    </li>
+                  ))}
+                </div>
+                <Link
+                  to={industry.href}
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-zion-slate-900 mb-4">
+              Why Choose Our Enterprise Solutions?
+            </h2>
+            <p className="text-xl text-zion-slate-600 max-w-3xl mx-auto">
+              Experience the transformative power of enterprise-grade solutions designed for scale, 
+              security, and sustainable growth.
             </p>
           </motion.div>
 
@@ -282,7 +380,7 @@ export default function AISolutions() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg text-center"
+                className="bg-gradient-to-r from-zion-slate-50 to-zion-slate-100 rounded-xl p-6 text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white mb-4">
                   <benefit.icon className="h-8 w-8" />
@@ -308,10 +406,10 @@ export default function AISolutions() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business with AI?
+              Ready to Transform Your Enterprise?
             </h2>
             <p className="text-xl text-zion-slate-200 mb-8">
-              Let's discuss how our AI solutions can drive innovation and growth for your organization.
+              Let's discuss how our enterprise solutions can drive innovation and growth for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

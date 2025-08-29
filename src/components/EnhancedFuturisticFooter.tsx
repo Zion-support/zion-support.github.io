@@ -66,45 +66,68 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Revolutionary 2030',
-      icon: Rocket,
+      title: 'AI Solutions',
+      icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'Quantum AI Hybrid Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Cybersecurity Platform', href: '/revolutionary-services-2030' },
-        { name: 'Autonomous AI Operations', href: '/revolutionary-services-2030' },
-        { name: 'Quantum Financial Trading', href: '/revolutionary-services-2030' },
-        { name: 'AI Healthcare Diagnostics', href: '/revolutionary-services-2030' },
-        { name: 'Smart City Platform', href: '/revolutionary-services-2030' }
+        { name: 'AI Solutions Overview', href: '/ai-solutions' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' }
       ]
     },
     {
-      title: 'Cloud & DevOps',
-      icon: Zap,
+      title: 'Industry Solutions',
+      icon: Building,
       color: 'from-blue-600 to-cyan-600',
       links: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
+    },
+    {
+      title: 'Core Services',
+      icon: Zap,
+      color: 'from-green-600 to-emerald-600',
+      links: [
+        { name: 'Services Overview', href: '/services-overview' },
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'Digital Twin', href: '/services/digital-twin' }
       ]
     },
     {
       title: 'Edge & IoT Services',
       icon: Server,
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-orange-600 to-red-600',
       links: [
         { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Space Tech', href: '/services/space-tech' }
+      ]
+    },
+    {
+      title: 'Company',
+      icon: Building,
+      color: 'from-gray-600 to-slate-600',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News', href: '/news' },
+        { name: 'Contact', href: '/contact' }
       ]
     },
     {

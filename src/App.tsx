@@ -19,6 +19,7 @@ const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
 const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
 const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
@@ -30,6 +31,10 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+
+// Solutions pages
+const Enterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
+const Healthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
 
 // New pages
 const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
@@ -206,8 +211,13 @@ function App() {
               <Route path="/pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
               <Route path="/comprehensive-services-landing-2028" element={<ComprehensiveServicesLanding2028 />} />
               <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
+              
+              {/* Solutions Routes */}
+              <Route path="/solutions/enterprise" element={<Enterprise />} />
+              <Route path="/solutions/healthcare" element={<Healthcare />} />
               <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
               <Route path="/services/uptime-sla-monitor" element={<UptimeSLAMonitor />} />
               <Route path="/services/soc2-compliance-tracker" element={<SOC2ComplianceTracker />} />
