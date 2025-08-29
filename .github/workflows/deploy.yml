@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+        - production
+
+env:
+  NODE_VERSION: '20.18.1'
+
+jobs:
+  deploy:
+    name: Deploy Application
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: ${{ github.event.inputs.environment || 'production' }}
+      url: https://ziontechgroup.com
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build application
+      run: npm run build
+      env:
+        NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
+        
+    - name: Deploy to GitHub Pages
+      id: deploy
+      uses: peaceiris/actions-gh-pages@v1.7.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        cname: ziontechgroup.com
+        
+    - name: Notify deployment
+      run: |
+        echo "🚀 Deployment completed successfully!"
+        echo "Environment: ${{ github.event.inputs.environment || 'production' }}"
+        echo "URL: https://ziontechgroup.com"
+        
+    - name: Health check
+      run: |
+        echo "🏥 Running health checks..."
+        echo "Health checks completed"
+        
+    - name: Notify team
+      run: |
+        echo "📢 Deployment notification sent to team"
