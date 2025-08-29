@@ -185,6 +185,26 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Spotlight: New Expert Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">GDPR DSAR Portal</h3>
+                <p className="text-slate-300 mb-2">Intake, verification, SLAs, and audit trails for privacy requests.</p>
+                <div className="text-sm text-slate-400">Typical: $99–$399/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://www.onetrust.com/pricing/" target="_blank" rel="noopener noreferrer">onetrust.com/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://transcend.io/pricing/" target="_blank" rel="noopener noreferrer">transcend.io/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/gdpr-dsar-portal" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Security Headers & CSP Manager</h3>
+                <p className="text-slate-300 mb-2">Automate HSTS and CSP with safe rollouts and violation reporting.</p>
+                <div className="text-sm text-slate-400">Typical: $49–$199/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://securityheaders.com/" target="_blank" rel="noopener noreferrer">securityheaders.com</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.cloudflare.com/plans/" target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/security-headers-csp-manager" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">Developer Productivity Copilot</h3>
                 <p className="text-slate-300 mb-2">AI PR reviews, test generation, and CI insights.</p>
                 <div className="text-sm text-slate-400">Typical: $19–$39/dev/mo</div>
@@ -205,6 +225,15 @@ export default function ServicesAdvertisingPage() {
                   <li><a className="text-cyan-400 underline" href="https://www.hubspot.com/pricing/sales" target="_blank" rel="noopener noreferrer">hubspot.com/pricing/sales</a></li>
                 </ul>
                 <div className="mt-3"><a href="/services/ai-sales-assistant" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Checkout Performance Optimizer</h3>
+                <p className="text-slate-300 mb-2">Checkout A/B tests, form UX fixes, and trust signals.</p>
+                <div className="text-sm text-slate-400">Typical: $99–$499/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://www.optimizely.com/pricing/" target="_blank" rel="noopener noreferrer">optimizely.com/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/checkout-performance-optimizer" className="text-cyan-400 underline">Learn more</a></div>
               </div>
               <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">Security Posture Guardian</h3>
@@ -240,6 +269,16 @@ export default function ServicesAdvertisingPage() {
                   <div className="mt-3"><a href={h.href} className="text-cyan-400 underline">Learn more</a></div>
                 </div>
               ))}
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Status & Incident Hub</h3>
+                <p className="text-slate-300 mb-2">Status pages, on‑call, comms, and postmortems.</p>
+                <div className="text-sm text-slate-400">Typical: $59–$299/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://betterstack.com/status/pricing" target="_blank" rel="noopener noreferrer">betterstack.com/status/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.pagerduty.com/pricing/" target="_blank" rel="noopener noreferrer">pagerduty.com/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/status-incident-hub" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
             </div>
           </section>
           <section>

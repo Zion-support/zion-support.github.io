@@ -60,6 +60,10 @@ export default function ServicesIndex() {
               { href: '/services/devops-release-automation', title: 'DevOps Release Automation', desc: 'Policy-driven CI/CD and safe rollbacks.' },
               { href: '/services/fractional-cto', title: 'Fractional CTO', desc: 'Strategic tech leadership on-demand.' },
               { href: '/services/governed-ai-agents', title: 'Governed AI Agents', desc: 'Multi-agent automation with approvals.' },
+              { href: '/services/gdpr-dsar-portal', title: 'GDPR DSAR Portal', desc: 'Privacy request intake, verification, and SLAs.' },
+              { href: '/services/security-headers-csp-manager', title: 'Security Headers & CSP', desc: 'Automate headers and CSP with reports.' },
+              { href: '/services/checkout-performance-optimizer', title: 'Checkout Optimizer', desc: 'Reduce friction and lift conversion.' },
+              { href: '/services/status-incident-hub', title: 'Status & Incident Hub', desc: 'SLOs, on-call, and incident workflows.' },
             ].map((s) => (
               <Link key={s.href} href={s.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
