@@ -28,7 +28,10 @@ import {
   Clock,
   Calendar,
   Check,
-  X
+  X,
+  Atom,
+  Heart,
+  Rocket
 } from 'lucide-react';
 import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
 import { SEO } from '@/components/SEO';
@@ -99,10 +102,177 @@ const serviceCategories = [
     color: 'from-blue-600 to-cyan-600'
   },
   {
-    name: 'Business Solutions',
-    icon: <TrendingUp className="w-6 h-6" />,
-    services: MICRO_SAAS_SERVICES.filter(s => s.category === 'Business Solutions'),
+    name: 'Cybersecurity',
+    icon: <Shield className="w-6 h-6" />,
+    services: [
+      {
+        id: "ai-cybersecurity-suite",
+        title: "AI Cybersecurity Suite Pro",
+        description: "Advanced AI-powered cybersecurity platform",
+        price: 199,
+        currency: "$",
+        pricingModel: "monthly",
+        features: ["AI threat detection", "Real-time monitoring", "Automated response", "Compliance management"],
+        benefits: ["85% reduction in security incidents", "Instant response times", "Cost-effective security", "Enterprise-grade protection"],
+        targetAudience: ["Financial services", "Healthcare", "E-commerce", "Enterprise companies"],
+        marketPrice: "$199-599/month",
+        website: "https://ziontechgroup.com/services/ai-cybersecurity-suite",
+        contactEmail: "kleber@ziontechgroup.com",
+        tags: ["AI Security", "Cybersecurity", "Compliance", "Threat Detection"],
+        aiScore: 98,
+        rating: 4.9,
+        reviewCount: 89,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+          name: "Zion Tech Group",
+          id: "zion-tech-group",
+          avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+          verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-20T10:00:00.000Z"
+      }
+    ],
+    color: 'from-red-600 to-orange-600'
+  },
+  {
+    name: 'Quantum Computing',
+    icon: <Atom className="w-6 h-6" />,
+    services: [
+      {
+        id: "quantum-ai-platform",
+        title: "Quantum AI Platform Enterprise",
+        description: "Next-generation quantum computing platform with AI integration",
+        price: 499,
+        currency: "$",
+        pricingModel: "monthly",
+        features: ["Quantum algorithm library", "AI-powered optimization", "Hybrid computing", "Real-time simulations"],
+        benefits: ["1000x faster problem solving", "Revolutionary AI capabilities", "Future-proof technology", "Competitive advantage"],
+        targetAudience: ["Research institutions", "Pharmaceutical companies", "Financial services", "Government agencies"],
+        marketPrice: "$499-1499/month",
+        website: "https://ziontechgroup.com/services/quantum-ai-platform",
+        contactEmail: "kleber@ziontechgroup.com",
+        tags: ["Quantum Computing", "AI", "Optimization", "Research"],
+        aiScore: 100,
+        rating: 5.0,
+        reviewCount: 23,
+        featured: true,
+        location: "Global",
+        availability: "Limited",
+        author: {
+          name: "Zion Tech Group",
+          id: "zion-tech-group",
+          avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+          verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-25T10:00:00.000Z"
+      }
+    ],
+    color: 'from-indigo-600 to-purple-600'
+  },
+  {
+    name: 'Healthcare Technology',
+    icon: <Heart className="w-6 h-6" />,
+    services: [
+      {
+        id: "ai-healthcare-analytics",
+        title: "AI Healthcare Analytics Pro",
+        description: "Advanced AI-powered healthcare analytics platform",
+        price: 299,
+        currency: "$",
+        pricingModel: "monthly",
+        features: ["Predictive disease modeling", "Real-time patient monitoring", "Clinical decision support", "Medical image analysis"],
+        benefits: ["40% improvement in diagnostic accuracy", "25% reduction in healthcare costs", "Faster diagnosis and treatment", "Enhanced patient experience"],
+        targetAudience: ["Hospitals", "Clinics", "Research institutions", "Healthcare startups"],
+        marketPrice: "$299-899/month",
+        website: "https://ziontechgroup.com/services/ai-healthcare-analytics",
+        contactEmail: "kleber@ziontechgroup.com",
+        tags: ["AI Healthcare", "Analytics", "Diagnostics", "Patient Care"],
+        aiScore: 97,
+        rating: 4.8,
+        reviewCount: 67,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+          name: "Zion Tech Group",
+          id: "zion-tech-group",
+          avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+          verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1576091160399-112c8f0b1d6d?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-30T10:00:00.000Z"
+      }
+    ],
     color: 'from-green-600 to-emerald-600'
+  },
+  {
+    name: 'Emerging Technologies',
+    icon: <Rocket className="w-6 h-6" />,
+    services: [
+      {
+        id: "space-tech-platform",
+        title: "Space Technology Platform",
+        description: "Advanced space technology solutions for research and innovation",
+        price: 599,
+        currency: "$",
+        pricingModel: "monthly",
+        features: ["Satellite data processing", "Space debris monitoring", "Orbital optimization", "Space weather forecasting"],
+        benefits: ["Access to space data", "Optimize satellite operations", "Reduce mission risks", "Innovative solutions"],
+        targetAudience: ["Space agencies", "Satellite companies", "Research institutions", "Defense contractors"],
+        marketPrice: "$599-1999/month",
+        website: "https://ziontechgroup.com/services/space-tech",
+        contactEmail: "kleber@ziontechgroup.com",
+        tags: ["Space Technology", "Satellites", "Orbital", "Space Data"],
+        aiScore: 96,
+        rating: 4.9,
+        reviewCount: 34,
+        featured: true,
+        location: "Global",
+        availability: "Limited",
+        author: {
+          name: "Zion Tech Group",
+          id: "zion-tech-group",
+          avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+          verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-10T10:00:00.000Z"
+      },
+      {
+        id: "green-it-solutions",
+        title: "Green IT Solutions Platform",
+        description: "Sustainable technology platform for environmental compliance",
+        price: 179,
+        currency: "$",
+        pricingModel: "monthly",
+        features: ["Carbon footprint tracking", "Energy consumption monitoring", "Sustainable IT practices", "Environmental compliance"],
+        benefits: ["40% carbon footprint reduction", "25% energy cost savings", "Meet sustainability goals", "Enhanced brand reputation"],
+        targetAudience: ["Corporations", "Government agencies", "Educational institutions", "Non-profits"],
+        marketPrice: "$179-599/month",
+        website: "https://ziontechgroup.com/services/green-it",
+        contactEmail: "kleber@ziontechgroup.com",
+        tags: ["Green IT", "Sustainability", "Carbon Reduction", "Energy"],
+        aiScore: 92,
+        rating: 4.7,
+        reviewCount: 56,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+          name: "Zion Tech Group",
+          id: "zion-tech-group",
+          avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+          verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1473341304170-971d4b7be3c4?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-15T10:00:00.000Z"
+      }
+    ],
+    color: 'from-orange-600 to-red-600'
   }
 ];
 

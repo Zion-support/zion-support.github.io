@@ -2,7 +2,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Brain, Cloud, Shield, Rocket, Zap, Users, TrendingUp, Star, Award, Globe, Heart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Brain, Cloud, Shield, Rocket, Zap, Users, TrendingUp, Star, Award, Globe, Heart, Atom, Lock, Cpu, Satellite } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -27,6 +27,8 @@ import { SecurityComplianceSection } from "@/components/SecurityComplianceSectio
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { ServicesShowcase } from "@/components/ServicesShowcase.tsx";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 // Animation variants for smooth performance
 const containerVariants = {
@@ -95,28 +97,92 @@ const aiServices = [
     ]
   },
   {
-    icon: Cloud,
-    title: "Cloud DevOps",
-    description: "Streamline your development pipeline with automated cloud infrastructure.",
-    path: "/services/cloud-devops",
-    features: [
-      "CI/CD Automation",
-      "Infrastructure as Code",
-      "Container Orchestration",
-      "Security Integration"
-    ]
-  },
-  {
     icon: Shield,
-    title: "AI Cybersecurity",
+    title: "AI Cybersecurity Suite",
     description: "Protect your business with intelligent threat detection and response systems.",
     path: "/services/ai-cybersecurity-suite",
     features: [
-      "Threat Intelligence",
+      "AI Threat Detection",
       "Automated Response",
       "Zero Trust Architecture",
       "Compliance Monitoring"
     ]
+  },
+  {
+    icon: Atom,
+    title: "Quantum AI Platform",
+    description: "Experience the future of computing with quantum-powered AI solutions.",
+    path: "/services/quantum-ai-platform",
+    features: [
+      "Quantum Algorithms",
+      "AI Optimization",
+      "Hybrid Computing",
+      "Research Tools"
+    ]
+  },
+  {
+    icon: Heart,
+    title: "AI Healthcare Analytics",
+    description: "Revolutionize healthcare delivery with AI-powered diagnostics and monitoring.",
+    path: "/services/ai-healthcare-analytics",
+    features: [
+      "Predictive Diagnostics",
+      "Patient Monitoring",
+      "Medical Imaging",
+      "Clinical Support"
+    ]
+  }
+];
+
+// Featured Services
+const featuredServices = [
+  {
+    icon: Cloud,
+    title: "Cloud DevOps",
+    description: "Streamline your development pipeline with automated cloud infrastructure.",
+    path: "/services/cloud-devops",
+    category: "Infrastructure",
+    price: "From $199/month"
+  },
+  {
+    icon: Rocket,
+    title: "Digital Twin",
+    description: "Create virtual replicas of your physical systems for optimization.",
+    path: "/services/digital-twin",
+    category: "Innovation",
+    price: "From $399/month"
+  },
+  {
+    icon: Lock,
+    title: "Blockchain Solutions",
+    description: "Secure, transparent, and efficient blockchain enterprise solutions.",
+    path: "/services/blockchain-enterprise-solutions",
+    category: "Security",
+    price: "From $249/month"
+  },
+  {
+    icon: Globe,
+    title: "Green IT Solutions",
+    description: "Sustainable technology solutions for environmental compliance.",
+    path: "/services/green-it",
+    category: "Sustainability",
+    price: "From $179/month"
+  },
+  {
+    icon: Cpu,
+    title: "IoT Edge Computing",
+    description: "Process data at the edge for real-time insights and automation.",
+    path: "/services/iot-edge",
+    category: "IoT",
+    price: "From $299/month"
+  },
+  {
+    icon: Satellite,
+    title: "Space Technology",
+    description: "Advanced space technology solutions for research and innovation.",
+    path: "/services/space-tech",
+    category: "Emerging Tech",
+    price: "From $599/month"
   }
 ];
 
@@ -282,6 +348,55 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Featured Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative technology solutions
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="mb-4">
+                  <Badge className="mb-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0">
+                    {service.category}
+                  </Badge>
+                  <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-cyan-400 font-semibold mb-4">{service.price}</p>
+                </div>
+                <Button asChild className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
+                  <Link to={service.path}>
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -45,7 +45,10 @@ export default function ServicesOverview() {
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot", description: "Intelligent sales automation" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant", description: "Automated compliance management" },
         { name: "AI Auto Email Responder", href: "/services/ai-auto-email-responder", description: "Smart email automation" },
-        { name: "LLM Content Studio", href: "/services/llm-content-studio", description: "AI-powered content creation" }
+        { name: "LLM Content Studio", href: "/services/llm-content-studio", description: "AI-powered content creation" },
+        { name: "AI Cybersecurity Suite", href: "/services/ai-cybersecurity-suite", description: "AI-powered security platform" },
+        { name: "Quantum AI Platform", href: "/services/quantum-ai-platform", description: "Next-generation quantum computing" },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics", description: "Healthcare AI solutions" }
       ]
     },
     {
@@ -100,24 +103,63 @@ export default function ServicesOverview() {
       ]
     },
     {
-      title: "Emerging Technologies",
-      icon: Rocket,
-      description: "Next-generation technology solutions",
+      title: "Blockchain & Web3",
+      icon: Lock,
+      description: "Decentralized solutions and blockchain technology",
       services: [
-        { name: "Quantum Computing", href: "/services/quantum-computing", description: "Quantum processing solutions" },
-        { name: "Blockchain Solutions", href: "/services/blockchain", description: "Distributed ledger technology" },
-        { name: "Space Technology", href: "/services/space-tech", description: "Aerospace innovation" },
-        { name: "Green IT", href: "/services/green-it", description: "Sustainable technology" }
+        { name: "Blockchain Enterprise Solutions", href: "/services/blockchain-enterprise-solutions", description: "Enterprise blockchain platform" },
+        { name: "Smart Contract Development", href: "/services/blockchain-enterprise-solutions", description: "Custom smart contracts" },
+        { name: "DeFi Solutions", href: "/services/blockchain-enterprise-solutions", description: "Decentralized finance" }
       ]
     },
     {
-      title: "Micro SaaS",
-      icon: ShoppingCart,
-      description: "Scalable software solutions for specific business needs",
+      title: "Healthcare Technology",
+      icon: Heart,
+      description: "AI-powered healthcare solutions and medical technology",
       services: [
-        { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions", description: "Productized SaaS platforms" },
-        { name: "Industry Solutions", href: "/services/industry-solutions", description: "Sector-specific software" },
-        { name: "Digital Transformation", href: "/services/digital-transformation", description: "Business modernization" }
+        { name: "Healthcare Tech", href: "/services/healthcare-tech", description: "Medical technology solutions" },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics", description: "Healthcare AI platform" },
+        { name: "Medical Imaging AI", href: "/services/ai-healthcare-analytics", description: "AI-powered diagnostics" }
+      ]
+    },
+    {
+      title: "Sustainability & Green Tech",
+      icon: Globe,
+      description: "Environmental technology and sustainable solutions",
+      services: [
+        { name: "Sustainability", href: "/services/sustainability", description: "Green technology solutions" },
+        { name: "Green IT", href: "/services/green-it", description: "Sustainable IT practices" },
+        { name: "Carbon Footprint Tracking", href: "/services/green-it", description: "Environmental monitoring" }
+      ]
+    },
+    {
+      title: "Emerging Technologies",
+      icon: Rocket,
+      description: "Cutting-edge technology solutions for the future",
+      services: [
+        { name: "Quantum Computing", href: "/services/quantum-computing", description: "Quantum technology solutions" },
+        { name: "Space Technology", href: "/services/space-tech", description: "Space tech platform" },
+        { name: "Digital Twin", href: "/services/digital-twin", description: "Virtual modeling solutions" }
+      ]
+    },
+    {
+      title: "Micro SaaS Solutions",
+      icon: ShoppingCart,
+      description: "Productized software solutions for specific business needs",
+      services: [
+        { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions", description: "Scalable software products" },
+        { name: "AI Sales Automation", href: "/services/ai-sales-copilot", description: "Sales process automation" },
+        { name: "Customer Feedback Platform", href: "/services/mobile-feedback-surveys", description: "Feedback collection system" }
+      ]
+    },
+    {
+      title: "Financial Technology",
+      icon: DollarSign,
+      description: "AI-powered financial solutions and optimization",
+      services: [
+        { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Financial operations optimization" },
+        { name: "Cloud Cost Optimization", href: "/services/cloud-finops-optimizer", description: "Cloud spending optimization" },
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant", description: "Regulatory compliance" }
       ]
     }
   ];
