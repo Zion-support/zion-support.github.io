@@ -3,21 +3,11 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Zap, Sparkles, Star, TrendingUp, Users, Award } from 'lucide-react';
 import { SEO } from "@/components/SEO";
-import { EnhancedHeroSection } from "@/components/EnhancedHeroSection";
+import EnhancedHeroSection from "@/components/EnhancedHeroSection";
 
 // Lazy load components for better performance
 const QuickAccess = React.lazy(() => import("@/components/home/QuickAccess"));
 const FeatureHighlights = React.lazy(() => import("@/components/home/FeatureHighlights"));
-const AIServicesShowcase = React.lazy(() => import("@/components/home/AIServicesShowcase"));
-const TechSolutionsSection = React.lazy(() => import("@/components/home/TechSolutionsSection"));
-const CaseStudiesSection = React.lazy(() => import("@/components/home/CaseStudiesSection"));
-const TeamExpertiseSection = React.lazy(() => import("@/components/home/TeamExpertiseSection"));
-const GlobalPresenceSection = React.lazy(() => import("@/components/home/GlobalPresenceSection"));
-const InnovationResearchSection = React.lazy(() => import("@/components/home/InnovationResearchSection"));
-const ClientSuccessStoriesSection = React.lazy(() => import("@/components/home/ClientSuccessStoriesSection"));
-const TechnologyStackSection = React.lazy(() => import("@/components/home/TechnologyStackSection"));
-const SecurityComplianceSection = React.lazy(() => import("@/components/home/SecurityComplianceSection"));
-const InteractiveTestimonials = React.lazy(() => import("@/components/home/InteractiveTestimonials"));
 const ServicesShowcase = React.lazy(() => import("@/components/home/ServicesShowcase"));
 const FloatingCTA = React.lazy(() => import("@/components/FloatingCTA"));
 
@@ -56,7 +46,7 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-r from-zion-slate/50 to-zion-slate-dark/50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30"></div>
 
         <div className="container-responsive relative z-10">
           <motion.div
@@ -121,116 +111,6 @@ export default function Home() {
         <FeatureHighlights />
       </Suspense>
 
-      {/* AI Services Showcase */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <AIServicesShowcase />
-      </Suspense>
-
-      {/* Tech Solutions Section */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <TechSolutionsSection />
-      </Suspense>
-
-      {/* Case Studies Section */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <CaseStudiesSection />
-      </Suspense>
-
-      {/* Team Expertise Section */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <TeamExpertiseSection />
-      </Suspense>
-
-      {/* Global Presence Section */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <GlobalPresenceSection />
-      </Suspense>
-
-      {/* Innovation Research Section */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <InnovationResearchSection />
-      </Suspense>
-
-      {/* Client Success Stories Section */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <ClientSuccessStoriesSection />
-      </Suspense>
-
-      {/* Technology Stack Section */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <TechnologyStackSection />
-      </Suspense>
-
-      {/* Security Compliance Section */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <SecurityComplianceSection />
-      </Suspense>
-
-      {/* Interactive Testimonials */}
-      <Suspense fallback={
-        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
-          <div className="container-responsive">
-            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
-          </div>
-        </div>
-      }>
-        <InteractiveTestimonials />
-      </Suspense>
-
       {/* Services Showcase */}
       <Suspense fallback={
         <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
@@ -244,7 +124,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30"></div>
 
         <div className="container-responsive relative z-10 text-center">
           <motion.div
@@ -288,7 +168,7 @@ export default function Home() {
                   <ArrowRight className="w-5 h-5" />
                 </motion.div>
               </Link>
-
+              
               <Link
                 to="/services"
                 className="group relative inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate transition-all duration-300 transform hover:scale-105"
