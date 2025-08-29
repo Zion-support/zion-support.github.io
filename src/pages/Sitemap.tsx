@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Home, 
-  Services, 
+  Settings, 
   Brain, 
   Cloud, 
   Shield, 
@@ -56,7 +56,7 @@ const Sitemap = () => {
     },
     {
       title: 'Core Services',
-      icon: Services,
+      icon: Settings,
       links: [
         { name: 'Services Overview', path: '/services', description: 'All services overview' },
         { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },

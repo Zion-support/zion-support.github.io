@@ -16,7 +16,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-export default function Pricing() {
+function Pricing() {
   const services = [
     {
       name: 'AI Project Manager',
