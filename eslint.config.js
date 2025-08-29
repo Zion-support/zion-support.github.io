@@ -167,7 +167,7 @@ export default [
     },
   },
   {
-    files: ['**/*.js', 'fix-*.js', '**/fix_*.js', 'fix*.js'],
+    files: ['**/*.js', '**/*.cjs', 'fix-*.js', '**/fix_*.js', 'fix*.js', '**/automation/**/*.js', '**/automation/**/*.cjs'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
@@ -182,6 +182,14 @@ export default [
         global: 'readonly',
         Buffer: 'readonly',
         console: 'readonly',
+        // File system globals
+        fs: 'readonly',
+        path: 'readonly',
+        // Other common Node.js globals
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
         // Browser globals for utility scripts
         window: 'readonly',
         document: 'readonly',

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 const chokidar = require('chokidar');
+
 class AutomationFactory {
   constructor() {
     this.scripts = new Map();
