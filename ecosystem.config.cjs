@@ -187,6 +187,62 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // Intelligent Error Recovery - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'intelligent-error-recovery',
+      script: './scripts/automation/intelligent-error-recovery.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // Adaptive Scheduler - runs every 30 minutes
+    {
+      name: 'adaptive-scheduler',
+      script: './scripts/automation/adaptive-scheduler.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // AI-Powered Code Analyzer - runs every 2 hours
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Cross-Process Coordinator - runs every 15 minutes
+    {
+      name: 'cross-process-coordinator',
+      script: './scripts/automation/cross-process-coordinator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
     }
   ]
 };
