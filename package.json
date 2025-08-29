@@ -24,7 +24,69 @@
     "type-check:all": "npm run type-check && npm run type-check:backend",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint --fix || true",
-    "install:all": "npm install && cd server && npm install"
+    "install:all": "npm install && cd server && npm install",
+    
+    "pm2:dev": "pm2 start ecosystem.config.cjs --env development",
+    "pm2:prod": "pm2 start ecosystem.config.cjs --env production",
+    "pm2:staging": "pm2 start ecosystem.config.cjs --env staging",
+    "pm2:stop": "pm2 stop all",
+    "pm2:restart": "pm2 restart all",
+    "pm2:reload": "pm2 reload ecosystem.config.cjs",
+    "pm2:delete": "pm2 delete all",
+    "pm2:save": "pm2 save",
+    "pm2:resurrect": "pm2 resurrect",
+    "pm2:status": "pm2 status",
+    "pm2:logs": "pm2 logs",
+    "pm2:monit": "pm2 monit",
+    "pm2:start:monitor": "pm2 start scripts/pm2-monitor.js --name zion-monitor",
+    "pm2:start:watcher": "pm2 start scripts/pm2-build-watcher.js --name zion-build-watcher",
+    "pm2:start:manager": "pm2 start scripts/pm2-manager.js --name zion-pm2-manager",
+    
+    "deploy:staging": "node scripts/pm2-deployer.js deploy staging",
+    "deploy:production": "node scripts/pm2-deployer.js deploy production",
+    "deploy:status": "node scripts/pm2-deployer.js status",
+    "deploy:history": "node scripts/pm2-deployer.js history",
+    
+    "dev:full": "concurrently \"npm run pm2:start:monitor\" \"npm run pm2:start:watcher\" \"npm run pm2:start:manager\" \"npm run pm2:dev\"",
+    "dev:monitored": "concurrently \"npm run pm2:start:monitor\" \"npm run pm2:dev\"",
+    "dev:watched": "concurrently \"npm run pm2:start:watcher\" \"npm run pm2:dev\"",
+    
+    "setup:pm2": "npm install -g pm2 && pm2 install pm2-logrotate && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 30",
+    "setup:logs": "mkdir -p logs backups",
+    "setup:all": "npm run setup:logs && npm run setup:pm2",
+    
+    "health:check": "node scripts/pm2-monitor.js --health-check",
+    "health:report": "node scripts/pm2-monitor.js --generate-report",
+    "performance:analyze": "node scripts/pm2-manager.js --analyze",
+    "performance:optimize": "node scripts/pm2-manager.js --optimize",
+    
+    "clean:logs": "rm -rf logs/*.log logs/*.json",
+    "clean:backups": "rm -rf backups/*",
+    "clean:all": "npm run clean:logs && npm run clean:backups",
+    
+    "backup:create": "mkdir -p backups && cp -r dist backups/dist-$(date +%Y%m%d-%H%M%S) && cp -r server/dist backups/server-dist-$(date +%Y%m%d-%H%M%S)",
+    "backup:restore": "echo 'Please specify backup directory: npm run backup:restore <backup-dir>'",
+    
+    "scale:frontend": "pm2 scale zion-frontend-prod",
+    "scale:backend": "pm2 scale zion-backend-prod",
+    "scale:auto": "node scripts/pm2-manager.js --auto-scale",
+    
+    "logs:frontend": "pm2 logs zion-frontend-dev --lines 100",
+    "logs:backend": "pm2 logs zion-backend-dev --lines 100",
+    "logs:monitor": "pm2 logs zion-monitor-dev --lines 100",
+    "logs:watcher": "pm2 logs zion-build-watcher --lines 100",
+    
+    "restart:frontend": "pm2 restart zion-frontend-dev",
+    "restart:backend": "pm2 restart zion-backend-dev",
+    "restart:monitor": "pm2 restart zion-monitor-dev",
+    "restart:watcher": "pm2 restart zion-build-watcher",
+    
+    "update:ecosystem": "pm2 reload ecosystem.config.cjs",
+    "update:all": "npm run update:ecosystem && pm2 save",
+    
+    "test:pm2": "pm2 start ecosystem.config.cjs --env development && sleep 10 && pm2 status && pm2 stop all && pm2 delete all",
+    "test:deployment": "npm run deploy:staging && npm run deploy:production",
+    "test:monitoring": "npm run pm2:start:monitor && sleep 30 && npm run health:report && pm2 stop zion-monitor && pm2 delete zion-monitor"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -95,6 +157,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "pm2": "^6.0.8",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
