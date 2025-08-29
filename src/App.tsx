@@ -129,43 +129,11 @@ const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase20
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 
 // 2025 New Innovative Services
-const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
-const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
-const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
-const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
-const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
-
-// Comprehensive improvements components
-const AdvancedAIServicesHub = lazy(() => import('./components/AdvancedAIServicesHub'));
-const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
-const EnhancedSEOManager = lazy(() => import('./components/EnhancedSEOManager'));
-const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveImprovements2025'));
-
-// New innovative AI services
-const AIAutonomousResearchAssistant = lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
-const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMarketingSuite'));
-const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
-const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
-const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
-const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-
-// Additional missing imports
-const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
-const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
-const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
-const AIContentCreationSuite = lazy(() => import('./pages/services/AIContentCreationSuite'));
-const AICybersecurity = lazy(() => import('./pages/services/ai-cybersecurity'));
-const AIHRPlatform = lazy(() => import('./pages/services/ai-hr-platform'));
-const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
-const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
-const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
-const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
 
 // Comprehensive services imports
 const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
@@ -180,10 +148,6 @@ const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServices
 
 // Additional service imports
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
-const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics'));
-const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
-const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
-const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
@@ -424,8 +388,6 @@ function App() {
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                     
                     {/* New AI Services Routes */}
-                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
-                    <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                     <Route path="/services/ai-autonomous-threat-intelligence" element={<AIAutonomousThreatIntelligence />} />
                     
                     {/* Additional Pages */}
