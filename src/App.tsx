@@ -61,6 +61,10 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+const AICodeReviewSecurity = React.lazy(() => import('./pages/services/ai-code-review-security'));
+const AICustomerExperienceAnalytics = React.lazy(() => import('./pages/services/ai-customer-experience-analytics'));
+const AIDevOpsAutomationPlatform = React.lazy(() => import('./pages/services/ai-devops-automation-platform'));
+const AIIoTEdgeComputingPlatform = React.lazy(() => import('./pages/services/ai-iot-edge-computing-platform'));
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -137,6 +141,10 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                <Route path="/services/ai-code-review-security" element={<AICodeReviewSecurity />} />
+                <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+                <Route path="/services/ai-devops-automation-platform" element={<AIDevOpsAutomationPlatform />} />
+                <Route path="/services/ai-iot-edge-computing-platform" element={<AIIoTEdgeComputingPlatform />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
