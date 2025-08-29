@@ -96,6 +96,33 @@ const Services: React.FC = () => {
             ))}
           </div>
 
+          {/* New Advanced Services Section */}
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold text-center mb-8">Advanced Services Portfolio 2025</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <Link to="/advanced-services-showcase-2025" className="block bg-gradient-to-br from-blue-900/60 to-purple-900/60 border border-blue-400/30 hover:border-blue-400/60 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105">
+                <div className="text-xs uppercase tracking-wide text-blue-300/70 font-medium">New</div>
+                <div className="mt-2 text-xl font-semibold text-blue-200">Advanced Services Showcase</div>
+                <div className="mt-2 text-sm text-blue-300/80">50+ cutting-edge AI, IT infrastructure, and micro SAAS solutions</div>
+                <div className="mt-4 text-xs text-blue-400/70">Explore our comprehensive portfolio</div>
+              </Link>
+              
+              <Link to="/revolutionary-services-2030" className="block bg-gradient-to-br from-purple-900/60 to-pink-900/60 border border-purple-400/30 hover:border-purple-400/60 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105">
+                <div className="text-xs uppercase tracking-wide text-purple-300/70 font-medium">Future</div>
+                <div className="mt-2 text-xl font-semibold text-purple-200">Revolutionary Services 2030</div>
+                <div className="mt-2 text-sm text-purple-300/80">Next-generation AI, quantum computing, and autonomous systems</div>
+                <div className="mt-4 text-xs text-purple-400/70">Shape the future of technology</div>
+              </Link>
+              
+              <Link to="/pricing-2030" className="block bg-gradient-to-br from-green-900/60 to-emerald-900/60 border border-green-400/30 hover:border-green-400/60 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105">
+                <div className="text-xs uppercase tracking-wide text-green-300/70 font-medium">Pricing</div>
+                <div className="mt-2 text-xl font-semibold text-green-200">Comprehensive Pricing Guide 2030</div>
+                <div className="mt-2 text-sm text-green-300/80">Detailed pricing, ROI analysis, and implementation guides</div>
+                <div className="mt-4 text-xs text-green-400/70">Make informed investment decisions</div>
+              </Link>
+            </div>
+          </div>
+
           <div className="mt-12 rounded-xl border border-white/10 bg-white/5 p-6 text-sm text-slate-300">
             <div className="mb-2 font-semibold text-white">Pricing Overview</div>
             <ul className="grid gap-2 sm:grid-cols-2">
