@@ -5,10 +5,6 @@
 /* Import Google Fonts for better typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
-/* Import enhanced futuristic and accessibility styles */
-@import './styles/enhanced-futuristic.css';
-@import './styles/accessibility.css';
-
 /* CSS Custom Properties for Zion Tech Group Brand */
 :root {
   /* Primary Brand Colors */
