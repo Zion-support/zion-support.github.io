@@ -44,37 +44,72 @@ export default function Services() {
 
   const serviceCategories = [
     {
-      name: 'AI & Analytics',
+      name: 'AI-Powered Micro SaaS',
       icon: Brain,
-      description: 'Cutting-edge artificial intelligence and data analytics solutions',
+      description: 'Intelligent software-as-a-service solutions that scale with your business',
       color: 'from-purple-600 to-pink-600',
       services: [
         {
-          name: 'AI Business Intelligence',
-          description: 'Transform your data into actionable insights with advanced AI algorithms',
-          features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization'],
-          href: '/services/ai-business-intelligence',
-          price: 'From $5,000',
+          name: 'AI Customer Churn Predictor',
+          description: 'Predict customer churn with 95% accuracy using machine learning algorithms',
+          features: ['Real-time Churn Risk Scoring', 'Behavioral Pattern Analysis', 'Automated Retention Campaigns', 'CRM Integration'],
+          href: '/services/ai-customer-churn-predictor',
+          price: 'From $299/month',
           rating: 4.9,
           reviewCount: 127
         },
         {
-          name: 'AI Sales Copilot',
-          description: 'AI-powered sales automation and customer relationship management',
-          features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automated Follow-ups'],
-          href: '/services/ai-sales-copilot',
-          price: 'From $3,500',
+          name: 'Intelligent Inventory Optimization',
+          description: 'AI-driven inventory management that reduces stockouts by 60%',
+          features: ['Demand Forecasting', 'Real-time Tracking', 'Automated Reorder Points', 'Cost Optimization'],
+          href: '/services/intelligent-inventory-optimization',
+          price: 'From $199/month',
           rating: 4.8,
           reviewCount: 89
         },
         {
-          name: 'AI Content Optimizer Pro',
-          description: 'Advanced AI-powered content optimization for SEO and engagement',
-          features: ['SEO Optimization', 'Readability Scoring', 'Multi-language Support', 'Performance Analytics'],
-          href: '/services/ai-content-optimizer-pro',
-          price: 'From $199/month',
+          name: 'AI Legal Document Analyzer Pro',
+          description: 'Advanced legal document analysis using NLP and AI for risk assessment',
+          features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Template Generation'],
+          href: '/services/ai-legal-document-analyzer',
+          price: 'From $399/month',
           rating: 4.9,
           reviewCount: 156
+        }
+      ]
+    },
+    {
+      name: 'Business Technology Solutions',
+      icon: Rocket,
+      description: 'Comprehensive business technology solutions for modern organizations',
+      color: 'from-green-600 to-emerald-600',
+      services: [
+        {
+          name: 'Real Estate Market Intelligence',
+          description: 'Comprehensive real estate analytics platform for market insights and investment opportunities',
+          features: ['Market Trend Analysis', 'Property Valuations', 'Investment Scoring', 'Portfolio Optimization'],
+          href: '/services/real-estate-market-intelligence',
+          price: 'From $299/month',
+          rating: 4.8,
+          reviewCount: 78
+        },
+        {
+          name: 'AI HR Recruitment Automation',
+          description: 'Intelligent recruitment platform that automates candidate sourcing and screening',
+          features: ['AI-powered Sourcing', 'Automated Screening', 'Skill Matching', 'Diversity Tracking'],
+          href: '/services/ai-hr-recruitment-automation',
+          price: 'From $199/month',
+          rating: 4.7,
+          reviewCount: 145
+        },
+        {
+          name: 'Intelligent Marketing Automation',
+          description: 'AI-driven marketing automation that personalizes campaigns and maximizes ROI',
+          features: ['Campaign Optimization', 'Customer Journey Mapping', 'Personalization Engine', 'ROI Tracking'],
+          href: '/services/intelligent-marketing-automation',
+          price: 'From $399/month',
+          rating: 4.9,
+          reviewCount: 234
         }
       ]
     },
@@ -85,65 +120,57 @@ export default function Services() {
       color: 'from-blue-600 to-cyan-600',
       services: [
         {
-          name: 'Cloud DevOps',
-          description: 'End-to-end cloud infrastructure and automated deployment solutions',
-          features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Auto-scaling'],
-          href: '/services/cloud-devops',
-          price: 'From $8,000',
+          name: 'Cloud-Native Application Development',
+          description: 'End-to-end cloud-native development with microservices architecture',
+          features: ['Microservices Design', 'Container Orchestration', 'CI/CD Pipelines', 'Performance Optimization'],
+          href: '/services/cloud-native-application-development',
+          price: 'From $25,000',
           rating: 4.9,
-          reviewCount: 234
-        },
-        {
-          name: 'Cloud FinOps Optimizer',
-          description: 'Cloud cost optimization and financial operations management',
-          features: ['Cost Analysis', 'Resource Optimization', 'Budget Management', 'ROI Tracking'],
-          href: '/services/cloud-finops-optimizer',
-          price: 'From $4,500',
-          rating: 4.8,
           reviewCount: 167
-        }
-      ]
-    },
-    {
-      name: 'Digital Solutions',
-      icon: Rocket,
-      description: 'Digital transformation and innovative technology solutions',
-      color: 'from-green-600 to-emerald-600',
-      services: [
-        {
-          name: 'Digital Twin',
-          description: 'Real-time digital simulation and monitoring solutions',
-          features: ['3D Modeling', 'Real-time Monitoring', 'Predictive Maintenance', 'Performance Analytics'],
-          href: '/services/digital-twin',
-          price: 'From $15,000',
-          rating: 4.9,
-          reviewCount: 78
         },
         {
-          name: 'IT Infrastructure',
-          description: 'Enterprise-grade IT infrastructure and network management',
-          features: ['Network Design', 'Server Management', 'Security Implementation', '24/7 Monitoring'],
-          href: '/services/it-infrastructure',
-          price: 'From $12,000',
+          name: 'Performance Monitoring Intelligence',
+          description: 'Advanced application performance monitoring with AI-powered insights',
+          features: ['Real-time Monitoring', 'AI Anomaly Detection', 'Performance Optimization', 'Root Cause Analysis'],
+          href: '/services/performance-monitoring-intelligence',
+          price: 'From $499/month',
           rating: 4.8,
-          reviewCount: 145
+          reviewCount: 134
+        },
+        {
+          name: 'API Management Intelligence',
+          description: 'Comprehensive API management with intelligent monitoring and security',
+          features: ['API Gateway Management', 'Intelligent Rate Limiting', 'Security & Authentication', 'Developer Portal'],
+          href: '/services/api-management-intelligence',
+          price: 'From $399/month',
+          rating: 4.9,
+          reviewCount: 89
         }
       ]
     },
     {
-      name: 'Cybersecurity',
+      name: 'Security & Compliance',
       icon: Shield,
-      description: 'Advanced security protocols and threat protection systems',
+      description: 'Advanced security protocols and regulatory compliance solutions',
       color: 'from-red-600 to-orange-600',
       services: [
         {
-          name: 'Zero Trust Architecture',
-          description: 'Advanced zero-trust security implementation and management',
-          features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
-          href: '/services/zero-trust-network-architecture',
-          price: 'From $18,000',
+          name: 'Zero Trust Security Implementation',
+          description: 'Comprehensive zero-trust security framework with continuous verification',
+          features: ['Identity Management', 'Network Segmentation', 'Continuous Monitoring', 'Threat Detection'],
+          href: '/services/zero-trust-security-implementation',
+          price: 'From $15,000',
           rating: 4.9,
           reviewCount: 134
+        },
+        {
+          name: 'Carbon Footprint Tracking Platform',
+          description: 'AI-powered platform for tracking and reducing carbon footprints',
+          features: ['Carbon Calculation', 'Real-time Monitoring', 'Reduction Recommendations', 'Sustainability Reporting'],
+          href: '/services/carbon-footprint-tracking',
+          price: 'From $299/month',
+          rating: 4.7,
+          reviewCount: 67
         }
       ]
     }
@@ -158,7 +185,7 @@ export default function Services() {
       color: 'from-violet-600 to-purple-600'
     },
     {
-      name: 'Blockchain Solutions',
+      name: 'Blockchain & Web3',
       icon: Lock,
       description: 'Enterprise blockchain implementation and DeFi solutions',
       href: '/services/blockchain-enterprise-solutions',
@@ -172,11 +199,39 @@ export default function Services() {
       color: 'from-green-600 to-teal-600'
     },
     {
-      name: 'Healthcare Technology',
+      name: 'Space Technology',
+      icon: Globe,
+      description: 'Satellite data analytics and space technology solutions',
+      href: '/services/space-technology',
+      color: 'from-indigo-600 to-blue-600'
+    },
+    {
+      name: 'Metaverse & AR/VR',
+      icon: Eye,
+      description: 'Virtual reality and metaverse business solutions',
+      href: '/services/metaverse-ar-vr',
+      color: 'from-purple-600 to-pink-600'
+    },
+    {
+      name: 'Autonomous Systems',
+      icon: Car,
+      description: 'AI-powered autonomous vehicle and robotic systems',
+      href: '/services/autonomous-systems',
+      color: 'from-orange-600 to-red-600'
+    },
+    {
+      name: 'Biotechnology & Health',
       icon: Heart,
       description: 'AI-powered healthcare solutions and medical technology',
-      href: '/services/healthcare-tech',
+      href: '/services/biotech-health',
       color: 'from-red-600 to-pink-600'
+    },
+    {
+      name: 'Green Technology',
+      icon: Leaf,
+      description: 'Sustainable technology and environmental solutions',
+      href: '/services/green-technology',
+      color: 'from-green-600 to-emerald-600'
     }
   ];
 
@@ -184,22 +239,32 @@ export default function Services() {
     {
       icon: Award,
       title: 'Proven Expertise',
-      description: '15+ years of technology innovation and successful project delivery'
+      description: '15+ years of technology innovation and successful project delivery across 25+ industries'
     },
     {
       icon: Users,
       title: 'Expert Team',
-      description: 'Certified professionals with deep industry knowledge and experience'
+      description: 'Certified professionals with deep industry knowledge and cutting-edge technology expertise'
     },
     {
       icon: Zap,
       title: 'Innovation First',
-      description: 'Cutting-edge solutions that keep you ahead of the competition'
+      description: 'Pioneering solutions in AI, quantum computing, blockchain, and emerging technologies'
     },
     {
       icon: Shield,
       title: 'Quality Assurance',
-      description: 'Rigorous testing and quality control for reliable solutions'
+      description: 'Rigorous testing, compliance, and quality control for enterprise-grade solutions'
+    },
+    {
+      icon: Rocket,
+      title: 'Rapid Implementation',
+      description: 'Fast deployment with 2-8 weeks average implementation time'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Proven ROI',
+      description: 'Average 350% return on investment across all our solutions'
     }
   ];
 
@@ -225,7 +290,7 @@ export default function Services() {
                 Our Comprehensive Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                From AI-powered micro SaaS to enterprise IT infrastructure, we provide end-to-end technology solutions that drive innovation and growth.
+                From AI-powered micro SaaS to quantum computing, blockchain, and emerging technologies, we provide comprehensive technology solutions across 25+ categories that drive innovation and growth.
               </p>
               
               {/* Contact Information */}
@@ -293,7 +358,7 @@ export default function Services() {
                 Our Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our comprehensive range of technology services designed to meet your business needs.
+                Explore our comprehensive range of 25+ technology service categories designed to meet your business needs across all industries.
               </p>
             </motion.div>
 
@@ -384,11 +449,11 @@ export default function Services() {
                 Emerging Technologies
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Stay ahead of the curve with our cutting-edge technology solutions and research initiatives.
+                Stay ahead of the curve with our cutting-edge emerging technology solutions including quantum computing, blockchain, space tech, and autonomous systems.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {emergingTechnologies.map((tech, index) => (
                 <motion.div
                   key={tech.name}
@@ -433,7 +498,7 @@ export default function Services() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {whyChooseUs.map((reason, index) => (
                 <motion.div
                   key={reason.title}
@@ -467,7 +532,7 @@ export default function Services() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our technology solutions can drive innovation, efficiency, and growth for your organization.
+                Let's discuss how our comprehensive technology solutions across 25+ categories can drive innovation, efficiency, and growth for your organization.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
