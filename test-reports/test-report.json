@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-08-29T16:21:01.493Z",
+  "timestamp": "2025-08-29T17:36:12.846Z",
   "summary": {
     "total": 6,
-    "passed": 6,
-    "failed": 0
+    "passed": 5,
+    "failed": 1
   },
   "results": {
     "unit": {
@@ -11,8 +11,8 @@
       "results": "No unit tests found\n"
     },
     "integration": {
-      "status": "success",
-      "results": "No integration tests found\n"
+      "status": "failure",
+      "results": "Command failed: npm run build"
     },
     "e2e": {
       "status": "success",
@@ -24,12 +24,12 @@
     },
     "accessibility": {
       "status": "success",
-      "results": "Lint check failed: Command failed: npm run lint\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n"
+      "results": "Lint check failed: Command failed: npm run lint\nsh: 1: eslint: not found\n"
     },
     "coverage": {
       "status": "success",
       "results": "Coverage generation failed\n"
     }
   },
-  "qualityGates": true
+  "qualityGates": false
 }
