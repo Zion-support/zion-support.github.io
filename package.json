@@ -129,6 +129,6 @@
     }
   },
   "resolutions": {
-    "@rollup/rollup-darwin-x64": "@rollup/rollup-linux-x64-gnu"
+    "rollup": "^4.18.0"
   }
 }
