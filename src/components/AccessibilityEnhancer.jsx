@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Switch } from '@/components/ui/switch';
+const Switch = ({ id, checked, onCheckedChange }) => (
+  <input id={id} type="checkbox" checked={checked} onChange={(e) => onCheckedChange?.(e.target.checked)} className="h-4 w-4" />
+);
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 export function AccessibilityEnhancer() {
