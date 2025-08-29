@@ -23,11 +23,13 @@ export default function Services() {
         { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: TrendingUp, description: 'Machine learning SEO optimization' },
         { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation' },
         { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool, description: 'Automated content creation' },
+        { name: 'AI Customer Success Prediction', href: '/services/ai-customer-success-prediction', icon: TrendingUp, description: 'Predict customer churn & success' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Intelligent supply chain management' },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced threat detection & response' },
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation' },
         { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization' },
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign, description: 'Intelligent financial insights' },
         { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'Self-directed research automation' },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: TrendingUp, description: 'Intelligent supply chain management' },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart, description: 'AI-powered healthcare solutions' },
         { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', icon: FileText, description: 'Automated legal document processing' },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart, description: 'Healthcare data insights' },
@@ -117,6 +119,27 @@ export default function Services() {
 
   const featuredServices = [
     {
+      name: '2025 Innovative Services',
+      href: '/innovative-services-landing-2025',
+      icon: Star,
+      description: 'Revolutionary Technology Services',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    {
+      name: '2025 Services Showcase',
+      href: '/comprehensive-services-showcase-2025',
+      icon: Star,
+      description: 'Complete Service Portfolio',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      name: '2025 Pricing Guide',
+      href: '/comprehensive-pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Complete Pricing & ROI Analysis',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
       name: '2026 Services Overview',
       href: '/ultimate-services-showcase-2026',
       icon: Star,
@@ -128,14 +151,14 @@ export default function Services() {
       href: '/comprehensive-services-showcase-2027',
       icon: Star,
       description: 'Cutting-edge Innovation & Emerging Tech',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       name: '2029 Cutting-Edge Services',
       href: '/zion-cutting-edge-services-2029',
       icon: Star,
       description: 'Future-ready Technology Solutions',
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-green-500 to-emerald-500'
     }
   ];
 

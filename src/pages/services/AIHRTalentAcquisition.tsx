@@ -1,3 +1,4 @@
+import React from 'react';
 import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Search, TrendingUp, Zap, Target, Clock, Briefcase, Globe } from 'lucide-react';
 
 export default function AIHRTalentAcquisition() {
@@ -101,56 +102,70 @@ export default function AIHRTalentAcquisition() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/pricing" className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center">
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-zion-slate-light/40 rounded-lg inline-flex items-center">
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
-            </div>
           </div>
         </div>
+      </section>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {[
-            { icon: Search, title: 'Smart Sourcing', desc: 'AI-powered candidate discovery and matching' },
-            { icon: TrendingUp, title: 'Quality Hires', desc: 'Predictive success modeling for better candidates' },
-            { icon: Clock, title: 'Faster Hiring', desc: 'Streamlined process from sourcing to onboarding' }
-          ].map((item) => (
-            <div key={item.title} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
-              <item.icon className="w-6 h-6 text-zion-cyan mb-3" />
-              <div className="text-zion-slate-dark font-semibold mb-2">{item.title}</div>
-              <div className="text-zion-slate-light text-sm">{item.desc}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-14 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Perfect For These Industries</h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            {useCases.map((uc) => (
-              <div key={uc} className="flex items-center">
-                <Target className="w-5 h-5 text-zion-cyan mr-3" />
-                <span className="text-zion-slate-dark">{uc}</span>
+      <section className="py-16 bg-zion-slate-light/10">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-zion-slate-dark text-center mb-12">Use Cases & Industries</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase) => (
+              <div key={useCase} className="bg-white rounded-xl p-6 shadow-md border border-zion-slate-light/20">
+                <Target className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">{useCase}</h3>
+                <p className="text-zion-slate-dark/70">Streamline your hiring process with AI-powered talent acquisition and candidate management.</p>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to transform your talent acquisition?</div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
-            </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
-            </a>
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Ready to Transform Your Hiring Process?</h2>
+          <p className="text-zion-slate-dark/70 text-lg">Get started with AI-powered talent acquisition today</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4">Start Free Trial</h3>
+            <p className="mb-6">Experience the power of AI-driven recruitment with our 14-day free trial</p>
+            <button className="bg-white text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors">
+              Start Free Trial
+            </button>
           </div>
-          <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
+          
+          <div className="bg-zion-slate-dark rounded-xl p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4">Schedule Demo</h3>
+            <p className="mb-6">See our platform in action with a personalized demo from our experts</p>
+            <button className="bg-zion-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan/80 transition-colors">
+              Schedule Demo
+            </button>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-zion-slate-dark text-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-8">Contact Our Team</h2>
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="flex items-center justify-center space-x-3">
+              <Phone className="h-6 w-6 text-zion-cyan" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center justify-center space-x-3">
+              <Mail className="h-6 w-6 text-zion-cyan" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center justify-center space-x-3">
+              <Globe className="h-6 w-6 text-zion-cyan" />
+              <span>https://ziontechgroup.com</span>
+            </div>
+          </div>
+          <p className="text-zion-slate-light">
+            Ready to revolutionize your hiring process? Contact us today to learn how AI-powered talent acquisition can transform your organization.
+          </p>
         </div>
       </section>
     </div>

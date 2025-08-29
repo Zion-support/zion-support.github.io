@@ -82,13 +82,13 @@ const footerSections = [
       { name: 'About Us', path: '/about', icon: Users },
       { name: 'Partners', path: '/partners', icon: Users },
       { name: 'Careers', path: '/careers', icon: Briefcase },
-      { name: 'Solutions', path: '/solutions', icon: Target },
       { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
       { name: 'Blog', path: '/blog', icon: Newspaper },
       { name: 'Contact', path: '/contact', icon: Phone },
-      { name: 'Leadership', path: '/leadership', icon: Users },
       { name: 'News', path: '/news', icon: Newspaper },
-      { name: 'Case Studies', path: '/case-studies', icon: FileText }
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Help Center', path: '/help', icon: HelpCircle }
     ]
   },
   {
@@ -117,7 +117,6 @@ const footerSections = [
       { name: 'Space Technology', path: '/space-tech', icon: Satellite },
       { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
       { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
-      { name: 'Green IT Solutions', path: '/green-it', icon: Leaf },
       { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock },
       { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
       { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: TrendingUp }
@@ -132,11 +131,8 @@ const footerSections = [
       { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
       { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
       { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
-      { name: 'Onsite IT Services', path: '/it-onsite-services', icon: Server },
-      { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
-      { name: 'Healthcare Solutions', path: '/healthcare-solutions', icon: Heart },
-      { name: 'Government Solutions', path: '/government-solutions', icon: Building },
-      { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', icon: Truck }
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
     ]
   },
   {
@@ -161,14 +157,13 @@ const footerSections = [
     links: [
       { name: 'Help Center', path: '/help', icon: HelpCircle },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Documentation', path: '/docs', icon: FileText },
-      { name: 'API Reference', path: '/api', icon: Code },
-      { name: 'Community', path: '/community', icon: Users },
       { name: 'Blog', path: '/blog', icon: BookOpen },
       { name: 'News', path: '/news', icon: Newspaper },
       { name: 'Case Studies', path: '/case-studies', icon: FileText },
       { name: 'Pricing', path: '/pricing', icon: DollarSign },
-      { name: 'Contact Support', path: '/contact', icon: MessageCircle }
+      { name: 'Contact Support', path: '/contact', icon: MessageCircle },
+      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+      { name: 'Sitemap', path: '/sitemap', icon: FileText }
     ]
   }
 ];
