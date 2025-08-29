@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -6,7 +7,7 @@ interface LoadingSpinnerProps {
   customColor?: string;
   text?: string;
   showText?: boolean;
-  variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple';
+  variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple' | 'skeleton';
   className?: string;
   ariaLabel?: string;
 }
@@ -31,8 +32,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   // Color classes
   const colorClasses = {
-    primary: 'text-cyan-400',
-    secondary: 'text-purple-400',
+    primary: 'text-zion-cyan',
+    secondary: 'text-zion-purple',
     white: 'text-white',
     custom: ''
   };
@@ -53,34 +54,84 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     switch (variant) {
       case 'dots':
         return (
-          <div className={`${baseClasses} flex space-x-1 justify-center items-center`} style={customStyle}>
-            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+          <div className={`${sizeClasses[size]} flex space-x-1 justify-center items-center`} style={customStyle}>
+            {[0, 1, 2].map((index) => (
+              <motion.div
+                key={index}
+                className="w-2 h-2 bg-current rounded-full"
+                animate={{
+                  y: [0, -8, 0],
+                  opacity: [1, 0.5, 1]
+                }}
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  delay: index * 0.2
+                }}
+              />
+            ))}
           </div>
         );
 
       case 'pulse':
         return (
-          <div className={`${baseClasses} bg-current rounded-full animate-pulse`} style={customStyle}></div>
+          <motion.div
+            className={`${sizeClasses[size]} bg-current rounded-full`}
+            style={customStyle}
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [1, 0.7, 1]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
         );
 
       case 'bars':
         return (
           <div className={`${sizeClasses[size]} flex space-x-1 justify-center items-center`} style={customStyle}>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '0ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '150ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '300ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '450ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+            {[0, 1, 2, 3].map((index) => (
+              <motion.div
+                key={index}
+                className="w-1 bg-current rounded-full"
+                style={{
+                  height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px'
+                }}
+                animate={{
+                  scaleY: [1, 1.5, 1],
+                  opacity: [0.5, 1, 0.5]
+                }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  delay: index * 0.15
+                }}
+              />
+            ))}
           </div>
         );
 
       case 'ripple':
         return (
           <div className={`${sizeClasses[size]} relative`}>
-            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-75"></div>
-            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-50" style={{ animationDelay: '150ms' }}></div>
-            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-25" style={{ animationDelay: '300ms' }}></div>
+            {[0, 1, 2].map((index) => (
+              <motion.div
+                key={index}
+                className="absolute inset-0 border-2 border-current rounded-full"
+                animate={{
+                  scale: [0, 1],
+                  opacity: [1, 0]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  delay: index * 0.5
+                }}
+              />
+            ))}
           </div>
         );
 
@@ -112,182 +163,158 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     }
   };
 
-  // Text size classes
-  const textSizeClasses = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-base',
-    xl: 'text-lg'
-  };
-
-  // Accessibility
-  const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`;
-  const isSpinning = variant === 'spinner' || variant === 'ripple';
-
   return (
-    <div 
-      className={`flex flex-col items-center justify-center space-y-2 ${className}`}
-      role="status"
-      aria-label={defaultAriaLabel}
-      aria-live="polite"
-    >
-      {/* Loading animation */}
-      <div 
-        className="relative"
-        style={color === 'custom' ? { color: customColor } : {}}
-      >
-        {renderSpinner()}
-        
-        {/* Screen reader text */}
-        <span className="sr-only">
-          {text}
-        </span>
-      </div>
-
-      {/* Optional text */}
+    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}>
+      {renderSpinner()}
       {showText && (
-        <div 
-          className={`${textSizeClasses[size]} text-center font-medium`}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className={`text-sm ${
+            color === 'custom' ? '' : colorClasses[color]
+          }`}
           style={color === 'custom' ? { color: customColor } : {}}
+          aria-label={ariaLabel || text}
         >
-          <span className={color === 'custom' ? '' : colorClasses[color]}>
-            {text}
-          </span>
-        </div>
-      )}
-
-      {/* Progress indicator for long operations */}
-      {variant === 'spinner' && (
-        <div className="w-full max-w-xs">
-          <div className="bg-slate-700 rounded-full h-1">
-            <div 
-              className="bg-gradient-to-r from-cyan-400 to-purple-400 h-1 rounded-full animate-pulse"
-              style={{ width: '60%' }}
-            ></div>
-          </div>
-        </div>
+          {text}
+        </motion.p>
       )}
     </div>
   );
 };
 
-// Specialized loading components for common use cases
-export const PageLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading page...' }) => (
-  <div className="min-h-screen bg-futuristic flex items-center justify-center">
-    <LoadingSpinner 
-      size="xl" 
-      variant="spinner" 
-      text={text} 
-      showText={true}
-      className="text-center"
-    />
-  </div>
+// Skeleton Components
+export const Skeleton: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <div className={`animate-pulse bg-zion-slate-light/20 rounded ${className}`} />
 );
 
-export const ButtonLoadingSpinner: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'sm' }) => (
-  <LoadingSpinner 
-    size={size} 
-    variant="spinner" 
-    color="white"
-    className="inline-flex"
-  />
-);
-
-export const InlineLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
-  <LoadingSpinner 
-    size="sm" 
-    variant="dots" 
-    text={text} 
-    showText={true}
-    className="inline-flex items-center space-x-2"
-  />
-);
-
-export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading amazing content...' }) => (
-  <div className="fixed inset-0 bg-futuristic/95 backdrop-blur-sm flex items-center justify-center z-50">
-    <div className="text-center">
-      <LoadingSpinner 
-        size="xl" 
-        variant="spinner" 
-        text={text} 
-        showText={true}
-        className="mb-4"
-      />
-      <div className="text-sm text-gray-400">
-        Powered by Zion Tech Group
+export const CardSkeleton: React.FC = () => (
+  <div className="bg-white dark:bg-zion-slate-dark rounded-lg p-6 shadow-sm border border-zion-slate-light/20">
+    <div className="flex items-center space-x-4 mb-4">
+      <Skeleton className="w-12 h-12 rounded-full" />
+      <div className="flex-1">
+        <Skeleton className="h-4 w-3/4 mb-2" />
+        <Skeleton className="h-3 w-1/2" />
       </div>
     </div>
+    <Skeleton className="h-4 w-full mb-2" />
+    <Skeleton className="h-4 w-5/6 mb-2" />
+    <Skeleton className="h-4 w-4/6" />
   </div>
 );
 
-// Loading overlay for components
-export const LoadingOverlay: React.FC<{ 
-  isLoading: boolean; 
-  children: React.ReactNode;
-  text?: string;
-  overlay?: boolean;
-}> = ({ isLoading, children, text = 'Loading...', overlay = true }) => {
-  if (!isLoading) return <>{children}</>;
-
-  if (overlay) {
-    return (
-      <div className="relative">
-        {children}
-        <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center">
-          <LoadingSpinner 
-            size="lg" 
-            variant="spinner" 
-            text={text} 
-            showText={true}
-            color="white"
-          />
+export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 3 }) => (
+  <div className="space-y-3">
+    {Array.from({ length: items }).map((_, index) => (
+      <div key={index} className="flex items-center space-x-3">
+        <Skeleton className="w-8 h-8 rounded-full" />
+        <div className="flex-1">
+          <Skeleton className="h-4 w-3/4 mb-1" />
+          <Skeleton className="h-3 w-1/2" />
         </div>
       </div>
-    );
-  }
-
-  return (
-    <div className="flex items-center justify-center p-8">
-      <LoadingSpinner 
-        size="lg" 
-        variant="spinner" 
-        text={text} 
-        showText={true}
-      />
-    </div>
-  );
-};
-
-// Skeleton loading component
-export const Skeleton: React.FC<{ 
-  className?: string;
-  lines?: number;
-  height?: string;
-}> = ({ className = '', lines = 1, height = 'h-4' }) => (
-  <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: lines }).map((_, index) => (
-      <div 
-        key={index}
-        className={`${height} bg-slate-700 rounded mb-2 ${index === lines - 1 ? 'w-3/4' : 'w-full'}`}
-      />
     ))}
   </div>
 );
 
-// Card skeleton
-export const CardSkeleton: React.FC<{ className?: string }> = ({ className = '' }) => (
-  <div className={`bg-slate-800/50 rounded-lg p-6 ${className}`}>
-    <div className="flex items-center space-x-4 mb-4">
-      <div className="w-12 h-12 bg-slate-700 rounded-full animate-pulse"></div>
-      <div className="flex-1">
-        <div className="h-4 bg-slate-700 rounded w-3/4 mb-2 animate-pulse"></div>
-        <div className="h-3 bg-slate-700 rounded w-1/2 animate-pulse"></div>
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
+  rows = 5, 
+  columns = 4 
+}) => (
+  <div className="overflow-hidden rounded-lg border border-zion-slate-light/20">
+    {/* Header */}
+    <div className="bg-zion-slate-light/10 px-6 py-3 border-b border-zion-slate-light/20">
+      <div className="flex space-x-4">
+        {Array.from({ length: columns }).map((_, index) => (
+          <Skeleton key={index} className="h-4 w-20" />
+        ))}
       </div>
     </div>
-    <div className="space-y-2">
-      <div className="h-3 bg-slate-700 rounded animate-pulse"></div>
-      <div className="h-3 bg-slate-700 rounded w-5/6 animate-pulse"></div>
-      <div className="h-3 bg-slate-700 rounded w-4/6 animate-pulse"></div>
+    
+    {/* Rows */}
+    <div className="divide-y divide-zion-slate-light/20">
+      {Array.from({ length: rows }).map((_, rowIndex) => (
+        <div key={rowIndex} className="px-6 py-4">
+          <div className="flex space-x-4">
+            {Array.from({ length: columns }).map((_, colIndex) => (
+              <Skeleton key={colIndex} className="h-4 w-24" />
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 );
+
+export const HeroSkeleton: React.FC = () => (
+  <div className="bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light rounded-2xl p-8 text-center">
+    <Skeleton className="w-32 h-32 mx-auto mb-6 rounded-full" />
+    <Skeleton className="h-8 w-3/4 mx-auto mb-4" />
+    <Skeleton className="h-6 w-1/2 mx-auto mb-6" />
+    <div className="flex justify-center space-x-4">
+      <Skeleton className="h-12 w-32 rounded-lg" />
+      <Skeleton className="h-12 w-32 rounded-lg" />
+    </div>
+  </div>
+);
+
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-white dark:bg-zion-slate-dark rounded-xl p-6 shadow-lg border border-zion-slate-light/20">
+    <div className="flex items-center space-x-4 mb-4">
+      <Skeleton className="w-16 h-16 rounded-lg" />
+      <div className="flex-1">
+        <Skeleton className="h-5 w-3/4 mb-2" />
+        <Skeleton className="h-4 w-1/2" />
+      </div>
+    </div>
+    <Skeleton className="h-4 w-full mb-2" />
+    <Skeleton className="h-4 w-5/6 mb-2" />
+    <Skeleton className="h-4 w-4/6 mb-4" />
+    <div className="flex justify-between items-center">
+      <Skeleton className="h-8 w-24 rounded-lg" />
+      <Skeleton className="h-8 w-32 rounded-lg" />
+    </div>
+  </div>
+);
+
+// Loading States
+export const PageLoading: React.FC = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <LoadingSpinner size="lg" variant="dots" showText text="Loading page..." />
+  </div>
+);
+
+export const ContentLoading: React.FC = () => (
+  <div className="flex items-center justify-center py-12">
+    <LoadingSpinner size="md" variant="pulse" showText text="Loading content..." />
+  </div>
+);
+
+export const ButtonLoading: React.FC = () => (
+  <LoadingSpinner size="sm" variant="spinner" color="white" />
+);
+
+// Loading Overlay
+export const LoadingOverlay: React.FC<{ 
+  isVisible: boolean; 
+  text?: string;
+  backdrop?: boolean;
+}> = ({ isVisible, text = 'Loading...', backdrop = true }) => {
+  if (!isVisible) return null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={`fixed inset-0 z-50 flex items-center justify-center ${
+        backdrop ? 'bg-black/50 backdrop-blur-sm' : ''
+      }`}
+    >
+      <div className="bg-white dark:bg-zion-slate-dark rounded-2xl p-8 shadow-2xl border border-zion-slate-light/20">
+        <LoadingSpinner size="lg" variant="dots" showText text={text} />
+      </div>
+    </motion.div>
+  );
+};
