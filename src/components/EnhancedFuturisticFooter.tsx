@@ -79,6 +79,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Revolutionary AI Services',
+      icon: Zap,
+      color: 'from-purple-600 to-cyan-600',
+      links: [
+        { name: 'AI Quantum Computing', href: '/services/ai-quantum-computing' },
+        { name: 'AI Space Technology', href: '/services/ai-space-technology' },
+        { name: 'AI Biotechnology', href: '/services/ai-biotechnology' }
+      ]
+    },
+    {
       title: 'Cloud & DevOps',
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',

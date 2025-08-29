@@ -4,9 +4,11 @@ import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Ro
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
+import { EnhancedSidebar } from '../components/EnhancedSidebar';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -60,6 +62,9 @@ export function AppHeader() {
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI Quantum Computing', href: '/services/ai-quantum-computing', icon: Zap, description: 'Revolutionary quantum solutions' },
+    { name: 'AI Space Technology', href: '/services/ai-space-technology', icon: Rocket, description: 'Space exploration & satellites' },
+    { name: 'AI Biotechnology', href: '/services/ai-biotechnology', icon: Dna, description: 'Healthcare & life sciences' },
   ];
 
   const servicesCategories = [
@@ -72,6 +77,16 @@ export function AppHeader() {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+      ]
+    },
+    {
+      name: 'Revolutionary AI',
+      icon: Zap,
+      color: 'from-purple-600 to-cyan-600',
+      services: [
+        { name: 'AI Quantum Computing', href: '/services/ai-quantum-computing', description: 'Quantum computing solutions' },
+        { name: 'AI Space Technology', href: '/services/ai-space-technology', description: 'Space exploration & satellites' },
+        { name: 'AI Biotechnology', href: '/services/ai-biotechnology', description: 'Healthcare & life sciences' }
       ]
     },
     {
@@ -203,6 +218,14 @@ export function AppHeader() {
                   <span>+1 302 464 0950</span>
                 </a>
               </div>
+
+              {/* Sidebar toggle button */}
+              <button
+                onClick={() => setSidebarOpen(true)}
+                className="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
 
               {/* Mobile menu button */}
               <button
@@ -404,9 +427,12 @@ export function AppHeader() {
                 </div>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
+                  </motion.div>
+      )}
+    </AnimatePresence>
+
+    {/* Enhanced Sidebar */}
+    <EnhancedSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+  </>
+);
 }

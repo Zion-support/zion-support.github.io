@@ -71,6 +71,11 @@ const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICyberse
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 
+// Revolutionary AI Services
+const AIQuantumComputing = React.lazy(() => import('./pages/services/AIQuantumComputing'));
+const AISpaceTechnology = React.lazy(() => import('./pages/services/AISpaceTechnology'));
+const AIBiotechnology = React.lazy(() => import('./pages/services/AIBiotechnology'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -167,6 +172,11 @@ function App() {
               <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
               <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
               <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              
+              {/* Revolutionary AI Services Routes */}
+              <Route path="/services/ai-quantum-computing" element={<AIQuantumComputing />} />
+              <Route path="/services/ai-space-technology" element={<AISpaceTechnology />} />
+              <Route path="/services/ai-biotechnology" element={<AIBiotechnology />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />

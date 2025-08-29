@@ -2,7 +2,7 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import { CheckCircle, ArrowRight, Zap, Rocket, Dna } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -95,6 +95,147 @@ export default function Home() {
                 <div className="text-sm text-gray-400">{stat.description}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Revolutionary Services Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary AI Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future of technology with our cutting-edge AI solutions that are transforming industries and pushing the boundaries of what's possible.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Quantum Computing */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300"
+            >
+              <div className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">AI Quantum Computing</h3>
+                <p className="text-gray-300 mb-6">
+                  Unlock exponential computational power with quantum algorithms and AI-powered optimization.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    Quantum machine learning
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    Unbreakable cryptography
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    Drug discovery acceleration
+                  </li>
+                </ul>
+                <div className="text-2xl font-bold text-purple-400 mb-4">From $2,999/month</div>
+                <Link 
+                  to="/services/ai-quantum-computing" 
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+                >
+                  Explore Quantum Computing
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Space Technology */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300"
+            >
+              <div className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Rocket className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">AI Space Technology</h3>
+                <p className="text-gray-300 mb-6">
+                  Explore the final frontier with AI-powered satellite operations and space exploration.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                    Autonomous satellites
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                    Space debris tracking
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                    Climate monitoring
+                  </li>
+                </ul>
+                <div className="text-2xl font-bold text-blue-400 mb-4">From $1,999/month</div>
+                <Link 
+                  to="/services/ai-space-technology" 
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300"
+                >
+                  Explore Space Technology
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Biotechnology */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-green-900/50 to-emerald-900/50 border border-green-500/30 hover:border-green-400/60 transition-all duration-300"
+            >
+              <div className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Dna className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">AI Biotechnology</h3>
+                <p className="text-gray-300 mb-6">
+                  Revolutionize healthcare with AI-powered drug discovery and personalized medicine.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    AI drug discovery
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    Genomic analysis
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    Personalized medicine
+                  </li>
+                </ul>
+                <div className="text-2xl font-bold text-green-400 mb-4">From $3,999/month</div>
+                <Link 
+                  to="/services/ai-biotechnology" 
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300"
+                >
+                  Explore Biotechnology
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
