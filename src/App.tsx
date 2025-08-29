@@ -82,8 +82,9 @@ const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealth
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
 const Training = React.lazy(() => import('./pages/Training'));
-const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
+const Support = React.lazy(() => import('./pages/Support'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const Security = React.lazy(() => import('./pages/Security'));
 const Compliance = React.lazy(() => import('./pages/Compliance'));
 
 const Careers = () => (
@@ -128,9 +129,13 @@ function App() {
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/help" element={<Help />} />
+              <Route path="/support" element={<Support />} />
               <Route path="/community" element={<Community />} />
               <Route path="/docs" element={<Documentation />} />
               <Route path="/training" element={<Training />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/compliance" element={<Compliance />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
