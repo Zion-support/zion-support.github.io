@@ -1,0 +1,136 @@
+name: Link Checker
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: link-checker
+  cancel-in-progress: false
+jobs:
+  check-links:
+    name: Check External Links
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install linkinator
+        run: npm install -g linkinator
+        
+      - name: Check external links
+        run: |
+          # Create a comprehensive list of external links to check
+          cat > external_links.txt << EOF
+          https://ziontechgroup.com
+          https://github.com/ziontechgroup
+          https://www.linkedin.com/company/zion-marketplace
+          https://www.facebook.com/zionmarketplace
+          https://instagram.com/ziontechgroup
+          https://twitter.com/ziontechgroup
+          https://ziontechgroup.com/services
+          https://ziontechgroup.com/about
+          https://ziontechgroup.com/contact
+          https://ziontechgroup.com/innovative-services-showcase-2026
+          EOF
+          
+          # Run linkinator on the external links
+          linkinator external_links.txt --format json > link_report.json || true
+          
+      - name: Analyze results
+        run: |
+          if [ -f link_report.json ]; then
+            # Count broken links
+            broken_count=$(jq '.links[] | select(.state=="BROKEN") | length' link_report.json 2>/dev/null || echo "0")
+            echo "Broken links found: $broken_count"
+            
+            # Create summary
+            echo "# Link Check Report" > LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "Generated on: $(date)" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "## Summary" >> LINK_REPORT.md
+            echo "- Total links checked: $(jq '.links | length' link_report.json 2>/dev/null || echo "0")" >> LINK_REPORT.md
+            echo "- Broken links: $broken_count" >> LINK_REPORT.md
+            echo "- Working links: $(($(jq '.links | length' link_report.json 2>/dev/null || echo "0") - broken_count))" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            
+            if [ "$broken_count" -gt 0 ]; then
+              echo "## Broken Links" >> LINK_REPORT.md
+              echo "| URL | Status | Error Details |" >> LINK_REPORT.md
+              echo "|-----|--------|---------------|" >> LINK_REPORT.md
+              jq -r '.links[] | select(.state=="BROKEN") | "| \(.url) | \(.status // "unknown") | \(.error // "N/A") |"' link_report.json >> LINK_REPORT.md 2>/dev/null || echo "| Error parsing results | | |" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              echo "## Recommendations" >> LINK_REPORT.md
+              echo "1. Check if the URLs are still valid" >> LINK_REPORT.md
+              echo "2. Update any outdated links" >> LINK_REPORT.md
+              echo "3. Verify domain ownership and accessibility" >> LINK_REPORT.md
+            else
+              echo "## Status" >> LINK_REPORT.md
+              echo "✅ All external links are working correctly!" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              echo "## Links Checked" >> LINK_REPORT.md
+              jq -r '.links[] | "- \(.url) - \(.status // "OK")"' link_report.json >> LINK_REPORT.md 2>/dev/null || echo "- Error parsing results" >> LINK_REPORT.md
+            fi
+            
+            echo "" >> LINK_REPORT.md
+            echo "## Workflow Information" >> LINK_REPORT.md
+            echo "- **Repository**: ${{ github.repository }}" >> LINK_REPORT.md
+            echo "- **Branch**: ${{ github.ref_name }}" >> LINK_REPORT.md
+            echo "- **Commit**: ${{ github.sha }}" >> LINK_REPORT.md
+            echo "- **Run ID**: ${{ github.run_id }}" >> LINK_REPORT.md
+          else
+            echo "# Link Check Report" > LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "Generated on: $(date)" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "## Error" >> LINK_REPORT.md
+            echo "❌ Failed to generate link report" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "## Troubleshooting" >> LINK_REPORT.md
+            echo "1. Check if linkinator installed correctly" >> LINK_REPORT.md
+            echo "2. Verify the external_links.txt file was created" >> LINK_REPORT.md
+            echo "3. Check workflow logs for detailed error messages" >> LINK_REPORT.md
+          fi
+          
+      - name: Create issue for broken links
+        if: failure()
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "External link check failed - broken links detected"
+          content-filepath: LINK_REPORT.md
+          labels: link-check,automated,broken-links,maintenance
+          assignees: ''
+          
+      - name: Upload report artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-report
+          path: |
+            LINK_REPORT.md
+            link_report.json
+            external_links.txt
+          retention-days: 30
+          
+      - name: Comment on PR if applicable
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('LINK_REPORT.md', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 🔗 Link Check Results\n\n${report}`
+            });
