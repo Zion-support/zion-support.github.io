@@ -101,10 +101,10 @@ export default function Signup() {
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       // Success - redirect or show success message
-      // console.log('Signup successful:', formData)
+      // // console.log('Signup successful:', formData)
       
     } catch (error) {
-      // console.error('Signup error:', error)
+      // // console.error('Signup error:', error)
     } finally {
       setIsSubmitting(false)
     }

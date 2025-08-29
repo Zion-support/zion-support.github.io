@@ -42,7 +42,7 @@ export class ErrorBoundary extends Component<Props, State> {
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo);
+      // // console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Call custom error handler if provided
@@ -81,9 +81,9 @@ export class ErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
 
-      // console.log('Error reported:', errorReport);
+      // // console.log('Error reported:', errorReport);
     } catch (reportingError) {
-      // console.warn('Failed to report error:', reportingError);
+      // // console.warn('Failed to report error:', reportingError);
     }
   };
 
@@ -119,9 +119,9 @@ Timestamp: ${new Date().toISOString()}
       try {
         await navigator.clipboard.writeText(errorDetails);
         // You could show a toast notification here
-        // console.log('Error details copied to clipboard');
+        // // console.log('Error details copied to clipboard');
       } catch (err) {
-        // console.warn('Failed to copy error details:', err);
+        // // console.warn('Failed to copy error details:', err);
       }
     }
   };
@@ -267,7 +267,7 @@ export function useErrorHandler() {
 
   const handleError = React.useCallback((error: Error) => {
     setError(error);
-    // console.error('Error caught by hook:', error);
+    // // console.error('Error caught by hook:', error);
   }, []);
 
   const clearError = React.useCallback(() => {

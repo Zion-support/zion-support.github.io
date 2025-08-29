@@ -152,7 +152,7 @@ print(response.result)`,
   if (verifySignature(signature, req.body)) {
     // Process webhook
     const event = req.body;
-    // console.log('Received event:', event.type);
+    // // console.log('Received event:', event.type);
   }
   
   res.status(200).send('OK');
