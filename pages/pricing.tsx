@@ -65,25 +65,29 @@ export default function PricingPage() {
       name: 'AI Model Training',
       description: 'Custom AI model development and training',
       price: 'From $2,500',
-      features: ['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
+      features: ['Custom Data Processing', 'Model Optimization', 'Performance Tuning'],
+      link: '/services/governed-ai-agents'
     },
     {
-      name: 'Quantum Computing Access',
-      description: 'Access to quantum computing resources',
-      price: 'From $5,000',
-      features: ['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
+      name: 'Cloud Cost Optimization',
+      description: 'Autonomous FinOps to cut cloud waste',
+      price: 'From $1,500/mo + % of savings',
+      features: ['Rightsizing', 'Idle cleanup', 'Anomaly alerts'],
+      link: '/services/cloud-cost-optimizer'
     },
     {
       name: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment',
       price: 'From $1,500',
-      features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
+      features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations'],
+      link: '/services/m365-security-copilot'
     },
     {
-      name: 'Cloud Migration',
-      description: 'Complete cloud infrastructure migration',
-      price: 'From $10,000',
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
+      name: 'Data Governance Setup',
+      description: 'Lineage, quality checks, policies',
+      price: 'From $6,000',
+      features: ['Lineage', 'Quality monitors', 'Policy-as-code'],
+      link: '/services/data-governance-observability'
     }
   ];
   const faqs = [
@@ -222,7 +226,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
                   <Link 
-                    href="/contact"
+                    href={service.link || '/contact'}
                     className="text-blue-400 hover:text-blue-300 font-medium text-sm"
                   >
                     Learn More →

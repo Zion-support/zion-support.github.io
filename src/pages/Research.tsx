@@ -1,3 +1,14 @@
+import React from 'react';
+
+export default function Research() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Research</h1>
+      <p className="text-zion-slate-light">Exploring emerging technologies and innovations.</p>
+    </div>
+  );
+}
+
 import React, { useState } from 'react';
 import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
 

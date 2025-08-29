@@ -1,3 +1,14 @@
+import React from 'react';
+
+export default function ServicesPage() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Services</h1>
+      <p className="text-zion-slate-light">Explore our AI, Cloud, Cybersecurity, and DevOps services.</p>
+    </div>
+  );
+}
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';

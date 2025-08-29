@@ -1,234 +1,252 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, 
   Filter, 
-  Grid, 
-  List, 
-  Star, 
-  MapPin, 
+  X, 
   Clock, 
-  DollarSign,
+  User, 
+  Tag, 
+  ArrowRight,
+  BookOpen,
+  FileText,
   Users,
-  Code,
-  Shield,
-  Cloud,
-  Brain,
-  Rocket,
   Zap,
-  Heart,
-  Building,
-  Cpu,
-  Lock,
+  Brain,
+  Cloud,
+  Shield,
   Globe,
+  Rocket,
   TrendingUp,
-  Award,
-  CheckCircle,
-  X,
-  SlidersHorizontal
+  Star,
+  Calendar,
+  Eye,
+  Heart,
+  Share2,
+  Bookmark
 } from 'lucide-react';
 
 interface SearchResult {
   id: string;
-  type: 'service' | 'talent' | 'equipment' | 'company';
   title: string;
-  description: string;
+  excerpt: string;
+  content: string;
+  type: 'service' | 'blog' | 'page' | 'documentation';
   category: string;
-  rating?: number;
-  reviewCount?: number;
-  price?: string;
-  location?: string;
   tags: string[];
-  image?: string;
-  path: string;
-  featured?: boolean;
+  author?: string;
+  date?: string;
+  readTime?: string;
+  views?: number;
+  rating?: number;
+  url: string;
+  icon: React.ReactNode;
+  color: string;
 }
 
-const mockSearchResults: SearchResult[] = [
-  {
-    id: '1',
-    type: 'service',
-    title: 'AI Business Intelligence Platform',
-    description: 'Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.',
-    category: 'AI & Analytics',
-    rating: 4.9,
-    reviewCount: 127,
-    price: '$2,500/mo',
-    location: 'Remote',
-    tags: ['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
-    path: '/services/ai-analytics',
-    featured: true
-  },
-  {
-    id: '2',
-    type: 'service',
-    title: 'Cybersecurity Suite',
-    description: 'Comprehensive security solution including threat detection, 24/7 monitoring, compliance management, and incident response.',
-    category: 'Cybersecurity',
-    rating: 4.8,
-    reviewCount: 89,
-    price: '$3,200/mo',
-    location: 'Remote',
-    tags: ['Security', 'Threat Detection', 'Compliance', 'Monitoring'],
-    path: '/services/cybersecurity',
-    featured: true
-  },
-  {
-    id: '3',
-    type: 'talent',
-    title: 'Senior AI Engineer',
-    description: 'Experienced AI engineer specializing in machine learning, deep learning, and natural language processing. Available for remote work.',
-    category: 'AI & Machine Learning',
-    rating: 4.9,
-    reviewCount: 45,
-    price: '$150/hr',
-    location: 'San Francisco, CA',
-    tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow', 'Remote'],
-    path: '/talent/ai-engineer'
-  },
-  {
-    id: '4',
-    type: 'equipment',
-    title: 'Quantum Computing Workstation',
-    description: 'High-performance quantum computing workstation for research and development. Includes latest quantum processors and development tools.',
-    category: 'Hardware',
-    price: '$25,000',
-    location: 'New York, NY',
-    tags: ['Quantum Computing', 'Hardware', 'Research', 'Development'],
-    path: '/equipment/quantum-workstation'
-  },
-  {
-    id: '5',
-    type: 'service',
-    title: 'Cloud Infrastructure Management',
-    description: 'Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability.',
-    category: 'Cloud & DevOps',
-    rating: 4.7,
-    reviewCount: 156,
-    price: '$1,800/mo',
-    location: 'Remote',
-    tags: ['Cloud', 'DevOps', 'Infrastructure', 'Scalability'],
-    path: '/services/cloud-devops'
-  },
-  {
-    id: '6',
-    type: 'talent',
-    title: 'DevOps Specialist',
-    description: 'DevOps engineer with expertise in AWS, Docker, Kubernetes, and CI/CD pipelines. Available for contract work.',
-    category: 'DevOps',
-    rating: 4.8,
-    reviewCount: 32,
-    price: '$120/hr',
-    location: 'Austin, TX',
-    tags: ['DevOps', 'AWS', 'Docker', 'Kubernetes', 'CI/CD'],
-    path: '/talent/devops-specialist'
-  }
-];
+interface SearchFilter {
+  type: string[];
+  category: string[];
+  tags: string[];
+  dateRange: string;
+}
 
-const categories = [
-  { id: 'all', name: 'All Categories', icon: Grid, count: 0 },
-  { id: 'services', name: 'Services', icon: Code, count: 0 },
-  { id: 'talent', name: 'Talent', icon: Users, count: 0 },
-  { id: 'equipment', name: 'Equipment', icon: Cpu, count: 0 },
-  { id: 'companies', name: 'Companies', icon: Building, count: 0 }
-];
-
-const filters = {
-  type: ['service', 'talent', 'equipment', 'company'],
-  category: ['AI & Analytics', 'Cybersecurity', 'Cloud & DevOps', 'IoT & Edge', 'Quantum Computing', 'Blockchain'],
-  location: ['Remote', 'On-site', 'Hybrid'],
-  priceRange: ['$0-$100', '$100-$500', '$500-$1000', '$1000+'],
-  rating: ['4.5+', '4.0+', '3.5+']
-};
-
-export default function SearchPage() {
+const SearchPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('q') || '');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [isLoading, setIsLoading] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
-  const [activeFilters, setActiveFilters] = useState({
-    type: [] as string[],
-    category: [] as string[],
-    location: [] as string[],
-    priceRange: [] as string[],
-    rating: [] as string[]
+  const [filters, setFilters] = useState<SearchFilter>({
+    type: [],
+    category: [],
+    tags: [],
+    dateRange: 'all'
   });
+
+  // Mock search results - in a real app, this would come from an API
+  const mockResults: SearchResult[] = [
+    {
+      id: '1',
+      title: 'AI Business Intelligence Solutions',
+      excerpt: 'Transform your business with cutting-edge AI-powered business intelligence solutions that provide real-time insights and predictive analytics.',
+      content: 'Our AI Business Intelligence solutions leverage machine learning algorithms to analyze vast amounts of data and provide actionable insights...',
+      type: 'service',
+      category: 'AI & Analytics',
+      tags: ['AI', 'Business Intelligence', 'Machine Learning', 'Analytics'],
+      author: 'Zion Tech Team',
+      date: '2024-12-15',
+      readTime: '5 min read',
+      views: 1247,
+      rating: 4.8,
+      url: '/services/ai-business-intelligence',
+      icon: <Brain className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      id: '2',
+      title: 'Cloud DevOps Best Practices',
+      excerpt: 'Learn the essential practices for implementing effective DevOps in cloud environments to accelerate development and deployment.',
+      content: 'Cloud DevOps combines the power of cloud computing with DevOps practices to create a more efficient and scalable development process...',
+      type: 'blog',
+      category: 'Cloud & DevOps',
+      tags: ['Cloud', 'DevOps', 'CI/CD', 'Automation'],
+      author: 'Sarah Chen',
+      date: '2024-12-10',
+      readTime: '8 min read',
+      views: 892,
+      rating: 4.6,
+      url: '/blog/cloud-devops-best-practices',
+      icon: <Cloud className="w-6 h-6" />,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      id: '3',
+      title: 'Cybersecurity Framework Implementation',
+      excerpt: 'Comprehensive guide to implementing enterprise-grade cybersecurity frameworks to protect your organization from evolving threats.',
+      content: 'Implementing a robust cybersecurity framework is essential for protecting sensitive data and maintaining business continuity...',
+      type: 'documentation',
+      category: 'Security',
+      tags: ['Cybersecurity', 'Framework', 'Compliance', 'Risk Management'],
+      author: 'Michael Rodriguez',
+      date: '2024-12-08',
+      readTime: '12 min read',
+      views: 1563,
+      rating: 4.9,
+      url: '/docs/cybersecurity-framework',
+      icon: <Shield className="w-6 h-6" />,
+      color: 'from-red-500 to-pink-500'
+    },
+    {
+      id: '4',
+      title: 'Digital Transformation Strategy',
+      excerpt: 'Strategic approach to digital transformation that aligns technology initiatives with business objectives for maximum impact.',
+      content: 'Digital transformation is not just about technology—it\'s about fundamentally changing how your business operates and delivers value...',
+      type: 'service',
+      category: 'Digital Innovation',
+      tags: ['Digital Transformation', 'Strategy', 'Innovation', 'Change Management'],
+      author: 'Zion Tech Team',
+      date: '2024-12-05',
+      readTime: '10 min read',
+      views: 2034,
+      rating: 4.7,
+      url: '/services/digital-transformation',
+      icon: <Rocket className="w-6 h-6" />,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      id: '5',
+      title: 'IoT Edge Computing Solutions',
+      excerpt: 'Next-generation IoT edge computing solutions that bring processing power closer to data sources for real-time decision making.',
+      content: 'Edge computing in IoT environments enables faster response times and reduced bandwidth usage by processing data locally...',
+      type: 'service',
+      category: 'IoT & Edge',
+      tags: ['IoT', 'Edge Computing', 'Real-time', 'Processing'],
+      author: 'Zion Tech Team',
+      date: '2024-12-03',
+      readTime: '7 min read',
+      views: 1156,
+      rating: 4.5,
+      url: '/services/iot-edge',
+      icon: <Zap className="w-6 h-6" />,
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      id: '6',
+      title: 'Micro SaaS Development Guide',
+      excerpt: 'Complete guide to building and launching successful micro SaaS applications with modern development practices.',
+      content: 'Micro SaaS applications offer entrepreneurs the opportunity to build focused, profitable software businesses...',
+      type: 'documentation',
+      category: 'Micro SaaS',
+      tags: ['SaaS', 'Development', 'Startup', 'Software'],
+      author: 'Emily Watson',
+      date: '2024-11-30',
+      readTime: '15 min read',
+      views: 987,
+      rating: 4.4,
+      url: '/docs/micro-saas-guide',
+      icon: <Globe className="w-6 h-6" />,
+      color: 'from-indigo-500 to-purple-500'
+    }
+  ];
+
+  const categories = ['AI & Analytics', 'Cloud & DevOps', 'Security', 'Digital Innovation', 'IoT & Edge', 'Micro SaaS'];
+  const types = ['service', 'blog', 'page', 'documentation'];
+  const allTags = ['AI', 'Machine Learning', 'Cloud', 'DevOps', 'Cybersecurity', 'Digital Transformation', 'IoT', 'SaaS', 'Analytics', 'Automation'];
 
   useEffect(() => {
     if (query) {
       performSearch(query);
+    } else {
+      setResults([]);
+      setFilteredResults([]);
     }
   }, [query]);
 
   useEffect(() => {
     applyFilters();
-  }, [activeFilters, results]);
+  }, [filters, results]);
 
   const performSearch = async (searchQuery: string) => {
-    setLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    setIsLoading(true);
     
-    const filtered = mockSearchResults.filter(item => 
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 800));
+    
+    // Filter mock results based on search query
+    const searchResults = mockResults.filter(result => 
+      result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      result.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      result.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      result.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
     
-    setResults(filtered);
-    setFilteredResults(filtered);
-    setLoading(false);
+    setResults(searchResults);
+    setIsLoading(false);
   };
 
   const applyFilters = () => {
     let filtered = [...results];
 
-    if (activeFilters.type.length > 0) {
-      filtered = filtered.filter(item => activeFilters.type.includes(item.type));
+    if (filters.type.length > 0) {
+      filtered = filtered.filter(result => filters.type.includes(result.type));
     }
 
-    if (activeFilters.category.length > 0) {
-      filtered = filtered.filter(item => activeFilters.category.includes(item.category));
+    if (filters.category.length > 0) {
+      filtered = filtered.filter(result => filters.category.includes(result.category));
     }
 
-    if (activeFilters.location.length > 0) {
-      filtered = filtered.filter(item => activeFilters.location.includes(item.location || 'Remote'));
+    if (filters.tags.length > 0) {
+      filtered = filtered.filter(result => 
+        result.tags.some(tag => filters.tags.includes(tag))
+      );
     }
 
-    if (activeFilters.rating.length > 0) {
-      filtered = filtered.filter(item => {
-        if (!item.rating) return false;
-        return activeFilters.rating.some(ratingFilter => {
-          const minRating = parseFloat(ratingFilter.replace('+', ''));
-          return item.rating! >= minRating;
-        });
-      });
+    if (filters.dateRange !== 'all') {
+      const now = new Date();
+      const cutoffDate = new Date();
+      
+      switch (filters.dateRange) {
+        case 'week':
+          cutoffDate.setDate(now.getDate() - 7);
+          break;
+        case 'month':
+          cutoffDate.setMonth(now.getMonth() - 1);
+          break;
+        case 'year':
+          cutoffDate.setFullYear(now.getFullYear() - 1);
+          break;
+      }
+      
+      filtered = filtered.filter(result => 
+        result.date && new Date(result.date) >= cutoffDate
+      );
     }
 
     setFilteredResults(filtered);
-  };
-
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
-    setActiveFilters(prev => ({
-      ...prev,
-      [filterType]: prev[filterType].includes(value)
-        ? prev[filterType].filter(v => v !== value)
-        : [...prev[filterType], value]
-    }));
-  };
-
-  const clearAllFilters = () => {
-    setActiveFilters({
-      type: [],
-      category: [],
-      location: [],
-      priceRange: [],
-      rating: []
-    });
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -238,427 +256,420 @@ export default function SearchPage() {
     }
   };
 
+  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
+    setFilters(prev => {
+      const currentValues = prev[filterType] as string[];
+      if (currentValues.includes(value)) {
+        return {
+          ...prev,
+          [filterType]: currentValues.filter(v => v !== value)
+        };
+      } else {
+        return {
+          ...prev,
+          [filterType]: [...currentValues, value]
+        };
+      }
+    });
+  };
+
+  const clearFilters = () => {
+    setFilters({
+      type: [],
+      category: [],
+      tags: [],
+      dateRange: 'all'
+    });
+  };
+
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'service': return Code;
-      case 'talent': return Users;
-      case 'equipment': return Cpu;
-      case 'company': return Building;
-      default: return Code;
+      case 'service':
+        return <Zap className="w-4 h-4" />;
+      case 'blog':
+        return <BookOpen className="w-4 h-4" />;
+      case 'documentation':
+        return <FileText className="w-4 h-4" />;
+      case 'page':
+        return <Users className="w-4 h-4" />;
+      default:
+        return <FileText className="w-4 h-4" />;
     }
   };
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Analytics': return Brain;
-      case 'Cybersecurity': return Shield;
-      case 'Cloud & DevOps': return Cloud;
-      case 'IoT & Edge': return Zap;
-      case 'Quantum Computing': return Rocket;
-      case 'Blockchain': return Lock;
-      default: return Code;
-    }
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'short', 
+      day: 'numeric' 
+    });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
-      <div className="container-responsive">
-        {/* Search Header */}
-        <motion.div 
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-4xl font-bold text-white mb-4">Search Results</h1>
-          <p className="text-zion-slate-light text-lg">
-            {query ? `Searching for "${query}"` : 'Enter your search query below'}
-          </p>
-        </motion.div>
-
-        {/* Search Form */}
-        <motion.div 
-          className="max-w-2xl mx-auto mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          <form onSubmit={handleSearch} className="relative">
-            <input
-              type="text"
-              placeholder="Search for services, talent, equipment, or companies..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg"
-            />
-            <button
-              type="submit"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-            >
-              <Search className="h-5 w-5" />
-            </button>
-          </form>
-        </motion.div>
-
-        {/* Filters and Results */}
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Filters Sidebar */}
-          <motion.div 
-            className="lg:w-80"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <SlidersHorizontal className="w-5 h-5 text-zion-cyan" />
-                  Filters
-                </h3>
+            <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Search className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Search Zion Tech Group
+            </h1>
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              Find services, documentation, blog posts, and resources to help transform your business with cutting-edge technology.
+            </p>
+            
+            {/* Search Form */}
+            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                <input
+                  type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search for services, articles, documentation..."
+                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-slate-600/30 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent backdrop-blur-md text-lg"
+                />
                 <button
-                  onClick={clearAllFilters}
-                  className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                  type="submit"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                 >
-                  Clear All
+                  Search
                 </button>
               </div>
-
-              {/* Type Filter */}
-              <div className="mb-6">
-                <h4 className="text-white font-medium mb-3">Type</h4>
-                <div className="space-y-2">
-                  {filters.type.map(type => (
-                    <label key={type} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={activeFilters.type.includes(type)}
-                        onChange={() => toggleFilter('type', type)}
-                        className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/20 rounded focus:ring-zion-cyan focus:ring-2"
-                      />
-                      <span className="text-zion-slate-light capitalize">{type}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Category Filter */}
-              <div className="mb-6">
-                <h4 className="text-white font-medium mb-3">Category</h4>
-                <div className="space-y-2">
-                  {filters.category.map(category => (
-                    <label key={category} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={activeFilters.category.includes(category)}
-                        onChange={() => toggleFilter('category', category)}
-                        className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/20 rounded focus:ring-zion-cyan focus:ring-2"
-                      />
-                      <span className="text-zion-slate-light">{category}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Location Filter */}
-              <div className="mb-6">
-                <h4 className="text-white font-medium mb-3">Location</h4>
-                <div className="space-y-2">
-                  {filters.location.map(location => (
-                    <label key={location} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={activeFilters.location.includes(location)}
-                        onChange={() => toggleFilter('location', location)}
-                        className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/20 rounded focus:ring-zion-cyan focus:ring-2"
-                      />
-                      <span className="text-zion-slate-light">{location}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Rating Filter */}
-              <div className="mb-6">
-                <h4 className="text-white font-medium mb-3">Minimum Rating</h4>
-                <div className="space-y-2">
-                  {filters.rating.map(rating => (
-                    <label key={rating} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={activeFilters.rating.includes(rating)}
-                        onChange={() => toggleFilter('rating', rating)}
-                        className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/20 rounded focus:ring-zion-cyan focus:ring-2"
-                      />
-                      <span className="text-zion-slate-light">{rating}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-            </div>
+            </form>
           </motion.div>
+        </div>
+      </div>
 
-          {/* Results */}
-          <div className="flex-1">
+      {/* Search Results */}
+      {query && (
+        <div className="container mx-auto px-4 py-12">
+          <div className="max-w-7xl mx-auto">
             {/* Results Header */}
-            <motion.div 
-              className="flex items-center justify-between mb-6"
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-col lg:flex-row gap-6 mb-8"
             >
-              <div className="flex items-center gap-4">
-                <h3 className="text-xl font-semibold text-white">
-                  {loading ? 'Searching...' : `${filteredResults.length} results found`}
-                </h3>
-                {Object.values(activeFilters).some(filters => filters.length > 0) && (
-                  <div className="flex gap-2">
-                    {Object.entries(activeFilters).map(([key, values]) =>
-                      values.map(value => (
-                        <span
-                          key={`${key}-${value}`}
-                          className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full flex items-center gap-2"
-                        >
-                          {value}
-                          <button
-                            onClick={() => toggleFilter(key as keyof typeof activeFilters, value)}
-                            className="hover:text-zion-cyan-light"
-                          >
-                            <X className="w-3 h-3" />
-                          </button>
-                        </span>
-                      ))
-                    )}
-                  </div>
-                )}
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-white mb-2">
+                  Search Results for "{query}"
+                </h2>
+                <p className="text-slate-400">
+                  {isLoading ? 'Searching...' : `${filteredResults.length} results found`}
+                </p>
               </div>
-
-              <div className="flex items-center gap-2">
+              
+              <div className="flex items-center gap-4">
                 <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-colors ${
-                    viewMode === 'grid' 
-                      ? 'bg-zion-cyan/20 text-zion-cyan' 
-                      : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+                  onClick={() => setShowFilters(!showFilters)}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
+                    showFilters
+                      ? 'border-cyan-500 bg-cyan-500/20 text-cyan-400'
+                      : 'border-slate-600/30 bg-white/5 text-white hover:bg-white/10'
                   }`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <Filter className="w-4 h-4" />
+                  Filters
                 </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-colors ${
-                    viewMode === 'list' 
-                      ? 'bg-zion-cyan/20 text-zion-cyan' 
-                      : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
-                </button>
+                
+                {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0 || filters.dateRange !== 'all') && (
+                  <button
+                    onClick={clearFilters}
+                    className="px-4 py-2 rounded-lg border border-slate-600/30 bg-white/5 text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-2"
+                  >
+                    <X className="w-4 h-4" />
+                    Clear
+                  </button>
+                )}
               </div>
             </motion.div>
 
-            {/* Loading State */}
-            {loading && (
-              <motion.div 
-                className="text-center py-12"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-              >
-                <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="text-zion-slate-light">Searching...</p>
-              </motion.div>
-            )}
-
-            {/* Results Grid/List */}
-            {!loading && (
-              <AnimatePresence mode="wait">
-                {viewMode === 'grid' ? (
+            <div className="flex flex-col lg:flex-row gap-8">
+              {/* Filters Sidebar */}
+              <AnimatePresence>
+                {showFilters && (
                   <motion.div
-                    key="grid"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="grid md:grid-cols-2 xl:grid-cols-3 gap-6"
+                    initial={{ opacity: 0, x: -20, width: 0 }}
+                    animate={{ opacity: 1, x: 0, width: 'auto' }}
+                    exit={{ opacity: 0, x: -20, width: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="lg:w-80 space-y-6"
                   >
+                    <div className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md">
+                      <h3 className="text-lg font-semibold text-white mb-4">Content Type</h3>
+                      <div className="space-y-3">
+                        {types.map((type) => (
+                          <label key={type} className="flex items-center gap-3 cursor-pointer">
+                            <input
+                              type="checkbox"
+                              checked={filters.type.includes(type)}
+                              onChange={() => toggleFilter('type', type)}
+                              className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
+                            />
+                            <span className="text-slate-300 capitalize">{type}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md">
+                      <h3 className="text-lg font-semibold text-white mb-4">Categories</h3>
+                      <div className="space-y-3">
+                        {categories.map((category) => (
+                          <label key={category} className="flex items-center gap-3 cursor-pointer">
+                            <input
+                              type="checkbox"
+                              checked={filters.category.includes(category)}
+                              onChange={() => toggleFilter('category', category)}
+                              className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
+                            />
+                            <span className="text-slate-300">{category}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md">
+                      <h3 className="text-lg font-semibold text-white mb-4">Tags</h3>
+                      <div className="space-y-3 max-h-48 overflow-y-auto">
+                        {allTags.map((tag) => (
+                          <label key={tag} className="flex items-center gap-3 cursor-pointer">
+                            <input
+                              type="checkbox"
+                              checked={filters.tags.includes(tag)}
+                              onChange={() => toggleFilter('tags', tag)}
+                              className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
+                            />
+                            <span className="text-slate-300">{tag}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md">
+                      <h3 className="text-lg font-semibold text-white mb-4">Date Range</h3>
+                      <div className="space-y-3">
+                        {[
+                          { value: 'all', label: 'All Time' },
+                          { value: 'week', label: 'Past Week' },
+                          { value: 'month', label: 'Past Month' },
+                          { value: 'year', label: 'Past Year' }
+                        ].map((option) => (
+                          <label key={option.value} className="flex items-center gap-3 cursor-pointer">
+                            <input
+                              type="radio"
+                              name="dateRange"
+                              value={option.value}
+                              checked={filters.dateRange === option.value}
+                              onChange={(e) => setFilters(prev => ({ ...prev, dateRange: e.target.value }))}
+                              className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 focus:ring-cyan-500 focus:ring-2"
+                            />
+                            <span className="text-slate-300">{option.label}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Results List */}
+              <div className="flex-1">
+                {isLoading ? (
+                  <div className="text-center py-12">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+                    <p className="text-slate-400">Searching...</p>
+                  </div>
+                ) : filteredResults.length > 0 ? (
+                  <div className="space-y-6">
                     {filteredResults.map((result, index) => (
                       <motion.div
                         key={result.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md hover:bg-white/10 transition-all duration-300"
                       >
-                        <Link
-                          to={result.path}
-                          className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
-                        >
-                          <div className="flex items-start justify-between mb-4">
-                            <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                              {result.type === 'service' ? 
-                                getCategoryIcon(result.category)({ className: "h-6 w-6 text-white" }) : 
-                                getTypeIcon(result.type)({ className: "h-6 w-6 text-white" })
-                              }
-                            </div>
-                            {result.featured && (
-                              <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                                Featured
+                        <div className="flex items-start gap-4">
+                          <div className={`w-12 h-12 bg-gradient-to-r ${result.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                            {result.icon}
+                          </div>
+                          
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-3 mb-2">
+                              <span className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full capitalize">
+                                {result.type}
                               </span>
-                            )}
-                          </div>
-
-                          <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-zion-cyan transition-colors">
-                            {result.title}
-                          </h3>
-                          <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
-                            {result.description}
-                          </p>
-
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-zion-cyan text-sm font-medium">{result.category}</span>
-                            {result.rating && (
-                              <div className="flex items-center gap-1">
-                                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                                <span className="text-white text-sm">{result.rating}</span>
-                                <span className="text-zion-slate-light text-sm">({result.reviewCount})</span>
-                              </div>
-                            )}
-                          </div>
-
-                          <div className="flex items-center justify-between">
-                            {result.price && (
-                              <span className="text-white font-semibold">{result.price}</span>
-                            )}
-                            {result.location && (
-                              <div className="flex items-center gap-1 text-zion-slate-light text-sm">
-                                <MapPin className="w-4 h-4" />
-                                {result.location}
-                              </div>
-                            )}
-                          </div>
-
-                          <div className="flex flex-wrap gap-2 mt-4">
-                            {result.tags.slice(0, 3).map(tag => (
-                              <span
-                                key={tag}
-                                className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
-                              >
-                                {tag}
+                              <span className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full">
+                                {result.category}
                               </span>
-                            ))}
-                          </div>
-                        </Link>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="list"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="space-y-4"
-                  >
-                    {filteredResults.map((result, index) => (
-                      <motion.div
-                        key={result.id}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
-                      >
-                        <Link
-                          to={result.path}
-                          className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
-                        >
-                          <div className="flex items-start gap-6">
-                            <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0">
-                              {result.type === 'service' ? 
-                                getCategoryIcon(result.category)({ className: "h-8 w-8 text-white" }) : 
-                                getTypeIcon(result.type)({ className: "h-8 w-8 text-white" })
-                              }
                             </div>
-
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-start justify-between mb-2">
-                                <h3 className="text-white font-semibold text-xl group-hover:text-zion-cyan transition-colors">
-                                  {result.title}
-                                </h3>
-                                {result.featured && (
-                                  <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full ml-4">
-                                    Featured
-                                  </span>
-                                )}
-                              </div>
-
-                              <p className="text-zion-slate-light mb-4">
-                                {result.description}
-                              </p>
-
-                              <div className="flex items-center gap-6 mb-4">
-                                <span className="text-zion-cyan font-medium">{result.category}</span>
-                                {result.rating && (
-                                  <div className="flex items-center gap-1">
-                                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                                    <span className="text-white">{result.rating}</span>
-                                    <span className="text-zion-slate-light">({result.reviewCount})</span>
-                                  </div>
-                                )}
-                                {result.price && (
-                                  <div className="flex items-center gap-1 text-white">
-                                    <DollarSign className="w-4 h-4" />
-                                    {result.price}
-                                  </div>
-                                )}
-                                {result.location && (
-                                  <div className="flex items-center gap-1 text-zion-slate-light">
-                                    <MapPin className="w-4 h-4" />
-                                    {result.location}
-                                  </div>
-                                )}
-                              </div>
-
+                            
+                            <h3 className="text-xl font-semibold text-white mb-2 hover:text-cyan-400 transition-colors duration-200">
+                              <a href={result.url} className="hover:underline">
+                                {result.title}
+                              </a>
+                            </h3>
+                            
+                            <p className="text-slate-300 mb-4 leading-relaxed">
+                              {result.excerpt}
+                            </p>
+                            
+                            <div className="flex items-center gap-6 text-sm text-slate-400 mb-4">
+                              {result.author && (
+                                <div className="flex items-center gap-2">
+                                  <User className="w-4 h-4" />
+                                  {result.author}
+                                </div>
+                              )}
+                              {result.date && (
+                                <div className="flex items-center gap-2">
+                                  <Calendar className="w-4 h-4" />
+                                  {formatDate(result.date)}
+                                </div>
+                              )}
+                              {result.readTime && (
+                                <div className="flex items-center gap-2">
+                                  <Clock className="w-4 h-4" />
+                                  {result.readTime}
+                                </div>
+                              )}
+                              {result.views && (
+                                <div className="flex items-center gap-2">
+                                  <Eye className="w-4 h-4" />
+                                  {result.views.toLocaleString()} views
+                                </div>
+                              )}
+                              {result.rating && (
+                                <div className="flex items-center gap-2">
+                                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                  {result.rating}
+                                </div>
+                              )}
+                            </div>
+                            
+                            <div className="flex items-center justify-between">
                               <div className="flex flex-wrap gap-2">
-                                {result.tags.map(tag => (
-                                  <span
-                                    key={tag}
-                                    className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-sm rounded-full"
-                                  >
+                                {result.tags.slice(0, 4).map((tag) => (
+                                  <span key={tag} className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full">
                                     {tag}
                                   </span>
                                 ))}
                               </div>
+                              
+                              <div className="flex items-center gap-2">
+                                <button className="p-2 text-slate-400 hover:text-white transition-colors duration-200">
+                                  <Heart className="w-4 h-4" />
+                                </button>
+                                <button className="p-2 text-slate-400 hover:text-white transition-colors duration-200">
+                                  <Bookmark className="w-4 h-4" />
+                                </button>
+                                <button className="p-2 text-slate-400 hover:text-white transition-colors duration-200">
+                                  <Share2 className="w-4 h-4" />
+                                </button>
+                                <a
+                                  href={result.url}
+                                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                                >
+                                  View
+                                  <ArrowRight className="w-4 h-4" />
+                                </a>
+                              </div>
                             </div>
                           </div>
-                        </Link>
+                        </div>
                       </motion.div>
                     ))}
-                  </motion.div>
+                  </div>
+                ) : (
+                  <div className="text-center py-12">
+                    <Search className="w-16 h-16 text-slate-500 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      No results found
+                    </h3>
+                    <p className="text-slate-400 mb-6">
+                      Try adjusting your search terms or filters to find what you're looking for.
+                    </p>
+                    <button
+                      onClick={clearFilters}
+                      className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                    >
+                      Clear Filters
+                    </button>
+                  </div>
                 )}
-              </AnimatePresence>
-            )}
-
-            {/* No Results */}
-            {!loading && filteredResults.length === 0 && (
-              <motion.div 
-                className="text-center py-12"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-              >
-                <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Search className="w-12 h-12 text-zion-cyan" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Try adjusting your search terms or filters to find what you're looking for.
-                </p>
-                <button
-                  onClick={clearAllFilters}
-                  className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-                >
-                  Clear All Filters
-                </button>
-              </motion.div>
-            )}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
+      {/* No Search Query State */}
+      {!query && (
+        <div className="container mx-auto px-4 py-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                What are you looking for?
+              </h2>
+              <p className="text-slate-300 mb-8 text-lg">
+                Search for our services, read our latest insights, or explore our comprehensive documentation.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Services</h3>
+                  <p className="text-slate-400 text-sm">
+                    AI, Cloud, Security, and more
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <BookOpen className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Resources</h3>
+                  <p className="text-slate-400 text-sm">
+                    Blog posts, case studies, guides
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <FileText className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
+                  <p className="text-slate-400 text-sm">
+                    Technical guides and tutorials
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
-}
+};
+
+export default SearchPage;

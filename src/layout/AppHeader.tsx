@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Target, BarChart3, Sparkles, GraduationCap, FileText } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,9 +38,11 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing-guide', current: false },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
+    { name: 'Request Quote', href: '/request-quote', current: false },
   ];
 
   const services = [
@@ -57,6 +59,21 @@ export function AppHeader() {
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: TrendingUp, description: 'Prioritize deals with ML' },
+    { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: '24/7 on-site assistant' },
+    { name: 'RAG Search', href: '/services/rag-search', icon: BookOpen, description: 'AI answers with citations' },
+    { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' },
+    { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', icon: ShoppingCart, description: 'Recos & search' },
+    { name: 'AI Sales Automation', href: '/innovative-services-showcase-2025', icon: TrendingUp, description: 'Complete sales automation suite' },
+    { name: 'AI Customer Support', href: '/innovative-services-showcase-2025', icon: MessageCircle, description: 'Intelligent support platform' },
+    { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', icon: DollarSign, description: 'Advanced financial insights' },
+    { name: 'AI Supply Chain', href: '/innovative-services-showcase-2025', icon: Settings, description: 'Supply chain optimization' },
+    { name: 'AI HR Platform', href: '/innovative-services-showcase-2025', icon: Users, description: 'HR automation & analytics' },
+    { name: 'AI Project Management', href: '/innovative-services-showcase-2025', icon: Target, description: 'Smart project optimization' },
+    { name: 'AI Marketing Automation', href: '/innovative-services-showcase-2025', icon: BarChart3, description: 'Marketing campaign optimization' },
+    { name: 'AI Learning Management', href: '/innovative-services-showcase-2025', icon: GraduationCap, description: 'Personalized learning platform' },
+    { name: 'AI Legal Automation', href: '/innovative-services-showcase-2025', icon: FileText, description: 'Legal document automation' },
+    { name: 'AI Healthcare Analytics', href: '/innovative-services-showcase-2025', icon: Heart, description: 'Healthcare insights platform' },
   ];
 
   const servicesCategories = [
@@ -68,7 +85,8 @@ export function AppHeader() {
         { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
         { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
         { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
+        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Latest cutting-edge solutions' }
       ]
     },
     {
@@ -79,7 +97,10 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Sales Automation Suite', href: '/innovative-services-showcase-2025', description: 'Complete sales automation' },
+        { name: 'AI Customer Support Platform', href: '/innovative-services-showcase-2025', description: 'Intelligent support system' },
+        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', description: 'Financial insights platform' }
       ]
     },
     {
@@ -89,7 +110,9 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
+        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'ML operations platform' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Edge AI & computing' }
       ]
     },
     {
@@ -99,7 +122,9 @@ export function AppHeader() {
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'IoT & edge solutions' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Enterprise blockchain' }
       ]
     },
     {
@@ -108,7 +133,34 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive security' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Quantum security' }
+      ]
+    },
+    {
+      name: 'Emerging Technologies',
+      icon: Sparkles,
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Quantum solutions' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech solutions' },
+        { name: 'Green IT', href: '/services/green-it', description: 'Sustainable technology' },
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech', description: 'Healthcare solutions' },
+        { name: 'Sustainability', href: '/services/sustainability', description: 'Environmental solutions' }
+      ]
+    },
+    {
+      name: 'Business Solutions',
+      icon: Briefcase,
+      color: 'from-teal-600 to-cyan-600',
+      services: [
+        { name: 'AI Supply Chain', href: '/innovative-services-showcase-2025', description: 'Supply chain optimization' },
+        { name: 'AI HR Platform', href: '/innovative-services-showcase-2025', description: 'HR automation' },
+        { name: 'AI Project Management', href: '/innovative-services-showcase-2025', description: 'Project optimization' },
+        { name: 'AI Marketing Automation', href: '/innovative-services-showcase-2025', description: 'Marketing optimization' },
+        { name: 'AI Learning Management', href: '/innovative-services-showcase-2025', description: 'Learning platform' },
+        { name: 'AI Legal Automation', href: '/innovative-services-showcase-2025', description: 'Legal automation' }
       ]
     }
   ];
@@ -122,7 +174,10 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Customer success automation' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Workflow automation' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'Data management' }
       ]
     },
     {
@@ -132,7 +187,9 @@ export function AppHeader() {
       solutions: [
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Edge computing solutions' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech solutions' }
       ]
     },
     {
@@ -142,7 +199,21 @@ export function AppHeader() {
       solutions: [
         { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-        { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' }
+        { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+        { name: 'Comprehensive Services', href: '/comprehensive-services', description: 'Complete service portfolio' }
+      ]
+    },
+    {
+      name: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-blue-600 to-cyan-600',
+      solutions: [
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Lead prioritization' },
+        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', description: 'Customer support' },
+        { name: 'RAG Search', href: '/services/rag-search', description: 'AI-powered search' },
+        { name: 'E-commerce Personalization', href: '/services/ecommerce-personalization', description: 'Personalized shopping' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'Customer insights' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Email automation' }
       ]
     }
   ];
@@ -152,6 +223,10 @@ export function AppHeader() {
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'All Services', href: '/services-overview', icon: Settings, description: 'Complete service catalog' },
+    { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'AI-powered solutions' },
+    { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart, description: 'Scalable software solutions' }
   ];
 
   const companyCategories = [
@@ -238,7 +313,7 @@ export function AppHeader() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
               {mainNavigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
@@ -271,7 +346,7 @@ export function AppHeader() {
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 pl-10 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 text-sm"
+                  className="w-48 xl:w-64 pl-10 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 text-sm"
                 />
               </form>
 
@@ -279,7 +354,7 @@ export function AppHeader() {
               <ThemeToggle />
 
               {/* Contact Info */}
-              <div className="hidden lg:flex items-center space-x-4 text-sm text-slate-300">
+              <div className="hidden lg:flex items-center gap-3 xl:gap-4 text-sm text-slate-300">
                 <a href="tel:+13024640950" className="flex items-center space-x-1 hover:text-cyan-400 transition-colors">
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>

@@ -18,11 +18,11 @@ const Terms = React.lazy(() => import('./pages/Terms.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 
 // Services pages
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
-const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.jsx'));
 
 // Marketplace pages
-const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
 
 // Support pages
 const Support = React.lazy(() => import('./pages/Support.tsx'));
@@ -43,6 +43,7 @@ const Categories = React.lazy(() => import('./pages/Categories.tsx'));
 
 // API Playground
 const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
+const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePricing.jsx'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -50,6 +51,9 @@ const LoadingSpinner = () => (
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
   </div>
 );
+
+// Pricing
+const Pricing = React.lazy(() => import('./pages/Pricing.tsx'));
 
 function App() {
   return (
@@ -72,7 +76,7 @@ function App() {
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/pricing" element={<ComprehensivePricing />} />
+              <Route path="/pricing" element={<Pricing />} />
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />

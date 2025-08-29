@@ -36,12 +36,12 @@
     "plugins": []
   },
   "include": [
-    "src/**/*.js",
-    "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.tsx"
   ],
   "exclude": [
+    "src/**/*.js",
+    "src/**/*.jsx",
     "src/components.disabled",
     "src/components.disabled/**/*",
     "src_disabled/**/*",
