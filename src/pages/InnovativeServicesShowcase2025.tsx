@@ -33,78 +33,7 @@ import {
   Lightbulb,
   Sparkles
 } from 'lucide-react';
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-
-const categoryIcons: Record<string, React.ReactNode> = {
-  'AI & Analytics': <Brain className="w-6 h-6" />,
-  'AI & Sales': <TrendingUp className="w-6 h-6" />,
-  'AI & Support': <MessageCircle className="w-6 h-6" />,
-  'AI & Finance': <DollarSign className="w-6 h-6" />,
-  'AI & Operations': <Settings className="w-6 h-6" />,
-  'AI & HR': <Users className="w-6 h-6" />,
-  'AI & Management': <Target className="w-6 h-6" />,
-  'AI & Marketing': <BarChart3 className="w-6 h-6" />,
-  'AI & Education': <GraduationCap className="w-6 h-6" />,
-  'AI & Legal': <FileText className="w-6 h-6" />,
-  'AI & Healthcare': <Heart className="w-6 h-6" />,
-  'Cybersecurity': <Shield className="w-6 h-6" />,
-  'Cloud & DevOps': <Cloud className="w-6 h-6" />,
-  'IoT & Edge': <Cpu className="w-6 h-6" />,
-  'Blockchain': <Lock className="w-6 h-6" />,
-  'Quantum Computing': <Atom className="w-6 h-6" />,
-  'Sustainability': <Leaf className="w-6 h-6" />,
-  'Space Tech': <Satellite className="w-6 h-6" />,
-  'FinTech': <DollarSign className="w-6 h-6" />,
-  'Healthcare': <Heart className="w-6 h-6" />,
-  'E-commerce': <ShoppingCart className="w-6 h-6" />,
-  'Content & Media': <BookOpen className="w-6 h-6" />,
-  'Productivity': <Settings className="w-6 h-6" />,
-  'Analytics': <BarChart3 className="w-6 h-6" />,
-  'Automation': <Zap className="w-6 h-6" />,
-  'Innovation': <Lightbulb className="w-6 h-6" />,
-  'Emerging Tech': <Sparkles className="w-6 h-6" />
-};
-
-const categoryColors: Record<string, string> = {
-  'AI & Analytics': 'from-purple-600 to-pink-600',
-  'AI & Sales': 'from-blue-600 to-cyan-600',
-  'AI & Support': 'from-green-600 to-emerald-600',
-  'AI & Finance': 'from-yellow-600 to-orange-600',
-  'AI & Operations': 'from-indigo-600 to-purple-600',
-  'AI & HR': 'from-pink-600 to-rose-600',
-  'AI & Management': 'from-cyan-600 to-blue-600',
-  'AI & Marketing': 'from-orange-600 to-red-600',
-  'AI & Education': 'from-emerald-600 to-green-600',
-  'AI & Legal': 'from-violet-600 to-purple-600',
-  'AI & Healthcare': 'from-red-600 to-pink-600',
-  'Cybersecurity': 'from-red-600 to-orange-600',
-  'Cloud & DevOps': 'from-blue-600 to-indigo-600',
-  'IoT & Edge': 'from-green-600 to-teal-600',
-  'Blockchain': 'from-yellow-600 to-orange-600',
-  'Quantum Computing': 'from-purple-600 to-indigo-600',
-  'Sustainability': 'from-green-600 to-emerald-600',
-  'Space Tech': 'from-indigo-600 to-purple-600',
-  'FinTech': 'from-emerald-600 to-teal-600',
-  'Healthcare': 'from-red-600 to-pink-600',
-  'E-commerce': 'from-blue-600 to-cyan-600',
-  'Content & Media': 'from-purple-600 to-pink-600',
-  'Productivity': 'from-orange-600 to-red-600',
-  'Analytics': 'from-cyan-600 to-blue-600',
-  'Automation': 'from-green-600 to-emerald-600',
-  'Innovation': 'from-yellow-600 to-orange-600',
-  'Emerging Tech': 'from-purple-600 to-indigo-600'
-};
-
-export default function InnovativeServicesShowcase2025() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-=======
 import { additionalInnovativeMicroSaasServices } from '../data/innovativeMicroSaasServices2025';
-
 export default function InnovativeServicesShowcase2025() {
   const featuredServices = [
     {
@@ -148,16 +77,12 @@ export default function InnovativeServicesShowcase2025() {
       category: 'Healthcare'
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
-
   const categories = useMemo(() => {
     const cats = [...new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2025.map(service => service.category))];
     return cats.sort();
   }, []);
-
   const filteredServices = useMemo(() => {
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-
     // Filter by search query
     if (searchQuery) {
       filtered = filtered.filter(service =>
@@ -166,12 +91,10 @@ export default function InnovativeServicesShowcase2025() {
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     }
-
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
-
     // Filter by price range
     if (priceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -188,7 +111,6 @@ export default function InnovativeServicesShowcase2025() {
         }
       });
     }
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -204,24 +126,20 @@ export default function InnovativeServicesShowcase2025() {
           return 0;
       }
     });
-
     return filtered;
   }, [searchQuery, selectedCategory, priceRange, sortBy]);
-
   const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Innovative Micro SAAS Services 2025 - Zion Tech Group"
         description="Discover our cutting-edge micro SAAS services for 2025. AI-powered solutions, quantum cybersecurity, edge computing, and more. Transform your business with innovative technology."
       />
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -266,7 +184,6 @@ export default function InnovativeServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information Banner */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-8 px-4">
         <div className="max-w-7xl mx-auto">
@@ -304,7 +221,6 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -321,7 +237,6 @@ export default function InnovativeServicesShowcase2025() {
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-
               {/* Category Filter */}
               <div>
                 <select
@@ -335,7 +250,6 @@ export default function InnovativeServicesShowcase2025() {
                   ))}
                 </select>
               </div>
-
               {/* Price Range Filter */}
               <div>
                 <select
@@ -349,7 +263,6 @@ export default function InnovativeServicesShowcase2025() {
                   <option value="high">Over $3,000</option>
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <select
@@ -367,7 +280,6 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -379,7 +291,6 @@ export default function InnovativeServicesShowcase2025() {
               Discover cutting-edge solutions designed to transform your business operations
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -403,11 +314,9 @@ export default function InnovativeServicesShowcase2025() {
                         <div className="text-sm text-gray-300">per month</div>
                       </div>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                       {service.title}
                     </h3>
-                    
                     <div className="flex items-center space-x-2 mb-3">
                       <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">
                         {service.category}
@@ -419,12 +328,10 @@ export default function InnovativeServicesShowcase2025() {
                       )}
                     </div>
                   </div>
-
                   {/* Description */}
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {service.description}
                   </div>
-
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -442,7 +349,6 @@ export default function InnovativeServicesShowcase2025() {
                       )}
                     </div>
                   </div>
-
                   {/* Benefits */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
@@ -455,7 +361,6 @@ export default function InnovativeServicesShowcase2025() {
                       ))}
                     </div>
                   </div>
-
                   {/* Technical Specs */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Technology:</h4>
@@ -472,7 +377,6 @@ export default function InnovativeServicesShowcase2025() {
                       )}
                     </div>
                   </div>
-
                   {/* Market Info */}
                   <div className="mb-6">
                     <div className="grid grid-cols-2 gap-3 text-xs">
@@ -486,7 +390,6 @@ export default function InnovativeServicesShowcase2025() {
                       </div>
                     </div>
                   </div>
-
                   {/* CTA Button */}
                   <div className="flex space-x-3">
                     <a
@@ -503,7 +406,6 @@ export default function InnovativeServicesShowcase2025() {
                       <Phone className="w-4 h-4" />
                     </a>
                   </div>
-
                   {/* Additional Info */}
                   <div className="mt-4 pt-4 border-t border-white/20">
                     <div className="grid grid-cols-2 gap-4 text-xs text-gray-400">
@@ -523,7 +425,6 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </div>
-
       {/* Featured Services */}
       <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50">
         <div className="container mx-auto px-4">
@@ -540,7 +441,6 @@ export default function InnovativeServicesShowcase2025() {
               Discover our most advanced and in-demand micro SAAS solutions
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
@@ -560,7 +460,6 @@ export default function InnovativeServicesShowcase2025() {
                     <div className="text-gray-400 text-sm">per month</div>
                   </div>
                 </div>
-
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-gray-700/50 rounded-lg">
                     <div className="text-2xl font-bold text-green-400">{service.roi}</div>
@@ -571,7 +470,6 @@ export default function InnovativeServicesShowcase2025() {
                     <div className="text-gray-300 text-sm">Delivery</div>
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <div className="grid grid-cols-1 gap-2">
@@ -583,7 +481,6 @@ export default function InnovativeServicesShowcase2025() {
                     ))}
                   </div>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Star className="w-5 h-5 text-yellow-400 fill-current" />
@@ -602,7 +499,6 @@ export default function InnovativeServicesShowcase2025() {
             </motion.div>
           ))}
         </div>
-
       {/* Market Insights */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -619,7 +515,6 @@ export default function InnovativeServicesShowcase2025() {
               Our services deliver exceptional returns on investment with proven market performance
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -631,7 +526,6 @@ export default function InnovativeServicesShowcase2025() {
               <div className="text-3xl font-bold text-white mb-2">400%</div>
               <div className="text-gray-300">Average ROI</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -642,7 +536,6 @@ export default function InnovativeServicesShowcase2025() {
               <div className="text-3xl font-bold text-white mb-2">10,000+</div>
               <div className="text-gray-300">Active Users</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -653,7 +546,6 @@ export default function InnovativeServicesShowcase2025() {
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-300">Uptime SLA</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -667,7 +559,6 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Call to Action Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -684,7 +575,6 @@ export default function InnovativeServicesShowcase2025() {
               Let's discuss how our innovative micro SaaS solutions can drive growth, 
               efficiency, and competitive advantage for your organization.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
@@ -697,7 +587,6 @@ export default function InnovativeServicesShowcase2025() {
                   {contactInfo.phone}
                 </a>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
@@ -709,7 +598,6 @@ export default function InnovativeServicesShowcase2025() {
                   {contactInfo.email}
                 </a>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <Globe className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Website</h3>
@@ -725,7 +613,6 @@ export default function InnovativeServicesShowcase2025() {
                 </a>
               </div>
             </div>
-
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Schedule a Free Consultation
