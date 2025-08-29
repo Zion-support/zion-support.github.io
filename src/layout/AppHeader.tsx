@@ -61,16 +61,16 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
+      name: 'AI Content Generator', 
+      href: '/services/ai-content-generator', 
       icon: PenTool, 
       description: 'Content Generation & Optimization',
       featured: true,

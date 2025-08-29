@@ -97,36 +97,36 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'All Services', href: '/services', featured: true },
         { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
-        { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
-        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
-        { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
-        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
-        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
-        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
-        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
-        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
-        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
-        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true },
-        { name: 'AI Marketing Automation', href: '/services#ai-marketing-automation', featured: true },
-        { name: 'AI Customer Support', href: '/services#ai-customer-support', featured: true },
-        { name: 'AI HR & Recruitment', href: '/services#ai-hr', featured: true },
-        { name: 'AI Content Creation', href: '/services#ai-content-creation', featured: true }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
+        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis', featured: true },
+        { name: 'AI Research & Discovery', href: '/services/ai-autonomous-research-assistant', featured: true },
+        { name: 'AI Green Technology', href: '/services/green-it', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services/ai-quantum-hybrid-platform', featured: true },
+        { name: 'AI Space Technology', href: '/services/space-tech', featured: true },
+        { name: 'AI FinTech Platform', href: '/services/ai-financial-trading', featured: true },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Quality Assurance', href: '/services/ai-predictive-maintenance', featured: true },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support', featured: true },
+        { name: 'AI HR & Recruitment', href: '/services/ai-hr-platform', featured: true },
+        { name: 'AI Content Creation', href: '/services/ai-content-generator', featured: true }
       ]
     },
     {
       title: 'Infrastructure & Security',
       featured: true,
       links: [
-        { name: 'Zero Trust Security', href: '/services#zero-trust-security', featured: true },
-        { name: 'AI Ethics & Governance', href: '/services#ai-ethics-guardian', featured: true },
-        { name: 'Cybersecurity Solutions', href: '/services#cybersecurity', featured: true },
-        { name: 'Cloud & DevOps', href: '/services#cloud-devops', featured: true },
-        { name: 'Data Analytics', href: '/services#data-analytics', featured: true },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure', featured: true },
-        { name: 'Digital Twin Solutions', href: '/services#digital-twin', featured: true },
-        { name: 'IoT & Edge Computing', href: '/services#iot-edge', featured: true },
-        { name: 'Blockchain & Web3', href: '/services#blockchain', featured: true },
-        { name: 'Quantum Computing', href: '/services#quantum-computing', featured: true }
+        { name: 'Zero Trust Security', href: '/services/zero-trust-network-access', featured: true },
+        { name: 'AI Ethics & Governance', href: '/services/ai-cybersecurity', featured: true },
+        { name: 'Cybersecurity Solutions', href: '/services/cybersecurity', featured: true },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', featured: true },
+        { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
+        { name: 'Digital Twin Solutions', href: '/services/digital-twin', featured: true },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', featured: true },
+        { name: 'Blockchain & Web3', href: '/services/blockchain', featured: true },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true }
       ]
     },
     {
@@ -151,14 +151,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
         { name: 'Enterprise Solutions', href: '/solutions', featured: true },
-        { name: 'AI Workflow Automation', href: '/services#ai-workflow-automation', featured: true },
-        { name: 'AI Project Management', href: '/services#ai-project-management', featured: true },
-        { name: 'AI Marketing Automation', href: '/services#ai-marketing-automation', featured: true },
-        { name: 'AI HR & Recruitment', href: '/services#ai-hr', featured: true },
-        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
-        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true },
-        { name: 'AI Sales Intelligence', href: '/services#ai-sales-intelligence', featured: true },
-        { name: 'AI Innovation Management', href: '/services#ai-innovation-management', featured: true }
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
+        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI HR & Recruitment', href: '/services/ai-hr-platform', featured: true },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Quality Assurance', href: '/services/ai-predictive-maintenance', featured: true },
+        { name: 'AI Sales Intelligence', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI Innovation Management', href: '/services/ai-workflow-orchestrator', featured: true }
       ]
     },
     {
