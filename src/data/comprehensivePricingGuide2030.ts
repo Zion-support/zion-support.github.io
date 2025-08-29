@@ -1,413 +1,466 @@
 import { ProductListing } from "@/types/listings";
-import { COMPREHENSIVE_SERVICES_INDEX_2030 } from "./comprehensiveServicesIndex2030";
+
+// Comprehensive Pricing Guide 2030 - Zion Tech Group
+// Transparent pricing for all services with market comparisons and ROI analysis
 
 export interface PricingTier {
   name: string;
   price: number;
-  currency: string;
-  billingCycle: string;
+  monthlyPrice: number;
+  description: string;
   features: string[];
-  limitations: string[];
   bestFor: string;
-  popular?: boolean;
+  setupTime: string;
+  support: string;
+  roi: string;
 }
 
 export interface ServicePricing {
   serviceId: string;
   serviceName: string;
   category: string;
-  basePrice: number;
-  currency: string;
-  pricingModel: string;
-  tiers: PricingTier[];
   marketPrice: string;
+  ourPrice: string;
+  savings: string;
+  pricingTiers: PricingTier[];
   competitors: string[];
+  valueProposition: string;
   roi: string;
   setupTime: string;
-  customPricing: boolean;
-  volumeDiscounts: boolean;
-  enterpriseOptions: boolean;
+  support: string;
 }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
-  // AI-Powered Business Intelligence Suite
+export const COMPREHENSIVE_PRICING_2030: ServicePricing[] = [
   {
-    serviceId: "ai-powered-business-intelligence-suite",
-    serviceName: "AI-Powered Business Intelligence Suite",
-    category: "AI & Business Intelligence",
-    basePrice: 4999,
-    currency: "$",
-    pricingModel: "Subscription + Usage",
-    tiers: [
+    serviceId: 'ai-autonomous-research-assistant-2030',
+    serviceName: 'AI Autonomous Research Assistant 2030',
+    category: 'AI & Research',
+    marketPrice: '$5,000 - $15,000',
+    ourPrice: '$2,499',
+    savings: '50-83%',
+    pricingTiers: [
       {
-        name: "Starter",
+        name: 'Starter',
+        price: 2499,
+        monthlyPrice: 249,
+        description: 'Perfect for small research teams and startups',
+        features: [
+          'Autonomous market research and analysis',
+          'Real-time competitive intelligence',
+          'Predictive trend forecasting',
+          'Basic dashboard and reporting',
+          'Email support',
+          'Up to 5 research projects'
+        ],
+        bestFor: 'Startups, small research teams, individual researchers',
+        setupTime: '2-4 weeks',
+        support: 'Email support + documentation',
+        roi: '800%'
+      },
+      {
+        name: 'Professional',
         price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
+        monthlyPrice: 499,
+        description: 'Ideal for growing research organizations',
         features: [
-          "Basic AI analytics",
-          "Up to 5 data sources",
-          "Standard reporting",
-          "Email support"
+          'Everything in Starter',
+          'Custom research methodology creation',
+          'Multi-language research capabilities',
+          'Integration with 50+ data sources',
+          'Advanced analytics and insights',
+          'Priority support',
+          'Up to 25 research projects'
         ],
-        limitations: [
-          "Limited AI models",
-          "Basic integrations",
-          "Standard SLA"
-        ],
-        bestFor: "Small businesses starting with AI"
+        bestFor: 'Medium research organizations, consulting firms',
+        setupTime: '3-5 weeks',
+        support: 'Priority support + dedicated specialist',
+        roi: '1000%'
       },
       {
-        name: "Professional",
-        price: 8999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: 'Enterprise',
+        price: 9999,
+        monthlyPrice: 999,
+        description: 'For large research organizations with complex needs',
         features: [
-          "Advanced AI analytics",
-          "Up to 20 data sources",
-          "Custom dashboards",
-          "Priority support",
-          "Advanced integrations"
+          'Everything in Professional',
+          'Custom dashboard development',
+          'API access for enterprise integration',
+          'White-label solutions',
+          'Dedicated account manager',
+          '24/7 support',
+          'Unlimited research projects'
         ],
-        limitations: [
-          "Limited custom models",
-          "Standard compliance"
+        bestFor: 'Large research organizations, investment companies',
+        setupTime: '4-6 weeks',
+        support: '24/7 support + dedicated account manager',
+        roi: '1200%'
+      }
+    ],
+    competitors: ['Bloomberg Terminal ($24,000/year)', 'Mintel ($15,000/year)', 'IBISWorld ($12,000/year)'],
+    valueProposition: 'Fully autonomous operation with 90% time reduction and predictive capabilities',
+    roi: '800-1200%',
+    setupTime: '2-6 weeks',
+    support: 'Email to 24/7 support based on tier'
+  },
+  {
+    serviceId: 'ai-ethical-governance-platform-2030',
+    serviceName: 'AI Ethical Governance Platform 2030',
+    category: 'AI & Operations',
+    marketPrice: '$8,000 - $25,000',
+    ourPrice: '$3,999',
+    savings: '50-84%',
+    pricingTiers: [
+      {
+        name: 'Basic',
+        price: 3999,
+        monthlyPrice: 399,
+        description: 'Essential AI governance for small organizations',
+        features: [
+          'AI bias detection and mitigation',
+          'Basic ethical AI framework',
+          'Compliance monitoring',
+          'Risk assessment tools',
+          'Email support',
+          'Up to 10 AI models'
         ],
-        bestFor: "Growing businesses with data needs",
-        popular: true
+        bestFor: 'Small AI teams, startups, growing companies',
+        setupTime: '3-6 weeks',
+        support: 'Email support + documentation',
+        roi: '650%'
       },
       {
-        name: "Enterprise",
+        name: 'Professional',
+        price: 7999,
+        monthlyPrice: 799,
+        description: 'Comprehensive governance for medium organizations',
+        features: [
+          'Everything in Basic',
+          'Advanced ethical AI framework',
+          'Real-time compliance alerts',
+          'Stakeholder communication platform',
+          'AI ethics training modules',
+          'Priority support',
+          'Up to 50 AI models'
+        ],
+        bestFor: 'Medium AI organizations, healthcare, finance',
+        setupTime: '4-8 weeks',
+        support: 'Priority support + dedicated specialist',
+        roi: '800%'
+      },
+      {
+        name: 'Enterprise',
         price: 15999,
-        currency: "$",
-        billingCycle: "monthly",
+        monthlyPrice: 1599,
+        description: 'Enterprise-grade governance for large organizations',
         features: [
-          "Full AI suite",
-          "Unlimited data sources",
-          "Custom AI models",
-          "24/7 support",
-          "Enterprise compliance",
-          "Custom integrations"
+          'Everything in Professional',
+          'Custom policy templates',
+          'Advanced audit trails',
+          'White-label solutions',
+          'Dedicated compliance specialist',
+          '24/7 support',
+          'Unlimited AI models'
         ],
-        limitations: [],
-        bestFor: "Large enterprises with complex needs"
+        bestFor: 'Large enterprises, government agencies, regulated industries',
+        setupTime: '6-10 weeks',
+        support: '24/7 support + dedicated compliance specialist',
+        roi: '1000%'
       }
     ],
-    marketPrice: "$4,000-8,000",
-    competitors: ["Tableau", "Power BI", "Qlik"],
-    roi: "500% within 6 months",
-    setupTime: "4-6 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
+    competitors: ['IBM AI Fairness 360 ($15,000/year)', 'Microsoft Responsible AI ($20,000/year)', 'Google AI Principles ($18,000/year)'],
+    valueProposition: 'Comprehensive governance framework with real-time monitoring and automated compliance',
+    roi: '650-1000%',
+    setupTime: '3-10 weeks',
+    support: 'Email to 24/7 support based on tier'
   },
-
-  // AI Autonomous Vehicle Fleet Management
   {
-    serviceId: "ai-autonomous-vehicle-fleet-management",
-    serviceName: "AI Autonomous Vehicle Fleet Management Platform",
-    category: "AI & Autonomous Systems",
-    basePrice: 15999,
-    currency: "$",
-    pricingModel: "Subscription + Per Vehicle",
-    tiers: [
+    serviceId: 'quantum-ai-trading-platform-2030',
+    serviceName: 'Quantum AI Trading Platform 2030',
+    category: 'AI & FinTech',
+    marketPrice: '$25,000 - $100,000',
+    ourPrice: '$5,999',
+    savings: '76-94%',
+    pricingTiers: [
       {
-        name: "Fleet Starter",
-        price: 15999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: 'Professional',
+        price: 5999,
+        monthlyPrice: 599,
+        description: 'Advanced trading platform for professional traders',
         features: [
-          "Up to 50 vehicles",
-          "Basic route optimization",
-          "Standard monitoring",
-          "Email support"
+          'Quantum-enhanced market prediction',
+          'AI-powered risk management',
+          'Real-time market analysis',
+          'Basic trading strategies',
+          'Portfolio optimization',
+          'Email support',
+          'Up to 5 trading accounts'
         ],
-        limitations: [
-          "Limited AI features",
-          "Basic reporting"
-        ],
-        bestFor: "Small fleet operators"
+        bestFor: 'Professional traders, small hedge funds, investment firms',
+        setupTime: '4-8 weeks',
+        support: 'Email support + documentation',
+        roi: '1200%'
       },
       {
-        name: "Fleet Professional",
-        price: 24999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: 'Institutional',
+        price: 14999,
+        monthlyPrice: 1499,
+        description: 'Institutional-grade platform for large organizations',
         features: [
-          "Up to 200 vehicles",
-          "Advanced AI optimization",
-          "Predictive maintenance",
-          "Priority support",
-          "Advanced analytics"
+          'Everything in Professional',
+          'Advanced trading strategies',
+          'Multi-exchange connectivity',
+          'Custom strategy builder',
+          'Advanced risk analytics',
+          'Priority support',
+          'Up to 25 trading accounts'
         ],
-        limitations: [
-          "Limited custom features"
-        ],
-        bestFor: "Medium-sized fleets",
-        popular: true
+        bestFor: 'Hedge funds, investment banks, institutional investors',
+        setupTime: '6-12 weeks',
+        support: 'Priority support + dedicated specialist',
+        roi: '1500%'
       },
       {
-        name: "Fleet Enterprise",
-        price: 39999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Unlimited vehicles",
-          "Full AI suite",
-          "Custom algorithms",
-          "24/7 support",
-          "Enterprise integrations"
-        ],
-        limitations: [],
-        bestFor: "Large fleet operations"
-      }
-    ],
-    marketPrice: "$12,000-25,000",
-    competitors: ["Tesla Fleet", "Waymo", "Cruise"],
-    roi: "800% within 12 months",
-    setupTime: "8-12 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
-  },
-
-  // AI Medical Imaging Diagnostic Platform
-  {
-    serviceId: "ai-medical-imaging-diagnostic-platform",
-    serviceName: "AI Medical Imaging Diagnostic Platform",
-    category: "AI & Healthcare",
-    basePrice: 24999,
-    currency: "$",
-    pricingModel: "Subscription + Per Scan",
-    tiers: [
-      {
-        name: "Clinical",
-        price: 24999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic diagnostic AI",
-          "Up to 1000 scans/month",
-          "Standard accuracy",
-          "Email support"
-        ],
-        limitations: [
-          "Limited AI models",
-          "Basic compliance"
-        ],
-        bestFor: "Small clinics"
-      },
-      {
-        name: "Hospital",
-        price: 39999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced diagnostic AI",
-          "Up to 10000 scans/month",
-          "High accuracy models",
-          "Priority support",
-          "Full compliance"
-        ],
-        limitations: [
-          "Limited custom models"
-        ],
-        bestFor: "Medium hospitals",
-        popular: true
-      },
-      {
-        name: "Medical Center",
-        price: 59999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full AI diagnostic suite",
-          "Unlimited scans",
-          "Custom AI models",
-          "24/7 support",
-          "Research capabilities"
-        ],
-        limitations: [],
-        bestFor: "Large medical centers"
-      }
-    ],
-    marketPrice: "$20,000-40,000",
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
-    roi: "1000% within 18 months",
-    setupTime: "12-16 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
-  },
-
-  // Quantum-Safe Cybersecurity Infrastructure
-  {
-    serviceId: "quantum-safe-cybersecurity-infrastructure",
-    serviceName: "Quantum-Safe Cybersecurity Infrastructure",
-    category: "IT Infrastructure",
-    basePrice: 19999,
-    currency: "$",
-    pricingModel: "Subscription + Implementation",
-    tiers: [
-      {
-        name: "Basic Security",
-        price: 19999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic quantum-safe encryption",
-          "Standard security protocols",
-          "Email support",
-          "Basic compliance"
-        ],
-        limitations: [
-          "Limited security features",
-          "Basic monitoring"
-        ],
-        bestFor: "Small organizations"
-      },
-      {
-        name: "Advanced Security",
+        name: 'Enterprise',
         price: 29999,
-        currency: "$",
-        billingCycle: "monthly",
+        monthlyPrice: 2999,
+        description: 'Enterprise platform with custom development',
         features: [
-          "Advanced quantum-safe protocols",
-          "Advanced monitoring",
-          "Priority support",
-          "Full compliance",
-          "Custom security rules"
+          'Everything in Institutional',
+          'Custom algorithm development',
+          'White-label solutions',
+          'Dedicated trading specialist',
+          '24/7 market support',
+          'SLA guarantees',
+          'Unlimited trading accounts'
         ],
-        limitations: [
-          "Limited custom features"
-        ],
-        bestFor: "Medium organizations",
-        popular: true
-      },
-      {
-        name: "Enterprise Security",
-        price: 44999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full quantum-safe suite",
-          "Custom security protocols",
-          "24/7 monitoring",
-          "24/7 support",
-          "Custom integrations"
-        ],
-        limitations: [],
-        bestFor: "Large enterprises"
+        bestFor: 'Large investment banks, sovereign wealth funds, major exchanges',
+        setupTime: '8-16 weeks',
+        support: '24/7 support + dedicated trading specialist',
+        roi: '2000%'
       }
     ],
-    marketPrice: "$15,000-35,000",
-    competitors: ["IBM Quantum", "Microsoft Quantum", "Google Quantum"],
-    roi: "700% within 18 months",
-    setupTime: "10-14 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
+    competitors: ['Bloomberg Terminal ($24,000/year)', 'Thomson Reuters ($18,000/year)', 'FactSet ($15,000/year)'],
+    valueProposition: 'Quantum computing integration with AI-powered predictions and real-time execution',
+    roi: '1200-2000%',
+    setupTime: '4-16 weeks',
+    support: 'Email to 24/7 support based on tier'
   },
-
-  // Metaverse Development Platform
   {
-    serviceId: "metaverse-development-platform",
-    serviceName: "Metaverse Development Platform",
-    category: "Emerging Technology",
-    basePrice: 17999,
-    currency: "$",
-    pricingModel: "Subscription + Development",
-    tiers: [
+    serviceId: 'enterprise-cloud-migration-2030',
+    serviceName: 'Enterprise Cloud Migration & Optimization 2030',
+    category: 'Cloud & DevOps',
+    marketPrice: '$50,000 - $200,000',
+    ourPrice: '$25,000',
+    savings: '50-87%',
+    pricingTiers: [
       {
-        name: "Creator",
-        price: 17999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: 'Standard Migration',
+        price: 25000,
+        monthlyPrice: 2500,
+        description: 'Complete cloud migration for medium enterprises',
         features: [
-          "Basic 3D tools",
-          "VR/AR support",
-          "Basic templates",
-          "Email support"
+          'Legacy system assessment and planning',
+          'Multi-cloud strategy development',
+          'Zero-downtime migration execution',
+          'Performance optimization',
+          'Security implementation',
+          'Basic training and support',
+          'Up to 100 servers'
         ],
-        limitations: [
-          "Limited customization",
-          "Basic integrations"
-        ],
-        bestFor: "Individual creators"
+        bestFor: 'Medium enterprises, growing companies, digital transformation',
+        setupTime: '8-16 weeks',
+        support: 'Email support + documentation',
+        roi: '400%'
       },
       {
-        name: "Developer",
-        price: 27999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: 'Advanced Migration',
+        price: 50000,
+        monthlyPrice: 5000,
+        description: 'Advanced migration with custom optimization',
         features: [
-          "Advanced 3D tools",
-          "Full VR/AR suite",
-          "Custom templates",
-          "Priority support",
-          "Advanced integrations"
+          'Everything in Standard',
+          'Custom optimization algorithms',
+          'Advanced security features',
+          'Disaster recovery setup',
+          'Performance monitoring',
+          'Priority support',
+          'Up to 500 servers'
         ],
-        limitations: [
-          "Limited custom features"
-        ],
-        bestFor: "Development teams",
-        popular: true
+        bestFor: 'Large enterprises, government agencies, healthcare',
+        setupTime: '12-24 weeks',
+        support: 'Priority support + dedicated specialist',
+        roi: '500%'
       },
       {
-        name: "Enterprise",
-        price: 44999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: 'Enterprise Migration',
+        price: 100000,
+        monthlyPrice: 10000,
+        description: 'Enterprise migration with full customization',
         features: [
-          "Full metaverse suite",
-          "Custom development tools",
-          "Enterprise integrations",
-          "24/7 support",
-          "Custom solutions"
+          'Everything in Advanced',
+          'Custom cloud architecture',
+          'White-label solutions',
+          'Dedicated account manager',
+          '24/7 support and monitoring',
+          'SLA guarantees',
+          'Unlimited servers'
         ],
-        limitations: [],
-        bestFor: "Large organizations"
+        bestFor: 'Fortune 500 companies, major government agencies, global enterprises',
+        setupTime: '16-32 weeks',
+        support: '24/7 support + dedicated account manager',
+        roi: '600%'
       }
     ],
-    marketPrice: "$15,000-35,000",
-    competitors: ["Unity", "Unreal Engine", "Roblox"],
-    roi: "700% within 18 months",
-    setupTime: "12-16 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
+    competitors: ['AWS Professional Services ($100,000+)', 'Microsoft Consulting Services ($80,000+)', 'Google Cloud Professional Services ($75,000+)'],
+    valueProposition: 'Zero-downtime migration with AI-powered optimization and comprehensive support',
+    roi: '400-600%',
+    setupTime: '8-32 weeks',
+    support: 'Email to 24/7 support based on tier'
+  },
+  {
+    serviceId: 'ai-powered-cybersecurity-2030',
+    serviceName: 'AI-Powered Cybersecurity Operations Center 2030',
+    category: 'Cybersecurity',
+    marketPrice: '$30,000 - $150,000',
+    ourPrice: '$15,000',
+    savings: '50-90%',
+    pricingTiers: [
+      {
+        name: 'Essential Security',
+        price: 15000,
+        monthlyPrice: 1500,
+        description: 'Essential cybersecurity for small to medium organizations',
+        features: [
+          'AI-powered threat detection',
+          'Real-time incident response',
+          'Basic vulnerability assessment',
+          'Security awareness training',
+          'Compliance monitoring',
+          'Email support',
+          'Up to 100 endpoints'
+        ],
+        bestFor: 'Small to medium businesses, startups, growing companies',
+        setupTime: '4-8 weeks',
+        support: 'Email support + documentation',
+        roi: '600%'
+      },
+      {
+        name: 'Advanced Security',
+        price: 30000,
+        monthlyPrice: 3000,
+        description: 'Advanced cybersecurity for medium to large organizations',
+        features: [
+          'Everything in Essential',
+          'Advanced threat hunting',
+          'Incident response automation',
+          'Threat intelligence integration',
+          'Advanced analytics',
+          'Priority support',
+          'Up to 1000 endpoints'
+        ],
+        bestFor: 'Medium to large enterprises, healthcare, finance',
+        setupTime: '6-12 weeks',
+        support: 'Priority support + dedicated specialist',
+        roi: '800%'
+      },
+      {
+        name: 'Enterprise Security',
+        price: 60000,
+        monthlyPrice: 6000,
+        description: 'Enterprise-grade cybersecurity with full customization',
+        features: [
+          'Everything in Advanced',
+          'Custom security policies',
+          'White-label solutions',
+          'Dedicated security specialist',
+          '24/7 SOC support',
+          'SLA guarantees',
+          'Unlimited endpoints'
+        ],
+        bestFor: 'Large enterprises, government agencies, critical infrastructure',
+        setupTime: '8-16 weeks',
+        support: '24/7 SOC support + dedicated security specialist',
+        roi: '1000%'
+      }
+    ],
+    competitors: ['CrowdStrike ($50,000+)', 'SentinelOne ($45,000+)', 'Palo Alto Networks ($60,000+)'],
+    valueProposition: 'AI-powered detection with real-time response and comprehensive coverage',
+    roi: '600-1000%',
+    setupTime: '4-16 weeks',
+    support: 'Email to 24/7 SOC support based on tier'
   }
 ];
 
-// Pricing Analysis and Insights
-export const PRICING_INSIGHTS_2030 = {
+// Pricing Categories for easy filtering
+export const PRICING_CATEGORIES_2030 = [
+  'AI & Research',
+  'AI & Operations',
+  'AI & FinTech',
+  'Cloud & DevOps',
+  'Cybersecurity',
+  'Quantum Computing',
+  'IoT & Edge Computing',
+  'Blockchain & Web3',
+  'Digital Twin',
+  'Space Technology',
+  'Sustainable Technology',
+  'IT Infrastructure'
+];
+
+// Pricing Statistics
+export const PRICING_STATISTICS_2030 = {
+  totalServices: COMPREHENSIVE_PRICING_2030.length,
+  totalCategories: PRICING_CATEGORIES_2030.length,
   averagePrice: Math.round(
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => sum + service.basePrice, 0) / 
-    COMPREHENSIVE_PRICING_GUIDE_2030.length
+    COMPREHENSIVE_PRICING_2030.reduce((sum, service) => {
+      const basePrice = service.pricingTiers[0]?.price || 0;
+      return sum + basePrice;
+    }, 0) / COMPREHENSIVE_PRICING_2030.length
   ),
-  priceRange: {
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-    max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  },
-  popularPricingModels: [
-    "Subscription + Usage",
-    "Subscription + Per Unit",
-    "Subscription + Implementation",
-    "Tiered Subscription"
-  ],
-  commonFeatures: [
-    "AI-powered capabilities",
-    "Enterprise-grade security",
-    "Custom integrations",
-    "Priority support",
-    "ROI tracking",
-    "Compliance certifications"
-  ],
-  marketTrends: [
-    "AI services commanding premium pricing",
-    "Quantum computing services at premium rates",
-    "Emerging technology services with high value",
-    "Healthcare AI services with regulatory compliance",
-    "Autonomous systems with safety certifications"
-  ]
+  averageMonthlyPrice: Math.round(
+    COMPREHENSIVE_PRICING_2030.reduce((sum, service) => {
+      const baseMonthlyPrice = service.pricingTiers[0]?.monthlyPrice || 0;
+      return sum + baseMonthlyPrice;
+    }, 0) / COMPREHENSIVE_PRICING_2030.length
+  ),
+  averageSavings: '60-85%',
+  averageROI: '800-1200%',
+  averageSetupTime: '6-12 weeks'
+};
+
+// High-ROI Services (ROI > 500%)
+export const HIGH_ROI_PRICING_2030 = COMPREHENSIVE_PRICING_2030.filter(service => {
+  const roi = service.roi;
+  if (typeof roi === 'string') {
+    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+    return roiNumber > 500;
+  }
+  return false;
+});
+
+// Quick Setup Services (< 8 weeks)
+export const QUICK_SETUP_PRICING_2030 = COMPREHENSIVE_PRICING_2030.filter(service => {
+  const setupTime = service.setupTime;
+  if (typeof setupTime === 'string') {
+    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+    return weeks < 8;
+  }
+  return false;
+});
+
+// Budget-Friendly Services (< $10,000)
+export const BUDGET_FRIENDLY_PRICING_2030 = COMPREHENSIVE_PRICING_2030.filter(service => {
+  const basePrice = service.pricingTiers[0]?.price || 0;
+  return basePrice < 10000;
+});
+
+// Enterprise Services (> $25,000)
+export const ENTERPRISE_PRICING_2030 = COMPREHENSIVE_PRICING_2030.filter(service => {
+  const basePrice = service.pricingTiers[0]?.price || 0;
+  return basePrice > 25000;
+});
+
+// Export individual service arrays for specific use cases
+export {
+  COMPREHENSIVE_PRICING_2030 as default
 };

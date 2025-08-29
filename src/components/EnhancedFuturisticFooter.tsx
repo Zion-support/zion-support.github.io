@@ -75,20 +75,33 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Revolutionary 2030 Services',
+      title: 'AI & Micro SAAS Services 2030',
       featured: true,
       links: [
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services#quantum-ai-trading', featured: true },
-        { name: 'Neural Interface Platform', href: '/services#neural-interface', featured: true },
-        { name: 'Holographic Workspace Platform', href: '/services#holographic-workspace', featured: true },
-        { name: 'BioDigital Twin Platform', href: '/services#biodigital-twin', featured: true },
-        { name: 'Space Debris Tracking System', href: '/services#space-debris-tracking', featured: true },
-        { name: 'AI Ethics Guardian Platform', href: '/services#ai-ethics-guardian', featured: true },
-        { name: 'Metaverse Builder Platform', href: '/services#metaverse-builder', featured: true },
-        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
-        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
-        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' }
+        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant-2030', featured: true },
+        { name: 'AI Ethical Governance Platform', href: '/services/ai-ethical-governance-2030', featured: true },
+        { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-2030', featured: true },
+        { name: 'AI Holographic Workspace', href: '/services/ai-holographic-workspace-2030', featured: true },
+        { name: 'AI BioDigital Twin Platform', href: '/services/ai-biodigital-twin-2030', featured: true },
+        { name: 'AI Space Debris Tracking', href: '/services/ai-space-debris-tracking-2030', featured: true },
+        { name: 'AI Metaverse Builder Platform', href: '/services/ai-metaverse-builder-2030', featured: true },
+        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-2030', featured: true },
+        { name: 'AI Content Creation Studio', href: '/services/ai-content-creation-studio-2030', featured: true }
+      ]
+    },
+    {
+      title: 'Enterprise IT Services 2030',
+      featured: true,
+      links: [
+        { name: 'Enterprise Cloud Migration', href: '/services/enterprise-cloud-migration-2030', featured: true },
+        { name: 'AI-Powered Cybersecurity', href: '/services/ai-powered-cybersecurity-2030', featured: true },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions-2030', featured: true },
+        { name: 'IoT Edge Computing Platform', href: '/services/iot-edge-computing-platform-2030', featured: true },
+        { name: 'Blockchain & Web3 Solutions', href: '/services/blockchain-web3-solutions-2030', featured: true },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin-platform-2030', featured: true },
+        { name: 'Space Technology Solutions', href: '/services/space-technology-solutions-2030', featured: true },
+        { name: 'Sustainable Technology Solutions', href: '/services/sustainable-technology-solutions-2030', featured: true },
+        { name: 'IT Infrastructure Modernization', href: '/services/it-infrastructure-modernization-2030', featured: true }
       ]
     },
     {
