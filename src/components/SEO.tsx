@@ -509,8 +509,6 @@ export function SEO({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-<<<<<<< HEAD
-
       <title>{enhancedTitle}</title>
       <meta name="description" content={enhancedDescription} />
       <meta name="keywords" content={defaultKeywords} />
