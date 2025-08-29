@@ -170,6 +170,7 @@ export default function NotFound() {
               </motion.div>
             ))}
           </motion.div>
+          </div>
         </div>
       </section>
 
