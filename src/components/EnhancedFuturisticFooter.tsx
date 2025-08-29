@@ -61,14 +61,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Consciousness',
+      title: 'Revolutionary 2030',
       links: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion' },
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics' }
+        { name: 'Quantum AI Hybrid Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Cybersecurity Platform', href: '/revolutionary-services-2030' },
+        { name: 'Autonomous AI Operations', href: '/revolutionary-services-2030' },
+        { name: 'Quantum Financial Trading', href: '/revolutionary-services-2030' },
+        { name: 'AI Healthcare Diagnostics', href: '/revolutionary-services-2030' },
+        { name: 'Smart City Platform', href: '/revolutionary-services-2030' }
       ]
     },
     {

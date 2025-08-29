@@ -2,7 +2,7 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import { ArrowRight, Brain, Shield, Zap } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -54,10 +54,16 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/services" 
+                to="/comprehensive-services" 
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Explore Our Services
+                Explore All Services
+              </Link>
+              <Link 
+                to="/revolutionary-services-2030" 
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Revolutionary 2030
               </Link>
               <Link 
                 to="/contact" 
@@ -78,6 +84,81 @@ export default function Home() {
         </div>
         <div className="absolute bottom-40 left-20 animate-float">
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
+        </div>
+      </section>
+
+      {/* Revolutionary Services Preview */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Revolutionary Services
+              <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+                2030
+              </span>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+              Experience the future of technology with our cutting-edge AI, quantum computing, and innovative solutions 
+              designed to transform industries and drive unprecedented growth.
+            </p>
+            <Link 
+              to="/revolutionary-services-2030" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Revolutionary Services
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Quantum AI Hybrid Platform",
+                description: "Revolutionary platform combining quantum computing with advanced AI",
+                icon: Brain,
+                color: "from-cyan-500 to-blue-600",
+                price: "$25,000/month"
+              },
+              {
+                title: "AI Cybersecurity Platform",
+                description: "Next-generation cybersecurity using AI and machine learning",
+                icon: Shield,
+                color: "from-red-500 to-orange-600",
+                price: "$8,999/month"
+              },
+              {
+                title: "Autonomous AI Operations",
+                description: "Platform that autonomously manages business operations",
+                icon: Zap,
+                color: "from-green-500 to-emerald-600",
+                price: "$15,999/month"
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group bg-slate-800/60 backdrop-blur border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-purple-400/10"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-300 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-slate-300 text-sm mb-4">
+                  {service.description}
+                </p>
+                <div className="text-2xl font-bold text-purple-400 mb-2">
+                  {service.price}
+                </div>
+                <div className="text-sm text-slate-400">
+                  Starting price • Enterprise support included
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
