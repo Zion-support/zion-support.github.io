@@ -20,6 +20,74 @@ module.exports = {
       }
     },
 
+    // AI Code Reviewer - Intelligent code analysis and auto-fixing
+    {
+      name: 'ai-code-reviewer',
+      script: './automation/ai-code-reviewer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 1 * * *', // Restart daily at 1 AM
+      log_file: './logs/ai-code-reviewer.log',
+      error_file: './logs/ai-code-reviewer-error.log',
+      out_file: './logs/ai-code-reviewer-out.log'
+    },
+
+    // Smart Dependency Analyzer - Intelligent dependency management
+    {
+      name: 'smart-dependency-analyzer',
+      script: './automation/smart-dependency-analyzer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 2 * * *', // Restart daily at 2 AM
+      log_file: './logs/smart-dependency-analyzer.log',
+      error_file: './logs/smart-dependency-analyzer-error.log',
+      out_file: './logs/smart-dependency-analyzer-out.log'
+    },
+
+    // Intelligent Performance Optimizer - Performance analysis and optimization
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './automation/intelligent-performance-optimizer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 3 * * *', // Restart daily at 3 AM
+      log_file: './logs/intelligent-performance-optimizer.log',
+      error_file: './logs/intelligent-performance-optimizer-error.log',
+      out_file: './logs/intelligent-performance-optimizer-out.log'
+    },
+
+    // Smart Test Generator - Automated test generation and analysis
+    {
+      name: 'smart-test-generator',
+      script: './automation/smart-test-generator.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 4 * * *', // Restart daily at 4 AM
+      log_file: './logs/smart-test-generator.log',
+      error_file: './logs/smart-test-generator-error.log',
+      out_file: './logs/smart-test-generator-out.log'
+    },
+
     // Build Health Monitor - Prevents build issues
     {
       name: 'build-health-monitor',
@@ -31,7 +99,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '0 0 * * *', // Restart daily at midnight
+      cron_restart: '0 5 * * *', // Restart daily at 5 AM
       log_file: './logs/build-monitor.log',
       error_file: './logs/build-monitor-error.log',
       out_file: './logs/build-monitor-out.log'
@@ -65,7 +133,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '0 12 * * *', // Restart daily at noon
+      cron_restart: '0 7 * * *', // Restart daily at 7 AM
       log_file: './logs/dependency.log',
       error_file: './logs/dependency-error.log',
       out_file: './logs/dependency-out.log'
@@ -82,7 +150,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '0 18 * * *', // Restart daily at 6 PM
+      cron_restart: '0 8 * * *', // Restart daily at 8 AM
       log_file: './logs/build-automation.log',
       error_file: './logs/build-automation-error.log',
       out_file: './logs/build-automation-out.log'
@@ -99,10 +167,44 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       },
-      cron_restart: '0 3 * * *', // Restart daily at 3 AM
+      cron_restart: '0 9 * * *', // Restart daily at 9 AM
       log_file: './logs/file-integrity.log',
       error_file: './logs/file-integrity-error.log',
       out_file: './logs/file-integrity-out.log'
+    },
+
+    // Intelligent Orchestrator - Coordinates all automation systems
+    {
+      name: 'intelligent-orchestrator',
+      script: './automation/intelligent-orchestrator.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 10 * * *', // Restart daily at 10 AM
+      log_file: './logs/intelligent-orchestrator.log',
+      error_file: './logs/intelligent-orchestrator-error.log',
+      out_file: './logs/intelligent-orchestrator-out.log'
+    },
+
+    // Automation Factory - Generates and manages automation scripts
+    {
+      name: 'automation-factory',
+      script: './automation/automation-factory.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 11 * * *', // Restart daily at 11 AM
+      log_file: './logs/automation-factory.log',
+      error_file: './logs/automation-factory-error.log',
+      out_file: './logs/automation-factory-out.log'
     }
   ],
 
