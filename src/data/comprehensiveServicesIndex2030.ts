@@ -1,20 +1,16 @@
 import { ProductListing } from "@/types/listings";
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "./comprehensiveInnovativeServices2030";
 import { ADVANCED_AI_SERVICES_2030 } from "./advancedAIServices2030";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030";
-import { CUTTING_EDGE_IT_INFRASTRUCTURE_2030 } from "./cuttingEdgeITInfrastructure2030";
-import { EMERGING_TECHNOLOGY_SERVICES_2030 } from "./emergingTechnologyServices2030";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "./innovativeMicroSaasServices2025";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "./innovativeMicroSaasServices2026";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "./innovativeMicroSaasServices2027";
+import { CUTTING_EDGE_IT_INFRASTRUCTURE_2030 } from "./cuttingEdgeITInfrastructure2030";
+import { EMERGING_TECHNOLOGY_SERVICES_2030 } from "./emergingTechnologyServices2030";
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
 
 export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
-  ...COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
   ...ADVANCED_AI_SERVICES_2030,
-  ...INNOVATIVE_MICRO_SAAS_SERVICES_2030,
   ...CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
   ...EMERGING_TECHNOLOGY_SERVICES_2030,
   ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
@@ -106,9 +102,7 @@ export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filte
 
 // Export individual service arrays for specific use cases
 export {
-  COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
   ADVANCED_AI_SERVICES_2030,
-  INNOVATIVE_MICRO_SAAS_SERVICES_2030,
   CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
   EMERGING_TECHNOLOGY_SERVICES_2030,
   INNOVATIVE_MICRO_SAAS_SERVICES_2025,
