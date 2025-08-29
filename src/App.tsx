@@ -219,7 +219,7 @@ function App() {
         
         <EnhancedFuturisticFooter />
         <ChatAssistant />
-        <PerformanceOptimizer />
+        <PerformanceOptimizer showMetrics={true} />
       </div>
     </ErrorBoundary>
   );
