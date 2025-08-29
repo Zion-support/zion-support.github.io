@@ -1,15 +1,4 @@
 import React from 'react';
-
-export default function Documentation() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-white mb-4">Documentation</h1>
-      <p className="text-zion-slate-light">Guides and API references.</p>
-    </div>
-  );
-}
-
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -27,7 +16,7 @@ import {
   Cloud,
   Rocket,
   Database,
-  Api,
+  Code,
   Terminal,
   GitBranch,
   Package,
@@ -36,7 +25,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
-export default function Documentation() {
+const Documentation: React.FC = () => {
   const documentationCategories = [
     {
       title: 'Getting Started',
@@ -52,7 +41,7 @@ export default function Documentation() {
     },
     {
       title: 'API Reference',
-      icon: Api,
+      icon: Code,
       color: 'from-purple-600 to-pink-600',
       description: 'Complete API documentation and examples',
       guides: [
@@ -473,3 +462,5 @@ print(response.result)`,
     </div>
   );
 }
+
+export default Documentation;
