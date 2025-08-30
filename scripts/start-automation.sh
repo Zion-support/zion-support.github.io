@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# PM2 Automation System Startup Script
-# This script manages the PM2 automation processes for the Zion Tech Group project
+# Enhanced Automation Startup Script for Zion Project
+# This script manages PM2 automation processes for continuous error fixing and code quality
 
 set -e
 
@@ -12,201 +12,230 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Project directory
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-cd "$PROJECT_DIR"
+# Project configuration
+PROJECT_NAME="zion-project"
+ECOSYSTEM_FILE="ecosystem.config.cjs"
+REPORTS_DIR="reports"
 
-echo -e "${BLUE}🚀 PM2 Automation System Manager${NC}"
-echo -e "${BLUE}================================${NC}"
-echo ""
+# Function to print colored output
+print_status() {
+    echo -e "${BLUE}[INFO]${NC} $1"
+}
+
+print_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
+}
+
+print_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
+
+print_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
 
 # Function to check if PM2 is installed
 check_pm2() {
     if ! command -v pm2 &> /dev/null; then
-        echo -e "${RED}❌ PM2 is not installed. Installing PM2...${NC}"
+        print_error "PM2 is not installed. Installing PM2 globally..."
         npm install -g pm2
-        echo -e "${GREEN}✅ PM2 installed successfully${NC}"
-    else
-        echo -e "${GREEN}✅ PM2 is already installed${NC}"
+        print_success "PM2 installed successfully"
     fi
 }
 
-# Function to start automation processes
-start_automation() {
-    echo -e "${BLUE}🔄 Starting automation processes...${NC}"
-    
-    # Check if processes are already running
-    if pm2 list | grep -q "console-error-fixer"; then
-        echo -e "${YELLOW}⚠️  Automation processes are already running${NC}"
-        pm2 status
-        return
+# Function to check if ecosystem file exists
+check_ecosystem() {
+    if [ ! -f "$ECOSYSTEM_FILE" ]; then
+        print_error "Ecosystem file $ECOSYSTEM_FILE not found!"
+        exit 1
     fi
+}
+
+# Function to start all automations
+start_automations() {
+    print_status "Starting all automation processes..."
     
-    # Start automation processes
-    pm2 start ecosystem.config.cjs --only automation
+    # Start the automation orchestrator first
+    pm2 start ecosystem.config.cjs --only automation-orchestrator
     
-    echo -e "${GREEN}✅ Automation processes started successfully${NC}"
-    echo ""
+    # Start other automation processes
+    pm2 start ecosystem.config.cjs --only enhanced-error-fixer,code-quality-automation,link-checker,continuous-improvement,daily-build-test,security-audit,dependency-updates,performance-monitor,quality-checks,link-integrity,front-maximizer,sitemap-runner
+    
+    print_success "All automation processes started successfully"
+    
+    # Show status
     pm2 status
 }
 
-# Function to stop automation processes
-stop_automation() {
-    echo -e "${BLUE}🛑 Stopping automation processes...${NC}"
+# Function to stop all automations
+stop_automations() {
+    print_status "Stopping all automation processes..."
     
-    # Stop all automation processes
-    pm2 stop ecosystem.config.cjs --only automation 2>/dev/null || true
+    # Stop all PM2 processes for this project
+    pm2 stop ecosystem.config.cjs
     
-    echo -e "${GREEN}✅ Automation processes stopped${NC}"
+    print_success "All automation processes stopped"
 }
 
-# Function to restart automation processes
-restart_automation() {
-    echo -e "${BLUE}🔄 Restarting automation processes...${NC}"
+# Function to restart all automations
+restart_automations() {
+    print_status "Restarting all automation processes..."
     
-    # Restart automation processes
-    pm2 restart ecosystem.config.cjs --only automation
+    pm2 restart ecosystem.config.cjs
     
-    echo -e "${GREEN}✅ Automation processes restarted${NC}"
-    echo ""
-    pm2 status
-}
-
-# Function to delete automation processes
-delete_automation() {
-    echo -e "${BLUE}🗑️  Deleting automation processes...${NC}"
-    
-    # Delete all automation processes
-    pm2 delete ecosystem.config.cjs --only automation 2>/dev/null || true
-    
-    echo -e "${GREEN}✅ Automation processes deleted${NC}"
+    print_success "All automation processes restarted"
 }
 
 # Function to show automation status
 show_status() {
-    echo -e "${BLUE}📊 Automation Status:${NC}"
-    echo ""
+    print_status "Automation Status:"
+    pm2 status
     
-    if pm2 list | grep -q "console-error-fixer"; then
-        pm2 status
-    else
-        echo -e "${YELLOW}⚠️  No automation processes are running${NC}"
-        echo "Use './scripts/start-automation.sh start' to start automation"
-    fi
+    print_status "Recent logs:"
+    pm2 logs --lines 20
 }
 
 # Function to show automation logs
 show_logs() {
-    echo -e "${BLUE}📝 Recent Automation Logs:${NC}"
-    echo ""
-    
-    if pm2 list | grep -q "console-error-fixer"; then
-        pm2 logs --lines 20 --nostream
-    else
-        echo -e "${YELLOW}⚠️  No automation processes are running${NC}"
-    fi
+    print_status "Showing automation logs (last 50 lines):"
+    pm2 logs --lines 50
 }
 
-# Function to open PM2 monitoring
-open_monit() {
-    echo -e "${BLUE}📊 Opening PM2 Monitoring Interface...${NC}"
-    echo "Press Ctrl+C to exit monitoring"
-    echo ""
-    
+# Function to monitor automations
+monitor_automations() {
+    print_status "Opening PM2 monitoring dashboard..."
     pm2 monit
 }
 
-# Function to check automation health
-check_health() {
-    echo -e "${BLUE}🔍 Checking Automation Health...${NC}"
-    echo ""
+# Function to run health check
+health_check() {
+    print_status "Running automation health check..."
     
-    if command -v node &> /dev/null; then
-        node scripts/automation-manager.js check
+    # Check PM2 status
+    if pm2 status | grep -q "online"; then
+        print_success "PM2 processes are running"
     else
-        echo -e "${RED}❌ Node.js is not available${NC}"
+        print_warning "Some PM2 processes may not be running"
+    fi
+    
+    # Check reports directory
+    if [ -d "$REPORTS_DIR" ]; then
+        print_success "Reports directory exists"
+        echo "Recent reports:"
+        ls -la "$REPORTS_DIR"/*.json 2>/dev/null | head -5 || echo "No reports found"
+    else
+        print_warning "Reports directory not found"
+    fi
+    
+    # Check ecosystem file
+    if [ -f "$ECOSYSTEM_FILE" ]; then
+        print_success "Ecosystem configuration file exists"
+    else
+        print_error "Ecosystem configuration file not found"
     fi
 }
 
 # Function to generate reports
 generate_reports() {
-    echo -e "${BLUE}📊 Generating Automation Reports...${NC}"
-    echo ""
+    print_status "Generating automation reports..."
     
-    if command -v node &> /dev/null; then
-        echo "Generating health report..."
-        node scripts/automation-manager.js status > automation-status-report.txt 2>&1 || true
-        
-        echo "Generating performance report..."
-        pm2 jlist > automation-performance-report.json 2>&1 || true
-        
-        echo -e "${GREEN}✅ Reports generated:${NC}"
-        echo "  - automation-status-report.txt"
-        echo "  - automation-performance-report.json"
+    # Create reports directory if it doesn't exist
+    mkdir -p "$REPORTS_DIR"
+    
+    # Generate status report
+    pm2 status --format json > "$REPORTS_DIR/pm2-status-$(date +%Y%m%d-%H%M%S).json"
+    
+    # Generate process list
+    pm2 list --format json > "$REPORTS_DIR/pm2-list-$(date +%Y%m%d-%H%M%S).json"
+    
+    print_success "Reports generated in $REPORTS_DIR"
+}
+
+# Function to clean up old reports
+cleanup_reports() {
+    print_status "Cleaning up old reports (keeping last 10)..."
+    
+    if [ -d "$REPORTS_DIR" ]; then
+        # Keep only the last 10 report files
+        cd "$REPORTS_DIR"
+        ls -t *.json | tail -n +11 | xargs -r rm
+        cd - > /dev/null
+        print_success "Old reports cleaned up"
     else
-        echo -e "${RED}❌ Node.js is not available${NC}"
+        print_warning "Reports directory not found"
     fi
 }
 
 # Function to show help
 show_help() {
-    echo -e "${BLUE}📖 Available Commands:${NC}"
+    echo "Enhanced Automation Management Script for Zion Project"
     echo ""
-    echo "  start     - Start automation processes"
-    echo "  stop      - Stop automation processes"
-    echo "  restart   - Restart automation processes"
-    echo "  delete    - Delete automation processes"
-    echo "  status    - Show automation status"
-    echo "  logs      - Show recent logs"
-    echo "  monit     - Open PM2 monitoring interface"
-    echo "  health    - Check automation health"
-    echo "  reports   - Generate automation reports"
-    echo "  help      - Show this help message"
+    echo "Usage: $0 [COMMAND]"
     echo ""
-    echo -e "${BLUE}📋 Examples:${NC}"
-    echo "  ./scripts/start-automation.sh start"
-    echo "  ./scripts/start-automation.sh status"
-    echo "  ./scripts/start-automation.sh logs"
+    echo "Commands:"
+    echo "  start     Start all automation processes"
+    echo "  stop      Stop all automation processes"
+    echo "  restart   Restart all automation processes"
+    echo "  status    Show automation status and recent logs"
+    echo "  logs      Show automation logs"
+    echo "  monit     Open PM2 monitoring dashboard"
+    echo "  health    Run health check on automations"
+    echo "  reports   Generate automation reports"
+    echo "  cleanup   Clean up old reports"
+    echo "  help      Show this help message"
     echo ""
+    echo "Examples:"
+    echo "  $0 start     # Start all automations"
+    echo "  $0 status    # Check automation status"
+    echo "  $0 logs      # View automation logs"
 }
 
 # Main script logic
-case "${1:-help}" in
-    "start")
-        check_pm2
-        start_automation
-        ;;
-    "stop")
-        stop_automation
-        ;;
-    "restart")
-        check_pm2
-        restart_automation
-        ;;
-    "delete")
-        delete_automation
-        ;;
-    "status")
-        show_status
-        ;;
-    "logs")
-        show_logs
-        ;;
-    "monit")
-        check_pm2
-        open_monit
-        ;;
-    "health")
-        check_health
-        ;;
-    "reports")
-        generate_reports
-        ;;
-    "help"|*)
-        show_help
-        ;;
-esac
+main() {
+    # Check if PM2 is installed
+    check_pm2
+    
+    # Check if ecosystem file exists
+    check_ecosystem
+    
+    case "${1:-help}" in
+        start)
+            start_automations
+            ;;
+        stop)
+            stop_automations
+            ;;
+        restart)
+            restart_automations
+            ;;
+        status)
+            show_status
+            ;;
+        logs)
+            show_logs
+            ;;
+        monit)
+            monitor_automations
+            ;;
+        health)
+            health_check
+            ;;
+        reports)
+            generate_reports
+            ;;
+        cleanup)
+            cleanup_reports
+            ;;
+        help|--help|-h)
+            show_help
+            ;;
+        *)
+            print_error "Unknown command: $1"
+            show_help
+            exit 1
+            ;;
+    esac
+}
 
-echo ""
-echo -e "${BLUE}💡 Tip: Use 'pm2 save' to save current process list${NC}"
-echo -e "${BLUE}💡 Tip: Use 'pm2 startup' to configure PM2 to start on boot${NC}"
+# Run main function with all arguments
+main "$@"

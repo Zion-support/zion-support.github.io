@@ -35,10 +35,10 @@ module.exports = {
       }
     },
 
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    // Enhanced Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
-      name: 'console-error-fixer',
-      script: './scripts/automation/console-error-fixer.cjs',
+      name: 'enhanced-error-fixer',
+      script: './scripts/automation/enhanced-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -46,6 +46,33 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // Code Quality Automation - runs every 2 hours
+    {
+      name: 'code-quality-automation',
+      script: './scripts/automation/code-quality-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Automation Orchestrator - runs continuously and manages all automations
+    {
+      name: 'automation-orchestrator',
+      script: './scripts/automation/automation-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
       }
     },
 

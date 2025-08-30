@@ -96,7 +96,6 @@ export default function SupportRequests() {
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-  
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -124,7 +123,6 @@ export default function SupportRequests() {
     
     return true;
   });
-  
   // Count by status for the summary dashboard
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;

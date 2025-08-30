@@ -27,7 +27,6 @@ const ForgotPassword: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
@@ -37,11 +36,9 @@ const ForgotPassword: React.FC = () => {
 
     setIsLoading(true);
     setError('');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       setSuccess('Verification code sent to your email!');
       setStep('verification');
     } catch (err) {
@@ -60,11 +57,9 @@ const ForgotPassword: React.FC = () => {
 
     setIsLoading(true);
     setError('');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
       setSuccess('Code verified! Please set your new password.');
       setStep('reset');
     } catch (err) {
@@ -87,11 +82,9 @@ const ForgotPassword: React.FC = () => {
 
     setIsLoading(true);
     setError('');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       setSuccess('Password reset successfully! Redirecting to login...');
       setTimeout(() => {
         window.location.href = '/login';
@@ -112,7 +105,6 @@ const ForgotPassword: React.FC = () => {
   };
 
   const passwordStrength = getPasswordStrength(newPassword);
-
   const securityFeatures = [
     {
       icon: <Shield className="w-6 h-6" />,
@@ -205,7 +197,6 @@ const ForgotPassword: React.FC = () => {
       </form>
     </motion.div>
   );
-
   const renderVerificationStep = () => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -283,7 +274,6 @@ const ForgotPassword: React.FC = () => {
       </form>
     </motion.div>
   );
-
   const renderResetStep = () => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -390,7 +380,6 @@ const ForgotPassword: React.FC = () => {
       </form>
     </motion.div>
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex">
       {/* Left Side - Form */}

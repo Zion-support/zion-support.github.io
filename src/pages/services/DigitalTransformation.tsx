@@ -152,7 +152,7 @@ export default function DigitalTransformation() {
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-8 h-8 text-white" />
+                    <service.icon className="w-8 h-8 text-white"     />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
@@ -201,7 +201,7 @@ export default function DigitalTransformation() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit.icon className="w-8 h-8 text-white"     />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>

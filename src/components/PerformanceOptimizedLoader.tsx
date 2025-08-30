@@ -27,15 +27,14 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-zion-cyan/20 rounded-full`}></div>
         {/* Spinning ring */}
-        <motion.div
-          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-zion-cyan border-t-transparent rounded-full`}
+        <motion.div className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-zion-cyan border-t-transparent rounded-full`}
           animate={{ rotate: 360 }}
           transition={{ 
             duration: 1, 
             repeat: Infinity, 
             ease: "linear" 
           }}
-        />
+            />
         {/* Logo text */}
         {showLogo && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
@@ -70,8 +69,7 @@ export function SkeletonLoader({
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
-        <motion.div
-          key={index}
+        <motion.div key={index}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
@@ -79,7 +77,7 @@ export function SkeletonLoader({
           style={{
             width: `${Math.random() * 40 + 60}%`
           }}
-        />
+            />
       ))}
     </div>
   );
