@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Enhanced Components
@@ -44,63 +43,50 @@ const Signup = lazy(() => import('./pages/Signup'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Error Fallback Component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    <div className="text-center text-white max-w-md mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-4 text-red-400">Something went wrong</h1>
-      <p className="text-gray-300 mb-6">
-        {error.message || 'An unexpected error occurred'}
-      </p>
-      <div className="space-y-3">
-        <button
-          onClick={resetErrorBoundary}
-          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Try again
-        </button>
-        <button
-          onClick={() => window.location.href = '/'}
-          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Go home
-        </button>
-      </div>
+const ErrorFallback = ({ error, resetErrorBoundary }) => (
+  <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+      <p className="text-zion-slate-light mb-6">We're working on fixing the problem.</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
+      >
+        Try again
+      </button>
     </div>
+  </div>
+);
+
+// Loading Component
+const LoadingSpinner = () => (
+  <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+    <EnhancedLoadingSpinner size="large" />
   </div>
 );
 
 function App() {
   return (
-    <EnhancedErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
+    <EnhancedErrorBoundary FallbackComponent={ErrorFallback}>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          {/* Skip Link for Accessibility */}
-          <a href="#main-content" className="skip-link">
-            Skip to main content
-          </a>
+        <div className="App">
+          {/* Performance and Analytics Components */}
+          <PerformanceOptimizer />
+          <AdvancedAnalytics />
+          <AdvancedAnalyticsDashboard />
+          <AIContentOptimizer />
+          <SecurityMonitoringSystem />
+          <UserExperienceOptimizer />
           
           {/* Header */}
           <EnhancedHeader />
           
           {/* Main Content */}
-          <main id="main-content" className="flex-1">
-            <Suspense fallback={<EnhancedLoadingSpinner />}>
+          <main id="main-content">
+            <Suspense fallback={<LoadingSpinner />}>
               <AnimatePresence mode="wait">
                 <Routes>
-                  {/* Core Routes */}
-                  <Route
-                    path="/"
-                    element={
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Home />
-                      </motion.div>
-                    }
-                  />
+                  <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/services" element={<Services />} />
@@ -123,55 +109,20 @@ function App() {
                   <Route path="/request-quote" element={<RequestQuote />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
-
-                  {/* 404 Page */}
-                  <Route
-                    path="*"
-                    element={
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-                      >
-                        <div className="text-center text-white">
-                          <h1 className="text-6xl font-bold mb-4">404</h1>
-                          <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
-                          <p className="text-gray-300 mb-8">
-                            The page you're looking for doesn't exist or has been moved.
-                          </p>
-                          <button
-                            onClick={() => window.history.back()}
-                            className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
-                          >
-                            Go Back
-                          </button>
-                          <button
-                            onClick={() => window.location.href = '/'}
-                            className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-                          >
-                            Go Home
-                          </button>
-                        </div>
-                      </motion.div>
-                    }
-                  />
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               </AnimatePresence>
             </Suspense>
           </main>
-
-          {/* Enhanced Components */}
-          <PerformanceOptimizer enabled={true} />
-          <EnhancedAccessibilityEnhancer enabled={true} />
-          <AdvancedAnalytics enabled={true} showMetrics={true} />
-          <SmartNotificationSystem enabled={true} />
-          <AdvancedAnalyticsDashboard enabled={true} />
-          <AIContentOptimizer enabled={true} />
-          <SecurityMonitoringSystem enabled={true} />
-          <UserExperienceOptimizer enabled={true} />
-          <FloatingActionButton enabled={true} />
+          
+          {/* Floating Action Button */}
+          <FloatingActionButton />
+          
+          {/* Notification System */}
+          <SmartNotificationSystem />
+          
+          {/* Accessibility Enhancer */}
+          <EnhancedAccessibilityEnhancer />
         </div>
       </Router>
     </EnhancedErrorBoundary>
