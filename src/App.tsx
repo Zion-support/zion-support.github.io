@@ -472,5 +472,6 @@ export default function App() {
       </ErrorBoundary>
     </HelmetProvider>
   );
+}
 
 export default App;
