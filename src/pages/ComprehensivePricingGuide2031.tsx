@@ -43,7 +43,7 @@ import {
   BookOpen,
   Truck
 } from 'lucide-react';
-import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data/comprehensivePricingGuide2031';
+import { comprehensivePricingGuide2031 } from '../data/comprehensivePricingGuide2031';
 
 const ComprehensivePricingGuide2031: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -52,12 +52,12 @@ const ComprehensivePricingGuide2031: React.FC = () => {
   const [selectedTier, setSelectedTier] = useState<string>('Professional');
 
   const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(COMPREHENSIVE_PRICING_GUIDE_2031.map(service => service.category)))];
+    const cats = ['All', ...Array.from(new Set(comprehensivePricingGuide2031.map(service => service.category)))];
     return cats;
   }, []);
 
   const filteredServices = useMemo(() => {
-    let filtered = COMPREHENSIVE_PRICING_GUIDE_2031;
+    let filtered = comprehensivePricingGuide2031;
 
     if (searchQuery) {
       filtered = filtered.filter(service =>
