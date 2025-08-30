@@ -1,44 +1,31 @@
-import React, { useState } from 'react.ts';
-import { useState, useEffect  } from 'react.ts';
+import React, { useState, useEffect } from 'react';
 
 interface User {
-
-
   id: string;
   email: string;
   name: string;
   role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
-<<<<<<< HEAD
   avatarUrl?: string;
-=======
-avatarUrl?: string;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AuthState {
-
-
   user: User | null;
   isAuthenticated: boolean;
-<<<<<<< HEAD
   isLoading: boolean;
-=======
-isLoading: boolean;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function useAuth(...args[]: any):  {
-  const [authState, setAuthState] = useState<any>({
-    user: anynull,
+export function useAuth() {
+  const [authState, setAuthState] = useState<AuthState>({
+    user: null,
     isAuthenticated: false,
     isLoading: true,
   });
 
-  useEffect(()   => {
+  useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {;
+    const checkAuth = () => {
       const storedUser = localStorage.getItem('zion_user');
       const token = localStorage.getItem('authToken');
 
@@ -49,47 +36,31 @@ export function useAuth(...args[]: any):  {
             user,
             isAuthenticated: true,
             isLoading: false,
-<<<<<<< HEAD
           });
         } catch (error) {
-<<<<<<< HEAD
-          // // // console.error('Error parsing stored user:', error);
-=======
-          // // // // // // // console.error('Error parsing stored user:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-          })} catch (error) {
           console.error('Error parsing stored user:', error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           setAuthState({
             user: null,
             isAuthenticated: false,
             isLoading: false,
-<<<<<<< HEAD
           });
-
-=======
-          })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+        }
       } else {
         setAuthState({
           user: null,
           isAuthenticated: false,
           isLoading: false,
-<<<<<<< HEAD
         });
-
-=======
-        })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      }
     };
 
-    checkAuth()}, []);
+    checkAuth();
+  }, []);
 
-  const login = async (email: anystring, _password: string)   => {
+  const login = async (email: string, password: string) => {
     // In a real app, you would make an API call to your backend
     const mockUser: User = {
-  id: '1',
+      id: '1',
       email,
       name: 'John Doe',
       role: 'user',
@@ -108,19 +79,20 @@ export function useAuth(...args[]: any):  {
     return mockUser;
   };
 
-  const logout = () => {;
-    setAuthState({;
-      user: null,;
-      isAuthenticated: false,;
-      isLoading: false,;
+  const logout = () => {
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
     });
     localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
+    localStorage.removeItem('authToken');
+  };
 
-  const register = async (email: anystring, password: string, name: string)   => {
+  const register = async (email: string, password: string, name: string) => {
     // Implement actual registration logic here
     const mockUser: User = {
-  id: '1',
+      id: '1',
       email,
       name,
       role: 'user'
@@ -146,15 +118,8 @@ export function useAuth(...args[]: any):  {
     register,
     isAuthenticated: authState.isAuthenticated,
     isLoading: authState.isLoading,
-<<<<<<< HEAD
-    isAdmin: authState.user?.role = == 'admin'
-  }};
-=======;
-    isAdmin: authState.user?.role = == 'admin';
+    isAdmin: authState.user?.role === 'admin'
   };
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default useAuth;

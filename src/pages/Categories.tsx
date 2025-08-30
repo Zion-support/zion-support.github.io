@@ -1,11 +1,32 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight export default function Categories(...args: any[]): any {
-=======
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Server, 
+  Users, 
+  Building, 
+  Database, 
+  Cloud, 
+  Shield, 
+  Brain, 
+  Zap, 
+  Globe, 
+  Cpu, 
+  Lock, 
+  BarChart3, 
+  Palette, 
+  Smartphone, 
+  Rocket, 
+  Target, 
+  Lightbulb, 
+  Code, 
+  Network, 
+  Eye, 
+  Star, 
+  ArrowRight 
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-export default function Categories(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+const CategoriesPage: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const mainCategories = [
@@ -13,44 +34,44 @@ export default function Categories(...args: any[]): any {
       id: 'all',
       name: 'All Categories',
       icon: <Globe className="w-8 h-8" />,
-      color: 'from-zion-cyan to-zion-blue',
+      color: 'from-blue-500 to-cyan-500',
       count: 0
     },
     {
       id: 'ai-ml',
       name: 'AI & Machine Learning',
       icon: <Brain className="w-8 h-8" />,
-      color: 'from-zion-purple to-zion-pink',
+      color: 'from-purple-500 to-pink-500',
       count: 45
     },
     {
       id: 'cloud',
       name: 'Cloud & Infrastructure',
       icon: <Cloud className="w-8 h-8" />,
-      color: 'from-zion-blue to-zion-cyan',
+      color: 'from-blue-500 to-cyan-500',
       count: 32
     },
     {
       id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: <Shield className="w-8 h-8" />,
-      color: 'from-zion-red to-zion-orange',
+      color: 'from-red-500 to-orange-500',
       count: 28
     },
     {
       id: 'data',
       name: 'Data & Analytics',
       icon: <BarChart3 className="w-8 h-8" />,
-      color: 'from-zion-green to-zion-emerald',
+      color: 'from-green-500 to-emerald-500',
       count: 36
     },
     {
       id: 'development',
       name: 'Development',
       icon: <Code className="w-8 h-8" />,
-      color: 'from-zion-indigo to-zion-purple',
+      color: 'from-indigo-500 to-purple-500',
       count: 41
-
+    }
   ];
 
   const subCategories = {
@@ -86,7 +107,7 @@ export default function Categories(...args: any[]): any {
         services: 8,
         talent: 5,
         equipment: 1
-
+      }
     ],
     'cloud': [
       {
@@ -112,7 +133,7 @@ export default function Categories(...args: any[]): any {
         services: 7,
         talent: 4,
         equipment: 1
-
+      }
     ],
     'cybersecurity': [
       {
@@ -138,7 +159,7 @@ export default function Categories(...args: any[]): any {
         services: 6,
         talent: 4,
         equipment: 3
-
+      }
     ],
     'data': [
       {
@@ -164,9 +185,9 @@ export default function Categories(...args: any[]): any {
         services: 6,
         talent: 5,
         equipment: 2
-
+      }
     ],
-    'development'[
+    'development': [
       {
         name: 'Web Development',
         description: 'Frontend and backend web applications',
@@ -185,23 +206,13 @@ export default function Categories(...args: any[]): any {
       },
       {
         name: 'API Development',
-<<<<<<< HEAD
         description: 'RESTful APIs and microservices',
         icon: <Network className="w-6 h-6" />,
         services: 13,
         talent: 8,
         equipment: 1
-
+      }
     ]
-=======
-        description: 'RESTful APIs and microservices',;
-        icon: <Network className="w-6 h-6" />,;
-        services: 13,;
-        talent: 8,;
-        equipment: 1;
-      };
-    ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const featuredItems = [
@@ -222,210 +233,234 @@ export default function Categories(...args: any[]): any {
       featured: true
     },
     {
-<<<<<<< HEAD
       type: 'equipment',
       title: 'High-Performance GPU Cluster',
       category: 'AI & Machine Learning',
       rating: 4.7,
       price: '$15,000/month',
       featured: true
-
-=======
-      type: 'equipment',;
-      title: 'High-Performance GPU Cluster',;
-      category: 'AI & Machine Learning',;
-      rating: 4.7,;
-      price: '$15,000/month',;
-      featured: true;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
-  const getCategoryCount = (categoryId: anystring)  => {
+  const getCategoryCount = (categoryId: string) => {
     if (categoryId === 'all') {
       return Object.values(subCategories).flat().reduce((total, sub) =>
         total + sub.services + sub.talent + sub.equipment, 0
       );
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    return subCategories[categoryId]?.reduce((total, sub) =>
+    return subCategories[categoryId as keyof typeof subCategories]?.reduce((total, sub) =>
       total + sub.services + sub.talent + sub.equipment, 0
-    ) || 0};
+    ) || 0;
+  };
 
   // Update counts
-<<<<<<< HEAD
-  mainCategories.forEach(cat = > {;
-    cat.count = getCategoryCount(cat.id)});
-=======
-  mainCategories.forEach(cat = > {;
+  mainCategories.forEach(cat => {
     cat.count = getCategoryCount(cat.id);
   });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Browse Categories - Zion Tech Group"
+        description="Explore our comprehensive collection of services, talent, and equipment organized into logical categories for easy discovery."
+      />
+      
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Browse Categories
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Explore our comprehensive collection of services, talent, and equipment organized into logical categories for easy discovery.
-          </p>
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Browse <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-600 bg-clip-text text-transparent">Categories</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Explore our comprehensive collection of services, talent, and equipment organized into 
+              logical categories for easy discovery.
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* Main Categories */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Main Categories
-          </h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {mainCategories.map((category)   => (
-              <button
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Main Categories</h2>
+            <p className="text-xl text-gray-300">Choose from our comprehensive technology categories</p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mainCategories.map((category, index) => (
+              <motion.button
                 key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 onClick={() => setActiveCategory(category.id)}
                 className={`text-left p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                   activeCategory === category.id
-                    ? 'border-zion-cyan bg-zion-cyan/10'
-                    : 'border-zion-slate-light bg-zion-slate hover:border-zion-cyan/50'
+                    ? 'border-blue-400 bg-blue-400/10'
+                    : 'border-slate-600 bg-slate-800/50 hover:border-blue-400/50'
                 }`}
-
+              >
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center text-white mb-4`}>
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
-                <p className="text-zion-slate-light text-sm mb-3">
+                <p className="text-gray-300 text-sm mb-3">
                   {category.count} total items available
                 </p>
-                <div className="flex items-center gap-2 text-zion-cyan text-sm font-medium">
+                <div className="flex items-center gap-2 text-blue-400 text-sm font-medium">
                   Browse Category
                   <ArrowRight className="w-4 h-4" />
                 </div>
-              </button>
+              </motion.button>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Sub Categories */}
-      {activeCategory !== 'all' && subCategories[activeCategory] && (
-        <div className="py-16 bg-zion-slate-dark">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
-              {mainCategories.find(c => c.id === activeCategory)?.name} - Sub Categories
-            </h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-              {subCategories[activeCategory].map((subCategory, index)   => (
-                <div
+      {activeCategory !== 'all' && subCategories[activeCategory as keyof typeof subCategories] && (
+        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {mainCategories.find(c => c.id === activeCategory)?.name} - Sub Categories
+              </h2>
+              <p className="text-xl text-gray-300">Explore specialized areas within this category</p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {subCategories[activeCategory as keyof typeof subCategories]?.map((subCategory, index) => (
+                <motion.div
                   key={index}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
-                  <div className="text-zion-cyan mb-4">{subCategory.icon}</div>
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                >
+                  <div className="text-blue-400 mb-4">{subCategory.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{subCategory.name}</h3>
-                  <p className="text-zion-slate-light text-sm mb-4">{subCategory.description}</p>
+                  <p className="text-gray-300 text-sm mb-4">{subCategory.description}</p>
 
                   <div className="grid grid-cols-3 gap-3 text-center">
-                    <div className="bg-zion-slate-light/20 rounded-lg p-3">
-                      <div className="text-zion-cyan font-bold text-lg">{subCategory.services}</div>
-                      <div className="text-zion-slate-light text-xs">Services</div>
+                    <div className="bg-slate-700/50 rounded-lg p-3">
+                      <div className="text-blue-400 font-bold text-lg">{subCategory.services}</div>
+                      <div className="text-gray-300 text-xs">Services</div>
                     </div>
-                    <div className="bg-zion-slate-light/20 rounded-lg p-3">
-                      <div className="text-zion-purple font-bold text-lg">{subCategory.talent}</div>
-                      <div className="text-zion-slate-light text-xs">Talent</div>
+                    <div className="bg-slate-700/50 rounded-lg p-3">
+                      <div className="text-purple-400 font-bold text-lg">{subCategory.talent}</div>
+                      <div className="text-gray-300 text-xs">Talent</div>
                     </div>
-                    <div className="bg-zion-slate-light/20 rounded-lg p-3">
-                      <div className="text-zion-orange font-bold text-lg">{subCategory.equipment}</div>
-                      <div className="text-zion-slate-light text-xs">Equipment</div>
+                    <div className="bg-slate-700/50 rounded-lg p-3">
+                      <div className="text-orange-400 font-bold text-lg">{subCategory.equipment}</div>
+                      <div className="text-gray-300 text-xs">Equipment</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
       )}
 
       {/* Featured Items */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Featured Items
-          </h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
-            {featuredItems.map((item, index)   => (
-              <div
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Items</h2>
+            <p className="text-xl text-gray-300">Handpicked solutions and services</p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredItems.map((item, index) => (
+              <motion.div
                 key={index}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
                 {item.featured && (
-                  <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
+                  <div className="inline-block bg-blue-400 text-white px-3 py-1 rounded-full text-xs font-medium mb-4">
                     Featured
                   </div>
                 )}
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-4">{item.category}</p>
+                <p className="text-gray-300 text-sm mb-4">{item.category}</p>
 
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     <span className="text-white font-medium">{item.rating}</span>
                   </div>
-                  <span className="text-zion-cyan font-semibold">{item.price}</span>
+                  <span className="text-blue-400 font-semibold">{item.price}</span>
                 </div>
 
-                <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-medium hover:bg-zion-cyan-light transition-colors">
+                <button className="w-full bg-blue-500 text-white py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors">
                   View Details
                 </button>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Browse All CTA */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Can't Find What You're Looking For?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Use our advanced search to find specific services, talent, or equipment, or contact us for custom solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/search"
-              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-
-              Advanced Search
-            </a>
-            <a
-              href="/contact"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-
-              Contact Us
-<<<<<<< HEAD
-            </a>
-          </div>
+      <section className="py-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Use our advanced search to find specific services, talent, or equipment, 
+              or contact us for custom solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/search"
+                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+              >
+                Advanced Search
+              </a>
+              <a
+                href="/contact"
+                className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
     </div>
-  )};
-=======;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+};
+
+export default CategoriesPage;

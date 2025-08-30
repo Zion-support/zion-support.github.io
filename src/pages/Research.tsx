@@ -1,11 +1,46 @@
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Research(...args: any[]): any {
-=======
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon   } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  FlaskConical, 
+  BookOpen, 
+  Users, 
+  Clock, 
+  Star, 
+  Search, 
+  Filter, 
+  Download, 
+  ExternalLink, 
+  ArrowRight, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Zap, 
+  Globe, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  CheckCircle, 
+  Calendar, 
+  MapPin, 
+  DollarSign, 
+  FileText, 
+  Lightbulb, 
+  Microscope, 
+  Rocket, 
+  Code, 
+  Network, 
+  Cpu, 
+  Lock, 
+  BarChart3, 
+  Palette, 
+  Smartphone, 
+  Eye, 
+  Star as StarIcon 
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-export default function Research(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+const ResearchPage: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
@@ -62,7 +97,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1038/s41534-024-00800-5',
           citations: 23
-
+        }
       ],
       tags: ['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
       featured: true,
@@ -99,7 +134,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
           citations: 18
-
+        }
       ],
       tags: ['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
       featured: true,
@@ -129,7 +164,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1109/MSEC.2024.001234',
           citations: 12
-
+        }
       ],
       tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
       featured: false,
@@ -181,7 +216,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1111/jscm.12345',
           citations: 28
-
+        }
       ],
       tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
       featured: false,
@@ -211,52 +246,31 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1038/s41928-024-01123-4',
           citations: 19
-<<<<<<< HEAD
-
+        }
       ],
       tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
       featured: true,
       progress: 55,
       impact: 'high'
-
-=======
-        };
-      ],;
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],;
-      featured: true,;
-      progress: 55,;
-      impact: 'high';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   // Update counts
-<<<<<<< HEAD
-  categories.forEach(cat = > {;
-    cat.count = researchProjects.filter(p => p.category === cat.id).length});
-
-  statuses.forEach(status = > {;
-    status.count = researchProjects.filter(p => p.status === status.id).length});
-
-  types.forEach(type = > {;
-    type.count = researchProjects.filter(p => p.type === type.id).length});
-=======
-  categories.forEach(cat = > {;
+  categories.forEach(cat => {
     cat.count = researchProjects.filter(p => p.category === cat.id).length;
   });
 
-  statuses.forEach(status = > {;
+  statuses.forEach(status => {
     status.count = researchProjects.filter(p => p.status === status.id).length;
   });
 
-  types.forEach(type = > {;
+  types.forEach(type => {
     type.count = researchProjects.filter(p => p.type === type.id).length;
   });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredProjects = researchProjects.filter(project => {;
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredProjects = researchProjects.filter(project => {
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
@@ -266,107 +280,90 @@ export default function Research(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: anystring)   => {;
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />};
-
-  const getCategoryIcon = (categoryId: anystring)  => {;
+  const getCategoryIcon = (categoryId: string) => {
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
   };
 
-  const getStatusColor = (status: anystring)  => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const getStatusColor = (status: string) => {
+    switch (status) {
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400';
       case 'planning': return 'text-yellow-400';
       case 'published': return 'text-purple-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      default: return 'text-gray-400';
+    }
   };
 
-<<<<<<< HEAD
-  const getImpactColor = (impact: anystring)  => {;
-    switch (impact) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const getImpactColor = (impact: string) => {
+    switch (impact) {
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400';
       case 'medium': return 'text-yellow-400';
       case 'low': return 'text-green-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      default: return 'text-gray-400';
+    }
   };
 
-<<<<<<< HEAD
-  const formatDate = (dateString: anystring)   => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',;
-      month: 'short';
-    })};
-
-  const formatFunding = (amount: anynumber)   => {
-    if (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {;
-      return `$${(amount / 1000).toFixed(0)}K`};
-    return `$${amount.toLocaleString()}`};
-=======
-  const formatDate = (dateString: anystring)  => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',;
-      month: 'short';
+      year: 'numeric',
+      month: 'short'
     });
   };
 
-  const formatFunding = (amount: anynumber)  => {;
-    if (amount >= 1000000) {;
+  const formatFunding = (amount: number) => {
+    if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`;
-
+    }
     return `$${amount.toLocaleString()}`;
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Research & Innovation - Zion Tech Group"
+        description="Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships."
+      />
+      
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <FlaskConical className="w-16 h-16 text-zion-cyan" />
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl mb-6">
+              <FlaskConical className="w-10 h-10 text-blue-400" />
             </div>
-          </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Research & Innovation
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships.
-          </p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Research & <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-600 bg-clip-text text-transparent">Innovation</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Pushing the boundaries of technology through cutting-edge research, innovative solutions, 
+              and collaborative partnerships.
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* Search and Filters */}
-      <div className="py-12">
-        <div className="container mx-auto px-4">
+      <section className="py-12">
+        <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {/* Search Bar */}
             <div className="relative mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search research projects..."
-                className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
               />
             </div>
 
@@ -382,10 +379,10 @@ export default function Research(...args: any[]): any {
                       onClick={() => setActiveCategory(category.id)}
                       className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeCategory === category.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                          ? 'bg-blue-500 text-white'
+                          : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
                       }`}
-
+                    >
                       {category.icon}
                       {category.name}
                     </button>
@@ -403,10 +400,10 @@ export default function Research(...args: any[]): any {
                       onClick={() => setActiveStatus(status.id)}
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeStatus === status.id
-                          ? 'bg-zion-purple text-white'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                          ? 'bg-purple-500 text-white'
+                          : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
                       }`}
-
+                    >
                       {status.name} ({status.count})
                     </button>
                   ))}
@@ -423,10 +420,10 @@ export default function Research(...args: any[]): any {
                       onClick={() => setActiveType(type.id)}
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeType === type.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: anybg-zion-slate-light hover:text-white'
+                          ? 'bg-blue-500 text-white'
+                          : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
                       }`}
-
+                    >
                       {type.name} ({type.count})
                     </button>
                   ))}
@@ -435,25 +432,35 @@ export default function Research(...args: any[]): any {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Featured Research */}
-      {researchProjects.filter(p   => p.featured).length > 0 && (
-        <div className="py-12 bg-zion-slate-dark">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
-              Featured Research Projects
-            </h2>
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {researchProjects.filter(p   => p.featured).map((project) => (
-                <div
+      {researchProjects.filter(p => p.featured).length > 0 && (
+        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">Featured Research Projects</h2>
+              <p className="text-xl text-gray-300">Breakthrough innovations leading the industry</p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {researchProjects.filter(p => p.featured).map((project, index) => (
+                <motion.div
                   key={project.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-
-                  <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-500">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                      <span className="px-3 py-1 bg-blue-400 text-white rounded-full text-xs font-medium">
                         Featured
                       </span>
                     </div>
@@ -481,7 +488,7 @@ export default function Research(...args: any[]): any {
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       {getCategoryIcon(project.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                      <span className="text-sm text-gray-300 bg-slate-700/50 px-2 py-1 rounded-full">
                         {categories.find(c => c.id === project.category)?.name}
                       </span>
                       <span className={`text-sm font-medium ${getStatusColor(project.status)}`}>
@@ -490,9 +497,9 @@ export default function Research(...args: any[]): any {
                     </div>
 
                     <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{project.description}</p>
+                    <p className="text-gray-300 text-sm mb-4">{project.description}</p>
 
-                    <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
+                    <div className="flex items-center justify-between mb-4 text-sm text-gray-300">
                       <div className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
                         {project.team.length} researchers
@@ -503,39 +510,48 @@ export default function Research(...args: any[]): any {
                       </div>
                     </div>
 
-                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+                    <button className="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
                       Learn More
                     </button>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
       )}
 
       {/* All Research Projects */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            All Research Projects
-          </h2>
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">All Research Projects</h2>
+            <p className="text-xl text-gray-300">Explore our complete research portfolio</p>
+          </motion.div>
 
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredProjects.map((project)   => (
-                <div
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredProjects.map((project, index) => (
+                <motion.div
                   key={project.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {getCategoryIcon(project.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                      <span className="text-sm text-gray-300 bg-slate-700/50 px-2 py-1 rounded-full">
                         {categories.find(c => c.id === project.category)?.name}
                       </span>
                       {project.featured && (
-                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                        <span className="px-2 py-1 bg-blue-400 text-white rounded-full text-xs font-medium">
                           Featured
                         </span>
                       )}
@@ -551,20 +567,20 @@ export default function Research(...args: any[]): any {
                   </div>
 
                   <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{project.description}</p>
+                  <p className="text-gray-300 mb-4">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.slice(0, 4).map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
+                        className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-full"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-zion-slate-light">
+                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-300">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
@@ -584,20 +600,20 @@ export default function Research(...args: any[]): any {
                   </div>
 
                   <div className="mb-4">
-                    <div className="flex items-center justify-between text-sm text-zion-slate-light mb-2">
+                    <div className="flex items-center justify-between text-sm text-gray-300 mb-2">
                       <span>Progress</span>
                       <span>{project.progress}%</span>
                     </div>
-                    <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
+                    <div className="w-full bg-slate-700/50 rounded-full h-2">
                       <div
-                        className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
+                        className="bg-blue-400 h-2 rounded-full transition-all duration-300"
                         style={{ width: `${project.progress}%` }}
                       ></div>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <div className="text-sm text-zion-slate-light">
+                    <div className="text-sm text-gray-300">
                       <div className="flex items-center gap-1 mb-1">
                         <Users className="w-4 h-4" />
                         Lead: {project.leadResearcher}
@@ -609,64 +625,59 @@ export default function Research(...args: any[]): any {
                     </div>
 
                     <div className="flex gap-2">
-                      <button className="bg-zion-purple text-white px-4 py-2 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2">
+                      <button className="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center gap-2">
                         <FileText className="w-4 h-4" />
                         Details
                       </button>
                       {project.publications.length > 0 && (
-                        <button className="bg-zion-cyan text-zion-slate-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
                           Papers
                         </button>
                       )}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           ) : (
             <div className="text-center py-12">
-              <FlaskConical className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+              <FlaskConical className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No research projects found</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-gray-300">
                 Try adjusting your search terms or browse all categories
               </p>
             </div>
           )}
         </div>
-      </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Join Our Research Community
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Collaborate with leading researchers, access cutting-edge technology, and contribute to breakthrough innovations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-              Explore Collaborations
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
-              Contact Research Team
-<<<<<<< HEAD
-            </button>
-          </div>
+      <section className="py-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Join Our Research Community
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Collaborate with leading researchers, access cutting-edge technology, and contribute to breakthrough innovations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                Explore Collaborations
+              </button>
+              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-colors">
+                Contact Research Team
+              </button>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
     </div>
-  )};
-=======;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}}
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+};
+
+export default ResearchPage;

@@ -1,95 +1,7 @@
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { Check,
-  X,
-  Star,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Users,
-  Building,
-  Smartphone,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Truck,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  DollarSign,
-  Clock
-<<<<<<< HEAD
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
-=======
- } from 'lucide-react';
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS   } from '@/data/expandedServices';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-// Group services by category for better organization
-<<<<<<< HEAD
-const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
-  if (!acc[service.category]) {;
-    acc[service.category] = [];
-<<<<<<< HEAD
-
-  acc[service.category].push(service);
-  return acc;
-}, { /* empty */ } as { [key: string]: typeof EXPANDED_SERVICES });
-=======
-  }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  acc[service.category].push(service);
-  return acc}, {} as { [key: string]: typeof EXPANDED_SERVICES });
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-// Pricing comparison features
-const pricingFeatures = [
-  "AI-Powered Solutions",
-  "24/7 Support",;
-  "Global Coverage",;
-  "Custom Integration",;
-  "Training & Documentation",;
-  "Regular Updates",;
-  "Security Compliance",;
-  "Scalable Architecture";
-];
-export default function ServicesPricingPage(...args: any[]): any {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const categories = Object.keys(servicesByCategory);
-  const filteredServices = selectedCategory === 'all'
-    ? EXPANDED_SERVICES
-    : servicesByCategory[selectedCategory] || [];
-  const getCategoryIcon = (category: anystring)   => {
-    const categoryIcons: { [key: string]: React.ReactNode } = {
-      'AI Automation': <Zap className="h-5 w-5" />,
-      'Customer Intelligence': <Users className="h-5 w-5" />,
-      'Content Marketing': <TrendingUp className="h-5 w-5" />,
-      'Cybersecurity': <Shield className="h-5 w-5" />,
-      'Threat Intelligence': <Shield className="h-5 w-5" />,
-      'Cloud Management': <Globe className="h-5 w-5" />,
-      'DevOps': <Zap className="h-5 w-5" />,
-      'Data Analytics': <TrendingUp className="h-5 w-5" />,
-      'IoT & Predictive Analytics': <Zap className="h-5 w-5" />,
-      'Business Intelligence': <TrendingUp className="h-5 w-5" />,
-      'Digital Transformation': <Building className="h-5 w-5" />,
-      'Edge Computing': <Globe className="h-5 w-5" />,
-      'API Management': <Zap className="h-5 w-5" />,
-      'Blockchain & Web3': <Zap className="h-5 w-5" />,;
-      'Mobile Development': <Smartphone className="h-5 w-5" />,;
-      'E-commerce': <ShoppingCart className="h-5 w-5" />,;
-      'Healthcare Technology': <Heart className="h-5 w-5" />,;
-      'FinTech': <TrendingUp className="h-5 w-5" />,;
-      'Education Technology': <GraduationCap className="h-5 w-5" />,;
-      'Supply Chain': <Truck className="h-5 w-5" />;
-    };
-    return categoryIcons[category] || <Zap className="h-5 w-5" />};
-=======
-import { motion  } from 'framer-motion.ts';
-import { Check, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Check, 
   Star, 
   Zap, 
   Shield, 
@@ -103,10 +15,10 @@ import { Check,
   Users,
   Clock,
   Award
- } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const ServicesPricingPage: React.FC = (): JSX.Element => {
   const [selectedPlan, setSelectedPlan] = useState('starter');
@@ -273,18 +185,17 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
     }
   ];
 
-  const calculatePrice = (plan: any)  => {
+  const calculatePrice = (plan: any) => {
     return billingCycle === 'monthly' ? plan.price.monthly : plan.price.annual;
   };
 
-  const calculateSavings = (plan: any)  => {
+  const calculateSavings = (plan: any) => {
     if (billingCycle === 'annual') {
       return Math.round((plan.price.monthly * 12 - plan.price.annual) / (plan.price.monthly * 12) * 100);
     }
     return 0;
   };
 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   return (
     <>
       <SEO 
@@ -293,49 +204,49 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
         keywords="AI services pricing, cloud solutions cost, cybersecurity pricing, technology consulting rates, Zion Tech Group pricing"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-blue/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 mb-6">
-                <Award className="w-5 h-5 text-zion-purple mr-2" />
-                <span className="text-zion-purple font-medium">Transparent Pricing</span>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/30 mb-6">
+                <Award className="w-5 h-5 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 font-medium">Transparent Pricing</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Services & Pricing
               </h1>
               
-              <p className="text-xl md:text-2xl text-zion-cyan-light max-w-4xl mx-auto leading-relaxed mb-8">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Choose the perfect plan for your business. Our transparent pricing ensures you know exactly 
                 what you're getting and how much it costs.
               </p>
 
               {/* Billing Toggle */}
               <div className="flex items-center justify-center space-x-4 mb-8">
-                <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-cyan-light'}`}>
+                <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-300'}`}>
                   Monthly
                 </span>
                 <button
                   onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
                   className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${
-                    billingCycle === 'annual' ? 'bg-zion-purple' : 'bg-zion-cyan-light'
+                    billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-gray-400'
                   }`}
                 >
                   <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
                   }`} />
                 </button>
-                <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-zion-cyan-light'}`}>
+                <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-300'}`}>
                   Annual
                   {billingCycle === 'annual' && (
-                    <span className="ml-2 text-sm bg-zion-purple text-white px-2 py-1 rounded-full">
+                    <span className="ml-2 text-sm bg-cyan-500 text-white px-2 py-1 rounded-full">
                       Save up to 20%
                     </span>
                   )}
@@ -358,14 +269,14 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold text-white mb-4">
                 Choose Your Plan
               </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Start with our starter plan and scale up as your business grows. 
                 All plans include our core features with different levels of support and customization.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={plan.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -374,13 +285,13 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                   viewport={{ once: true }}
                   className={`relative ${
                     plan.popular 
-                      ? 'ring-2 ring-zion-purple scale-105' 
+                      ? 'ring-2 ring-cyan-500 scale-105' 
                       : ''
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -388,99 +299,35 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                   
                   <Card className={`h-full transition-all duration-300 hover:scale-105 ${
                     plan.popular 
-                      ? 'bg-zion-purple/10 border-zion-purple/50' 
-                      : 'bg-white/5 border-white/20'
+                      ? 'bg-cyan-500/10 border-cyan-500/50' 
+                      : 'bg-slate-800/50 border-slate-700/50'
                   } backdrop-blur-sm`}>
                     <CardHeader className="text-center">
                       <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ${
                         plan.popular 
-                          ? 'bg-zion-purple text-white' 
-                          : 'bg-zion-cyan text-zion-slate-dark'
+                          ? 'bg-cyan-500 text-white' 
+                          : 'bg-blue-500 text-white'
                       }`}>
                         <plan.icon className="w-8 h-8" />
                       </div>
-<<<<<<< HEAD
-                    ))}
-                  </div>
-                  <Button
-                    className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
-<<<<<<< HEAD
-                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
-
-=======
-                    onClick = {
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry',
-  '_blank')
-
-
-
-
-
-
-}
-                  >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                    Get Custom Quote
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-        {/* Service Categories Tabs */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Services by Category</h2>
-          <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-white/10 border-white/20">
-              <TabsTrigger value="all" className="text-white data-[state=active]:bg-zion-purple">
-                All Services
-              </TabsTrigger>
-              {categories.slice(0, 5).map(category => (
-                <TabsTrigger key={category} value={category} className="text-white data-[state=active]:bg-zion-purple">
-                  {category.split(' ')[0]}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service)   => (
-                  <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
-                    <CardHeader>
-                      <div className="flex items-start justify-between mb-3">
-                        <div className="flex items-center gap-2">
-                          <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">
-                            {getCategoryIcon(service.category)}
-                          </div>
-                          <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
-                            {service.price && service.price <= 4999 ? 'Starter' :
-                             service.price && service.price <= 9999 ? 'Professional' :
-                             service.price && service.price <= 25000 ? 'Enterprise' : 'Custom'}
-                          </Badge>
-                        </div>
-                      </div>
-                      <CardTitle className="text-lg text-white line-clamp-2">{service.title}</CardTitle>
-                      <CardDescription className="text-zion-cyan-light line-clamp-3">
-                        {service.description}
-=======
                       
                       <CardTitle className="text-2xl font-bold text-white">
                         {plan.name}
                       </CardTitle>
                       
-                      <CardDescription className="text-zion-cyan-light">
+                      <CardDescription className="text-gray-300">
                         {plan.description}
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
                       </CardDescription>
                       
                       <div className="mt-6">
                         <div className="text-4xl font-bold text-white">
                           ${calculatePrice(plan)}
-                          <span className="text-lg text-zion-cyan-light">
+                          <span className="text-lg text-gray-300">
                             /{billingCycle === 'monthly' ? 'mo' : 'year'}
                           </span>
                         </div>
                         {billingCycle === 'annual' && (
-                          <div className="text-sm text-zion-purple font-medium mt-2">
+                          <div className="text-sm text-cyan-400 font-medium mt-2">
                             Save {calculateSavings(plan)}% with annual billing
                           </div>
                         )}
@@ -488,79 +335,10 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                     </CardHeader>
                     
                     <CardContent>
-<<<<<<< HEAD
-                      <div className="space-y-4">
-                        {/* Pricing and Details */}
-                        <div className="space-y-2">
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Price:</span>
-                            <span className="font-semibold text-zion-cyan text-lg">
-                              ${service.price?.toLocaleString()}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Availability:</span>
-                            <span className="flex items-center gap-1 text-sm">
-                              <Clock className="h-3 w-3" />
-                              {service.availability}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Location:</span>
-                            <span className="flex items-center gap-1 text-sm">
-                              <Globe className="h-3 w-3" />
-                              {service.location}
-                            </span>
-                          </div>
-                        </div>
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2">
-                          {service.tags.slice(0, 3).map((tag, index) => (
-                            <Badge key={index} variant="secondary" className="bg-white/10 text-zion-cyan-light border-white/20 text-xs">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                        {/* Rating and AI Score */}
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1">
-                            <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                            <span className="text-sm">{service.rating}</span>
-                            <span className="text-xs text-zion-cyan-light">({service.reviewCount} reviews)</span>
-                          </div>
-                          {service.aiScore && (
-                            <Badge className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                              AI Score: {service.aiScore}
-                            </Badge>
-                          )}
-                        </div>
-                        {/* Action Buttons */}
-                        <div className="flex gap-2">
-                          <Button
-                            className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
-                            onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`, '_blank')}
-
-                            <Mail className="h-4 w-4 mr-2" />
-                            Get Quote
-                          </Button>
-                          <Button
-                            variant="outline"
-                            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-<<<<<<< HEAD
-                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-
-                            <ExternalLink className="h-4 w-4" />
-                          </Button>
-                        </div>
-=======
-                            onClick = {
-  () => window.open('https://ziontechgroup.com',
-  '_blank')
-=======
                       <ul className="space-y-3 mb-8">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center space-x-3">
-                            <Check className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                            <Check className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                             <span className="text-white">{feature}</span>
                           </li>
                         ))}
@@ -569,8 +347,8 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                       <Button 
                         className={`w-full ${
                           plan.popular 
-                            ? 'bg-zion-purple hover:bg-zion-purple/80' 
-                            : 'bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark'
+                            ? 'bg-cyan-500 hover:bg-cyan-600' 
+                            : 'bg-blue-500 hover:bg-blue-600'
                         }`}
                         onClick={() => setSelectedPlan(plan.id)}
                       >
@@ -584,10 +362,9 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
         {/* Service Categories */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -599,14 +376,14 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold text-white mb-4">
                 Our Service Categories
               </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive range of technology services. 
                 Each category can be customized to meet your specific requirements.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-              {serviceCategories.map((category, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -615,9 +392,9 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                   viewport={{ once: true }}
                   className="group"
                 >
-                  <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20 hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
+                  <Card className="h-full bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
                     <CardHeader className="text-center">
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-blue rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
                         <category.icon className="w-8 h-8 text-white" />
                       </div>
                       
@@ -625,11 +402,11 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                         {category.name}
                       </CardTitle>
                       
-                      <CardDescription className="text-zion-cyan-light">
+                      <CardDescription className="text-gray-300">
                         {category.description}
                       </CardDescription>
                       
-                      <div className="text-2xl font-bold text-zion-cyan">
+                      <div className="text-2xl font-bold text-cyan-400">
                         Starting at ${category.startingPrice}/mo
                       </div>
                     </CardHeader>
@@ -638,7 +415,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                       <ul className="space-y-2 mb-6">
                         {category.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center space-x-2 text-sm">
-                            <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                            <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                             <span className="text-white">{feature}</span>
                           </li>
                         ))}
@@ -646,7 +423,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                       
                       <Button 
                         variant="outline" 
-                        className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white"
+                        className="w-full border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white"
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -672,14 +449,14 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold text-white mb-4">
                 Additional Services
               </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Enhance your plan with these additional services. 
                 Mix and match to create the perfect solution for your business.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-              {addOns.map((addon, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {addOns.map((addon, index) => (
                 <motion.div
                   key={addon.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -687,9 +464,9 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
+                  <Card className="h-full bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
                     <CardHeader className="text-center">
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl mb-4">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl mb-4">
                         <addon.icon className="w-8 h-8 text-white" />
                       </div>
                       
@@ -697,11 +474,11 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                         {addon.name}
                       </CardTitle>
                       
-                      <CardDescription className="text-zion-cyan-light">
+                      <CardDescription className="text-gray-300">
                         {addon.description}
                       </CardDescription>
                       
-                      <div className="text-2xl font-bold text-zion-cyan">
+                      <div className="text-2xl font-bold text-cyan-400">
                         ${addon.price[billingCycle as keyof typeof addon.price]}/{billingCycle === 'monthly' ? 'mo' : 'year'}
                       </div>
                     </CardHeader>
@@ -709,7 +486,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                     <CardContent>
                       <Button 
                         variant="outline" 
-                        className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
+                        className="w-full border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-slate-900"
                       >
                         Add Service
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -723,7 +500,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -735,14 +512,14 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold text-white mb-4">
                 What Our Clients Say
               </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Don't just take our word for it. Here's what our clients have to say 
                 about our services and pricing.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-              {testimonials.map((testimonial, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -750,7 +527,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20">
+                  <Card className="h-full bg-slate-800/50 backdrop-blur-sm border-slate-700/50">
                     <CardContent className="p-6">
                       <div className="flex items-center mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -758,15 +535,14 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                         ))}
                       </div>
                       
-                      <p className="text-zion-cyan-light mb-4 italic">
+                      <p className="text-gray-300 mb-4 italic">
                         "{testimonial.content}"
                       </p>
                       
-                      <div className="border-t border-white/20 pt-4">
+                      <div className="border-t border-slate-600/50 pt-4">
                         <div className="font-semibold text-white">{testimonial.name}</div>
-                        <div className="text-sm text-zion-cyan-light">{testimonial.role}</div>
-                        <div className="text-xs text-zion-cyan-light">{testimonial.comp}</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                        <div className="text-sm text-gray-300">{testimonial.role}</div>
+                        <div className="text-xs text-gray-400">{testimonial.company}</div>
                       </div>
                     </CardContent>
                   </Card>
@@ -789,51 +565,51 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Get answers to common questions about our services and pricing structure.
               </p>
             </motion.div>
 
             <div className="space-y-6">
-              <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
+              <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 text-white">
                 <CardHeader>
-                  <CardTitle className="text-zion-cyan">What's included in each plan?</CardTitle>
+                  <CardTitle className="text-cyan-400">What's included in each plan?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-zion-cyan-light">
+                  <p className="text-gray-300">
                     All our services include implementation, training, documentation, and 24/7 support. 
                     Custom integrations and additional features can be added based on your requirements.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
+              <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 text-white">
                 <CardHeader>
-                  <CardTitle className="text-zion-cyan">Do you offer custom pricing?</CardTitle>
+                  <CardTitle className="text-cyan-400">Do you offer custom pricing?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-zion-cyan-light">
+                  <p className="text-gray-300">
                     Yes, we provide custom pricing for enterprise solutions and specialized requirements. 
                     Contact us for a personalized quote tailored to your business needs.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
+              <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 text-white">
                 <CardHeader>
-                  <CardTitle className="text-zion-cyan">What payment terms do you offer?</CardTitle>
+                  <CardTitle className="text-cyan-400">What payment terms do you offer?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-zion-cyan-light">
+                  <p className="text-gray-300">
                     We offer flexible payment terms including upfront payment, milestone-based payments, 
                     and monthly/annual subscription options for ongoing services.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
+              <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 text-white">
                 <CardHeader>
-                  <CardTitle className="text-zion-cyan">Is there a money-back guarantee?</CardTitle>
+                  <CardTitle className="text-cyan-400">Is there a money-back guarantee?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-zion-cyan-light">
+                  <p className="text-gray-300">
                     We offer a satisfaction guarantee. If you're not completely satisfied with our services 
                     within the first 30 days, we'll work to make it right or provide a refund.
                   </p>
@@ -841,74 +617,20 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               </Card>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-        {/* Pricing FAQ Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">What's included in the pricing?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  All our services include implementation, training, documentation, and 24/7 support.
-                  Custom integrations and additional features can be added based on your requirements.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">Do you offer custom pricing?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  Yes, we provide custom pricing for enterprise solutions and specialized requirements.
-                  Contact us for a personalized quote tailored to your business needs.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">What payment terms do you offer?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  We offer flexible payment terms including upfront payment, milestone-based payments,
-                  and monthly/annual subscription options for ongoing services.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">Is there a money-back guarantee?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  We offer a satisfaction guarantee. If you're not completely satisfied with our services
-                  within the first 30 days, we'll work to make it right or provide a refund.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-=======
         </section>
 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
         {/* Contact CTA Section */}
-        <div className="bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-center text-white mx-4 sm:mx-6 lg:mx-8 mb-20">
+        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl p-8 text-center text-white mx-4 sm:mx-6 lg:mx-8 mb-20">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-xl mb-6 text-zion-cyan-light">
+          <p className="text-xl mb-6 text-white/90">
             Let's discuss your project requirements and find the perfect solution for your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-zion-purple hover:bg-zion-cyan-light"
+              className="bg-white text-cyan-600 hover:bg-gray-100"
               onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}
-
+            >
               <Mail className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
@@ -917,7 +639,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               variant="outline"
               className="border-white text-white hover:bg-white/10"
               onClick={() => window.open('tel:+13024640950', '_blank')}
-
+            >
               <Phone className="h-5 w-5 mr-2" />
               Call Now
             </Button>
@@ -926,10 +648,6 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
       </div>
     </>
   );
-<<<<<<< HEAD
-</div></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
 };
 
 export default ServicesPricingPage;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
