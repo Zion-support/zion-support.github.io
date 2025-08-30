@@ -41,6 +41,7 @@ export default function AIDigitalTwinPlatform() {
       price: '$3,999/mo',
       features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
+    }
   ];
 
   const useCases = [

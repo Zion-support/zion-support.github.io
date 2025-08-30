@@ -112,13 +112,13 @@ const AIIoTEdgeComputing = createLazyComponent(() => import('./pages/services/AI
 // const AISustainableTechnology = createLazyComponent(() => import('./pages/services/AISustainableTechnology'));
 // const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AIQuantumMachineLearning'));
 // const AICybersecurity = createLazyComponent(() => import('./pages/services/AICybersecurity'));
-const AIHRPlatform = createLazyComponent(() => import('./pages/services/AIHRPlatform'));
+// const AIHRPlatform = createLazyComponent(() => import('./pages/services/AIHRPlatform'));
 // const SustainableTechnology = createLazyComponent(() => import('./pages/services/sustainable-technology'));
 // const QuantumMachineLearning = createLazyComponent(() => import('./pages/services/quantum-machine-learning'));
 // const AIContentCreation = createLazyComponent(() => import('./pages/services/ai-content-creation'));
-const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/iot-edge-computing'));
+// const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/iot-edge-computing'));
 // const QuantumComputing = createLazyComponent(() => import('./pages/services/quantum-computing'));
-const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));
+// const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));
 // const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));
 const API = createLazyComponent(() => import('./pages/API'));
 const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
@@ -131,7 +131,7 @@ const DigitalTransformation = createLazyComponent(() => import('./pages/services
 // const AISupplyChainRiskManagement = createLazyComponent(() => import('./pages/services/AISupplyChainRiskManagement'));
 const AIESGCompliancePlatform = createLazyComponent(() => import('./pages/services/AIESGCompliancePlatform'));
 const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services/AIDigitalTwinPlatform'));
-const AIQuantumComputingPlatform = createLazyComponent(() => import('./pages/services/AIQuantumComputingPlatform'));
+// const AIQuantumComputingPlatform = createLazyComponent(() => import('./pages/services/AIQuantumComputingPlatform'));
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AIEdgeComputingPlatform'));
 
 // 2025 Innovative Services
@@ -139,10 +139,10 @@ const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/servic
 
 // Additional innovative services
 const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/AIAutonomousResearchAssistant'));
-const AIContentMarketingSuite = createLazyComponent(() => import('./pages/services/AIContentMarketingSuite'));
-const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AIQuantumHybridPlatform'));
+// const AIContentMarketingSuite = createLazyComponent(() => import('./pages/services/AIContentMarketingSuite'));
+// const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AIQuantumHybridPlatform'));
 const AICybersecurityPlatform = createLazyComponent(() => import('./pages/services/AICybersecurityPlatform'));
-const AIHealthcarePlatform = createLazyComponent(() => import('./pages/services/AIHealthcarePlatform'));
+// const AIHealthcarePlatform = createLazyComponent(() => import('./pages/services/AIHealthcarePlatform'));
 
 // Showcase pages
 // const UltimateServicesShowcase2025 = createLazyComponent(() => import('./components/UltimateServicesShowcase2025'));
@@ -154,12 +154,12 @@ const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages
 // const ZionCuttingEdgeServices2029 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2029'));
 
 // Additional service components
-const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/AIComplianceAssistant'));
-const AISalesCopilot = createLazyComponent(() => import('./pages/services/AISalesCopilot'));
+// const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/AIComplianceAssistant'));
+// const AISalesCopilot = createLazyComponent(() => import('./pages/services/AISalesCopilot'));
 const AIPoweredSEO = createLazyComponent(() => import('./pages/services/AIPoweredSEO'));
 const InterviewAssessmentAI = createLazyComponent(() => import('./pages/services/InterviewAssessmentAI'));
 const AICustomerSupportAutomation = createLazyComponent(() => import('./pages/services/AICustomerSupportAutomation'));
-const AIProjectManagement = createLazyComponent(() => import('./pages/services/AIProjectManagement'));
+// const AIProjectManagement = createLazyComponent(() => import('./pages/services/AIProjectManagement'));
 const AIFinancialAnalytics = createLazyComponent(() => import('./pages/services/AIFinancialAnalytics'));
 const CloudDevOps = createLazyComponent(() => import('./pages/services/CloudDevOps'));
 const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITInfrastructure'));
@@ -340,11 +340,11 @@ function App() {
 
                     {/* Service Detail Routes */}
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
-                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                                          {/* <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} /> */}
+                                          {/* <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} /> */}
                     <Route path="/services/ai-seo" element={<AIPoweredSEO />} />
                     <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
-                    <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+                                          {/* <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} /> */}
                     <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                     <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
@@ -356,11 +356,11 @@ function App() {
                     <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
                     <Route path="/services/dsr-portal" element={<DSRPortal />} />
                     <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
-                    <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                    {/* <Route path="/services/digital-twin" element={<DigitalTwin />} /> */}
                     <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
                     {/* <Route path="/services/quantum-computing" element={<QuantumComputing />} /> */}
-                    <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
-                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    {/* <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} /> */}
+                                          {/* <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} /> */}
                     <Route path="/services/space-tech" element={<SpaceTech />} />
                     {/* <Route path="/services/data-analytics" element={<DataAnalytics />} /> */}
                     <Route path="/services/micro-crm" element={<MicroCRM />} />
@@ -368,7 +368,7 @@ function App() {
                     <Route path="/services/website-analytics" element={<WebsiteAnalytics />} />
                     <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                     {/* <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} /> */}
-                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                                          {/* <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} /> */}
 
                     {/* AI Service Routes */}
                     {/* <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} /> */}
@@ -389,12 +389,12 @@ function App() {
                     {/* <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} /> */}
                     <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                     <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
-                    <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
+                                          {/* <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} /> */}
                     <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
 
                     {/* Additional Service Routes */}
                     {/* <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} /> */}
-                    <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+                    {/* <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} /> */}
                     {/* <Route path="/services/sustainable-technology" element={<SustainableTechnology />} /> */}
                     {/* <Route path="/services/ai-content-creation" element={<AIContentCreation />} /> */}
                     {/* <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} /> */}

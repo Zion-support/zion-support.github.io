@@ -24,6 +24,7 @@ const IoTEdgeComputing: React.FC = () => {
       icon: Cloud,
       title: 'Hybrid Cloud',
       description: 'Seamless integration with cloud services'
+    }
   ];
 
   const applications = [
@@ -46,25 +47,21 @@ const IoTEdgeComputing: React.FC = () => {
       title: 'Retail',
       description: 'Smart inventory and customer analytics',
       icon: '🛍️'
+    }
   ];
 
-  const benefits = [;
-    'Reduced latency and faster response times',;
-    'Lower bandwidth costs and network efficiency',;
-    'Enhanced privacy and data security',;
-    'Real-time decision making capabilities',;
-    'Scalable and flexible architecture',;
-    'Improved reliability and uptime';
+  const benefits = [
+    'Reduced latency and faster response times',
+    'Lower bandwidth costs and network efficiency',
+    'Enhanced privacy and data security',
+    'Real-time decision making capabilities',
+    'Scalable and flexible architecture',
+    'Improved reliability and uptime'
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
-=======
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="IoT Edge Computing Services - Zion Tech Group"
         description="Transform your business with IoT edge computing solutions. Process data locally for faster insights and real-time decision making."
       />
@@ -73,29 +70,17 @@ const IoTEdgeComputing: React.FC = () => {
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{
+              opacity: 0,
+              y: 20
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
+          >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full border border-green-400/30 mb-6">
               <Cpu className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">IoT Edge Computing</span>
