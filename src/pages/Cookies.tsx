@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Shield,
   Cookie,
@@ -9,7 +9,7 @@ import { Shield,
   Check,
   X,
 =======
-import { SEO           } from '../components/SEO';
+import { SEO            } from '../components/SEO';
 import { Cookie, 
   Shield, 
   Settings, 
@@ -32,7 +32,7 @@ const Cookies: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
   Globe,
   BarChart3,
   Users
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 export default function Cookies(...args: any[]): any {
   const [expandedSection, setExpandedSection] = useState<any>(null);
@@ -157,11 +157,11 @@ export default function Cookies(...args: any[]): any {
   ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 
-  const updateCookiePreference = (type: anyanyanyanyanyanyanyanyanyanystring, enabled: boolean)           => {
+  const updateCookiePreference = (type: anyanyanyanyanyanyanyanyanyanyanystring, enabled: boolean)            => {
     if (type === 'essential') return; // Essential cookies cannot be disabled
     
     setCookiePreferences(prev => ({
@@ -522,8 +522,8 @@ export default function Cookies(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {cookieTypes.map((type, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {cookieTypes.map((type, index)            => (
               <motion.div
                 key={type.id}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { Helmet           } from 'react-helmet-async.ts';
+import { Helmet            } from 'react-helmet-async.ts';
 import { Rocket, 
   Zap, 
   Code, 
@@ -34,7 +34,7 @@ import { Rocket,
   Play,
   Pause,
   RefreshCw
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 export default function MicroSAASPlatform(...args: any[]): any {
   const features = [
@@ -283,8 +283,8 @@ export default function MicroSAASPlatform(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
-            {features.map((feature, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
+            {features.map((feature, index)            => (
               <div key={index} className="group">
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -322,8 +322,8 @@ export default function MicroSAASPlatform(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {platformCapabilities.map((capability, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {platformCapabilities.map((capability, index)            => (
               <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 border border-gray-200">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center">
@@ -361,8 +361,8 @@ export default function MicroSAASPlatform(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)            => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{useCase.title}</h3>
                 <p className="text-gray-600 mb-6">{useCase.description}</p>
@@ -394,8 +394,8 @@ export default function MicroSAASPlatform(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {developmentProcess.map((phase, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {developmentProcess.map((phase, index)            => (
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white group-hover:scale-110 transition-transform duration-300">
                   {phase.step}
@@ -425,8 +425,8 @@ export default function MicroSAASPlatform(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)            => (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
                 plan.popular ? 'border-purple-500 ring-4 ring-purple-500/20' : 'border-gray-200'
               }`}>

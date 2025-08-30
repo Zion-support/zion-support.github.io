@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react.ts';
-import { Helmet           } from 'react-helmet-async.ts';
+import { Helmet            } from 'react-helmet-async.ts';
 
 interface SEOData {
+
 
 
 
@@ -21,6 +22,7 @@ interface SEOData {
   structuredData?: object;
 
 interface EnhancedSEOManagerProps extends React.PropsWithChildren<{
+
 
 
 
@@ -60,7 +62,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags
-      const updateOGTag = (property: anyanyanyanyanyanyanyanyanyanystring, content: string)           => {;
+      const updateOGTag = (property: anyanyanyanyanyanyanyanyanyanyanystring, content: string)            => {;
         let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
           ogTag = document.createElement('meta');
@@ -77,7 +79,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       
       // Update Twitter Card tags
-      const updateTwitterTag = (name: anyanyanyanyanyanyanyanyanyanystring, content: string)           => {;
+      const updateTwitterTag = (name: anyanyanyanyanyanyanyanyanyanyanystring, content: string)            => {;
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
           twitterTag = document.createElement('meta');

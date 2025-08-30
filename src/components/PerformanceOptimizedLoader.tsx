@@ -1,5 +1,5 @@
 import React, { memo } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 
 interface LoaderProps extends React.PropsWithChildren<{}> {
 
@@ -130,7 +130,7 @@ PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 export function SkeletonLoader(...args: any[]): any {
   return (
     <div className = {`space-y-3 ${className}`}>
-      {Array.from({ length: anyanyanyanyanyanyanyanyanyanylines }).map((_, index)           => (
+      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)            => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -170,8 +170,8 @@ export function CardSkeleton(...args: any[]): any {
 // Grid skeleton loader
 export function GridSkeleton(...args: any[]): any {
   return (
-    <div className = {`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>;
-      {Array.from({ length: columns * rows }).map((_, index)           => (;
+    <div className = {`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>;
+      {Array.from({ length: columns * rows }).map((_, index)            => (;
         <CardSkeleton key={index} />;
       ))};
     </div>;

@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts'
-import { Link           } from 'react-router-dom.ts'
+import { Link            } from 'react-router-dom.ts'
 import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact(...args: any[]): any {
 =======
-import React, { useState           } from 'react.ts'
-import { Link            } from 'react-router-dom.ts'
-import { Mail, Phone, MapPin, Send, CheckCircle            } from 'lucide-react.ts'
+import React, { useState            } from 'react.ts'
+import { Link             } from 'react-router-dom.ts'
+import { Mail, Phone, MapPin, Send, CheckCircle             } from 'lucide-react.ts'
 
 
 export default function Contact(...args[]: any):  {
@@ -19,17 +19,17 @@ export default function Contact(...args[]: any):  {
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
 <<<<<<< HEAD
-	const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {
+	const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)            => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
 <<<<<<< HEAD
 		// // // console.log('Form submitted:', formData)
 =======
-		// // // // // // // console.log('Form submitted: anyanyanyanyanyanyanyanyanyany', formData)
+		// // // // // // // console.log('Form submitted: anyanyanyanyanyanyanyanyanyanyany', formData)
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 		setIsSubmitted(true)
 		// Reset form after submission
-		setTimeout(()           => {
+		setTimeout(()            => {
 			setIsSubmitted(false)
 			setFormData({ name: '', email: '', company: '', message: '' })
 		}, 3000)
@@ -37,7 +37,7 @@ export default function Contact(...args[]: any):  {
 =======
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-	const handleChange = (e: anyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)           => {
+	const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)            => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 		setFormData({
 			...formData,

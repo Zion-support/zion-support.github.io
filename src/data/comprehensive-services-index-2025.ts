@@ -1,8 +1,9 @@
-import { enhancedServices2025           } from './enhanced-services-2025';
-import { comprehensiveServices2025Enhanced           } from './comprehensive-services-2025-enhanced';
-import { comprehensivePricingGuide2025           } from './comprehensive-pricing-guide-2025';
+import { enhancedServices2025            } from './enhanced-services-2025';
+import { comprehensiveServices2025Enhanced            } from './comprehensive-services-2025-enhanced';
+import { comprehensivePricingGuide2025            } from './comprehensive-pricing-guide-2025';
 
 export interface ServiceIndex {
+
 
 
 
@@ -30,13 +31,14 @@ export interface ServiceIndex {
 
 
 
+
 }
 
 // Combine all services into a comprehensive index
 export const comprehensiveServicesIndex2025: ServiceIndex[] = [
     // Existing services from enhanced-services-2025.ts
     ...enhancedServices2025.map(service => ({
-        id: anyanyanyanyanyanyanyanyanyanyservice.id,
+        id: anyanyanyanyanyanyanyanyanyanyanyservice.id,
         name: service.name,
         category: service.category,
         description: service.description,
@@ -46,8 +48,8 @@ export const comprehensiveServicesIndex2025: ServiceIndex[] = [
     })),
 
     // New services from comprehensive-services-2025-enhanced.ts
-    ...comprehensiveServices2025Enhanced.map(service           => ({
-        id: anyanyanyanyanyanyanyanyanyanyservice.id,
+    ...comprehensiveServices2025Enhanced.map(service            => ({
+        id: anyanyanyanyanyanyanyanyanyanyanyservice.id,
         name: service.name,
         category: service.category,
         description: service.description,
@@ -57,7 +59,7 @@ export const comprehensiveServicesIndex2025: ServiceIndex[] = [
     })),
 
     // Services from comprehensive-pricing-guide-2025.ts
-    ...comprehensivePricingGuide2025.map(service           => ({
+    ...comprehensivePricingGuide2025.map(service            => ({
         id: service.id,
         name: service.name,
         category: service.category,
@@ -69,17 +71,17 @@ export const comprehensiveServicesIndex2025: ServiceIndex[] = [
 ];
 
 // Get services by category
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     return comprehensiveServicesIndex2025.filter(service => service.category === category);
 };
 
 // Get services by source
-export const getServicesBySource = (source: anyanyanyanyanyanyanyanyanyany'existing' | 'new' | 'pricing-guide')           => {
+export const getServicesBySource = (source: anyanyanyanyanyanyanyanyanyanyany'existing' | 'new' | 'pricing-guide')            => {
     return comprehensiveServicesIndex2025.filter(service => service.source === source);
 };
 
 // Search services
-export const searchServices = (query: anyanyanyanyanyanyanyanyanyanystring)           => {
+export const searchServices = (query: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     const lowercaseQuery = query.toLowerCase();
     return comprehensiveServicesIndex2025.filter(service =>
         service.name.toLowerCase().includes(lowercaseQuery) ||
@@ -104,12 +106,12 @@ export const getServiceStats = () => {
     const categories = getUniqueCategories();
     
     return {
-        total: anyanyanyanyanyanyanyanyanyanytotalServices,
+        total: anyanyanyanyanyanyanyanyanyanyanytotalServices,
         existing: existingServices,
         new: newServices,
         pricingGuide: pricingGuideServices,
         categories: categories.length,
-        categoryBreakdown: categories.map(category           => ({
+        categoryBreakdown: categories.map(category            => ({
             name: category,
             count: getServicesByCategory(category).length
         }))

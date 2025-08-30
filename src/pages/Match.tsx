@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 import { Sparkles,
   Users,
   Target,
@@ -38,7 +38,7 @@ import { Sparkles,
   Network,
   Settings as SettingsIcon
 <<<<<<< HEAD
-import { SEO           } from '../components/SEO';
+import { SEO            } from '../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -309,8 +309,8 @@ const Match: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)            => (
               <motion.div
                 key={service.id}
                 initial = {
@@ -486,7 +486,7 @@ const Match: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
                 step: "01",
@@ -506,7 +506,7 @@ const Match: React.FC = (): JSX.Element => {;
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
 
-            ].map((step, index)           => (
+            ].map((step, index)            => (
               <motion.div
                 key={index}
                 initial = {

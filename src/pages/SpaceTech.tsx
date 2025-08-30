@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 import { Rocket, 
   Satellite, 
   Globe, 
@@ -51,7 +51,7 @@ import { Rocket,
   Brain,
   Network,
   Cpu
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 export default function SpaceTech(...args: any[]): any {
   const features = [
@@ -182,8 +182,8 @@ export default function SpaceTech(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -221,8 +221,8 @@ export default function SpaceTech(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {applications.map((application, index)           => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {applications.map((application, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -270,8 +270,8 @@ export default function SpaceTech(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
-            {technologies.map((tech, index)           => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
+            {technologies.map((tech, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

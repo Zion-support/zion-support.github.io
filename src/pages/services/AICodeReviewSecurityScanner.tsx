@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye as EyeIcon, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon, GitBranch, GitCommit, GitPullRequest, GitMerge, GitCompare, GitBranch as GitBranchIcon, GitCommit as GitCommitIcon, GitPullRequest as GitPullRequestIcon, GitMerge as GitMergeIcon, GitCompare as GitCompareIcon           } from 'lucide-react.ts';
+import { motion            } from 'framer-motion.ts';
+import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye as EyeIcon, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon, GitBranch, GitCommit, GitPullRequest, GitMerge, GitCompare, GitBranch as GitBranchIcon, GitCommit as GitCommitIcon, GitPullRequest as GitPullRequestIcon, GitMerge as GitMergeIcon, GitCompare as GitCompareIcon            } from 'lucide-react.ts';
 
 const AICodeReviewSecurityScanner = () => {
   const features = [
@@ -250,8 +250,8 @@ const AICodeReviewSecurityScanner = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {vulnerabilityTypes.map((vulnType, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {vulnerabilityTypes.map((vulnType, index)            => (
               <motion.div
                 key={index}
                 initial = {
@@ -348,8 +348,8 @@ const AICodeReviewSecurityScanner = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial = {
@@ -439,8 +439,8 @@ const AICodeReviewSecurityScanner = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)            => (
               <motion.div
                 key={index}
                 initial = {
@@ -558,8 +558,8 @@ const AICodeReviewSecurityScanner = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)            => (
               <motion.div
                 key={index}
                 initial = {

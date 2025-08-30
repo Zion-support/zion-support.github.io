@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 import { BarChart3, 
   TrendingUp, 
   Brain, 
@@ -24,8 +24,8 @@ import { BarChart3,
   Phone,
   Mail,
   MapPin
-          } from 'lucide-react.ts';
-import { SEO           } from '../../components/SEO';
+           } from 'lucide-react.ts';
+import { SEO            } from '../../components/SEO';
 
 const AIBusinessIntelligenceDashboard = () => {
   const features = [
@@ -240,8 +240,8 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -287,8 +287,8 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -334,8 +334,8 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)           => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -409,8 +409,8 @@ const AIBusinessIntelligenceDashboard = () => {
             </h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {testimonials.map((testimonial, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {testimonials.map((testimonial, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}

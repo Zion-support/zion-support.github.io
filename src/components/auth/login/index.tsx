@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import { LoginForm            } from './LoginForm';
+import { LoginForm             } from './LoginForm';
 =======
-import { LoginForm           } from './LoginForm';
+import { LoginForm            } from './LoginForm';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function LoginContent(...args[]: any):  {

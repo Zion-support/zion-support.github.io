@@ -1,22 +1,23 @@
 <<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield            } from 'lucide-react.ts';
-import { useNavigate            } from 'react-router-dom.ts';
-import { useDebounce            } from '@/hooks/useDebounce';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield             } from 'lucide-react.ts';
+import { useNavigate             } from 'react-router-dom.ts';
+import { useDebounce             } from '@/hooks/useDebounce';
 =======
 import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield import { useNavigate           } from 'react-router-dom.ts';
-import { useDebounce           } from '@/hooks/useDebounce';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield import { useNavigate            } from 'react-router-dom.ts';
+import { useDebounce            } from '@/hooks/useDebounce';
 =======
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight           } from 'lucide-react.ts';
-import { useNavigate           } from 'react-router-dom.ts';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight            } from 'lucide-react.ts';
+import { useNavigate            } from 'react-router-dom.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SearchResult {
+
 
 
 
@@ -48,6 +49,7 @@ relevance: number;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -63,10 +65,12 @@ interface SearchFilter {
 
 
 
+
   type: string[];
   category: string[];
 <<<<<<< HEAD
 tags: string[];
+
 
 
 
@@ -95,8 +99,10 @@ interface SearchSuggestion {
 
 
 
-  text: anyanyanyanyanyanyanyanyanyanystring;
+
+  text: anyanyanyanyanyanyanyanyanyanyanystring;
   type: 'recent' | 'trending' | 'ai';
+
 
 
 
@@ -113,7 +119,7 @@ interface EnhancedSearchProps extends React.PropsWithChildren<{}> {
 
   className?: string;
   placeholder?: string;
-  onSearch?: (query: string)           => void;
+  onSearch?: (query: string)            => void;
   variant?: 'default' | 'futuristic' | 'minimal';
 
 }
@@ -324,7 +330,7 @@ export function EnhancedSearch(...args: any[]): any {;
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyMouseEvent)            => {
+    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyMouseEvent)             => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
 <<<<<<< HEAD
         setIsOpen(false);
@@ -335,14 +341,14 @@ export function EnhancedSearch(...args: any[]): any {;
       try {;
         setRecentSearches(JSON.parse(saved));
       } catch (error) {
-        console.error('Failed to parse recent searches: anyanyanyanyanyanyanyanyanyany', error);
+        console.error('Failed to parse recent searches: anyanyanyanyanyanyanyanyanyanyany', error);
       }
     }
   }, []);
 
   // Handle click outside
-  useEffect(()           => {
-    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyMouseEvent)           => {;
+  useEffect(()            => {
+    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyMouseEvent)            => {;
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -357,7 +363,7 @@ export function EnhancedSearch(...args: any[]): any {;
   // Handle keyboard navigation
   useEffect(() => {
 <<<<<<< HEAD
-    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyKeyboardEvent)            => {
+    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)             => {
       if (event.key === 'Escape') {;
         setIsOpen(false)} else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {;
         event.preventDefault();
@@ -373,7 +379,7 @@ export function EnhancedSearch(...args: any[]): any {;
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const handleSearch = useCallback((searchQuery: anyanyanyanyanyanyanyanyanyanystring)            => {
+  const handleSearch = useCallback((searchQuery: anyanyanyanyanyanyanyanyanyanyanystring)             => {
     if (searchQuery.trim()) {;
       // Add to recent searches;
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -390,23 +396,23 @@ export function EnhancedSearch(...args: any[]): any {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [recentSearches]);
 
-  const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanySearchResult)            => {;
+  const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanyanySearchResult)             => {;
     handleSearch(result.title);
     router(result.url);
 =======
-    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyKeyboardEvent)           => {;
+    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)            => {;
       if (!isOpen) return;
 
       switch (event.key) {
         case 'ArrowDown':
           event.preventDefault();
           setSelectedIndex(prev = > ;
-            prev < results.length - 1 ? prev + 1: anyanyanyanyanyanyanyanyanyanyprev;
+            prev < results.length - 1 ? prev + 1: anyanyanyanyanyanyanyanyanyanyanyprev;
           );
           break;
         case 'ArrowUp':
           event.preventDefault();
-          setSelectedIndex(prev           => prev > 0 ? prev - 1 : -1);
+          setSelectedIndex(prev            => prev > 0 ? prev - 1 : -1);
           break;
         case 'Enter':
           event.preventDefault();
@@ -477,14 +483,14 @@ export function EnhancedSearch(...args: any[]): any {;
     return () => clearTimeout(timeoutId);
   }, [query, filters, handleSearch]);
 
-  const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanySearchResult)           => {;
+  const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanyanySearchResult)            => {;
     router(result.url);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setIsOpen(false);
     setQuery('')};
 
 <<<<<<< HEAD
-  const toggleFilter = (filterType: anyanyanyanyanyanyanyanyanyanykeyof SearchFilter, value: string)            => {
+  const toggleFilter = (filterType: anyanyanyanyanyanyanyanyanyanyanykeyof SearchFilter, value: string)             => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -495,10 +501,10 @@ export function EnhancedSearch(...args: any[]): any {;
   const clearFilters = () => {;
     setFilters({ type[], category[], tags[] })};
 
-  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanystring)            => {
+  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (type) {
 =======;
-  const toggleFilter = (filterType: anyanyanyanyanyanyanyanyanyanykeyof SearchFilter, value: string)           => {;
+  const toggleFilter = (filterType: anyanyanyanyanyanyanyanyanyanyanykeyof SearchFilter, value: string)            => {;
     setFilters(prev => ({;
       ...prev,;
       [filterType]: prev[filterType].includes(value);
@@ -511,7 +517,7 @@ export function EnhancedSearch(...args: any[]): any {;
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'service': return <Code className="h-4 w-4" />;

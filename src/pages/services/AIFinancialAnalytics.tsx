@@ -2,7 +2,7 @@
 import { TrendingUp, BarChart3, Shield, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Calculator, PieChart export default function AIFinancialAnalytics(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 import { BarChart3, 
   TrendingUp, 
   Brain, 
@@ -35,8 +35,8 @@ import { BarChart3,
   TrendingDown,
   Percent,
   Clock
-          } from 'lucide-react.ts';
-import { SEO           } from '../../components/SEO';
+           } from 'lucide-react.ts';
+import { SEO            } from '../../components/SEO';
 
 const AIFinancialAnalytics = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -339,8 +339,8 @@ const AIFinancialAnalytics = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -407,8 +407,8 @@ const AIFinancialAnalytics = () => {
             <p className="text-xl text-gray-600">From portfolio analysis to market prediction, we cover all your financial analytics needs</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
-            {analyticsTypes.map((analyticsType, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {analyticsTypes.map((analyticsType, index)            => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
                 <PieChart className="w-8 h-8 text-green-500 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 text-sm">{analyticsType}</h3>
@@ -433,8 +433,8 @@ const AIFinancialAnalytics = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -469,8 +469,8 @@ const AIFinancialAnalytics = () => {
           <p className="text-xl text-gray-600">Ideal for financial professionals and organizations seeking data-driven insights</p>
         </div>
 
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-          {useCases.map((useCase, index)           => (
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {useCases.map((useCase, index)            => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <Target className="w-8 h-8 text-green-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
@@ -523,8 +523,8 @@ const AIFinancialAnalytics = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -570,8 +570,8 @@ const AIFinancialAnalytics = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -607,8 +607,8 @@ const AIFinancialAnalytics = () => {
             <p className="text-xl text-gray-600">Choose the plan that fits your financial analytics needs</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)            => (
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
                 plan.popular ? 'border-green-500 ring-2 ring-green-500/20' : 'border-gray-200'
               }`}>
@@ -632,8 +632,8 @@ const AIFinancialAnalytics = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)           => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -741,8 +741,8 @@ const AIFinancialAnalytics = () => {
             </h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {testimonials.map((testimonial, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {testimonials.map((testimonial, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}

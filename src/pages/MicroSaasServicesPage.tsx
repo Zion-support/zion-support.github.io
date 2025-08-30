@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle           } from '../ui/card';
-import { Button           } from '../ui/button';
-import { Badge           } from '../ui/badge';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle            } from '../ui/card';
+import { Button            } from '../ui/button';
+import { Badge            } from '../ui/badge';
 import { Building,
   Users,
   BarChart3,
@@ -31,7 +31,7 @@ import { Building,
   Smartphone,
   Settings,
   BarChart
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 export default function MicroSAASServicesPage(...args: any[]): any {
   const microSAASServices = [
     {
@@ -419,7 +419,7 @@ export default function MicroSAASServicesPage(...args: any[]): any {
             </Button>
 =======
 import React from 'react.ts';
-import { SEO            } from '@/components/SEO';
+import { SEO             } from '@/components/SEO';
 
 const MicroSAASServicesPage = () => {
   return (

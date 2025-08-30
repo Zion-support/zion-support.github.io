@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 import { BarChart3,
   Users,
   TrendingUp,
@@ -23,7 +23,7 @@ import { BarChart3,
 <<<<<<< HEAD
 export default function Dashboard(...args: any[]): any {
 =======
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export default function Dashboard(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -196,7 +196,7 @@ export default function Dashboard(...args[]: any):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanystring)            => {
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (status) {;
       case "Completed":;
         return "bg-green-100 text-green-800";
@@ -213,7 +213,7 @@ export default function Dashboard(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanystring)            => {
+  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (priority) {;
       case "High":;
         return "bg-red-100 text-red-800";
@@ -257,8 +257,8 @@ export default function Dashboard(...args[]: any):  {
 
       <div className="p-6">
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {stats.map((stat, index)            => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {stats.map((stat, index)             => (
             <motion.div
 <<<<<<< HEAD
               key={stat.title}

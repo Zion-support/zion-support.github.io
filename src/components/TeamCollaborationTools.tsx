@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 import { Users,
   MessageCircle,
   FileText,
@@ -65,10 +65,11 @@ import { Users,
   PieChart
 <<<<<<< HEAD
 =======
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface TeamMember {
+
 
 
 
@@ -102,10 +103,12 @@ availability: 'available' | 'busy' | 'unavailable';
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Project {
+
 
 
 
@@ -142,10 +145,12 @@ tags: string[];
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Task {
+
 
 
 
@@ -181,10 +186,12 @@ comments: Comment[];
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Comment {
+
 
 
 
@@ -214,10 +221,12 @@ replies: Comment[];
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Message {
+
 
 
 
@@ -237,6 +246,7 @@ interface Message {
   attachments?: string[];
 <<<<<<< HEAD
   reactions: { type: string; count: number 
+
 
 
 
@@ -266,6 +276,7 @@ interface FileItem {
 
 
 
+
   id: string;
   name: string;
   type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
@@ -280,6 +291,7 @@ interface FileItem {
   version: string;
 =======
 version: string;
+
 
 
 
@@ -535,7 +547,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get status color and icon
 <<<<<<< HEAD
-  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
@@ -552,7 +564,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get project status color
 <<<<<<< HEAD
-  const getProjectStatusColor = (status: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getProjectStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'planning': return 'text-blue-400 bg-blue-400/20';
@@ -570,7 +582,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get priority color
 <<<<<<< HEAD
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'low': return 'text-green-400 bg-green-400/20';
@@ -587,7 +599,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get file type icon
 <<<<<<< HEAD
-  const getFileTypeIcon = (type: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getFileTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'document': return <FileText className="w-5 h-5" />;
@@ -605,7 +617,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Format file size
 <<<<<<< HEAD
-  const formatFileSize = (size: anyanyanyanyanyanyanyanyanyanynumber)           => {;
+  const formatFileSize = (size: anyanyanyanyanyanyanyanyanyanyanynumber)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
@@ -613,16 +625,16 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Handle project selection
 <<<<<<< HEAD
-  const handleProjectSelect = (project: anyanyanyanyanyanyanyanyanyanyProject)            => {;
+  const handleProjectSelect = (project: anyanyanyanyanyanyanyanyanyanyanyProject)             => {;
     setSelectedProject(project)};
 
   // Handle message reactions
-  const handleProjectSelect = (project: anyanyanyanyanyanyanyanyanyanyProject)           => {;
+  const handleProjectSelect = (project: anyanyanyanyanyanyanyanyanyanyanyProject)            => {;
     setSelectedProject(project);
   };
 
   // Handle message reactions
-  const handleMessageReaction = (messageId: anyanyanyanyanyanyanyanyanyanystring, reactionType: string)           => {;
+  const handleMessageReaction = (messageId: anyanyanyanyanyanyanyanyanyanyanystring, reactionType: string)            => {;
     setMessages(prev => prev.map(msg => {;
       if (msg.id === messageId) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -823,8 +835,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.map((member, index)             => (
               <motion.div
                 key={member.id}
                 initial = {

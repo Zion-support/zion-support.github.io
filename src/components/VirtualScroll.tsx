@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 
 interface VirtualScrollProps<T> {
-  items: anyanyanyanyanyanyanyanyanyanyT[];
+  items: anyanyanyanyanyanyanyanyanyanyanyT[];
   height: number;
   itemHeight: number;
-  renderItem: (item: T, index: number)           => React.ReactNode;
+  renderItem: (item: T, index: number)            => React.ReactNode;
   overscan?: number;
   className?: string;
-  onScroll?: (scrollTop: anyanyanyanyanyanyanyanyanyanynumber)           => void;
+  onScroll?: (scrollTop: anyanyanyanyanyanyanyanyanyanyanynumber)            => void;
 }
 
 export function VirtualScroll<T>({
@@ -39,7 +39,7 @@ export function VirtualScroll<T>({
   const transform = `translateY(${visibleRange.start * itemHeight}px)`;
 
   // Handle scroll
-  const handleScroll = useCallback((event: anyanyanyanyanyanyanyanyanyanyReact.UIEvent<HTMLDivElement>)           => {;
+  const handleScroll = useCallback((event: anyanyanyanyanyanyanyanyanyanyanyReact.UIEvent<HTMLDivElement>)            => {;
     const newScrollTop = event.currentTarget.scrollTop;
     setScrollTop(newScrollTop);
     onScroll?.(newScrollTop);
@@ -192,11 +192,13 @@ interface ServiceCard {
 
 
 
-  id: anyanyanyanyanyanyanyanyanyanystring;
+
+  id: anyanyanyanyanyanyanyanyanyanyanystring;
   name: string;
   description: string;
   category: string;
   icon?: string;
+
 
 
 
@@ -213,13 +215,13 @@ interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {
 
   services: ServiceCard[];
   height?: number;
-  onServiceClick?: (service: ServiceCard)           => void;
+  onServiceClick?: (service: ServiceCard)            => void;
   className?: string;
 
 }
 
 export function ServiceVirtualScroll(...args: any[]): any {
-  const renderServiceCard = useCallback((service: anyanyanyanyanyanyanyanyanyanyServiceCard, index: number)           => (
+  const renderServiceCard = useCallback((service: anyanyanyanyanyanyanyanyanyanyanyServiceCard, index: number)            => (
     <div className="p-4">
       <motion.div
         whileHover={{ scale: 1.02 }}

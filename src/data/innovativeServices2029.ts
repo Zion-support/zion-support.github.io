@@ -9,6 +9,7 @@ export interface Service {
 
 
 
+
   id: string;
   name: string;
   category: 'ai' | 'it' | 'micro-saas' | 'cybersecurity' | 'cloud' | 'data' | 'automation' | 'compliance' | 'analytics' | 'integration';
@@ -22,6 +23,7 @@ pricing: {;
     enterprise: string;
     setup: string;
   
+
 
 
 

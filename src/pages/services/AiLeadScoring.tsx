@@ -2,12 +2,12 @@
 
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO           } from '@/components/SEO';
+import { SEO            } from '@/components/SEO';
 import { TrendingUp, CheckCircle, Database, PlugZap const AiLeadScoring: React.FC = (): JSX.Element => {
 =======
 import React from 'react.ts';
-import { SEO            } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database, PlugZap            } from 'lucide-react.ts';
+import { SEO             } from '@/components/SEO';
+import { TrendingUp, CheckCircle, Database, PlugZap             } from 'lucide-react.ts';
 
 const AiLeadScoring: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar import { Link           } from 'react-router-dom.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar import { Link            } from 'react-router-dom.ts';
 =======
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar            } from 'lucide-react.ts';
-import { Link            } from 'react-router-dom.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar             } from 'lucide-react.ts';
+import { Link             } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const featuredListings = [
@@ -134,7 +134,7 @@ export function FeaturedListingsSection(...args: any[]): any {
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredListings = selectedCategory === "All"
-    ? featuredListings: anyanyanyanyanyanyanyanyanyanyfeaturedListings.filter(listing           => listing.category === selectedCategory);
+    ? featuredListings: anyanyanyanyanyanyanyanyanyanyanyfeaturedListings.filter(listing            => listing.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -147,8 +147,8 @@ export function FeaturedListingsSection(...args: any[]): any {
 
   };
 
-  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanynumber)           => {
-    return Array.from({ length: anyanyanyanyanyanyanyanyanyany5 }, (_, i)           => (
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyany5 }, (_, i)            => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
@@ -191,8 +191,8 @@ export function FeaturedListingsSection(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index)           => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredServices.map((service, index)            => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">

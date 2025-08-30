@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -51,19 +51,20 @@ import { Brain,
   X
 <<<<<<< HEAD
 =======
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
 <<<<<<< HEAD
-import { ULTIMATE_INNOVATIVE_SERVICES_2026            } from '../data/ultimateInnovativeServices2026';
-import { ALL_REVOLUTIONARY_SERVICES_2026            } from '../data/comprehensiveServices2026';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026             } from '../data/ultimateInnovativeServices2026';
+import { ALL_REVOLUTIONARY_SERVICES_2026             } from '../data/comprehensiveServices2026';
 =======
-import { ULTIMATE_INNOVATIVE_SERVICES_2026           } from '../data/ultimateInnovativeServices2026';
-import { comprehensiveServices           } from '../data/comprehensiveServices';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026            } from '../data/ultimateInnovativeServices2026';
+import { comprehensiveServices            } from '../data/comprehensiveServices';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
+
 
 
 
@@ -87,6 +88,7 @@ pricing: {;
     enterprise: number;
     currency: string;
 billingCycle: string;
+
 
 
 
@@ -246,7 +248,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     switch (category) {;
       case 'Artificial Intelligence':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -279,7 +281,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     switch (status.toLowerCase()) {;
       case 'live':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -382,13 +384,13 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
 
-                {categories.map(category           => (
-=======
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
-              >
                 {categories.map(category            => (
+=======
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
+              >
+                {categories.map(category             => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>{category}</option>
                 ))}
@@ -414,9 +416,9 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {filteredServices.map((service, index)            => (
+            {filteredServices.map((service, index)             => (
               <motion.div
                 key={service.id}
                 initial = {

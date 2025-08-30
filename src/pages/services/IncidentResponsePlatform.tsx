@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO            } from '@/components/SEO';
+import { SEO             } from '@/components/SEO';
 
 export default function IncidentResponsePlatform(...args: []):  {
   return (

@@ -1,10 +1,11 @@
-import { ProductListing            } from '@/types/listings';
-import { COMPREHENSIVE_SERVICES_INDEX_2030            } from './comprehensiveServicesIndex2030';
+import { ProductListing             } from '@/types/listings';
+import { COMPREHENSIVE_SERVICES_INDEX_2030             } from './comprehensiveServicesIndex2030';
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
 
 export interface PricingTier {
+
 
 
 
@@ -34,10 +35,12 @@ support: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ServicePricing {
+
 
 
 
@@ -64,6 +67,7 @@ export interface ServicePricing {
   enterpriseFeatures: string[];
 =======
 enterpriseFeatures: string[];
+
 
 
 
@@ -386,35 +390,35 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
-  averagePrice: anyanyanyanyanyanyanyanyanyanyMath.round(
+  averagePrice: anyanyanyanyanyanyanyanyanyanyanyMath.round(
 <<<<<<< HEAD
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)           => sum + service.basePrice, 0) /
+    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)            => sum + service.basePrice, 0) /
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
-  priceRange: anyanyanyanyanyanyanyanyanyany{
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s           => s.basePrice)),
-    max: anyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s           => s.basePrice))
+  priceRange: anyanyanyanyanyanyanyanyanyanyany{
+    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s            => s.basePrice)),
+    max: anyanyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s            => s.basePrice))
   },
-  categoryPricing: anyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)           => {
+  categoryPricing: anyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)            => {
     if (!acc[service.category]) {
       acc[service.category] = [];
 
     acc[service.category].push(service.basePrice);
     return acc;
   }, { /* empty */ } as Record<string, any>),
-  roiAnalysis: anyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.map(service           => ({
+  roiAnalysis: anyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.map(service            => ({
 =======
     COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
-  priceRange: anyanyanyanyanyanyanyanyanyany{
+  priceRange: anyanyanyanyanyanyanyanyanyanyany{
 <<<<<<< HEAD
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s            => s.basePrice)),
-  max: anyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s            => s.basePrice))
+    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s             => s.basePrice)),
+  max: anyanyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s             => s.basePrice))
   
 
 },
-  categoryPricing: anyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)            => {
+  categoryPricing: anyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)             => {
     if (!acc[service.category]) {;
       acc[service.category] = []};
     acc[service.category].push(service.basePrice);
@@ -427,15 +431,15 @@ export const PRICING_ANALYSIS_2030 = {
     price: service.basePrice
   }))
 =======
-    min: anyanyanyanyanyanyanyanyanyanyMath.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s           => s.basePrice)),
-  max: anyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s           => s.basePrice))
+    min: anyanyanyanyanyanyanyanyanyanyanyMath.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s            => s.basePrice)),
+  max: anyanyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s            => s.basePrice))
   ;
 ;
 ;
 ;
 
 },;
-  categoryPricing: anyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)           => {;
+  categoryPricing: anyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)            => {;
     if (!acc[service.category]) {;
       acc[service.category] = [];
     }

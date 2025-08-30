@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { AnimatePresence, motion           } from 'framer-motion.ts';
+import { AnimatePresence, motion            } from 'framer-motion.ts';
 import { Accessibility,
     CheckCircle,
     Contrast,
@@ -14,10 +14,10 @@ import { Accessibility,
     X,
     ZoomIn,
     ZoomOut
-import React, { useCallback, useEffect, useState           } from 'react.ts';
+import React, { useCallback, useEffect, useState            } from 'react.ts';
 =======
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 import { Volume2,
   VolumeX,
   Eye,
@@ -27,10 +27,11 @@ import { Volume2,
   Accessibility,
   Settings,
   X
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilitySettings {
+
 
 
 
@@ -53,6 +54,7 @@ interface AccessibilitySettings {
   dyslexia: boolean;
 =======
 keyboardNavigation: boolean;
+
 
 
 
@@ -103,7 +105,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
       document.documentElement.classList.remove('high-contrast')}
 =======
   // Apply accessibility settings to document
-  const applySettings = useCallback((newSettings: anyanyanyanyanyanyanyanyanyanyAccessibilitySettings)           => {;
+  const applySettings = useCallback((newSettings: anyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)            => {;
     const root = document.documentElement;
 
     // High contrast
@@ -192,7 +194,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
       setSettings(JSON.parse(saved))}
   }, []);
 
-  const toggleSetting = (key: anyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings)            => {
+  const toggleSetting = (key: anyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings)             => {
     setSettings(prev => ({
       ...prev,;
       [key]: !prev[key];
@@ -200,7 +202,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-  const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyReact.KeyboardEvent)            => {
+  const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyReact.KeyboardEvent)             => {
     if (e.key === 'Escape') {;
       setIsOpen(false)};
   };
@@ -226,7 +228,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyKeyboardEvent)           => {;
+    const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)            => {;
       const target = e.target as HTMLElement;
 
       // Skip if in input/textarea
@@ -274,7 +276,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   useEffect(() => {
     if (!settings.focusIndicator) return;
 
-    const handleFocusIn = (e: anyanyanyanyanyanyanyanyanyanyFocusEvent)           => {;
+    const handleFocusIn = (e: anyanyanyanyanyanyanyanyanyanyanyFocusEvent)            => {;
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #3b82f6';
       target.style.outlineOffset = '2px';
@@ -292,7 +294,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 
     };
 
-    const handleFocusOut = (e: anyanyanyanyanyanyanyanyanyanyFocusEvent)           => {;
+    const handleFocusOut = (e: anyanyanyanyanyanyanyanyanyanyanyFocusEvent)            => {;
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
@@ -312,11 +314,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus: anyanyanyanyanyanyanyanyanyanynot-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    skipLink.className = 'skip-link sr-only focus: anyanyanyanyanyanyanyanyanyanyanynot-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
 
     document.body.insertBefore(skipLink, document.body.firstChild);
 
-    return ()           => {
+    return ()            => {
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
 
@@ -326,9 +328,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   // Quick accessibility actions
   const quickActions = [
     {
-      icon: anyanyanyanyanyanyanyanyanyanyContrast,
+      icon: anyanyanyanyanyanyanyanyanyanyanyContrast,
       label: 'Toggle High Contrast',
-      action: ()           => {
+      action: ()            => {
         const newSettings = {
   ...settings,;
   ;
@@ -336,7 +338,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   ;
   ;
   ;
-  highContrast: anyanyanyanyanyanyanyanyanyany!settings.highContrast ;
+  highContrast: anyanyanyanyanyanyanyanyanyanyany!settings.highContrast ;
 
 
 
@@ -352,7 +354,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     {
       icon: Type,
       label: 'Toggle Large Text',
-      action: ()           => {
+      action: ()            => {
         const newSettings = {
   ...settings,;
   ;
@@ -360,7 +362,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   ;
   ;
   ;
-  largeText: anyanyanyanyanyanyanyanyanyany!settings.largeText ;
+  largeText: anyanyanyanyanyanyanyanyanyanyany!settings.largeText ;
 
 
 
@@ -376,29 +378,29 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     {
       icon: ZoomIn,
       label: 'Increase Zoom',
-      action: ()           => {
+      action: ()            => {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
         const newZoom = Math.min(currentZoom + 0.1, 2.0);
         document.documentElement.style.fontSize = `${newZoom * 16}px`;
         announce(`Zoom increased to ${Math.round(newZoom * 100)}%`);
       },
-      active: anyanyanyanyanyanyanyanyanyanyfalse // Zoom actions are not toggleable, so they are not active
+      active: anyanyanyanyanyanyanyanyanyanyanyfalse // Zoom actions are not toggleable, so they are not active
     },
     {
       icon: ZoomOut,
       label: 'Decrease Zoom',
-      action: ()           => {
+      action: ()            => {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
         const newZoom = Math.max(currentZoom - 0.1, 0.5);
         document.documentElement.style.fontSize = `${newZoom * 16}px`;
         announce(`Zoom decreased to ${Math.round(newZoom * 100)}%`);
       },
-      active: anyanyanyanyanyanyanyanyanyanyfalse // Zoom actions are not toggleable, so they are not active
+      active: anyanyanyanyanyanyanyanyanyanyanyfalse // Zoom actions are not toggleable, so they are not active
     },
     {
       icon: RotateCcw,
       label: 'Reset Zoom',
-      action: ()           => {
+      action: ()            => {
         document.documentElement.style.fontSize = '16px';
         announce('Zoom reset to 100%');
       },
@@ -568,8 +570,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
               </div>
 
               {/* Settings Grid */}
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4 mb-6">
-                {Object.entries(settings).map(([key, value])           => {
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4 mb-6">
+                {Object.entries(settings).map(([key, value])            => {
                   const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
                   const Icon = key === 'highContrast' ? Contrast :
                               key === 'largeText' ? Type :
@@ -585,8 +587,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
               </div>;
 ;
               {/* Settings Grid */};
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4 mb-6">;
-                {Object.entries(settings).map(([key, value])           => {;
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4 mb-6">;
+                {Object.entries(settings).map(([key, value])            => {;
                   const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
                   const Icon = key === 'highContrast' ? Contrast : ;
                               key === 'largeText' ? Type : ;

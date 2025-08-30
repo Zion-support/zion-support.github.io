@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet           } from 'react-helmet-async.ts';
-import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon import { Link           } from 'react-router-dom.ts';
+import { Helmet            } from 'react-helmet-async.ts';
+import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon import { Link            } from 'react-router-dom.ts';
 =======
 import React from 'react.ts';
-import { Helmet            } from 'react-helmet-async.ts';
-import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon            } from 'lucide-react.ts';
-import { Link            } from 'react-router-dom.ts';
+import { Helmet             } from 'react-helmet-async.ts';
+import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon             } from 'lucide-react.ts';
+import { Link             } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function BlockchainEnterpriseSolutions(...args: []):  {
@@ -69,7 +69,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Lock,
@@ -102,7 +102,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   description: "Global blockchain networks for international business operations."
 <<<<<<< HEAD
 
-              ].map((feature, index)           => (
+              ].map((feature, index)            => (
 =======
                 }
               ].map((feature, index)  => (
@@ -131,7 +131,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Supply Chain",
@@ -170,7 +170,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   benefits: ["P2P trading", "Renewable certificates", "Grid management"]
 <<<<<<< HEAD
 
-              ].map((useCase, index)           => (
+              ].map((useCase, index)            => (
 =======
                 }
               ].map((useCase, index)  => (
@@ -230,11 +230,11 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Blockchain Types</h3>
                 <div className="space-y-4">
                   {[
-                    { type: anyanyanyanyanyanyanyanyanyany"Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },
+                    { type: anyanyanyanyanyanyanyanyanyanyany"Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },
                     { type: "Private", icon: Lock, color: "from-purple-500 to-pink-500", description: "Controlled, permissioned networks" },
                     { type: "Consortium", icon: Users, color: "from-green-500 to-emerald-500", description: "Multi-organization networks" },
                     { type: "Hybrid", icon: LinkIcon, color: "from-orange-500 to-red-500", description: "Combination of public and private" }
-                  ].map((item, index)            => (
+                  ].map((item, index)             => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -317,7 +317,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -340,7 +340,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   description: "Deploy and integrate with existing enterprise systems."
 <<<<<<< HEAD
 
-              ].map((step, index)           => (
+              ].map((step, index)            => (
 =======
                 }
               ].map((step, index)  => (

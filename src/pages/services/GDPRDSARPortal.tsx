@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone           } from 'lucide-react.ts';
-import { Link           } from 'react-router-dom.ts';
+import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone            } from 'lucide-react.ts';
+import { Link            } from 'react-router-dom.ts';
 
 export default function GDPRDSARPortal(...args: any[]): any {
   return (
@@ -15,13 +15,13 @@ export default function GDPRDSARPortal(...args: any[]): any {
               Launch a branded privacy request portal with ID verification, workflow, SLAs, redaction, and audit-ready exports. Integrates with common CRMs and ticketing tools.
             </p>
 
-            <div className="mt-8 grid gap-4 sm: anyanyanyanyanyanyanyanyanyanygrid-cols-2">
+            <div className="mt-8 grid gap-4 sm: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
               {[ 
                 { title: 'Identity verification & consent', desc: 'Email/SMS OTP, ID document support.' },
                 { title: 'Workflow automation', desc: 'Intake, triage, routing, collaboration.' },
                 { title: 'Data source connectors', desc: 'CRM, CDP, Data Warehouse lookups.' },
                 { title: 'Exports & redaction', desc: 'PDF/CSV exports with auto‑redaction.' },
-              ].map((f)           => (
+              ].map((f)            => (
                 <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                   <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
                   <div className="mt-1 text-sm text-slate-300">{f.desc}</div>

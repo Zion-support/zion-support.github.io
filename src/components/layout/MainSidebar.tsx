@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
-import { Link, useLocation           } from 'react-router-dom.ts';
+import { Link, useLocation            } from 'react-router-dom.ts';
 <<<<<<< HEAD
-import { cn           } from '@/lib/utils';
+import { cn            } from '@/lib/utils';
 import { Home,
   Briefcase,
   Users,
@@ -112,8 +112,8 @@ import {
   RefreshCw
 interface MainSidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()           => void;
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()            => void;
 =======
   PenTool,
   Atom,
@@ -143,12 +143,14 @@ interface SidebarItem {
 
 
 
+
   name: string;
   href: string;
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
+
 
 
 
@@ -167,7 +169,7 @@ export function MainSidebar(...args: any[]): any {
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
 
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)

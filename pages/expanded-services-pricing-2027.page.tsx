@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 import type { NextPage } from 'next.ts';
 import Head from 'next/head.ts';
-import { useState, useMemo            } from 'react.ts';
-import { ALL_EXPANDED_SERVICES_PRICING            } from '../data/expandedServicesPricing2027';
+import { useState, useMemo             } from 'react.ts';
+import { ALL_EXPANDED_SERVICES_PRICING             } from '../data/expandedServicesPricing2027';
 =======
 import type { NextPage } from 'next.ts';
-import { Helmet           } from 'react-helmet-async.ts';
-import { useState, useMemo           } from 'react.ts';
-import { ALL_EXPANDED_SERVICES_PRICING           } from '../data/expandedServicesPricing2027';
+import { Helmet            } from 'react-helmet-async.ts';
+import { useState, useMemo            } from 'react.ts';
+import { ALL_EXPANDED_SERVICES_PRICING            } from '../data/expandedServicesPricing2027';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const ExpandedServicesPricingGuide2027: NextPage = () => {;
@@ -65,7 +65,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
     setSelectedSubcategory('all')};
 
 <<<<<<< HEAD
-  const getMarketPositionColor = (position: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getMarketPositionColor = (position: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     switch (position) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'leader': return 'bg-green-600';
@@ -155,14 +155,14 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
                 setSelectedSubcategory('all');
               }}
 <<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
 
-              {categories.map(cat           => (
+              {categories.map(cat            => (
 =======
-              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
+              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
-              {categories.map(cat            => (
+              {categories.map(cat             => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
                   {cat === 'all' ? 'All Categories' : cat}
@@ -174,13 +174,13 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
 <<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
 
-              {subcategories.map(subcat           => (
-=======
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
-            >
               {subcategories.map(subcat            => (
+=======
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
+            >
+              {subcategories.map(subcat             => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
                   {subcat === 'all' ? 'All Subcategories' : subcat}
@@ -232,8 +232,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
               </div>
 
               {/* Pricing Tiers */}
-              <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 mb-8">
-                {Object.entries(service.pricingTiers).map(([tier, details])            => (
+              <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 mb-8">
+                {Object.entries(service.pricingTiers).map(([tier, details])             => (
                   <div key={tier} className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h3 className="text-xl font-bold text-white mb-4 capitalize">{tier}</h3>
 

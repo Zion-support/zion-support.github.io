@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes           } from 'react-router-dom.ts';
+import { Navigate, Route, Routes            } from 'react-router-dom.ts';
 import DeveloperPortal from '../pages/DeveloperPortal';
 import ApiDocsHub from '../pages/ApiDocsHub';
 import ApiReference from '../pages/ApiReference';

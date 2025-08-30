@@ -136,8 +136,8 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <p className="text-xl text-gray-600">From recruitment to retention, we cover all your HR needs</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
-            {platformModules.map((module, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {platformModules.map((module, index)            => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
                 <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 text-sm">{module}</h3>
@@ -154,8 +154,8 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <p className="text-xl text-gray-600">Ideal for HR teams and organizations seeking to optimize their talent management</p>
         </div>
 
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-          {useCases.map((useCase, index)           => (
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {useCases.map((useCase, index)            => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <Target className="w-8 h-8 text-orange-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
@@ -200,8 +200,8 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <p className="text-xl text-gray-600">Choose the plan that fits your organization size and needs</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)            => (
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'
               }`}>

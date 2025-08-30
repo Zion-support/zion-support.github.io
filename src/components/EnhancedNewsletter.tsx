@@ -1,7 +1,8 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift interface NewsletterFormData {
+
 
 
 
@@ -27,11 +28,13 @@ import React, { useState
  
  
  
+ 
 } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift            } from 'lucide-react.ts';
+import { motion             } from 'framer-motion.ts';
+import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift             } from 'lucide-react.ts';
 
 interface NewsletterFormData {
+
 
 
 
@@ -47,6 +50,7 @@ interface NewsletterFormData {
   firstName: string;
   interests: string[];
 frequency: 'weekly' | 'monthly' | 'quarterly';
+
 
 
 
@@ -130,7 +134,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
     return Object.keys(newErrors).length === 0};
 
 <<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {;
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
 
@@ -156,13 +160,13 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 =======
-      console.log('Newsletter subscription: anyanyanyanyanyanyanyanyanyany', formData);
+      console.log('Newsletter subscription: anyanyanyanyanyanyanyanyanyanyany', formData);
       
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       setStatus('success');
 
       // Reset form after successful submission
-      setTimeout(()            => {
+      setTimeout(()             => {
         setFormData({
           email: '',
           firstName: '',
@@ -190,11 +194,11 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const handleInterestToggle = (interestId: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const handleInterestToggle = (interestId: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     setFormData(prev => ({;
       ...prev,;
-      interests: anyanyanyanyanyanyanyanyanyanyprev.interests.includes(interestId);
-        ? prev.interests.filter(id           => id !== interestId);
+      interests: anyanyanyanyanyanyanyanyanyanyanyprev.interests.includes(interestId);
+        ? prev.interests.filter(id            => id !== interestId);
         : [...prev.interests, interestId];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }));
@@ -209,14 +213,14 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
       setErrors(prev = > ({ ...prev, interests: null }))};
   };
 
-  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanykeyof NewsletterFormData, value: string | string[])            => {;
+  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanykeyof NewsletterFormData, value: string | string[])             => {;
 =======;
       setErrors(prev => ({ ...prev, interests: null }));
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanykeyof NewsletterFormData, value: string | string[])           => {;
+  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanykeyof NewsletterFormData, value: string | string[])            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setFormData(prev => ({ ...prev, [field]: value }));
 
@@ -463,14 +467,14 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Areas of Interest * (Select all that apply)
           </label>
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
-            {interests.map((interest)            => {;
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
+            {interests.map((interest)             => {;
 =======;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
             Areas of Interest * (Select all that apply);
           </label>;
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">;
-            {interests.map((interest)           => {;
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">;
+            {interests.map((interest)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
@@ -516,8 +520,8 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Update Frequency
           </label>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
-            {frequencies.map((freq)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
+            {frequencies.map((freq)             => (
               <label
                 key={freq.value}
                 className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${

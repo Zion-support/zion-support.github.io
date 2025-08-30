@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Search,
   Filter,
@@ -78,8 +78,8 @@ import { Search,
   CheckCircle2,
   XCircle,
   Info as InfoIcon
-import { SEO           } from '../components/SEO';
-import { servicesCatalog           } from '../data/servicesCatalog';
+import { SEO            } from '../components/SEO';
+import { servicesCatalog            } from '../data/servicesCatalog';
 
 // Enhanced category definitions with better organization
 const serviceCategories = [
@@ -142,20 +142,20 @@ const serviceCategories = [
 ];
 
 // Enhanced service features display
-const ServiceCard = ({ service, viewMode }: { service: anyanyanyanyanyanyanyanyanyany; viewMode: 'grid' | 'list' })           => {
+const ServiceCard = ({ service, viewMode }: { service: anyanyanyanyanyanyanyanyanyanyany; viewMode: 'grid' | 'list' })            => {
   const [expanded, setExpanded] = useState(false);
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     const cat = serviceCategories.find(c => c.id === category);
     return cat ? cat.icon : Grid;
   };
 =======
-import { Search, Filter, Star, TrendingUp, Clock, Users, DollarSign, Globe, Shield, Bot, Cloud, BarChart3, Workflow, FileText, Sparkles, Building, Car, Leaf, Zap, Home, Scale, GraduationCap, ShoppingCart, Hotel           } from 'lucide-react.ts';
-import { SEO           } from '@/components/SEO';
-import { enhancedServices2025           } from '../../data/enhanced-2025-services';
-import { specializedIndustryServices           } from '../../data/specialized-industry-services';
-import { allServices           } from '../../data/services';
-import { Link           } from 'react-router-dom.ts';
+import { Search, Filter, Star, TrendingUp, Clock, Users, DollarSign, Globe, Shield, Bot, Cloud, BarChart3, Workflow, FileText, Sparkles, Building, Car, Leaf, Zap, Home, Scale, GraduationCap, ShoppingCart, Hotel            } from 'lucide-react.ts';
+import { SEO            } from '@/components/SEO';
+import { enhancedServices2025            } from '../../data/enhanced-2025-services';
+import { specializedIndustryServices            } from '../../data/specialized-industry-services';
+import { allServices            } from '../../data/services';
+import { Link            } from 'react-router-dom.ts';
 
 export default function ServicesOverview(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
@@ -267,7 +267,7 @@ export default function ServicesOverview(...args: any[]): any {
               Key Features
             </h4>
             <div className="space-y-2">
-              {service.features.slice(0, 3).map((feature: anyanyanyanyanyanyanyanyanyanystring, idx: number)           => (
+              {service.features.slice(0, 3).map((feature: anyanyanyanyanyanyanyanyanyanyanystring, idx: number)            => (
                 <div key={idx} className="flex items-center space-x-2">
                   <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                   <span className="text-sm text-gray-600">{feature}</span>
@@ -282,7 +282,7 @@ export default function ServicesOverview(...args: any[]): any {
                   {expanded ? <ChevronDown className="w-4 h-4 ml-1" /> : <ChevronRight className="w-4 h-4 ml-1" />}
                 </button>
               )}
-              {expanded && service.features.slice(3).map((feature: anyanyanyanyanyanyanyanyanyanystring, idx: number)           => (
+              {expanded && service.features.slice(3).map((feature: anyanyanyanyanyanyanyanyanyanyanystring, idx: number)            => (
                 <div key={idx + 3} className="flex items-center space-x-2">
                   <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                   <span className="text-sm text-gray-600">{feature}</span>
@@ -306,7 +306,7 @@ export default function ServicesOverview(...args: any[]): any {
   // List view
   return (
 =======
-  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyany)           => (
+  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyany)            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     <motion.div
       key={service.id}
@@ -380,7 +380,7 @@ export default function ServicesOverview(...args: any[]): any {
       <div className="mb-4">
         <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
         <ul className="space-y-1">
-          {(service.features || []).slice(0, 4).map((feature: anyanyanyanyanyanyanyanyanyanystring, index: number)           => (
+          {(service.features || []).slice(0, 4).map((feature: anyanyanyanyanyanyanyanyanyanyanystring, index: number)            => (
             <li key={index} className="text-gray-300 text-xs flex items-center">
               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
               {feature}
@@ -392,7 +392,7 @@ export default function ServicesOverview(...args: any[]): any {
       <div className="mb-4">
         <h4 className="text-white font-semibold mb-2 text-sm">Benefits:</h4>
         <ul className="space-y-1">
-          {(service.benefits || []).slice(0, 3).map((benefit: anyanyanyanyanyanyanyanyanyanystring, index: number)           => (
+          {(service.benefits || []).slice(0, 3).map((benefit: anyanyanyanyanyanyanyanyanyanyanystring, index: number)            => (
             <li key={index} className="text-gray-300 text-xs flex items-center">
               <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
               {benefit}
@@ -415,7 +415,7 @@ export default function ServicesOverview(...args: any[]): any {
 
       <div className="mb-4">
         <div className="flex flex-wrap gap-2">
-          {service.targetAudience?.slice(0, 3).map((audience: anyanyanyanyanyanyanyanyanyanystring, index: number)           => (
+          {service.targetAudience?.slice(0, 3).map((audience: anyanyanyanyanyanyanyanyanyanyanystring, index: number)            => (
             <span key={index} className="bg-blue-500/20 text-blue-300 text-xs px-2 py-1 rounded-full">
               {audience}
             </span>
@@ -458,10 +458,10 @@ const ServicesSidebar = ({
   onCategoryChange,
   categoriesWithCounts
 }: {
-  selectedCategory: anyanyanyanyanyanyanyanyanyanystring;
-  onCategoryChange: (category: string)           => void;
-  categoriesWithCounts: anyanyanyanyanyanyanyanyanyanyany[];
-})           => {
+  selectedCategory: anyanyanyanyanyanyanyanyanyanyanystring;
+  onCategoryChange: (category: string)            => void;
+  categoriesWithCounts: anyanyanyanyanyanyanyanyanyanyanyany[];
+})            => {
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
       <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -767,9 +767,9 @@ export default function ServicesOverview(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400"
                 >
-                  {categories.map(category           => (
+                  {categories.map(category            => (
                     <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                       {category.name}
                     </option>
@@ -782,9 +782,9 @@ export default function ServicesOverview(...args: any[]): any {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400"
                 >
-                  {industries.map(industry           => (
+                  {industries.map(industry            => (
                     <option key={industry.id} value={industry.id} className="bg-slate-800 text-white">
                       {industry.name}
                     </option>

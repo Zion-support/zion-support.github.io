@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
-import { SEO            } from '../components/SEO';
-import { motion            } from 'framer-motion.ts';
-import { Link            } from 'react-router-dom.ts';
+import { SEO             } from '../components/SEO';
+import { motion             } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
 
 const AllServicesIndex: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState('');
@@ -219,9 +219,9 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      {categories.map(category            => (
+                      {categories.map(category             => (
                         <option key={category} value={category} className="bg-gray-800 text-white">
                           {category === 'all' ? 'All Categories' : category}
                         </option>
@@ -279,8 +279,8 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                 </button>
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index)            => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service, index)             => (
                   <motion.div
                     key={service.id}
                     initial = {

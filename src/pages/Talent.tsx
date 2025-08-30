@@ -9,9 +9,9 @@ const Talent: React.FC = (): JSX.Element => (
 );
 =======
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { SEO           } from '../components/SEO';
-import { Link           } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
+import { SEO            } from '../components/SEO';
+import { Link            } from 'react-router-dom.ts';
 import { Users, 
   Search, 
   Filter, 
@@ -472,7 +472,7 @@ import { Users,
   YellowEyeBean,
   YellowIndianBean,
   YellowWaxBean
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 export default function Talent(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -615,7 +615,7 @@ export default function Talent(...args: any[]): any {
     }
   ];
 
-  const toggleTalentExpansion = (talentId: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const toggleTalentExpansion = (talentId: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     setExpandedTalent(expandedTalent === talentId ? null : talentId);
   };
 
@@ -630,7 +630,7 @@ export default function Talent(...args: any[]): any {
     return true;
   });
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -641,7 +641,7 @@ export default function Talent(...args: any[]): any {
     }
   };
 
-  const getExperienceColor = (experience: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const getExperienceColor = (experience: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     switch (experience) {
       case 'junior': return 'bg-green-500/20 text-green-400';
       case 'mid': return 'bg-blue-500/20 text-blue-400';
@@ -651,12 +651,12 @@ export default function Talent(...args: any[]): any {
     }
   };
 
-  const getAvailabilityColor = (availability: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const getAvailabilityColor = (availability: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
   };
 
-  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanynumber)           => {
-    return Array.from({ length: anyanyanyanyanyanyanyanyanyany5 }, (_, i)           => (
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyany5 }, (_, i)            => (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -721,9 +721,9 @@ export default function Talent(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {categories.map((category)           => (
+                  {categories.map((category)            => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -736,9 +736,9 @@ export default function Talent(...args: any[]): any {
                 <select
                   value={selectedExperience}
                   onChange={(e) => setSelectedExperience(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {experienceLevels.map((level)           => (
+                  {experienceLevels.map((level)            => (
                     <option key={level.id} value={level.id}>
                       {level.name} ({level.count})
                     </option>
@@ -787,8 +787,8 @@ export default function Talent(...args: any[]): any {
             <p className="text-xl text-gray-300">Top-tier talent with exceptional track records</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {talentPool.filter(t           => t.featured).map((talent, index) => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {talentPool.filter(t            => t.featured).map((talent, index) => (
               <motion.div
                 key={talent.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -923,8 +923,8 @@ export default function Talent(...args: any[]): any {
           </motion.div>
 
           {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTalent.map((talent, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredTalent.map((talent, index)            => (
                 <motion.div
                   key={talent.id}
                   initial={{ opacity: 0, y: 20 }}

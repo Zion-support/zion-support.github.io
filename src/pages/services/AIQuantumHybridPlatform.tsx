@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Link           } from 'react-router-dom.ts';
+import { Link            } from 'react-router-dom.ts';
 import { Brain,
   Cpu,
   Zap,
@@ -58,7 +58,7 @@ const AIQuantumHybridPlatform = () => {
   DollarSign,
   Clock,
   ExternalLink
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 export default function AIQuantumHybridPlatform(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -365,8 +365,8 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
 
             Key Features
           </motion.h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -449,8 +449,8 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -497,8 +497,8 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
 
             Why Choose AI Quantum Hybrid Platform?
           </motion.h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -560,9 +560,9 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            {useCases.map((useCase, index)           => (
+            {useCases.map((useCase, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -762,8 +762,8 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

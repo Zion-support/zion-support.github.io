@@ -109,18 +109,18 @@ export const SERVICE_STATS = {
 
 // Helper Functions
 <<<<<<< HEAD
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanystring)            => {;
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanystring)             => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
 
-export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanystring)            => {;
+export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanyanystring)             => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
 
-export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)            => {
+export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)             => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;
   )};
 
-export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanystring[])            => {
+export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanyanystring[])             => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   )};
@@ -133,21 +133,21 @@ export const searchTerm = query.toLowerCase();
     service.category.toLowerCase().includes(searchTerm);
   )};
 =======
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 };
 
-export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanystring)           => {;
+export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
 };
 
-export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)           => {
+export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)            => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
 
-export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanystring[])           => {;
+export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanyanystring[])            => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   );

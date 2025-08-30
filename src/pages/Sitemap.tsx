@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 <<<<<<< HEAD
 import {
   Brain,
@@ -135,8 +135,8 @@ export default function Sitemap(...args: any[]): any {
         { name: 'Micro SaaS Services', href: '/micro-saas-services', description: 'SaaS services' },
         { name: 'Micro SaaS Services 2028', href: '/micro-saas-services-2028', description: '2028 SaaS services' }
 =======
-import { SEO           } from '../components/SEO';
-import { Link           } from 'react-router-dom.ts';
+import { SEO            } from '../components/SEO';
+import { Link            } from 'react-router-dom.ts';
 import { Home, 
   Building, 
   Users, 
@@ -168,7 +168,7 @@ import { Home,
   MapPin,
   Phone,
   Mail
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 export default function Sitemap(...args: any[]): any {
   const currentYear = new Date().getFullYear();
@@ -355,8 +355,8 @@ export default function Sitemap(...args: any[]): any {
 
       {/* Sitemap Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-          {sitemapSections.map((section, sectionIndex)           => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {sitemapSections.map((section, sectionIndex)            => (
 =======
     <>
       <SEO 
@@ -484,8 +484,8 @@ export default function Sitemap(...args: any[]): any {
 
         {/* Sitemap Content */}
         <div className="container mx-auto px-4 pb-20">
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8">
-            {sitemapSections.map((section, sectionIndex)           => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8">
+            {sitemapSections.map((section, sectionIndex)            => (
               <motion.div
                 key={section.title}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-blue-light/20"

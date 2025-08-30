@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 import { Star,
   Quote,
   ChevronLeft,
@@ -10,10 +10,11 @@ import { Star,
   Award
 <<<<<<< HEAD
 =======
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Testimonial {
+
 
 
 
@@ -38,6 +39,7 @@ interface Testimonial {
   avatar: string;
 =======
 avatar: string;
+
 
 
 
@@ -140,7 +142,7 @@ export default function EnhancedTestimonialsSection(...args[]: any):  {
     setIsAutoPlaying(false)};
 
 <<<<<<< HEAD
-  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanynumber)           => {;
+  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanynumber)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setCurrentTestimonial(index);
     setIsAutoPlaying(false)};
@@ -301,8 +303,8 @@ export default function EnhancedTestimonialsSection(...args[]: any):  {
                   </blockquote>
 
                   {/* Results */}
-                  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4 mb-8">
-                    {currentTestimonialData.results.map((result, index)            => (
+                  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4 mb-8">
+                    {currentTestimonialData.results.map((result, index)             => (
                       <motion.div
                         key={result}
                         initial = {
@@ -433,13 +435,13 @@ export default function EnhancedTestimonialsSection(...args[]: any):  {
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' },
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index)            => (
+              ].map((indicator, index)             => (
                 <motion.div
                   key={indicator.label}
                   initial = {

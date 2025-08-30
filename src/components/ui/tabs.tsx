@@ -12,11 +12,13 @@ interface TabsContextType {
 
 
 
-  activeTab: anyanyanyanyanyanyanyanyanyanystring;
+
+  activeTab: anyanyanyanyanyanyanyanyanyanyanystring;
 <<<<<<< HEAD
-  setActiveTab: (tab: string)           => void;
+  setActiveTab: (tab: string)            => void;
 =======
-setActiveTab: anyanyanyanyanyanyanyanyanyany(tab: string)            => void;
+setActiveTab: anyanyanyanyanyanyanyanyanyanyany(tab: string)             => void;
+
 
 
 
@@ -33,14 +35,14 @@ const TabsContext = createContext<TabsContextType | null>(null);
 
 interface TabsProps extends React.PropsWithChildren<{}> {
 
-  children: anyanyanyanyanyanyanyanyanyanyReactNode;
+  children: anyanyanyanyanyanyanyanyanyanyanyReactNode;
   defaultValue?: string;
   value?: string;
 <<<<<<< HEAD
-  onValueChange?: (value: string)           => void;
+  onValueChange?: (value: string)            => void;
   className?: string;
 =======
-  onValueChange?: (value: anyanyanyanyanyanyanyanyanyanystring)            => void;
+  onValueChange?: (value: anyanyanyanyanyanyanyanyanyanyanystring)             => void;
   className?: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -48,12 +50,12 @@ interface TabsProps extends React.PropsWithChildren<{}> {
 export function Tabs(...args[]: any):  {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: anyanyanyanyanyanyanyanyanyanystring)            => {;
+  const handleTabChange = (tab: anyanyanyanyanyanyanyanyanyanyanystring)             => {;
 =======;
 export function Tabs(...args: any[]): any {;
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const handleTabChange = (tab: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setActiveTab(tab);
     if (onValueChange) {

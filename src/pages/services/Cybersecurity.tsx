@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO           } from '../../components/SEO';
+import { SEO            } from '../../components/SEO';
 import { Shield, 
   Brain, 
   Zap, 
@@ -10,7 +10,7 @@ import { Shield,
   BarChart3,
   AlertTriangle,
   Eye
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 export default function Cybersecurity(...args: any[]): any {
   return (

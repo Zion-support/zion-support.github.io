@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 import { Newspaper,
   Calendar,
   User,
@@ -13,7 +13,7 @@ import { Newspaper,
 <<<<<<< HEAD
   Globe,
   Star
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 =======
   Users,
   Zap,
@@ -431,9 +431,9 @@ export default function Press(...args[]: any):  {
   delay: 0.3 
 
 }}
-            className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
           >
-            {compStats.map((stat, index)            => (
+            {compStats.map((stat, index)             => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-white" />
@@ -496,8 +496,8 @@ export default function Press(...args[]: any):  {
             Latest Press Releases
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {pressReleases.map((release, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {pressReleases.map((release, index)             => (
               <motion.article
                 key={release.title}
                 initial = {
@@ -587,9 +587,9 @@ export default function Press(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {filteredContent.filter(item           => item.featured).map((item) => (
+            {filteredContent.filter(item            => item.featured).map((item) => (
               <motion.article
                 key={item.id}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -694,9 +694,9 @@ export default function Press(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {filteredContent.filter(item           => !item.featured).map((item) => (
+            {filteredContent.filter(item            => !item.featured).map((item) => (
               <motion.article
                 key={item.id}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"

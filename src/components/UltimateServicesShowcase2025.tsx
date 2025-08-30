@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { SEO           } from '@/components/SEO';
-import { Link           } from 'react-router-dom.ts';
+import { SEO            } from '@/components/SEO';
+import { Link            } from 'react-router-dom.ts';
 import { Brain,
   Zap,
   Shield,
@@ -22,15 +22,16 @@ import { Brain,
   MapPin,
   ExternalLink,
   Search
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025           } from '@/data/ultimateRealServices2025';
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025            } from '@/data/ultimateRealServices2025';
 =======
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
-import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle           } from 'lucide-react.ts';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025           } from '../data/innovativeMicroSaasServices2025';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle            } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025            } from '../data/innovativeMicroSaasServices2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ServiceContact {
+
 
 
 
@@ -55,6 +56,7 @@ website: string;
 
 
 
+
 }
 
 const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
@@ -67,24 +69,24 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
 
   const categories = [
-    { id: anyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s           => s.category === 'AI & Automation').length, icon: anyanyanyanyanyanyanyanyanyany'🤖' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s           => s.category === 'AI & Analytics').length, icon: anyanyanyanyanyanyanyanyanyany'📊' },
-    { id: 'AI & Legal', name: 'AI & Legal', count: allServices.filter(s           => s.category === 'AI & Legal').length, icon: anyanyanyanyanyanyanyanyanyany'⚖️' },
-    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s           => s.category === 'AI & Logistics').length, icon: anyanyanyanyanyanyanyanyanyany'🚚' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s           => s.category === 'AI & Healthcare').length, icon: anyanyanyanyanyanyanyanyanyany'🏥' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s           => s.category === 'AI & Marketing').length, icon: anyanyanyanyanyanyanyanyanyany'📢' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s           => s.category === 'AI & Research').length, icon: anyanyanyanyanyanyanyanyanyany'🔬' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s           => s.category === 'AI & HR').length, icon: anyanyanyanyanyanyanyanyanyany'👥' },
-    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: allServices.filter(s           => s.category === 'AI & Manufacturing').length, icon: anyanyanyanyanyanyanyanyanyany'🏭' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s           => s.category === 'AI & Content').length, icon: anyanyanyanyanyanyanyanyanyany'✍️' },
-    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s           => s.category === 'AI & Transportation').length, icon: anyanyanyanyanyanyanyanyanyany'🚗' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s           => s.category === 'Quantum Computing').length, icon: anyanyanyanyanyanyanyanyanyany'⚛️' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s           => s.category === 'Cybersecurity').length, icon: anyanyanyanyanyanyanyanyanyany'🛡️' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s           => s.category === 'Edge Computing').length, icon: anyanyanyanyanyanyanyanyanyany'🌐' },
-    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s           => s.category === 'Sustainability').length, icon: anyanyanyanyanyanyanyanyanyany'🌱' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s           => s.category === 'Blockchain').length, icon: anyanyanyanyanyanyanyanyanyany'🔗' },
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s           => s.category === 'Metaverse').length, icon: '🌍' }
+    { id: anyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: allServices.length, icon: '🚀' },
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s            => s.category === 'AI & Automation').length, icon: anyanyanyanyanyanyanyanyanyanyany'🤖' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s            => s.category === 'AI & Analytics').length, icon: anyanyanyanyanyanyanyanyanyanyany'📊' },
+    { id: 'AI & Legal', name: 'AI & Legal', count: allServices.filter(s            => s.category === 'AI & Legal').length, icon: anyanyanyanyanyanyanyanyanyanyany'⚖️' },
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s            => s.category === 'AI & Logistics').length, icon: anyanyanyanyanyanyanyanyanyanyany'🚚' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s            => s.category === 'AI & Healthcare').length, icon: anyanyanyanyanyanyanyanyanyanyany'🏥' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s            => s.category === 'AI & Marketing').length, icon: anyanyanyanyanyanyanyanyanyanyany'📢' },
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s            => s.category === 'AI & Research').length, icon: anyanyanyanyanyanyanyanyanyanyany'🔬' },
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s            => s.category === 'AI & HR').length, icon: anyanyanyanyanyanyanyanyanyanyany'👥' },
+    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: allServices.filter(s            => s.category === 'AI & Manufacturing').length, icon: anyanyanyanyanyanyanyanyanyanyany'🏭' },
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s            => s.category === 'AI & Content').length, icon: anyanyanyanyanyanyanyanyanyanyany'✍️' },
+    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s            => s.category === 'AI & Transportation').length, icon: anyanyanyanyanyanyanyanyanyanyany'🚗' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s            => s.category === 'Quantum Computing').length, icon: anyanyanyanyanyanyanyanyanyanyany'⚛️' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s            => s.category === 'Cybersecurity').length, icon: anyanyanyanyanyanyanyanyanyanyany'🛡️' },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s            => s.category === 'Edge Computing').length, icon: anyanyanyanyanyanyanyanyanyanyany'🌐' },
+    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s            => s.category === 'Sustainability').length, icon: anyanyanyanyanyanyanyanyanyanyany'🌱' },
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s            => s.category === 'Blockchain').length, icon: anyanyanyanyanyanyanyanyanyanyany'🔗' },
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s            => s.category === 'Metaverse').length, icon: '🌍' }
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -110,7 +112,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
   });
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
@@ -148,7 +150,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
       }
     };
 =======;
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className = "text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
@@ -439,9 +441,9 @@ const UltimateServicesShowcase2025 = () => {
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: anyanyanyanyanyanyanyanyanyany0.8, delay: 0.4 }}
+            transition={{ duration: anyanyanyanyanyanyanyanyanyanyany0.8, delay: 0.4 }}
           >
-            {categories.map((category)           => (
+            {categories.map((category)            => (
               <motion.button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
@@ -690,8 +692,8 @@ const UltimateServicesShowcase2025 = () => {
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service)            => (
               <div
                 key={service.id}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10 group"

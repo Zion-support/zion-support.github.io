@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 <<<<<<< HEAD
 import { Brain,
   Zap,
@@ -71,7 +71,7 @@ import EnhancedSEOManager from '../components/EnhancedSEOManager';
   PhoneCall,
   Mail as MailIcon,
   MapPin as MapPinIcon
-          } from 'lucide-react';
+           } from 'lucide-react';
 import EnhancedSEOManager from '../components/EnhancedSEOManager';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -287,9 +287,9 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto"
+              className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto"
 
-              {stats.map((stat, index)           => (
+              {stats.map((stat, index)            => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -327,8 +327,8 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {improvements.map((improvement, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {improvements.map((improvement, index)            => (
                 <motion.div
                   key={improvement.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -397,8 +397,8 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)            => (
                 <motion.div
                   key={benefit}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -583,8 +583,8 @@ export default ComprehensiveImprovements2025;}}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {improvements.map((improvement, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {improvements.map((improvement, index)            => (
               <motion.div
                 key={improvement.category}
                 initial = {
@@ -690,8 +690,8 @@ export default ComprehensiveImprovements2025;}}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -789,8 +789,8 @@ export default ComprehensiveImprovements2025;}}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)            => (
               <motion.div
                 key={benefit.title}
                 initial = {

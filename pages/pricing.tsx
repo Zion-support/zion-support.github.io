@@ -181,13 +181,13 @@ export default function PricingPage(...args[]: any):  {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingTiers.map((tier, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingTiers.map((tier, index)            => (
                 <div
                   key={index}
 =======
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingTiers.map((tier, index)            => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingTiers.map((tier, index)             => (
                 <div 
                   key={index} 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -249,12 +249,12 @@ export default function PricingPage(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {addOnServices.map((service, index)            => (
 =======
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index)            => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {addOnServices.map((service, index)             => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>

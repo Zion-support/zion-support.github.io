@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 // Service Worker Registration Utility
-export function registerServiceWorker(...args: anyanyanyanyanyanyanyanyanyany[]): any {
+export function registerServiceWorker(...args: anyanyanyanyanyanyanyanyanyanyany[]): any {
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', ()          => {
+    window.addEventListener('load', ()           => {
       // Use development service worker in development mode
       const isDev = import.meta.env.DEV;
       const swUrl = isDev ? '/sw-dev.js' : '/sw.js';
@@ -10,20 +10,20 @@ export function registerServiceWorker(...args: anyanyanyanyanyanyanyanyanyany[])
 <<<<<<< HEAD
       // // // console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
 =======
-      // // // // // // // console.log(`Registering service worker: anyanyanyanyanyanyanyanyanyany${swUrl} (${isDev ? 'dev' : 'prod'})`);
+      // // // // // // // console.log(`Registering service worker: anyanyanyanyanyanyanyanyanyanyany${swUrl} (${isDev ? 'dev' : 'prod'})`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       navigator.serviceWorker
         .register(swUrl)
-        .then((registration)           => {
+        .then((registration)            => {
 <<<<<<< HEAD
           // // // console.log('SW registered: ', registration);
 =======
-          // // // // // // // console.log('SW registered: anyanyanyanyanyanyanyanyanyany', registration);
+          // // // // // // // console.log('SW registered: anyanyanyanyanyanyanyanyanyanyany', registration);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
           // Handle updates
-          registration.addEventListener('updatefound', ()           => {
+          registration.addEventListener('updatefound', ()            => {
             const newWorker = registration.installing;
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
@@ -44,7 +44,7 @@ export function registerServiceWorker(...args: anyanyanyanyanyanyanyanyanyany[])
 <<<<<<< HEAD
           // // // console.error('SW registration failed: ', registrationError);
 =======
-          // // // // // // // console.error('SW registration failed: anyanyanyanyanyanyanyanyanyany', registrationError);
+          // // // // // // // console.error('SW registration failed: anyanyanyanyanyanyanyanyanyanyany', registrationError);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         });
     });
@@ -53,7 +53,7 @@ export function registerServiceWorker(...args: anyanyanyanyanyanyanyanyanyany[])
 export function unregisterServiceWorker(...args: any[]): any {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
-      .then((registration)           => {
+      .then((registration)            => {
         registration.unregister();
       })
       .catch((error) => {
@@ -92,7 +92,7 @@ const API_ENDPOINTS = [
 ];
 
 // Install event - cache static assets
-self.addEventListener('install', (event: anyanyanyanyanyanyanyanyanyanyExtendableEvent)           => {
+self.addEventListener('install', (event: anyanyanyanyanyanyanyanyanyanyanyExtendableEvent)            => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
@@ -104,24 +104,24 @@ self.addEventListener('install', (event: anyanyanyanyanyanyanyanyanyanyExtendabl
         return self.skipWaiting();
       })
       .catch(error => {
-        console.error('Service Worker installation failed: anyanyanyanyanyanyanyanyanyany', error);
+        console.error('Service Worker installation failed: anyanyanyanyanyanyanyanyanyanyany', error);
       })
   );
 });
 
 // Activate event - clean up old caches
-self.addEventListener('activate', (event: ExtendableEvent)           => {
+self.addEventListener('activate', (event: ExtendableEvent)            => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
           if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache: anyanyanyanyanyanyanyanyanyany', cacheName);
+            console.log('Deleting old cache: anyanyanyanyanyanyanyanyanyanyany', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
-    }).then(()           => {
+    }).then(()            => {
       console.log('Service Worker activated successfully');
       return self.clients.claim();
     })
@@ -129,7 +129,7 @@ self.addEventListener('activate', (event: ExtendableEvent)           => {
 });
 
 // Fetch event - handle different caching strategies
-self.addEventListener('fetch', (event: anyanyanyanyanyanyanyanyanyanyFetchEvent)           => {
+self.addEventListener('fetch', (event: anyanyanyanyanyanyanyanyanyanyanyFetchEvent)            => {
   const { request } = event;
   const url = new URL(request.url);
 
@@ -234,7 +234,7 @@ function isFont(request: Request): boolean {
 }
 
 // Background sync for offline actions
-self.addEventListener('sync', (event: anyanyanyanyanyanyanyanyanyanySyncEvent)           => {
+self.addEventListener('sync', (event: anyanyanyanyanyanyanyanyanyanyanySyncEvent)            => {
   console.log('Background sync triggered:', event.tag);
   
   if (event.tag === 'background-sync') {
@@ -255,16 +255,16 @@ async function doBackgroundSync(...args: any[]): any {
     
     console.log('Background sync completed successfully');
   } catch (error) {
-    console.error('Background sync failed: anyanyanyanyanyanyanyanyanyany', error);
+    console.error('Background sync failed: anyanyanyanyanyanyanyanyanyanyany', error);
   }
 }
 
 // Handle push notifications
-self.addEventListener('push', (event: PushEvent)           => {
+self.addEventListener('push', (event: PushEvent)            => {
   console.log('Push notification received:', event);
   
   const options = {
-    body: anyanyanyanyanyanyanyanyanyanyevent.data?.text() || 'New notification from Zion Tech Group',
+    body: anyanyanyanyanyanyanyanyanyanyanyevent.data?.text() || 'New notification from Zion Tech Group',
     icon: '/icon-192x192.png',
     badge: '/badge-72x72.png',
     vibrate: [100, 50, 100],
@@ -292,7 +292,7 @@ self.addEventListener('push', (event: PushEvent)           => {
 });
 
 // Handle notification clicks
-self.addEventListener('notificationclick', (event: NotificationEvent)           => {
+self.addEventListener('notificationclick', (event: NotificationEvent)            => {
   console.log('Notification clicked:', event);
   
   event.notification.close();
@@ -305,7 +305,7 @@ self.addEventListener('notificationclick', (event: NotificationEvent)           
 });
 
 // Handle message events from main thread
-self.addEventListener('message', (event: anyanyanyanyanyanyanyanyanyanyExtendableMessageEvent)           => {
+self.addEventListener('message', (event: anyanyanyanyanyanyanyanyanyanyanyExtendableMessageEvent)            => {
   console.log('Message received in service worker:', event.data);
   
   if (event.data && event.data.type === 'SKIP_WAITING') {

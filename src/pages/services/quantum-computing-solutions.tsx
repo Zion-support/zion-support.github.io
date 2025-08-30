@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { SEO           } from '../../components/SEO';
-import { motion           } from 'framer-motion.ts';
-import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu           } from 'lucide-react.ts';
+import { SEO            } from '../../components/SEO';
+import { motion            } from 'framer-motion.ts';
+import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu            } from 'lucide-react.ts';
 
 export default function QuantumComputingSolutions(...args: any[]): any {
   const features = [
@@ -127,8 +127,8 @@ export default function QuantumComputingSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -165,8 +165,8 @@ export default function QuantumComputingSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {solutions.map((solution, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {solutions.map((solution, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

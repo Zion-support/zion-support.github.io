@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 import { Search,
   Filter,
   Star,
@@ -51,10 +51,10 @@ import { Search,
   Gauge,
   MessageCircle as MessageCircleIcon
 <<<<<<< HEAD
-import { enhancedServicesCatalog2025, EnhancedService           } from '../data/enhancedServicesCatalog2025';
+import { enhancedServicesCatalog2025, EnhancedService            } from '../data/enhancedServicesCatalog2025';
 =======
 } from 'lucide-react';
-import { enhancedServicesCatalog2025, EnhancedService           } from '../data/enhancedServicesCatalog2025';
+import { enhancedServicesCatalog2025, EnhancedService            } from '../data/enhancedServicesCatalog2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function EnhancedServicesShowcase2025(...args: any[]): any {
@@ -112,7 +112,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
 };
 
-  const ServiceCard = ({ service }: { service: anyanyanyanyanyanyanyanyanyanyEnhancedService })           => (
+  const ServiceCard = ({ service }: { service: anyanyanyanyanyanyanyanyanyanyanyEnhancedService })            => (
     <motion.div
       key={service.id}
       className="neon-card hover:scale-105 transition-all duration-300 cursor-pointer group"
@@ -270,7 +270,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
-  const ServiceList = ({ service }: { service: anyanyanyanyanyanyanyanyanyanyEnhancedService })           => (
+  const ServiceList = ({ service }: { service: anyanyanyanyanyanyanyanyanyanyanyEnhancedService })            => (
     <motion.div
       key={service.id}
       className="neon-card p-6 hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
@@ -425,13 +425,13 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
               {[
                 { icon: Rocket, label: 'Services', value: '50+', color: 'text-cyan-400' },
                 { icon: Users, label: 'Customers', value: '500+', color: 'text-purple-400' },
                 { icon: TrendingUp, label: 'Growth', value: '300%', color: 'text-green-400' },
                 { icon: Award, label: 'Awards', value: '25+', color: 'text-yellow-400' }
-              ].map((stat, index)           => (
+              ].map((stat, index)            => (
                 <motion.div
                   key={stat.label}
                   className="text-center"
@@ -522,9 +522,9 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
 
-                  {categories.map(category           => (
+                  {categories.map(category            => (
                     <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -592,8 +592,8 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8' : 'space-y-6'}>
-                {filteredServices.map((service)           => (
+              <div className={viewMode === 'grid' ? 'grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8' : 'space-y-6'}>
+                {filteredServices.map((service)            => (
                   viewMode === 'grid' ? (
                     <ServiceCard key={service.id} service={service} />
                   ) : (

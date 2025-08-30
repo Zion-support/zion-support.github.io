@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Atom,
   Zap,
@@ -34,7 +34,7 @@ import {
   Shield,
   TrendingUp,
   Layers
-import { SEO           } from '@/components/SEO';
+import { SEO            } from '@/components/SEO';
 =======
   Lightbulb,
   Search,
@@ -63,7 +63,7 @@ import { SEO           } from '@/components/SEO';
   Bluetooth,
   Radio
 } from 'lucide-react';
-import { SEO           } from '../../components/SEO';
+import { SEO            } from '../../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function QuantumComputingSolutions(...args: any[]): any {
@@ -331,8 +331,8 @@ export default function QuantumComputingSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {quantumApplications.map((app, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {quantumApplications.map((app, index)            => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -414,9 +414,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 =======
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            {features.map((feature, index)           => (
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -470,8 +470,8 @@ export default function QuantumComputingSolutions(...args: any[]): any {
           </motion.div>
 
 <<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)            => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6"
@@ -484,8 +484,8 @@ export default function QuantumComputingSolutions(...args: any[]): any {
                   <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">
                     <Zap className="h-6 w-6 text-white" />
 =======
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {capabilities.map((capability, index)           => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -544,11 +544,11 @@ export default function QuantumComputingSolutions(...args: any[]): any {
           </motion.div>
 
 <<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {researchAreas.map((area, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {researchAreas.map((area, index)            => (
 =======
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -610,8 +610,8 @@ export default function QuantumComputingSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)            => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -720,12 +720,12 @@ export default function QuantumComputingSolutions(...args: any[]): any {
           </motion.div>
 
 <<<<<<< HEAD
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
-            {quantumTechnologies.map((tech, index)           => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
+            {quantumTechnologies.map((tech, index)            => (
               <motion.a
 =======
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)            => (
               <motion.div
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 key={index}

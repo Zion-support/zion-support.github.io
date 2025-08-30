@@ -10,6 +10,7 @@ export interface ServiceContact {
 
 
 
+
   phone: string;
   email: string;
   website: string;
@@ -27,9 +28,11 @@ address: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface MicroSaasService {
+
 
 
 
@@ -74,9 +77,11 @@ trialPeriod: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface ITService {
+
 
 
 
@@ -118,9 +123,11 @@ support: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface AIService {
+
 
 
 
@@ -155,6 +162,7 @@ export interface AIService {
 
 =======
 useCases: string[];
+
 
 
 

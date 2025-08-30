@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 import { Brain,
   Search,
   BookOpen,
@@ -12,8 +12,8 @@ import { Brain,
   CheckCircle,
   ArrowRight,
 =======
-import React, { useState, useEffect           } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import React, { useState, useEffect            } from 'react.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 import { 
   Brain, 
   Search, 
@@ -370,8 +370,8 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -423,8 +423,8 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -462,8 +462,8 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)            => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -621,8 +621,8 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index)           => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {features.map((feature, index)            => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}

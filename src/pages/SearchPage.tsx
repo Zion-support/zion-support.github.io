@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react.ts';
-import { Link, useSearchParams           } from 'react-router-dom.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { Link, useSearchParams            } from 'react-router-dom.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 import { Search, 
   Filter, 
   X, 
@@ -46,7 +46,7 @@ import { Search,
   Video,
   GraduationCap,
   TestTube
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 const SearchPage: React.FC = (): JSX.Element => {
@@ -80,6 +80,7 @@ interface SearchResult {
 
 
 
+
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
@@ -89,6 +90,7 @@ interface SearchResult {
   icon: ;
   tags: string[];
   featured?: boolean;
+
 
 
 
@@ -347,17 +349,17 @@ export default function SearchPage(...args[]: any):  {
   }, [searchQuery, selectedCategory, selectedTags]);
 
   // Handle search
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)            => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      setSearchParams({ q: anyanyanyanyanyanyanyanyanyanysearchQuery.trim() });
+      setSearchParams({ q: anyanyanyanyanyanyanyanyanyanyanysearchQuery.trim() });
       setIsSearching(true);
-      setTimeout(()           => setIsSearching(false), 1000);
+      setTimeout(()            => setIsSearching(false), 1000);
     }
   };
 
   // Handle tag selection
-  const toggleTag = (tag: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const toggleTag = (tag: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     setSelectedTags(prev => 
       prev.includes(tag) 
         ? prev.filter(t => t !== tag)
@@ -438,9 +440,9 @@ export default function SearchPage(...args[]: any):  {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400/50"
+                className="px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400/50"
               >
-                {categories.map(category           => (
+                {categories.map(category            => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -492,9 +494,9 @@ export default function SearchPage(...args[]: any):  {
           </div>
 
           {/* Results Grid */}
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredResults.map((result, index)           => (
+              {filteredResults.map((result, index)            => (
                 <motion.div
                   key={result.id}
                   initial={{ opacity: 0, y: 20 }}

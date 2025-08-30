@@ -1,30 +1,30 @@
 <<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react.ts';
+import { Card, CardContent, CardHeader, CardTitle             } from './ui/card';
+import { Button             } from './ui/button';
+import { Badge             } from './ui/badge';
+import { Alert, AlertDescription             } from './ui/alert';
+import { Progress             } from './ui/progress';
+import { Shield, 
+=======
+import React, { useEffect, useState, useCallback            } from 'react.ts';
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle            } from './ui/card';
 import { Button            } from './ui/button';
 import { Badge            } from './ui/badge';
 import { Alert, AlertDescription            } from './ui/alert';
 import { Progress            } from './ui/progress';
-import { Shield, 
-=======
-import React, { useEffect, useState, useCallback           } from 'react.ts';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle           } from './ui/card';
-import { Button           } from './ui/button';
-import { Badge           } from './ui/badge';
-import { Alert, AlertDescription           } from './ui/alert';
-import { Progress           } from './ui/progress';
 import { Shield,
   Lock,
   AlertTriangle,
   CheckCircle,
   Eye,
 =======
-import { Card, CardContent, CardHeader, CardTitle           } from './ui/card';
-import { Button           } from './ui/button';
-import { Badge           } from './ui/badge';
-import { Alert, AlertDescription           } from './ui/alert';
-import { Progress           } from './ui/progress';
+import { Card, CardContent, CardHeader, CardTitle            } from './ui/card';
+import { Button            } from './ui/button';
+import { Badge            } from './ui/badge';
+import { Alert, AlertDescription            } from './ui/alert';
+import { Progress            } from './ui/progress';
 import { Shield, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Lock, 
@@ -41,10 +41,11 @@ import { Shield,
   Database
 <<<<<<< HEAD
 =======
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SecurityThreat {
+
 
 
 
@@ -75,10 +76,12 @@ status: 'active' | 'mitigated' | 'resolved';
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecurityMetrics {
+
 
 
 
@@ -108,10 +111,12 @@ encryptionStrength: number;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecurityCheck {
+
 
 
 
@@ -132,6 +137,7 @@ interface SecurityCheck {
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
 =======
 category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
+
 
 
 
@@ -163,7 +169,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   useEffect(() => {
     const sampleThreats: SecurityThreat[] = [
       {
-        id: anyanyanyanyanyanyanyanyanyany'1',
+        id: anyanyanyanyanyanyanyanyanyanyany'1',
         type: 'xss',
         severity: 'high',
         description: 'Potential XSS vulnerability in user input field',
@@ -194,7 +200,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     setThreats(sampleThreats)}, []);
 
   // Generate security checks
-  useEffect(()            => {
+  useEffect(()             => {
     const checks: SecurityCheck[] = [
       {
         id: '1',
@@ -258,7 +264,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     setIsScanning(false)}, []);
 
 <<<<<<< HEAD
-  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     setThreats(prev => prev.map(threat =>
       threat.id === threatId
         ? { ...threat, status: 'mitigated' as const }
@@ -266,31 +272,31 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     ));
   }, []);
 
-  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanystring)           => {
+  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanystring)            => {
     setThreats(prev => prev.map(threat =>
       threat.id === threatId
         ? { ...threat, status: 'resolved' as const }
         : threat
 =======
 <<<<<<< HEAD
-  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanystring)            => {
+  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanystring)             => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'mitigated' as const };
         : threat;
     ))}, []);
 
-  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanystring)            => {
+  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanystring)             => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'resolved' as const };
         : threat;
     ))}, []);
 
-  const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanySecurityThreat['type'])            => {
+  const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanyanySecurityThreat['type'])             => {
     switch (type) {;
 =======;
-  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     setThreats(prev => prev.map(threat => ;
       threat.id === threatId ;
         ? { ...threat, status: 'mitigated' as const };
@@ -298,7 +304,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     ));
   }, []);
 
-  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     setThreats(prev => prev.map(threat => ;
       threat.id === threatId ;
         ? { ...threat, status: 'resolved' as const };
@@ -307,7 +313,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     ));
   }, []);
 
-  const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanySecurityThreat['type'])           => {;
+  const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanyanySecurityThreat['type'])            => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'xss': return <Bug className="h-4 w-4" />;
@@ -325,7 +331,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   };
 
 <<<<<<< HEAD
-  const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanySecurityThreat['severity'])           => {;
+  const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanySecurityThreat['severity'])            => {;
     switch (severity) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'critical': return 'bg-red-500';
@@ -341,7 +347,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   };
 
 <<<<<<< HEAD
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanySecurityThreat['status'])           => {;
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanySecurityThreat['status'])            => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'active': return 'bg-red-100 text-red-800';
@@ -356,7 +362,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   };
 
 <<<<<<< HEAD
-  const getCheckStatusIcon = (status: anyanyanyanyanyanyanyanyanyanySecurityCheck['status'])           => {;
+  const getCheckStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanySecurityCheck['status'])            => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
@@ -371,7 +377,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   };
 
 <<<<<<< HEAD
-  const getSecurityScoreColor = (score: anyanyanyanyanyanyanyanyanyanynumber)           => {;
+  const getSecurityScoreColor = (score: anyanyanyanyanyanyanyanyanyanyanynumber)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';

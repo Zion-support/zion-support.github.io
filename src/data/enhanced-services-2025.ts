@@ -10,6 +10,7 @@ export interface EnhancedService {
 
 
 
+
   id: string;
   name: string;
   tagline: string;
@@ -20,6 +21,7 @@ pricing: {;
     yearly: string;
     enterprise: string;
 setup: string;
+
 
 
 

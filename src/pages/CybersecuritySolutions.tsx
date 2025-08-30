@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import { motion            } from 'framer-motion.ts';
 import { Shield,
   Lock,
   Eye,
@@ -27,7 +27,7 @@ import { Shield,
 <<<<<<< HEAD
 export default function CybersecuritySolutions(...args: any[]): any {
 =======
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export default function CybersecuritySolutions(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -268,7 +268,7 @@ export default function CybersecuritySolutions(...args[]: any):  {
   };
 
   const filteredThreats = selectedThreat === 'all'
-    ? securityThreats: anyanyanyanyanyanyanyanyanyanysecurityThreats.filter(threat           => threat.type === selectedThreat);
+    ? securityThreats: anyanyanyanyanyanyanyanyanyanyanysecurityThreats.filter(threat            => threat.type === selectedThreat);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
@@ -379,9 +379,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {securityServices.map((service, index)           => (
+            {securityServices.map((service, index)            => (
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -475,10 +475,10 @@ export default function CybersecuritySolutions(...args[]: any):  {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
 <<<<<<< HEAD
 
-            {threatTypes.map((threat)           => {
+            {threatTypes.map((threat)            => {
 =======
           >
             {threatTypes.map((threat)  => {
@@ -504,9 +504,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
 
 }};
             transition={{ duration: 0.6 }};
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }};
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }};
           >;
-            {threatTypes.map((threat)           => {;
+            {threatTypes.map((threat)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               const Icon = threat.icon;
@@ -542,9 +542,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {filteredThreats.map((threat, index)           => (
+            {filteredThreats.map((threat, index)            => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -642,9 +642,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {complianceFrameworks.map((framework, index)           => (
+            {complianceFrameworks.map((framework, index)            => (
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -731,9 +731,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {securityMetrics.map((metric, index)           => (
+            {securityMetrics.map((metric, index)            => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -792,7 +792,7 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {[
               {
@@ -819,7 +819,7 @@ export default function CybersecuritySolutions(...args[]: any):  {
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
 
-            ].map((phase, index)           => (
+            ].map((phase, index)            => (
               <motion.div
                 key={index}
                 className="relative"

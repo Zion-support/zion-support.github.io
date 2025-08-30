@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown import { Link, useLocation           } from 'react-router-dom.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown import { Link, useLocation            } from 'react-router-dom.ts';
 =======
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown            } from 'lucide-react.ts';
-import { Link, useLocation            } from 'react-router-dom.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown             } from 'lucide-react.ts';
+import { Link, useLocation             } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
@@ -17,7 +17,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
   const location = useLocation();
 
 <<<<<<< HEAD
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanystring)           => {;
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
@@ -34,7 +34,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
     setExpandedSections(newExpanded)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanystring)            => location.pathname === path;
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanystring)             => location.pathname === path;
 
   const navigationSections = [
     {

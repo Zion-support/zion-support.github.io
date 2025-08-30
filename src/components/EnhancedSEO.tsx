@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback } from 'react.ts';
-import { Helmet           } from 'react-helmet-async.ts';
+import { Helmet            } from 'react-helmet-async.ts';
 
 interface EnhancedSEOProps extends React.PropsWithChildren<{}> {
 
@@ -167,7 +167,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     ]
 =======
     "sameAs": [
-      "https: anyanyanyanyanyanyanyanyanyany//twitter.com/ziontechgroup",
+      "https: anyanyanyanyanyanyanyanyanyanyany//twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
       "https://facebook.com/ziontechgroup"
     ],
@@ -208,7 +208,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Preload critical resources
-  useEffect(()           => {
+  useEffect(()            => {
     // Preload critical fonts
     const fontLinks = [
       'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
@@ -244,12 +244,12 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
     // DNS prefetch for external domains
     const dnsPrefetchDomains = [
-      'https: anyanyanyanyanyanyanyanyanyany//fonts.googleapis.com',
+      'https: anyanyanyanyanyanyanyanyanyanyany//fonts.googleapis.com',
       'https://fonts.gstatic.com',
       'https://www.google-analytics.com'
     ];
 
-    dnsPrefetchDomains.forEach(domain           => {
+    dnsPrefetchDomains.forEach(domain            => {
       const link = document.createElement('link');
       link.rel = 'dns-prefetch';
       link.href = domain;

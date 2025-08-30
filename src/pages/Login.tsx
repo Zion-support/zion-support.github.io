@@ -9,8 +9,8 @@ const Login: React.FC = (): JSX.Element => (
 );
 =======
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 import { Mail, 
   Lock, 
   Eye, 
@@ -44,8 +44,8 @@ import { Mail,
   Monitor,
   Tablet,
   Laptop
-          } from 'lucide-react.ts';
-import { SEO           } from '../components/SEO';
+           } from 'lucide-react.ts';
+import { SEO            } from '../components/SEO';
 
 export default function Login(...args: any[]): any {
   const [isLogin, setIsLogin] = useState(true);
@@ -66,7 +66,7 @@ export default function Login(...args: any[]): any {
   const [submitted, setSubmitted] = useState(false);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)           => {
+  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)            => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -75,13 +75,13 @@ export default function Login(...args: any[]): any {
   };
 
 <<<<<<< HEAD
-  const handleChange = (e: anyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)            => {
+  const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)             => {
     setFormData({
       ...formData,;
       [e.target.name]: e.target.value;
     })};
 
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {;
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)            => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setIsSubmitting(true);

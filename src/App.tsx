@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react.ts';
-import { Routes, Route          } from 'react-router-dom.ts';
-import { Header          } from './components/Header';
-import { Footer          } from './components/Footer';
-import { Sidebar          } from './components/Sidebar';
-import { ErrorBoundary          } from 'react-error-boundary.ts';
+import { Routes, Route           } from 'react-router-dom.ts';
+import { Header           } from './components/Header';
+import { Footer           } from './components/Footer';
+import { Sidebar           } from './components/Sidebar';
+import { ErrorBoundary           } from 'react-error-boundary.ts';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
@@ -24,25 +24,25 @@ const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/Comprehensi
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
 // Enhanced Layout Components
-import { EnhancedHeader          } from './components/EnhancedHeader';
-import { EnhancedFooter          } from './components/EnhancedFooter';
+import { EnhancedHeader           } from './components/EnhancedHeader';
+import { EnhancedFooter           } from './components/EnhancedFooter';
 
 // Enhanced Components
-import { PerformanceOptimizer          } from './components/PerformanceOptimizer';
+import { PerformanceOptimizer           } from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer          } from './components/MobileExperienceEnhancer';
-import { SEO          } from './components/SEO';
-import { FloatingActionButton          } from './components/FloatingActionButton';
-import { AdvancedAnalytics          } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem          } from './components/SmartNotificationSystem';
-import { ChatAssistant          } from './components/ChatAssistant';
-import { ErrorBoundary          } from './components/ErrorBoundary';
-import { LoadingSpinner          } from './components/ui/loading-spinner';
+import { MobileExperienceEnhancer           } from './components/MobileExperienceEnhancer';
+import { SEO           } from './components/SEO';
+import { FloatingActionButton           } from './components/FloatingActionButton';
+import { AdvancedAnalytics           } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem           } from './components/SmartNotificationSystem';
+import { ChatAssistant           } from './components/ChatAssistant';
+import { ErrorBoundary           } from './components/ErrorBoundary';
+import { LoadingSpinner           } from './components/ui/loading-spinner';
 
 // Enhanced lazy loading with preloading hints
-const createLazyComponent = (importFn: anyanyanyanyanyanyanyanyany()          => Promise<any>, fallback?: React.ReactNode) => {
+const createLazyComponent = (importFn: anyanyanyanyanyanyanyanyanyany()           => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
-  return (props: anyanyanyanyanyanyanyanyanyany)          => (
+  return (props: anyanyanyanyanyanyanyanyanyanyany)           => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
@@ -182,7 +182,7 @@ const UltimateInnovativeServicesShowcase2025 = createLazyComponent(() => import(
 
 
 // Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: anyanyanyanyanyanyanyanyanyError; resetErrorBoundary: ()          => void }) => (
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: anyanyanyanyanyanyanyanyanyanyError; resetErrorBoundary: ()           => void }) => (
   <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
     <div className="text-center max-w-md">
       <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">

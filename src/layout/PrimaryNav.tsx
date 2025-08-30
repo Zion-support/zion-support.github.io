@@ -1,21 +1,21 @@
 import React, { useState } from 'react.ts';
-import { Link, useLocation           } from 'react-router-dom.ts';
-import { Logo           } from '@/components/header/Logo';
-import { PointsBadge           } from '@/components/loyalty/PointsBadge';
-import { UserMenu           } from '@/components/header/UserMenu';
-import { LanguageSelector           } from '@/components/header/LanguageSelector';
-import { ModeToggle           } from '@/components/ModeToggle';
-import { useAuth           } from '@/hooks/useAuth';
-import { useIsMobile           } from '@/hooks/use-mobile';
-import { useMessaging           } from '@/context/MessagingContext';
-import { EnhancedSearchInput           } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions           } from '@/data/marketplaceData';
-import { slugify           } from '@/lib/slugify';
-import { ResponsiveNavigation           } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu           } from '@/components/header/MobileMenu';
-import { MobileBottomNav           } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart import { useTranslation           } from 'react-i18next.ts';
-import { useSelector           } from 'react-redux.ts';
+import { Link, useLocation            } from 'react-router-dom.ts';
+import { Logo            } from '@/components/header/Logo';
+import { PointsBadge            } from '@/components/loyalty/PointsBadge';
+import { UserMenu            } from '@/components/header/UserMenu';
+import { LanguageSelector            } from '@/components/header/LanguageSelector';
+import { ModeToggle            } from '@/components/ModeToggle';
+import { useAuth            } from '@/hooks/useAuth';
+import { useIsMobile            } from '@/hooks/use-mobile';
+import { useMessaging            } from '@/context/MessagingContext';
+import { EnhancedSearchInput            } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions            } from '@/data/marketplaceData';
+import { slugify            } from '@/lib/slugify';
+import { ResponsiveNavigation            } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu            } from '@/components/header/MobileMenu';
+import { MobileBottomNav            } from '@/components/header/MobileBottomNav';
+import { Menu, X, ShoppingCart import { useTranslation            } from 'react-i18next.ts';
+import { useSelector            } from 'react-redux.ts';
 import type { RootState } from '@/store';
 
 <<<<<<< HEAD
@@ -34,11 +34,11 @@ export function PrimaryNav(...args[]: any):  {
     unreadCount = messaging.unreadCount} catch {
     // context not available
 
-  const cartCount = useSelector((s: anyanyanyanyanyanyanyanyanyanyRootState)            =>;
+  const cartCount = useSelector((s: anyanyanyanyanyanyanyanyanyanyanyRootState)             =>;
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0),;
   );
 
-  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)            => {;
+  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)             => {;
     e.preventDefault();
     if (query.trim()) {
 <<<<<<< HEAD

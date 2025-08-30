@@ -12,6 +12,7 @@ interface User {
 
 
 
+
   id: string;
   email: string;
   displayName?: string;
@@ -23,6 +24,7 @@ interface User {
   updatedAt?: string;
 =======
 updatedAt?: string;
+
 
 
 
@@ -47,11 +49,13 @@ interface AuthTokens {
 
 
 
+
   accessToken: string | null;
 <<<<<<< HEAD
   refreshToken: string | null;
 =======
-refreshToken: anyanyanyanyanyanyanyanyanyanystring | null;
+refreshToken: anyanyanyanyanyanyanyanyanyanyanystring | null;
+
 
 
 
@@ -76,32 +80,34 @@ interface AuthContextType {
 
 
 
+
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;
   tokens: AuthTokens;
 <<<<<<< HEAD
-login: (email: string, password: string)           => Promise<any>;
-  register: anyanyanyanyanyanyanyanyany(name: string, email: string, password: string)           => Promise<any>;
-  signup: anyanyanyanyanyanyanyanyany(email: string, password: string, userData: )           => Promise<any>;
-  logout: anyanyanyanyanyanyanyanyanyany()           => Promise<any>;
-  resetPassword: anyanyanyanyanyanyanyanyanyany(email: string)           => Promise<any>;
-  updateProfile: anyanyanyanyanyanyanyanyanyany(updates: Partial<User>)           => Promise<any>;
-  loginWithGoogle: anyanyanyanyanyanyanyanyanyany()           => Promise<any>;
-  loginWithFacebook: anyanyanyanyanyanyanyanyanyany()           => Promise<any>;
-  loginWithTwitter: anyanyanyanyanyanyanyanyanyany()           => Promise<any>;
-  loginWithWeb3: anyanyanyanyanyanyanyanyanyany()           => Promise<any>;
-=======
-login: anyanyanyanyanyanyanyanyanyany(email: string, password: string)            => Promise<any>;
+login: (email: string, password: string)            => Promise<any>;
   register: anyanyanyanyanyanyanyanyanyany(name: string, email: string, password: string)            => Promise<any>;
-  signup: anyanyanyanyanyanyanyanyanyany(email: string, password: string, userData)            => Promise<any>;
-  logout: anyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-  resetPassword: anyanyanyanyanyanyanyanyanyany(email: string)            => Promise<any>;
-  updateProfile: anyanyanyanyanyanyanyanyanyany(updates: Partial<User>)            => Promise<any>;
-  loginWithGoogle: anyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-  loginWithFacebook: anyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-  loginWithTwitter: anyanyanyanyanyanyanyanyanyany()            => Promise<any>;
-loginWithWeb3: anyanyanyanyanyanyanyanyanyany()            => Promise<any>;
+  signup: anyanyanyanyanyanyanyanyanyany(email: string, password: string, userData: )            => Promise<any>;
+  logout: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
+  resetPassword: anyanyanyanyanyanyanyanyanyanyany(email: string)            => Promise<any>;
+  updateProfile: anyanyanyanyanyanyanyanyanyanyany(updates: Partial<User>)            => Promise<any>;
+  loginWithGoogle: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
+  loginWithFacebook: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
+  loginWithTwitter: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
+  loginWithWeb3: anyanyanyanyanyanyanyanyanyanyany()            => Promise<any>;
+=======
+login: anyanyanyanyanyanyanyanyanyanyany(email: string, password: string)             => Promise<any>;
+  register: anyanyanyanyanyanyanyanyanyanyany(name: string, email: string, password: string)             => Promise<any>;
+  signup: anyanyanyanyanyanyanyanyanyanyany(email: string, password: string, userData)             => Promise<any>;
+  logout: anyanyanyanyanyanyanyanyanyanyany()             => Promise<any>;
+  resetPassword: anyanyanyanyanyanyanyanyanyanyany(email: string)             => Promise<any>;
+  updateProfile: anyanyanyanyanyanyanyanyanyanyany(updates: Partial<User>)             => Promise<any>;
+  loginWithGoogle: anyanyanyanyanyanyanyanyanyanyany()             => Promise<any>;
+  loginWithFacebook: anyanyanyanyanyanyanyanyanyanyany()             => Promise<any>;
+  loginWithTwitter: anyanyanyanyanyanyanyanyanyanyany()             => Promise<any>;
+loginWithWeb3: anyanyanyanyanyanyanyanyanyanyany()             => Promise<any>;
+
 
 
 

@@ -13,6 +13,7 @@ export interface PricingTier {
 
 
 
+
   name: string;
   price: number;
   currency: string;
@@ -38,10 +39,12 @@ export interface PricingTier {
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ServicePricing {
+
 
 
 
@@ -68,6 +71,7 @@ contactInfo: {;
     website: string;
     address: string;
   
+
 
 
 
