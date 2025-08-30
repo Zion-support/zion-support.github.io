@@ -1124,6 +1124,186 @@ export function ServicesPage() {
         'Identity Management',
         'Security Operations'
       ]
+    },
+
+    // New Revolutionary Services 2025
+    {
+      id: 'quantum-ai-hybrid-platform',
+      title: 'Quantum AI Hybrid Platform',
+      description: 'Revolutionary platform combining quantum computing with AI for exponential computational power and breakthrough problem-solving capabilities',
+      icon: Atom,
+      color: 'from-cyan-600 to-blue-700',
+      price: '$2,999 - $9,999/month',
+      features: [
+        'Quantum-Classical Hybrid Computing',
+        'Quantum AI Algorithms',
+        'Quantum Machine Learning',
+        'Quantum Neural Networks',
+        'Hybrid Problem Solving',
+        'Quantum Simulation',
+        'Performance Analytics',
+        'Expert Quantum Consulting'
+      ],
+      benefits: [
+        'Solve problems 1000x faster than classical computers',
+        'Exponential computational power',
+        'Revolutionary AI capabilities',
+        'Future-proof technology investment',
+        'Competitive advantage in R&D',
+        'Breakthrough scientific discoveries'
+      ],
+      useCases: [
+        'Pharmaceutical Research',
+        'Financial Modeling',
+        'Climate Science',
+        'Material Science',
+        'Cryptography',
+        'Logistics Optimization',
+        'Machine Learning Research',
+        'Scientific Computing'
+      ]
+    },
+
+    {
+      id: 'ai-edge-computing-platform',
+      title: 'AI Edge Computing Platform',
+      description: 'Revolutionary edge computing platform bringing AI processing to the edge for real-time decision making and offline capabilities',
+      icon: Cpu,
+      color: 'from-orange-600 to-red-700',
+      price: '$699 - $2,499/month',
+      features: [
+        'Edge AI Model Deployment',
+        'Real-time Inference at Edge',
+        'Offline AI Processing',
+        'Edge Device Management',
+        'Model Compression & Optimization',
+        'Edge-to-Cloud Sync',
+        'Multi-edge Node Orchestration',
+        'Edge Security & Privacy'
+      ],
+      benefits: [
+        'Reduce latency by 90% vs cloud processing',
+        'Enable offline AI capabilities',
+        'Reduce bandwidth costs by 70%',
+        'Enhanced privacy and security',
+        'Real-time decision making',
+        'Scalable edge AI deployment'
+      ],
+      useCases: [
+        'Autonomous Vehicles',
+        'Smart Manufacturing',
+        'IoT Devices',
+        'Mobile Applications',
+        'Healthcare Monitoring',
+        'Retail Analytics',
+        'Security Systems',
+        'Smart Cities'
+      ]
+    },
+
+    {
+      id: 'ai-blockchain-analytics',
+      title: 'AI Blockchain Analytics Platform',
+      description: 'Advanced analytics platform combining AI with blockchain for real-time insights, fraud detection, and DeFi optimization',
+      icon: Link,
+      color: 'from-emerald-600 to-teal-700',
+      price: '$899 - $2,999/month',
+      features: [
+        'Real-time Blockchain Analysis',
+        'AI-Powered Fraud Detection',
+        'DeFi Protocol Analytics',
+        'Smart Contract Risk Assessment',
+        'Cryptocurrency Market Intelligence',
+        'Blockchain Network Monitoring',
+        'Predictive Crypto Analytics',
+        'Compliance & Regulatory Reporting'
+      ],
+      benefits: [
+        'Detect fraud in real-time',
+        'Optimize DeFi strategies',
+        'Reduce blockchain security risks',
+        'Compliance automation',
+        'Real-time market intelligence',
+        'Predictive trading insights'
+      ],
+      useCases: [
+        'Cryptocurrency Exchanges',
+        'DeFi Protocols',
+        'Financial Institutions',
+        'Regulatory Agencies',
+        'Investment Firms',
+        'Blockchain Companies'
+      ]
+    },
+
+    {
+      id: 'ai-financial-trading-platform',
+      title: 'AI Financial Trading Platform',
+      description: 'Advanced AI-powered trading platform with real-time market analysis, automated strategies, and risk management',
+      icon: DollarSign,
+      color: 'from-green-600 to-emerald-700',
+      price: '$999 - $2,999/month',
+      features: [
+        'AI-Powered Trading Signals',
+        'Automated Trading Strategies',
+        'Real-time Risk Assessment',
+        'Portfolio Optimization',
+        'Market Prediction Models',
+        'Multi-asset Trading',
+        'Compliance Management',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Increase trading performance by 25-40%',
+        'Reduce emotional trading decisions',
+        '24/7 automated trading',
+        'Advanced risk management',
+        'Real-time market insights',
+        'Portfolio diversification'
+      ],
+      useCases: [
+        'Institutional Investors',
+        'Retail Traders',
+        'Hedge Funds',
+        'Asset Management Firms',
+        'Financial Advisors',
+        'Quantitative Trading Firms'
+      ]
+    },
+
+    {
+      id: 'ai-healthcare-analytics',
+      title: 'AI Healthcare Analytics Platform',
+      description: 'Comprehensive healthcare analytics leveraging AI for predictive insights, patient risk assessment, and operational optimization',
+      icon: Heart,
+      color: 'from-pink-600 to-rose-700',
+      price: '$599 - $1,999/month',
+      features: [
+        'Predictive Patient Risk Assessment',
+        'Population Health Analytics',
+        'Clinical Decision Support',
+        'Healthcare Operations Optimization',
+        'Revenue Cycle Management',
+        'Patient Engagement Analytics',
+        'Quality Metrics & Reporting',
+        'EHR Integration'
+      ],
+      benefits: [
+        'Reduce readmission rates by 30%',
+        'Improve patient outcomes by 25%',
+        'Optimize healthcare operations',
+        'Reduce healthcare costs by 20%',
+        'Enhanced clinical decision making',
+        'Improve patient satisfaction'
+      ],
+      useCases: [
+        'Hospitals & Health Systems',
+        'Primary Care Practices',
+        'Specialty Clinics',
+        'Health Insurance Companies',
+        'Public Health Agencies',
+        'Research Institutions'
+      ]
     }
   ];
 
@@ -1369,6 +1549,13 @@ export function ServicesPage() {
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Explore New Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/comprehensive-showcase-2025"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                <span>Comprehensive Showcase</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
