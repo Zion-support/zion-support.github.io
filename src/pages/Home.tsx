@@ -1,12 +1,11 @@
 
-import React, { Suspense, useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
+import React, { Suspense, useState, useEffect, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-
-import { SEO  } from '@/components/SEO';
-import { HeroSection  } from '@/components/HeroSection';
-import { LoadingSpinner  } from '@/components/ui/LoadingSpinner';
+import { SEO } from '@/components/SEO';
+import { HeroSection } from '@/components/HeroSection';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -21,7 +20,7 @@ const FuturisticBackground = React.memo(() => {
   );
 
 // Loading fallback component
-const LoadingFallback = ({ message }: { message: string })  => (
+const LoadingFallback = ({ message }: { message: string }) => (
   <div className="py-20 bg-slate-900">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
