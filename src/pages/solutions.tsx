@@ -35,13 +35,13 @@ const Solutions: React.FC = (): JSX.Element => {
       title: 'AI-Powered Healthcare Analytics',
       industry: 'healthcare',
       description: 'Transform patient care with predictive analytics and intelligent diagnosis support.',
-      features[
+      features: [
         'Predictive disease modeling',
         'Medical image analysis',
         'Patient risk assessment',
         'Drug discovery optimization'
       ],
-      benefits[
+      benefits: [
         'Improved diagnostic accuracy',
         'Reduced healthcare costs',
         'Enhanced patient outcomes',
@@ -56,13 +56,13 @@ const Solutions: React.FC = (): JSX.Element => {
       title: 'Cybersecurity for Financial Services',
       industry: 'finance',
       description: 'Protect financial institutions with advanced threat detection and compliance solutions.',
-      features[
+      features: [
         'Real-time threat monitoring',
         'Compliance automation',
         'Fraud detection systems',
         'Secure transaction processing'
       ],
-      benefits[
+      benefits: [
         'Enhanced security posture',
         'Regulatory compliance',
         'Reduced fraud losses',
@@ -77,13 +77,13 @@ const Solutions: React.FC = (): JSX.Element => {
       title: 'Smart Manufacturing Platform',
       industry: 'manufacturing',
       description: 'Optimize production with IoT sensors, predictive maintenance, and quality control.',
-      features[
+      features: [
         'Predictive maintenance',
         'Quality control automation',
         'Supply chain optimization',
         'Energy efficiency monitoring'
       ],
-      benefits[
+      benefits: [
         'Reduced downtime',
         'Improved product quality',
         'Lower operational costs',
@@ -98,13 +98,13 @@ const Solutions: React.FC = (): JSX.Element => {
       title: 'E-commerce Personalization Engine',
       industry: 'retail',
       description: 'Boost sales with AI-driven product recommendations and customer insights.',
-      features[
+      features: [
         'Personalized recommendations',
         'Customer behavior analysis',
         'Dynamic pricing optimization',
         'Inventory management'
       ],
-      benefits[
+      benefits: [
         'Increased conversion rates',
         'Higher customer retention',
         'Optimized pricing strategies',
@@ -119,13 +119,13 @@ const Solutions: React.FC = (): JSX.Element => {
       title: 'Cloud-Native Development Platform',
       industry: 'technology',
       description: 'Accelerate software development with cloud-native tools and DevOps automation.',
-      features[
+      features: [
         'Container orchestration',
         'CI/CD pipelines',
         'Microservices architecture',
         'Auto-scaling infrastructure'
       ],
-      benefits[
+      benefits: [
         'Faster time to market',
         'Reduced infrastructure costs',
         'Improved scalability',
@@ -140,13 +140,13 @@ const Solutions: React.FC = (): JSX.Element => {
       title: 'Data Intelligence Platform',
       industry: 'technology',
       description: 'Unlock insights from your data with advanced analytics and machine learning.',
-      features[
+      features: [
         'Data warehousing',
         'Real-time analytics',
         'Machine learning models',
         'Business intelligence dashboards'
       ],
-      benefits[
+      benefits: [
         'Data-driven decisions',
         'Improved operational efficiency',
         'Competitive advantage',

@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '../components/SEO';
 import { Video, 
   Calendar, 
@@ -25,9 +25,9 @@ import { Video,
   MapPin,
   Mail,
   Phone
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Webinars(...args[]):  {
+export default function Webinars() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showPast, setShowPast] = useState(false);
@@ -55,7 +55,7 @@ export default function Webinars(...args[]):  {
       attendees: 450,
       maxAttendees: 500,
       summary: 'Learn how to implement AI-powered compliance automation to reduce manual work and improve accuracy.',
-      tags['AI', 'Compliance', 'Automation', 'Best Practices'],
+      tags: ['AI', 'Compliance', 'Automation', 'Best Practices'],
       registrationUrl: '/webinars/ai-compliance-automation-2024/register',
       watchUrl: null,
       isLive: false
@@ -71,7 +71,7 @@ export default function Webinars(...args[]):  {
       attendees: 320,
       maxAttendees: 400,
       summary: 'Deep dive into implementing zero trust security architecture in large enterprise environments.',
-      tags['Cybersecurity', 'Zero Trust', 'Enterprise', 'Security Architecture'],
+      tags: ['Cybersecurity', 'Zero Trust', 'Enterprise', 'Security Architecture'],
       registrationUrl: '/webinars/zero-trust-security-enterprise/register',
       watchUrl: null,
       isLive: false
@@ -87,7 +87,7 @@ export default function Webinars(...args[]):  {
       attendees: 280,
       maxAttendees: 350,
       summary: 'Discover strategies for optimizing cloud costs across multiple cloud providers using FinOps principles.',
-      tags['Cloud Computing', 'FinOps', 'Cost Optimization', 'Multi-Cloud'],
+      tags: ['Cloud Computing', 'FinOps', 'Cost Optimization', 'Multi-Cloud'],
       registrationUrl: '/webinars/cloud-finops-multi-cloud/register',
       watchUrl: null,
       isLive: false
@@ -103,7 +103,7 @@ export default function Webinars(...args[]):  {
       attendees: 195,
       maxAttendees: 300,
       summary: 'Explore practical applications of digital twin technology and how to measure return on investment.',
-      tags['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
+      tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
       registrationUrl: '/webinars/digital-twin-applications-roi/register',
       watchUrl: null,
       isLive: false
@@ -122,7 +122,7 @@ export default function Webinars(...args[]):  {
       attendees: 520,
       maxAttendees: 500,
       summary: 'Comprehensive overview of AI applications in healthcare, including ethical considerations and regulatory compliance.',
-      tags['Healthcare AI', 'Ethics', 'Regulatory Compliance', 'Medical Technology'],
+      tags: ['Healthcare AI', 'Ethics', 'Regulatory Compliance', 'Medical Technology'],
       registrationUrl: null,
       watchUrl: '/webinars/ai-healthcare-future-2024/watch',
       isLive: false,
@@ -140,7 +140,7 @@ export default function Webinars(...args[]):  {
       attendees: 480,
       maxAttendees: 450,
       summary: 'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.',
-      tags['Quantum Computing', 'Future Technology', 'Innovation', 'Strategic Planning'],
+      tags: ['Quantum Computing', 'Future Technology', 'Innovation', 'Strategic Planning'],
       registrationUrl: null,
       watchUrl: '/webinars/quantum-computing-future-2024/watch',
       isLive: false,
@@ -158,7 +158,7 @@ export default function Webinars(...args[]):  {
       attendees: 320,
       maxAttendees: 300,
       summary: 'Implementing sustainable technology practices to reduce environmental impact and operational costs.',
-      tags['Sustainability', 'Green IT', 'Environmental Impact', 'Cost Reduction'],
+      tags: ['Sustainability', 'Green IT', 'Environmental Impact', 'Cost Reduction'],
       registrationUrl: null,
       watchUrl: '/webinars/sustainable-technology-enterprise-2024/watch',
       isLive: false,
@@ -176,7 +176,7 @@ export default function Webinars(...args[]):  {
       attendees: 410,
       maxAttendees: 400,
       summary: 'Strategies for implementing edge computing and IoT solutions in enterprise environments.',
-      tags['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
+      tags: ['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
       registrationUrl: null,
       watchUrl: '/webinars/edge-computing-iot-enterprise-2024/watch',
       isLive: false,

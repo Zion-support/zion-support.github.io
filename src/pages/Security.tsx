@@ -31,13 +31,13 @@ import { Shield,
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
 
-export default function Security(...args[]):  {
+export default function Security() {
   const securityFeatures = [
     {
       category: 'Data Protection',
       icon: Lock,
       color: 'from-blue-500 to-cyan-600',
-      features[
+      features: [
         'End-to-end encryption for all data',
         'AES-256 encryption at rest and in transit',
         'Secure key management with HSM',
@@ -50,7 +50,7 @@ export default function Security(...args[]):  {
       category: 'Network Security',
       icon: Network,
       color: 'from-green-500 to-emerald-600',
-      features[
+      features: [
         'Zero-trust network architecture',
         'Advanced firewall protection',
         'DDoS mitigation and protection',
@@ -63,7 +63,7 @@ export default function Security(...args[]):  {
       category: 'Application Security',
       icon: Code,
       color: 'from-purple-500 to-pink-600',
-      features[
+      features: [
         'Secure software development lifecycle',
         'Regular security code reviews',
         'Automated vulnerability scanning',
@@ -76,7 +76,7 @@ export default function Security(...args[]):  {
       category: 'Access Control',
       icon: Key,
       color: 'from-orange-500 to-red-600',
-      features[
+      features: [
         'Multi-factor authentication (MFA)',
         'Role-based access control (RBAC)',
         'Single sign-on (SSO) integration',
@@ -164,7 +164,7 @@ export default function Security(...args[]):  {
       icon: Eye,
       color: 'from-blue-500 to-cyan-600',
       timeframe: 'Real-time',
-      tools['SIEM', 'EDR', 'Network monitoring']
+      tools: ['SIEM', 'EDR', 'Network monitoring']
     },
     {
       phase: 'Analysis',
@@ -172,7 +172,7 @@ export default function Security(...args[]):  {
       icon: MagnifyingGlass,
       color: 'from-green-500 to-emerald-600',
       timeframe: '< 15 minutes',
-      tools['Threat intelligence', 'Forensic analysis', 'Expert team']
+      tools: ['Threat intelligence', 'Forensic analysis', 'Expert team']
     },
     {
       phase: 'Containment',
@@ -180,7 +180,7 @@ export default function Security(...args[]):  {
       icon: Lock,
       color: 'from-purple-500 to-pink-600',
       timeframe: '< 30 minutes',
-      tools['Network segmentation', 'Access control', 'System isolation']
+      tools: ['Network segmentation', 'Access control', 'System isolation']
     },
     {
       phase: 'Recovery',
@@ -188,7 +188,7 @@ export default function Security(...args[]):  {
       icon: Zap,
       color: 'from-orange-500 to-red-600',
       timeframe: '< 2 hours',
-      tools['Backup systems', 'Redundancy', 'Failover procedures']
+      tools: ['Backup systems', 'Redundancy', 'Failover procedures']
     }
   ];
 

@@ -66,7 +66,7 @@ const featuredProducts = [
     views: 2847,
     likes: 156,
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-    tags['AI', 'High Performance', 'Scalable'],
+    tags: ['AI', 'High Performance', 'Scalable'],
     featured: true
   },
   {
@@ -80,7 +80,7 @@ const featuredProducts = [
     views: 1956,
     likes: 134,
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Security', 'Expert', 'Certified'],
+    tags: ['Security', 'Expert', 'Certified'],
     featured: true
   },
   {
@@ -94,7 +94,7 @@ const featuredProducts = [
     views: 3241,
     likes: 189,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Quantum', 'Research', 'Advanced'],
+    tags: ['Quantum', 'Research', 'Advanced'],
     featured: false
   }
 ];
@@ -107,16 +107,19 @@ const filters = [
   { name: 'Services', value: 'services' }
 ];
 
-export default function Marketplace(...args[]):  {
+export default function Marketplace() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredProducts = featuredProducts.filter(product => {
     if (selectedCategory !== 'all' && product.category.toLowerCase() !== selectedCategory) {
-      return false}
+      return false;
+    }
     if (searchQuery && !product.title.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false}
-    return true});
+      return false;
+    }
+    return true;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">

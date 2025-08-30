@@ -35,7 +35,49 @@ module.exports = {
       }
     },
 
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    // Comprehensive Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // TypeScript Error Fixer - runs every 15 minutes
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // General Error Fixer - runs every 20 minutes
+    {
+      name: 'general-error-fixer',
+      script: './scripts/automation/error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1200000' // 20 minutes
+      }
+    },
+
+    // Continuous console error fixer - runs every 15 minutes
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',

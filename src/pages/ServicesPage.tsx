@@ -33,7 +33,7 @@ import { Brain,
 import { SEO  } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 
-export default function ServicesPage(...args[]):  {
+export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Shield, 
   FileText, 
@@ -12,9 +12,9 @@ import { Shield,
   Mail,
   Phone,
   MapPin
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Terms(...args[]):  {
+export default function Terms() {
   const lastUpdated = 'December 15, 2024';
 
   const termsSections = [
@@ -420,4 +420,5 @@ export default function Terms(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  );
+}

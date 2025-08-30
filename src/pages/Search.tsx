@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight  } from 'lucide-react.ts';
-import { useSearchParams  } from 'react-router-dom.ts';
+import React, { useState, useEffect } from 'react';
+import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight  } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 
-export default function Search(...args[]):  {
+export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -39,7 +39,7 @@ export default function Search(...args[]):  {
       price: '$2,500/month',
       location: 'Remote',
       comp: 'Zion Tech Group',
-      tags['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
+      tags: ['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
       featured: true
     },
     {
@@ -53,7 +53,7 @@ export default function Search(...args[]):  {
       price: '$150/hour',
       location: 'San Francisco, CA',
       comp: 'Tech Solutions Inc',
-      tags['AI', 'Machine Learning', 'Python', 'TensorFlow'],
+      tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow'],
       featured: false
     },
     {
@@ -67,7 +67,7 @@ export default function Search(...args[]):  {
       price: '$15,000/month',
       location: 'New York, NY',
       comp: 'Cloud Computing Corp',
-      tags['GPU', 'AI Training', 'High Performance', 'Enterprise'],
+      tags: ['GPU', 'AI Training', 'High Performance', 'Enterprise'],
       featured: true
     },
     {
@@ -81,12 +81,12 @@ export default function Search(...args[]):  {
       price: '$300/hour',
       location: 'Remote',
       comp: 'Zion Tech Group',
-      tags['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
+      tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
       featured: false
     }
   ];
 
-  useEffect(()  => {
+  useEffect(() => {
     if (searchQuery) {
       performSearch()}
   }, [searchQuery, activeCategory, sortBy]);
@@ -124,13 +124,13 @@ export default function Search(...args[]):  {
     setResults(filteredResults);
     setLoading(false)};
 
-  const handleSearch = (e: React.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() })}
   };
 
-  const getTypeIcon = (type: string)  => {
+  const getTypeIcon = (type: string) => {
     switch (type) {
       case 'service':
         return <Server className="w-5 h-5 text-zion-cyan" />;
@@ -142,7 +142,7 @@ export default function Search(...args[]):  {
         return <SearchIcon className="w-5 h-5 text-zion-slate-light" />}
   };
 
-  const getTypeLabel = (type: string)  => {
+  const getTypeLabel = (type: string) => {
     switch (type) {
       case 'service':
         return 'Service';
@@ -219,7 +219,7 @@ export default function Search(...args[]):  {
                 onChange={(e) => setSortBy(e.target.value)}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
               >
-                {sortOptions.map((option)  => (
+                {sortOptions.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>

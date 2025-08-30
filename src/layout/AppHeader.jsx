@@ -49,7 +49,7 @@ export function AppHeader() {
       name: 'Services', 
       path: '/services', 
       icon: null,
-      dropdown[
+      dropdown: [
         { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },
         { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500' },
         { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500' },

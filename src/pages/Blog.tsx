@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Search, 
   Filter, 
@@ -14,9 +14,9 @@ import { Search,
   Cloud,
   Brain,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Blog(...args[]):  {
+export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -137,7 +137,7 @@ export default function Blog(...args[]):  {
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.author.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    [];
+    : [];
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -468,4 +468,5 @@ export default function Blog(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  );
+}
