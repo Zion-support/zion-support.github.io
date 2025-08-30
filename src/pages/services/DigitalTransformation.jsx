@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { ArrowRight const DigitalTransformation = () => {
+import { ArrowRight } from 'lucide-react';
+
+const DigitalTransformation = () => {
     const transformationServices = [
         {
             title: "Process Automation",
@@ -45,7 +47,7 @@ import { ArrowRight const DigitalTransformation = () => {
             description: "Modernize your technology stack for scalability and performance",
             features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
             icon: "🏗️"
-
+        }
     ];
     const benefits = [
         "Increased operational efficiency by 50%",
@@ -90,13 +92,8 @@ import { ArrowRight const DigitalTransformation = () => {
               {" "}Transformation
             </span>
           </motion.h1>
-<<<<<<< HEAD
           <motion.p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
             Embrace the future of business with our comprehensive digital transformation services
-=======
-          <motion.p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto" initial = {
-  { opacity: 0,
-  y: 20 
 
 
 
