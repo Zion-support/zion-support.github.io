@@ -52,7 +52,8 @@ export default function EnterpriseDemo() {
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-6 h-6 text-zion-cyan"/>
-                </CardTitle>
+                </div>
+                <CardTitle className="text-white text-2xl">Expert Guidance</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-zion-slate-light">

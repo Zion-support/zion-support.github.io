@@ -1,10 +1,11 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Shield, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Shield, 
   Lock, 
   Eye, 
   Zap, 
-  Award,
+  Target, 
   Users, 
   CheckCircle,
   ArrowRight,
@@ -19,14 +20,14 @@ import { Shield,
   Server,
   Monitor,
   CreditCard
- } from 'lucide-react';
-export default function CybersecurityServices(...args[]):  {
+} from 'lucide-react';
+export default function CybersecurityServices() {
   const cyberServices = [
     {
       name: "Security Assessment & Auditing",
       description: "Comprehensive security evaluation and compliance auditing",
       icon: Eye,
-      features[
+      features: [
         "Vulnerability assessments",
         "Penetration testing",
         "Security audits and compliance",
@@ -39,7 +40,7 @@ export default function CybersecurityServices(...args[]):  {
       name: "Threat Detection & Response",
       description: "Advanced threat monitoring and incident response",
       icon: AlertTriangle,
-      features[
+      features: [
         "24/7 security monitoring",
         "Threat intelligence",
         "Incident response planning",
@@ -52,7 +53,7 @@ export default function CybersecurityServices(...args[]):  {
       name: "Identity & Access Management",
       description: "Secure user authentication and authorization systems",
       icon: Key,
-      features[
+      features: [
         "Single sign-on (SSO)",
         "Multi-factor authentication",
         "Role-based access control",
@@ -65,7 +66,7 @@ export default function CybersecurityServices(...args[]):  {
       name: "Data Protection & Encryption",
       description: "Comprehensive data security and encryption solutions",
       icon: Lock,
-      features[
+      features: [
         "Data encryption at rest and in transit",
         "Data loss prevention",
         "Backup and recovery",
@@ -117,7 +118,7 @@ export default function CybersecurityServices(...args[]):  {
     {
       name: "NIST",
       description: "National Institute of Standards and Technology",
-      icon: Award,
+      icon: Target,
       color: "from-cyan-500 to-blue-600"
     }
   ];
@@ -126,12 +127,7 @@ export default function CybersecurityServices(...args[]):  {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cybersecurity
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -159,9 +155,9 @@ export default function CybersecurityServices(...args[]):  {
         </div>
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
         </div>
       </section>
       {/* Services Grid */}
@@ -175,8 +171,8 @@ export default function CybersecurityServices(...args[]):  {
               Comprehensive security solutions designed to protect your business from evolving threats
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {cyberServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {cyberServices.map((service, index) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -226,8 +222,8 @@ export default function CybersecurityServices(...args[]):  {
               We leverage cutting-edge security tools and technologies to protect your infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
-            {securityTechnologies.map((tech, index)  => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {securityTechnologies.map((tech, index) => (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -253,8 +249,8 @@ export default function CybersecurityServices(...args[]):  {
               Meet industry standards and regulatory requirements with our compliance solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
@@ -298,4 +294,5 @@ export default function CybersecurityServices(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  );
+}

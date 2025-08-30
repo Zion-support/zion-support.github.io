@@ -69,7 +69,7 @@ const benefits: Benefit[] = [
       "Bulk discount options",
       "Transparent cost structure"
     ]
-  }
+  },
 ];
 
 
@@ -86,7 +86,17 @@ export function BenefitsSection(...args[]):  {
         delayChildren: 0.1
       }
     }
-  ];
+  };
+
+  const statsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 }
+  };
 
   const stats = [
     { value: "500+", label: "Projects Delivered", icon: Rocket },
