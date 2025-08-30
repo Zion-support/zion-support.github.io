@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { 
   Brain, 
   Shield, 
@@ -184,7 +185,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <>
+      <SEO />
+      <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
@@ -456,6 +459,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
