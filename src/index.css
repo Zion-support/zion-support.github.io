@@ -97,7 +97,8 @@
   --focus-ring-offset: 2px;
   
   /* Accessibility */
---sr-only: 0 0 0 0;
+  --sr-only: 0 0 0 0;
+}
 --high-contrast: 1;
 --reduced-motion: 1;
 --large-text: 1;
@@ -199,7 +200,6 @@
   filter: url(#tritanopia-filter);
 }
 
-}
 
 .bg-futuristic {
   background: 

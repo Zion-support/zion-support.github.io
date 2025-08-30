@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import { SEO } from '../components/SEO';
 
 export default function Cookies() {
   return (
@@ -94,11 +94,7 @@ export default function Cookies() {
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
                   <p className="text-gray-300 leading-relaxed">
-<<<<<<< HEAD
                     If you have any questions about our use of cookies or would like to update your preferences,
-=======
-                    If you have  questions about our use of cookies or would like to update your preferences, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     please contact us at{' '}
                     <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
                       kleber@ziontechgroup.com
@@ -116,9 +112,5 @@ export default function Cookies() {
         </div>
       </main>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
