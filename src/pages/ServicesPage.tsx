@@ -872,6 +872,258 @@ export function ServicesPage() {
         'Healthcare',
         'Government'
       ]
+    },
+    {
+      id: 'ai-powered-business-intelligence',
+      title: 'AI-Powered Business Intelligence',
+      description: 'Transform your data into actionable insights with advanced AI analytics and predictive modeling',
+      icon: Brain,
+      color: 'from-violet-600 to-purple-700',
+      price: '$2,000 - $12,000/month',
+      features: [
+        'Advanced Analytics & ML',
+        'Predictive Modeling',
+        'Natural Language Queries',
+        'Real-time Dashboards',
+        'Automated Insights',
+        'Data Storytelling',
+        'Collaborative Analytics',
+        'Mobile BI Access'
+      ],
+      benefits: [
+        'Data-driven decision making',
+        'Predictive business insights',
+        'Reduced analysis time by 80%',
+        'Improved forecasting accuracy',
+        'Real-time business monitoring',
+        'Enhanced collaboration'
+      ],
+      useCases: [
+        'Financial Planning',
+        'Sales Forecasting',
+        'Customer Analytics',
+        'Operational Intelligence',
+        'Risk Management',
+        'Performance Tracking',
+        'Market Analysis',
+        'Strategic Planning'
+      ]
+    },
+    {
+      id: 'blockchain-enterprise-solutions',
+      title: 'Blockchain Enterprise Solutions',
+      description: 'Leverage blockchain technology for secure, transparent, and efficient business operations',
+      icon: Link,
+      color: 'from-emerald-600 to-teal-700',
+      price: '$3,000 - $20,000/month',
+      features: [
+        'Smart Contract Development',
+        'DeFi Protocol Integration',
+        'Cross-chain Interoperability',
+        'Digital Asset Management',
+        'Supply Chain Tracking',
+        'Identity Verification',
+        'Token Economics',
+        'Regulatory Compliance'
+      ],
+      benefits: [
+        'Enhanced security and transparency',
+        'Reduced operational costs',
+        'Automated trust mechanisms',
+        'Global accessibility',
+        'Immutable audit trails',
+        'Innovative business models'
+      ],
+      useCases: [
+        'Supply Chain Management',
+        'Financial Services',
+        'Healthcare Records',
+        'Real Estate',
+        'Voting Systems',
+        'Intellectual Property',
+        'Cross-border Payments',
+        'Digital Identity'
+      ]
+    },
+    {
+      id: 'quantum-machine-learning',
+      title: 'Quantum Machine Learning',
+      description: 'Harness quantum computing power for revolutionary machine learning capabilities',
+      icon: Atom,
+      color: 'from-indigo-600 to-blue-700',
+      price: '$8,000 - $50,000/month',
+      features: [
+        'Quantum Neural Networks',
+        'Quantum Feature Selection',
+        'Quantum Optimization',
+        'Hybrid Classical-Quantum',
+        'Quantum Error Correction',
+        'Quantum Simulation',
+        'Quantum Cryptography',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Exponential computational speed',
+        'Revolutionary ML capabilities',
+        'Enhanced optimization',
+        'Future-proof technology',
+        'Competitive advantage',
+        'Scientific breakthroughs'
+      ],
+      useCases: [
+        'Drug Discovery',
+        'Financial Modeling',
+        'Climate Prediction',
+        'Material Science',
+        'Logistics Optimization',
+        'Cryptography',
+        'AI Research',
+        'Scientific Computing'
+      ]
+    },
+    {
+      id: 'edge-ai-computing',
+      title: 'Edge AI Computing',
+      description: 'Deploy AI models at the edge for real-time processing and reduced latency',
+      icon: Cpu,
+      color: 'from-orange-600 to-red-700',
+      price: '$1,500 - $10,000/month',
+      features: [
+        'Edge Model Deployment',
+        'Real-time Inference',
+        'Offline Processing',
+        'Model Optimization',
+        'Edge Device Management',
+        'Data Synchronization',
+        'Security & Privacy',
+        'Performance Monitoring'
+      ],
+      benefits: [
+        'Reduced latency',
+        'Lower bandwidth costs',
+        'Enhanced privacy',
+        'Offline capabilities',
+        'Scalable deployment',
+        'Real-time responsiveness'
+      ],
+      useCases: [
+        'Autonomous Vehicles',
+        'Smart Manufacturing',
+        'IoT Devices',
+        'Mobile Applications',
+        'Healthcare Monitoring',
+        'Retail Analytics',
+        'Security Systems',
+        'Smart Cities'
+      ]
+    },
+    {
+      id: 'ai-ethics-governance',
+      title: 'AI Ethics & Governance',
+      description: 'Ensure responsible AI development with comprehensive ethics and governance frameworks',
+      icon: Shield,
+      color: 'from-pink-600 to-rose-700',
+      price: '$2,500 - $15,000/month',
+      features: [
+        'AI Ethics Framework',
+        'Bias Detection & Mitigation',
+        'Explainable AI',
+        'Fairness Assessment',
+        'Privacy Protection',
+        'Compliance Monitoring',
+        'Stakeholder Engagement',
+        'Audit & Reporting'
+      ],
+      benefits: [
+        'Responsible AI development',
+        'Regulatory compliance',
+        'Reduced bias and discrimination',
+        'Enhanced transparency',
+        'Stakeholder trust',
+        'Risk mitigation'
+      ],
+      useCases: [
+        'AI Development Teams',
+        'Regulatory Compliance',
+        'Risk Management',
+        'Corporate Governance',
+        'Public Policy',
+        'Research Institutions',
+        'Healthcare AI',
+        'Financial AI'
+      ]
+    },
+    {
+      id: 'neuromorphic-computing',
+      title: 'Neuromorphic Computing',
+      description: 'Revolutionary brain-inspired computing for next-generation AI applications',
+      icon: Brain,
+      color: 'from-cyan-600 to-blue-700',
+      price: '$10,000 - $60,000/month',
+      features: [
+        'Brain-inspired Architecture',
+        'Spiking Neural Networks',
+        'Low-power Computing',
+        'Real-time Learning',
+        'Adaptive Processing',
+        'Neuromorphic Chips',
+        'Cognitive Computing',
+        'Bio-inspired Algorithms'
+      ],
+      benefits: [
+        'Ultra-low power consumption',
+        'Real-time learning capabilities',
+        'Brain-like processing',
+        'Adaptive intelligence',
+        'Revolutionary performance',
+        'Future computing paradigm'
+      ],
+      useCases: [
+        'Autonomous Systems',
+        'Cognitive Computing',
+        'Brain-computer Interfaces',
+        'Robotics',
+        'Sensor Networks',
+        'Medical Devices',
+        'IoT Applications',
+        'Scientific Research'
+      ]
+    },
+    {
+      id: 'ai-powered-cybersecurity',
+      title: 'AI-Powered Cybersecurity',
+      description: 'Advanced threat detection and response using artificial intelligence and machine learning',
+      icon: Shield,
+      color: 'from-red-600 to-pink-700',
+      price: '$2,500 - $15,000/month',
+      features: [
+        'AI Threat Detection',
+        'Behavioral Analysis',
+        'Automated Response',
+        'Threat Intelligence',
+        'Vulnerability Assessment',
+        'Incident Management',
+        'Security Analytics',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Real-time threat detection',
+        'Reduced false positives',
+        'Automated incident response',
+        '24/7 security monitoring',
+        'Proactive threat prevention',
+        'Enhanced security posture'
+      ],
+      useCases: [
+        'Enterprise Security',
+        'Cloud Security',
+        'Network Protection',
+        'Endpoint Security',
+        'Application Security',
+        'Data Protection',
+        'Identity Management',
+        'Security Operations'
+      ]
     }
   ];
 
