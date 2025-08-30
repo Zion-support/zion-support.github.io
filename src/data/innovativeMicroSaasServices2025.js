@@ -243,7 +243,7 @@ export const innovativeMicroSaasServices2025 = [
             "Real-time video analytics",
             "Predictive maintenance"
         ],
-        compliance["ISO 27001", "SOC 2", "GDPR", "NIST", "IEC 62443"],
+        compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST", "IEC 62443"],
         scalability: "Unlimited edge nodes",
         support: "24/7 edge computing support"
     },
@@ -256,7 +256,7 @@ export const innovativeMicroSaasServices2025 = [
         pricing: "Professional",
         price: 6000,
         pricingModel: "monthly",
-        features[
+        features: [
             "Bias detection algorithms",
             "Fairness metrics",
             "Explainability tools",
@@ -266,7 +266,7 @@ export const innovativeMicroSaasServices2025 = [
             "Risk assessment tools",
             "Stakeholder communication"
         ],
-        benefits[
+        benefits: [
             "100% regulatory compliance",
             "Reduced AI bias incidents",
             "Enhanced transparency",
