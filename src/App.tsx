@@ -364,7 +364,7 @@ function App() {
                     {/* <Route path="/services/space-tech" element={<SpaceTech />} /> */}
                     {/* <Route path="/services/data-analytics" element={<DataAnalytics />} /> */}
                     <Route path="/services/micro-crm" element={<MicroCRM />} />
-                    <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
+                    {/* <Route path="/services/helpdesk" element={<HelpdeskPlatform />} /> */}
                                           {/* <Route path="/services/website-analytics" element={<WebsiteAnalytics />} /> */}
                     <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                     {/* <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} /> */}
