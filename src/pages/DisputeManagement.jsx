@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SEO from '../SEO';
+import SEO from "../SEO";
 export default function DisputeManagement() {
     const [activeTab, setActiveTab] = useState('overview');
     return (<>
@@ -282,5 +282,9 @@ export default function DisputeManagement() {
             </div>)}
         </div>
       </main>
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

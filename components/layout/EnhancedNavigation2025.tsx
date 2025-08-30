@@ -1,65 +1,91 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight } from 'lucide-react';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight export default function EnhancedNavigation2025() {
+=======
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react';
 
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation2025(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+	const [activeDropdown, setActiveDropdown] = useState<any>(null);
 
 	useEffect(() => {
 		const handleScroll = () => setIsScrolled(window.scrollY > 20);
 		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+		return () => window.removeEventListener('scroll', handleScroll)}, []);
 
 	const navigation = [
 		{
 			name: 'Services',
 			href: '/services',
+<<<<<<< HEAD
 			children: [
+				{ name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Predictive analytics and insights' },
+				{ name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced threat detection' },
+				{ name: 'Micro SAAS Platform', href: '/services/micro-saas-platform', description: 'Rapid application development' },
+				{ name: 'AI Content Creation', href: '/services/ai-content-creation-suite', description: 'Automated content generation' },
+				{ name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales automation' },
+=======
+			children[
 				{ name: 'AI Solutions', href: '/services/ai-solutions', description: 'Autonomous AI systems and workflows' },
 				{ name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure and automation' },
 				{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Zero-trust security frameworks' },
 				{ name: 'Data & Analytics', href: '/services/data', description: 'Data pipelines and ML ops' },
 				{ name: 'Micro SaaS', href: '/services/micro-saas', description: 'Rapid product development' },
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			]
 		},
 		{
 			name: 'Solutions',
 			href: '/solutions',
+<<<<<<< HEAD
 			children: [
+				{ name: 'Financial Services', href: '/solutions/financial', description: 'AI risk management & compliance' },
+				{ name: 'Healthcare', href: '/solutions/healthcare', description: 'Patient data security & AI diagnostics' },
+				{ name: 'Manufacturing', href: '/solutions/manufacturing', description: 'IoT & predictive maintenance' },
+				{ name: 'Retail & E-commerce', href: '/solutions/retail', description: 'Customer analytics & personalization' },
+=======
+			children[
 				{ name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale implementations' },
 				{ name: 'SMB', href: '/solutions/smb', description: 'Small business focused' },
 				{ name: 'Startup', href: '/solutions/startup', description: 'Growth acceleration' },
 				{ name: 'Government', href: '/solutions/government', description: 'Public sector expertise' },
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			]
 		},
 		{
-			name: 'Company',
+			name: 'Comp',
 			href: '/about',
-			children: [
+			children[
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
-				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
-				{ name: 'Careers', href: '/careers', description: 'Join our team' },
-				{ name: 'Contact', href: '/contact', description: 'Get in touch' },
-			]
-		},
-		{ name: 'Blog', href: '/blog' },
-		{ name: 'Pricing', href: '/pricing' },
+				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },;
+				{ name: 'Careers', href: '/careers', description: 'Join our team' },;
+				{ name: 'Contact', href: '/contact', description: 'Get in touch' },;
+			];
+		},;
+		{ name: 'Blog', href: '/blog' },;
+		{ name: 'Pricing', href: '/pricing' },;
 	];
 
-	const toggleDropdown = (name: string) => {
+<<<<<<< HEAD
+	const toggleDropdown = (name: string)  => {;
+		setActiveDropdown(activeDropdown === name ? null : name)};
+=======
+	const toggleDropdown = (name: string) => {;
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-	const closeMobileMenu = () => {
+	const closeMobileMenu = () => {;
 		setIsOpen(false);
-		setActiveDropdown(null);
-	};
+		setActiveDropdown(null)};
 
 	return (
-		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+		<nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
 		}`}>
 			{/* Top Contact Bar */}
@@ -102,8 +128,8 @@ export default function EnhancedNavigation2025() {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<div className="hidden lg:flex lg:items-center lg:space-x-8">
-						{navigation.map((item) => (
+					<div className="hidden lg: flex lg:items-center lg:space-x-8">
+						{navigation.map((item)  => (
 							<div key={item.name} className="relative group">
 								{item.children ? (
 									<button
@@ -111,7 +137,7 @@ export default function EnhancedNavigation2025() {
 										className="flex items-center space-x-1 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
 										aria-expanded={activeDropdown === item.name}
 										aria-haspopup="true"
-									>
+
 										<span>{item.name}</span>
 										<ChevronDown
 											className={`w-4 h-4 transition-transform duration-200 ${
@@ -123,7 +149,7 @@ export default function EnhancedNavigation2025() {
 									<Link
 										href={item.href}
 										className="px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-									>
+
 										{item.name}
 									</Link>
 								)}
@@ -140,7 +166,7 @@ export default function EnhancedNavigation2025() {
 													href={child.href}
 													className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
 													onClick={() => setActiveDropdown(null)}
-												>
+
 													<div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
 														<span className="text-cyan-400 text-sm">→</span>
 													</div>
@@ -187,7 +213,7 @@ export default function EnhancedNavigation2025() {
 											onClick={() => toggleDropdown(item.name)}
 											className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
 											aria-expanded={activeDropdown === item.name}
-										>
+
 											<span>{item.name}</span>
 											<ChevronRight
 												className={`w-4 h-4 transition-transform duration-200 ${
@@ -203,7 +229,7 @@ export default function EnhancedNavigation2025() {
 														href={child.href}
 														className="block px-4 py-2 text-gray-400 hover:text-cyan-300 transition-colors duration-200"
 														onClick={closeMobileMenu}
-													>
+
 														{child.name}
 													</Link>
 												))}
@@ -215,7 +241,7 @@ export default function EnhancedNavigation2025() {
 										href={item.href}
 										className="block px-4 py-3 text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
 										onClick={closeMobileMenu}
-									>
+
 										{item.name}
 									</Link>
 								)}
@@ -229,10 +255,23 @@ export default function EnhancedNavigation2025() {
 									Request a quote
 								</button>
 							</Link>
+<<<<<<< HEAD
 						</div>
 					</div>
 				</div>
 			)}
 		</nav>
+	)};
+=======;
+						</div>;
+					</div>;
+				</div>;
+			)};
+		</nav>;
 	);
+<<<<<<< HEAD
+}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

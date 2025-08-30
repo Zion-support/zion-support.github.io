@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface ComprehensiveService {
   id: string;
   name: string;
@@ -30,20 +30,34 @@ export interface ComprehensiveService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
@@ -53,7 +67,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$199',
     period: '/month',
     description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
-    features: [
+    features[
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
       'Best practice recommendations',
@@ -75,11 +89,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '2 hours',
     category: 'Development & DevOps',
     realService: true,
-    technology: ['AI/ML, Static Analysis, Security Scanning'],
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
-    useCases: ['Code quality improvement, Security compliance, Team productivity'],
+    technology['AI/ML, Static Analysis, Security Scanning'],
+    integrations['GitHub, GitLab, Bitbucket, Jira, Slack'],
+    useCases['Code quality improvement, Security compliance, Team productivity'],
     roi: 'Reduce code review time by 40-60% and improve code quality by 25%.',
-    competitors: ['SonarQube, CodeClimate, Snyk'],
+    competitors['SonarQube, CodeClimate, Snyk'],
     marketSize: '$8B code quality tools',
     growthRate: '35% YoY',
     variant: 'ai-futuristic',
@@ -98,7 +112,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$349',
     period: '/month',
     description: 'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',
-    features: [
+    features[
       'AI-powered anomaly detection',
       'Automated incident classification',
       'Smart escalation routing',
@@ -120,11 +134,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1 day',
     category: 'Monitoring & Operations',
     realService: true,
-    technology: ['AI/ML, Real-time Processing, Automation'],
-    integrations: ['Datadog, New Relic, PagerDuty, Slack, Teams'],
-    useCases: ['Incident management, Team coordination, Post-mortem analysis'],
+    technology['AI/ML, Real-time Processing, Automation'],
+    integrations['Datadog, New Relic, PagerDuty, Slack, Teams'],
+    useCases['Incident management, Team coordination, Post-mortem analysis'],
     roi: 'Reduce MTTR by 50-70% and improve team response efficiency.',
-    competitors: ['PagerDuty, Opsgenie, VictorOps'],
+    competitors['PagerDuty, Opsgenie, VictorOps'],
     marketSize: '$15B incident management',
     growthRate: '28% YoY',
     variant: 'ai-futuristic',
@@ -143,7 +157,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$599',
     period: '/month',
     description: 'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',
-    features: [
+    features[
       'Post-quantum cryptographic algorithms',
       'Quantum key distribution (QKD)',
       'Hybrid encryption systems',
@@ -165,11 +179,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1-2 weeks',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['Post-Quantum Cryptography, QKD, Hybrid Systems'],
-    integrations: ['PKI systems, Cloud platforms, IoT devices'],
-    useCases: ['Data protection, Secure communications, Compliance'],
+    technology['Post-Quantum Cryptography, QKD, Hybrid Systems'],
+    integrations['PKI systems, Cloud platforms, IoT devices'],
+    useCases['Data protection, Secure communications, Compliance'],
     roi: 'Future-proof security investment; avoid costly migrations later.',
-    competitors: ['ISARA, PQShield, Quantum Xchange'],
+    competitors['ISARA, PQShield, Quantum Xchange'],
     marketSize: '$2B quantum security',
     growthRate: '45% YoY',
     variant: 'quantum-security',
@@ -188,7 +202,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$449',
     period: '/month',
     description: 'AI-powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',
-    features: [
+    features[
       'Autonomous infrastructure management',
       'Self-healing systems',
       'Intelligent deployment strategies',
@@ -210,11 +224,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '3-5 days',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['AI/ML, Kubernetes, Terraform, Ansible'],
-    integrations: ['AWS, GCP, Azure, GitHub, GitLab, Jenkins'],
-    useCases: ['Infrastructure automation, Deployment optimization, Cost management'],
+    technology['AI/ML, Kubernetes, Terraform, Ansible'],
+    integrations['AWS, GCP, Azure, GitHub, GitLab, Jenkins'],
+    useCases['Infrastructure automation, Deployment optimization, Cost management'],
     roi: 'Reduce operational overhead by 60-80% and improve system reliability.',
-    competitors: ['GitLab CI/CD, Jenkins, CircleCI'],
+    competitors['GitLab CI/CD, Jenkins, CircleCI'],
     marketSize: '$20B DevOps tools',
     growthRate: '32% YoY',
     variant: 'ai-autonomous',
@@ -233,7 +247,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$299',
     period: '/month',
     description: 'Platform for deploying, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',
-    features: [
+    features[
       'Edge model deployment',
       'Real-time inference optimization',
       'Model versioning and updates',
@@ -255,11 +269,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '2-3 days',
     category: 'AI & Edge Computing',
     realService: true,
-    technology: ['Edge Computing, AI/ML, IoT, 5G'],
-    integrations: ['TensorFlow, PyTorch, AWS IoT, Azure IoT'],
-    useCases: ['Real-time AI applications, IoT intelligence, Edge computing'],
+    technology['Edge Computing, AI/ML, IoT, 5G'],
+    integrations['TensorFlow, PyTorch, AWS IoT, Azure IoT'],
+    useCases['Real-time AI applications, IoT intelligence, Edge computing'],
     roi: 'Reduce latency by 80-90% and enable real-time AI applications.',
-    competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Edge TPU'],
+    competitors['AWS IoT Greengrass, Azure IoT Edge, Google Edge TPU'],
     marketSize: '$12B edge AI',
     growthRate: '38% YoY',
     variant: 'edge-futuristic',
@@ -278,7 +292,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$399',
     period: '/month',
     description: 'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
-    features: [
+    features[
       'Automated compliance monitoring',
       'Risk assessment and scoring',
       'Regulatory reporting automation',
@@ -300,11 +314,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1 week',
     category: 'Blockchain & DeFi',
     realService: true,
-    technology: ['Blockchain, Smart Contracts, AI/ML, Compliance'],
-    integrations: ['Ethereum, Polygon, Solana, DeFi protocols'],
-    useCases: ['Regulatory compliance, Risk management, Governance automation'],
+    technology['Blockchain, Smart Contracts, AI/ML, Compliance'],
+    integrations['Ethereum, Polygon, Solana, DeFi protocols'],
+    useCases['Regulatory compliance, Risk management, Governance automation'],
     roi: 'Reduce compliance costs by 40-60% and improve regulatory adherence.',
-    competitors: ['OpenZeppelin, ConsenSys, Chainalysis'],
+    competitors['OpenZeppelin, ConsenSys, Chainalysis'],
     marketSize: '$8B blockchain governance',
     growthRate: '42% YoY',
     variant: 'blockchain-futuristic',
@@ -323,7 +337,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$249',
     period: '/month',
     description: 'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
-    features: [
+    features[
       'Predictive churn risk scoring',
       'Customer health monitoring',
       'Automated engagement workflows',
@@ -345,11 +359,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1 week',
     category: 'Customer Success & Growth',
     realService: true,
-    technology: ['AI/ML, Predictive Analytics, Automation'],
-    integrations: ['Salesforce, HubSpot, Pipedrive, Intercom'],
-    useCases: ['Churn prevention, Customer retention, Revenue growth'],
+    technology['AI/ML, Predictive Analytics, Automation'],
+    integrations['Salesforce, HubSpot, Pipedrive, Intercom'],
+    useCases['Churn prevention, Customer retention, Revenue growth'],
     roi: 'Increase customer retention by 15-25% and LTV by 20-35%.',
-    competitors: ['Gainsight, Totango, ChurnZero'],
+    competitors['Gainsight, Totango, ChurnZero'],
     marketSize: '$6B customer success',
     growthRate: '26% YoY',
     variant: 'ai-futuristic',
@@ -368,7 +382,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$799',
     period: '/month',
     description: 'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
-    features: [
+    features[
       'Quantum algorithm implementations',
       'Hybrid quantum-classical ML',
       'Optimization problem solving',
@@ -390,11 +404,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & AI',
     realService: true,
-    technology: ['Quantum Computing, Machine Learning, Optimization'],
-    integrations: ['IBM Quantum, Google Quantum, AWS Braket'],
-    useCases: ['Drug discovery, Financial modeling, Scientific research'],
+    technology['Quantum Computing, Machine Learning, Optimization'],
+    integrations['IBM Quantum, Google Quantum, AWS Braket'],
+    useCases['Drug discovery, Financial modeling, Scientific research'],
     roi: 'Solve previously intractable problems; accelerate research and development.',
-    competitors: ['IBM Quantum, Google Quantum, Rigetti'],
+    competitors['IBM Quantum, Google Quantum, Rigetti'],
     marketSize: '$3B quantum computing',
     growthRate: '55% YoY',
     variant: 'quantum',
@@ -413,7 +427,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$549',
     period: '/month',
     description: 'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
-    features: [
+    features[
       'Demand forecasting and planning',
       'Inventory optimization',
       'Risk assessment and mitigation',
@@ -435,11 +449,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '2-3 weeks',
     category: 'Supply Chain & Logistics',
     realService: true,
-    technology: ['AI/ML, IoT, Blockchain, Analytics'],
-    integrations: ['ERP systems, WMS, TMS, IoT platforms'],
-    useCases: ['Inventory optimization, Risk management, Cost reduction'],
+    technology['AI/ML, IoT, Blockchain, Analytics'],
+    integrations['ERP systems, WMS, TMS, IoT platforms'],
+    useCases['Inventory optimization, Risk management, Cost reduction'],
     roi: 'Reduce inventory costs by 15-25% and improve service levels by 20-30%.',
-    competitors: ['SAP SCM, Oracle SCM, Blue Yonder'],
+    competitors['SAP SCM, Oracle SCM, Blue Yonder'],
     marketSize: '$25B supply chain management',
     growthRate: '18% YoY',
     variant: 'ai-futuristic',
@@ -458,7 +472,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$399',
     period: '/month',
     description: 'Advanced cybersecurity platform that provides real-time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
-    features: [
+    features[
       'Real-time threat detection',
       'Threat intelligence sharing',
       'Automated incident response',
@@ -480,11 +494,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1 week',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['AI/ML, Threat Intelligence, Automation'],
-    integrations: ['SIEM systems, EDR, Firewalls, IDS/IPS'],
-    useCases: ['Threat detection, Incident response, Risk management'],
+    technology['AI/ML, Threat Intelligence, Automation'],
+    integrations['SIEM systems, EDR, Firewalls, IDS/IPS'],
+    useCases['Threat detection, Incident response, Risk management'],
     roi: 'Reduce security incidents by 40-60% and improve response time by 70%.',
-    competitors: ['CrowdStrike, Palo Alto Networks, FireEye'],
+    competitors['CrowdStrike, Palo Alto Networks, FireEye'],
     marketSize: '$35B cybersecurity',
     growthRate: '22% YoY',
     variant: 'security-futuristic',
@@ -503,7 +517,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$179',
     period: '/month',
     description: 'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
-    features: [
+    features[
       'AI content generation',
       'Multi-channel content optimization',
       'SEO optimization tools',
@@ -525,11 +539,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1 day',
     category: 'Content & Marketing',
     realService: true,
-    technology: ['AI/ML, NLP, Content Generation'],
-    integrations: ['WordPress, HubSpot, Mailchimp, Social media platforms'],
-    useCases: ['Content marketing, SEO optimization, Social media management'],
+    technology['AI/ML, NLP, Content Generation'],
+    integrations['WordPress, HubSpot, Mailchimp, Social media platforms'],
+    useCases['Content marketing, SEO optimization, Social media management'],
     roi: 'Increase content production by 300-500% and improve engagement by 25-40%.',
-    competitors: ['Jasper, Copy.ai, Grammarly, Writesonic'],
+    competitors['Jasper, Copy.ai, Grammarly, Writesonic'],
     marketSize: '$12B content creation tools',
     growthRate: '35% YoY',
     variant: 'ai-creative',
@@ -548,7 +562,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$499',
     period: '/month',
     description: 'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',
-    features: [
+    features[
       'Automated data quality monitoring',
       'Compliance and governance rules',
       'Data lineage tracking',
@@ -570,11 +584,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '2-3 weeks',
     category: 'Data & Analytics',
     realService: true,
-    technology: ['AI/ML, Data Quality, Compliance Automation'],
-    integrations: ['Snowflake, Databricks, AWS, Azure, GCP'],
-    useCases: ['Data quality management, Compliance automation, Data lineage'],
+    technology['AI/ML, Data Quality, Compliance Automation'],
+    integrations['Snowflake, Databricks, AWS, Azure, GCP'],
+    useCases['Data quality management, Compliance automation, Data lineage'],
     roi: 'Reduce data quality issues by 60-80% and compliance costs by 40-60%.',
-    competitors: ['Collibra, Alation, Informatica, Talend'],
+    competitors['Collibra, Alation, Informatica, Talend'],
     marketSize: '$18B data governance',
     growthRate: '24% YoY',
     variant: 'data-futuristic',
@@ -593,7 +607,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$1,299',
     period: '/month',
     description: 'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
-    features: [
+    features[
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
       'Market analysis tools',
@@ -615,11 +629,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1 month',
     category: 'Quantum Computing & Finance',
     realService: true,
-    technology: ['Quantum Computing, Financial Algorithms, Risk Management'],
-    integrations: ['Bloomberg, Reuters, Trading platforms, Risk systems'],
-    useCases: ['Portfolio optimization, Risk management, Algorithmic trading'],
+    technology['Quantum Computing, Financial Algorithms, Risk Management'],
+    integrations['Bloomberg, Reuters, Trading platforms, Risk systems'],
+    useCases['Portfolio optimization, Risk management, Algorithmic trading'],
     roi: 'Improve trading performance by 15-25% and reduce risk exposure.',
-    competitors: ['Goldman Sachs Quantum, JP Morgan Quantum, D-Wave'],
+    competitors['Goldman Sachs Quantum, JP Morgan Quantum, D-Wave'],
     marketSize: '$5B quantum finance',
     growthRate: '48% YoY',
     variant: 'quantum-financial',
@@ -638,7 +652,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$299',
     period: '/month',
     description: 'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
-    features: [
+    features[
       'AI-powered candidate screening',
       'Automated interview scheduling',
       'Employee onboarding workflows',
@@ -660,11 +674,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1-2 weeks',
     category: 'HR & People Operations',
     realService: true,
-    technology: ['AI/ML, HR Automation, Analytics'],
-    integrations: ['Workday, BambooHR, Greenhouse, Slack, Teams'],
-    useCases: ['Recruitment automation, Performance management, Employee engagement'],
+    technology['AI/ML, HR Automation, Analytics'],
+    integrations['Workday, BambooHR, Greenhouse, Slack, Teams'],
+    useCases['Recruitment automation, Performance management, Employee engagement'],
     roi: 'Reduce hiring time by 40-60% and improve employee retention by 20-30%.',
-    competitors: ['Workday, BambooHR, Greenhouse, Lever'],
+    competitors['Workday, BambooHR, Greenhouse, Lever'],
     marketSize: '$22B HR software',
     growthRate: '19% YoY',
     variant: 'ai-futuristic',
@@ -683,7 +697,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$399',
     period: '/month',
     description: 'Comprehensive IoT platform that provides intelligent device management, real-time analytics, predictive maintenance, and automated workflows for connected devices.',
-    features: [
+    features[
       'IoT device management',
       'Real-time data analytics',
       'Predictive maintenance',
@@ -705,11 +719,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '2-3 weeks',
     category: 'IoT & Edge Computing',
     realService: true,
-    technology: ['IoT, AI/ML, Edge Computing, Cloud Platforms'],
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'],
-    useCases: ['Device management, Predictive maintenance, Smart automation'],
+    technology['IoT, AI/ML, Edge Computing, Cloud Platforms'],
+    integrations['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'],
+    useCases['Device management, Predictive maintenance, Smart automation'],
     roi: 'Reduce maintenance costs by 25-40% and improve operational efficiency by 30-50%.',
-    competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, Particle'],
+    competitors['AWS IoT, Azure IoT, Google Cloud IoT, Particle'],
     marketSize: '$30B IoT platforms',
     growthRate: '32% YoY',
     variant: 'iot-futuristic',
@@ -728,7 +742,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$699',
     period: '/month',
     description: 'Advanced cybersecurity platform that implements quantum-resistant algorithms, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',
-    features: [
+    features[
       'Quantum-resistant algorithms',
       'Post-quantum cryptography',
       'Quantum key distribution',
@@ -750,11 +764,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1 month',
     category: 'Quantum Computing & Security',
     realService: true,
-    technology: ['Quantum Computing, Post-Quantum Cryptography, QKD'],
-    integrations: ['PKI systems, Security tools, Cloud platforms'],
-    useCases: ['Data protection, Secure communications, Compliance'],
+    technology['Quantum Computing, Post-Quantum Cryptography, QKD'],
+    integrations['PKI systems, Security tools, Cloud platforms'],
+    useCases['Data protection, Secure communications, Compliance'],
     roi: 'Future-proof security investment; avoid costly migrations later.',
-    competitors: ['ISARA, PQShield, Quantum Xchange, ID Quantique'],
+    competitors['ISARA, PQShield, Quantum Xchange, ID Quantique'],
     marketSize: '$4B quantum security',
     growthRate: '52% YoY',
     variant: 'quantum-security',
@@ -773,7 +787,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     price: '$349',
     period: '/month',
     description: 'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data-driven insights.',
-    features: [
+    features[
       'Predictive lead scoring',
       'Customer behavior analysis',
       'Sales process optimization',
@@ -795,11 +809,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     setupTime: '1 week',
     category: 'Sales & Revenue',
     realService: true,
-    technology: ['AI/ML, Predictive Analytics, Sales Automation'],
-    integrations: ['Salesforce, HubSpot, Pipedrive, Slack, Teams'],
-    useCases: ['Lead scoring, Sales optimization, Revenue forecasting'],
+    technology['AI/ML, Predictive Analytics, Sales Automation'],
+    integrations['Salesforce, HubSpot, Pipedrive, Slack, Teams'],
+    useCases['Lead scoring, Sales optimization, Revenue forecasting'],
     roi: 'Increase sales conversion rates by 20-35% and improve revenue by 25-40%.',
-    competitors: ['Salesforce Einstein, HubSpot, Pipedrive, Gong'],
+    competitors['Salesforce Einstein, HubSpot, Pipedrive, Gong'],
     marketSize: '$18B sales intelligence',
     growthRate: '28% YoY',
     variant: 'ai-futuristic',
@@ -810,5 +824,5 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     customers: 234,
     rating: 4.8,
     reviews: 178
-  }
-];
+
+];}}

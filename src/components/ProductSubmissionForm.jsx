@@ -13,8 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
-import { Sparkles } from "lucide-react";
-// Define the form schema with zod
+import { Sparkles // Define the form schema with zod
 const productSchema = z.object({
     title: z.string().min(3, "Title must be at least 3 characters"),
     description: z.string().min(10, "Description must be at least 10 characters"),
@@ -44,8 +43,8 @@ export function ProductSubmissionForm() {
             description: "",
             price: "",
             category: "",
-            video: undefined,
-            model: undefined,
+            video: null,
+            model: null,
             tags: "",
         },
     });
@@ -56,22 +55,35 @@ export function ProductSubmissionForm() {
             form.setValue("image", file);
             const reader = new FileReader();
             reader.onloadend = () => {
+<<<<<<< HEAD
                 setImagePreview(reader.result);
             };
             reader.readAsDataURL(file);
-        }
+
+=======
+                setImagePreview(reader.result)};
+            reader.readAsDataURL(file)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleVideoChange = (e) => {
         const file = e.target.files?.[0];
         if (file) {
+<<<<<<< HEAD
             form.setValue("video", file);
-        }
+
+=======
+            form.setValue("video", file)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleModelChange = (e) => {
         const file = e.target.files?.[0];
         if (file) {
+<<<<<<< HEAD
             form.setValue("model", file);
-        }
+
+=======
+            form.setValue("model", file)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Apply AI-generated content to the form
     const handleApplyGenerated = (content) => {
@@ -81,8 +93,7 @@ export function ProductSubmissionForm() {
         const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
         form.setValue("price", averagePrice);
         // Switch to the manual tab to show applied content
-        setActiveTab("manual");
-    };
+        setActiveTab("manual")};
     // Handle form submission
     const onSubmit = async (values) => {
         if (!user) {
@@ -91,22 +102,28 @@ export function ProductSubmissionForm() {
                 description: "You must be logged in to publish products",
                 variant: "destructive",
             });
+<<<<<<< HEAD
             return;
-        }
+
+=======
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // Create the product listing
             const productData = {
-                title: values.title,
+  title: values.title,
                 description: values.description,
                 price: parseFloat(values.price),
                 category: values.category,
                 currency: "USD", // Default currency
-                tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
+                tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) [],
                 author: {
                     name: user.displayName || "Anonymous Creator",
                     id: user.id,
-                },
+  
+
+},
                 createdAt: new Date().toISOString(),
             };
             const { data: productRecord, error: productError } = await supabase
@@ -115,8 +132,12 @@ export function ProductSubmissionForm() {
                 .select('id')
                 .single();
             if (productError) {
+<<<<<<< HEAD
                 throw new Error(productError.message);
-            }
+
+=======
+                throw new Error(productError.message)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // If we have an image, upload it
             if (values.image) {
                 const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
@@ -124,8 +145,12 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(imagePath, values.image);
                 if (uploadError) {
+<<<<<<< HEAD
                     throw new Error(uploadError.message);
-                }
+
+=======
+                    throw new Error(uploadError.message)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 // Get the public URL for the image
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
@@ -134,13 +159,18 @@ export function ProductSubmissionForm() {
                 const { error: updateError } = await supabase
                     .from('product_listings')
                     .update({
-                    images: [publicUrlData.publicUrl]
+                    images[publicUrlData.publicUrl]
                 })
                     .eq('id', productRecord.id);
                 if (updateError) {
+<<<<<<< HEAD
                     throw new Error(updateError.message);
-                }
+
+
+=======
+                    throw new Error(updateError.message)}
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Upload video if provided
             if (values.video) {
                 const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
@@ -148,8 +178,12 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(videoPath, values.video);
                 if (uploadError) {
+<<<<<<< HEAD
                     throw new Error(uploadError.message);
-                }
+
+=======
+                    throw new Error(uploadError.message)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
                     .getPublicUrl(videoPath);
@@ -158,9 +192,14 @@ export function ProductSubmissionForm() {
                     .update({ video_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
+<<<<<<< HEAD
                     throw new Error(updateError.message);
-                }
+
+
+=======
+                    throw new Error(updateError.message)}
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Upload model if provided
             if (values.model) {
                 const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
@@ -168,8 +207,12 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(modelPath, values.model);
                 if (uploadError) {
+<<<<<<< HEAD
                     throw new Error(uploadError.message);
-                }
+
+=======
+                    throw new Error(uploadError.message)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
                     .getPublicUrl(modelPath);
@@ -178,27 +221,47 @@ export function ProductSubmissionForm() {
                     .update({ model_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
+<<<<<<< HEAD
                     throw new Error(updateError.message);
-                }
+
+
+=======
+                    throw new Error(updateError.message)}
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Show success message
             toast({
                 title: "Product Published!",
                 description: "Your product has been successfully published on Zion.",
             });
             // Redirect to product page
+<<<<<<< HEAD
             navigate(`/marketplace/listing/${productRecord.id}`);
+
+=======
+<<<<<<< HEAD
+            router(`/marketplace/listing/${productRecord.id}`)}
+=======
+            router(`/marketplace/listing/${productRecord.id}`);
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             toast({
                 title: "Publication Failed",
                 description: error instanceof Error ? error.message : "An unknown error occurred",
                 variant: "destructive",
+<<<<<<< HEAD
             });
-        }
+
         finally {
             setIsSubmitting(false);
-        }
+
+=======
+            })}
+        finally {
+            setIsSubmitting(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -210,7 +273,7 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-      
+
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -285,7 +348,7 @@ export function ProductSubmissionForm() {
                     Upload a high-quality image of your product (recommended size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-                  
+
                   {imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3 / 2}>
                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover"/>
@@ -304,10 +367,19 @@ export function ProductSubmissionForm() {
                   <FormMessage />
                 </FormItem>)}/>
 
-            <FormField control={form.control} name="model" render={() => (<FormItem>
+            <FormField control={form.control} name="model" render = {
+  () => (<FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
-                    <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer"/>
+                    <Input type="file" accept="model/gltf-binary,
+  .glb" onChange={handleModelChange
+
+
+
+
+
+
+} className="cursor-pointer"/>
                   </FormControl>
                   <FormDescription>
                     Upload a 3D model for interactive viewing
@@ -323,12 +395,24 @@ export function ProductSubmissionForm() {
           </form>
         </Form>
       </TabsContent>
-      
+
       <TabsContent value="ai">
-        <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues={{
+        <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues = {
+  {
             title: form.getValues("title"),
-            category: form.getValues("category")
-        }}/>
+  category: form.getValues("category")
+        
+
+
+
+
+
+
+}}/>
       </TabsContent>
+<<<<<<< HEAD
     </Tabs>);
-}
+}}}}}}}}}}}}}}}}}}}
+=======
+    </Tabs>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,44 +1,62 @@
+<<<<<<< HEAD
 import React from 'react';
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
+import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase const Consulting = () => {
+=======
+import React from 'react.ts';
+import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase  } from 'lucide-react';
 
 const Consulting = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const consultingServices = [
     {
       icon: Lightbulb,
       title: "Technology Strategy",
       description: "Strategic technology planning and digital transformation roadmaps",
-      features: ["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"]
+      features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"]
     },
     {
       icon: Target,
       title: "AI & ML Consulting",
       description: "Expert guidance on AI implementation and machine learning strategies",
-      features: ["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]
+      features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]
     },
     {
       icon: Shield,
       title: "Cybersecurity Consulting",
       description: "Comprehensive security assessments and risk management strategies",
-      features: ["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]
+      features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]
     },
     {
       icon: Globe,
       title: "Cloud Strategy",
       description: "Cloud migration planning and multi-cloud optimization strategies",
-      features: ["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]
+      features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]
     },
     {
       icon: Database,
       title: "Data Strategy",
       description: "Data governance, analytics, and business intelligence consulting",
-      features: ["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
+      features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
     },
     {
+<<<<<<< HEAD
       icon: Zap,
       title: "Digital Innovation",
       description: "Emerging technology consulting and innovation acceleration",
+<<<<<<< HEAD
       features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
-    }
+
+=======
+      features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
+    };
+=======;
+      icon: Zap,;
+      title: "Digital Innovation",;
+      description: "Emerging technology consulting and innovation acceleration",;
+      features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industries = [
@@ -65,22 +83,32 @@ const Consulting = () => {
     {
       title: "Energy & Utilities",
       description: "Smart grid and sustainability consulting",
+<<<<<<< HEAD
       icon: Globe
     },
     {
       title: "Government",
       description: "Public sector digital transformation consulting",
       icon: Briefcase
-    }
+
+=======
+      icon: Globe;
+    },;
+    {;
+      title: "Government",;
+      description: "Public sector digital transformation consulting",;
+      icon: Briefcase;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [
-    "Expert guidance from industry professionals",
-    "Proven methodologies and best practices",
-    "Customized solutions for your specific needs",
-    "Long-term strategic partnerships",
-    "Measurable results and ROI",
-    "Access to cutting-edge technology insights"
+  const benefits = [;
+    "Expert guidance from industry professionals",;
+    "Proven methodologies and best practices",;
+    "Customized solutions for your specific needs",;
+    "Long-term strategic partnerships",;
+    "Measurable results and ROI",;
+    "Access to cutting-edge technology insights";
   ];
 
   const process = [
@@ -97,17 +125,27 @@ const Consulting = () => {
     {
       phase: "Strategy",
       description: "Developing customized solutions and implementation plans",
+<<<<<<< HEAD
       duration: "3-6 weeks"
     },
     {
       phase: "Implementation",
       description: "Executing the strategy with ongoing support and guidance",
       duration: "Ongoing"
-    }
+
+=======
+      duration: "3-6 weeks";
+    },;
+    {;
+      phase: "Implementation",;
+      description: "Executing the strategy with ongoing support and guidance",;
+      duration: "Ongoing";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -121,7 +159,7 @@ const Consulting = () => {
               <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent"> Consulting</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Strategic technology consulting to help your organization navigate 
+              Strategic technology consulting to help your organization navigate
               digital transformation and achieve competitive advantages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -144,11 +182,11 @@ const Consulting = () => {
               Our Consulting Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive consulting services designed to address your unique 
+              Comprehensive consulting services designed to address your unique
               technology challenges and opportunities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {consultingServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
@@ -179,11 +217,11 @@ const Consulting = () => {
               Industry Expertise
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Deep industry knowledge and experience across multiple sectors 
+              Deep industry knowledge and experience across multiple sectors
               to deliver relevant and effective solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">
@@ -207,7 +245,7 @@ const Consulting = () => {
                 Why Choose Our Consulting?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our consulting services provide strategic guidance and practical 
+                Our consulting services provide strategic guidance and practical
                 solutions that drive real business value and competitive advantage.
               </p>
               <ul className="space-y-3">
@@ -224,7 +262,7 @@ const Consulting = () => {
                 <Award className="w-24 h-24 text-orange-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Proven Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our consultants bring decades of combined experience 
+                  Our consultants bring decades of combined experience
                   and proven track records of success.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -245,10 +283,10 @@ const Consulting = () => {
             Our Consulting Process
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A systematic approach to delivering consulting services that ensures 
+            A systematic approach to delivering consulting services that ensures
             success and maximizes value for our clients.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((phase, index) => (
               <div key={index} className="text-center">
@@ -271,7 +309,7 @@ const Consulting = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our consulting services can help you navigate 
+            Let's discuss how our consulting services can help you navigate
             digital transformation and achieve your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -280,12 +318,21 @@ const Consulting = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
+<<<<<<< HEAD
             </a>
           </div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default Consulting;
+export default Consulting;}}}}

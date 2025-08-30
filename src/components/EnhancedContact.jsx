@@ -3,12 +3,11 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/Textarea';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe } from 'lucide-react';
-export const EnhancedContact = () => {
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe export const EnhancedContact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        company: '',
+        comp: '',
         phone: '',
         service: '',
         message: ''
@@ -43,7 +42,7 @@ export const EnhancedContact = () => {
             description: 'When we\'re available',
             action: 'Mon-Fri: 9AM-6PM EST',
             href: '#'
-        }
+
     ];
     const services = [
         'AI Solutions',
@@ -60,29 +59,45 @@ export const EnhancedContact = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const cardVariants = {
-        hidden: { scale: 0.9, opacity: 0 },
+  hidden: { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             scale: 1,
             opacity: 1,
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.02,
@@ -90,16 +105,15 @@ export const EnhancedContact = () => {
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
             [name]: value
-        }));
-    };
+        }))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -113,15 +127,31 @@ export const EnhancedContact = () => {
             setFormData({
                 name: '',
                 email: '',
-                company: '',
+                comp: '',
                 phone: '',
                 service: '',
                 message: ''
-            });
-        }, 3000);
-    };
+            })}, 3000)};
     if (isSubmitted) {
-        return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+        return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} transition={{ duration: 0.5 }}>
         <div className="text-center max-w-md mx-auto px-4">
           <CheckCircle className="h-24 w-24 text-green-400 mx-auto mb-6"/>
           <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>
@@ -132,8 +162,12 @@ export const EnhancedContact = () => {
             Send Another Message
           </Button>
         </div>
+<<<<<<< HEAD
       </motion.div>);
-    }
+
+=======
+      </motion.div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -154,7 +188,7 @@ export const EnhancedContact = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {contactMethods.map((method, index) => (<motion.a key={index} href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="group" variants={cardVariants} whileHover="hover">
+            {contactMethods.map((method, index) => (<motion.a key={index} href={method.href} target={method.href.startsWith('http') ? '_blank' : null} rel={method.href.startsWith('http') ? 'noopener noreferrer' : null} className="group" variants={cardVariants} whileHover="hover">
                 <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 h-full">
                   <div className="text-4xl mb-4 flex justify-center">
                     <method.icon className="h-16 w-16 text-zion-cyan group-hover:scale-110 transition-transform duration-300"/>
@@ -203,11 +237,10 @@ export const EnhancedContact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <motion.div variants={itemVariants}>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                  Company
-                </label>
-                <Input type="text" placeholder="Enter your company name" value={formData.company} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan"/>
-                <input type="hidden" name="company" value={formData.company}/>
+                <label htmlFor="comp" className="block text-sm font-medium text-gray-300 mb-2">
+                  Comp </label>
+                <Input type="text" placeholder="Enter your comp name" value={formData.comp} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan"/>
+                <input type="hidden" name="comp" value={formData.comp}/>
               </motion.div>
 
               <motion.div variants={itemVariants}>
@@ -235,7 +268,7 @@ export const EnhancedContact = () => {
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                 Message *
               </label>
-              <Textarea rows={6} placeholder="Tell us about your project, requirements, or any questions you have..." value={formData.message} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan resize-none"/>
+              <Textarea rows={6} placeholder="Tell us about your project, requirements, or  questions you have..." value={formData.message} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan resize-none"/>
               <input type="hidden" name="message" value={formData.message}/>
             </motion.div>
 
@@ -254,7 +287,7 @@ export const EnhancedContact = () => {
         </div>
       </section>
 
-      {/* Company Info */}
+      {/* Comp Info */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -287,5 +320,10 @@ export const EnhancedContact = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 };
+}}}}}}}}}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X import { Button } from './button';
+=======
 import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
-import { Button } from './button';
+import { Button } from "./button";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -19,90 +23,135 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         const root = document.documentElement;
         // High contrast
         if (settings.highContrast) {
+<<<<<<< HEAD
             root.classList.add('high-contrast');
-        }
+
         else {
             root.classList.remove('high-contrast');
-        }
+
         // Large text
         if (settings.largeText) {
             root.style.fontSize = '18px';
-        }
+
         else {
             root.style.fontSize = '16px';
-        }
+
         // Reduced motion
         if (settings.reducedMotion) {
             root.style.setProperty('--reduced-motion', 'reduce');
-        }
+
         else {
             root.style.setProperty('--reduced-motion', 'no-preference');
-        }
+
+=======
+            root.classList.add('high-contrast')}
+        else {
+            root.classList.remove('high-contrast')}
+        // Large text
+        if (settings.largeText) {
+            root.style.fontSize = '18px'}
+        else {
+            root.style.fontSize = '16px'}
+        // Reduced motion
+        if (settings.reducedMotion) {
+            root.style.setProperty('--reduced-motion', 'reduce')}
+        else {
+            root.style.setProperty('--reduced-motion', 'no-preference')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Font size
         root.style.setProperty('--font-size', `${settings.fontSize}px`);
         // Color blind mode
         root.setAttribute('data-color-blind', settings.colorBlindMode);
         // Notify parent component
-        onSettingsChange?.(settings);
-    }, [settings, enabled, onSettingsChange]);
+        onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]);
     // Load saved settings from localStorage
     useEffect(() => {
         const saved = localStorage.getItem('accessibility-settings');
         if (saved) {
             try {
                 const parsed = JSON.parse(saved);
+<<<<<<< HEAD
                 setSettings(prev => ({ ...prev, ...parsed }));
-            }
+
+=======
+                setSettings(prev => ({ ...prev, ...parsed }))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch {
                 // Silently handle parsing errors
-            }
-        }
+
+
     }, []);
     // Save settings to localStorage
     const saveSettings = useCallback((newSettings) => {
         setSettings(newSettings);
-        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-    }, []);
+        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
     // Toggle settings
     const toggleSetting = useCallback((key, value) => {
         const newSettings = {
+  <<<<<<< HEAD
             ...settings,
-            [key]: value !== undefined ? value : !settings[key]
-        };
+  [key]: value !== null ? value : !settings[key]
+        
+
+};
+        saveSettings(newSettings)}, [settings, saveSettings]);
+=======
+  ...settings,
+  [key]: value !== null ? value : !settings[key]
+        
+
+
+
+
+};
         saveSettings(newSettings);
     }, [settings, saveSettings]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Reset to defaults
     const resetSettings = useCallback(() => {
         const defaults = {
-            highContrast: false,
+  highContrast: false,
             largeText: false,
             reducedMotion: false,
             screenReader: false,
             fontSize: 16,
+  <<<<<<< HEAD
             colorBlindMode: 'normal'
-        };
+        
+
+};
+        saveSettings(defaults)}, [saveSettings]);
+=======
+  colorBlindMode: 'normal'
+        
+
+
+
+
+};
         saveSettings(defaults);
     }, [saveSettings]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Font size controls
     const increaseFontSize = useCallback(() => {
-        toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24));
-    }, [settings.fontSize, toggleSetting]);
+        toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, toggleSetting]);
     const decreaseFontSize = useCallback(() => {
-        toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12));
-    }, [settings.fontSize, toggleSetting]);
+        toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12))}, [settings.fontSize, toggleSetting]);
     // Screen reader announcement
-    const announceToScreenReader = useCallback((message) => {
-        if (settings.screenReader) {
-            const announcement = document.createElement('div');
+    const announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
             announcement.setAttribute('aria-atomic', 'true');
             announcement.className = 'sr-only';
             announcement.textContent = message;
             document.body.appendChild(announcement);
             setTimeout(() => {
+<<<<<<< HEAD
                 document.body.removeChild(announcement);
             }, 1000);
-        }
+
+=======
+                document.body.removeChild(announcement)}, 1000)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [settings.screenReader]);
     if (!enabled)
         return null;
@@ -117,9 +166,45 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>
-            
+
             {/* Panel */}
-            <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial={{ opacity: 0, x: 300, scale: 0.95 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 300, scale: 0.95 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+            <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial = {
+  { opacity: 0, x: 300,
+  scale: 0.95 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1, x: 0,
+  scale: 1 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0, x: 300,
+  scale: 0.95 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.3,
+  ease: "easeOut" 
+
+
+
+
+
+
+}}>
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white">Accessibility</h2>
@@ -131,7 +216,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               {/* Visual Settings */}
               <div className="space-y-4">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual</h3>
-                
+
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -176,7 +261,16 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     <Eye className="w-5 h-5 text-zion-cyan"/>
                     <span className="text-zinc-300">Color Blind Mode</span>
                   </div>
-                  <select value={settings.colorBlindMode} onChange={(e) => toggleSetting('colorBlindMode', e.target.value)} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                  <select value={settings.colorBlindMode} onChange = {
+  (e) => toggleSetting('colorBlindMode',
+  e.target.value)
+
+
+
+
+
+
+} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                     <option value="normal">Normal</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
                     <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -188,7 +282,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               {/* Motion Settings */}
               <div className="space-y-4 mt-6">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Motion</h3>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Settings className="w-5 h-5 text-zion-cyan"/>
@@ -203,7 +297,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               {/* Audio Settings */}
               <div className="space-y-4 mt-6">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Audio</h3>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     {settings.screenReader ? (<Volume2 className="w-5 h-5 text-zion-cyan"/>) : (<VolumeX className="w-5 h-5 text-zinc-400"/>)}
@@ -240,7 +334,8 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       </AnimatePresence>
 
       {/* Screen Reader Only Class */}
-      <style dangerouslySetInnerHTML={{
+      <style dangerouslySetInnerHTML = {
+  {
             __html: `
           .sr-only {
             position: absolute;
@@ -249,10 +344,25 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             padding: 0;
             margin: -1px;
             overflow: hidden;
-            clip: rect(0, 0, 0, 0);
+            clip: rect(0, 0, 0,
+  0);
             white-space: nowrap;
+<<<<<<< HEAD
+            border: 0
+
+}
+=======
             border: 0;
-          }
+<<<<<<< HEAD
+=======
+          
+
+
+
+
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
           .high-contrast {
             --zion-cyan: #00ffff;
@@ -262,48 +372,79 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-blue-light: #3399ff;
             --zion-cyan-light: #33ffff;
             --zion-purple-dark: #6600cc;
+<<<<<<< HEAD
             --zion-purple-light: #cc33ff;
-          }
 
           [data-color-blind="protanopia"] {
             filter: url('#protanopia-filter');
-          }
 
           [data-color-blind="deuteranopia"] {
             filter: url('#deuteranopia-filter');
-          }
 
           [data-color-blind="tritanopia"] {
             filter: url('#tritanopia-filter');
-          }
 
           :root {
             --font-size: 16px;
             --reduced-motion: no-preference;
-          }
 
           * {
             font-size: var(--font-size);
-          }
+=======
+            --zion-purple-light: #cc33ff}
+
+          [data-color-blind="protanopia"] {
+            filter: url('#protanopia-filter')}
+
+          [data-color-blind="deuteranopia"] {
+            filter: url('#deuteranopia-filter')}
+
+          [data-color-blind="tritanopia"] {
+            filter: url('#tritanopia-filter')}
+
+          :root {
+            --font-size: 16px;
+            --reduced-motion: no-preference}
+
+          * {
+            font-size: var(--font-size)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.01ms !important;
               animation-iteration-count: 1 !important;
+<<<<<<< HEAD
               transition-duration: 0.01ms !important;
-            }
+
+=======
+              transition-duration: 0.01ms !important}
           }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
+<<<<<<< HEAD
             transition-duration: 0.01ms !important;
-          }
+
+=======
+            transition-duration: 0.01ms !important}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         `
         }}/>
 
       {/* SVG Filters for Color Blind Modes */}
-      <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+      <svg style = {
+  { position: 'absolute', width: 0,
+  height: 0 
+
+
+
+
+
+
+}}>
         <defs>
           <filter id="protanopia-filter">
             <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/>
@@ -316,5 +457,9 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
           </filter>
         </defs>
       </svg>
+<<<<<<< HEAD
     </>);
-}
+</div>}}}}}}}}}}}}}}}}}}}}}}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

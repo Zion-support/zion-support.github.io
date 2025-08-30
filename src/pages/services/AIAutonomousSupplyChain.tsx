@@ -63,13 +63,13 @@ const AIAutonomousSupplyChain = () => {
       description: "AI analyzes supplier performance, financial health, and geopolitical risks in real-time",
       icon: Shield,
       color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "End-to-End Visibility",
-      description: "Complete transparency across the entire supply chain from raw materials to final delivery",
-      icon: Eye,
-      color: "from-cyan-500 to-blue-500"
-    }
+    },;
+    {;
+      title: "End-to-End Visibility",;
+      description: "Complete transparency across the entire supply chain from raw materials to final delivery",;
+      icon: Eye,;
+      color: "from-cyan-500 to-blue-500";
+    };
   ];
 
   const pricingPlans = [
@@ -113,13 +113,13 @@ const AIAutonomousSupplyChain = () => {
         "Custom AI model development",
         "Global supply chain visibility",
         "Advanced analytics dashboard",
-        "Dedicated support team",
-        "SLA guarantees",
-        "On-premise deployment",
-        "White-label solutions"
-      ],
-      popular: false
-    }
+        "Dedicated support team",;
+        "SLA guarantees",;
+        "On-premise deployment",;
+        "White-label solutions";
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -136,13 +136,13 @@ const AIAutonomousSupplyChain = () => {
     {
       title: "Better Customer Service",
       description: "Faster delivery times and improved order accuracy",
-      metric: "50% faster delivery"
-    },
-    {
-      title: "Risk Mitigation",
-      description: "Identify and prevent supply chain disruptions proactively",
-      metric: "80% risk reduction"
-    }
+      metric: "50% faster delivery";
+    },;
+    {;
+      title: "Risk Mitigation",;
+      description: "Identify and prevent supply chain disruptions proactively",;
+      metric: "80% risk reduction";
+    };
   ];
 
   const useCases = [
@@ -163,24 +163,42 @@ const AIAutonomousSupplyChain = () => {
       description: "Ensure critical medical supplies are always available and properly distributed",
       icon: Heart,
       color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Food & Beverage",
-      description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",
-      icon: Leaf,
-      color: "from-green-500 to-emerald-500"
-    }
+    },;
+    {;
+      title: "Food & Beverage",;
+      description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",;
+      icon: Leaf,;
+      color: "from-green-500 to-emerald-500";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
@@ -216,8 +234,26 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -235,9 +271,36 @@ const AIAutonomousSupplyChain = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-400 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -256,8 +319,26 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -274,9 +355,36 @@ const AIAutonomousSupplyChain = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -295,8 +403,26 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -313,9 +439,36 @@ const AIAutonomousSupplyChain = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -332,8 +485,26 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -350,9 +521,36 @@ const AIAutonomousSupplyChain = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
                   plan.popular 
@@ -406,8 +604,26 @@ const AIAutonomousSupplyChain = () => {
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-green-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -458,13 +674,13 @@ const AIAutonomousSupplyChain = () => {
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-blue-400 mb-4" />
-              <p className="text-gray-300">Address</p>
-              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              <p className="text-gray-300">Address</p>;
+              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
-import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
-import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
-import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
-import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";
+import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";
+import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";
+import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";
+import { enterpriseITInnovationServices2025 } from "../../data/2025-enterprise-it-innovations";
 const ComprehensiveServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedService, setSelectedService] = useState(null);
@@ -65,7 +65,46 @@ const ComprehensiveServicesShowcase = () => {
                 return true;
             // Handle special category mappings
             const categoryMappings = {
-                'ai-legal-compliance': ['Legal', 'Compliance'],
+  <<<<<<< HEAD
+                'ai-legal-compliance'['Legal', 'Compliance'],
+                'quantum-security-communication'['Quantum', 'Security', 'Communication'],
+                'ai-healthcare-diagnostics'['Healthcare', 'Diagnostics'],
+                'autonomous-supply-chain-logistics'['Supply Chain', 'Logistics'],
+                'blockchain-digital-identity'['Blockchain', 'Digital Identity'],
+                'ai-finance-trading'['Finance', 'Trading'],
+                'space-technology-innovation'['Space', 'Innovation'],
+                'metaverse-virtual-reality'['Metaverse', 'Virtual Reality'],
+                'sustainable-energy-green-tech'['Energy', 'Green Tech'],
+                'advanced-robotics-automation'['Robotics', 'Automation'],
+                'quantum-internet-networking'['Quantum', 'Internet', 'Networking'],
+                'climate-tech-sustainability'['Climate', 'Sustainability'],
+                'autonomous-vehicles-transportation'['Vehicle', 'Transportation'],
+                'brain-computer-interface-neuroscience'['Brain-Computer', 'Neuroscience'],
+                'synthetic-biology-biotechnology'['Biology', 'Biotechnology'],
+                'enterprise-data-analytics'['Enterprise', 'Data', 'Analytics'],
+                'multi-cloud-infrastructure'['Multi-Cloud', 'Infrastructure'],
+                'enterprise-api-integration'['Enterprise', 'API', 'Integration'],
+                'enterprise-itsm'['Enterprise', 'IT Service Management'],
+                'enterprise-security-soc'['Enterprise', 'Security', 'SOC'],
+                'enterprise-governance'['Enterprise', 'Data Governance'],
+                'enterprise-workflow-automation'['Enterprise', 'Workflow', 'Automation'],
+                'enterprise-digital-twin-iot'['Enterprise', 'Digital Twin',
+  'IoT']
+            
+
+};
+            const targetKeywords = categoryMappings[selectedCategory] || [category.name];
+            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', '')))});
+    const fadeInUp = {
+  initial: { opacity: 0,
+  y: 60 
+
+},
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 }
+    };
+=======
+  'ai-legal-compliance': ['Legal', 'Compliance'],
                 'quantum-security-communication': ['Quantum', 'Security', 'Communication'],
                 'ai-healthcare-diagnostics': ['Healthcare', 'Diagnostics'],
                 'autonomous-supply-chain-logistics': ['Supply Chain', 'Logistics'],
@@ -87,23 +126,43 @@ const ComprehensiveServicesShowcase = () => {
                 'enterprise-security-soc': ['Enterprise', 'Security', 'SOC'],
                 'enterprise-governance': ['Enterprise', 'Data Governance'],
                 'enterprise-workflow-automation': ['Enterprise', 'Workflow', 'Automation'],
-                'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin', 'IoT']
-            };
+                'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin',
+  'IoT']
+            
+
+
+
+
+};
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', '')));
         });
-    const fadeInUp = {
-        initial: { opacity: 0, y: 60 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6 }
-    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const filteredServices = selectedCategory === 'all'
         ? COMPREHENSIVE_SERVICES
         : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <motion.div className="max-w-7xl mx-auto text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+        <motion.div className="max-w-7xl mx-auto text-center" initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }}>
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
             Comprehensive
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
@@ -113,8 +172,8 @@ const ComprehensiveServicesShowcase = () => {
             <span className="text-white">Comprehensive Tech Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-            Discover our cutting-edge collection of AI-powered micro SAAS services, innovative IT solutions, 
-            emerging technology innovations, enterprise services, quantum computing solutions, and revolutionary 
+            Discover our cutting-edge collection of AI-powered micro SAAS services, innovative IT solutions,
+            emerging technology innovations, enterprise services, quantum computing solutions, and revolutionary
             technology platforms designed to transform your business operations across all industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -159,32 +218,18 @@ import {Brain,
             ArrowRight,
             CheckCircle,
             Star,
-            Award} from 'lucide-react';
-
-export const ComprehensiveServicesShowcase: React.FC = () => {}
+            Awardexport const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const serviceCategories = [
-    {id}: 'all', name: 'All Services', icon: Star },
-    {id}: 'ai', name: 'AI & ML', icon: Brain },
-    {id}: 'quantum', name: 'Quantum Computing', icon: Atom },
-    {id}: 'security', name: 'Cybersecurity', icon: Shield },
-    {id}: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
-    {id}: 'blockchain', name: 'Blockchain & Web3', icon: LinkIcon },
-    {id}: 'enterprise', name: 'Enterprise IT', icon: Users },
-    {id}: 'green', name: 'Green IT', icon: Leaf },
-    {id}: 'space', name: 'Space Tech', icon: Rocket },
-    {id}: 'saas', name: 'MicroSAAS', icon: Package }
-  ];
-
+<<<<<<< HEAD
   const services = [
     {id}: 'ai-solutions',
       title: 'AI Solutions',
       category: 'ai',
       description: 'Comprehensive artificial intelligence and machine learning solutions for business transformation.',
       icon: Brain,
-      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Automation'],
-      benefits: ['40% efficiency gains', 'Intelligent decision making', 'Scalable AI infrastructure'],
+      features['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Automation'],
+      benefits['40% efficiency gains', 'Intelligent decision making', 'Scalable AI infrastructure'],
       color: 'from-purple-500 to-pink-500',
       href: '/services/ai-solutions'
     },
@@ -193,8 +238,8 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       category: 'quantum',
       description: 'Cutting-edge quantum computing solutions for complex problem solving and optimization.',
       icon: Atom,
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'],
-      benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology'],
+      features['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'],
+      benefits['Exponential speedup', 'Complex problem solving', 'Future-proof technology'],
       color: 'from-indigo-500 to-purple-500',
       href: '/services/quantum-computing'
     },
@@ -203,8 +248,8 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       category: 'security',
       description: 'Advanced security solutions with AI-powered threat detection and prevention.',
       icon: Shield,
-      features: ['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Audits'],
-      benefits: ['Real-time protection', 'Proactive defense', 'Compliance assurance'],
+      features['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Audits'],
+      benefits['Real-time protection', 'Proactive defense', 'Compliance assurance'],
       color: 'from-red-500 to-orange-500',
       href: '/services/cybersecurity'
     },
@@ -213,8 +258,8 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       category: 'cloud',
       description: 'Scalable cloud infrastructure and DevOps automation for modern applications.',
       icon: Cloud,
-      features: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'],
-      benefits: ['Scalable infrastructure', 'Faster deployment', 'Cost optimization'],
+      features['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'],
+      benefits['Scalable infrastructure', 'Faster deployment', 'Cost optimization'],
       color: 'from-blue-500 to-cyan-500',
       href: '/services/cloud-devops'
     },
@@ -223,8 +268,8 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       category: 'blockchain',
       description: 'Decentralized technology solutions for the next generation of digital applications.',
       icon: LinkIcon,
-      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain'],
-      benefits: ['Transparency', 'Security', 'Innovation'],
+      features['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain'],
+      benefits['Transparency', 'Security', 'Innovation'],
       color: 'from-green-500 to-emerald-500',
       href: '/services/blockchain-web3'
     },
@@ -233,8 +278,8 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       category: 'enterprise',
       description: 'Comprehensive IT solutions for large organizations and enterprises.',
       icon: Users,
-      features: ['IT Infrastructure', 'Data Management', 'System Integration', 'Digital Transformation'],
-      benefits: ['Enterprise-grade solutions', 'Scalable architecture', '24/7 support'],
+      features['IT Infrastructure', 'Data Management', 'System Integration', 'Digital Transformation'],
+      benefits['Enterprise-grade solutions', 'Scalable architecture', '24/7 support'],
       color: 'from-slate-500 to-gray-500',
       href: '/services/enterprise-it'
     },
@@ -243,8 +288,8 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       category: 'green',
       description: 'Sustainable technology solutions for environmentally conscious businesses.',
       icon: Leaf,
-      features: ['Energy Efficiency', 'Sustainable Infrastructure', 'Carbon Reduction', 'Green Computing'],
-      benefits: ['Environmental impact', 'Cost savings', 'Sustainability compliance'],
+      features['Energy Efficiency', 'Sustainable Infrastructure', 'Carbon Reduction', 'Green Computing'],
+      benefits['Environmental impact', 'Cost savings', 'Sustainability compliance'],
       color: 'from-green-500 to-teal-500',
       href: '/services/green-it'
     },
@@ -253,8 +298,8 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       category: 'space',
       description: 'Advanced space technology solutions for satellite systems and space exploration.',
       icon: Rocket,
-      features: ['Satellite Systems', 'Space Data Analytics', 'Space Cybersecurity', 'Orbital Solutions'],
-      benefits: ['Innovation leadership', 'Advanced technology', 'Space expertise'],
+      features['Satellite Systems', 'Space Data Analytics', 'Space Cybersecurity', 'Orbital Solutions'],
+      benefits['Innovation leadership', 'Advanced technology', 'Space expertise'],
       color: 'from-violet-500 to-purple-500',
       href: '/services/space-tech'
     },
@@ -263,13 +308,15 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       category: 'saas',
       description: 'Custom software-as-a-service solutions for niche markets and specific business needs.',
       icon: Package,
-      features: ['Custom Development', 'Scalable Architecture', 'API Integration', 'User Management'],
-      benefits: ['Custom solutions', 'Scalable business model', 'Recurring revenue'],
+      features['Custom Development', 'Scalable Architecture', 'API Integration', 'User Management'],
+      benefits['Custom solutions', 'Scalable business model', 'Recurring revenue'],
       color: 'from-orange-500 to-red-500',
       href: '/services/microsaas'
-    }
+
   ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const solutions = [
     {id}: 'ai-autonomous-business',
       title: 'AI Autonomous Business',
@@ -326,15 +373,20 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       icon: Brain,
       category: 'ai',
       href: '/solutions/ai-business-intelligence'
-    }
+
   ];
 
-  const filteredServices = activeCategory === 'all' 
-    ? services 
+<<<<<<< HEAD
+  const filteredServices = activeCategory === 'all'
+    ? services
     : services.filter(service => service.category === activeCategory);
 
+  const filteredSolutions = activeCategory === 'all'
+    ? solutions
+=======
   const filteredSolutions = activeCategory === 'all' 
     ? solutions 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     : solutions.filter(solution => solution.category === activeCategory);
 
   return (
@@ -350,7 +402,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
             Our Comprehensive Services & Solutions
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our complete range of cutting-edge technology services and solutions 
+            Discover our complete range of cutting-edge technology services and solutions
             designed to transform your business and drive innovation.
           </p>
         </div>
@@ -375,15 +427,15 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
-                
+
                 <h4 className="text-xl font-semibold text-white mb-3 text-center">
                   {service.title}
                 </h4>
-                
+
                 <p className="text-gray-300 mb-4 text-center text-sm">
                   {service.description}
                 </p>
-                
+
                 <div className="mb-4">
                   <h5 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h5>
                   <ul className="space-y-1">
@@ -396,7 +448,34 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular
+            {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/20 to-cyan-500/20'
                     : 'border-white/20 hover:border-white/40'}`} onClick={() => setSelectedService(service)}>
                 {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -404,7 +483,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                       Popular
                     </span>
                   </div>)}
-                
+
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl`}>
                     {service.icon}
@@ -445,7 +524,34 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
 
       {/* Service Details Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <motion.div initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}} className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-8">
               <div className="flex justify-between items-start mb-6">
                 <div className="flex items-center gap-4">
@@ -468,7 +574,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{selectedService.description}</p>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -562,7 +668,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-            Contact us today to discuss how our innovative micro SAAS services can drive growth, 
+            Contact us today to discuss how our innovative micro SAAS services can drive growth,
             efficiency, and competitive advantage for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -582,14 +688,18 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
           </div>
         </div>
       </></div>
+<<<<<<< HEAD
     </div>))};
-}
 
 interface ServiceCardProps {service}: any;
   getCategoryIcon: (category: string) => React.ReactNode;
-}
+=======
+    </div>))}}
 
-function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
+interface ServiceCardProps {service};getCategoryIcon: (category: string) => React.ReactNode}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+function ServiceCard({service, getCategoryIcon}: ServiceCardProps) { /* empty */ }
   return (
     <Card className="group hover:scale-105 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-cyan-500/50">
       <div className="relative overflow-hidden rounded-t-lg">
@@ -609,7 +719,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
           </div>
         </div>
       </div>
-      
+
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -630,14 +740,14 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
           {service.description}
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent className="pt-0">
         <div className="flex flex-wrap gap-2 mb-4">
           {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs border-slate-600 text-slate-300">
               {tag}
             </Badge>))}
         </div>
-        
+
         <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
           <div className="flex items-center gap-1">
             <Clock className="w-3 h-3"/>
@@ -648,7 +758,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
             {service.location}
           </div>
         </div>
-        
+
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full overflow-hidden">
@@ -659,7 +769,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
               <div className="text-slate-400 text-xs">{service.author.email}</div>
             </div>
           </div>
-          
+
           <Button size="sm" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
             <ArrowRight className="w-3 h-3 mr-1"/>
             Learn More
@@ -667,10 +777,14 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   );
-}
+
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
-                
+
                 <div className="mb-4">
                   <h5 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h5>
                   <ul className="space-y-1">
@@ -680,7 +794,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
                       </li>))}
                   </ul>
                 </div>
-                
+
                 <a href={service.href} className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group-hover:shadow-lg">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
@@ -718,20 +832,27 @@ import {Search,
             Network,
             Smartphone,
             Monitor,
+<<<<<<< HEAD
+            Serverimport {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
+=======
             Server} from 'lucide-react';
-import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
+import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from "../data/innovativeMicroSaasServices";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   index: number;
   viewMode: 'grid' | 'list';
+<<<<<<< HEAD
   onServiceClick: (service: InnovativeMicroSaasService) => void;
-}
+=======
+  onServiceClick: (service: InnovativeMicroSaasService) => void}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onServiceClick}) => {}
+const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onServiceClick}) => { /* empty */ }
   const [isHovered, setIsHovered] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
 
-  const getCategoryIcon = useCallback((category: string) => {}
+  const getCategoryIcon = useCallback((category: string) => { /* empty */ }
     const iconMap: {[key]}: string]: React.ReactNode } = {'AI & Business Intelligence'}: <Brain className="w-5 h-5"/>,
       'Cybersecurity': <Shield className="w-5 h-5"/>,
       'DevOps & Cloud': <Cloud className="w-5 h-5"/>,
@@ -745,10 +866,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
       'Mobile Development': <Smartphone className="w-5 h-5"/>,
       'Web Development': <Monitor className="w-5 h-5"/>
     };
-    return iconMap[category] || <Star className="w-5 h-5"/>;
-  }, []);
+    return iconMap[category] || <Star className="w-5 h-5"/>}, []);
 
-  const getCategoryColor = useCallback((category: string) => {}
+  const getCategoryColor = useCallback((category: string) => { /* empty */ }
     const colorMap: {[key]}: string]: string } = {'AI & Business Intelligence'}: 'from-purple-500 to-pink-500',
       'Cybersecurity': 'from-red-500 to-orange-500',
       'DevOps & Cloud': 'from-blue-500 to-cyan-500',
@@ -762,26 +882,64 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
       'Mobile Development': 'from-green-500 to-blue-500',
       'Web Development': 'from-orange-500 to-red-500'
     };
-    return colorMap[category] || 'from-blue-500 to-purple-500';
-  }, []);
+    return colorMap[category] || 'from-blue-500 to-purple-500'}, []);
 
   const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
-    setIsLiked(!isLiked);
-  }, [isLiked]);
+    setIsLiked(!isLiked)}, [isLiked]);
 
   const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
     if (navigator.share) {navigator.share({
             title: service.title,
             text: service.description,
             url: service.websiteUrl
+<<<<<<< HEAD
         })};
     } else {navigator.clipboard.writeText(service.websiteUrl)};
-    }
+
+=======
+        })}} else {navigator.clipboard.writeText(service.websiteUrl)}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [service]);
 
-  if (viewMode === 'grid') {}
+  if (viewMode === 'grid') { /* empty */ }
     return (
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ y: -5, scale: 1.02 }} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 relative overflow-hidden">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 transform rotate-12 scale-150"></div>
@@ -862,12 +1020,42 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
           {isHovered && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-2xl"/>)}
         </AnimatePresence>
       </motion.div>
+<<<<<<< HEAD
     );
-  }
+=======
+    )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // List View
   return (
-    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ x: 5 }} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+    <motion.div initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} whileHover={{ x: 5 }} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Service Info */}
         <div className="flex-1">
@@ -942,7 +1130,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
               <div className="text-lg font-bold text-blue-400">{service.timeToValue}</div>
             </div>
           </div>
-          
+
           <div className="flex gap-2">
             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hover:scale-105" aria-label={`Get started with ${service.title}`}>
               Get Started
@@ -955,10 +1143,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
         </div>
       </div>
     </motion.div>
-  );
-};
+  )};
 
-const ComprehensiveServicesShowcase: React.FC = () => {}
+const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState< />'rating' | 'price' | 'aiScore' | 'name'>('rating');
@@ -970,23 +1157,28 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   const filteredServices = useMemo(() => {let} filtered = INNOVATIVE_MICRO_SAAS_SERVICES;
 
     // Filter by search term
-    if (searchTerm) {}
+    if (searchTerm) { /* empty */ }
       const searchLower = searchTerm.toLowerCase();
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchLower) ||
         service.description.toLowerCase().includes(searchLower) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchLower)) ||
         service.category.toLowerCase().includes(searchLower)
+<<<<<<< HEAD
       );
-    }
 
     // Filter by category
     if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
-    }
+=======
+      )}
+
+    // Filter by category
+    if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Sort services
-    filtered.sort((a, b) => {}
-      switch (sortBy) {}
+    filtered.sort((a, b) => { /* empty */ }
+      switch (sortBy) { /* empty */ }
         case 'rating':
           return (b.rating || 0) - (a.rating || 0);
         case 'price':
@@ -996,44 +1188,77 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         case 'name':
           return a.title.localeCompare(b.title);
         default:
+<<<<<<< HEAD
           return 0;
-      }
+
+=======
+          return 0}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
 
-    return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+    return filtered}, [searchTerm, selectedCategory, sortBy]);
 
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here
-    console.log('Service clicked:', service);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // // // console.log('Service clicked:', service);
+=======
+    // // // // // // // console.log('Service clicked:', service);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, []);
+=======
+    console.log('Service clicked:', service)}, []);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const clearFilters = useCallback(() => {setSearchTerm('')};
     setSelectedCategory('all');
-    setSortBy('rating');
-  }, []);
+    setSortBy('rating')}, []);
 
   // Keyboard navigation support
+<<<<<<< HEAD
+  useEffect(() => { /* empty */ }
+    const handleKeyDown = (e: KeyboardEvent) => { /* empty */ }
+      if (e.key === 'Escape') {setSelectedService(null)};
+
+=======
   useEffect(() => {}
     const handleKeyDown = (e: KeyboardEvent) => {}
-      if (e.key === 'Escape') {setSelectedService(null)};
-      }
+      if (e.key === 'Escape') {setSelectedService(null)}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
             Comprehensive Services
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our complete portfolio of cutting-edge technology solutions designed to transform your business 
+            Discover our complete portfolio of cutting-edge technology solutions designed to transform your business
             with AI, quantum computing, cybersecurity, and more.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-gray-400">
@@ -1053,7 +1278,34 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         </motion.div>
 
         {/* Search and Filter Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-gray-700/50">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}} className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-gray-700/50">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search */}
             <div className="relative">
@@ -1084,47 +1336,111 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
               </button>
               <button onClick={() => setViewMode('list')} className={`px-4 py-3 rounded-lg transition-all duration-300 ${viewMode === 'list'
             ? 'bg-blue-600 text-white'
-            : 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50'}`} aria-label="List view" aria-pressed={viewMode === 'list'}>
+            : 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50'}`} aria-label="List view" aria-pressed={viewMode === 'list'>
                 List
               </button>
             </div>
           </div>
 
-          {/* Clear Filters */}
+          {/* Clear Filters */
           {(searchTerm || selectedCategory !== 'all') && (<div className="mt-4 flex items-center justify-between">
               <div className="text-sm text-gray-400">
-                {filteredServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES.length} services
+                {filteredServices.length of {INNOVATIVE_MICRO_SAAS_SERVICES.length services
               </div>
-              <button onClick={clearFilters} className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
+              <button onClick={clearFilters className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
                 Clear all filters
               </button>
-            </div>)}
+            </div>)
         </motion.div>
 
+<<<<<<< HEAD
+        {/* Services Grid/List */
+        <motion.div initial={{ opacity: 0, y: 20  animate={{ opacity: 1, y: 0  transition={{ duration: 0.8, delay: 0.4 >
+=======
         {/* Services Grid/List */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           {filteredServices.length > 0 ? (viewMode === 'grid' ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} viewMode={viewMode} onServiceClick={handleServiceClick}/>))}
+                {filteredServices.map((service, index) => (<ServiceCard key={service.id service={service index={index viewMode={viewMode onServiceClick={handleServiceClick/>))
               </div>) : (<div className="space-y-6">
-                {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} viewMode={viewMode} onServiceClick={handleServiceClick}/>))}
-              </div>)) : (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">
+                {filteredServices.map((service, index) => (<ServiceCard key={service.id service={service index={index viewMode={viewMode onServiceClick={handleServiceClick/>))
+              </div>)) : (<motion.div initial={{ opacity: 0  animate={{ opacity: 1  className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400 mb-4">Try adjusting your search criteria or filters.</p>
-              <button onClick={clearFilters} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+              <button onClick={clearFilters className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
                 Clear Filters
               </button>
-            </motion.div>)}
+            </motion.div>)
         </motion.div>
 
+<<<<<<< HEAD
+        {/* CTA Section */
+        <motion.div initial={{ opacity: 0, y: 20  animate={{ opacity: 1, y: 0  transition={{ duration: 0.8, delay: 0.8  className="text-center mt-20">
+=======
         {/* CTA Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="text-center mt-20">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.8 
+
+
+
+
+
+
+}} className="text-center mt-20">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-blue-500/30">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our comprehensive services combine cutting-edge technology with proven business value. 
+              Our comprehensive services combine cutting-edge technology with proven business value.
               Get started today and experience the future of business technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1139,9 +1455,31 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
   );
-};
+;
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default ComprehensiveServicesShowcase;
+<<<<<<< HEAD
+    </></></></></></></></>)};
+=======
     </></></></></></></></>);
+<<<<<<< HEAD
+</div></div></div></div></div></Card></Card></Card></Card></section></section></section></motion.div>;
+)
+=======
 };
+
+export default ServiceCard;
+export default ServiceCard;
+export default ServiceCard;
+export default ServiceCard;
+export default ServiceCard;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export default ServiceCard;
+export default ServiceCard;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

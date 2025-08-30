@@ -3,8 +3,12 @@ import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+<<<<<<< HEAD
+import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award import { SEO } from '@/components/SEO';
+=======
 import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function PricingGuidePage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
@@ -12,16 +16,19 @@ export default function PricingGuidePage() {
         : EXPANDED_SERVICES.filter(service => service.category === selectedCategory);
     const getCategoryStats = (category) => {
         const services = EXPANDED_SERVICES.filter(s => s.category === category);
-        const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
         const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
-        return { count: services.length, avgPrice, avgRating };
-    };
+        return { count: services.length, avgPrice, avgRating }};
     const formatPrice = (price) => {
         if (price >= 1000) {
+<<<<<<< HEAD
             return `$${(price / 1000).toFixed(1)}K`;
-        }
+
         return `$${price}`;
     };
+=======
+            return `$${(price / 1000).toFixed(1)}K`}
+        return `$${price}`};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getServiceTier = (price) => {
         if (price < 2000)
             return { tier: "Starter", color: "bg-green-100 text-green-800" };
@@ -29,8 +36,7 @@ export default function PricingGuidePage() {
             return { tier: "Professional", color: "bg-blue-100 text-blue-800" };
         if (price < 10000)
             return { tier: "Enterprise", color: "bg-purple-100 text-purple-800" };
-        return { tier: "Premium", color: "bg-orange-100 text-orange-800" };
-    };
+        return { tier: "Premium", color: "bg-orange-100 text-orange-800" }};
     return (<div className="min-h-screen bg-background">
       <SEO title="Service Pricing Guide - Zion Tech Group" description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs." keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost" canonical="https://ziontechgroup.com/pricing"/>
 
@@ -43,7 +49,7 @@ export default function PricingGuidePage() {
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
             Transparent pricing for all our micro SAAS services and IT solutions. No hidden fees, no surprises.
           </p>
-          
+
           {/* Pricing Summary */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
             <div className="text-center">
@@ -100,8 +106,7 @@ export default function PricingGuidePage() {
             const stats = getCategoryStats(category.name);
             return (<Button key={category.id} variant={selectedCategory === category.name ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.name)} className={selectedCategory === category.name ? 'bg-zion-cyan text-white' : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}>
                   {category.name} ({stats.count})
-                </Button>);
-        })}
+                </Button>)})}
           </div>
         </div>
       </div>
@@ -161,7 +166,16 @@ export default function PricingGuidePage() {
                 </CardHeader>
 
                 <CardContent className="pt-0">
-                  <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
+                  <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style = {
+  { display: '-webkit-box', WebkitLineClamp: 3,
+  WebkitBoxOrient: 'vertical' 
+
+
+
+
+
+
+}}>
                     {service.description}
                   </CardDescription>
 
@@ -198,8 +212,7 @@ export default function PricingGuidePage() {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>);
-        })}
+              </Card>)})}
         </div>
 
         {filteredServices.length === 0 && (<div className="text-center py-12">
@@ -267,7 +280,7 @@ export default function PricingGuidePage() {
           <h2 className="text-3xl font-bold text-white mb-8">
             Why Our Pricing is Competitive
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -305,7 +318,7 @@ export default function PricingGuidePage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Contact us for a custom quote tailored to your specific requirements
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
               <Mail className="w-5 h-5 mr-2"/>
@@ -323,5 +336,9 @@ export default function PricingGuidePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card>}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

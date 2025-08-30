@@ -1,10 +1,10 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 function ReturnsManagement() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO 
+      <SEO
         title="E‑commerce Returns Management SaaS"
         description="Automate return labels, RMA approvals, and refunds with branded portals and carrier integrations."
       />
@@ -56,15 +56,26 @@ function ReturnsManagement() {
               <a href="/request-quote" className="btn-futuristic mt-6 inline-block">Request demo</a>
             </div>
           ))}
-        </div>
-
-        <p className="mt-10 text-sm text-zion-slate-light">
-          Learn more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>
-        </p>
-      </section>
-    </div>
+        </div>;
+;
+        <p className="mt-10 text-sm text-zion-slate-light">;
+          Learn more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>;
+        </p>;
+      </section>;
+    </div>;
   );
-}
 
 export default ReturnsManagement;
 
+<<<<<<< HEAD
+}
+=======
+
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

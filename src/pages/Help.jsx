@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  BookOpen, 
-  MessageCircle, 
+import {
+  Search,
+  BookOpen,
+  MessageCircle,
   Phone,
   Mail,
   Video,
@@ -16,13 +16,12 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openCategories, setOpenCategories] = useState([]);
   const toggleCategory = (category) => {
-    setOpenCategories(prev => 
-      prev.includes(category) 
+    setOpenCategories(prev =>
+      prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
     );
@@ -47,7 +46,7 @@ export default function Help() {
           title: 'First steps for new users',
           description: 'Essential information to get you started quickly',
           url: '/help/first-steps'
-        }
+
       ]
     },
     {
@@ -69,7 +68,7 @@ export default function Help() {
           title: 'Managing notifications and preferences',
           description: 'Customize how and when you receive updates',
           url: '/help/notifications'
-        }
+
       ]
     },
     {
@@ -91,7 +90,7 @@ export default function Help() {
           title: 'Payment and billing explained',
           description: 'Understanding our payment system and fees',
           url: '/help/payments'
-        }
+
       ]
     },
     {
@@ -113,7 +112,7 @@ export default function Help() {
           title: 'Cloud and infrastructure services',
           description: 'Scalable cloud solutions for your business needs',
           url: '/help/cloud-services'
-        }
+
       ]
     },
     {
@@ -135,7 +134,7 @@ export default function Help() {
           title: 'Refund and cancellation policies',
           description: 'Our policies for refunds and service cancellations',
           url: '/help/refund-policy'
-        }
+
       ]
     },
     {
@@ -157,9 +156,9 @@ export default function Help() {
           title: 'Reporting security issues',
           description: 'How to report security concerns or vulnerabilities',
           url: '/help/security-reporting'
-        }
+
       ]
-    }
+
   ];
   const popularArticles = [
     {
@@ -179,7 +178,7 @@ export default function Help() {
       description: 'Protect your account with these security best practices',
       category: 'Security & Privacy',
       readTime: '6 min read'
-    }
+
   ];
   const filteredCategories = helpCategories.map(category => ({
     ...category,
@@ -249,7 +248,7 @@ export default function Help() {
                 <button
                   onClick={() => toggleCategory(category.id)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-cyan/10 transition-colors"
-                >
+
                   <div className="flex items-center space-x-3">
                     <category.icon className="w-6 h-6 text-zion-cyan" />
                     <h3 className="text-lg font-semibold text-white">{category.title}</h3>
@@ -267,10 +266,10 @@ export default function Help() {
                         <div key={articleIndex} className="bg-zion-blue-dark/30 p-4 rounded-lg hover:bg-zion-cyan/10 transition-colors">
                           <h4 className="text-white font-medium mb-2">{article.title}</h4>
                           <p className="text-zion-slate-light text-sm mb-3">{article.description}</p>
-                          <Link 
+                          <Link
                             to={article.url}
                             className="inline-flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium"
-                          >
+
                             <span>Read Article</span>
                             <ArrowRight className="w-4 h-4" />
                           </Link>
@@ -365,10 +364,10 @@ export default function Help() {
               <p className="text-zion-slate-light text-sm mb-4">
                 Call us directly for immediate assistance
               </p>
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors inline-block"
-              >
+
                 Call Now
               </a>
             </div>
@@ -378,10 +377,10 @@ export default function Help() {
               <p className="text-zion-slate-light text-sm mb-4">
                 Send us a detailed message
               </p>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors inline-block"
-              >
+
                 Send Email
               </a>
             </div>
@@ -390,4 +389,4 @@ export default function Help() {
       </section>
     </div>
   );
-}
+}}}}}}}}}}

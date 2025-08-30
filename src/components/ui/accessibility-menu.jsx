@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import { Settings, FileText, Eye, Zap, Volume2, VolumeX import { Button } from './button';
+=======
 import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
-import { Button } from './button';
+import { Button } from "./button";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -14,15 +18,18 @@ export function AccessibilityMenu() {
         // Load settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
+<<<<<<< HEAD
             setSettings(JSON.parse(savedSettings));
-        }
+
+=======
+            setSettings(JSON.parse(savedSettings))}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     useEffect(() => {
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage
-        localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-    }, [settings]);
+        localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
     const applySettings = (newSettings) => {
         const root = document.documentElement;
         // Font size
@@ -30,37 +37,59 @@ export function AccessibilityMenu() {
             newSettings.fontSize === 'large' ? '1.125' : '1');
         // High contrast
         if (newSettings.highContrast) {
+<<<<<<< HEAD
             root.classList.add('high-contrast');
-        }
+
         else {
             root.classList.remove('high-contrast');
-        }
+
         // Reduced motion
         if (newSettings.reducedMotion) {
             root.classList.add('reduced-motion');
-        }
+
         else {
             root.classList.remove('reduced-motion');
-        }
+
+=======
+            root.classList.add('high-contrast')}
+        else {
+            root.classList.remove('high-contrast')}
+        // Reduced motion
+        if (newSettings.reducedMotion) {
+            root.classList.add('reduced-motion')}
+        else {
+            root.classList.remove('reduced-motion')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const toggleSetting = (key) => {
         setSettings(prev => ({
             ...prev,
             [key]: !prev[key]
-        }));
-    };
+        }))};
     const updateFontSize = (size) => {
-        setSettings(prev => ({ ...prev, fontSize: size }));
-    };
+        setSettings(prev => ({ ...prev, fontSize: size }))};
     const resetSettings = () => {
         const defaultSettings = {
-            fontSize: 'medium',
+  fontSize: 'medium',
             highContrast: false,
             reducedMotion: false,
+  <<<<<<< HEAD
             soundEnabled: true
-        };
+        
+
+};
+        setSettings(defaultSettings)};
+=======
+  soundEnabled: true
+        
+
+
+
+
+};
         setSettings(defaultSettings);
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<>
       {/* Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
@@ -69,7 +98,43 @@ export function AccessibilityMenu() {
 
       {/* Menu Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 20 }} transition={{ type: "spring", stiffness: 300, damping: 30 }}>
+        {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial = {
+  { opacity: 0, scale: 0.9,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0, scale: 0.9,
+  y: 20 
+
+
+
+
+
+
+}} transition = {
+  { type: "spring", stiffness: 300,
+  damping: 30 
+
+
+
+
+
+
+}}>
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-white">Accessibility</h3>
@@ -144,5 +209,9 @@ export function AccessibilityMenu() {
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsOpen(false)}/>)}
       </AnimatePresence>
+<<<<<<< HEAD
     </>);
-}
+}}}}}}</motion.div>}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

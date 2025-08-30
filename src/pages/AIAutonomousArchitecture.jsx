@@ -8,7 +8,7 @@ const AIAutonomousArchitecture = () => {
         <meta name="keywords" content="AI architecture, autonomous architecture, system design, blueprint creation, autonomous operations, AI architecture platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-architecture"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousArchitecture = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Architecture Intelligence</h3>
               <p className="text-gray-300">AI trained on architecture datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-gray-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that architects independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-zinc-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Architecture</h3>
               <p className="text-gray-300">24/7 architecture operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-neutral-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive architecture insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-stone-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Design</h3>
               <p className="text-gray-300">Prevent architectural issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-slate-300 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Architecture</h3>
@@ -93,25 +93,25 @@ const AIAutonomousArchitecture = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze requirements</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-slate-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
                 <p className="text-gray-300 text-sm">Design architecture</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-slate-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Plan</h3>
                 <p className="text-gray-300 text-sm">Plan structure</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-slate-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Validate</h3>
                 <p className="text-gray-300 text-sm">Validate design</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-slate-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Document</h3>
@@ -138,12 +138,12 @@ const AIAutonomousArchitecture = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Software Development</h3>
                 <p className="text-gray-300">Software architecture design</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Infrastructure</h3>
                 <p className="text-gray-300">Infrastructure architecture</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Systems</h3>
                 <p className="text-gray-300">Enterprise architecture</p>
@@ -168,6 +168,5 @@ const AIAutonomousArchitecture = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousArchitecture;

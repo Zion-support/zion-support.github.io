@@ -1,16 +1,36 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  innovativeMicroSaasServices2031, 
+import {
+  innovativeMicroSaasServices2031,
+  innovativeITInfrastructureServices2031,
+  innovativeAIServices2031
+} from '../src/data/innovativeServices2031';
+import {
+  Brain,
+  Cloud,
+  CheckCircle,
+  TrendingUp,
+  Users,
+=======
+import React from 'react.ts';
+import Head from 'next/head.ts';
+import { innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
-} from '../src/data/innovativeServices2031';
+<<<<<<< HEAD
+ } from "../src/data/innovativeServices2031";
+import { Brain, 
+=======
+} from "../src/data/innovativeServices2031";
 import { 
   Brain, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Cloud, 
   CheckCircle, 
   TrendingUp, 
   Users, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Phone,
   Mail,
   Globe,
@@ -20,22 +40,33 @@ import {
   Target,
   Award,
   Clock
-} from 'lucide-react';
-
+<<<<<<< HEAD
 const InnovativeServicesShowcase2031: React.FC = () => {
   const scrollToContact = () => {
+=======
+ } from 'lucide-react';
+
+<<<<<<< HEAD
+const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {;
+  const scrollToContact = () => {;
+    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
+=======
+const InnovativeServicesShowcase2031: React.FC = () => {;
+  const scrollToContact = () => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <>
       <Helmet>
         <title>Innovative Services 2031 - Zion Tech Group | Cutting-Edge Micro SAAS, IT & AI Solutions</title>
-        <meta name="description" content="Discover Zion Tech Group's revolutionary 2031 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions." />
+        <meta name = "description" content="Discover Zion Tech Group's revolutionary 2031 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions." />
         <meta name="keywords" content="innovative services 2031, quantum computing, AI services, IT infrastructure, micro SAAS, Zion Tech Group, cutting-edge technology, digital transformation" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase-2031" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -46,30 +77,30 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                 Revolutionary Services 2031
               </span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               The Future of
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>
               <br />
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Starts Here</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Experience Zion Tech Group's cutting-edge portfolio of innovative micro SAAS, IT infrastructure, and AI services designed to revolutionize your business in 2031 and beyond.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+              <button
                 onClick={scrollToContact}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button 
+              <button
                 onClick={() => document.getElementById('services-overview')?.scrollIntoView({ behavior: 'smooth' })}
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+
                 Explore Services
               </button>
             </div>
@@ -202,10 +233,10 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                         </span>
                         <span className="text-sm text-gray-400">{service.pricing}</span>
                       </div>
-                      
+
                       <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                       <p className="text-gray-300 mb-6">{service.description}</p>
-                      
+
                       <div className="flex items-center mb-6">
                         <span className="text-3xl font-bold text-white">${service.price.toLocaleString()}</span>
                         <span className="text-gray-400 ml-2">/month</span>
@@ -264,10 +295,10 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                         ))}
                       </div>
 
-                      <button 
+                      <button
                         onClick={scrollToContact}
                         className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                      >
+
                         Get Started
                       </button>
                     </div>
@@ -363,31 +394,31 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                 <form className="space-y-6">
                   <div>
                     <label className="block text-white font-medium mb-2">Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="Your full name"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-white font-medium mb-2">Email</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                      placeholder="your.email@company.com"
+                      placeholder="your.email@comp.com"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-white font-medium mb-2">Company</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                      placeholder="Your company name"
+                      placeholder="Your comp name"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-white font-medium mb-2">Service Interest</label>
                     <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-500">
@@ -398,20 +429,20 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                       <option value="consultation">General Consultation</option>
                     </select>
                   </div>
-                  
+
                   <div>
                     <label className="block text-white font-medium mb-2">Message</label>
-                    <textarea 
+                    <textarea
                       rows={4}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="Tell us about your project or requirements..."
                     ></textarea>
                   </div>
-                  
-                  <button 
+
+                  <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                  >
+
                     Send Message
                   </button>
                 </form>
@@ -430,25 +461,34 @@ const InnovativeServicesShowcase2031: React.FC = () => {
               The future of technology is here, and it's waiting for you. Join the companies already transforming their operations with Zion Tech Group's innovative services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+              <button
                 onClick={scrollToContact}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Your Transformation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <a 
+              <a
                 href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+
                 Visit Our Website
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </div>;
+    </>;
+  )};
+=======
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default InnovativeServicesShowcase2031;
+export default InnovativeServicesShowcase2031;}

@@ -1,13 +1,25 @@
 import React, { createContext, useContext, useState } from 'react';
-const DropdownMenuContext = createContext(undefined);
-export function DropdownMenu({ children }) {
+const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
-    return (<DropdownMenuContext.Provider value={{ isOpen, setIsOpen }}>
+    return (<DropdownMenuContext.Provider value = {
+  { isOpen,
+  setIsOpen 
+
+
+
+
+
+
+}}>
       <div className="relative">
         {children}
       </div>
+<<<<<<< HEAD
     </DropdownMenuContext.Provider>);
-}
+
+=======
+    </DropdownMenuContext.Provider>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function DropdownMenuTrigger({ children, asChild = false }) {
     const context = useContext(DropdownMenuContext);
     if (!context)
@@ -15,12 +27,19 @@ export function DropdownMenuTrigger({ children, asChild = false }) {
     if (asChild) {
         return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
         {children}
+<<<<<<< HEAD
       </div>);
-    }
+
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>);
-}
+
+=======
+      </div>)}
+    return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
+      {children}
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {
     const context = useContext(DropdownMenuContext);
     if (!context)
@@ -28,14 +47,25 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     if (!context.isOpen)
         return null;
     const alignClasses = {
-        start: 'left-0',
+  start: 'left-0',
         center: 'left-1/2 transform -translate-x-1/2',
-        end: 'right-0'
-    };
+  end: 'right-0'
+    
+
+
+
+
+
+
+};
     return (<div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
       {children}
+<<<<<<< HEAD
     </div>);
-}
+
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {
     const context = useContext(DropdownMenuContext);
     if (!context)
@@ -43,14 +73,20 @@ export function DropdownMenuItem({ children, onClick, asChild = false, className
     const handleClick = () => {
         if (onClick)
             onClick();
-        context.setIsOpen(false);
-    };
+        context.setIsOpen(false)};
     if (asChild) {
         return (<div className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>
         {children}
+<<<<<<< HEAD
       </div>);
-    }
+
     return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}>
       {children}
     </button>);
-}
+}}}}}}
+=======
+      </div>)}
+    return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}>
+      {children}
+    </button>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

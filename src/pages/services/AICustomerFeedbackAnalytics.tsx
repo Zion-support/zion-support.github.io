@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   MessageSquare, 
   TrendingUp, 
@@ -58,13 +58,13 @@ export default function AICustomerFeedbackAnalytics() {
     {
       icon: PieChart,
       title: "Advanced Segmentation",
-      description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies."
-    },
-    {
-      icon: Activity,
-      title: "Automated Reporting",
-      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations."
-    }
+      description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies.";
+    },;
+    {;
+      icon: Activity,;
+      title: "Automated Reporting",;
+      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations.";
+    };
   ];
 
   const benefits = [
@@ -91,13 +91,13 @@ export default function AICustomerFeedbackAnalytics() {
     {
       icon: TrendingUp,
       title: "Increased Revenue",
-      description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value."
-    },
-    {
-      icon: Clock,
-      title: "Time Savings",
-      description: "Automate feedback analysis and reporting, saving hours of manual work each week."
-    }
+      description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value.";
+    },;
+    {;
+      icon: Clock,;
+      title: "Time Savings",;
+      description: "Automate feedback analysis and reporting, saving hours of manual work each week.";
+    };
   ];
 
   const pricingPlans = [
@@ -146,13 +146,13 @@ export default function AICustomerFeedbackAnalytics() {
         "Dedicated account manager",
         "White-label solutions",
         "Advanced security features",
-        "Custom reporting",
-        "On-premise deployment options",
-        "SLA guarantees"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
+        "Custom reporting",;
+        "On-premise deployment options",;
+        "SLA guarantees";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -179,13 +179,13 @@ export default function AICustomerFeedbackAnalytics() {
     {
       industry: "Education",
       description: "Analyze student feedback, course satisfaction, and institutional improvement opportunities",
-      icon: Award
-    },
-    {
-      industry: "Manufacturing",
-      description: "Track customer satisfaction with products, service quality, and identify improvement areas",
-      icon: Settings
-    }
+      icon: Award;
+    },;
+    {;
+      industry: "Manufacturing",;
+      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
+      icon: Settings;
+    };
   ];
 
   const integrations = [
@@ -206,17 +206,17 @@ export default function AICustomerFeedbackAnalytics() {
       platforms: ["Twitter", "Facebook", "Instagram", "LinkedIn"]
     },
     {
-      name: "Review Platforms",
-      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"]
-    },
-    {
-      name: "Analytics Tools",
-      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"]
-    }
+      name: "Review Platforms",;
+      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"];
+    },;
+    {;
+      name: "Analytics Tools",;
+      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Customer Feedback Analytics - Zion Tech Group"
         description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
@@ -228,8 +228,26 @@ export default function AICustomerFeedbackAnalytics() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
@@ -264,8 +282,26 @@ export default function AICustomerFeedbackAnalytics() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -282,9 +318,36 @@ export default function AICustomerFeedbackAnalytics() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
@@ -317,8 +380,26 @@ export default function AICustomerFeedbackAnalytics() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -335,9 +416,36 @@ export default function AICustomerFeedbackAnalytics() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
@@ -370,8 +478,26 @@ export default function AICustomerFeedbackAnalytics() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -388,9 +514,36 @@ export default function AICustomerFeedbackAnalytics() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
@@ -441,8 +594,26 @@ export default function AICustomerFeedbackAnalytics() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -459,9 +630,36 @@ export default function AICustomerFeedbackAnalytics() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
@@ -494,8 +692,26 @@ export default function AICustomerFeedbackAnalytics() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -512,9 +728,36 @@ export default function AICustomerFeedbackAnalytics() {
             {integrations.map((integration, index) => (
               <motion.div
                 key={integration.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
@@ -541,8 +784,26 @@ export default function AICustomerFeedbackAnalytics() {
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -560,12 +821,12 @@ export default function AICustomerFeedbackAnalytics() {
               </button>
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

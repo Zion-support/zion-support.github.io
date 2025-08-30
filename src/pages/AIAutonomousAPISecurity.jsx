@@ -8,7 +8,7 @@ const AIAutonomousAPISecurity = () => {
         <meta name="keywords" content="AI API security, autonomous API security, API protection, threat detection, autonomous operations, AI API security platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-api-security"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousAPISecurity = () => {
               <h3 className="text-xl font-semibold text-white mb-3">API Security Intelligence</h3>
               <p className="text-gray-300">AI trained on API security datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that secures APIs independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous API Security</h3>
               <p className="text-gray-300">24/7 API security operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive API security insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-violet-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive API Security</h3>
               <p className="text-gray-300">Prevent API security issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive API Security</h3>
@@ -93,25 +93,25 @@ const AIAutonomousAPISecurity = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
                 <p className="text-gray-300 text-sm">Monitor APIs</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-cyan-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
                 <p className="text-gray-300 text-sm">Detect threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-cyan-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-cyan-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Protect</h3>
                 <p className="text-gray-300 text-sm">Protect APIs</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-cyan-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Respond</h3>
@@ -138,12 +138,12 @@ const AIAutonomousAPISecurity = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Web APIs</h3>
                 <p className="text-gray-300">Web API security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Mobile APIs</h3>
                 <p className="text-gray-300">Mobile API security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Microservice APIs</h3>
                 <p className="text-gray-300">Microservice API security</p>
@@ -168,6 +168,5 @@ const AIAutonomousAPISecurity = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousAPISecurity;

@@ -1,9 +1,9 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
-export default function AIComplianceCopilot() {
+export default function AIComplianceCopilot(...args[]):  {
   return (
-    <div className="min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">
       <SEO
         title="AI Compliance Copilot | Zion Tech Group"
         description="Continuously map controls, flag risks, and auto-generate audit evidence for SOC 2, ISO 27001, HIPAA, GDPR."
@@ -21,26 +21,39 @@ export default function AIComplianceCopilot() {
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h2 className="text-lg font-semibold mb-2">Frameworks</h2>
             <p className="text-sm text-zion-slate-light">SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, NIST 800-53.</p>
-          </div>
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-lg font-semibold mb-2">Integrations</h2>
-            <p className="text-sm text-zion-slate-light">AWS, GCP, Azure, GitHub, GitLab, Okta, Jira, Slack.</p>
-          </div>
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-lg font-semibold mb-2">Pricing</h2>
+          </div>;
+          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
+            <h2 className="text-lg font-semibold mb-2">Integrations</h2>;
+            <p className="text-sm text-zion-slate-light">AWS, GCP, Azure, GitHub, GitLab, Okta, Jira, Slack.</p>;
+          </div>;
+          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
+            <h2 className="text-lg font-semibold mb-2">Pricing</h2>;
             <p className="text-sm text-zion-slate-light">From $1,500/mo; enterprise tiers with dedicated CSM.</p>
-            <p className="text-xs text-zion-slate-light mt-2">
+            <p className = "text-xs text-zion-slate-light mt-2">
               References: <a className="text-cyan-400" href="https://drata.com/pricing" target="_blank" rel="noreferrer">Drata</a>, <a className="text-cyan-400" href="https://vanta.com/pricing" target="_blank" rel="noreferrer">Vanta</a>
             </p>
           </div>
         </div>
 
         <div className="mt-10 rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
+<<<<<<< HEAD
           <h3 className="font-semibold mb-2">Contact</h3>
           <p className="text-sm text-zion-slate-light">+1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
       </section>
     </div>
+  )};
+=======;
+          <h3 className="font-semibold mb-2">Contact</h3>;
+          <p className="text-sm text-zion-slate-light">+1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

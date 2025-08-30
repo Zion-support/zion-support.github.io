@@ -4,13 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText } from 'lucide-react';
-import { SERVICE_CATEGORIES } from '@/data/enhancedServices';
+import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText import { SERVICE_CATEGORIES } from '@/data/enhancedServices';
 export default function ComprehensiveContact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        company: '',
+        comp: '',
         phone: '',
         service: '',
         message: ''
@@ -18,14 +17,21 @@ export default function ComprehensiveContact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
-        console.log('Form submitted:', formData);
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // // // console.log('Form submitted:', formData);
+=======
+        // // // // // // // console.log('Form submitted:', formData);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
+=======
+        console.log('Form submitted:', formData)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
-        });
-    };
+        })};
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -67,11 +73,11 @@ export default function ComprehensiveContact() {
                       <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter your email"/>
                     </div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="company" className="text-white">Company</Label>
-                      <Input id="company" name="company" value={formData.company} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter company name"/>
+                      <Label htmlFor="comp" className="text-white">Company</Label>
+                      <Input id="comp" name="comp" value={formData.comp} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter comp name"/>
                     </div>
                     <div>
                       <Label htmlFor="phone" className="text-white">Phone Number</Label>
@@ -122,7 +128,7 @@ export default function ComprehensiveContact() {
                     <p className="text-sm text-zion-cyan-light">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
@@ -131,7 +137,7 @@ export default function ComprehensiveContact() {
                     <p className="text-sm text-zion-cyan-light">24/7 Response</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
@@ -140,7 +146,7 @@ export default function ComprehensiveContact() {
                     <p className="text-zion-cyan-light">Middletown DE 19709</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <Globe className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
@@ -351,5 +357,9 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </footer>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

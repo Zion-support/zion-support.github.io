@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 } from 'lucide-react';
-const testimonials = [
+import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 const testimonials = [
     {
         id: '1',
         name: 'Sarah Chen',
         role: 'CTO',
-        company: 'TechFlow Solutions',
+        comp: 'TechFlow Solutions',
         avatar: 'SC',
         rating: 5,
         content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 300% improvement in our AI model performance.',
@@ -19,7 +18,7 @@ const testimonials = [
         id: '2',
         name: 'Marcus Rodriguez',
         role: 'Head of Engineering',
-        company: 'InnovateCorp',
+        comp: 'InnovateCorp',
         avatar: 'MR',
         rating: 5,
         content: 'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.',
@@ -32,7 +31,7 @@ const testimonials = [
         id: '3',
         name: 'Dr. Emily Watson',
         role: 'Research Director',
-        company: 'Quantum Labs',
+        comp: 'Quantum Labs',
         avatar: 'EW',
         rating: 5,
         content: 'Working with Zion\'s AI services has accelerated our research by months. The platform\'s capabilities and the team\'s expertise are unmatched in the industry.',
@@ -45,7 +44,7 @@ const testimonials = [
         id: '4',
         name: 'Alex Thompson',
         role: 'Product Manager',
-        company: 'StartupXYZ',
+        comp: 'StartupXYZ',
         avatar: 'AT',
         rating: 5,
         content: 'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.',
@@ -58,7 +57,7 @@ const testimonials = [
         id: '5',
         name: 'Lisa Park',
         role: 'VP of Operations',
-        company: 'GlobalTech Inc',
+        comp: 'GlobalTech Inc',
         avatar: 'LP',
         rating: 5,
         content: 'The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion\'s support team is always available when we need them.',
@@ -66,7 +65,7 @@ const testimonials = [
         date: '2 months ago',
         likes: 94,
         verified: true
-    }
+
 ];
 const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & Development', 'Startup Solutions', 'Global Operations'];
 export function InteractiveTestimonials() {
@@ -81,31 +80,33 @@ export function InteractiveTestimonials() {
         if (!isAutoPlaying)
             return;
         const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, [isAutoPlaying, filteredTestimonials.length]);
+            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)}, 5000);
+        return () => clearInterval(interval)}, [isAutoPlaying, filteredTestimonials.length]);
     const nextTestimonial = () => {
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
-    };
+        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};
     const prevTestimonial = () => {
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
-    };
+        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};
     const toggleLike = (testimonialId) => {
         setLikedTestimonials(prev => {
             const newSet = new Set(prev);
             if (newSet.has(testimonialId)) {
+<<<<<<< HEAD
                 newSet.delete(testimonialId);
-            }
+
             else {
                 newSet.add(testimonialId);
-            }
+
             return newSet;
         });
     };
+=======
+                newSet.delete(testimonialId)}
+            else {
+                newSet.add(testimonialId)}
+            return newSet})};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const renderStars = (rating) => {
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>));
-    };
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))};
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -113,11 +114,19 @@ export function InteractiveTestimonials() {
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
-            }
-        }
+
+
     };
     const itemVariants = {
-        hidden: { opacity: 0, y: 20, scale: 0.95 },
+  hidden: { opacity: 0, y: 20,
+  scale: 0.95 
+
+
+
+
+
+
+},
         visible: {
             opacity: 1,
             y: 0,
@@ -125,8 +134,8 @@ export function InteractiveTestimonials() {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated elements */}
@@ -138,29 +147,101 @@ export function InteractiveTestimonials() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 px-4 py-2 rounded-full border border-blue-500/30 mb-6">
             <MessageCircle className="w-5 h-5 text-blue-400"/>
             <span className="text-blue-300 font-medium">Client Success Stories</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             What Our Clients
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Say About Us
             </span>
           </h2>
-          
+
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             Discover why leading companies choose Zion Tech Group for their AI and technology needs
           </p>
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}>
           {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
                 ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25'
-                : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>
+                : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}>
               {category}
             </motion.button>))}
         </motion.div>
@@ -168,13 +249,40 @@ export function InteractiveTestimonials() {
         {/* Main Testimonial Display */}
         <motion.div className="relative max-w-4xl mx-auto mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <AnimatePresence mode="wait">
-            <motion.div key={currentIndex} initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.5 }} className="text-center">
+            <motion.div key={currentIndex} initial = {
+  { opacity: 0,
+  x: 100 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  x: -100 
+
+
+
+
+
+
+}} transition={{ duration: 0.5 }} className="text-center">
               <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-3xl p-12 border border-white/20 backdrop-blur-sm relative overflow-hidden">
                 {/* Quote icon */}
                 <div className="absolute top-8 left-8 text-blue-400/20">
                   <Quote className="w-16 h-16"/>
                 </div>
-                
+
                 {/* Rating */}
                 <div className="flex justify-center mb-6">
                   {renderStars(filteredTestimonials[currentIndex]?.rating || 0)}
@@ -195,7 +303,7 @@ export function InteractiveTestimonials() {
                       {filteredTestimonials[currentIndex]?.name}
                     </div>
                     <div className="text-zion-slate-light">
-                      {filteredTestimonials[currentIndex]?.role} at {filteredTestimonials[currentIndex]?.company}
+                      {filteredTestimonials[currentIndex]?.role} at {filteredTestimonials[currentIndex]?.comp}
                     </div>
                   </div>
                   {filteredTestimonials[currentIndex]?.verified && (<div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
@@ -254,10 +362,18 @@ export function InteractiveTestimonials() {
 
         {/* Testimonial Grid */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover={{
+          {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover = {
+  {
                 y: -8,
                 scale: 1.02,
-                transition: { duration: 0.2 }
+  transition: { duration: 0.2 
+
+
+
+
+
+
+}
             }} className="group cursor-pointer" onClick={() => setCurrentIndex(index)}>
               <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/20 hover:border-blue-500/40 transition-all duration-300 backdrop-blur-sm">
                 {/* Header */}
@@ -298,7 +414,34 @@ export function InteractiveTestimonials() {
         </motion.div>
 
         {/* Enhanced CTA Section */}
-        <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
+        <motion.div className="text-center mt-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}>
           <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl p-12 border border-blue-500/30 backdrop-blur-sm">
             <h3 className="text-3xl font-bold text-white mb-6">
               Join Our Success Stories
@@ -306,13 +449,13 @@ export function InteractiveTestimonials() {
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Experience the same level of excellence and innovation that our clients rave about
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 Start Your Journey
                 <ChevronRight className="w-5 h-5"/>
               </button>
-              
+
               <button className="inline-flex items-center gap-3 border-2 border-blue-500/50 text-blue-300 hover:bg-blue-500/20 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 backdrop-blur-sm">
                 View All Reviews
                 <MessageCircle className="w-5 h-5"/>
@@ -321,5 +464,9 @@ export function InteractiveTestimonials() {
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </section>);
-}
+}}}}}}}}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

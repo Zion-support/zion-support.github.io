@@ -6,44 +6,54 @@ export default function AIResearchAssistant() {
             title: 'Intelligent Literature Review',
             description: 'AI-powered analysis of research papers, journals, and academic sources',
             icon: '📚',
-            benefits: ['Faster research discovery', 'Comprehensive coverage', 'Trend analysis']
+            benefits['Faster research discovery', 'Comprehensive coverage', 'Trend analysis']
         },
         {
             title: 'Data Mining & Analysis',
             description: 'Advanced algorithms to extract insights from large datasets',
             icon: '🔍',
-            benefits: ['Pattern recognition', 'Statistical analysis', 'Predictive modeling']
+            benefits['Pattern recognition', 'Statistical analysis', 'Predictive modeling']
         },
         {
             title: 'Citation Management',
             description: 'Automated citation tracking and bibliography generation',
             icon: '📝',
-            benefits: ['Multiple format support', 'Auto-updating', 'Collaboration tools']
+            benefits['Multiple format support', 'Auto-updating', 'Collaboration tools']
         },
         {
             title: 'Research Collaboration',
             description: 'Real-time collaboration tools for research teams',
             icon: '👥',
+<<<<<<< HEAD
             benefits: ['Shared workspaces', 'Version control', 'Communication tools']
+
+=======
+            benefits['Shared workspaces', 'Version control', 'Communication tools']
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
             industry: 'Academic Research',
-            applications: ['Literature reviews', 'Meta-analyses', 'Systematic reviews', 'Grant writing']
+            applications['Literature reviews', 'Meta-analyses', 'Systematic reviews', 'Grant writing']
         },
         {
             industry: 'Market Research',
-            applications: ['Competitive analysis', 'Trend forecasting', 'Customer insights', 'Industry reports']
+            applications['Competitive analysis', 'Trend forecasting', 'Customer insights', 'Industry reports']
         },
         {
             industry: 'Scientific Research',
-            applications: ['Data analysis', 'Hypothesis testing', 'Experimental design', 'Publication support']
+            applications['Data analysis', 'Hypothesis testing', 'Experimental design', 'Publication support']
         },
         {
             industry: 'Business Intelligence',
+<<<<<<< HEAD
             applications: ['Market analysis', 'Risk assessment', 'Strategic planning', 'Performance metrics']
+
+=======
+            applications['Market analysis', 'Risk assessment', 'Strategic planning', 'Performance metrics']
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const tools = [
         { name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/', description: 'AI-powered academic search engine' },
@@ -59,7 +69,7 @@ export default function AIResearchAssistant() {
             AI Research Assistant
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your research process with AI-powered tools that accelerate discovery, 
+            Transform your research process with AI-powered tools that accelerate discovery,
             enhance collaboration, and deliver deeper insights across all domains.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -124,7 +134,7 @@ export default function AIResearchAssistant() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Research?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join leading researchers and organizations who are already using AI to accelerate 
+              Join leading researchers and organizations who are already using AI to accelerate
               their discoveries and gain competitive advantages.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -138,5 +148,9 @@ export default function AIResearchAssistant() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

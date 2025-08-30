@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  Settings, 
-  FileText, 
-  HelpCircle, 
-  MessageSquare, 
-  BarChart3, 
-  ShoppingCart, 
-  Wrench, 
-  Globe, 
-  Building, 
-  Code, 
-  Shield, 
-  Zap, 
-  ChevronRight, 
+import {
+  Home,
+  Briefcase,
+  Users,
+  Settings,
+  FileText,
+  HelpCircle,
+  MessageSquare,
+  BarChart3,
+  ShoppingCart,
+  Wrench,
+  Globe,
+  Building,
+  Code,
+  Shield,
+  Zap,
+  ChevronRight,
   ChevronDown,
   Star,
   Rocket,
@@ -63,8 +63,6 @@ import {
   Info,
   ExternalLink,
   X
-} from 'lucide-react';
-
 interface SidebarItem {
   name: string;
   path: string;
@@ -72,7 +70,6 @@ interface SidebarItem {
   children?: SidebarItem[];
   badge?: string;
   external?: boolean;
-}
 
 export function Sidebar() {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
@@ -164,21 +161,29 @@ export function Sidebar() {
         { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
         { name: 'Reports', path: '/analytics/reports', icon: BarChart }
       ]
-    }
+
   ];
 
+<<<<<<< HEAD
   const toggleItem = (itemName: string) => {
-    setExpandedItems(prev => 
+    setExpandedItems(prev =>
       prev.includes(itemName)
         ? prev.filter(name => name !== itemName)
         : [...prev, itemName]
+=======
+  const toggleItem = (itemName: string) => {;
+    setExpandedItems(prev => ;
+      prev.includes(itemName);
+        ? prev.filter(name => name !== itemName);
+        : [...prev, itemName];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     );
   };
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <div className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
+    <div className = {`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
       isOpen ? 'translate-x-0' : 'translate-x-full'
     }`}>
       <div className="flex flex-col h-full">
@@ -189,7 +194,7 @@ export function Sidebar() {
             onClick={onClose}
             className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
             aria-label="Close sidebar"
-          >
+
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -208,7 +213,7 @@ export function Sidebar() {
                           ? 'bg-blue-600/20 text-white'
                           : 'text-gray-300 hover:text-white hover:bg-white/10'
                       }`}
-                    >
+
                       <div className="flex items-center space-x-3">
                         <item.icon className="h-5 w-5" />
                         <span className="font-medium">{item.name}</span>
@@ -219,7 +224,7 @@ export function Sidebar() {
                         }`}
                       />
                     </button>
-                    
+
                     {expandedItems.includes(item.name) && (
                       <div className="ml-6 mt-2 space-y-1">
                         {item.children.map((child) => (
@@ -232,7 +237,7 @@ export function Sidebar() {
                                 : 'text-gray-400 hover:text-white hover:bg-white/10'
                             }`}
                             onClick={onClose}
-                          >
+
                             <child.icon className="h-4 w-4" />
                             <span className="text-sm">{child.name}</span>
                           </Link>
@@ -249,7 +254,7 @@ export function Sidebar() {
                         : 'text-gray-300 hover:text-white hover:bg-white/10'
                     }`}
                     onClick={onClose}
-                  >
+
                     <item.icon className="h-5 w-5" />
                     <span className="font-medium">{item.name}</span>
                   </Link>
@@ -267,21 +272,29 @@ export function Sidebar() {
               to="/contact"
               className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
               onClick={onClose}
-            >
+<<<<<<< HEAD
+
               Contact Support
             </Link>
           </div>
         </div>
       </div>
     </div>
+=======
+            >;
+              Contact Support;
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
   return <Sidebar isOpen={isOpen} onClose={onClose} />;
-}
+}}}}}}

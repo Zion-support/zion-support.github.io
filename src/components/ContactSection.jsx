@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users } from 'lucide-react';
-export function ContactSection() {
+import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users export function ContactSection() {
     const contactMethods = [
         {
             icon: <Mail className="w-6 h-6"/>,
@@ -26,7 +25,7 @@ export function ContactSection() {
             contact: "Available 24/7",
             link: "/chat",
             color: "from-zion-blue to-zion-purple"
-        }
+
     ];
     const officeLocations = [
         {
@@ -46,7 +45,7 @@ export function ContactSection() {
             country: "United Kingdom",
             address: "1 Canary Wharf, London E14 5AB",
             icon: <MapPin className="w-5 h-5"/>
-        }
+
     ];
     const supportFeatures = [
         {
@@ -68,7 +67,7 @@ export function ContactSection() {
             icon: <Globe className="w-6 h-6"/>,
             title: "Global Reach",
             description: "Support available in multiple time zones"
-        }
+
     ];
     return (<section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">
       <div className="container mx-auto px-4">
@@ -78,7 +77,7 @@ export function ContactSection() {
             Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Touch</span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business with cutting-edge technology? 
+            Ready to transform your business with cutting-edge technology?
             Let's discuss how Zion Tech Group can help you achieve your goals.
           </p>
         </div>
@@ -172,7 +171,7 @@ export function ContactSection() {
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your technology needs and discover how 
+            Contact us today to discuss your technology needs and discover how
             Zion Tech Group can help transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -186,5 +185,9 @@ export function ContactSection() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
-}
+}}}}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

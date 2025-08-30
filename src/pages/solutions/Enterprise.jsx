@@ -1,7 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock const EnterpriseSolutions = () => {
+=======
+import Link from 'next/link';
 import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
 const EnterpriseSolutions = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const solutions = [
         {
             title: 'AI-Powered Business Intelligence',
@@ -54,7 +59,7 @@ const EnterpriseSolutions = () => {
             ],
             icon: Zap,
             href: '/services/ai-autonomous-systems'
-        }
+
     ];
     const industries = [
         {
@@ -80,7 +85,7 @@ const EnterpriseSolutions = () => {
             description: 'Omnichannel retail solutions for modern commerce.',
             icon: Globe,
             solutions: ['Customer personalization', 'Inventory management', 'Demand forecasting', 'E-commerce optimization']
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -90,7 +95,7 @@ const EnterpriseSolutions = () => {
             Enterprise Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your enterprise with cutting-edge AI technology. Our solutions are designed to scale 
+            Transform your enterprise with cutting-edge AI technology. Our solutions are designed to scale
             with your business and drive measurable results across all departments.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -110,7 +115,7 @@ const EnterpriseSolutions = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Core Enterprise Solutions
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => {
             const Icon = solution.icon;
@@ -121,16 +126,16 @@ const EnterpriseSolutions = () => {
                     </div>
                     <h3 className="text-2xl font-bold">{solution.title}</h3>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-6">{solution.description}</p>
-                  
+
                   <ul className="space-y-3 mb-6">
                     {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-gray-300">{feature}</span>
                       </li>))}
                   </ul>
-                  
+
                   <Link to={solution.href} className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                     Learn More
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,7 +154,7 @@ const EnterpriseSolutions = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Industry-Specific Solutions
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => {
             const Icon = industry.icon;
@@ -160,9 +165,9 @@ const EnterpriseSolutions = () => {
                     </div>
                     <h3 className="text-2xl font-bold">{industry.name}</h3>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-6">{industry.description}</p>
-                  
+
                   <div className="grid grid-cols-1 gap-3">
                     {industry.solutions.map((solution, solutionIndex) => (<div key={solutionIndex} className="bg-gray-700/50 rounded-lg p-3">
                         <span className="text-gray-300">{solution}</span>
@@ -180,7 +185,7 @@ const EnterpriseSolutions = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Why Choose Zion Tech Group?
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
             {
@@ -197,7 +202,7 @@ const EnterpriseSolutions = () => {
                 title: '24/7 Support',
                 description: 'Round-the-clock support with dedicated account managers.',
                 icon: Users
-            }
+
         ].map((benefit, index) => {
             const Icon = benefit.icon;
             return (<div key={index} className="text-center">
@@ -236,3 +241,4 @@ const EnterpriseSolutions = () => {
     </div>);
 };
 export default EnterpriseSolutions;
+}}}}

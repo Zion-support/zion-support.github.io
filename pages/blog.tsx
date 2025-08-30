@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react'
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default function Blog() {
+=======
+import React from 'react.ts'
+import Link from 'next/link.ts'
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react'
 
-export default function Blog() {
+export default function Blog(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const blogPosts = [
     {
       id: 'ai-automation-trends-2025',
@@ -12,7 +18,7 @@ export default function Blog() {
       date: '2025-01-15',
       readTime: '8 min read',
       category: 'AI & Automation',
-      tags: ['AI', 'Automation', 'Trends', '2025'],
+      tags['AI', 'Automation', 'Trends', '2025'],
       featured: true,
       image: '/blog/ai-automation-trends.jpg'
     },
@@ -24,7 +30,7 @@ export default function Blog() {
       date: '2025-01-10',
       readTime: '12 min read',
       category: 'Cybersecurity',
-      tags: ['Cloud', 'Security', 'DevOps', 'Best Practices'],
+      tags['Cloud', 'Security', 'DevOps', 'Best Practices'],
       featured: false,
       image: '/blog/cloud-security.jpg'
     },
@@ -36,7 +42,7 @@ export default function Blog() {
       date: '2025-01-08',
       readTime: '10 min read',
       category: 'Emerging Tech',
-      tags: ['Quantum', 'Computing', 'Enterprise', 'Future'],
+      tags['Quantum', 'Computing', 'Enterprise', 'Future'],
       featured: false,
       image: '/blog/quantum-computing.jpg'
     },
@@ -48,7 +54,7 @@ export default function Blog() {
       date: '2025-01-05',
       readTime: '15 min read',
       category: 'DevOps',
-      tags: ['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
+      tags['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
       featured: false,
       image: '/blog/devops-automation.jpg'
     },
@@ -60,7 +66,7 @@ export default function Blog() {
       date: '2025-01-03',
       readTime: '11 min read',
       category: 'AI & Ethics',
-      tags: ['AI Ethics', 'Governance', 'Compliance', 'Business'],
+      tags['AI Ethics', 'Governance', 'Compliance', 'Business'],
       featured: false,
       image: '/blog/ai-ethics.jpg'
     },
@@ -72,10 +78,10 @@ export default function Blog() {
       date: '2024-12-28',
       readTime: '14 min read',
       category: 'Cybersecurity',
-      tags: ['Cybersecurity', 'Threats', 'Analysis', '2025'],
+      tags['Cybersecurity', 'Threats', 'Analysis', '2025'],
       featured: false,
       image: '/blog/cyber-threats.jpg'
-    }
+
   ]
 
   const categories = [
@@ -121,10 +127,10 @@ export default function Blog() {
                       {post.category}
                     </span>
                   </div>
-                  
+
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h2>
                   <p className="text-lg text-gray-600 mb-6">{post.excerpt}</p>
-                  
+
                   <div className="flex items-center gap-6 text-sm text-gray-500 mb-6">
                     <div className="flex items-center gap-2">
                       <User className="h-4 w-4" />
@@ -132,10 +138,10 @@ export default function Blog() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
                       })}
                     </div>
                     <div className="flex items-center gap-2">
@@ -143,7 +149,7 @@ export default function Blog() {
                       {post.readTime}
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {post.tags.map(tag => (
                       <span key={tag} className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
@@ -151,11 +157,11 @@ export default function Blog() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <Link
                     href={`/blog/${post.id}`}
                     className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
-                  >
+
                     Read Full Article
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -178,9 +184,15 @@ export default function Blog() {
               Explore our collection of articles covering the latest trends, best practices, and industry insights.
             </p>
           </div>
-          
+<<<<<<< HEAD
+
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.filter(post => !post.featured).map((post, index) => (
+=======
+          
+          <div className="grid grid-cols-1 gap-8 md: grid-cols-2 lg:grid-cols-3">
+            {blogPosts.filter(post  => !post.featured).map((post, index) => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <article key={post.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -189,10 +201,10 @@ export default function Blog() {
                     </span>
                     <span className="text-xs text-gray-500">{post.readTime}</span>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                  
+
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-1">
                       <User className="h-3 w-3" />
@@ -200,13 +212,13 @@ export default function Blog() {
                     </div>
                     <div className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric' 
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric'
                       })}
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-1 mb-4">
                     {post.tags.slice(0, 3).map(tag => (
                       <span key={tag} className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-50 text-blue-700">
@@ -214,11 +226,11 @@ export default function Blog() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <Link
                     href={`/blog/${post.id}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
-                  >
+
                     Read More
                     <ArrowRight className="ml-1 h-3 w-3" />
                   </Link>
@@ -248,10 +260,20 @@ export default function Blog() {
               <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200">
                 Subscribe
               </button>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
   )
-}
+}}}
+=======
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

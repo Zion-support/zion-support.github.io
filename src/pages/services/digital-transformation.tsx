@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone import { Link } from 'react-router-dom';
+=======
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function DigitalTransformation() {
+export default function DigitalTransformation(...args: []):  {
   return (
     <>
       <Helmet>
         <title>Digital Transformation - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation." />
+        <meta name = "description" content="Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation." />
         <meta name="keywords" content="digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation" />
       </Helmet>
 
@@ -22,22 +28,22 @@ export default function DigitalTransformation() {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Business Transformation
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Digital
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Transformation</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with comprehensive digital transformation services. Modernize operations, 
+                Transform your business with comprehensive digital transformation services. Modernize operations,
                 enhance customer experience, and drive innovation across your organization.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,12 +64,12 @@ export default function DigitalTransformation() {
                 Comprehensive Digital Transformation
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our digital transformation services cover every aspect of modernizing your business 
+                Our digital transformation services cover every aspect of modernizing your business
                 for the digital age.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -94,8 +100,13 @@ export default function DigitalTransformation() {
                   icon: TrendingUp,
                   title: "Data Analytics",
                   description: "Leverage data insights for informed decision-making and optimization."
-                }
+<<<<<<< HEAD
+
               ].map((feature, index) => (
+=======
+                }
+              ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +131,7 @@ export default function DigitalTransformation() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Technology Infrastructure",
@@ -157,8 +168,13 @@ export default function DigitalTransformation() {
                   description: "Ensure digital security and regulatory compliance.",
                   icon: Shield,
                   benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
-                }
+<<<<<<< HEAD
+
               ].map((area, index) => (
+=======
+                }
+              ].map((area, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -191,7 +207,7 @@ export default function DigitalTransformation() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Cloud Platforms",
@@ -228,8 +244,13 @@ export default function DigitalTransformation() {
                   description: "Advanced cybersecurity and compliance solutions.",
                   icon: Shield,
                   features: ["Zero-trust security", "Compliance automation", "Threat detection"]
-                }
+<<<<<<< HEAD
+
               ].map((tech, index) => (
+=======
+                }
+              ].map((tech, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
@@ -289,7 +310,7 @@ export default function DigitalTransformation() {
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -314,7 +335,7 @@ export default function DigitalTransformation() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -335,8 +356,13 @@ export default function DigitalTransformation() {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and scale digital capabilities."
-                }
+<<<<<<< HEAD
+
               ].map((step, index) => (
+=======
+                }
+              ].map((step, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -362,14 +388,15 @@ export default function DigitalTransformation() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-              >
+<<<<<<< HEAD
+
                 Explore All Services
               </Link>
             </div>
@@ -377,5 +404,15 @@ export default function DigitalTransformation() {
         </section>
       </div>
     </>
+=======
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
+}}}}}}

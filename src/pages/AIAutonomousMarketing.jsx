@@ -8,7 +8,7 @@ const AIAutonomousMarketing = () => {
         <meta name="keywords" content="AI marketing, autonomous campaigns, marketing automation, AI content creation, personalized marketing, marketing AI"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-marketing"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousMarketing = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Predictive Analytics</h3>
               <p className="text-gray-300">Customer behavior prediction</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-red-400 text-4xl mb-4">📧</div>
               <h3 className="text-xl font-semibold text-white mb-3">Email Automation</h3>
               <p className="text-gray-300">Intelligent email campaigns</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">📱</div>
               <h3 className="text-xl font-semibold text-white mb-3">Social Media</h3>
               <p className="text-gray-300">Automated social posting</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🎨</div>
               <h3 className="text-xl font-semibold text-white mb-3">Creative Generation</h3>
               <p className="text-gray-300">AI-powered ad creation</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">SEO Optimization</h3>
               <p className="text-gray-300">Automated search optimization</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Tracking</h3>
@@ -93,19 +93,19 @@ const AIAutonomousMarketing = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Data Collection</h3>
                 <p className="text-gray-300">Customer data analysis</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-xl font-semibold text-white mb-3">AI Strategy</h3>
                 <p className="text-gray-300">Intelligent campaign planning</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Execution</h3>
                 <p className="text-gray-300">Automated campaign launch</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Optimization</h3>
@@ -132,12 +132,12 @@ const AIAutonomousMarketing = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">E-commerce</h3>
                 <p className="text-gray-300">Product promotion and sales</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">B2B Marketing</h3>
                 <p className="text-gray-300">Lead generation and nurturing</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Brand Awareness</h3>
                 <p className="text-gray-300">Multi-channel brand building</p>
@@ -162,6 +162,5 @@ const AIAutonomousMarketing = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousMarketing;

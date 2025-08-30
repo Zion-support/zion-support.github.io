@@ -5,7 +5,7 @@ export const real2026Q2Additions = [
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
     description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',
-    features: [
+    features[
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI Act',
       'Automated risk and impact assessments with mitigations',
       'Dataset lineage, consent tracking, and PII classification',
@@ -14,13 +14,13 @@ export const real2026Q2Additions = [
       'Realtime controls dashboard and drift alerts',
       'Export auditor-ready reports (SOC2, ISO, HIPAA add-ons)'
     ],
-    useCases: [
+    useCases[
       'Enterprise AI model governance',
       'Regulatory readiness and audits',
       'Vendor model risk management'
     ],
-    integrations: ['Jira', 'ServiceNow', 'Slack', 'GitHub', 'Azure OpenAI', 'Vertex AI', 'Datadog'],
-    competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
+    integrations['Jira', 'ServiceNow', 'Slack', 'GitHub', 'Azure OpenAI', 'Vertex AI', 'Datadog'],
+    competitors['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2,500',
     period: '/month',
     trialDays: 14,
@@ -35,7 +35,7 @@ export const real2026Q2Additions = [
     category: 'AI & Data',
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',
     description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',
-    features: [
+    features[
       'Differential privacy and k-anonymity options',
       'Data schema import and auto-profiling',
       'Class balancing, minority class boosters',
@@ -43,9 +43,9 @@ export const real2026Q2Additions = [
       'Evaluation dashboard with KS/JS metrics',
       'SDKs for Python/JS and API access'
     ],
-    useCases: ['Training data augmentation', 'Privacy-preserving analytics', 'Test data generation'],
-    integrations: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
-    competitors: ['Mostly AI', 'Gretel', 'YData'],
+    useCases['Training data augmentation', 'Privacy-preserving analytics', 'Test data generation'],
+    integrations['S3', 'BigQuery', 'Snowflake', 'Databricks'],
+    competitors['Mostly AI', 'Gretel', 'YData'],
     price: '$1,200',
     period: '/month',
     trialDays: 14,
@@ -60,7 +60,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
     description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',
-    features: [
+    features[
       'Return portal widgets and hosted flows',
       'Policy rules engine with A/B tests',
       'Carrier label and pickup automation',
@@ -68,9 +68,9 @@ export const real2026Q2Additions = [
       'Disposition tracking and warehouse notifications',
       'Analytics: reasons, preventable returns, CX scores'
     ],
-    useCases: ['DTC brands returns automation', 'Marketplace return SLAs', 'Reduce WISMO support'],
-    integrations: ['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
-    competitors: ['Loop Returns', 'Returnly'],
+    useCases['DTC brands returns automation', 'Marketplace return SLAs', 'Reduce WISMO support'],
+    integrations['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
+    competitors['Loop Returns', 'Returnly'],
     price: '$399',
     period: '/month',
     trialDays: 14,
@@ -85,7 +85,7 @@ export const real2026Q2Additions = [
     category: 'Observability',
     tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',
     description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',
-    features: [
+    features[
       'Token and cost telemetry with budgets',
       'Hallucination detectors and blocklists',
       'Content safety checks and policy labels',
@@ -93,9 +93,9 @@ export const real2026Q2Additions = [
       'Regression tests and golden prompts',
       'Quality scorecards and SLA alerts'
     ],
-    useCases: ['GenAI product analytics', 'Model regression monitoring', 'Cost governance'],
-    integrations: ['OpenAI', 'Azure OpenAI', 'Vertex AI', 'LangChain', 'Vercel', 'Datadog'],
-    competitors: ['Humanloop', 'Arize', 'Langfuse'],
+    useCases['GenAI product analytics', 'Model regression monitoring', 'Cost governance'],
+    integrations['OpenAI', 'Azure OpenAI', 'Vertex AI', 'LangChain', 'Vercel', 'Datadog'],
+    competitors['Humanloop', 'Arize', 'Langfuse'],
     price: '$490',
     period: '/month',
     trialDays: 14,
@@ -110,16 +110,16 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',
     tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',
     description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',
-    features: [
+    features[
       'Real-time anomaly detection',
       'Slack/Teams alerts and triage workflows',
       'Automated remediation playbooks',
       'Kubernetes cost allocation and showback',
       'Tag hygiene and unused resource cleanup'
     ],
-    useCases: ['FinOps guardrails', 'Cost regression prevention', 'Unit economics tracking'],
-    integrations: ['AWS', 'GCP', 'Azure', 'Kubernetes', 'Slack', 'PagerDuty'],
-    competitors: ['CloudZero', 'Kubecost'],
+    useCases['FinOps guardrails', 'Cost regression prevention', 'Unit economics tracking'],
+    integrations['AWS', 'GCP', 'Azure', 'Kubernetes', 'Slack', 'PagerDuty'],
+    competitors['CloudZero', 'Kubecost'],
     price: '$690',
     period: '/month',
     trialDays: 14,
@@ -134,16 +134,16 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',
     tagline: 'REST and SDKs for compliant e-signatures with audit trails.',
     description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',
-    features: [
+    features[
       'Signer authentication and KYC add-ons',
       'Templates and merge fields',
       'Bulk send and reminders',
       'Webhooks and event callbacks',
       'LTV and certificate validation'
     ],
-    useCases: ['Contract workflows', 'Internal approvals', 'Customer onboarding'],
-    integrations: ['Zapier', 'Make.com', 'Salesforce', 'HubSpot'],
-    competitors: ['DocuSign API', 'HelloSign API'],
+    useCases['Contract workflows', 'Internal approvals', 'Customer onboarding'],
+    integrations['Zapier', 'Make.com', 'Salesforce', 'HubSpot'],
+    competitors['DocuSign API', 'HelloSign API'],
     price: '$149',
     period: '/month',
     trialDays: 14,
@@ -158,16 +158,16 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',
     tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',
     description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',
-    features: [
+    features[
       'Multiple environments and components',
       'SLOs and error budget burn tracking',
       'Incident templates and RCAs',
       'Subscriber notifications and webhooks',
       'Custom domains and branding'
     ],
-    useCases: ['Public trust for SaaS', 'B2B vendor requirements', 'Platform reliability communications'],
-    integrations: ['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty'],
-    competitors: ['Statuspage', 'Better Uptime'],
+    useCases['Public trust for SaaS', 'B2B vendor requirements', 'Platform reliability communications'],
+    integrations['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty'],
+    competitors['Statuspage', 'Better Uptime'],
     price: '$79',
     period: '/month',
     trialDays: 14,
@@ -182,16 +182,16 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',
     tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',
     description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',
-    features: [
+    features[
       'Questionnaire templates and AI autofill',
       'Evidence collection from SOC2/SIG Lite',
       'Continuous internet scanning and ratings',
       'Findings, tasks, and remediation playbooks',
       'Board-ready risk reports'
     ],
-    useCases: ['Third-party risk programs', 'Sales security reviews', 'Procurement diligence'],
-    integrations: ['SecurityScorecard', 'BitSight', 'OneTrust', 'Jira'],
-    competitors: ['Whistic', 'Vanta', 'ZenGRC'],
+    useCases['Third-party risk programs', 'Sales security reviews', 'Procurement diligence'],
+    integrations['SecurityScorecard', 'BitSight', 'OneTrust', 'Jira'],
+    competitors['Whistic', 'Vanta', 'ZenGRC'],
     price: '$890',
     period: '/month',
     trialDays: 14,
@@ -206,16 +206,16 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',
     tagline: 'Embeddings + RAG search over docs with answer extraction.',
     description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',
-    features: [
+    features[
       'Doc ingestion from URLs, PDFs, and repos',
       'Embeddings index with incremental updates',
       'RAG with citations and safety checks',
       'Analytics: searches, deflections, gaps',
       'Multi-tenant and SSO support'
     ],
-    useCases: ['Developer portals', 'Internal knowledge bases', 'Customer docs'],
-    integrations: ['GitHub', 'Confluence', 'Notion', 'Zendesk'],
-    competitors: ['Algolia Answers', 'Vectara'],
+    useCases['Developer portals', 'Internal knowledge bases', 'Customer docs'],
+    integrations['GitHub', 'Confluence', 'Notion', 'Zendesk'],
+    competitors['Algolia Answers', 'Vectara'],
     price: '$249',
     period: '/month',
     trialDays: 14,
@@ -230,22 +230,33 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',
     description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',
-    features: [
+    features[
       'Windows/macOS/Linux agent and lightweight mode',
       'Patch automation and health policies',
       'Remote scripts and secure sessions',
       'Inventory, software metering, and alerts',
       'Ticketing and customer portals'
     ],
-    useCases: ['MSPs and IT providers', 'Internal IT for SMBs', 'BYOD governance'],
-    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
-    competitors: ['Atera', 'NinjaOne'],
+    useCases['MSPs and IT providers', 'Internal IT for SMBs', 'BYOD governance'],
+    integrations['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
+    competitors['Atera', 'NinjaOne'],
     price: '$4',
+<<<<<<< HEAD
     period: '/device/month',
     trialDays: 14,
     setupTime: 'Fast',
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-  }
+
+];}
+=======
+    period: '/device/month',;
+    trialDays: 14,;
+    setupTime: 'Fast',;
+    marketPosition: 'Cost-effective RMM for partners and IT teams',;
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
+  };
 ];
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

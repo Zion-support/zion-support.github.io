@@ -1,59 +1,84 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ultimateZionServices2025 } from '../data/ultimate-zion-services-2025';
+import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
 
-const UltimateZionServicesShowcase: React.FC = () => {
+const UltimateZionServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' },
-    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },
-    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },
-    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' },
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' },
-    { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' }
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' },;
+    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },;
+    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },;
+    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },;
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' },;
+    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' },;
+    { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' };
   ];
 
-  const filteredServices = ultimateZionServices2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ultimateZionServices2025.filter(service => {;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1,;
+        delayChildren: 0.2;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
+  hidden: { opacity: 0,
+  y: 20 
+
+
+
+
+
+;
+},;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0.5 };
+    };
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} 
             transition={{ duration: 0.6 }}
           >
             Ultimate
@@ -68,9 +93,36 @@ const UltimateZionServicesShowcase: React.FC = () => {
           
           <motion.p 
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} 
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
           >
             Discover our revolutionary portfolio of cutting-edge micro SAAS services, quantum computing solutions, 
             blockchain innovations, space technology, and AI-powered services designed to transform industries and 
@@ -80,9 +132,36 @@ const UltimateZionServicesShowcase: React.FC = () => {
           {/* Contact Information */}
           <motion.div 
             className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-4xl mx-auto border border-white/20" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} 
+            transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
           >
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
@@ -119,9 +198,36 @@ const UltimateZionServicesShowcase: React.FC = () => {
           {/* Search and Filter */}
           <motion.div 
             className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12" 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} 
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} 
+            transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
           >
             <input 
               type="text" 
@@ -297,8 +403,26 @@ const UltimateZionServicesShowcase: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -317,13 +441,13 @@ const UltimateZionServicesShowcase: React.FC = () => {
               </button>
             </div>
             <div className="mt-6 text-sm text-gray-400">
-              <p>🌟 Trusted by Fortune 500 companies worldwide</p>
-              <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+              <p>🌟 Trusted by Fortune 500 companies worldwide</p>;
+              <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

@@ -10,8 +10,8 @@ const AIAutonomousBusinessProcessAutomation = () => {
               AI Autonomous Business Process Automation
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your business processes with AI-powered automation. 
-              Our intelligent systems analyze, optimize, and execute business processes 
+              Revolutionize your business processes with AI-powered automation.
+              Our intelligent systems analyze, optimize, and execute business processes
               with unprecedented efficiency and accuracy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -32,16 +32,16 @@ const AIAutonomousBusinessProcessAutomation = () => {
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Intelligent Process Automation
           </h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6 text-cyan-400">AI-Powered Process Management</h3>
               <p className="text-lg text-gray-300 mb-8">
-                Our AI systems don't just automate processes—they understand them, 
-                optimize them, and continuously improve them. Every business process 
+                Our AI systems don't just automate processes—they understand them,
+                optimize them, and continuously improve them. Every business process
                 becomes more efficient, accurate, and cost-effective.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -52,7 +52,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                     <p className="text-gray-300">AI analyzes existing processes to identify automation opportunities</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-bold">2</span>
@@ -62,7 +62,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                     <p className="text-gray-300">AI designs optimal process workflows based on business goals</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-bold">3</span>
@@ -74,7 +74,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-cyan-500/30">
               <h4 className="text-2xl font-bold text-cyan-400 mb-6">Key Benefits</h4>
               <div className="space-y-4">
@@ -110,7 +110,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Automated Process Types
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
@@ -118,7 +118,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Communication Processes</h3>
               <p className="text-gray-300 mb-6">
-                Automated email campaigns, customer notifications, and internal 
+                Automated email campaigns, customer notifications, and internal
                 communications with intelligent personalization.
               </p>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -135,7 +135,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Data Processing</h3>
               <p className="text-gray-300 mb-6">
-                Automated data collection, analysis, and reporting with 
+                Automated data collection, analysis, and reporting with
                 real-time insights and predictive analytics.
               </p>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -152,7 +152,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Sales Processes</h3>
               <p className="text-gray-300 mb-6">
-                End-to-end sales automation from lead generation to 
+                End-to-end sales automation from lead generation to
                 deal closure with intelligent qualification and nurturing.
               </p>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -169,7 +169,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">HR Processes</h3>
               <p className="text-gray-300 mb-6">
-                Automated recruitment, onboarding, performance management, 
+                Automated recruitment, onboarding, performance management,
                 and employee lifecycle processes.
               </p>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -186,7 +186,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Financial Processes</h3>
               <p className="text-gray-300 mb-6">
-                Automated invoicing, expense management, budget tracking, 
+                Automated invoicing, expense management, budget tracking,
                 and financial reporting processes.
               </p>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -203,7 +203,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">IT Operations</h3>
               <p className="text-gray-300 mb-6">
-                Automated system monitoring, incident response, 
+                Automated system monitoring, incident response,
                 and infrastructure management processes.
               </p>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -223,7 +223,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Advanced Technology Features
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-3xl font-bold mb-8 text-cyan-400">AI & Machine Learning</h3>
@@ -246,7 +246,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-3xl font-bold mb-8 text-cyan-400">Automation Capabilities</h3>
               <div className="space-y-4">
@@ -278,7 +278,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Process Automation Pricing
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-600 hover:border-cyan-400/50 transition-all duration-300">
               <h3 className="text-2xl font-bold mb-4 text-white">Basic Automation</h3>
@@ -338,7 +338,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
             Ready to Automate Your Processes?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your business with AI-powered process automation. 
+            Transform your business with AI-powered process automation.
             Start your free trial today and see the difference automation can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -351,6 +351,5 @@ const AIAutonomousBusinessProcessAutomation = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AIAutonomousBusinessProcessAutomation;

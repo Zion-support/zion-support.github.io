@@ -1,57 +1,68 @@
-import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, TrendingUp, Zap, Target, Clock, Shield, Sun } from 'lucide-react';
-
-export default function AISustainableTechnology() {
+import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, TrendingUp, Zap, Target, Clock, Shield, Sun export default function AISustainableTechnology() {
   const features = [
     'AI-powered energy consumption optimization',
     'Real-time sustainability monitoring and reporting',
     'Intelligent carbon footprint tracking and reduction',
-    'Advanced waste management and recycling optimization',
-    'Automated sustainability compliance monitoring',
-    'Real-time environmental impact assessment',
-    'Advanced resource efficiency optimization',
-    'Predictive sustainability analytics',
-    'AI-driven green technology recommendations',
-    'Comprehensive sustainability dashboard and reporting'
+    'Advanced waste management and recycling optimization',;
+    'Automated sustainability compliance monitoring',;
+    'Real-time environmental impact assessment',;
+    'Advanced resource efficiency optimization',;
+    'Predictive sustainability analytics',;
+    'AI-driven green technology recommendations',;
+    'Comprehensive sustainability dashboard and reporting';
   ];
 
-  const benefits = [
-    'Reduce energy consumption by 25-40%',
-    'Lower carbon footprint by 30-50%',
-    'Improve resource efficiency by 35%',
-    'Reduce waste generation by 40%',
-    'Achieve sustainability certifications faster',
-    'Enable data-driven environmental decisions'
+  const benefits = [;
+    'Reduce energy consumption by 25-40%',;
+    'Lower carbon footprint by 30-50%',;
+    'Improve resource efficiency by 35%',;
+    'Reduce waste generation by 40%',;
+    'Achieve sustainability certifications faster',;
+    'Enable data-driven environmental decisions';
   ];
 
-  const useCases = [
-    'Manufacturing and industrial sustainability',
-    'Commercial building energy management',
-    'Data center and IT sustainability',
-    'Transportation and logistics optimization',
-    'Retail and hospitality sustainability',
-    'Healthcare and medical facility management'
+  const useCases = [;
+    'Manufacturing and industrial sustainability',;
+    'Commercial building energy management',;
+    'Data center and IT sustainability',;
+    'Transportation and logistics optimization',;
+    'Retail and hospitality sustainability',;
+    'Healthcare and medical facility management';
   ];
 
   const tiers = [
-    { 
-      name: 'Sustainability Starter', 
-      price: '$299/mo', 
-      details: ['Up to 5 locations', 'Basic AI monitoring', 'Standard reporting', 'Email support'] 
+    {
+      name: 'Sustainability Starter',
+      price: '$299/mo',
+      details: ['Up to 5 locations', 'Basic AI monitoring', 'Standard reporting', 'Email support']
     },
+<<<<<<< HEAD
+    {
+      name: 'Sustainability Professional',
+      price: '$799/mo',
+      details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support']
+    },
+    {
+      name: 'Enterprise Sustainability',
+      price: '$2,499/mo',
+      details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support']
+    },
+=======
     { 
       name: 'Sustainability Professional', 
       price: '$799/mo', 
-      details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise Sustainability', 
-      price: '$2,499/mo', 
-      details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+      details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise Sustainability', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -74,7 +85,7 @@ export default function AISustainableTechnology() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
@@ -87,7 +98,7 @@ export default function AISustainableTechnology() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -147,12 +158,12 @@ export default function AISustainableTechnology() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-zion-slate-light">;
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}

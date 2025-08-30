@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   Package, 
   TrendingUp, 
@@ -65,13 +65,13 @@ export default function AIInventoryManagement() {
     {
       icon: PieChart,
       title: "Advanced Analytics Dashboard",
-      description: "Comprehensive insights into inventory performance, turnover rates, and cost optimization opportunities."
-    },
-    {
-      icon: Activity,
-      title: "Supply Chain Integration",
-      description: "Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility."
-    }
+      description: "Comprehensive insights into inventory performance, turnover rates, and cost optimization opportunities.";
+    },;
+    {;
+      icon: Activity,;
+      title: "Supply Chain Integration",;
+      description: "Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility.";
+    };
   ];
 
   const benefits = [
@@ -98,13 +98,13 @@ export default function AIInventoryManagement() {
     {
       icon: TrendingUp,
       title: "Improved Cash Flow",
-      description: "Better inventory turnover rates and reduced capital tied up in excess stock."
-    },
-    {
-      icon: Clock,
-      title: "Time Savings",
-      description: "Automate routine inventory tasks and focus on strategic business decisions."
-    }
+      description: "Better inventory turnover rates and reduced capital tied up in excess stock.";
+    },;
+    {;
+      icon: Clock,;
+      title: "Time Savings",;
+      description: "Automate routine inventory tasks and focus on strategic business decisions.";
+    };
   ];
 
   const pricingPlans = [
@@ -156,13 +156,13 @@ export default function AIInventoryManagement() {
         "White-label solutions",
         "Advanced security features",
         "Custom reporting",
-        "On-premise deployment",
-        "SLA guarantees",
-        "24/7 support"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
+        "On-premise deployment",;
+        "SLA guarantees",;
+        "24/7 support";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -189,13 +189,13 @@ export default function AIInventoryManagement() {
     {
       industry: "Food & Beverage",
       description: "Manage perishable inventory, track expiration dates, and optimize food waste reduction",
-      icon: Package
-    },
-    {
-      industry: "Automotive",
-      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",
-      icon: Truck
-    }
+      icon: Package;
+    },;
+    {;
+      industry: "Automotive",;
+      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
+      icon: Truck;
+    };
   ];
 
   const integrations = [
@@ -216,13 +216,13 @@ export default function AIInventoryManagement() {
       platforms: ["Square", "Toast", "Lightspeed", "ShopKeep"]
     },
     {
-      name: "ERP Systems",
-      platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"]
-    },
-    {
-      name: "Supplier Platforms",
-      platforms: ["Alibaba", "Amazon Business", "ThomasNet", "Global Sources"]
-    }
+      name: "ERP Systems",;
+      platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"];
+    },;
+    {;
+      name: "Supplier Platforms",;
+      platforms: ["Alibaba", "Amazon Business", "ThomasNet", "Global Sources"];
+    };
   ];
 
   const keyMetrics = [
@@ -239,17 +239,17 @@ export default function AIInventoryManagement() {
     {
       metric: "60%",
       label: "Stockout Reduction",
-      description: "Decrease in stockout incidents"
-    },
-    {
-      metric: "3x",
-      label: "Faster Processing",
-      description: "Improved inventory processing speed"
-    }
+      description: "Decrease in stockout incidents";
+    },;
+    {;
+      metric: "3x",;
+      label: "Faster Processing",;
+      description: "Improved inventory processing speed";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Inventory Management - Zion Tech Group"
         description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
@@ -261,8 +261,26 @@ export default function AIInventoryManagement() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
@@ -300,9 +318,36 @@ export default function AIInventoryManagement() {
             {keyMetrics.map((metric, index) => (
               <motion.div
                 key={metric.metric}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -325,8 +370,26 @@ export default function AIInventoryManagement() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -343,9 +406,36 @@ export default function AIInventoryManagement() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
               >
@@ -378,8 +468,26 @@ export default function AIInventoryManagement() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -396,9 +504,36 @@ export default function AIInventoryManagement() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
               >
@@ -431,8 +566,26 @@ export default function AIInventoryManagement() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -449,9 +602,36 @@ export default function AIInventoryManagement() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
@@ -502,8 +682,26 @@ export default function AIInventoryManagement() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -520,9 +718,36 @@ export default function AIInventoryManagement() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
               >
@@ -555,8 +780,26 @@ export default function AIInventoryManagement() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -573,9 +816,36 @@ export default function AIInventoryManagement() {
             {integrations.map((integration, index) => (
               <motion.div
                 key={integration.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
               >
@@ -602,8 +872,26 @@ export default function AIInventoryManagement() {
       <section className="py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -621,12 +909,12 @@ export default function AIInventoryManagement() {
               </button>
               <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

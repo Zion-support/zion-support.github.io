@@ -1,64 +1,75 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIDataSecurity() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDataSecurity() {
   const features = [
     'AI-powered data security optimization',
-    'Intelligent threat detection and response',
-    'Automated security monitoring and alerting',
-    'Predictive analytics for security threats',
-    'Smart security compliance and governance',
-    'AI-driven security automation and orchestration',
-    'Real-time security analytics and insights',
-    'Custom AI models for security applications'
+    'Intelligent threat detection and response',;
+    'Automated security monitoring and alerting',;
+    'Predictive analytics for security threats',;
+    'Smart security compliance and governance',;
+    'AI-driven security automation and orchestration',;
+    'Real-time security analytics and insights',;
+    'Custom AI models for security applications';
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$399/mo', 
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
+<<<<<<< HEAD
+    {
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
+    },
+    {
+      name: 'Enterprise',
+      price: '$2,499/mo',
+      details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support']
+    },
+=======
     { 
       name: 'Business', 
       price: '$999/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Data security optimization',
-    'Threat detection and response',
-    'Security monitoring and analytics',
-    'Compliance and governance monitoring',
-    'Security automation and orchestration',
-    'Security scaling and management'
+  const useCases = [;
+    'Data security optimization',;
+    'Threat detection and response',;
+    'Security monitoring and analytics',;
+    'Compliance and governance monitoring',;
+    'Security automation and orchestration',;
+    'Security scaling and management';
   ];
 
-  const benefits = [
-    'Improve data security performance by 50-80%',
-    'Reduce threat response time by 40-70%',
-    'Cut security operational costs by 35-65%',
-    'Enhance data security reliability and scalability',
-    'Optimize resource utilization',
-    'Scale data security operations efficiently'
+  const benefits = [;
+    'Improve data security performance by 50-80%',;
+    'Reduce threat response time by 40-70%',;
+    'Cut security operational costs by 35-65%',;
+    'Enhance data security reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale data security operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-500 via-pink-500 to-rose-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +174,12 @@ export default function AIDataSecurity() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}

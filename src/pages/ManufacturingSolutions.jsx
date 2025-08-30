@@ -1,44 +1,54 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network export default function ManufacturingSolutions() {
+=======
+import Link from 'next/link';
 import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
 export default function ManufacturingSolutions() {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const solutions = [
         {
             icon: Brain,
             title: "AI-Powered Manufacturing",
             description: "Intelligent automation and predictive maintenance for smart factories",
-            features: ["Predictive maintenance", "Quality control", "Process optimization"]
+            features["Predictive maintenance", "Quality control", "Process optimization"]
         },
         {
             icon: Cpu,
             title: "IoT Integration",
             description: "Connected devices and sensors for real-time monitoring and control",
-            features: ["Real-time monitoring", "Data collection", "Remote control"]
+            features["Real-time monitoring", "Data collection", "Remote control"]
         },
         {
             icon: BarChart3,
             title: "Advanced Analytics",
             description: "Data-driven insights for operational efficiency and quality improvement",
-            features: ["Performance analytics", "Quality metrics", "Efficiency tracking"]
+            features["Performance analytics", "Quality metrics", "Efficiency tracking"]
         },
         {
             icon: Shield,
             title: "Cybersecurity",
             description: "Industrial-grade security for connected manufacturing systems",
-            features: ["Threat detection", "Access control", "Data protection"]
+            features["Threat detection", "Access control", "Data protection"]
         },
         {
             icon: Network,
             title: "Digital Twin",
             description: "Virtual replicas of physical systems for simulation and optimization",
-            features: ["3D modeling", "Simulation", "Performance prediction"]
+            features["3D modeling", "Simulation", "Performance prediction"]
         },
         {
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined workflows and automated decision-making processes",
+<<<<<<< HEAD
             features: ["Workflow automation", "Decision support", "Process optimization"]
+
+=======
+            features["Workflow automation", "Decision support", "Process optimization"]
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
@@ -70,7 +80,7 @@ export default function ManufacturingSolutions() {
             title: "Production Planning",
             description: "Intelligent production scheduling and resource allocation",
             icon: "📅"
-        }
+
     ];
     const benefits = [
         "Reduce downtime by 30-50%",
@@ -93,7 +103,7 @@ export default function ManufacturingSolutions() {
             Manufacturing Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your manufacturing operations with Industry 4.0 technology. 
+            Transform your manufacturing operations with Industry 4.0 technology.
             Embrace smart manufacturing for increased efficiency, quality, and productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -119,7 +129,7 @@ export default function ManufacturingSolutions() {
               Our comprehensive suite of manufacturing technology solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-orange-500 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg w-fit mb-4">
@@ -149,7 +159,7 @@ export default function ManufacturingSolutions() {
               Discover how smart manufacturing is transforming industries worldwide
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300">
                 <div className="text-4xl mb-4">{useCase.icon}</div>
@@ -171,7 +181,7 @@ export default function ManufacturingSolutions() {
               See real results with our smart manufacturing solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">
@@ -209,5 +219,9 @@ export default function ManufacturingSolutions() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

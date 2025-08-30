@@ -29,15 +29,18 @@ export interface NextGenInnovativeService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
@@ -47,7 +50,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
-    features: [
+    features[
       'Quantum neural signal processing',
       'Real-time brain activity monitoring',
       'AI-powered cognitive enhancement',
@@ -70,11 +73,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum AI & Neuroscience',
     realService: true,
-    technology: ['Quantum Computing', 'Neural Networks', 'Brain-Computer Interface', 'AI/ML', 'Quantum Encryption'],
-    integrations: ['Research APIs', 'Medical devices', 'Cloud platforms', 'Data analysis tools'],
-    useCases: ['Medical research', 'Cognitive enhancement', 'Neural rehabilitation', 'AI development', 'Defense applications'],
+    technology['Quantum Computing', 'Neural Networks', 'Brain-Computer Interface', 'AI/ML', 'Quantum Encryption'],
+    integrations['Research APIs', 'Medical devices', 'Cloud platforms', 'Data analysis tools'],
+    useCases['Medical research', 'Cognitive enhancement', 'Neural rehabilitation', 'AI development', 'Defense applications'],
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
-    competitors: ['Neuralink ($10,000+/month)', 'Kernel ($50,000+/month)'],
+    competitors['Neuralink ($10,000+/month)', 'Kernel ($50,000+/month)'],
     marketSize: '$1.5B BCI market',
     growthRate: '300% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -99,7 +102,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$5,999',
     period: '/month',
     description: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.',
-    features: [
+    features[
       'Satellite mission planning',
       'Orbital mechanics calculations',
       'Real-time satellite tracking',
@@ -122,11 +125,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '4-6 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['Satellite Technology', 'Orbital Mechanics', 'Space Weather', 'AI/ML', 'Cloud Computing'],
-    integrations: ['SpaceX APIs', 'NASA data', 'Weather services', 'Ground stations', 'Launch providers'],
-    useCases: ['Satellite operations', 'Mission planning', 'Space infrastructure', 'Launch coordination', 'Space research'],
+    technology['Satellite Technology', 'Orbital Mechanics', 'Space Weather', 'AI/ML', 'Cloud Computing'],
+    integrations['SpaceX APIs', 'NASA data', 'Weather services', 'Ground stations', 'Launch providers'],
+    useCases['Satellite operations', 'Mission planning', 'Space infrastructure', 'Launch coordination', 'Space research'],
     roi: '500% ROI through operational efficiency and mission success rates',
-    competitors: ['SpaceX Starlink ($99/month)', 'OneWeb ($50/month)'],
+    competitors['SpaceX Starlink ($99/month)', 'OneWeb ($50/month)'],
     marketSize: '$469B space economy',
     growthRate: '400% annual growth',
     variant: 'space-futuristic',
@@ -151,7 +154,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
-    features: [
+    features[
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
       'Protein folding prediction',
@@ -174,11 +177,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Biotech & Healthcare AI',
     realService: true,
-    technology: ['AI/ML', 'Quantum Computing', 'Bioinformatics', 'Genomics', 'Drug Discovery'],
-    integrations: ['Research databases', 'Lab equipment', 'Clinical trial systems', 'Regulatory databases'],
-    useCases: ['Drug discovery', 'Genetic research', 'Clinical trials', 'Personalized medicine', 'Disease research'],
+    technology['AI/ML', 'Quantum Computing', 'Bioinformatics', 'Genomics', 'Drug Discovery'],
+    integrations['Research databases', 'Lab equipment', 'Clinical trial systems', 'Regulatory databases'],
+    useCases['Drug discovery', 'Genetic research', 'Clinical trials', 'Personalized medicine', 'Disease research'],
     roi: '1000% ROI through accelerated drug development and patent generation',
-    competitors: ['Insitro ($100M+ funding)', 'Recursion ($2B+ funding)'],
+    competitors['Insitro ($100M+ funding)', 'Recursion ($2B+ funding)'],
     marketSize: '$150B AI in healthcare',
     growthRate: '250% annual growth',
     variant: 'biotech-futuristic',
@@ -203,7 +206,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$7,999',
     period: '/month',
     description: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.',
-    features: [
+    features[
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
       'Real-time market analysis',
@@ -226,11 +229,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '3-4 weeks',
     category: 'Quantum Finance & Trading',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'Algorithmic Trading', 'High-Frequency Trading', 'Blockchain'],
-    integrations: ['Trading platforms', 'Market data feeds', 'Risk management systems', 'Portfolio systems'],
-    useCases: ['Algorithmic trading', 'Portfolio optimization', 'Risk management', 'Market analysis', 'High-frequency trading'],
+    technology['Quantum Computing', 'AI/ML', 'Algorithmic Trading', 'High-Frequency Trading', 'Blockchain'],
+    integrations['Trading platforms', 'Market data feeds', 'Risk management systems', 'Portfolio systems'],
+    useCases['Algorithmic trading', 'Portfolio optimization', 'Risk management', 'Market analysis', 'High-frequency trading'],
     roi: '1000%+ ROI through superior trading performance and market timing',
-    competitors: ['Renaissance Technologies ($100B+ AUM)', 'Two Sigma ($60B+ AUM)'],
+    competitors['Renaissance Technologies ($100B+ AUM)', 'Two Sigma ($60B+ AUM)'],
     marketSize: '$15T algorithmic trading',
     growthRate: '150% annual growth',
     variant: 'quantum-finance-futuristic',
@@ -255,7 +258,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.',
-    features: [
+    features[
       'Advanced computer vision',
       'Real-time decision making',
       'Sensor fusion algorithms',
@@ -278,11 +281,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '4-6 weeks',
     category: 'Autonomous Vehicles & Robotics',
     realService: true,
-    technology: ['Computer Vision', 'AI/ML', 'Robotics', 'Sensor Fusion', 'Edge Computing'],
-    integrations: ['Vehicle systems', 'Drone platforms', 'Robotics hardware', 'Fleet management systems'],
-    useCases: ['Self-driving cars', 'Autonomous drones', 'Industrial robotics', 'Logistics automation', 'Smart cities'],
+    technology['Computer Vision', 'AI/ML', 'Robotics', 'Sensor Fusion', 'Edge Computing'],
+    integrations['Vehicle systems', 'Drone platforms', 'Robotics hardware', 'Fleet management systems'],
+    useCases['Self-driving cars', 'Autonomous drones', 'Industrial robotics', 'Logistics automation', 'Smart cities'],
     roi: '800% ROI through operational efficiency and safety improvements',
-    competitors: ['Waymo ($1B+ investment)', 'Tesla Autopilot ($12,000)'],
+    competitors['Waymo ($1B+ investment)', 'Tesla Autopilot ($12,000)'],
     marketSize: '$2.5T autonomous vehicle market',
     growthRate: '200% annual growth',
     variant: 'autonomous-futuristic',
@@ -307,7 +310,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$3,999',
     period: '/month',
     description: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.',
-    features: [
+    features[
       'Quantum-resistant encryption',
       'AI threat detection',
       'Real-time monitoring',
@@ -330,11 +333,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Cybersecurity',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'Cryptography', 'Threat Detection', 'Blockchain'],
-    integrations: ['SIEM systems', 'Firewalls', 'Identity providers', 'Compliance platforms'],
-    useCases: ['Data protection', 'Threat detection', 'Incident response', 'Compliance', 'Risk management'],
+    technology['Quantum Computing', 'AI/ML', 'Cryptography', 'Threat Detection', 'Blockchain'],
+    integrations['SIEM systems', 'Firewalls', 'Identity providers', 'Compliance platforms'],
+    useCases['Data protection', 'Threat detection', 'Incident response', 'Compliance', 'Risk management'],
     roi: '600% ROI through security improvements and risk reduction',
-    competitors: ['Palo Alto Networks ($1,000+/month)', 'CrowdStrike ($500+/month)'],
+    competitors['Palo Alto Networks ($1,000+/month)', 'CrowdStrike ($500+/month)'],
     marketSize: '$200B cybersecurity market',
     growthRate: '180% annual growth',
     variant: 'quantum-security-futuristic',
@@ -359,7 +362,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.',
-    features: [
+    features[
       'AI content generation',
       'Virtual world building',
       'Real-time interactions',
@@ -382,11 +385,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true,
-    technology: ['AI/ML', 'VR/AR', '3D Graphics', 'Real-time Rendering', 'Blockchain'],
-    integrations: ['VR headsets', 'Gaming platforms', 'Social media', 'Payment systems'],
-    useCases: ['Virtual worlds', 'Gaming experiences', 'Social platforms', 'Education', 'Entertainment'],
+    technology['AI/ML', 'VR/AR', '3D Graphics', 'Real-time Rendering', 'Blockchain'],
+    integrations['VR headsets', 'Gaming platforms', 'Social media', 'Payment systems'],
+    useCases['Virtual worlds', 'Gaming experiences', 'Social platforms', 'Education', 'Entertainment'],
     roi: '700% ROI through user engagement and monetization',
-    competitors: ['Meta Horizon ($30/month)', 'Roblox ($25/month)'],
+    competitors['Meta Horizon ($30/month)', 'Roblox ($25/month)'],
     marketSize: '$800B metaverse market',
     growthRate: '300% annual growth',
     variant: 'metaverse-futuristic',
@@ -411,7 +414,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.',
-    features: [
+    features[
       'Quantum key distribution',
       'AI threat monitoring',
       'Real-time protection',
@@ -434,11 +437,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '3-4 weeks',
     category: 'Quantum Internet & Security',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'Network Security', 'Cryptography', 'Internet Protocols'],
-    integrations: ['Network equipment', 'Cloud platforms', 'Security tools', 'Monitoring systems'],
-    useCases: ['Network security', 'Data protection', 'Threat detection', 'Compliance', 'Performance monitoring'],
+    technology['Quantum Computing', 'AI/ML', 'Network Security', 'Cryptography', 'Internet Protocols'],
+    integrations['Network equipment', 'Cloud platforms', 'Security tools', 'Monitoring systems'],
+    useCases['Network security', 'Data protection', 'Threat detection', 'Compliance', 'Performance monitoring'],
     roi: '800% ROI through security improvements and operational efficiency',
-    competitors: ['Cloudflare ($20/month)', 'Akamai ($100+/month)'],
+    competitors['Cloudflare ($20/month)', 'Akamai ($100+/month)'],
     marketSize: '$150B internet security market',
     growthRate: '200% annual growth',
     variant: 'quantum-internet-futuristic',
@@ -463,7 +466,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$1,999',
     period: '/month',
     description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
-    features: [
+    features[
       'AI contract analysis',
       'Risk assessment',
       'Compliance checking',
@@ -486,11 +489,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '1-2 weeks',
     category: 'AI Legal Services',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Legal Tech', 'Document Analysis', 'Cloud Computing'],
-    integrations: ['Document management systems', 'Legal databases', 'E-signature platforms', 'CRM systems'],
-    useCases: ['Contract review', 'Legal research', 'Compliance checking', 'Risk assessment', 'Document analysis'],
+    technology['AI/ML', 'Natural Language Processing', 'Legal Tech', 'Document Analysis', 'Cloud Computing'],
+    integrations['Document management systems', 'Legal databases', 'E-signature platforms', 'CRM systems'],
+    useCases['Contract review', 'Legal research', 'Compliance checking', 'Risk assessment', 'Document analysis'],
     roi: '500% ROI through time savings and improved accuracy',
-    competitors: ['DocuSign ($25/month)', 'ContractPodAi ($500+/month)'],
+    competitors['DocuSign ($25/month)', 'ContractPodAi ($500+/month)'],
     marketSize: '$25B legal tech market',
     growthRate: '150% annual growth',
     variant: 'ai-legal-futuristic',
@@ -515,7 +518,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption.',
-    features: [
+    features[
       'Quantum device security',
       'AI edge computing',
       'Real-time processing',
@@ -538,11 +541,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum IoT & Edge Computing',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'IoT', 'Edge Computing', 'Blockchain'],
-    integrations: ['IoT devices', 'Cloud platforms', 'Security tools', 'Analytics platforms'],
-    useCases: ['Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Consumer devices', 'Security systems'],
+    technology['Quantum Computing', 'AI/ML', 'IoT', 'Edge Computing', 'Blockchain'],
+    integrations['IoT devices', 'Cloud platforms', 'Security tools', 'Analytics platforms'],
+    useCases['Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Consumer devices', 'Security systems'],
     roi: '600% ROI through security improvements and operational efficiency',
-    competitors: ['AWS IoT ($5/month)', 'Microsoft Azure IoT ($25/month)'],
+    competitors['AWS IoT ($5/month)', 'Microsoft Azure IoT ($25/month)'],
     marketSize: '$1.5T IoT market',
     growthRate: '250% annual growth',
     variant: 'quantum-iot-futuristic',
@@ -558,5 +561,5 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     customers: 38,
     rating: 4.7,
     reviews: 26
-  }
-];
+
+];}}

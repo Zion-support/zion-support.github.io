@@ -11,9 +11,13 @@ export interface CuttingEdgeMicroSaas2028 {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
-}
+
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {
     id: "2028-cutting-edge-micro-saas",
@@ -21,7 +25,7 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     tagline: "Cutting-edge micro SAAS for 2028",
     price: "$199/month",
     description: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.",
-    features: [
+    features[
       "Cutting-edge features",
       "Latest innovations",
       "Advanced technology",
@@ -35,6 +39,6 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

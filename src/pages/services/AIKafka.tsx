@@ -1,64 +1,75 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIKafka() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKafka() {
   const features = [
     'AI-powered Kafka optimization',
-    'Intelligent Kafka management',
-    'Automated Kafka monitoring and alerting',
-    'Predictive analytics for Kafka scaling',
-    'Smart Kafka security and compliance',
-    'AI-driven Kafka automation and orchestration',
-    'Real-time Kafka analytics and insights',
-    'Custom AI models for Kafka applications'
+    'Intelligent Kafka management',;
+    'Automated Kafka monitoring and alerting',;
+    'Predictive analytics for Kafka scaling',;
+    'Smart Kafka security and compliance',;
+    'AI-driven Kafka automation and orchestration',;
+    'Real-time Kafka analytics and insights',;
+    'Custom AI models for Kafka applications';
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$399/mo', 
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
+<<<<<<< HEAD
+    {
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
+    },
+    {
+      name: 'Enterprise',
+      price: '$2,499/mo',
+      details: ['Unlimited storage', 'Custom AI models', 'Full Kafka suite', '24/7 dedicated support']
+    },
+=======
     { 
       name: 'Business', 
       price: '$999/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full Kafka suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full Kafka suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Kafka optimization',
-    'Kafka management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Kafka scaling and management'
+  const useCases = [;
+    'Kafka optimization',;
+    'Kafka management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Kafka scaling and management';
   ];
 
-  const benefits = [
-    'Improve Kafka performance by 50-80%',
-    'Reduce Kafka latency by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance Kafka reliability and scalability',
-    'Optimize resource utilization',
-    'Scale Kafka operations efficiently'
+  const benefits = [;
+    'Improve Kafka performance by 50-80%',;
+    'Reduce Kafka latency by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Kafka reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale Kafka operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +174,12 @@ export default function AIKafka() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}

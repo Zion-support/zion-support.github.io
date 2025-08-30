@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 export const UltimateServicesShowcase2027 = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
@@ -35,11 +35,20 @@ export const UltimateServicesShowcase2027 = () => {
             <p className="text-gray-300 mb-4">Connected devices and edge computing</p>
             <Link to="/services/iot-edge" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
+<<<<<<< HEAD
             </Link>
           </div>
         </div>
-      </div>
-    </section>
+      </div>;
+    </section>;
+  )};
+=======
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default UltimateServicesShowcase2027;

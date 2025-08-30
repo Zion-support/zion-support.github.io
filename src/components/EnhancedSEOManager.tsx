@@ -9,40 +9,38 @@ interface SEOData {
   ogType?: string;
   canonicalUrl?: string;
   structuredData?: object;
-}
 
 interface EnhancedSEOManagerProps {
   seoData: SEOData;
   children: React.ReactNode;
-}
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
     // Update meta tags dynamically
-    const updateMetaTags = () => {
-      // Update title
+    const updateMetaTags = () => {;
+      // Update title;
       document.title = seoData.title;
-      
+
       // Update meta description
       let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('name', 'description');
         document.head.appendChild(metaDesc);
-      }
+
       metaDesc.setAttribute('content', seoData.description);
-      
+
       // Update keywords
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name', 'keywords');
         document.head.appendChild(metaKeywords);
-      }
+
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags
-      const updateOGTag = (property: string, content: string) => {
+      const updateOGTag = (property: string, content: string) => {;
         let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
           ogTag = document.createElement('meta');
@@ -59,7 +57,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       
       // Update Twitter Card tags
-      const updateTwitterTag = (name: string, content: string) => {
+      const updateTwitterTag = (name: string, content: string) => {;
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
           twitterTag = document.createElement('meta');
@@ -111,16 +109,67 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     <>
       <Helmet>
         <title>{seoData.title}</title>
+<<<<<<< HEAD
         <meta name="description" content={seoData.description} />
         <meta name="keywords" content={seoData.keywords.join(', ')} />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:type" content={seoData.ogType || 'website'} />
+        {seoData.ogImage && <meta property="og:image" content={seoData.ogImage} />}
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        {seoData.ogImage && <meta name="twitter:image" content={seoData.ogImage} />}
+
+        {/* Canonical URL */}
+        {seoData.canonicalUrl && <link rel="canonical" href={seoData.canonicalUrl} />}
+
+        {/* Structured Data */}
+        {seoData.structuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(seoData.structuredData)}
+          </script>
+        )}
+
+        {/* Performance Optimizations */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* Security headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
+        {/* Security */}
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+      </Helmet>
+
+      {children}
+    </>
+  );
+};
+
+export default EnhancedSEOManager;}}}}
+=======
+        <meta name = "description" content={seoData.description} />
+        <meta name="keywords" content = {
+  seoData.keywords.join(',
+  ')
+
+
+
+
+
+
+} />
+        <meta name="robots" content="index, follow" />;
+        <meta name="author" content="Zion Tech Group" />;
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
+        ;
+        {/* Security headers */};
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;
+        <meta httpEquiv="X-Frame-Options" content="DENY" />;
+        <meta httpEquiv="X-XSS-Protection" content="1; mode = block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         
         {/* Performance optimizations */}
@@ -134,14 +183,17 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        
-        {/* Theme color */}
-        <meta name="theme-color" content="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
-      </Helmet>
-      {children}
-    </>
+        ;
+        {/* Theme color */};
+        <meta name="theme-color" content="#000000" />;
+        <meta name="msapplication-TileColor" content="#000000" />;
+      </Helmet>;
+      {children};
+    </>;
   );
 };
 
 export default EnhancedSEOManager;
+export default function
+    return;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
-import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon } from 'lucide-react';
+import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon const ReturnsManagementSaaS: React.FC = () => {
+=======
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon  } from 'lucide-react';
 
-const ReturnsManagementSaaS: React.FC = () => {
+const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO
         title="E-commerce Returns Management SaaS - Zion Tech Group"
         description="Automate returns labels, RMA approvals, tracking, refunds, and analytics. Integrates with Shopify, WooCommerce, BigCommerce, and custom stores."
         keywords="returns management, RMA, e-commerce, Shopify, automation, logistics"
@@ -74,15 +80,16 @@ const ReturnsManagementSaaS: React.FC = () => {
         </div>
 
         <div className="mt-8">
-          <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">
-            Book a demo
-            <LinkIcon className="w-4 h-4" />
-          </a>
-        </div>
-      </section>
-    </div>
+          <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">;
+            Book a demo;
+            <LinkIcon className="w-4 h-4" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 
 export default ReturnsManagementSaaS;
 
+}

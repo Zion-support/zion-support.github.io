@@ -1,16 +1,27 @@
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
+import { Star, Zap, Shield, TrendingUp, Users export function ServiceShowcase({ services }) {
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
 export function ServiceShowcase({ services }) {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return <Zap className="h-5 w-5"/>;
             case 'Security': return <Shield className="h-5 w-5"/>;
             case 'Analytics': return <TrendingUp className="h-5 w-5"/>;
             case 'Development': return <Users className="h-5 w-5"/>;
+<<<<<<< HEAD
             default: return <Star className="h-5 w-5"/>;
-        }
+
+=======
+            default: return <Star className="h-5 w-5"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryColor = (category) => {
         switch (category) {
@@ -18,8 +29,12 @@ export function ServiceShowcase({ services }) {
             case 'Security': return 'from-red-500 to-orange-500';
             case 'Analytics': return 'from-blue-500 to-cyan-500';
             case 'Development': return 'from-green-500 to-emerald-500';
+<<<<<<< HEAD
             default: return 'from-gray-500 to-slate-500';
-        }
+
+=======
+            default: return 'from-gray-500 to-slate-500'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
       <div className="container mx-auto px-4">
@@ -39,7 +54,7 @@ export function ServiceShowcase({ services }) {
                     Featured
                   </Badge>
                 </div>)}
-              
+
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-3 mb-3">
                   <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
@@ -85,7 +100,7 @@ export function ServiceShowcase({ services }) {
                     </span>
                     <span className="text-zinc-400 text-sm">per month</span>
                   </div>
-                  
+
                   <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">
                     Get Started
                   </Button>
@@ -103,5 +118,9 @@ export function ServiceShowcase({ services }) {
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+</div></Card></Card></Card></Card>}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

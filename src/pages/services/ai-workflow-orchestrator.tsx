@@ -50,22 +50,22 @@ const AIWorkflowOrchestrator = () => {
     {
       icon: BarChart3,
       title: "Advanced Analytics",
-      description: "Comprehensive insights into workflow performance and optimization opportunities"
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Seamless team coordination with real-time updates and communication tools"
-    }
+      description: "Comprehensive insights into workflow performance and optimization opportunities";
+    },;
+    {;
+      icon: Users,;
+      title: "Team Collaboration",;
+      description: "Seamless team coordination with real-time updates and communication tools";
+    };
   ];
 
-  const benefits = [
-    "Reduce manual workflow processing by up to 80%",
-    "Improve decision accuracy with AI-powered insights",
-    "Scale operations without proportional cost increases",
-    "Ensure compliance and audit trail maintenance",
-    "Real-time monitoring and alerting capabilities",
-    "Seamless integration with existing systems"
+  const benefits = [;
+    "Reduce manual workflow processing by up to 80%",;
+    "Improve decision accuracy with AI-powered insights",;
+    "Scale operations without proportional cost increases",;
+    "Ensure compliance and audit trail maintenance",;
+    "Real-time monitoring and alerting capabilities",;
+    "Seamless integration with existing systems";
   ];
 
   const useCases = [
@@ -82,13 +82,13 @@ const AIWorkflowOrchestrator = () => {
     {
       title: "Manufacturing",
       description: "Optimize production scheduling and quality control processes",
-      icon: Settings
-    },
-    {
-      title: "Retail",
-      description: "Automate inventory management and customer service workflows",
-      icon: ShoppingCart
-    }
+      icon: Settings;
+    },;
+    {;
+      title: "Retail",;
+      description: "Automate inventory management and customer service workflows",;
+      icon: ShoppingCart;
+    };
   ];
 
   const pricing = [
@@ -127,20 +127,20 @@ const AIWorkflowOrchestrator = () => {
       description: "Tailored solutions for large organizations with specific requirements",
       features: [
         "Unlimited workflow executions",
-        "Custom AI model training",
-        "Dedicated security team",
-        "24/7 phone support",
-        "Custom development",
-        "On-premise deployment options"
-      ]
-    }
+        "Custom AI model training",;
+        "Dedicated security team",;
+        "24/7 phone support",;
+        "Custom development",;
+        "On-premise deployment options";
+      ];
+    };
   ];
 
   return (
     <>
       <Helmet>
         <title>AI Workflow Orchestrator - Zion Tech Group | Intelligent Process Automation</title>
-        <meta name="description" content="Transform your business processes with Zion Tech's AI Workflow Orchestrator. Automate complex workflows with intelligent decision-making and real-time optimization." />
+        <meta name = "description" content="Transform your business processes with Zion Tech's AI Workflow Orchestrator. Automate complex workflows with intelligent decision-making and real-time optimization." />
         <meta name="keywords" content="AI workflow, process automation, workflow orchestration, business process automation, Zion Tech Group" />
       </Helmet>
 
@@ -149,8 +149,26 @@ const AIWorkflowOrchestrator = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -183,9 +201,36 @@ const AIWorkflowOrchestrator = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Powerful Features for Modern Workflows
@@ -195,9 +240,36 @@ const AIWorkflowOrchestrator = () => {
                 {features.map((feature, index) => (
                   <motion.div
                     key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+
+}}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200"
                   >
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -216,9 +288,36 @@ const AIWorkflowOrchestrator = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Why Choose AI Workflow Orchestrator?
@@ -228,9 +327,36 @@ const AIWorkflowOrchestrator = () => {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.05 * index }}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.05 * index 
+
+
+
+
+
+
+}}
                     className="flex items-center gap-3"
                   >
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -246,9 +372,36 @@ const AIWorkflowOrchestrator = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Industry Applications
@@ -258,9 +411,36 @@ const AIWorkflowOrchestrator = () => {
                 {useCases.map((useCase, index) => (
                   <motion.div
                     key={useCase.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+
+}}
                     className="text-center"
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -279,9 +459,36 @@ const AIWorkflowOrchestrator = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Simple, Transparent Pricing
@@ -291,9 +498,36 @@ const AIWorkflowOrchestrator = () => {
                 {pricing.map((plan, index) => (
                   <motion.div
                     key={plan.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+
+
+
+
+}}
                     className={`relative bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border ${
                       plan.popular 
                         ? 'border-blue-500 ring-2 ring-blue-500/20' 
@@ -344,9 +578,36 @@ const AIWorkflowOrchestrator = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+
+
+
+
+}}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Workflows?
@@ -361,13 +622,13 @@ const AIWorkflowOrchestrator = () => {
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
                   Schedule Demo
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+                </button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 };
 

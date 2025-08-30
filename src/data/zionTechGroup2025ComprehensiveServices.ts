@@ -679,23 +679,23 @@ export const zionTechGroup2025Services: ZionService[] = [
   }
 ];
 
-export const getServicesByCategory = (category: ZionService['category']) => {
+export const getServicesByCategory = (category: ZionService['category']) => {;
   return zionTechGroup2025Services.filter(service => service.category === category);
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return zionTechGroup2025Services.filter(service => {
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+  return zionTechGroup2025Services.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
 
-export const searchServices = (query: string) => {
+export const searchServices = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
-  return zionTechGroup2025Services.filter(service =>
-    service.title.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||
-    service.features.some(feature => feature.toLowerCase().includes(lowercaseQuery))
+  return zionTechGroup2025Services.filter(service = >;
+    service.title.toLowerCase().includes(lowercaseQuery) ||;
+    service.description.toLowerCase().includes(lowercaseQuery) ||;
+    service.category.toLowerCase().includes(lowercaseQuery) ||;
+    service.features.some(feature => feature.toLowerCase().includes(lowercaseQuery));
   );
 };

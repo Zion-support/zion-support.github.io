@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Link, 
-  Coins, 
-  Shield, 
-  Zap, 
-  Database, 
-  Globe, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Lock, 
-  Network, 
-  Wallet, 
+import {
+  Link,
+  Coins,
+  Shield,
+  Zap,
+  Database,
+  Globe,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Lock,
+  Network,
+  Wallet,
   BarChart3,
   Star,
   Award,
@@ -24,9 +24,15 @@ import {
   Users,
   Clock,
   Check
-} from 'lucide-react';
-
+<<<<<<< HEAD
 const BlockchainServicesPage = () => {
+=======
+ } from 'lucide-react';
+
+<<<<<<< HEAD
+const BlockchainServicesPage = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blockchainServices = [
@@ -37,7 +43,7 @@ const BlockchainServicesPage = () => {
       price: 3500,
       currency: "$",
       period: "/project",
-      features: [
+      features[
         "Custom smart contract development",
         "Security auditing & testing",
         "Gas optimization",
@@ -57,7 +63,7 @@ const BlockchainServicesPage = () => {
       price: 15000,
       currency: "$",
       period: "/platform",
-      features: [
+      features[
         "DEX development",
         "Lending protocols",
         "Yield farming",
@@ -77,7 +83,7 @@ const BlockchainServicesPage = () => {
       price: 8000,
       currency: "$",
       period: "/marketplace",
-      features: [
+      features[
         "NFT minting & trading",
         "Auction system",
         "Royalty distribution",
@@ -97,7 +103,7 @@ const BlockchainServicesPage = () => {
       price: 25000,
       currency: "$",
       period: "/solution",
-      features: [
+      features[
         "Private blockchain setup",
         "Consensus mechanisms",
         "Identity management",
@@ -117,7 +123,7 @@ const BlockchainServicesPage = () => {
       price: 5000,
       currency: "$",
       period: "/audit",
-      features: [
+      features[
         "Smart contract auditing",
         "Penetration testing",
         "Vulnerability assessment",
@@ -137,51 +143,63 @@ const BlockchainServicesPage = () => {
       price: 12000,
       currency: "$",
       period: "/solution",
-      features: [
+      features[
         "Bridge development",
         "Cross-chain messaging",
         "Asset interoperability",
         "Multi-chain wallets",
         "Atomic swaps",
+<<<<<<< HEAD
         "Network monitoring"
       ],
       icon: Globe,
       category: "Interoperability",
       badge: "Advanced",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    }
+
+=======
+        "Network monitoring";
+      ],;
+      icon: Globe,;
+      category: "Interoperability",;
+      badge: "Advanced",;
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: blockchainServices.length },
-    { id: 'Development', name: 'Development', count: blockchainServices.filter(s => s.category === 'Development').length },
-    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length },
-    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length },
-    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length },
-    { id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length },
-    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s => s.category === 'Interoperability').length }
+<<<<<<< HEAD
+    { id: 'Development', name: 'Development', count: blockchainServices.filter(s  => s.category === 'Development').length },
+    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
+    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
+    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
+    { id: 'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },;
+    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length };
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? blockchainServices 
+  const filteredServices = selectedCategory === 'all'
+    ? blockchainServices
     : blockchainServices.filter(service => service.category === selectedCategory);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Network className="w-12 h-12 text-white" />
             </div>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Blockchain{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -189,10 +207,10 @@ const BlockchainServicesPage = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge blockchain solutions. From smart contracts to DeFi platforms, 
+            Transform your business with cutting-edge blockchain solutions. From smart contracts to DeFi platforms,
             we build secure, scalable, and innovative blockchain applications.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Get Started
@@ -228,7 +246,7 @@ const BlockchainServicesPage = () => {
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                       : 'bg-zion-blue-dark/50 text-zion-slate-light hover:bg-zion-cyan/20 hover:text-white border border-zion-cyan/20'
                   }`}
-                >
+
                   {category.name}
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
@@ -243,21 +261,48 @@ const BlockchainServicesPage = () => {
       {/* Services Grid */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+
                 {/* Service Image */}
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative overflow-hidden">
                   <service.icon className="w-16 h-16 text-zion-cyan z-10" />
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10"></div>
                 </div>
-                
+
                 <div className="p-6">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
@@ -270,7 +315,7 @@ const BlockchainServicesPage = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   {/* Badge */}
                   <div className="mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -284,7 +329,7 @@ const BlockchainServicesPage = () => {
                       {service.badge}
                     </span>
                   </div>
-                  
+
                   {/* Price */}
                   <div className="mb-6">
                     <div className="flex items-baseline gap-2">
@@ -294,7 +339,7 @@ const BlockchainServicesPage = () => {
                       <span className="text-zion-slate-light">{service.period}</span>
                     </div>
                   </div>
-                  
+
                   {/* Features */}
                   <div className="space-y-3 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
@@ -309,7 +354,7 @@ const BlockchainServicesPage = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   {/* CTA */}
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                     Get Started
@@ -330,12 +375,12 @@ const BlockchainServicesPage = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We combine deep blockchain expertise with cutting-edge technology to deliver 
+              We combine deep blockchain expertise with cutting-edge technology to deliver
               solutions that drive real business value.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: Shield,
@@ -366,19 +411,51 @@ const BlockchainServicesPage = () => {
                 icon: Globe,
                 title: "Multi-Chain Support",
                 description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
-              }
+<<<<<<< HEAD
+
             ].map((feature, index) => (
+=======
+              }
+            ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
               </motion.div>
@@ -394,22 +471,32 @@ const BlockchainServicesPage = () => {
             Ready to Build the Future?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Let's discuss how blockchain technology can transform your business. 
+            Let's discuss how blockchain technology can transform your business.
             Our experts are ready to help you navigate the blockchain landscape.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Start Your Project
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Schedule Consultation
+<<<<<<< HEAD
             </button>
           </div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </button>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default BlockchainServicesPage;
+}}}

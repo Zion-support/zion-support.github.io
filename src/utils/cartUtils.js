@@ -1,7 +1,6 @@
 // Cart utility functions for managing shopping cart state and operations
 
 // Local storage keys
-const CART_STORAGE_KEY = 'zion_cart';
 const CART_EXPIRY_KEY = 'zion_cart_expiry';
 
 // Cart expiry time (24 hours)
@@ -15,25 +14,39 @@ export const getCartFromStorage = () => {
   try {
     const cartData = localStorage.getItem(CART_STORAGE_KEY);
     const expiryData = localStorage.getItem(CART_EXPIRY_KEY);
-    
+
     if (!cartData || !expiryData) {
       return [];
+<<<<<<< HEAD
+=======
     }
-    
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
     const expiry = parseInt(expiryData);
     const now = Date.now();
-    
+
     // Check if cart has expired
     if (now > expiry) {
       clearCartFromStorage();
       return [];
-    }
-    
+<<<<<<< HEAD
+
     return JSON.parse(cartData);
   } catch (error) {
-    console.error('Error reading cart from storage:', error);
+<<<<<<< HEAD
+    // // // console.error('Error reading cart from storage:', error);
+=======
+    // // // // // // // console.error('Error reading cart from storage:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+    }
+
+    return JSON.parse(cartData);
+  } catch (error) {
+    // // // // console.error('Error reading cart from storage:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return [];
-  }
+
 };
 
 /**
@@ -46,8 +59,17 @@ export const saveCartToStorage = (cart) => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     localStorage.setItem(CART_EXPIRY_KEY, expiry.toString());
   } catch (error) {
-    console.error('Error saving cart to storage:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // // // console.error('Error saving cart to storage:', error);
+
+=======
+    // // // // // // // console.error('Error saving cart to storage:', error);
+=======
+    // // // // console.error('Error saving cart to storage:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
 
 /**
@@ -58,8 +80,17 @@ export const clearCartFromStorage = () => {
     localStorage.removeItem(CART_STORAGE_KEY);
     localStorage.removeItem(CART_EXPIRY_KEY);
   } catch (error) {
-    console.error('Error clearing cart from storage:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // // // console.error('Error clearing cart from storage:', error);
+
+=======
+    // // // // // // // console.error('Error clearing cart from storage:', error);
+=======
+    // // // // console.error('Error clearing cart from storage:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
 
 /**
@@ -70,12 +101,21 @@ export const clearCartFromStorage = () => {
  */
 export const addToCart = (currentCart, item) => {
   if (!item || !item.id) {
-    console.error('Invalid item provided to addToCart');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // // // console.error('Invalid item provided to addToCart');
+=======
+    // // // // // // // console.error('Invalid item provided to addToCart');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+    return currentCart;
+=======
+    // // // // console.error('Invalid item provided to addToCart');
     return currentCart;
   }
-  
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   const existingItemIndex = currentCart.findIndex(cartItem => cartItem.id === item.id);
-  
+
   if (existingItemIndex >= 0) {
     // Item already exists, update quantity
     const updatedCart = [...currentCart];
@@ -91,7 +131,7 @@ export const addToCart = (currentCart, item) => {
       quantity: item.quantity || 1,
       addedAt: new Date().toISOString()
     }];
-  }
+
 };
 
 /**
@@ -114,10 +154,13 @@ export const removeFromCart = (currentCart, itemId) => {
 export const updateCartItemQuantity = (currentCart, itemId, quantity) => {
   if (quantity <= 0) {
     return removeFromCart(currentCart, itemId);
+<<<<<<< HEAD
+=======
   }
-  
-  return currentCart.map(item => 
-    item.id === itemId 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  return currentCart.map(item =>
+    item.id === itemId
       ? { ...item, quantity, updatedAt: new Date().toISOString() }
       : item
   );
@@ -136,21 +179,22 @@ export const calculateCartTotal = (cart) => {
       total: 0,
       itemCount: 0
     };
+<<<<<<< HEAD
+=======
   }
-  
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   const subtotal = cart.reduce((sum, item) => {
     const price = parseFloat(item.price) || 0;
     const quantity = parseInt(item.quantity) || 0;
     return sum + (price * quantity);
   }, 0);
-  
+
   // Calculate tax (example: 8.5%)
-  const taxRate = 0.085;
-  const tax = subtotal * taxRate;
   const total = subtotal + tax;
-  
+
   const itemCount = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0);
-  
+
   return {
     subtotal: Math.round(subtotal * 100) / 100,
     tax: Math.round(tax * 100) / 100,
@@ -185,15 +229,15 @@ export const getCartItemById = (cart, itemId) => {
  */
 export const validateCartItem = (item) => {
   if (!item) return false;
-  
+
   const requiredFields = ['id', 'name', 'price'];
   const hasRequiredFields = requiredFields.every(field => item.hasOwnProperty(field));
-  
+
   if (!hasRequiredFields) return false;
-  
+
   const price = parseFloat(item.price);
   const quantity = parseInt(item.quantity) || 1;
-  
+
   return !isNaN(price) && price >= 0 && quantity > 0;
 };
 
@@ -206,13 +250,16 @@ export const validateCartItem = (item) => {
 export const mergeCarts = (cart1, cart2) => {
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
     return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
+<<<<<<< HEAD
+=======
   }
-  
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   const mergedCart = [...cart1];
-  
+
   cart2.forEach(item2 => {
     const existingItemIndex = mergedCart.findIndex(item1 => item1.id === item2.id);
-    
+
     if (existingItemIndex >= 0) {
       // Merge quantities
       mergedCart[existingItemIndex].quantity += item2.quantity;
@@ -223,9 +270,9 @@ export const mergeCarts = (cart1, cart2) => {
         ...item2,
         addedAt: new Date().toISOString()
       });
-    }
+
   });
-  
+
   return mergedCart;
 };
 
@@ -238,8 +285,11 @@ export const mergeCarts = (cart1, cart2) => {
 export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
     return '$0.00';
+<<<<<<< HEAD
+=======
   }
-  
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: currency
@@ -253,7 +303,7 @@ export const formatPrice = (price, currency = 'USD') => {
  */
 export const getCartSummary = (cart) => {
   const total = calculateCartTotal(cart);
-  
+
   return {
     itemCount: total.itemCount,
     uniqueItems: cart.length,
@@ -273,9 +323,17 @@ export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-    console.error('Error exporting cart data:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // // // console.error('Error exporting cart data:', error);
+=======
+    // // // // // // // console.error('Error exporting cart data:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+    // // // // console.error('Error exporting cart data:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return '[]';
-  }
+
 };
 
 /**
@@ -288,12 +346,20 @@ export const importCartData = (cartData) => {
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
       return parsed.filter(item => validateCartItem(item));
-    }
+
     return [];
   } catch (error) {
-    console.error('Error importing cart data:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // // // console.error('Error importing cart data:', error);
+=======
+    // // // // // // // console.error('Error importing cart data:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+    // // // // console.error('Error importing cart data:', error);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return [];
-  }
+
 };
 
 /**
@@ -304,7 +370,7 @@ export const importCartData = (cartData) => {
 export const getCartKey = (userId = null) => {
   if (userId) {
     return `zion_cart_${userId}`;
-  }
+
   return CART_STORAGE_KEY;
 };
 
@@ -316,4 +382,4 @@ export const getCartKey = (userId = null) => {
  */
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2);
-};
+};}}}}}}}}}}}}}}}}

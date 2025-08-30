@@ -3,8 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { Link } from "react-router-dom";
-import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
-import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
+<<<<<<< HEAD
+import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
 const iotServices = [
     {
         id: "iot-platform",
@@ -131,8 +131,13 @@ const iotServices = [
         badge: "Featured",
         link: "/services",
         image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    }
+
 ];
+=======
+import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
+import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const iotBenefits = [
     {
         title: "Real-time Monitoring",
@@ -153,8 +158,10 @@ const iotBenefits = [
         title: "Predictive Maintenance",
         description: "Prevent equipment failures with predictive analytics and proactive maintenance scheduling",
         icon: <TrendingUp className="h-6 w-6"/>
-    }
+
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const iotUseCases = [
     {
         title: "Smart Manufacturing",
@@ -175,7 +182,7 @@ const iotUseCases = [
         title: "Smart Agriculture",
         description: "Precision farming, environmental monitoring, and automated irrigation systems",
         icon: <Settings className="h-6 w-6"/>
-    }
+
 ];
 export default function IoTServicesPage() {
     return (<div className="min-h-screen bg-background">
@@ -190,7 +197,7 @@ export default function IoTServicesPage() {
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Connect, monitor, and optimize your business with cutting-edge IoT technology. From device management to 
+              Connect, monitor, and optimize your business with cutting-edge IoT technology. From device management to
               advanced analytics, we deliver comprehensive IoT solutions that drive innovation and efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -347,5 +354,9 @@ export default function IoTServicesPage() {
       </section>
 
       <TrustedBySection />
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card>}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

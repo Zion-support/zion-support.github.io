@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Calendar, Clock, ArrowRight, Tag, User } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, Tag, User export default function News() {
+=======
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react'
 
 
-export default function News() {
+export default function News(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const newsArticles = [
 		{
 			id: 1,
@@ -32,7 +38,7 @@ export default function News() {
 			author: 'Zion Team',
 			date: '2025-01-05',
 			readTime: '3 min read',
-			category: 'Company News',
+			category: 'Comp News',
 			image: '/api/placeholder/400/250'
 		},
 		{
@@ -64,10 +70,10 @@ export default function News() {
 			readTime: '8 min read',
 			category: 'Security',
 			image: '/api/placeholder/400/250'
-		}
+
 	]
 
-	const categories = ['All', 'Product Launch', 'Company News', 'Industry Insights', 'Customer Success', 'Security']
+	const categories = ['All', 'Product Launch', 'Comp News', 'Industry Insights', 'Customer Success', 'Security']
 
 	return (
 		<>
@@ -93,7 +99,7 @@ export default function News() {
 							<button
 								key={category}
 								className="px-4 py-2 rounded-full text-sm font-medium transition-colors hover:bg-blue-50 hover:text-blue-600"
-							>
+
 								{category}
 							</button>
 						))}
@@ -144,7 +150,7 @@ export default function News() {
 									<Link
 										to={`/news/${newsArticles[0].id}`}
 										className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-									>
+
 										Read More
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
@@ -158,8 +164,8 @@ export default function News() {
 			{/* News Grid */}
 			<section className="py-16">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid gap-8 lg:grid-cols-2">
-						{newsArticles.slice(1).map((article) => (
+					<div className="grid gap-8 lg: grid-cols-2">
+						{newsArticles.slice(1).map((article)  => (
 							<article key={article.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
 								<div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
 									<Tag className="h-12 w-12 text-gray-400" />
@@ -194,7 +200,7 @@ export default function News() {
 										<Link
 											to={`/news/${article.id}`}
 											className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-										>
+
 											Read More
 											<ArrowRight className="ml-2 h-4 w-4" />
 										</Link>
@@ -243,18 +249,28 @@ export default function News() {
 						<Link
 							to="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-						>
+
 							Get Started
 						</Link>
 						<Link
 							to="/services"
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
-						>
+
 							Learn more <span aria-hidden="true">→</span>
+<<<<<<< HEAD
 						</Link>
 					</div>
 				</div>
 			</section>
 		</>
 	)
-}
+}}}
+=======
+						</Link>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

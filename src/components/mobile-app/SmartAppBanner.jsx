@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
+<<<<<<< HEAD
+import { X, ArrowRight import { Link } from 'react-router-dom';
+=======
 import { X, ArrowRight } from "lucide-react";
-import { Link } from 'react-router-dom';
+import Link from "next/link";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { useIsMobile } from "@/hooks/use-mobile";
 export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appStoreUrl = "/download", googlePlayUrl = "/download", delay = 1500 }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -10,25 +14,32 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
         // Only show banner on mobile devices and if it hasn't been dismissed
         if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
             const timer = setTimeout(() => {
+<<<<<<< HEAD
                 setIsVisible(true);
             }, delay);
             return () => clearTimeout(timer);
-        }
+
+=======
+                setIsVisible(true)}, delay);
+            return () => clearTimeout(timer)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isMobile, delay]);
     const dismissBanner = () => {
         setIsVisible(false);
-        safeStorage.setItem("smartBannerDismissed", "true");
-    };
+        safeStorage.setItem("smartBannerDismissed", "true")};
     const resetBanner = () => {
         safeStorage.removeItem("smartBannerDismissed");
-        setIsVisible(true);
-    };
+        setIsVisible(true)};
     // Only render on mobile devices
     if (!isMobile || !isVisible) {
         return process.env.NODE_ENV === 'development' ? (<div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
+<<<<<<< HEAD
       </div>) : null;
-    }
+
+=======
+      </div>) : null}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Detect iOS or Android
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
@@ -37,22 +48,27 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
           {appIconSrc ? (<img loading="lazy" src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md"/>) : (<div className="text-zion-cyan font-bold text-lg">Z</div>)}
         </div>
-        
+
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
-        
+
         <div className="flex items-center gap-3">
           <Link href="/open-app" className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium">
             View
             <ArrowRight className="w-3 h-3 ml-1"/>
           </Link>
-          
+
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5"/>
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 };
+}}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

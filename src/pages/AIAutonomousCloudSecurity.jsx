@@ -8,7 +8,7 @@ const AIAutonomousCloudSecurity = () => {
         <meta name="keywords" content="AI cloud security, autonomous cloud security, cloud protection, threat detection, autonomous operations, AI cloud security platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-cloud-security"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousCloudSecurity = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Cloud Security Intelligence</h3>
               <p className="text-gray-300">AI trained on cloud security datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that secures cloud independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Cloud Security</h3>
               <p className="text-gray-300">24/7 cloud security operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive cloud security insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-violet-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Cloud Security</h3>
               <p className="text-gray-300">Prevent cloud security issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Cloud Security</h3>
@@ -93,25 +93,25 @@ const AIAutonomousCloudSecurity = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
                 <p className="text-gray-300 text-sm">Monitor cloud</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-sky-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
                 <p className="text-gray-300 text-sm">Detect threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-sky-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-sky-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Protect</h3>
                 <p className="text-gray-300 text-sm">Protect cloud</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-sky-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Respond</h3>
@@ -138,12 +138,12 @@ const AIAutonomousCloudSecurity = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Public Cloud</h3>
                 <p className="text-gray-300">Public cloud security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Private Cloud</h3>
                 <p className="text-gray-300">Private cloud security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Hybrid Cloud</h3>
                 <p className="text-gray-300">Hybrid cloud security</p>
@@ -168,6 +168,5 @@ const AIAutonomousCloudSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousCloudSecurity;

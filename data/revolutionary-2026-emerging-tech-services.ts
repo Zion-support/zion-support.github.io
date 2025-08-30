@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2026EmergingTechService {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface Revolutionary2026EmergingTechService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTechService[] = [
   // Holographic Metaverse Development Platform
   {
@@ -48,7 +51,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary platform for creating immersive 3D holographic metaverse experiences with AI-powered content generation and real-time collaboration.',
-    features: [
+    features[
       '3D holographic rendering',
       'AI content generation',
       'Real-time collaboration',
@@ -71,11 +74,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '2 weeks',
     category: 'Emerging Tech & Metaverse',
     realService: true,
-    technology: ['3D Graphics', 'Holographic Rendering', 'AI Content Generation', 'Unity', 'Unreal Engine', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['VR headsets', 'AR glasses', 'Holographic displays', 'Gaming engines', 'Social platforms', 'Payment systems'],
-    useCases: ['Gaming experiences', 'Virtual events', 'Educational content', 'Corporate training', 'Healthcare simulation', 'Virtual real estate'],
+    technology['3D Graphics', 'Holographic Rendering', 'AI Content Generation', 'Unity', 'Unreal Engine', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['VR headsets', 'AR glasses', 'Holographic displays', 'Gaming engines', 'Social platforms', 'Payment systems'],
+    useCases['Gaming experiences', 'Virtual events', 'Educational content', 'Corporate training', 'Healthcare simulation', 'Virtual real estate'],
     roi: 'Average customer sees 700% ROI within 10 months through immersive experiences and AI content generation.',
-    competitors: ['Unity', 'Unreal Engine', 'Roblox', 'Minecraft', 'Second Life'],
+    competitors['Unity', 'Unreal Engine', 'Roblox', 'Minecraft', 'Second Life'],
     marketSize: '$74.4B market',
     growthRate: '38.2% annual growth',
     variant: 'quantum-futuristic',
@@ -100,7 +103,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$5,999',
     period: '/month',
     description: 'Advanced AI platform for tracking space debris, predicting collisions, and managing space traffic to ensure satellite safety and orbital sustainability.',
-    features: [
+    features[
       'Real-time debris tracking',
       'Collision prediction algorithms',
       'Space traffic management',
@@ -123,11 +126,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '3 weeks',
     category: 'Space Tech & AI',
     realService: true,
-    technology: ['AI Algorithms', 'Satellite Tracking', 'Orbital Mechanics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Satellite systems', 'Ground stations', 'Tracking networks', 'Government databases', 'Insurance platforms', 'Defense systems'],
-    useCases: ['Satellite safety', 'Space traffic management', 'Collision prevention', 'Insurance risk assessment', 'Regulatory compliance', 'Emergency response'],
+    technology['AI Algorithms', 'Satellite Tracking', 'Orbital Mechanics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Satellite systems', 'Ground stations', 'Tracking networks', 'Government databases', 'Insurance platforms', 'Defense systems'],
+    useCases['Satellite safety', 'Space traffic management', 'Collision prevention', 'Insurance risk assessment', 'Regulatory compliance', 'Emergency response'],
     roi: 'Average customer sees 900% ROI within 8 months through satellite protection and collision prevention.',
-    competitors: ['LeoLabs', 'Space-Track', 'ESA', 'NASA', 'JAXA'],
+    competitors['LeoLabs', 'Space-Track', 'ESA', 'NASA', 'JAXA'],
     marketSize: '$23.8B market',
     growthRate: '45.7% annual growth',
     variant: 'quantum-futuristic',
@@ -152,7 +155,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$1,999',
     period: '/month',
     description: 'Revolutionary AI platform that predicts climate changes with unprecedented accuracy using advanced machine learning and global data analysis.',
-    features: [
+    features[
       'Climate pattern recognition',
       'Long-term predictions',
       'Regional forecasting',
@@ -175,11 +178,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '2 weeks',
     category: 'Climate Tech & AI',
     realService: true,
-    technology: ['Machine Learning', 'Climate Modeling', 'Data Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Weather stations', 'Satellite data', 'Government databases', 'Insurance platforms', 'Agriculture systems', 'Energy grids'],
-    useCases: ['Climate planning', 'Risk assessment', 'Policy development', 'Agriculture optimization', 'Energy planning', 'Urban development'],
+    technology['Machine Learning', 'Climate Modeling', 'Data Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Weather stations', 'Satellite data', 'Government databases', 'Insurance platforms', 'Agriculture systems', 'Energy grids'],
+    useCases['Climate planning', 'Risk assessment', 'Policy development', 'Agriculture optimization', 'Energy planning', 'Urban development'],
     roi: 'Average customer sees 500% ROI within 12 months through accurate predictions and risk mitigation.',
-    competitors: ['ClimateAI', 'Jupiter Intelligence', 'The Climate Corporation', 'IBM Weather', 'AccuWeather'],
+    competitors['ClimateAI', 'Jupiter Intelligence', 'The Climate Corporation', 'IBM Weather', 'AccuWeather'],
     marketSize: '$56.3B market',
     growthRate: '22.8% annual growth',
     variant: 'quantum-futuristic',
@@ -204,7 +207,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$3,499',
     period: '/month',
     description: 'Revolutionary AI platform that enables autonomous manufacturing with self-optimizing processes, predictive maintenance, and intelligent quality control.',
-    features: [
+    features[
       'Self-optimizing production',
       'Predictive maintenance',
       'Intelligent quality control',
@@ -227,11 +230,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '3 weeks',
     category: 'Manufacturing & AI',
     realService: true,
-    technology: ['AI Algorithms', 'IoT Integration', 'Predictive Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Manufacturing equipment', 'IoT sensors', 'ERP systems', 'Quality control systems', 'Supply chain platforms', 'Energy management systems'],
-    useCases: ['Production optimization', 'Quality improvement', 'Cost reduction', 'Energy efficiency', 'Supply chain optimization', 'Customization'],
+    technology['AI Algorithms', 'IoT Integration', 'Predictive Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Manufacturing equipment', 'IoT sensors', 'ERP systems', 'Quality control systems', 'Supply chain platforms', 'Energy management systems'],
+    useCases['Production optimization', 'Quality improvement', 'Cost reduction', 'Energy efficiency', 'Supply chain optimization', 'Customization'],
     roi: 'Average customer sees 600% ROI within 10 months through production optimization and cost reduction.',
-    competitors: ['Siemens', 'Rockwell Automation', 'GE Digital', 'ABB', 'Honeywell'],
+    competitors['Siemens', 'Rockwell Automation', 'GE Digital', 'ABB', 'Honeywell'],
     marketSize: '$89.7B market',
     growthRate: '19.3% annual growth',
     variant: 'quantum-futuristic',
@@ -256,7 +259,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$15,999',
     period: '/month',
     description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, quantum cryptography, and quantum networking capabilities.',
-    features: [
+    features[
       'Quantum entanglement networks',
       'Quantum cryptography',
       'Quantum repeaters',
@@ -279,11 +282,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '4 weeks',
     category: 'Quantum Tech & Internet',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Networks', 'Quantum Cryptography', 'Python', 'Qiskit', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Telecom networks', 'Government systems', 'Defense platforms', 'Research databases', 'Financial systems', 'Healthcare platforms'],
-    useCases: ['Secure communications', 'Government networks', 'Defense systems', 'Financial transactions', 'Healthcare data', 'Research collaboration'],
+    technology['Quantum Computing', 'Quantum Networks', 'Quantum Cryptography', 'Python', 'Qiskit', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations['Telecom networks', 'Government systems', 'Defense platforms', 'Research databases', 'Financial systems', 'Healthcare platforms'],
+    useCases['Secure communications', 'Government networks', 'Defense systems', 'Financial transactions', 'Healthcare data', 'Research collaboration'],
     roi: 'Average customer sees 1800% ROI within 18 months through quantum security and future-proof infrastructure.',
-    competitors: ['Cisco', 'Juniper', 'Huawei', 'Nokia', 'Ericsson'],
+    competitors['Cisco', 'Juniper', 'Huawei', 'Nokia', 'Ericsson'],
     marketSize: '$127.3B market',
     growthRate: '35.8% annual growth',
     variant: 'quantum-futuristic',
@@ -299,5 +302,5 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     customers: 45,
     rating: 4.9,
     reviews: 34
-  }
-];
+
+];}}

@@ -11,9 +11,13 @@ export interface EmergingTech2027Service {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
-}
+
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTech2027Services: EmergingTech2027Service[] = [
   {
     id: "2027-emerging-tech",
@@ -21,7 +25,7 @@ export const emergingTech2027Services: EmergingTech2027Service[] = [
     tagline: "Emerging tech for 2027",
     price: "$349/month",
     description: "Advanced platform showcasing emerging technologies and innovations for 2027.",
-    features: [
+    features[
       "Emerging technologies",
       "Innovation platform",
       "Future capabilities",
@@ -35,6 +39,6 @@ export const emergingTech2027Services: EmergingTech2027Service[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

@@ -4,7 +4,7 @@ export function useMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
+    const checkMobile = () => {;
       const userAgent = navigator.userAgent;
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
       setIsMobile(isMobileDevice);

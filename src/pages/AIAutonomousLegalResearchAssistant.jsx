@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
-const AIAutonomousLegalResearchAssistant = () => {
+import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle const AIAutonomousLegalResearchAssistant = () => {
     const features = [
         "Autonomous case law analysis",
         "Statute interpretation & updates",
@@ -32,7 +31,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             icon: Shield,
             title: "Compliance & Updates",
             description: "Stay current with latest legal changes and regulatory updates"
-        }
+
     ];
     const pricingPlans = [
         {
@@ -40,7 +39,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             price: "$899",
             period: "/month",
             description: "Perfect for individual lawyers and small firms",
-            features: [
+            features[
                 "Up to 100 research queries/month",
                 "Basic case law analysis",
                 "Standard legal databases access",
@@ -53,7 +52,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             price: "$1,999",
             period: "/month",
             description: "Ideal for law firms and legal departments",
-            features: [
+            features[
                 "Up to 500 research queries/month",
                 "Advanced AI analysis",
                 "Premium legal databases",
@@ -69,7 +68,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             price: "$3,999",
             period: "/month",
             description: "For large law firms and corporations",
-            features: [
+            features[
                 "Unlimited research queries",
                 "Custom AI model training",
                 "Enterprise security features",
@@ -79,7 +78,7 @@ const AIAutonomousLegalResearchAssistant = () => {
                 "On-site training & support",
                 "SLA guarantees"
             ]
-        }
+
     ];
     const useCases = [
         {
@@ -101,7 +100,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             title: "Legal Opinions",
             description: "Generate well-researched legal opinions with AI assistance",
             icon: BarChart3
-        }
+
     ];
     const industries = [
         "Corporate Law",
@@ -128,7 +127,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             AI Autonomous Legal Research Assistant
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Advanced AI-powered legal research tool that autonomously analyzes case law, statutes, 
+            Advanced AI-powered legal research tool that autonomously analyzes case law, statutes,
             and legal precedents to provide comprehensive legal insights and accelerate your research.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -312,6 +311,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AIAutonomousLegalResearchAssistant;
+}}}}

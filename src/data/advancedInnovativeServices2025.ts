@@ -1,4 +1,4 @@
-export type AdvancedServiceItem = {
+export type AdvancedServiceItem = {;
   id: string;
   title: string;
   description: string;
@@ -21,7 +21,7 @@ export type AdvancedServiceItem = {
   securityFeatures: string[];
 };
 
-export type AdvancedServiceCategory = {
+export type AdvancedServiceCategory = {;
   name: string;
   slug: string;
   description: string;
@@ -115,7 +115,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         deploymentOptions: ['SaaS', 'Private cloud', 'Hybrid', 'On-premise'],
         scalability: 'Processes 10M+ customer interactions daily',
         securityFeatures: ['Data encryption at rest and in transit', 'Role-based access control', 'Audit logging', 'Data residency controls']
-      }
+
     ]
   },
   {
@@ -204,7 +204,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         deploymentOptions: ['Hardware security modules', 'Software libraries', 'Cloud services', 'Hybrid solutions'],
         scalability: 'Supports 1M+ concurrent connections with minimal latency',
         securityFeatures: ['Quantum-resistant algorithms', 'Hardware acceleration', 'Side-channel protection', 'Regular security audits']
-      }
+
     ]
   },
   {
@@ -293,7 +293,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         deploymentOptions: ['Edge locations', 'Hybrid edge-cloud', 'Multi-edge', 'Custom edge'],
         scalability: 'Manages 10K+ edge nodes globally',
         securityFeatures: ['Edge security', 'Encrypted communications', 'Access control', 'Threat detection']
-      }
+
     ]
   },
   {
@@ -382,7 +382,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         deploymentOptions: ['Private blockchain', 'Consortium blockchain', 'Hybrid solutions', 'Cloud deployment'],
         scalability: 'Handles 100K+ transactions per second',
         securityFeatures: ['Cryptographic security', 'Access controls', 'Audit trails', 'Compliance monitoring']
-      }
+
     ]
   },
   {
@@ -471,7 +471,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         deploymentOptions: ['Cloud', 'On-premise', 'Hybrid', 'Co-location'],
         scalability: 'Processes 1M+ market events per second',
         securityFeatures: ['Financial-grade security', 'Encrypted communications', 'Access controls', 'Audit trails', 'Compliance monitoring']
-      }
+
     ]
   },
   {
@@ -560,9 +560,9 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         deploymentOptions: ['Cloud', 'On-premise', 'Hybrid', 'Edge deployment'],
         scalability: 'Processes 1M+ events per second with linear scaling',
         securityFeatures: ['Data encryption', 'Access controls', 'Audit logging', 'Performance monitoring']
-      }
+
     ]
-  }
+
 ];
 
-export default advancedInnovativeServices2025;
+export default advancedInnovativeServices2025;}}}}}}}

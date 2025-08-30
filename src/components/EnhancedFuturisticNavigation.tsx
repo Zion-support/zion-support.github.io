@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
+import {
+  Menu,
+  X,
+  Search,
+  User,
+  Bell,
   ChevronDown,
   Brain,
   Shield,
@@ -218,38 +218,58 @@ import {
   Chi,
   Psi,
   Omega
-} from 'lucide-react';
-
+<<<<<<< HEAD
 export const EnhancedFuturisticNavigation: React.FC = () => {
+=======
+ } from 'lucide-react';
+
+<<<<<<< HEAD
+export const EnhancedFuturisticNavigation: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+<<<<<<< HEAD
+    const handleScroll = () => {;
+      setScrolled(window.scrollY > 20)};
+=======
+    const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
+    setActiveDropdown(null)}, [location.pathname]);
 
-  const handleSearch = (e: React.FormEvent) => {
+<<<<<<< HEAD
+  const handleSearch = (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (searchQuery.trim()) {
+<<<<<<< HEAD
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-    }
+
+=======
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const toggleDropdown = (dropdown: string) => {
+<<<<<<< HEAD
+  const toggleDropdown = (dropdown: string)  => {;
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
+=======
+  const toggleDropdown = (dropdown: string) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const navigationItems = [
     {
@@ -264,7 +284,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/ai-services',
       icon: Brain,
       color: 'from-zion-purple to-zion-pink',
-      dropdown: [
+      dropdown[
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
@@ -278,7 +298,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/micro-saas',
       icon: Code,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
+      dropdown[
         { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' },
         { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
         { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
@@ -294,7 +314,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/it-services',
       icon: Network,
       color: 'from-zion-blue to-zion-purple',
-      dropdown: [
+      dropdown[
         { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
         { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
         { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },
@@ -308,7 +328,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/emerging-tech',
       icon: Rocket,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown: [
+      dropdown[
         { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
         { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' },
         { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' },
@@ -322,7 +342,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/marketplace',
       icon: ShoppingCart,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
+      dropdown[
         { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' },
         { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' },
         { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' },
@@ -336,7 +356,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/services-overview',
       icon: BarChart3,
       color: 'from-zion-green to-zion-emerald',
-      dropdown: [
+      dropdown[
         { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
         { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
         { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
@@ -350,21 +370,31 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       color: 'from-zion-blue to-zion-cyan',
       isMain: true
     },
+<<<<<<< HEAD
     {
       name: 'Contact',
       href: '/contact',
       icon: Phone,
       color: 'from-zion-cyan to-zion-purple',
       isMain: true
-    }
+
+=======
+    {;
+      name: 'Contact',;
+      href: '/contact',;
+      icon: Phone,;
+      color: 'from-zion-cyan to-zion-purple',;
+      isMain: true;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
       {/* Desktop Navigation */}
       <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+        scrolled
+          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-6">
@@ -397,7 +427,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                           : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
                       }`}
-                    >
+
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.name}</span>
                       <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
@@ -412,7 +442,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                           : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
                       }`}
-                    >
+
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.name}</span>
                     </Link>
@@ -423,12 +453,39 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          initial = {
+  { opacity: 0, y: 10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
+                          animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+
+}}
+                          exit = {
+  { opacity: 0, y: 10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
-                        >
+
                           <div className="p-4">
                             <div className="grid grid-cols-1 gap-2">
                               {item.dropdown.map((dropdownItem) => (
@@ -436,7 +493,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                                   key={dropdownItem.name}
                                   to={dropdownItem.href}
                                   className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-slate-light/30 transition-all duration-200 group"
-                                >
+
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                                     {dropdownItem.icon && <dropdownItem.icon className="w-4 h-4 text-zion-cyan" />}
                                   </div>
@@ -491,8 +548,8 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       {/* Mobile Navigation */}
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">
         <div className={`transition-all duration-500 ${
-          scrolled 
-            ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+          scrolled
+            ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
             : 'bg-transparent'
         }`}>
           <div className="max-w-7xl mx-auto px-6">
@@ -514,7 +571,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
-              >
+
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
@@ -525,12 +582,39 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.3 }}
               className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden"
-            >
+
               <div className="max-w-7xl mx-auto px-6 py-6">
                 {/* Search */}
                 <form onSubmit={handleSearch} className="relative mb-6">
@@ -557,7 +641,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
                                 : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
                             }`}
-                          >
+
                             <div className="flex items-center space-x-3">
                               {item.icon && <item.icon className="w-4 h-4" />}
                               <span>{item.name}</span>
@@ -566,23 +650,50 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                               activeDropdown === item.name ? 'rotate-180' : ''
                             }`} />
                           </button>
-                          
+
                           {/* Mobile Dropdown */}
                           <AnimatePresence>
                             {activeDropdown === item.name && (
                               <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
+                                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                                 transition={{ duration: 0.3 }}
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
-                              >
+
                                 {item.dropdown.map((dropdownItem) => (
                                   <Link
                                     key={dropdownItem.name}
                                     to={dropdownItem.href}
                                     className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
-                                  >
+
                                     {dropdownItem.name}
                                   </Link>
                                 ))}
@@ -598,7 +709,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
                               : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
                           }`}
-                        >
+
                           <div className="flex items-center space-x-3">
                             {item.icon && <item.icon className="w-4 h-4" />}
                             <span>{item.name}</span>
@@ -625,10 +736,23 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
+<<<<<<< HEAD
       </nav>
 
       {/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
-    </>
+      <div className="h-20"></div>;
+    </>;
+  )};
+=======
+      </nav>;
+;
+      {/* Spacer for fixed navigation */};
+      <div className="h-20"></div>;
+    </>;
   );
+<<<<<<< HEAD
+};}}}
+=======
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

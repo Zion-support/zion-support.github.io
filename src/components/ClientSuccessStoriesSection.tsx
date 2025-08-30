@@ -1,6 +1,73 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {
+  Star,
+  Quote,
+  TrendingUp,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Heart
+<<<<<<< HEAD
+export const ClientSuccessStoriesSection: React.FC = () => {
+=======
+} from 'lucide-react';
 
+<<<<<<< HEAD
+export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      comp: 'TechFlow Solutions',
+      avatar: '👩‍💼',
+      rating: 5,
+      quote: 'Zion Tech Group transformed our legacy systems into a modern, AI-powered platform. The results exceeded our expectations with 300% performance improvement.',
+      metrics['300% Performance', '60% Cost Reduction', '2x Faster Deployment']
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CEO',
+      comp: 'Global Manufacturing Co.',
+      avatar: '👨‍💼',
+      rating: 5,
+      quote: 'Their cybersecurity expertise helped us achieve SOC 2 compliance in record time. The team is professional, knowledgeable, and delivers exceptional results.',
+      metrics['SOC 2 Compliance', '99.9% Uptime', 'Zero Security Breaches']
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'VP of Operations',
+      comp: 'HealthTech Innovations',
+      avatar: '👩‍⚕️',
+      rating: 5,
+      quote: 'The AI solutions they implemented have revolutionized our patient care processes. We\'ve seen a 40% improvement in diagnostic accuracy.',
+      metrics['40% Accuracy', '50% Time Savings', 'HIPAA Compliant']
+    },
+    {
+      name: 'David Thompson',
+      role: 'Founder',
+      comp: 'StartupXYZ',
+      avatar: '👨‍💻',
+      rating: 5,
+      quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
+<<<<<<< HEAD
+      metrics: ['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
+
+=======
+      metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture'];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  ];
+
+  const successMetrics = [
+    { label: 'Client Satisfaction', value: '98%', icon: Heart },
+    { label: 'Project Success Rate', value: '99%', icon: CheckCircle },
+    { label: 'Client Retention', value: '95%', icon: Users },;
+    { label: 'Average Rating', value: '4.9/5', icon: Star };
+  ];
+=======
 const successStories = [
   {
     id: 1,
@@ -46,54 +113,159 @@ const successStories = [
       "Improved patient outcomes by 30%",
       "Reduced administrative overhead by 50%",
       "Enhanced data accuracy by 95%"
-    ],
-    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",
-    author: "Dr. Emily Rodriguez",
-    position: "Chief Medical Officer",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"
-  }
+    ],;
+    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",;
+    author: "Dr. Emily Rodriguez",;
+    position: "Chief Medical Officer",;
+    rating: 5,;
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
+  };
 ];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function ClientSuccessStoriesSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+=======
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Client Success Stories
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Real results from real clients. Discover how we've transformed businesses across industries.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Real results from real clients. Discover how we've helped businesses
+            across industries achieve remarkable transformations and measurable success.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {successStories.map((story, index) => (
+        {/* Success Metrics */}
+        <motion.div
+<<<<<<< HEAD
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+
+          {successMetrics.map((metric, index) => {
+=======
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+}}
+          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
+        >;
+          {successMetrics.map((metric, index)  => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            const IconComponent = metric.icon;
+            return (
+              <div key = {metric.label} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-green-100 rounded-full">
+                    <IconComponent className="h-8 w-8 text-green-600" />
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">
+                  {metric.value}
+                </div>
+                <div className="text-gray-600">{metric.label}</div>
+              </div>
+            )})}
+        </motion.div>
+
+        {/* Testimonials Grid */}
+        <div className="grid md: grid-cols-2 gap-8 mb-12">
+          {testimonials.map((testimonial, index)  => (
             <motion.div
+<<<<<<< HEAD
+              key={testimonial.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+
+=======
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
             >
-              <div className="relative">
-                <img 
-                  src={story.image} 
-                  alt={story.client}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-3 left-3">
-                  <span className="px-3 py-1 bg-slate-800/80 text-white text-xs font-semibold rounded-full">
-                    {story.industry}
-                  </span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+              <div className="flex items-center mb-6">
+                <div className="text-4xl mr-4">{testimonial.avatar}</div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-gray-600">{testimonial.role}</p>
+                  <p className="text-blue-600 font-medium">{testimonial.comp}</p>
                 </div>
                 <div className="absolute top-3 right-3">
                   <div className="flex items-center gap-1">
@@ -155,10 +327,37 @@ export function ClientSuccessStoriesSection() {
         {/* Success Metrics */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -188,17 +387,80 @@ export function ClientSuccessStoriesSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+
+=======
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to be our next success story?</span>
-            <span className="text-2xl">→</span>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Write Your Success Story?
+            </h3>
+            <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have transformed their
+              businesses with our innovative technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
+                View All Case Studies
+                <Award className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
-      </div>
-    </section>
+      </div>;
+    </section>;
+  )};
+
+export default ClientSuccessStoriesSection;
+<<<<<<< HEAD
+}}
+=======
+=======
+            <span className="text-2xl">→</span>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export default ClientSuccessStoriesSection;
+export default ClientSuccessStoriesSection;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

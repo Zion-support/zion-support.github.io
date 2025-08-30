@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap } from 'lucide-react';
-const ContentQualityAnalyzer = () => {
+import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [contentIssues, setContentIssues] = useState([]);
@@ -49,12 +48,11 @@ const ContentQualityAnalyzer = () => {
             description: 'No headings found',
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',
             status: 'open'
-        }
+
     ];
     useEffect(() => {
         setContentIssues(sampleIssues);
-        generateReport(sampleIssues);
-    }, []);
+        generateReport(sampleIssues)}, []);
     const generateReport = (issues) => {
         const totalPages = 79; // From analysis report
         const pagesWithIssues = issues.length;
@@ -71,14 +69,12 @@ const ContentQualityAnalyzer = () => {
             pagesWithImages: 45, // Sample data
             pagesWithMetaDescriptions: 32, // Sample data
             lastUpdated: new Date()
-        });
-    };
+        })};
     const startAnalysis = async () => {
         setIsAnalyzing(true);
         // Simulate content analysis
         await new Promise(resolve => setTimeout(resolve, 3000));
-        setIsAnalyzing(false);
-    };
+        setIsAnalyzing(false)};
     const getSeverityIcon = (severity) => {
         switch (severity) {
             case 'high':
@@ -88,8 +84,12 @@ const ContentQualityAnalyzer = () => {
             case 'low':
                 return <Info className="w-4 h-4 text-blue-400"/>;
             default:
+<<<<<<< HEAD
                 return <Info className="w-4 h-4 text-gray-400"/>;
-        }
+
+=======
+                return <Info className="w-4 h-4 text-gray-400"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -100,8 +100,12 @@ const ContentQualityAnalyzer = () => {
             case 'low':
                 return 'text-blue-400';
             default:
+<<<<<<< HEAD
                 return 'text-gray-400';
-        }
+
+=======
+                return 'text-gray-400'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -112,15 +116,17 @@ const ContentQualityAnalyzer = () => {
             case 'open':
                 return 'text-red-400';
             default:
+<<<<<<< HEAD
                 return 'text-gray-400';
-        }
+
+=======
+                return 'text-gray-400'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const filteredIssues = contentIssues.filter(issue => {
-        const matchesFilter = selectedFilter === 'all' || issue.severity === selectedFilter;
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesFilter && matchesSearch;
-    });
+        return matchesFilter && matchesSearch});
     const getIssueTypeLabel = (type) => {
         switch (type) {
             case 'missing_title':
@@ -134,8 +140,12 @@ const ContentQualityAnalyzer = () => {
             case 'no_images':
                 return 'No Images';
             default:
+<<<<<<< HEAD
                 return type;
-        }
+
+=======
+                return type}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       {/* Floating Action Button */}
@@ -145,7 +155,34 @@ const ContentQualityAnalyzer = () => {
 
       {/* Modal */}
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
-          <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+          <motion.div initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}} animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}} exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">
               <div className="flex items-center justify-between">
@@ -347,6 +384,6 @@ const ContentQualityAnalyzer = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
-};
+    </>)};
 export default ContentQualityAnalyzer;
+}}}}}}

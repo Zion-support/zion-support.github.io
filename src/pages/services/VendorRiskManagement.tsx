@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-const VendorRiskManagement: React.FC = () => (
+const VendorRiskManagement: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="Vendor Risk Management (VRM) SaaS - Zion Tech Group" description="Continuously assess, score, and monitor third-party risk with automated evidence collection and remediation workflows." />
 
@@ -36,13 +36,13 @@ const VendorRiskManagement: React.FC = () => (
           <li>Enterprise: custom, SSO, advanced exports</li>
         </ul>
       </div>
-    </section>
-
-    <section className="container mx-auto px-4 pb-16 space-x-4">
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request demo</a>
-      <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-block px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 transition">Learn more</a>
-    </section>
-  </div>
+    </section>;
+;
+    <section className="container mx-auto px-4 pb-16 space-x-4">;
+      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request demo</a>;
+      <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-block px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 transition">Learn more</a>;
+    </section>;
+  </div>;
 );
 
 export default VendorRiskManagement;

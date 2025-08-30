@@ -8,14 +8,13 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { Loader2 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from "next/router";
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
-    const router = useNavigate();
+    const router = useRouter();
     const [contentType, setContentType] = useState('blog');
     const [customPrompt, setCustomPrompt] = useState('');
     const [topic, setTopic] = useState('');
@@ -28,8 +27,17 @@ export default function ContentGenerator() {
     React.useEffect(() => {
         if (!isLoading && !user) {
             toast.error("You must be logged in to access this page");
+<<<<<<< HEAD
             navigate("/login?redirect=/content-generator");
+
+=======
+<<<<<<< HEAD
+            router.push("/login?redirect=/content-generator")}
+=======
+            router("/login?redirect=/content-generator");
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [user, isLoading, router]);
     const generateContent = async () => {
         setIsGenerating(true);
@@ -38,34 +46,54 @@ export default function ContentGenerator() {
             const { data, error } = await supabase.functions.invoke('generate-content', {
                 body: {
                     contentType,
-                    prompt: customPrompt || undefined,
-                    topic: topic || undefined,
+                    prompt: customPrompt || null,
+                    topic: topic || null,
                     autoPublish,
                     includeImage: contentType === 'blog' ? includeImage : false
-                }
+
             });
             if (error)
                 throw error;
             setPreviewContent(data);
+<<<<<<< HEAD
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
-        }
+
         catch (error) {
-            console.error("Error generating content:", error);
+<<<<<<< HEAD
+            // // // console.error("Error generating content:", error);
+=======
+            // // // // // // // console.error("Error generating content:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error("Failed to generate content. Please try again.");
-        }
+
         finally {
             setIsGenerating(false);
-        }
+
+=======
+            toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
+        catch (error) {
+            console.error("Error generating content:", error);
+            toast.error("Failed to generate content. Please try again.")}
+        finally {
+            setIsGenerating(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const sendTestNewsletter = async () => {
         if (!testEmail) {
             toast.error("Please enter a test email address");
+<<<<<<< HEAD
             return;
-        }
+
         if (!previewContent) {
             toast.error("Generate newsletter content first");
             return;
-        }
+
+=======
+            return}
+        if (!previewContent) {
+            toast.error("Generate newsletter content first");
+            return}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         try {
             const { data, error } = await supabase.functions.invoke('send-newsletter', {
                 body: {
@@ -74,33 +102,49 @@ export default function ContentGenerator() {
                     body: previewContent.body,
                     testMode: true,
                     testEmail
-                }
+
             });
             if (error)
                 throw error;
+<<<<<<< HEAD
             toast.success(`Test newsletter sent to ${testEmail}!`);
-        }
+
+        catch (error) {
+<<<<<<< HEAD
+            // // // console.error("Error sending test newsletter:", error);
+=======
+            // // // // // // // console.error("Error sending test newsletter:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+            toast.error("Failed to send test newsletter. Please try again.");
+
+=======
+            toast.success(`Test newsletter sent to ${testEmail}!`)}
         catch (error) {
             console.error("Error sending test newsletter:", error);
-            toast.error("Failed to send test newsletter. Please try again.");
-        }
+            toast.error("Failed to send test newsletter. Please try again.")}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Check if user is still loading
     if (isLoading) {
         return (<>
-        
+
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading...</div>
         </div>
-        
+<<<<<<< HEAD
+
       </>);
-    }
+
+=======
+        
+      </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
-      
+
       <div className="min-h-screen bg-zion-blue py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-1">
               <Card className="bg-zion-blue-dark border border-zion-blue-light">
@@ -123,29 +167,38 @@ export default function ContentGenerator() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
-                    <Input id="topic" placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
+                    <Input id="topic" placeholder = {
+  contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
+  May Platform Updates"
+
+
+
+
+
+
+} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>
                     <Textarea id="customPrompt" placeholder="Enter a custom prompt for the AI..." className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]" value={customPrompt} onChange={(e) => setCustomPrompt(e.target.value)}/>
                   </div>
-                  
+
                   {contentType === 'blog' && (<>
                       <div className="flex items-center justify-between">
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
                         <Switch id="autoPublish" checked={autoPublish} onCheckedChange={setAutoPublish}/>
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch id="includeImage" checked={includeImage} onCheckedChange={setIncludeImage}/>
                       </div>
                     </>)}
-                  
+
                   {contentType === 'newsletter' && (<div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
                       <Input id="testEmail" type="email" placeholder="your@email.com" className="bg-zion-blue border border-zion-blue-light text-white" value={testEmail} onChange={(e) => setTestEmail(e.target.value)}/>
@@ -161,7 +214,7 @@ export default function ContentGenerator() {
                 </CardFooter>
               </Card>
             </div>
-            
+
             <div className="lg:col-span-2">
               <Card className="bg-zion-blue-dark border border-zion-blue-light h-full">
                 <CardHeader>
@@ -181,15 +234,24 @@ export default function ContentGenerator() {
                             <TabsTrigger value="markdown">Markdown</TabsTrigger>
                             <TabsTrigger value="metadata">Metadata</TabsTrigger>
                           </TabsList>
-                          
+
                           <TabsContent value="preview" className="pt-4">
                             <ScrollArea className="h-[500px] pr-4">
                               <div className="space-y-4">
                                 <h2 className="text-2xl font-bold text-white">{previewContent.title}</h2>
                                 <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
-                                <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{
+                                <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML = {
+  {
                 __html: previewContent.body
-                    .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>")
+                    .replace(/^#{1,
+  6
+
+
+
+
+
+
+}\s+(.+)$/gm, "<h$1>$2</h$1>")
                     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
                     .replace(/\*(.+?)\*/g, "<em>$1</em>")
                     .replace(/^-\s+(.+)$/gm, "<li>$1</li>")
@@ -198,7 +260,7 @@ export default function ContentGenerator() {
                               </div>
                             </ScrollArea>
                           </TabsContent>
-                          
+
                           <TabsContent value="markdown" className="pt-4">
                             <ScrollArea className="h-[500px]">
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">
@@ -206,19 +268,19 @@ export default function ContentGenerator() {
                               </pre>
                             </ScrollArea>
                           </TabsContent>
-                          
+
                           <TabsContent value="metadata" className="pt-4">
                             <div className="space-y-4">
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Title</h3>
                                 <p className="text-zion-slate-light">{previewContent.title}</p>
                               </div>
-                              
+
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Meta Description</h3>
                                 <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
                               </div>
-                              
+
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Tags</h3>
                                 <div className="flex flex-wrap gap-2">
@@ -227,12 +289,12 @@ export default function ContentGenerator() {
                                     </span>))}
                                 </div>
                               </div>
-                              
+
                               {previewContent.tweetSummary && (<div>
                                   <h3 className="text-white font-semibold mb-1">Tweet Summary</h3>
                                   <p className="text-zion-slate-light">{previewContent.tweetSummary}</p>
                                 </div>)}
-                              
+
                               {previewContent.imagePrompt && (<div>
                                   <h3 className="text-white font-semibold mb-1">Image Prompt</h3>
                                   <p className="text-zion-slate-light">{previewContent.imagePrompt}</p>
@@ -246,7 +308,7 @@ export default function ContentGenerator() {
                             <TabsTrigger value="preview">Preview</TabsTrigger>
                             <TabsTrigger value="html">HTML</TabsTrigger>
                           </TabsList>
-                          
+
                           <TabsContent value="preview" className="pt-4">
                             <div className="bg-white rounded-lg p-6 text-black">
                               <h2 className="text-xl font-bold">{previewContent.subject}</h2>
@@ -259,14 +321,14 @@ export default function ContentGenerator() {
                                 </Button>
                               </div>
                             </div>
-                            
+
                             <div className="mt-4 flex justify-end">
                               <Button onClick={sendTestNewsletter} disabled={!testEmail} className="bg-zion-blue-light hover:bg-zion-blue text-white">
                                 Send Test to {testEmail || "your email"}
                               </Button>
                             </div>
                           </TabsContent>
-                          
+
                           <TabsContent value="html" className="pt-4">
                             <ScrollArea className="h-[500px]">
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">
@@ -295,6 +357,11 @@ export default function ContentGenerator() {
           </div>
         </div>
       </div>
-      
+<<<<<<< HEAD
+
     </>);
-}
+</div></div></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}}}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -12,10 +12,10 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         setIsAnalyzing(true);
         const issues = [];
         const suggestions = [];
-        let wordCount = 0;
-        let readabilityScore = 100;
-        let seoScore = 100;
-        let engagementScore = 100;
+        const wordCount = 0;
+        const readabilityScore = 100;
+        const seoScore = 100;
+        const engagementScore = 100;
         // Get all content elements
         const contentElements = document.querySelectorAll(targetElements.join(', '));
         contentElements.forEach((element, index) => {
@@ -36,8 +36,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'seo'
                 });
                 seoScore -= 10;
+<<<<<<< HEAD
                 engagementScore -= 10;
-            }
+
+=======
+                engagementScore -= 10}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for very short content
             if (words.length > 0 && words.length < 10) {
                 issues.push({
@@ -52,8 +56,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'engagement'
                 });
                 engagementScore -= 5;
+<<<<<<< HEAD
                 seoScore -= 3;
-            }
+
+=======
+                seoScore -= 3}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for very long paragraphs (hard to read)
             if (words.length > 100) {
                 issues.push({
@@ -68,8 +76,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'readability'
                 });
                 readabilityScore -= 5;
+<<<<<<< HEAD
                 engagementScore -= 3;
-            }
+
+=======
+                engagementScore -= 3}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for proper heading structure
             if (element.tagName.match(/^H[1-6]$/)) {
                 const level = parseInt(element.tagName.charAt(1));
@@ -88,16 +100,21 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             suggestion: 'Ensure heading levels follow logical sequence',
                             impact: 'accessibility'
                         });
+<<<<<<< HEAD
                         seoScore -= 3;
-                    }
+
+
+
+=======
+                        seoScore -= 3}
                 }
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
-            const wordFrequency = {};
+            const wordFrequency = { /* empty */ };
             commonWords.forEach(word => {
-                wordFrequency[word] = (wordFrequency[word] || 0) + 1;
-            });
+                wordFrequency[word] = (wordFrequency[word] || 0) + 1});
             Object.entries(wordFrequency).forEach(([word, count]) => {
                 if (count > 5 && word.length > 3) {
                     const density = (count / commonWords.length) * 100;
@@ -113,9 +130,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             suggestion: 'Reduce keyword density for more natural content',
                             impact: 'seo'
                         });
+<<<<<<< HEAD
                         seoScore -= 5;
-                    }
+
+
+=======
+                        seoScore -= 5}
                 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             });
             // Check for proper meta descriptions
             if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
@@ -132,8 +154,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
                     });
+<<<<<<< HEAD
                     seoScore -= 5;
-                }
+
+=======
+                    seoScore -= 5}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 else if (content.length > 160) {
                     issues.push({
                         id: `long-meta-${index}`,
@@ -146,9 +172,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
                     });
+<<<<<<< HEAD
                     seoScore -= 2;
-                }
+
+
+=======
+                    seoScore -= 2}
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for broken links
             if (element.tagName === 'A') {
                 const href = element.getAttribute('href');
@@ -164,9 +195,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Ensure link points to valid URL or page section',
                         impact: 'engagement'
                     });
+<<<<<<< HEAD
                     engagementScore -= 3;
-                }
+
+
+=======
+                    engagementScore -= 3}
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for images without alt text
             if (element.tagName === 'IMG') {
                 const alt = element.getAttribute('alt');
@@ -183,9 +219,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         impact: 'accessibility'
                     });
                     seoScore -= 8;
+<<<<<<< HEAD
                     engagementScore -= 5;
-                }
+
+
+=======
+                    engagementScore -= 5}
             }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         });
         // Generate suggestions based on analysis
         if (wordCount < 300) {
@@ -197,8 +238,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'high',
                 implementation: 'Add relevant sections, expand existing content, include more examples',
                 expectedImpact: 15
+<<<<<<< HEAD
             });
-        }
+
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (readabilityScore < 80) {
             suggestions.push({
                 id: 'improve-readability',
@@ -208,8 +253,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'medium',
                 implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language',
                 expectedImpact: 12
+<<<<<<< HEAD
             });
-        }
+
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (seoScore < 80) {
             suggestions.push({
                 id: 'seo-optimization',
@@ -219,8 +268,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'high',
                 implementation: 'Fix meta descriptions, add alt text, improve heading structure',
                 expectedImpact: 20
+<<<<<<< HEAD
             });
-        }
+
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (engagementScore < 80) {
             suggestions.push({
                 id: 'engagement-improvement',
@@ -230,45 +283,68 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'medium',
                 implementation: 'Add interactive elements, improve content structure, include calls-to-action',
                 expectedImpact: 10
+<<<<<<< HEAD
             });
-        }
+
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Calculate overall score
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
         const analysisResult = {
-            wordCount,
+  wordCount,
             readabilityScore: Math.max(0, Math.min(100, readabilityScore)),
             seoScore: Math.max(0, Math.min(100, seoScore)),
             engagementScore: Math.max(0, Math.min(100, engagementScore)),
             issues,
             suggestions,
-            overallScore: Math.max(0, Math.min(100, overallScore))
-        };
+            overallScore: Math.max(0, Math.min(100,
+  overallScore))
+        
+
+
+
+
+
+
+};
         setAnalysis(analysisResult);
-        setIsAnalyzing(false);
-    }, [targetElements]);
+        setIsAnalyzing(false)}, [targetElements]);
     // Auto-fix content issues
     const autoFixIssues = useCallback(() => {
         if (!analysis)
             return;
+<<<<<<< HEAD
         const fixableIssues = analysis.issues.filter(issue => issue.fixable);
-        let fixedCount = 0;
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+        const fixedCount = 0;
         fixableIssues.forEach(issue => {
             if (issue.element) {
                 switch (issue.id.split('-')[0]) {
                     case 'empty-content':
                         if (issue.element.textContent?.trim() === '') {
                             issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>';
+<<<<<<< HEAD
                             fixedCount++;
-                        }
+
+=======
+                            fixedCount++}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         break;
                     case 'missing-alt':
                         if (issue.element.tagName === 'IMG') {
                             const img = issue.element;
                             if (!img.alt) {
                                 img.alt = 'Image';
+<<<<<<< HEAD
                                 fixedCount++;
-                            }
+
+
+=======
+                                fixedCount++}
                         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         break;
                     case 'short-meta':
                     case 'long-meta':
@@ -276,22 +352,31 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         break;
                     case 'broken-link':
                         // These would require more complex logic to fix
+<<<<<<< HEAD
                         break;
-                }
-            }
+
+
         });
         if (fixedCount > 0) {
             // Re-analyze content after fixes
             setTimeout(analyzeContent, 500);
-        }
+
         return fixedCount;
     }, [analysis, analyzeContent]);
+=======
+                        break}
+            }
+        });
+        if (fixedCount > 0) {
+            // Re-analyze content after fixes
+            setTimeout(analyzeContent, 500)}
+        return fixedCount}, [analysis, analyzeContent]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Highlight element in page
     const highlightElement = useCallback((element) => {
         // Remove previous highlights
         document.querySelectorAll('.content-highlight').forEach(el => {
-            el.classList.remove('content-highlight');
-        });
+            el.classList.remove('content-highlight')});
         // Add highlight to selected element
         element.classList.add('content-highlight');
         setSelectedElement(element);
@@ -300,15 +385,17 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         // Remove highlight after 3 seconds
         setTimeout(() => {
             element.classList.remove('content-highlight');
-            setSelectedElement(null);
-        }, 3000);
-    }, []);
+            setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content
     useEffect(() => {
         if (autoAnalyze) {
             const timer = setTimeout(analyzeContent, 3000);
+<<<<<<< HEAD
             return () => clearTimeout(timer);
-        }
+
+=======
+            return () => clearTimeout(timer)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoAnalyze, analyzeContent]);
     // Get score color
     const getScoreColor = (score) => {
@@ -316,24 +403,26 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             return 'text-green-600';
         if (score >= 60)
             return 'text-yellow-600';
-        return 'text-red-600';
-    };
+        return 'text-red-600'};
     // Get score background color
     const getScoreBgColor = (score) => {
         if (score >= 80)
             return 'bg-green-100 dark:bg-green-900/20';
         if (score >= 60)
             return 'bg-yellow-100 dark:bg-yellow-900/20';
-        return 'bg-red-100 dark:bg-red-900/20';
-    };
+        return 'bg-red-100 dark:bg-red-900/20'};
     // Get severity color
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
+<<<<<<< HEAD
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-        }
+
+=======
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get priority color
     const getPriorityColor = (priority) => {
@@ -341,8 +430,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
+<<<<<<< HEAD
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-        }
+
+=======
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       {/* Content Quality Toggle Button */}
@@ -352,7 +445,34 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
       {/* Content Quality Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
+        {isOpen && (<motion.div initial = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+
+
+
+
+
+
+}} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -416,7 +536,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className={`p-3 rounded-lg ${getScoreBgColor(analysis.seoScore)}`}>
                           <div className="text-center">
                             <div className={`text-lg font-bold ${getScoreColor(analysis.seoScore)}`}>
@@ -427,7 +547,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className={`p-3 rounded-lg ${getScoreBgColor(analysis.engagementScore)}`}>
                           <div className="text-center">
                             <div className={`text-lg font-bold ${getScoreColor(analysis.engagementScore)}`}>
@@ -470,7 +590,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>)}
                             {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5"/>)}
                             {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>)}
-                            
+
                             <div className="flex-1">
                               <h4 className="font-medium text-gray-900 dark:text-white text-sm">
                                 {issue.title}
@@ -510,7 +630,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                       {analysis.suggestions.map((suggestion) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">
                           <div className="flex items-start gap-2">
                             <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>
-                            
+
                             <div className="flex-1">
                               <h4 className="font-medium text-gray-900 dark:text-white text-sm">
                                 {suggestion.title}
@@ -554,16 +674,24 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                   </button>
 
                   {/* Export Report */}
-                  {analysis && (<button onClick={() => {
+                  {analysis && (<button onClick = {
+  () => {
                         const report = JSON.stringify(analysis, null, 2);
-                        const blob = new Blob([report], { type: 'application/json' });
+                        const blob = new Blob([report],
+  { type: 'application/json' 
+
+
+
+
+
+
+});
                         const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
                         a.download = 'content-quality-report.json';
                         a.click();
-                        URL.revokeObjectURL(url);
-                    }} className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
+                        URL.revokeObjectURL(url)}} className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                       Export Report
                     </button>)}
                 </div>)}
@@ -577,9 +705,13 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
           outline: 3px solid #8b5cf6 !important;
           outline-offset: 2px !important;
           background-color: rgba(139, 92, 246, 0.1) !important;
+<<<<<<< HEAD
           transition: all 0.3s ease !important;
-        }
+
+=======
+          transition: all 0.3s ease !important}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       `}</style>
-    </>);
-};
+    </>)};
 export default ContentQualityEnhancer;
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Brain, 
+import {
+  Search,
+  Filter,
+  Star,
+  Users,
+  TrendingUp,
+  Shield,
+  Zap,
+  Globe,
+  Brain,
   Rocket,
   Phone,
   Mail,
@@ -19,10 +19,9 @@ import {
   CheckCircle,
   Clock,
   DollarSign
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
+import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services";
+import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services";
 
 export default function ZionCuttingEdgeServices2029() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,42 +29,56 @@ export default function ZionCuttingEdgeServices2029() {
   const [priceRange, setPriceRange] = useState('all');
 
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
-  
+
   const categories = ['all', ...new Set(allServices.map(service => service.category))];
-  
+<<<<<<< HEAD
+
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
+
     let matchesPrice = true;
+=======
+  
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesPrice = true;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (priceRange !== 'all') {
       const [min, max] = priceRange.split('-').map(Number);
       if (max) {
         matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max;
       } else {
         matchesPrice = service.pricing.starter >= min;
-      }
-    }
-    
+
+
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (range: string) => {
-    switch (range) {
+  const getPriceRangeLabel = (range: string) => {;
+    switch (range) {;
       case '0-1000': return '$0 - $1,000/month';
       case '1000-3000': return '$1,000 - $3,000/month';
       case '3000-5000': return '$3,000 - $5,000/month';
       case '5000+': return '$5,000+/month';
       default: return 'All Prices';
-    }
+
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Zion Tech Group 2029 Cutting-Edge Services | Revolutionary AI, IT & Micro SAAS Solutions"
         description="Discover Zion Tech Group's revolutionary 2029 cutting-edge services including AI-powered quantum computing, autonomous systems, space technology, biotechnology, and more. Transform your business with next-generation solutions."
         keywords="AI services, quantum computing, autonomous systems, space technology, biotechnology, renewable energy, robotics, cybersecurity, Zion Tech Group, cutting-edge technology"
@@ -75,10 +88,28 @@ export default function ZionCuttingEdgeServices2029() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Zion Tech Group 2029
@@ -87,21 +118,21 @@ export default function ZionCuttingEdgeServices2029() {
               <span className="text-white">Cutting-Edge Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, IT, and Micro SAAS solutions that define the future of technology. 
+              Revolutionary AI, IT, and Micro SAAS solutions that define the future of technology.
               From quantum computing to space technology, we're building tomorrow's innovations today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#services"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
-              >
+
                 Explore Services
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
-              >
+
                 Contact Us
                 <Phone className="w-5 h-5" />
               </a>
@@ -152,7 +183,7 @@ export default function ZionCuttingEdgeServices2029() {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 {categories.map(category => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
@@ -165,7 +196,7 @@ export default function ZionCuttingEdgeServices2029() {
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
                 className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 <option value="all">All Prices</option>
                 <option value="0-1000">$0 - $1,000/month</option>
                 <option value="1000-3000">$1,000 - $3,000/month</option>
@@ -185,7 +216,7 @@ export default function ZionCuttingEdgeServices2029() {
               Revolutionary Services Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive suite of cutting-edge services designed to transform industries 
+              Discover our comprehensive suite of cutting-edge services designed to transform industries
               and accelerate your business growth with next-generation technology.
             </p>
           </div>
@@ -194,11 +225,38 @@ export default function ZionCuttingEdgeServices2029() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
-              >
+
                 {/* Service Header */}
                 <div className="text-center mb-6">
                   <div className="text-4xl mb-4">{service.icon}</div>
@@ -303,14 +361,14 @@ export default function ZionCuttingEdgeServices2029() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+
                     Learn More
                     <ExternalLink className="w-4 h-4" />
                   </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                     className="w-full border-2 border-white/30 text-white py-3 px-4 rounded-lg font-semibold text-center hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+
                     Get Quote
                     <Mail className="w-4 h-4" />
                   </a>
@@ -326,19 +384,24 @@ export default function ZionCuttingEdgeServices2029() {
                 )}
               </motion.div>
             ))}
-          </div>
-
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-300 text-lg">No services found matching your criteria.</p>
-              <button
-                onClick={() => {
+          </div>;
+;
+          {filteredServices.length === 0 && (;
+            <div className="text-center py-12">;
+              <p className="text-gray-300 text-lg">No services found matching your criteria.</p>;
+              <button;
+                onClick={() => {;
                   setSearchTerm('');
                   setSelectedCategory('all');
                   setPriceRange('all');
                 }}
+<<<<<<< HEAD
                 className="mt-4 text-blue-400 hover:text-blue-300 underline"
+
+=======
+                className = "mt-4 text-blue-400 hover:text-blue-300 underline"
               >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear filters
               </button>
             </div>
@@ -354,18 +417,40 @@ export default function ZionCuttingEdgeServices2029() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're not just another technology company. We're pioneers, innovators, and visionaries 
+<<<<<<< HEAD
+              We're not just another technology company. We're pioneers, innovators, and visionaries
+=======
+              We're not just another technology comp. We're pioneers, innovators, and visionaries 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               who are building the future, one breakthrough at a time.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.5 }}
               className="text-center"
-            >
+
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Rocket className="w-8 h-8 text-white" />
               </div>
@@ -376,11 +461,38 @@ export default function ZionCuttingEdgeServices2029() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: 0.1 
+
+
+
+
+
+
+}}
               className="text-center"
-            >
+
               <div className="bg-gradient-to-br from-green-600 to-teal-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
               </div>
@@ -391,11 +503,38 @@ export default function ZionCuttingEdgeServices2029() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="text-center"
-            >
+
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Brain className="w-8 h-8 text-white" />
               </div>
@@ -406,11 +545,38 @@ export default function ZionCuttingEdgeServices2029() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: 0.3 
+
+
+
+
+
+
+}}
               className="text-center"
-            >
+
               <div className="bg-gradient-to-br from-yellow-500 to-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
               </div>
@@ -427,29 +593,47 @@ export default function ZionCuttingEdgeServices2029() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the elite group of forward-thinking companies that are already leveraging 
+              Join the elite group of forward-thinking companies that are already leveraging
               our revolutionary services to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+
                 Call Now
                 <Phone className="w-5 h-5" />
               </a>
@@ -465,7 +649,7 @@ export default function ZionCuttingEdgeServices2029() {
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
               <p className="text-gray-300 mb-6">
-                Pioneering the future of technology with revolutionary AI, IT, and Micro SAAS solutions 
+                Pioneering the future of technology with revolutionary AI, IT, and Micro SAAS solutions
                 that transform industries and accelerate business growth.
               </p>
               <div className="space-y-2 text-gray-300">
@@ -479,17 +663,17 @@ export default function ZionCuttingEdgeServices2029() {
               <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Our Services</a></li>
-                <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Main Website</a></li>
-                <li><a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Get Quote</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>;
+                <li><a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Main Website</a></li>;
+                <li><a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Get Quote</a></li>;
+              </ul>;
+            </div>;
+          </div>;
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">;
             <p>&copy; 2029 Zion Tech Group. All rights reserved. | Revolutionizing technology, one innovation at a time.</p>
           </div>
         </div>
       </footer>
     </div>
   );
-}
+}}}}}

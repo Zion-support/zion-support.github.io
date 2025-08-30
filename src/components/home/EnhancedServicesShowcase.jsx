@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle } from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
+import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 const serviceIcons = {
-    'AI Automation': Brain,
+  'AI Automation': Brain,
     'Cloud Management': Cloud,
     'Cybersecurity': Shield,
     'Data Engineering': Database,
@@ -17,6 +16,8 @@ const serviceIcons = {
     'Healthcare Technology': Heart,
     'Financial Technology': DollarSign,
     'Blockchain': LinkIcon,
+  
+
 };
 export function EnhancedServicesShowcase() {
     return (<section className="py-20 bg-zion-blue-dark">
@@ -65,7 +66,7 @@ export function EnhancedServicesShowcase() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-purple">
                         {tag}
@@ -85,8 +86,7 @@ export function EnhancedServicesShowcase() {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>);
-        })}
+              </Card>)})}
         </div>
 
         {/* Service Categories Overview */}
@@ -100,7 +100,7 @@ export function EnhancedServicesShowcase() {
               Process automation, customer insights, and intelligent content optimization
             </p>
           </div>
-          
+
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <Cloud className="w-8 h-8 text-white"/>
@@ -110,7 +110,7 @@ export function EnhancedServicesShowcase() {
               Multi-cloud orchestration, edge computing, and cost optimization
             </p>
           </div>
-          
+
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="w-8 h-8 text-white"/>
@@ -120,7 +120,7 @@ export function EnhancedServicesShowcase() {
               AI threat detection, zero trust security, and compliance frameworks
             </p>
           </div>
-          
+
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <Database className="w-8 h-8 text-white"/>
@@ -147,7 +147,7 @@ export function EnhancedServicesShowcase() {
                 Industry-leading solutions with measurable ROI and customer success stories
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-6 h-6 text-white"/>
@@ -157,7 +157,7 @@ export function EnhancedServicesShowcase() {
                 Cutting-edge AI and emerging technologies to keep you ahead of competition
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-6 h-6 text-zion-blue-dark"/>
@@ -193,5 +193,9 @@ export function EnhancedServicesShowcase() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
-}
+</Card></Card></Card></Card>}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

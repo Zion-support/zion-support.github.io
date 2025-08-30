@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface EmergingTech2026Service {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface EmergingTech2026Service {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neural Interface Development Platform
   {
@@ -48,7 +51,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$599',
     period: '/month',
     description: 'Revolutionary platform for developing brain-computer interfaces (BCIs) that enable direct communication between the human brain and computers, opening new possibilities for accessibility and human augmentation.',
-    features: [
+    features[
       'AI-powered neural signal processing',
       'Real-time brain activity monitoring',
       'Custom BCI application development',
@@ -71,11 +74,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '16 hours',
     category: 'Neural Interface & Brain-Computer Interface',
     realService: true,
-    technology: ['Neural Networks', 'Signal Processing', 'Machine Learning', 'React', 'Python', 'TensorFlow', 'PyTorch', 'AWS'],
-    integrations: ['EEG devices', 'EMG sensors', 'Eye tracking systems', 'VR/AR platforms', 'Medical devices', 'Research tools'],
-    useCases: ['Assistive technology', 'Gaming interfaces', 'Medical diagnostics', 'Research studies', 'Accessibility tools', 'Human augmentation'],
+    technology['Neural Networks', 'Signal Processing', 'Machine Learning', 'React', 'Python', 'TensorFlow', 'PyTorch', 'AWS'],
+    integrations['EEG devices', 'EMG sensors', 'Eye tracking systems', 'VR/AR platforms', 'Medical devices', 'Research tools'],
+    useCases['Assistive technology', 'Gaming interfaces', 'Medical diagnostics', 'Research studies', 'Accessibility tools', 'Human augmentation'],
     roi: 'Research institutions report 1000%+ ROI through breakthrough discoveries and new funding opportunities.',
-    competitors: ['No direct competitors yet', 'Emerging startups in BCI space'],
+    competitors['No direct competitors yet', 'Emerging startups in BCI space'],
     marketSize: '$1.7B market (projected)',
     growthRate: '500% annual growth',
     variant: 'ai-futuristic',
@@ -100,7 +103,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$799',
     period: '/month',
     description: 'Groundbreaking platform that uses quantum computing to simulate consciousness and cognitive processes, enabling researchers to study the nature of consciousness and develop advanced AI systems.',
-    features: [
+    features[
       'Quantum consciousness simulation engine',
       'Cognitive process modeling',
       'Consciousness state analysis',
@@ -123,11 +126,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '24 hours',
     category: 'Quantum AI & Consciousness Research',
     realService: true,
-    technology: ['Quantum Computing', 'Consciousness Theory', 'Neural Networks', 'React', 'Python', 'Qiskit', 'TensorFlow', 'AWS Quantum'],
-    integrations: ['Research databases', 'Academic platforms', 'Data analysis tools', 'Visualization software', 'Collaboration platforms'],
-    useCases: ['Consciousness research', 'AI development', 'Neuroscience studies', 'Philosophical research', 'Cognitive science', 'Artificial general intelligence'],
+    technology['Quantum Computing', 'Consciousness Theory', 'Neural Networks', 'React', 'Python', 'Qiskit', 'TensorFlow', 'AWS Quantum'],
+    integrations['Research databases', 'Academic platforms', 'Data analysis tools', 'Visualization software', 'Collaboration platforms'],
+    useCases['Consciousness research', 'AI development', 'Neuroscience studies', 'Philosophical research', 'Cognitive science', 'Artificial general intelligence'],
     roi: 'Research institutions achieve 2000%+ ROI through groundbreaking discoveries and significant funding increases.',
-    competitors: ['No direct competitors', 'Traditional AI research platforms'],
+    competitors['No direct competitors', 'Traditional AI research platforms'],
     marketSize: '$500M market (emerging)',
     growthRate: '800% annual growth',
     variant: 'quantum-futuristic',
@@ -152,7 +155,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$399',
     period: '/month',
     description: 'Next-generation metaverse platform that uses holographic technology and AI to create immersive 3D virtual worlds, enabling users to interact in photorealistic environments.',
-    features: [
+    features[
       'AI-powered 3D world generation',
       'Holographic projection technology',
       'Real-time collaboration tools',
@@ -175,11 +178,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '6 hours',
     category: 'Holographic Technology & Metaverse',
     realService: true,
-    technology: ['Holographic Projection', '3D Graphics', 'AI Generation', 'React', 'Three.js', 'WebGL', 'Node.js', 'AWS'],
-    integrations: ['VR headsets', 'AR glasses', '3D printers', 'Social media platforms', 'Payment gateways', 'Analytics tools'],
-    useCases: ['Virtual events', 'Gaming platforms', 'Virtual real estate', 'Educational simulations', 'Corporate training', 'Entertainment experiences'],
+    technology['Holographic Projection', '3D Graphics', 'AI Generation', 'React', 'Three.js', 'WebGL', 'Node.js', 'AWS'],
+    integrations['VR headsets', 'AR glasses', '3D printers', 'Social media platforms', 'Payment gateways', 'Analytics tools'],
+    useCases['Virtual events', 'Gaming platforms', 'Virtual real estate', 'Educational simulations', 'Corporate training', 'Entertainment experiences'],
     roi: 'Event organizers achieve 600% ROI through increased attendance and premium ticket pricing.',
-    competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],
+    competitors['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],
     marketSize: '$74.2B market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +207,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$499',
     period: '/month',
     description: 'Revolutionary AI platform that enables fully autonomous manufacturing operations, from design to production, with zero human intervention and maximum efficiency.',
-    features: [
+    features[
       'AI-powered design optimization',
       'Autonomous production planning',
       'Predictive maintenance systems',
@@ -227,11 +230,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '12 hours',
     category: 'AI & Autonomous Manufacturing',
     realService: true,
-    technology: ['Machine Learning', 'Computer Vision', 'IoT Integration', 'React', 'Python', 'TensorFlow', 'PostgreSQL', 'AWS'],
-    integrations: ['PLC systems', 'SCADA systems', 'ERP systems', 'MES systems', 'Quality control equipment', 'Supply chain platforms'],
-    useCases: ['Automated production', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Energy management', 'Performance monitoring'],
+    technology['Machine Learning', 'Computer Vision', 'IoT Integration', 'React', 'Python', 'TensorFlow', 'PostgreSQL', 'AWS'],
+    integrations['PLC systems', 'SCADA systems', 'ERP systems', 'MES systems', 'Quality control equipment', 'Supply chain platforms'],
+    useCases['Automated production', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Energy management', 'Performance monitoring'],
     roi: 'Manufacturing companies achieve 800% ROI through increased production efficiency and reduced operational costs.',
-    competitors: ['Siemens Mindsphere', 'PTC ThingWorx', 'GE Predix', 'Rockwell Automation', 'Schneider Electric'],
+    competitors['Siemens Mindsphere', 'PTC ThingWorx', 'GE Predix', 'Rockwell Automation', 'Schneider Electric'],
     marketSize: '$198.4B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -256,7 +259,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$699',
     period: '/month',
     description: 'Advanced AI platform for space technology applications, including satellite management, space exploration planning, and orbital optimization using machine learning algorithms.',
-    features: [
+    features[
       'AI satellite management',
       'Orbital optimization algorithms',
       'Space debris tracking',
@@ -279,11 +282,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '16 hours',
     category: 'AI & Space Technology',
     realService: true,
-    technology: ['Machine Learning', 'Orbital Mechanics', 'Satellite Technology', 'React', 'Python', 'TensorFlow', 'PostgreSQL', 'AWS'],
-    integrations: ['Satellite ground stations', 'Space tracking systems', 'Weather data sources', 'Communication networks', 'Launch providers'],
-    useCases: ['Satellite operations', 'Mission planning', 'Space debris management', 'Communication optimization', 'Launch optimization', 'Space research'],
+    technology['Machine Learning', 'Orbital Mechanics', 'Satellite Technology', 'React', 'Python', 'TensorFlow', 'PostgreSQL', 'AWS'],
+    integrations['Satellite ground stations', 'Space tracking systems', 'Weather data sources', 'Communication networks', 'Launch providers'],
+    useCases['Satellite operations', 'Mission planning', 'Space debris management', 'Communication optimization', 'Launch optimization', 'Space research'],
     roi: 'Space companies achieve 1000%+ ROI through improved satellite operations and mission success rates.',
-    competitors: ['Maxar', 'Planet Labs', 'Spire', 'SpaceX', 'Blue Origin'],
+    competitors['Maxar', 'Planet Labs', 'Spire', 'SpaceX', 'Blue Origin'],
     marketSize: '$469.0B market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -308,7 +311,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$349',
     period: '/month',
     description: 'Revolutionary energy management platform that uses quantum computing and AI to optimize energy consumption, predict demand, and manage renewable energy systems with unprecedented efficiency.',
-    features: [
+    features[
       'Quantum energy optimization',
       'AI demand prediction',
       'Renewable energy management',
@@ -331,11 +334,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '8 hours',
     category: 'Quantum AI & Energy Management',
     realService: true,
-    technology: ['Quantum Computing', 'Machine Learning', 'Energy Systems', 'React', 'Python', 'TensorFlow', 'PostgreSQL', 'AWS'],
-    integrations: ['Smart meters', 'SCADA systems', 'Building management systems', 'Renewable energy systems', 'Utility APIs'],
-    useCases: ['Energy optimization', 'Demand management', 'Renewable integration', 'Grid management', 'Cost optimization', 'Sustainability tracking'],
+    technology['Quantum Computing', 'Machine Learning', 'Energy Systems', 'React', 'Python', 'TensorFlow', 'PostgreSQL', 'AWS'],
+    integrations['Smart meters', 'SCADA systems', 'Building management systems', 'Renewable energy systems', 'Utility APIs'],
+    useCases['Energy optimization', 'Demand management', 'Renewable integration', 'Grid management', 'Cost optimization', 'Sustainability tracking'],
     roi: 'Utility companies achieve 600% ROI through improved energy efficiency and reduced operational costs.',
-    competitors: ['Schneider Electric', 'Siemens Energy', 'GE Digital', 'ABB', 'Honeywell'],
+    competitors['Schneider Electric', 'Siemens Energy', 'GE Digital', 'ABB', 'Honeywell'],
     marketSize: '$125.3B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -360,7 +363,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$449',
     period: '/month',
     description: 'Comprehensive AI robotics platform that enables the development and deployment of intelligent robots for manufacturing, healthcare, logistics, and service industries.',
-    features: [
+    features[
       'AI robot programming',
       'Computer vision integration',
       'Natural language processing',
@@ -383,11 +386,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '10 hours',
     category: 'AI & Robotics',
     realService: true,
-    technology: ['Machine Learning', 'Computer Vision', 'Robotics', 'React', 'Python', 'TensorFlow', 'ROS', 'AWS'],
-    integrations: ['Robot arms', 'Mobile robots', 'Sensors', 'Vision systems', 'Control systems', 'Safety systems'],
-    useCases: ['Manufacturing automation', 'Healthcare assistance', 'Logistics automation', 'Service robots', 'Research robots', 'Educational robots'],
+    technology['Machine Learning', 'Computer Vision', 'Robotics', 'React', 'Python', 'TensorFlow', 'ROS', 'AWS'],
+    integrations['Robot arms', 'Mobile robots', 'Sensors', 'Vision systems', 'Control systems', 'Safety systems'],
+    useCases['Manufacturing automation', 'Healthcare assistance', 'Logistics automation', 'Service robots', 'Research robots', 'Educational robots'],
     roi: 'Manufacturing companies achieve 700% ROI through improved automation and reduced labor costs.',
-    competitors: ['Universal Robots', 'ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa'],
+    competitors['Universal Robots', 'ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa'],
     marketSize: '$43.8B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -412,7 +415,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$299',
     period: '/month',
     description: 'Advanced logistics platform that uses quantum computing and AI to optimize supply chains, route planning, and inventory management with unprecedented efficiency.',
-    features: [
+    features[
       'Quantum route optimization',
       'AI demand forecasting',
       'Supply chain optimization',
@@ -435,11 +438,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '6 hours',
     category: 'Quantum AI & Logistics',
     realService: true,
-    technology: ['Quantum Computing', 'Machine Learning', 'Logistics', 'React', 'Python', 'TensorFlow', 'PostgreSQL', 'AWS'],
-    integrations: ['ERP systems', 'WMS systems', 'TMS systems', 'Tracking systems', 'Payment gateways', 'Analytics platforms'],
-    useCases: ['Route optimization', 'Supply chain management', 'Inventory optimization', 'Demand forecasting', 'Cost optimization', 'Sustainability tracking'],
+    technology['Quantum Computing', 'Machine Learning', 'Logistics', 'React', 'Python', 'TensorFlow', 'PostgreSQL', 'AWS'],
+    integrations['ERP systems', 'WMS systems', 'TMS systems', 'Tracking systems', 'Payment gateways', 'Analytics platforms'],
+    useCases['Route optimization', 'Supply chain management', 'Inventory optimization', 'Demand forecasting', 'Cost optimization', 'Sustainability tracking'],
     roi: 'Logistics companies achieve 500% ROI through improved efficiency and reduced operational costs.',
-    competitors: ['SAP Supply Chain', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Infor'],
+    competitors['SAP Supply Chain', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Infor'],
     marketSize: '$15.5B market',
     growthRate: '250% annual growth',
     variant: 'quantum-futuristic',
@@ -464,7 +467,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     price: '$199',
     period: '/month',
     description: 'Advanced virtual events platform that uses AI to create engaging, interactive experiences with personalized content, intelligent networking, and automated event management.',
-    features: [
+    features[
       'AI-powered content personalization',
       'Intelligent networking algorithms',
       'Automated event management',
@@ -487,11 +490,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '4 hours',
     category: 'AI & Virtual Events',
     realService: true,
-    technology: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'React', 'Node.js', 'Python', 'PostgreSQL', 'AWS'],
-    integrations: ['Zoom', 'Microsoft Teams', 'Google Meet', 'CRM systems', 'Marketing platforms', 'Payment gateways', 'Analytics tools'],
-    useCases: ['Virtual conferences', 'Trade shows', 'Corporate events', 'Training sessions', 'Product launches', 'Networking events'],
+    technology['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'React', 'Node.js', 'Python', 'PostgreSQL', 'AWS'],
+    integrations['Zoom', 'Microsoft Teams', 'Google Meet', 'CRM systems', 'Marketing platforms', 'Payment gateways', 'Analytics tools'],
+    useCases['Virtual conferences', 'Trade shows', 'Corporate events', 'Training sessions', 'Product launches', 'Networking events'],
     roi: 'Event organizers achieve 400% ROI through increased attendance and improved engagement.',
-    competitors: ['Zoom Events', 'Hopin', 'vFairs', '6Connex', 'ON24'],
+    competitors['Zoom Events', 'Hopin', 'vFairs', '6Connex', 'ON24'],
     marketSize: '$18.6B market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -507,5 +510,5 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     customers: 320,
     rating: 4.8,
     reviews: 198
-  }
-];
+
+];}}

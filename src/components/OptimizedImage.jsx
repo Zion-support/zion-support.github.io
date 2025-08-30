@@ -10,38 +10,53 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
     useEffect(() => {
         if (priority) {
             setIsInView(true);
+<<<<<<< HEAD
             return;
-        }
+
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setIsInView(true);
                 observer.disconnect();
-            }
+
+=======
+            return}
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setIsInView(true);
+                observer.disconnect()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }, {
             rootMargin: '50px',
             threshold: 0.1
         });
         if (imageRef.current) {
+<<<<<<< HEAD
             observer.observe(imageRef.current);
-        }
+
         return () => observer.disconnect();
     }, [priority]);
     // Load image when in view
     useEffect(() => {
         if (isInView && !priority) {
             setCurrentSrc(src);
-        }
+
+=======
+            observer.observe(imageRef.current)}
+        return () => observer.disconnect()}, [priority]);
+    // Load image when in view
+    useEffect(() => {
+        if (isInView && !priority) {
+            setCurrentSrc(src)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isInView, src, priority]);
     const handleLoad = () => {
         setIsLoaded(true);
         setHasError(false);
-        onLoad?.();
-    };
+        onLoad?.()};
     const handleError = () => {
         setHasError(true);
         setCurrentSrc(fallback);
-        onError?.();
-    };
+        onError?.()};
     return (<div className={`relative overflow-hidden ${className}`}>
       <AnimatePresence>
         {/* Loading Placeholder */}
@@ -65,6 +80,41 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
       <motion.img ref={imageRef} src={currentSrc} alt={alt} sizes={sizes} className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} onLoad={handleLoad} onError={handleError} loading={priority ? 'eager' : 'lazy'} decoding="async"/>
 
       {/* Progressive Loading Effect */}
-      {isLoaded && !hasError && (<motion.div initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
+<<<<<<< HEAD
+      {isLoaded && !hasError && (<motion.div initial = {
+  { opacity: 0,
+  scale: 1.1 
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+}} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
+    </div>)};
+=======
+      {isLoaded && !hasError && (<motion.div initial = {
+  { opacity: 0,
+  scale: 1.1 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
     </div>);
 };
+<<<<<<< HEAD
+}}}</motion.div>}
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

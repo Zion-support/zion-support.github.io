@@ -1,26 +1,42 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+<<<<<<< HEAD
+function res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }}
+=======
+function res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+<<<<<<< HEAD
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 exports.config = {
-  schedule: '*/20 * * * *', // every 20 minutes
+  schedule: '*/20 * * * *',
+  // every 20 minutes
+
+
+
+
+
+
+
 };
 
 exports.handler = async () => {
-  const logs = [];
-  function logStep(name, fn) {
+  const logStep(name, fn) {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
+<<<<<<< HEAD
     return status;
-  }
+=======
+    return status}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'https://ziontechgroup.com';
 
@@ -31,5 +47,9 @@ exports.handler = async () => {
   logStep('homepage:update', () => runNode('automation/homepage-updater.cjs'));
   logStep('homepage:advertise', () => runNode('automation/homepage-auto-advertiser.cjs'));
 
+<<<<<<< HEAD
   return { statusCode: 200, body: logs.join('\n') };
-};
+};}}
+=======
+  return { statusCode: 200, body: logs.join('\n') }};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

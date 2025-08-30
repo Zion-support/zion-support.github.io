@@ -1,44 +1,47 @@
 import React from 'react';
-import { Globe, Clock, Users, Shield, Zap, CheckCircle } from 'lucide-react';
-
-export const GlobalServiceSection = () => {
+import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = () => {
   const globalServices = [
     {
       icon: Globe,
       title: "Global Coverage",
       description: "24/7 support across multiple time zones and regions worldwide",
-      features: ["Multi-language support", "Local compliance expertise", "Regional data centers"]
+      features["Multi-language support", "Local compliance expertise", "Regional data centers"]
     },
     {
       icon: Clock,
       title: "24/7 Availability",
       description: "Round-the-clock monitoring and support for critical systems",
-      features: ["Always-on monitoring", "Instant alert response", "Continuous maintenance"]
+      features["Always-on monitoring", "Instant alert response", "Continuous maintenance"]
     },
     {
       icon: Users,
       title: "Expert Teams",
       description: "Certified professionals with deep industry knowledge",
-      features: ["Certified technicians", "Industry specialists", "Continuous training"]
+      features["Certified technicians", "Industry specialists", "Continuous training"]
     },
     {
       icon: Shield,
       title: "Security First",
       description: "Enterprise-grade security protocols and compliance standards",
-      features: ["SOC 2 compliance", "Data encryption", "Access controls"]
+      features["SOC 2 compliance", "Data encryption", "Access controls"]
     },
     {
       icon: Zap,
       title: "Rapid Response",
       description: "Quick deployment and resolution of critical issues",
-      features: ["Emergency response", "Remote diagnostics", "On-site dispatch"]
+      features["Emergency response", "Remote diagnostics", "On-site dispatch"]
     },
     {
       icon: CheckCircle,
       title: "Quality Assurance",
       description: "Rigorous testing and validation of all services",
+<<<<<<< HEAD
       features: ["Performance testing", "Security audits", "Compliance verification"]
+
+=======
+      features["Performance testing", "Security audits", "Compliance verification"]
     }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -58,7 +61,7 @@ export const GlobalServiceSection = () => {
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-            >
+
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-blue-600/20 rounded-lg mr-4">
                   <service.icon className="h-8 w-8 text-blue-400" />
@@ -93,5 +96,9 @@ export const GlobalServiceSection = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
-};
+};}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

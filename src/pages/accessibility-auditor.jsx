@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const AccessibilityAuditor = () => {
     const features = [
         {
@@ -21,7 +21,7 @@ const AccessibilityAuditor = () => {
             title: "Compliance Reporting",
             description: "Detailed reports with actionable recommendations",
             icon: "📋"
-        }
+
     ];
     const complianceStandards = [
         "WCAG 2.1 AA",
@@ -33,16 +33,21 @@ const AccessibilityAuditor = () => {
     const testingAreas = [
         {
             category: "Visual Accessibility",
-            items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
+            items["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
         },
         {
             category: "Content Accessibility",
-            items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
+            items["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
         },
         {
             category: "Technical Accessibility",
+<<<<<<< HEAD
             items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
+
+=======
+            items["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -55,12 +60,12 @@ const AccessibilityAuditor = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ensure your digital products are accessible to everyone. Our comprehensive 
-              accessibility auditing service helps you meet compliance standards and 
+              Ensure your digital products are accessible to everyone. Our comprehensive
+              accessibility auditing service helps you meet compliance standards and
               provide inclusive user experiences.
             </p>
           </div>
-          
+
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
@@ -72,7 +77,7 @@ const AccessibilityAuditor = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Compliance Standards */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -84,7 +89,7 @@ const AccessibilityAuditor = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Testing Areas */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
@@ -100,7 +105,7 @@ const AccessibilityAuditor = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Process */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Audit Process</h2>
@@ -112,7 +117,7 @@ const AccessibilityAuditor = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Initial Assessment</h3>
                 <p className="text-gray-300 text-sm">Comprehensive review of your current accessibility status</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -120,7 +125,7 @@ const AccessibilityAuditor = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Automated Testing</h3>
                 <p className="text-gray-300 text-sm">Run comprehensive automated accessibility tests</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -128,7 +133,7 @@ const AccessibilityAuditor = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Manual Review</h3>
                 <p className="text-gray-300 text-sm">Expert manual testing and validation</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>
@@ -138,7 +143,7 @@ const AccessibilityAuditor = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Accessibility Auditor?</h2>
@@ -164,7 +169,7 @@ const AccessibilityAuditor = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Technical Benefits</h3>
                 <ul className="space-y-3 text-gray-300">
@@ -188,13 +193,13 @@ const AccessibilityAuditor = () => {
               </div>
             </div>
           </div>
-          
+
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Make Your Digital Products Accessible?</h3>
               <p className="text-gray-300 mb-6">
-                Get a comprehensive accessibility audit and ensure your products are 
+                Get a comprehensive accessibility audit and ensure your products are
                 inclusive for all users. Contact us today to get started.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -209,6 +214,6 @@ const AccessibilityAuditor = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AccessibilityAuditor;
+}}

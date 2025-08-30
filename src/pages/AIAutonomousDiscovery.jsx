@@ -8,7 +8,7 @@ const AIAutonomousDiscovery = () => {
         <meta name="keywords" content="AI discovery, autonomous discovery, pattern discovery, insight revelation, autonomous operations, AI discovery platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-discovery"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousDiscovery = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Discovery Intelligence</h3>
               <p className="text-gray-300">AI trained on discovery datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that discovers independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Discovery</h3>
               <p className="text-gray-300">24/7 discovery operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-violet-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive discovery insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Discovery</h3>
               <p className="text-gray-300">Prevent knowledge gaps</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Discovery</h3>
@@ -93,25 +93,25 @@ const AIAutonomousDiscovery = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Explore</h3>
                 <p className="text-gray-300 text-sm">Explore data</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-rose-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze patterns</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-rose-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Discover</h3>
                 <p className="text-gray-300 text-sm">Discover insights</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-rose-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Validate</h3>
                 <p className="text-gray-300 text-sm">Validate findings</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-rose-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Report</h3>
@@ -138,12 +138,12 @@ const AIAutonomousDiscovery = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Data Science</h3>
                 <p className="text-gray-300">Data pattern discovery</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Business Intelligence</h3>
                 <p className="text-gray-300">Business insight discovery</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Research</h3>
                 <p className="text-gray-300">Research discovery</p>
@@ -168,6 +168,5 @@ const AIAutonomousDiscovery = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousDiscovery;

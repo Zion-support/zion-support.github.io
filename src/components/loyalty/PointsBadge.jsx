@@ -1,5 +1,4 @@
-import { Gift } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import { Gift import { useAuth } from '@/hooks/useAuth';
 import { useEffect, useState } from 'react';
 import { usePoints } from '@/hooks/usePoints';
 import { Link } from 'react-router-dom';
@@ -10,8 +9,7 @@ export function PointsBadge() {
     const { ledger, balance } = usePoints();
     const [points, setPoints] = useState(balance);
     useEffect(() => {
-        setPoints(balance);
-    }, [balance]);
+        setPoints(balance)}, [balance]);
     if (!user)
         return null;
     const breakdown = ledger.reduce((acc, e) => {
@@ -21,15 +19,20 @@ export function PointsBadge() {
             acc.post += e.delta;
         if (e.reason === 'referral')
             acc.referral += e.delta;
-        return acc;
-    }, { purchase: 0, post: 0, referral: 0 });
+        return acc}, { purchase: 0, post: 0, referral: 0 });
     const handleLogout = async () => {
         if (signOut) {
+<<<<<<< HEAD
             await signOut();
-        }
+
         else if (logout) {
             await logout();
-        }
+
+=======
+            await signOut()}
+        else if (logout) {
+            await logout()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<DropdownMenu>
       <TooltipProvider>
@@ -61,5 +64,9 @@ export function PointsBadge() {
         </DropdownMenuItem>
         <DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
+<<<<<<< HEAD
     </DropdownMenu>);
-}
+}}}}
+=======
+    </DropdownMenu>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

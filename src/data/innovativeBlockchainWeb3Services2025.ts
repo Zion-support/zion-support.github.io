@@ -1,4 +1,5 @@
 export interface InnovativeBlockchainWeb3Service {
+
   id: string;
   title: string;
   description: string;
@@ -17,21 +18,22 @@ export interface InnovativeBlockchainWeb3Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
+<<<<<<< HEAD
   marketSize?: string;
-}
+=======
+  marketSize?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3Service[] = [
   // DeFi Platform & Yield Farming
@@ -44,7 +46,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     price: 1899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Multi-chain DeFi aggregation",
       "Automated yield farming",
       "Liquidity provision tools",
@@ -56,28 +58,28 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       "Real-time analytics",
       "Mobile app access"
     ],
-    benefits: [
+    benefits[
       "Earn 15-25% APY on stable assets",
       "Access to 100+ DeFi protocols",
       "Automated portfolio rebalancing",
       "Cross-chain yield optimization",
       "Professional risk management"
     ],
-    useCases: [
+    useCases[
       "Yield farming",
       "Liquidity provision",
       "Staking and governance",
       "Portfolio management",
       "Cross-chain DeFi"
     ],
-    targetAudience: [
+    targetAudience[
       "DeFi users",
       "Crypto investors",
       "Traders",
       "Institutional investors",
       "DeFi protocols"
     ],
-    tags: ["DeFi", "Yield Farming", "Blockchain", "Smart Contracts", "Cross-chain"],
+    tags["DeFi", "Yield Farming", "Blockchain", "Smart Contracts", "Cross-chain"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "premium",
     marketPrice: "$1,899 - $4,899/month",
@@ -89,13 +91,13 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
+      technology["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],
+      integrations["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
       apiEndpoints: 250,
       uptime: "99.9%",
-      security: ["Smart contract audits", "Multi-sig wallets", "Insurance protocols", "Bug bounty programs"]
+      security["Smart contract audits", "Multi-sig wallets", "Insurance protocols", "Bug bounty programs"]
     },
-    competitors: ["Yearn Finance", "Aave", "Compound", "Curve Finance", "Uniswap"],
+    competitors["Yearn Finance", "Aave", "Compound", "Curve Finance", "Uniswap"],
     marketSize: "$67.8 billion by 2025"
   },
 
@@ -109,7 +111,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     price: 1299,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered NFT creation",
       "Multi-chain NFT minting",
       "Marketplace functionality",
@@ -121,28 +123,28 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       "Mobile app",
       "API access"
     ],
-    benefits: [
+    benefits[
       "Create unique NFTs with AI",
       "Earn royalties on secondary sales",
       "Access to global marketplace",
       "Fractional ownership opportunities",
       "Cross-chain compatibility"
     ],
-    useCases: [
+    useCases[
       "Digital art creation",
       "Gaming assets",
       "Music and videos",
       "Virtual real estate",
       "Collectibles"
     ],
-    targetAudience: [
+    targetAudience[
       "Artists and creators",
       "Gamers",
       "Collectors",
       "Brands and companies",
       "Content creators"
     ],
-    tags: ["NFTs", "Digital Assets", "Blockchain", "AI Creation", "Marketplace"],
+    tags["NFTs", "Digital Assets", "Blockchain", "AI Creation", "Marketplace"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "professional",
     marketPrice: "$1,299 - $3,299/month",
@@ -154,13 +156,13 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Solidity", "IPFS", "React", "Node.js", "MongoDB"],
-      integrations: ["Ethereum", "Polygon", "OpenSea API", "MetaMask", "WalletConnect"],
+      technology["Solidity", "IPFS", "React", "Node.js", "MongoDB"],
+      integrations["Ethereum", "Polygon", "OpenSea API", "MetaMask", "WalletConnect"],
       apiEndpoints: 180,
       uptime: "99.9%",
-      security: ["Smart contract security", "IPFS storage", "Multi-sig wallets", "Access controls"]
+      security["Smart contract security", "IPFS storage", "Multi-sig wallets", "Access controls"]
     },
-    competitors: ["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway"],
+    competitors["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway"],
     marketSize: "$23.4 billion by 2025"
   },
 
@@ -174,7 +176,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     price: 999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "DAO creation wizard",
       "Voting mechanisms",
       "Proposal management",
@@ -186,28 +188,28 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       "Mobile app",
       "API integration"
     ],
-    benefits: [
+    benefits[
       "Create DAOs in minutes",
       "Transparent governance",
       "Automated execution",
       "Community-driven decisions",
       "Secure treasury management"
     ],
-    useCases: [
+    useCases[
       "Community governance",
       "Investment DAOs",
       "Protocol governance",
       "Art collectives",
       "Charitable organizations"
     ],
-    targetAudience: [
+    targetAudience[
       "Community leaders",
       "Investors",
       "Protocol developers",
       "Artists and creators",
       "Non-profits"
     ],
-    tags: ["DAO", "Governance", "Blockchain", "Voting", "Treasury Management"],
+    tags["DAO", "Governance", "Blockchain", "Voting", "Treasury Management"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "professional",
     marketPrice: "$999 - $2,999/month",
@@ -219,13 +221,13 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Ethereum", "Polygon", "Gnosis Safe", "Snapshot", "Discord"],
+      technology["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],
+      integrations["Ethereum", "Polygon", "Gnosis Safe", "Snapshot", "Discord"],
       apiEndpoints: 120,
       uptime: "99.9%",
-      security: ["Multi-sig security", "Smart contract audits", "Access controls", "Audit trails"]
+      security["Multi-sig security", "Smart contract audits", "Access controls", "Audit trails"]
     },
-    competitors: ["Aragon", "Colony", "Moloch", "Gnosis", "Snapshot"],
+    competitors["Aragon", "Colony", "Moloch", "Gnosis", "Snapshot"],
     marketSize: "$12.8 billion by 2025"
   },
 
@@ -239,7 +241,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     price: 1499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Self-sovereign identity",
       "Zero-knowledge proofs",
       "Privacy-preserving authentication",
@@ -251,28 +253,28 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       "Mobile app",
       "Developer tools"
     ],
-    benefits: [
+    benefits[
       "Own your digital identity",
       "Privacy-preserving authentication",
       "Cross-platform compatibility",
       "Eliminate password management",
       "Enhanced security"
     ],
-    useCases: [
+    useCases[
       "Web3 applications",
       "DeFi platforms",
       "Gaming",
       "Healthcare",
       "Government services"
     ],
-    targetAudience: [
+    targetAudience[
       "Web3 developers",
       "Application developers",
       "Enterprises",
       "Government agencies",
       "Healthcare providers"
     ],
-    tags: ["Web3", "Identity", "Authentication", "Privacy", "Zero-Knowledge Proofs"],
+    tags["Web3", "Identity", "Authentication", "Privacy", "Zero-Knowledge Proofs"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "professional",
     marketPrice: "$1,499 - $3,999/month",
@@ -284,13 +286,13 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Solidity", "Zero-Knowledge Proofs", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Ethereum", "Polygon", "WalletConnect", "MetaMask", "Discord"],
+      technology["Solidity", "Zero-Knowledge Proofs", "React", "Node.js", "PostgreSQL"],
+      integrations["Ethereum", "Polygon", "WalletConnect", "MetaMask", "Discord"],
       apiEndpoints: 200,
       uptime: "99.9%",
-      security: ["Cryptographic security", "Privacy protection", "Access controls", "Audit trails"]
+      security["Cryptographic security", "Privacy protection", "Access controls", "Audit trails"]
     },
-    competitors: ["Spruce", "3Box", "BrightID", "Gitcoin Passport", "Worldcoin"],
+    competitors["Spruce", "3Box", "BrightID", "Gitcoin Passport", "Worldcoin"],
     marketSize: "$18.9 billion by 2025"
   },
 
@@ -304,7 +306,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     price: 2199,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Multi-chain asset bridges",
       "Cross-chain data sharing",
       "Interoperability protocols",
@@ -316,28 +318,28 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       "Mobile app",
       "Developer portal"
     ],
-    benefits: [
+    benefits[
       "Seamless cross-chain transfers",
       "Access to multiple ecosystems",
       "Enhanced liquidity",
       "Reduced transaction costs",
       "Unified user experience"
     ],
-    useCases: [
+    useCases[
       "Asset transfers",
       "Cross-chain DeFi",
       "Multi-chain applications",
       "Liquidity provision",
       "Cross-chain NFTs"
     ],
-    targetAudience: [
+    targetAudience[
       "DeFi protocols",
       "Application developers",
       "Traders",
       "Liquidity providers",
       "Blockchain projects"
     ],
-    tags: ["Cross-Chain", "Interoperability", "Blockchain", "Bridges", "Liquidity"],
+    tags["Cross-Chain", "Interoperability", "Blockchain", "Bridges", "Liquidity"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,199 - $5,199/month",
@@ -349,13 +351,13 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Solidity", "Rust", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
+      technology["Solidity", "Rust", "React", "Node.js", "PostgreSQL"],
+      integrations["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
       apiEndpoints: 300,
       uptime: "99.99%",
-      security: ["Multi-sig security", "Audit trails", "Real-time monitoring", "Insurance protocols"]
+      security["Multi-sig security", "Audit trails", "Real-time monitoring", "Insurance protocols"]
     },
-    competitors: ["Multichain", "Stargate", "Hop Protocol", "Synapse", "Celer Network"],
+    competitors["Multichain", "Stargate", "Hop Protocol", "Synapse", "Celer Network"],
     marketSize: "$15.6 billion by 2025"
-  }
-];
+
+];}}

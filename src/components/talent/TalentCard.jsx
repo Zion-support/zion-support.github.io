@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MapPin, Clock, CheckCircle2 } from "lucide-react";
-import { FavoriteButton } from "@/components/FavoriteButton";
+import { MapPin, Clock, CheckCircle2 import { FavoriteButton } from "@/components/FavoriteButton";
 import { useNavigate } from "react-router-dom";
 const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => {
     const navigate = useNavigate();
@@ -10,18 +9,33 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
         e.preventDefault();
         e.stopPropagation();
         if (onMessage) {
+<<<<<<< HEAD
             onMessage(talent);
-        }
+
         else {
             navigate(`/messages?talentId=${talent.id}`);
+
+=======
+            onMessage(talent)}
+        else {
+<<<<<<< HEAD
+            router(`/messages?talentId=${talent.id}`)}
+=======
+            router(`/messages?talentId=${talent.id}`);
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleBook = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onBook) {
+<<<<<<< HEAD
             onBook(talent);
-        }
+
+=======
+            onBook(talent)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Extract skills - limit to 5 for display
     const skills = talent.skills?.slice(0, 5) || [];
@@ -39,7 +53,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan"/>
               </div>)}
           </div>
-          
+
           {/* Main Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start">
@@ -47,7 +61,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
               <FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1"/>
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
-            
+
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (<div className="flex items-center text-zion-slate-light">
@@ -61,7 +75,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
             </div>
           </div>
         </div>
-        
+
         {/* Skills */}
         {skills.length > 0 && (<div className="mt-4">
             <div className="flex flex-wrap gap-2">
@@ -73,7 +87,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
                 </span>)}
             </div>
           </div>)}
-        
+
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">
           <div>
@@ -82,7 +96,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
                 <span className="text-zion-slate-light font-normal">/hr</span>
               </div>) : (<div className="text-zion-slate-light">Rate not specified</div>)}
           </div>
-          
+
           <div className="flex items-center gap-2">
             {isAuthenticated && (<Button size="sm" variant="secondary" onClick={handleBook} className="bg-zion-purple hover:bg-zion-purple-light text-white">
                 Book
@@ -93,7 +107,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
           </div>
         </div>
       </div>
-    </Card>);
-};
+    </Card>)};
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
+}}}}

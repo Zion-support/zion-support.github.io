@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LinkValidator } from '../utils/linkValidator';
+import { LinkValidator } from "../utils/linkValidator";
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
     const [brokenLinks, setBrokenLinks] = useState([]);
     const [fixedLinks, setFixedLinks] = useState([]);
@@ -12,7 +12,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         setScanProgress(0);
         const links = Array.from(document.querySelectorAll('a[href]'));
         const results = [];
-        for (let i = 0; i < links.length; i++) {
+        for (const i = 0; i < links.length; i++) {
             const link = links[i];
             const href = link.getAttribute('href');
             if (href) {
@@ -20,25 +20,40 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 if (result.status === 'broken') {
                     results.push(result);
                     if (autoFix) {
+<<<<<<< HEAD
                         await fixBrokenLink(href, result);
-                    }
-                }
+
+
                 // Update progress
                 setScanProgress(((i + 1) / links.length) * 100);
                 // Small delay to prevent overwhelming the browser
                 await new Promise(resolve => setTimeout(resolve, 10));
-            }
+
+
+=======
+                        await fixBrokenLink(href, result)}
+                }
+                // Update progress
+                setScanProgress(((i + 1) / links.length) * 100);
+                // Small delay to prevent overwhelming the browser
+                await new Promise(resolve => setTimeout(resolve, 10))}
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setBrokenLinks(results);
         setLastScanTime(new Date());
         setIsScanning(false);
         // Notify parent component of issues
         results.forEach(result => {
             if (onLinkIssue) {
+<<<<<<< HEAD
                 onLinkIssue(result);
-            }
+
         });
     };
+=======
+                onLinkIssue(result)}
+        })};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Fix a broken link
     const fixBrokenLink = async (originalUrl, validationResult) => {
         if (validationResult.suggestedFix && validationResult.suggestedFix.startsWith('Redirect to:')) {
@@ -48,25 +63,46 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             links.forEach(link => {
                 link.href = newUrl;
                 link.setAttribute('data-fixed', 'true');
-                link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
-            });
+                link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`)});
             // Add to fixed links list
             const fix = {
-                originalUrl,
+  originalUrl,
                 newUrl,
                 type: 'redirect',
+  <<<<<<< HEAD
                 reason: 'Automatically fixed broken internal link'
-            };
+            
+
+};
+            setFixedLinks(prev => [...prev, fix])}
+=======
+  reason: 'Automatically fixed broken internal link'
+            
+
+
+
+
+};
             setFixedLinks(prev => [...prev, fix]);
+<<<<<<< HEAD
+
+=======
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Fix all broken links
     const fixAllBrokenLinks = async () => {
         for (const brokenLink of brokenLinks) {
+<<<<<<< HEAD
             await fixBrokenLink(brokenLink.url, brokenLink);
-        }
+
         setBrokenLinks([]);
     };
+=======
+            await fixBrokenLink(brokenLink.url, brokenLink)}
+        setBrokenLinks([])};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Generate redirect rules for server configuration
     const generateRedirectRules = () => {
         const rules = LinkValidator.generateRedirectRules();
@@ -76,29 +112,38 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         a.href = url;
         a.download = 'redirect-rules.txt';
         a.click();
-        URL.revokeObjectURL(url);
-    };
+        URL.revokeObjectURL(url)};
     // Export broken links report
     const exportReport = () => {
         const report = {
-            scanTime: lastScanTime?.toISOString(),
+  scanTime: lastScanTime?.toISOString(),
             totalBrokenLinks: brokenLinks.length,
             brokenLinks: brokenLinks,
-            fixedLinks: fixedLinks
-        };
+  fixedLinks: fixedLinks
+        
+
+
+
+
+
+
+};
         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
         a.download = 'broken-links-report.json';
         a.click();
-        URL.revokeObjectURL(url);
-    };
+        URL.revokeObjectURL(url)};
     // Auto-scan on component mount
     useEffect(() => {
         if (autoFix) {
+<<<<<<< HEAD
             scanPageLinks();
-        }
+
+=======
+            scanPageLinks()}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoFix]);
     return (<div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-6">
@@ -168,7 +213,16 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                       {link.suggestedFix}
                     </div>)}
                 </div>
-                <button onClick={() => fixBrokenLink(link.url, link)} className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">
+                <button onClick = {
+  () => fixBrokenLink(link.url,
+  link)
+
+
+
+
+
+
+} className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">
                   Fix
                 </button>
               </div>))}
@@ -216,6 +270,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             <li>• Update sitemap to exclude broken URLs</li>
           </ul>
         </div>)}
-    </div>);
-};
+    </div>)};
 export default LinkMonitor;
+}}}}}}}}

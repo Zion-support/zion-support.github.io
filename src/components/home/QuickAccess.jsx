@@ -1,6 +1,5 @@
 import React from 'react';
-import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
-export const QuickAccess = () => {
+import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight export const QuickAccess = () => {
     const quickLinks = [
         {
             title: "AI Solutions",
@@ -43,7 +42,7 @@ export const QuickAccess = () => {
             icon: Zap,
             href: "/contact",
             color: "from-yellow-500 to-orange-500"
-        }
+
     ];
     return (<section className="py-16 bg-slate-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,11 +63,11 @@ export const QuickAccess = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300"/>
               </div>
-              
+
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                 {link.title}
               </h3>
-              
+
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                 {link.description}
               </p>
@@ -82,5 +81,10 @@ export const QuickAccess = () => {
           </a>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
 };
+}}
+=======
+    </section>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

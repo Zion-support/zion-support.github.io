@@ -20,7 +20,7 @@ const InteractiveServiceShowcase = () => {
             icon: '🤖',
             price: 'From $2,500',
             category: 'ai',
-            features: ['Strategic Planning', 'Implementation Roadmap', 'ROI Analysis', 'Team Training'],
+            features['Strategic Planning', 'Implementation Roadmap', 'ROI Analysis', 'Team Training'],
             isPopular: true,
             color: 'from-zion-cyan to-zion-blue',
             href: '/services/ai'
@@ -32,7 +32,7 @@ const InteractiveServiceShowcase = () => {
             icon: '🔮',
             price: 'From $25,000',
             category: 'quantum',
-            features: ['Quantum Algorithms', 'AI Integration', 'Performance Optimization', 'Scalable Architecture'],
+            features['Quantum Algorithms', 'AI Integration', 'Performance Optimization', 'Scalable Architecture'],
             isNew: true,
             color: 'from-zion-purple to-zion-cyan',
             href: '/services/quantum'
@@ -44,7 +44,7 @@ const InteractiveServiceShowcase = () => {
             icon: '🧠',
             price: 'From $35,000',
             category: 'ai',
-            features: ['Neural Networks', 'Efficient Processing', 'Scalable Architecture', 'Low Power Consumption'],
+            features['Neural Networks', 'Efficient Processing', 'Scalable Architecture', 'Low Power Consumption'],
             color: 'from-zion-blue to-zion-cyan',
             href: '/services/ai'
         },
@@ -55,7 +55,7 @@ const InteractiveServiceShowcase = () => {
             icon: '🌐',
             price: 'From $15,000',
             category: 'cloud',
-            features: ['Edge Deployment', 'Load Balancing', 'Real-time Processing', 'IoT Integration'],
+            features['Edge Deployment', 'Load Balancing', 'Real-time Processing', 'IoT Integration'],
             color: 'from-zion-cyan to-zion-green',
             href: '/services/cloud'
         },
@@ -66,7 +66,7 @@ const InteractiveServiceShowcase = () => {
             icon: '🔒',
             price: 'From $20,000',
             category: 'security',
-            features: ['Data Privacy', 'Distributed Training', 'Secure Communication', 'Compliance Ready'],
+            features['Data Privacy', 'Distributed Training', 'Secure Communication', 'Compliance Ready'],
             color: 'from-zion-green to-zion-cyan',
             href: '/services/security'
         },
@@ -77,7 +77,7 @@ const InteractiveServiceShowcase = () => {
             icon: '⚖️',
             price: 'From $18,000',
             category: 'ai',
-            features: ['Ethical Guidelines', 'Compliance Tools', 'Audit Trails', 'Risk Assessment'],
+            features['Ethical Guidelines', 'Compliance Tools', 'Audit Trails', 'Risk Assessment'],
             color: 'from-zion-yellow to-zion-orange',
             href: '/services/ai'
         },
@@ -88,7 +88,7 @@ const InteractiveServiceShowcase = () => {
             icon: '🔐',
             price: 'From $30,000',
             category: 'security',
-            features: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Threat Detection', 'Zero Trust'],
+            features['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Threat Detection', 'Zero Trust'],
             isNew: true,
             color: 'from-zion-purple to-zion-red',
             href: '/services/security'
@@ -100,10 +100,10 @@ const InteractiveServiceShowcase = () => {
             icon: '⚙️',
             price: 'From $12,000',
             category: 'automation',
-            features: ['Infrastructure as Code', 'Auto-scaling', 'Cost Optimization', 'Monitoring'],
+            features['Infrastructure as Code', 'Auto-scaling', 'Cost Optimization', 'Monitoring'],
             color: 'from-zion-orange to-zion-yellow',
             href: '/services/automation'
-        }
+
     ];
     const filteredServices = activeCategory === 'all'
         ? services
@@ -114,35 +114,69 @@ const InteractiveServiceShowcase = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const categoryVariants = {
-        hidden: { scale: 0.8, opacity: 0 },
+  hidden: { scale: 0.8,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             scale: 1,
             opacity: 1,
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+        <motion.div className="text-center mb-20" initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
             Explore Our{' '}
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
@@ -150,13 +184,31 @@ const InteractiveServiceShowcase = () => {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge technology solutions designed to transform your business operations 
+            Discover cutting-edge technology solutions designed to transform your business operations
             and drive innovation across all industries
           </p>
         </motion.div>
 
         {/* Category Filter Tabs */}
-        <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25'
                 : 'bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hover:bg-white/20 hover:border-zion-cyan/50'}`}>
@@ -196,7 +248,7 @@ const InteractiveServiceShowcase = () => {
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                         {service.description}
                       </p>
-                      
+
                       {/* Price */}
                       <div className="text-zion-cyan font-bold text-lg mb-4">
                         {service.price}
@@ -229,13 +281,40 @@ const InteractiveServiceShowcase = () => {
         </motion.div>
 
         {/* Bottom CTA Section */}
-        <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
+        <motion.div className="text-center mt-20" initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}>
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Let's discuss how our innovative technology solutions can drive your business forward 
+              Let's discuss how our innovative technology solutions can drive your business forward
               and give you a competitive edge in the market
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -251,6 +330,11 @@ const InteractiveServiceShowcase = () => {
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </section>);
-};
+</div></div>};
+=======
+    </section>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default InteractiveServiceShowcase;
+}}}}}}}

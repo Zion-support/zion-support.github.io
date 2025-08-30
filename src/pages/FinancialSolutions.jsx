@@ -1,44 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock } from 'lucide-react';
-export default function FinancialSolutions() {
+import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock export default function FinancialSolutions() {
     const solutions = [
         {
             icon: Brain,
             title: "AI-Powered Trading",
             description: "Intelligent algorithmic trading systems with real-time market analysis",
-            features: ["Predictive analytics", "Risk management", "Portfolio optimization"]
+            features["Predictive analytics", "Risk management", "Portfolio optimization"]
         },
         {
             icon: Shield,
             title: "Regulatory Compliance",
             description: "Automated compliance monitoring and reporting for financial regulations",
-            features: ["Real-time monitoring", "Automated reporting", "Audit trails"]
+            features["Real-time monitoring", "Automated reporting", "Audit trails"]
         },
         {
             icon: BarChart3,
             title: "Financial Analytics",
             description: "Advanced data analytics for investment decisions and market insights",
-            features: ["Market analysis", "Performance tracking", "Risk assessment"]
+            features["Market analysis", "Performance tracking", "Risk assessment"]
         },
         {
             icon: Lock,
             title: "Cybersecurity",
             description: "Bank-grade security solutions for financial institutions",
-            features: ["Fraud detection", "Secure transactions", "Data protection"]
+            features["Fraud detection", "Secure transactions", "Data protection"]
         },
         {
             icon: Database,
             title: "Data Management",
             description: "Comprehensive financial data integration and management",
-            features: ["Real-time data", "Multi-source integration", "Data quality"]
+            features["Real-time data", "Multi-source integration", "Data quality"]
         },
         {
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined financial operations and workflow automation",
+<<<<<<< HEAD
             features: ["Workflow automation", "Document processing", "Approval systems"]
+
+=======
+            features["Workflow automation", "Document processing", "Approval systems"]
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
@@ -70,7 +74,7 @@ export default function FinancialSolutions() {
             title: "Treasury Operations",
             description: "Automated treasury management and cash flow optimization",
             icon: "💰"
-        }
+
     ];
     const benefits = [
         "Reduce operational costs by 25-40%",
@@ -93,7 +97,7 @@ export default function FinancialSolutions() {
             Financial Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your financial operations with cutting-edge AI technology. 
+            Transform your financial operations with cutting-edge AI technology.
             Streamline processes, enhance security, and drive innovation in the financial sector.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -119,7 +123,7 @@ export default function FinancialSolutions() {
               Our AI-powered solutions address every aspect of modern financial operations
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg w-fit mb-4">
@@ -149,7 +153,7 @@ export default function FinancialSolutions() {
               Discover how our financial solutions are transforming the industry
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
                 <div className="text-4xl mb-4">{useCase.icon}</div>
@@ -171,7 +175,7 @@ export default function FinancialSolutions() {
               See real results with our AI-powered financial solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">
@@ -209,5 +213,9 @@ export default function FinancialSolutions() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

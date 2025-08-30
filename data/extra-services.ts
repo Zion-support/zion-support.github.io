@@ -11,9 +11,13 @@ export interface ExtraService {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
-}
+
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const extraServices: ExtraService[] = [
   {
     id: "cloud-migration-expert",
@@ -21,7 +25,7 @@ export const extraServices: ExtraService[] = [
     tagline: "Seamless cloud migration and optimization",
     price: "$99/hour",
     description: "Professional cloud migration services for businesses looking to modernize their infrastructure.",
-    features: [
+    features[
       "AWS/Azure/GCP migration",
       "Performance optimization",
       "Cost analysis",
@@ -35,7 +39,7 @@ export const extraServices: ExtraService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
   {
     id: "cybersecurity-audit",
@@ -43,7 +47,7 @@ export const extraServices: ExtraService[] = [
     tagline: "Comprehensive security assessment and protection",
     price: "$199/hour",
     description: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.",
-    features: [
+    features[
       "Vulnerability assessment",
       "Penetration testing",
       "Security policy review",
@@ -57,6 +61,6 @@ export const extraServices: ExtraService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}}

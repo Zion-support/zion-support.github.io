@@ -20,8 +20,8 @@ export interface AdditionalService {
     email: string;
     website: string;
   };
-}
 
+<<<<<<< HEAD
 export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
   {
     id: "enterprise-rag-search",
@@ -53,7 +53,7 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
   {
     id: "ai-code-review-copilot",
@@ -84,7 +84,7 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
   {
     id: "mlops-observability-platform",
@@ -115,7 +115,7 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
   {
     id: "data-privacy-compliance-scanner",
@@ -146,7 +146,7 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
   {
     id: "iot-digital-twin-studio",
@@ -177,10 +177,12 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
-  }
+
+
 ];
 
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
   {
     id: "ai-sales-outreach-accelerator",
@@ -205,6 +207,7 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
     category: "AI & Content",
     price: 999,
     marketPrice: "$1,000 - $3,000/month"
-  }
+
 ];
 
+}}}}}}}}

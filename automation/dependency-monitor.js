@@ -5,7 +5,11 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
-console.log('📦 Dependency Monitor Starting...\n');
+<<<<<<< HEAD
+// // // // // console.log('📦 Dependency Monitor Starting...\n');
+=======
+// // // // // // // // console.log('📦 Dependency Monitor Starting...\n');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 class DependencyMonitor {
   constructor() {
@@ -14,37 +18,44 @@ class DependencyMonitor {
     this.dependenciesUpdated = 0;
     this.monitoring = false;
     this.logFile = path.join(this.projectRoot, 'logs', 'dependency.log');
-    
+
     // Ensure logs directory exists
     this.ensureLogsDirectory();
-    
+
     // Initialize monitoring
     this.startMonitoring();
-  }
 
   ensureLogsDirectory() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
-    }
-  }
+
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    
-    console.log(logEntry.trim());
-    
+
+<<<<<<< HEAD
+    // // // // // console.log(logEntry.trim());
+=======
+    // // // // // // // // console.log(logEntry.trim());
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+<<<<<<< HEAD
+      // // // console.error('Failed to write to log file:', error.message);
+
+=======
+      // // // // // // // console.error('Failed to write to log file:', error.message);
     }
   }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   async startMonitoring() {
     this.log('Starting dependency monitoring...');
-    
+
     // Schedule regular dependency checks
     cron.schedule('0 */2 * * *', () => {
       this.performDependencyCheck();
@@ -66,30 +77,27 @@ class DependencyMonitor {
     }, 15000);
 
     this.log('Dependency monitoring started successfully');
-  }
 
   async performDependencyCheck() {
     if (this.monitoring) return;
-    
+
     this.monitoring = true;
     this.log('Performing dependency check...');
 
     try {
       const issues = await this.detectDependencyIssues();
-      
+
       if (issues.length > 0) {
         this.log(`Found ${issues.length} dependency issues, attempting fixes...`);
         await this.autoFixDependencyIssues(issues);
       } else {
         this.log('No dependency issues detected, all packages are up to date');
-      }
 
     } catch (error) {
       this.log(`Dependency check failed: ${error.message}`, 'ERROR');
     } finally {
       this.monitoring = false;
-    }
-  }
+
 
   async detectDependencyIssues() {
     const issues = [];
@@ -103,7 +111,6 @@ class DependencyMonitor {
         description: `${outdatedPackages.length} outdated packages found`,
         details: outdatedPackages
       });
-    }
 
     // Check for missing dependencies
     if (await this.hasMissingDependencies()) {
@@ -112,7 +119,6 @@ class DependencyMonitor {
         severity: 'high',
         description: 'Missing critical dependencies detected'
       });
-    }
 
     // Check for peer dependency issues
     const peerDependencyIssues = await this.checkPeerDependencies();
@@ -123,7 +129,6 @@ class DependencyMonitor {
         description: `${peerDependencyIssues.length} peer dependency issues found`,
         details: peerDependencyIssues
       });
-    }
 
     // Check for dependency conflicts
     const dependencyConflicts = await this.checkDependencyConflicts();
@@ -134,19 +139,17 @@ class DependencyMonitor {
         description: `${dependencyConflicts.length} dependency conflicts detected`,
         details: dependencyConflicts
       });
-    }
 
     return issues;
-  }
 
   async checkOutdatedPackages() {
     try {
-      const result = execSync('npm outdated --json', { 
-        cwd: this.projectRoot, 
+      const result = execSync('npm outdated --json', {
+        cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      
+
       if (result.trim()) {
         const outdated = JSON.parse(result);
         return Object.keys(outdated).map(pkg => ({
@@ -155,8 +158,7 @@ class DependencyMonitor {
           wanted: outdated[pkg].wanted,
           latest: outdated[pkg].latest
         }));
-      }
-      
+
       return [];
     } catch (error) {
       // npm outdated returns non-zero if there are outdated packages
@@ -171,11 +173,10 @@ class DependencyMonitor {
           }));
         } catch (parseError) {
           return [];
-        }
-      }
+
+
       return [];
-    }
-  }
+
 
   async hasMissingDependencies() {
     try {
@@ -183,54 +184,49 @@ class DependencyMonitor {
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       if (!fs.existsSync(packageJsonPath)) {
         return true;
-      }
 
       // Check if node_modules exists
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       if (!fs.existsSync(nodeModulesPath)) {
         return true;
-      }
 
       // Check if key dependencies exist
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       const requiredDeps = ['vite', '@vitejs/plugin-react', 'react', 'react-dom'];
-      
+
       for (const dep of requiredDeps) {
         if (packageJson.dependencies && packageJson.dependencies[dep]) {
           try {
             require.resolve(dep);
           } catch (e) {
             return true; // Missing dependency
-          }
-        }
-      }
-      
+
+
+
       return false;
     } catch (error) {
       return true;
-    }
-  }
+
 
   async checkPeerDependencies() {
     try {
-      const result = execSync('npm ls --json', { 
-        cwd: this.projectRoot, 
+      const result = execSync('npm ls --json', {
+        cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      
+
       const dependencies = JSON.parse(result);
       const issues = [];
-      
+
       // Check for peer dependency warnings
       if (dependencies.problems) {
         dependencies.problems.forEach(problem => {
           if (problem.includes('peer dep missing') || problem.includes('peer dependency')) {
             issues.push(problem);
-          }
+
         });
-      }
-      
+
       return issues;
     } catch (error) {
       // npm ls returns non-zero if there are issues
@@ -238,44 +234,41 @@ class DependencyMonitor {
         try {
           const dependencies = JSON.parse(error.stdout);
           const issues = [];
-          
+
           if (dependencies.problems) {
             dependencies.problems.forEach(problem => {
               if (problem.includes('peer dep missing') || problem.includes('peer dependency')) {
                 issues.push(problem);
-              }
+
             });
-          }
-          
+
           return issues;
         } catch (parseError) {
           return [];
-        }
-      }
+
+
       return [];
-    }
-  }
+
 
   async checkDependencyConflicts() {
     try {
-      const result = execSync('npm ls --json', { 
-        cwd: this.projectRoot, 
+      const result = execSync('npm ls --json', {
+        cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      
+
       const dependencies = JSON.parse(result);
       const issues = [];
-      
+
       // Check for dependency conflicts
       if (dependencies.problems) {
         dependencies.problems.forEach(problem => {
           if (problem.includes('conflict') || problem.includes('incompatible')) {
             issues.push(problem);
-          }
+
         });
-      }
-      
+
       return issues;
     } catch (error) {
       // npm ls returns non-zero if there are issues
@@ -283,29 +276,27 @@ class DependencyMonitor {
         try {
           const dependencies = JSON.parse(error.stdout);
           const issues = [];
-          
+
           if (dependencies.problems) {
             dependencies.problems.forEach(problem => {
               if (problem.includes('conflict') || problem.includes('incompatible')) {
                 issues.push(problem);
-              }
+
             });
-          }
-          
+
           return issues;
         } catch (parseError) {
           return [];
-        }
-      }
+
+
       return [];
-    }
-  }
+
 
   async autoFixDependencyIssues(issues) {
     for (const issue of issues) {
       try {
         this.log(`Attempting to fix: ${issue.type}`);
-        
+
         switch (issue.type) {
           case 'outdated_packages':
             await this.fixOutdatedPackages(issue.details);
@@ -319,198 +310,191 @@ class DependencyMonitor {
           case 'dependency_conflicts':
             await this.fixDependencyConflicts(issue.details);
             break;
-        }
-        
+
         this.dependenciesUpdated++;
         this.log(`Successfully fixed: ${issue.type}`);
-        
+
       } catch (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR');
-      }
-    }
-  }
+
+
 
   async fixOutdatedPackages(outdatedPackages) {
     this.log('Fixing outdated packages...');
-    
+
     try {
       // Create a report of what will be updated
+<<<<<<< HEAD
       const reportPath = path.join(this.projectRoot, 'logs', 'dependency-update-report.txt');
+      const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>
+=======
       const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg => 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         `${pkg.name}: ${pkg.current} → ${pkg.latest}`
       ).join('\n')}\n\nUpdating packages...`;
-      
+
       fs.writeFileSync(reportPath, reportContent);
-      
+
       // Update packages
-      execSync('npm update', { 
-        cwd: this.projectRoot, 
-        stdio: 'inherit' 
+      execSync('npm update', {
+        cwd: this.projectRoot,
+        stdio: 'inherit'
       });
-      
+
       this.log('Packages updated successfully');
-      
+
       // Update the report
       const updatedReport = `${reportContent}\n\nUpdate completed successfully at ${new Date().toISOString()}`;
       fs.writeFileSync(reportPath, updatedReport);
-      
+
     } catch (error) {
       throw new Error(`Failed to update packages: ${error.message}`);
-    }
-  }
+
 
   async fixMissingDependencies() {
     this.log('Installing missing dependencies...');
-    
+
     try {
-      execSync('npm install', { 
-        cwd: this.projectRoot, 
-        stdio: 'inherit' 
+      execSync('npm install', {
+        cwd: this.projectRoot,
+        stdio: 'inherit'
       });
       this.log('Dependencies installed successfully');
     } catch (error) {
       throw new Error(`Failed to install dependencies: ${error.message}`);
-    }
-  }
+
 
   async fixPeerDependencies(issues) {
     this.log('Fixing peer dependency issues...');
-    
+
     try {
       // Try to auto-fix with npm
-      execSync('npm install --legacy-peer-deps', { 
-        cwd: this.projectRoot, 
-        stdio: 'inherit' 
+      execSync('npm install --legacy-peer-deps', {
+        cwd: this.projectRoot,
+        stdio: 'inherit'
       });
       this.log('Peer dependency issues resolved');
     } catch (error) {
       this.log(`Failed to auto-fix peer dependencies: ${error.message}`, 'WARN');
-      
+
       // Create a report for manual resolution
-      const reportPath = path.join(this.projectRoot, 'logs', 'peer-dependency-report.txt');
       const reportContent = `Peer Dependency Issues Report - ${new Date().toISOString()}\n\n${issues.join('\n')}\n\nThese issues require manual attention.`;
-      
+
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Peer dependency report saved to: ${reportPath}`);
-    }
-  }
+
 
   async fixDependencyConflicts(conflicts) {
     this.log('Fixing dependency conflicts...');
-    
+
     try {
       // Try to resolve conflicts with npm
-      execSync('npm install --force', { 
-        cwd: this.projectRoot, 
-        stdio: 'inherit' 
+      execSync('npm install --force', {
+        cwd: this.projectRoot,
+        stdio: 'inherit'
       });
       this.log('Dependency conflicts resolved');
     } catch (error) {
       this.log(`Failed to auto-fix dependency conflicts: ${error.message}`, 'WARN');
-      
+
       // Create a report for manual resolution
-      const reportPath = path.join(this.projectRoot, 'logs', 'dependency-conflict-report.txt');
       const reportContent = `Dependency Conflict Report - ${new Date().toISOString()}\n\n${conflicts.join('\n')}\n\nThese conflicts require manual attention.`;
-      
+
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Dependency conflict report saved to: ${reportPath}`);
-    }
-  }
+
 
   async performSecurityAudit() {
     this.log('Performing security audit...');
-    
+
     try {
-      const result = execSync('npm audit --json', { 
-        cwd: this.projectRoot, 
+      const result = execSync('npm audit --json', {
+        cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      
+
       const audit = JSON.parse(result);
-      
+
       if (audit.vulnerabilities && Object.keys(audit.vulnerabilities).length > 0) {
         this.vulnerabilitiesFound = Object.keys(audit.vulnerabilities).length;
         this.log(`Found ${this.vulnerabilitiesFound} security vulnerabilities`, 'WARN');
-        
+
         // Try to auto-fix vulnerabilities
         await this.autoFixSecurityVulnerabilities(audit);
       } else {
         this.log('No security vulnerabilities found');
-      }
-      
+
     } catch (error) {
       this.log(`Security audit failed: ${error.message}`, 'ERROR');
-    }
-  }
+
 
   async autoFixSecurityVulnerabilities(audit) {
     this.log('Attempting to auto-fix security vulnerabilities...');
-    
+
     try {
       // Try to fix vulnerabilities automatically
-      execSync('npm audit fix', { 
-        cwd: this.projectRoot, 
-        stdio: 'inherit' 
+      execSync('npm audit fix', {
+        cwd: this.projectRoot,
+        stdio: 'inherit'
       });
       this.log('Security vulnerabilities auto-fixed');
-      
+
       // Create a report
-      const reportPath = path.join(this.projectRoot, 'logs', 'security-audit-report.txt');
       const reportContent = `Security Audit Report - ${new Date().toISOString()}\n\nVulnerabilities found: ${this.vulnerabilitiesFound}\nAuto-fix attempted and completed.`;
-      
+
       fs.writeFileSync(reportPath, reportContent);
-      
+
     } catch (error) {
       this.log(`Failed to auto-fix vulnerabilities: ${error.message}`, 'WARN');
-      
+
       // Create a detailed report for manual resolution
-      const reportPath = path.join(this.projectRoot, 'logs', 'security-audit-report.txt');
       const reportContent = `Security Audit Report - ${new Date().toISOString()}\n\nVulnerabilities found: ${this.vulnerabilitiesFound}\nAuto-fix failed. Manual intervention required.\n\nAudit details:\n${JSON.stringify(audit, null, 2)}`;
-      
+
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Security audit report saved to: ${reportPath}`);
-    }
-  }
+
 
   async performWeeklyUpdates() {
     this.log('Performing weekly dependency updates...');
-    
+
     try {
       // Check for major updates
       const majorUpdates = await this.checkMajorUpdates();
-      
+
       if (majorUpdates.length > 0) {
         this.log(`Found ${majorUpdates.length} packages with major updates available`);
-        
+
         // Create a report for major updates
+<<<<<<< HEAD
         const reportPath = path.join(this.projectRoot, 'logs', 'major-updates-report.txt');
+        const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>
+=======
         const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg => 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           `${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`
         ).join('\n')}\n\nReview these updates carefully as they may contain breaking changes.`;
-        
+
         fs.writeFileSync(reportPath, reportContent);
         this.log(`Major updates report saved to: ${reportPath}`);
-      }
-      
+
       // Perform minor and patch updates
       await this.performSafeUpdates();
-      
+
       this.log('Weekly dependency updates completed');
-      
+
     } catch (error) {
       this.log(`Weekly dependency updates failed: ${error.message}`, 'ERROR');
-    }
-  }
+
 
   async checkMajorUpdates() {
     try {
-      const result = execSync('npm outdated --json', { 
-        cwd: this.projectRoot, 
+      const result = execSync('npm outdated --json', {
+        cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      
+
       if (result.trim()) {
         const outdated = JSON.parse(result);
         return Object.keys(outdated)
@@ -525,53 +509,54 @@ class DependencyMonitor {
             current: outdated[pkg].current,
             latest: outdated[pkg].latest
           }));
-      }
-      
+
       return [];
     } catch (error) {
       return [];
-    }
-  }
+
 
   async performSafeUpdates() {
     try {
       // Update only minor and patch versions
-      execSync('npm update', { 
-        cwd: this.projectRoot, 
-        stdio: 'inherit' 
+      execSync('npm update', {
+        cwd: this.projectRoot,
+        stdio: 'inherit'
       });
       this.log('Safe updates completed');
     } catch (error) {
       this.log(`Safe updates failed: ${error.message}`, 'WARN');
-    }
-  }
+
 
   async cleanupOldReports() {
     this.log('Cleaning up old dependency reports...');
-    
+
     try {
       const logsDir = path.join(this.projectRoot, 'logs');
       if (fs.existsSync(logsDir)) {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days
-        
+<<<<<<< HEAD
+
         for (const file of files) {
           if (file.includes('-report.txt') || file.includes('-audit-report.txt')) {
             const filePath = path.join(logsDir, file);
+=======
+        
+        for (const filePath = path.join(logsDir, file);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const stats = fs.statSync(filePath);
-            
+
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
               this.log(`Removed old report: ${file}`);
-            }
-          }
-        }
-      }
+
+
+
+
     } catch (error) {
       this.log(`Report cleanup failed: ${error.message}`, 'WARN');
-    }
-  }
+
 
   getStats() {
     return {
@@ -580,26 +565,24 @@ class DependencyMonitor {
       monitoring: this.monitoring,
       uptime: process.uptime()
     };
-  }
 
   async stop() {
     this.log('Stopping dependency monitor...');
     this.monitoring = false;
     process.exit(0);
-  }
-}
+
 
 // Handle graceful shutdown
 process.on('SIGINT', async () => {
   if (monitor) {
     await monitor.stop();
-  }
+
 });
 
 process.on('SIGTERM', async () => {
   if (monitor) {
     await monitor.stop();
-  }
+
 });
 
 // Start the monitor
@@ -611,3 +594,4 @@ setInterval(() => {
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 900000); // Every 15 minutes
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

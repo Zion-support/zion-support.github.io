@@ -1,30 +1,46 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown import { Link, useLocation } from 'react-router-dom';
+=======
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
+import { Link, useLocation  } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export const MobileSidebarToggle: React.FC = () => {
+<<<<<<< HEAD
+export const MobileSidebarToggle: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: string) => {
+<<<<<<< HEAD
+  const toggleSection = (section: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
+<<<<<<< HEAD
       newExpanded.delete(section);
     } else {
       newExpanded.add(section);
-    }
+
     setExpandedSections(newExpanded);
   };
+=======
+      newExpanded.delete(section)} else {
+      newExpanded.add(section)}
+    setExpandedSections(newExpanded)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string)  => location.pathname === path;
 
   const navigationSections = [
     {
       title: "Main",
       icon: Home,
-      items: [
+      items[
         { name: "Home", href: "/", icon: Home },
         { name: "About Us", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
@@ -35,7 +51,7 @@ export const MobileSidebarToggle: React.FC = () => {
     {
       title: "Services",
       icon: Zap,
-      items: [
+      items[
         { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },
         { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },
         { name: "IT Infrastructure", href: "/it-services", icon: Server },
@@ -45,7 +61,7 @@ export const MobileSidebarToggle: React.FC = () => {
     {
       title: "Solutions",
       icon: Target,
-      items: [
+      items[
         { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Rocket },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Cloud },
         { name: "Edge Computing", href: "/emerging-tech/edge", icon: Server },
@@ -55,30 +71,40 @@ export const MobileSidebarToggle: React.FC = () => {
     {
       title: "Resources",
       icon: BookOpen,
+<<<<<<< HEAD
       items: [
         { name: "Documentation", href: "/docs", icon: FileText },
         { name: "API Reference", href: "/api", icon: FileText },
         { name: "Developer Portal", href: "/developer", icon: Server },
         { name: "Support Center", href: "/support", icon: HelpCircle }
       ]
-    }
+
+=======
+      items[;
+        { name: "Documentation", href: "/docs", icon: FileText },;
+        { name: "API Reference", href: "/api", icon: FileText },;
+        { name: "Developer Portal", href: "/developer", icon: Server },;
+        { name: "Support Center", href: "/support", icon: HelpCircle };
+      ];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const quickActions = [
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
-    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
+  const quickActions = [;
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;
+    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;
+    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
 
   return (
     <>
       {/* Mobile Menu Button */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover = {{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-      >
+
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </motion.button>
 
@@ -101,9 +127,18 @@ export const MobileSidebarToggle: React.FC = () => {
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+              transition = {
+  { duration: 0.3,
+  ease: 'easeOut' 
+
+
+
+
+
+
+}}
               className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto"
-            >
+
               <div className="p-6">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
@@ -121,7 +156,7 @@ export const MobileSidebarToggle: React.FC = () => {
                   <button
                     onClick={() => setIsOpen(false)}
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                  >
+
                     <X className="w-5 h-5" />
                   </button>
                 </div>
@@ -133,10 +168,44 @@ export const MobileSidebarToggle: React.FC = () => {
                     {quickActions.map((action, index) => (
                       <motion.div
                         key={action.name}
+<<<<<<< HEAD
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: index * 0.1 }}
+
+=======
+                        initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                        transition = {
+  { duration: 0.3,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                       >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         <Link
                           to={action.href}
                           onClick={() => setIsOpen(false)}
@@ -145,7 +214,7 @@ export const MobileSidebarToggle: React.FC = () => {
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'
                               : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'
                           }`}
-                        >
+
                           <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                           <span className="font-medium">{action.name}</span>
                         </Link>
@@ -159,14 +228,48 @@ export const MobileSidebarToggle: React.FC = () => {
                   {navigationSections.map((section, sectionIndex) => (
                     <motion.div
                       key={section.title}
+<<<<<<< HEAD
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
+
+=======
+                      initial = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                      transition = {
+  { duration: 0.5,
+  delay: sectionIndex * 0.1 
+
+
+
+
+
+
+}}
                     >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <button
                         onClick={() => toggleSection(section.title)}
                         className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
-                      >
+
                         <div className="flex items-center space-x-3">
                           <section.icon className="w-4 h-4 group-hover:text-zion-cyan transition-colors duration-300" />
                           <span className="font-medium">{section.title}</span>
@@ -181,19 +284,80 @@ export const MobileSidebarToggle: React.FC = () => {
                       <AnimatePresence>
                         {expandedSections.has(section.title) && (
                           <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
+                            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                            animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                             transition={{ duration: 0.3 }}
                             className="ml-7 mt-2 space-y-1"
-                          >
+
                             {section.items.map((item, itemIndex) => (
                               <motion.div
                                 key={item.name}
+<<<<<<< HEAD
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.2, delay: itemIndex * 0.05 }}
+
+=======
+                                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                                transition = {
+  { duration: 0.2,
+  delay: itemIndex * 0.05 
+
+
+
+
+
+
+}}
                               >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                                 <Link
                                   to={item.href}
                                   onClick={() => setIsOpen(false)}
@@ -202,7 +366,7 @@ export const MobileSidebarToggle: React.FC = () => {
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30'
                                       : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'
                                   }`}
-                                >
+
                                   <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />
                                   <span className="text-sm">{item.name}</span>
                                 </Link>
@@ -231,10 +395,23 @@ export const MobileSidebarToggle: React.FC = () => {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </>
         )}
-      </AnimatePresence>
-    </>
+      </AnimatePresence>;
+    </>;
+  )};
+=======
+            </motion.div>;
+          </>;
+        )};
+      </AnimatePresence>;
+    </>;
   );
+<<<<<<< HEAD
+};}}</section></motion.div>}
+=======
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

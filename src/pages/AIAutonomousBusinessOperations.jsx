@@ -21,25 +21,30 @@ const AIAutonomousBusinessOperations = () => {
             title: "Predictive Analytics",
             description: "Forecast trends and optimize business performance",
             icon: "🔮"
-        }
+
     ];
     const businessAreas = [
         {
             category: "Operations Management",
-            capabilities: ["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"]
+            capabilities["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"]
         },
         {
             category: "Financial Operations",
-            capabilities: ["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"]
+            capabilities["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"]
         },
         {
             category: "Human Resources",
-            capabilities: ["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"]
+            capabilities["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"]
         },
         {
             category: "Customer Operations",
+<<<<<<< HEAD
             capabilities: ["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
+
+=======
+            capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
@@ -61,7 +66,7 @@ const AIAutonomousBusinessOperations = () => {
             title: "Finance",
             description: "Risk assessment and portfolio optimization",
             icon: "💼"
-        }
+
     ];
     const benefits = [
         {
@@ -83,7 +88,7 @@ const AIAutonomousBusinessOperations = () => {
             title: "Scalability",
             description: "Easily scale operations as business grows",
             metric: "Unlimited"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -96,12 +101,12 @@ const AIAutonomousBusinessOperations = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business operations with AI-powered automation and optimization. 
-              Streamline processes, reduce costs, and improve efficiency across all 
+              Transform your business operations with AI-powered automation and optimization.
+              Streamline processes, reduce costs, and improve efficiency across all
               areas of your organization.
             </p>
           </div>
-          
+
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">AI-Powered Business Operations</h2>
@@ -113,7 +118,7 @@ const AIAutonomousBusinessOperations = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Business Areas */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Business Coverage</h2>
@@ -129,7 +134,7 @@ const AIAutonomousBusinessOperations = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>
@@ -141,7 +146,7 @@ const AIAutonomousBusinessOperations = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose AI Business Operations?</h2>
@@ -153,7 +158,7 @@ const AIAutonomousBusinessOperations = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Implementation Process */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Implementation Process</h2>
@@ -165,7 +170,7 @@ const AIAutonomousBusinessOperations = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Assessment</h3>
                 <p className="text-gray-300 text-sm">Evaluate current operations and identify opportunities</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -173,7 +178,7 @@ const AIAutonomousBusinessOperations = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
                 <p className="text-gray-300 text-sm">Design AI-powered solutions and automation workflows</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -181,7 +186,7 @@ const AIAutonomousBusinessOperations = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Implementation</h3>
                 <p className="text-gray-300 text-sm">Deploy AI solutions and integrate with existing systems</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>
@@ -191,7 +196,7 @@ const AIAutonomousBusinessOperations = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Dashboard Preview */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -204,7 +209,7 @@ const AIAutonomousBusinessOperations = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Performance Metrics</h3>
                   <p className="text-gray-300 text-sm">Real-time monitoring of business operations</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🤖</span>
@@ -212,7 +217,7 @@ const AIAutonomousBusinessOperations = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">AI Insights</h3>
                   <p className="text-gray-300 text-sm">AI-generated recommendations and insights</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">⚡</span>
@@ -223,13 +228,13 @@ const AIAutonomousBusinessOperations = () => {
               </div>
             </div>
           </div>
-          
+
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business Operations?</h3>
               <p className="text-gray-300 mb-6">
-                Experience the power of AI-driven business operations. Streamline processes, 
+                Experience the power of AI-driven business operations. Streamline processes,
                 reduce costs, and improve efficiency across your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -244,6 +249,6 @@ const AIAutonomousBusinessOperations = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AIAutonomousBusinessOperations;
+}}}}

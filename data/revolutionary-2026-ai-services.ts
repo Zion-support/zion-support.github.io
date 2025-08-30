@@ -11,9 +11,13 @@ export interface Revolutionary2026AiService {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
-}
+
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
   {
     id: "2026-revolutionary-ai",
@@ -21,7 +25,7 @@ export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
     tagline: "Revolutionary AI for 2026",
     price: "$249/month",
     description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
-    features: [
+    features[
       "Revolutionary AI",
       "Transformative capabilities",
       "Advanced algorithms",
@@ -35,6 +39,6 @@ export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

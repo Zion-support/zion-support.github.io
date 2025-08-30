@@ -1,13 +1,25 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import {
+  Brain,
+  PenTool,
+  TrendingUp,
+  Target,
+  Users,
+  BarChart3,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   PenTool, 
   TrendingUp, 
   Target, 
   Users, 
   BarChart3, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Calendar,
   Zap,
   CheckCircle,
@@ -26,41 +38,45 @@ import {
   Shield,
   Headphones,
   Rocket
-} from 'lucide-react';
-
+<<<<<<< HEAD
 export default function AIContentMarketingAutomation() {
+=======
+ } from 'lucide-react';
+
+export default function AIContentMarketingAutomation(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     "AI-powered content generation for multiple formats",
     "Multi-channel content distribution automation",
     "Intelligent audience targeting and segmentation",
     "Real-time performance analytics and optimization",
     "SEO-optimized content creation",
-    "Social media scheduling and automation",
-    "Email marketing campaign automation",
-    "Content calendar management",
-    "Brand voice consistency maintenance",
-    "A/B testing and optimization",
-    "Competitor analysis and insights",
-    "ROI tracking and attribution modeling"
+    "Social media scheduling and automation",;
+    "Email marketing campaign automation",;
+    "Content calendar management",;
+    "Brand voice consistency maintenance",;
+    "A/B testing and optimization",;
+    "Competitor analysis and insights",;
+    "ROI tracking and attribution modeling";
   ];
 
-  const benefits = [
-    "Increase content production by 300%",
-    "Improve engagement rates by 45%",
-    "Reduce content creation costs by 60%",
-    "Boost SEO rankings by 35%",
-    "Automate 80% of marketing workflows"
+  const benefits = [;
+    "Increase content production by 300%",;
+    "Improve engagement rates by 45%",;
+    "Reduce content creation costs by 60%",;
+    "Boost SEO rankings by 35%",;
+    "Automate 80% of marketing workflows";
   ];
 
   const useCases = [
     "E-commerce content marketing",
-    "B2B lead generation campaigns",
-    "Social media management",
-    "Email marketing automation",
-    "Blog and article creation",
-    "Video content marketing",
-    "Influencer collaboration",
-    "Event marketing campaigns"
+    "B2B lead generation campaigns",;
+    "Social media management",;
+    "Email marketing automation",;
+    "Blog and article creation",;
+    "Video content marketing",;
+    "Influencer collaboration",;
+    "Event marketing campaigns";
   ];
 
   const pricing = [
@@ -69,7 +85,7 @@ export default function AIContentMarketingAutomation() {
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features: [
+      features[
         "AI content generation (50 pieces/month)",
         "Basic social media automation",
         "Email campaign templates",
@@ -84,7 +100,7 @@ export default function AIContentMarketingAutomation() {
       price: "$799",
       period: "/month",
       description: "Ideal for growing businesses and marketing teams",
-      features: [
+      features[
         "AI content generation (200 pieces/month)",
         "Advanced social media automation",
         "Multi-channel distribution",
@@ -100,35 +116,68 @@ export default function AIContentMarketingAutomation() {
       price: "$1,999",
       period: "/month",
       description: "For large organizations with complex needs",
-      features: [
+      features[
         "Unlimited AI content generation",
         "Custom AI model training",
         "Advanced audience targeting",
         "White-label solutions",
+<<<<<<< HEAD
         "API access",
         "Dedicated account manager",
         "24/7 phone support"
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+        "API access",;
+        "Dedicated account manager",;
+        "24/7 phone support";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Content Marketing Automation Platform - Zion Tech Group"
         description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Marketing
@@ -140,7 +189,7 @@ export default function AIContentMarketingAutomation() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically. 
+              Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically.
               Increase engagement, reduce costs, and scale your marketing efforts effortlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -148,14 +197,14 @@ export default function AIContentMarketingAutomation() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-              >
+
                 Watch Demo
               </motion.button>
             </div>
@@ -167,11 +216,29 @@ export default function AIContentMarketingAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Powerful Features for Modern Marketing
             </h2>
@@ -180,15 +247,42 @@ export default function AIContentMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -203,11 +297,29 @@ export default function AIContentMarketingAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Marketing Results
             </h2>
@@ -216,15 +328,42 @@ export default function AIContentMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
@@ -239,11 +378,29 @@ export default function AIContentMarketingAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -252,19 +409,46 @@ export default function AIContentMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                  plan.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -272,7 +456,7 @@ export default function AIContentMarketingAutomation() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -299,7 +483,7 @@ export default function AIContentMarketingAutomation() {
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
-                >
+
                   {plan.cta}
                 </motion.button>
               </motion.div>
@@ -312,11 +496,29 @@ export default function AIContentMarketingAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Perfect for Every Marketing Need
             </h2>
@@ -325,15 +527,42 @@ export default function AIContentMarketingAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-purple-500 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -348,10 +577,28 @@ export default function AIContentMarketingAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Marketing?
             </h2>
@@ -363,19 +610,19 @@ export default function AIContentMarketingAutomation() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-              >
+
                 Schedule Demo
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -390,10 +637,23 @@ export default function AIContentMarketingAutomation() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
             <span>🌐 https://ziontechgroup.com</span>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
+}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

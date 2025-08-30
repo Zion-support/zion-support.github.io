@@ -6,20 +6,25 @@ const CloudServices = () => {
             title: "Cloud Migration & Strategy",
             description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",
             price: "From $8,500/project",
-            features: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
+            features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
         },
         {
             title: "Cloud-Native Development",
             description: "Build scalable applications using cloud-native technologies and microservices architecture.",
             price: "From $12,000/project",
-            features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
+            features["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
         },
         {
             title: "Cloud Security & Compliance",
             description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
             price: "From $6,500/month",
+<<<<<<< HEAD
             features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
+
+=======
+            features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
@@ -30,7 +35,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -63,6 +68,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default CloudServices;
+}

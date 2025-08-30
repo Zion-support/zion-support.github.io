@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import {
+  Brain,
+  Users,
+  Calendar,
+  TrendingUp,
+  Shield,
+  Zap,
+  CheckCircle,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Users, 
   Calendar, 
   TrendingUp, 
   Shield, 
   Zap, 
   CheckCircle, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Clock,
   Target,
@@ -22,9 +35,13 @@ import {
   Globe,
   Smartphone,
   Cloud
-} from 'lucide-react';
-
+<<<<<<< HEAD
 export default function AIProjectManagementPlatform() {
+=======
+ } from 'lucide-react';
+
+export default function AIProjectManagementPlatform(...args: []):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -49,13 +66,23 @@ export default function AIProjectManagementPlatform() {
     {
       icon: Shield,
       title: 'Risk Assessment & Mitigation',
+<<<<<<< HEAD
       description: 'AI continuously monitors project risks and provides proactive recommendations'
     },
     {
       icon: Zap,
       title: 'Automated Reporting',
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates'
-    }
+
+=======
+      description: 'AI continuously monitors project risks and provides proactive recommendations';
+    },;
+    {;
+      icon: Zap,;
+      title: 'Automated Reporting',;
+      description: 'Intelligent report generation with customizable dashboards and stakeholder updates';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -101,13 +128,23 @@ export default function AIProjectManagementPlatform() {
         'Full AI suite',
         'Custom integrations',
         'Dedicated support manager',
+<<<<<<< HEAD
         'Advanced security features',
         'Custom AI model training',
         'On-premise deployment options',
         'SLA guarantees'
       ],
       popular: false
-    }
+
+=======
+        'Advanced security features',;
+        'Custom AI model training',;
+        'On-premise deployment options',;
+        'SLA guarantees';
+      ],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -124,13 +161,23 @@ export default function AIProjectManagementPlatform() {
     {
       icon: BarChart3,
       title: '40% Cost Reduction',
+<<<<<<< HEAD
       description: 'Eliminate waste through AI-driven efficiency improvements'
     },
     {
       icon: Users,
       title: 'Enhanced Team Productivity',
       description: 'Automated workflows free up time for strategic work'
-    }
+
+=======
+      description: 'Eliminate waste through AI-driven efficiency improvements';
+    },;
+    {;
+      icon: Users,;
+      title: 'Enhanced Team Productivity',;
+      description: 'Automated workflows free up time for strategic work';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -147,45 +194,78 @@ export default function AIProjectManagementPlatform() {
     {
       title: 'Construction Projects',
       description: 'Track progress and manage resources across multiple sites with predictive analytics',
+<<<<<<< HEAD
       icon: Building
     },
     {
       title: 'Event Planning',
       description: 'Streamline event coordination with AI-driven task management and vendor coordination',
       icon: Calendar
-    }
+
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+      icon: Building;
+    },;
+    {;
+      title: 'Event Planning',;
+      description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
+      icon: Calendar;
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Project Management Platform - Zion Tech Group"
         description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Project Management
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               The Future of
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Project Management</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights. 
+              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights.
               Manage teams smarter, deliver faster, and achieve more with our cutting-edge platform.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -202,12 +282,30 @@ export default function AIProjectManagementPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -216,16 +314,43 @@ export default function AIProjectManagementPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -241,12 +366,30 @@ export default function AIProjectManagementPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
@@ -255,16 +398,43 @@ export default function AIProjectManagementPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -280,12 +450,30 @@ export default function AIProjectManagementPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Industry
             </h2>
@@ -294,16 +482,43 @@ export default function AIProjectManagementPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -319,12 +534,30 @@ export default function AIProjectManagementPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -333,20 +566,47 @@ export default function AIProjectManagementPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                  plan.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -390,18 +650,36 @@ export default function AIProjectManagementPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Project Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of teams already experiencing the future of project management
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -410,13 +688,22 @@ export default function AIProjectManagementPlatform() {
                 Contact Sales
               </button>
             </div>
-            
+
             <p className="text-gray-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+<<<<<<< HEAD
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
       </section>
     </div>
+=======;
+              No credit card required • 14-day free trial • Cancel anytime;
+            </p>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
-}
+}}}}}}

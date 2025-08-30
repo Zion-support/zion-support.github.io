@@ -1,64 +1,75 @@
-import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 } from 'lucide-react';
-
-export default function AIHRRecruitment() {
+import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
   const features = [
     'AI-powered candidate sourcing and matching',
-    'Intelligent resume parsing and skill extraction',
-    'Automated interview scheduling and coordination',
-    'Predictive analytics for candidate success',
-    'Bias-free screening and diversity optimization',
-    'Automated reference checking and verification',
-    'Integration with major ATS and HR platforms',
-    'Custom AI models for industry-specific hiring'
+    'Intelligent resume parsing and skill extraction',;
+    'Automated interview scheduling and coordination',;
+    'Predictive analytics for candidate success',;
+    'Bias-free screening and diversity optimization',;
+    'Automated reference checking and verification',;
+    'Integration with major ATS and HR platforms',;
+    'Custom AI models for industry-specific hiring';
   ];
 
   const tiers = [
-    { 
-      name: 'Starter', 
-      price: '$199/mo', 
-      details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support'] 
+    {
+      name: 'Starter',
+      price: '$199/mo',
+      details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support']
     },
+<<<<<<< HEAD
+    {
+      name: 'Professional',
+      price: '$499/mo',
+      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support']
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,299/mo',
+      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
+    },
+=======
     { 
       name: 'Professional', 
       price: '$499/mo', 
-      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$1,299/mo', 
-      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
-    },
+      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,299/mo', ;
+      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'High-volume recruitment and hiring',
-    'Technical talent acquisition',
-    'Executive search and placement',
-    'Seasonal hiring optimization',
-    'Diversity and inclusion hiring',
-    'Remote workforce recruitment'
+  const useCases = [;
+    'High-volume recruitment and hiring',;
+    'Technical talent acquisition',;
+    'Executive search and placement',;
+    'Seasonal hiring optimization',;
+    'Diversity and inclusion hiring',;
+    'Remote workforce recruitment';
   ];
 
-  const benefits = [
-    'Reduce time-to-hire by 40-60%',
-    'Improve candidate quality by 30-50%',
-    'Cut recruitment costs by 25-40%',
-    'Increase diversity in hiring by 35-55%',
-    'Enhance candidate experience',
-    'Scale recruitment without additional staff'
+  const benefits = [;
+    'Reduce time-to-hire by 40-60%',;
+    'Improve candidate quality by 30-50%',;
+    'Cut recruitment costs by 25-40%',;
+    'Increase diversity in hiring by 35-55%',;
+    'Enhance candidate experience',;
+    'Scale recruitment without additional staff';
   ];
 
-  const industries = [
-    'Technology & Software',
-    'Healthcare & Life Sciences',
-    'Financial Services',
-    'Manufacturing & Industrial',
-    'Retail & E-commerce',
-    'Professional Services'
+  const industries = [;
+    'Technology & Software',;
+    'Healthcare & Life Sciences',;
+    'Financial Services',;
+    'Manufacturing & Industrial',;
+    'Retail & E-commerce',;
+    'Professional Services';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +174,12 @@ export default function AIHRRecruitment() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}

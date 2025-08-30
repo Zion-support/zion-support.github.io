@@ -8,7 +8,7 @@ const AIAutonomousDecisionEngine = () => {
         <meta name="keywords" content="AI decision engine, autonomous decision making, AI reasoning, decision automation, intelligent systems, AI logic"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-decision-engine"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousDecisionEngine = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">Makes decisions independently without human intervention</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">🧮</div>
               <h3 className="text-xl font-semibold text-white mb-3">Complex Logic</h3>
               <p className="text-gray-300">Handles multi-variable decision trees and complex scenarios</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Predictive Analysis</h3>
               <p className="text-gray-300">Forecasts outcomes and optimizes decision paths</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
               <p className="text-gray-300">Improves decision quality over time with experience</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">⚖️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Risk Assessment</h3>
               <p className="text-gray-300">Evaluates risks and benefits of each decision option</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold text-white mb-3">Goal Optimization</h3>
@@ -93,19 +93,19 @@ const AIAutonomousDecisionEngine = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Data Input</h3>
                 <p className="text-gray-300">Collect and validate relevant information</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-emerald-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Analysis</h3>
                 <p className="text-gray-300">Process data and identify patterns</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-emerald-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Reasoning</h3>
                 <p className="text-gray-300">Apply logic and generate options</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-emerald-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Decision</h3>
@@ -122,12 +122,12 @@ const AIAutonomousDecisionEngine = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Financial Trading</h3>
                 <p className="text-gray-300">Automated trading decisions based on market analysis</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Supply Chain</h3>
                 <p className="text-gray-300">Inventory and logistics optimization decisions</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Customer Service</h3>
                 <p className="text-gray-300">Automated routing and issue resolution</p>
@@ -152,6 +152,5 @@ const AIAutonomousDecisionEngine = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousDecisionEngine;

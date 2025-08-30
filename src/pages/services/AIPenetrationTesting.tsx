@@ -1,64 +1,75 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIPenetrationTesting() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting() {
   const features = [
     'AI-powered penetration testing optimization',
-    'Intelligent vulnerability discovery and exploitation',
-    'Automated security assessment and reporting',
-    'Predictive analytics for security risks',
-    'Smart testing methodology and planning',
-    'AI-driven testing automation and orchestration',
-    'Real-time testing analytics and insights',
-    'Custom AI models for testing applications'
+    'Intelligent vulnerability discovery and exploitation',;
+    'Automated security assessment and reporting',;
+    'Predictive analytics for security risks',;
+    'Smart testing methodology and planning',;
+    'AI-driven testing automation and orchestration',;
+    'Real-time testing analytics and insights',;
+    'Custom AI models for testing applications';
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$799/mo', 
-      details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support']
     },
+<<<<<<< HEAD
+    {
+      name: 'Business',
+      price: '$1,999/mo',
+      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support']
+    },
+    {
+      name: 'Enterprise',
+      price: '$4,999/mo',
+      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support']
+    },
+=======
     { 
       name: 'Business', 
       price: '$1,999/mo', 
-      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$4,999/mo', 
-      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$4,999/mo', ;
+      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Penetration testing optimization',
-    'Vulnerability discovery and exploitation',
-    'Security assessment and reporting',
-    'Testing methodology and planning',
-    'Testing automation and orchestration',
-    'Testing scaling and management'
+  const useCases = [;
+    'Penetration testing optimization',;
+    'Vulnerability discovery and exploitation',;
+    'Security assessment and reporting',;
+    'Testing methodology and planning',;
+    'Testing automation and orchestration',;
+    'Testing scaling and management';
   ];
 
-  const benefits = [
-    'Improve penetration testing performance by 50-80%',
-    'Reduce testing completion time by 40-70%',
-    'Cut testing operational costs by 35-65%',
-    'Enhance testing reliability and scalability',
-    'Optimize resource utilization',
-    'Scale testing operations efficiently'
+  const benefits = [;
+    'Improve penetration testing performance by 50-80%',;
+    'Reduce testing completion time by 40-70%',;
+    'Cut testing operational costs by 35-65%',;
+    'Enhance testing reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale testing operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-gray-500 via-slate-500 to-zinc-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +174,12 @@ export default function AIPenetrationTesting() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-gray-600 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}

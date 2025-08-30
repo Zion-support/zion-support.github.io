@@ -1,0 +1,503 @@
+#!/usr/bin/env node
+
+/**
+ * Enhanced Automation Runner
+ * Coordinates and optimizes all PM2 automation processes with advanced error handling
+ */
+
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const util = require('util');
+
+const execAsync = util.promisify(exec);
+
+class EnhancedAutomationRunner {
+  constructor() {
+    this.config = {
+  maxConcurrentProcesses: 3,
+      retryAttempts: 3,
+      retryDelay: 5000,
+      healthCheckInterval: 30000,
+  logLevel: 'info'
+    
+
+};
+    
+    this.processQueue = [];
+    this.runningProcesses = new Map();
+    this.processHistory = [];
+    this.performanceMetrics = {};
+  }
+
+  async start() {
+    console.log('🚀 Starting Enhanced Automation Runner...');
+    
+    try {
+      // Initialize monitoring
+      await this.initializeMonitoring();
+      
+      // Start health monitoring
+      this.startHealthMonitoring();
+      
+      // Process automation queue
+      await this.processQueue();
+      
+      console.log('✅ Enhanced Automation Runner started successfully');
+      
+    } catch (error) {
+      console.error('❌ Failed to start Enhanced Automation Runner:', error);
+      throw error;
+    }
+  }
+
+  async initializeMonitoring() {
+    console.log('📊 Initializing monitoring systems...');
+    
+    // Create monitoring directories
+    const dirs = ['logs', 'reports', 'metrics', 'cache'];
+    for (const dirPath = path.join(__dirname, '../../', dir);
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true });
+      }
+    }
+    
+    // Initialize performance tracking
+    this.performanceMetrics = {
+  startTime: Date.now(),
+      totalProcesses: 0,
+      successfulProcesses: 0,
+      failedProcesses: 0,
+      averageExecutionTime: 0,
+  totalExecutionTime: 0
+    
+
+};
+  }
+
+  startHealthMonitoring() {
+    setInterval(async () => {
+      await this.performHealthCheck();
+    }, this.config.healthCheckInterval);
+  }
+
+  async performHealthCheck() {
+    try {
+      const healthStatus = await this.checkSystemHealth();
+      
+      if (healthStatus.overallHealth === 'critical') {
+        console.log('🚨 CRITICAL: System health check failed');
+        await this.triggerEmergencyProcedures();
+      } else if (healthStatus.overallHealth === 'warning') {
+        console.log('⚠️  WARNING: System showing signs of stress');
+        await this.optimizePerformance();
+      }
+      
+      // Log health status
+      await this.logHealthStatus(healthStatus);
+      
+    } catch (error) {
+      console.error('Health check failed:', error);
+    }
+  }
+
+  async checkSystemHealth() {
+    const health = {
+  overallHealth: 'healthy',
+      cpu: 0,
+      memory: 0,
+      disk: 0,
+  processes: 0
+    
+
+};
+
+    try {
+      // Check CPU usage
+      const { stdout: cpuInfo } = await execAsync('top -bn1 | grep "Cpu(s)" | awk \'{print $2}\' | cut -d\'%\' -f1');
+      health.cpu = parseFloat(cpuInfo.trim());
+      
+      // Check memory usage
+      const { stdout: memInfo } = await execAsync('free | grep Mem | awk \'{printf("%.2f", $3/$2 * 100.0)}\'');
+      health.memory = parseFloat(memInfo.trim());
+      
+      // Check disk usage
+      const { stdout: diskInfo } = await execAsync('df / | tail -1 | awk \'{print $5}\' | cut -d\'%\' -f1');
+      health.disk = parseFloat(diskInfo.trim());
+      
+      // Check PM2 processes
+      const { stdout: pm2Info } = await execAsync('pm2 list | grep -c "online"');
+      health.processes = parseInt(pm2Info.trim());
+      
+      // Assess overall health
+      if (health.cpu > 90 || health.memory > 90 || health.disk > 90) {
+        health.overallHealth = 'critical';
+      } else if (health.cpu > 80 || health.memory > 80 || health.disk > 80) {
+        health.overallHealth = 'warning';
+      }
+      
+    } catch (error) {
+      console.error('Health check command failed:', error);
+      health.overallHealth = 'unknown';
+    }
+
+    return health;
+  }
+
+  async triggerEmergencyProcedures() {
+    console.log('🚨 Triggering emergency procedures...');
+    
+    try {
+      // Stop non-critical processes
+      await this.stopNonCriticalProcesses();
+      
+      // Clear caches
+      await this.clearCaches();
+      
+      // Restart critical processes
+      await this.restartCriticalProcesses();
+      
+      console.log('✅ Emergency procedures completed');
+      
+    } catch (error) {
+      console.error('Emergency procedures failed:', error);
+    }
+  }
+
+  async stopNonCriticalProcesses() {
+    const nonCritical = ['front-maximizer', 'sitemap-runner', 'performance-monitor'];
+    
+    for (const processName of nonCritical) {
+      try {
+        await execAsync(`pm2 stop ${processName}`);
+        console.log(`⏹️  Stopped non-critical process: ${processName}`);
+      } catch (error) {
+        console.log(`⚠️  Failed to stop ${processName}:`, error.message);
+      }
+    }
+  }
+
+  async clearCaches() {
+    try {
+      const cacheDir = path.join(__dirname, '../../cache');
+      if (fs.existsSync(cacheDir)) {
+        const files = fs.readdirSync(cacheDir);
+        for (const file of files) {
+          fs.unlinkSync(path.join(cacheDir, file));
+        }
+        console.log('🗑️  Cleared cache directory');
+      }
+    } catch (error) {
+      console.error('Failed to clear cache:', error);
+    }
+  }
+
+  async restartCriticalProcesses() {
+    const critical = ['console-error-fixer', 'link-checker', 'security-audit'];
+    
+    for (const processName of critical) {
+      try {
+        await execAsync(`pm2 restart ${processName}`);
+        console.log(`🔄 Restarted critical process: ${processName}`);
+      } catch (error) {
+        console.error(`Failed to restart ${processName}:`, error);
+      }
+    }
+  }
+
+  async optimizePerformance() {
+    console.log('⚡ Optimizing performance...');
+    
+    try {
+      // Adjust PM2 process limits
+      await this.adjustProcessLimits();
+      
+      // Optimize memory usage
+      await this.optimizeMemoryUsage();
+      
+      console.log('✅ Performance optimization completed');
+      
+    } catch (error) {
+      console.error('Performance optimization failed:', error);
+    }
+  }
+
+  async adjustProcessLimits() {
+    try {
+      // Set memory limits for processes
+      const processes = ['console-error-fixer', 'link-checker', 'continuous-improvement'];
+      
+      for (const processName of processes) {
+        await execAsync(`pm2 restart ${processName} --max-memory-restart 100M`);
+      }
+      
+      console.log('📊 Adjusted process memory limits');
+      
+    } catch (error) {
+      console.error('Failed to adjust process limits:', error);
+    }
+  }
+
+  async optimizeMemoryUsage() {
+    try {
+      // Force garbage collection if available
+      if (global.gc) {
+        global.gc();
+        console.log('🧹 Forced garbage collection');
+      }
+      
+      // Clear module cache for non-essential modules
+      const nonEssentialModules = ['fs', 'path', 'util'];
+      for (const moduleName of nonEssentialModules) {
+        if (require.cache[require.resolve(moduleName)]) {
+          delete require.cache[require.resolve(moduleName)];
+        }
+      }
+      
+      console.log('🗂️  Cleared module cache');
+      
+    } catch (error) {
+      console.error('Failed to optimize memory:', error);
+    }
+  }
+
+  async processQueue() {
+    console.log('📋 Processing automation queue...');
+    
+    // Add automation tasks to queue
+    this.addAutomationTasks();
+    
+    // Process queue with concurrency control
+    while (this.processQueue.length > 0 || this.runningProcesses.size > 0) {
+      // Start new processes if under limit
+      while (this.runningProcesses.size < this.config.maxConcurrentProcesses && this.processQueue.length > 0) {
+        const task = this.processQueue.shift();
+        await this.startProcess(task);
+      }
+      
+      // Wait for processes to complete
+      await this.waitForProcesses();
+      
+      // Small delay to prevent busy waiting
+      await this.sleep(1000);
+    }
+  }
+
+  addAutomationTasks() {
+    const tasks = [
+      { name: 'console-error-fixer', priority: 'high', script: 'console-error-fixer.js' },
+      { name: 'link-checker', priority: 'high', script: 'link-checker.js' },
+      { name: 'continuous-improvement', priority: 'medium', script: 'continuous-improvement.js' },
+      { name: 'daily-build-test', priority: 'medium', script: 'daily-build-test.js' },
+      { name: 'security-audit', priority: 'high', script: 'security-audit.js' },
+      { name: 'quality-checks', priority: 'medium', script: 'quality-checks.js' },
+      { name: 'performance-monitor', priority: 'low', script: 'performance-monitor.js' },
+      { name: 'dependency-updates', priority: 'low', script: 'dependency-updates.js' }
+    ];
+    
+    // Sort by priority
+    tasks.sort((a, b) => {
+      const priorityOrder = {
+  high: 3, medium: 2,
+  low: 1 
+
+};
+      return priorityOrder[b.priority] - priorityOrder[a.priority];
+    });
+    
+    this.processQueue.push(...tasks);
+  }
+
+  async startProcess(task) {
+    const processId = Date.now() + Math.random();
+    const startTime = Date.now();
+    
+    console.log(`🚀 Starting ${task.name} (Priority: ${task.priority})`);
+    
+    try {
+      const scriptPath = path.join(__dirname, task.script);
+      const child = exec(`node ${scriptPath}`, {
+        cwd: __dirname,
+        maxBuffer: 1024 * 1024 // 1MB buffer
+      });
+      
+      this.runningProcesses.set(processId, {
+        task,
+        child,
+        startTime,
+        status: 'running'
+      });
+      
+      // Handle process completion
+      child.on('close', (code) => {
+        this.handleProcessCompletion(processId, code, startTime);
+      });
+      
+      // Handle process errors
+      child.on('error', (error) => {
+        this.handleProcessError(processId, error);
+      });
+      
+    } catch (error) {
+      console.error(`Failed to start ${task.name}:`, error);
+      this.handleProcessError(processId, error);
+    }
+  }
+
+  handleProcessCompletion(processId, code, startTime) {
+    const process = this.runningProcesses.get(processId);
+    if (!process) return;
+    
+    const executionTime = Date.now() - startTime;
+    const success = code === 0;
+    
+    // Update metrics
+    this.performanceMetrics.totalProcesses++;
+    this.performanceMetrics.totalExecutionTime += executionTime;
+    this.performanceMetrics.averageExecutionTime = 
+      this.performanceMetrics.totalExecutionTime / this.performanceMetrics.totalProcesses;
+    
+    if (success) {
+      this.performanceMetrics.successfulProcesses++;
+      console.log(`✅ ${process.task.name} completed successfully in ${executionTime}ms`);
+    } else {
+      this.performanceMetrics.failedProcesses++;
+      console.log(`❌ ${process.task.name} failed with code ${code} in ${executionTime}ms`);
+    }
+    
+    // Record in history
+    this.processHistory.push({
+      name: process.task.name,
+      startTime: new Date(startTime).toISOString(),
+      executionTime,
+      success,
+      exitCode: code
+    });
+    
+    // Clean up
+    this.runningProcesses.delete(processId);
+  }
+
+  handleProcessError(processId, error) {
+    const process = this.runningProcesses.get(processId);
+    if (!process) return;
+    
+    console.error(`💥 ${process.task.name} encountered an error:`, error.message);
+    
+    // Update metrics
+    this.performanceMetrics.totalProcesses++;
+    this.performanceMetrics.failedProcesses++;
+    
+    // Record in history
+    this.processHistory.push({
+      name: process.task.name,
+      startTime: new Date(process.startTime).toISOString(),
+      executionTime: Date.now() - process.startTime,
+      success: false,
+      error: error.message
+    });
+    
+    // Clean up
+    this.runningProcesses.delete(processId);
+  }
+
+  async waitForProcesses() {
+    // Wait for any process to complete
+    if (this.runningProcesses.size > 0) {
+      await this.sleep(100);
+    }
+  }
+
+  async logHealthStatus(healthStatus) {
+    try {
+      const logEntry = {
+  timestamp: new Date().toISOString(),
+  ...healthStatus
+      
+
+};
+      
+      fs.appendFileSync(logPath, JSON.stringify(logEntry) + '\n');
+      
+    } catch (error) {
+      console.error('Failed to log health status:', error);
+    }
+  }
+
+  async generatePerformanceReport() {
+    const reportPath = path.join(__dirname, '../../reports/performance-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    console.log(`📊 Performance report generated: ${reportPath}`);
+    return report;
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    // Success rate recommendations
+    const successRate = this.performanceMetrics.successfulProcesses / this.performanceMetrics.totalProcesses;
+    if (successRate < 0.9) {
+      recommendations.push('Investigate process failures - success rate below 90%');
+    }
+    
+    // Performance recommendations
+    if (this.performanceMetrics.averageExecutionTime > 60000) { // 1 minute
+      recommendations.push('Processes taking too long - consider optimization or parallelization');
+    }
+    
+    // Memory recommendations
+    if (this.performanceMetrics.totalProcesses > 100) {
+      recommendations.push('High process count - consider batching or reducing frequency');
+    }
+    
+    return recommendations;
+  }
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async shutdown() {
+    console.log('🛑 Shutting down Enhanced Automation Runner...');
+    
+    try {
+      // Stop all running processes
+      for (const [id, process] of this.runningProcesses) {
+        process.child.kill();
+        this.runningProcesses.delete(id);
+      }
+      
+      // Generate final report
+      await this.generatePerformanceReport();
+      
+      console.log('✅ Enhanced Automation Runner shutdown complete');
+      
+    } catch (error) {
+      console.error('❌ Shutdown failed:', error);
+    }
+  }
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', async () => {
+  const runner = global.currentRunner;
+  if (runner) {
+    await runner.shutdown();
+  }
+  process.exit(0);
+});
+
+// Run the enhanced automation runner
+if (require.main === module) {
+  const runner = new EnhancedAutomationRunner();
+  global.currentRunner = runner;
+  
+  runner.start().catch(async (error) => {
+    console.error('Fatal error:', error);
+    await runner.shutdown();
+    process.exit(1);
+  });
+}
+
+module.exports = EnhancedAutomationRunner;

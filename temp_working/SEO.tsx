@@ -14,7 +14,7 @@ interface SEOProps {
   tags?: string[];
   noindex?: boolean;
   nofollow?: boolean;
-}
+
 export function SEO({
   title,
   description,
@@ -23,19 +23,22 @@ export function SEO({
   image = '/images/zion-tech-group-og.jpg',
   type = 'website',
   publishedTime,
-  modifiedTime,
-  author = 'Zion Tech Group',
-  section,
-  tags = [],
-  noindex = false,
-  nofollow = false
-}: SEOProps) {
+  modifiedTime,;
+  author = 'Zion Tech Group',;
+  section,;
+  tags = [],;
+  noindex = false,;
+  nofollow = false;
+}: SEOProps) {;
   const siteUrl = 'https://ziontechgroup.com';
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
-  
+
   // Default meta description if none provided
-  const metaDescription = description || 
+<<<<<<< HEAD
+  const metaDescription = description ||
+=======
+  const metaDescription = description || ;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
 
   // Default title if none provided
@@ -50,11 +53,18 @@ export function SEO({
 
   // Structured data for organization
   const organizationSchema = {
-    "@context": "https://schema.org",
+  "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": siteUrl,
-    "logo": `${siteUrl}/images/zion-tech-group-logo.png`,
+  "logo": `${siteUrl
+
+
+
+
+
+
+}/images/zion-tech-group-logo.png`,
     "description": "Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services",
     "foundingDate": "2020",
     "address": {
@@ -96,7 +106,7 @@ export function SEO({
             "@type": "Service",
             "name": "AI & Analytics Solutions",
             "description": "Cutting-edge artificial intelligence and data analytics services"
-          }
+
         },
         {
           "@type": "Offer",
@@ -104,62 +114,79 @@ export function SEO({
             "@type": "Service",
             "name": "Cybersecurity Services",
             "description": "Advanced security protocols and threat protection"
-          }
+
         },
         {
           "@type": "Offer",
           "itemOffered": {
+<<<<<<< HEAD
             "@type": "Service",
             "name": "Cloud & DevOps",
             "description": "Scalable cloud infrastructure and development operations"
-          }
-        }
+
+
       ]
-    }
+
+=======
+            "@type": "Service",;
+            "name": "Cloud & DevOps",;
+            "description": "Scalable cloud infrastructure and development operations";
+          };
+        };
+      ];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Structured data for the current page
   const pageSchema = {
-    "@context": "https://schema.org",
+  "@context": "https://schema.org",
     "@type": type === 'article' ? 'Article' : 'WebPage',
     "headline": title,
     "description": metaDescription,
     "url": fullUrl,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": fullUrl
-    },
+  "@id": fullUrl
+    
+
+
+
+
+
+
+},
     "publisher": {
       "@type": "Organization",
       "name": "Zion Tech Group",
       "logo": {
         "@type": "ImageObject",
         "url": `${siteUrl}/images/zion-tech-group-logo.png`
-      }
+
     },
     "image": fullImageUrl,
     "datePublished": publishedTime || new Date().toISOString(),
     "dateModified": modifiedTime || new Date().toISOString(),
     "author": {
-      "@type": "Organization",
-      "name": author
-    },
-    ...(type === 'article' && {
-      "articleSection": section,
-      "keywords": tags.join(', ')
-    })
+      "@type": "Organization",;
+      "name": author;
+    },;
+    ...(type === 'article' && {;
+      "articleSection": section,;
+      "keywords": tags.join(', ');
+    });
   };
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={metaDescription} />
+      <meta name = "description" content={metaDescription} />
       <meta name="robots" content={robotsContent} />
-      
+
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={`${siteUrl}${canonical}`} />}
-      
+
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
@@ -170,7 +197,7 @@ export function SEO({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
@@ -178,14 +205,23 @@ export function SEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={fullImageUrl} />
-      
+
       {/* Additional Meta Tags */}
       <meta name="author" content={author} />
-      <meta name="keywords" content={tags.join(', ')} />
+      <meta name="keywords" content = {
+  tags.join(',
+  ')
+
+
+
+
+
+
+} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
-      
+
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -196,7 +232,7 @@ export function SEO({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://cdn.gpteng.co" />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
@@ -206,34 +242,45 @@ export function SEO({
       </script>
       {/* Additional SEO Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
+<<<<<<< HEAD
       <meta name="apple-mobile-web-app-title" content="Zion Tech" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
+
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+=======
+      <meta name="apple-mobile-web-app-title" content="Zion Tech" />;
+      <meta name="apple-mobile-web-app-capable" content="yes" />;
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />;
+      ;
+      {/* Security Headers */};
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;
+      <meta httpEquiv="X-Frame-Options" content="DENY" />;
+      <meta httpEquiv="X-XSS-Protection" content="1; mode = block" />
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
+
       {/* Performance and UX */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
-      
+
       {/* Language and Region */}
       <meta httpEquiv="Content-Language" content="en" />
       <meta name="language" content="English" />
       <meta name="geo.region" content="US-DE" />
       <meta name="geo.placename" content="Middletown, Delaware" />
-      
+
       {/* Business Information */}
       <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
-      <meta name="business:contact_data:locality" content="Middletown" />
-      <meta name="business:contact_data:region" content="DE" />
-      <meta name="business:contact_data:postal_code" content="19709" />
-      <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />
-      <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
-    </Helmet>
+      <meta name="business:contact_data:locality" content="Middletown" />;
+      <meta name="business:contact_data:region" content="DE" />;
+      <meta name="business:contact_data:postal_code" content="19709" />;
+      <meta name="business:contact_data:country_name" content="United States" />;
+      <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />;
+      <meta name="business:contact_data:email" content="info@ziontechgroup.com" />;
+    </Helmet>;
   );
-}
+}}}}}}}}

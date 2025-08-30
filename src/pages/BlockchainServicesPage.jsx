@@ -3,8 +3,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 import { TrustedBySection } from "../TrustedBySection";
+=======
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
 import { TrustedBySection } from "../TrustedBySection";
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const blockchainServices = [
     {
         id: "smart-contracts",
@@ -13,7 +18,7 @@ const blockchainServices = [
         price: 3500,
         currency: "$",
         period: "/project",
-        features: [
+        features[
             "Custom smart contract development",
             "Security auditing & testing",
             "Gas optimization",
@@ -34,7 +39,7 @@ const blockchainServices = [
         price: 15000,
         currency: "$",
         period: "/platform",
-        features: [
+        features[
             "DEX development",
             "Lending protocols",
             "Yield farming",
@@ -55,7 +60,7 @@ const blockchainServices = [
         price: 8000,
         currency: "$",
         period: "/marketplace",
-        features: [
+        features[
             "NFT minting & trading",
             "Auction system",
             "Royalty distribution",
@@ -76,7 +81,7 @@ const blockchainServices = [
         price: 25000,
         currency: "$",
         period: "/solution",
-        features: [
+        features[
             "Private blockchain setup",
             "Consensus mechanisms",
             "Identity management",
@@ -97,7 +102,7 @@ const blockchainServices = [
         price: 5000,
         currency: "$",
         period: "/audit",
-        features: [
+        features[
             "Smart contract auditing",
             "Penetration testing",
             "Vulnerability assessment",
@@ -118,7 +123,7 @@ const blockchainServices = [
         price: 3000,
         currency: "$",
         period: "/day",
-        features: [
+        features[
             "Blockchain strategy",
             "Tokenomics design",
             "Regulatory compliance",
@@ -131,8 +136,10 @@ const blockchainServices = [
         badge: "Expert",
         link: "/services",
         image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    }
+
 ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const blockchainBenefits = [
     {
         title: "Transparency",
@@ -153,7 +160,7 @@ const blockchainBenefits = [
         title: "Innovation",
         description: "Enable new business models and revenue streams through tokenization and DeFi",
         icon: <TrendingUp className="h-6 w-6"/>
-    }
+
 ];
 const useCases = [
     {
@@ -175,7 +182,7 @@ const useCases = [
         title: "Decentralized Finance",
         description: "Build financial services without intermediaries using smart contracts and DeFi protocols",
         icon: <Wallet className="h-6 w-6"/>
-    }
+
 ];
 export default function BlockchainServicesPage() {
     return (<div className="min-h-screen bg-background">
@@ -190,7 +197,7 @@ export default function BlockchainServicesPage() {
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge blockchain technology. From DeFi platforms to enterprise solutions, 
+              Transform your business with cutting-edge blockchain technology. From DeFi platforms to enterprise solutions,
               we deliver secure, scalable, and innovative blockchain applications.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -347,5 +354,9 @@ export default function BlockchainServicesPage() {
       </section>
 
       <TrustedBySection />
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card>}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

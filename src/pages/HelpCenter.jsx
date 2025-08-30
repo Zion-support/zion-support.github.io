@@ -1,21 +1,33 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
-export default function HelpCenter() {
+import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight export default function HelpCenter() {
     const [searchQuery, setSearchQuery] = useState('');
     const [expandedCategories, setExpandedCategories] = useState(['getting-started']);
     const toggleCategory = (category) => {
         setExpandedCategories(prev => prev.includes(category)
             ? prev.filter(c => c !== category)
-            : [...prev, category]);
-    };
+            [...prev, category])};
     const helpCategories = {
-        'getting-started': {
+  'getting-started': {
             title: 'Getting Started',
             icon: BookOpen,
+<<<<<<< HEAD
+            articles[
+                { title: 'How to create your first account',
+  href: '/help/create-account' 
+
+},
+=======
             articles: [
-                { title: 'How to create your first account', href: '/help/create-account' },
+                { title: 'How to create your first account',
+  href: '/help/create-account' 
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
                 { title: 'First steps for new users', href: '/help/first-steps' }
@@ -24,7 +36,7 @@ export default function HelpCenter() {
         'marketplace': {
             title: 'Marketplace',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'How to list products and services', href: '/help/list-products' },
                 { title: 'Managing your listings', href: '/help/manage-listings' },
                 { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
@@ -34,7 +46,7 @@ export default function HelpCenter() {
         'talent': {
             title: 'Talent & Hiring',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'Creating a talent profile', href: '/help/talent-profile' },
                 { title: 'Finding and hiring talent', href: '/help/hire-talent' },
                 { title: 'Managing projects and contracts', href: '/help/manage-projects' },
@@ -44,7 +56,7 @@ export default function HelpCenter() {
         'technical': {
             title: 'Technical Support',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'Common technical issues', href: '/help/technical-issues' },
                 { title: 'Browser compatibility', href: '/help/browser-compatibility' },
                 { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },
@@ -54,7 +66,7 @@ export default function HelpCenter() {
         'billing': {
             title: 'Billing & Payments',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'Understanding your invoice', href: '/help/invoice-guide' },
                 { title: 'Payment methods and security', href: '/help/payment-methods' },
                 { title: 'Refund and cancellation policy', href: '/help/refund-policy' },
@@ -64,13 +76,13 @@ export default function HelpCenter() {
         'account': {
             title: 'Account & Security',
             icon: BookOpen,
-            articles: [
+            articles[
                 { title: 'Account security best practices', href: '/help/account-security' },
                 { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },
                 { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
             ]
-        }
+
     };
     const popularArticles = [
         'How to create your first account',
@@ -98,7 +110,7 @@ export default function HelpCenter() {
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8">
               Find answers to common questions, explore tutorials, and get the support you need to succeed with Zion Tech Group.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"/>
@@ -124,7 +136,7 @@ export default function HelpCenter() {
                       {expandedCategories.includes(key) ? (<ChevronDown className="w-5 h-5"/>) : (<ChevronRight className="w-5 h-5"/>)}
                     </button>
                   </div>
-                  
+
                   {expandedCategories.includes(key) && (<div className="space-y-2">
                       {category.articles.map((article, index) => (<Link key={index} to={article.href} className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-zion-blue-light/10">
                           {article.title}
@@ -142,7 +154,16 @@ export default function HelpCenter() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularArticles.map((article, index) => (<div key={index} className="bg-zion-blue-light/20 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
-                  <Link to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
+                  <Link to = {
+  `/help/${article.toLowerCase().replace(/\s+/g,
+  '-')
+
+
+
+
+
+
+}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-2"/>
                   </Link>
@@ -156,9 +177,9 @@ export default function HelpCenter() {
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Still Need Help?</h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Our support team is here to help you 24/7. Get in touch with us through any of these channels.
+              Our support team is here to help you 24/7. Get in touch with us through  of these channels.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -170,7 +191,7 @@ export default function HelpCenter() {
                   Start Chat
                 </button>
               </div>
-              
+
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-zion-cyan"/>
@@ -181,7 +202,7 @@ export default function HelpCenter() {
                   Send Email
                 </Link>
               </div>
-              
+
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-zion-cyan"/>
@@ -196,5 +217,9 @@ export default function HelpCenter() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </>);
-}
+}}}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

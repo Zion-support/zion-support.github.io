@@ -6,7 +6,6 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
 
 export interface MicroSaasService {
   id: number;
@@ -32,7 +31,6 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-}
 
 export interface ITService {
   id: number;
@@ -55,7 +53,6 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
-}
 
 export interface AIService {
   id: number;
@@ -80,14 +77,24 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  website: "https://ziontechgroup.com",;
+  ;
+  ;
+  ;
+  ;
+  address: "364 E Main St STE 1008 Middletown DE 19709";
+;
+
+
+
+
+
+
 };
 
 // Revolutionary Micro SAAS Services 2025
@@ -541,7 +548,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     innovationLevel: "Advanced",
     marketSize: "$28 billion",
     growthRate: "27% annually"
-  }
+
 ];
 
 // Advanced IT Infrastructure Services 2025
@@ -671,7 +678,7 @@ export const advancedITInfrastructureServices2025: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$45 billion",
     compliance: ["SOX", "ISO 27001", "ITIL"]
-  }
+
 ];
 
 // Revolutionary AI Services 2025
@@ -822,14 +829,25 @@ export const revolutionaryAIServices2025: AIService[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$20 billion",
     ethicalAI: ["AI safety", "Ethical guidelines", "Transparency", "Human oversight"]
-  }
+
 ];
 
 // Export all services
 export const allServices2025 = {
   microSaas: revolutionaryMicroSaasServices2025,
-  itInfrastructure: advancedITInfrastructureServices2025,
-  ai: revolutionaryAIServices2025
+  itInfrastructure: advancedITInfrastructureServices2025,;
+  ;
+  ;
+  ;
+  ;
+  ai: revolutionaryAIServices2025;
+;
+
+
+
+
+
+
 };
 
-export default allServices2025;
+export default allServices2025;}}}}}}}

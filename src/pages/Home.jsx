@@ -16,13 +16,13 @@ import { ServicesShowcase } from "@/components/ServicesShowcase";
 export default function Home() {
   return (
     <>
-      <SEO 
+      <SEO
         title="Zion Tech Group - Leading AI & Technology Solutions"
         description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
         canonical="/"
         url="https://ziontechgroup.com"
       />
-      
+
       <HeroSection />
       <QuickAccess />
       <FeatureCTAs />
@@ -36,5 +36,9 @@ export default function Home() {
       <ITServiceRequestHero />
       <FloatingCTA />
     </>
+<<<<<<< HEAD
   );
 }
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

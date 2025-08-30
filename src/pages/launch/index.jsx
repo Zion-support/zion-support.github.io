@@ -59,26 +59,49 @@ const LaunchToolkitPage = () => {
             for (const assetPath of toolkitAssets) {
                 const response = await fetch(`/${assetPath}`); // Fetch from public directory
                 if (!response.ok) {
-                    console.error(`Failed to fetch asset: ${assetPath}`);
+<<<<<<< HEAD
+                    // // // console.error(`Failed to fetch asset: ${assetPath}`);
+=======
+                    // // // // // // // console.error(`Failed to fetch asset: ${assetPath}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     // Optionally, decide if one failed asset should stop the whole process
                     // or if it should be skipped. For now, we'll log and continue.
+<<<<<<< HEAD
                     continue;
-                }
+
                 const blob = await response.blob();
                 // The path in the zip should be relative to 'toolkit_assets' or a desired root folder in the zip
                 const pathInZip = assetPath.replace(/^toolkit_assets\//, 'Zion_Launch_Toolkit/');
                 zip.file(pathInZip, blob);
-            }
+
             const zipBlob = await zip.generateAsync({ type: 'blob' });
             saveAs(zipBlob, 'Zion_Launch_Toolkit.zip');
-        }
+
         catch (error) {
-            console.error("Error creating ZIP:", error);
+<<<<<<< HEAD
+            // // // console.error("Error creating ZIP:", error);
+=======
+            // // // // // // // console.error("Error creating ZIP:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.');
-        }
+
         finally {
             setIsZipping(false);
-        }
+
+=======
+                    continue}
+                const blob = await response.blob();
+                // The path in the zip should be relative to 'toolkit_assets' or a desired root folder in the zip
+                const pathInZip = assetPath.replace(/^toolkit_assets\//, 'Zion_Launch_Toolkit/');
+                zip.file(pathInZip, blob)}
+            const zipBlob = await zip.generateAsync({ type: 'blob' });
+            saveAs(zipBlob, 'Zion_Launch_Toolkit.zip')}
+        catch (error) {
+            console.error("Error creating ZIP:", error);
+            setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.')}
+        finally {
+            setIsZipping(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     React.useEffect(() => {
         const fetchExplainerCopy = async () => {
@@ -87,22 +110,37 @@ const LaunchToolkitPage = () => {
             try {
                 const response = await fetch('/toolkit_assets/social_media_kit/copy_blocks/explainer_copy_1.txt');
                 if (!response.ok) {
+<<<<<<< HEAD
                     throw new Error(`Failed to fetch explainer copy: ${response.statusText}`);
-                }
+
                 const text = await response.text();
                 setExplainerCopy(text);
-            }
+
+=======
+                    throw new Error(`Failed to fetch explainer copy: ${response.statusText}`)}
+                const text = await response.text();
+                setExplainerCopy(text)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch (error) {
-                console.error("Error loading explainer copy:", error);
+<<<<<<< HEAD
+                // // // console.error("Error loading explainer copy:", error);
+=======
+                // // // // // // // console.error("Error loading explainer copy:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 setExplainerCopy('Could not load explainer copy.');
+<<<<<<< HEAD
                 setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.');
-            }
+
             finally {
                 setIsLoadingCopy(false);
-            }
+
+=======
+                setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.')}
+            finally {
+                setIsLoadingCopy(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
-        fetchExplainerCopy();
-    }, []); // Empty dependency array means this runs once on mount
+        fetchExplainerCopy()}, []); // Empty dependency array means this runs once on mount
     const loadTemplate = async (url) => {
         setSelectedTemplateUrl(url);
         setSelectedTemplateContent(''); // Clear previous template content
@@ -112,30 +150,54 @@ const LaunchToolkitPage = () => {
         try {
             const response = await fetch(url);
             if (!response.ok) {
+<<<<<<< HEAD
                 throw new Error(`Failed to fetch template: ${response.statusText}`);
-            }
+
             const text = await response.text();
             setSelectedTemplateContent(text);
-        }
+
+=======
+                throw new Error(`Failed to fetch template: ${response.statusText}`)}
+            const text = await response.text();
+            setSelectedTemplateContent(text)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-            console.error("Error loading template:", error);
+<<<<<<< HEAD
+            // // // console.error("Error loading template:", error);
+=======
+            // // // // // // // console.error("Error loading template:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             setSelectedTemplateContent('');
+<<<<<<< HEAD
             setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.');
-        }
+
         finally {
             setIsLoadingTemplate(false);
-        }
+
     };
     const generateWithDate = () => {
         if (selectedTemplateContent && customDate) {
             setGeneratedPressRelease(selectedTemplateContent.replace(/\[DATE\]/g, customDate));
-        }
+
         else if (!selectedTemplateContent) {
             setGeneratedPressRelease('Please load a template first.');
-        }
+
         else {
             setGeneratedPressRelease('Please enter a date.');
-        }
+
+=======
+            setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.')}
+        finally {
+            setIsLoadingTemplate(false)}
+    };
+    const generateWithDate = () => {
+        if (selectedTemplateContent && customDate) {
+            setGeneratedPressRelease(selectedTemplateContent.replace(/\[DATE\]/g, customDate))}
+        else if (!selectedTemplateContent) {
+            setGeneratedPressRelease('Please load a template first.')}
+        else {
+            setGeneratedPressRelease('Please enter a date.')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<AppLayout>
       <NextSeo title="Launch Operations Toolkit" description="Your complete toolkit for the Zion platform public release."/>
@@ -386,6 +448,6 @@ const LaunchToolkitPage = () => {
           </div>
         </section>
       </div>
-    </AppLayout>);
-};
+    </AppLayout>)};
 export default LaunchToolkitPage;
+}}}}}}}}}}}}}}}}

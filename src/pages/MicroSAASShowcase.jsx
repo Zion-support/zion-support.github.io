@@ -3,8 +3,7 @@ import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText } from 'lucide-react';
-import Target from 'lucide-react/dist/esm/icons/target';
+import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText import Target from 'lucide-react/dist/esm/icons/target';
 import { Link } from 'react-router-dom';
 const microSAASServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'Micro SAAS');
 export default function MicroSAASShowcase() {
@@ -19,7 +18,7 @@ export default function MicroSAASShowcase() {
             Micro SAAS Solutions
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Powerful, affordable software solutions designed for modern businesses. 
+            Powerful, affordable software solutions designed for modern businesses.
             Streamline operations, boost productivity, and scale efficiently with our cloud-based platforms.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -71,7 +70,7 @@ export default function MicroSAASShowcase() {
               SAAS Solutions Portfolio
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our micro SAAS platforms are built with modern technology, designed for ease of use, 
+              Our micro SAAS platforms are built with modern technology, designed for ease of use,
               and priced for accessibility. Start small, scale as you grow.
             </p>
           </div>
@@ -84,7 +83,7 @@ export default function MicroSAASShowcase() {
                     {service.subcategory}
                   </Badge>
                 </div>
-                
+
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-blue">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
@@ -102,7 +101,7 @@ export default function MicroSAASShowcase() {
                       per month
                     </div>
                     <div className="text-xs text-zion-cyan mt-1">
-                      No setup fees • Cancel anytime
+                      No setup fees • Cancel time
                     </div>
                   </div>
 
@@ -188,7 +187,7 @@ export default function MicroSAASShowcase() {
                 <Cloud className="w-8 h-8 text-white"/>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Cloud-Based</h3>
-              <p className="text-gray-600">Access from anywhere, anytime with automatic updates and backups</p>
+              <p className="text-gray-600">Access from where, time with automatic updates and backups</p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -233,7 +232,7 @@ export default function MicroSAASShowcase() {
                 <Smartphone className="w-8 h-8 text-zion-cyan"/>
                 <h3 className="text-xl font-semibold text-zion-blue">Mobile Responsive</h3>
               </div>
-              <p className="text-gray-600">Access your data and manage operations from any device, anywhere in the world.</p>
+              <p className="text-gray-600">Access your data and manage operations from  device, where in the world.</p>
             </div>
             <div className="p-6 border border-zion-blue-light rounded-lg">
               <div className="flex items-center gap-3 mb-4">
@@ -326,7 +325,7 @@ export default function MicroSAASShowcase() {
             Ready to Transform Your Business Operations?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have streamlined their operations with our micro SAAS solutions. 
+            Join thousands of businesses that have streamlined their operations with our micro SAAS solutions.
             Start your free trial today and experience the difference.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -371,5 +370,9 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card>}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -24,11 +24,15 @@ export default function ITOnsiteServicesPage() {
             toast({
                 title: "Payment Successful",
                 description: "Your IT onsite service request has been received. Our team will contact you shortly.",
+<<<<<<< HEAD
             });
-        }
+
+=======
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [success]);
     // Popular countries for the featured cards
-    const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+    const popularCountries = ["United States", "United Kingdom", "Canada", "Germ", "Japan", "Singapore"];
     // Filter countries based on search query
     const filteredCountries = onsiteServicePricing
         .filter(country => country.country.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -41,34 +45,31 @@ export default function ITOnsiteServicesPage() {
         if (!aIsPopular && bIsPopular)
             return 1;
         // Then sort alphabetically
-        return a.country.localeCompare(b.country);
-    });
+        return a.country.localeCompare(b.country)});
     const handleCountrySelect = (country) => {
         setSelectedCountry(country);
         // Scroll to the service details section
         setTimeout(() => {
-            document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-    };
+            document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })}, 100)};
     return (<section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section with Features */}
           <PageHero />
-          
+
           {/* Country Selection Tabs */}
           <div className="mb-12">
             <CountryTabs popularCountries={popularCountries} filteredCountries={filteredCountries} handleCountrySelect={handleCountrySelect} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
           </div>
-          
+
           {/* Service Details Section */}
           <ServiceDetailsSection selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry}/>
-          
+
           {/* How It Works Section */}
           <ServiceProcessSteps />
-          
+
           {/* What's Included Section */}
           <ServiceIncludes />
-          
+
           {/* Complete Pricing Table */}
           <div id="pricing-table" className="my-16">
             <div className="text-center mb-8">
@@ -78,10 +79,10 @@ export default function ITOnsiteServicesPage() {
                 Additional hours are billed separately at standard rates.
               </p>
             </div>
-            
+
             <ITServicePricingTable />
           </div>
-          
+
           <EnterpriseCallToAction />
         </div>
       </section>
@@ -90,5 +91,9 @@ export default function ITOnsiteServicesPage() {
                 ,
                     <TrustedBySection />
                         ,
+<<<<<<< HEAD
                             <QuoteFormSection />);
-}
+}}
+=======
+                            <QuoteFormSection />)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

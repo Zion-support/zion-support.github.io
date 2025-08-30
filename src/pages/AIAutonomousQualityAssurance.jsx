@@ -8,7 +8,7 @@ const AIAutonomousQualityAssurance = () => {
         <meta name="keywords" content="AI quality assurance, autonomous quality assurance, quality monitoring, standard assurance, autonomous operations, AI quality assurance platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-quality-assurance"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousQualityAssurance = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Quality Intelligence</h3>
               <p className="text-gray-300">AI trained on quality datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that ensures quality independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Quality Assurance</h3>
               <p className="text-gray-300">24/7 quality assurance operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive quality insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-emerald-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Quality Assurance</h3>
               <p className="text-gray-300">Prevent quality issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-lime-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Quality Assurance</h3>
@@ -93,25 +93,25 @@ const AIAutonomousQualityAssurance = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
                 <p className="text-gray-300 text-sm">Monitor quality</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze quality</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Ensure</h3>
                 <p className="text-gray-300 text-sm">Ensure standards</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Maintain</h3>
                 <p className="text-gray-300 text-sm">Maintain excellence</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Optimize</h3>
@@ -138,12 +138,12 @@ const AIAutonomousQualityAssurance = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Software Development</h3>
                 <p className="text-gray-300">Software quality assurance</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Manufacturing</h3>
                 <p className="text-gray-300">Product quality assurance</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Service Delivery</h3>
                 <p className="text-gray-300">Service quality assurance</p>
@@ -168,6 +168,5 @@ const AIAutonomousQualityAssurance = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousQualityAssurance;

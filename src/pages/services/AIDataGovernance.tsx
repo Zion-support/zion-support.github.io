@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
+import {
+  Shield,
+  Database,
+  Lock,
+  Eye,
+  Search,
+  FileText,
+  Users,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   Database, 
   Lock, 
   Eye, 
   Search, 
   FileText, 
   Users, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   AlertTriangle,
   BarChart3,
@@ -42,9 +55,13 @@ import {
   EyeOn,
   LockOpen,
   LockClosed
-} from 'lucide-react';
-
+<<<<<<< HEAD
 const AIDataGovernance: React.FC = () => {
+=======
+ } from 'lucide-react';
+
+const AIDataGovernance: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Shield,
@@ -75,13 +92,23 @@ const AIDataGovernance: React.FC = () => {
       title: "Automated Compliance Reporting",
       description: "Generate regulatory reports automatically with AI-powered accuracy and completeness",
       color: "from-indigo-500 to-purple-500"
+<<<<<<< HEAD
     },
     {
       icon: Users,
       title: "Data Lineage Tracking",
       description: "Complete audit trail showing data origins, transformations, and usage patterns",
       color: "from-yellow-500 to-orange-500"
-    }
+
+=======
+    },;
+    {;
+      icon: Users,;
+      title: "Data Lineage Tracking",;
+      description: "Complete audit trail showing data origins, transformations, and usage patterns",;
+      color: "from-yellow-500 to-orange-500";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -90,7 +117,7 @@ const AIDataGovernance: React.FC = () => {
       price: "$499",
       period: "/month",
       description: "Essential data governance for small to medium organizations",
-      features: [
+      features[
         "Up to 10TB data management",
         "Basic AI classification",
         "Standard access controls",
@@ -107,7 +134,7 @@ const AIDataGovernance: React.FC = () => {
       price: "$1,299",
       period: "/month",
       description: "Advanced data governance for growing enterprises",
-      features: [
+      features[
         "Up to 100TB data management",
         "Advanced AI classification",
         "Custom access policies",
@@ -126,19 +153,29 @@ const AIDataGovernance: React.FC = () => {
       price: "$3,999",
       period: "/month",
       description: "Comprehensive data governance for large organizations",
-      features: [
+      features[
         "Unlimited data management",
         "Custom AI models",
         "Advanced security features",
         "Multi-tenant support",
         "Dedicated support team",
+<<<<<<< HEAD
         "Custom development",
         "SLA guarantees",
         "On-premise option"
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
+=======
+        "Custom development",;
+        "SLA guarantees",;
+        "On-premise option";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -159,13 +196,23 @@ const AIDataGovernance: React.FC = () => {
       title: "40% Cost Reduction",
       description: "Eliminate manual data governance processes and reduce risks",
       metric: "40%"
+<<<<<<< HEAD
     },
     {
       icon: Clock,
       title: "Real-time Monitoring",
       description: "Instant alerts and proactive threat prevention",
       metric: "24/7"
-    }
+
+=======
+    },;
+    {;
+      icon: Clock,;
+      title: "Real-time Monitoring",;
+      description: "Instant alerts and proactive threat prevention",;
+      metric: "24/7";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceFrameworks = [
@@ -198,13 +245,23 @@ const AIDataGovernance: React.FC = () => {
       description: "Information security management system",
       icon: Lock,
       color: "from-indigo-500 to-purple-500"
+<<<<<<< HEAD
     },
     {
       name: "SOC 2",
       description: "Service Organization Control 2 compliance",
       icon: CheckCircle,
       color: "from-yellow-500 to-orange-500"
-    }
+
+=======
+    },;
+    {;
+      name: "SOC 2",;
+      description: "Service Organization Control 2 compliance",;
+      icon: CheckCircle,;
+      color: "from-yellow-500 to-orange-500";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -229,47 +286,80 @@ const AIDataGovernance: React.FC = () => {
       icon: ShieldCheck,
       color: "from-purple-500 to-pink-500"
     },
+<<<<<<< HEAD
     {
       industry: "Technology",
       title: "Intellectual Property",
       description: "Protect trade secrets and proprietary data with advanced classification",
       icon: Cpu,
       color: "from-orange-500 to-red-500"
-    }
+
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+    {;
+      industry: "Technology",;
+      title: "Intellectual Property",;
+      description: "Protect trade secrets and proprietary data with advanced classification",;
+      icon: Cpu,;
+      color: "from-orange-500 to-red-500";
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Data Governance - Zion Tech Group"
         description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
                 <Shield className="w-4 h-4 mr-2" />
                 AI-Powered Data Protection
               </div>
-              
+
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 AI Data
                 <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent"> Governance</span>
               </h1>
-              
+
               <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Protect your most valuable asset with intelligent data governance. 
+                Protect your most valuable asset with intelligent data governance.
                 AI-powered classification, access control, and compliance management for the modern enterprise.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
@@ -294,16 +384,49 @@ const AIDataGovernance: React.FC = () => {
               Everything you need to secure, classify, and govern your data with AI intelligence
             </p>
           </div>
-          
+<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -328,16 +451,49 @@ const AIDataGovernance: React.FC = () => {
               See how AI Data Governance transforms data security and compliance
             </p>
           </div>
-          
+<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
-              >
+
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -361,16 +517,49 @@ const AIDataGovernance: React.FC = () => {
               Built-in compliance for major regulatory frameworks and industry standards
             </p>
           </div>
-          
+<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map((framework, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${framework.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${framework.color} mb-4`}>
                     <framework.icon className="w-6 h-6 text-white" />
@@ -395,16 +584,49 @@ const AIDataGovernance: React.FC = () => {
               Tailored data governance for your industry's unique requirements
             </p>
           </div>
-          
+<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className="flex items-start space-x-4">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
@@ -434,20 +656,53 @@ const AIDataGovernance: React.FC = () => {
               Choose the plan that fits your data governance needs
             </p>
           </div>
-          
+<<<<<<< HEAD
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
+=======
+          
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className={`relative rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50' 
+                  plan.popular
+                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'
                     : 'bg-slate-800/50 border border-slate-700/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -455,7 +710,7 @@ const AIDataGovernance: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-4">
@@ -464,7 +719,7 @@ const AIDataGovernance: React.FC = () => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -473,7 +728,7 @@ const AIDataGovernance: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'
@@ -491,10 +746,28 @@ const AIDataGovernance: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Data?
             </h2>
@@ -508,12 +781,21 @@ const AIDataGovernance: React.FC = () => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
                 Schedule Demo
               </button>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default AIDataGovernance;
+export default AIDataGovernance;}}}}}}

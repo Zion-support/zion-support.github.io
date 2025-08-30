@@ -2,8 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef } from "react";
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react";
-import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 const AUTO_SERVICE_TITLES = [
@@ -28,20 +27,24 @@ function generateInnovationListing(index) {
         category: "Innovation",
         price,
         currency: "$",
-        tags: ["innovation", "ai", "service"],
+        tags["innovation", "ai", "service"],
         author: {
             name: "AutoGen Solutions",
             id: "autogen"
         },
-        images: ["https://source.unsplash.com/random/800x500?technology"],
+        images["https://source.unsplash.com/random/800x500?technology"],
         createdAt: new Date().toISOString(),
         rating,
         reviewCount,
         location: "Global",
         availability: "Immediate",
         aiScore: Math.floor(Math.random() * 20) + 80
+<<<<<<< HEAD
     };
-}
+
+=======
+    }}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function CategoryDetail() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { slug } = useParams();
@@ -56,11 +59,18 @@ export default function CategoryDetail() {
     const innovationCounterRef = useRef(0);
     // Map of category slugs to their display data
     const categoryData = {
-        'services': {
+  'services': {
             title: "Services",
             description: "On-demand IT support, consulting, development, and more",
-            icon: <Briefcase className="w-6 h-6"/>
-        },
+  icon: <Briefcase className="w-6 h-6"/>
+        
+
+
+
+
+
+
+},
         'talents': {
             title: "Talents",
             description: "Connect with AI experts, developers, and tech specialists",
@@ -115,7 +125,7 @@ export default function CategoryDetail() {
             title: "Business Solutions",
             description: "Enterprise AI integrations and services",
             icon: <Briefcase className="w-6 h-6"/>
-        }
+
     };
     useEffect(() => {
         setIsLoading(true);
@@ -139,20 +149,19 @@ export default function CategoryDetail() {
                 category: currentCategory.title,
                 price: Math.floor(Math.random() * 500) + 50,
                 currency: "$",
-                tags: [`${slug}`, "ai", "tool"],
+                tags[`${slug}`, "ai", "tool"],
                 author: {
                     name: `Provider ${index + 1}`,
                     id: `author-${index + 1}`,
-                    avatarUrl: undefined
+                    avatarUrl: null
                 },
-                images: [`/placeholder.svg`],
+                images[`/placeholder.svg`],
                 createdAt: new Date().toISOString(),
                 rating: Math.floor(Math.random() * 5) + 1,
                 reviewCount: Math.floor(Math.random() * 100)
             }));
         setListings(listingsToShow);
-        setIsLoading(false);
-    }, [slug]);
+        setIsLoading(false)}, [slug]);
     useEffect(() => {
         if (slug !== 'innovation')
             return;
@@ -161,10 +170,8 @@ export default function CategoryDetail() {
             setListings((prev) => [
                 generateInnovationListing(innovationCounterRef.current),
                 ...prev,
-            ]);
-        }, 120000); // every 2 minutes
-        return () => clearInterval(interval);
-    }, [slug]);
+            ])}, 120000); // every 2 minutes
+        return () => clearInterval(interval)}, [slug]);
     // Handle requesting a quote
     const handleRequestQuote = (listingId) => {
         const listing = listings.find(item => item.id === listingId);
@@ -174,7 +181,7 @@ export default function CategoryDetail() {
                 description: `Your quote request for ${listing.title} has been sent.`
             });
             // Navigate to the quote request page with the listing information
-            navigate("/request-quote", {
+            router("/request-quote", {
                 state: {
                     serviceType: listing.category,
                     specificItem: {
@@ -182,13 +189,19 @@ export default function CategoryDetail() {
                         title: listing.title,
                         category: listing.category,
                         image: listing.images?.[0]
+<<<<<<< HEAD
+
+
+            });
+
+=======
                     }
                 }
-            });
-        }
+            })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
-      
+
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
@@ -196,7 +209,7 @@ export default function CategoryDetail() {
               ← Back to Categories
             </Link>
           </div>
-          
+
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -210,7 +223,7 @@ export default function CategoryDetail() {
               {category.description}
             </p>
           </div>
-          
+
           {isLoading ? (<div className="flex justify-center items-center h-64">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>
             </div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -218,6 +231,11 @@ export default function CategoryDetail() {
             </div>)}
         </div>
       </div>
-      
+<<<<<<< HEAD
+
     </>);
-}
+}}}}}}}
+=======
+      
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

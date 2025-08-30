@@ -3,10 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings } from 'lucide-react';
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 export default function AllServicesLandingPage() {
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -14,8 +13,12 @@ export default function AllServicesLandingPage() {
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
+<<<<<<< HEAD
             default: return '⚡';
-        }
+
+=======
+            default: return '⚡'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryIconComponent = (category) => {
         switch (category) {
@@ -23,8 +26,12 @@ export default function AllServicesLandingPage() {
             case 'Micro SAAS': return <Cloud className="h-6 w-6"/>;
             case 'IT Services': return <Code className="h-6 w-6"/>;
             case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>;
+<<<<<<< HEAD
             default: return <Settings className="h-6 w-6"/>;
-        }
+
+=======
+            default: return <Settings className="h-6 w-6"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPricingModelColor = (model) => {
         switch (model) {
@@ -32,8 +39,12 @@ export default function AllServicesLandingPage() {
             case 'project-based': return 'bg-purple-100 text-purple-800';
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
+<<<<<<< HEAD
             default: return 'bg-gray-100 text-gray-800';
-        }
+
+=======
+            default: return 'bg-gray-100 text-gray-800'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getServiceIcon = (subcategory) => {
         switch (subcategory) {
@@ -48,8 +59,12 @@ export default function AllServicesLandingPage() {
             case 'DevOps': return <Code className="h-5 w-5"/>;
             case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>;
             case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>;
+<<<<<<< HEAD
             default: return <Settings className="h-5 w-5"/>;
-        }
+
+=======
+            default: return <Settings className="h-5 w-5"/>}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-background">
       <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"/>
@@ -61,10 +76,10 @@ export default function AllServicesLandingPage() {
             Complete Tech Solutions Ecosystem
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            From cutting-edge AI automation to affordable micro SAAS solutions, comprehensive IT infrastructure, 
+            From cutting-edge AI automation to affordable micro SAAS solutions, comprehensive IT infrastructure,
             and digital transformation services - we provide everything your business needs to thrive in the digital age.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">
               <Phone className="h-5 w-5 mr-2"/>
@@ -145,7 +160,7 @@ export default function AllServicesLandingPage() {
                           {service.description}
                         </CardDescription>
                       </CardHeader>
-                      
+
                       <CardContent className="space-y-4">
                         {/* Rating and AI Score */}
                         <div className="flex items-center justify-between">
@@ -255,7 +270,7 @@ export default function AllServicesLandingPage() {
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -266,7 +281,7 @@ export default function AllServicesLandingPage() {
                 Our services have helped businesses achieve significant improvements in efficiency, cost savings, and growth.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-white"/>
@@ -276,7 +291,7 @@ export default function AllServicesLandingPage() {
                 Certified professionals with years of experience in AI, IT, and digital transformation across various industries.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-white"/>
@@ -299,7 +314,7 @@ export default function AllServicesLandingPage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">
               <Phone className="h-5 w-5 mr-2"/>
@@ -310,7 +325,7 @@ export default function AllServicesLandingPage() {
               Email kleber@ziontechgroup.com
             </Button>
           </div>
-          
+
           <div className="text-zion-slate-light">
             <p className="mb-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>Website: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">https://ziontechgroup.com</a></p>
@@ -319,5 +334,9 @@ export default function AllServicesLandingPage() {
       </section>
 
       <TrustedBySection />
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card>}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

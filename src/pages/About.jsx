@@ -1,7 +1,5 @@
 import React from 'react';
-import { Users, Target, Globe, Award, Shield, Lightbulb } from 'lucide-react';
-
-const About = () => {
+import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
   const values = [
     {
       icon: Lightbulb,
@@ -22,7 +20,7 @@ const About = () => {
       icon: Shield,
       title: "Integrity",
       description: "We operate with honesty, transparency, and ethical practices in all our business relationships and operations."
-    }
+
   ];
 
   const milestones = [
@@ -43,9 +41,9 @@ const About = () => {
     },
     {
       year: "2022",
-      title: "Company Founded",
+      title: "Comp Founded",
       description: "Zion Tech Group was established with a vision to revolutionize technology solutions."
-    }
+
   ];
 
   const stats = [
@@ -70,7 +68,11 @@ const About = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Technology</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Zion Tech Group is a leading technology company dedicated to transforming businesses through 
+<<<<<<< HEAD
+              Zion Tech Group is a leading technology company dedicated to transforming businesses through
+=======
+              Zion Tech Group is a leading technology comp dedicated to transforming businesses through 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               innovative AI solutions, quantum computing, and cutting-edge digital technologies.
             </p>
           </div>
@@ -87,18 +89,18 @@ const About = () => {
               </div>
               <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-lg text-gray-300">
-                To democratize advanced technology and make AI, quantum computing, and innovative solutions 
+                To democratize advanced technology and make AI, quantum computing, and innovative solutions
                 accessible to businesses of all sizes, enabling them to thrive in the digital age.
               </p>
             </div>
-            
+
             <div className="bg-slate-800/50 border border-white/10 rounded-xl p-8">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                 <Lightbulb className="w-8 h-8 text-white"/>
               </div>
               <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
               <p className="text-lg text-gray-300">
-                To be the global leader in AI-powered business transformation, creating a future where 
+                To be the global leader in AI-powered business transformation, creating a future where
                 technology enhances human potential and drives sustainable growth across all industries.
               </p>
             </div>
@@ -169,23 +171,23 @@ const About = () => {
             Let's discuss how our innovative solutions can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-            >
+
               📞 Call +1 (302) 464-0950
             </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
+            <a
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-            >
+
               ✉️ Get in Touch
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default About;
+}}}

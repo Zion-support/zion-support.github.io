@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function Cookies() {
   return (
@@ -22,8 +22,8 @@ export default function Cookies() {
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">What Are Cookies?</h2>
                   <p className="text-gray-300 leading-relaxed">
-                    Cookies are small text files that are placed on your device when you visit our website. 
-                    They help us provide you with a better experience by remembering your preferences, 
+                    Cookies are small text files that are placed on your device when you visit our website.
+                    They help us provide you with a better experience by remembering your preferences,
                     analyzing how you use our site, and personalizing content.
                   </p>
                 </section>
@@ -45,21 +45,21 @@ export default function Cookies() {
                     <div className="border-l-4 border-blue-500 pl-4">
                       <h3 className="text-xl font-medium text-white mb-2">Essential Cookies</h3>
                       <p className="text-gray-300">
-                        These cookies are necessary for the website to function and cannot be switched off. 
+                        These cookies are necessary for the website to function and cannot be switched off.
                         They include cookies for security, authentication, and basic site functionality.
                       </p>
                     </div>
                     <div className="border-l-4 border-purple-500 pl-4">
                       <h3 className="text-xl font-medium text-white mb-2">Analytics Cookies</h3>
                       <p className="text-gray-300">
-                        Help us understand how visitors interact with our website by collecting and reporting 
+                        Help us understand how visitors interact with our website by collecting and reporting
                         information anonymously. This helps us improve our services.
                       </p>
                     </div>
                     <div className="border-l-4 border-cyan-500 pl-4">
                       <h3 className="text-xl font-medium text-white mb-2">Preference Cookies</h3>
                       <p className="text-gray-300">
-                        Allow our website to remember information that changes the way it behaves or looks, 
+                        Allow our website to remember information that changes the way it behaves or looks,
                         such as your preferred language or region.
                       </p>
                     </div>
@@ -74,8 +74,8 @@ export default function Cookies() {
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Third-Party Cookies</h2>
                   <p className="text-gray-300 leading-relaxed">
-                    Some cookies on our website are set by third-party services that we use to enhance 
-                    functionality, such as analytics providers, advertising networks, and social media platforms. 
+                    Some cookies on our website are set by third-party services that we use to enhance
+                    functionality, such as analytics providers, advertising networks, and social media platforms.
                     These third parties have their own privacy policies and cookie policies.
                   </p>
                 </section>
@@ -94,7 +94,11 @@ export default function Cookies() {
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
                   <p className="text-gray-300 leading-relaxed">
-                    If you have any questions about our use of cookies or would like to update your preferences, 
+<<<<<<< HEAD
+                    If you have any questions about our use of cookies or would like to update your preferences,
+=======
+                    If you have  questions about our use of cookies or would like to update your preferences, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     please contact us at{' '}
                     <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
                       kleber@ziontechgroup.com
@@ -112,5 +116,9 @@ export default function Cookies() {
         </div>
       </main>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

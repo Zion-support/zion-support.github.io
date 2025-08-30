@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
+=======
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
-import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
+import ultimateInnovativeServices2025 from "../../data/2025-ultimate-innovative-services-expansion";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function UltimateHomepage2025() {
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
         setIsVisible(true);
         const interval = setInterval(() => {
-            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, []);
+            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length)}, 5000);
+        return () => clearInterval(interval)}, []);
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
     const allServices = ultimateInnovativeServices2025.slice(0, 9);
     const stats = [
@@ -45,7 +47,7 @@ export default function UltimateHomepage2025() {
             title: 'Predictive Analytics',
             description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',
             color: 'from-orange-500 to-red-500'
-        }
+
     ];
     const industries = [
         { name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' },
@@ -57,7 +59,7 @@ export default function UltimateHomepage2025() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025" description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology." keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"/>
-      
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -78,7 +80,7 @@ export default function UltimateHomepage2025() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your business with cutting-edge AI-powered, quantum-secure, and autonomous solutions. 
+                Transform your business with cutting-edge AI-powered, quantum-secure, and autonomous solutions.
                 Lead the future of technology with Zion Tech Group.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -106,7 +108,7 @@ export default function UltimateHomepage2025() {
                 </div>
               </div>
             </div>
-            
+
             <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <div className="text-center mb-6">
@@ -195,7 +197,7 @@ export default function UltimateHomepage2025() {
             Why Choose Zion Tech Group?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We combine cutting-edge technology with proven business expertise to deliver 
+            We combine cutting-edge technology with proven business expertise to deliver
             solutions that transform industries and drive unprecedented growth.
           </p>
         </div>
@@ -270,7 +272,7 @@ export default function UltimateHomepage2025() {
             Industries We Transform
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our revolutionary solutions are designed to meet the unique challenges 
+            Our revolutionary solutions are designed to meet the unique challenges
             and opportunities across diverse industries.
           </p>
         </div>
@@ -336,7 +338,7 @@ export default function UltimateHomepage2025() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the future of business with our revolutionary AI-powered, quantum-secure, and autonomous solutions. 
+              Join the future of business with our revolutionary AI-powered, quantum-secure, and autonomous solutions.
               Get in touch today to discover how we can help you achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -352,5 +354,9 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

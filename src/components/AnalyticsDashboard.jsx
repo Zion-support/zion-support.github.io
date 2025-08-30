@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw import { useAnalytics } from '../hooks/useAnalytics';
+=======
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useAnalytics } from "../hooks/useAnalytics";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
@@ -16,29 +20,33 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (!showRealTime)
             return;
         const interval = setInterval(() => {
-            updateAnalyticsSummary();
-        }, refreshInterval);
-        return () => clearInterval(interval);
-    }, [showRealTime, refreshInterval]);
+            updateAnalyticsSummary()}, refreshInterval);
+        return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
     // Update analytics summary
     const updateAnalyticsSummary = () => {
         const summary = getAnalyticsSummary();
         if (summary) {
+<<<<<<< HEAD
             setAnalyticsSummary(summary);
-        }
+
+=======
+            setAnalyticsSummary(summary)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Update summary when events change
     useEffect(() => {
-        updateAnalyticsSummary();
-    }, [events, currentSession]);
+        updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions
     const handleDashboardInteraction = (action, metadata) => {
-        trackEvent('dashboard', action, 'dashboard_interaction', undefined, metadata);
+<<<<<<< HEAD
+        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
+=======
+        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Track conversion goal
     const handleTrackConversion = () => {
-        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange });
-    };
+        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
     // Get events by category for chart
     const getEventsByCategory = () => {
         if (!analyticsSummary?.eventsByCategory)
@@ -46,13 +54,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
             category,
             count: count
-        }));
-    };
+        }))};
     // Get performance score
     const getPerformanceScore = () => {
         if (!performanceMetrics)
             return 0;
-        let score = 100;
+        const score = 100;
         // Deduct points for poor performance
         if (performanceMetrics.pageLoadTime > 3000)
             score -= 20;
@@ -66,24 +73,21 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             score -= 25;
         else if (performanceMetrics.cumulativeLayoutShift > 0.05)
             score -= 10;
-        return Math.max(0, score);
-    };
+        return Math.max(0, score)};
     // Format duration
     const formatDuration = (seconds) => {
         if (seconds < 60)
             return `${seconds}s`;
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
-        return `${minutes}m ${remainingSeconds}s`;
-    };
+        return `${minutes}m ${remainingSeconds}s`};
     // Format number with K/M suffix
     const formatNumber = (num) => {
         if (num >= 1000000)
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000)
             return `${(num / 1000).toFixed(1)}K`;
-        return num.toString();
-    };
+        return num.toString()};
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">
@@ -98,18 +102,32 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-400' : 'bg-red-400'}`}></div>
               {isTracking ? 'Tracking' : 'Stopped'}
             </div>
-            
+
             {/* Time Range Selector */}
-            <select value={selectedTimeRange} onChange={(e) => {
+            <select value={selectedTimeRange} onChange = {
+  (e) => {
             setSelectedTimeRange(e.target.value);
-            handleDashboardInteraction('time_range_changed', { timeRange: e.target.value });
+<<<<<<< HEAD
+            handleDashboardInteraction('time_range_changed',
+  { timeRange: e.target.value 
+
+})}} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
+=======
+            handleDashboardInteraction('time_range_changed',
+  { timeRange: e.target.value 
+
+
+
+
+});
         }} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               <option value="1h">1 Hour</option>
               <option value="24h">24 Hours</option>
               <option value="7d">7 Days</option>
               <option value="30d">30 Days</option>
             </select>
-            
+
             <button onClick={() => setIsExpanded(!isExpanded)} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label={isExpanded ? 'Collapse dashboard' : 'Expand dashboard'}>
               {isExpanded ? '−' : '+'}
             </button>
@@ -173,7 +191,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           Real-time Events
           {showRealTime && (<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>)}
         </h4>
-        
+
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {events.slice(-5).reverse().map((event) => (<div key={event.id} className="flex items-center justify-between text-sm p-2 bg-gray-50 dark:bg-gray-700 rounded">
               <div className="flex items-center gap-2">
@@ -188,7 +206,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 {new Date(event.timestamp).toLocaleTimeString()}
               </span>
             </div>))}
-          
+
           {events.length === 0 && (<div className="text-center text-gray-500 text-sm py-4">
               No events tracked yet
             </div>)}
@@ -198,7 +216,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       {/* Detailed Analytics */}
       {isExpanded && (<div className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">
           <h4 className="font-medium text-gray-900 dark:text-white mb-3">Detailed Analytics</h4>
-          
+
           {/* Performance Metrics */}
           {performanceMetrics && (<div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
               <h5 className="font-medium text-blue-800 dark:text-blue-200 mb-2">Performance Metrics</h5>
@@ -273,20 +291,23 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         <div className="flex gap-2">
           <button onClick={() => {
             handleDashboardInteraction('refresh_clicked');
-            updateAnalyticsSummary();
-        }} className="flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">
+            updateAnalyticsSummary()}} className="flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">
             <RefreshCw className="w-4 h-4"/>
             Refresh Data
           </button>
-          
+
           <button onClick={() => {
             handleTrackConversion();
-            handleDashboardInteraction('conversion_tracked');
-        }} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
+            handleDashboardInteraction('conversion_tracked')}} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
             <Target className="w-4 h-4"/>
             Track Goal
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
 };
+}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

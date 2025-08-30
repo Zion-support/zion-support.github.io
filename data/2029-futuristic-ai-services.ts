@@ -11,9 +11,13 @@ export interface FuturisticAiService2029 {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
-}
+
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const futuristicAIServices2029: FuturisticAiService2029[] = [
   {
     id: "2029-futuristic-ai",
@@ -21,7 +25,7 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [
     tagline: "Futuristic AI for 2029",
     price: "$499/month",
     description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
-    features: [
+    features[
       "Futuristic AI",
       "Advanced capabilities",
       "Breakthrough algorithms",
@@ -35,6 +39,6 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

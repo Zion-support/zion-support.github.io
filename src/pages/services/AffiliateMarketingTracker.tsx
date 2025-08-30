@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor import { SEO } from '@/components/SEO';
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AffiliateMarketingTracker() {
+export default function AffiliateMarketingTracker(...args[]):  {
   const features = [
     {
       icon: Target,
@@ -29,13 +36,23 @@ export default function AffiliateMarketingTracker() {
     {
       icon: Shield,
       title: "Fraud Detection",
+<<<<<<< HEAD
       description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity."
     },
     {
       icon: Globe,
       title: "Multi-channel Support",
       description: "Track performance across social media, email, influencer partnerships, and more."
-    }
+
+=======
+      description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity.";
+    },;
+    {;
+      icon: Globe,;
+      title: "Multi-channel Support",;
+      description: "Track performance across social media, email, influencer partnerships, and more.";
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -44,7 +61,7 @@ export default function AffiliateMarketingTracker() {
       price: "$99",
       period: "/month",
       description: "Perfect for small businesses starting with affiliate marketing",
-      features: [
+      features[
         "Up to 100 affiliates",
         "Basic tracking & analytics",
         "Email support",
@@ -58,7 +75,7 @@ export default function AffiliateMarketingTracker() {
       price: "$299",
       period: "/month",
       description: "Ideal for growing businesses with active affiliate programs",
-      features: [
+      features[
         "Up to 500 affiliates",
         "Advanced analytics & AI insights",
         "Priority support",
@@ -73,16 +90,26 @@ export default function AffiliateMarketingTracker() {
       price: "$799",
       period: "/month",
       description: "For large-scale affiliate operations with custom requirements",
-      features: [
+      features[
         "Unlimited affiliates",
         "Custom integrations",
+<<<<<<< HEAD
         "Dedicated account manager",
         "White-label options",
         "Advanced fraud protection",
         "Custom commission structures"
       ],
       popular: false
-    }
+
+=======
+        "Dedicated account manager",;
+        "White-label options",;
+        "Advanced fraud protection",;
+        "Custom commission structures";
+      ],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -99,23 +126,38 @@ export default function AffiliateMarketingTracker() {
     {
       title: "Reduce Fraud",
       description: "AI-powered detection prevents click fraud and ensures campaign integrity.",
+<<<<<<< HEAD
       icon: Shield
     },
     {
       title: "Scale Efficiently",
       description: "Manage thousands of affiliates with automated systems and smart workflows.",
       icon: Users
-    }
+
+=======
+      icon: Shield;
+    },;
+    {;
+      title: "Scale Efficiently",;
+      description: "Manage thousands of affiliates with automated systems and smart workflows.",;
+      icon: Users;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
-      <SEO 
+<<<<<<< HEAD
+      <SEO
         title="Affiliate Marketing Tracker - Zion Tech Group"
+=======
+      <SEO 
+        title = "Affiliate Marketing Tracker - Zion Tech Group"
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI."
         canonical="/services/affiliate-marketing-tracker"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -123,30 +165,48 @@ export default function AffiliateMarketingTracker() {
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.6 }}
-              >
+
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
                     Affiliate Marketing Tracker
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  Advanced affiliate tracking platform with AI-powered analytics, real-time reporting, and fraud detection. 
+                  Advanced affiliate tracking platform with AI-powered analytics, real-time reporting, and fraud detection.
                   Optimize your affiliate program and maximize ROI.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                  >
+
                     Get Started
                   </Link>
-                  <Link 
+                  <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
-                  >
+
                     Schedule Demo
                   </Link>
                 </div>
@@ -166,16 +226,49 @@ export default function AffiliateMarketingTracker() {
                 Everything you need to track, manage, and optimize your affiliate marketing campaigns
               </p>
             </div>
-            
+<<<<<<< HEAD
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
+=======
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -198,16 +291,49 @@ export default function AffiliateMarketingTracker() {
                 Transform your affiliate marketing with intelligent automation and powerful insights
               </p>
             </div>
-            
+<<<<<<< HEAD
+
             <div className="grid md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
+=======
+            
+            <div className="grid md: grid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="flex items-start space-x-4"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -232,20 +358,53 @@ export default function AffiliateMarketingTracker() {
                 Choose the plan that fits your affiliate marketing needs and scale as you grow
               </p>
             </div>
-            
+<<<<<<< HEAD
+
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
+=======
+            
+            <div className="grid md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular 
-                      ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                    plan.popular
+                      ? 'border-blue-500 ring-2 ring-blue-500/20'
                       : 'border-slate-700'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -253,7 +412,7 @@ export default function AffiliateMarketingTracker() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                     <div className="mb-4">
@@ -262,7 +421,7 @@ export default function AffiliateMarketingTracker() {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -271,7 +430,7 @@ export default function AffiliateMarketingTracker() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -279,7 +438,7 @@ export default function AffiliateMarketingTracker() {
                         ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+
                     Get Started
                   </Link>
                 </motion.div>
@@ -292,10 +451,28 @@ export default function AffiliateMarketingTracker() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Affiliate Marketing?
               </h2>
@@ -303,24 +480,37 @@ export default function AffiliateMarketingTracker() {
                 Join thousands of businesses using our platform to optimize their affiliate programs and increase revenue.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Free Trial
                 </Link>
-                <Link 
+                <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
-                >
+
                   Contact Sales
                 </Link>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
       </div>
     </>
+  )};
+=======;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
+<<<<<<< HEAD
+}}}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

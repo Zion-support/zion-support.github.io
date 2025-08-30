@@ -31,7 +31,6 @@ export interface AdditionalInnovativeService2025 {
   };
   competitors?: string[];
   marketSize?: string;
-}
 
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService2025[] = [
   // AI-Powered Legal Document Automation
@@ -1072,5 +1071,5 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     },
     competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"],
     marketSize: "$15.8 billion by 2025"
-  }
-];
+
+];}}

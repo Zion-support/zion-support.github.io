@@ -1,14 +1,12 @@
 import React from 'react';
-import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe } from 'lucide-react';
-
-export const ServiceIncludes = () => {
+import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe export const ServiceIncludes = () => {
   const servicePackages = [
     {
       name: 'Basic Package',
       description: 'Essential IT services for small businesses',
       price: 'Starting at $299/month',
       popular: false,
-      includes: [
+      includes[
         '24/7 Help Desk Support',
         'Remote Troubleshooting',
         'Basic Network Monitoring',
@@ -18,7 +16,7 @@ export const ServiceIncludes = () => {
         'Basic Security Monitoring',
         'Backup Verification'
       ],
-      notIncluded: [
+      notIncluded[
         'On-site Visits',
         'Hardware Installation',
         'Advanced Security Features',
@@ -26,7 +24,7 @@ export const ServiceIncludes = () => {
         'Custom Reporting',
         'Strategic IT Planning'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '4-8 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Basic', icon: Shield },
@@ -38,7 +36,7 @@ export const ServiceIncludes = () => {
       description: 'Comprehensive IT services for growing businesses',
       price: 'Starting at $599/month',
       popular: true,
-      includes: [
+      includes[
         'Everything in Basic Package',
         'On-site Support (2 visits/month)',
         'Hardware Installation & Setup',
@@ -52,14 +50,14 @@ export const ServiceIncludes = () => {
         'User Training Sessions',
         'Strategic IT Consulting'
       ],
-      notIncluded: [
+      notIncluded[
         'Unlimited On-site Visits',
         'Dedicated IT Manager',
         'Custom Software Development',
         'Hardware Procurement',
         'Advanced Analytics'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '2-4 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Advanced', icon: Shield },
@@ -71,7 +69,7 @@ export const ServiceIncludes = () => {
       description: 'Full-service IT management for large organizations',
       price: 'Starting at $1,299/month',
       popular: false,
-      includes: [
+      includes[
         'Everything in Professional Package',
         'Unlimited On-site Support',
         'Dedicated IT Manager',
@@ -88,19 +86,19 @@ export const ServiceIncludes = () => {
         'Vendor Management',
         'Technology Roadmap Planning'
       ],
-      notIncluded: [
+      notIncluded[
         'Custom Hardware Development',
         'Third-party Software Licensing',
         'Legal Compliance Services',
         'Insurance Requirements'
       ],
-      features: [
+      features[
         { name: 'Response Time', value: '1-2 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Enterprise', icon: Shield },
         { name: 'Reporting', value: 'Daily', icon: FileText }
       ]
-    }
+
   ];
 
   const additionalServices = [
@@ -139,7 +137,7 @@ export const ServiceIncludes = () => {
       price: 'Custom Quote',
       description: 'Complete cloud infrastructure migration services',
       icon: Globe
-    }
+
   ];
 
   return (
@@ -151,7 +149,7 @@ export const ServiceIncludes = () => {
             What's Included in Your Service
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the service package that fits your business needs. All packages include our core services 
+            Choose the service package that fits your business needs. All packages include our core services
             with additional features and support levels.
           </p>
         </div>
@@ -162,11 +160,11 @@ export const ServiceIncludes = () => {
             <div
               key={index}
               className={`relative bg-white rounded-3xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
-                pkg.popular 
-                  ? 'border-blue-500 scale-105' 
+                pkg.popular
+                  ? 'border-blue-500 scale-105'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
-            >
+
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -174,7 +172,7 @@ export const ServiceIncludes = () => {
                   </span>
                 </div>
               )}
-              
+
               <div className="p-8">
                 {/* Package Header */}
                 <div className="text-center mb-8">
@@ -235,7 +233,7 @@ export const ServiceIncludes = () => {
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
-                >
+
                   Get Started
                 </button>
               </div>
@@ -312,19 +310,19 @@ export const ServiceIncludes = () => {
               Need a Custom Solution?
             </h3>
             <p className="text-gray-600 mb-6">
-              Our team can customize any service package to meet your specific business requirements.
+              Our team can customize  service package to meet your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+
                 Get Custom Quote
               </a>
               <a
                 href="#consultation"
                 className="px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>
@@ -332,5 +330,9 @@ export const ServiceIncludes = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
-};
+};}}}
+=======
+  )};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

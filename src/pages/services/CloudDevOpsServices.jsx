@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
-const CloudDevOpsServices = () => {
+import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor const CloudDevOpsServices = () => {
     const cloudServices = [
         {
             title: "Cloud Migration & Strategy",
             description: "Seamless migration to cloud platforms with strategic planning and execution.",
             icon: Cloud,
-            features: [
+            features[
                 "Multi-cloud Strategy",
                 "Legacy System Migration",
                 "Cost Optimization",
@@ -18,8 +17,8 @@ const CloudDevOpsServices = () => {
         {
             title: "DevOps Implementation",
             description: "Streamline development and operations with modern DevOps practices and tools.",
-            icon: GitFork,
-            features: [
+            icon: GitBranch,
+            features[
                 "CI/CD Pipeline Setup",
                 "Infrastructure as Code",
                 "Automated Testing",
@@ -31,7 +30,7 @@ const CloudDevOpsServices = () => {
             title: "Container Orchestration",
             description: "Manage and scale containerized applications with Kubernetes and Docker.",
             icon: Server,
-            features: [
+            features[
                 "Kubernetes Deployment",
                 "Docker Containerization",
                 "Service Mesh",
@@ -43,7 +42,7 @@ const CloudDevOpsServices = () => {
             title: "Database Management",
             description: "Optimize and manage databases in cloud environments for performance and reliability.",
             icon: Database,
-            features: [
+            features[
                 "Database Migration",
                 "Performance Tuning",
                 "Backup & Recovery",
@@ -55,7 +54,7 @@ const CloudDevOpsServices = () => {
             title: "Security & Compliance",
             description: "Ensure cloud security and compliance with industry standards and best practices.",
             icon: Shield,
-            features: [
+            features[
                 "Identity & Access Management",
                 "Network Security",
                 "Data Encryption",
@@ -67,14 +66,14 @@ const CloudDevOpsServices = () => {
             title: "Monitoring & Observability",
             description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
             icon: Monitor,
-            features: [
+            features[
                 "Real-time Monitoring",
                 "Log Management",
                 "Performance Metrics",
                 "Alert Management",
                 "Troubleshooting Tools"
             ]
-        }
+
     ];
     const benefits = [
         "Faster time to market with automated deployments",
@@ -96,18 +95,23 @@ const CloudDevOpsServices = () => {
         {
             name: "Amazon Web Services",
             description: "Leading cloud platform with comprehensive services",
-            features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
+            features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
         },
         {
             name: "Microsoft Azure",
             description: "Enterprise-grade cloud solutions for Windows environments",
-            features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
+            features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
         },
         {
             name: "Google Cloud Platform",
             description: "Innovative cloud services with AI and ML capabilities",
+<<<<<<< HEAD
             features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
+
+=======
+            features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
         }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -118,7 +122,7 @@ const CloudDevOpsServices = () => {
             Cloud & DevOps Services
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Accelerate your digital transformation with modern cloud infrastructure 
+            Accelerate your digital transformation with modern cloud infrastructure
             and DevOps practices that drive innovation and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -140,11 +144,11 @@ const CloudDevOpsServices = () => {
               Comprehensive Cloud & DevOps Solutions
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From cloud migration to DevOps transformation, we provide end-to-end 
+              From cloud migration to DevOps transformation, we provide end-to-end
               solutions that modernize your infrastructure and accelerate delivery.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
@@ -179,11 +183,11 @@ const CloudDevOpsServices = () => {
               Multi-Cloud Expertise
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We work with all major cloud providers to give you the best solutions 
+              We work with all major cloud providers to give you the best solutions
               for your specific needs and budget.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
@@ -214,7 +218,7 @@ const CloudDevOpsServices = () => {
               Transform your organization with modern cloud and DevOps practices.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -237,7 +241,7 @@ const CloudDevOpsServices = () => {
               We leverage industry-leading tools and technologies to deliver robust solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <p className="text-slate-700 font-semibold">{tech}</p>
@@ -253,7 +257,7 @@ const CloudDevOpsServices = () => {
             Ready to Modernize Your Infrastructure?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cloud and DevOps expertise can transform your 
+            Let's discuss how our cloud and DevOps expertise can transform your
             organization's technology landscape.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -266,6 +270,6 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default CloudDevOpsServices;
+}}}

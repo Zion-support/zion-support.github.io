@@ -1,26 +1,26 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Clock, 
-  Users, 
-  Target, 
-  Rocket, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Atom, 
-  Heart, 
-  Satellite, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
+import {
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Clock,
+  Users,
+  Target,
+  Rocket,
+  Brain,
+  Shield,
+  Cloud,
+  Atom,
+  Heart,
+  Satellite,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
   MapPin,
   Sparkles,
   Award,
@@ -51,8 +51,12 @@ import {
   ShoppingCart,
   Gauge,
   MessageCircle as MessageCircleIcon
-} from 'lucide-react';
+<<<<<<< HEAD
 import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
+=======
+} from 'lucide-react';
+import { enhancedServicesCatalog2025, EnhancedService } from "../data/enhancedServicesCatalog2025";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function EnhancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -66,15 +70,15 @@ export default function EnhancedServicesShowcase2025() {
   // Filter and sort services
   const filteredServices = useMemo(() => {
     return enhancedServicesCatalog2025
-      .filter(service => 
+      .filter(service =>
         (selectedCategory === 'all' || service.category === selectedCategory) &&
-        (service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-      .sort((a, b) => {
-        switch (sortBy) {
-          case 'featured':
+        (service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+      );
+      .sort((a, b) => {;
+        switch (sortBy) {;
+          case 'featured':;
             return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
           case 'popular':
             return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
@@ -88,25 +92,54 @@ export default function EnhancedServicesShowcase2025() {
             return a.name.localeCompare(b.name);
           default:
             return 0;
-        }
+
       });
   }, [searchTerm, selectedCategory, sortBy]);
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
+  ;
+  ;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
+
+
+
+
+
+
+};
 
   const ServiceCard = ({ service }: { service: EnhancedService }) => (
     <motion.div
       key={service.id}
       className="neon-card hover:scale-105 transition-all duration-300 cursor-pointer group"
       whileHover={{ y: -10 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
       transition={{ duration: 0.5 }}
-    >
+
       {/* Service Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-3">
@@ -141,7 +174,7 @@ export default function EnhancedServicesShowcase2025() {
       <div className="space-y-4">
         <p className="text-lg font-semibold text-gray-200">{service.tagline}</p>
         <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
-        
+
         {/* Pricing */}
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-cyan-400 font-orbitron">
@@ -214,18 +247,28 @@ export default function EnhancedServicesShowcase2025() {
           <Link
             to={service.link}
             className="flex-1 btn-neon text-center text-sm py-2"
-          >
+
             Learn More
           </Link>
           <Link
             to="/contact"
+<<<<<<< HEAD
             className="flex-1 btn-neon-cyan text-center text-sm py-2"
-          >
+
             Get Started
           </Link>
         </div>
       </div>
     </motion.div>
+=======
+            className="flex-1 btn-neon-cyan text-center text-sm py-2";
+          >;
+            Get Started;
+          </Link>;
+        </div>;
+      </div>;
+    </motion.div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
   const ServiceList = ({ service }: { service: EnhancedService }) => (
@@ -233,13 +276,31 @@ export default function EnhancedServicesShowcase2025() {
       key={service.id}
       className="neon-card p-6 hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
       whileHover={{ x: 10 }}
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+      animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
       transition={{ duration: 0.5 }}
-    >
+
       <div className="flex items-center space-x-6">
         <div className="text-4xl">{service.icon}</div>
-        
+
         <div className="flex-1">
           <div className="flex items-start justify-between mb-3">
             <div>
@@ -266,10 +327,10 @@ export default function EnhancedServicesShowcase2025() {
               )}
             </div>
           </div>
-          
+
           <p className="text-lg font-semibold text-gray-200 mb-2">{service.tagline}</p>
           <p className="text-gray-300 text-sm leading-relaxed mb-4">{service.description}</p>
-          
+
           <div className="grid grid-cols-4 gap-4 text-sm">
             <div>
               <p className="text-gray-400">Price</p>
@@ -289,27 +350,37 @@ export default function EnhancedServicesShowcase2025() {
             </div>
           </div>
         </div>
-        
+
         <div className="flex flex-col space-y-3">
           <Link
             to={service.link}
             className="btn-neon text-sm py-2 px-4"
-          >
+
             Learn More
           </Link>
           <Link
             to="/contact"
+<<<<<<< HEAD
             className="btn-neon-cyan text-sm py-2 px-4"
-          >
+
             Get Started
           </Link>
         </div>
       </div>
     </motion.div>
+=======
+            className="btn-neon-cyan text-sm py-2 px-4";
+          >;
+            Get Started;
+          </Link>;
+        </div>;
+      </div>;
+    </motion.div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
   return (
-    <div className="min-h-screen futuristic-bg">
+    <div className = "min-h-screen futuristic-bg">
       {/* Floating Particles */}
       <div className="floating-particles">
         {[...Array(9)].map((_, i) => (
@@ -321,10 +392,28 @@ export default function EnhancedServicesShowcase2025() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold font-orbitron mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Revolutionary
@@ -335,7 +424,7 @@ export default function EnhancedServicesShowcase2025() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Experience the future of technology with our cutting-edge AI, quantum computing, and innovative solutions that transform businesses and drive digital transformation.
             </p>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
               {[
@@ -347,10 +436,44 @@ export default function EnhancedServicesShowcase2025() {
                 <motion.div
                   key={stat.label}
                   className="text-center"
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+
+=======
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-3`} />
                   <div className="text-3xl font-bold text-white font-orbitron">{stat.value}</div>
                   <div className="text-gray-400 font-medium">{stat.label}</div>
@@ -363,13 +486,13 @@ export default function EnhancedServicesShowcase2025() {
               <Link
                 to="/contact"
                 className="btn-neon-cyan text-lg px-8 py-4"
-              >
+
                 Get Started Today
               </Link>
               <Link
                 to="/about"
                 className="btn-neon text-lg px-8 py-4"
-              >
+
                 Learn More
               </Link>
             </div>
@@ -401,7 +524,7 @@ export default function EnhancedServicesShowcase2025() {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                >
+
                   {categories.map(category => (
                     <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
@@ -416,7 +539,7 @@ export default function EnhancedServicesShowcase2025() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                >
+
                   <option value="featured">Featured</option>
                   <option value="popular">Popular</option>
                   <option value="new">New</option>
@@ -431,13 +554,13 @@ export default function EnhancedServicesShowcase2025() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
-                >
+
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
-                >
+
                   <List className="w-4 h-4" />
                 </button>
               </div>
@@ -485,14 +608,14 @@ export default function EnhancedServicesShowcase2025() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-              >
+
                 <Search className="w-16 h-16 text-gray-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-400 mb-2">No services found</h3>
                 <p className="text-gray-500">Try adjusting your search criteria or browse all services.</p>
                 <Link
                   to="/services"
                   className="btn-neon-cyan mt-4 inline-block"
-                >
+
                   Browse All Services
                 </Link>
               </motion.div>
@@ -505,18 +628,36 @@ export default function EnhancedServicesShowcase2025() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 border-t border-gray-700/50">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Let's discuss how our revolutionary AI, quantum computing, and innovative solutions can help you achieve your technology goals and stay ahead of the competition.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <div className="flex items-center justify-center space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 text-cyan-400" />
@@ -536,13 +677,14 @@ export default function EnhancedServicesShowcase2025() {
               <Link
                 to="/contact"
                 className="btn-neon-cyan text-lg px-8 py-4"
-              >
+
                 Schedule a Consultation
               </Link>
               <Link
                 to="/pricing"
                 className="btn-neon text-lg px-8 py-4"
-              >
+<<<<<<< HEAD
+
                 View Pricing
               </Link>
             </div>
@@ -550,18 +692,28 @@ export default function EnhancedServicesShowcase2025() {
         </div>
       </section>
     </div>
+=======
+              >
+                View Pricing;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
 
 // Icon components for view mode toggle
-const Grid = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-  </svg>
+const Grid = ({ className }: { className?: string }) => (;
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />;
+  </svg>;
 );
 
-const List = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-  </svg>
+const List = ({ className }: { className?: string }) => (;
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />;
+  </svg>;
 );
+}}}

@@ -3,9 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useInterviews } from "@/hooks/useInterviews";
 import { format, isPast, parseISO } from "date-fns";
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+import { Calendar, Clock, Video import { Avatar } from "@/components/ui/avatar";
+=======
+import Link from "next/link";
 import { Calendar, Clock, Video } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function UpcomingInterviewsCard() {
     const { fetchInterviews } = useInterviews();
     const [upcomingInterviews, setUpcomingInterviews] = useState([]);
@@ -21,17 +26,29 @@ export function UpcomingInterviewsCard() {
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews
+<<<<<<< HEAD
                 setUpcomingInterviews(upcoming);
-            }
+
             catch (error) {
-                console.error("Error loading upcoming interviews:", error);
+<<<<<<< HEAD
+                // // // console.error("Error loading upcoming interviews:", error);
+
+=======
+                // // // // // // // console.error("Error loading upcoming interviews:", error);
             }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             finally {
                 setIsLoading(false);
-            }
+
+=======
+                setUpcomingInterviews(upcoming)}
+            catch (error) {
+                console.error("Error loading upcoming interviews:", error)}
+            finally {
+                setIsLoading(false)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
-        loadInterviews();
-    }, []);
+        loadInterviews()}, []);
     if (isLoading) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -51,8 +68,12 @@ export function UpcomingInterviewsCard() {
               </div>))}
           </div>
         </CardContent>
+<<<<<<< HEAD
       </Card>);
-    }
+
+=======
+      </Card>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (upcomingInterviews.length === 0) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -70,8 +91,12 @@ export function UpcomingInterviewsCard() {
             </Button>
           </div>
         </CardContent>
+<<<<<<< HEAD
       </Card>);
-    }
+
+=======
+      </Card>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -83,7 +108,6 @@ export function UpcomingInterviewsCard() {
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h:mm a');
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
@@ -109,10 +133,9 @@ export function UpcomingInterviewsCard() {
                     {formattedDate} at {formattedTime}
                   </div>
                 </div>
-              </div>);
-        })}
+              </div>)})}
         </div>
-        
+
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link href="/interviews">
@@ -121,5 +144,9 @@ export function UpcomingInterviewsCard() {
           </Button>
         </div>
       </CardContent>
+<<<<<<< HEAD
     </Card>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}
+=======
+    </Card>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

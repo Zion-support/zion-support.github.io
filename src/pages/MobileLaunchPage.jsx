@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { Header } from '../components/header/Header';
 import { Footer } from '../components/Footer';
 import { MobileLaunchHero } from '../components/mobile-app/MobileLaunchHero';
@@ -13,7 +13,7 @@ import { CommunityTrust } from '../components/mobile-app/CommunityTrust';
 export const MobileLaunchPage = () => {
   return (
     <>
-      <SEO 
+      <SEO
         title="Zion Mobile App - Download IT Asset Management App"
         description="Download Zion mobile app for iOS and Android. Professional IT asset management in your pocket with real-time sync, offline mode, and enterprise security."
         keywords="zion mobile app, IT asset management app, download, iOS, Android, mobile app"
@@ -30,5 +30,4 @@ export const MobileLaunchPage = () => {
       </main>
       <Footer />
     </>
-  );
-};
+  )};

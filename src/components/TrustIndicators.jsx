@@ -1,6 +1,5 @@
 import React from 'react';
-import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap } from 'lucide-react';
-export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
+import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
     const indicators = [
         {
             icon: Shield,
@@ -25,7 +24,7 @@ export function TrustIndicators({ className, showStats = true, showCertification
             title: "Verified Community",
             description: "10,000+ verified professionals and companies",
             color: "text-zion-purple"
-        }
+
     ];
     const certifications = [
         { name: "SOC 2 Type II", status: "Certified", year: "2024" },
@@ -47,7 +46,7 @@ export function TrustIndicators({ className, showStats = true, showCertification
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Zion Tech Group maintains the highest standards of security, compliance, and reliability 
+            Zion Tech Group maintains the highest standards of security, compliance, and reliability
             to ensure your business operations remain secure and uninterrupted.
           </p>
         </div>
@@ -112,8 +111,12 @@ export function TrustIndicators({ className, showStats = true, showCertification
           <p className="text-white font-medium">- Sarah Chen, CTO at TechCorp</p>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
-}
+
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
@@ -133,5 +136,9 @@ export function TrustIndicatorsCompact({ className }) {
         <Zap className="w-4 h-4"/>
         <span>99.9% Uptime</span>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

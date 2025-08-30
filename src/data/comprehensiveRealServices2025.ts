@@ -33,7 +33,6 @@ export interface ComprehensiveRealService {
   marketSize?: string;
   demoUrl?: string;
   documentationUrl?: string;
-}
 
 export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -1039,7 +1038,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketSize: "$19.8 billion by 2025",
     demoUrl: "https://ziontechgroup.com/demo/zero-trust",
     documentationUrl: "https://ziontechgroup.com/docs/zero-trust"
-  }
+
 ];
 
-export default COMPREHENSIVE_REAL_SERVICES_2025;
+export default COMPREHENSIVE_REAL_SERVICES_2025;}}

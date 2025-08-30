@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export function BlogSection() {
+export function BlogSection(...args[]):  {
   const blogPosts = [
     {
       id: '1',
@@ -10,17 +10,27 @@ export function BlogSection() {
       date: '2024-01-15',
       readTime: '8 min read'
     },
+<<<<<<< HEAD
     {
       id: '2',
       title: 'Building Scalable Web Applications',
       excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
       date: '2024-01-10',
       readTime: '12 min read'
-    }
+
+=======
+    {;
+      id: '2',;
+      title: 'Building Scalable Web Applications',;
+      excerpt: 'Best practices and architectural patterns for creating scalable web apps...',;
+      date: '2024-01-10',;
+      readTime: '12 min read';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <section className="py-16">
+    <section className = "py-16">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-white">Latest from Our Blog</h2>
@@ -28,8 +38,8 @@ export function BlogSection() {
             View all posts →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {blogPosts.map((post) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+          {blogPosts.map((post)  => (
             <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold text-white mb-3">
                 <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">
@@ -41,10 +51,23 @@ export function BlogSection() {
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
               </div>
+<<<<<<< HEAD
             </article>
           ))}
         </div>
       </div>
     </section>
+  )};
+=======;
+            </article>;
+          ))};
+        </div>;
+      </div>;
+    </section>;
   );
+<<<<<<< HEAD
+}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

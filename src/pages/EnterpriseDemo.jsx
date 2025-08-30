@@ -1,14 +1,17 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { GradientHeading } from "@/components/GradientHeading";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Users, CheckCircle, Star, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, Calendar, CheckCircle, Clock, Star, Users import { Link } from "react-router-dom";
 export default function EnterpriseDemo() {
     return (<>
       <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion's enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https://ziontechgroup.com/enterprise/demo"/>
-      
+
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -40,10 +43,8 @@ export default function EnterpriseDemo() {
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-zion-cyan"/>
                 </div>
-                                <CardTitle>
-                  Interactive Demo
-                </CardTitle>
-                </CardHeader>
+                <CardTitle className="text-white text-2xl">Interactive Features</CardTitle>
+              </CardHeader>
               <CardContent>
                 <CardDescription className="text-zion-slate-light">
                   See real-time demonstrations of AI matching, talent management, and marketplace features
@@ -56,9 +57,7 @@ export default function EnterpriseDemo() {
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-6 h-6 text-zion-cyan"/>
                 </div>
-                <CardTitle>
-                  Expert Guidance
-                </CardTitle>
+                <CardTitle className="text-white text-2xl">Expert Guidance</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-zion-slate-light">
@@ -141,21 +140,21 @@ export default function EnterpriseDemo() {
                   See how our AI algorithms match the perfect talent to your requirements
                 </p>
               </div>
-              
+
               <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Marketplace Features</h3>
                 <p className="text-zion-slate-light">
                   Explore our comprehensive marketplace for services, equipment, and solutions
                 </p>
               </div>
-              
+
               <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Dashboard</h3>
                 <p className="text-zion-slate-light">
                   Experience our powerful analytics and management tools
                 </p>
               </div>
-              
+
               <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Integration Capabilities</h3>
                 <p className="text-zion-slate-light">
@@ -187,5 +186,9 @@ export default function EnterpriseDemo() {
           </div>
         </div>
       </main>
+<<<<<<< HEAD
     </>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

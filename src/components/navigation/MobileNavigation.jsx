@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb import { Button } from '@/components/ui/button';
 const mobileMenuItems = [
     { name: 'Services', icon: <Briefcase className="w-5 h-5"/>, href: '/services' },
     { name: 'Talent', icon: <Users className="w-5 h-5"/>, href: '/talent' },
@@ -14,16 +13,21 @@ export function MobileNavigation() {
         setIsOpen(!isOpen);
         // Prevent body scroll when menu is open
         if (!isOpen) {
+<<<<<<< HEAD
             document.body.style.overflow = 'hidden';
-        }
+
         else {
             document.body.style.overflow = 'unset';
-        }
+
+=======
+            document.body.style.overflow = 'hidden'}
+        else {
+            document.body.style.overflow = 'unset'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const closeMenu = () => {
         setIsOpen(false);
-        document.body.style.overflow = 'unset';
-    };
+        document.body.style.overflow = 'unset'};
     return (<div className="lg:hidden">
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-blue-dark" aria-label="Toggle mobile menu" aria-expanded={isOpen}>
@@ -87,5 +91,9 @@ export function MobileNavigation() {
             </div>
           </div>
         </div>)}
+<<<<<<< HEAD
     </div>);
-}
+}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

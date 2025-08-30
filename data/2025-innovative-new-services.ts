@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface InnovativeNewService2025 {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface InnovativeNewService2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const innovativeNewServices2025: InnovativeNewService2025[] = [
   // AI-Powered Content Intelligence Platform
   {
@@ -48,7 +51,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     price: '$2,500',
     period: '/month',
     description: 'Advanced AI platform that analyzes content performance, generates insights, and optimizes content strategy across all digital channels with predictive analytics.',
-    features: [
+    features[
       'Real-time content performance analytics',
       'AI-powered content optimization suggestions',
       'Predictive content performance modeling',
@@ -71,11 +74,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     setupTime: '2-3 days',
     category: 'AI Content Intelligence',
     realService: true,
-    technology: ['Machine Learning, Natural Language Processing, Predictive Analytics, Python, React, Node.js'],
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Google Analytics, Social media platforms'],
-    useCases: ['Content marketing optimization, SEO strategy, Social media management, E-commerce content, Brand storytelling'],
+    technology['Machine Learning, Natural Language Processing, Predictive Analytics, Python, React, Node.js'],
+    integrations['WordPress, Shopify, HubSpot, Mailchimp, Google Analytics, Social media platforms'],
+    useCases['Content marketing optimization, SEO strategy, Social media management, E-commerce content, Brand storytelling'],
     roi: 'Average 300% ROI through improved content performance and conversion rates.',
-    competitors: ['Clearscope, MarketMuse, Frase, SurferSEO'],
+    competitors['Clearscope, MarketMuse, Frase, SurferSEO'],
     marketSize: '$15B+ content marketing market',
     growthRate: '150%+ annual growth',
     variant: 'ai-creative',
@@ -100,7 +103,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     price: '$15,000',
     period: '/month',
     description: 'Next-generation quantum-secure communication network that provides unbreakable encryption for government, financial, and enterprise communications using quantum key distribution.',
-    features: [
+    features[
       'Quantum key distribution (QKD)',
       'Unbreakable encryption protocols',
       'Real-time quantum state monitoring',
@@ -123,11 +126,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     setupTime: '8-12 weeks',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Quantum Computing, Quantum Cryptography, QKD Protocols, Quantum Networks, Python, C++'],
-    integrations: ['Government systems, Financial platforms, Healthcare networks, Enterprise infrastructure'],
-    useCases: ['Government communications, Financial transactions, Healthcare data, Military communications, Corporate secrets'],
+    technology['Quantum Computing, Quantum Cryptography, QKD Protocols, Quantum Networks, Python, C++'],
+    integrations['Government systems, Financial platforms, Healthcare networks, Enterprise infrastructure'],
+    useCases['Government communications, Financial transactions, Healthcare data, Military communications, Corporate secrets'],
     roi: 'Critical infrastructure protection with 1000%+ ROI through security breach prevention.',
-    competitors: ['ID Quantique, Toshiba Quantum, Quantum Xchange'],
+    competitors['ID Quantique, Toshiba Quantum, Quantum Xchange'],
     marketSize: '$8B+ quantum security market',
     growthRate: '400%+ annual growth',
     variant: 'quantum-security',
@@ -152,7 +155,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     price: '$8,500',
     period: '/month',
     description: 'Fully autonomous AI operations center that manages, monitors, and optimizes your entire business infrastructure without human intervention, using advanced AI agents and machine learning.',
-    features: [
+    features[
       'Autonomous system monitoring',
       'Self-healing infrastructure',
       'Predictive maintenance',
@@ -175,11 +178,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     setupTime: '4-6 weeks',
     category: 'AI Operations',
     realService: true,
-    technology: ['Machine Learning, AI Agents, Automation, Kubernetes, Python, Go, React'],
-    integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Monitoring tools, CI/CD pipelines'],
-    useCases: ['Data center management, Cloud operations, Manufacturing automation, Healthcare systems, Financial trading'],
+    technology['Machine Learning, AI Agents, Automation, Kubernetes, Python, Go, React'],
+    integrations['AWS, Azure, GCP, Kubernetes, Docker, Monitoring tools, CI/CD pipelines'],
+    useCases['Data center management, Cloud operations, Manufacturing automation, Healthcare systems, Financial trading'],
     roi: 'Average 500% ROI through reduced operational costs and improved efficiency.',
-    competitors: ['PagerDuty, DataDog, New Relic, Splunk'],
+    competitors['PagerDuty, DataDog, New Relic, Splunk'],
     marketSize: '$25B+ AI operations market',
     growthRate: '200%+ annual growth',
     variant: 'ai-autonomous',
@@ -204,7 +207,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     price: '$3,200',
     period: '/month',
     description: 'Comprehensive blockchain-powered supply chain platform that provides end-to-end visibility, traceability, and intelligence for global supply chains with AI-powered analytics.',
-    features: [
+    features[
       'End-to-end supply chain tracking',
       'Blockchain-based transparency',
       'AI-powered demand forecasting',
@@ -227,11 +230,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     setupTime: '6-8 weeks',
     category: 'Blockchain Supply Chain',
     realService: true,
-    technology: ['Blockchain, Smart Contracts, AI/ML, IoT, Python, Solidity, React'],
-    integrations: ['ERP systems, WMS, TMS, IoT devices, Payment gateways, Shipping carriers'],
-    useCases: ['Product tracking, Quality assurance, Compliance, Sustainability, Risk management'],
+    technology['Blockchain, Smart Contracts, AI/ML, IoT, Python, Solidity, React'],
+    integrations['ERP systems, WMS, TMS, IoT devices, Payment gateways, Shipping carriers'],
+    useCases['Product tracking, Quality assurance, Compliance, Sustainability, Risk management'],
     roi: 'Average 400% ROI through improved efficiency, reduced waste, and better compliance.',
-    competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail'],
+    competitors['IBM Food Trust, VeChain, WaltonChain, OriginTrail'],
     marketSize: '$18B+ blockchain supply chain market',
     growthRate: '250%+ annual growth',
     variant: 'supply-chain-futuristic',
@@ -256,7 +259,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     price: '$4,800',
     period: '/month',
     description: 'Comprehensive metaverse development platform that enables businesses to create immersive 3D experiences, virtual events, and digital twins with AI-powered content generation.',
-    features: [
+    features[
       '3D world building tools',
       'AI-powered content generation',
       'Virtual event hosting',
@@ -279,11 +282,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     setupTime: '3-4 weeks',
     category: 'Metaverse Development',
     realService: true,
-    technology: ['3D Graphics, AI/ML, VR/AR, WebGL, Unity, Unreal Engine, Python'],
-    integrations: ['VR headsets, AR devices, Gaming platforms, Social media, Payment systems'],
-    useCases: ['Virtual events, Digital twins, Gaming, Education, Healthcare, Real estate'],
+    technology['3D Graphics, AI/ML, VR/AR, WebGL, Unity, Unreal Engine, Python'],
+    integrations['VR headsets, AR devices, Gaming platforms, Social media, Payment systems'],
+    useCases['Virtual events, Digital twins, Gaming, Education, Healthcare, Real estate'],
     roi: 'Average 350% ROI through virtual event hosting and digital experience monetization.',
-    competitors: ['Roblox, Decentraland, The Sandbox, Meta'],
+    competitors['Roblox, Decentraland, The Sandbox, Meta'],
     marketSize: '$12B+ metaverse market',
     growthRate: '300%+ annual growth',
     variant: 'metaverse-futuristic',
@@ -308,7 +311,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     price: '$12,000',
     period: '/month',
     description: 'Next-generation financial trading platform that leverages quantum computing for ultra-fast market analysis, AI-powered predictions, and automated trading strategies.',
-    features: [
+    features[
       'Quantum-powered market analysis',
       'AI trading strategy optimization',
       'Real-time risk assessment',
@@ -331,11 +334,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     setupTime: '10-12 weeks',
     category: 'Quantum Finance',
     realService: true,
-    technology: ['Quantum Computing, AI/ML, Financial Algorithms, Python, C++, Quantum Algorithms'],
-    integrations: ['Trading exchanges, Market data providers, Risk management systems, Compliance platforms'],
-    useCases: ['Algorithmic trading, Portfolio management, Risk assessment, Market analysis, Compliance'],
+    technology['Quantum Computing, AI/ML, Financial Algorithms, Python, C++, Quantum Algorithms'],
+    integrations['Trading exchanges, Market data providers, Risk management systems, Compliance platforms'],
+    useCases['Algorithmic trading, Portfolio management, Risk assessment, Market analysis, Compliance'],
     roi: 'Average 800% ROI through improved trading performance and risk management.',
-    competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
+    competitors['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
     marketSize: '$35B+ financial technology market',
     growthRate: '500%+ annual growth',
     variant: 'quantum-ai-finance',
@@ -360,7 +363,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     price: '$6,500',
     period: '/month',
     description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis, treatment recommendations, and patient monitoring using deep learning and medical imaging.',
-    features: [
+    features[
       'AI-powered medical imaging analysis',
       'Automated diagnosis generation',
       'Treatment recommendation engine',
@@ -383,11 +386,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     setupTime: '8-10 weeks',
     category: 'AI Healthcare',
     realService: true,
-    technology: ['Deep Learning, Computer Vision, Medical AI, Python, TensorFlow, PyTorch'],
-    integrations: ['EMR systems, Medical devices, Telemedicine platforms, Lab systems, Pharmacy systems'],
-    useCases: ['Medical imaging, Diagnosis, Treatment planning, Patient monitoring, Drug safety'],
+    technology['Deep Learning, Computer Vision, Medical AI, Python, TensorFlow, PyTorch'],
+    integrations['EMR systems, Medical devices, Telemedicine platforms, Lab systems, Pharmacy systems'],
+    useCases['Medical imaging, Diagnosis, Treatment planning, Patient monitoring, Drug safety'],
     roi: 'Average 600% ROI through improved diagnostic accuracy and reduced medical errors.',
-    competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, NVIDIA Clara'],
+    competitors['IBM Watson Health, Google Health, Microsoft Healthcare, NVIDIA Clara'],
     marketSize: '$45B+ AI healthcare market',
     growthRate: '350%+ annual growth',
     variant: 'ai-healthcare',
@@ -412,7 +415,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     price: '$5,200',
     period: '/month',
     description: 'Advanced edge computing orchestration platform that manages distributed computing resources, optimizes performance, and provides real-time analytics for IoT and edge applications.',
-    features: [
+    features[
       'Distributed edge management',
       'Real-time performance optimization',
       'IoT device orchestration',
@@ -435,11 +438,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     setupTime: '4-6 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Edge Computing, IoT, AI/ML, Kubernetes, Docker, Python, Go'],
-    integrations: ['IoT platforms, Cloud providers, Monitoring tools, Security systems, Network equipment'],
-    useCases: ['IoT management, Edge AI, Smart cities, Manufacturing automation, Telecommunications'],
+    technology['Edge Computing, IoT, AI/ML, Kubernetes, Docker, Python, Go'],
+    integrations['IoT platforms, Cloud providers, Monitoring tools, Security systems, Network equipment'],
+    useCases['IoT management, Edge AI, Smart cities, Manufacturing automation, Telecommunications'],
     roi: 'Average 450% ROI through improved performance and reduced infrastructure costs.',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, VMware Edge'],
+    competitors['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, VMware Edge'],
     marketSize: '$20B+ edge computing market',
     growthRate: '280%+ annual growth',
     variant: 'edge-futuristic',
@@ -455,5 +458,5 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     customers: 38,
     rating: 4.8,
     reviews: 20
-  }
-];
+
+];}}

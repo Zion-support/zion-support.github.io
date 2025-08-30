@@ -3,15 +3,19 @@ export interface Real2025Q2Addition {
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   features: string[];
-}
+
+=======
+  features: string[]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const real2025Q2Additions: Real2025Q2Addition[] = [
   {
     id: 'ai-meeting-notes',
     name: 'AI Meeting Notes & Action Items',
     tagline: 'Never miss decisions and follow‑ups again',
     price: '$29/mo+',
-    features: [
+    features[
       'Auto-transcription with speaker labels',
       'Decision and action item extraction',
       'Email and Slack follow‑ups',
@@ -23,11 +27,12 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [
     name: 'Uptime & SLA Reporter',
     tagline: 'Proactive reliability with customer‑facing transparency',
     price: '$19/mo+',
-    features: [
+    features[
       'Global checks and alerting',
       'SLA calculations per customer',
       'Incident timelines and labels',
       'Hosted status pages'
     ]
-  }
+
 ];
+}}

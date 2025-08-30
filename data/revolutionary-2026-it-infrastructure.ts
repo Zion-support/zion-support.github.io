@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2026ITInfrastructureService {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface Revolutionary2026ITInfrastructureService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfrastructureService[] = [
   {
     id: 'quantum-cloud-infrastructure',
@@ -47,7 +50,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     price: '$9,999',
     period: '/month',
     description: 'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises, research institutions, and organizations requiring next-generation computing capabilities.',
-    features: [
+    features[
       'Quantum-powered computing resources',
       'Advanced quantum security protocols',
       'Real-time quantum optimization',
@@ -70,11 +73,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     setupTime: '6 weeks',
     category: 'Quantum IT Infrastructure & Cloud',
     realService: true,
-    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Advanced Security', 'Machine Learning', 'Real-time Processing', 'Quantum Networking'],
-    integrations: ['AWS', 'Google Cloud', 'Microsoft Azure', 'Enterprise systems', 'Research platforms', 'Government systems'],
-    useCases: ['High-performance computing', 'Advanced research', 'Government applications', 'Financial modeling', 'Healthcare computing', 'Tech development'],
+    technology['Quantum Computing', 'Cloud Infrastructure', 'Advanced Security', 'Machine Learning', 'Real-time Processing', 'Quantum Networking'],
+    integrations['AWS', 'Google Cloud', 'Microsoft Azure', 'Enterprise systems', 'Research platforms', 'Government systems'],
+    useCases['High-performance computing', 'Advanced research', 'Government applications', 'Financial modeling', 'Healthcare computing', 'Tech development'],
     roi: 'Enterprises report 600% ROI through improved performance and advanced capabilities.',
-    competitors: ['AWS', 'Google Cloud', 'Microsoft Azure', 'IBM Cloud', 'Oracle Cloud'],
+    competitors['AWS', 'Google Cloud', 'Microsoft Azure', 'IBM Cloud', 'Oracle Cloud'],
     marketSize: '$45B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -98,7 +101,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     price: '$6,999',
     period: '/month',
     description: 'Advanced neuromorphic computing platform that mimics the human brain for unprecedented AI performance. Perfect for AI research, robotics, and organizations developing next-generation intelligent systems.',
-    features: [
+    features[
       'Brain-inspired computing architecture',
       'Advanced neural networks',
       'Real-time learning capabilities',
@@ -121,11 +124,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     setupTime: '4 weeks',
     category: 'Neuromorphic Computing & AI',
     realService: true,
-    technology: ['Neuromorphic Computing', 'Advanced AI', 'Neural Networks', 'Robotics', 'Machine Learning', 'Real-time Processing'],
-    integrations: ['AI platforms', 'Robotics systems', 'Research tools', 'Government platforms', 'Academic systems', 'Defense platforms'],
-    useCases: ['AI research', 'Robotics development', 'Intelligent systems', 'Government AI', 'Academic research', 'Defense AI'],
+    technology['Neuromorphic Computing', 'Advanced AI', 'Neural Networks', 'Robotics', 'Machine Learning', 'Real-time Processing'],
+    integrations['AI platforms', 'Robotics systems', 'Research tools', 'Government platforms', 'Academic systems', 'Defense platforms'],
+    useCases['AI research', 'Robotics development', 'Intelligent systems', 'Government AI', 'Academic research', 'Defense AI'],
     roi: 'Research institutions report 500% ROI through breakthrough discoveries and funding opportunities.',
-    competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SpiNNaker', 'Neurogrid'],
+    competitors['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SpiNNaker', 'Neurogrid'],
     marketSize: '$8B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -149,7 +152,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     price: '$7,499',
     period: '/month',
     description: 'Revolutionary photonic computing infrastructure that uses light for ultra-fast processing. Perfect for high-performance computing, telecommunications, and organizations requiring maximum speed.',
-    features: [
+    features[
       'Light-speed photonic processing',
       'Advanced optical networking',
       'Real-time photonic optimization',
@@ -172,11 +175,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     setupTime: '5 weeks',
     category: 'Photonic Computing & High Performance',
     realService: true,
-    technology: ['Photonic Computing', 'Optical Processing', 'Advanced Networking', 'High Performance Computing', 'Real-time Processing', 'Optical Security'],
-    integrations: ['Computing platforms', 'Telecommunications systems', 'Research tools', 'Government platforms', 'Academic systems', 'Tech platforms'],
-    useCases: ['High-performance computing', 'Telecommunications', 'Research computing', 'Government computing', 'Academic research', 'Tech development'],
+    technology['Photonic Computing', 'Optical Processing', 'Advanced Networking', 'High Performance Computing', 'Real-time Processing', 'Optical Security'],
+    integrations['Computing platforms', 'Telecommunications systems', 'Research tools', 'Government platforms', 'Academic systems', 'Tech platforms'],
+    useCases['High-performance computing', 'Telecommunications', 'Research computing', 'Government computing', 'Academic research', 'Tech development'],
     roi: 'Telecommunications companies report 400% ROI through improved performance and speed.',
-    competitors: ['Intel', 'AMD', 'NVIDIA', 'IBM', 'Hewlett Packard Enterprise'],
+    competitors['Intel', 'AMD', 'NVIDIA', 'IBM', 'Hewlett Packard Enterprise'],
     marketSize: '$12B market',
     growthRate: '220% annual growth',
     variant: 'it-futuristic',
@@ -200,7 +203,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     price: '$11,999',
     period: '/month',
     description: 'Revolutionary DNA computing platform that uses molecular biology for solving complex problems. Perfect for research institutions, pharmaceutical companies, and organizations exploring molecular computing.',
-    features: [
+    features[
       'Molecular DNA computing',
       'Advanced biological algorithms',
       'Real-time molecular processing',
@@ -223,11 +226,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     setupTime: '8 weeks',
     category: 'DNA Computing & Molecular Biology',
     realService: true,
-    technology: ['DNA Computing', 'Molecular Biology', 'Biological Algorithms', 'Advanced Research', 'Molecular Processing', 'Biological Security'],
-    integrations: ['Research platforms', 'Pharmaceutical systems', 'Biotech platforms', 'Government databases', 'Academic systems', 'Medical platforms'],
-    useCases: ['Complex problem solving', 'Drug discovery', 'Biological research', 'Government research', 'Academic research', 'Medical research'],
+    technology['DNA Computing', 'Molecular Biology', 'Biological Algorithms', 'Advanced Research', 'Molecular Processing', 'Biological Security'],
+    integrations['Research platforms', 'Pharmaceutical systems', 'Biotech platforms', 'Government databases', 'Academic systems', 'Medical platforms'],
+    useCases['Complex problem solving', 'Drug discovery', 'Biological research', 'Government research', 'Academic research', 'Medical research'],
     roi: 'Pharmaceutical companies report 800% ROI through breakthrough discoveries and drug development.',
-    competitors: ['No direct competitors', 'Research institutions developing similar concepts'],
+    competitors['No direct competitors', 'Research institutions developing similar concepts'],
     marketSize: '$35B emerging market',
     growthRate: '400% annual growth',
     variant: 'healthcare-futuristic',
@@ -251,7 +254,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     price: '$5,999',
     period: '/month',
     description: 'Advanced holographic computing infrastructure that provides immersive 3D computing experiences. Perfect for gaming companies, entertainment companies, and organizations requiring immersive technology.',
-    features: [
+    features[
       '3D holographic processing',
       'Immersive computing experiences',
       'Real-time holographic rendering',
@@ -274,11 +277,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     setupTime: '3 weeks',
     category: 'Holographic Computing & Immersive Technology',
     realService: true,
-    technology: ['Holographic Computing', '3D Processing', 'Immersive Technology', 'Advanced Visualization', 'Real-time Rendering', '3D Security'],
-    integrations: ['Gaming platforms', 'Entertainment systems', 'Tech platforms', 'Educational systems', 'Government platforms', 'Research platforms'],
-    useCases: ['Gaming experiences', 'Entertainment content', 'Educational content', 'Government visualization', 'Research visualization', 'Tech development'],
+    technology['Holographic Computing', '3D Processing', 'Immersive Technology', 'Advanced Visualization', 'Real-time Rendering', '3D Security'],
+    integrations['Gaming platforms', 'Entertainment systems', 'Tech platforms', 'Educational systems', 'Government platforms', 'Research platforms'],
+    useCases['Gaming experiences', 'Entertainment content', 'Educational content', 'Government visualization', 'Research visualization', 'Tech development'],
     roi: 'Gaming companies report 350% ROI through improved user experiences and engagement.',
-    competitors: ['Microsoft HoloLens', 'Magic Leap', 'Meta', 'Google Glass', 'Apple Vision Pro'],
+    competitors['Microsoft HoloLens', 'Magic Leap', 'Meta', 'Google Glass', 'Apple Vision Pro'],
     marketSize: '$18B market',
     growthRate: '280% annual growth',
     variant: 'holographic-futuristic',
@@ -302,7 +305,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary quantum internet infrastructure that provides unbreakable communication and ultra-fast networking. Perfect for government agencies, financial institutions, and organizations requiring maximum security.',
-    features: [
+    features[
       'Quantum communication protocols',
       'Ultra-secure networking',
       'Real-time quantum encryption',
@@ -325,11 +328,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     setupTime: '6 weeks',
     category: 'Quantum Internet & Communication',
     realService: true,
-    technology: ['Quantum Internet', 'Quantum Communication', 'Advanced Encryption', 'Quantum Networking', 'Real-time Processing', 'Quantum Security'],
-    integrations: ['Government systems', 'Financial platforms', 'Healthcare systems', 'Defense platforms', 'Tech platforms', 'Research systems'],
-    useCases: ['Government communication', 'Financial transactions', 'Healthcare data', 'Defense communications', 'Tech development', 'Research communication'],
+    technology['Quantum Internet', 'Quantum Communication', 'Advanced Encryption', 'Quantum Networking', 'Real-time Processing', 'Quantum Security'],
+    integrations['Government systems', 'Financial platforms', 'Healthcare systems', 'Defense platforms', 'Tech platforms', 'Research systems'],
+    useCases['Government communication', 'Financial transactions', 'Healthcare data', 'Defense communications', 'Tech development', 'Research communication'],
     roi: 'Government agencies report 600% ROI through enhanced security and communication.',
-    competitors: ['Traditional ISPs', 'Emerging quantum networks', 'Government quantum initiatives'],
+    competitors['Traditional ISPs', 'Emerging quantum networks', 'Government quantum initiatives'],
     marketSize: '$28B market',
     growthRate: '320% annual growth',
     variant: 'quantum-futuristic',
@@ -353,7 +356,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     price: '$4,999',
     period: '/month',
     description: 'Advanced edge quantum computing platform that brings quantum processing capabilities to edge devices. Perfect for IoT companies, mobile companies, and organizations requiring real-time quantum processing.',
-    features: [
+    features[
       'Edge quantum processing',
       'Real-time quantum computing',
       'Advanced edge security',
@@ -376,11 +379,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     setupTime: '4 weeks',
     category: 'Edge Computing & Quantum Technology',
     realService: true,
-    technology: ['Edge Computing', 'Quantum Computing', 'Real-time Processing', 'IoT Technology', 'Mobile Technology', 'Edge Security'],
-    integrations: ['IoT platforms', 'Mobile systems', 'Tech platforms', 'Automotive systems', 'Healthcare platforms', 'Government systems'],
-    useCases: ['IoT processing', 'Mobile computing', 'Tech development', 'Automotive computing', 'Healthcare monitoring', 'Government edge computing'],
+    technology['Edge Computing', 'Quantum Computing', 'Real-time Processing', 'IoT Technology', 'Mobile Technology', 'Edge Security'],
+    integrations['IoT platforms', 'Mobile systems', 'Tech platforms', 'Automotive systems', 'Healthcare platforms', 'Government systems'],
+    useCases['IoT processing', 'Mobile computing', 'Tech development', 'Automotive computing', 'Healthcare monitoring', 'Government edge computing'],
     roi: 'IoT companies report 450% ROI through improved processing and real-time capabilities.',
-    competitors: ['No direct competitors', 'Traditional edge computing providers'],
+    competitors['No direct competitors', 'Traditional edge computing providers'],
     marketSize: '$22B emerging market',
     growthRate: '350% annual growth',
     variant: 'edge-futuristic',
@@ -404,7 +407,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary quantum robotics infrastructure that provides advanced automation capabilities. Perfect for manufacturing companies, logistics companies, and organizations requiring intelligent automation.',
-    features: [
+    features[
       'Quantum-powered robotics',
       'Advanced automation algorithms',
       'Real-time robotic control',
@@ -427,11 +430,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     setupTime: '5 weeks',
     category: 'Quantum Robotics & Automation',
     realService: true,
-    technology: ['Quantum Computing', 'Robotics', 'Advanced Automation', 'Machine Learning', 'Real-time Control', 'Robotic Security'],
-    integrations: ['Manufacturing systems', 'Logistics platforms', 'Healthcare systems', 'Government platforms', 'Research platforms', 'Tech platforms'],
-    useCases: ['Manufacturing automation', 'Logistics automation', 'Healthcare robotics', 'Government automation', 'Research robotics', 'Tech development'],
+    technology['Quantum Computing', 'Robotics', 'Advanced Automation', 'Machine Learning', 'Real-time Control', 'Robotic Security'],
+    integrations['Manufacturing systems', 'Logistics platforms', 'Healthcare systems', 'Government platforms', 'Research platforms', 'Tech platforms'],
+    useCases['Manufacturing automation', 'Logistics automation', 'Healthcare robotics', 'Government automation', 'Research robotics', 'Tech development'],
     roi: 'Manufacturing companies report 500% ROI through improved automation and efficiency.',
-    competitors: ['Traditional robotics companies', 'Emerging AI robotics', 'Industrial automation companies'],
+    competitors['Traditional robotics companies', 'Emerging AI robotics', 'Industrial automation companies'],
     marketSize: '$32B market',
     growthRate: '280% annual growth',
     variant: 'autonomous-futuristic',
@@ -447,5 +450,5 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     customers: 180,
     rating: 4.8,
     reviews: 90
-  }
-];
+
+];}}

@@ -6,9 +6,8 @@ interface User {
   name: string;
   email: string;
   createdAt?: string;
-}
 
-const ApiDemo: React.FC = () => {
+const ApiDemo: React.FC = () => {;
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -21,38 +20,37 @@ const ApiDemo: React.FC = () => {
     fetchUsers();
   }, []);
 
-  const checkHealth = async () => {
-    try {
+  const checkHealth = async () => {;
+    try {;
       const response = await api.health();
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
     } catch (err) {
       setHealthStatus('❌ API Unhealthy');
-    }
+
   };
 
-  const fetchUsers = async () => {
+  const fetchUsers = async () => {;
     setLoading(true);
     setError(null);
-    
+
     try {
       const response = await api.getUsers();
       if (response.success && response.data) {
         setUsers(response.data);
-      }
+
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch users');
     } finally {
       setLoading(false);
-    }
+
   };
 
-  const handleCreateUser = async (e: React.FormEvent) => {
+  const handleCreateUser = async (e: React.FormEvent) => {;
     e.preventDefault();
-    
+
     if (!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required');
       return;
-    }
 
     setLoading(true);
     setError(null);
@@ -62,21 +60,21 @@ const ApiDemo: React.FC = () => {
       if (response.success && response.data) {
         setUsers(prev => [...prev, response.data!]);
         setNewUser({ name: '', email: '' });
-      }
+
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to create user');
     } finally {
       setLoading(false);
-    }
+
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
+    <div className = "max-w-4xl mx-auto p-6 space-y-6">
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           🚀 Vite + Node.js Hybrid App Demo
         </h2>
-        
+
         {/* API Health Status */}
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-700 mb-2">API Status</h3>
@@ -92,7 +90,16 @@ const ApiDemo: React.FC = () => {
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
-                onChange={(e) => setNewUser(prev => ({ ...prev, name: e.target.value }))}
+                onChange = {
+  (e) => setNewUser(prev => ({ ...prev,
+  name: e.target.value 
+
+
+
+
+
+
+}))}
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -100,7 +107,16 @@ const ApiDemo: React.FC = () => {
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-                onChange={(e) => setNewUser(prev => ({ ...prev, email: e.target.value }))}
+                onChange = {
+  (e) => setNewUser(prev => ({ ...prev,
+  email: e.target.value 
+
+
+
+
+
+
+}))}
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -109,7 +125,7 @@ const ApiDemo: React.FC = () => {
               type="submit"
               disabled={loading}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
@@ -130,11 +146,11 @@ const ApiDemo: React.FC = () => {
               onClick={fetchUsers}
               disabled={loading}
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
-            >
+
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>
-          
+
           {loading ? (
             <div className="text-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
@@ -169,14 +185,14 @@ const ApiDemo: React.FC = () => {
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>
           <div className="text-sm text-green-700 space-y-1">
             <p>• <strong>Frontend:</strong> Vite + React (Port 3000) - Fast HMR & optimized builds</p>
-            <p>• <strong>Backend:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>
-            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>
-            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>
-          </div>
-        </div>
-      </div>
-    </div>
+            <p>• <strong>Backend:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>;
+            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
+            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 };
 
-export default ApiDemo;
+export default ApiDemo;}}}}}}}

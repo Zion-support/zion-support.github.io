@@ -8,7 +8,7 @@ const AIAutonomousResearch = () => {
         <meta name="keywords" content="AI research, autonomous research, scientific discovery, research automation, AI platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-research"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -28,31 +28,31 @@ const AIAutonomousResearch = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Multi-Domain Research</h3>
               <p className="text-gray-300">Automated research across scientific, medical, technological, and business domains</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-semibold text-white mb-3">Intelligent Analysis</h3>
               <p className="text-gray-300">Advanced AI algorithms that identify patterns, correlations, and insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Accelerated Discovery</h3>
               <p className="text-gray-300">Reduce research time from months to days with autonomous workflows</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-white mb-3">Data Synthesis</h3>
               <p className="text-gray-300">Automated compilation and analysis of research papers, datasets, and findings</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Literature Review</h3>
               <p className="text-gray-300">Comprehensive analysis of existing research and identification of gaps</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-red-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Trend Prediction</h3>
@@ -73,7 +73,7 @@ const AIAutonomousResearch = () => {
                   <li>• Space exploration and astronomy</li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-8 border border-white/10">
                 <h3 className="text-2xl font-semibold text-white mb-4">Business Intelligence</h3>
                 <ul className="text-gray-300 space-y-2">
@@ -103,6 +103,5 @@ const AIAutonomousResearch = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousResearch;

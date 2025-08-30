@@ -11,9 +11,13 @@ export interface ProfessionalService {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
-}
+
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const professionalServices: ProfessionalService[] = [
   {
     id: "it-consulting",
@@ -21,7 +25,7 @@ export const professionalServices: ProfessionalService[] = [
     tagline: "Expert IT consulting for business growth",
     price: "$120/hour",
     description: "Professional IT consulting services to help businesses optimize their technology investments.",
-    features: [
+    features[
       "Technology assessment",
       "Strategic planning",
       "Implementation guidance",
@@ -35,6 +39,6 @@ export const professionalServices: ProfessionalService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

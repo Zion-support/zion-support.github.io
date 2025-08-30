@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Star,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Zap, 
@@ -10,6 +23,7 @@ import {
   Phone, 
   Mail, 
   MapPin, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ExternalLink,
   TrendingUp,
   Users,
@@ -18,46 +32,77 @@ import {
   Clock,
   DollarSign,
   Search
-} from 'lucide-react';
+<<<<<<< HEAD
 import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
 import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
 import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
+=======
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { innovativeAIServices2030  } from "../data/innovativeAIServices2030";
+import { innovativeCybersecurityServices2030  } from "../data/innovativeCybersecurityServices2030";
+import { innovativeCloudDevOpsServices2030  } from "../data/innovativeCloudDevOpsServices2030";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const InnovativeServicesShowcase2030: React.FC = () => {
+const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
+=======;
+} from 'lucide-react';
+import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
+import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
+import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
+
+const InnovativeServicesShowcase2030: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = [
-    ...innovativeAIServices2030,
-    ...innovativeCybersecurityServices2030,
-    ...innovativeCloudDevOpsServices2030
+  const allServices = [;
+    ...innovativeAIServices2030,;
+    ...innovativeCybersecurityServices2030,;
+    ...innovativeCloudDevOpsServices2030;
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category.toLowerCase().includes(activeCategory.toLowerCase());
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },
-    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length }
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
+    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Revolutionary Services 2030
             </h1>
@@ -128,7 +173,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                       ? 'bg-purple-600 border-purple-500 text-white'
                       : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
                   }`}
-                >
+
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
@@ -144,15 +189,42 @@ const InnovativeServicesShowcase2030: React.FC = () => {
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all group"
-              >
+
                 {/* Service Header */}
                 <div className="mb-4">
                   <div className="flex items-start justify-between mb-3">
@@ -224,7 +296,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                       <span
                         key={idx}
                         className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20"
-                      >
+
                         {tag}
                       </span>
                     ))}
@@ -256,31 +328,41 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                  >
+
                     <ExternalLink className="w-4 h-4" />
                     Learn More
                   </a>
                   <a
                     href={`mailto:${service.contactEmail}?subject=Inquiry about ${service.title}`}
                     className="flex-1 bg-white/10 hover:bg-white/20 text-white text-center py-2 px-4 rounded-lg transition-colors border border-white/20"
-                  >
+
                     Contact
                   </a>
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
-              <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
+          </div>;
+;
+          {filteredServices.length === 0 && (;
+            <div className="text-center py-12">;
+              <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
                   setSearchTerm('');
+<<<<<<< HEAD
+                  setActiveCategory('all')}}
+                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors";
+=======;
                   setActiveCategory('all');
                 }}
+<<<<<<< HEAD
                 className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
+
+=======
+                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear Filters
               </button>
             </div>
@@ -292,12 +374,30 @@ const InnovativeServicesShowcase2030: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
@@ -306,7 +406,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Award,
@@ -327,16 +427,48 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                 icon: Users,
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
-              }
+<<<<<<< HEAD
+
             ].map((feature, index) => (
+=======
+              }
+            ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-purple-600/20 border border-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -352,11 +484,29 @@ const InnovativeServicesShowcase2030: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -367,14 +517,14 @@ const InnovativeServicesShowcase2030: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2"
-              >
+
                 <Mail className="w-5 h-5" />
                 Get Started Today
               </a>
               <a
                 href="tel:+13024640950"
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors border border-white/20 flex items-center justify-center gap-2"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -426,12 +576,21 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                 <div className="text-gray-300">Cloud & DevOps</div>
                 <div className="text-gray-300">IT Infrastructure</div>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default InnovativeServicesShowcase2030;
+export default InnovativeServicesShowcase2030;}}

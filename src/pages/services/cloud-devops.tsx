@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server import { Link } from 'react-router-dom';
+=======
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function CloudDevOps() {
+export default function CloudDevOps(...args: []):  {
   return (
     <>
       <Helmet>
         <title>Cloud DevOps - Zion Tech Group</title>
-        <meta name="description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />
+        <meta name = "description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />
         <meta name="keywords" content="cloud devops, CI/CD, cloud infrastructure, automation, containerization, kubernetes, aws, azure, google cloud" />
       </Helmet>
 
@@ -22,22 +28,22 @@ export default function CloudDevOps() {
                 <Cloud className="w-4 h-4 mr-2" />
                 Cloud-Native DevOps
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Cloud
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> DevOps</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, 
+                Streamline your development and operations with cloud-native DevOps solutions. Automate deployments,
                 improve collaboration, and accelerate delivery with modern cloud infrastructure.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,12 +64,12 @@ export default function CloudDevOps() {
                 Comprehensive Cloud DevOps Solutions
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our cloud DevOps platform provides end-to-end solutions for modern software development 
+                Our cloud DevOps platform provides end-to-end solutions for modern software development
                 and deployment workflows.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: GitBranch,
@@ -94,8 +100,13 @@ export default function CloudDevOps() {
                   icon: TrendingUp,
                   title: "Monitoring & Analytics",
                   description: "Real-time monitoring and analytics for application performance."
-                }
+<<<<<<< HEAD
+
               ].map((feature, index) => (
+=======
+                }
+              ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +131,7 @@ export default function CloudDevOps() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Continuous Integration",
@@ -157,8 +168,13 @@ export default function CloudDevOps() {
                   description: "Built-in security scanning and compliance automation.",
                   icon: Shield,
                   benefits: ["Vulnerability scanning", "Compliance checks", "Security policies"]
-                }
+<<<<<<< HEAD
+
               ].map((area, index) => (
+=======
+                }
+              ].map((area, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -191,7 +207,7 @@ export default function CloudDevOps() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "CI/CD Tools",
@@ -228,8 +244,13 @@ export default function CloudDevOps() {
                   description: "Security scanning, compliance, and vulnerability management.",
                   icon: Shield,
                   features: ["Vulnerability scanning", "Compliance automation", "Security policies"]
-                }
+<<<<<<< HEAD
+
               ].map((tech, index) => (
+=======
+                }
+              ].map((tech, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
@@ -289,7 +310,7 @@ export default function CloudDevOps() {
                     { metric: "60-90%", label: "Lead Time", description: "Reduction" },
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
                     { metric: "99.9%+", label: "Uptime", description: "Availability" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -314,7 +335,7 @@ export default function CloudDevOps() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -335,8 +356,13 @@ export default function CloudDevOps() {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve processes."
-                }
+<<<<<<< HEAD
+
               ].map((step, index) => (
+=======
+                }
+              ].map((step, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -362,14 +388,15 @@ export default function CloudDevOps() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-              >
+<<<<<<< HEAD
+
                 Explore All Services
               </Link>
             </div>
@@ -377,5 +404,15 @@ export default function CloudDevOps() {
         </section>
       </div>
     </>
+=======
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
+}}}}}}

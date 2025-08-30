@@ -1,8 +1,22 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
-import { 
-  Brain, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Zap,
+  Database,
+  Smartphone,
+  Code,
+  Lock,
+=======
+import type { NextPage } from 'next.ts';
+import Head from 'next/head.ts';
+import { useState  } from 'react.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Globe, 
@@ -11,6 +25,7 @@ import {
   Smartphone, 
   Code, 
   Lock, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   TrendingUp,
   Rocket,
   Cpu,
@@ -21,18 +36,22 @@ import {
   Target,
   Users,
   CheckCircle
-} from 'lucide-react';
-
+<<<<<<< HEAD
 const Products: NextPage = () => {
+=======
+ } from 'lucide-react';
+
+const Products: NextPage = () => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const productCategories = [
-    { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },
-    { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },
-    { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-600 to-teal-600' },
-    { id: 'security', name: 'Security Tools', icon: Shield, color: 'from-red-600 to-orange-600' },
-    { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-600 to-green-600' },
-    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-600 to-orange-600' }
+  const productCategories = [;
+    { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },;
+    { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },;
+    { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-600 to-teal-600' },;
+    { id: 'security', name: 'Security Tools', icon: Shield, color: 'from-red-600 to-orange-600' },;
+    { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-600 to-green-600' },;
+    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-600 to-orange-600' };
   ];
 
   const products = [
@@ -43,7 +62,7 @@ const Products: NextPage = () => {
       tagline: 'AI-Powered Content Creation Platform',
       description: 'Revolutionary AI platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns. Features advanced language models, content templates, and automated publishing workflows.',
       price: '$299/month',
-      features: [
+      features[
         'AI Content Generation',
         'SEO Optimization',
         'Multi-Platform Publishing',
@@ -53,7 +72,7 @@ const Products: NextPage = () => {
         'Social Media Integration',
         'Automated Workflows'
       ],
-      benefits: [
+      benefits[
         '10x faster content creation',
         'Improved SEO rankings',
         'Consistent brand messaging',
@@ -71,7 +90,7 @@ const Products: NextPage = () => {
       tagline: 'Intelligent Lead Generation & CRM',
       description: 'Advanced lead generation platform with AI-powered scoring, automated follow-ups, and comprehensive CRM capabilities. Integrates with major marketing tools and provides actionable insights.',
       price: '$199/month',
-      features: [
+      features[
         'AI Lead Scoring',
         'Automated Follow-ups',
         'CRM Integration',
@@ -81,7 +100,7 @@ const Products: NextPage = () => {
         'A/B Testing',
         'ROI Tracking'
       ],
-      benefits: [
+      benefits[
         '3x higher conversion rates',
         'Automated lead nurturing',
         'Comprehensive reporting',
@@ -99,7 +118,7 @@ const Products: NextPage = () => {
       tagline: 'AI-Powered Code Generation & Review',
       description: 'Intelligent coding assistant that generates, reviews, and optimizes code across multiple programming languages. Features include automated testing, documentation generation, and performance optimization.',
       price: '$399/month',
-      features: [
+      features[
         'AI Code Generation',
         'Code Review & Optimization',
         'Automated Testing',
@@ -109,7 +128,7 @@ const Products: NextPage = () => {
         'Multi-Language Support',
         'Git Integration'
       ],
-      benefits: [
+      benefits[
         '50% faster development',
         'Reduced bug rates',
         'Improved code quality',
@@ -127,7 +146,7 @@ const Products: NextPage = () => {
       tagline: 'Intelligent Task Management & Automation',
       description: 'AI-driven project management platform that automates task assignment, tracks progress, and optimizes team workflows. Features intelligent scheduling, resource allocation, and predictive analytics.',
       price: '$149/month',
-      features: [
+      features[
         'AI Task Assignment',
         'Workflow Automation',
         'Resource Optimization',
@@ -137,7 +156,7 @@ const Products: NextPage = () => {
         'Performance Analytics',
         'Integration Hub'
       ],
-      benefits: [
+      benefits[
         '30% productivity increase',
         'Automated task management',
         'Better resource utilization',
@@ -155,7 +174,7 @@ const Products: NextPage = () => {
       tagline: 'Advanced Cybersecurity & Threat Detection',
       description: 'Comprehensive cybersecurity platform with real-time threat detection, automated incident response, and compliance management. Protects against advanced persistent threats and provides detailed security analytics.',
       price: '$499/month',
-      features: [
+      features[
         'Real-time Threat Detection',
         'Automated Incident Response',
         'Compliance Management',
@@ -165,7 +184,7 @@ const Products: NextPage = () => {
         'Penetration Testing',
         'Security Training'
       ],
-      benefits: [
+      benefits[
         '99.9% threat detection rate',
         'Automated security responses',
         'Regulatory compliance',
@@ -183,7 +202,7 @@ const Products: NextPage = () => {
       tagline: 'Blockchain Development & Deployment Platform',
       description: 'Comprehensive blockchain platform for building, testing, and deploying smart contracts and decentralized applications. Features include development tools, testing frameworks, and deployment automation.',
       price: '$799/month',
-      features: [
+      features[
         'Smart Contract Development',
         'DApp Creation Tools',
         'Testing Frameworks',
@@ -193,25 +212,44 @@ const Products: NextPage = () => {
         'Security Auditing',
         'Developer SDKs'
       ],
-      benefits: [
+      benefits[
         'Faster blockchain development',
         'Reduced deployment time',
         'Enhanced security',
+<<<<<<< HEAD
         'Multi-chain compatibility'
       ],
       icon: Network,
       color: 'from-violet-600 to-purple-600',
       demoUrl: '/demo/blockchainforge',
       pricingUrl: '/pricing/blockchainforge'
-    }
+
   ];
 
-  const filteredProducts = activeCategory === 'all' 
-    ? products 
+  const filteredProducts = activeCategory === 'all'
+    ? products
+=======
+        'Multi-chain compatibility';
+      ],;
+      icon: Network,;
+      color: 'from-violet-600 to-purple-600',;
+      demoUrl: '/demo/blockchainforge',;
+      pricingUrl: '/pricing/blockchainforge';
+    };
+  ];
+
+<<<<<<< HEAD
+  const filteredProducts = activeCategory === 'all' ;
+    ? products: products.filter(product  => product.category === activeCategory);
+=======
+  const filteredProducts = activeCategory === 'all' ;
+    ? products ;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     : products.filter(product => product.category === activeCategory);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Helmet>
         <title>Products - Zion Tech Group | AI, SaaS, Security Solutions</title>
         <meta name="description" content="Explore our innovative product portfolio including AI-powered content creation, lead generation, cybersecurity, blockchain development, and more. Transform your business with cutting-edge technology." />
@@ -226,57 +264,71 @@ const Products: NextPage = () => {
             Our Products
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
-            Revolutionary technology products designed to transform how you work, create, and grow. 
+            Revolutionary technology products designed to transform how you work, create, and grow.
             From AI-powered solutions to enterprise-grade security, we deliver innovation that drives results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
+
               📞 Call +1 (302) 464-0950
             </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
+            <a
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
+
               ✉️ Request Demo
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {productCategories.map((category) => {
+        </div>;
+      </div>;
+;
+      {/* Category Filter */};
+      <div className="container mx-auto px-4 py-16">;
+        <div className="flex flex-wrap justify-center gap-4 mb-16">;
+          {productCategories.map((category) => {;
             const IconComponent = category.icon;
             return (
               <button
-                key={category.id}
+                key = {category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
                     : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
+<<<<<<< HEAD
                 }`}
-              >
+
                 <IconComponent className="w-5 h-5" />
                 <span>{category.name}</span>
               </button>
+            )})}
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid lg: grid-cols-2 gap-8">
+          {filteredProducts.map((product)  => {;
+=======;
+                }`};
+              >;
+                <IconComponent className="w-5 h-5" />;
+                <span>{category.name}</span>;
+              </button>;
             );
           })}
         </div>
 
         {/* Products Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {filteredProducts.map((product) => {
+        <div className = "grid lg:grid-cols-2 gap-8">;
+          {filteredProducts.map((product) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const IconComponent = product.icon;
             return (
               <div
-                key={product.id}
+                key = {product.id}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
-              >
+
                 <div className="flex items-start justify-between mb-6">
                   <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${product.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -286,7 +338,7 @@ const Products: NextPage = () => {
                     <p className="text-gray-400 text-sm">per month</p>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
                 <p className="text-blue-300 font-medium mb-4">{product.tagline}</p>
                 <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
@@ -325,32 +377,45 @@ const Products: NextPage = () => {
                   <a
                     href={product.demoUrl}
                     className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors"
-                  >
+
                     🚀 Try Demo
                   </a>
                   <a
                     href={product.pricingUrl}
                     className="flex-1 bg-transparent border border-white/30 text-white text-center py-3 px-4 rounded-lg font-medium hover:bg-white/10 transition-colors"
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
                   >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     💰 View Pricing
                   </a>
                 </div>
               </div>
+            )})};
+=======;
+                  >;
+                    💰 View Pricing;
+                  </a>;
+                </div>;
+              </div>;
             );
           })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
 
         {/* Enterprise Solutions */}
-        <div className="mt-20">
+        <div className = "mt-20">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Enterprise Solutions
             </h2>
             <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              Need custom enterprise solutions? We offer tailored development, white-label options, 
+              Need custom enterprise solutions? We offer tailored development, white-label options,
               and dedicated support for large organizations.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -376,16 +441,16 @@ const Products: NextPage = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+
                 📞 Call +1 (302) 464-0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry" 
+              <a
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+
                 ✉️ Enterprise Inquiry
               </a>
             </div>
@@ -483,21 +548,21 @@ const Products: NextPage = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl mb-8 text-gray-300">
-              Start your free trial today or schedule a personalized demo to see how our products 
+              Start your free trial today or schedule a personalized demo to see how our products
               can revolutionize your workflow and drive growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+
                 📞 Call +1 (302) 464-0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
+              <a
+                href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+
                 ✉️ Schedule Demo
               </a>
             </div>
@@ -517,12 +582,21 @@ const Products: NextPage = () => {
                 <h3 className="text-white font-semibold mb-2">⏰ Business Hours</h3>
                 <p className="text-gray-300">Mon-Fri: 9AM-6PM EST<br />Sat: 10AM-2PM EST</p>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default Products;
+export default Products;}}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-import { innovativeITServices2025 } from '../data/innovativeITServices2025';
-import { innovativeAIServices2025 } from '../data/innovativeAIServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
+import { innovativeITServices2025 } from "../data/innovativeITServices2025";
+import { innovativeAIServices2025 } from "../data/innovativeAIServices2025";
 const InnovativeServicesShowcase = () => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [selectedService, setSelectedService] = useState(null);
@@ -19,15 +19,17 @@ const InnovativeServicesShowcase = () => {
             case 'ai':
                 return innovativeAIServices2025;
             default:
+<<<<<<< HEAD
                 return [];
-        }
+
+=======
+                return []}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleServiceClick = (service) => {
-        setSelectedService(service);
-    };
+        setSelectedService(service)};
     const closeModal = () => {
-        setSelectedService(null);
-    };
+        setSelectedService(null)};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -101,7 +103,7 @@ const InnovativeServicesShowcase = () => {
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {service.name}
                 </h3>
-                
+
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {service.description}
                 </p>
@@ -247,7 +249,7 @@ const InnovativeServicesShowcase = () => {
                         <span className="text-white">{selectedService.contactInfo.website}</span>
                       </div>
                     </div>
-                    
+
                     <div className="mt-6">
                       <a href={`mailto:${selectedService.contactInfo.email}`} className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center block">
                         Get Started Today
@@ -279,6 +281,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default InnovativeServicesShowcase;
+}

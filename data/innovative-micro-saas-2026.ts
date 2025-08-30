@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface InnovativeMicroSaas2026 {
   id: string;
   name: string;
@@ -30,20 +30,34 @@ export interface InnovativeMicroSaas2026 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
   {
@@ -53,7 +67,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$199',
     period: '/month',
     description: 'Intelligent feedback analysis platform that uses AI to categorize, analyze, and extract actionable insights from customer feedback across multiple channels.',
-    features: [
+    features[
       'Multi-channel feedback collection',
       'AI-powered sentiment analysis',
       'Automatic feedback categorization',
@@ -76,11 +90,11 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     setupTime: '2-3 days',
     category: 'Customer Experience & AI',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'NLP libraries'],
-    integrations: ['Shopify', 'WooCommerce', 'Salesforce', 'HubSpot', 'Zendesk', 'Custom APIs'],
-    useCases: ['Customer satisfaction tracking', 'Product improvement insights', 'Service quality monitoring', 'Market research'],
+    technology['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'NLP libraries'],
+    integrations['Shopify', 'WooCommerce', 'Salesforce', 'HubSpot', 'Zendesk', 'Custom APIs'],
+    useCases['Customer satisfaction tracking', 'Product improvement insights', 'Service quality monitoring', 'Market research'],
     roi: 'Average 35% improvement in customer satisfaction scores and 25% reduction in customer churn.',
-    competitors: ['Qualtrics', 'SurveyMonkey', 'Typeform', 'Hotjar', 'UserVoice'],
+    competitors['Qualtrics', 'SurveyMonkey', 'Typeform', 'Hotjar', 'UserVoice'],
     marketSize: '$3.8B customer feedback market',
     growthRate: '120% annual growth',
     variant: 'ai-futuristic',
@@ -99,7 +113,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$299',
     period: '/month',
     description: 'Next-generation VR meeting platform that creates immersive virtual environments for remote collaboration, training, and presentations.',
-    features: [
+    features[
       'Customizable virtual meeting spaces',
       '3D avatar customization',
       'Interactive whiteboards and tools',
@@ -122,11 +136,11 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     setupTime: '1 day',
     category: 'Virtual Reality & Collaboration',
     realService: true,
-    technology: ['Unity', 'WebXR', 'Three.js', 'React', 'Node.js', 'WebRTC', 'WebGL'],
-    integrations: ['Zoom', 'Teams', 'Google Calendar', 'Outlook', 'Slack', 'Custom APIs'],
-    useCases: ['Remote team collaboration', 'Virtual training sessions', '3D presentations', 'Design reviews'],
+    technology['Unity', 'WebXR', 'Three.js', 'React', 'Node.js', 'WebRTC', 'WebGL'],
+    integrations['Zoom', 'Teams', 'Google Calendar', 'Outlook', 'Slack', 'Custom APIs'],
+    useCases['Remote team collaboration', 'Virtual training sessions', '3D presentations', 'Design reviews'],
     roi: 'Average 40% improvement in meeting engagement and 30% reduction in travel costs.',
-    competitors: ['Spatial', 'VRChat', 'AltspaceVR', 'Rec Room', 'Horizon Workrooms'],
+    competitors['Spatial', 'VRChat', 'AltspaceVR', 'Rec Room', 'Horizon Workrooms'],
     marketSize: '$2.1B VR collaboration market',
     growthRate: '190% annual growth',
     variant: 'ar-futuristic',
@@ -145,7 +159,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$399',
     period: '/month',
     description: 'Smart inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs while maintaining service levels.',
-    features: [
+    features[
       'AI-powered demand forecasting',
       'Dynamic reorder point calculation',
       'Seasonal trend analysis',
@@ -168,11 +182,11 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     setupTime: '1-2 weeks',
     category: 'Inventory Management & AI',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Time series analysis'],
-    integrations: ['Shopify', 'WooCommerce', 'QuickBooks', 'SAP', 'Oracle', 'Custom ERP systems'],
-    useCases: ['Demand forecasting', 'Stock optimization', 'Purchase planning', 'Cost reduction'],
+    technology['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Time series analysis'],
+    integrations['Shopify', 'WooCommerce', 'QuickBooks', 'SAP', 'Oracle', 'Custom ERP systems'],
+    useCases['Demand forecasting', 'Stock optimization', 'Purchase planning', 'Cost reduction'],
     roi: 'Average 25% reduction in inventory costs and 30% improvement in stock turnover.',
-    competitors: ['TradeGecko', 'Zoho Inventory', 'Fishbowl', 'Sage', 'NetSuite'],
+    competitors['TradeGecko', 'Zoho Inventory', 'Fishbowl', 'Sage', 'NetSuite'],
     marketSize: '$4.2B inventory management market',
     growthRate: '110% annual growth',
     variant: 'ai-futuristic',
@@ -191,7 +205,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$249',
     period: '/month',
     description: 'Blockchain-based supply chain tracking platform that provides end-to-end visibility, transparency, and security for global supply chains.',
-    features: [
+    features[
       'End-to-end supply chain tracking',
       'Blockchain-based data immutability',
       'Real-time shipment monitoring',
@@ -214,11 +228,11 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     setupTime: '2-3 weeks',
     category: 'Blockchain & Supply Chain',
     realService: true,
-    technology: ['Ethereum', 'Hyperledger Fabric', 'Node.js', 'React', 'PostgreSQL', 'IPFS', 'Smart contracts'],
-    integrations: ['SAP', 'Oracle', 'Salesforce', 'Custom ERP systems', 'Logistics platforms'],
-    useCases: ['Product traceability', 'Compliance tracking', 'Quality assurance', 'Supply chain optimization'],
+    technology['Ethereum', 'Hyperledger Fabric', 'Node.js', 'React', 'PostgreSQL', 'IPFS', 'Smart contracts'],
+    integrations['SAP', 'Oracle', 'Salesforce', 'Custom ERP systems', 'Logistics platforms'],
+    useCases['Product traceability', 'Compliance tracking', 'Quality assurance', 'Supply chain optimization'],
     roi: 'Average 35% improvement in supply chain transparency and 20% reduction in compliance costs.',
-    competitors: ['IBM Food Trust', 'VeChain', 'OriginTrail', 'Ambrosus', 'WaltonChain'],
+    competitors['IBM Food Trust', 'VeChain', 'OriginTrail', 'Ambrosus', 'WaltonChain'],
     marketSize: '$3.1B blockchain supply chain market',
     growthRate: '180% annual growth',
     variant: 'blockchain-futuristic',
@@ -237,7 +251,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$149',
     period: '/month',
     description: 'Advanced social media management platform that uses AI to optimize posting times, content performance, and engagement across multiple social networks.',
-    features: [
+    features[
       'AI-powered posting time optimization',
       'Multi-platform content scheduling',
       'Content performance prediction',
@@ -260,11 +274,11 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     setupTime: '1 day',
     category: 'Social Media & AI',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Social media APIs'],
-    integrations: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'Pinterest', 'YouTube'],
-    useCases: ['Content scheduling', 'Performance optimization', 'Engagement analysis', 'Competitor monitoring'],
+    technology['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Social media APIs'],
+    integrations['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'Pinterest', 'YouTube'],
+    useCases['Content scheduling', 'Performance optimization', 'Engagement analysis', 'Competitor monitoring'],
     roi: 'Average 45% improvement in engagement rates and 30% increase in follower growth.',
-    competitors: ['Buffer', 'Hootsuite', 'Sprout Social', 'Later', 'Planoly'],
+    competitors['Buffer', 'Hootsuite', 'Sprout Social', 'Later', 'Planoly'],
     marketSize: '$2.8B social media management market',
     growthRate: '130% annual growth',
     variant: 'ai-futuristic',
@@ -275,5 +289,5 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     customers: 156,
     rating: 4.8,
     reviews: 445
-  }
-];
+
+];}}

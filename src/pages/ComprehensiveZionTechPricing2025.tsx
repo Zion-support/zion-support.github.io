@@ -1,32 +1,42 @@
 import React, { useState } from 'react';
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from '../data/enhancedZionTechServices2025';
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from "../data/enhancedZionTechServices2025";
 
-const ComprehensiveZionTechPricing2025: React.FC = () => {
+const ComprehensiveZionTechPricing2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
-  
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => 
+<<<<<<< HEAD
+
+  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service =>
     selectedCategory === 'All' || service.category === selectedCategory
+=======
+  
+  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
+    selectedCategory === 'All' || service.category === selectedCategory;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
-  const getPrice = (service: any) => {
-    if (billingCycle === 'yearly' && service.pricing?.yearly) {
+<<<<<<< HEAD
+  const getPrice = (service: any) => {;
+    if (billingCycle === 'yearly' && service.pricing?.yearly) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       return service.pricing.yearly;
-    }
+
     return service.price;
   };
 
-  const getSavings = (service: any) => {
-    if (billingCycle === 'yearly' && service.pricing?.yearly) {
+<<<<<<< HEAD
+  const getSavings = (service: any) => {;
+    if (billingCycle === 'yearly' && service.pricing?.yearly) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       return (service.price * 12 - service.pricing.yearly).toLocaleString();
-    }
+
     return 0;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -39,10 +49,10 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transparent pricing for cutting-edge micro SAAS, IT services, and AI solutions. 
+              Transparent pricing for cutting-edge micro SAAS, IT services, and AI solutions.
               Choose the plan that fits your business needs and budget.
             </p>
-            
+
             {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
@@ -53,7 +63,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
                 }`}
-              >
+
                 <span
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-9' : 'translate-x-1'
@@ -99,7 +109,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
-            >
+
               {category}
             </button>
           ))}
@@ -142,7 +152,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                   <span className="text-lg font-bold text-green-400">{service.aiScore}/100</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-3">
-                  <div 
+                  <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-300"
                     style={{ width: `${service.aiScore}%` }}
                   ></div>
@@ -217,13 +227,13 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
-                >
+
                   Get Started
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
                   className="block w-full text-center px-4 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300"
-                >
+
                   Contact Sales
                 </a>
               </div>
@@ -269,9 +279,9 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact our sales team to discuss your needs, get a custom quote, or schedule a demo of any service.
+            Contact our sales team to discuss your needs, get a custom quote, or schedule a demo of  service.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
             <div className="text-center">
               <div className="text-2xl font-bold text-blue-400 mb-2">Call Us</div>
@@ -298,7 +308,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Custom Quote Request"
               className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg"
-            >
+
               Request Quote
             </a>
           </div>
@@ -310,23 +320,24 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
         <h2 className="text-3xl font-bold text-white text-center mb-12">
           Frequently Asked Questions
         </h2>
-        
+
         <div className="space-y-6">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-3">What payment methods do you accept?</h3>
             <p className="text-gray-300">We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.</p>
           </div>
-          
+
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-            <h3 className="text-xl font-bold text-white mb-3">Can I cancel my subscription at any time?</h3>
-            <p className="text-gray-300">Yes, all subscriptions can be cancelled at any time with no penalties. We offer month-to-month and annual billing options.</p>
+            <h3 className="text-xl font-bold text-white mb-3">Can I cancel my subscription at  time?</h3>
+            <p className="text-gray-300">Yes, all subscriptions can be cancelled at  time with no penalties. We offer month-to-month and annual billing options.</p>
           </div>
-          
+
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-3">Do you offer free trials?</h3>
-            <p className="text-gray-300">Yes, most services offer a 14-day free trial. Contact us to arrange a trial period for any service.</p>
+            <p className="text-gray-300">Yes, most services offer a 14-day free trial. Contact us to arrange a trial period for  service.</p>
           </div>
-          
+<<<<<<< HEAD
+
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-3">What kind of support do you provide?</h3>
             <p className="text-gray-300">We provide 24/7 technical support, dedicated account managers for enterprise clients, and comprehensive documentation and training resources.</p>
@@ -334,7 +345,17 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
         </div>
       </div>
     </div>
+=======
+          
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">;
+            <h3 className="text-xl font-bold text-white mb-3">What kind of support do you provide?</h3>;
+            <p className="text-gray-300">We provide 24/7 technical support, dedicated account managers for enterprise clients, and comprehensive documentation and training resources.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
 
-export default ComprehensiveZionTechPricing2025;
+export default ComprehensiveZionTechPricing2025;}}

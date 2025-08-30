@@ -1,6 +1,6 @@
 import React from 'react';
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
-const AIBusinessIntelligence = () => {
+<<<<<<< HEAD
+import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search const AIBusinessIntelligence = () => {
     const biFeatures = [
         {
             icon: Brain,
@@ -25,7 +25,7 @@ const AIBusinessIntelligence = () => {
             title: "Real-time Monitoring",
             description: "Live monitoring and alerting for business metrics",
             features: ["Live data feeds", "Instant alerts", "Performance tracking", "KPI monitoring"]
-        }
+
     ];
     const biSolutions = [
         {
@@ -63,8 +63,12 @@ const AIBusinessIntelligence = () => {
             description: "Future-focused insights and forecasting",
             icon: Lightbulb,
             capabilities: ["Trend prediction", "Risk forecasting", "Opportunity identification", "Scenario planning"]
-        }
+
     ];
+=======
+import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
+const AIBusinessIntelligence = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const benefits = [
         "Data-driven decision making across all business areas",
         "Real-time insights and instant access to critical information",
@@ -103,7 +107,7 @@ const AIBusinessIntelligence = () => {
             phase: "Deployment & Training",
             description: "Deploy system and train users",
             duration: "2-4 weeks"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -119,7 +123,7 @@ const AIBusinessIntelligence = () => {
               <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent"> Business Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with AI-powered analytics and insights 
+              Transform your business with AI-powered analytics and insights
               that drive intelligent decision making and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -142,11 +146,11 @@ const AIBusinessIntelligence = () => {
               Business Intelligence Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered BI platform provides comprehensive analytics 
+              Our AI-powered BI platform provides comprehensive analytics
               and insights for informed decision making.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {biFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -173,11 +177,11 @@ const AIBusinessIntelligence = () => {
               BI Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive business intelligence solutions covering all 
+              Comprehensive business intelligence solutions covering all
               aspects of your business operations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {biSolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -205,7 +209,7 @@ const AIBusinessIntelligence = () => {
                 Why Choose AI Business Intelligence?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our AI-powered BI platform transforms raw data into actionable 
+                Our AI-powered BI platform transforms raw data into actionable
                 insights that drive business growth and success.
               </p>
               <ul className="space-y-3">
@@ -220,7 +224,7 @@ const AIBusinessIntelligence = () => {
                 <Lightbulb className="w-24 h-24 text-violet-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Data Intelligence</h3>
                 <p className="text-gray-300 mb-6">
-                  Transform your data into intelligent insights that drive 
+                  Transform your data into intelligent insights that drive
                   better decisions and business outcomes.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -241,10 +245,10 @@ const AIBusinessIntelligence = () => {
             Implementation Process
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A structured approach to implementing AI-powered business 
+            A structured approach to implementing AI-powered business
             intelligence in your organization.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {implementation.map((phase, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -265,7 +269,7 @@ const AIBusinessIntelligence = () => {
             Ready to Transform Your Business Intelligence?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Start making data-driven decisions with AI-powered business 
+            Start making data-driven decisions with AI-powered business
             intelligence and analytics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -281,3 +285,4 @@ const AIBusinessIntelligence = () => {
     </div>);
 };
 export default AIBusinessIntelligence;
+}}}}

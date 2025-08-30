@@ -1,69 +1,77 @@
-import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud, Wifi } from 'lucide-react';
-
-export default function AIEdgeComputingPlatform() {
+import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud, Wifi export default function AIEdgeComputingPlatform() {
   const features = [
     'AI-powered edge device management and optimization',
     'Real-time data processing at the edge',
     'Distributed AI model deployment and inference',
-    'Edge-to-cloud synchronization and analytics',
-    'Automatic load balancing and failover',
-    'Edge security and threat detection',
-    'IoT device integration and management',
-    'Custom edge computing workflows',
-    'Edge analytics and reporting tools',
-    'Scalable edge infrastructure management'
+    'Edge-to-cloud synchronization and analytics',;
+    'Automatic load balancing and failover',;
+    'Edge security and threat detection',;
+    'IoT device integration and management',;
+    'Custom edge computing workflows',;
+    'Edge analytics and reporting tools',;
+    'Scalable edge infrastructure management';
   ];
 
-  const benefits = [
-    'Reduce latency by 80-90%',
-    'Cut bandwidth costs by 60-70%',
-    'Improve data privacy and security',
-    'Real-time edge processing',
-    'Enhanced offline capabilities',
-    'Scalable edge infrastructure'
+  const benefits = [;
+    'Reduce latency by 80-90%',;
+    'Cut bandwidth costs by 60-70%',;
+    'Improve data privacy and security',;
+    'Real-time edge processing',;
+    'Enhanced offline capabilities',;
+    'Scalable edge infrastructure';
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
-      price: '$499/mo', 
+    {
+      name: 'Starter',
+      price: '$499/mo',
       features: ['Up to 50 edge devices', 'Basic edge processing', 'Standard monitoring', 'Email support', 'Monthly reports'],
       popular: false
     },
-    { 
-      name: 'Professional', 
-      price: '$1,199/mo', 
+    {
+      name: 'Professional',
+      price: '$1,199/mo',
       features: ['Up to 200 edge devices', 'Advanced AI analytics', 'Real-time processing', 'Priority support', 'Custom workflows', 'API access'],
       popular: true
+<<<<<<< HEAD
     },
-    { 
-      name: 'Enterprise', 
-      price: '$3,499/mo', 
+    {
+      name: 'Enterprise',
+      price: '$3,499/mo',
       features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
-    }
+
+=======
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,499/mo', ;
+      features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Smart city infrastructure',
-    'Industrial IoT monitoring',
-    'Autonomous vehicle systems',
-    'Healthcare edge computing',
-    'Retail edge analytics',
-    'Energy grid optimization'
+  const useCases = [;
+    'Smart city infrastructure',;
+    'Industrial IoT monitoring',;
+    'Autonomous vehicle systems',;
+    'Healthcare edge computing',;
+    'Retail edge analytics',;
+    'Energy grid optimization';
   ];
 
-  const industries = [
-    'Smart Cities & Infrastructure',
-    'Manufacturing & Industry 4.0',
-    'Transportation & Logistics',
-    'Healthcare & Medical Devices',
-    'Retail & E-commerce',
-    'Energy & Utilities'
+  const industries = [;
+    'Smart Cities & Infrastructure',;
+    'Manufacturing & Industry 4.0',;
+    'Transportation & Logistics',;
+    'Healthcare & Medical Devices',;
+    'Retail & E-commerce',;
+    'Energy & Utilities';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -72,7 +80,7 @@ export default function AIEdgeComputingPlatform() {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Edge Computing Platform</h1>
           <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
-            Bring AI processing to the edge with intelligent device management, real-time data processing, 
+            Bring AI processing to the edge with intelligent device management, real-time data processing,
             and distributed computing capabilities. Transform your IoT infrastructure with edge intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -92,7 +100,7 @@ export default function AIEdgeComputingPlatform() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Edge Computing Intelligence</h2>
           <p className="text-xl text-gray-600">Comprehensive edge computing solutions powered by AI</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
@@ -105,7 +113,7 @@ export default function AIEdgeComputingPlatform() {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Target Industries</h3>
             <div className="grid grid-cols-1 gap-3">
@@ -127,7 +135,7 @@ export default function AIEdgeComputingPlatform() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose AI Edge Computing Platform?</h2>
             <p className="text-xl text-gray-600">Transform your IoT infrastructure with intelligent edge computing</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -147,7 +155,7 @@ export default function AIEdgeComputingPlatform() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Applications</h2>
           <p className="text-xl text-gray-600">Trusted by leading organizations across industries</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
@@ -167,7 +175,7 @@ export default function AIEdgeComputingPlatform() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
             <p className="text-xl text-gray-600">Choose the plan that fits your edge computing needs</p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
@@ -180,13 +188,13 @@ export default function AIEdgeComputingPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-teal-600 mb-2">{plan.price}</div>
                   <p className="text-gray-600">per month</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
@@ -195,10 +203,10 @@ export default function AIEdgeComputingPlatform() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular 
-                    ? 'bg-teal-600 text-white hover:bg-teal-700' 
+                  plan.popular
+                    ? 'bg-teal-600 text-white hover:bg-teal-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   Get Started
@@ -206,7 +214,7 @@ export default function AIEdgeComputingPlatform() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
             <a href="mailto:kleber@ziontechgroup.com" className="text-teal-600 hover:text-teal-700 font-semibold">
@@ -267,7 +275,7 @@ export default function AIEdgeComputingPlatform() {
               +1 302 464 0950
             </a>
           </div>
-          
+
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <Mail className="w-8 h-8 text-teal-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
@@ -277,22 +285,36 @@ export default function AIEdgeComputingPlatform() {
             </a>
           </div>
         </div>
-        
+
         <div className="mt-12 p-6 bg-gray-50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-          <a 
-            href="https://ziontechgroup.com" 
-            target="_blank" 
-            rel="noreferrer" 
+<<<<<<< HEAD
+          <a
+            href="https://ziontechgroup.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
-          >
+
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
+=======
+          <a 
+            href="https://ziontechgroup.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold";
+          >;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
+}}}

@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity import { Link } from 'react-router-dom';
+=======
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AICybersecuritySuite() {
+export default function AICybersecuritySuite(...args: []):  {
   return (
     <>
       <Helmet>
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
-        <meta name="description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
+        <meta name = "description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
         <meta name="keywords" content="AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence" />
       </Helmet>
 
@@ -22,22 +28,22 @@ export default function AICybersecuritySuite() {
                 <Shield className="w-4 h-4 mr-2" />
                 AI-Powered Cybersecurity
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Cybersecurity
                 <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Suite</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds 
+                Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds
                 in real-time. Protect your digital assets with intelligent threat detection and automated response.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Protected
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,12 +64,12 @@ export default function AICybersecuritySuite() {
                 Intelligent Threat Protection
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats 
+                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats
                 with intelligent detection and automated response capabilities.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -94,8 +100,13 @@ export default function AICybersecuritySuite() {
                   icon: Lock,
                   title: "Data Encryption",
                   description: "End-to-end encryption with AI-powered key management and access control."
-                }
+<<<<<<< HEAD
+
               ].map((feature, index) => (
+=======
+                }
+              ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +131,7 @@ export default function AICybersecuritySuite() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   layer: "01",
@@ -141,8 +152,13 @@ export default function AICybersecuritySuite() {
                   layer: "04",
                   title: "Data Security",
                   description: "Encryption, access control, and data loss prevention."
-                }
+<<<<<<< HEAD
+
               ].map((layer, index) => (
+=======
+                }
+              ].map((layer, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{layer.layer}</span>
@@ -194,7 +210,7 @@ export default function AICybersecuritySuite() {
                     { type: "Phishing", icon: Eye, color: "from-orange-500 to-red-500", count: "5M+" },
                     { type: "Ransomware", icon: Lock, color: "from-purple-500 to-red-500", count: "2M+" },
                     { type: "DDoS", icon: Activity, color: "from-blue-500 to-cyan-500", count: "1M+" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex justify-between items-center">
                       <div className="flex items-center space-x-3">
                         <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
@@ -223,7 +239,7 @@ export default function AICybersecuritySuite() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "SOC 2 Type II",
@@ -260,8 +276,13 @@ export default function AICybersecuritySuite() {
                   description: "Cybersecurity framework alignment and implementation.",
                   icon: Activity,
                   features: ["Framework mapping", "Gap analysis", "Implementation guidance"]
-                }
+<<<<<<< HEAD
+
               ].map((compliance, index) => (
+=======
+                }
+              ].map((compliance, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <compliance.icon className="w-6 h-6 text-white" />
@@ -295,14 +316,15 @@ export default function AICybersecuritySuite() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200"
-              >
+
                 Schedule Security Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200"
-              >
+<<<<<<< HEAD
+
                 Explore All Services
               </Link>
             </div>
@@ -310,5 +332,15 @@ export default function AICybersecuritySuite() {
         </section>
       </div>
     </>
+=======
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
+}}}}}

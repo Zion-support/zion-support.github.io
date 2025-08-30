@@ -9,7 +9,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 2499,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Cloud strategy and planning",
             "Infrastructure assessment and design",
             "Multi-cloud migration services",
@@ -21,28 +21,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Scalability planning and implementation",
             "Cloud governance and best practices"
         ],
-        benefits: [
+        benefits[
             "Reduce infrastructure costs by 40%",
             "Improve system scalability by 300%",
             "Enhance disaster recovery capabilities",
             "Increase operational efficiency by 50%",
             "Enable global business expansion"
         ],
-        useCases: [
+        useCases[
             "Legacy system modernization",
             "Business expansion and scaling",
             "Cost optimization initiatives",
             "Disaster recovery planning",
             "Global infrastructure deployment"
         ],
-        targetAudience: [
+        targetAudience[
             "Enterprise IT leaders",
             "Technology directors",
             "Operations managers",
             "Business owners",
             "Digital transformation consultants"
         ],
-        tags: ["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
+        tags["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,499 - $10,000/month",
@@ -52,15 +52,15 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             website: "https://ziontechgroup.com",
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
-        technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
-        integrations: ["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Industry-specific regulations"],
+        technology["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
+        integrations["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
+        compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Industry-specific regulations"],
         roi: "800% within 18 months",
-        competitors: ["Accenture", "Deloitte", "IBM", "Capgemini"],
+        competitors["Accenture", "Deloitte", "IBM", "Capgemini"],
         demoUrl: "https://ziontechgroup.com/demo/cloud-infrastructure",
-        caseStudies: ["Enterprise 40% cost reduction", "Startup 300% scalability improvement"],
+        caseStudies["Enterprise 40% cost reduction", "Startup 300% scalability improvement"],
         marketTrend: "Growing cloud adoption with 45% annual growth",
-        industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"],
+        industryFocus["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"],
         scalability: "Enterprise-grade with unlimited scalability",
         customizationLevel: "Custom cloud solutions and migration strategies",
         serviceLevel: "24/7 managed cloud services"
@@ -75,7 +75,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 1899,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Security assessment and auditing",
             "Threat detection and response",
             "Vulnerability management",
@@ -87,28 +87,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Security architecture design",
             "24/7 security monitoring"
         ],
-        benefits: [
+        benefits[
             "Reduce security incidents by 90%",
             "Improve threat detection by 95%",
             "Ensure regulatory compliance",
             "Protect sensitive business data",
             "Enhance customer trust and reputation"
         ],
-        useCases: [
+        useCases[
             "Security framework implementation",
             "Compliance and audit support",
             "Incident response and recovery",
             "Security awareness programs",
             "Risk assessment and management"
         ],
-        targetAudience: [
+        targetAudience[
             "Chief Information Security Officers",
             "Security managers",
             "Compliance officers",
             "IT directors",
             "Business owners"
         ],
-        tags: ["Cybersecurity", "Information Security", "Threat Detection", "Compliance", "Risk Management"],
+        tags["Cybersecurity", "Information Security", "Threat Detection", "Compliance", "Risk Management"],
         estimatedDelivery: "6-10 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,899 - $7,500/month",
@@ -117,15 +117,15 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["SIEM platforms", "EDR solutions", "Firewall systems", "Identity management", "Security frameworks"],
-        integrations: ["Security tools", "Monitoring systems", "Compliance platforms", "Incident response systems", "Training platforms"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry-specific regulations"],
+        technology["SIEM platforms", "EDR solutions", "Firewall systems", "Identity management", "Security frameworks"],
+        integrations["Security tools", "Monitoring systems", "Compliance platforms", "Incident response systems", "Training platforms"],
+        compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry-specific regulations"],
         roi: "1000% within 12 months",
-        competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco Security"],
+        competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco Security"],
         demoUrl: "https://ziontechgroup.com/demo/cybersecurity",
-        caseStudies: ["Financial institution 90% threat reduction", "Healthcare 95% security improvement"],
+        caseStudies["Financial institution 90% threat reduction", "Healthcare 95% security improvement"],
         marketTrend: "High demand for cybersecurity with 65% annual growth",
-        industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
+        industryFocus["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
         scalability: "Enterprise security infrastructure with unlimited protection",
         customizationLevel: "Custom security frameworks and compliance solutions",
         serviceLevel: "24/7 security monitoring and response"
@@ -140,7 +140,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 1599,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "DevOps strategy and implementation",
             "CI/CD pipeline design and setup",
             "Infrastructure as Code (IaC)",
@@ -152,28 +152,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Team training and enablement",
             "Ongoing support and maintenance"
         ],
-        benefits: [
+        benefits[
             "Reduce deployment time by 80%",
             "Improve code quality by 60%",
             "Increase development velocity by 100%",
             "Reduce operational costs by 40%",
             "Enable faster time-to-market"
         ],
-        useCases: [
+        useCases[
             "Software development optimization",
             "Release management automation",
             "Quality assurance improvement",
             "Development team enablement",
             "Infrastructure automation"
         ],
-        targetAudience: [
+        targetAudience[
             "Development teams",
             "DevOps engineers",
             "IT operations managers",
             "Product managers",
             "Technology leaders"
         ],
-        tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
+        tags["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$1,599 - $6,000/month",
@@ -182,15 +182,15 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform"],
-        integrations: ["Version control systems", "Testing frameworks", "Monitoring tools", "Cloud platforms", "Security tools"],
-        compliance: ["Security best practices", "Quality standards", "Development standards"],
+        technology["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform"],
+        integrations["Version control systems", "Testing frameworks", "Monitoring tools", "Cloud platforms", "Security tools"],
+        compliance["Security best practices", "Quality standards", "Development standards"],
         roi: "700% within 12 months",
-        competitors: ["GitLab", "GitHub", "Atlassian", "CircleCI"],
+        competitors["GitLab", "GitHub", "Atlassian", "CircleCI"],
         demoUrl: "https://ziontechgroup.com/demo/devops-cicd",
-        caseStudies: ["Development team 80% deployment time reduction", "Startup 100% development velocity increase"],
+        caseStudies["Development team 80% deployment time reduction", "Startup 100% development velocity increase"],
         marketTrend: "Growing DevOps adoption with 55% annual growth",
-        industryFocus: ["Technology", "Finance", "Healthcare", "E-commerce", "SaaS"],
+        industryFocus["Technology", "Finance", "Healthcare", "E-commerce", "SaaS"],
         scalability: "Enterprise DevOps platform with unlimited pipeline support",
         customizationLevel: "Custom DevOps workflows and automation rules",
         serviceLevel: "24/7 DevOps support and monitoring"
@@ -205,7 +205,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 1299,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Data strategy and architecture",
             "Data collection and integration",
             "Data quality and governance",
@@ -217,28 +217,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Data security and privacy",
             "Ongoing data optimization"
         ],
-        benefits: [
+        benefits[
             "Improve decision-making by 70%",
             "Increase operational efficiency by 45%",
             "Identify new business opportunities",
             "Reduce operational costs by 30%",
             "Enable data-driven culture"
         ],
-        useCases: [
+        useCases[
             "Business intelligence implementation",
             "Data-driven decision making",
             "Operational optimization",
             "Customer insights and analytics",
             "Performance monitoring and reporting"
         ],
-        targetAudience: [
+        targetAudience[
             "Data analysts",
             "Business intelligence managers",
             "Operations managers",
             "Marketing teams",
             "Executive leadership"
         ],
-        tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
+        tags["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
         estimatedDelivery: "6-10 weeks",
         supportLevel: "premium",
         marketPrice: "$1,299 - $5,000/month",
@@ -247,15 +247,15 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
-        integrations: ["Data sources", "Business systems", "Cloud platforms", "Analytics tools", "Reporting systems"],
-        compliance: ["GDPR", "CCPA", "Data privacy", "Industry regulations"],
+        technology["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
+        integrations["Data sources", "Business systems", "Cloud platforms", "Analytics tools", "Reporting systems"],
+        compliance["GDPR", "CCPA", "Data privacy", "Industry regulations"],
         roi: "600% within 10 months",
-        competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
+        competitors["Tableau", "Power BI", "Looker", "Qlik"],
         demoUrl: "https://ziontechgroup.com/demo/data-analytics",
-        caseStudies: ["Retail company 70% decision improvement", "Manufacturing 45% efficiency increase"],
+        caseStudies["Retail comp 70% decision improvement", "Manufacturing 45% efficiency increase"],
         marketTrend: "Growing data analytics adoption with 50% annual growth",
-        industryFocus: ["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
+        industryFocus["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
         scalability: "Enterprise data platform with unlimited data processing",
         customizationLevel: "Custom analytics solutions and reporting dashboards",
         serviceLevel: "24/7 data monitoring and support"
@@ -270,7 +270,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Network design and architecture",
             "Infrastructure implementation",
             "Network security and monitoring",
@@ -282,28 +282,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Network documentation",
             "Ongoing support and optimization"
         ],
-        benefits: [
+        benefits[
             "Improve network reliability by 95%",
             "Reduce network downtime by 80%",
             "Enhance network security",
             "Optimize network performance",
             "Reduce operational costs by 35%"
         ],
-        useCases: [
+        useCases[
             "Network infrastructure design",
             "Security implementation",
             "Performance optimization",
             "Disaster recovery planning",
             "Network expansion and scaling"
         ],
-        targetAudience: [
+        targetAudience[
             "Network administrators",
             "IT managers",
             "System administrators",
             "Business owners",
             "Technology consultants"
         ],
-        tags: ["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
+        tags["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
         estimatedDelivery: "4-8 weeks",
         supportLevel: "premium",
         marketPrice: "$999 - $4,000/month",
@@ -312,15 +312,15 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Cisco", "Juniper", "Aruba", "Network monitoring tools", "Security appliances"],
-        integrations: ["Network devices", "Security systems", "Monitoring tools", "Cloud platforms", "Business systems"],
-        compliance: ["Network security standards", "Industry regulations", "Best practices"],
+        technology["Cisco", "Juniper", "Aruba", "Network monitoring tools", "Security appliances"],
+        integrations["Network devices", "Security systems", "Monitoring tools", "Cloud platforms", "Business systems"],
+        compliance["Network security standards", "Industry regulations", "Best practices"],
         roi: "500% within 12 months",
-        competitors: ["Cisco", "Juniper", "Aruba", "Fortinet"],
+        competitors["Cisco", "Juniper", "Aruba", "Fortinet"],
         demoUrl: "https://ziontechgroup.com/demo/network-infrastructure",
-        caseStudies: ["Enterprise 95% network reliability improvement", "SMB 80% downtime reduction"],
+        caseStudies["Enterprise 95% network reliability improvement", "SMB 80% downtime reduction"],
         marketTrend: "Growing network infrastructure demand with 40% annual growth",
-        industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Education"],
+        industryFocus["Technology", "Finance", "Healthcare", "Manufacturing", "Education"],
         scalability: "Enterprise network infrastructure with unlimited scalability",
         customizationLevel: "Custom network solutions and security configurations",
         serviceLevel: "24/7 network monitoring and support"
@@ -335,7 +335,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 299,
         currency: "$",
         pricingModel: "hourly",
-        features: [
+        features[
             "Technology strategy development",
             "Digital transformation planning",
             "IT investment optimization",
@@ -347,28 +347,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Performance measurement frameworks",
             "Ongoing strategic guidance"
         ],
-        benefits: [
+        benefits[
             "Align technology with business goals",
             "Optimize IT investments by 40%",
             "Reduce technology risks",
             "Improve operational efficiency",
             "Enable strategic competitive advantages"
         ],
-        useCases: [
+        useCases[
             "Technology strategy development",
             "Digital transformation planning",
             "IT investment optimization",
             "Vendor selection and management",
             "Technology risk assessment"
         ],
-        targetAudience: [
+        targetAudience[
             "Chief Technology Officers",
             "IT directors",
             "Business executives",
             "Technology leaders",
             "Business owners"
         ],
-        tags: ["IT Consulting", "Strategic Planning", "Digital Transformation", "Technology Strategy", "IT Governance"],
+        tags["IT Consulting", "Strategic Planning", "Digital Transformation", "Technology Strategy", "IT Governance"],
         estimatedDelivery: "2-4 weeks",
         supportLevel: "consulting",
         marketPrice: "$299 - $500/hour",
@@ -377,15 +377,15 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Strategic frameworks", "Planning tools", "Analytics platforms", "Governance frameworks"],
-        integrations: ["Business systems", "Technology platforms", "Analytics tools", "Governance systems"],
-        compliance: ["Industry best practices", "Governance standards", "Regulatory requirements"],
+        technology["Strategic frameworks", "Planning tools", "Analytics platforms", "Governance frameworks"],
+        integrations["Business systems", "Technology platforms", "Analytics tools", "Governance systems"],
+        compliance["Industry best practices", "Governance standards", "Regulatory requirements"],
         roi: "1000% within 6 months",
-        competitors: ["McKinsey", "BCG", "Bain", "Accenture"],
+        competitors["McKinsey", "BCG", "Bain", "Accenture"],
         demoUrl: "https://ziontechgroup.com/demo/it-consulting",
-        caseStudies: ["Fortune 500 40% IT investment optimization", "Startup successful digital transformation"],
+        caseStudies["Fortune 500 40% IT investment optimization", "Startup successful digital transformation"],
         marketTrend: "Growing IT consulting demand with 35% annual growth",
-        industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
+        industryFocus["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
         scalability: "Consulting services for organizations of all sizes",
         customizationLevel: "Custom strategic plans and technology roadmaps",
         serviceLevel: "Flexible consulting engagement models"
@@ -400,7 +400,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 799,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "24/7 technical support",
             "Help desk ticketing system",
             "Remote desktop support",
@@ -412,28 +412,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Escalation procedures",
             "Ongoing support optimization"
         ],
-        benefits: [
+        benefits[
             "Improve user productivity by 60%",
             "Reduce IT support costs by 45%",
             "Enhance user satisfaction",
             "Minimize system downtime",
             "Enable self-service support"
         ],
-        useCases: [
+        useCases[
             "Technical support and troubleshooting",
             "User training and education",
             "System maintenance and updates",
             "Performance monitoring",
             "Help desk optimization"
         ],
-        targetAudience: [
+        targetAudience[
             "IT support managers",
             "Help desk teams",
             "Business users",
             "IT administrators",
             "Business owners"
         ],
-        tags: ["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
+        tags["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
         estimatedDelivery: "2-4 weeks",
         supportLevel: "premium",
         marketPrice: "$799 - $3,000/month",
@@ -442,15 +442,15 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
-        integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
-        compliance: ["Service level agreements", "Support standards", "User privacy"],
+        technology["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
+        integrations["Business systems", "User management", "Monitoring tools", "Communication platforms"],
+        compliance["Service level agreements", "Support standards", "User privacy"],
         roi: "400% within 8 months",
-        competitors: ["Zendesk", "Freshdesk", "ServiceNow", "Atlassian"],
+        competitors["Zendesk", "Freshdesk", "ServiceNow", "Atlassian"],
         demoUrl: "https://ziontechgroup.com/demo/it-support",
-        caseStudies: ["Enterprise 60% productivity improvement", "SMB 45% support cost reduction"],
+        caseStudies["Enterprise 60% productivity improvement", "SMB 45% support cost reduction"],
         marketTrend: "Growing IT support demand with 40% annual growth",
-        industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
+        industryFocus["All Industries", "Technology", "Finance", "Healthcare", "Education"],
         scalability: "Multi-organization support platform with unlimited user support",
         customizationLevel: "Custom support workflows and knowledge bases",
         serviceLevel: "24/7 technical support and monitoring"
@@ -465,7 +465,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 1999,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Custom software development",
             "System integration services",
             "API development and management",
@@ -477,28 +477,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Security implementation",
             "Ongoing support and updates"
         ],
-        benefits: [
+        benefits[
             "Create tailored business solutions",
             "Improve operational efficiency by 50%",
             "Enable new business capabilities",
             "Reduce manual processes by 70%",
             "Gain competitive advantages"
         ],
-        useCases: [
+        useCases[
             "Custom business applications",
             "System integration projects",
             "Process automation",
             "Data management solutions",
             "Customer-facing applications"
         ],
-        targetAudience: [
+        targetAudience[
             "Business owners",
             "Product managers",
             "Technology leaders",
             "Operations managers",
             "Digital transformation teams"
         ],
-        tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
+        tags["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
         estimatedDelivery: "8-16 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,999 - $8,000/month",
@@ -507,15 +507,15 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
-        integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
-        compliance: ["Security standards", "Quality standards", "Industry regulations"],
+        technology["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
+        integrations["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
+        compliance["Security standards", "Quality standards", "Industry regulations"],
         roi: "800% within 18 months",
-        competitors: ["Custom development agencies", "System integrators", "Technology consultancies"],
+        competitors["Custom development agencies", "System integrators", "Technology consultancies"],
         demoUrl: "https://ziontechgroup.com/demo/software-development",
-        caseStudies: ["Manufacturing 50% efficiency improvement", "Retail 70% process automation"],
+        caseStudies["Manufacturing 50% efficiency improvement", "Retail 70% process automation"],
         marketTrend: "Growing custom software demand with 55% annual growth",
-        industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
+        industryFocus["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
         scalability: "Enterprise development platform with unlimited customization",
         customizationLevel: "Fully custom software solutions and integrations",
         serviceLevel: "Comprehensive development and ongoing support"
@@ -530,7 +530,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         price: 1499,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Project planning and scoping",
             "Resource management and allocation",
             "Risk assessment and mitigation",
@@ -542,28 +542,28 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Performance monitoring",
             "Post-implementation support"
         ],
-        benefits: [
+        benefits[
             "Ensure project success by 90%",
             "Reduce project risks by 70%",
             "Deliver projects on time and budget",
             "Improve stakeholder satisfaction",
             "Enable smooth project transitions"
         ],
-        useCases: [
+        useCases[
             "Technology implementation projects",
             "System migration projects",
             "Infrastructure deployment",
             "Software implementation",
             "Digital transformation projects"
         ],
-        targetAudience: [
+        targetAudience[
             "Project managers",
             "IT directors",
             "Business executives",
             "Technology leaders",
             "Implementation teams"
         ],
-        tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
+        tags["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
         estimatedDelivery: "Project-based",
         supportLevel: "premium",
         marketPrice: "$1,499 - $6,000/month",
@@ -572,18 +572,19 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
-        integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
-        compliance: ["Project standards", "Quality standards", "Industry best practices"],
+        technology["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
+        integrations["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
+        compliance["Project standards", "Quality standards", "Industry best practices"],
         roi: "600% within 12 months",
-        competitors: ["Project management consultancies", "Technology implementation firms"],
+        competitors["Project management consultancies", "Technology implementation firms"],
         demoUrl: "https://ziontechgroup.com/demo/project-management",
-        caseStudies: ["Enterprise 90% project success rate", "Startup successful technology implementation"],
+        caseStudies["Enterprise 90% project success rate", "Startup successful technology implementation"],
         marketTrend: "Growing project management demand with 45% annual growth",
-        industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
+        industryFocus["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
         scalability: "Project management services for projects of all sizes",
         customizationLevel: "Custom project management methodologies and tools",
         serviceLevel: "Comprehensive project management and support"
-    }
+
 ];
 export default COMPREHENSIVE_IT_SERVICES_2025;
+}

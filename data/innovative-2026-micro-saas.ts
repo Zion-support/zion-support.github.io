@@ -11,9 +11,13 @@ export interface Innovative2026MicroSaas {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
-}
+
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
   {
     id: "2026-micro-saas",
@@ -21,7 +25,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
     tagline: "Next-generation micro SAAS solutions",
     price: "$89/month",
     description: "Innovative micro SAAS platform designed for 2026 with advanced features and capabilities.",
-    features: [
+    features[
       "Micro SAAS solutions",
       "Advanced features",
       "Scalable platform",
@@ -35,6 +39,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

@@ -1,50 +1,55 @@
 import React from 'react';
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO";
+import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket const AISolutions = () => {
+=======
+import SEO from "@/components/SEO";
 import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket } from 'lucide-react';
 const AISolutions = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const aiServices = [
         {
             icon: Brain,
             title: "AI Autonomous Systems",
             description: "Self-learning AI systems that operate independently and continuously improve performance",
-            features: ["Machine Learning", "Neural Networks", "Predictive Analytics", "Automated Decision Making"],
+            features["Machine Learning", "Neural Networks", "Predictive Analytics", "Automated Decision Making"],
             path: "/ai-autonomous-systems"
         },
         {
             icon: Cpu,
             title: "AI Research Assistant",
             description: "Intelligent research tools that accelerate discovery and analysis across all domains",
-            features: ["Data Mining", "Pattern Recognition", "Literature Review", "Hypothesis Generation"],
+            features["Data Mining", "Pattern Recognition", "Literature Review", "Hypothesis Generation"],
             path: "/ai-autonomous-research-assistant"
         },
         {
             icon: Shield,
             title: "AI-Powered Cybersecurity",
             description: "Advanced threat detection and prevention using artificial intelligence",
-            features: ["Threat Intelligence", "Behavioral Analysis", "Real-time Monitoring", "Automated Response"],
+            features["Threat Intelligence", "Behavioral Analysis", "Real-time Monitoring", "Automated Response"],
             path: "/ai-powered-enterprise-security"
         },
         {
             icon: Cloud,
             title: "AI Business Intelligence",
             description: "Comprehensive business analytics and insights powered by AI",
-            features: ["Data Visualization", "Predictive Modeling", "Performance Metrics", "Strategic Planning"],
+            features["Data Visualization", "Predictive Modeling", "Performance Metrics", "Strategic Planning"],
             path: "/ai-business-intelligence"
         },
         {
             icon: Zap,
             title: "AI Content Generation",
             description: "Automated content creation for marketing, documentation, and communication",
-            features: ["Text Generation", "Image Creation", "Video Production", "Multilingual Support"],
+            features["Text Generation", "Image Creation", "Video Production", "Multilingual Support"],
             path: "/ai-content-generator"
         },
         {
             icon: Target,
             title: "AI Sales & Marketing",
             description: "Intelligent automation for sales processes and marketing campaigns",
-            features: ["Lead Scoring", "Customer Segmentation", "Campaign Optimization", "ROI Analysis"],
+            features["Lead Scoring", "Customer Segmentation", "Campaign Optimization", "ROI Analysis"],
             path: "/ai-agentic-sales-outreach"
-        }
+
     ];
     const benefits = [
         {
@@ -66,7 +71,7 @@ const AISolutions = () => {
             icon: Globe,
             title: "Global Scalability",
             description: "Scale your operations globally with AI automation and optimization"
-        }
+
     ];
     return (<div className="min-h-screen bg-background pt-20">
       <SEO title="AI Solutions - Zion Tech Group" description="Discover cutting-edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group." keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence" canonical="https://ziontechgroup.com/ai-solutions"/>
@@ -80,7 +85,7 @@ const AISolutions = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Future</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. 
+              Transform your business with cutting-edge artificial intelligence solutions.
               From autonomous systems to intelligent analytics, we deliver the future of technology today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -103,7 +108,7 @@ const AISolutions = () => {
               Comprehensive AI Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI solutions span across all major business domains, providing intelligent automation 
+              Our AI solutions span across all major business domains, providing intelligent automation
               and insights that drive growth and innovation.
             </p>
           </div>
@@ -162,7 +167,7 @@ const AISolutions = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join the AI revolution and stay ahead of the competition. 
+            Join the AI revolution and stay ahead of the competition.
             Our experts are ready to help you implement cutting-edge AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -175,6 +180,6 @@ const AISolutions = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AISolutions;
+}}}

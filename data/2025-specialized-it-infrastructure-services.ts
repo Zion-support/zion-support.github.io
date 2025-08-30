@@ -28,20 +28,34 @@ export interface SpecializedITInfrastructureService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 export const specializedITInfrastructureServices2025: SpecializedITInfrastructureService[] = [
   {
@@ -51,7 +65,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     price: '$1,899',
     period: '/month',
     description: 'Advanced edge computing optimization platform that intelligently distributes workloads, manages resources, and optimizes performance across distributed edge locations for maximum efficiency and cost savings.',
-    features: [
+    features[
       'Intelligent workload distribution',
       'Resource optimization',
       'Performance monitoring',
@@ -74,11 +88,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '3-4 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Kubernetes, Docker, Python, Go, Rust, Edge Computing'],
-    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker Swarm'],
-    useCases: ['IoT optimization, Content delivery, Real-time processing, Edge analytics, Distributed computing'],
+    technology['Kubernetes, Docker, Python, Go, Rust, Edge Computing'],
+    integrations['AWS, Azure, Google Cloud, Kubernetes, Docker Swarm'],
+    useCases['IoT optimization, Content delivery, Real-time processing, Edge analytics, Distributed computing'],
     roi: 'Reduce edge computing costs by 40% and improve performance by 60%',
-    competitors: ['AWS Outposts, Azure Stack Edge, Google Anthos, VMware Edge'],
+    competitors['AWS Outposts, Azure Stack Edge, Google Anthos, VMware Edge'],
     marketSize: '$8.5B edge computing market',
     growthRate: '105% annual growth',
     contactInfo: contact,
@@ -96,7 +110,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     price: '$3,299',
     period: '/month',
     description: 'Next-generation network infrastructure designed to be quantum-ready, featuring quantum-resistant encryption, advanced routing algorithms, and future-proof architecture for the quantum computing era.',
-    features: [
+    features[
       'Quantum-resistant encryption',
       'Advanced routing algorithms',
       'Network virtualization',
@@ -119,11 +133,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '6-8 weeks',
     category: 'Quantum Computing',
     realService: true,
-    technology: ['Quantum Cryptography, Post-Quantum Algorithms, SDN, NFV, Advanced Routing'],
-    integrations: ['Cisco, Juniper, Arista, VMware, OpenStack'],
-    useCases: ['Government networks, Financial networks, Healthcare networks, Research networks, Defense networks'],
+    technology['Quantum Cryptography, Post-Quantum Algorithms, SDN, NFV, Advanced Routing'],
+    integrations['Cisco, Juniper, Arista, VMware, OpenStack'],
+    useCases['Government networks, Financial networks, Healthcare networks, Research networks, Defense networks'],
     roi: 'Critical infrastructure organizations report priceless value for future security',
-    competitors: ['No direct competitors yet', 'Traditional network vendors'],
+    competitors['No direct competitors yet', 'Traditional network vendors'],
     marketSize: '$2.1B quantum networking market',
     growthRate: '200% annual growth',
     contactInfo: contact,
@@ -141,7 +155,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     price: '$1,599',
     period: '/month',
     description: 'Intelligent DevOps automation platform that autonomously manages deployment pipelines, infrastructure provisioning, monitoring, and optimization using AI and machine learning for maximum efficiency.',
-    features: [
+    features[
       'Automated CI/CD pipelines',
       'Infrastructure as Code',
       'Intelligent monitoring',
@@ -164,11 +178,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '2-3 weeks',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['Kubernetes, Docker, Terraform, Ansible, Python, Go'],
-    integrations: ['GitHub, GitLab, AWS, Azure, Google Cloud, Jenkins'],
-    useCases: ['CI/CD automation, Infrastructure management, Deployment automation, Monitoring, Security automation'],
+    technology['Kubernetes, Docker, Terraform, Ansible, Python, Go'],
+    integrations['GitHub, GitLab, AWS, Azure, Google Cloud, Jenkins'],
+    useCases['CI/CD automation, Infrastructure management, Deployment automation, Monitoring, Security automation'],
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
+    competitors['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
     marketSize: '$7.8B DevOps market',
     growthRate: '95% annual growth',
     contactInfo: contact,
@@ -186,7 +200,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     price: '$2,499',
     period: '/month',
     description: 'Comprehensive zero trust security framework that continuously verifies every user, device, and connection while providing adaptive access control and real-time threat detection.',
-    features: [
+    features[
       'Continuous verification',
       'Adaptive access control',
       'Threat detection',
@@ -209,11 +223,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '4-6 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['AI/ML, Blockchain, Zero Trust Architecture, Identity Management, Threat Intelligence'],
-    integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'],
-    useCases: ['Enterprise security, Government security, Financial security, Healthcare security, Educational security'],
+    technology['AI/ML, Blockchain, Zero Trust Architecture, Identity Management, Threat Intelligence'],
+    integrations['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'],
+    useCases['Enterprise security, Government security, Financial security, Healthcare security, Educational security'],
     roi: 'Reduce security incidents by 95% and compliance costs by 60%',
-    competitors: ['Okta, Palo Alto, CrowdStrike, Microsoft, Cisco'],
+    competitors['Okta, Palo Alto, CrowdStrike, Microsoft, Cisco'],
     marketSize: '$22B zero trust security market',
     growthRate: '85% annual growth',
     contactInfo: contact,
@@ -231,7 +245,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     price: '$2,899',
     period: '/month',
     description: 'Advanced data center management platform that uses AI to optimize power consumption, cooling systems, server utilization, and overall efficiency for maximum cost savings and performance.',
-    features: [
+    features[
       'Power optimization',
       'Cooling management',
       'Server utilization',
@@ -254,11 +268,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '5-7 weeks',
     category: 'Data Center Management',
     realService: true,
-    technology: ['AI/ML, IoT, Big Data, Cloud Computing, Energy Management'],
-    integrations: ['Schneider Electric, Eaton, Vertiv, AWS, Azure, Google Cloud'],
-    useCases: ['Data center optimization, Energy management, Performance monitoring, Capacity planning, Cost optimization'],
+    technology['AI/ML, IoT, Big Data, Cloud Computing, Energy Management'],
+    integrations['Schneider Electric, Eaton, Vertiv, AWS, Azure, Google Cloud'],
+    useCases['Data center optimization, Energy management, Performance monitoring, Capacity planning, Cost optimization'],
     roi: 'Reduce data center energy costs by 35% and improve efficiency by 45%',
-    competitors: ['Schneider Electric, Eaton, Vertiv, IBM, Dell'],
+    competitors['Schneider Electric, Eaton, Vertiv, IBM, Dell'],
     marketSize: '$12.5B data center management market',
     growthRate: '75% annual growth',
     contactInfo: contact,
@@ -268,5 +282,5 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     customers: 56,
     rating: 4.6,
     reviews: 34
-  }
-];
+
+];}}

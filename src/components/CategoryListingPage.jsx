@@ -5,8 +5,7 @@ import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 } from "lucide-react";
-export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
+import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
     { label: 'Newest First', value: 'newest' },
     { label: 'Oldest First', value: 'oldest' },
     { label: 'Highest Rating', value: 'rating-high' },
@@ -23,16 +22,13 @@ export function CategoryListingPage({ title, description, listings: initialListi
     const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value);
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
-        localStorage.setItem('category_selected_sort', selectedSort);
-    }, [selectedSort]);
+        localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {
-        localStorage.setItem('category_selected_filter', selectedFilter);
-    }, [selectedFilter]);
+        localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
-        return () => clearTimeout(timeout);
-    }, [searchQuery, selectedSort, selectedFilter]);
+        return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);
     // Process listings based on filters and search
     const processedListings = initialListings
         .filter(listing => {
@@ -47,8 +43,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
             return matchesSearch && (listing.rating || 0) >= 4;
         if (selectedFilter === 'best-match')
             return matchesSearch && (listing.aiScore || 0) >= 85;
-        return matchesSearch;
-    })
+        return matchesSearch})
         .sort((a, b) => {
         // Apply sorting
         switch (selectedSort) {
@@ -65,8 +60,12 @@ export function CategoryListingPage({ title, description, listings: initialListi
             case 'z-a':
                 return b.title.localeCompare(a.title);
             default:
+<<<<<<< HEAD
                 return 0;
-        }
+
+=======
+                return 0}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     return (<>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -85,7 +84,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate"/>
                 <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
               </div>
-              
+
               <Select value={selectedSort} onValueChange={setSelectedSort}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <div className="flex items-center">
@@ -138,13 +137,16 @@ export function CategoryListingPage({ title, description, listings: initialListi
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
               <Button variant="outline" onClick={() => {
                 setSearchQuery("");
-                setSelectedFilter(filterOptions[0].value);
-            }} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+                setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
                 Clear all filters
               </Button>
             </div>)}
         </div>
       </div>
       <Footer />
+<<<<<<< HEAD
     </>);
-}
+}}}
+=======
+    </>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

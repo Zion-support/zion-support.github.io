@@ -1,57 +1,68 @@
-import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, TrendingUp, Brain, Target, Clock, Shield, Globe } from 'lucide-react';
-
-export default function AIQuantumMachineLearning() {
+import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, TrendingUp, Brain, Target, Clock, Shield, Globe export default function AIQuantumMachineLearning() {
   const features = [
     'Quantum-enhanced machine learning algorithms',
     'Hybrid quantum-classical computing solutions',
     'Advanced quantum neural network optimization',
-    'Real-time quantum algorithm execution',
-    'Quantum machine learning model training',
-    'Advanced quantum data processing and analysis',
-    'Quantum-enhanced optimization algorithms',
-    'Real-time quantum computing resource management',
-    'AI-driven quantum algorithm selection',
-    'Comprehensive quantum computing analytics'
+    'Real-time quantum algorithm execution',;
+    'Quantum machine learning model training',;
+    'Advanced quantum data processing and analysis',;
+    'Quantum-enhanced optimization algorithms',;
+    'Real-time quantum computing resource management',;
+    'AI-driven quantum algorithm selection',;
+    'Comprehensive quantum computing analytics';
   ];
 
-  const benefits = [
-    'Solve complex problems 100x faster than classical computing',
-    'Improve machine learning accuracy by 40-60%',
-    'Enable previously impossible computational tasks',
-    'Reduce computational costs for complex algorithms',
-    'Accelerate scientific research and discovery',
-    'Enable breakthrough innovations in AI and ML'
+  const benefits = [;
+    'Solve complex problems 100x faster than classical computing',;
+    'Improve machine learning accuracy by 40-60%',;
+    'Enable previously impossible computational tasks',;
+    'Reduce computational costs for complex algorithms',;
+    'Accelerate scientific research and discovery',;
+    'Enable breakthrough innovations in AI and ML';
   ];
 
-  const useCases = [
-    'Drug discovery and pharmaceutical research',
-    'Financial modeling and risk assessment',
-    'Climate modeling and environmental research',
-    'Materials science and nanotechnology',
-    'Cryptography and cybersecurity',
-    'Artificial intelligence and machine learning'
+  const useCases = [;
+    'Drug discovery and pharmaceutical research',;
+    'Financial modeling and risk assessment',;
+    'Climate modeling and environmental research',;
+    'Materials science and nanotechnology',;
+    'Cryptography and cybersecurity',;
+    'Artificial intelligence and machine learning';
   ];
 
   const tiers = [
-    { 
-      name: 'Quantum Starter', 
-      price: '$1,999/mo', 
-      details: ['Up to 100 quantum operations', 'Basic quantum algorithms', 'Standard support', 'Email support'] 
+    {
+      name: 'Quantum Starter',
+      price: '$1,999/mo',
+      details: ['Up to 100 quantum operations', 'Basic quantum algorithms', 'Standard support', 'Email support']
     },
+<<<<<<< HEAD
+    {
+      name: 'Quantum Professional',
+      price: '$4,999/mo',
+      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support']
+    },
+    {
+      name: 'Enterprise Quantum',
+      price: '$12,999/mo',
+      details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support']
+    },
+=======
     { 
       name: 'Quantum Professional', 
       price: '$4,999/mo', 
-      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise Quantum', 
-      price: '$12,999/mo', 
-      details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support'] 
-    },
+      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise Quantum', ;
+      price: '$12,999/mo', ;
+      details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -74,7 +85,7 @@ export default function AIQuantumMachineLearning() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
@@ -87,7 +98,7 @@ export default function AIQuantumMachineLearning() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -147,12 +158,12 @@ export default function AIQuantumMachineLearning() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-zion-slate-light">;
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}

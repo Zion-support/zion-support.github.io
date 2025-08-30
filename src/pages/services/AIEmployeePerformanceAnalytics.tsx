@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   Users, 
   TrendingUp, 
@@ -65,13 +65,13 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       icon: PieChart,
       title: "Predictive Performance Insights",
-      description: "AI-powered predictions for employee potential, retention risk, and career development opportunities."
-    },
-    {
-      icon: Activity,
-      title: "Engagement & Wellness Monitoring",
-      description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being."
-    }
+      description: "AI-powered predictions for employee potential, retention risk, and career development opportunities.";
+    },;
+    {;
+      icon: Activity,;
+      title: "Engagement & Wellness Monitoring",;
+      description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being.";
+    };
   ];
 
   const benefits = [
@@ -98,13 +98,13 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       icon: TrendingUp,
       title: "Enhanced Productivity",
-      description: "Optimize team performance through data-driven insights and targeted development programs."
-    },
-    {
-      icon: Clock,
-      title: "Time Savings",
-      description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month."
-    }
+      description: "Optimize team performance through data-driven insights and targeted development programs.";
+    },;
+    {;
+      icon: Clock,;
+      title: "Time Savings",;
+      description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month.";
+    };
   ];
 
   const pricingPlans = [
@@ -156,13 +156,13 @@ export default function AIEmployeePerformanceAnalytics() {
         "White-label solutions",
         "Advanced security features",
         "Custom reporting",
-        "On-premise deployment",
-        "SLA guarantees",
-        "24/7 support"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
+        "On-premise deployment",;
+        "SLA guarantees",;
+        "24/7 support";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -189,13 +189,13 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       industry: "Manufacturing",
       description: "Monitor production efficiency, quality metrics, and operational performance across manufacturing teams",
-      icon: Settings
-    },
-    {
-      industry: "Finance",
-      description: "Track financial advisor performance, client satisfaction, and investment portfolio management",
-      icon: DollarSign
-    }
+      icon: Settings;
+    },;
+    {;
+      industry: "Finance",;
+      description: "Track financial advisor performance, client satisfaction, and investment portfolio management",;
+      icon: DollarSign;
+    };
   ];
 
   const integrations = [
@@ -216,13 +216,13 @@ export default function AIEmployeePerformanceAnalytics() {
       platforms: ["Salesforce", "HubSpot", "Pipedrive", "Zoho"]
     },
     {
-      name: "Learning Platforms",
-      platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"]
-    },
-    {
-      name: "Time Tracking",
-      platforms: ["Toggl", "Harvest", "Time Doctor", "RescueTime"]
-    }
+      name: "Learning Platforms",;
+      platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"];
+    },;
+    {;
+      name: "Time Tracking",;
+      platforms: ["Toggl", "Harvest", "Time Doctor", "RescueTime"];
+    };
   ];
 
   const keyMetrics = [
@@ -239,13 +239,13 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       metric: "60%",
       label: "Time Savings",
-      description: "Reduction in manual performance review time"
-    },
-    {
-      metric: "3.2x",
-      label: "ROI",
-      description: "Return on investment for performance analytics"
-    }
+      description: "Reduction in manual performance review time";
+    },;
+    {;
+      metric: "3.2x",;
+      label: "ROI",;
+      description: "Return on investment for performance analytics";
+    };
   ];
 
   const performanceIndicators = [
@@ -258,17 +258,17 @@ export default function AIEmployeePerformanceAnalytics() {
       indicators: ["Error Rates", "Customer Satisfaction", "Code Reviews", "Quality Scores"]
     },
     {
-      category: "Collaboration Metrics",
-      indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"]
-    },
-    {
-      category: "Growth Metrics",
-      indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"]
-    }
+      category: "Collaboration Metrics",;
+      indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"];
+    },;
+    {;
+      category: "Growth Metrics",;
+      indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Employee Performance Analytics - Zion Tech Group"
         description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
@@ -280,8 +280,26 @@ export default function AIEmployeePerformanceAnalytics() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
@@ -319,9 +337,36 @@ export default function AIEmployeePerformanceAnalytics() {
             {keyMetrics.map((metric, index) => (
               <motion.div
                 key={metric.metric}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -344,8 +389,26 @@ export default function AIEmployeePerformanceAnalytics() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -362,9 +425,36 @@ export default function AIEmployeePerformanceAnalytics() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -397,8 +487,26 @@ export default function AIEmployeePerformanceAnalytics() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -415,9 +523,36 @@ export default function AIEmployeePerformanceAnalytics() {
             {performanceIndicators.map((category, index) => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -442,8 +577,26 @@ export default function AIEmployeePerformanceAnalytics() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -460,9 +613,36 @@ export default function AIEmployeePerformanceAnalytics() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -495,8 +675,26 @@ export default function AIEmployeePerformanceAnalytics() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -513,9 +711,36 @@ export default function AIEmployeePerformanceAnalytics() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
@@ -566,8 +791,26 @@ export default function AIEmployeePerformanceAnalytics() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -584,9 +827,36 @@ export default function AIEmployeePerformanceAnalytics() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -619,8 +889,26 @@ export default function AIEmployeePerformanceAnalytics() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -637,9 +925,36 @@ export default function AIEmployeePerformanceAnalytics() {
             {integrations.map((integration, index) => (
               <motion.div
                 key={integration.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -666,8 +981,26 @@ export default function AIEmployeePerformanceAnalytics() {
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -685,12 +1018,12 @@ export default function AIEmployeePerformanceAnalytics() {
               </button>
               <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

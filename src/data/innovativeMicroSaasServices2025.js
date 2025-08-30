@@ -618,8 +618,9 @@ export const innovativeMicroSaasServices2025 = [
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
         scalability: "Unlimited customers",
         support: "Customer experience expert support"
-    }
+
 ];
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025 = innovativeMicroSaasServices2025;
 export default innovativeMicroSaasServices2025;
+}

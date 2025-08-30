@@ -1,64 +1,75 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityTraining() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining() {
   const features = [
     'AI-powered security training optimization',
-    'Intelligent training strategy management and execution',
-    'Automated security skill assessment and certification',
-    'Predictive analytics for training needs',
-    'Smart training framework management',
-    'AI-driven training automation and orchestration',
-    'Real-time training performance tracking',
-    'Custom AI models for training applications'
+    'Intelligent training strategy management and execution',;
+    'Automated security skill assessment and certification',;
+    'Predictive analytics for training needs',;
+    'Smart training framework management',;
+    'AI-driven training automation and orchestration',;
+    'Real-time training performance tracking',;
+    'Custom AI models for training applications';
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$199/mo', 
-      details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$199/mo',
+      details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support']
     },
+<<<<<<< HEAD
+    {
+      name: 'Business',
+      price: '$599/mo',
+      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support']
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,499/mo',
+      details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support']
+    },
+=======
     { 
       name: 'Business', 
       price: '$599/mo', 
-      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$1,499/mo', 
-      details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Security training optimization',
-    'Training strategy management and execution',
-    'Security skill assessment and certification',
-    'Training framework management and automation',
-    'Training automation and orchestration',
-    'Training scaling and management'
+  const useCases = [;
+    'Security training optimization',;
+    'Training strategy management and execution',;
+    'Security skill assessment and certification',;
+    'Training framework management and automation',;
+    'Training automation and orchestration',;
+    'Training scaling and management';
   ];
 
-  const benefits = [
-    'Improve security training performance by 50-80%',
-    'Reduce training completion time by 40-70%',
-    'Cut security training costs by 35-65%',
-    'Enhance security training reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security training operations efficiently'
+  const benefits = [;
+    'Improve security training performance by 50-80%',;
+    'Reduce training completion time by 40-70%',;
+    'Cut security training costs by 35-65%',;
+    'Enhance security training reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security training operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +174,12 @@ export default function AISecurityTraining() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}

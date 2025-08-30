@@ -11,34 +11,34 @@ export interface PricingAnalysis {
     valueProposition: string;
     targetMarket: string;
     marketSize: string;
-    growthRate: string;
-  };
+    growthRate: string};
   pricingStrategy: {
     strategy: string;
     justification: string;
     priceElasticity: string;
     bundlingOptions: string[];
-    discountStructure: string[];
-  };
+    discountStructure: string[]};
   competitiveAnalysis: {
     directCompetitors: string[];
     indirectCompetitors: string[];
     competitiveAdvantages: string[];
-    differentiationFactors: string[];
-  };
+    differentiationFactors: string[]};
   roiAnalysis: {
     customerROI: string;
     implementationCost: string;
     paybackPeriod: string;
-    totalCostOfOwnership: string;
-  };
+    totalCostOfOwnership: string};
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   };
-}
+
+=======
+    website: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
   // AI AUTONOMOUS BUSINESS MANAGER
   {
@@ -60,27 +60,27 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       strategy: 'Value-based pricing with premium positioning',
       justification: 'First-to-market autonomous business management with no direct competitors',
       priceElasticity: 'Low - High value proposition justifies premium pricing',
-      bundlingOptions: [
+      bundlingOptions[
         'Enterprise package: $8,999/month (includes customization + support)',
         'Professional package: $4,999/month (includes training + integration)',
         'Starter package: $1,999/month (limited features)'
       ],
-      discountStructure: [
+      discountStructure[
         'Annual billing: 20% discount',
         'Multi-year contracts: 30% discount',
         'Enterprise volume: 40% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['No direct competitors'],
-      indirectCompetitors: ['Traditional consulting firms ($500-2,000/hour)', 'ERP systems ($10,000-100,000/month)'],
-      competitiveAdvantages: [
+      directCompetitors['No direct competitors'],
+      indirectCompetitors['Traditional consulting firms ($500-2,000/hour)', 'ERP systems ($10,000-100,000/month)'],
+      competitiveAdvantages[
         'First-to-market autonomous operations',
         '99.9% accuracy guarantee',
         '24/7 operational oversight',
         'Zero human intervention required'
       ],
-      differentiationFactors: [
+      differentiationFactors[
         'Fully autonomous decision-making',
         'Real-time market analysis',
         'Predictive business modeling',
@@ -98,7 +98,7 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   // QUANTUM NEURAL NETWORK PLATFORM
   {
@@ -120,27 +120,27 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       strategy: 'Premium pricing for cutting-edge technology',
       justification: 'Revolutionary quantum computing capabilities with limited competition',
       priceElasticity: 'Low - High-value research applications',
-      bundlingOptions: [
+      bundlingOptions[
         'Research package: $15,999/month (includes collaboration tools)',
         'Enterprise package: $9,999/month (includes support + training)',
         'Academic package: $2,999/month (discounted for research)'
       ],
-      discountStructure: [
+      discountStructure[
         'Annual billing: 25% discount',
         'Research collaboration: 40% discount',
         'Government contracts: 30% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['IBM Quantum ($1,000-10,000/month)', 'Google Quantum AI ($5,000-25,000/month)'],
-      indirectCompetitors: ['Traditional HPC clusters ($50,000-500,000/month)', 'Cloud computing services'],
-      competitiveAdvantages: [
+      directCompetitors['IBM Quantum ($1,000-10,000/month)', 'Google Quantum AI ($5,000-25,000/month)'],
+      indirectCompetitors['Traditional HPC clusters ($50,000-500,000/month)', 'Cloud computing services'],
+      competitiveAdvantages[
         '1000x performance improvement',
         'Quantum neural networks',
         'Hybrid classical-quantum computing',
         'Advanced simulation capabilities'
       ],
-      differentiationFactors: [
+      differentiationFactors[
         'Quantum neural network processing',
         'Quantum machine learning algorithms',
         'Complex problem solving',
@@ -158,7 +158,7 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   // AUTONOMOUS DEFI TRADING PLATFORM
   {
@@ -180,27 +180,27 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       strategy: 'Performance-based pricing with competitive positioning',
       justification: 'High returns justify premium pricing in growing DeFi market',
       priceElasticity: 'Medium - Performance-driven market',
-      bundlingOptions: [
+      bundlingOptions[
         'Premium package: $2,999/month (includes advanced features)',
         'Professional package: $1,999/month (includes support)',
         'Basic package: $799/month (limited features)'
       ],
-      discountStructure: [
+      discountStructure[
         'Annual billing: 15% discount',
         'Performance bonuses: 5-20% based on returns',
         'Volume discounts: 10-30% for large portfolios'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['Traditional DeFi platforms (free-2% fees)', 'Manual trading services ($100-1,000/month)'],
-      indirectCompetitors: ['Traditional investment platforms', 'Hedge funds'],
-      competitiveAdvantages: [
+      directCompetitors['Traditional DeFi platforms (free-2% fees)', 'Manual trading services ($100-1,000/month)'],
+      indirectCompetitors['Traditional investment platforms', 'Hedge funds'],
+      competitiveAdvantages[
         '200% average annual returns',
         '95% risk reduction',
         'Autonomous trading algorithms',
         'Multi-chain DeFi integration'
       ],
-      differentiationFactors: [
+      differentiationFactors[
         'AI-powered autonomous trading',
         'Risk management systems',
         'Portfolio optimization',
@@ -218,7 +218,7 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   // AI-POWERED THREAT HUNTING PLATFORM
   {
@@ -240,27 +240,27 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       strategy: 'Value-based pricing with competitive positioning',
       justification: 'High threat detection rate justifies premium pricing',
       priceElasticity: 'Medium - Security-critical applications',
-      bundlingOptions: [
+      bundlingOptions[
         'Enterprise package: $2,999/month (includes 24/7 support)',
         'Professional package: $1,499/month (includes training)',
         'Standard package: $899/month (basic features)'
       ],
-      discountStructure: [
+      discountStructure[
         'Annual billing: 20% discount',
         'Multi-year contracts: 30% discount',
         'Government/education: 25% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['CrowdStrike ($8-15/user/month)', 'SentinelOne ($5-12/user/month)', 'Darktrace ($50-100/user/month)'],
-      indirectCompetitors: ['Traditional SIEM systems', 'Manual security monitoring'],
-      competitiveAdvantages: [
+      directCompetitors['CrowdStrike ($8-15/user/month)', 'SentinelOne ($5-12/user/month)', 'Darktrace ($50-100/user/month)'],
+      indirectCompetitors['Traditional SIEM systems', 'Manual security monitoring'],
+      competitiveAdvantages[
         '99.99% threat detection rate',
         'Autonomous incident response',
         'Predictive threat intelligence',
         'Zero-day vulnerability detection'
       ],
-      differentiationFactors: [
+      differentiationFactors[
         'AI-powered autonomous hunting',
         'Predictive threat intelligence',
         'Behavioral analysis',
@@ -278,7 +278,7 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   // AUTONOMOUS MANUFACTURING OPTIMIZER
   {
@@ -300,27 +300,27 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       strategy: 'Value-based pricing with ROI focus',
       justification: 'High production increase and uptime guarantee justify premium pricing',
       priceElasticity: 'Medium - Manufacturing efficiency critical',
-      bundlingOptions: [
+      bundlingOptions[
         'Enterprise package: $8,999/month (includes customization)',
         'Professional package: $5,999/month (includes training)',
         'Standard package: $3,499/month (basic features)'
       ],
-      discountStructure: [
+      discountStructure[
         'Annual billing: 20% discount',
         'Multi-site deployment: 25% discount',
         'Manufacturing association: 15% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['Traditional MES systems ($10,000-100,000/month)', 'Manual optimization services'],
-      indirectCompetitors: ['ERP systems', 'Basic monitoring tools'],
-      competitiveAdvantages: [
+      directCompetitors['Traditional MES systems ($10,000-100,000/month)', 'Manual optimization services'],
+      indirectCompetitors['ERP systems', 'Basic monitoring tools'],
+      competitiveAdvantages[
         '99.9% uptime guarantee',
         '30% production increase',
         '50% downtime reduction',
         'Autonomous operation'
       ],
-      differentiationFactors: [
+      differentiationFactors[
         'AI-powered autonomous management',
         'Predictive maintenance',
         'Quality control automation',
@@ -338,34 +338,65 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
-  }
+
+
 ];
-export const getPricingAnalysisByService = (serviceId: string) => {
+<<<<<<< HEAD
+export const getPricingAnalysisByService = (serviceId: string) => {;
+  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId)};
+export const getPricingAnalysisByService = (serviceId: string) => {;
   return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId);
 };
-export const getPricingAnalysisByCategory = (category: string) => {
+export const getPricingAnalysisByCategory = (category: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   if (!category || category === 'All') return comprehensivePricingAnalysis2025;
-  return comprehensivePricingAnalysis2025.filter(s => s.category === category);
-};
+  return comprehensivePricingAnalysis2025.filter(s => s.category === category)};
 export const getMarketInsights = () => {
   const insights = {
-    totalMarketSize: '$1.2T+',
+  totalMarketSize: '$1.2T+',
     averageGrowthRate: '250% annual',
     priceRange: '$799 - $6,999/month',
     mostExpensiveCategory: 'Quantum Computing & AI',
     mostAffordableCategory: 'IoT & Edge Computing',
+<<<<<<< HEAD
     highestROI: '1000% (Quantum Neural Network Platform)',
-    fastestPayback: '2-4 months (DeFi Trading Platform)'
-  };
-  return insights;
+  fastestPayback: '2-4 months (DeFi Trading Platform)';
+  ;
+
 };
+  return insights};
 export const getCompetitiveLandscape = () => {
   return {
-    aiServices: ['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],
-    quantumComputing: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],
-    cybersecurity: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],
-    manufacturing: ['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],
-    blockchain: ['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura']
-  };
+    aiServices['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],
+    quantumComputing['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],
+    cybersecurity['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],
+    manufacturing['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],;
+    blockchain['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura'];
+  }};
+=======
+    highestROI: '1000% (Quantum Neural Network Platform)',;
+  ;
+  ;
+  fastestPayback: '2-4 months (DeFi Trading Platform)';
+  ;
+
+
+
+
 };
+  return insights;
+};
+export const getCompetitiveLandscape = () => {;
+  return {;
+    aiServices: ['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],;
+    quantumComputing: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],;
+    cybersecurity: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],;
+    manufacturing: ['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],;
+    blockchain: ['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura'];
+  };
+<<<<<<< HEAD
+};}}}}}}}
+=======
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

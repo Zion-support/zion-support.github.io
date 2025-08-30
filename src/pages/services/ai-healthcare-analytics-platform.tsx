@@ -1,13 +1,25 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Heart, 
+import {
+  Heart,
+  Brain,
+  Activity,
+  Shield,
+  Zap,
+  CheckCircle,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Heart, 
   Brain, 
   Activity, 
   Shield, 
   Zap, 
   CheckCircle, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Clock,
   Target,
@@ -22,9 +34,13 @@ import {
   PieChart,
   TrendingUp,
   AlertTriangle
-} from 'lucide-react';
-
+<<<<<<< HEAD
 export default function AIHealthcareAnalyticsPlatform() {
+=======
+ } from 'lucide-react';
+
+export default function AIHealthcareAnalyticsPlatform(...args: []):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -49,13 +65,23 @@ export default function AIHealthcareAnalyticsPlatform() {
     {
       icon: Zap,
       title: 'Real-Time Monitoring',
+<<<<<<< HEAD
       description: 'Continuous patient monitoring with instant alerts for critical health changes'
     },
     {
       icon: Eye,
       title: 'Medical Image Analysis',
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'
-    }
+
+=======
+      description: 'Continuous patient monitoring with instant alerts for critical health changes';
+    },;
+    {;
+      icon: Eye,;
+      title: 'Medical Image Analysis',;
+      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -102,13 +128,23 @@ export default function AIHealthcareAnalyticsPlatform() {
         'Full AI suite',
         'Custom AI models',
         'Dedicated support team',
+<<<<<<< HEAD
         'Advanced compliance',
         'On-premise options',
         'SLA guarantees',
         'Custom integrations'
       ],
       popular: false
-    }
+
+=======
+        'Advanced compliance',;
+        'On-premise options',;
+        'SLA guarantees',;
+        'Custom integrations';
+      ],;
+      popular: false;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -125,13 +161,23 @@ export default function AIHealthcareAnalyticsPlatform() {
     {
       icon: Clock,
       title: '24/7 Patient Monitoring',
+<<<<<<< HEAD
       description: 'Continuous monitoring ensures patient safety around the clock'
     },
     {
       icon: BarChart3,
       title: '40% Cost Reduction',
       description: 'AI optimization reduces healthcare costs and improves efficiency'
-    }
+
+=======
+      description: 'Continuous monitoring ensures patient safety around the clock';
+    },;
+    {;
+      icon: BarChart3,;
+      title: '40% Cost Reduction',;
+      description: 'AI optimization reduces healthcare costs and improves efficiency';
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -148,54 +194,87 @@ export default function AIHealthcareAnalyticsPlatform() {
     {
       title: 'Treatment Optimization',
       description: 'AI recommends optimal treatment plans based on patient data and outcomes',
+<<<<<<< HEAD
       icon: Heart
     },
     {
       title: 'Drug Safety Monitoring',
       description: 'Real-time monitoring of drug interactions and adverse effects',
       icon: Shield
-    }
+
+=======
+      icon: Heart;
+    },;
+    {;
+      title: 'Drug Safety Monitoring',;
+      description: 'Real-time monitoring of drug interactions and adverse effects',;
+      icon: Shield;
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const complianceStandards = [
-    'HIPAA Compliant',
-    'FDA Approved',
-    'ISO 13485',
-    'SOC 2 Type II',
-    'GDPR Compliant',
-    'HITECH Certified'
+  const complianceStandards = [;
+    'HIPAA Compliant',;
+    'FDA Approved',;
+    'ISO 13485',;
+    'SOC 2 Type II',;
+    'GDPR Compliant',;
+    'HITECH Certified';
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Healthcare Analytics Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
               <Heart className="w-4 h-4 mr-2" />
               AI-Powered Healthcare
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Healthcare with
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our AI-powered healthcare platform delivers 95% accuracy in diagnosis support, predictive analytics, 
+              Our AI-powered healthcare platform delivers 95% accuracy in diagnosis support, predictive analytics,
               and patient monitoring. Revolutionize patient care with the future of medical technology.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -212,12 +291,30 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -226,16 +323,43 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -251,12 +375,30 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
@@ -265,16 +407,43 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -290,12 +459,30 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Healthcare Solutions
             </h2>
@@ -304,16 +491,43 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -329,12 +543,30 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Compliance & Certifications
             </h2>
@@ -343,16 +575,43 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceStandards.map((standard, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceStandards.map((standard, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
-              >
+
                 <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
                 <p className="text-white font-medium text-sm">{standard}</p>
               </motion.div>
@@ -365,12 +624,30 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Healthcare Plan
             </h2>
@@ -379,20 +656,47 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                  plan.popular
+                    ? 'border-blue-500 ring-2 ring-blue-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -436,18 +740,36 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of healthcare providers already using our AI-powered platform
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -456,7 +778,8 @@ export default function AIHealthcareAnalyticsPlatform() {
                 Contact Healthcare Team
               </button>
             </div>
-            
+<<<<<<< HEAD
+
             <p className="text-gray-400 mt-6">
               No credit card required • 30-day free trial • HIPAA compliant
             </p>
@@ -464,5 +787,15 @@ export default function AIHealthcareAnalyticsPlatform() {
         </div>
       </section>
     </div>
+=======
+            
+            <p className="text-gray-400 mt-6">;
+              No credit card required • 30-day free trial • HIPAA compliant;
+            </p>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
+}}}}}}

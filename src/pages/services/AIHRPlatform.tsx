@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import {
+  Brain,
+  Users,
+  TrendingUp,
+  Target,
+  BarChart3,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Users, 
   TrendingUp, 
   Target, 
   BarChart3, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Calendar,
   Zap,
   CheckCircle,
@@ -32,41 +43,45 @@ import {
   Award,
   Heart,
   Building
-} from 'lucide-react';
-
+<<<<<<< HEAD
 export default function AIHRPlatform() {
+=======
+ } from 'lucide-react';
+
+export default function AIHRPlatform(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     "AI-powered candidate screening and matching",
     "Intelligent resume parsing and analysis",
     "Automated interview scheduling and coordination",
     "Performance analytics and employee insights",
     "Predictive analytics for retention and engagement",
-    "Skills gap analysis and training recommendations",
-    "Automated onboarding and offboarding",
-    "Employee sentiment analysis and feedback",
-    "Compliance monitoring and reporting",
-    "Talent pipeline management",
-    "Diversity and inclusion analytics",
-    "Workforce planning and forecasting"
+    "Skills gap analysis and training recommendations",;
+    "Automated onboarding and offboarding",;
+    "Employee sentiment analysis and feedback",;
+    "Compliance monitoring and reporting",;
+    "Talent pipeline management",;
+    "Diversity and inclusion analytics",;
+    "Workforce planning and forecasting";
   ];
 
-  const benefits = [
-    "Reduce hiring time by 60%",
-    "Improve candidate quality by 40%",
-    "Increase employee retention by 35%",
-    "Reduce HR administrative costs by 50%",
-    "Enhance diversity and inclusion metrics"
+  const benefits = [;
+    "Reduce hiring time by 60%",;
+    "Improve candidate quality by 40%",;
+    "Increase employee retention by 35%",;
+    "Reduce HR administrative costs by 50%",;
+    "Enhance diversity and inclusion metrics";
   ];
 
   const useCases = [
     "Enterprise HR departments",
-    "Recruitment agencies",
-    "Startups and scale-ups",
-    "Remote-first companies",
-    "Healthcare organizations",
-    "Financial services firms",
-    "Technology companies",
-    "Manufacturing companies"
+    "Recruitment agencies",;
+    "Startups and scale-ups",;
+    "Remote-first companies",;
+    "Healthcare organizations",;
+    "Financial services firms",;
+    "Technology companies",;
+    "Manufacturing companies";
   ];
 
   const pricing = [
@@ -75,7 +90,7 @@ export default function AIHRPlatform() {
       price: "$399",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features: [
+      features[
         "AI candidate screening (up to 100/month)",
         "Basic resume parsing",
         "Interview scheduling",
@@ -91,7 +106,7 @@ export default function AIHRPlatform() {
       price: "$899",
       period: "/month",
       description: "Ideal for growing companies and HR teams",
-      features: [
+      features[
         "AI candidate screening (unlimited)",
         "Advanced resume parsing",
         "Performance analytics",
@@ -108,35 +123,68 @@ export default function AIHRPlatform() {
       price: "$1,999",
       period: "/month",
       description: "For large organizations with complex HR needs",
-      features: [
+      features[
         "Custom AI model training",
         "Advanced workforce planning",
         "White-label solutions",
         "Custom integrations",
+<<<<<<< HEAD
         "Dedicated account manager",
         "24/7 phone support",
         "Unlimited employees"
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+        "Dedicated account manager",;
+        "24/7 phone support",;
+        "Unlimited employees";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
+  ];
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI HR Platform - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, performance management, and employee engagement. Streamline hiring and improve retention."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered HR
@@ -148,7 +196,7 @@ export default function AIHRPlatform() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your HR operations with AI that screens candidates, manages performance, and engages employees. 
+              Revolutionize your HR operations with AI that screens candidates, manages performance, and engages employees.
               Streamline hiring, improve retention, and build better teams with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -156,14 +204,14 @@ export default function AIHRPlatform() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-              >
+
                 Watch Demo
               </motion.button>
             </div>
@@ -175,11 +223,29 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive HR Intelligence
             </h2>
@@ -188,15 +254,42 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -211,11 +304,29 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your HR Operations
             </h2>
@@ -224,15 +335,42 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
@@ -247,28 +385,73 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry-Leading Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven solutions across diverse industries and company sizes
+              Proven solutions across diverse industries and comp sizes
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-indigo-500 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Building className="w-8 h-8 text-white" />
                 </div>
@@ -283,32 +466,76 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Company
-            </h2>
+              Flexible Pricing for Every Comp </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Scale your HR platform as your company grows
+              Scale your HR platform as your comp grows
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-indigo-500 ring-2 ring-indigo-500/20' 
+                  plan.popular
+                    ? 'border-indigo-500 ring-2 ring-indigo-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -316,7 +543,7 @@ export default function AIHRPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -343,7 +570,7 @@ export default function AIHRPlatform() {
                       ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
-                >
+
                   {plan.cta}
                 </motion.button>
               </motion.div>
@@ -356,10 +583,28 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your HR Operations?
             </h2>
@@ -371,19 +616,19 @@ export default function AIHRPlatform() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-              >
+
                 Schedule Demo
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -398,10 +643,23 @@ export default function AIHRPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
             <span>🌐 https://ziontechgroup.com</span>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+<<<<<<< HEAD
+}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

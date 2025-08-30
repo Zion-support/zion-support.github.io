@@ -1,11 +1,20 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Accessibility,
+  Type,
+  Eye,
+  Volume2,
+  Keyboard,
+=======
 import { 
   Accessibility as AccessibilityIcon, 
   Type, 
   Eye, 
   Volume2, 
   Keyboard, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   X,
   Plus,
   Minus,
@@ -13,15 +22,12 @@ import {
   Sun,
   Moon,
   Settings
-} from 'lucide-react';
-
 interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
-}
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,14 +46,13 @@ export function Accessibility() {
       const parsed = JSON.parse(savedSettings);
       setSettings(parsed);
       applySettings(parsed);
-    }
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey) {
-        switch (e.key) {
-          case '=':
-          case '+':
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.ctrlKey) {;
+        switch (e.key) {;
+          case '=':;
+          case '+':;
             e.preventDefault();
             increaseFontSize();
             break;
@@ -59,73 +64,105 @@ export function Accessibility() {
             e.preventDefault();
             resetSettings();
             break;
-        }
-      }
+
+
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings = (newSettings: AccessibilitySettings) => {;
     const root = document.documentElement;
-    
+
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
-    
+
     // Apply high contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
-    }
-    
+
     // Apply reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
-    }
-    
+
     // Apply theme
-    if (newSettings.theme === 'light') {
+    if (newSettings.theme = == 'light') {;
       root.classList.add('light-theme');
       root.classList.remove('dark-theme');
-    } else if (newSettings.theme === 'dark') {
+    } else if (newSettings.theme = == 'dark') {;
       root.classList.add('dark-theme');
       root.classList.remove('light-theme');
     } else {
       root.classList.remove('light-theme', 'dark-theme');
-    }
+
   };
 
+<<<<<<< HEAD
+  const updateSetting = (key: keyof AccessibilitySettings, value: ) => {
+    const newSettings = {
+  ...settings,;
+  [key]: value ;
+
+};
+=======
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
+    const newSettings = {
+  ...settings,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  [key]: value ;
+
+
+
+
+
+
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  const increaseFontSize = () => {
-    if (settings.fontSize < 24) {
+  const increaseFontSize = () => {;
+    if (settings.fontSize < 24) {;
       updateSetting('fontSize', settings.fontSize + 2);
-    }
+
   };
 
-  const decreaseFontSize = () => {
-    if (settings.fontSize > 12) {
+  const decreaseFontSize = () => {;
+    if (settings.fontSize > 12) {;
       updateSetting('fontSize', settings.fontSize - 2);
-    }
+
   };
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
-      fontSize: 16,
+  fontSize: 16,
       highContrast: false,
       reducedMotion: false,
-      soundEnabled: true,
-      theme: 'auto'
-    };
+      soundEnabled: true,;
+  ;
+  ;
+  ;
+  ;
+  theme: 'auto';
+    ;
+
+
+
+
+
+
+};
     setSettings(defaultSettings);
     applySettings(defaultSettings);
     localStorage.removeItem('accessibility-settings');
@@ -135,24 +172,65 @@ export function Accessibility() {
     <>
       {/* Accessibility Toggle Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick = {() => setIsOpen(!isOpen)}
         className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
         aria-label="Accessibility Settings"
         title="Accessibility Settings"
+<<<<<<< HEAD
+
+        <Accessibility className="w-6 h-6" />
+=======
       >
         <AccessibilityIcon className="w-6 h-6" />
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: -400 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -400 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial = {
+  { opacity: 0,
+  x: -400 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  x: -400 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.3,
+  ease: "easeOut" 
+
+
+
+
+
+
+}}
             className="fixed left-4 bottom-20 z-50 w-80 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl backdrop-blur-xl"
-          >
+
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
@@ -164,7 +242,7 @@ export function Accessibility() {
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Close accessibility panel"
-                >
+
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -181,7 +259,7 @@ export function Accessibility() {
                     disabled={settings.fontSize <= 12}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     aria-label="Decrease font size"
-                  >
+
                     <Minus className="w-4 h-4 text-white" />
                   </button>
                   <span className="text-white font-mono min-w-[3rem] text-center">
@@ -192,7 +270,7 @@ export function Accessibility() {
                     disabled={settings.fontSize >= 24}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     aria-label="Increase font size"
-                  >
+
                     <Plus className="w-4 h-4 text-white" />
                   </button>
                 </div>
@@ -208,7 +286,16 @@ export function Accessibility() {
                   <input
                     type="checkbox"
                     checked={settings.highContrast}
-                    onChange={(e) => updateSetting('highContrast', e.target.checked)}
+                    onChange = {
+  (e) => updateSetting('highContrast',
+  e.target.checked)
+
+
+
+
+
+
+}
                     className="sr-only"
                   />
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -231,7 +318,16 @@ export function Accessibility() {
                   <input
                     type="checkbox"
                     checked={settings.reducedMotion}
-                    onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                    onChange = {
+  (e) => updateSetting('reducedMotion',
+  e.target.checked)
+
+
+
+
+
+
+}
                     className="sr-only"
                   />
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -254,13 +350,22 @@ export function Accessibility() {
                   {(['auto', 'light', 'dark'] as const).map((theme) => (
                     <button
                       key={theme}
-                      onClick={() => updateSetting('theme', theme)}
+                      onClick = {
+  () => updateSetting('theme',
+  theme)
+
+
+
+
+
+
+}
                       className={`p-2 rounded-md text-xs font-medium transition-colors ${
                         settings.theme === theme
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                       }`}
-                    >
+
                       {theme === 'auto' && 'Auto'}
                       {theme === 'light' && <Sun className="w-4 h-4 mx-auto" />}
                       {theme === 'dark' && <Moon className="w-4 h-4 mx-auto" />}
@@ -279,7 +384,16 @@ export function Accessibility() {
                   <input
                     type="checkbox"
                     checked={settings.soundEnabled}
-                    onChange={(e) => updateSetting('soundEnabled', e.target.checked)}
+                    onChange = {
+  (e) => updateSetting('soundEnabled',
+  e.target.checked)
+
+
+
+
+
+
+}
                     className="sr-only"
                   />
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -318,7 +432,8 @@ export function Accessibility() {
               <button
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
-              >
+<<<<<<< HEAD
+
                 Reset to Defaults
               </button>
             </div>
@@ -326,5 +441,15 @@ export function Accessibility() {
         )}
       </AnimatePresence>
     </>
+=======
+              >
+                Reset to Defaults;
+              </button>;
+            </div>;
+          </motion.div>;
+        )};
+      </AnimatePresence>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
+}}}}}}}}}}}

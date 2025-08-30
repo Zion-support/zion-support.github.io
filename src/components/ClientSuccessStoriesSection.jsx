@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building } from 'lucide-react';
-const successStories = [
+import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building const successStories = [
     {
         id: 1,
         client: "TechFlow Solutions",
@@ -15,13 +14,13 @@ const successStories = [
             cost: "40%",
             time: "60%"
         },
-        metrics: [
+        metrics[
             { label: "Transaction Processing", before: "1,000/sec", after: "10,000/sec", improvement: "900%" },
             { label: "System Uptime", before: "95%", after: "99.9%", improvement: "5.2%" },
             { label: "Customer Satisfaction", before: "3.2/5", after: "4.8/5", improvement: "50%" },
             { label: "Development Speed", before: "6 months", after: "2 months", improvement: "67%" }
         ],
-        technologies: ["AWS", "Kubernetes", "React", "Node.js", "PostgreSQL", "Redis"],
+        technologies["AWS", "Kubernetes", "React", "Node.js", "PostgreSQL", "Redis"],
         team: "12 developers",
         duration: "8 months",
         budget: "$2.5M",
@@ -44,13 +43,13 @@ const successStories = [
             cost: "35%",
             time: "70%"
         },
-        metrics: [
+        metrics[
             { label: "Patient Wait Time", before: "45 minutes", after: "5 minutes", improvement: "89%" },
             { label: "Diagnostic Accuracy", before: "78%", after: "94%", improvement: "21%" },
             { label: "Platform Security", before: "Basic", after: "Enterprise-grade", improvement: "N/A" },
             { label: "User Adoption", before: "60%", after: "95%", improvement: "58%" }
         ],
-        technologies: ["React Native", "Python", "TensorFlow", "AWS", "HIPAA Compliance", "WebRTC"],
+        technologies["React Native", "Python", "TensorFlow", "AWS", "HIPAA Compliance", "WebRTC"],
         team: "15 developers",
         duration: "12 months",
         budget: "$3.2M",
@@ -73,13 +72,13 @@ const successStories = [
             cost: "30%",
             time: "65%"
         },
-        metrics: [
+        metrics[
             { label: "Sales Conversion", before: "2.1%", after: "6.8%", improvement: "224%" },
             { label: "Inventory Turnover", before: "4x/year", after: "12x/year", improvement: "200%" },
             { label: "Customer Retention", before: "45%", after: "78%", improvement: "73%" },
             { label: "Operational Costs", before: "$2.1M", after: "$1.4M", improvement: "33%" }
         ],
-        technologies: ["React", "Next.js", "Python", "Machine Learning", "AWS", "Stripe"],
+        technologies["React", "Next.js", "Python", "Machine Learning", "AWS", "Stripe"],
         team: "18 developers",
         duration: "10 months",
         budget: "$2.8M",
@@ -102,13 +101,13 @@ const successStories = [
             cost: "45%",
             time: "55%"
         },
-        metrics: [
+        metrics[
             { label: "Production Output", before: "85%", after: "98%", improvement: "15%" },
             { label: "Downtime Reduction", before: "12%", after: "2%", improvement: "83%" },
             { label: "Energy Efficiency", before: "70%", after: "92%", improvement: "31%" },
             { label: "Quality Control", before: "94%", after: "99.5%", improvement: "6%" }
         ],
-        technologies: ["IoT Sensors", "Python", "Machine Learning", "Azure", "React", "Real-time Analytics"],
+        technologies["IoT Sensors", "Python", "Machine Learning", "Azure", "React", "Real-time Analytics"],
         team: "20 developers",
         duration: "14 months",
         budget: "$4.1M",
@@ -131,13 +130,13 @@ const successStories = [
             cost: "50%",
             time: "75%"
         },
-        metrics: [
+        metrics[
             { label: "Student Engagement", before: "45%", after: "87%", improvement: "93%" },
             { label: "Learning Outcomes", before: "72%", after: "91%", improvement: "26%" },
             { label: "Content Delivery", before: "Manual", after: "AI-powered", improvement: "N/A" },
             { label: "Platform Scalability", before: "1,000 users", after: "50,000 users", improvement: "4,900%" }
         ],
-        technologies: ["React", "Node.js", "Python", "AI/ML", "AWS", "MongoDB"],
+        technologies["React", "Node.js", "Python", "AI/ML", "AWS", "MongoDB"],
         team: "16 developers",
         duration: "11 months",
         budget: "$2.9M",
@@ -160,13 +159,13 @@ const successStories = [
             cost: "60%",
             time: "80%"
         },
-        metrics: [
+        metrics[
             { label: "Energy Efficiency", before: "65%", after: "89%", improvement: "37%" },
             { label: "Renewable Integration", before: "20%", after: "75%", improvement: "275%" },
             { label: "Grid Reliability", before: "92%", after: "99.5%", improvement: "8%" },
             { label: "Operational Costs", before: "$5.2M", after: "$2.1M", improvement: "60%" }
         ],
-        technologies: ["Python", "Machine Learning", "IoT", "React", "AWS", "Real-time Analytics"],
+        technologies["Python", "Machine Learning", "IoT", "React", "AWS", "Real-time Analytics"],
         team: "22 developers",
         duration: "16 months",
         budget: "$5.5M",
@@ -175,7 +174,7 @@ const successStories = [
         role: "Chief Technology Officer",
         rating: 5,
         featured: false
-    }
+
 ];
 const industryStats = [
     { industry: "FinTech", projects: 45, successRate: "98%", avgROI: "340%" },
@@ -203,19 +202,27 @@ export function ClientSuccessStoriesSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
@@ -227,18 +234,63 @@ export function ClientSuccessStoriesSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Client <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover how Zion Tech Group has transformed businesses across industries, delivering 
+            Discover how Zion Tech Group has transformed businesses across industries, delivering
             exceptional results and measurable business impact through innovative technology solutions.
           </p>
 
           {/* Overall stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {overallStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+            {overallStats.map((stat, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
                 </div>
@@ -249,15 +301,69 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
 
         {/* Industry Performance */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.div className="mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Performance</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industryStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+            {industryStats.map((stat, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <h4 className="text-xl font-bold text-white mb-4">{stat.industry}</h4>
-                
+
                 <div className="grid grid-cols-3 gap-4 text-center mb-4">
                   <div>
                     <div className="text-zion-cyan font-bold text-lg">{stat.projects}</div>
@@ -277,13 +383,67 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
 
         {/* Success Stories */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="mb-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+
+}}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {successStories.map((story, index) => (<motion.div key={story.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
+            {successStories.map((story, index) => (<motion.div key={story.id} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
@@ -344,7 +504,34 @@ export function ClientSuccessStoriesSection() {
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedStory === story.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {selectedStory === story.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+
+
+
+
+
+}} transition={{ duration: 0.3 }}>
                         {/* Detailed Metrics */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-3">Detailed Metrics:</h5>
@@ -392,14 +579,41 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+
+}}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Write Your Success Story?
               </h3>
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Join hundreds of successful companies that have transformed their business with Zion Tech Group. 
+                Join hundreds of successful companies that have transformed their business with Zion Tech Group.
                 Let's discuss how we can help you achieve similar results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -414,5 +628,9 @@ export function ClientSuccessStoriesSection() {
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </section>);
-}
+}}}}}}}
+=======
+    </section>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

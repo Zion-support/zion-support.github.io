@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2028CybersecurityBlockchainService {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface Revolutionary2028CybersecurityBlockchainService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028CybersecurityBlockchainService[] = [
   // AI-Powered Threat Intelligence Platform
   {
@@ -48,7 +51,7 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     price: '$1,299',
     period: '/month',
     description: 'Advanced AI-powered threat intelligence platform that uses machine learning to predict, detect, and automatically respond to cyber threats in real-time. Features behavioral analysis, threat hunting, and automated incident response.',
-    features: [
+    features[
       'AI-powered threat prediction',
       'Behavioral anomaly detection',
       'Automated threat hunting',
@@ -71,11 +74,11 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     setupTime: '2 weeks',
     category: 'AI Cybersecurity',
     realService: true,
-    technology: ['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Behavioral Analysis', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Email security', 'Web security', 'Cloud security platforms'],
-    useCases: ['Threat detection', 'Incident response', 'Vulnerability management', 'Security monitoring', 'Compliance reporting', 'Threat hunting'],
+    technology['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Behavioral Analysis', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['SIEM systems', 'EDR platforms', 'Firewalls', 'Email security', 'Web security', 'Cloud security platforms'],
+    useCases['Threat detection', 'Incident response', 'Vulnerability management', 'Security monitoring', 'Compliance reporting', 'Threat hunting'],
     roi: 'Organizations report 480% ROI through reduced security incidents and improved threat response times.',
-    competitors: ['CrowdStrike', 'Palo Alto Networks', 'FireEye', 'Symantec', 'Trend Micro'],
+    competitors['CrowdStrike', 'Palo Alto Networks', 'FireEye', 'Symantec', 'Trend Micro'],
     marketSize: '$52.8B market',
     growthRate: '285% annual growth',
     variant: 'cybersecurity',
@@ -100,7 +103,7 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     price: '$899',
     period: '/month',
     description: 'Next-generation blockchain platform that combines quantum-resistant cryptography with AI optimization for secure, scalable, and future-proof decentralized applications. Features post-quantum algorithms, smart contract optimization, and cross-chain interoperability.',
-    features: [
+    features[
       'Quantum-resistant cryptography',
       'AI-powered smart contract optimization',
       'Cross-chain interoperability',
@@ -123,11 +126,11 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     setupTime: '1 month',
     category: 'Quantum Blockchain',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Blockchain', 'Machine Learning', 'Smart Contracts', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Ethereum', 'Solana', 'Polkadot', 'DeFi protocols', 'NFT marketplaces', 'Wallet providers', 'Oracle services'],
-    useCases: ['DeFi applications', 'NFT platforms', 'Supply chain tracking', 'Digital identity', 'Cross-border payments', 'Smart contracts'],
+    technology['Post-Quantum Cryptography', 'Blockchain', 'Machine Learning', 'Smart Contracts', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['Ethereum', 'Solana', 'Polkadot', 'DeFi protocols', 'NFT marketplaces', 'Wallet providers', 'Oracle services'],
+    useCases['DeFi applications', 'NFT platforms', 'Supply chain tracking', 'Digital identity', 'Cross-border payments', 'Smart contracts'],
     roi: 'Platforms report 520% ROI through improved security, scalability, and user adoption.',
-    competitors: ['Ethereum', 'Solana', 'Polkadot', 'Cardano', 'Avalanche'],
+    competitors['Ethereum', 'Solana', 'Polkadot', 'Cardano', 'Avalanche'],
     marketSize: '$19.8B market',
     growthRate: '320% annual growth',
     variant: 'quantum-futuristic',
@@ -152,7 +155,7 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     price: '$599',
     period: '/month',
     description: 'Advanced AI-powered identity verification platform that uses biometric authentication, document verification, and behavioral analysis to provide secure, seamless identity verification. Features liveness detection, fraud prevention, and compliance management.',
-    features: [
+    features[
       'AI-powered biometric authentication',
       'Document verification',
       'Liveness detection',
@@ -175,11 +178,11 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     setupTime: '1 week',
     category: 'AI Identity',
     realService: true,
-    technology: ['Computer Vision', 'Machine Learning', 'Biometric Authentication', 'Natural Language Processing', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Banking systems', 'E-commerce platforms', 'Healthcare systems', 'Government databases', 'CRM systems', 'Payment processors'],
-    useCases: ['Customer onboarding', 'Account verification', 'Fraud prevention', 'Compliance verification', 'Access control', 'Digital identity'],
+    technology['Computer Vision', 'Machine Learning', 'Biometric Authentication', 'Natural Language Processing', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['Banking systems', 'E-commerce platforms', 'Healthcare systems', 'Government databases', 'CRM systems', 'Payment processors'],
+    useCases['Customer onboarding', 'Account verification', 'Fraud prevention', 'Compliance verification', 'Access control', 'Digital identity'],
     roi: 'Companies report 380% ROI through reduced fraud and improved customer experience.',
-    competitors: ['Onfido', 'Jumio', 'ID.me', 'Veriff', 'AuthenticID'],
+    competitors['Onfido', 'Jumio', 'ID.me', 'Veriff', 'AuthenticID'],
     marketSize: '$18.5B market',
     growthRate: '245% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +207,7 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     price: '$799',
     period: '/month',
     description: 'Comprehensive blockchain-based supply chain security platform that provides end-to-end transparency, authentication, and monitoring. Features product tracking, counterfeit detection, compliance verification, and sustainability tracking.',
-    features: [
+    features[
       'End-to-end product tracking',
       'Counterfeit detection',
       'Compliance verification',
@@ -227,11 +230,11 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     setupTime: '2 weeks',
     category: 'Blockchain Security',
     realService: true,
-    technology: ['Blockchain', 'IoT Sensors', 'Machine Learning', 'Smart Contracts', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['ERP systems', 'WMS platforms', 'IoT devices', 'QR codes', 'RFID systems', 'Mobile apps'],
-    useCases: ['Product authentication', 'Supply chain transparency', 'Counterfeit prevention', 'Compliance verification', 'Sustainability tracking', 'Quality assurance'],
+    technology['Blockchain', 'IoT Sensors', 'Machine Learning', 'Smart Contracts', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['ERP systems', 'WMS platforms', 'IoT devices', 'QR codes', 'RFID systems', 'Mobile apps'],
+    useCases['Product authentication', 'Supply chain transparency', 'Counterfeit prevention', 'Compliance verification', 'Sustainability tracking', 'Quality assurance'],
     roi: 'Companies report 420% ROI through reduced fraud, improved compliance, and enhanced customer trust.',
-    competitors: ['IBM Food Trust', 'SAP Blockchain', 'Oracle Blockchain', 'VeChain', 'Walmart Blockchain'],
+    competitors['IBM Food Trust', 'SAP Blockchain', 'Oracle Blockchain', 'VeChain', 'Walmart Blockchain'],
     marketSize: '$25.3B market',
     growthRate: '285% annual growth',
     variant: 'blockchain-futuristic',
@@ -256,7 +259,7 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     price: '$1,099',
     period: '/month',
     description: 'Revolutionary privacy-preserving analytics platform that uses federated learning, homomorphic encryption, and differential privacy to extract valuable insights without compromising data privacy. Features secure multi-party computation and privacy-preserving machine learning.',
-    features: [
+    features[
       'Federated learning',
       'Homomorphic encryption',
       'Differential privacy',
@@ -279,11 +282,11 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     setupTime: '1 month',
     category: 'AI Privacy',
     realService: true,
-    technology: ['Federated Learning', 'Homomorphic Encryption', 'Differential Privacy', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Data platforms', 'Analytics tools', 'ML frameworks', 'Privacy tools', 'Compliance platforms', 'Research platforms'],
-    useCases: ['Healthcare analytics', 'Financial modeling', 'Research collaboration', 'Privacy-compliant insights', 'Cross-organizational analytics', 'Regulatory compliance'],
+    technology['Federated Learning', 'Homomorphic Encryption', 'Differential Privacy', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['Data platforms', 'Analytics tools', 'ML frameworks', 'Privacy tools', 'Compliance platforms', 'Research platforms'],
+    useCases['Healthcare analytics', 'Financial modeling', 'Research collaboration', 'Privacy-compliant insights', 'Cross-organizational analytics', 'Regulatory compliance'],
     roi: 'Organizations report 380% ROI through improved insights while maintaining privacy compliance.',
-    competitors: ['OpenMined', 'Privacera', 'BigID', 'OneTrust', 'TrustArc'],
+    competitors['OpenMined', 'Privacera', 'BigID', 'OneTrust', 'TrustArc'],
     marketSize: '$12.8B market',
     growthRate: '265% annual growth',
     variant: 'ai-futuristic',
@@ -299,5 +302,5 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     customers: 450,
     rating: 4.8,
     reviews: 320
-  }
-];
+
+];}}

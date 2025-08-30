@@ -1,15 +1,19 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation import { SEO } from '../../components/SEO';
+=======
 import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIAutonomousVehiclePlatform() {
-  const features = [
-    'Advanced computer vision and sensor fusion',
-    'Real-time decision making and path planning',
-    'Predictive maintenance and fleet optimization',
-    'Multi-vehicle coordination and traffic management',
-    'Safety-first autonomous driving algorithms',
-    'Cloud-based vehicle monitoring and control'
+  const features = [;
+    'Advanced computer vision and sensor fusion',;
+    'Real-time decision making and path planning',;
+    'Predictive maintenance and fleet optimization',;
+    'Multi-vehicle coordination and traffic management',;
+    'Safety-first autonomous driving algorithms',;
+    'Cloud-based vehicle monitoring and control';
   ];
 
   const tiers = [
@@ -47,49 +51,64 @@ export default function AIAutonomousVehiclePlatform() {
       details: [
         'Unlimited vehicle management',
         'Custom autonomous algorithms',
+<<<<<<< HEAD
         '24/7 dedicated support',
         'On-premise deployment options',
         'Custom integrations and APIs',
         'White-label solutions available',
         'Regulatory compliance tools'
       ]
-    }
+
+=======
+        '24/7 dedicated support',;
+        'On-premise deployment options',;
+        'Custom integrations and APIs',;
+        'White-label solutions available',;
+        'Regulatory compliance tools';
+      ];
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Ride-sharing and taxi services',
-    'Logistics and delivery fleets',
-    'Public transportation systems',
-    'Mining and construction vehicles',
-    'Agricultural machinery automation',
-    'Emergency response vehicles'
+  const useCases = [;
+    'Ride-sharing and taxi services',;
+    'Logistics and delivery fleets',;
+    'Public transportation systems',;
+    'Mining and construction vehicles',;
+    'Agricultural machinery automation',;
+    'Emergency response vehicles';
   ];
 
-  const benefits = [
-    'Reduce transportation costs by 40-60% through automation',
-    'Improve safety by eliminating human error factors',
-    'Increase fleet efficiency and utilization rates',
-    'Enable 24/7 operation without driver fatigue',
-    'Reduce carbon emissions through optimized routing'
+  const benefits = [;
+    'Reduce transportation costs by 40-60% through automation',;
+    'Improve safety by eliminating human error factors',;
+    'Increase fleet efficiency and utilization rates',;
+    'Enable 24/7 operation without driver fatigue',;
+    'Reduce carbon emissions through optimized routing';
   ];
 
-  const industries = [
-    'Transportation and Logistics',
-    'Automotive Manufacturing',
-    'Ride-sharing Services',
-    'Public Transit',
-    'Construction and Mining',
-    'Agriculture and Farming'
+  const industries = [;
+    'Transportation and Logistics',;
+    'Automotive Manufacturing',;
+    'Ride-sharing Services',;
+    'Public Transit',;
+    'Construction and Mining',;
+    'Agriculture and Farming';
   ];
 
   return (
     <>
-      <SEO 
+<<<<<<< HEAD
+      <SEO
         title="AI Autonomous Vehicle Platform | Zion Tech Group"
+=======
+      <SEO 
+        title = "AI Autonomous Vehicle Platform | Zion Tech Group"
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management."
         keywords="AI autonomous vehicles, self-driving cars, autonomous fleet management, computer vision, sensor fusion, transportation automation"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -103,21 +122,21 @@ export default function AIAutonomousVehiclePlatform() {
               AI-Powered Autonomous Vehicle Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize transportation with our cutting-edge autonomous vehicle platform. 
+              Revolutionize transportation with our cutting-edge autonomous vehicle platform.
               Advanced AI algorithms ensure safety, efficiency, and intelligent fleet management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-              >
+
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a 
+              <a
                 href="#pricing"
                 className="inline-flex items-center px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-200"
-              >
+
                 View Pricing
               </a>
             </div>
@@ -180,10 +199,10 @@ export default function AIAutonomousVehiclePlatform() {
                       </li>
                     ))}
                   </ul>
-                  <a 
+                  <a
                     href="https://ziontechgroup.com/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-                  >
+
                     Get Started
                   </a>
                 </div>
@@ -298,10 +317,11 @@ export default function AIAutonomousVehiclePlatform() {
                 <p className="text-gray-300">Middletown DE 19709</p>
               </div>
             </div>
-            <a 
+            <a
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-            >
+<<<<<<< HEAD
+
               Get Started Today
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
@@ -309,5 +329,15 @@ export default function AIAutonomousVehiclePlatform() {
         </section>
       </div>
     </>
+=======
+            >
+              Get Started Today;
+              <ArrowRight className="ml-2 w-5 h-5" />;
+            </a>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}
+}}}

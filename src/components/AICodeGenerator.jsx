@@ -1,8 +1,13 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
-import { useAICodeGeneration } from '../hooks/useAICodeGeneration';
+<<<<<<< HEAD
+import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 import { useAICodeGeneration } from '../hooks/useAICodeGeneration';
 import { useAnalytics } from '../hooks/useAnalytics';
+=======
+import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
+import { useAICodeGeneration } from "../hooks/useAICodeGeneration";
+import { useAnalytics } from "../hooks/useAnalytics";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -32,20 +37,18 @@ export const AICodeGenerator = () => {
         if (!form.prompt.trim())
             return;
         await generateCode(form.prompt, form);
-        trackEvent('ai_code_generator', 'form_submitted', form.language, undefined, {
+        trackEvent('ai_code_generator', 'form_submitted', form.language, null, {
             framework: form.framework,
             style: form.style,
             target: form.target,
             quality: form.quality
-        });
-    }, [form, generateCode, trackEvent]);
+        })}, [form, generateCode, trackEvent]);
     // Handle custom code analysis
     const handleAnalyzeCustomCode = useCallback(async () => {
         if (!customCode.trim())
             return;
         await analyzeCode(customCode, form.language);
-        trackEvent('ai_code_generator', 'custom_code_analyzed', form.language, customCode.length);
-    }, [customCode, form.language, analyzeCode, trackEvent]);
+        trackEvent('ai_code_generator', 'custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization
     const handleOptimizeCode = useCallback(async (focus) => {
         if (!generatedCode && !customCode)
@@ -55,9 +58,14 @@ export const AICodeGenerator = () => {
         if (generatedCode) {
             // Update generated code
             // Note: In a real implementation, you'd want to update the state properly
-        }
+<<<<<<< HEAD
+
         trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length);
     }, [generatedCode, customCode, optimizeCode, trackEvent]);
+=======
+        }
+        trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Handle test generation
     const handleGenerateTests = useCallback(async () => {
         if (!generatedCode && !customCode)
@@ -65,9 +73,18 @@ export const AICodeGenerator = () => {
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTest, form.language);
         // In a real implementation, you'd want to display the test code
-        console.log('Generated tests:', testCode);
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // // // console.log('Generated tests:', testCode);
+=======
+        // // // // // // // console.log('Generated tests:', testCode);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
     }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
+=======
+        console.log('Generated tests:', testCode);
+        trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Handle documentation generation
     const handleGenerateDocs = useCallback(async () => {
         if (!generatedCode && !customCode)
@@ -75,34 +92,52 @@ export const AICodeGenerator = () => {
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDoc, form.language);
         // In a real implementation, you'd want to display the documentation
-        console.log('Generated docs:', docs);
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // // // console.log('Generated docs:', docs);
+=======
+        // // // // // // // console.log('Generated docs:', docs);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
     }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
+=======
+        console.log('Generated docs:', docs);
+        trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Copy code to clipboard
     const copyToClipboard = useCallback(async (code) => {
         try {
             await navigator.clipboard.writeText(code);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
+<<<<<<< HEAD
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
-        }
+
         catch (error) {
-            console.error('Failed to copy code:', error);
+<<<<<<< HEAD
+            // // // console.error('Failed to copy code:', error);
+
+=======
+            // // // // // // // console.error('Failed to copy code:', error);
         }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+            trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length)}
+        catch (error) {
+            console.error('Failed to copy code:', error)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [trackEvent]);
     // Apply suggestion
     const handleApplySuggestion = useCallback((suggestion) => {
         applySuggestion(suggestion);
-        trackEvent('ai_code_generator', 'suggestion_applied', suggestion.type, undefined, {
+        trackEvent('ai_code_generator', 'suggestion_applied', suggestion.type, null, {
             suggestionId: suggestion.id,
             impact: suggestion.impact
-        });
-    }, [applySuggestion, trackEvent]);
+        })}, [applySuggestion, trackEvent]);
     // Clear history
     const handleClearHistory = useCallback(() => {
         clearHistory();
-        trackEvent('ai_code_generator', 'history_cleared', 'manual');
-    }, [clearHistory, trackEvent]);
+        trackEvent('ai_code_generator', 'history_cleared', 'manual')}, [clearHistory, trackEvent]);
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">
@@ -115,7 +150,7 @@ export const AICodeGenerator = () => {
               Powered by AI
             </div>
           </h2>
-          
+
           <div className="flex items-center gap-2">
             <button onClick={() => exportCode('json')} className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2">
               <Download className="w-4 h-4"/>
@@ -146,14 +181,50 @@ export const AICodeGenerator = () => {
       {/* Main Content */}
       <div className="p-6">
         <AnimatePresence mode="wait">
-          {activeTab === 'generate' && (<motion.div key="generate" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'generate' && (<motion.div key="generate" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}} className="space-y-6">
               {/* Generation Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Describe what you want to build
                   </label>
-                  <textarea value={form.prompt} onChange={(e) => setForm(prev => ({ ...prev, prompt: e.target.value }))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>
+                  <textarea value={form.prompt} onChange = {
+  (e) => setForm(prev => ({ ...prev,
+  prompt: e.target.value 
+
+
+
+
+
+
+}))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>
                 </div>
 
                 {/* Basic Options */}
@@ -162,7 +233,16 @@ export const AICodeGenerator = () => {
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Language
                     </label>
-                    <select value={form.language} onChange={(e) => setForm(prev => ({ ...prev, language: e.target.value }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                    <select value={form.language} onChange = {
+  (e) => setForm(prev => ({ ...prev,
+  language: e.target.value 
+
+
+
+
+
+
+}))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                       <option value="typescript">TypeScript</option>
                       <option value="javascript">JavaScript</option>
                       <option value="python">Python</option>
@@ -178,7 +258,16 @@ export const AICodeGenerator = () => {
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Framework
                     </label>
-                    <select value={form.framework || ''} onChange={(e) => setForm(prev => ({ ...prev, framework: e.target.value || undefined }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                    <select value={form.framework || ''} onChange = {
+  (e) => setForm(prev => ({ ...prev,
+  framework: e.target.value || null 
+
+
+
+
+
+
+}))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                       <option value="">None</option>
                       <option value="react">React</option>
                       <option value="vue">Vue</option>
@@ -195,7 +284,16 @@ export const AICodeGenerator = () => {
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Style
                     </label>
-                    <select value={form.style} onChange={(e) => setForm(prev => ({ ...prev, style: e.target.value }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                    <select value={form.style} onChange = {
+  (e) => setForm(prev => ({ ...prev,
+  style: e.target.value 
+
+
+
+
+
+
+}))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                       <option value="functional">Functional</option>
                       <option value="oop">OOP</option>
                       <option value="procedural">Procedural</option>
@@ -207,7 +305,16 @@ export const AICodeGenerator = () => {
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Quality
                     </label>
-                    <select value={form.quality} onChange={(e) => setForm(prev => ({ ...prev, quality: e.target.value }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                    <select value={form.quality} onChange = {
+  (e) => setForm(prev => ({ ...prev,
+  quality: e.target.value 
+
+
+
+
+
+
+}))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                       <option value="prototype">Prototype</option>
                       <option value="development">Development</option>
                       <option value="production">Production</option>
@@ -222,7 +329,34 @@ export const AICodeGenerator = () => {
                 </button>
 
                 {/* Advanced Options */}
-                {showAdvanced && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                {showAdvanced && (<motion.div initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     {[
                     { key: 'includeTests', label: 'Tests', icon: TestTube },
                     { key: 'includeDocs', label: 'Docs', icon: FileText },
@@ -230,7 +364,16 @@ export const AICodeGenerator = () => {
                     { key: 'includeLogging', label: 'Logging', icon: Info },
                     { key: 'includeMetrics', label: 'Metrics', icon: Gauge }
                 ].map(({ key, label, icon: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">
-                        <input type="checkbox" checked={form[key]} onChange={(e) => setForm(prev => ({ ...prev, [key]: e.target.checked }))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                        <input type="checkbox" checked={form[key]} onChange = {
+  (e) => setForm(prev => ({ ...prev,
+  [key]: e.target.checked 
+
+
+
+
+
+
+}))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                         <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400"/>
                         <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>
                       </label>))}
@@ -248,7 +391,25 @@ export const AICodeGenerator = () => {
               </form>
 
               {/* Generated Code Display */}
-              {generatedCode && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
+              {generatedCode && (<motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} className="space-y-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       Generated Code
@@ -264,7 +425,7 @@ export const AICodeGenerator = () => {
                       </button>
                     </div>
                   </div>
-                  
+
                   <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
                     <pre className="text-sm font-mono">
                       <code>{generatedCode}</code>
@@ -273,7 +434,34 @@ export const AICodeGenerator = () => {
                 </motion.div>)}
             </motion.div>)}
 
-          {activeTab === 'analyze' && (<motion.div key="analyze" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'analyze' && (<motion.div key="analyze" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Paste code to analyze
@@ -292,7 +480,25 @@ export const AICodeGenerator = () => {
               </button>
 
               {/* Analysis Results */}
-              {codeAnalysis && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
+              {codeAnalysis && (<motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} className="space-y-6">
                   {/* Metrics Overview */}
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                     {[
@@ -310,10 +516,15 @@ export const AICodeGenerator = () => {
                               {value}/10
                             </div>
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
+<<<<<<< HEAD
                           </div>);
-                    }
+
                     return null;
                 })}
+=======
+                          </div>)}
+                    return null})}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
 
                   {/* Code Metrics */}
@@ -351,7 +562,34 @@ export const AICodeGenerator = () => {
                 </motion.div>)}
             </motion.div>)}
 
-          {activeTab === 'optimize' && (<motion.div key="optimize" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'optimize' && (<motion.div key="optimize" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}} className="space-y-6">
               <div className="text-center py-8">
                 <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -377,7 +615,34 @@ export const AICodeGenerator = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'tests' && (<motion.div key="tests" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'tests' && (<motion.div key="tests" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}} className="space-y-6">
               <div className="text-center py-8">
                 <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -394,7 +659,34 @@ export const AICodeGenerator = () => {
               </button>
             </motion.div>)}
 
-          {activeTab === 'docs' && (<motion.div key="docs" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+          {activeTab === 'docs' && (<motion.div key="docs" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}} className="space-y-6">
               <div className="text-center py-8">
                 <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -413,12 +705,48 @@ export const AICodeGenerator = () => {
         </AnimatePresence>
 
         {/* Suggestions Panel */}
-        {suggestions.length > 0 && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
+        {suggestions.length > 0 && (<motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               AI Suggestions ({suggestions.length})
             </h3>
             <div className="grid gap-4">
-              {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+              {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-1 text-xs rounded-full ${suggestion.type === 'security' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
@@ -437,18 +765,18 @@ export const AICodeGenerator = () => {
                       {Math.round(suggestion.confidence * 100)}% confidence
                     </span>
                   </div>
-                  
+
                   <h4 className="font-medium text-gray-900 dark:text-white mb-2">
                     {suggestion.title}
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                     {suggestion.explanation}
                   </p>
-                  
+
                   <div className="bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">
                     <code>{suggestion.code}</code>
                   </div>
-                  
+
                   <div className="flex items-center gap-2">
                     <button onClick={() => handleApplySuggestion(suggestion)} className="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors">
                       Apply Suggestion
@@ -462,7 +790,25 @@ export const AICodeGenerator = () => {
           </motion.div>)}
 
         {/* History Panel */}
-        {history.length > 0 && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
+        {history.length > 0 && (<motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 Generation History ({history.length})
@@ -472,7 +818,7 @@ export const AICodeGenerator = () => {
                 Clear History
               </button>
             </div>
-            
+
             <div className="space-y-3 max-h-64 overflow-y-auto">
               {history.slice(0, 10).map((item) => (<div key={item.id} className="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
                   <div className="flex items-center justify-between mb-2">
@@ -490,7 +836,7 @@ export const AICodeGenerator = () => {
                       {item.timestamp.toLocaleTimeString()}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center gap-2">
                     <button onClick={() => copyToClipboard(item.code)} className="px-2 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-xs rounded transition-colors">
                       Copy Code
@@ -503,5 +849,10 @@ export const AICodeGenerator = () => {
             </div>
           </motion.div>)}
       </div>
+<<<<<<< HEAD
     </div>);
 };
+}}}}}
+=======
+    </div>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

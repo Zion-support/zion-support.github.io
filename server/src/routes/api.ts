@@ -4,11 +4,11 @@ import { body, validationResult } from 'express-validator';
 const router = Router();
 
 // Validation middleware
-const validate = (req: any, res: any, next: any) => {
+const validate = (req: any, res: any, next: any) => {;
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
-  }
+
   next();
 };
 
@@ -16,22 +16,22 @@ const validate = (req: any, res: any, next: any) => {
 router.get('/users', async (_req, res) => {
   try {
     // Example data - replace with actual database query
-    const users = [
-      { id: 1, name: 'John Doe', email: 'john@example.com' },
-      { id: 2, name: 'Jane Smith', email: 'jane@example.com' }
+    const users = [;
+      { id: 1, name: 'John Doe', email: 'john@example.com' },;
+      { id: 2, name: 'Jane Smith', email: 'jane@example.com' };
     ];
-    
-    res.json({ 
-      success: true, 
+
+    res.json({
+      success: true,
       data: users,
-      count: users.length 
+      count: users.length
     });
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to fetch users' 
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch users'
     });
-  }
+
 });
 
 // POST /api/users
@@ -42,58 +42,95 @@ router.post('/users', [
 ], async (req: any, res: any) => {
   try {
     const { name, email } = req.body;
-    
+
     // Example user creation - replace with actual database operation
     const newUser = {
-      id: Date.now(),
+  id: Date.now(),
       name,
+<<<<<<< HEAD
       email,
       createdAt: new Date().toISOString()
     };
+
+    res.status(201).json({
+      success: true,
+=======
+      email,;
+  ;
+  ;
+  ;
+  ;
+  createdAt: new Date().toISOString();
+    ;
+
+
+
+
+
+
+};
     
     res.status(201).json({ 
       success: true, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       data: newUser,
-      message: 'User created successfully' 
+      message: 'User created successfully'
     });
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to create user' 
+    res.status(500).json({
+      success: false,
+      error: 'Failed to create user'
     });
-  }
+
 });
 
 // GET /api/users/:id
 router.get('/users/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    
+
     // Example user lookup - replace with actual database query
     const user = {
-      id: parseInt(id),
+  id: parseInt(id),
       name: 'John Doe',
+<<<<<<< HEAD
       email: 'john@example.com',
       createdAt: new Date().toISOString()
     };
+
+=======
+      email: 'john@example.com',;
+  ;
+  ;
+  ;
+  ;
+  createdAt: new Date().toISOString();
+    ;
+
+
+
+
+
+
+};
     
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!user) {
-      return res.status(404).json({ 
-        success: false, 
-        error: 'User not found' 
+      return res.status(404).json({
+        success: false,
+        error: 'User not found'
       });
-    }
-    
-    return res.json({ 
-      success: true, 
-      data: user 
+
+    return res.json({
+      success: true,
+      data: user
     });
   } catch (error) {
-    return res.status(500).json({ 
-      success: false, 
-      error: 'Failed to fetch user' 
+    return res.status(500).json({
+      success: false,
+      error: 'Failed to fetch user'
     });
-  }
+
 });
 
-export default router;
+export default router;}}}}}

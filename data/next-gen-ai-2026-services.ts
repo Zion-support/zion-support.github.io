@@ -11,9 +11,13 @@ export interface NextGenAi2026Service {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
-}
+
+=======
+    address: string}}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
     id: "2026-next-gen-ai",
@@ -21,7 +25,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     tagline: "Next-generation AI for 2026",
     price: "$299/month",
     description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",
-    features: [
+    features[
       "Next-gen AI capabilities",
       "Advanced algorithms",
       "Future-ready features",
@@ -35,6 +39,6 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

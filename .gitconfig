@@ -1,0 +1,24 @@
+[core]
+    editor = nano
+    autocrlf = input
+    safecrlf = warn
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
+    upstream = auto
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    visual = !gitk

@@ -5,76 +5,76 @@ import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRigh
 export default function AICustomerExperienceSupport() {
   const features = [
     'AI-powered chatbot with 95% accuracy and natural language processing',
-    'Intelligent ticket routing and priority classification',
-    'Automated customer sentiment analysis and satisfaction tracking',
-    'Multi-channel support integration (email, chat, phone, social media)',
-    'Predictive customer behavior analysis and proactive support',
-    'Personalized customer journey mapping and optimization',
-    'Real-time analytics and performance monitoring dashboard',
-    'Integration with CRM, helpdesk, and e-commerce platforms',
+    'Intelligent ticket routing and priority classification',;
+    'Automated customer sentiment analysis and satisfaction tracking',;
+    'Multi-channel support integration (email, chat, phone, social media)',;
+    'Predictive customer behavior analysis and proactive support',;
+    'Personalized customer journey mapping and optimization',;
+    'Real-time analytics and performance monitoring dashboard',;
+    'Integration with CRM, helpdesk, and e-commerce platforms',;
   ];
 
-  const benefits = [
-    'Increase customer satisfaction scores by 35-50%',
-    'Reduce support response time by 80% with AI automation',
-    'Cut support costs by 40-60% through intelligent automation',
-    'Improve customer retention rates by 25-40%',
-    'Generate 20-30% more upsell opportunities',
-    'Achieve 99.9% support ticket resolution rate',
+  const benefits = [;
+    'Increase customer satisfaction scores by 35-50%',;
+    'Reduce support response time by 80% with AI automation',;
+    'Cut support costs by 40-60% through intelligent automation',;
+    'Improve customer retention rates by 25-40%',;
+    'Generate 20-30% more upsell opportunities',;
+    'Achieve 99.9% support ticket resolution rate',;
   ];
 
   const supportChannels = [
     'Live Chat & Messaging',
     'Email Support Automation',
     'Phone Support Integration',
-    'Social Media Monitoring',
-    'Self-Service Knowledge Base',
-    'Video Call Support',
-    'Mobile App Support',
-    'Voice Assistant Integration',
-    'WhatsApp Business API',
-    'SMS Support Automation',
+    'Social Media Monitoring',;
+    'Self-Service Knowledge Base',;
+    'Video Call Support',;
+    'Mobile App Support',;
+    'Voice Assistant Integration',;
+    'WhatsApp Business API',;
+    'SMS Support Automation',;
   ];
 
   const aiCapabilities = [
     'Natural Language Processing',
     'Sentiment Analysis',
     'Intent Recognition',
-    'Automated Responses',
-    'Smart Escalation',
-    'Predictive Analytics',
-    'Customer Segmentation',
-    'Behavioral Analysis',
-    'Proactive Support',
-    'Performance Optimization',
+    'Automated Responses',;
+    'Smart Escalation',;
+    'Predictive Analytics',;
+    'Customer Segmentation',;
+    'Behavioral Analysis',;
+    'Proactive Support',;
+    'Performance Optimization',;
   ];
 
   const integrations = [
     'Salesforce Service Cloud',
     'Zendesk Support',
     'HubSpot Service Hub',
-    'Intercom',
-    'Freshdesk',
-    'Shopify',
-    'WooCommerce',
-    'Magento',
-    'Slack',
-    'Microsoft Teams',
+    'Intercom',;
+    'Freshdesk',;
+    'Shopify',;
+    'WooCommerce',;
+    'Magento',;
+    'Slack',;
+    'Microsoft Teams',;
   ];
 
   const stack = [
     { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
-    { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },
-    { name: 'Twilio', url: 'https://www.twilio.com/' },
-    { name: 'Intercom', url: 'https://www.intercom.com/' },
-    { name: 'Zendesk', url: 'https://www.zendesk.com/' },
-    { name: 'HubSpot', url: 'https://www.hubspot.com/' },
-    { name: 'Salesforce', url: 'https://www.salesforce.com/' },
-    { name: 'Analytics', url: 'https://analytics.google.com/' },
+    { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },;
+    { name: 'Twilio', url: 'https://www.twilio.com/' },;
+    { name: 'Intercom', url: 'https://www.intercom.com/' },;
+    { name: 'Zendesk', url: 'https://www.zendesk.com/' },;
+    { name: 'HubSpot', url: 'https://www.hubspot.com/' },;
+    { name: 'Salesforce', url: 'https://www.salesforce.com/' },;
+    { name: 'Analytics', url: 'https://analytics.google.com/' },;
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -253,12 +253,12 @@ export default function AICustomerExperienceSupport() {
             <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
               Call +1 302 464 0950
             </a>
-          </div>
-          <p className="text-slate-400 mt-6">
-            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions
-          </p>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <p className="text-slate-400 mt-6">;
+            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
+          </p>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

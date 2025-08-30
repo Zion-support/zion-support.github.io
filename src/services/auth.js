@@ -7,19 +7,21 @@ class AuthService {
   constructor() {
     this.token = localStorage.getItem('token');
     this.user = JSON.parse(localStorage.getItem('user') || 'null');
-  }
 
   // Login user
   async login(credentials) {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Mock validation
       if (!credentials.email || !credentials.password) {
         throw new Error('Email and password are required');
+<<<<<<< HEAD
+=======
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       // Mock successful login
       const mockUser = {
         id: 1,
@@ -29,35 +31,37 @@ class AuthService {
         avatar: null,
         createdAt: new Date().toISOString()
       };
-      
+
       const mockToken = 'mock-jwt-token-' + Date.now();
-      
+
       // Store in localStorage
       this.token = mockToken;
       this.user = mockUser;
       localStorage.setItem('token', mockToken);
       localStorage.setItem('user', JSON.stringify(mockUser));
-      
+
       return {
         user: mockUser,
         token: mockToken
       };
     } catch (error) {
       throw new Error(error.message || 'Login failed');
-    }
-  }
+
 
   // Register user
   async register(userData) {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Mock validation
       if (!userData.email || !userData.password || !userData.name) {
         throw new Error('Name, email, and password are required');
+<<<<<<< HEAD
+=======
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       // Mock successful registration
       const mockUser = {
         id: Date.now(),
@@ -67,93 +71,92 @@ class AuthService {
         avatar: null,
         createdAt: new Date().toISOString()
       };
-      
+
       const mockToken = 'mock-jwt-token-' + Date.now();
-      
+
       // Store in localStorage
       this.token = mockToken;
       this.user = mockUser;
       localStorage.setItem('token', mockToken);
       localStorage.setItem('user', JSON.stringify(mockUser));
-      
+
       return {
         user: mockUser,
         token: mockToken
       };
     } catch (error) {
       throw new Error(error.message || 'Registration failed');
-    }
-  }
+
 
   // Logout user
   async logout() {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 500));
-      
+
       // Clear localStorage
       this.token = null;
       this.user = null;
       localStorage.removeItem('token');
       localStorage.removeItem('user');
-      
+
       return true;
     } catch (error) {
       throw new Error('Logout failed');
-    }
-  }
+
 
   // Get current user
   getCurrentUser() {
     return this.user;
-  }
 
   // Get current token
   getCurrentToken() {
     return this.token;
-  }
 
   // Check if user is authenticated
   isAuthenticated() {
     return !!this.token && !!this.user;
-  }
 
   // Check if user has specific role
   hasRole(role) {
     return this.user && this.user.role === role;
-  }
 
   // Refresh token
   async refreshToken() {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 500));
-      
+
       if (!this.token) {
         throw new Error('No token to refresh');
+<<<<<<< HEAD
+=======
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       // Mock token refresh
       const newToken = 'mock-jwt-token-refreshed-' + Date.now();
       this.token = newToken;
       localStorage.setItem('token', newToken);
-      
+
       return newToken;
     } catch (error) {
       throw new Error('Token refresh failed');
-    }
-  }
+
 
   // Forgot password
   async forgotPassword(email) {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!email) {
         throw new Error('Email is required');
+<<<<<<< HEAD
+=======
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       // Mock successful password reset request
       return {
         message: 'Password reset email sent successfully',
@@ -161,122 +164,133 @@ class AuthService {
       };
     } catch (error) {
       throw new Error(error.message || 'Password reset request failed');
-    }
-  }
+
 
   // Reset password
   async resetPassword(token, newPassword) {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!token || !newPassword) {
         throw new Error('Token and new password are required');
+<<<<<<< HEAD
+=======
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       // Mock successful password reset
       return {
         message: 'Password reset successfully'
       };
     } catch (error) {
       throw new Error(error.message || 'Password reset failed');
-    }
-  }
+
 
   // Update user profile
   async updateProfile(profileData) {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
+<<<<<<< HEAD
+=======
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       // Mock profile update
       const updatedUser = {
-        ...this.user,
+  ...this.user,
         ...profileData,
         updatedAt: new Date().toISOString()
       };
-      
+
       this.user = updatedUser;
       localStorage.setItem('user', JSON.stringify(updatedUser));
-      
+
       return updatedUser;
     } catch (error) {
       throw new Error(error.message || 'Profile update failed');
-    }
-  }
+
 
   // Change password
   async changePassword(currentPassword, newPassword) {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
+<<<<<<< HEAD
+
+      if (!currentPassword || !newPassword) {
+        throw new Error('Current and new passwords are required');
+=======
       }
-      
+
       if (!currentPassword || !newPassword) {
         throw new Error('Current and new passwords are required');
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       // Mock password change
       return {
         message: 'Password changed successfully'
       };
     } catch (error) {
       throw new Error(error.message || 'Password change failed');
-    }
-  }
+
 
   // Verify email
   async verifyEmail(token) {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!token) {
         throw new Error('Verification token is required');
+<<<<<<< HEAD
+=======
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       // Mock email verification
       if (this.user) {
         this.user.emailVerified = true;
         this.user.verifiedAt = new Date().toISOString();
         localStorage.setItem('user', JSON.stringify(this.user));
+<<<<<<< HEAD
+=======
       }
-      
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
       return {
         message: 'Email verified successfully'
       };
     } catch (error) {
       throw new Error(error.message || 'Email verification failed');
-    }
-  }
+
 
   // Get user permissions
   getUserPermissions() {
     if (!this.user) return [];
-    
+
     // Mock permissions based on user role
     const permissions = {
-      user: ['read:own', 'write:own'],
+  user: ['read:own', 'write:own'],
       admin: ['read:all', 'write:all', 'delete:all', 'manage:users'],
       moderator: ['read:all', 'write:all', 'moderate:content']
     };
-    
+
     return permissions[this.user.role] || [];
-  }
 
   // Check if user has specific permission
   hasPermission(permission) {
     const permissions = this.getUserPermissions();
     return permissions.includes(permission);
-  }
-}
+
 
 // Create singleton instance
 const authService = new AuthService();
@@ -288,4 +302,4 @@ export const logout = () => authService.logout();
 export const getCurrentUser = () => authService.getCurrentUser();
 export const isAuthenticated = () => authService.isAuthenticated();
 
-export default authService;
+export default authService;}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

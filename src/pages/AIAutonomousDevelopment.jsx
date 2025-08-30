@@ -8,7 +8,7 @@ const AIAutonomousDevelopment = () => {
         <meta name="keywords" content="AI development, autonomous development, code generation, application building, autonomous operations, AI development platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-development"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousDevelopment = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Development Intelligence</h3>
               <p className="text-gray-300">AI trained on development datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that develops independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Development</h3>
               <p className="text-gray-300">24/7 development operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive development insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-emerald-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Development</h3>
               <p className="text-gray-300">Prevent development issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-lime-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Development</h3>
@@ -93,25 +93,25 @@ const AIAutonomousDevelopment = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Plan</h3>
                 <p className="text-gray-300 text-sm">Plan development</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Code</h3>
                 <p className="text-gray-300 text-sm">Write code</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Build</h3>
                 <p className="text-gray-300 text-sm">Build application</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Test</h3>
                 <p className="text-gray-300 text-sm">Test application</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Deploy</h3>
@@ -138,12 +138,12 @@ const AIAutonomousDevelopment = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Software Companies</h3>
                 <p className="text-gray-300">Software development</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Startups</h3>
                 <p className="text-gray-300">Product development</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise</h3>
                 <p className="text-gray-300">Enterprise development</p>
@@ -168,6 +168,5 @@ const AIAutonomousDevelopment = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousDevelopment;

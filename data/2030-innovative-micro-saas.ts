@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface InnovativeMicroSaas2030 {
   id: string;
   name: string;
@@ -30,15 +30,18 @@ export interface InnovativeMicroSaas2030 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
-}
+
+=======
+  reviews: number}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
   // AI Business Intelligence 2030
   {
@@ -48,7 +51,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered business intelligence, providing real-time insights, predictive analytics, and autonomous decision-making.',
-    features: [
+    features[
       'AI-powered analytics',
       'Real-time insights',
       'Predictive analytics',
@@ -71,11 +74,11 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     setupTime: '2-4 weeks',
     category: 'AI Business Intelligence 2030',
     realService: true,
-    technology: ['Advanced AI, Business Intelligence, Machine Learning, Predictive Analytics'],
-    integrations: ['Business platforms, ERP systems, CRM systems, Data warehouses'],
-    useCases: ['Business analytics, Predictive insights, Decision making, Business optimization'],
+    technology['Advanced AI, Business Intelligence, Machine Learning, Predictive Analytics'],
+    integrations['Business platforms, ERP systems, CRM systems, Data warehouses'],
+    useCases['Business analytics, Predictive insights, Decision making, Business optimization'],
     roi: 'Revolutionary business intelligence with potential for massive efficiency gains and strategic insights.',
-    competitors: ['Limited competition in AI business intelligence'],
+    competitors['Limited competition in AI business intelligence'],
     marketSize: 'Growing market - $200B+ potential',
     growthRate: '800%+ annual growth potential',
     variant: 'ai-futuristic',
@@ -100,7 +103,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for quantum-secure communication, providing unbreakable encryption and secure communication channels.',
-    features: [
+    features[
       'Quantum encryption',
       'Unbreakable security',
       'Quantum key distribution',
@@ -123,11 +126,11 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     setupTime: '1-2 weeks',
     category: 'Quantum-Secure Communication 2030',
     realService: true,
-    technology: ['Quantum Computing, Quantum Encryption, Quantum Key Distribution, Security Protocols'],
-    integrations: ['Communication platforms, Security systems, Quantum computers, Encryption tools'],
-    useCases: ['Secure communication, Government communications, Financial transactions, Healthcare data'],
+    technology['Quantum Computing, Quantum Encryption, Quantum Key Distribution, Security Protocols'],
+    integrations['Communication platforms, Security systems, Quantum computers, Encryption tools'],
+    useCases['Secure communication, Government communications, Financial transactions, Healthcare data'],
     roi: 'Revolutionary security technology with potential for complete communication security.',
-    competitors: ['Limited competition in quantum security'],
+    competitors['Limited competition in quantum security'],
     marketSize: 'Growing market - $150B+ potential',
     growthRate: '1200%+ annual growth potential',
     variant: 'quantum-futuristic',
@@ -152,7 +155,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     price: '$1,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered customer success automation, enabling autonomous customer service and success optimization.',
-    features: [
+    features[
       'AI customer service',
       'Autonomous customer success',
       'Customer optimization',
@@ -175,11 +178,11 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     setupTime: '1-2 weeks',
     category: 'AI Customer Success Automation 2030',
     realService: true,
-    technology: ['Advanced AI, Customer Success, Machine Learning, Automation'],
-    integrations: ['CRM systems, Customer service platforms, Communication tools, Analytics platforms'],
-    useCases: ['Customer service automation, Customer success optimization, Customer insights, Service automation'],
+    technology['Advanced AI, Customer Success, Machine Learning, Automation'],
+    integrations['CRM systems, Customer service platforms, Communication tools, Analytics platforms'],
+    useCases['Customer service automation, Customer success optimization, Customer insights, Service automation'],
     roi: 'Revolutionary customer service technology with potential for massive efficiency gains and customer satisfaction.',
-    competitors: ['Limited competition in AI customer success'],
+    competitors['Limited competition in AI customer success'],
     marketSize: 'Growing market - $100B+ potential',
     growthRate: '600%+ annual growth potential',
     variant: 'ai-futuristic',
@@ -204,7 +207,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for blockchain-powered supply chain transparency, providing end-to-end traceability and verification.',
-    features: [
+    features[
       'Blockchain traceability',
       'End-to-end verification',
       'Supply chain transparency',
@@ -227,11 +230,11 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     setupTime: '2-4 weeks',
     category: 'Blockchain Supply Chain Transparency 2030',
     realService: true,
-    technology: ['Blockchain, Supply Chain Management, Distributed Ledger, Smart Contracts'],
-    integrations: ['ERP systems, Logistics platforms, Manufacturing systems, Retail platforms'],
-    useCases: ['Supply chain tracking, Product verification, Logistics optimization, Manufacturing transparency'],
+    technology['Blockchain, Supply Chain Management, Distributed Ledger, Smart Contracts'],
+    integrations['ERP systems, Logistics platforms, Manufacturing systems, Retail platforms'],
+    useCases['Supply chain tracking, Product verification, Logistics optimization, Manufacturing transparency'],
     roi: 'Revolutionary supply chain technology with potential for complete transparency and optimization.',
-    competitors: ['Limited competition in blockchain supply chain'],
+    competitors['Limited competition in blockchain supply chain'],
     marketSize: 'Growing market - $120B+ potential',
     growthRate: '900%+ annual growth potential',
     variant: 'blockchain-futuristic',
@@ -256,7 +259,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered marketing automation, enabling autonomous marketing campaigns and optimization.',
-    features: [
+    features[
       'AI marketing campaigns',
       'Autonomous marketing',
       'Marketing optimization',
@@ -279,11 +282,11 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     setupTime: '1-2 weeks',
     category: 'AI Marketing Automation 2030',
     realService: true,
-    technology: ['Advanced AI, Marketing Automation, Machine Learning, Campaign Optimization'],
-    integrations: ['Marketing platforms, CRM systems, Analytics tools, Social media platforms'],
-    useCases: ['Marketing automation, Campaign optimization, Marketing insights, Performance optimization'],
+    technology['Advanced AI, Marketing Automation, Machine Learning, Campaign Optimization'],
+    integrations['Marketing platforms, CRM systems, Analytics tools, Social media platforms'],
+    useCases['Marketing automation, Campaign optimization, Marketing insights, Performance optimization'],
     roi: 'Revolutionary marketing technology with potential for massive efficiency gains and performance improvement.',
-    competitors: ['Limited competition in AI marketing automation'],
+    competitors['Limited competition in AI marketing automation'],
     marketSize: 'Growing market - $80B+ potential',
     growthRate: '700%+ annual growth potential',
     variant: 'ai-futuristic',
@@ -299,5 +302,5 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     customers: 89,
     rating: 4.7,
     reviews: 52
-  }
-];
+
+];}}

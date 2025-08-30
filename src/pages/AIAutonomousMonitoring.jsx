@@ -8,7 +8,7 @@ const AIAutonomousMonitoring = () => {
         <meta name="keywords" content="AI monitoring, autonomous monitoring, system monitoring, performance monitoring, autonomous operations, AI monitoring platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-monitoring"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousMonitoring = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Monitoring Intelligence</h3>
               <p className="text-gray-300">AI trained on monitoring datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that monitors independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Monitoring</h3>
               <p className="text-gray-300">24/7 monitoring operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive monitoring insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-emerald-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Monitoring</h3>
               <p className="text-gray-300">Prevent system issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Monitoring</h3>
@@ -93,25 +93,25 @@ const AIAutonomousMonitoring = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Collect</h3>
                 <p className="text-gray-300 text-sm">Collect data</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze data</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
                 <p className="text-gray-300 text-sm">Detect issues</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Alert</h3>
                 <p className="text-gray-300 text-sm">Alert users</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Respond</h3>
@@ -138,12 +138,12 @@ const AIAutonomousMonitoring = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Systems</h3>
                 <p className="text-gray-300">Enterprise monitoring</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Cloud Infrastructure</h3>
                 <p className="text-gray-300">Cloud monitoring</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Web Applications</h3>
                 <p className="text-gray-300">Web app monitoring</p>
@@ -168,6 +168,5 @@ const AIAutonomousMonitoring = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousMonitoring;

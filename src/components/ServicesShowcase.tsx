@@ -1,23 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  ShoppingCart, 
-  MessageCircle, 
-  BookOpen, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+<<<<<<< HEAD
+  Zap,
+  Users,
+  Globe,
+  Cpu,
+  Lock,
+  ShoppingCart,
+  MessageCircle,
+  BookOpen,
   DollarSign,
   Gauge,
   HelpCircle
-} from 'lucide-react';
-
 export function ServicesShowcase() {
   const services = [
     {
@@ -179,7 +178,7 @@ export function ServicesShowcase() {
       href: "/services/affiliate-tracking",
       category: "Marketing",
       color: "from-green-500 to-emerald-600"
-    }
+
   ];
 
   const containerVariants = {
@@ -188,39 +187,175 @@ export function ServicesShowcase() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
+
+
+=======
+  Server,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Globe as GlobeIcon,
+  ChevronDown,
+  ChevronUp
+} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';
+
+interface ServiceShowcaseProps {
+  className?: string;
+}
+
+export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025];
+
+  // Group services by category
+  const servicesByCategory = allServices.reduce((acc, service) => {
+    const category = service.category;
+    if (!acc[category]) {
+      acc[category] = [];
     }
+    acc[category].push(service);
+    return acc;
+  }, {} as Record<string, typeof allServices>);
+
+  const toggleCategory = (category: string) => {
+    setExpandedCategories(prev =>
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { 
+      opacity: 0,
+      y: 20 
+    },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
+
+
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
       }
     }
   };
+
+  const getCategoryColor = (category: string) => {
+    const colors = {
+      'AI & Machine Learning': 'from-zion-purple to-zion-purple-dark',
+      'Cloud & DevOps': 'from-zion-cyan to-zion-cyan-dark',
+      'Cybersecurity': 'from-zion-red to-zion-red-dark',
+      'Data & Analytics': 'from-zion-blue to-zion-blue-dark',
+      'IoT & Edge Computing': 'from-zion-green to-zion-green-dark',
+      'Quantum Computing': 'from-zion-indigo to-zion-indigo-dark'
+    };
+    return colors[category as keyof typeof colors] || 'from-zion-cyan to-zion-blue';
+  };
+
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
+    : allServices.filter(service =>
+        service.category.toLowerCase().includes(selectedCategory.toLowerCase())
+      );
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           className="text-center mb-16"
+
+=======
         >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Comprehensive
             <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"> Services</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From AI-powered solutions to enterprise infrastructure, we provide end-to-end technology services that drive business transformation
+          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+            Discover our extensive collection of cutting-edge micro SAAS solutions designed to transform your business.
+            From AI-powered analytics to quantum computing, we offer innovative solutions across all major technology domains.
           </p>
+
+          {/* Quick Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
+              <div className="text-zion-slate-light">Total Services</div>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="text-4xl font-bold text-zion-purple mb-2">6</div>
+              <div className="text-zion-slate-light">Technology Categories</div>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="text-4xl font-bold text-zion-blue mb-2">99.9%</div>
+              <div className="text-zion-slate-light">Uptime Guarantee</div>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <div className="text-4xl font-bold text-zion-green mb-2">24/7</div>
+              <div className="text-zion-slate-light">Support Available</div>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Services Grid */}
@@ -230,21 +365,35 @@ export function ServicesShowcase() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-        >
+<<<<<<< HEAD
+
           {services.map((service, index) => (
+=======
+        >
+          {filteredServices.map((service, index) => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
               className="group relative"
-            >
+<<<<<<< HEAD
+
               <Link to={service.href}>
                 <div className="relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
                   {/* Background Gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+
+=======
+            >
+              <Link to={service.href || `/services/${service.id}`}>
+                <div className="relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
+                  {/* Background Gradient */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${getCategoryColor(service.category)} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                   
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   {/* Icon */}
-                  <div className={`relative z-10 w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`relative z-10 w-16 h-16 bg-gradient-to-br ${getCategoryColor(service.category)} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
 
@@ -273,12 +422,14 @@ export function ServicesShowcase() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mt-16"
-        >
+
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -290,19 +441,36 @@ export function ServicesShowcase() {
               <Link
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Started Today
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
+
                 View All Services
               </Link>
+=======
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+            <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
+              <p className="text-white text-lg mb-4">
+                Ready to transform your business with our services?
+              </p>
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                Get Started Today
+                <ArrowRight className="w-5 h-5" />
+              </button>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
         </motion.div>
       </div>
     </section>
   );
+<<<<<<< HEAD
+</div></div>}}}}}}}
+=======
 }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

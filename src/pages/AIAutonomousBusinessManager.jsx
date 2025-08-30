@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
   Star,
   Users,
   Award,
@@ -576,15 +576,19 @@ import {
   Shield,
   Zap,
   Brain
+<<<<<<< HEAD
+=======
 } from 'lucide-react';
 
+<<<<<<< HEAD
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const businessManagerSolutions = [
   {
     id: 1,
     title: "AI Business Intelligence",
     description: "Intelligent business analytics and insights powered by artificial intelligence.",
     icon: BarChart3,
-    features: [
+    features[
       "Predictive analytics",
       "Data visualization",
       "Real-time insights",
@@ -593,14 +597,14 @@ const businessManagerSolutions = [
     price: "From $100,000",
     timeline: "16-24 weeks",
     category: "Analytics",
-    technologies: ["Machine Learning", "Data Analytics", "Business Intelligence", "AI Models"]
+    technologies["Machine Learning", "Data Analytics", "Business Intelligence", "AI Models"]
   },
   {
     id: 2,
     title: "Autonomous Process Automation",
     description: "AI-powered automation of business processes and workflows.",
     icon: Cog,
-    features: [
+    features[
       "Process optimization",
       "Workflow automation",
       "Decision automation",
@@ -609,14 +613,14 @@ const businessManagerSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Automation",
-    technologies: ["RPA", "AI", "Workflow Engines", "Process Mining"]
+    technologies["RPA", "AI", "Workflow Engines", "Process Mining"]
   },
   {
     id: 3,
     title: "Smart Resource Management",
     description: "Intelligent allocation and optimization of business resources.",
     icon: Users,
-    features: [
+    features[
       "Resource optimization",
       "Capacity planning",
       "Cost optimization",
@@ -625,14 +629,14 @@ const businessManagerSolutions = [
     price: "From $120,000",
     timeline: "18-28 weeks",
     category: "Resource Management",
-    technologies: ["AI Optimization", "Resource Planning", "Analytics", "Machine Learning"]
+    technologies["AI Optimization", "Resource Planning", "Analytics", "Machine Learning"]
   },
   {
     id: 4,
     title: "Predictive Business Planning",
     description: "AI-driven forecasting and strategic business planning.",
     icon: Target,
-    features: [
+    features[
       "Market forecasting",
       "Trend analysis",
       "Risk assessment",
@@ -641,14 +645,14 @@ const businessManagerSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Planning",
-    technologies: ["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
+    technologies["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
   },
   {
     id: 5,
     title: "Intelligent Customer Management",
     description: "AI-powered customer relationship and experience management.",
     icon: Users,
-    features: [
+    features[
       "Customer insights",
       "Personalization",
       "Predictive marketing",
@@ -657,14 +661,14 @@ const businessManagerSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Customer Management",
-    technologies: ["AI", "CRM", "Machine Learning", "Customer Analytics"]
+    technologies["AI", "CRM", "Machine Learning", "Customer Analytics"]
   },
   {
     id: 6,
     title: "Autonomous Financial Management",
     description: "AI-driven financial planning, analysis, and decision making.",
     icon: TrendingUp,
-    features: [
+    features[
       "Financial forecasting",
       "Risk management",
       "Investment analysis",
@@ -673,10 +677,17 @@ const businessManagerSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Financial",
+<<<<<<< HEAD
     technologies: ["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
+
+=======
+    technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const businessTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -705,13 +716,13 @@ const businessTechnologies = [
     icon: Target,
     useCase: "Strategic Planning",
     reliability: "High"
-  }
+
 ];
 
 const successStories = [
   {
     id: 1,
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed AI-powered business intelligence for 50+ global facilities",
     solution: "Built comprehensive AI business manager with predictive analytics and process automation",
@@ -720,7 +731,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Group",
+    comp: "Financial Services Group",
     industry: "Finance",
     challenge: "Required autonomous financial management and risk assessment",
     solution: "Implemented AI-driven financial planning and risk management system",
@@ -729,13 +740,13 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Retail Chain Network",
+    comp: "Retail Chain Network",
     industry: "Retail",
     challenge: "Needed intelligent customer management and predictive marketing",
     solution: "Built AI-powered customer analytics and personalization platform",
     results: "35% customer satisfaction increase, 45% marketing ROI improvement, better customer retention",
     logo: "RCN"
-  }
+
 ];
 
 const processSteps = [
@@ -766,7 +777,7 @@ const processSteps = [
     description: "Optimize systems and train business teams",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+
 ];
 
 const businessBenefits = [
@@ -774,26 +785,31 @@ const businessBenefits = [
     title: "Intelligent Decision Making",
     description: "AI-powered insights enable better, data-driven business decisions",
     icon: Brain,
-    examples: ["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
   },
   {
     title: "Process Automation",
     description: "Automated workflows reduce manual effort and improve efficiency",
     icon: Zap,
-    examples: ["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"]
+    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"]
   },
   {
     title: "Cost Optimization",
     description: "AI identifies cost-saving opportunities and optimizes resource allocation",
     icon: TrendingUp,
-    examples: ["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"]
+    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"]
   },
   {
     title: "Competitive Advantage",
     description: "AI capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
+<<<<<<< HEAD
     examples: ["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
+
+=======
+    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
   }
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function AIAutonomousBusinessManager() {
@@ -801,9 +817,9 @@ export default function AIAutonomousBusinessManager() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Analytics', 'Automation', 'Resource Management', 'Planning', 'Customer Management', 'Financial'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? businessManagerSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? businessManagerSolutions
     : businessManagerSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -815,33 +831,78 @@ export default function AIAutonomousBusinessManager() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Brain className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous &
               <span className="text-gradient block">Business Manager</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Transform your business with intelligent AI management systems. From autonomous 
+              Transform your business with intelligent AI management systems. From autonomous
               decision making to predictive analytics, we help you build the future of business.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Brain className="w-4 h-4" />
@@ -864,11 +925,29 @@ export default function AIAutonomousBusinessManager() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">AI Business Manager Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make AI business management essential
@@ -879,18 +958,45 @@ export default function AIAutonomousBusinessManager() {
             {businessBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
@@ -910,11 +1016,29 @@ export default function AIAutonomousBusinessManager() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Business Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading AI business management platforms
@@ -925,21 +1049,48 @@ export default function AIAutonomousBusinessManager() {
             {businessTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-                
+
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                  technology.reliability === 'Critical' 
+                  technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                     : technology.reliability === 'High'
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
@@ -957,11 +1108,29 @@ export default function AIAutonomousBusinessManager() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our AI Business Manager Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful AI business management implementation
@@ -972,11 +1141,38 @@ export default function AIAutonomousBusinessManager() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -985,7 +1181,7 @@ export default function AIAutonomousBusinessManager() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -1001,11 +1197,29 @@ export default function AIAutonomousBusinessManager() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">AI Business Manager Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for intelligent business management
@@ -1023,7 +1237,7 @@ export default function AIAutonomousBusinessManager() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -1033,19 +1247,46 @@ export default function AIAutonomousBusinessManager() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -1054,23 +1295,23 @@ export default function AIAutonomousBusinessManager() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -1090,11 +1331,29 @@ export default function AIAutonomousBusinessManager() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">AI Business Manager Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with AI business management
@@ -1105,21 +1364,48 @@ export default function AIAutonomousBusinessManager() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -1134,7 +1420,7 @@ export default function AIAutonomousBusinessManager() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -1151,28 +1437,46 @@ export default function AIAutonomousBusinessManager() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how AI business management can revolutionize your operations, 
+              Let's discuss how AI business management can revolutionize your operations,
               improve decision making, and create competitive advantages.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start AI Business Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 AI Business Consultation
               </a>
             </div>
@@ -1180,5 +1484,9 @@ export default function AIAutonomousBusinessManager() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
-}
+}}}}}}}
+=======
+  )}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

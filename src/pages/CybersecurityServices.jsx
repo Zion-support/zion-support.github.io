@@ -2,9 +2,9 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO";
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server import { Link } from "react-router-dom";
 export default function CybersecurityServices() {
     const services = [
         {
@@ -30,8 +30,14 @@ export default function CybersecurityServices() {
             description: "Employee cybersecurity awareness and best practices training",
             icon: <Users className="h-6 w-6 text-zion-cyan"/>,
             price: "From $500"
-        }
+
     ];
+=======
+import SEO from "@/components/SEO";
+import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
+import { Link } from "react-router-dom";
+export default function CybersecurityServices() {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const securitySolutions = [
         {
             title: "Network Security",
@@ -62,7 +68,7 @@ export default function CybersecurityServices() {
             title: "Compliance",
             description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
             icon: <Shield className="h-8 w-8 text-zion-blue"/>
-        }
+
     ];
     const pricingPlans = [
         {
@@ -70,7 +76,7 @@ export default function CybersecurityServices() {
             price: "$299",
             period: "/month",
             description: "Essential cybersecurity for small businesses",
-            features: [
+            features[
                 "Security assessment",
                 "Basic monitoring",
                 "Monthly reports",
@@ -84,7 +90,7 @@ export default function CybersecurityServices() {
             price: "$799",
             period: "/month",
             description: "Comprehensive protection for growing businesses",
-            features: [
+            features[
                 "Full security audit",
                 "24/7 monitoring",
                 "Incident response",
@@ -99,7 +105,7 @@ export default function CybersecurityServices() {
             price: "$1,999",
             period: "/month",
             description: "Full-scale cybersecurity for large organizations",
-            features: [
+            features[
                 "Custom security solutions",
                 "Dedicated security team",
                 "Advanced threat hunting",
@@ -108,7 +114,7 @@ export default function CybersecurityServices() {
                 "Executive reporting"
             ],
             popular: false
-        }
+
     ];
     const testimonials = [
         {
@@ -126,9 +132,9 @@ export default function CybersecurityServices() {
         {
             name: "Robert Johnson",
             role: "CEO, E-commerce Pro",
-            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",
+            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than  other provider we've used.",
             rating: 5
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services"/>
@@ -144,7 +150,7 @@ export default function CybersecurityServices() {
             Cybersecurity Services
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Protect your business from evolving cyber threats with our comprehensive security services. 
+            Protect your business from evolving cyber threats with our comprehensive security services.
             From penetration testing to incident response, we've got you covered 24/7.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -174,7 +180,7 @@ export default function CybersecurityServices() {
               Our expert cybersecurity team provides a full range of security services to protect your business assets and data.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                 <CardHeader className="text-center">
@@ -207,7 +213,7 @@ export default function CybersecurityServices() {
               From network security to compliance, we provide comprehensive protection across all aspects of your infrastructure.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securitySolutions.map((solution, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 text-center">
                 <CardHeader>
@@ -237,7 +243,7 @@ export default function CybersecurityServices() {
               Choose the security plan that fits your business needs. All plans include our core cybersecurity features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
@@ -282,7 +288,7 @@ export default function CybersecurityServices() {
               See what our clients say about our cybersecurity expertise and commitment to protecting their businesses.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">
@@ -324,5 +330,9 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

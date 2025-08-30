@@ -21,6 +21,5 @@ const $service = () => {
           </Link>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default $service;

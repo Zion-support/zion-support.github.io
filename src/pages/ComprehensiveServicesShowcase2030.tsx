@@ -1,17 +1,37 @@
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { innovativeMicroSaasServices2030 } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030 } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030 } from '../data/comprehensiveAIServices2030';
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { SEO  } from "../components/SEO";
+import { innovativeMicroSaasServices2030  } from "../data/innovativeMicroSaasServices2030";
+import { comprehensiveITServices2030  } from "../data/comprehensiveITServices2030";
+import { comprehensiveAIServices2030  } from "../data/comprehensiveAIServices2030";
 
-const ComprehensiveServicesShowcase2030: React.FC = () => {
+const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
+  const [activeTab, setActiveTab] = useState<any>('microsaas');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const getFilteredServices = () => {;
+    let services[] = [];
+=======
+import React, { useState } from 'react';
+import { SEO } from "../components/SEO";
+import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
+import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";
+import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
+
+const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {
+  const getFilteredServices = () => {;
     let services: any[] = [];
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -21,27 +41,54 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
+<<<<<<< HEAD
         break;
-    }
 
     if (searchTerm) {
+      services = services.filter(service =>
+=======
+        break}
+
+    if (searchTerm) {
+<<<<<<< HEAD
       services = services.filter(service => 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        service.tags.some((tag: string)  => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      )};
+=======;
+      services = services.filter(service => ;
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
-    }
+<<<<<<< HEAD
 
     if (selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory);
+=======
     }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-    return services;
-  };
+    if (selectedCategory !== 'all') {
+      services = services.filter(service => service.category === selectedCategory)};
+;
+    return services};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const getCategories = () => {
+<<<<<<< HEAD
+  const getCategories = () => {;
+    let services[] = [];
+=======
+  const getCategories = () => {;
     let services: any[] = [];
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -51,14 +98,16 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
+<<<<<<< HEAD
         break;
-    }
+=======
+        break}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     const categories = [...new Set(services.map(service => service.category))];
-    return categories;
-  };
+    return categories};
 
-  const renderServiceCard = (service: any) => {
+  const renderServiceCard = (service)  => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -69,9 +118,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 {service.pricing}
               </span>
             </div>
-            
+
             <p className="text-gray-600 mb-4">{service.description}</p>
-            
+
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold text-gray-900">${service.price.toLocaleString()}</span>
@@ -88,7 +137,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: string, index: number) => (
+                {service.features.slice(0, 6).map((feature: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     {feature}
@@ -100,7 +149,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
               <div className="space-y-1">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number) => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {benefit}
@@ -112,7 +161,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Target Audience:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.targetAudience.slice(0, 3).map((audience: string, index: number) => (
+                {service.targetAudience.slice(0, 3).map((audience: string, index: number)  => (
                   <span key={index} className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">
                     {audience}
                   </span>
@@ -123,7 +172,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: string, index: number) => (
+                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                     {tech}
                   </span>
@@ -140,7 +189,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 <span><strong>Market Size:</strong> {service.marketSize}</span>
                 <span><strong>Growth Rate:</strong> {service.growthRate}</span>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -156,15 +205,24 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                >
+
                   Learn More
+<<<<<<< HEAD
                 </a>
               </div>
             </div>
           </div>
         </div>
+      )} else if (activeTab === 'it') {;
+=======;
+                </a>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
       );
-    } else if (activeTab === 'it') {
+    } else if (activeTab = == 'it') {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -174,9 +232,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 {service.category}
               </span>
             </div>
-            
+
             <p className="text-gray-600 mb-4">{service.description}</p>
-            
+
             <div className="mb-4">
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
@@ -199,7 +257,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: string, index: number) => (
+                {service.features.slice(0, 6).map((feature: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {feature}
@@ -211,7 +269,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
               <div className="space-y-1">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number) => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     {benefit}
@@ -223,7 +281,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: string, index: number) => (
+                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (
                   <span key={index} className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">
                     {tech}
                   </span>
@@ -242,7 +300,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   <strong>Support:</strong> {service.support}
                 </div>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -258,17 +316,26 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-                >
+
                   Learn More
+<<<<<<< HEAD
                 </a>
               </div>
             </div>
           </div>
         </div>
+      )} else {;
+=======;
+                </a>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
       );
     } else {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       return (
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
+        <div key = {service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
             <div className="flex items-start justify-between mb-4">
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
@@ -281,9 +348,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <p className="text-gray-600 mb-4">{service.description}</p>
-            
+
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold text-gray-900">${service.price.toLocaleString()}</span>
@@ -303,7 +370,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">AI Models:</h4>
               <div className="flex flex-wrap gap-2 mb-3">
-                {service.aiModels.slice(0, 4).map((model: string, index: number) => (
+                {service.aiModels.slice(0, 4).map((model: string, index: number)  => (
                   <span key={index} className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full">
                     {model}
                   </span>
@@ -314,7 +381,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: string, index: number) => (
+                {service.features.slice(0, 6).map((feature: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
                     {feature}
@@ -326,7 +393,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.useCases.slice(0, 4).map((useCase: string, index: number) => (
+                {service.useCases.slice(0, 4).map((useCase: string, index: number)  => (
                   <span key={index} className="px-2 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">
                     {useCase}
                   </span>
@@ -337,7 +404,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: string, index: number) => (
+                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                     {tech}
                   </span>
@@ -356,7 +423,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   <strong>Training Data:</strong> {service.trainingData}
                 </div>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -372,27 +439,40 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                >
+
                   Learn More
+<<<<<<< HEAD
                 </a>
               </div>
             </div>
           </div>
         </div>
+      )};
+=======;
+                </a>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
       );
+<<<<<<< HEAD
+
+=======
     }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
     <>
       <SEO
-        title="Comprehensive Services Showcase 2030 - Zion Tech Group"
+        title = "Comprehensive Services Showcase 2030 - Zion Tech Group"
         description="Explore our cutting-edge micro SAAS, IT infrastructure, and AI services. Discover innovative solutions with real market data, competitive pricing, and proven ROI."
         keywords="micro SAAS, IT services, AI services, technology solutions, Zion Tech Group, 2030 services"
         ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg"
         ogUrl="https://ziontechgroup.com/comprehensive-services-showcase-2030"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -402,7 +482,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 Comprehensive Services Showcase 2030
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services. 
+                Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.
                 Real solutions with proven ROI, competitive pricing, and market-leading innovation.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -468,7 +548,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 <option value="all">All Categories</option>
                 {getCategories().map((category) => (
                   <option key={category} value={category}>{category}</option>
@@ -487,7 +567,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 Micro SAAS Services ({innovativeMicroSaasServices2030.length})
               </button>
               <button
@@ -497,7 +577,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 IT Services ({comprehensiveITServices2030.length})
               </button>
               <button
@@ -507,7 +587,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 AI Services ({comprehensiveAIServices2030.length})
               </button>
             </div>
@@ -517,18 +597,28 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {getFilteredServices().map(renderServiceCard)}
           </div>
-
-          {/* No Results */}
-          {getFilteredServices().length === 0 && (
-            <div className="text-center py-12">
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
+;
+          {/* No Results */};
+          {getFilteredServices().length === 0 && (;
+            <div className="text-center py-12">;
+              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
                   setSearchTerm('');
+<<<<<<< HEAD
+                  setSelectedCategory('all')}}
+                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors";
+=======;
                   setSelectedCategory('all');
                 }}
+<<<<<<< HEAD
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+
+=======
+                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear Filters
               </button>
             </div>
@@ -544,21 +634,30 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
               <a
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+
                 Call Now: +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+
                 Email Us
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div>;
+    </>;
+  )};
+=======
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default ComprehensiveServicesShowcase2030;
+export default ComprehensiveServicesShowcase2030;}}}}}

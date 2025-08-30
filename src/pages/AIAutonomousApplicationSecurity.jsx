@@ -8,7 +8,7 @@ const AIAutonomousApplicationSecurity = () => {
         <meta name="keywords" content="AI application security, autonomous application security, application protection, vulnerability detection, autonomous operations, AI application security platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-application-security"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousApplicationSecurity = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Application Security Intelligence</h3>
               <p className="text-gray-300">AI trained on application security datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-emerald-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that secures applications independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Application Security</h3>
               <p className="text-gray-300">24/7 application security operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive application security insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Application Security</h3>
               <p className="text-gray-300">Prevent application security issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Application Security</h3>
@@ -93,25 +93,25 @@ const AIAutonomousApplicationSecurity = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Scan</h3>
                 <p className="text-gray-300 text-sm">Scan applications</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
                 <p className="text-gray-300 text-sm">Detect vulnerabilities</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Protect</h3>
                 <p className="text-gray-300 text-sm">Protect applications</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
@@ -138,12 +138,12 @@ const AIAutonomousApplicationSecurity = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Web Applications</h3>
                 <p className="text-gray-300">Web application security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Mobile Apps</h3>
                 <p className="text-gray-300">Mobile application security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Software</h3>
                 <p className="text-gray-300">Enterprise application security</p>
@@ -168,6 +168,5 @@ const AIAutonomousApplicationSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousApplicationSecurity;

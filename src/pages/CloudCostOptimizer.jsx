@@ -1,10 +1,9 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Check, Cloud, BarChart3, Globe, Settings import { Link } from "react-router-dom";
 export default function CloudCostOptimizer() {
     const features = [
         "AI-driven cost optimization algorithms",
@@ -26,7 +25,7 @@ export default function CloudCostOptimizer() {
             price: "$49",
             period: "/month",
             description: "Perfect for small cloud deployments",
-            features: [
+            features[
                 "Up to $5,000 monthly cloud spend",
                 "Basic cost optimization",
                 "Monthly cost reports",
@@ -41,7 +40,7 @@ export default function CloudCostOptimizer() {
             price: "$149",
             period: "/month",
             description: "Ideal for growing businesses",
-            features: [
+            features[
                 "Up to $50,000 monthly cloud spend",
                 "Advanced AI optimization",
                 "Real-time cost monitoring",
@@ -58,7 +57,7 @@ export default function CloudCostOptimizer() {
             price: "$399",
             period: "/month",
             description: "For large cloud deployments",
-            features: [
+            features[
                 "Unlimited cloud spend",
                 "Premium AI optimization",
                 "24/7 cost monitoring",
@@ -71,7 +70,7 @@ export default function CloudCostOptimizer() {
                 "Custom reporting"
             ],
             popular: false
-        }
+
     ];
     const optimizationServices = [
         {
@@ -93,7 +92,7 @@ export default function CloudCostOptimizer() {
             title: "Automated Actions",
             description: "Automatically implement cost-saving measures with your approval and oversight.",
             icon: <Settings className="h-8 w-8 text-zion-purple"/>
-        }
+
     ];
     const supportedClouds = [
         "Amazon Web Services (AWS)",
@@ -125,7 +124,7 @@ export default function CloudCostOptimizer() {
             metric: "Cost Visibility",
             value: "100%",
             description: "Complete transparency into cloud spending"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
       <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
@@ -142,7 +141,7 @@ export default function CloudCostOptimizer() {
             Cloud Cost Optimizer
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Stop overpaying for cloud services. Our AI-powered platform analyzes your cloud usage and automatically 
+            Stop overpaying for cloud services. Our AI-powered platform analyzes your cloud usage and automatically
             optimizes resources to reduce costs by up to 40% while maintaining performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -168,7 +167,7 @@ export default function CloudCostOptimizer() {
               Our customers consistently achieve significant cost reductions while improving cloud performance.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {costSavings.map((saving, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
@@ -192,7 +191,7 @@ export default function CloudCostOptimizer() {
               Our platform provides end-to-end cloud cost optimization across all major cloud providers.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {optimizationServices.map((service, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
@@ -218,7 +217,7 @@ export default function CloudCostOptimizer() {
               Optimize costs across all major cloud providers from a single platform.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {supportedClouds.map((cloud, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
                 <CardContent className="p-4 text-center">
@@ -241,7 +240,7 @@ export default function CloudCostOptimizer() {
               Our AI-powered platform continuously monitors and optimizes your cloud infrastructure for maximum efficiency.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <CardContent className="p-6">
@@ -266,7 +265,7 @@ export default function CloudCostOptimizer() {
               Choose the plan that fits your cloud spending. All plans include our core optimization features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-blue-500 border-2 scale-105' : 'border-blue-500/20'} bg-zion-slate/50 hover:border-blue-500/40 transition-all duration-300`}>
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -305,7 +304,7 @@ export default function CloudCostOptimizer() {
             Ready to Optimize Your Cloud Costs?
           </h2>
           <p className="text-lg text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already saving money with our cloud cost optimization platform. 
+            Join thousands of businesses already saving money with our cloud cost optimization platform.
             Start with a free cost analysis today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -324,5 +323,9 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 const Dashboard = () => {
   return (
@@ -56,22 +56,22 @@ const Dashboard = () => {
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
                 <div className="space-y-3">
-                  <a 
-                    href="/contact" 
+                  <a
+                    href="/contact"
                     className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg text-center transition-colors"
-                  >
+
                     Contact Support
                   </a>
-                  <a 
-                    href="/services" 
+                  <a
+                    href="/services"
                     className="block w-full bg-transparent border border-white text-white hover:bg-white hover:text-slate-900 px-4 py-3 rounded-lg text-center transition-colors"
-                  >
+
                     View Services
                   </a>
-                  <a 
-                    href="/request-quote" 
+                  <a
+                    href="/request-quote"
                     className="block w-full bg-transparent border border-white text-white hover:bg-white hover:text-slate-900 px-4 py-3 rounded-lg text-center transition-colors"
-                  >
+
                     Request Quote
                   </a>
                 </div>
@@ -119,23 +119,22 @@ const Dashboard = () => {
             Our support team is here to help you get the most out of your Zion Tech Group services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-            >
+
               📞 Call +1 (302) 464-0950
             </a>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-            >
+
               Contact Support
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Dashboard;

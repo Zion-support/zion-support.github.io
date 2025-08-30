@@ -1,64 +1,75 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityGovernance() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance() {
   const features = [
     'AI-powered security governance optimization',
-    'Intelligent governance policy management and enforcement',
-    'Automated security compliance monitoring and reporting',
-    'Predictive analytics for governance needs',
-    'Smart governance framework management',
-    'AI-driven governance automation and orchestration',
-    'Real-time governance performance tracking',
-    'Custom AI models for governance applications'
+    'Intelligent governance policy management and enforcement',;
+    'Automated security compliance monitoring and reporting',;
+    'Predictive analytics for governance needs',;
+    'Smart governance framework management',;
+    'AI-driven governance automation and orchestration',;
+    'Real-time governance performance tracking',;
+    'Custom AI models for governance applications';
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$699/mo', 
-      details: ['Up to 10 policies', 'Basic AI features', 'Standard governance', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$699/mo',
+      details: ['Up to 10 policies', 'Basic AI features', 'Standard governance', 'Email support']
     },
+<<<<<<< HEAD
+    {
+      name: 'Business',
+      price: '$1,799/mo',
+      details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support']
+    },
+    {
+      name: 'Enterprise',
+      price: '$4,499/mo',
+      details: ['Unlimited policies', 'Custom AI models', 'Full governance suite', '24/7 dedicated support']
+    },
+=======
     { 
       name: 'Business', 
       price: '$1,799/mo', 
-      details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$4,499/mo', 
-      details: ['Unlimited policies', 'Custom AI models', 'Full governance suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$4,499/mo', ;
+      details: ['Unlimited policies', 'Custom AI models', 'Full governance suite', '24/7 dedicated support'] ;
+    },;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const useCases = [
-    'Security governance optimization',
-    'Governance policy management and enforcement',
-    'Security compliance monitoring and reporting',
-    'Governance framework management and automation',
-    'Governance automation and orchestration',
-    'Governance scaling and management'
+  const useCases = [;
+    'Security governance optimization',;
+    'Governance policy management and enforcement',;
+    'Security compliance monitoring and reporting',;
+    'Governance framework management and automation',;
+    'Governance automation and orchestration',;
+    'Governance scaling and management';
   ];
 
-  const benefits = [
-    'Improve security governance performance by 50-80%',
-    'Reduce governance compliance time by 40-70%',
-    'Cut security governance costs by 35-65%',
-    'Enhance security governance reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security governance operations efficiently'
+  const benefits = [;
+    'Improve security governance performance by 50-80%',;
+    'Reduce governance compliance time by 40-70%',;
+    'Cut security governance costs by 35-65%',;
+    'Enhance security governance reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security governance operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-500 via-green-500 to-lime-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +174,12 @@ export default function AISecurityGovernance() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-}
+}}

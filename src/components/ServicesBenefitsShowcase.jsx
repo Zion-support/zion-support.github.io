@@ -1,8 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
+import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink import { CONTACT_INFO } from '@/data/comprehensiveServices';
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
 import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
 import { CONTACT_INFO } from '@/data/comprehensiveServices';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function ServicesBenefitsShowcase() {
     const serviceBenefits = [
         {
@@ -10,7 +16,7 @@ export function ServicesBenefitsShowcase() {
             icon: <Brain className="w-12 h-12"/>,
             color: "from-purple-500 to-indigo-600",
             description: "Transform your business with cutting-edge artificial intelligence and machine learning solutions",
-            benefits: [
+            benefits[
                 "Advanced AI algorithms and models",
                 "Real-time data processing and insights",
                 "Scalable machine learning infrastructure",
@@ -20,7 +26,7 @@ export function ServicesBenefitsShowcase() {
                 "Predictive analytics and forecasting",
                 "AI-powered automation workflows"
             ],
-            useCases: [
+            useCases[
                 "Customer service chatbots",
                 "Predictive maintenance systems",
                 "Fraud detection and prevention",
@@ -40,7 +46,7 @@ export function ServicesBenefitsShowcase() {
             icon: <Cloud className="w-12 h-12"/>,
             color: "from-cyan-500 to-blue-600",
             description: "Enterprise-grade IT infrastructure and consulting services for modern businesses",
-            benefits: [
+            benefits[
                 "Cloud migration and optimization",
                 "Cybersecurity and compliance",
                 "DevOps automation and CI/CD",
@@ -50,7 +56,7 @@ export function ServicesBenefitsShowcase() {
                 "Performance optimization",
                 "Scalable architecture design"
             ],
-            useCases: [
+            useCases[
                 "Digital transformation initiatives",
                 "Cloud infrastructure setup",
                 "Security audits and compliance",
@@ -70,7 +76,7 @@ export function ServicesBenefitsShowcase() {
             icon: <Zap className="w-12 h-12"/>,
             color: "from-emerald-500 to-green-600",
             description: "Specialized software-as-a-service solutions designed for specific business needs",
-            benefits: [
+            benefits[
                 "Ready-to-use business applications",
                 "Cloud-based accessibility",
                 "Automatic updates and maintenance",
@@ -80,7 +86,7 @@ export function ServicesBenefitsShowcase() {
                 "Real-time collaboration",
                 "Mobile-first design"
             ],
-            useCases: [
+            useCases[
                 "Inventory management",
                 "Project management",
                 "Customer support automation",
@@ -94,7 +100,7 @@ export function ServicesBenefitsShowcase() {
             startingPrice: "$199",
             implementationTime: "Immediate - 3 weeks",
             support: "Business hours support with priority options"
-        }
+
     ];
     const industryStats = [
         { metric: "95%", label: "Client Satisfaction Rate" },
@@ -110,7 +116,7 @@ export function ServicesBenefitsShowcase() {
             Why Choose Our Services?
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto">
-            Discover the unique advantages and proven benefits that make our services the preferred choice 
+            Discover the unique advantages and proven benefits that make our services the preferred choice
             for businesses worldwide. From cutting-edge AI to enterprise IT solutions, we deliver results.
           </p>
         </div>
@@ -135,7 +141,7 @@ export function ServicesBenefitsShowcase() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-6">
                 {/* Key Benefits */}
                 <div>
@@ -279,5 +285,9 @@ export function ServicesBenefitsShowcase() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>);
-}
+</div></div></Card></Card></Card></Card>}}}
+=======
+    </div>)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

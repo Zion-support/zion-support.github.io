@@ -9,7 +9,7 @@ export const ADVANCED_AI_SERVICES = [
         price: 2500,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Real-time market data analysis",
             "Machine learning prediction models",
             "Risk management algorithms",
@@ -19,28 +19,28 @@ export const ADVANCED_AI_SERVICES = [
             "Performance analytics",
             "Compliance monitoring"
         ],
-        benefits: [
+        benefits[
             "Increase trading accuracy by 45%",
             "Reduce risk exposure by 60%",
             "24/7 automated trading",
             "Data-driven decision making",
             "Scalable trading strategies"
         ],
-        useCases: [
+        useCases[
             "Hedge funds",
             "Investment firms",
             "Individual traders",
             "Financial institutions",
             "Wealth management"
         ],
-        targetAudience: [
+        targetAudience[
             "Quantitative traders",
             "Financial analysts",
             "Investment managers",
             "Hedge fund operators",
             "Individual investors"
         ],
-        tags: ["AI", "Algorithmic Trading", "Financial Technology", "Machine Learning", "Risk Management"],
+        tags["AI", "Algorithmic Trading", "Financial Technology", "Machine Learning", "Risk Management"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $10,000/month",
@@ -49,11 +49,11 @@ export const ADVANCED_AI_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Apache Kafka"],
-        integrations: ["Bloomberg Terminal", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
-        compliance: ["SEC", "FINRA", "MiFID II", "GDPR"],
+        technology["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Apache Kafka"],
+        integrations["Bloomberg Terminal", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
+        compliance["SEC", "FINRA", "MiFID II", "GDPR"],
         roi: "400% within 12 months",
-        competitors: ["Alpaca", "QuantConnect", "Zipline", "Backtrader"],
+        competitors["Alpaca", "QuantConnect", "Zipline", "Backtrader"],
         marketSize: "$12.5 billion",
         growthRate: "23.5% annually"
     },
@@ -67,7 +67,7 @@ export const ADVANCED_AI_SERVICES = [
         price: 1500,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Medical image analysis (X-rays, MRIs, CT scans)",
             "Symptom analysis and diagnosis",
             "Patient data integration",
@@ -77,28 +77,28 @@ export const ADVANCED_AI_SERVICES = [
             "HIPAA compliance",
             "Multi-language support"
         ],
-        benefits: [
+        benefits[
             "Improve diagnostic accuracy by 35%",
             "Reduce diagnosis time by 50%",
             "Lower healthcare costs",
             "Better patient outcomes",
             "24/7 availability"
         ],
-        useCases: [
+        useCases[
             "Hospitals and clinics",
             "Radiology departments",
             "Primary care practices",
             "Emergency rooms",
             "Telemedicine platforms"
         ],
-        targetAudience: [
+        targetAudience[
             "Healthcare providers",
             "Radiologists",
             "Primary care physicians",
             "Hospital administrators",
             "Telemedicine companies"
         ],
-        tags: ["AI", "Healthcare", "Medical Diagnostics", "Deep Learning", "Medical Imaging"],
+        tags["AI", "Healthcare", "Medical Diagnostics", "Deep Learning", "Medical Imaging"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $5,000/month",
@@ -107,11 +107,11 @@ export const ADVANCED_AI_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "HL7 FHIR", "React"],
-        integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "eClinicalWorks"],
-        compliance: ["HIPAA", "FDA", "SOC 2", "HITECH"],
+        technology["TensorFlow", "PyTorch", "OpenCV", "DICOM", "HL7 FHIR", "React"],
+        integrations["Epic", "Cerner", "Allscripts", "Practice Fusion", "eClinicalWorks"],
+        compliance["HIPAA", "FDA", "SOC 2", "HITECH"],
         roi: "250% within 18 months",
-        competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "NVIDIA Clara"],
+        competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "NVIDIA Clara"],
         marketSize: "$8.2 billion",
         growthRate: "28.7% annually"
     },
@@ -125,7 +125,7 @@ export const ADVANCED_AI_SERVICES = [
         price: 1200,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Demand forecasting",
             "Inventory optimization",
             "Route optimization",
@@ -135,28 +135,28 @@ export const ADVANCED_AI_SERVICES = [
             "Risk assessment",
             "Performance analytics"
         ],
-        benefits: [
+        benefits[
             "Reduce inventory costs by 25%",
             "Improve delivery times by 30%",
             "Increase supply chain efficiency",
             "Better demand planning",
             "Risk mitigation"
         ],
-        useCases: [
+        useCases[
             "Manufacturing companies",
             "Retail chains",
             "E-commerce businesses",
             "Logistics providers",
             "Distribution centers"
         ],
-        targetAudience: [
+        targetAudience[
             "Supply chain managers",
             "Operations directors",
             "Logistics coordinators",
             "Inventory managers",
             "Business owners"
         ],
-        tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $4,000/month",
@@ -165,11 +165,11 @@ export const ADVANCED_AI_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "Apache Spark", "PostgreSQL", "Redis", "React"],
-        integrations: ["SAP", "Oracle", "NetSuite", "Salesforce", "Shopify", "WMS systems"],
-        compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
+        technology["Python", "TensorFlow", "Apache Spark", "PostgreSQL", "Redis", "React"],
+        integrations["SAP", "Oracle", "NetSuite", "Salesforce", "Shopify", "WMS systems"],
+        compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
         roi: "300% within 12 months",
-        competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
+        competitors["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
         marketSize: "$15.8 billion",
         growthRate: "18.9% annually"
     },
@@ -183,7 +183,7 @@ export const ADVANCED_AI_SERVICES = [
         price: 1800,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Real-time threat detection",
             "Behavioral analysis",
             "Anomaly detection",
@@ -193,28 +193,28 @@ export const ADVANCED_AI_SERVICES = [
             "Compliance reporting",
             "Security analytics"
         ],
-        benefits: [
+        benefits[
             "Detect threats 90% faster",
             "Reduce false positives by 70%",
             "24/7 automated monitoring",
             "Proactive threat prevention",
             "Compliance automation"
         ],
-        useCases: [
+        useCases[
             "Enterprise organizations",
             "Financial institutions",
             "Healthcare providers",
             "Government agencies",
             "Educational institutions"
         ],
-        targetAudience: [
+        targetAudience[
             "CISOs",
             "Security analysts",
             "IT managers",
             "Compliance officers",
             "Security engineers"
         ],
-        tags: ["AI", "Cybersecurity", "Threat Detection", "Machine Learning", "Security Analytics"],
+        tags["AI", "Cybersecurity", "Threat Detection", "Machine Learning", "Security Analytics"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,800 - $6,000/month",
@@ -223,11 +223,11 @@ export const ADVANCED_AI_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "PostgreSQL", "React"],
-        integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+        technology["Python", "TensorFlow", "Elasticsearch", "Kafka", "PostgreSQL", "React"],
+        integrations["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
+        compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         roi: "350% within 12 months",
-        competitors: ["Darktrace", "CrowdStrike", "SentinelOne", "Cylance"],
+        competitors["Darktrace", "CrowdStrike", "SentinelOne", "Cylance"],
         marketSize: "$22.4 billion",
         growthRate: "31.2% annually"
     },
@@ -241,7 +241,7 @@ export const ADVANCED_AI_SERVICES = [
         price: 399,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI text generation",
             "Video creation and editing",
             "Graphic design automation",
@@ -251,28 +251,28 @@ export const ADVANCED_AI_SERVICES = [
             "Content scheduling",
             "Performance analytics"
         ],
-        benefits: [
+        benefits[
             "Increase content production by 500%",
             "Reduce creation time by 80%",
             "Maintain brand consistency",
             "SEO-optimized content",
             "Cost-effective production"
         ],
-        useCases: [
+        useCases[
             "Marketing agencies",
             "Content creators",
             "E-commerce businesses",
             "Social media managers",
             "Brand managers"
         ],
-        targetAudience: [
+        targetAudience[
             "Content marketers",
             "Social media managers",
             "Brand managers",
             "Digital agencies",
             "Business owners"
         ],
-        tags: ["AI", "Content Creation", "Video Editing", "Graphic Design", "Social Media"],
+        tags["AI", "Content Creation", "Video Editing", "Graphic Design", "Social Media"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,200/month",
@@ -281,11 +281,11 @@ export const ADVANCED_AI_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"],
-        integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social platforms"],
-        compliance: ["GDPR", "SOC 2", "Content guidelines"],
+        technology["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"],
+        integrations["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social platforms"],
+        compliance["GDPR", "SOC 2", "Content guidelines"],
         roi: "400% within 6 months",
-        competitors: ["Jasper", "Copy.ai", "Lumen5", "Canva Pro"],
+        competitors["Jasper", "Copy.ai", "Lumen5", "Canva Pro"],
         marketSize: "$18.7 billion",
         growthRate: "26.4% annually"
     },
@@ -299,7 +299,7 @@ export const ADVANCED_AI_SERVICES = [
         price: 800,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Contract analysis",
             "Risk identification",
             "Clause extraction",
@@ -309,28 +309,28 @@ export const ADVANCED_AI_SERVICES = [
             "Case law analysis",
             "Reporting and insights"
         ],
-        benefits: [
+        benefits[
             "Reduce review time by 75%",
             "Improve accuracy by 90%",
             "Identify risks faster",
             "Cost-effective legal review",
             "24/7 availability"
         ],
-        useCases: [
+        useCases[
             "Law firms",
             "Corporate legal departments",
             "Compliance teams",
             "Contract managers",
             "Legal consultants"
         ],
-        targetAudience: [
+        targetAudience[
             "Attorneys",
             "Legal professionals",
             "Compliance officers",
             "Contract managers",
             "Legal departments"
         ],
-        tags: ["AI", "Legal Technology", "Document Analysis", "Contract Review", "Compliance"],
+        tags["AI", "Legal Technology", "Document Analysis", "Contract Review", "Compliance"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$800 - $2,500/month",
@@ -339,11 +339,11 @@ export const ADVANCED_AI_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["NLP", "Machine Learning", "Python", "React", "PostgreSQL", "Elasticsearch"],
-        integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Office", "Legal databases", "Case management systems"],
-        compliance: ["GDPR", "SOC 2", "Legal ethics", "Data privacy"],
+        technology["NLP", "Machine Learning", "Python", "React", "PostgreSQL", "Elasticsearch"],
+        integrations["DocuSign", "Adobe Acrobat", "Microsoft Office", "Legal databases", "Case management systems"],
+        compliance["GDPR", "SOC 2", "Legal ethics", "Data privacy"],
         roi: "280% within 12 months",
-        competitors: ["Kira Systems", "Luminance", "eBrevia", "ContractPodAi"],
+        competitors["Kira Systems", "Luminance", "eBrevia", "ContractPodAi"],
         marketSize: "$6.8 billion",
         growthRate: "22.1% annually"
     },
@@ -357,7 +357,7 @@ export const ADVANCED_AI_SERVICES = [
         price: 299,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Property value prediction",
             "Market trend analysis",
             "Investment analysis",
@@ -367,28 +367,28 @@ export const ADVANCED_AI_SERVICES = [
             "Comparative analysis",
             "Investment recommendations"
         ],
-        benefits: [
+        benefits[
             "Improve investment decisions by 40%",
             "Reduce research time by 70%",
             "Better market timing",
             "Risk mitigation",
             "Data-driven insights"
         ],
-        useCases: [
+        useCases[
             "Real estate investors",
             "Property managers",
             "Real estate agents",
             "Investment firms",
             "Property developers"
         ],
-        targetAudience: [
+        targetAudience[
             "Real estate investors",
             "Property managers",
             "Real estate agents",
             "Investment analysts",
             "Property developers"
         ],
-        tags: ["AI", "Real Estate", "Market Analytics", "Investment Analysis", "Predictive Analytics"],
+        tags["AI", "Real Estate", "Market Analytics", "Investment Analysis", "Predictive Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $999/month",
@@ -397,11 +397,11 @@ export const ADVANCED_AI_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "PostgreSQL", "React", "Redis", "Machine Learning"],
-        integrations: ["MLS systems", "Zillow API", "Redfin API", "Property databases", "Financial data sources"],
-        compliance: ["GDPR", "SOC 2", "Real estate regulations"],
+        technology["Python", "TensorFlow", "PostgreSQL", "React", "Redis", "Machine Learning"],
+        integrations["MLS systems", "Zillow API", "Redfin API", "Property databases", "Financial data sources"],
+        compliance["GDPR", "SOC 2", "Real estate regulations"],
         roi: "320% within 12 months",
-        competitors: ["Zillow Offers", "Redfin", "Opendoor", "Compass"],
+        competitors["Zillow Offers", "Redfin", "Opendoor", "Compass"],
         marketSize: "$9.3 billion",
         growthRate: "19.8% annually"
     },
@@ -415,7 +415,7 @@ export const ADVANCED_AI_SERVICES = [
         price: 1500,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Energy consumption monitoring",
             "Demand prediction",
             "Load balancing",
@@ -425,28 +425,28 @@ export const ADVANCED_AI_SERVICES = [
             "Automated controls",
             "Sustainability reporting"
         ],
-        benefits: [
+        benefits[
             "Reduce energy costs by 25%",
             "Improve efficiency by 35%",
             "Better sustainability",
             "Predictive maintenance",
             "Automated optimization"
         ],
-        useCases: [
+        useCases[
             "Commercial buildings",
             "Industrial facilities",
             "Data centers",
             "Retail chains",
             "Manufacturing plants"
         ],
-        targetAudience: [
+        targetAudience[
             "Facility managers",
             "Energy managers",
             "Sustainability officers",
             "Building operators",
             "Property managers"
         ],
-        tags: ["AI", "Energy Management", "Smart Grid", "Sustainability", "IoT"],
+        tags["AI", "Energy Management", "Smart Grid", "Sustainability", "IoT"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $5,000/month",
@@ -455,12 +455,13 @@ export const ADVANCED_AI_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time series databases"],
-        integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage", "Utility APIs"],
-        compliance: ["ISO 50001", "LEED", "Energy Star", "SOC 2"],
+        technology["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time series databases"],
+        integrations["Building management systems", "Smart meters", "Solar panels", "Battery storage", "Utility APIs"],
+        compliance["ISO 50001", "LEED", "Energy Star", "SOC 2"],
         roi: "250% within 18 months",
-        competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
+        competitors["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         marketSize: "$11.2 billion",
         growthRate: "24.6% annually"
-    }
+
 ];
+}

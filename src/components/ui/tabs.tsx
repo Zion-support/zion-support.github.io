@@ -1,59 +1,117 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
 
 interface TabsContextType {
+
   activeTab: string;
+<<<<<<< HEAD
   setActiveTab: (tab: string) => void;
-}
+=======
+  setActiveTab: (tab: string)  => void}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const TabsContext = createContext<TabsContextType | undefined>(undefined);
+const TabsContext = createContext<TabsContextType | null>(null);
 
-interface TabsProps {
+interface TabsProps extends React.PropsWithChildren<{}> {
+
   children: ReactNode;
   defaultValue?: string;
   value?: string;
+<<<<<<< HEAD
   onValueChange?: (value: string) => void;
   className?: string;
-}
+=======
+  onValueChange?: (value: string)  => void;
+  className?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {
+<<<<<<< HEAD
+export function Tabs(...args[]):  {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: string) => {
+  const handleTabChange = (tab: string)  => {;
+=======;
+export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;
+  const [activeTab, setActiveTab] = useState(value || defaultValue || '');
+
+  const handleTabChange = (tab: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setActiveTab(tab);
     if (onValueChange) {
+<<<<<<< HEAD
       onValueChange(tab);
-    }
+
+=======
+      onValueChange(tab)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
-    <TabsContext.Provider value={{ activeTab, setActiveTab: handleTabChange }}>
+<<<<<<< HEAD
+    <TabsContext.Provider value = {
+  { activeTab,
+  setActiveTab: handleTabChange 
+
+}}>
       <div className={className}>
         {children}
       </div>
     </TabsContext.Provider>
-  );
-}
+  )}
 
-interface TabsListProps {
+interface TabsListProps extends React.PropsWithChildren<{}> {
+=======
+    <TabsContext.Provider value = {
+  { activeTab,
+  setActiveTab: handleTabChange 
+
+
+
+;
+;
+
+}}>;
+      <div className={className}>;
+        {children};
+      </div>;
+    </TabsContext.Provider>;
+  );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   children: ReactNode;
+<<<<<<< HEAD
   className?: string;
-}
+=======
+  className?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function TabsList({ children, className = '' }: TabsListProps) {
-  return (
-    <div className={`flex border-b border-gray-200 ${className}`}>
-      {children}
-    </div>
+<<<<<<< HEAD
+export function TabsList({ children, className = '' }: TabsListProps) {;
+  return (;
+    <div className={`flex border-b border-gray-200 ${className}`}>;
+      {children};
+    </div>;
   );
+<<<<<<< HEAD
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-interface TabsTriggerProps {
   children: ReactNode;
   value: string;
+<<<<<<< HEAD
   className?: string;
-}
+=======
+  className?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function TabsTrigger({ children, value, className = '' }: TabsTriggerProps) {
+<<<<<<< HEAD
+export function TabsTrigger({ children, value, className = '' }: TabsTriggerProps) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
 
@@ -61,35 +119,67 @@ export function TabsTrigger({ children, value, className = '' }: TabsTriggerProp
 
   return (
     <button
-      className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+      className = {`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
         isActive
           ? 'border-b-2 border-blue-500 text-blue-600'
           : 'text-gray-500 hover:text-gray-700 hover:border-b-2 hover:border-gray-300'
+<<<<<<< HEAD
       } ${className}`}
       onClick={() => context.setActiveTab(value)}
-    >
+
       {children}
     </button>
-  );
-}
+  )}
 
-interface TabsContentProps {
+interface TabsContentProps extends React.PropsWithChildren<{}> {;
+=======;
+      } ${className}`};
+      onClick={() => context.setActiveTab(value)};
+    >;
+      {children};
+    </button>;
+  );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   children: ReactNode;
   value: string;
+<<<<<<< HEAD
   className?: string;
-}
+=======
+  className?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function TabsContent({ children, value, className = '' }: TabsContentProps) {
+<<<<<<< HEAD
+export function TabsContent({ children, value, className = '' }: TabsContentProps) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
 
   if (context.activeTab !== value) {
+<<<<<<< HEAD
     return null;
-  }
+=======
+    return null}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
-    <div className={`mt-4 ${className}`}>
+<<<<<<< HEAD
+    <div className = {`mt-4 ${className}`}>
       {children}
     </div>
+  )};
+=======;
+    <div className = {`mt-4 ${className}`}>;
+      {children};
+    </div>;
   );
+<<<<<<< HEAD
+}}}}}}}}}}}
+=======
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

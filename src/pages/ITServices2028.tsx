@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
@@ -14,8 +14,11 @@ import {
   Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins,
   PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
-} from 'lucide-react';
+<<<<<<< HEAD
+=======
+ } from 'lucide-react';
 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const itServices2028 = [
   {
     id: 'quantum-cloud-infrastructure',
@@ -24,7 +27,7 @@ const itServices2028 = [
     price: '$45,999',
     period: '/month',
     description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
-    features: [
+    features[
       'Quantum-ready computing nodes',
       'Advanced AI optimization',
       'Zero-latency networking',
@@ -54,7 +57,7 @@ const itServices2028 = [
     price: '$32,999',
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
-    features: [
+    features[
       'AI threat detection',
       'Behavioral analysis',
       'Zero-trust architecture',
@@ -84,7 +87,7 @@ const itServices2028 = [
     price: '$28,999',
     period: '/month',
     description: 'Revolutionary quantum database platform that provides unprecedented speed, security, and scalability for enterprise data management.',
-    features: [
+    features[
       'Quantum query optimization',
       'Real-time data processing',
       'Advanced encryption',
@@ -114,7 +117,7 @@ const itServices2028 = [
     price: '$22,999',
     period: '/month',
     description: 'AI-powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
-    features: [
+    features[
       'AI network monitoring',
       'Automatic optimization',
       'Traffic analysis',
@@ -144,7 +147,7 @@ const itServices2028 = [
     price: '$35,999',
     period: '/month',
     description: 'Advanced quantum-powered DevOps platform that automates software development, testing, deployment, and operations processes.',
-    features: [
+    features[
       'AI-powered CI/CD',
       'Automated testing',
       'Deployment automation',
@@ -174,7 +177,7 @@ const itServices2028 = [
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive AI-powered data analytics platform that provides real-time insights, predictive analytics, and automated reporting.',
-    features: [
+    features[
       'Real-time data processing',
       'AI-powered insights',
       'Predictive analytics',
@@ -190,65 +193,76 @@ const itServices2028 = [
     icon: BarChart3,
     color: 'from-emerald-600 to-teal-700',
     category: 'Data & Analytics',
+<<<<<<< HEAD
     realService: true,
     marketSize: '$11.2B data analytics market',
     growthRate: '220% annual growth',
     rating: 4.6,
     reviews: 156,
     customers: 89
-  }
+
+=======
+    realService: true,;
+    marketSize: '$11.2B data analytics market',;
+    growthRate: '220% annual growth',;
+    rating: 4.6,;
+    reviews: 156,;
+    customers: 89;
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-const ITServices2028: React.FC = () => {
+<<<<<<< HEAD
+const ITServices2028: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-red to-zion-pink' },
-    { id: 'database', name: 'Database & Storage', icon: Database, color: 'from-zion-green to-zion-emerald' },
-    { id: 'networking', name: 'Networking', icon: Network, color: 'from-zion-purple to-zion-indigo' },
-    { id: 'devops', name: 'DevOps & Automation', icon: Rocket, color: 'from-zion-orange to-zion-red' },
-    { id: 'analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' }
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, color: 'from-zion-blue to-zion-cyan' },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-red to-zion-pink' },;
+    { id: 'database', name: 'Database & Storage', icon: Database, color: 'from-zion-green to-zion-emerald' },;
+    { id: 'networking', name: 'Networking', icon: Network, color: 'from-zion-purple to-zion-indigo' },;
+    { id: 'devops', name: 'DevOps & Automation', icon: Rocket, color: 'from-zion-orange to-zion-red' },;
+    { id: 'analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
   ];
 
   const filteredServices = itServices2028.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
       service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
-          >
+
             IT Services 2028
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
-          >
+
             Cutting-edge IT solutions powered by quantum computing and artificial intelligence
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
-          >
+
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
               🚀 Quantum-Ready Infrastructure
             </div>
@@ -279,7 +293,7 @@ const ITServices2028: React.FC = () => {
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
                   }`}
-                >
+
                   <category.icon className="w-4 h-4" />
                   {category.name}
                 </motion.button>
@@ -304,15 +318,42 @@ const ITServices2028: React.FC = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              >
+
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
@@ -370,7 +411,7 @@ const ITServices2028: React.FC = () => {
                 <Link
                   to={`/it-services/${service.id}`}
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-                >
+
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -397,47 +438,56 @@ const ITServices2028: React.FC = () => {
       {/* Contact Section */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-          >
+
             Ready to Transform Your IT Infrastructure?
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-          >
+
             Contact our team of IT experts to discuss how our innovative services can revolutionize your technology infrastructure
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+
               <Phone className="w-5 h-5" />
               +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
+<<<<<<< HEAD
             </a>
           </motion.div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </a>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default ITServices2028;
+export default ITServices2028;}}

@@ -326,45 +326,18 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
   }
 ];
 
-export const INDUSTRY_CATEGORIES = [
-    "Healthcare",
-    "Financial Services",
-    "Manufacturing",
-    "Energy",
-    "Transportation",
-    "Education",
-    "Real Estate",
-    "Agriculture",
-    "Legal Services",
-    "Media & Entertainment"
-];
-
-export const INDUSTRY_PRICING = {
-    basic: {
-        price: 299,
-        currency: "$",
-        period: "month",
-        features: ["Core platform access", "Basic analytics", "Standard support"]
-    },
-    professional: {
-        price: 799,
-        currency: "$",
-        period: "month",
-        features: ["Advanced features", "Custom integrations", "Priority support", "Advanced analytics"]
-    },
-    enterprise: {
-        price: 1999,
-        currency: "$",
-        period: "month",
-        features: ["Full platform access", "White-label options", "24/7 support", "Custom development"]
-    }
-};
-
 export const INDUSTRY_CONTACT = {
-    phone: "+1 302 464 0950",
+  phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008, Middletown DE 19709",
     website: "https://ziontechgroup.com",
     supportHours: "24/7",
-    responseTime: "< 2 hours"
+  responseTime: "< 2 hours"
+
+
+
+
+
+
+
 };

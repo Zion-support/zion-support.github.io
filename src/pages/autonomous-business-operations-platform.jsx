@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const AutonomousBusinessOperationsPlatform = () => {
     return (<div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}
@@ -10,7 +10,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               Autonomous Business Operations Platform
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with AI-powered autonomous operations that run 24/7, 
+              Transform your business with AI-powered autonomous operations that run 24/7,
               continuously optimizing processes and driving growth without human intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,29 +38,29 @@ const AutonomousBusinessOperationsPlatform = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">24/7 Operations</h3>
               <p className="text-gray-300">
-                Your business never sleeps. Autonomous systems work around the clock, 
+                Your business never sleeps. Autonomous systems work around the clock,
                 continuously monitoring and optimizing operations.
               </p>
             </div>
-            
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-green-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">📈</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Continuous Optimization</h3>
               <p className="text-gray-300">
-                AI algorithms constantly learn and improve, automatically adjusting 
+                AI algorithms constantly learn and improve, automatically adjusting
                 strategies for maximum efficiency and profitability.
               </p>
             </div>
-            
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-green-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-teal-500/20 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">💰</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Cost Reduction</h3>
               <p className="text-gray-300">
-                Eliminate manual processes and reduce operational costs by up to 70% 
+                Eliminate manual processes and reduce operational costs by up to 70%
                 while improving accuracy and consistency.
               </p>
             </div>
@@ -79,7 +79,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-3 text-green-400">Financial Operations</h3>
                 <p className="text-gray-300 mb-4">
-                  Automated invoicing, expense management, and financial reporting with 
+                  Automated invoicing, expense management, and financial reporting with
                   real-time analytics and predictive insights.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
@@ -89,11 +89,11 @@ const AutonomousBusinessOperationsPlatform = () => {
                   <li>• Compliance monitoring</li>
                 </ul>
               </div>
-              
+
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-3 text-emerald-400">Customer Service</h3>
                 <p className="text-gray-300 mb-4">
-                  AI-powered customer support with intelligent routing, automated responses, 
+                  AI-powered customer support with intelligent routing, automated responses,
                   and sentiment analysis.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
@@ -104,12 +104,12 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </ul>
               </div>
             </div>
-            
+
             <div className="space-y-8">
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-3 text-teal-400">Supply Chain Management</h3>
                 <p className="text-gray-300 mb-4">
-                  Intelligent inventory management, demand forecasting, and supplier 
+                  Intelligent inventory management, demand forecasting, and supplier
                   optimization with real-time tracking.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
@@ -119,11 +119,11 @@ const AutonomousBusinessOperationsPlatform = () => {
                   <li>• Risk assessment</li>
                 </ul>
               </div>
-              
+
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-3 text-green-400">Marketing Automation</h3>
                 <p className="text-gray-300 mb-4">
-                  Personalized marketing campaigns, lead scoring, and conversion 
+                  Personalized marketing campaigns, lead scoring, and conversion
                   optimization with continuous A/B testing.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
@@ -172,7 +172,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             Ready to Automate Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of companies already running autonomous operations 
+            Join hundreds of companies already running autonomous operations
             and experiencing unprecedented efficiency and growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -185,6 +185,5 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default AutonomousBusinessOperationsPlatform;

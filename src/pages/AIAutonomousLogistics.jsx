@@ -8,7 +8,7 @@ const AIAutonomousLogistics = () => {
         <meta name="keywords" content="AI logistics, autonomous logistics, supply chain optimization, warehouse automation, AI logistics management"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-logistics"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousLogistics = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operations</h3>
               <p className="text-gray-300">AI that manages logistics independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-semibold text-white mb-3">Intelligent Optimization</h3>
               <p className="text-gray-300">AI algorithms that continuously improve efficiency</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics</h3>
               <p className="text-gray-300">Live monitoring and performance tracking</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-semibold text-white mb-3">Seamless Integration</h3>
               <p className="text-gray-300">Connect with existing systems and partners</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Risk Management</h3>
               <p className="text-gray-300">Identify and mitigate supply chain risks</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
@@ -93,25 +93,25 @@ const AIAutonomousLogistics = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Demand Forecast</h3>
                 <p className="text-gray-300 text-sm">AI predicts future requirements</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-sky-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Inventory Planning</h3>
                 <p className="text-gray-300 text-sm">Optimize stock levels</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-sky-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Route Optimization</h3>
                 <p className="text-gray-300 text-sm">AI plans optimal delivery routes</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-sky-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Execution</h3>
                 <p className="text-gray-300 text-sm">Automated order fulfillment</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-sky-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Monitoring</h3>
@@ -138,12 +138,12 @@ const AIAutonomousLogistics = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">E-commerce</h3>
                 <p className="text-gray-300">Online retail logistics optimization</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Manufacturing</h3>
                 <p className="text-gray-300">Production supply chain management</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Healthcare</h3>
                 <p className="text-gray-300">Medical supply chain optimization</p>
@@ -168,6 +168,5 @@ const AIAutonomousLogistics = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default AIAutonomousLogistics;

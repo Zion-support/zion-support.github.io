@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-const SaaSChurnPredictor: React.FC = () => (
+const SaaSChurnPredictor: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="SaaS Churn Predictor - Zion Tech Group" description="Predict churn risk, explain drivers, and trigger retention plays across your lifecycle stack." />
     <section className="container mx-auto px-4 py-12">
@@ -33,13 +33,13 @@ const SaaSChurnPredictor: React.FC = () => (
           <li>Growth: $399/mo up to 50k MAU</li>
           <li>Enterprise: custom, SSO, model export</li>
         </ul>
-      </div>
-    </section>
-    <section className="container mx-auto px-4 pb-16 space-x-4">
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request demo</a>
-      <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-block px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 transition">Learn more</a>
-    </section>
-  </div>
+      </div>;
+    </section>;
+    <section className="container mx-auto px-4 pb-16 space-x-4">;
+      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request demo</a>;
+      <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-block px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 transition">Learn more</a>;
+    </section>;
+  </div>;
 );
 
 export default SaaSChurnPredictor;

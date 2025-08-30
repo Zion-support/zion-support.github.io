@@ -34,11 +34,11 @@ export function ServiceWorker() {
               setSwState(prev => ({ ...prev, isInstalling: true }));
               
               newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed') {
-                  setSwState(prev => ({ 
-                    ...prev, 
-                    isInstalling: false,
-                    hasUpdate: true 
+                if (newWorker.state = == 'installed') {;
+                  setSwState(prev => ({ ;
+                    ...prev, ;
+                    isInstalling: false,;
+                    hasUpdate: true ;
                   }));
                 }
               });
@@ -56,7 +56,6 @@ export function ServiceWorker() {
     }
 
     // Online/offline detection
-    const handleOnline = () => setSwState(prev => ({ ...prev, isOnline: true }));
     const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: false }));
 
     window.addEventListener('online', handleOnline);
@@ -68,9 +67,9 @@ export function ServiceWorker() {
     };
   }, []);
 
-  const handleUpdate = () => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.ready.then((registration) => {
+  const handleUpdate = () => {;
+    if ('serviceWorker' in navigator) {;
+      navigator.serviceWorker.ready.then((registration) => {;
         registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
       });
     }
@@ -82,9 +81,36 @@ export function ServiceWorker() {
     <AnimatePresence>
       {swState.hasUpdate && (
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
+          initial = {
+  { opacity: 0,
+  y: -50 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          exit = {
+  { opacity: 0,
+  y: -50 
+
+
+
+
+
+
+}}
           className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
         >
           <div className="flex items-center space-x-3">
@@ -108,12 +134,12 @@ export function ServiceWorker() {
                 onClick={handleUpdate}
                 className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
               >
-                Update
-              </button>
-            )}
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+                Update;
+              </button>;
+            )};
+          </div>;
+        </motion.div>;
+      )};
+    </AnimatePresence>;
   );
 }
