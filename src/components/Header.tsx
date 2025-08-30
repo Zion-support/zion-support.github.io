@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -26,46 +22,223 @@ import {
   Search,
   Bell,
   User,
-  Settings
+  Settings,
+  Zap,
+  Atom,
+  Eye,
+  Activity,
+  Building,
+  Target,
+  TrendingUp,
+  Briefcase,
+  Newspaper
 } from 'lucide-react';
 
 export function Header() {
-	return (
-		<header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg">
-			<nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex items-center justify-between h-16">
-					<Link to="/" className="text-white text-xl font-bold">
-						Zion Tech Group
-					</Link>
-					<div className="hidden md:flex space-x-8">
-						<Link to="/services" className="text-white hover:text-cyan-400">Services</Link>
-						<Link to="/solutions" className="text-white hover:text-cyan-400">Solutions</Link>
-						<Link to="/about" className="text-white hover:text-cyan-400">About</Link>
-						<Link to="/contact" className="text-white hover:text-cyan-400">Contact</Link>
-					</div>
-				</div>
-			</nav>
-		</header>
-	);
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
-export function Header(...args[]):  {
-	return (
-		<header className = "fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg">
-			<nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex items-center justify-between h-16">
-					<Link to="/" className="text-white text-xl font-bold">
-						Zion Tech Group
-					</Link>
-					<div className="hidden md:flex space-x-8">
-						<Link to="/services" className="text-white hover:text-cyan-400">Services</Link>
-						<Link to="/blog" className="text-white hover:text-cyan-400">Blog</Link>
-						<Link to="/about" className="text-white hover:text-cyan-400">About</Link>
-						<Link to="/contact" className="text-white hover:text-cyan-400">Contact</Link>
-					</div>
-				</div>
-			</nav>
-		</header>
-	)};
-;
+  const navigation = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      dropdown: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin Solutions', href: '/solutions/digital-twin', icon: Eye },
+        { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield }
+      ]
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      dropdown: [
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Partners', href: '/partners', icon: Network },
+        { name: 'Press', href: '/press', icon: Newspaper }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      dropdown: [
+        { name: 'Blog', href: '/blog', icon: Newspaper },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+        { name: 'Support', href: '/support', icon: FileText },
+        { name: 'Training', href: '/training', icon: FileText },
+        { name: 'Helpdesk', href: '/help', icon: FileText }
+      ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
+    }
+  ];
+
+  const isActive = (href: string) => location.pathname === href;
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                {item.dropdown ? (
+                  <div
+                    className="flex items-center space-x-1 text-white hover:text-cyan-400 cursor-pointer transition-colors"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <span className={isActive(item.href) ? 'text-cyan-400' : ''}>
+                      {item.name}
+                    </span>
+                    <ChevronDown className="w-4 h-4" />
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`text-white hover:text-cyan-400 transition-colors ${
+                      isActive(item.href) ? 'text-cyan-400' : ''
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {item.dropdown && activeDropdown === item.name && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-xl">
+                    <div className="py-2">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors"
+                        >
+                          <subItem.icon className="w-4 h-4" />
+                          <span>{subItem.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Right side actions */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <button className="text-white hover:text-cyan-400 transition-colors">
+              <Search className="w-5 h-5" />
+            </button>
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <div className="text-white font-medium mb-2">{item.name}</div>
+                      <div className="ml-4 space-y-2">
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            className="block text-gray-300 hover:text-white transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="block text-white hover:text-cyan-400 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              <div className="pt-4 border-t border-gray-700">
+                <Link
+                  to="/contact"
+                  className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
