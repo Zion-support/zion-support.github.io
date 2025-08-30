@@ -24,7 +24,7 @@ import { HelpCircle,
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
 
-export default function Support(...args[]):  {
+export default function Support() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Mail, Phone, MapPinIcon  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Mail, Phone, MapPinIcon  } from 'lucide-react';
 
-export default function Careers(...args[]):  {
+export default function Careers() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
@@ -30,7 +30,7 @@ export default function Careers(...args[]):  {
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements[
+      requirements: [
         'Advanced degree in Computer Science, AI, or related field',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with large language models and NLP',
@@ -45,7 +45,7 @@ export default function Careers(...args[]):  {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Protect our systems and clients with advanced security solutions.',
-      requirements[
+      requirements: [
         'Bachelor\'s degree in Cybersecurity or related field',
         'Certifications: CISSP, CEH, or similar',
         'Experience with penetration testing and vulnerability assessment',
@@ -60,7 +60,7 @@ export default function Careers(...args[]):  {
       type: 'Full-time',
       experience: '4+ years',
       description: 'Design and implement scalable cloud infrastructure solutions.',
-      requirements[
+      requirements: [
         'Bachelor\'s degree in Computer Science or related field',
         'AWS, Azure, or GCP certifications',
         'Experience with Kubernetes and Docker',
@@ -75,7 +75,7 @@ export default function Careers(...args[]):  {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Drive product strategy and development for our technology solutions.',
-      requirements[
+      requirements: [
         'Bachelor\'s degree in Business, Engineering, or related field',
         'Experience in B2B SaaS product management',
         'Strong analytical and communication skills',

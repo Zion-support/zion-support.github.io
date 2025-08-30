@@ -90,7 +90,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   // Voice recognition setup
   useEffect(() => {
     if (enableVoice && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as ).webkitSpeechRecognition;
+      const SpeechRecognition = (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
@@ -115,7 +115,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         content: 'Hello! I\'m your AI assistant. How can I help you today?',
         timestamp: new Date(),
         metadata: {
-          suggestions[
+          suggestions: [
             'Tell me about your services',
             'Help me with pricing',
             'Schedule a consultation',
@@ -217,7 +217,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         content: `Uploaded file: ${file.name}`,
         timestamp: new Date(),
         metadata: {
-          sources[file.name],
+          sources: [file.name],
         }
       };
       setMessages(prev  => [...prev, fileMessage])}

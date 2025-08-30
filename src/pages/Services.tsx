@@ -25,7 +25,8 @@ import { Brain,
   Database,
   Network,
   Smartphone,
-  Server
+  Server,
+  Car
  } from 'lucide-react.ts';
 
 export default function Services(...args: []):  {
@@ -89,6 +90,24 @@ export default function Services(...args: []):  {
           price: 'From $2,500',
           rating: 4.7,
           reviewCount: 203
+        },
+        {
+          name: 'AI Quantum Financial Trading',
+          description: 'Next-generation AI-powered quantum computing platform for high-frequency trading',
+          features: ['Quantum Trading Algorithms', 'Real-time Market Analysis', 'Risk Management', 'Portfolio Optimization'],
+          href: '/services/ai-quantum-financial-trading-platform',
+          price: 'From $25,000',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'AI Healthcare Diagnostics',
+          description: 'Advanced AI-powered medical diagnostics platform for accurate diagnoses',
+          features: ['Medical Image Analysis', 'Lab Result Interpretation', 'Treatment Recommendations', 'Clinical Decision Support'],
+          href: '/services/ai-healthcare-diagnostics-platform',
+          price: 'From $15,000',
+          rating: 4.9,
+          reviewCount: 156
         }
       ]
     },
@@ -133,6 +152,33 @@ export default function Services(...args: []):  {
           price: 'From $4,500',
           rating: 4.8,
           reviewCount: 76
+        },
+        {
+          name: 'Quantum Computing Infrastructure',
+          description: 'Enterprise-grade quantum computing infrastructure for advanced computational tasks',
+          features: ['Quantum Processors', 'Quantum Memory Systems', 'Quantum Networking', 'Algorithm Development'],
+          href: '/services/quantum-computing-infrastructure-as-a-service',
+          price: 'From $50,000',
+          rating: 4.9,
+          reviewCount: 67
+        },
+        {
+          name: 'Green IT Infrastructure',
+          description: 'Sustainable and energy-efficient IT infrastructure solutions',
+          features: ['Energy-efficient Hardware', 'Renewable Energy Integration', 'Smart Power Management', 'Carbon Tracking'],
+          href: '/services/green-it-infrastructure-solutions',
+          price: 'From $22,000',
+          rating: 4.8,
+          reviewCount: 89
+        },
+        {
+          name: 'Zero Trust Network Architecture',
+          description: 'Advanced zero trust security architecture for comprehensive protection',
+          features: ['Identity Management', 'Device Verification', 'Network Segmentation', 'Continuous Monitoring'],
+          href: '/services/zero-trust-network-architecture',
+          price: 'From $25,000',
+          rating: 4.9,
+          reviewCount: 178
         }
       ]
     },
@@ -168,6 +214,94 @@ export default function Services(...args: []):  {
           price: 'From $6,500',
           rating: 4.7,
           reviewCount: 189
+        }
+      ]
+    },
+    {
+      name: 'Emerging Technologies',
+      icon: Rocket,
+      description: 'Breakthrough technologies and innovative solutions for the future',
+      color: 'from-purple-600 to-pink-600',
+      services: [
+        {
+          name: 'AI Quantum Machine Learning',
+          description: 'Breakthrough quantum machine learning platform for complex problem solving',
+          features: ['Quantum Neural Networks', 'Quantum Optimization', 'Pattern Recognition', 'Hybrid Computing'],
+          href: '/services/ai-quantum-machine-learning',
+          price: 'From $35,000',
+          rating: 4.9,
+          reviewCount: 56
+        },
+        {
+          name: 'AI Synthetic Biology',
+          description: 'Revolutionary AI platform for synthetic biology and biological systems',
+          features: ['DNA Sequence Design', 'Biological Simulation', 'Protein Structure Prediction', 'Lab Automation'],
+          href: '/services/ai-synthetic-biology-platform',
+          price: 'From $40,000',
+          rating: 4.9,
+          reviewCount: 34
+        },
+        {
+          name: 'AI Neuromorphic Computing',
+          description: 'Brain-inspired AI platform for ultra-efficient processing and learning',
+          features: ['Spiking Neural Networks', 'Event-driven Processing', 'Low-power AI', 'Real-time Learning'],
+          href: '/services/ai-neuromorphic-computing-platform',
+          price: 'From $30,000',
+          rating: 4.8,
+          reviewCount: 67
+        },
+        {
+          name: 'AI Digital Twin Platform',
+          description: 'Comprehensive digital twin platform for real-time monitoring and optimization',
+          features: ['Physical System Replication', 'Predictive Maintenance', 'Performance Optimization', 'IoT Integration'],
+          href: '/services/ai-digital-twin-platform',
+          price: 'From $25,000',
+          rating: 4.8,
+          reviewCount: 145
+        },
+        {
+          name: 'AI Metaverse Development',
+          description: 'AI-powered platform for building and managing immersive virtual worlds',
+          features: ['Content Generation', 'Virtual World Creation', 'User Interaction Systems', 'VR/AR Integration'],
+          href: '/services/ai-metaverse-development-platform',
+          price: 'From $32,000',
+          rating: 4.8,
+          reviewCount: 89
+        }
+      ]
+    },
+    {
+      name: 'Autonomous Systems',
+      icon: Car,
+      description: 'AI-powered autonomous systems and robotics solutions',
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        {
+          name: 'AI Autonomous Vehicles',
+          description: 'Advanced AI-powered autonomous vehicle systems for cars, trucks, and drones',
+          features: ['Real-time Perception', 'Path Planning', 'Safety Systems', 'Edge Computing'],
+          href: '/services/ai-autonomous-vehicle-systems',
+          price: 'From $45,000',
+          rating: 4.9,
+          reviewCount: 78
+        },
+        {
+          name: 'AI Space Technology',
+          description: 'Revolutionary AI platform for space exploration and satellite operations',
+          features: ['Satellite Optimization', 'Space Debris Tracking', 'Autonomous Navigation', 'Mission Planning'],
+          href: '/services/ai-space-technology-platform',
+          price: 'From $60,000',
+          rating: 4.9,
+          reviewCount: 45
+        },
+        {
+          name: 'AI Autonomous Operations',
+          description: 'Revolutionary AI platform for autonomous business operations and decision-making',
+          features: ['Autonomous Decision Making', 'Process Optimization', 'Resource Allocation', '24/7 Operations'],
+          href: '/services/ai-autonomous-business-operations',
+          price: 'From $22,000',
+          rating: 4.9,
+          reviewCount: 92
         }
       ]
     },
