@@ -1,53 +1,57 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { TrendingUp, 
+  Users, 
+  DollarSign, 
+  Clock, 
+  ArrowRight,
+  Star,
+  CheckCircle
+ } from 'lucide-react.ts';
 
-const caseStudies = [
-  {
-    id: 1,
-    title: "AI-Powered Supply Chain Optimization",
-    company: "Global Manufacturing Corp",
-    industry: "Manufacturing",
-    challenge: "Inefficient supply chain causing 30% cost overruns and delays",
-    solution: "Implemented AI-driven demand forecasting and route optimization",
-    results: [
-      "Reduced costs by 25%",
-      "Improved delivery times by 40%",
-      "Increased efficiency by 35%"
-    ],
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    id: 2,
-    title: "Quantum Computing Financial Modeling",
-    company: "FinTech Innovations Ltd",
-    industry: "Financial Services",
-    challenge: "Complex financial models taking days to compute",
-    solution: "Deployed quantum computing algorithms for portfolio optimization",
-    results: [
-      "1000x faster computation",
-      "Improved accuracy by 60%",
-      "Reduced risk by 45%"
-    ],
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    id: 3,
-    title: "Blockchain Supply Chain Transparency",
-    company: "Organic Foods Inc",
-    industry: "Food & Beverage",
-    challenge: "Lack of transparency in food supply chain",
-    solution: "Implemented blockchain-based tracking system",
-    results: [
-      "100% supply chain visibility",
-      "Reduced fraud by 99%",
-      "Improved customer trust by 80%"
-    ],
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",
-    color: "from-green-500 to-emerald-500"
-  }
-];
+export const CaseStudiesSection: React.FC = (): JSX.Element => {
+  const caseStudies = [
+    {
+      comp: 'TechCorp Solutions',
+      industry: 'Financial Services',
+      challenge: 'Legacy system modernization and digital transformation',
+      solution: 'Implemented AI-powered automation and cloud migration',
+      results[
+        '40% reduction in operational costs',
+        '60% improvement in customer satisfaction',
+        '3x faster transaction processing'
+      ],
+      logo: '🏦',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      comp: 'Global Manufacturing Inc.',
+      industry: 'Manufacturing',
+      challenge: 'Supply chain optimization and predictive maintenance',
+      solution: 'IoT sensors and AI-powered analytics platform',
+      results[
+        '25% reduction in downtime',
+        '30% improvement in supply chain efficiency',
+        '$2M annual cost savings'
+      ],
+      logo: '🏭',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      comp: 'HealthTech Innovations',
+      industry: 'Healthcare',
+      challenge: 'Patient data security and compliance management',
+      solution: 'Zero-trust security framework and automated compliance',
+      results[
+        '99.9% security compliance rate',
+        '50% reduction in audit preparation time',
+        'Enhanced patient data protection'
+      ],
+      logo: '🏥',
+      color: 'from-purple-500 to-pink-500'
+    }
+  ];
 
 export function CaseStudiesSection() {
   return (
@@ -68,26 +72,24 @@ export function CaseStudiesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => (
+        <div className="grid lg: grid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index)  => (
             <motion.div
-              key={study.id}
-              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial={{ opacity: 0, y: 30 }}
+              key={study.comp}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="relative">
-                <img 
-                  src={study.image} 
-                  alt={study.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-3 left-3">
-                  <span className="px-3 py-1 bg-slate-800/80 text-white text-xs font-semibold rounded-full">
-                    {study.industry}
-                  </span>
+              <div className="flex items-center mb-6">
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${study.color} mr-4`}>
+                  <span className="text-2xl">{study.logo}</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {study.comp}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{study.industry}</p>
                 </div>
               </div>
               
@@ -146,5 +148,6 @@ export function CaseStudiesSection() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )};
+
+export default CaseStudiesSection;

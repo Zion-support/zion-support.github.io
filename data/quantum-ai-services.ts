@@ -29,15 +29,13 @@ export interface QuantumAIService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const quantumAIServices: QuantumAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',
@@ -46,7 +44,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$2,999',
     period: '/month',
     description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months through quantum neural processing.',
-    features: [
+    features[
       'Quantum neural signal processing',
       'Real-time brain activity monitoring',
       'AI-powered cognitive enhancement',
@@ -69,11 +67,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '1 week',
     category: 'Quantum AI & Neuroscience',
     realService: true,
-    technology: ['Quantum Computing', 'OpenAI GPT-4', 'Neural Networks', 'React', 'Node.js', 'PostgreSQL', 'Quantum Simulators'],
-    integrations: ['Research databases', 'Medical imaging systems', 'AI platforms', 'Cloud quantum services', 'Neuroscience tools'],
-    useCases: ['Cognitive research', 'Medical diagnosis', 'AI training', 'Neural interface development', 'Brain-computer communication', 'Cognitive enhancement'],
+    technology['Quantum Computing', 'OpenAI GPT-4', 'Neural Networks', 'React', 'Node.js', 'PostgreSQL', 'Quantum Simulators'],
+    integrations['Research databases', 'Medical imaging systems', 'AI platforms', 'Cloud quantum services', 'Neuroscience tools'],
+    useCases['Cognitive research', 'Medical diagnosis', 'AI training', 'Neural interface development', 'Brain-computer communication', 'Cognitive enhancement'],
     roi: 'Revolutionary technology with 1000% ROI potential through breakthrough discoveries and patents.',
-    competitors: ['Neuralink', 'Kernel', 'Basic neural interfaces'],
+    competitors['Neuralink', 'Kernel', 'Basic neural interfaces'],
     marketSize: '$1.5B BCI market',
     growthRate: '300% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -97,7 +95,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$1,499',
     period: '/month',
     description: 'Advanced quantum AI platform that enhances human cognitive abilities through neural stimulation and AI-powered learning optimization. Improve memory, focus, and problem-solving by 500%.',
-    features: [
+    features[
       'Quantum AI learning algorithms',
       'Neural stimulation protocols',
       'Cognitive performance tracking',
@@ -120,11 +118,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '2 hours',
     category: 'Quantum AI & Cognitive Enhancement',
     realService: true,
-    technology: ['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Neural Networks'],
-    integrations: ['Learning management systems', 'Fitness trackers', 'Brain monitoring devices', 'Educational platforms', 'Productivity tools'],
-    useCases: ['Learning enhancement', 'Memory improvement', 'Focus optimization', 'Problem-solving training', 'Cognitive performance monitoring', 'Brain training'],
+    technology['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Neural Networks'],
+    integrations['Learning management systems', 'Fitness trackers', 'Brain monitoring devices', 'Educational platforms', 'Productivity tools'],
+    useCases['Learning enhancement', 'Memory improvement', 'Focus optimization', 'Problem-solving training', 'Cognitive performance monitoring', 'Brain training'],
     roi: 'Average user improves cognitive performance by 500% and learning efficiency by 300% within 3 months.',
-    competitors: ['Basic cognitive training apps', 'Traditional learning tools'],
+    competitors['Basic cognitive training apps', 'Traditional learning tools'],
     marketSize: '$2.1B cognitive enhancement market',
     growthRate: '400% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -148,7 +146,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$899',
     period: '/month',
     description: 'Next-generation blockchain security platform that uses quantum cryptography to create unbreakable digital assets and smart contracts. Protect your blockchain applications with quantum-resistant security.',
-    features: [
+    features[
       'Quantum-resistant cryptography',
       'Post-quantum blockchain protocols',
       'Smart contract security auditing',
@@ -171,11 +169,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '1 day',
     category: 'Quantum AI & Blockchain',
     realService: true,
-    technology: ['Quantum Computing', 'Blockchain', 'Post-Quantum Cryptography', 'React', 'Node.js', 'PostgreSQL', 'Quantum Simulators'],
-    integrations: ['Ethereum', 'Bitcoin', 'Polygon', 'Solana', 'Major blockchain networks', 'DeFi protocols'],
-    useCases: ['Blockchain security', 'Smart contract protection', 'Cryptocurrency security', 'DeFi platform protection', 'NFT marketplace security', 'Digital asset protection'],
+    technology['Quantum Computing', 'Blockchain', 'Post-Quantum Cryptography', 'React', 'Node.js', 'PostgreSQL', 'Quantum Simulators'],
+    integrations['Ethereum', 'Bitcoin', 'Polygon', 'Solana', 'Major blockchain networks', 'DeFi protocols'],
+    useCases['Blockchain security', 'Smart contract protection', 'Cryptocurrency security', 'DeFi platform protection', 'NFT marketplace security', 'Digital asset protection'],
     roi: 'Protect against future quantum attacks and ensure long-term blockchain security. ROI through risk mitigation and competitive advantage.',
-    competitors: ['Traditional blockchain security', 'Basic cryptography tools'],
+    competitors['Traditional blockchain security', 'Basic cryptography tools'],
     marketSize: '$3.2B blockchain security market',
     growthRate: '350% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -199,7 +197,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$1,299',
     period: '/month',
     description: 'Advanced quantum cybersecurity platform that protects enterprise networks with quantum-resistant protocols and AI-powered threat detection. Future-proof your security against quantum attacks.',
-    features: [
+    features[
       'Quantum-resistant encryption',
       'AI-powered threat detection',
       'Real-time security monitoring',
@@ -222,11 +220,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '1 week',
     category: 'Quantum AI & Cybersecurity',
     realService: true,
-    technology: ['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Quantum Cryptography'],
-    integrations: ['Active Directory', 'LDAP', 'SIEM systems', 'Firewall appliances', 'Endpoint protection', 'Cloud security platforms'],
-    useCases: ['Network security', 'Data protection', 'Threat detection', 'Incident response', 'Compliance management', 'Security monitoring'],
+    technology['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Quantum Cryptography'],
+    integrations['Active Directory', 'LDAP', 'SIEM systems', 'Firewall appliances', 'Endpoint protection', 'Cloud security platforms'],
+    useCases['Network security', 'Data protection', 'Threat detection', 'Incident response', 'Compliance management', 'Security monitoring'],
     roi: 'Protect against future quantum attacks and ensure long-term security. ROI through risk mitigation and competitive advantage.',
-    competitors: ['Traditional cybersecurity', 'Basic security tools'],
+    competitors['Traditional cybersecurity', 'Basic security tools'],
     marketSize: '$150B cybersecurity market',
     growthRate: '300% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -250,7 +248,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$799',
     period: '/month',
     description: 'Advanced quantum AI platform that optimizes energy consumption, distribution, and generation using quantum algorithms. Reduce energy costs by 60% and improve efficiency by 300%.',
-    features: [
+    features[
       'Quantum energy optimization algorithms',
       'Real-time consumption monitoring',
       'Predictive energy analytics',
@@ -273,11 +271,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Energy',
     realService: true,
-    technology: ['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'IoT Integration'],
-    integrations: ['Smart meters', 'Energy management systems', 'Building automation', 'Solar panels', 'Battery storage', 'Grid systems'],
-    useCases: ['Energy optimization', 'Cost reduction', 'Efficiency improvement', 'Renewable integration', 'Smart grid management', 'Predictive maintenance'],
+    technology['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'IoT Integration'],
+    integrations['Smart meters', 'Energy management systems', 'Building automation', 'Solar panels', 'Battery storage', 'Grid systems'],
+    useCases['Energy optimization', 'Cost reduction', 'Efficiency improvement', 'Renewable integration', 'Smart grid management', 'Predictive maintenance'],
     roi: 'Average customer reduces energy costs by 60% and improves efficiency by 300% within 6 months.',
-    competitors: ['Traditional energy management', 'Basic optimization tools'],
+    competitors['Traditional energy management', 'Basic optimization tools'],
     marketSize: '$8.5B energy management market',
     growthRate: '280% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -301,7 +299,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$1,999',
     period: '/month',
     description: 'Advanced quantum AI trading platform that uses quantum algorithms to predict market movements and optimize trading strategies. Achieve 500% better returns than traditional trading methods.',
-    features: [
+    features[
       'Quantum AI market prediction',
       'Real-time trading algorithms',
       'Risk management systems',
@@ -324,11 +322,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '1 week',
     category: 'Quantum AI & Financial Trading',
     realService: true,
-    technology: ['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Financial APIs'],
-    integrations: ['Major brokers', 'Financial data providers', 'Risk management systems', 'Portfolio management tools', 'Compliance platforms'],
-    useCases: ['Algorithmic trading', 'Portfolio optimization', 'Risk management', 'Market prediction', 'Automated trading', 'Performance analysis'],
+    technology['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Financial APIs'],
+    integrations['Major brokers', 'Financial data providers', 'Risk management systems', 'Portfolio management tools', 'Compliance platforms'],
+    useCases['Algorithmic trading', 'Portfolio optimization', 'Risk management', 'Market prediction', 'Automated trading', 'Performance analysis'],
     roi: 'Average user achieves 500% better returns than traditional trading methods within 12 months.',
-    competitors: ['Traditional trading platforms', 'Basic algorithmic trading'],
+    competitors['Traditional trading platforms', 'Basic algorithmic trading'],
     marketSize: '$12B algorithmic trading market',
     growthRate: '320% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -352,7 +350,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols and real-time threat detection.',
-    features: [
+    features[
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography',
       'Quantum-resistant VPN tunnels',
@@ -375,11 +373,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Internet Security',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Key Distribution', 'Post-Quantum Cryptography', 'React', 'Node.js', 'PostgreSQL', 'Network Security'],
-    integrations: ['Network infrastructure', 'Security appliances', 'Cloud platforms', 'Enterprise systems', 'IoT devices', 'Mobile networks'],
-    useCases: ['Internet security', 'Network protection', 'Data encryption', 'Threat prevention', 'Compliance management', 'Secure communications'],
+    technology['Quantum Computing', 'Quantum Key Distribution', 'Post-Quantum Cryptography', 'React', 'Node.js', 'PostgreSQL', 'Network Security'],
+    integrations['Network infrastructure', 'Security appliances', 'Cloud platforms', 'Enterprise systems', 'IoT devices', 'Mobile networks'],
+    useCases['Internet security', 'Network protection', 'Data encryption', 'Threat prevention', 'Compliance management', 'Secure communications'],
     roi: 'Protect against future quantum attacks and ensure long-term internet security. ROI through risk mitigation and competitive advantage.',
-    competitors: ['Traditional internet security', 'Basic encryption tools'],
+    competitors['Traditional internet security', 'Basic encryption tools'],
     marketSize: '$150B cybersecurity market',
     growthRate: '300% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -403,7 +401,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$599',
     period: '/month',
     description: 'Advanced quantum-secured IoT platform that manages and secures connected devices with quantum encryption and AI-powered monitoring. Protect your IoT ecosystem with future-proof security.',
-    features: [
+    features[
       'Quantum-secured IoT communications',
       'AI-powered device management',
       'Real-time security monitoring',
@@ -426,11 +424,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '1 week',
     category: 'Quantum AI & IoT',
     realService: true,
-    technology: ['Quantum Computing', 'IoT Protocols', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Quantum Cryptography'],
-    integrations: ['Major IoT platforms', 'Smart devices', 'Cloud services', 'Enterprise systems', 'Mobile networks', 'Security systems'],
-    useCases: ['IoT security', 'Device management', 'Performance optimization', 'Predictive maintenance', 'Energy efficiency', 'Smart automation'],
+    technology['Quantum Computing', 'IoT Protocols', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Quantum Cryptography'],
+    integrations['Major IoT platforms', 'Smart devices', 'Cloud services', 'Enterprise systems', 'Mobile networks', 'Security systems'],
+    useCases['IoT security', 'Device management', 'Performance optimization', 'Predictive maintenance', 'Energy efficiency', 'Smart automation'],
     roi: 'Protect IoT devices from future quantum attacks and improve operational efficiency by 200%.',
-    competitors: ['Traditional IoT platforms', 'Basic device management'],
+    competitors['Traditional IoT platforms', 'Basic device management'],
     marketSize: '$18B IoT platform market',
     growthRate: '250% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -454,7 +452,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$1,199',
     period: '/month',
     description: 'Advanced quantum AI platform that optimizes logistics, supply chains, and transportation using quantum algorithms. Reduce logistics costs by 40% and improve efficiency by 300%.',
-    features: [
+    features[
       'Quantum logistics algorithms',
       'Real-time route optimization',
       'Supply chain analytics',
@@ -477,11 +475,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Logistics',
     realService: true,
-    technology: ['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Logistics APIs'],
-    integrations: ['ERP systems', 'WMS platforms', 'Transportation management', 'Inventory systems', 'Supplier networks', 'Customer platforms'],
-    useCases: ['Route optimization', 'Supply chain optimization', 'Inventory management', 'Demand forecasting', 'Cost reduction', 'Performance improvement'],
+    technology['Quantum Computing', 'OpenAI GPT-4', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Logistics APIs'],
+    integrations['ERP systems', 'WMS platforms', 'Transportation management', 'Inventory systems', 'Supplier networks', 'Customer platforms'],
+    useCases['Route optimization', 'Supply chain optimization', 'Inventory management', 'Demand forecasting', 'Cost reduction', 'Performance improvement'],
     roi: 'Average customer reduces logistics costs by 40% and improves efficiency by 300% within 6 months.',
-    competitors: ['Traditional logistics platforms', 'Basic optimization tools'],
+    competitors['Traditional logistics platforms', 'Basic optimization tools'],
     marketSize: '$15B logistics optimization market',
     growthRate: '220% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -505,7 +503,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary quantum-powered metaverse platform that creates immersive digital worlds with quantum AI and advanced graphics. Build the next generation of virtual experiences.',
-    features: [
+    features[
       'Quantum AI world generation',
       'Advanced 3D graphics engine',
       'Real-time collaboration tools',
@@ -528,11 +526,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Metaverse',
     realService: true,
-    technology: ['Quantum Computing', '3D Graphics', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'VR/AR Integration'],
-    integrations: ['VR headsets', 'AR devices', 'Gaming platforms', 'Social media', 'Payment systems', 'Cloud services'],
-    useCases: ['Virtual world creation', 'Gaming development', 'Educational experiences', 'Training simulations', 'Virtual events', 'Digital commerce'],
+    technology['Quantum Computing', '3D Graphics', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'VR/AR Integration'],
+    integrations['VR headsets', 'AR devices', 'Gaming platforms', 'Social media', 'Payment systems', 'Cloud services'],
+    useCases['Virtual world creation', 'Gaming development', 'Educational experiences', 'Training simulations', 'Virtual events', 'Digital commerce'],
     roi: 'Create revolutionary metaverse experiences and monetize virtual assets. ROI through innovation and market leadership.',
-    competitors: ['Traditional metaverse platforms', 'Basic VR development'],
+    competitors['Traditional metaverse platforms', 'Basic VR development'],
     marketSize: '$800B metaverse market',
     growthRate: '400% annual growth',
     variant: 'quantum-ai-futuristic',
@@ -556,7 +554,7 @@ export const quantumAIServices: QuantumAIService[] = [
     price: '$3,999',
     period: '/month',
     description: 'Advanced quantum AI robotics platform that creates intelligent, autonomous robots with human-like decision-making capabilities. Transform manufacturing, healthcare, and service industries.',
-    features: [
+    features[
       'Quantum AI decision making',
       'Advanced robotics control',
       'Autonomous navigation',
@@ -579,11 +577,11 @@ export const quantumAIServices: QuantumAIService[] = [
     setupTime: '1 month',
     category: 'Quantum AI & Robotics',
     realService: true,
-    technology: ['Quantum Computing', 'Robotics', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'IoT Integration'],
-    integrations: ['Robot hardware', 'Manufacturing systems', 'Healthcare equipment', 'Service platforms', 'Safety systems', 'Monitoring tools'],
-    useCases: ['Manufacturing automation', 'Healthcare assistance', 'Service automation', 'Research and development', 'Safety and security', 'Performance optimization'],
+    technology['Quantum Computing', 'Robotics', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'IoT Integration'],
+    integrations['Robot hardware', 'Manufacturing systems', 'Healthcare equipment', 'Service platforms', 'Safety systems', 'Monitoring tools'],
+    useCases['Manufacturing automation', 'Healthcare assistance', 'Service automation', 'Research and development', 'Safety and security', 'Performance optimization'],
     roi: 'Revolutionary robotics technology with superior decision making and automation capabilities. ROI through innovation and market leadership.',
-    competitors: ['Traditional robotics platforms', 'Basic automation tools'],
+    competitors['Traditional robotics platforms', 'Basic automation tools'],
     marketSize: '$25B robotics market',
     growthRate: '350% annual growth',
     variant: 'quantum-ai-futuristic',

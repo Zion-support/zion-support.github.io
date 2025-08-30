@@ -11,7 +11,7 @@ const baseData: QuoteFormData = {
   endDate: undefined,
   timeline: 'flexible',
   budget: { amount: 0, type: 'fixed' },
-  contactInfo: { name: '', email: '', phone: '', company: '' },
+  contactInfo: { name: '', email: '', phone: '', comp: '' },
 };
 it('shows results when searching services', async () => {
   const data = { ...baseData };
@@ -21,8 +21,7 @@ it('shows results when searching services', async () => {
     json: async () => [
       { id: 'service-3', title: 'IT Consulting', category: 'service' },
     ],
-  }) as any;
-  render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
+  }) as ;render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
   fireEvent.click(screen.getByText('Services'));
   const input = screen.getByPlaceholderText(/search service/i);
   fireEvent.change(input, { target: { value: 'IT' } });
@@ -40,8 +39,7 @@ it('renders results from api', async () => {
       { id: 's2', title: 'B', category: 'service' },
       { id: 's3', title: 'C', category: 'service' },
     ],
-  }) as any;
-  render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
+  }) as ;render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
   fireEvent.click(screen.getByText('Services'));
   await waitFor(() => {
     expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3);

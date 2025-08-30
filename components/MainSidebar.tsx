@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { 
-  Home, 
+import React, { useState } from 'react.ts';
+import Link from 'next/link.ts';
+import { useRouter  } from 'next/router.ts';
+import { Home, 
   Briefcase, 
   Users, 
   Phone, 
@@ -65,29 +64,28 @@ import {
   Leaf,
   Sun,
   Wind
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface SidebarProps {
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: ()  => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const router = useNavigate();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const router = useRouter();
+  const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: string)  => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
+        [...prev, section]
+    )};
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: string)  => router.pathname === path;
 
   const navigation = {
-    main: [
+    main[
       { name: 'Home', href: '/', icon: Home },
       { name: 'About', href: '/about', icon: Building },
       { name: 'Services', href: '/services', icon: Briefcase },
@@ -97,7 +95,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Blog', href: '/blog', icon: Newspaper },
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
-    services: [
+    services[
       { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' },
       { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Infrastructure & automation' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' },
@@ -105,7 +103,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' },
       { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' },
     ],
-    solutions: [
+    solutions[
       { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' },
       { name: 'SMB', href: '/solutions/smb', icon: Store, description: 'Small business focused' },
       { name: 'Startup', href: '/solutions/startup', icon: Rocket, description: 'Growth acceleration' },
@@ -113,7 +111,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Health tech solutions' },
       { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' },
     ],
-    resources: [
+    resources[
       { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' },
       { name: 'API Reference', href: '/api', icon: Code, description: 'Developer resources' },
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
@@ -121,12 +119,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' },
       { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
     ],
-    company: [
+    comp[
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
+      { name: 'News', href: '/news', icon: Newspaper, description: 'Comp updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
     ]
   };
@@ -150,7 +148,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: string, items: any[], sectionKey: string) => (
+  const renderNavSection = (title: string, items[], sectionKey: string)  => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
@@ -281,8 +279,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* Resources Section */}
           {renderNavSection('Resources', navigation.resources, 'resources')}
 
-          {/* Company Section */}
-          {renderNavSection('Company', navigation.company, 'company')}
+          {/* Comp Section */}
+          {renderNavSection('Comp', navigation.comp, 'comp')}
         </div>
 
         {/* Footer */}
@@ -326,7 +324,6 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 
 export default MainSidebar;

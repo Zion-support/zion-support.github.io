@@ -1,11 +1,10 @@
-// import type { AppProps } from 'next/app'; // TODO: Remove or replace with appropriate type
+import type { AppProps } from 'next/app.ts';
 import '../styles/globals.css';
 import ModernLayout from '../components/layout/ModernLayout';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App(...args[]):  {
   return (
     <ModernLayout>
       <Component {...pageProps} />
     </ModernLayout>
-  );
-}
+  )}

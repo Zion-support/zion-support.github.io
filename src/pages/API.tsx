@@ -1,7 +1,29 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Code, 
+  Search, 
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Brain,
+  Cloud,
+  Shield,
+  Sparkles,
+  Zap,
+  Globe,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Terminal,
+  Key,
+  Database,
+  Lock
+ } from 'lucide-react.ts';
 
 const API: React.FC = () => {
   const endpoints = [
@@ -54,14 +76,60 @@ const API: React.FC = () => {
     }
   ];
 
-  const sdks = [
-    { name: 'JavaScript/Node.js', icon: '🔷' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'Java', icon: '☕' },
-    { name: 'C#', icon: '🔷' },
-    { name: 'Go', icon: '🐹' },
-    { name: 'PHP', icon: '🐘' }
-  ];
+url = "https://api.ziontechgroup.com/v1/ai/text/analyze"
+headers = {"Authorization": "Bearer YOUR_API_KEY"}
+
+response = requests.post(url, json={
+    "text": "Your text here",
+    "analysis_type": "sentiment"
+})
+
+print(response.json())`,
+    category: 'AI & ML'
+  },
+  {
+    title: 'Cloud Resource Management',
+    language: 'JavaScript',
+    description: 'Example of managing cloud resources through our infrastructure API.',
+    code: `const axios = require('axios');
+
+const api = axios.create({
+    baseURL: 'https://api.ziontechgroup.com/v1/cloud',
+    headers: {'Authorization': 'Bearer YOUR_API_KEY'}
+});
+
+const createInstance = async () => {
+    const response = await api.post('/instances', {
+        type: 'compute',
+        size: 'medium',
+        region: 'us-east-1'
+    });
+    return response.data};`,
+    category: 'Cloud & DevOps'
+  },
+  {
+    title: 'Security Threat Detection',
+    language: 'Python',
+    description: 'Implement real-time threat detection using our security API.',
+    code: `import requests
+
+def check_threat(ip_address):
+    url = "https://api.ziontechgroup.com/v1/security/threat-check"
+    headers = {"Authorization": "Bearer YOUR_API_KEY"}
+    
+    response = requests.post(url, json={
+        "ip": ip_address,
+        "check_type": "comprehensive"
+    })
+    
+    return response.json()`,
+    category: 'Security'
+  }
+];
+
+export default function API(...args[]):  {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -125,8 +193,8 @@ const API: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {apiCategories.map((category, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -162,8 +230,8 @@ const API: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="space-y-4">
-            {endpoints.map((endpoint, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            {quickStartExamples.map((example, index)  => (
               <motion.div
                 key={endpoint.path}
                 initial={{ opacity: 0, x: -20 }}
@@ -266,7 +334,4 @@ const API: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default API;
+  )}

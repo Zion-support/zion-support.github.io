@@ -5,8 +5,7 @@ export type InnovativeMicroSaasV2 = {
 	category: string;
 	price: string;
 	rating: number;
-	reviews: number;
-};
+	reviews: number};
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 	{
 		id: 'ai-business-intelligence-pro',

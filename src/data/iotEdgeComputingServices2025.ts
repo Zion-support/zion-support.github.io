@@ -1,4 +1,5 @@
 export interface IoTEdgeService {
+
   id: string;
   title: string;
   description: string;
@@ -9,12 +10,11 @@ export interface IoTEdgeService {
   features: string[];
   benefits: string[];
   useCases: string[];
-  pricing: {
+pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string;
-  };
+    custom: string};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -23,8 +23,7 @@ export interface IoTEdgeService {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   scalability: string;
-  deployment: string;
-}
+  deployment: string}
 export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
   {
     id: 'smart-city-platform',
@@ -34,7 +33,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     icon: 'Building',
     color: 'from-blue-500 to-indigo-600',
     category: 'smart-cities',
-    features: [
+    features[
       'Traffic management',
       'Environmental monitoring',
       'Energy optimization',
@@ -42,13 +41,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       'Public safety',
       'Infrastructure monitoring'
     ],
-    benefits: [
+    benefits[
       'Improved city efficiency',
       'Reduced energy consumption',
       'Enhanced citizen experience',
       'Better resource management'
     ],
-    useCases: [
+    useCases[
       'Municipal governments',
       'City planners',
       'Urban developers',
@@ -61,7 +60,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '16-32 weeks',
-    technologies: ['IoT Sensors', 'Edge Computing', '5G Networks', 'Cloud Computing', 'AI/ML', 'Data Analytics'],
+    technologies['IoT Sensors', 'Edge Computing', '5G Networks', 'Cloud Computing', 'AI/ML', 'Data Analytics'],
     iotScore: 98,
     marketPrice: '$5,999-$39,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -77,7 +76,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     icon: 'Factory',
     color: 'from-gray-500 to-slate-600',
     category: 'industrial-iot',
-    features: [
+    features[
       'Predictive maintenance',
       'Quality control',
       'Energy management',
@@ -85,13 +84,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       'Asset tracking',
       'Performance analytics'
     ],
-    benefits: [
+    benefits[
       '30% reduction in downtime',
       'Improved product quality',
       'Energy cost savings',
       'Enhanced operational efficiency'
     ],
-    useCases: [
+    useCases[
       'Manufacturing plants',
       'Industrial facilities',
       'Warehouses',
@@ -104,7 +103,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '12-24 weeks',
-    technologies: ['Industrial Sensors', 'Edge Computing', 'PLC Integration', 'SCADA Systems', 'AI/ML', 'Cloud Computing'],
+    technologies['Industrial Sensors', 'Edge Computing', 'PLC Integration', 'SCADA Systems', 'AI/ML', 'Cloud Computing'],
     iotScore: 97,
     marketPrice: '$3,999-$24,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -120,7 +119,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     icon: 'Cpu',
     color: 'from-green-500 to-emerald-600',
     category: 'edge-ai',
-    features: [
+    features[
       'Local AI processing',
       'Real-time analytics',
       'Edge machine learning',
@@ -128,13 +127,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       'Offline capabilities',
       'Scalable deployment'
     ],
-    benefits: [
+    benefits[
       '90% reduction in latency',
       'Real-time insights',
       'Offline operation',
       'Reduced bandwidth usage'
     ],
-    useCases: [
+    useCases[
       'Autonomous vehicles',
       'Smart cameras',
       'Industrial robots',
@@ -147,7 +146,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '8-16 weeks',
-    technologies: ['Edge Computing', 'AI/ML', 'TensorFlow Lite', 'Edge GPUs', '5G Networks', 'Edge Analytics'],
+    technologies['Edge Computing', 'AI/ML', 'TensorFlow Lite', 'Edge GPUs', '5G Networks', 'Edge Analytics'],
     iotScore: 96,
     marketPrice: '$2,999-$19,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -163,7 +162,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     icon: 'Smartphone',
     color: 'from-purple-500 to-pink-600',
     category: 'connected-devices',
-    features: [
+    features[
       'Device provisioning',
       'Remote monitoring',
       'Over-the-air updates',
@@ -171,13 +170,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       'Performance analytics',
       'Device lifecycle management'
     ],
-    benefits: [
+    benefits[
       'Centralized device management',
       'Reduced operational costs',
       'Improved security',
       'Better device performance'
     ],
-    useCases: [
+    useCases[
       'IoT deployments',
       'Device manufacturers',
       'Service providers',
@@ -190,7 +189,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-12 weeks',
-    technologies: ['Device Management', 'IoT Protocols', 'Cloud Computing', 'Security', 'Analytics', 'APIs'],
+    technologies['Device Management', 'IoT Protocols', 'Cloud Computing', 'Security', 'Analytics', 'APIs'],
     iotScore: 95,
     marketPrice: '$1,999-$12,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -206,7 +205,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     icon: 'Radio',
     color: 'from-teal-500 to-cyan-600',
     category: 'sensor-networks',
-    features: [
+    features[
       'Sensor deployment',
       'Data collection',
       'Real-time monitoring',
@@ -214,13 +213,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       'Power management',
       'Data analytics'
     ],
-    benefits: [
+    benefits[
       'Comprehensive monitoring',
       'Real-time insights',
       'Optimized network performance',
       'Reduced maintenance costs'
     ],
-    useCases: [
+    useCases[
       'Environmental monitoring',
       'Agricultural IoT',
       'Infrastructure monitoring',
@@ -233,7 +232,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '4-12 weeks',
-    technologies: ['IoT Sensors', 'Wireless Networks', 'Edge Computing', 'Data Collection', 'Analytics', 'Cloud Computing'],
+    technologies['IoT Sensors', 'Wireless Networks', 'Edge Computing', 'Data Collection', 'Analytics', 'Cloud Computing'],
     iotScore: 94,
     marketPrice: '$1,499-$9,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -249,7 +248,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     icon: 'Server',
     color: 'from-orange-500 to-red-600',
     category: 'edge-computing',
-    features: [
+    features[
       'Edge nodes',
       'Distributed computing',
       'Load balancing',
@@ -257,13 +256,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       'Edge storage',
       'Network optimization'
     ],
-    benefits: [
+    benefits[
       'Improved performance',
       'Reduced latency',
       'Better reliability',
       'Scalable infrastructure'
     ],
-    useCases: [
+    useCases[
       'Edge applications',
       'Distributed systems',
       'Content delivery',
@@ -276,7 +275,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '8-16 weeks',
-    technologies: ['Edge Computing', 'Kubernetes', 'Docker', 'Load Balancers', 'Storage', 'Networking'],
+    technologies['Edge Computing', 'Kubernetes', 'Docker', 'Load Balancers', 'Storage', 'Networking'],
     iotScore: 95,
     marketPrice: '$2,499-$17,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -292,7 +291,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     icon: 'Shield',
     color: 'from-red-500 to-orange-600',
     category: 'iot-security',
-    features: [
+    features[
       'Device authentication',
       'Network security',
       'Data encryption',
@@ -300,13 +299,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       'Access control',
       'Security monitoring'
     ],
-    benefits: [
+    benefits[
       'Enhanced security',
       'Data protection',
       'Threat prevention',
       'Compliance support'
     ],
-    useCases: [
+    useCases[
       'IoT deployments',
       'Smart cities',
       'Industrial IoT',
@@ -319,7 +318,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-12 weeks',
-    technologies: ['IoT Security', 'Encryption', 'Authentication', 'Network Security', 'Threat Detection', 'Compliance'],
+    technologies['IoT Security', 'Encryption', 'Authentication', 'Network Security', 'Threat Detection', 'Compliance'],
     iotScore: 98,
     marketPrice: '$2,999-$19,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -335,7 +334,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     icon: 'BarChart3',
     color: 'from-indigo-500 to-purple-600',
     category: 'data-analytics',
-    features: [
+    features[
       'Real-time processing',
       'Predictive analytics',
       'Data visualization',
@@ -343,13 +342,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       'Data integration',
       'Performance monitoring'
     ],
-    benefits: [
+    benefits[
       'Data-driven insights',
       'Predictive capabilities',
       'Automated decision making',
       'Improved efficiency'
     ],
-    useCases: [
+    useCases[
       'IoT deployments',
       'Smart cities',
       'Industrial monitoring',
@@ -362,7 +361,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '4-8 weeks',
-    technologies: ['Big Data', 'AI/ML', 'Real-time Processing', 'Data Visualization', 'Analytics', 'Cloud Computing'],
+    technologies['Big Data', 'AI/ML', 'Real-time Processing', 'Data Visualization', 'Analytics', 'Cloud Computing'],
     iotScore: 95,
     marketPrice: '$1,999-$12,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -371,12 +370,9 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     deployment: 'Cloud-based analytics platform'
   }
 ];
-export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[] => {
+export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]  => {
   if (category === 'All') {
-    return IOT_EDGE_COMPUTING_SERVICES_2025;
-  }
-  return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category);
-};
+    return IOT_EDGE_COMPUTING_SERVICES_2025}
+  return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category)};
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {
-  return IOT_EDGE_COMPUTING_SERVICES_2025;
-};
+  return IOT_EDGE_COMPUTING_SERVICES_2025};

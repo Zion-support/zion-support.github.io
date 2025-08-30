@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect  } from 'react.ts';
 interface ResponsiveState {
+
   screenWidth: number;
   screenHeight: number;
   orientation: "landscape" | "portrait";
   isMobile: boolean;
   isTablet: boolean;
-  isDesktop: boolean;
-}
+  isDesktop: boolean}
 const useResponsive = (): ResponsiveState => {
-  const [state, setState] = useState<ResponsiveState>({
+  const [state, setState] = useState<any>({
     screenWidth: 1920,
     screenHeight: 1080,
     orientation: "landscape",
@@ -16,7 +16,7 @@ const useResponsive = (): ResponsiveState => {
     isTablet: false,
     isDesktop: true,
   });
-  useEffect(() => {
+  useEffect(()  => {
     const updateDimensions = () => {
       setState({
         screenWidth: window.innerWidth,
@@ -26,12 +26,9 @@ const useResponsive = (): ResponsiveState => {
         isMobile: window.innerWidth < 768,
         isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,
         isDesktop: window.innerWidth >= 1024,
-      });
-    };
+      })};
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
-  return state;
-};
+    return () => window.removeEventListener("resize", updateDimensions)}, []);
+  return state};
 export default useResponsive;

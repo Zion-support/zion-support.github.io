@@ -1,31 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Leaf, 
-  Zap, 
-  Shield, 
-  Globe, 
-  TrendingUp, 
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Sun,
-  Wind,
-  Battery,
-  Recycle,
-  Tree,
-  Lightbulb,
-  Gauge,
-  Target,
-  Award,
-  BarChart3
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import React from 'react.ts';
+import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu  } from 'lucide-react.ts';
 
 export default function GreenIT() {
   const features = [
@@ -169,9 +143,79 @@ export default function GreenIT() {
         </div>
       </section>
 
-      {/* What is Green IT */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
+      {/* Green IT Services */}
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Green IT Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive sustainable technology solutions designed to reduce 
+              environmental impact and improve operational efficiency.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {greenServices.map((service, index)  => (
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="w-8 h-8 text-white"/>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <p className="text-lg font-semibold text-green-400 mb-4">{service.price}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
+                      <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Green Technologies */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Green Technologies We Use
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Cutting-edge sustainable technologies and practices to build 
+              environmentally responsible IT solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {greenTechnologies.map((tech, index)  => (
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <tech.icon className="w-8 h-8 text-white"/>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
+                <p className="text-gray-300 mb-4">{tech.description}</p>
+                <ul className="space-y-2">
+                  {tech.features.map((feature, idx) => (
+                    <li key={idx} className="text-sm text-gray-400">
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}

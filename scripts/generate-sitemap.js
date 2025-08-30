@@ -75,14 +75,12 @@ function generateSitemapXML() {
     <lastmod>${route.lastmod}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
-  </url>`;
-  }).join('\n');
+  </url>`}).join('\n');
   
   return `${xmlHeader}
 ${urlsetOpen}
 ${urls}
-${urlsetClose}`;
-}
+${urlsetClose}`}
 // Generate robots.txt content
 function generateRobotsTxt() {
   return `User-agent: *
@@ -101,16 +99,14 @@ Allow: /sitemap.xml
 Allow: /favicon.ico
 Allow: /manifest.json
 # Crawl delay (optional)
-Crawl-delay: 1`;
-}
+Crawl-delay: 1`}
 // Generate the sitemap
 function generateSitemap() {
   try {
     // Create the public directory if it doesn't exist
     const publicDir = path.join(__dirname, '..', 'public');
     if (!fs.existsSync(publicDir)) {
-      fs.mkdirSync(publicDir, { recursive: true });
-    }
+      fs.mkdirSync(publicDir, { recursive: true })}
     
     // Generate and write sitemap.xml
     const sitemapContent = generateSitemapXML();
@@ -146,12 +142,9 @@ function generateSitemap() {
     
     console.log('\n🎉 All sitemap files generated successfully!');
     console.log(`📊 Total routes: ${routes.length}`);
-    console.log(`🌐 Base URL: ${BASE_URL}`);
-    
-  } catch (error) {
+    console.log(`🌐 Base URL: ${BASE_URL}`)} catch (error) {
     console.error('❌ Error generating sitemap:', error.message);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 // Run the sitemap generation
 generateSitemap();

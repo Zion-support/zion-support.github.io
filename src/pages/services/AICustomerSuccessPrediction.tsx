@@ -1,40 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Database,
-  Cloud,
-  Lock,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Phone,
-  Mail,
-  MapPin,
-  BarChart3,
-  MessageCircle,
-  Calendar,
-  AlertTriangle,
-  Star
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react.ts';
 
-export default function AICustomerSuccessPrediction() {
+const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -140,8 +109,8 @@ export default function AICustomerSuccessPrediction() {
       name: 'Starter',
       price: '$299',
       period: '/month',
-      description: 'Perfect for small teams and startups',
-      features: [
+      description: 'Perfect for growing SaaS companies',
+      features[
         'Up to 1,000 customers',
         'Basic prediction models',
         'Email alerts',
@@ -155,8 +124,8 @@ export default function AICustomerSuccessPrediction() {
       name: 'Professional',
       price: '$799',
       period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
+      description: 'Ideal for established businesses',
+      features[
         'Up to 10,000 customers',
         'Advanced AI models',
         'Real-time dashboards',
@@ -171,8 +140,8 @@ export default function AICustomerSuccessPrediction() {
       name: 'Enterprise',
       price: '$1,999',
       period: '/month',
-      description: 'For large organizations',
-      features: [
+      description: 'For large-scale operations',
+      features[
         'Unlimited customers',
         'Custom AI models',
         'White-label solution',
@@ -183,6 +152,29 @@ export default function AICustomerSuccessPrediction() {
       cta: 'Contact Sales',
       popular: false
     }
+  ];
+
+  const useCases = [
+    {
+      title: 'SaaS Companies',
+      description: 'Predict churn, identify expansion opportunities, and optimize customer success operations',
+      metrics['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores']
+    },
+    {
+      title: 'E-commerce',
+      description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
+      metrics['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases']
+    },
+    {
+      title: 'Financial Services',
+      description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
+      metrics['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores']
+    }
+  ];
+
+  const integrations = [
+    'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',
+    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks'
   ];
 
   return (
@@ -238,8 +230,20 @@ export default function AICustomerSuccessPrediction() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+      {/* Features Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features for Modern Customer Success
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Everything you need to predict, prevent, and optimize customer success outcomes
+            </p>
+          </div>
+          
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -274,10 +278,10 @@ export default function AICustomerSuccessPrediction() {
               Comprehensive tools and features designed to transform your customer success operations 
               and drive measurable business outcomes.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+          </div>
+          
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -322,10 +326,10 @@ export default function AICustomerSuccessPrediction() {
               AI Customer Success Prediction is transforming industries across the globe, 
               enabling proactive customer management and driving unprecedented business growth.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          </div>
+          
+          <div className="grid md: grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -370,10 +374,10 @@ export default function AICustomerSuccessPrediction() {
               Discover how AI Customer Success Prediction can transform your organization 
               and drive measurable business outcomes.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          </div>
+          
+          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -539,10 +543,30 @@ export default function AICustomerSuccessPrediction() {
             <div className="flex flex-wrap justify-center gap-4">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105">
                 Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Schedule Demo
-              </button>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Us
+              </a>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <span>14-day free trial</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <span>No credit card required</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <span>Cancel time</span>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -587,5 +611,6 @@ export default function AICustomerSuccessPrediction() {
         </div>
       </section>
     </div>
-  );
-}
+  )};
+
+export default AICustomerSuccessPrediction;

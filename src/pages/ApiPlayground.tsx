@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react';
 
 export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -213,13 +213,11 @@ export default function ApiPlayground() {
   ];
 
   // Update counts
-  categories.forEach(cat => {
-    cat.count = apis.filter(api => api.category === cat.id).length;
-  });
+  categories.forEach(cat  => {
+    cat.count = apis.filter(api => api.category === cat.id).length});
 
   methods.forEach(method => {
-    method.count = apis.filter(api => api.method === method.id).length;
-  });
+    method.count = apis.filter(api => api.method === method.id).length});
 
   const filteredApis = apis.filter(api => {
     const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -228,32 +226,27 @@ export default function ApiPlayground() {
     const matchesCategory = activeCategory === 'all' || api.category === category.id;
     const matchesMethod = activeMethod === 'all' || api.method === method.id;
     
-    return matchesSearch && matchesCategory && matchesMethod;
-  });
+    return matchesSearch && matchesCategory && matchesMethod});
 
-  const getCategoryIcon = (categoryId: string) => {
-    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
-  };
+  const getCategoryIcon = (categoryId: string)  => {
+    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />};
 
-  const getMethodColor = (method: string) => {
-    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
-  };
+  const getMethodColor = (method: string)  => {
+    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'};
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400';
       case 'alpha': return 'text-red-400';
-      default: return 'text-zion-slate-light';
-    }
+      default: return 'text-zion-slate-light'}
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect = (api)  => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
-    setActiveTab('playground');
-  };
+    setActiveTab('playground')};
 
   const handleTestApi = async () => {
     if (!selectedApi) return;
@@ -263,13 +256,10 @@ export default function ApiPlayground() {
     // Simulate API call
     setTimeout(() => {
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
-      setIsLoading(false);
-    }, 1500);
-  };
+      setIsLoading(false)}, 1500)};
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  };
+  const copyToClipboard = (text: string)  => {
+    navigator.clipboard.writeText(text)};
 
   const downloadResponse = () => {
     if (!responseData) return;
@@ -282,8 +272,7 @@ export default function ApiPlayground() {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
+    URL.revokeObjectURL(url)};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -647,5 +636,4 @@ export default function ApiPlayground() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

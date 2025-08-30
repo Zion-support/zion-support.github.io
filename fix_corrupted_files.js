@@ -51,11 +51,9 @@ function fixCorruptedFile(filePath) {
       .trim();
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
-    return true;
-  } catch (error) {
+    return true} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 // Function to recursively find and fix corrupted files
 function fixCorruptedFiles(directory) {
@@ -64,10 +62,8 @@ function fixCorruptedFiles(directory) {
     const filePath = path.join(directory, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
-      fixCorruptedFiles(filePath);
-    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
-      fixCorruptedFile(filePath);
-    }
+      fixCorruptedFiles(filePath)} else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+      fixCorruptedFile(filePath)}
   }
 }
 // Start fixing from the pages directory

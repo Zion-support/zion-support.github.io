@@ -11,9 +11,7 @@ export interface Innovative2025Service {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const innovative2025Services: Innovative2025Service[] = [
   {
     id: "ai-innovation-hub",
@@ -21,7 +19,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     tagline: "Center for AI innovation and development",
     price: "$159/month",
     description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",
-    features: [
+    features[
       "AI development tools",
       "Innovation resources",
       "Collaboration platform",

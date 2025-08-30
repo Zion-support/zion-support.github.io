@@ -1,4 +1,5 @@
-export interface InnovativeService2025 {
+export interface InnovativeService {
+
   id: string;
   title: string;
   description: string;
@@ -17,21 +18,18 @@ export interface InnovativeService2025 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   // AI-Powered Autonomous Business Operations
@@ -44,41 +42,41 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     price: 4999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "24/7 Autonomous Operations",
-      "AI Decision Making Engine",
-      "Process Optimization",
-      "Real-time Analytics",
-      "Predictive Maintenance",
-      "Resource Allocation",
-      "Automated Workflow Management",
-      "Intelligent Task Routing",
-      "Performance Monitoring",
-      "Self-healing Systems"
+    features[
+      "AI-powered data analysis",
+      "Automated insight generation",
+      "Natural language queries",
+      "Predictive analytics",
+      "Custom dashboard creation",
+      "Real-time data processing",
+      "Multi-source data integration",
+      "Advanced visualization tools",
+      "Automated reporting",
+      "Mobile app access"
     ],
-    benefits: [
-      "Reduce operational costs by up to 45%",
-      "Improve process efficiency by 70%",
-      "Eliminate manual errors and delays",
-      "24/7 automated operations",
-      "Scalable business processes"
+    benefits[
+      "Reduce analysis time by 80%",
+      "Improve decision accuracy by 60%",
+      "Automated insight discovery",
+      "Real-time business monitoring",
+      "Scalable analytics infrastructure"
     ],
-    useCases: [
-      "Manufacturing automation",
-      "Supply chain optimization",
-      "Customer service automation",
-      "Financial operations",
-      "HR process automation"
+    useCases[
+      "Sales performance analysis",
+      "Customer behavior insights",
+      "Financial reporting automation",
+      "Operational efficiency tracking",
+      "Market trend analysis"
     ],
-    targetAudience: [
-      "Enterprise businesses",
-      "Manufacturing companies",
-      "Service providers",
-      "E-commerce platforms",
-      "Financial institutions"
+    targetAudience[
+      "Business analysts",
+      "Data scientists",
+      "Executives",
+      "Marketing teams",
+      "Sales teams"
     ],
-    tags: ["AI", "Automation", "Business Operations", "Process Optimization", "Autonomous Systems"],
-    estimatedDelivery: "8-12 weeks",
+    tags["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
+    estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $12,999/month",
     roi: "300-500%",
@@ -154,321 +152,510 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "Elasticsearch", "Kafka"],
-      integrations: ["Splunk", "QRadar", "CrowdStrike", "SentinelOne", "Palo Alto"],
+      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
       apiEndpoints: 150,
-      uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "NIST", "End-to-end encryption"]
-    },
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
-    marketSize: "$45.6 billion by 2025"
-  },
-
-  // AI Content Marketing Suite
-  {
-    id: "ai-content-marketing-suite",
-    title: "AI Content Marketing Suite",
-    description: "End-to-end AI-powered content creation and marketing automation platform that generates engaging content across all channels, optimizes campaigns, and drives measurable results.",
-    category: "AI & Marketing",
-    subcategory: "Content Marketing",
-    price: 899,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI Content Generation",
-      "Multi-channel Publishing",
-      "SEO Optimization",
-      "Performance Analytics",
-      "Brand Voice Consistency",
-      "A/B Testing",
-      "Content Calendar Management",
-      "Social Media Automation",
-      "Email Marketing Integration",
-      "ROI Tracking"
-    ],
-    benefits: [
-      "10x faster content creation",
-      "Improve engagement by 60%",
-      "Reduce marketing costs by 40%",
-      "24/7 content optimization",
-      "Data-driven marketing decisions"
-    ],
-    useCases: [
-      "Content marketing",
-      "Social media management",
-      "Email marketing",
-      "SEO campaigns",
-      "Brand awareness"
-    ],
-    targetAudience: [
-      "Marketing teams",
-      "Content creators",
-      "Agencies",
-      "Small businesses",
-      "E-commerce brands"
-    ],
-    tags: ["AI", "Content Marketing", "Automation", "SEO", "Social Media"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "professional",
-    marketPrice: "$899 - $2,499/month",
-    roi: "200-350%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "GPT-4", "React", "Node.js", "MongoDB", "Redis"],
-      integrations: ["HubSpot", "Mailchimp", "Hootsuite", "Buffer", "WordPress"],
-      apiEndpoints: 100,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "End-to-end encryption"]
+      security["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]
     },
-    competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
-    marketSize: "$8.2 billion by 2025"
+    competitors["Tableau", "Power BI", "Looker", "Qlik"],
+    marketSize: "$29.9 billion by 2025"
   },
 
-  // AI Sales Intelligence Platform
+  // Quantum Computing Solutions
   {
-    id: "ai-sales-intelligence",
-    title: "AI Sales Intelligence Platform",
-    description: "Intelligent sales platform that automates lead qualification, provides predictive analytics, and optimizes the entire sales process using advanced AI and machine learning.",
+    id: "ai-sales-copilot",
+    title: "AI Sales Copilot",
+    description: "Intelligent sales assistant that automates lead qualification, provides real-time coaching, and optimizes sales processes using advanced AI algorithms.",
     category: "AI & Sales",
-    subcategory: "Sales Intelligence",
-    price: 1299,
+    subcategory: "Sales Automation",
+    price: 1499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Lead Qualification",
-      "Automated Follow-ups",
-      "Sales Process Optimization",
-      "Performance Analytics",
-      "CRM Integration",
-      "Predictive Lead Scoring",
-      "Sales Forecasting",
-      "Pipeline Management",
-      "Revenue Optimization",
-      "Customer Insights"
+    features[
+      "AI-powered lead scoring",
+      "Real-time sales coaching",
+      "Automated follow-up sequences",
+      "Predictive sales analytics",
+      "CRM integration",
+      "Voice and text analysis",
+      "Performance tracking",
+      "Custom sales playbooks",
+      "Multi-channel communication",
+      "Advanced reporting"
     ],
-    benefits: [
-      "Increase conversion rates by 45%",
-      "Reduce follow-up time by 80%",
-      "Improve lead quality by 60%",
-      "Automated sales reporting",
-      "Data-driven sales decisions"
+    benefits[
+      "Increase sales productivity by 40%",
+      "Improve conversion rates by 25%",
+      "Reduce manual data entry by 70%",
+      "Better lead qualification",
+      "Enhanced sales team performance"
     ],
-    useCases: [
-      "B2B sales",
-      "Lead generation",
-      "Sales process optimization",
-      "Customer relationship management",
-      "Revenue forecasting"
+    useCases[
+      "B2B sales automation",
+      "Lead qualification",
+      "Sales coaching",
+      "Pipeline management",
+      "Performance optimization"
     ],
-    targetAudience: [
+    targetAudience[
       "Sales teams",
       "Sales managers",
       "Business development",
       "Startups",
       "Enterprise sales"
     ],
-    tags: ["AI", "Sales", "Lead Generation", "CRM", "Analytics"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "professional",
-    marketPrice: "$1,299 - $3,999/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["Salesforce", "HubSpot", "Pipedrive", "Zoho", "Microsoft Dynamics"],
-      apiEndpoints: 120,
-      uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "End-to-end encryption"]
-    },
-    competitors: ["Gong", "Chorus", "Outreach", "SalesLoft"],
-    marketSize: "$12.4 billion by 2025"
-  },
-
-  // AI Customer Experience Platform
-  {
-    id: "ai-customer-experience",
-    title: "AI Customer Experience Platform",
-    description: "Comprehensive customer experience platform that uses AI to provide personalized support, automate customer interactions, and optimize customer satisfaction across all touchpoints.",
-    category: "AI & Customer Experience",
-    subcategory: "Customer Support",
-    price: 699,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI Chatbots",
-      "Intelligent Ticket Routing",
-      "Sentiment Analysis",
-      "Knowledge Base",
-      "Multi-language Support",
-      "Performance Analytics",
-      "Customer Journey Mapping",
-      "Personalization Engine",
-      "Voice Analytics",
-      "Proactive Support"
-    ],
-    benefits: [
-      "Reduce response time by 85%",
-      "Improve customer satisfaction by 50%",
-      "Handle 15x more inquiries",
-      "24/7 customer support",
-      "Personalized customer experiences"
-    ],
-    useCases: [
-      "Customer support",
-      "Help desk automation",
-      "Customer service optimization",
-      "Multi-channel support",
-      "Customer experience management"
-    ],
-    targetAudience: [
-      "Customer support teams",
-      "E-commerce businesses",
-      "Service providers",
-      "SaaS companies",
-      "Retail businesses"
-    ],
-    tags: ["AI", "Customer Experience", "Support", "Automation", "Personalization"],
-    estimatedDelivery: "5-7 weeks",
-    supportLevel: "professional",
-    marketPrice: "$699 - $2,199/month",
-    roi: "200-350%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "NLP", "React", "Node.js", "MongoDB", "Redis"],
-      integrations: ["Zendesk", "Intercom", "Freshdesk", "Help Scout", "Slack"],
-      apiEndpoints: 80,
-      uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "End-to-end encryption"]
-    },
-    competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"],
-    marketSize: "$18.7 billion by 2025"
-  },
-
-  // AI Data Analytics & Business Intelligence
-  {
-    id: "ai-data-analytics-bi",
-    title: "AI Data Analytics & Business Intelligence Platform",
-    description: "Advanced business intelligence platform that uses AI to transform raw data into actionable insights, predictive analytics, and automated reporting for data-driven decision making.",
-    category: "AI & Analytics",
-    subcategory: "Business Intelligence",
-    price: 1999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Predictive Analytics",
-      "Real-time Dashboards",
-      "Data Visualization",
-      "Automated Reporting",
-      "Machine Learning Models",
-      "Data Integration",
-      "Natural Language Queries",
-      "Advanced Analytics",
-      "Data Governance",
-      "Mobile Access"
-    ],
-    benefits: [
-      "Uncover hidden insights",
-      "Make data-driven decisions",
-      "Predict future trends",
-      "Automate reporting processes",
-      "Real-time business monitoring"
-    ],
-    useCases: [
-      "Business intelligence",
-      "Data analysis",
-      "Performance monitoring",
-      "Strategic planning",
-      "Operational optimization"
-    ],
-    targetAudience: [
-      "Business analysts",
-      "Data scientists",
-      "Executives",
-      "Marketing teams",
-      "Operations teams"
-    ],
-    tags: ["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,999 - $5,999/month",
+    tags["AI", "Sales", "Automation", "CRM", "Lead Generation"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,499 - $3,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Apache Spark"],
-      integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
-      apiEndpoints: 150,
-      uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]
-    },
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
-    marketSize: "$29.9 billion by 2025"
+    }
   },
 
-  // Quantum Computing Solutions
+  // Cloud FinOps Optimizer
   {
-    id: "quantum-computing-solutions",
-    title: "Quantum Computing Solutions Platform",
-    description: "Revolutionary quantum computing platform that provides access to quantum processing power for complex computational problems, cryptography, and scientific research applications.",
+    id: "cloud-finops-optimizer",
+    title: "Cloud FinOps Optimizer",
+    description: "Comprehensive cloud cost management platform that uses AI to optimize spending, identify waste, and provide actionable cost reduction recommendations.",
+    category: "Cloud & DevOps",
+    subcategory: "Cost Optimization",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "AI-powered cost analysis",
+      "Automated resource optimization",
+      "Real-time cost monitoring",
+      "Predictive cost forecasting",
+      "Multi-cloud support",
+      "Cost allocation tracking",
+      "Budget management",
+      "Automated scaling",
+      "Waste detection",
+      "ROI analysis"
+    ],
+    benefits[
+      "Reduce cloud costs by 30-50%",
+      "Improve resource utilization",
+      "Better budget planning",
+      "Automated cost optimization",
+      "Enhanced financial visibility"
+    ],
+    useCases[
+      "Cloud cost management",
+      "Resource optimization",
+      "Budget planning",
+      "Multi-cloud management",
+      "DevOps cost control"
+    ],
+    targetAudience[
+      "DevOps teams",
+      "Cloud architects",
+      "Financial officers",
+      "IT managers",
+      "Startups"
+    ],
+    tags["Cloud", "FinOps", "Cost Optimization", "DevOps", "AWS", "Azure", "GCP"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,499 - $6,999/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI Compliance Assistant
+  {
+    id: "ai-compliance-assistant",
+    title: "AI Compliance Assistant",
+    description: "Intelligent compliance management platform that automates regulatory reporting, monitors compliance status, and provides real-time risk assessments.",
+    category: "AI & Compliance",
+    subcategory: "Regulatory Compliance",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "AI-powered compliance monitoring",
+      "Automated regulatory reporting",
+      "Real-time risk assessment",
+      "Document management",
+      "Audit trail tracking",
+      "Policy management",
+      "Training automation",
+      "Incident reporting",
+      "Compliance scoring",
+      "Multi-regulation support"
+    ],
+    benefits[
+      "Reduce compliance costs by 40%",
+      "Improve audit success rates",
+      "Automated compliance monitoring",
+      "Real-time risk visibility",
+      "Enhanced regulatory reporting"
+    ],
+    useCases[
+      "SOC 2 compliance",
+      "GDPR compliance",
+      "HIPAA compliance",
+      "Financial regulations",
+      "Industry standards"
+    ],
+    targetAudience[
+      "Compliance officers",
+      "Legal teams",
+      "IT security",
+      "Healthcare organizations",
+      "Financial institutions"
+    ],
+    tags["AI", "Compliance", "Security", "Regulations", "Risk Management"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,999 - $9,999/month",
+    roi: "150-300%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI Auto Email Responder
+  {
+    id: "ai-auto-email-responder",
+    title: "AI Auto Email Responder",
+    description: "Intelligent email automation platform that uses AI to understand context, generate personalized responses, and manage email workflows automatically.",
+    category: "AI & Communication",
+    subcategory: "Email Automation",
+    price: 899,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "AI-powered email understanding",
+      "Personalized response generation",
+      "Automated workflow management",
+      "Multi-language support",
+      "CRM integration",
+      "Sentiment analysis",
+      "Priority classification",
+      "Template management",
+      "Performance analytics",
+      "Mobile app access"
+    ],
+    benefits[
+      "Reduce email response time by 80%",
+      "Improve customer satisfaction",
+      "Automated email management",
+      "Better workflow efficiency",
+      "Enhanced communication quality"
+    ],
+    useCases[
+      "Customer service automation",
+      "Sales follow-up",
+      "Support ticket management",
+      "Internal communication",
+      "Marketing automation"
+    ],
+    targetAudience[
+      "Customer service teams",
+      "Sales teams",
+      "Support teams",
+      "Small businesses",
+      "Enterprise organizations"
+    ],
+    tags["AI", "Email", "Automation", "Communication", "Customer Service"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "standard",
+    marketPrice: "$899 - $2,499/month",
+    roi: "400-600%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Customer Feedback Surveys
+  {
+    id: "customer-feedback-surveys",
+    title: "AI-Powered Customer Feedback Platform",
+    description: "Intelligent feedback collection and analysis platform that uses AI to gather insights, analyze sentiment, and provide actionable recommendations.",
+    category: "AI & Customer Experience",
+    subcategory: "Feedback Management",
+    price: 699,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "AI-powered survey creation",
+      "Sentiment analysis",
+      "Real-time feedback collection",
+      "Multi-channel distribution",
+      "Advanced analytics",
+      "Custom reporting",
+      "Integration capabilities",
+      "Mobile optimization",
+      "Automated insights",
+      "Action planning tools"
+    ],
+    benefits[
+      "Improve customer satisfaction scores",
+      "Better product development insights",
+      "Automated feedback analysis",
+      "Real-time customer insights",
+      "Enhanced decision-making"
+    ],
+    useCases[
+      "Customer satisfaction surveys",
+      "Product feedback collection",
+      "Service quality assessment",
+      "Employee feedback",
+      "Market research"
+    ],
+    targetAudience[
+      "Product managers",
+      "Customer success teams",
+      "Marketing teams",
+      "Business owners",
+      "Research teams"
+    ],
+    tags["AI", "Customer Experience", "Feedback", "Surveys", "Analytics"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "standard",
+    marketPrice: "$699 - $1,999/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // LLM Content Studio
+  {
+    id: "llm-content-studio",
+    title: "LLM Content Studio",
+    description: "Advanced content creation platform powered by Large Language Models that generates high-quality, SEO-optimized content across multiple formats and languages.",
+    category: "AI & Content",
+    subcategory: "Content Generation",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "AI-powered content generation",
+      "Multi-format support",
+      "SEO optimization",
+      "Multi-language generation",
+      "Brand voice customization",
+      "Content planning tools",
+      "Collaboration features",
+      "Performance analytics",
+      "Integration capabilities",
+      "Content templates"
+    ],
+    benefits[
+      "Increase content production by 500%",
+      "Improve SEO rankings",
+      "Reduce content creation costs",
+      "Consistent brand voice",
+      "Multi-language content"
+    ],
+    useCases[
+      "Blog content creation",
+      "Marketing copy",
+      "Product descriptions",
+      "Social media content",
+      "Technical documentation"
+    ],
+    targetAudience[
+      "Content marketers",
+      "SEO specialists",
+      "Business owners",
+      "Agencies",
+      "E-commerce businesses"
+    ],
+    tags["AI", "Content Generation", "LLM", "SEO", "Marketing"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,999 - $4,999/month",
+    roi: "400-700%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // FinOps Advisor
+  {
+    id: "finops-advisor",
+    title: "FinOps Advisor",
+    description: "Intelligent financial operations platform that provides real-time insights, automates financial processes, and optimizes business performance through AI-driven analytics.",
+    category: "AI & Finance",
+    subcategory: "Financial Operations",
+    price: 3499,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "AI-powered financial analysis",
+      "Real-time performance monitoring",
+      "Automated reporting",
+      "Predictive analytics",
+      "Budget optimization",
+      "Cost allocation",
+      "ROI tracking",
+      "Financial planning tools",
+      "Integration capabilities",
+      "Custom dashboards"
+    ],
+    benefits[
+      "Improve financial visibility by 60%",
+      "Reduce financial reporting time by 70%",
+      "Better budget optimization",
+      "Enhanced decision-making",
+      "Automated financial processes"
+    ],
+    useCases[
+      "Financial planning",
+      "Budget management",
+      "Performance tracking",
+      "Cost optimization",
+      "Financial reporting"
+    ],
+    targetAudience[
+      "CFOs",
+      "Financial analysts",
+      "Business owners",
+      "Finance teams",
+      "Startups"
+    ],
+    tags["AI", "Finance", "FinOps", "Analytics", "Budgeting"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,499 - $7,999/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Digital Twin Platform
+  {
+    id: "digital-twin-platform",
+    title: "Digital Twin Platform",
+    description: "Advanced digital twin technology that creates virtual replicas of physical systems, enabling real-time monitoring, predictive maintenance, and optimization.",
+    category: "IoT & Digital Twin",
+    subcategory: "System Simulation",
+    price: 5999,
+    currency: "$",
+    pricingModel: "monthly",
+    features[
+      "Real-time system monitoring",
+      "Predictive maintenance",
+      "3D visualization",
+      "Data integration",
+      "Analytics dashboard",
+      "Alert system",
+      "Historical data analysis",
+      "Performance optimization",
+      "Custom modeling",
+      "API access"
+    ],
+    benefits[
+      "Reduce maintenance costs by 40%",
+      "Improve system uptime by 25%",
+      "Better resource optimization",
+      "Predictive insights",
+      "Enhanced operational efficiency"
+    ],
+    useCases[
+      "Manufacturing optimization",
+      "Infrastructure monitoring",
+      "Energy management",
+      "Healthcare systems",
+      "Smart cities"
+    ],
+    targetAudience[
+      "Manufacturing companies",
+      "Infrastructure managers",
+      "Energy companies",
+      "Healthcare organizations",
+      "Government agencies"
+    ],
+    tags["Digital Twin", "IoT", "Monitoring", "Predictive Maintenance", "3D Visualization"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,999 - $15,999/month",
+    roi: "150-300%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Quantum Computing Services
+  {
+    id: "quantum-computing-services",
+    title: "Quantum Computing Solutions",
+    description: "Cutting-edge quantum computing services that solve complex optimization problems, cryptography, and scientific simulations for research and enterprise applications.",
     category: "Quantum Computing",
     subcategory: "Computing Platform",
     price: 9999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Quantum Processing Units",
-      "Quantum Algorithms",
-      "Cryptography Solutions",
-      "Scientific Computing",
-      "Machine Learning",
-      "Optimization Problems",
-      "Quantum Simulation",
-      "API Access",
-      "Development Tools",
-      "Expert Support"
+    features[
+      "Quantum algorithm development",
+      "Optimization problem solving",
+      "Cryptography services",
+      "Scientific simulations",
+      "Quantum software development",
+      "Consulting services",
+      "Training programs",
+      "Research collaboration",
+      "Custom solutions",
+      "Performance monitoring"
     ],
-    benefits: [
-      "Exponential speedup for specific algorithms",
-      "Unprecedented computational power",
-      "Breakthrough capabilities in cryptography",
-      "Revolutionary AI and machine learning",
-      "Advanced scientific research capabilities"
+    benefits[
+      "Solve previously unsolvable problems",
+      "Exponential speed improvements",
+      "Advanced cryptography",
+      "Research breakthroughs",
+      "Competitive advantage"
     ],
-    useCases: [
+    useCases[
+      "Financial modeling",
       "Drug discovery",
       "Financial modeling",
       "Climate research",
       "Logistics optimization",
       "Cryptography"
     ],
-    targetAudience: [
+    targetAudience[
       "Research institutions",
       "Pharmaceutical companies",
       "Financial institutions",
       "Government agencies",
       "Technology companies"
     ],
-    tags: ["Quantum Computing", "Cryptography", "Scientific Computing", "AI", "Research"],
-    estimatedDelivery: "12-16 weeks",
+    tags["Quantum Computing", "Optimization", "Cryptography", "Research", "Advanced Technology"],
+    estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$9,999 - $25,000/month",
     roi: "500-1000%",
@@ -686,20 +873,16 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
 ];
 
 // Helper functions
-export const getServicesByCategory = (category: string): InnovativeService2025[] => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
-};
+export const getServicesByCategory = (category: string): InnovativeService[]  => {
+  return INNOVATIVE_SERVICES_2025.filter(service => service.category === category)};
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number): InnovativeService2025[] => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
-};
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number): InnovativeService[]  => {
+  return INNOVATIVE_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice)};
 
 export const getTopRatedServices = (limit: number = 5): InnovativeService2025[] => {
   return INNOVATIVE_SERVICES_2025
     .sort((a, b) => b.rating - a.rating)
-    .slice(0, limit);
-};
+    .slice(0, limit)};
 
-export const getServicesByAIScore = (minScore: number): InnovativeService2025[] => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};
+export const getServicesByAIScore = (minScore: number): InnovativeService[]  => {
+  return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore)};

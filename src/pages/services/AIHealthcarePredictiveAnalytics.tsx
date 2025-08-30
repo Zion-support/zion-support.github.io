@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Heart, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Heart, 
   Brain, 
   TrendingUp, 
   Users, 
@@ -42,10 +41,10 @@ import {
   UserCheck,
   Clipboard,
   TestTube
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
-export default function AIHealthcarePredictiveAnalytics() {
+export default function AIHealthcarePredictiveAnalytics(...args[]):  {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -101,7 +100,7 @@ export default function AIHealthcarePredictiveAnalytics() {
       price: '$899',
       period: '/month',
       description: 'Perfect for small clinics and practices',
-      features: [
+      features[
         'Up to 1,000 patients',
         'Basic predictive analytics',
         'Standard risk scoring',
@@ -118,7 +117,7 @@ export default function AIHealthcarePredictiveAnalytics() {
       price: '$1,799',
       period: '/month',
       description: 'Ideal for growing healthcare organizations',
-      features: [
+      features[
         'Up to 10,000 patients',
         'Advanced AI analytics',
         'Real-time monitoring',
@@ -138,7 +137,7 @@ export default function AIHealthcarePredictiveAnalytics() {
       price: '$4,999',
       period: '/month',
       description: 'For large healthcare systems with complex needs',
-      features: [
+      features[
         'Unlimited patients',
         'Premium AI analytics',
         '24/7 dedicated support',
@@ -285,8 +284,8 @@ export default function AIHealthcarePredictiveAnalytics() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -324,8 +323,8 @@ export default function AIHealthcarePredictiveAnalytics() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {clinicalApplications.map((application, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {clinicalApplications.map((application, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -363,8 +362,8 @@ export default function AIHealthcarePredictiveAnalytics() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -399,8 +398,8 @@ export default function AIHealthcarePredictiveAnalytics() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFeatures.map((feature, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceFeatures.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -435,8 +434,8 @@ export default function AIHealthcarePredictiveAnalytics() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -474,8 +473,8 @@ export default function AIHealthcarePredictiveAnalytics() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -553,7 +552,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             </div>
             
             <p className="text-slate-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -572,7 +571,7 @@ export default function AIHealthcarePredictiveAnalytics() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our healthcare experts are here to help you get started and answer any questions
+              Our healthcare experts are here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -604,5 +603,4 @@ export default function AIHealthcarePredictiveAnalytics() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

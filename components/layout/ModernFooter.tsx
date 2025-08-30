@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock } from 'lucide-react';
+import React from 'react.ts';
+import Link from 'next/link.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock  } from 'lucide-react.ts';
 
-const ModernFooter: React.FC = () => {
+const ModernFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
 
   const serviceCategories = [
@@ -40,7 +40,7 @@ const ModernFooter: React.FC = () => {
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -199,7 +199,6 @@ const ModernFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )};
 
 export default ModernFooter;

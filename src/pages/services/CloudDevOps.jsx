@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Zap, Database, Server, GitFork, Cpu, Globe, Shield } from 'lucide-react';
+import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const CloudDevOps = () => {
@@ -9,25 +9,25 @@ const CloudDevOps = () => {
       icon: Cloud,
       title: "Cloud Migration",
       description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+      features["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
     },
     {
       icon: Server,
       title: "Infrastructure as Code",
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
-      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
+      features["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
     },
     {
-      icon: GitFork,
+      icon: GitBranch,
       title: "CI/CD Pipelines",
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
-      features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
+      features["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
     },
     {
       icon: Database,
       title: "Database Management",
       description: "Scalable database solutions with high availability and disaster recovery.",
-      features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
+      features["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
     }
   ];
 
@@ -55,10 +55,10 @@ const CloudDevOps = () => {
   ];
 
   const devOpsTools = [
-    { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
-    { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
-    { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
-    { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
+    { category: "CI/CD", tools["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
+    { category: "Infrastructure", tools["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
+    { category: "Monitoring", tools["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
+    { category: "Security", tools["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
 
   return (
@@ -177,7 +177,6 @@ const CloudDevOps = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default CloudDevOps;

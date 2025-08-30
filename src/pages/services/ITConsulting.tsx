@@ -1,9 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Briefcase, 
-  Target, 
-  CheckCircle, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Users, 
+  Cpu, 
+  Shield, 
+  Cloud, 
+  Database, 
+  Network, 
+  Zap, 
+  Target,
   ArrowRight,
   Play,
   Settings,
@@ -142,21 +147,11 @@ import {
   HardDrive3,
   Server4,
   Rocket,
-  Globe,
-  Building,
-  DollarSign,
-  Users,
-  Clock,
-  Search,
-  Sparkles,
-  Zap,
-  Cpu,
-  Server,
-  Network2
-} from 'lucide-react';
+  Building2
+ } from 'lucide-react.ts';
 
-const ITConsulting = () => {
-  const features = [
+export default function ITConsulting(...args: []):  {
+  const services = [
     {
       icon: Briefcase,
       title: 'Strategic IT Planning',
@@ -299,9 +294,9 @@ const ITConsulting = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {services.map((service, index)  => (
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -337,9 +332,9 @@ const ITConsulting = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <motion.div
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {expertise.map((area, index)  => (
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -378,35 +373,22 @@ const ITConsulting = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {benefits.map((benefit, index)  => (
+              <motion.div 
+                key={index}
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -429,17 +411,55 @@ const ITConsulting = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
+            {industries.map((industry, index)  => (
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                <div className="text-zion-cyan font-semibold">{industry}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Our Consulting Process
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              A proven methodology that ensures successful consulting outcomes and lasting value.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
+            {[
+              { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },
+              { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },
+              { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },
+              { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
+            ].map((phase, index)  => (
+              <motion.div 
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+                  {phase.step}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>

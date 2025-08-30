@@ -1,14 +1,14 @@
-import React from 'react';
-import { ReactNode } from 'react';
-import { FuturisticNavigation } from './FuturisticNavigation';
-import { FuturisticFooter } from './FuturisticFooter';
-import { EnhancedSidebar } from './EnhancedSidebar';
-import { FuturisticAnimatedBackground } from './FuturisticAnimatedBackground';
+import React from 'react.ts';
+import { ReactNode  } from 'react.ts';
+import { FuturisticNavigation  } from './FuturisticNavigation';
+import { FuturisticFooter  } from './FuturisticFooter';
+import { EnhancedSidebar  } from './EnhancedSidebar';
+import { FuturisticAnimatedBackground  } from './FuturisticAnimatedBackground';
 
-interface EnhancedLayoutProps {
+interface EnhancedLayoutProps extends React.PropsWithChildren<{}> {
+
   children: ReactNode;
-  showSidebar?: boolean;
-}
+  showSidebar?: boolean}
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ 
   children, 
@@ -36,5 +36,4 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
       {/* Footer */}
       <FuturisticFooter />
     </div>
-  );
-};
+  )};

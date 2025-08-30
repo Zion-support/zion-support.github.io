@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   FileText, 
   TrendingUp, 
   Users, 
@@ -32,10 +31,10 @@ import {
   Award,
   Gauge,
   PieChart
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
-export default function AIFinancialComplianceAssistant() {
+export default function AIFinancialComplianceAssistant(...args[]):  {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -91,7 +90,7 @@ export default function AIFinancialComplianceAssistant() {
       price: '$499',
       period: '/month',
       description: 'Perfect for small financial institutions',
-      features: [
+      features[
         'Up to 1,000 transactions/month',
         'Basic compliance monitoring',
         'Standard regulatory updates',
@@ -108,7 +107,7 @@ export default function AIFinancialComplianceAssistant() {
       price: '$999',
       period: '/month',
       description: 'Ideal for growing financial organizations',
-      features: [
+      features[
         'Up to 10,000 transactions/month',
         'Advanced AI compliance monitoring',
         'Real-time regulatory updates',
@@ -128,7 +127,7 @@ export default function AIFinancialComplianceAssistant() {
       price: '$2,499',
       period: '/month',
       description: 'For large financial institutions with complex needs',
-      features: [
+      features[
         'Unlimited transactions',
         'Premium AI compliance monitoring',
         '24/7 dedicated support',
@@ -266,8 +265,8 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -305,8 +304,8 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -344,8 +343,8 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -380,8 +379,8 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -419,8 +418,8 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -498,7 +497,7 @@ export default function AIFinancialComplianceAssistant() {
             </div>
             
             <p className="text-slate-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -517,7 +516,7 @@ export default function AIFinancialComplianceAssistant() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our compliance experts are here to help you get started and answer any questions
+              Our compliance experts are here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -549,5 +548,4 @@ export default function AIFinancialComplianceAssistant() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

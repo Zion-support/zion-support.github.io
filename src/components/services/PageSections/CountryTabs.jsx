@@ -9,10 +9,10 @@ export const CountryTabs = () => {
       id: 'us',
       name: 'United States',
       flag: '🇺🇸',
-      regions: [
+      regions[
         {
           name: 'Northeast',
-          cities: ['New York', 'Boston', 'Philadelphia', 'Washington DC'],
+          cities['New York', 'Boston', 'Philadelphia', 'Washington DC'],
           contact: {
             phone: '+1 (555) 123-4567',
             email: 'northeast@zion.com',
@@ -21,7 +21,7 @@ export const CountryTabs = () => {
         },
         {
           name: 'Southeast',
-          cities: ['Atlanta', 'Miami', 'Charlotte', 'Orlando'],
+          cities['Atlanta', 'Miami', 'Charlotte', 'Orlando'],
           contact: {
             phone: '+1 (555) 234-5678',
             email: 'southeast@zion.com',
@@ -30,7 +30,7 @@ export const CountryTabs = () => {
         },
         {
           name: 'Midwest',
-          cities: ['Chicago', 'Detroit', 'Minneapolis', 'Indianapolis'],
+          cities['Chicago', 'Detroit', 'Minneapolis', 'Indianapolis'],
           contact: {
             phone: '+1 (555) 345-6789',
             email: 'midwest@zion.com',
@@ -39,7 +39,7 @@ export const CountryTabs = () => {
         },
         {
           name: 'West Coast',
-          cities: ['Los Angeles', 'San Francisco', 'Seattle', 'Portland'],
+          cities['Los Angeles', 'San Francisco', 'Seattle', 'Portland'],
           contact: {
             phone: '+1 (555) 456-7890',
             email: 'westcoast@zion.com',
@@ -52,10 +52,10 @@ export const CountryTabs = () => {
       id: 'ca',
       name: 'Canada',
       flag: '🇨🇦',
-      regions: [
+      regions[
         {
           name: 'Eastern Canada',
-          cities: ['Toronto', 'Montreal', 'Ottawa', 'Quebec City'],
+          cities['Toronto', 'Montreal', 'Ottawa', 'Quebec City'],
           contact: {
             phone: '+1 (555) 567-8901',
             email: 'eastern@zion.ca',
@@ -64,7 +64,7 @@ export const CountryTabs = () => {
         },
         {
           name: 'Western Canada',
-          cities: ['Vancouver', 'Calgary', 'Edmonton', 'Winnipeg'],
+          cities['Vancouver', 'Calgary', 'Edmonton', 'Winnipeg'],
           contact: {
             phone: '+1 (555) 678-9012',
             email: 'western@zion.ca',
@@ -77,10 +77,10 @@ export const CountryTabs = () => {
       id: 'uk',
       name: 'United Kingdom',
       flag: '🇬🇧',
-      regions: [
+      regions[
         {
           name: 'England',
-          cities: ['London', 'Manchester', 'Birmingham', 'Liverpool'],
+          cities['London', 'Manchester', 'Birmingham', 'Liverpool'],
           contact: {
             phone: '+44 20 1234 5678',
             email: 'england@zion.co.uk',
@@ -89,7 +89,7 @@ export const CountryTabs = () => {
         },
         {
           name: 'Scotland',
-          cities: ['Edinburgh', 'Glasgow', 'Aberdeen', 'Dundee'],
+          cities['Edinburgh', 'Glasgow', 'Aberdeen', 'Dundee'],
           contact: {
             phone: '+44 131 234 5678',
             email: 'scotland@zion.co.uk',
@@ -102,10 +102,10 @@ export const CountryTabs = () => {
       id: 'au',
       name: 'Australia',
       flag: '🇦🇺',
-      regions: [
+      regions[
         {
           name: 'Eastern Australia',
-          cities: ['Sydney', 'Melbourne', 'Brisbane', 'Canberra'],
+          cities['Sydney', 'Melbourne', 'Brisbane', 'Canberra'],
           contact: {
             phone: '+61 2 1234 5678',
             email: 'eastern@zion.com.au',
@@ -114,7 +114,7 @@ export const CountryTabs = () => {
         },
         {
           name: 'Western Australia',
-          cities: ['Perth', 'Adelaide', 'Darwin', 'Hobart'],
+          cities['Perth', 'Adelaide', 'Darwin', 'Hobart'],
           contact: {
             phone: '+61 8 1234 5678',
             email: 'western@zion.com.au',
@@ -296,7 +296,7 @@ export const CountryTabs = () => {
               Need Service in Another Region?
             </h3>
             <p className="text-blue-100 mb-6">
-              Contact our global team to discuss your IT service needs in any location.
+              Contact our global team to discuss your IT service needs in  location.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -316,5 +316,4 @@ export const CountryTabs = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

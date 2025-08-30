@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
+import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react';
 
 export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -217,17 +217,14 @@ export default function Research() {
   ];
 
   // Update counts
-  categories.forEach(cat => {
-    cat.count = researchProjects.filter(p => p.category === cat.id).length;
-  });
+  categories.forEach(cat  => {
+    cat.count = researchProjects.filter(p => p.category === cat.id).length});
 
   statuses.forEach(status => {
-    status.count = researchProjects.filter(p => p.status === status.id).length;
-  });
+    status.count = researchProjects.filter(p => p.status === status.id).length});
 
   types.forEach(type => {
-    type.count = researchProjects.filter(p => p.type === type.id).length;
-  });
+    type.count = researchProjects.filter(p => p.type === type.id).length});
 
   const filteredProjects = researchProjects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -238,48 +235,40 @@ export default function Research() {
     const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
     
-    return matchesSearch && matchesCategory && matchesStatus && matchesType;
-  });
+    return matchesSearch && matchesCategory && matchesStatus && matchesType});
 
-  const getCategoryIcon = (categoryId: string) => {
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
-  };
+  const getCategoryIcon = (categoryId: string)  => {
+    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />};
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400';
       case 'planning': return 'text-yellow-400';
       case 'published': return 'text-purple-400';
-      default: return 'text-zion-slate-light';
-    }
+      default: return 'text-zion-slate-light'}
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (impact: string)  => {
     switch (impact) {
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400';
       case 'medium': return 'text-yellow-400';
       case 'low': return 'text-green-400';
-      default: return 'text-zion-slate-light';
-    }
+      default: return 'text-zion-slate-light'}
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short'
-    });
-  };
+    })};
 
-  const formatFunding = (amount: number) => {
+  const formatFunding = (amount: number)  => {
     if (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1)}M`;
-    } else if (amount >= 1000) {
-      return `$${(amount / 1000).toFixed(0)}K`;
-    }
-    return `$${amount.toLocaleString()}`;
-  };
+      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {
+      return `$${(amount / 1000).toFixed(0)}K`}
+    return `$${amount.toLocaleString()}`};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -370,7 +359,7 @@ export default function Research() {
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeType === type.id
                           ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover: bg-zion-slate-light hover:text-white'
                       }`}
                     >
                       {type.name} ({type.count})
@@ -384,14 +373,14 @@ export default function Research() {
       </div>
 
       {/* Featured Research */}
-      {researchProjects.filter(p => p.featured).length > 0 && (
+      {researchProjects.filter(p  => p.featured).length > 0 && (
         <div className="py-12 bg-zion-slate-dark">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Research Projects
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {researchProjects.filter(p => p.featured).map((project) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {researchProjects.filter(p  => p.featured).map((project) => (
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
@@ -468,8 +457,8 @@ export default function Research() {
           </h2>
           
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredProjects.map((project) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredProjects.map((project)  => (
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -601,5 +590,4 @@ export default function Research() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

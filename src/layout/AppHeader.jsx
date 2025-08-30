@@ -29,17 +29,14 @@ export function AppHeader() {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+      setScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
+    setActiveDropdown(null)}, [location.pathname]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -69,10 +66,8 @@ export function AppHeader() {
 
   const isActiveRoute = (path) => {
     if (path === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(path);
-  };
+      return location.pathname === '/'}
+    return location.pathname.startsWith(path)};
 
   return (
     <motion.header 
@@ -261,5 +256,4 @@ export function AppHeader() {
         )}
       </AnimatePresence>
     </motion.header>
-  );
-}
+  )}

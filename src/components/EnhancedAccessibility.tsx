@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import React, { useEffect, useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Volume2, 
+  VolumeX, 
   Eye, 
   EyeOff, 
   Volume2, 
@@ -12,39 +13,20 @@ import {
   RotateCcw,
   Accessibility,
   Settings,
-  X,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Keyboard,
-  MousePointer,
-  Smartphone
-} from 'lucide-react';
+  X
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
-  colorBlind: boolean;
-  dyslexia: boolean;
-}
+  keyboardNavigation: boolean}
 
-interface EnhancedAccessibilityProps {
-  enabled?: boolean;
-  showControls?: boolean;
-  className?: string;
-}
-
-export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
-  enabled = true,
-  showControls = true,
-  className = ''
-}) => {
+export const EnhancedAccessibility: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -57,247 +39,40 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [announcements, setAnnouncements] = useState<string[]>([]);
 
-  // Apply accessibility settings to document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
-    // High contrast
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-      root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--text-secondary', '#e5e7eb');
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--bg-secondary', '#1f2937');
-    } else {
-      root.classList.remove('high-contrast');
-      root.style.removeProperty('--text-primary');
-      root.style.removeProperty('--text-secondary');
-      root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--bg-secondary');
-    }
+  useEffect(()  => {
+    // Apply accessibility settings to document
+    if (settings.highContrast) {
+      document.documentElement.classList.add('high-contrast')} else {
+      document.documentElement.classList.remove('high-contrast')}
 
-    // Large text
-    if (newSettings.largeText) {
-      root.style.fontSize = '18px';
-      root.style.lineHeight = '1.6';
-    } else {
-      root.style.fontSize = '16px';
-      root.style.lineHeight = '1.5';
-    }
+    if (settings.reducedMotion) {
+      document.documentElement.classList.add('reduced-motion')} else {
+      document.documentElement.classList.remove('reduced-motion')}
 
-    // Reduced motion
-    if (newSettings.reducedMotion) {
-      root.style.setProperty('--reduced-motion', 'reduce');
-    } else {
-      root.style.removeProperty('--reduced-motion');
-    }
+    if (settings.largeText) {
+      document.documentElement.classList.add('large-text')} else {
+      document.documentElement.classList.remove('large-text')}
 
-    // Focus indicator
-    if (newSettings.focusIndicator) {
-      root.style.setProperty('--focus-ring', '2px solid #3b82f6');
-    } else {
-      root.style.setProperty('--focus-ring', 'none');
-    }
+    // Save settings to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
-    // Color blind support
-    if (newSettings.colorBlind) {
-      root.classList.add('color-blind-support');
-    } else {
-      root.classList.remove('color-blind-support');
-    }
-
-    // Dyslexia support
-    if (newSettings.dyslexia) {
-      root.style.fontFamily = 'OpenDyslexic, Arial, sans-serif';
-      root.style.letterSpacing = '0.1em';
-      root.style.wordSpacing = '0.2em';
-    } else {
-      root.style.fontFamily = '';
-      root.style.letterSpacing = '';
-      root.style.wordSpacing = '';
-    }
-
-    setSettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  useEffect(() => {
+    // Load saved settings
+    const saved = localStorage.getItem('accessibility-settings');
+    if (saved) {
+      setSettings(JSON.parse(saved))}
   }, []);
 
-  // Load saved settings on mount
-  useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      const parsed = JSON.parse(savedSettings);
-      setSettings(parsed);
-      applySettings(parsed);
-    }
-  }, [applySettings]);
+  const toggleSetting = (key: keyof AccessibilitySettings)  => {
+    setSettings(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }))};
 
-  // Screen reader announcements
-  const announce = useCallback((message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    // Remove after announcement
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-
-    setAnnouncements(prev => [...prev, message]);
-  }, []);
-
-  // Enhanced keyboard navigation
-  useEffect(() => {
-    if (!settings.keyboardNavigation) return;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      const target = e.target as HTMLElement;
-      
-      // Skip if in input/textarea
-      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
-
-      switch (e.key) {
-        case 'Tab':
-          // Enhanced tab navigation with visual feedback
-          setCurrentFocus(target);
-          target.style.outline = '2px solid #3b82f6';
-          target.style.outlineOffset = '2px';
-          
-          setTimeout(() => {
-            target.style.outline = '';
-            target.style.outlineOffset = '';
-          }, 2000);
-          break;
-          
-        case 'Enter':
-        case ' ':
-          if (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button') {
-            e.preventDefault();
-            target.click();
-            announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
-          }
-          break;
-          
-        case 'Escape':
-          // Close modals, dropdowns, etc.
-          const modals = document.querySelectorAll('[role="dialog"], [data-modal]');
-          modals.forEach(modal => {
-            if (modal.getAttribute('aria-hidden') === 'false') {
-              (modal as HTMLElement).click();
-            }
-          });
-          break;
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [settings.keyboardNavigation, announce]);
-
-  // Focus management
-  useEffect(() => {
-    if (!settings.focusIndicator) return;
-
-    const handleFocusIn = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      target.style.outline = '2px solid #3b82f6';
-      target.style.outlineOffset = '2px';
-      
-      if (settings.screenReader) {
-        const label = target.getAttribute('aria-label') || 
-                     target.getAttribute('title') || 
-                     target.textContent;
-        if (label) announce(`Focused on ${label}`);
-      }
-    };
-
-    const handleFocusOut = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      target.style.outline = '';
-      target.style.outlineOffset = '';
-    };
-
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-    
-    return () => {
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, [settings.focusIndicator, settings.screenReader, announce]);
-
-  // Skip to main content link
-  useEffect(() => {
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-    
-    document.body.insertBefore(skipLink, document.body.firstChild);
-    
-    return () => {
-      if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
-      }
-    };
-  }, []);
-
-  // Quick accessibility actions
-  const quickActions = [
-    {
-      icon: Contrast,
-      label: 'Toggle High Contrast',
-      action: () => {
-        const newSettings = { ...settings, highContrast: !settings.highContrast };
-        applySettings(newSettings);
-        announce(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
-      },
-      active: settings.highContrast
-    },
-    {
-      icon: Type,
-      label: 'Toggle Large Text',
-      action: () => {
-        const newSettings = { ...settings, largeText: !settings.largeText };
-        applySettings(newSettings);
-        announce(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
-      },
-      active: settings.largeText
-    },
-    {
-      icon: ZoomIn,
-      label: 'Increase Zoom',
-      action: () => {
-        const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
-        const newZoom = Math.min(currentZoom + 0.1, 2.0);
-        document.documentElement.style.fontSize = `${newZoom * 16}px`;
-        announce(`Zoom increased to ${Math.round(newZoom * 100)}%`);
-      }
-    },
-    {
-      icon: ZoomOut,
-      label: 'Decrease Zoom',
-      action: () => {
-        const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
-        const newZoom = Math.max(currentZoom - 0.1, 0.5);
-        document.documentElement.style.fontSize = `${newZoom * 16}px`;
-        announce(`Zoom decreased to ${Math.round(newZoom * 100)}%`);
-      }
-    },
-    {
-      icon: RotateCcw,
-      label: 'Reset Zoom',
-      action: () => {
-        document.documentElement.style.fontSize = '16px';
-        announce('Zoom reset to 100%');
-      }
-    }
-  ];
-
-  if (!enabled) return null;
+  const handleKeyDown = (e: React.KeyboardEvent)  => {
+    if (e.key === 'Escape') {
+      setIsOpen(false)}
+  };
 
   return (
     <>
@@ -461,5 +236,4 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         ))}
       </div>
     </>
-  );
-};
+  )};

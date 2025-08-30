@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState  } from 'react.ts';
 interface PerformanceMetrics {
+
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
@@ -7,24 +8,21 @@ interface PerformanceMetrics {
   ttfb: number | null; // Time to First Byte
   domLoad: number | null; // DOM Content Loaded
   windowLoad: number | null; // Window Load
-  navigationStart: number | null;
-}
+  navigationStart: number | null}
 interface PerformanceObserverEntry {
+
   name: string;
   value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-}
+  rating: 'good' | 'needs-improvement' | 'poor'}
 // Extended interfaces for specific performance entry types
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
-  startTime: number;
-}
+  startTime: number}
 interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
-  value: number;
-}
-export function usePerformance() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  value: number}
+export function usePerformance(...args[]):  {
+  const [metrics, setMetrics] = useState<any>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -34,38 +32,34 @@ export function usePerformance() {
     windowLoad: null,
     navigationStart: null,
   });
-  const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
+  const [observers, setObservers] = useState<any>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
   useEffect(() => {
     // Check if PerformanceObserver is supported
     if (!('PerformanceObserver' in window)) {
       console.warn('PerformanceObserver not supported');
-      return;
-    }
+      return}
     // First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
     });
     // Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {
-        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
-      }
+        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))}
     });
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-      }
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))}
     });
     // Cumulative Layout Shift (CLS)
     const clsObserver = new PerformanceObserver((list) => {
@@ -73,20 +67,16 @@ export function usePerformance() {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
-        }
+          clsValue += layoutShiftEntry.value}
       }
-      setMetrics(prev => ({ ...prev, cls: clsValue }));
-    });
+      setMetrics(prev => ({ ...prev, cls: clsValue }))});
     // Start observing
     try {
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-    } catch (error) {
-      console.warn('Error setting up performance observers:', error);
-    }
+      fcpObserver.observe({ entryTypes['paint'] });
+      lcpObserver.observe({ entryTypes['largest-contentful-paint'] });
+      fidObserver.observe({ entryTypes['first-input'] });
+      clsObserver.observe({ entryTypes['layout-shift'] })} catch (error) {
+      console.warn('Error setting up performance observers:', error)}
     // Navigation timing metrics
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
@@ -95,18 +85,15 @@ export function usePerformance() {
         ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
         domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
         windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
-      }));
-    }
+      }))}
     // Cleanup
-    return () => {
+    return ()  => {
       fcpObserver.disconnect();
       lcpObserver.disconnect();
       fidObserver.disconnect();
-      clsObserver.disconnect();
-    };
-  }, []);
+      clsObserver.disconnect()}}, []);
   // Get performance rating
-  const getRating = (metric: keyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor' => {
+  const getRating = (metric: keyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor'  => {
     const thresholds = {
       fcp: { good: 1800, poor: 3000 },
       lcp: { good: 2500, poor: 4000 },
@@ -118,8 +105,7 @@ export function usePerformance() {
     if (!threshold) return 'good';
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor';
-  };
+    return 'poor'};
   // Get all metrics with ratings
   const getMetricsWithRatings = () => {
     const result: PerformanceObserverEntry[] = [];
@@ -129,19 +115,16 @@ export function usePerformance() {
           name: key.toUpperCase(),
           value,
           rating: getRating(key as keyof PerformanceMetrics, value)
-        });
-      }
+        })}
     });
-    return result;
-  };
+    return result};
   // Log performance metrics
   const logMetrics = () => {
     const metricsWithRatings = getMetricsWithRatings();
     console.group('🚀 Performance Metrics');
     // Measure basic timing
     measureNavigationTiming();
-    console.groupEnd();
-  };
+    console.groupEnd()};
   // Get performance score (0-100)
   const getPerformanceScore = () => {
     const metricsWithRatings = getMetricsWithRatings();
@@ -151,11 +134,9 @@ export function usePerformance() {
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
-        default: return 100;
-      }
+        default: return 100}
     });
-    return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
-  };
+    return Math.round(scores.reduce((sum, score)  => sum + score, 0) / scores.length)};
   // Monitor long tasks
   useEffect(() => {
     if (!('PerformanceObserver' in window)) return;
@@ -163,21 +144,16 @@ export function usePerformance() {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 50) {
-          console.warn('Long task detected:', {
+          console.warn('Long task detected: ', {
             duration: entry.duration,
             startTime: entry.startTime,
             name: entry.name
-          });
-        }
-      });
-    });
+          })}
+      })});
     try {
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
-    } catch (error) {
-      console.warn('Error setting up long task observer:', error);
-    }
-    return () => longTaskObserver.disconnect();
-  }, []);
+      longTaskObserver.observe({ entryTypes['longtask'] })} catch (error) {
+      console.warn('Error setting up long task observer:', error)}
+    return ()  => longTaskObserver.disconnect()}, []);
   return {
     metrics,
     observers,
@@ -187,32 +163,24 @@ export function usePerformance() {
     startMonitoring,
     stopMonitoring,
     resetMetrics,
-  };
-}
+  }}
 // Hook for monitoring specific performance events
-export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry) => void) {
+export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry)  => void) {
   useEffect(() => {
     if (!('PerformanceObserver' in window)) return;
     const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach(callback);
-    });
+      list.getEntries().forEach(callback)});
     try {
-      observer.observe({ entryTypes: [eventName] });
-    } catch (error) {
-      console.warn(`Error observing ${eventName}:`, error);
-    }
-    return () => observer.disconnect();
-  }, [eventName, callback]);
-}
+      observer.observe({ entryTypes[eventName] })} catch (error) {
+      console.warn(`Error observing ${eventName}:`, error)}
+    return ()  => observer.disconnect()}, [eventName, callback])}
 // Hook for measuring time between renders
-export function useRenderTime() {
+export function useRenderTime(...args[]):  {
   const renderStart = useRef(performance.now());
   const [renderTime, setRenderTime] = useState(0);
   useEffect(() => {
     const renderEnd = performance.now();
     const time = renderEnd - renderStart.current;
     setRenderTime(time);
-    renderStart.current = renderEnd;
-  });
-  return renderTime;
-}
+    renderStart.current = renderEnd});
+  return renderTime}

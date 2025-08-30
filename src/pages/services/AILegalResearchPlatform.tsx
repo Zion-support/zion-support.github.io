@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   BookOpen, 
   TrendingUp, 
   Target, 
@@ -32,9 +31,9 @@ import {
   Library,
   Briefcase,
   Award
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AILegalResearchPlatform() {
+export default function AILegalResearchPlatform(...args[]):  {
   const features = [
     "AI-powered case law research and analysis",
     "Intelligent document review and contract analysis",
@@ -75,7 +74,7 @@ export default function AILegalResearchPlatform() {
       price: "$299",
       period: "/month",
       description: "Perfect for individual attorneys and small law firms",
-      features: [
+      features[
         "AI legal research (up to 100 queries/month)",
         "Basic document analysis",
         "Case law database access",
@@ -91,7 +90,7 @@ export default function AILegalResearchPlatform() {
       price: "$799",
       period: "/month",
       description: "Ideal for growing law firms and legal teams",
-      features: [
+      features[
         "AI legal research (unlimited queries)",
         "Advanced document analysis",
         "Multi-jurisdiction research",
@@ -108,7 +107,7 @@ export default function AILegalResearchPlatform() {
       price: "$1,999",
       period: "/month",
       description: "For large law firms and corporate legal departments",
-      features: [
+      features[
         "Custom AI model training",
         "White-label solutions",
         "Advanced analytics and reporting",
@@ -188,8 +187,8 @@ export default function AILegalResearchPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -224,8 +223,8 @@ export default function AILegalResearchPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -260,8 +259,8 @@ export default function AILegalResearchPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -296,8 +295,8 @@ export default function AILegalResearchPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -383,7 +382,7 @@ export default function AILegalResearchPlatform() {
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -403,5 +402,4 @@ export default function AILegalResearchPlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

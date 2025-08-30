@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Home,
+import React, { useState } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Home,
   Brain,
   Cloud,
   Server,
@@ -42,91 +41,27 @@ import {
   DollarSign,
   Leaf,
   Building,
-  User,
-  Factory,
-  Heart,
-  PenTool,
-  Eye,
-  Smartphone,
-  Truck,
-  Car,
-  City,
-  CheckCircle,
-  ArrowUpRight,
-  Play,
-  MailIcon,
-  User as UserIcon,
-  Handshake as HandshakeIcon,
-  Briefcase as BriefcaseIcon,
-  FileText as FileTextIcon,
-  HelpCircle as HelpCircleIcon,
-  MessageCircle as MessageCircleIcon,
-  Settings as SettingsIcon,
-  BarChart3 as BarChart3Icon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Network as NetworkIcon,
-  Lock as LockIcon,
-  Code as CodeIcon,
-  ShoppingCart as ShoppingCartIcon,
-  Target as TargetIcon,
-  Lightbulb as LightbulbIcon,
-  Award as AwardIcon,
-  TrendingUp as TrendingUpIcon,
-  BookOpen as BookOpenIcon,
-  Calendar as CalendarIcon,
-  MapPin as MapPinIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  ChevronRight as ChevronRightIcon,
-  ChevronDown as ChevronDownIcon,
-  Handshake as HandshakeIcon2,
-  Atom as AtomIcon,
-  Link as LinkIcon2,
-  Wifi as WifiIcon,
-  HeartPulse as HeartPulseIcon,
-  DollarSign as DollarSignIcon,
-  Leaf as LeafIcon,
-  Building as BuildingIcon,
-  User as UserIcon2,
-  Factory as FactoryIcon,
-  Heart as HeartIcon,
-  PenTool as PenToolIcon,
-  Eye as EyeIcon,
-  Smartphone as SmartphoneIcon,
-  Truck as TruckIcon,
-  Car as CarIcon,
-  City as CityIcon,
-  CheckCircle as CheckCircleIcon,
-  ArrowUpRight as ArrowUpRightIcon,
-  Play as PlayIcon,
-  MailIcon as MailIcon2
-} from 'lucide-react';
+  User
+ } from 'lucide-react.ts';
 
-export const EnhancedSidebar: React.FC = () => {
+export const EnhancedSidebar: React.FC = (): JSX.Element => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: string)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
-    } else {
-      newExpanded.add(section);
-    }
-    setExpandedSections(newExpanded);
-  };
+      newExpanded.delete(section)} else {
+      newExpanded.add(section)}
+    setExpandedSections(newExpanded)};
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string)  => location.pathname === path;
 
   const navigationSections = [
     {
       title: "Main Navigation",
       icon: Home,
-      items: [
+      items[
         { name: "Home", href: "/", icon: Home },
         { name: "Services", href: "/services", icon: Zap },
         { name: "Solutions", href: "/solutions", icon: Target },
@@ -138,37 +73,12 @@ export const EnhancedSidebar: React.FC = () => {
       ]
     },
     {
-      title: "AI & Machine Learning",
-      icon: Brain,
-      items: [
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics", icon: Heart },
-        { name: "AI Legal Document Analysis", href: "/services/ai-legal-document-analysis", icon: FileText },
-        { name: "AI Financial Trading", href: "/services/ai-financial-trading", icon: TrendingUp },
-        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization", icon: Truck },
-        { name: "AI Content Creation", href: "/services/ai-content-creation", icon: PenTool },
-        { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
-        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation", icon: Target },
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
-        { name: "AI Project Management", href: "/services/ai-project-management", icon: Briefcase },
-        { name: "AI Predictive Maintenance", href: "/services/ai-predictive-maintenance", icon: Eye },
-        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot", icon: TrendingUp }
-      ]
-    },
-    {
-      title: "Cloud & Infrastructure",
-      icon: Cloud,
-      items: [
+      title: "Service Areas",
+      icon: Zap,
+      items[
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "Digital Twin Platform", href: "/services/digital-twin", icon: Cpu },
-        { name: "IoT Edge Computing", href: "/services/iot-edge-computing", icon: Wifi },
-        { name: "Data Analytics", href: "/services/data-analytics", icon: BarChart3 },
-        { name: "Micro SaaS Products", href: "/services/micro-saas", icon: ShoppingCart },
-        { name: "Micro CRM", href: "/services/micro-crm", icon: Users },
-        { name: "Helpdesk Platform", href: "/services/helpdesk", icon: HelpCircle },
-        { name: "Website Analytics", href: "/services/website-analytics", icon: Eye },
-        { name: "IT Helpdesk", href: "/services/it-helpdesk", icon: Settings }
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain }
       ]
     },
     {
@@ -218,29 +128,12 @@ export const EnhancedSidebar: React.FC = () => {
     {
       title: "Resources & Support",
       icon: BookOpen,
-      items: [
-        { name: "Blog & Insights", href: "/blog", icon: FileText },
-        { name: "Case Studies", href: "/case-studies", icon: Target },
-        { name: "White Papers", href: "/white-papers", icon: FileText },
-        { name: "Webinars", href: "/webinars", icon: Users },
-        { name: "Documentation", href: "/docs", icon: Code },
-        { name: "API Reference", href: "/api-docs", icon: Code },
-        { name: "Developer Portal", href: "/developers", icon: Code },
-        { name: "Training & Certification", href: "/training", icon: Award },
-        { name: "Community Forum", href: "/community", icon: Users },
-        { name: "FAQ & Help Center", href: "/faq", icon: HelpCircle },
-        { name: "Pricing Guide 2025", href: "/pricing-guide-2025", icon: DollarSign },
-        { name: "Comprehensive Pricing 2027", href: "/comprehensive-pricing-guide-2027", icon: DollarSign }
-      ]
-    },
-    {
-      title: "Quick Actions",
-      icon: Zap,
-      items: [
-        { name: "Request Quote", href: "/request-quote", icon: MessageCircle },
-        { name: "Schedule Demo", href: "/schedule-demo", icon: Calendar },
-        { name: "Get Support", href: "/support", icon: HelpCircle },
-        { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
+      items[
+        { name: "FAQ", href: "/faq", icon: HelpCircle },
+        { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
+        { name: "Help Center", href: "/help", icon: HelpCircle },
+        { name: "Support", href: "/support", icon: HelpCircle },
+        { name: "Sitemap", href: "/sitemap", icon: Globe },
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
         { name: "Login", href: "/login", icon: User },
         { name: "Sitemap", href: "/sitemap", icon: Globe }
@@ -331,6 +224,5 @@ export const EnhancedSidebar: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    </aside>
+  )};

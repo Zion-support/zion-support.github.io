@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { Mail, Send, CheckCircle  } from 'lucide-react.ts';
 
-export const FooterNewsletter: React.FC = () => {
+export const FooterNewsletter: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (!email.trim()) return;
 
@@ -20,12 +20,9 @@ export const FooterNewsletter: React.FC = () => {
       setEmail('');
       
       // Reset after 3 seconds
-      setTimeout(() => setIsSubmitted(false), 3000);
-    } catch (error) {
-      console.error('Newsletter subscription failed:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
+      console.error('Newsletter subscription failed:', error)} finally {
+      setIsSubmitting(false)}
   };
 
   return (
@@ -80,9 +77,8 @@ export const FooterNewsletter: React.FC = () => {
         )}
 
         <p className="text-xs text-gray-400 mt-4">
-          We respect your privacy. Unsubscribe at any time.
+          We respect your privacy. Unsubscribe at  time.
         </p>
       </div>
     </div>
-  );
-};
+  )};

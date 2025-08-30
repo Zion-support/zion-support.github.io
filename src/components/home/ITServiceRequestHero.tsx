@@ -1,8 +1,54 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { GradientHeading  } from '@/components/GradientHeading';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useNavigate  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react.ts';
 
-export function ITServiceRequestHero() {
+export function ITServiceRequestHero(...args[]):  {
+  const [location, setLocation] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent)  => {
+    e.preventDefault();
+    if (location.trim()) {
+      setIsSubmitting(true);
+      // Simulate API call
+      setTimeout(() => {
+        setIsSubmitting(false);
+        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  const features = [
+    { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}
@@ -24,9 +70,13 @@ export function ITServiceRequestHero() {
               <span className="block text-blue-400">We've Got You Covered</span>
             </h2>
             
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              From infrastructure setup to cybersecurity solutions, our expert team delivers 
-              comprehensive IT services that keep your business running smoothly and securely.
+            <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
+              24/7 Global IT Onsite Services
+            </GradientHeading>
+            
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
+              Get professional IT technicians where in the world, time you need them. 
+              From emergency repairs to scheduled maintenance, we're there when you need us most.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -133,5 +183,4 @@ export function ITServiceRequestHero() {
         </div>
       </div>
     </section>
-  );
-}
+  )}

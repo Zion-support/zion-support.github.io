@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   GraduationCap, 
   TrendingUp, 
   Target, 
@@ -33,9 +32,9 @@ import {
   Users as UsersIcon,
   Award,
   Lightbulb
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIEducationPlatform() {
+export default function AIEducationPlatform(...args[]):  {
   const features = [
     "AI-powered personalized learning paths",
     "Intelligent content recommendation",
@@ -76,7 +75,7 @@ export default function AIEducationPlatform() {
       price: "$299",
       period: "/month",
       description: "Perfect for individual schools and small districts",
-      features: [
+      features[
         "AI learning paths (up to 500 students)",
         "Basic content recommendation",
         "Assessment tools",
@@ -92,7 +91,7 @@ export default function AIEducationPlatform() {
       price: "$799",
       period: "/month",
       description: "Ideal for school districts and larger institutions",
-      features: [
+      features[
         "AI learning paths (unlimited students)",
         "Advanced content recommendation",
         "Comprehensive analytics",
@@ -109,7 +108,7 @@ export default function AIEducationPlatform() {
       price: "$1,999",
       period: "/month",
       description: "For large educational organizations and corporations",
-      features: [
+      features[
         "Custom AI model training",
         "White-label solutions",
         "Advanced integrations",
@@ -189,8 +188,8 @@ export default function AIEducationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -225,8 +224,8 @@ export default function AIEducationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -261,8 +260,8 @@ export default function AIEducationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -297,8 +296,8 @@ export default function AIEducationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -384,7 +383,7 @@ export default function AIEducationPlatform() {
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -404,5 +403,4 @@ export default function AIEducationPlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  TrendingUp, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { TrendingUp, 
   Shield, 
   Clock, 
   Zap, 
@@ -20,9 +19,9 @@ import {
   Activity,
   AlertTriangle,
   Target
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIFinancialTradingRiskManagement() {
+export default function AIFinancialTradingRiskManagement(...args[]):  {
   const features = [
     {
       icon: TrendingUp,
@@ -60,7 +59,7 @@ export default function AIFinancialTradingRiskManagement() {
     {
       name: "AI Trading Platform",
       price: "From $4,999/month",
-      features: [
+      features[
         "Advanced trading algorithms",
         "Real-time market data",
         "Portfolio optimization",
@@ -72,7 +71,7 @@ export default function AIFinancialTradingRiskManagement() {
     {
       name: "Risk Management Suite",
       price: "From $2,999/month",
-      features: [
+      features[
         "Portfolio risk analysis",
         "VaR calculations",
         "Stress testing",
@@ -84,7 +83,7 @@ export default function AIFinancialTradingRiskManagement() {
     {
       name: "Market Analysis Engine",
       price: "From $3,999/month",
-      features: [
+      features[
         "AI market predictions",
         "Sentiment analysis",
         "Technical indicators",
@@ -96,7 +95,7 @@ export default function AIFinancialTradingRiskManagement() {
     {
       name: "Quantitative Research",
       price: "From $5,999/month",
-      features: [
+      features[
         "Custom strategy development",
         "Advanced modeling",
         "Performance analytics",
@@ -200,8 +199,8 @@ export default function AIFinancialTradingRiskManagement() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -238,8 +237,8 @@ export default function AIFinancialTradingRiskManagement() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {servicePackages.map((pkg, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {servicePackages.map((pkg, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -288,8 +287,8 @@ export default function AIFinancialTradingRiskManagement() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportedAssets.map((asset, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {supportedAssets.map((asset, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -323,8 +322,8 @@ export default function AIFinancialTradingRiskManagement() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -360,8 +359,8 @@ export default function AIFinancialTradingRiskManagement() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologies.map((tech, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              {technologies.map((tech, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -490,5 +489,4 @@ export default function AIFinancialTradingRiskManagement() {
         </section>
       </div>
     </>
-  );
-}
+  )}

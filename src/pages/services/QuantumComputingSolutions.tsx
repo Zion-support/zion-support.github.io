@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Atom, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO  } from '@/components/SEO';
+import { Atom, 
   Zap, 
   CheckCircle, 
   BarChart3, 
@@ -14,11 +14,8 @@ import {
   Globe,
   Rocket,
   Target,
-  Shield,
-  TrendingUp,
-  Layers
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+  Globe
+ } from 'lucide-react.ts';
 
 export default function QuantumComputingSolutions() {
   const features = [
@@ -190,9 +187,9 @@ export default function QuantumComputingSolutions() {
               Discover how quantum computing is transforming industries and solving previously impossible problems
             </p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {quantumApplications.map((app, index) => (
+
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -212,9 +209,57 @@ export default function QuantumComputingSolutions() {
                 </div>
                 <p className="text-slate-300 mb-6 leading-relaxed">{app.description}</p>
                 <ul className="space-y-2">
-                  {app.useCases.map((useCase, idx) => (
-                    <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="h-4 w-4 text-cyan-400 mr-3 flex-shrink-0" />
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-400 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Applications */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your industry with quantum computing capabilities
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {applications.map((app, index)  => (
+              <motion.div
+                key={app.industry}
+                className="bg-slate-700/50 rounded-xl p-6 border border-slate-600 hover:border-blue-400 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="p-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg mr-3">
+                    <app.icon className="w-5 h-5 text-blue-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{app.industry}</h3>
+                </div>
+                <ul className="space-y-1">
+                  {app.useCases.map((useCase, useCaseIndex) => (
+                    <li key={useCaseIndex} className="flex items-center text-gray-400 text-sm">
+                      <ArrowRight className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                       {useCase}
                     </li>
                   ))}
@@ -242,9 +287,9 @@ export default function QuantumComputingSolutions() {
               Cutting-edge quantum computing features for the most challenging computational problems
             </p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"

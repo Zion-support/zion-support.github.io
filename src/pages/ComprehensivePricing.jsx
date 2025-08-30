@@ -39,8 +39,7 @@ const ComprehensivePricing = () => {
             case 'consulting': return <Users className="h-5 w-5"/>;
             case 'managed services': return <Settings className="h-5 w-5"/>;
             case 'web development': return <Globe className="h-5 w-5"/>;
-            default: return <Star className="h-5 w-5"/>;
-        }
+            default: return <Star className="h-5 w-5"/>}
     };
     const getCategoryColor = (category) => {
         switch (category.toLowerCase()) {
@@ -71,37 +70,27 @@ const ComprehensivePricing = () => {
             case 'consulting': return 'from-purple-500 to-indigo-500';
             case 'managed services': return 'from-teal-500 to-cyan-500';
             case 'web development': return 'from-blue-500 to-green-500';
-            default: return 'from-gray-500 to-slate-500';
-        }
+            default: return 'from-gray-500 to-slate-500'}
     };
     const formatPrice = (price, pricingModel) => {
         if (pricingModel === 'per API call') {
-            return `$${price.toFixed(3)} per call`;
-        }
+            return `$${price.toFixed(3)} per call`}
         else if (pricingModel === 'per word') {
-            return `$${price.toFixed(2)} per word`;
-        }
+            return `$${price.toFixed(2)} per word`}
         else if (pricingModel === 'per recommendation') {
-            return `$${price.toFixed(3)} per recommendation`;
-        }
+            return `$${price.toFixed(3)} per recommendation`}
         else if (pricingModel === 'per employee/month') {
-            return `$${price}/employee/month`;
-        }
+            return `$${price}/employee/month`}
         else if (pricingModel === 'monthly') {
-            return `$${price}/month`;
-        }
+            return `$${price}/month`}
         else if (pricingModel === 'usage-based') {
-            return `$${price} per unit`;
-        }
+            return `$${price} per unit`}
         else if (pricingModel === 'tiered') {
-            return `$${price}/month starting`;
-        }
+            return `$${price}/month starting`}
         else if (pricingModel === 'enterprise') {
-            return `$${price}/month`;
-        }
+            return `$${price}/month`}
         else {
-            return `$${price}`;
-        }
+            return `$${price}`}
     };
     const renderMicroSaasPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {enhancedMicroSaasServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-700/50 border-slate-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">
@@ -431,6 +420,5 @@ const ComprehensivePricing = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ComprehensivePricing;

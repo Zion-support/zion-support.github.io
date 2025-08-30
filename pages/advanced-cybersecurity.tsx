@@ -1,12 +1,12 @@
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
-import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from '../data/advancedCybersecurityServices2027';
+import type { NextPage } from 'next.ts';
+import Head from 'next/head.ts';
+import { useState  } from 'react.ts';
+import { ADVANCED_CYBERSECURITY_SERVICES_2027  } from '../data/advancedCybersecurityServices2027';
 
 const AdvancedCybersecurityServices: NextPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<string>('innovation');
+  const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = [
     { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },
@@ -21,8 +21,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -33,37 +32,33 @@ const AdvancedCybersecurityServices: NextPage = () => {
       case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
-        return 0;
-    }
+        return 0}
   });
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor = (level: string)  => {
     switch (level) {
       case 'Revolutionary': return 'from-red-500 to-pink-600';
       case 'Breakthrough': return 'from-purple-500 to-indigo-600';
       case 'Advanced': return 'from-blue-500 to-cyan-600';
-      default: return 'from-gray-500 to-gray-600';
-    }
+      default: return 'from-gray-500 to-gray-600'}
   };
 
-  const getBadgeColor = (badge: string) => {
+  const getBadgeColor = (badge: string)  => {
     switch (badge) {
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
-      default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
-    }
+      default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
   };
 
-  const getSecurityIcon = (category: string) => {
+  const getSecurityIcon = (category: string)  => {
     switch (category) {
       case 'AI Security': return '🤖';
       case 'Quantum Security': return '🔐';
       case 'Network Security': return '🌐';
       case 'Endpoint Security': return '💻';
       case 'Cloud Security': return '☁️';
-      default: return '🛡️';
-    }
+      default: return '🛡️'}
   };
 
   return (
@@ -128,13 +123,13 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
 
         {/* Security Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">
           {[
             { icon: '🛡️', label: 'Threats Blocked', value: '99.9%', color: 'from-green-500 to-emerald-600' },
             { icon: '👁️', label: '24/7 Monitoring', value: 'Always On', color: 'from-blue-500 to-cyan-600' },
             { icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },
             { icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
-          ].map((stat, index) => (
+          ].map((stat, index)  => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"
@@ -170,9 +165,9 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
-                {categories.map((category) => (
+                {categories.map((category)  => (
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -220,8 +215,8 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index)  => (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -342,7 +337,6 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AdvancedCybersecurityServices;

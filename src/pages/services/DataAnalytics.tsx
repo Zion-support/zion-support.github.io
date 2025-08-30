@@ -1,36 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Cpu,
-  Network,
-  FileText
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { BarChart3, Database, Zap, Shield, Globe, Server, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, PieChart, LineChart, BarChart, TrendingDown, ShoppingCart  } from 'lucide-react.ts';
 
-export default function DataAnalytics() {
+export default function DataAnalytics(...args: []):  {
   const features = [
     {
       icon: Database,
@@ -273,8 +246,8 @@ export default function DataAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -293,7 +266,45 @@ export default function DataAnalytics() {
         </div>
       </section>
 
-      {/* Core Solutions */}
+      {/* Industries */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Solutions
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our data analytics solutions are tailored for specific industries, 
+              providing relevant insights and actionable intelligence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+            {industries.map((industry, index)  => (
+              <motion.div
+                key={industry.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
+                  <industry.icon className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
+                <p className="text-sm text-slate-400">{industry.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services & Pricing */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
@@ -311,8 +322,8 @@ export default function DataAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

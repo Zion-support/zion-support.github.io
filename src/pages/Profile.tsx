@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  User, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { User, 
   Mail, 
   Phone, 
   Building, 
@@ -34,57 +33,52 @@ import {
   Brain,
   Cloud,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface UserProfile {
+
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
-  company: string;
+  comp: string;
   position: string;
   industry: string;
   location: string;
   website: string;
   bio: string;
-  avatar: string;
-}
+  avatar: string}
 
 interface NotificationSettings {
+
   emailNotifications: boolean;
   pushNotifications: boolean;
   marketingEmails: boolean;
   securityAlerts: boolean;
   projectUpdates: boolean;
-  weeklyReports: boolean;
-}
+  weeklyReports: boolean}
 
 interface SecuritySettings {
+
   twoFactorEnabled: boolean;
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
-  loginHistory: Array<{
-    date: string;
-    location: string;
-    device: string;
-    status: 'success' | 'failed';
-  }>;
-}
+loginHistory: Array<any>}
 
-const Profile: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
+const Profile: React.FC = (): JSX.Element => {
+  const [activeTab, setActiveTab] = useState<any>('profile');
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
 
-  const [profile, setProfile] = useState<UserProfile>({
+  const [profile, setProfile] = useState<any>({
     firstName: 'John',
     lastName: 'Doe',
     email: 'john.doe@ziontechgroup.com',
     phone: '+1 (555) 123-4567',
-    company: 'Zion Tech Group',
+    comp: 'Zion Tech Group',
     position: 'Senior Developer',
     industry: 'Technology',
     location: 'San Francisco, CA',
@@ -93,7 +87,7 @@ const Profile: React.FC = () => {
     avatar: '/api/placeholder/150/150'
   });
 
-  const [notifications, setNotifications] = useState<NotificationSettings>({
+  const [notifications, setNotifications] = useState<any>({
     emailNotifications: true,
     pushNotifications: true,
     marketingEmails: false,
@@ -102,12 +96,12 @@ const Profile: React.FC = () => {
     weeklyReports: false
   });
 
-  const [security, setSecurity] = useState<SecuritySettings>({
+  const [security, setSecurity] = useState<any>({
     twoFactorEnabled: true,
     sessionTimeout: 30,
     passwordLastChanged: '2024-01-15',
     lastLogin: '2024-01-20 14:30:00',
-    loginHistory: [
+    loginHistory[
       { date: '2024-01-20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },
       { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
       { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
@@ -146,27 +140,21 @@ const Profile: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       setSuccess('Profile updated successfully!');
-      setIsEditing(false);
-    } catch (err) {
-      setError('Failed to update profile. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+      setIsEditing(false)} catch (err) {
+      setError('Failed to update profile. Please try again.')} finally {
+      setIsLoading(false)}
   };
 
   const handlePasswordChange = async () => {
     if (!currentPassword || !newPassword || !confirmPassword) {
       setError('Please fill in all password fields');
-      return;
-    }
+      return}
     if (newPassword.length < 8) {
       setError('New password must be at least 8 characters long');
-      return;
-    }
+      return}
     if (newPassword !== confirmPassword) {
       setError('New passwords do not match');
-      return;
-    }
+      return}
 
     setIsLoading(true);
     setError('');
@@ -179,28 +167,23 @@ const Profile: React.FC = () => {
       setSuccess('Password changed successfully!');
       setCurrentPassword('');
       setNewPassword('');
-      setConfirmPassword('');
-    } catch (err) {
-      setError('Failed to change password. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+      setConfirmPassword('')} catch (err) {
+      setError('Failed to change password. Please try again.')} finally {
+      setIsLoading(false)}
   };
 
-  const handleNotificationToggle = (key: keyof NotificationSettings) => {
+  const handleNotificationToggle = (key: keyof NotificationSettings)  => {
     setNotifications(prev => ({
       ...prev,
       [key]: !prev[key]
-    }));
-  };
+    }))};
 
-  const getPasswordStrength = (password: string) => {
+  const getPasswordStrength = (password: string)  => {
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
     if (password.length < 16) return { score: 3, label: 'Good', color: 'text-blue-400' };
-    return { score: 4, label: 'Strong', color: 'text-green-400' };
-  };
+    return { score: 4, label: 'Strong', color: 'text-green-400' }};
 
   const passwordStrength = getPasswordStrength(newPassword);
 
@@ -242,7 +225,7 @@ const Profile: React.FC = () => {
               {profile.firstName} {profile.lastName}
             </h2>
             <p className="text-slate-300 text-lg mb-1">{profile.position}</p>
-            <p className="text-slate-400">{profile.company}</p>
+            <p className="text-slate-400">{profile.comp}</p>
           </div>
           <button
             onClick={() => setIsEditing(!isEditing)}
@@ -254,8 +237,8 @@ const Profile: React.FC = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -346,8 +329,8 @@ const Profile: React.FC = () => {
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
-                value={profile.company}
-                onChange={(e) => setProfile(prev => ({ ...prev, company: e.target.value }))}
+                value={profile.comp}
+                onChange={(e) => setProfile(prev => ({ ...prev, comp: e.target.value }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -375,9 +358,9 @@ const Profile: React.FC = () => {
                 value={profile.industry}
                 onChange={(e) => setProfile(prev => ({ ...prev, industry: e.target.value }))}
                 disabled={!isEditing}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {industries.map((industry) => (
+                {industries.map((industry)  => (
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
               </select>
@@ -450,8 +433,8 @@ const Profile: React.FC = () => {
       {/* Achievements */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {achievements.map((achievement, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
+          {achievements.map((achievement, index)  => (
             <motion.div
               key={achievement.title}
               initial={{ opacity: 0, y: 20 }}
@@ -843,7 +826,7 @@ const Profile: React.FC = () => {
           ].map((tab) => (
             <button
               key={tab.key}
-              onClick={() => setActiveTab(tab.key as any)}
+              onClick={() => setActiveTab(tab.key as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 activeTab === tab.key
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
@@ -863,7 +846,6 @@ const Profile: React.FC = () => {
         {activeTab === 'preferences' && renderPreferencesTab()}
       </div>
     </div>
-  );
-};
+  )};
 
 export default Profile;

@@ -1,116 +1,191 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Database, 
-  Rocket, 
-  Target, 
-  Users, 
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Workflow,
-  Atom,
-  MessageCircle,
-  PenTool,
-  Calendar,
-  Heart,
-  DollarSign,
-  ShoppingBag,
-  Settings,
-  Globe,
-  Award,
-  TrendingUp
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, CheckCircle2, Globe, Sparkles, Shield, Cpu, Cloud, Database, Workflow, Rocket, DollarSign, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react.ts';
 
-const ComprehensiveServices: React.FC = () => {
-  const serviceCategories = [
+const ComprehensiveServices: React.FC = (): JSX.Element => {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+
+  const microSaaS = [
     {
-      title: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions",
-      icon: Brain,
-      services: [
-        { name: "AI Business Intelligence", path: "/services/ai-business-intelligence" },
-        { name: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
-        { name: "AI Cybersecurity", path: "/services/ai-cybersecurity" },
-        { name: "AI Content Generation", path: "/services/ai-content-generator" }
-      ],
-      featured: true
+      title: 'SOC 2 Evidence Collector',
+      desc: 'Automate evidence collection across AWS, GCP, Azure, Okta, and SaaS tools with time-stamped control mappings.',
+      price: '$499–$1,499/mo',
+      cta: 'https://ziontechgroup.com/services/soc2-compliance-automation',
+      features['Prebuilt integrations (AWS, GCP, Azure, Okta, GitHub)', 'Automated screenshots and policy snapshots', 'Continuous control monitoring', 'Auditor export packages']
     },
     {
-      title: "Quantum Computing",
-      description: "Next-generation quantum solutions",
-      icon: Atom,
-      services: [
-        { name: "Quantum Computing Solutions", path: "/services/quantum-computing-solutions" },
-        { name: "Quantum Neural Networks", path: "/services/quantum-neural-networks" },
-        { name: "Quantum Financial Trading", path: "/services/quantum-financial-trading" }
-      ],
-      featured: true
+      title: 'Contract Risk Analyzer',
+      desc: 'AI parses vendor/customer contracts, flags risky clauses, and suggests redlines aligned to your playbook.',
+      price: '$299–$999/mo',
+      cta: 'https://ziontechgroup.com',
+      features['LLM clause classification', 'Deviation scoring vs. standards', 'One-click redline suggestions', 'Secure data handling']
     },
     {
-      title: "Cloud & DevOps",
-      description: "Scalable infrastructure solutions",
-      icon: Cloud,
-      services: [
-        { name: "Cloud DevOps", path: "/services/cloud-devops" },
-        { name: "Cloud FinOps Optimization", path: "/services/cloud-finops-optimizer" },
-        { name: "IT Infrastructure", path: "/services/it-infrastructure" }
-      ]
+      title: 'Churn Predictor for SaaS',
+      desc: 'Connect Stripe, Mixpanel, and Intercom to predict churn and trigger save plays automatically.',
+      price: '$199–$799/mo',
+      cta: 'https://ziontechgroup.com',
+      features['Cohort churn models', 'Alerts to Slack/Email', 'Playbooks and A/B experiments', 'No-code connectors']
     },
     {
-      title: "IoT & Edge Computing",
-      description: "Smart device solutions",
-      icon: Cpu,
-      services: [
-        { name: "IoT Edge Computing", path: "/services/iot-edge-computing" },
-        { name: "Digital Twin Platform", path: "/services/digital-twin" },
-        { name: "Smart Manufacturing", path: "/services/manufacturing-solutions" }
-      ]
+      title: 'AI RFP Copilot',
+      desc: 'Auto-assemble tailored RFP responses from your knowledge base with confidence citations.',
+      price: '$249–$1,249/mo',
+      cta: 'https://ziontechgroup.com',
+      features['Semantic retrieval over KB', 'Tone/style controls', 'Compliance guardrails', 'Export to Word/PDF']
     },
     {
-      title: "Micro SaaS Solutions",
-      description: "Productized business tools",
-      icon: Rocket,
-      services: [
-        { name: "Micro SaaS Solutions", path: "/services/micro-saas-solutions" },
-        { name: "Micro CRM", path: "/services/micro-crm" },
-        { name: "Website Analytics", path: "/services/website-analytics" }
-      ]
+      title: 'FinOps Cost Anomaly Detector',
+      desc: 'Continuously scans AWS, Azure, and GCP for cost spikes, identifies root causes, and opens auto-remediation tickets.',
+      price: '$299–$1,299/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features['Real-time anomaly alerts', 'Service- and tag-level drilldowns', 'Forecast vs. actuals variance', 'Slack/Jira integrations']
     },
     {
-      title: "Business Intelligence",
-      description: "Data-driven insights",
-      icon: BarChart3,
-      services: [
-        { name: "Data Analytics", path: "/services/data-analytics" },
-        { name: "AI Data Analytics", path: "/services/ai-data-analytics" },
-        { name: "Business Intelligence", path: "/services/ai-business-intelligence" }
-      ]
+      title: 'Vendor Security Monitoring',
+      desc: 'Continuously monitors vendor attack surface, breach news, and policy compliance for third-party risk management.',
+      price: '$249–$999/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features['Dark web/domain monitoring', 'Security questionnaire scoring', 'Policy mapping to SOC 2/ISO 27001', 'Executive risk reports']
+    },
+    {
+      title: 'Data Quality & Lineage Monitor',
+      desc: 'Automated data tests, schema drift detection, and lineage maps across Snowflake, BigQuery, and Redshift.',
+      price: '$399–$1,499/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features['Column-level lineage', 'Freshness and completeness SLIs', 'dbt integration', 'Incident paging with ownership']
+    },
+    {
+      title: 'API Monetization Hub',
+      desc: 'Usage metering, subscription plans, rate limiting, and Stripe billing for your public/private APIs.',
+      price: '$199–$899/mo + 1% usage',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features['Per-endpoint metering', 'Self-serve developer portal', 'JWT/OAuth2 auth', 'Stripe/Chargebee integrations']
     }
   ];
 
-  const stats = [
-    { icon: Users, value: "500+", label: "Happy Clients" },
-    { icon: TrendingUp, value: "95%", label: "Success Rate" },
-    { icon: Award, value: "10+", label: "Years Experience" },
-    { icon: Globe, value: "25+", label: "Countries Served" }
+  const itServices = [
+    {
+      title: 'Cloud Migration Factory',
+      desc: 'Blueprint, migrate, and optimize workloads to AWS/Azure/GCP with cost governance.',
+      price: 'Projects from $15,000',
+      cta: 'https://ziontechgroup.com',
+      features['Landing zone setup', 'App discovery and TCO', 'Infra-as-Code (Terraform)', 'FinOps and tagging policies']
+    },
+    {
+      title: 'Managed Kubernetes (EKS/AKS/GKE)',
+      desc: 'Secure, observable clusters with GitOps, autoscaling, and SLO dashboards.',
+      price: '$3,500–$12,000/mo',
+      cta: 'https://ziontechgroup.com',
+      features['GitOps with ArgoCD', 'Service mesh (Istio/Linkerd)', 'Zero-trust policies', 'Golden paths for services']
+    },
+    {
+      title: 'Zero Trust & IAM Hardening',
+      desc: 'Design and implement zero trust network access and identity least-privilege.',
+      price: 'Engagements from $12,000',
+      cta: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
+      features['Okta/Azure AD architecture', 'Device posture and SSO', 'Policy-as-Code (OPA)', 'Continuous verification']
+    },
+    {
+      title: 'Observability & Resilience',
+      desc: 'Unified logs, metrics, traces with SLOs and chaos engineering runs.',
+      price: 'Projects from $9,000',
+      cta: 'https://ziontechgroup.com',
+      features['OpenTelemetry pipelines', 'SLO error budgets', 'Synthetic tests', 'Chaos experiments']
+    },
+    {
+      title: 'Microsoft 365 Security Hardening',
+      desc: 'Secure Microsoft 365 with baseline policies, Conditional Access, DLP, and identity governance.',
+      price: 'Packages from $7,500',
+      cta: 'https://ziontechgroup.com/contact',
+      features['Defender baseline policies', 'Conditional Access hardening', 'DLP and sensitivity labels', 'Admin RBAC and audit']
+    },
+    {
+      title: 'Modern Data Platform (Lakehouse)',
+      desc: 'Design and implement a scalable lakehouse on Databricks or Snowflake with medallion architecture.',
+      price: 'Projects from $25,000',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features['Ingestion with CDC', 'Bronze/Silver/Gold layers', 'Quality tests and lineage', 'Cost governance and caching']
+    },
+    {
+      title: 'SRE as a Service',
+      desc: 'Reliability engineering, SLOs, error budgets, incident response, and chaos drills for critical systems.',
+      price: '$6,000–$20,000/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features['SLO design and dashboards', 'On-call runbooks', 'Game days and chaos testing', 'Postmortem program']
+    },
+    {
+      title: 'Network Observability & Zero Trust',
+      desc: 'eBPF-powered observability, microsegmentation, and ZTNA rollout across hybrid networks.',
+      price: 'Engagements from $18,000',
+      cta: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
+      features['eBPF flow visibility', 'Microsegmentation policy design', 'ZTNA rollout', 'Continuous verification']
+    }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Comprehensive Services - Zion Tech Group"
-        description="Explore our complete portfolio of innovative technology solutions including AI, Quantum Computing, Cloud DevOps, IoT, and Micro SaaS services."
-        keywords="technology services, AI solutions, quantum computing, cloud services, IoT solutions, Zion Tech Group"
-      />
+  const aiSolutions = [
+    {
+      title: 'Private RAG Platform',
+      desc: 'Deploy secure Retrieval Augmented Generation with vector DBs and governance.',
+      price: '$1,999–$7,999/mo',
+      cta: 'https://ziontechgroup.com',
+      features['Multi-tenant isolation', 'PII redaction and masking', 'Eval harness and guardrails', 'Vendor-agnostic LLMs']
+    },
+    {
+      title: 'Vision AI Defect Detection',
+      desc: 'Edge and cloud pipelines to detect manufacturing defects and reduce scrap.',
+      price: 'POC from $8,000',
+      cta: 'https://ziontechgroup.com',
+      features['Edge inferencing', 'Active learning loops', 'MLOps with CI/CD', 'Audit trails and labeling']
+    },
+    {
+      title: 'AI Sales Copilot',
+      desc: 'Automate research, first-touch emails, call notes, and CRM hygiene with approvals.',
+      price: '$149–$699/user/mo',
+      cta: 'https://ziontechgroup.com',
+      features['Account research digests', 'Sequencing with human-in-the-loop', 'Meeting summaries to CRM', 'Compliance logging']
+    },
+    {
+      title: 'GenAI App Accelerator',
+      desc: 'From ideation to production with secure foundations, evals, and cost controls.',
+      price: 'Engagements from $20,000',
+      cta: 'https://ziontechgroup.com',
+      features['Prompt and function design', 'Eval suites and canaries', 'Safety filters and monitoring', 'Cost + latency SLO design']
+    },
+    {
+      title: 'Contact Center QA & Insights',
+      desc: 'Multilingual LLM scoring of calls/chats with auto-coaching, compliance checks, and CSAT prediction.',
+      price: '$1,499–$4,999/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features['Auto QA rubrics', 'Redaction and PII controls', 'Supervisor dashboards', 'CRM sync (Salesforce/HubSpot)']
+    },
+    {
+      title: 'Intelligent Document Processing',
+      desc: 'High-accuracy extraction and validation for invoices, claims, KYC, and logistics documents.',
+      price: '$0.02–$0.08/page + platform fee',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features['Few-shot templates', 'Human-in-the-loop validation', 'Field-level confidence', 'Export to ERP/DB']
+    },
+    {
+      title: 'AI Code & Security Reviewer',
+      desc: 'Static + LLM hybrid reviews for security, performance, and style with auto-fix suggestions.',
+      price: '$299–$999/repo/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features['OWASP/CWE checks', 'Performance anti-patterns', 'Org-wide policy gates', 'PR comments and autofix']
+    },
+    {
+      title: 'Managed MLOps Platform',
+      desc: 'End-to-end ML lifecycle with experiment tracking, model registry, deployment, and evaluations.',
+      price: '$2,499–$9,999/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features['Feature store and lineage', 'Canary and shadow deploys', 'Live evals and guardrails', 'Cost and latency SLOs']
+    }
+  ];
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -153,24 +228,29 @@ const ComprehensiveServices: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-cyan-400 font-semibold">{stat.label}</div>
-              </motion.div>
+  const Section: React.FC<{ icon: React.ReactNode; title: string; description: string; items: { title: string; desc: string; price: string; cta: string; features: string[]}[]; gradient: string}>
+    = ({ icon, title, description, items, gradient }) => (
+    <section className="py-14">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className={`rounded-2xl p-8 border border-white/10 bg-gradient-to-br ${gradient} text-white`}> 
+          <div className="flex items-center mb-6">
+            <div className="mr-3">{icon}</div>
+            <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
+          </div>
+          <p className="text-white/80 mb-6">{description}</p>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {items.map((svc)  => (
+              <div key={svc.title} className="bg-black/30 rounded-xl p-6 border border-white/10">
+                <h3 className="text-xl font-semibold mb-2">{svc.title}</h3>
+                <p className="text-white/80 mb-4">{svc.desc}</p>
+                <div className="text-zion-cyan font-semibold mb-4 flex items-center"><DollarSign className="h-4 w-4 mr-1" />{svc.price}</div>
+                <ul className="space-y-2 mb-4">
+                  {svc.features.map((f) => (
+                    <li key={f} className="flex items-start"><CheckCircle2 className="h-4 w-4 text-emerald-400 mr-2 mt-1" /><span className="text-white/90">{f}</span></li>
+                  ))}
+                </ul>
+                {linkItem(svc.cta)}
+              </div>
             ))}
           </div>
         </div>
@@ -243,45 +323,9 @@ const ComprehensiveServices: React.FC = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our comprehensive technology services can revolutionize 
-              your operations and drive innovation.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
-                Start Your Journey
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
-                Get Custom Quote
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-};
+        </section>
+      </div>
+    </>
+  )};
 
 export default ComprehensiveServices;

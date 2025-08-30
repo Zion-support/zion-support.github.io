@@ -1,8 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Brain, 
   BarChart3, 
   AlertTriangle, 
@@ -17,9 +16,9 @@ import {
   TrendingUp,
   Eye,
   Cpu
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AIFinancialFraudDetection: React.FC = () => {
+const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -73,21 +72,21 @@ const AIFinancialFraudDetection: React.FC = () => {
       plan: "Starter",
       price: "$799",
       period: "/month",
-      features: ["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],
+      features["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],
       popular: false
     },
     {
       plan: "Professional",
       price: "$1,999",
       period: "/month",
-      features: ["Up to 100K transactions/month", "Advanced AI models", "Real-time blocking", "Priority support", "API access"],
+      features["Up to 100K transactions/month", "Advanced AI models", "Real-time blocking", "Priority support", "API access"],
       popular: true
     },
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
-      features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
+      features["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
     }
   ];
@@ -157,8 +156,8 @@ const AIFinancialFraudDetection: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -196,8 +195,8 @@ const AIFinancialFraudDetection: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
@@ -234,8 +233,8 @@ const AIFinancialFraudDetection: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -272,8 +271,8 @@ const AIFinancialFraudDetection: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={integration}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -307,8 +306,8 @@ const AIFinancialFraudDetection: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={plan.plan}
                 initial={{ opacity: 0, y: 30 }}
@@ -402,7 +401,7 @@ const AIFinancialFraudDetection: React.FC = () => {
               <div>
                 <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                 <p className="font-semibold">Starting at $799/month</p>
-                <p className="text-sm">No setup fees, cancel anytime</p>
+                <p className="text-sm">No setup fees, cancel time</p>
               </div>
               <div>
                 <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />
@@ -427,7 +426,6 @@ const AIFinancialFraudDetection: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIFinancialFraudDetection;

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  PenTool, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { PenTool, 
   FileText, 
   Brain, 
   Zap, 
@@ -22,45 +21,45 @@ import {
   DollarSign,
   Target,
   Award
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIContentGenerationPlatform() {
+export default function AIContentGenerationPlatform(...args[]):  {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Writing',
       description: 'Advanced language models that generate high-quality, engaging content across multiple formats and industries.',
-      benefits: ['SEO-optimized content', 'Brand voice consistency', 'Multi-language support', 'Context-aware generation']
+      benefits['SEO-optimized content', 'Brand voice consistency', 'Multi-language support', 'Context-aware generation']
     },
     {
       icon: Palette,
       title: 'Visual Content Creation',
       description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.',
-      benefits: ['Custom brand styling', 'High-resolution output', 'Style transfer', 'Batch generation']
+      benefits['Custom brand styling', 'High-resolution output', 'Style transfer', 'Batch generation']
     },
     {
       icon: Video,
       title: 'Video Content Generation',
       description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.',
-      benefits: ['Auto-script generation', 'Voice synthesis', 'Background music', 'Template library']
+      benefits['Auto-script generation', 'Voice synthesis', 'Background music', 'Template library']
     },
     {
       icon: Code,
       title: 'Technical Content',
       description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.',
-      benefits: ['Code documentation', 'API guides', 'Tutorial generation', 'Technical writing']
+      benefits['Code documentation', 'API guides', 'Tutorial generation', 'Technical writing']
     },
     {
       icon: Shield,
       title: 'Content Moderation',
       description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.',
-      benefits: ['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking']
+      benefits['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking']
     },
     {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',
-      benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
+      benefits['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
     }
   ];
 
@@ -69,25 +68,25 @@ export default function AIContentGenerationPlatform() {
       industry: 'Marketing & Advertising',
       title: 'Campaign Content Creation',
       description: 'Generate complete marketing campaigns including copy, visuals, and video content for multiple channels.',
-      metrics: ['50% faster campaign creation', '40% increase in engagement', '30% reduction in content costs']
+      metrics['50% faster campaign creation', '40% increase in engagement', '30% reduction in content costs']
     },
     {
       industry: 'E-commerce',
       title: 'Product Descriptions & Marketing',
       description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.',
-      metrics: ['60% faster product onboarding', '35% improvement in conversion rates', '25% increase in SEO traffic']
+      metrics['60% faster product onboarding', '35% improvement in conversion rates', '25% increase in SEO traffic']
     },
     {
       industry: 'Publishing & Media',
       title: 'Content Production',
       description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.',
-      metrics: ['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement']
+      metrics['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement']
     },
     {
       industry: 'Corporate Communications',
       title: 'Business Content',
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',
-      metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
+      metrics['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
     }
   ];
 
@@ -139,7 +138,7 @@ export default function AIContentGenerationPlatform() {
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and individual creators',
-      features: [
+      features[
         '10,000 words per month',
         '100 AI-generated images',
         '5 video generations',
@@ -155,7 +154,7 @@ export default function AIContentGenerationPlatform() {
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
-      features: [
+      features[
         '100,000 words per month',
         '1,000 AI-generated images',
         '50 video generations',
@@ -173,7 +172,7 @@ export default function AIContentGenerationPlatform() {
       price: '$999',
       period: '/month',
       description: 'For large organizations with high-volume content needs',
-      features: [
+      features[
         'Unlimited words',
         'Unlimited images',
         'Unlimited videos',
@@ -285,8 +284,8 @@ export default function AIContentGenerationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -333,8 +332,8 @@ export default function AIContentGenerationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -350,8 +349,8 @@ export default function AIContentGenerationPlatform() {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-3">
-                  <h4 className="text-white font-semibold">Key Results:</h4>
-                  {useCase.metrics.map((metric, idx) => (
+                  <h4 className="text-white font-semibold">Key Results: any</h4>
+                  {useCase.metrics.map((metric, idx)  => (
                     <div key={idx} className="flex items-center space-x-2 text-sm">
                       <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                       <span className="text-slate-300">{metric}</span>
@@ -384,8 +383,8 @@ export default function AIContentGenerationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -425,8 +424,8 @@ export default function AIContentGenerationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -461,8 +460,8 @@ export default function AIContentGenerationPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -558,5 +557,4 @@ export default function AIContentGenerationPlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

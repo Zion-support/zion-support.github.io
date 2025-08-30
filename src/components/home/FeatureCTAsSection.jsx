@@ -90,5 +90,4 @@ export const FeatureCTAsSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

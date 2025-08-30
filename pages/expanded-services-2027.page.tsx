@@ -1,28 +1,25 @@
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState, useMemo } from 'react';
-import { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2027';
+import type { NextPage } from 'next.ts';
+import Head from 'next/head.ts';
+import { useState, useMemo  } from 'react.ts';
+import { ALL_EXPANDED_SERVICES_2027  } from '../data/expandedInnovativeServices2027';
 
 const ExpandedServicesShowcase2027: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
 
   // Get unique categories and subcategories
   const categories = useMemo(() => {
     const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
-    return cats;
-  }, []);
+    return cats}, []);
 
   const subcategories = useMemo(() => {
     if (selectedCategory === 'all') {
       const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
-      return subcats;
-    }
+      return subcats}
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
-    return subcats;
-  }, [selectedCategory]);
+    return subcats}, [selectedCategory]);
 
   // Filter services based on search and filters
   const filteredServices = useMemo(() => {
@@ -35,15 +32,12 @@ const ExpandedServicesShowcase2027: NextPage = () => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
       
-      return matchesSearch && matchesCategory && matchesSubcategory;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory]);
+      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
 
   const resetFilters = () => {
     setSearchTerm('');
     setSelectedCategory('all');
-    setSelectedSubcategory('all');
-  };
+    setSelectedSubcategory('all')};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -104,11 +98,10 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               value={selectedCategory}
               onChange={(e) => {
                 setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
-              }}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                setSelectedSubcategory('all')}}
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
-              {categories.map(cat => (
+              {categories.map(cat  => (
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
                   {cat === 'all' ? 'All Categories' : cat}
                 </option>
@@ -118,9 +111,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {
             <select
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
-              {subcategories.map(subcat => (
+              {subcategories.map(subcat  => (
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
                   {subcat === 'all' ? 'All Subcategories' : subcat}
                 </option>
@@ -159,8 +152,8 @@ const ExpandedServicesShowcase2027: NextPage = () => {
         </div>
 
         {/* Services Grid/List */}
-        <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
-          {filteredServices.map((service) => (
+        <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
+          {filteredServices.map((service)  => (
             <div
               key={service.id}
               className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 ${
@@ -266,7 +259,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )};
 
 export default ExpandedServicesShowcase2027;

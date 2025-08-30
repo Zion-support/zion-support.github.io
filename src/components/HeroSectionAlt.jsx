@@ -30,8 +30,8 @@ export const HeroSectionAlt = () => {
 
   const floatingVariants = {
     animate: {
-      y: [-15, 15, -15],
-      rotate: [0, 5, -5, 0],
+      y[-15, 15, -15],
+      rotate[0, 5, -5, 0],
       transition: {
         duration: 8,
         repeat: Infinity,
@@ -143,5 +143,4 @@ export const HeroSectionAlt = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};

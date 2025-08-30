@@ -7,7 +7,7 @@ const News = () => {
   
   const categories = [
     'All',
-    'Company News',
+    'Comp News',
     'Product Updates',
     'Industry Insights',
     'Awards & Recognition',
@@ -18,7 +18,7 @@ const News = () => {
 
   const sources = [
     'All Sources',
-    'Company Press Releases',
+    'Comp Press Releases',
     'Industry Reports',
     'Technology News',
     'Research Papers',
@@ -40,7 +40,7 @@ const News = () => {
       id: 1,
       title: "Zion Tech Group Launches Revolutionary AI-Powered Quantum Neural Network Platform",
       category: "Product Updates",
-      source: "Company Press Releases",
+      source: "Comp Press Releases",
       date: "2025-01-15",
       readTime: "5 min read",
       excerpt: "Our latest innovation combines quantum computing principles with advanced neural networks to deliver unprecedented AI capabilities for enterprise applications.",
@@ -62,7 +62,7 @@ const News = () => {
       id: 3,
       title: "Strategic Partnership Announced with Leading Cloud Infrastructure Provider",
       category: "Partnerships",
-      source: "Company Press Releases",
+      source: "Comp Press Releases",
       date: "2024-12-10",
       readTime: "4 min read",
       excerpt: "New partnership expands our cloud capabilities and enables seamless integration for enterprise clients.",
@@ -97,8 +97,7 @@ const News = () => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -241,7 +240,6 @@ const News = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default News;

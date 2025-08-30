@@ -29,7 +29,7 @@ const healthcareSolutions = [
     title: "HIPAA-Compliant Mobile Apps",
     description: "Secure mobile applications that meet healthcare privacy standards and regulations.",
     icon: Smartphone,
-    features: [
+    features[
       "HIPAA compliance built-in",
       "End-to-end encryption",
       "Secure user authentication",
@@ -38,14 +38,14 @@ const healthcareSolutions = [
     price: "From $25,000",
     timeline: "8-16 weeks",
     category: "Mobile Development",
-    compliance: ["HIPAA", "HITECH", "SOC 2"]
+    compliance["HIPAA", "HITECH", "SOC 2"]
   },
   {
     id: 2,
     title: "AI-Powered Diagnostics",
     description: "Machine learning algorithms that assist healthcare professionals in diagnosis and treatment planning.",
     icon: Brain,
-    features: [
+    features[
       "Medical image analysis",
       "Symptom assessment",
       "Treatment recommendations",
@@ -54,14 +54,14 @@ const healthcareSolutions = [
     price: "From $40,000",
     timeline: "12-20 weeks",
     category: "AI & Analytics",
-    compliance: ["FDA", "CE Mark", "ISO 13485"]
+    compliance["FDA", "CE Mark", "ISO 13485"]
   },
   {
     id: 3,
     title: "Electronic Health Records (EHR)",
     description: "Comprehensive digital health record systems that streamline patient care and data management.",
     icon: FileText,
-    features: [
+    features[
       "Patient data management",
       "Clinical workflow automation",
       "Interoperability standards",
@@ -70,14 +70,14 @@ const healthcareSolutions = [
     price: "From $60,000",
     timeline: "16-24 weeks",
     category: "Software Systems",
-    compliance: ["HL7 FHIR", "ONC", "Meaningful Use"]
+    compliance["HL7 FHIR", "ONC", "Meaningful Use"]
   },
   {
     id: 4,
     title: "Telemedicine Platform",
     description: "Secure video conferencing and remote consultation tools for healthcare providers.",
     icon: Users,
-    features: [
+    features[
       "HD video conferencing",
       "Secure messaging",
       "Appointment scheduling",
@@ -86,14 +86,14 @@ const healthcareSolutions = [
     price: "From $35,000",
     timeline: "10-18 weeks",
     category: "Platform Solutions",
-    compliance: ["HIPAA", "HITECH", "SOC 2"]
+    compliance["HIPAA", "HITECH", "SOC 2"]
   },
   {
     id: 5,
     title: "IoT Health Monitoring",
     description: "Connected devices and sensors for continuous patient monitoring and data collection.",
     icon: Activity,
-    features: [
+    features[
       "Real-time monitoring",
       "Data analytics",
       "Alert systems",
@@ -102,14 +102,14 @@ const healthcareSolutions = [
     price: "From $30,000",
     timeline: "12-20 weeks",
     category: "IoT & Hardware",
-    compliance: ["FDA", "ISO 13485", "IEC 62304"]
+    compliance["FDA", "ISO 13485", "IEC 62304"]
   },
   {
     id: 6,
     title: "Cybersecurity Framework",
     description: "Comprehensive security solutions to protect patient data and healthcare systems.",
     icon: Shield,
-    features: [
+    features[
       "Threat detection",
       "Data encryption",
       "Access controls",
@@ -118,7 +118,7 @@ const healthcareSolutions = [
     price: "From $45,000",
     timeline: "8-16 weeks",
     category: "Security",
-    compliance: ["NIST", "ISO 27001", "HITRUST"]
+    compliance["NIST", "ISO 27001", "HITRUST"]
   }
 ];
 
@@ -127,32 +127,32 @@ const complianceStandards = [
     name: "HIPAA",
     description: "Health Insurance Portability and Accountability Act",
     icon: Lock,
-    requirements: ["Privacy Rule", "Security Rule", "Breach Notification"]
+    requirements["Privacy Rule", "Security Rule", "Breach Notification"]
   },
   {
     name: "HITECH",
     description: "Health Information Technology for Economic and Clinical Health",
     icon: Zap,
-    requirements: ["Meaningful Use", "EHR Incentives", "Privacy Protections"]
+    requirements["Meaningful Use", "EHR Incentives", "Privacy Protections"]
   },
   {
     name: "FDA",
     description: "Food and Drug Administration",
     icon: Shield,
-    requirements: ["Medical Device Approval", "Software as Medical Device", "Clinical Trials"]
+    requirements["Medical Device Approval", "Software as Medical Device", "Clinical Trials"]
   },
   {
     name: "SOC 2",
     description: "System and Organization Controls",
     icon: CheckCircle,
-    requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality"]
+    requirements["Security", "Availability", "Processing Integrity", "Confidentiality"]
   }
 ];
 
 const successStories = [
   {
     id: 1,
-    company: "MedTech Solutions",
+    comp: "MedTech Solutions",
     industry: "Healthcare Technology",
     challenge: "Needed HIPAA-compliant mobile app for patient engagement",
     solution: "Built secure mobile app with end-to-end encryption",
@@ -161,7 +161,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "HealthCare Plus",
+    comp: "HealthCare Plus",
     industry: "Hospital Network",
     challenge: "Required scalable telemedicine platform for 10 hospitals",
     solution: "Implemented secure video conferencing with EHR integration",
@@ -170,7 +170,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Digital Diagnostics",
+    comp: "Digital Diagnostics",
     industry: "Medical Imaging",
     challenge: "Needed AI-powered diagnostic assistance tool",
     solution: "Developed FDA-approved AI diagnostic platform",
@@ -482,7 +482,7 @@ export default function HealthcareSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -547,5 +547,4 @@ export default function HealthcareSolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

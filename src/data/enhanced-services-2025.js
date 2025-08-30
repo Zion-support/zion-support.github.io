@@ -5,7 +5,7 @@ export const enhancedServices2025 = [
     description: "Cutting-edge artificial intelligence and machine learning services to transform your business operations.",
     icon: "🤖",
     category: "AI & ML",
-    features: [
+    features[
       "Custom AI Model Development",
       "Machine Learning Pipeline Design",
       "Natural Language Processing",
@@ -18,7 +18,7 @@ export const enhancedServices2025 = [
       professional: "$15,000",
       enterprise: "Custom"
     },
-    technologies: ["TensorFlow", "PyTorch", "OpenAI", "Hugging Face", "AWS SageMaker"]
+    technologies["TensorFlow", "PyTorch", "OpenAI", "Hugging Face", "AWS SageMaker"]
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const enhancedServices2025 = [
     description: "Next-generation quantum computing solutions for complex problem-solving and optimization.",
     icon: "⚛️",
     category: "Quantum",
-    features: [
+    features[
       "Quantum Algorithm Development",
       "Quantum Machine Learning",
       "Quantum Optimization",
@@ -39,7 +39,7 @@ export const enhancedServices2025 = [
       professional: "$25,000",
       enterprise: "Custom"
     },
-    technologies: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "D-Wave", "Rigetti"]
+    technologies["IBM Qiskit", "Google Cirq", "Microsoft Q#", "D-Wave", "Rigetti"]
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ export const enhancedServices2025 = [
     description: "Decentralized solutions and blockchain infrastructure for the future of digital transactions.",
     icon: "🔗",
     category: "Blockchain",
-    features: [
+    features[
       "Smart Contract Development",
       "DeFi Platform Creation",
       "NFT Marketplace Development",
@@ -60,7 +60,7 @@ export const enhancedServices2025 = [
       professional: "$20,000",
       enterprise: "Custom"
     },
-    technologies: ["Ethereum", "Solana", "Polygon", "Solidity", "Web3.js"]
+    technologies["Ethereum", "Solana", "Polygon", "Solidity", "Web3.js"]
   },
   {
     id: 4,
@@ -68,7 +68,7 @@ export const enhancedServices2025 = [
     description: "Internet of Things solutions and edge computing infrastructure for connected devices.",
     icon: "🌐",
     category: "IoT",
-    features: [
+    features[
       "IoT Device Development",
       "Edge Computing Solutions",
       "Sensor Network Design",
@@ -81,7 +81,7 @@ export const enhancedServices2025 = [
       professional: "$18,000",
       enterprise: "Custom"
     },
-    technologies: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"]
+    technologies["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"]
   },
   {
     id: 5,
@@ -89,7 +89,7 @@ export const enhancedServices2025 = [
     description: "Advanced security solutions and threat detection systems to protect your digital assets.",
     icon: "🛡️",
     category: "Security",
-    features: [
+    features[
       "Penetration Testing",
       "Security Auditing",
       "Threat Detection",
@@ -102,7 +102,7 @@ export const enhancedServices2025 = [
       professional: "$22,000",
       enterprise: "Custom"
     },
-    technologies: ["Metasploit", "Wireshark", "Nmap", "Burp Suite", "Snort"]
+    technologies["Metasploit", "Wireshark", "Nmap", "Burp Suite", "Snort"]
   },
   {
     id: 6,
@@ -110,7 +110,7 @@ export const enhancedServices2025 = [
     description: "Scalable cloud solutions and DevOps practices for modern application development.",
     icon: "☁️",
     category: "Cloud",
-    features: [
+    features[
       "Cloud Architecture Design",
       "DevOps Implementation",
       "Container Orchestration",
@@ -123,7 +123,7 @@ export const enhancedServices2025 = [
       professional: "$12,000",
       enterprise: "Custom"
     },
-    technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"]
+    technologies["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"]
   },
   {
     id: 7,
@@ -131,7 +131,7 @@ export const enhancedServices2025 = [
     description: "Immersive experiences and metaverse solutions for the next generation of digital interaction.",
     icon: "🥽",
     category: "AR/VR",
-    features: [
+    features[
       "Virtual Reality Applications",
       "Augmented Reality Solutions",
       "Metaverse Platform Development",
@@ -144,7 +144,7 @@ export const enhancedServices2025 = [
       professional: "$28,000",
       enterprise: "Custom"
     },
-    technologies: ["Unity", "Unreal Engine", "Oculus", "HoloLens", "WebXR"]
+    technologies["Unity", "Unreal Engine", "Oculus", "HoloLens", "WebXR"]
   },
   {
     id: 8,
@@ -152,7 +152,7 @@ export const enhancedServices2025 = [
     description: "Sustainable technology solutions to reduce environmental impact and improve efficiency.",
     icon: "🌱",
     category: "Green Tech",
-    features: [
+    features[
       "Energy Management Systems",
       "Sustainable Computing",
       "Green Data Centers",
@@ -165,7 +165,7 @@ export const enhancedServices2025 = [
       professional: "$19,000",
       enterprise: "Custom"
     },
-    technologies: ["IoT Sensors", "Machine Learning", "Cloud Computing", "Data Analytics"]
+    technologies["IoT Sensors", "Machine Learning", "Cloud Computing", "Data Analytics"]
   }
 ];
 

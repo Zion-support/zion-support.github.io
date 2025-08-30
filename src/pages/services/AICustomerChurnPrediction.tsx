@@ -1,8 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  TrendingDown, 
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { TrendingDown, 
   Brain, 
   BarChart3, 
   Shield, 
@@ -14,9 +13,9 @@ import {
   Star,
   Clock,
   DollarSign
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AICustomerChurnPrediction: React.FC = () => {
+const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -61,21 +60,21 @@ const AICustomerChurnPrediction: React.FC = () => {
       plan: "Starter",
       price: "$299",
       period: "/month",
-      features: ["Up to 1,000 customers", "Basic churn predictions", "Email alerts", "Standard support"],
+      features["Up to 1,000 customers", "Basic churn predictions", "Email alerts", "Standard support"],
       popular: false
     },
     {
       plan: "Growth",
       price: "$799",
       period: "/month",
-      features: ["Up to 10,000 customers", "Advanced ML models", "Custom dashboards", "Priority support", "API access"],
+      features["Up to 10,000 customers", "Advanced ML models", "Custom dashboards", "Priority support", "API access"],
       popular: true
     },
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
-      features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],
+      features["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
     }
   ];
@@ -145,8 +144,8 @@ const AICustomerChurnPrediction: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -184,8 +183,8 @@ const AICustomerChurnPrediction: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
@@ -222,8 +221,8 @@ const AICustomerChurnPrediction: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={integration}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -257,8 +256,8 @@ const AICustomerChurnPrediction: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={plan.plan}
                 initial={{ opacity: 0, y: 30 }}
@@ -352,7 +351,7 @@ const AICustomerChurnPrediction: React.FC = () => {
               <div>
                 <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                 <p className="font-semibold">Starting at $299/month</p>
-                <p className="text-sm">No setup fees, cancel anytime</p>
+                <p className="text-sm">No setup fees, cancel time</p>
               </div>
               <div>
                 <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />
@@ -377,7 +376,6 @@ const AICustomerChurnPrediction: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICustomerChurnPrediction;

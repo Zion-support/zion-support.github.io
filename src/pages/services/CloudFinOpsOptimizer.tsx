@@ -1,87 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  DollarSign, 
-  TrendingDown, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap,
-  Gauge,
-  BarChart4,
-  TrendingUp,
-  Lightbulb,
-  Rocket
-} from 'lucide-react';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight  } from 'lucide-react.ts';
 
-const CloudFinOpsOptimizer = () => {
-  const features = [
-    {
-      icon: Cloud,
-      title: 'Multi-Cloud Optimization',
-      description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
-    },
-    {
-      icon: Zap2,
-      title: 'Automated Optimization',
-      description: 'AI-powered recommendations and automated cost reduction actions'
-    },
-    {
-      icon: Gauge,
-      title: 'Performance Monitoring',
-      description: 'Real-time performance metrics with cost correlation analysis'
-    },
-    {
-      icon: BarChart4,
-      title: 'Advanced Analytics',
-      description: 'Deep insights into spending patterns and optimization opportunities'
-    },
-    {
-      icon: TrendingUp2,
-      title: 'Predictive Modeling',
-      description: 'Forecast future costs and identify optimization trends'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Smart Recommendations',
-      description: 'Intelligent suggestions for cost savings and efficiency improvements'
-    }
+export default function CloudFinOpsOptimizer(...args[]):  {
+  const capabilities = [
+    'Multi-cloud cost visibility (AWS, Azure, GCP)',
+    'Idle/underutilized resource detection and rightsizing',
+    'Reserved Instances/Savings Plans recommendations',
+    'Anomaly detection and budget alerts',
   ];
 
   const benefits = [
@@ -372,8 +298,5 @@ const CloudFinOpsOptimizer = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CloudFinOpsOptimizer;
+  )}
 

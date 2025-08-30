@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Flask, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Flask, 
   Brain, 
   Atom, 
   Globe, 
@@ -17,9 +16,9 @@ import {
   Users,
   Award,
   ArrowRight
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const ResearchDevelopment: React.FC = () => {
+const ResearchDevelopment: React.FC = (): JSX.Element => {
   const [selectedArea, setSelectedArea] = useState('all');
 
   const researchAreas = [
@@ -41,7 +40,7 @@ const ResearchDevelopment: React.FC = () => {
       timeline: '2024-2026',
       team: '12 researchers',
       funding: '$2.5M',
-      outcomes: [
+      outcomes[
         'Quantum advantage in optimization problems',
         'Improved machine learning algorithms',
         'Novel quantum computing architectures'
@@ -56,7 +55,7 @@ const ResearchDevelopment: React.FC = () => {
       timeline: '2023-2025',
       team: '8 researchers',
       funding: '$1.8M',
-      outcomes: [
+      outcomes[
         'Faster drug candidate identification',
         'Reduced research costs',
         'Improved success rates in clinical trials'
@@ -71,7 +70,7 @@ const ResearchDevelopment: React.FC = () => {
       timeline: '2022-2024',
       team: '15 researchers',
       funding: '$3.2M',
-      outcomes: [
+      outcomes[
         'Enhanced threat detection capabilities',
         'Improved compliance frameworks',
         'Industry-standard security protocols'
@@ -86,7 +85,7 @@ const ResearchDevelopment: React.FC = () => {
       timeline: '2025-2028',
       team: '20 researchers',
       funding: '$5.0M',
-      outcomes: [
+      outcomes[
         'Global low-latency connectivity',
         'Space-based data centers',
         'Satellite computing networks'
@@ -101,7 +100,7 @@ const ResearchDevelopment: React.FC = () => {
       timeline: '2023-2026',
       team: '10 researchers',
       funding: '$2.0M',
-      outcomes: [
+      outcomes[
         'Improved language understanding',
         'Better translation accuracy',
         'Enhanced conversational AI'
@@ -116,7 +115,7 @@ const ResearchDevelopment: React.FC = () => {
       timeline: '2024-2027',
       team: '18 researchers',
       funding: '$4.1M',
-      outcomes: [
+      outcomes[
         'Reduced energy consumption',
         'Green computing standards',
         'Sustainable technology practices'
@@ -238,8 +237,8 @@ const ResearchDevelopment: React.FC = () => {
             <p className="text-lg text-zion-slate-light">Exploring the frontiers of technology and innovation</p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {filteredProjects.map((project, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {filteredProjects.map((project, index)  => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -362,8 +361,8 @@ const ResearchDevelopment: React.FC = () => {
             <p className="text-lg text-zion-slate-light">Collaborating with leading institutions worldwide</p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {partnerships.map((partner, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {partnerships.map((partner, index)  => (
               <motion.div
                 key={partner.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -405,7 +404,7 @@ const ResearchDevelopment: React.FC = () => {
             <p className="text-lg text-zion-slate-light">Where ideas become reality</p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {[
               {
                 icon: Flask,
@@ -422,7 +421,7 @@ const ResearchDevelopment: React.FC = () => {
                 title: 'Data Analytics',
                 description: 'High-performance computing for big data research'
               }
-            ].map((lab, index) => (
+            ].map((lab, index)  => (
               <motion.div
                 key={lab.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -469,7 +468,6 @@ const ResearchDevelopment: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ResearchDevelopment;

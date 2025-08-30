@@ -1,13 +1,13 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-export default function PricingPage() {
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
+export default function PricingPage(...args[]):  {
   const pricingTiers = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: '$99',
       period: '/month',
-      features: [
+      features[
         'AI-Powered Analytics Dashboard',
         'Basic Cloud Infrastructure',
         'Email Support',
@@ -24,7 +24,7 @@ export default function PricingPage() {
       description: 'Ideal for growing businesses and teams',
       price: '$299',
       period: '/month',
-      features: [
+      features[
         'Everything in Starter',
         'Advanced AI Decision Engine',
         'Priority Support',
@@ -43,7 +43,7 @@ export default function PricingPage() {
       description: 'For large organizations with complex needs',
       price: 'Custom',
       period: '',
-      features: [
+      features[
         'Everything in Professional',
         'Custom AI Solutions',
         '24/7 Dedicated Support',
@@ -65,25 +65,25 @@ export default function PricingPage() {
       name: 'AI Model Training',
       description: 'Custom AI model development and training',
       price: 'From $2,500',
-      features: ['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
+      features['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
     },
     {
       name: 'Quantum Computing Access',
       description: 'Access to quantum computing resources',
       price: 'From $5,000',
-      features: ['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
+      features['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
     },
     {
       name: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment',
       price: 'From $1,500',
-      features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
+      features['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
     },
     {
       name: 'Cloud Migration',
       description: 'Complete cloud infrastructure migration',
       price: 'From $10,000',
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
+      features['Architecture Design', 'Data Migration', 'Performance Optimization']
     }
   ];
   const faqs = [
@@ -92,8 +92,8 @@ export default function PricingPage() {
       answer: 'We accept all major credit cards, bank transfers, and can accommodate custom payment terms for enterprise clients.'
     },
     {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
+      question: 'Can I change my plan at  time?',
+      answer: 'Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.'
     },
     {
       question: 'Is there a setup fee?',
@@ -109,7 +109,7 @@ export default function PricingPage() {
     },
     {
       question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
+      answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
     }
   ];
   return (
@@ -144,8 +144,8 @@ export default function PricingPage() {
         {/* Pricing Tiers */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {pricingTiers.map((tier, index)  => (
                 <div 
                   key={index} 
                   className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
@@ -205,8 +205,8 @@ export default function PricingPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {addOnServices.map((service, index)  => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -279,5 +279,4 @@ export default function PricingPage() {
         </section>
       </main>
     </>
-  );
-}
+  )}

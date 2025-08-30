@@ -1,13 +1,12 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
 type Service = {
   name: string;
   path: string;
   summary: string;
   price: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions';
-};
+  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions'};
 
 const services: Service[] = [
   { name: 'Website AI Chatbot', path: '/services/website-ai-chatbot', summary: '24/7 on-site AI that answers, qualifies, and books meetings.', price: '$299–$899/mo', category: 'Micro SaaS' },
@@ -42,12 +41,11 @@ const services: Service[] = [
   { name: 'FinOps Advisory Sprint', path: '/services/finops-advisory-sprint', summary: '90-day cost optimization with KPIs and automation.', price: '$9k–$35k fixed', category: 'IT Services' }
 ];
 
-const groupByCategory = (items: Service[]) => items.reduce<Record<string, Service[]>>((acc, s) => {
+const groupByCategory = (items: Service[])  => items.reduce<Record<string, any>>((acc, s) => {
   (acc[s.category] = acc[s.category] || []).push(s);
-  return acc;
-}, {});
+  return acc}, {});
 
-const ServicesCatalog: React.FC = () => {
+const ServicesCatalog: React.FC = (): JSX.Element => {
   const grouped = groupByCategory(services);
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -62,8 +60,8 @@ const ServicesCatalog: React.FC = () => {
         {Object.entries(grouped).map(([category, list]) => (
           <div key={category}>
             <h2 className="text-2xl font-semibold mb-4">{category}</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {list.map(item => (
+            <div className="grid md: grid-cols-3 gap-6">
+              {list.map(item  => (
                 <a key={item.name} href={`https://ziontechgroup.com${item.path}`} className="block p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
                   <h3 className="font-semibold text-lg mb-1">{item.name}</h3>
                   <p className="text-slate-300 text-sm mb-3">{item.summary}</p>
@@ -83,8 +81,7 @@ const ServicesCatalog: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default ServicesCatalog;
 

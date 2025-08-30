@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react.ts';
 
-export default function CustomerExperience() {
+export default function CustomerExperience(...args[]):  {
   const features = [
     {
       icon: Heart,
@@ -107,8 +107,8 @@ export default function CustomerExperience() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -146,8 +146,8 @@ export default function CustomerExperience() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {capabilities.map((capability, index)  => (
               <motion.div
                 key={capability.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -202,5 +202,4 @@ export default function CustomerExperience() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp  } from 'lucide-react.ts';
 
-const AIHealthcareAnalyticsPlatform: React.FC = () => {
+const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -49,7 +49,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       price: '$1,499',
       period: '/month',
       description: 'Perfect for small to medium healthcare facilities',
-      features: [
+      features[
         'Up to 500 patient beds',
         'Basic predictive analytics',
         'Patient risk scoring',
@@ -65,7 +65,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       price: '$3,999',
       period: '/month',
       description: 'Ideal for growing healthcare networks',
-      features: [
+      features[
         'Up to 2,000 patient beds',
         'Advanced AI algorithms',
         'Population health analytics',
@@ -82,7 +82,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       price: '$8,999',
       period: '/month',
       description: 'For large healthcare systems and research institutions',
-      features: [
+      features[
         'Unlimited patient capacity',
         'Custom AI models',
         'Research analytics tools',
@@ -100,17 +100,17 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
     {
       title: 'Hospitals & Health Systems',
       description: 'Optimize patient care, reduce readmissions, and improve operational efficiency across multiple facilities',
-      metrics: ['Reduce readmissions by 25%', 'Improve patient outcomes by 30%', 'Cut operational costs by 20%']
+      metrics['Reduce readmissions by 25%', 'Improve patient outcomes by 30%', 'Cut operational costs by 20%']
     },
     {
       title: 'Primary Care Practices',
       description: 'Preventive care strategies, chronic disease management, and population health optimization',
-      metrics: ['Increase preventive care by 40%', 'Reduce ER visits by 35%', 'Improve patient satisfaction by 45%']
+      metrics['Increase preventive care by 40%', 'Reduce ER visits by 35%', 'Improve patient satisfaction by 45%']
     },
     {
       title: 'Specialty Clinics',
       description: 'Disease-specific analytics, treatment optimization, and patient outcome tracking',
-      metrics: ['Optimize treatment plans by 50%', 'Reduce complications by 30%', 'Improve recovery times by 25%']
+      metrics['Optimize treatment plans by 50%', 'Reduce complications by 30%', 'Improve recovery times by 25%']
     }
   ];
 
@@ -203,8 +203,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -235,8 +235,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -267,8 +267,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -334,8 +334,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -371,8 +371,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -486,7 +486,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-blue-500 mr-2" />
-                <span>Cancel anytime</span>
+                <span>Cancel time</span>
               </div>
             </div>
           </motion.div>
@@ -525,7 +525,6 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIHealthcareAnalyticsPlatform;

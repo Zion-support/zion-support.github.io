@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
+  Cloud, 
   Shield, 
   Cloud, 
   Zap, 
@@ -29,29 +30,28 @@ import {
   ExternalLink,
   Search,
   Clock,
-  Wifi,
-  Chip,
-  Database as DatabaseIcon,
-  ShieldCheck,
-  Bot,
-  GitFork,
-  Eye as EyeIcon,
-  Sparkles as SparklesIcon,
-  Zap as ZapIcon
-} from 'lucide-react';
-import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
-import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
-import { comprehensivePricingGuide2028 } from '../data/comprehensivePricingGuide2028';
+  BarChart3,
+  Target,
+  Users,
+  Check,
+  X
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { revolutionaryMicroSaasServices2028, 
+  revolutionaryITInfrastructureServices2028, 
+  revolutionaryAIServices2028 
+ } from '@/data/innovativeMicroSaasServices2028';
 
-const InnovativeServicesShowcase2028: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+export default function InnovativeServicesShowcase2028(...args[]):  {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState(null);
 
   const allServices = [
-    ...ADVANCED_AI_SERVICES_2028,
-    ...COMPREHENSIVE_IT_INFRASTRUCTURE_2028,
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2028
+    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
+    ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: 'IT Infrastructure' })),
+    ...revolutionaryAIServices2028.map(s  => ({ ...s, type: 'AI Services' }))
   ];
 
   const categories = [
@@ -61,39 +61,37 @@ const InnovativeServicesShowcase2028: React.FC = () => {
     { id: 'saas', name: 'Micro SAAS', icon: Cloud, count: INNOVATIVE_MICRO_SAAS_SERVICES_2028.length }
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || 
-      (activeCategory === 'ai' && ADVANCED_AI_SERVICES_2028.includes(service)) ||
-      (activeCategory === 'infrastructure' && COMPREHENSIVE_IT_INFRASTRUCTURE_2028.includes(service)) ||
-      (activeCategory === 'saas' && INNOVATIVE_MICRO_SAAS_SERVICES_2028.includes(service));
-    
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    return matchesCategory && matchesSearch;
-  });
+  const filteredServices = selectedCategory === 'all' 
+    ? allServices: allServices.filter(s  => s.type === selectedCategory);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+  const getCategoryIcon = (category: string)  => {
+    switch (category) {
+      case 'Legal Tech': return Scale;
+      case 'Supply Chain': return Truck;
+      case 'Marketing Tech': return Target;
+      case 'HR Tech': return Users;
+      case 'Sustainability': return Globe;
+      case 'Real Estate Tech': return Home;
+      case 'Cybersecurity': return Shield;
+      case 'Industrial IoT': return Wrench;
+      case 'Cloud Computing': return Cloud;
+      case 'Content Creation': return FileText;
+      case 'Healthcare AI': return Heart;
+      default: return Rocket}
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
+  const getCategoryColor = (category: string)  => {
+    const colors = [
+      'from-blue-600 to-cyan-600',
+      'from-purple-600 to-pink-600',
+      'from-green-600 to-emerald-600',
+      'from-red-600 to-orange-600',
+      'from-indigo-600 to-purple-600',
+      'from-yellow-600 to-orange-600',
+      'from-teal-600 to-blue-600',
+      'from-pink-600 to-red-600'
+    ];
+    return colors[Math.abs(category.length) % colors.length]};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -202,7 +200,16 @@ const InnovativeServicesShowcase2028: React.FC = () => {
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredServices.map((service, index) => (
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {selectedCategory === 'all' ? 'All Services' : selectedCategory}
+            </h2>
+            <p className="text-zion-slate-light max-w-3xl mx-auto">
+              Discover our revolutionary solutions designed to transform your business operations and drive growth
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -460,7 +467,4 @@ const InnovativeServicesShowcase2028: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
-};
-
-export default InnovativeServicesShowcase2028;
+  )}

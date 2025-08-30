@@ -1,9 +1,7 @@
-
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Shield, 
   TrendingUp, 
   Zap, 
@@ -81,70 +79,18 @@ import {
   Grid,
   List,
   ChevronDown,
-  ShoppingCart,
-  MessageCircle,
-  HelpCircle,
-  FileText,
-  Video,
-  Truck,
-  Briefcase
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-
-// Sample data for demonstration
-const MICRO_SAAS_SERVICES = [
-  {
-    id: 'micro-crm',
-    title: 'Micro CRM',
-    description: 'Lightweight customer relationship management for small businesses',
-    category: 'Business Tools',
-    subcategory: 'CRM',
-    pricingModel: 'monthly',
-    price: 29,
-    rating: 4.8,
-    reviewCount: 156,
-    aiScore: 95,
-    featured: true,
-    createdAt: '2024-01-15',
-    href: '/services/micro-crm',
-    tags: ['CRM', 'Business', 'Automation'],
-    images: ['/images/micro-crm.jpg']
-  },
-  {
-    id: 'helpdesk-platform',
-    title: 'Helpdesk Platform',
-    description: 'Streamlined customer support and ticket management system',
-    category: 'Customer Support',
-    subcategory: 'Helpdesk',
-    pricingModel: 'monthly',
-    price: 39,
-    rating: 4.7,
-    reviewCount: 89,
-    aiScore: 92,
-    featured: false,
-    createdAt: '2024-02-01',
-    href: '/services/helpdesk-platform',
-    tags: ['Support', 'Helpdesk', 'Customer Service'],
-    images: ['/images/helpdesk.jpg']
-  },
-  {
-    id: 'website-analytics',
-    title: 'Website Analytics',
-    description: 'Comprehensive website performance and user behavior analytics',
-    category: 'Analytics',
-    subcategory: 'Web Analytics',
-    pricingModel: 'monthly',
-    price: 19,
-    rating: 4.9,
-    reviewCount: 234,
-    aiScore: 98,
-    featured: true,
-    createdAt: '2024-01-10',
-    href: '/services/website-analytics',
-    tags: ['Analytics', 'Web', 'Performance'],
-    images: ['/images/analytics.jpg']
-  }
+  ChevronUp
+ } from 'lucide-react.ts';
+import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Badge  } from '@/components/ui/badge';
+const categories = [
+  { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
+  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },
+  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'IT Services').length },
+  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'Business Solutions').length }
 ];
 
 const categories = [
@@ -161,24 +107,20 @@ const pricingModels = [
   { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
-
-export default function ComprehensiveServicesOverview2027() {
+export default function ComprehensiveServicesOverview2027(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
-  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-
+  const [sortBy, setSortBy] = useState<any>('rating');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing);
-    }
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing)}
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(service =>
@@ -186,8 +128,7 @@ export default function ComprehensiveServicesOverview2027() {
         service.description.toLowerCase().includes(query) ||
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||
         service.subcategory?.toLowerCase().includes(query)
-      );
-    }
+      )}
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
@@ -199,13 +140,10 @@ export default function ComprehensiveServicesOverview2027() {
         case 'newest':
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
         default:
-          return 0;
-      }
+          return 0}
     });
-    setFilteredServices(filtered);
-  }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-
-  const ServiceCard = ({ service }: { service: any }) => (
+    setFilteredServices(filtered)}, [selectedCategory, selectedPricing, searchQuery, sortBy]);
+  const ServiceCard = ({ service }: { service})  => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -262,8 +200,54 @@ export default function ComprehensiveServicesOverview2027() {
             <span className="text-white font-semibold">{service.pricingModel}</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-zion-slate-light text-sm">Created:</span>
-            <span className="text-white text-sm">{new Date(service.createdAt).toLocaleDateString()}</span>
+            <span className="text-zion-slate-light text-sm">Market Price:</span>
+            <span className="text-zion-purple font-semibold">{service.marketPrice}</span>
+          </div>
+        </div>
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-zion-slate-light text-sm">Key Benefits:</span>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+              className="text-zion-cyan hover:text-zion-cyan-light"
+            >
+              {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </Button>
+          </div>
+          {expandedService === service.id && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="space-y-2"
+            >
+              {service.benefits.map((benefit: string, index: number)  => (
+                <div key={index} className="flex items-start space-x-2">
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                  <span className="text-zion-slate-light text-sm">{benefit}</span>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </div>
+        <div className="pt-4 border-t border-zion-blue-light/20">
+          <div className="flex items-center justify-between">
+            <Link
+              to={service.website}
+              className="inline-flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
+            >
+              <span className="text-sm font-medium">Learn More</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+            <Link
+              to={`mailto:${service.contactEmail}`}
+              className="inline-flex items-center space-x-2 text-zion-purple hover:text-zion-purple-light transition-colors"
+            >
+              <span className="text-sm font-medium">Contact</span>
+              <Mail className="w-4 h-4" />
+            </Link>
           </div>
         </div>
         <Button 
@@ -278,7 +262,7 @@ export default function ComprehensiveServicesOverview2027() {
       </div>
     </motion.div>
   );
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -349,29 +333,103 @@ export default function ComprehensiveServicesOverview2027() {
               </select>
             </div>
           </div>
-          <div className="flex flex-wrap gap-4">
-            {categories.map((category) => (
-              <Button
-                key={category.id}
-                variant={selectedCategory === category.id ? 'default' : 'outline'}
-                onClick={() => setSelectedCategory(category.id)}
-                className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
-              >
-                {category.icon}
-                <span className="ml-2">{category.name}</span>
-                <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
-                  {category.count}
-                </Badge>
-              </Button>
+        </div>
+      </section>
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Filters and Search */}
+          <div className="mb-8 space-y-6">
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex-1 max-w-md">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                  <Input
+                    placeholder="Search services..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/20 text-white placeholder-zion-slate-light"
+                  />
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <Button
+                    variant={viewMode === 'grid' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setViewMode('grid')}
+                    className="bg-zion-cyan hover:bg-zion-cyan-light"
+                  >
+                    <Grid className="w-4 h-4" />
+                  </Button>
+                  <Button
+                    variant={viewMode === 'list' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setViewMode('list')}
+                    className="bg-zion-cyan hover:bg-zion-cyan-light"
+                  >
+                    <List className="w-4 h-4" />
+                  </Button>
+                </div>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as )}
+                  className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
+                >
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="aiScore">Sort by AI Score</option>
+                  <option value="newest">Sort by Newest</option>
+                </select>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  variant={selectedCategory === category.id ? 'default' : 'outline'}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
+                >
+                  {category.icon}
+                  <span className="ml-2">{category.name}</span>
+                  <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
+                    {category.count}
+                  </Badge>
+                </Button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {pricingModels.map((pricing) => (
+                <Button
+                  key={pricing.id}
+                  variant={selectedPricing === pricing.id ? 'default' : 'outline'}
+                  onClick={() => setSelectedPricing(pricing.id)}
+                  className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
+                >
+                  {pricing.name}
+                </Button>
+              ))}
+            </div>
+          </div>
+          {/* Services Grid */}
+          <div className={`grid gap-8 ${
+            viewMode === 'grid' 
+              ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' 
+              : 'grid-cols-1'
+          }`}>
+            {filteredServices.map((service)  => (
+              <ServiceCard key={service.id} service={service} />
             ))}
           </div>
           <div className="flex flex-wrap gap-4">
             {pricingModels.map((pricing) => (
               <Button
-                key={pricing.id}
-                variant={selectedPricing === pricing.id ? 'default' : 'outline'}
-                onClick={() => setSelectedPricing(pricing.id)}
-                className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
+                onClick={() => {
+                  setSelectedCategory('all');
+                  setSelectedPricing('all');
+                  setSearchQuery('')}}
+                className="bg-zion-cyan hover:bg-zion-cyan-light"
               >
                 {pricing.name}
               </Button>
@@ -430,5 +488,4 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

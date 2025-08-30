@@ -11,9 +11,7 @@ export interface Revolutionary2027ItService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
     id: "2027-revolutionary-it",
@@ -21,7 +19,7 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
     tagline: "Revolutionary IT for 2027",
     price: "$349/month",
     description: "Revolutionary IT platform that transforms how businesses manage technology in 2027.",
-    features: [
+    features[
       "Revolutionary IT",
       "Transformative technology",
       "Advanced capabilities",

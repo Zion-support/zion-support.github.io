@@ -50,8 +50,7 @@ const specialServices = [
   }
 ];
 interface CategoriesSectionProps {
-  showTitle?: boolean;
-}
+  showTitle?: boolean}
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -162,5 +161,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

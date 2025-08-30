@@ -1,28 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Users, 
-  Target, 
-  Award, 
-  Globe, 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Lock,
-  CheckCircle,
-  TrendingUp,
-  Star,
-  Clock,
-  BarChart3,
-  Lightbulb
-} from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock  } from 'lucide-react.ts'
 
-export default function Index() {
+
+export default function Index(...args[]):  {
 	const features = [
 		{
 			icon: Brain,
@@ -146,55 +127,11 @@ export default function Index() {
 							We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
 						</p>
 					</div>
-					
-					<div className="grid gap-8 lg:grid-cols-3">
-						{features.map((feature, index) => (
-							<div key={feature.title} className="group relative">
-								<div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-									<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-										<feature.icon className="h-8 w-8 text-white" />
-									</div>
-									<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-									<p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
-									<Link
-										to={feature.href}
-										className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform duration-300"
-									>
-										Learn More <ArrowRight className="ml-2 h-4 w-4" />
-									</Link>
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
-			</section>
-
-			{/* Testimonials Section */}
-			<section className="py-24 bg-white">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center mb-16">
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							What Our Clients Say
-						</h2>
-						<p className="mt-6 text-lg text-gray-600">
-							Don't just take our word for it. Here's what industry leaders have to say about working with us.
-						</p>
-					</div>
-					
-					<div className="grid gap-8 lg:grid-cols-2">
-						{testimonials.map((testimonial, index) => (
-							<div key={index} className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-								<div className="flex items-center mb-4">
-									{[...Array(testimonial.rating)].map((_, i) => (
-										<Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-									))}
-								</div>
-								<blockquote className="text-lg text-gray-700 mb-6 italic">
-									"{testimonial.quote}"
-								</blockquote>
-								<div>
-									<div className="font-semibold text-gray-900">{testimonial.author}</div>
-									<div className="text-gray-600">{testimonial.position}</div>
+					<div className="grid gap-8 lg: grid-cols-3">
+						{features.map((feature)  => (
+							<div key={feature.title} className="text-center">
+								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6">
+									<feature.icon className="h-8 w-8 text-blue-600" />
 								</div>
 							</div>
 						))}

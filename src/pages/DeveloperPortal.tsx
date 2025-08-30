@@ -1,10 +1,41 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Code, 
+  BookOpen, 
+  Zap, 
+  Shield, 
+  Users, 
+  MessageSquare, 
+  Github, 
+  ExternalLink, 
+  Terminal, 
+  Webhook, 
+  Key, 
+  Mail,
+  ArrowRight,
+  Check,
+  Star,
+  Download,
+  Play,
+  Settings,
+  Database,
+  Globe,
+  Lock,
+  Rocket,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Clock,
+  BarChart3,
+  Target,
+  Award,
+  Lightbulb
+ } from 'lucide-react.ts';
 
-const DeveloperPortal: React.FC = () => {
-  const tools = [
+const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const apiFeatures = [
     {
       icon: Code,
       title: 'Code Examples',
@@ -60,10 +91,17 @@ const DeveloperPortal: React.FC = () => {
 
   const community = [
     {
-      name: 'Developer Forum',
-      description: 'Get help from our community',
-      members: '2.5K+',
-      icon: '💬'
+      language: 'JavaScript',
+      code: `const response = await fetch('https://api.ziontechgroup.com/v1/data', {
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+
+const data = await response.json();
+// // // // console.log(data);`,
+      icon: Code
     },
     {
       name: 'GitHub Discussions',
@@ -147,8 +185,8 @@ const DeveloperPortal: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {quickStartSteps.map((step, index)  => (
               <motion.div
                 key={tool.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -187,8 +225,96 @@ const DeveloperPortal: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {resources.map((resource, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {apiFeatures.map((feature, index)  => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-lg font-bold text-white mb-3 text-center">{feature.title}</h3>
+                <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{feature.description}</p>
+                
+                <div className="flex items-center justify-between">
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                    feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
+                  }`}>
+                    {feature.status}
+                  </span>
+                  
+                  <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm">
+                    View Docs
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Code Examples */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Code Examples
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Get started quickly with these ready-to-use code examples in your preferred language.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {codeExamples.map((example, index)  => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <example.icon className="w-6 h-6 text-zion-cyan" />
+                    <h3 className="text-lg font-bold text-white">{example.language}</h3>
+                  </div>
+                  
+                  <div className="bg-zion-slate-dark/80 rounded-lg p-4 mb-4">
+                    <pre className="text-zion-slate-light text-sm overflow-x-auto">
+                      <code>{example.code}</code>
+                    </pre>
+                  </div>
+                  
+                  <button className="w-full bg-zion-cyan/20 text-zion-cyan border border-zion-cyan py-2 px-4 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
+                    Copy Code
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resources */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Developer Resources
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Comprehensive documentation, tools, and community resources to help you succeed.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {resources.map((resource, index)  => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -341,7 +467,6 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default DeveloperPortal;

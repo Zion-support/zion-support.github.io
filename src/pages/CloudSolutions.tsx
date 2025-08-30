@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Cloud, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Cloud, 
   Server, 
   Database, 
   Shield, 
@@ -15,33 +14,33 @@ import {
   Code,
   Settings,
   Users
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function CloudSolutions() {
+export default function CloudSolutions(...args[]):  {
   const cloudServices = [
     {
       icon: Server,
       title: "Cloud Migration",
       description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+      features["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
     },
     {
       icon: Database,
       title: "Database Management",
       description: "Optimize and manage your databases in the cloud for maximum performance",
-      features: ["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
+      features["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
     },
     {
       icon: Shield,
       title: "Cloud Security",
       description: "Comprehensive security solutions to protect your cloud infrastructure",
-      features: ["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
+      features["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
     },
     {
       icon: Zap,
       title: "DevOps Automation",
       description: "Streamline your development and deployment processes with automation",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
+      features["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
     }
   ];
 
@@ -175,7 +174,7 @@ export default function CloudSolutions() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {cloudServices.map((service, index) => (
+            {cloudServices.map((service, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -229,7 +228,7 @@ export default function CloudSolutions() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index)  => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -272,7 +271,7 @@ export default function CloudSolutions() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {technologies.map((tech, index) => (
+            {technologies.map((tech, index)  => (
               <motion.div 
                 key={index}
                 className="text-center group"
@@ -317,5 +316,4 @@ export default function CloudSolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

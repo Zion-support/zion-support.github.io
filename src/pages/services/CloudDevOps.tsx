@@ -1,47 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Code, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone,
-  GitBranch,
-  Docker,
-  Kubernetes,
-  Terminal,
-  Workflow,
-  Rocket,
-  RefreshCw,
-  Shield,
-  Lock
-} from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Cloud, Zap, Shield, Cpu, Database, Server, GitBranch, Docker, Kubernetes, Aws, Azure, Gcp, Monitor, BarChart3, Settings, Users, Globe, Lock, RefreshCw, TrendingUp  } from 'lucide-react.ts';
 
-const CloudDevOps = () => {
+export default function CloudDevOps(...args[]):  {
   const features = [
     {
       icon: Cloud,
@@ -49,14 +11,10 @@ const CloudDevOps = () => {
       description: 'Design and implement scalable cloud architectures on AWS, Azure, and GCP'
     },
     {
-      icon: Code,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment pipelines for rapid delivery'
-    },
-    {
       icon: Docker,
-      title: 'Containerization',
-      description: 'Docker and Kubernetes implementation for scalable application deployment'
+      title: 'Container Orchestration',
+      description: 'Kubernetes and Docker expertise for scalable microservices architecture',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: GitBranch,
@@ -86,44 +44,38 @@ const CloudDevOps = () => {
 
   const services = [
     {
-      icon: Server,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and ARM templates for automated infrastructure'
+      title: 'Cloud Migration',
+      description: 'Seamless migration from on-premises to cloud infrastructure',
+      price: 'From $5,000',
+      features['Infrastructure assessment', 'Migration planning', 'Data migration', 'Testing & validation']
     },
     {
-      icon: Workflow,
-      title: 'CI/CD Automation',
-      description: 'Jenkins, GitHub Actions, and GitLab CI for seamless deployments'
+      title: 'DevOps Implementation',
+      description: 'Complete DevOps transformation with modern tools and practices',
+      price: 'From $8,000',
+      features['CI/CD setup', 'Infrastructure as Code', 'Monitoring & logging', 'Team training']
     },
     {
-      icon: Kubernetes,
-      title: 'Container Orchestration',
-      description: 'Kubernetes clusters with Helm charts and automated scaling'
+      title: 'Cloud Optimization',
+      description: 'Cost optimization and performance tuning for existing cloud infrastructure',
+      price: 'From $3,000',
+      features['Cost analysis', 'Performance optimization', 'Resource scaling', 'Best practices']
     },
     {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Automated database provisioning, backups, and scaling'
+      title: '24/7 Managed Services',
+      description: 'Round-the-clock monitoring, maintenance, and support',
+      price: 'From $2,500/month',
+      features['Proactive monitoring', 'Incident response', 'Regular maintenance', 'Performance reports']
     }
   ];
 
-  const useCases = [
-    {
-      industry: 'E-commerce',
-      description: 'Scalable infrastructure for high-traffic online stores'
-    },
-    {
-      industry: 'SaaS Platforms',
-      description: 'Multi-tenant applications with automated scaling'
-    },
-    {
-      industry: 'Financial Services',
-      description: 'Secure, compliant cloud infrastructure for banking applications'
-    },
-    {
-      industry: 'Healthcare',
-      description: 'HIPAA-compliant cloud solutions for medical applications'
-    }
+  const technologies = [
+    { name: 'AWS', icon: Aws, description: 'Amazon Web Services' },
+    { name: 'Azure', icon: Azure, description: 'Microsoft Azure' },
+    { name: 'GCP', icon: Gcp, description: 'Google Cloud Platform' },
+    { name: 'Kubernetes', icon: Kubernetes, description: 'Container orchestration' },
+    { name: 'Docker', icon: Docker, description: 'Containerization' },
+    { name: 'Terraform', icon: Settings, description: 'Infrastructure as Code' }
   ];
 
   return (
@@ -185,8 +137,8 @@ const CloudDevOps = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -315,8 +267,8 @@ const CloudDevOps = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -324,8 +276,58 @@ const CloudDevOps = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-slate-300 mb-4">{service.description}</p>
+                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-slate-300">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
+                >
+                  Get Quote
+                </motion.button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Technologies We Master
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              We work with the latest and most reliable cloud and DevOps technologies
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+            {technologies.map((tech, index)  => (
+              <motion.div
+                key={tech.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
+                  <tech.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -363,8 +365,4 @@ const CloudDevOps = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CloudDevOps;
-
+  )}

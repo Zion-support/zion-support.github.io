@@ -1,31 +1,58 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  PenTool, 
-  FileText, 
-  Image, 
-  Video, 
-  Globe, 
-  Zap, 
-  Brain, 
-  Shield,
-  CheckCircle,
-  TrendingUp,
-  MessageSquare,
-  Search,
-  Target,
-  BarChart3,
-  Users,
-  Sparkles
-} from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Edit3, Type, Image, Video, Music  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function AIContentGenerator() {
+export default function AIContentGenerator(...args[]):  {
   const features = [
     {
       icon: PenTool,
-      title: 'Multi-Format Content Creation',
-      description: 'Generate blog posts, social media content, emails, ads, and more with AI-powered writing assistance'
+      title: "Multi-format Content",
+      description: "Create blog posts, articles, social media content, emails, and marketing copy with AI assistance."
+    },
+    {
+      icon: Zap,
+      title: "Instant Generation",
+      description: "Generate content in seconds with customizable templates and intelligent suggestions."
+    },
+    {
+      icon: BarChart3,
+      title: "SEO Optimization",
+      description: "AI-powered SEO recommendations and keyword optimization for better search rankings."
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile-First Design",
+      description: "Create and edit content on  device with our responsive platform and mobile apps."
+    },
+    {
+      icon: Globe,
+      title: "Multi-language Support",
+      description: "Generate content in over 50 languages with native-level quality and cultural adaptation."
+    }
+  ];
+
+  const contentTypes = [
+    {
+      icon: Edit3,
+      title: "Blog Posts & Articles",
+      description: "Long-form content with research, citations, and engaging narratives"
+    },
+    {
+      icon: Type,
+      title: "Social Media Content",
+      description: "Platform-optimized posts for Twitter, LinkedIn, Instagram, and Facebook"
+    },
+    {
+      icon: FileText,
+      title: "Marketing Copy",
+      description: "Compelling ad copy, landing pages, and promotional materials"
+    },
+    {
+      icon: Mail,
+      title: "Email Campaigns",
+      description: "Newsletters, drip campaigns, and personalized email content"
     },
     {
       icon: Image,
@@ -34,23 +61,58 @@ export default function AIContentGenerator() {
     },
     {
       icon: Video,
-      title: 'Video Content Creation',
-      description: 'Generate video scripts, storyboards, and even short video clips with AI technology'
+      title: "Video Scripts",
+      description: "Scripts for YouTube, TikTok, and marketing videos"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Content Creator",
+      price: "$39",
+      period: "/month",
+      description: "Perfect for individual creators and small businesses",
+      features[
+        "Up to 100 content pieces/month",
+        "Basic AI writing tools",
+        "5 content templates",
+        "Standard SEO suggestions",
+        "Mobile app access",
+        "Email support"
+      ],
+      popular: false
     },
     {
-      icon: Search,
-      title: 'SEO-Optimized Content',
-      description: 'AI automatically optimizes content for search engines with keyword research and semantic analysis'
+      name: "Content Professional",
+      price: "$99",
+      period: "/month",
+      description: "Ideal for growing businesses and content teams",
+      features[
+        "Up to 500 content pieces/month",
+        "Advanced AI capabilities",
+        "Unlimited templates",
+        "Advanced SEO tools",
+        "Priority support",
+        "API access",
+        "Team collaboration"
+      ],
+      popular: true
     },
     {
-      icon: Target,
-      title: 'Audience Targeting',
-      description: 'Content tailored to specific demographics, industries, and customer personas'
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Track content performance with AI-powered insights and optimization recommendations'
+      name: "Content Enterprise",
+      price: "$299",
+      period: "/month",
+      description: "For large organizations with high-volume content needs",
+      features[
+        "Unlimited content generation",
+        "Custom AI models",
+        "White-label solutions",
+        "Dedicated content manager",
+        "Advanced analytics",
+        "Custom training",
+        "On-premise options"
+      ],
+      popular: false
     }
   ];
 
@@ -172,10 +234,10 @@ export default function AIContentGenerator() {
                 Leverage cutting-edge artificial intelligence to create high-quality content 
                 that engages your audience and drives results.
               </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            </div>
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -188,6 +250,70 @@ export default function AIContentGenerator() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Content Types Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                Create Any Type of Content
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From blog posts to social media content, our AI handles it all
+              </p>
+            </div>
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {contentTypes.map((type, index)  => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                    <type.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{type.title}</h3>
+                  <p className="text-gray-300">{type.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                Perfect for Every Team
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Whether you're a solo creator or enterprise team, our platform scales with you
+              </p>
+            </div>
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index)  => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -210,10 +336,10 @@ export default function AIContentGenerator() {
                 Join thousands of content creators and marketers who have transformed 
                 their content strategy with AI-powered generation.
               </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+            </div>
+            
+            <div className="grid md: grid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -245,10 +371,10 @@ export default function AIContentGenerator() {
                 Choose the plan that fits your content creation needs. 
                 All plans include a 14-day free trial.
               </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+            </div>
+            
+            <div className="grid md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -328,5 +454,4 @@ export default function AIContentGenerator() {
         </section>
       </div>
     </>
-  );
-}
+  )}

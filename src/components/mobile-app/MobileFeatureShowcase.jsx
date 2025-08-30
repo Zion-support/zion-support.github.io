@@ -30,7 +30,7 @@ export const MobileFeatureShowcase = () => {
     {
       icon: Globe,
       title: "Global Access",
-      description: "Access your projects and talent from anywhere in the world",
+      description: "Access your projects and talent from where in the world",
       color: "from-cyan-500 to-cyan-600"
     },
     {
@@ -88,5 +88,4 @@ export const MobileFeatureShowcase = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

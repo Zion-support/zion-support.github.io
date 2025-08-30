@@ -1,4 +1,5 @@
 export interface EquipmentItem {
+
   id: string;
   name: string;
   description: string;
@@ -6,8 +7,7 @@ export interface EquipmentItem {
   category: string;
   image: string;
   specs: string[];
-  availability: boolean;
-}
+  availability: boolean}
 
 export const EQUIPMENT_DETAILS: EquipmentItem[] = [
   {
@@ -17,7 +17,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     price: 2500,
     category: "Servers",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
-    specs: ["NVIDIA RTX 4090", "64GB RAM", "2TB SSD", "Intel i9-13900K"],
+    specs["NVIDIA RTX 4090", "64GB RAM", "2TB SSD", "Intel i9-13900K"],
     availability: true
   },
   {
@@ -27,7 +27,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     price: 5000,
     category: "Quantum",
     image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop",
-    specs: ["100+ qubit simulation", "Real-time visualization", "API integration"],
+    specs["100+ qubit simulation", "Real-time visualization", "API integration"],
     availability: true
   },
   {
@@ -37,7 +37,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     price: 800,
     category: "IoT",
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
-    specs: ["ARM Cortex-A72", "4GB RAM", "32GB eMMC", "WiFi 6"],
+    specs["ARM Cortex-A72", "4GB RAM", "32GB eMMC", "WiFi 6"],
     availability: true
   }
 ];

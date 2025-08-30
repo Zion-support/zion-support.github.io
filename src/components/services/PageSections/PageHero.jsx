@@ -35,7 +35,7 @@ export const PageHero = ({
   ];
 
   const displayFeatures = features.length > 0 ? features : defaultFeatures;
-  const displayStats = stats.length > 0 ? stats : [
+  const displayStats = stats.length > 0 ? stats [
     { value: '500+', label: 'Happy Clients' },
     { value: '99.9%', label: 'Uptime' },
     { value: '24/7', label: 'Support' },
@@ -145,5 +145,4 @@ export const PageHero = ({
         </svg>
       </div>
     </section>
-  );
-};
+  )};

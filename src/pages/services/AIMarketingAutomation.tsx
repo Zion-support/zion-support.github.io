@@ -1,8 +1,38 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, TrendingUp, MessageSquare, Mail as MailIcon, Share2, Filter } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
+  Target, 
+  TrendingUp, 
+  Users, 
+  BarChart3, 
+  Calendar,
+  Zap,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Globe,
+  Smartphone,
+  Monitor,
+  BookOpen,
+  MessageSquare,
+  Share2,
+  Analytics,
+  Palette,
+  Clock,
+  DollarSign,
+  Shield,
+  Headphones,
+  Rocket,
+  Mail,
+  Phone,
+  MessageCircle,
+  ShoppingCart,
+  Eye,
+  MousePointer
+ } from 'lucide-react.ts';
 
-export default function AIMarketingAutomation() {
+export default function AIMarketingAutomation(...args[]):  {
   const features = [
     'AI-powered audience segmentation and targeting',
     'Predictive customer behavior analysis',
@@ -24,25 +54,54 @@ export default function AIMarketingAutomation() {
 
   const pricingTiers = [
     {
-      name: 'Starter',
-      price: '$99',
-      period: '/mo',
-      contacts: 'Up to 5,000 contacts',
-      features: ['Basic AI segmentation', '5 email campaigns', 'Standard analytics', 'Email support', 'Basic automation']
+      name: "Starter",
+      price: "$199",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features[
+        "AI customer segmentation (up to 10,000 contacts)",
+        "Basic email automation",
+        "Social media scheduling",
+        "Basic analytics dashboard",
+        "Email support",
+        "Up to 5 team members"
+      ],
+      cta: "Start Free Trial",
+      popular: false
     },
     {
-      name: 'Professional',
-      price: '$299',
-      period: '/mo',
-      contacts: 'Up to 25,000 contacts',
-      features: ['Advanced AI insights', 'Unlimited campaigns', 'Custom automation', 'Priority support', 'Advanced analytics', 'Multi-channel campaigns']
+      name: "Professional",
+      price: "$599",
+      period: "/month",
+      description: "Ideal for growing businesses and marketing teams",
+      features[
+        "AI customer segmentation (unlimited contacts)",
+        "Advanced email automation",
+        "Multi-channel campaigns",
+        "Advanced analytics and reporting",
+        "Priority support",
+        "Up to 25 team members",
+        "API access"
+      ],
+      cta: "Start Free Trial",
+      popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/mo',
-      contacts: 'Unlimited contacts',
-      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting']
+      name: "Enterprise",
+      price: "$1,499",
+      period: "/month",
+      description: "For large organizations with complex marketing needs",
+      features[
+        "Custom AI model training",
+        "White-label solutions",
+        "Advanced integrations",
+        "Custom attribution models",
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Unlimited team members"
+      ],
+      cta: "Contact Sales",
+      popular: false
     }
   ];
 
@@ -111,11 +170,17 @@ export default function AIMarketingAutomation() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-purple-400" />
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-rose-500 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-rose-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
               </div>
@@ -132,10 +197,16 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">See how AI transforms your marketing performance</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-rose-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-lg text-slate-300">{benefit}</p>
@@ -153,47 +224,20 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">Intelligent, automated, and personalized marketing campaigns</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-10 h-10 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Audience Analysis</h3>
-              <p className="text-slate-300">AI analyzes customer behavior, preferences, and engagement patterns</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-10 h-10 text-pink-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Content Personalization</h3>
-              <p className="text-slate-300">AI automatically personalizes content and messaging for each segment</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart3 className="w-10 h-10 text-orange-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Performance Optimization</h3>
-              <p className="text-slate-300">Continuous optimization based on real-time performance data</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Marketing Channels Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Multi-Channel Marketing</h2>
-            <p className="text-xl text-slate-300">Reach your audience across all channels with unified AI automation</p>
-          </div>
-
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {channels.map((channel, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-purple-500/50 transition-all duration-300">
-                <p className="text-sm font-medium text-slate-300">{channel}</p>
-              </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-rose-500 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-rose-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -207,14 +251,17 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">Choose the plan that fits your marketing needs</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div 
-                key={index} 
-                className={`bg-slate-800/50 border rounded-xl p-8 ${
-                  tier.name === 'Professional' 
-                    ? 'border-purple-500/50 bg-purple-500/5' 
-                    : 'border-slate-700/50'
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular 
+                    ? 'border-rose-500 ring-2 ring-rose-500/20' 
+                    : 'border-gray-700'
                 }`}
               >
                 <div className="text-center mb-6">
@@ -252,22 +299,40 @@ export default function AIMarketingAutomation() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Perfect For</h2>
-            <p className="text-xl text-slate-300">Businesses that want to scale their marketing intelligently</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center">
-                <Target className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold">{useCase}</h3>
-              </div>
-            ))}
-          </div>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Marketing?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses that have already revolutionized their marketing with AI
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-rose-600 to-pink-600 text-white font-semibold rounded-lg hover:from-rose-700 hover:to-pink-700 transition-all duration-200"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
+              >
+                Schedule Demo
+              </motion.button>
+            </div>
+            <p className="text-sm text-gray-400 mt-4">
+              No credit card required • 14-day free trial • Cancel time
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -381,5 +446,4 @@ export default function AIMarketingAutomation() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

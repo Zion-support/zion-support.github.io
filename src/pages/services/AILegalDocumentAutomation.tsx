@@ -1,17 +1,116 @@
-import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale, Lock } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { FileText, 
+  Shield, 
+  Clock, 
+  Zap, 
+  Search, 
+  Eye,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  Globe,
+  Users,
+  BarChart3,
+  Lock
+ } from 'lucide-react.ts';
 
-export default function AILegalDocumentAutomation() {
+export default function AILegalDocumentAutomation(...args[]):  {
   const features = [
-    'AI-powered contract generation and review',
-    'Legal compliance checking and validation',
-    'Automated risk assessment and mitigation',
-    'Multi-jurisdiction legal framework support',
-    'Real-time legal document collaboration',
-    'Advanced clause library and templates',
-    'Automated contract renewal reminders',
-    'Legal document version control and tracking',
-    'Integration with e-signature platforms',
-    'Comprehensive audit trail and reporting'
+    {
+      icon: FileText,
+      title: "AI Document Generation",
+      description: "Automatically generate legal documents with intelligent templates and compliance checks"
+    },
+    {
+      icon: Shield,
+      title: "Compliance Monitoring",
+      description: "Real-time monitoring of legal compliance requirements and automatic updates"
+    },
+    {
+      icon: Clock,
+      title: "Instant Processing",
+      description: "Process legal documents in seconds instead of hours with AI-powered automation"
+    },
+    {
+      icon: Zap,
+      title: "Smart Templates",
+      description: "Intelligent document templates that adapt to your specific legal requirements"
+    },
+    {
+      icon: Search,
+      title: "Legal Research",
+      description: "AI-powered legal research assistant with case law analysis and precedent tracking"
+    },
+    {
+      icon: Eye,
+      title: "Document Review",
+      description: "Automated document review with risk assessment and compliance validation"
+    }
+  ];
+
+  const servicePackages = [
+    {
+      name: "Contract Generation",
+      price: "From $299/month",
+      features[
+        "AI-powered contract templates",
+        "Automated compliance checks",
+        "Custom clause generation",
+        "Version control and tracking",
+        "Electronic signature integration",
+        "24/7 support"
+      ]
+    },
+    {
+      name: "Legal Research Assistant",
+      price: "From $199/month",
+      features[
+        "Case law analysis",
+        "Precedent tracking",
+        "Regulatory updates",
+        "Citation management",
+        "Research summaries",
+        "Expert consultation"
+      ]
+    },
+    {
+      name: "Document Review & Analysis",
+      price: "From $399/month",
+      features[
+        "Automated risk assessment",
+        "Compliance validation",
+        "Legal precedent analysis",
+        "Red flag identification",
+        "Detailed reporting",
+        "Priority recommendations"
+      ]
+    },
+    {
+      name: "Legal Workflow Automation",
+      price: "From $599/month",
+      features[
+        "End-to-end workflow automation",
+        "Task assignment and tracking",
+        "Deadline management",
+        "Integration with legal systems",
+        "Performance analytics",
+        "Custom automation rules"
+      ]
+    }
+  ];
+
+  const supportedDocuments = [
+    "Contracts and Agreements",
+    "Legal Briefs and Memos",
+    "Compliance Reports",
+    "Policy Documents",
+    "Terms of Service",
+    "Privacy Policies",
+    "Employment Agreements",
+    "NDAs and Confidentiality Agreements"
   ];
 
   const benefits = [
@@ -147,79 +246,294 @@ export default function AILegalDocumentAutomation() {
           </div>
         </div>
 
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Technical Specifications</h2>
-          <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-sm">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Technology Stack</h3>
-                <div className="flex flex-wrap gap-2">
-                  {technicalSpecs.technology.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Integrations</h3>
-                <div className="flex flex-wrap gap-2">
-                  {technicalSpecs.integrations.map((integration) => (
-                    <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
-                      {integration}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="mt-6 grid md:grid-cols-3 gap-6">
-              <div>
-                <h4 className="font-semibold text-zion-slate-dark mb-2">Security & Compliance</h4>
-                <div className="space-y-1">
-                  {technicalSpecs.security.map((sec) => (
-                    <div key={sec} className="flex items-center text-sm text-zion-slate-dark">
-                      <Lock className="w-4 h-4 text-zion-cyan mr-2" />
-                      {sec}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-zion-slate-dark mb-2">Uptime</h4>
-                <div className="text-2xl font-bold text-zion-cyan">{technicalSpecs.uptime}</div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-zion-slate-dark mb-2">Compliance Standards</h4>
-                <div className="space-y-1">
-                  {technicalSpecs.compliance.map((comp) => (
-                    <div key={comp} className="flex items-center text-sm text-zion-slate-dark">
-                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />
-                      {comp}
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to automate your legal operations?</div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
-            </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
-            </a>
+        {/* Service Packages */}
+        <section className="py-20 px-6 bg-black/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Flexible Service Packages
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan for your legal practice needs with scalable 
+                pricing and comprehensive features
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {servicePackages.map((pkg, index)  => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <h3 className="text-xl font-semibold mb-3 text-white">{pkg.name}</h3>
+                  <div className="text-3xl font-bold mb-6 text-cyan-400">{pkg.price}</div>
+                  <ul className="space-y-3 mb-6">
+                    {pkg.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  >
+                    Get Started
+                  </motion.button>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          <div className="mt-4">
-            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">
-              Learn More <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
+        </section>
+
+        {/* Supported Document Types */}
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Comprehensive Document Support
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI platform handles a wide range of legal documents with 
+                industry-specific compliance requirements
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {supportedDocuments.map((doc, index)  => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
+                >
+                  <FileText className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                  <p className="text-white font-medium">{doc}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-6 bg-black/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Transform Your Legal Practice
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience significant improvements in efficiency, accuracy, and 
+                cost-effectiveness with AI-powered legal automation
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index)  => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="text-white text-lg font-medium">{benefit}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technologies Section */}
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Cutting-Edge Technology Stack
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Built with the latest AI and machine learning technologies for 
+                maximum performance and reliability
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              {technologies.map((tech, index)  => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
+                >
+                  <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                  <p className="text-white font-medium">{tech}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl font-bold mb-6 text-white"
+            >
+              Ready to Transform Your Legal Operations?
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-cyan-100 mb-8"
+            >
+              Join leading law firms and legal departments that have already 
+              revolutionized their document processes with AI automation
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
+              >
+                Schedule Demo
+              </motion.button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Get in Touch
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Ready to discuss how AI Legal Document Automation can transform 
+                your legal practice? Contact our experts today.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center"
+              >
+                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-center"
+              >
+                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>
+                <p className="text-gray-300">https://ziontechgroup.com</p>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-center mt-12"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-white">Address</h3>
+              <p className="text-gray-300">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  )}

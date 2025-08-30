@@ -1,7 +1,7 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
 
-export default function AIDataPipelineOptimizer() {
+export default function AIDataPipelineOptimizer(...args[]):  {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>
@@ -28,6 +28,5 @@ export default function AIDataPipelineOptimizer() {
         </div>
       </main>
     </div>
-  );
-}
+  )}
 

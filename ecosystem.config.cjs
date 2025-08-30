@@ -35,49 +35,49 @@ module.exports = {
       }
     },
 
-    // 🧠 NEW: Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    // Comprehensive Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
     {
-      name: 'intelligent-predictive-monitor',
-      script: './scripts/automation/intelligent-predictive-monitor.cjs',
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
       }
     },
 
-    // 🤖 NEW: AI Code Optimizer - runs every hour
+    // TypeScript Error Fixer - runs every 15 minutes
     {
-      name: 'ai-code-optimizer',
-      script: './scripts/automation/ai-code-optimizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-
-    // 📦 NEW: Smart Dependency Manager - runs every 6 hours
-    {
-      name: 'smart-dependency-manager',
-      script: './scripts/automation/smart-dependency-manager.cjs',
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
       }
     },
 
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    // General Error Fixer - runs every 20 minutes
+    {
+      name: 'general-error-fixer',
+      script: './scripts/automation/error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1200000' // 20 minutes
+      }
+    },
+
+    // Continuous console error fixer - runs every 15 minutes
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',
@@ -231,87 +231,31 @@ module.exports = {
       }
     },
 
-    // NEW: AI Code Analyzer - runs every 4 hours
+    // PM2 Monitor - runs every 10 minutes
     {
-      name: 'ai-code-analyzer',
-      script: './scripts/automation/ai-code-analyzer.cjs',
+      name: 'pm2-monitor',
+      script: './scripts/automation/pm2-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
       }
     },
 
-    // NEW: Smart Deployment Optimizer - runs every 6 hours
+    // Enhanced Automation Runner - runs every 15 minutes
     {
-      name: 'smart-deployment-optimizer',
-      script: './scripts/automation/smart-deployment-optimizer.cjs',
+      name: 'enhanced-automation-runner',
+      script: './scripts/automation/enhanced-automation-runner.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // NEW: Adaptive Test Generator - runs every 8 hours
-    {
-      name: 'adaptive-test-generator',
-      script: './scripts/automation/adaptive-test-generator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '28800000' // 8 hours
-      }
-    },
-
-    // NEW: Intelligent Code Refactorer - runs every 12 hours
-    {
-      name: 'intelligent-code-refactorer',
-      script: './scripts/automation/intelligent-code-refactorer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '43200000' // 12 hours
-      }
-    },
-
-    // NEW: Smart Documentation Generator - runs every 24 hours
-    {
-      name: 'smart-documentation-generator',
-      script: './scripts/automation/smart-documentation-generator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-
-    // NEW: Predictive Maintenance Monitor - runs every 2 hours
-    {
-      name: 'predictive-maintenance-monitor',
-      script: './scripts/automation/predictive-maintenance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
       }
     }
   ]

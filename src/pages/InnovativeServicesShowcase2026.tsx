@@ -1,72 +1,72 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
-
-const InnovativeServicesShowcase2026: React.FC = () => {
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
+  Shield, 
+  Zap, 
+  Cloud, 
+  Lock, 
+  Globe, 
+  Cpu, 
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  TrendingUp,
+  Users,
+  Building2,
+  Leaf,
+  Car,
+  Heart,
+  Scale,
+  Eye,
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink
+ } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES  } from '../data/servicesData';
+export default function InnovativeServicesShowcase2026(...args[]):  {
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('innovation');
-
-  const categories = ['All', 'AI & Automation', 'Quantum Computing', 'Blockchain', 'Cybersecurity', 'IoT', 'AI & Content', 'DevOps', 'Finance', 'Sustainability'];
-
-  const filteredServices = useMemo(() => {
-    let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2026;
-
-    // Filter by search query
-    if (searchQuery) {
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
-
-    // Filter by category
-    if (selectedCategory !== 'All') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
-    // Sort services
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return a.price - b.price;
-        case 'innovation':
-          return b.innovationLevel === 'Revolutionary' ? 1 : -1;
-        case 'roi':
-          return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
-        default:
-          return 0;
-      }
-    });
-
-    return filtered;
-  }, [searchQuery, selectedCategory, sortBy]);
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Automation':
-        return <Cpu className="w-5 h-5" />;
-      case 'Quantum Computing':
-        return <Zap className="w-5 h-5" />;
-      case 'Blockchain':
-        return <Database className="w-5 h-5" />;
-      case 'Cybersecurity':
-        return <Shield className="w-5 h-5" />;
-      case 'IoT':
-        return <Globe className="w-5 h-5" />;
-      case 'AI & Content':
-        return <Cpu className="w-5 h-5" />;
-      case 'DevOps':
-        return <Database className="w-5 h-5" />;
-      case 'Finance':
-        return <TrendingUp className="w-5 h-5" />;
-      case 'Sustainability':
-        return <Leaf className="w-5 h-5" />;
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from-blue-500 to-cyan-500' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
+    { id: 'DevOps & Infrastructure', name: 'DevOps & Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-500' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-rose-500 to-pink-500' },
+    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', icon: Zap, color: 'from-amber-500 to-yellow-500' }
+  ];
+  const filteredServices = INNOVATIVE_SERVICES.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch});
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+        return a.price - b.price;
+      case 'innovation':
+        return a.innovationLevel === 'Cutting-edge' ? -1 : 1;
+      case 'roi':
+        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       default:
-        return <Star className="w-5 h-5" />;
+        return 0}
+  });
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
   };
 
@@ -151,10 +151,10 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
+                  {categories.map(category  => (
+                    <option key={category.id} value={category.id}>{category.name}</option>
                   ))}
                 </select>
               </div>
@@ -178,10 +178,15 @@ const InnovativeServicesShowcase2026: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="pb-20">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-            {filteredServices.map((service, index) => (
+      <motion.div 
+        className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -410,7 +415,4 @@ const InnovativeServicesShowcase2026: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default InnovativeServicesShowcase2026;
+  )}

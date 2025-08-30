@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../src/data/innovativeServices2025';
-const InnovativeServicesShowcase: React.FC = () => {
+import React, { useState, useMemo } from 'react.ts';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices  } from '../src/data/innovativeServices2025';
+const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -28,20 +28,16 @@ const InnovativeServicesShowcase: React.FC = () => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
+      )}
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     // Filter by price range
     if (priceRange !== 'all') {
       const [min, max] = priceRange.split('-').map(Number);
       if (priceRange === '3000+') {
-        filtered = filtered.filter(service => service.price >= 3000);
-      } else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max);
-      }
+        filtered = filtered.filter(service => service.price >= 3000)} else {
+        filtered = filtered.filter(service => service.price >= min && service.price <= max)}
     }
     // Sort services
     switch (sortBy) {
@@ -56,10 +52,8 @@ const InnovativeServicesShowcase: React.FC = () => {
         break;
       case 'launchDate':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-        break;
-    }
-    return filtered;
-  }, [searchTerm, selectedCategory, priceRange, sortBy]);
+        break}
+    return filtered}, [searchTerm, selectedCategory, priceRange, sortBy]);
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
@@ -192,9 +186,9 @@ const InnovativeServicesShowcase: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -207,9 +201,9 @@ const InnovativeServicesShowcase: React.FC = () => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {priceRanges.map(range => (
+                {priceRanges.map(range  => (
                   <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
               </select>
@@ -220,9 +214,9 @@ const InnovativeServicesShowcase: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {sortOptions.map(option => (
+                {sortOptions.map(option  => (
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
               </select>
@@ -236,8 +230,8 @@ const InnovativeServicesShowcase: React.FC = () => {
           </p>
         </div>
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)  => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
@@ -267,6 +261,5 @@ const InnovativeServicesShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default InnovativeServicesShowcase;

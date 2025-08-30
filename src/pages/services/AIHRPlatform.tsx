@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Users, 
   TrendingUp, 
   Target, 
@@ -32,9 +31,9 @@ import {
   Award,
   Heart,
   Building
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIHRPlatform() {
+export default function AIHRPlatform(...args[]):  {
   const features = [
     "AI-powered candidate screening and matching",
     "Intelligent resume parsing and analysis",
@@ -75,7 +74,7 @@ export default function AIHRPlatform() {
       price: "$399",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features: [
+      features[
         "AI candidate screening (up to 100/month)",
         "Basic resume parsing",
         "Interview scheduling",
@@ -91,7 +90,7 @@ export default function AIHRPlatform() {
       price: "$899",
       period: "/month",
       description: "Ideal for growing companies and HR teams",
-      features: [
+      features[
         "AI candidate screening (unlimited)",
         "Advanced resume parsing",
         "Performance analytics",
@@ -108,7 +107,7 @@ export default function AIHRPlatform() {
       price: "$1,999",
       period: "/month",
       description: "For large organizations with complex HR needs",
-      features: [
+      features[
         "Custom AI model training",
         "Advanced workforce planning",
         "White-label solutions",
@@ -188,8 +187,8 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -224,8 +223,8 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -256,12 +255,12 @@ export default function AIHRPlatform() {
               Industry-Leading Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven solutions across diverse industries and company sizes
+              Proven solutions across diverse industries and comp sizes
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -289,15 +288,14 @@ export default function AIHRPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Company
-            </h2>
+              Flexible Pricing for Every Comp </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Scale your HR platform as your company grows
+              Scale your HR platform as your comp grows
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -383,7 +381,7 @@ export default function AIHRPlatform() {
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -403,5 +401,4 @@ export default function AIHRPlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

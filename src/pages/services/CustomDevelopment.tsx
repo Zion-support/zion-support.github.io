@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Code, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Code, 
   Smartphone, 
   Globe, 
   Database, 
@@ -23,35 +22,34 @@ import {
   Rocket,
   Building2,
   Cpu,
-  Network,
-  GitFork
-} from 'lucide-react';
+  Network
+ } from 'lucide-react.ts';
 
-export default function CustomDevelopment() {
+export default function CustomDevelopment(...args[]):  {
   const services = [
     {
       title: 'Web Applications',
       description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',
       icon: Globe,
-      features: ['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'Content Management Systems']
+      features['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'Content Management Systems']
     },
     {
       title: 'Mobile Applications',
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
       icon: Smartphone,
-      features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']
+      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']
     },
     {
       title: 'API Development',
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
       icon: Network,
-      features: ['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
+      features['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
     },
     {
       title: 'System Integration',
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
-              icon: GitFork,
-      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
+      icon: Workflow,
+      features['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
     }
   ];
 
@@ -60,25 +58,25 @@ export default function CustomDevelopment() {
       title: 'Frontend',
       description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
       icon: Monitor,
-      stack: ['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']
+      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']
     },
     {
       title: 'Backend',
       description: 'Robust backend technologies for scalable and secure applications.',
       icon: Cpu, // Changed from Server to Cpu
-      stack: ['Node.js', 'Python', 'Java', 'C#', 'Go']
+      stack['Node.js', 'Python', 'Java', 'C#', 'Go']
     },
     {
       title: 'Mobile',
       description: 'Cross-platform and native mobile development technologies.',
       icon: Smartphone,
-      stack: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
+      stack['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
     {
       title: 'Database',
       description: 'Modern database solutions for data storage and management.',
       icon: Database,
-      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
+      stack['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
     }
   ];
 
@@ -164,8 +162,8 @@ export default function CustomDevelopment() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
@@ -218,8 +216,8 @@ export default function CustomDevelopment() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {technologies.map((tech, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
@@ -262,8 +260,8 @@ export default function CustomDevelopment() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -300,8 +298,8 @@ export default function CustomDevelopment() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
+            {industries.map((industry, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
@@ -333,13 +331,13 @@ export default function CustomDevelopment() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
               { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },
               { step: '03', title: 'Development', description: 'Build the application using agile development practices' },
               { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -392,5 +390,4 @@ export default function CustomDevelopment() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

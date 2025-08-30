@@ -1,96 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Cpu, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  BarChart3,
-  TrendingUp,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
-  Brain,
-  Compass,
-  Shield,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Database2,
-  Lock2,
-  Key2,
-  Fingerprint2,
-  Eye,
-  Brain2,
-  Cpu2,
-  Memory,
-  HardDrive,
-  Server2
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Rocket, Atom, Zap, Brain, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu  } from 'lucide-react.ts';
 
-const QuantumComputing = () => {
+export default function QuantumComputing(...args: []):  {
   const features = [
     {
       icon: Atom,
@@ -240,8 +152,8 @@ const QuantumComputing = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -278,8 +190,8 @@ const QuantumComputing = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

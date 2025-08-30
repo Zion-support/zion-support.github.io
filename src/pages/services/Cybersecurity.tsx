@@ -1,9 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Shield, 
   Lock, 
   Eye, 
   Zap, 
@@ -22,14 +19,14 @@ import {
   Server,
   Monitor,
   CreditCard
-} from 'lucide-react';
-export default function CybersecurityServices() {
+ } from 'lucide-react.ts';
+export default function CybersecurityServices(...args[]):  {
   const cyberServices = [
     {
       name: "Security Assessment & Auditing",
       description: "Comprehensive security evaluation and compliance auditing",
       icon: Eye,
-      features: [
+      features[
         "Vulnerability assessments",
         "Penetration testing",
         "Security audits and compliance",
@@ -42,7 +39,7 @@ export default function CybersecurityServices() {
       name: "Threat Detection & Response",
       description: "Advanced threat monitoring and incident response",
       icon: AlertTriangle,
-      features: [
+      features[
         "24/7 security monitoring",
         "Threat intelligence",
         "Incident response planning",
@@ -55,7 +52,7 @@ export default function CybersecurityServices() {
       name: "Identity & Access Management",
       description: "Secure user authentication and authorization systems",
       icon: Key,
-      features: [
+      features[
         "Single sign-on (SSO)",
         "Multi-factor authentication",
         "Role-based access control",
@@ -68,7 +65,7 @@ export default function CybersecurityServices() {
       name: "Data Protection & Encryption",
       description: "Comprehensive data security and encryption solutions",
       icon: Lock,
-      features: [
+      features[
         "Data encryption at rest and in transit",
         "Data loss prevention",
         "Backup and recovery",
@@ -178,8 +175,8 @@ export default function CybersecurityServices() {
               Comprehensive security solutions designed to protect your business from evolving threats
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cyberServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {cyberServices.map((service, index)  => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -229,8 +226,8 @@ export default function CybersecurityServices() {
               We leverage cutting-edge security tools and technologies to protect your infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {securityTechnologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+            {securityTechnologies.map((tech, index)  => (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -256,8 +253,8 @@ export default function CybersecurityServices() {
               Meet industry standards and regulatory requirements with our compliance solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index)  => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
@@ -301,5 +298,4 @@ export default function CybersecurityServices() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

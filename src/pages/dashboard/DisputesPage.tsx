@@ -1,9 +1,9 @@
 
-import { SEO } from '@/components/SEO';
-import { DisputeDashboard } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { SEO  } from '@/components/SEO';
+import { DisputeDashboard  } from '@/components/disputes';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
-function DisputesPage() {
+function DisputesPage(...args[]):  {
   return (
     <ProtectedRoute>
       <>
@@ -16,7 +16,6 @@ function DisputesPage() {
         
       </>
     </ProtectedRoute>
-  );
-}
+  )}
 
 export default DisputesPage;

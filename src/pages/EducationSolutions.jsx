@@ -32,7 +32,7 @@ const educationSolutions = [
     title: "Learning Management System (LMS)",
     description: "Comprehensive platform for managing courses, content, and student progress tracking.",
     icon: BookOpen,
-    features: [
+    features[
       "Course management",
       "Content delivery",
       "Student tracking",
@@ -41,14 +41,14 @@ const educationSolutions = [
     price: "From $40,000",
     timeline: "16-24 weeks",
     category: "LMS Platforms",
-    integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom"]
+    integrations["Canvas", "Blackboard", "Moodle", "Google Classroom"]
   },
   {
     id: 2,
     title: "Mobile Learning Apps",
     description: "Native mobile applications that enable learning on-the-go across all devices.",
     icon: Smartphone,
-    features: [
+    features[
       "Cross-platform development",
       "Offline content access",
       "Push notifications",
@@ -57,14 +57,14 @@ const educationSolutions = [
     price: "From $30,000",
     timeline: "12-20 weeks",
     category: "Mobile Development",
-    integrations: ["iOS", "Android", "React Native", "Flutter"]
+    integrations["iOS", "Android", "React Native", "Flutter"]
   },
   {
     id: 3,
     title: "Virtual Reality (VR) Learning",
     description: "Immersive educational experiences using virtual reality technology.",
     icon: Monitor,
-    features: [
+    features[
       "3D learning environments",
       "Interactive simulations",
       "Multi-user collaboration",
@@ -73,14 +73,14 @@ const educationSolutions = [
     price: "From $60,000",
     timeline: "20-32 weeks",
     category: "VR/AR",
-    integrations: ["Oculus", "HTC Vive", "WebXR", "Unity"]
+    integrations["Oculus", "HTC Vive", "WebXR", "Unity"]
   },
   {
     id: 4,
     title: "AI-Powered Tutoring",
     description: "Intelligent tutoring systems that adapt to individual learning styles and needs.",
     icon: Brain,
-    features: [
+    features[
       "Personalized learning paths",
       "Adaptive assessments",
       "Natural language processing",
@@ -89,14 +89,14 @@ const educationSolutions = [
     price: "From $50,000",
     timeline: "16-24 weeks",
     category: "AI & Analytics",
-    integrations: ["Machine Learning", "NLP", "Data Analytics", "Cloud AI"]
+    integrations["Machine Learning", "NLP", "Data Analytics", "Cloud AI"]
   },
   {
     id: 5,
     title: "Video Conferencing Platform",
     description: "Secure and scalable video conferencing solution for remote learning and collaboration.",
     icon: Video,
-    features: [
+    features[
       "HD video streaming",
       "Screen sharing",
       "Recording capabilities",
@@ -105,14 +105,14 @@ const educationSolutions = [
     price: "From $35,000",
     timeline: "12-18 weeks",
     category: "Communication",
-    integrations: ["Zoom API", "Microsoft Teams", "Google Meet", "WebRTC"]
+    integrations["Zoom API", "Microsoft Teams", "Google Meet", "WebRTC"]
   },
   {
     id: 6,
     title: "Student Analytics Dashboard",
     description: "Comprehensive analytics platform for tracking student performance and engagement.",
     icon: BarChart3,
-    features: [
+    features[
       "Performance metrics",
       "Engagement tracking",
       "Predictive analytics",
@@ -121,7 +121,7 @@ const educationSolutions = [
     price: "From $25,000",
     timeline: "10-16 weeks",
     category: "Analytics",
-    integrations: ["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
+    integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
   }
 ];
 
@@ -155,7 +155,7 @@ const edTechTrends = [
 const successStories = [
   {
     id: 1,
-    company: "Tech University",
+    comp: "Tech University",
     industry: "Higher Education",
     challenge: "Needed comprehensive LMS for 50,000+ students",
     solution: "Built custom LMS with AI-powered personalization",
@@ -164,7 +164,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Global Learning Network",
+    comp: "Global Learning Network",
     industry: "K-12 Education",
     challenge: "Required mobile learning platform for remote students",
     solution: "Developed cross-platform mobile app with offline capabilities",
@@ -173,7 +173,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Corporate Training Plus",
+    comp: "Corporate Training Plus",
     industry: "Corporate Training",
     challenge: "Needed VR training simulations for safety training",
     solution: "Created immersive VR training modules with progress tracking",
@@ -486,7 +486,7 @@ export default function EducationSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -551,5 +551,4 @@ export default function EducationSolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

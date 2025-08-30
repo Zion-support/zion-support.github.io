@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock  } from 'lucide-react.ts';
 
-const ModernHeader: React.FC = () => {
+const ModernHeader: React.FC = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const serviceCategories = [
     { name: 'AI Services', icon: Cpu, href: '/services/ai', description: 'Intelligent automation & AI solutions' },
@@ -194,7 +192,6 @@ const ModernHeader: React.FC = () => {
         )}
       </AnimatePresence>
     </motion.header>
-  );
-};
+  )};
 
 export default ModernHeader;

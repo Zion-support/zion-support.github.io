@@ -1,5 +1,5 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
 const ITServicesPage = () => {
   return (
@@ -43,7 +43,6 @@ const ITServicesPage = () => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 
 export default ITServicesPage;

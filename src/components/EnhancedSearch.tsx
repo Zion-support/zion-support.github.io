@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight, Globe, Building, Code, Shield } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { useDebounce } from '@/hooks/useDebounce';
+import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield  } from 'lucide-react.ts';
+import { useNavigate  } from 'react-router-dom.ts';
+import { useDebounce  } from '@/hooks/useDebounce';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -12,15 +13,13 @@ interface SearchResult {
   type: 'service' | 'page' | 'blog' | 'case-study' | 'article' | 'ai-suggestion';
   category: string;
   tags: string[];
-  relevance: number;
-  icon?: React.ComponentType<any>;
-}
+  relevance: number}
 
 interface SearchFilter {
+
   type: string[];
   category: string[];
-  tags: string[];
-}
+  tags: string[]}
 
 interface SearchSuggestion {
   text: string;
@@ -43,9 +42,8 @@ const searchData: SearchResult[] = [
     url: '/services/ai-business-intelligence',
     type: 'service',
     category: 'AI Solutions',
-    tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
-    relevance: 95,
-    icon: Brain
+    tags['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
+    relevance: 95
   },
   {
     id: 'cloud-devops',
@@ -54,9 +52,8 @@ const searchData: SearchResult[] = [
     url: '/services/cloud-devops',
     type: 'service',
     category: 'Cloud & DevOps',
-    tags: ['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
-    relevance: 90,
-    icon: Globe
+    tags['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
+    relevance: 90
   },
   {
     id: 'cybersecurity',
@@ -65,31 +62,8 @@ const searchData: SearchResult[] = [
     url: '/services/ai-cybersecurity-suite',
     type: 'service',
     category: 'Cybersecurity',
-    tags: ['Security', 'AI', 'Cybersecurity', 'Enterprise'],
-    relevance: 88,
-    icon: Shield
-  },
-  {
-    id: 'quantum-computing',
-    title: 'Quantum Computing Solutions',
-    description: 'Next-generation computational power for complex problem solving',
-    url: '/services/quantum-computing',
-    type: 'service',
-    category: 'Quantum Computing',
-    tags: ['Quantum', 'Computing', 'AI', 'Machine Learning'],
-    relevance: 92,
-    icon: Zap
-  },
-  {
-    id: 'micro-saas',
-    title: 'Micro SaaS Platform',
-    description: 'Scalable software solutions tailored to your specific needs',
-    url: '/services/micro-saas',
-    type: 'service',
-    category: 'Micro SaaS',
-    tags: ['SaaS', 'Software', 'Scalable', 'Custom'],
-    relevance: 88,
-    icon: TrendingUp
+    tags['Security', 'AI', 'Cybersecurity', 'Enterprise'],
+    relevance: 88
   },
   // Pages
   {
@@ -98,10 +72,9 @@ const searchData: SearchResult[] = [
     description: 'Learn about our mission, values, and commitment to innovation',
     url: '/about',
     type: 'page',
-    category: 'Company',
-    tags: ['About', 'Company', 'Mission', 'Values'],
-    relevance: 85,
-    icon: Building
+    category: 'Comp',
+    tags['About', 'Comp', 'Mission', 'Values'],
+    relevance: 85
   },
   {
     id: 'contact',
@@ -110,9 +83,8 @@ const searchData: SearchResult[] = [
     url: '/contact',
     type: 'page',
     category: 'Support',
-    tags: ['Contact', 'Support', 'Consultation', 'Help'],
-    relevance: 80,
-    icon: Code
+    tags['Contact', 'Support', 'Consultation', 'Help'],
+    relevance: 80
   },
   // Blog posts (example)
   {
@@ -122,9 +94,8 @@ const searchData: SearchResult[] = [
     url: '/blog/ai-trends-2025',
     type: 'blog',
     category: 'AI Insights',
-    tags: ['AI', 'Trends', '2025', 'Business'],
-    relevance: 75,
-    icon: TrendingUp
+    tags['AI', 'Trends', '2025', 'Business'],
+    relevance: 75
   }
 ];
 
@@ -136,161 +107,114 @@ const categories = [
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' }
 ];
 
-// Mock suggestions
-const mockSuggestions: SearchSuggestion[] = [
-  { text: 'AI compliance assistant', type: 'recent' },
-  { text: 'Quantum machine learning', type: 'trending' },
-  { text: 'Digital transformation consulting', type: 'ai' },
-  { text: 'Cloud DevOps automation', type: 'trending' }
-];
-
-export function EnhancedSearch({ 
-  className = '',
-  placeholder = 'Search for AI services, quantum solutions...',
-  onSearch,
-  variant = 'default'
-}: EnhancedSearchProps) {
-  const [isOpen, setIsOpen] = useState(false);
+export const EnhancedSearch: React.FC = (): JSX.Element => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [filters, setFilters] = useState<SearchFilter>({
-    type: [],
-    category: [],
-    tags: []
+  const [results, setResults] = useState<any>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [filters, setFilters] = useState<any>({
+    type[],
+    category[],
+    tags[]
   });
-  
+  const [showFilters, setShowFilters] = useState(false);
+  const [recentSearches, setRecentSearches] = useState<any>([]);
+  const [popularSearches] = useState([
+    'AI Solutions', 'Cloud Services', 'Cybersecurity', 'Digital Transformation'
+  ]);
+
+  const debouncedQuery = useDebounce(query, 300);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
-  const debouncedQuery = useDebounce(query, 300);
 
-  // Handle click outside
+  // Load recent searches from localStorage
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-        setSelectedIndex(-1);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    const saved = localStorage.getItem('zion-recent-searches');
+    if (saved) {
+      setRecentSearches(JSON.parse(saved))}
   }, []);
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsOpen(false);
-        setSelectedIndex(-1);
-      } else if (event.key === 'ArrowDown') {
-        event.preventDefault();
-        setSelectedIndex(prev => 
-          prev < results.length - 1 ? prev + 1 : prev
-        );
-      } else if (event.key === 'ArrowUp') {
-        event.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-      } else if (event.key === 'Enter' && selectedIndex >= 0) {
-        event.preventDefault();
-        if (results[selectedIndex]) {
-          handleResultClick(results[selectedIndex]);
-        }
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener('keydown', handleKeyDown);
-    }
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, results, selectedIndex]);
 
   // Search functionality
   useEffect(() => {
-    if (!debouncedQuery.trim()) {
+    if (debouncedQuery.trim().length < 2) {
       setResults([]);
-      setSuggestions(mockSuggestions);
-      return;
-    }
+      return}
 
-    setIsLoading(true);
-    
-    // Simulate API call delay
-    const timeout = setTimeout(() => {
-      const searchResults = searchData
-        .filter(item => {
-          const matchesQuery = 
-            item.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-            item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-            item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
-          
-          const matchesFilters = 
-            (filters.type.length === 0 || filters.type.includes(item.type)) &&
-            (filters.category.length === 0 || filters.category.includes(item.category)) &&
-            (filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag)));
-          
-          return matchesQuery && matchesFilters;
-        })
-        .sort((a, b) => b.relevance - a.relevance)
-        .slice(0, 10);
+    const searchResults = searchData
+      .filter(item => {
+        const matchesQuery = item.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
+                           item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
+                           item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
+        
+        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&
+                              filters.category.length === 0 || filters.category.includes(item.category) &&
+                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
+        
+        return matchesQuery && matchesFilters})
+      .sort((a, b) => b.relevance - a.relevance)
+      .slice(0, 10);
 
-      setResults(searchResults);
-      setSuggestions(mockSuggestions.filter(s => 
-        s.text.toLowerCase().includes(debouncedQuery.toLowerCase())
-      ));
-      setIsLoading(false);
-    }, 200);
+    setResults(searchResults)}, [debouncedQuery, filters]);
 
-    return () => clearTimeout(timeout);
-  }, [debouncedQuery, filters]);
+  // Handle click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent)  => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false)}
+    };
 
-  const handleResultClick = (result: SearchResult) => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent)  => {
+      if (event.key === 'Escape') {
+        setIsOpen(false)} else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        event.preventDefault();
+        setIsOpen(true);
+        inputRef.current?.focus()}
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
+
+  const handleSearch = useCallback((searchQuery: string)  => {
+    if (searchQuery.trim()) {
+      // Add to recent searches
+      const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
+      setRecentSearches(updated);
+      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
+      
+      // Navigate to search results or close search
+      setIsOpen(false);
+      setQuery('')}
+  }, [recentSearches]);
+
+  const handleResultClick = (result: SearchResult)  => {
+    handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
-    setQuery('');
-    onSearch?.(result.title);
-  };
+    setQuery('')};
 
-  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
-    setQuery(suggestion.text);
-    onSearch?.(suggestion.text);
-  };
+  const toggleFilter = (filterType: keyof SearchFilter, value: string)  => {
+    setFilters(prev => ({
+      ...prev,
+      [filterType]: prev[filterType].includes(value)
+        ? prev[filterType].filter(v => v !== value)
+        [...prev[filterType], value]
+    }))};
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setQuery(value);
-    if (value.trim()) {
-      setIsOpen(true);
-    } else {
-      setIsOpen(false);
-    }
-  };
+  const clearFilters = () => {
+    setFilters({ type[], category[], tags[] })};
 
-  const handleInputFocus = () => {
-    if (query.trim() || suggestions.length > 0) {
-      setIsOpen(true);
-    }
-  };
-
-  const clearSearch = () => {
-    setQuery('');
-    setResults([]);
-    setIsOpen(false);
-    setSelectedIndex(-1);
-  };
-
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'futuristic':
-        return 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-sm';
-      case 'minimal':
-        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
-      default:
-        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg';
-    }
+  const getTypeIcon = (type: string)  => {
+    switch (type) {
+      case 'service': return <Code className="h-4 w-4" />;
+      case 'page': return <Globe className="h-4 w-4" />;
+      case 'blog': return <TrendingUp className="h-4 w-4" />;
+      case 'case-study': return <Building className="h-4 w-4" />;
+      default: return <Search className="h-4 w-4" />}
   };
 
   return (
@@ -433,5 +357,4 @@ export function EnhancedSearch({
         )}
       </AnimatePresence>
     </div>
-  );
-}
+  )};
