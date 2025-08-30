@@ -1,621 +1,596 @@
-export interface InnovativeITService {
+// Innovative IT Services 2025 - Zion Tech Group
+// Cutting-edge IT infrastructure and development solutions with real business value
+
+export interface ITService {
   id: string;
-  title: string;
-  description: string;
+  name: string;
   category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  description: string;
+  shortDescription: string;
+  pricing: {
+    starter: {
+      price: number;
+      period: string;
+      features: string[];
+      support: string;
+      responseTime: string;
+    };
+    professional: {
+      price: number;
+      period: string;
+      features: string[];
+      support: string;
+      responseTime: string;
+    };
+    enterprise: {
+      price: number;
+      period: string;
+      features: string[];
+      support: string;
+      responseTime: string;
+    };
+  };
   features: string[];
   benefits: string[];
-  useCases: string[];
   targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
+  useCases: string[];
+  technologies: string[];
+  integrations: string[];
+  customDevelopment: boolean;
+  trainingIncluded: boolean;
+  freeConsultation: boolean;
+  moneyBackGuarantee: boolean;
+  sla: string;
+  availability: string;
+  compliance: string[];
+  security: string[];
+  deployment: string[];
+  support: string[];
   marketPrice: string;
+  competitors: string[];
   roi: string;
+  implementationTime: string;
   innovationLevel: string;
+  marketSize: string;
+  growthRate: string;
+  tags: string[];
+  image: string;
+  demoUrl: string;
+  documentationUrl: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
+    address: string;
   };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
+  createdAt: string;
+  featured: boolean;
+  trending: boolean;
+  rating: number;
+  reviewCount: number;
 }
 
-export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
-  // Quantum Cloud Computing Infrastructure
+export const innovativeITServices: ITService[] = [
   {
-    id: "quantum-cloud-computing-infrastructure",
-    title: "Quantum Cloud Computing Infrastructure",
-    description: "Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud services, providing unprecedented computational power and efficiency.",
-    category: "Cloud Computing",
-    subcategory: "Quantum Cloud",
-    price: 15999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum processing units (QPUs) integration",
-      "Hybrid classical-quantum workflows",
-      "Quantum algorithm optimization",
-      "Real-time quantum simulation",
-      "Quantum machine learning pipelines",
-      "Quantum cryptography services",
-      "Scalable quantum resources",
-      "Quantum development environment",
-      "API for quantum applications",
-      "Quantum security protocols"
-    ],
-    benefits: [
-      "10,000x faster computation for specific problems",
-      "Reduce cloud costs by 60%",
-      "Unprecedented computational power",
-      "Future-proof technology",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Scientific research and simulations",
-      "Financial modeling and risk assessment",
-      "Drug discovery and molecular modeling",
-      "Cryptography and security",
-      "Machine learning optimization"
-    ],
-    targetAudience: [
-      "Research institutions",
-      "Financial services",
-      "Pharmaceutical companies",
-      "Government agencies",
-      "Technology companies"
-    ],
-    tags: ["Quantum Computing", "Cloud Infrastructure", "High Performance", "Innovation", "Research"],
-    estimatedDelivery: "20-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$15,999 - $45,000/month",
-    roi: "500-1000%",
-    innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    id: "cloud-devops-automation-platform",
+    name: "Cloud DevOps Automation Platform",
+    category: "Cloud & DevOps",
+    description: "Comprehensive DevOps automation platform that streamlines software development, testing, and deployment processes. Features include CI/CD pipelines, infrastructure as code, automated testing, and cloud resource management across multiple cloud providers.",
+    shortDescription: "AI-powered DevOps automation and cloud management platform",
+    pricing: {
+      starter: {
+        price: 79,
+        period: "month",
+        features: ["Basic CI/CD pipelines", "Git integration", "Basic testing automation", "Email support", "Up to 5 projects"],
+        support: "Email support",
+        responseTime: "< 24 hours"
+      },
+      professional: {
+        price: 199,
+        period: "month",
+        features: ["All starter features", "Advanced automation", "Multi-cloud support", "Priority support", "Up to 25 projects"],
+        support: "Priority support",
+        responseTime: "< 8 hours"
+      },
+      enterprise: {
+        price: 499,
+        period: "month",
+        features: ["All professional features", "Custom automation", "Advanced integrations", "Dedicated support", "Unlimited projects", "White-label options"],
+        support: "Dedicated support",
+        responseTime: "< 4 hours"
+      }
     },
-    technicalSpecs: {
-      technology: ["Quantum Algorithms", "Python", "Qiskit", "AWS", "Azure", "React"],
-      integrations: ["Quantum hardware", "Cloud platforms", "Scientific software", "ML frameworks"],
-      apiEndpoints: 500,
-      uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "Quantum-resistant encryption", "Zero-trust architecture"]
-    },
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
-    marketSize: "$89.7 billion by 2027"
-  },
-
-  // Blockchain-Based Supply Chain Management
-  {
-    id: "blockchain-supply-chain-management",
-    title: "Blockchain-Based Supply Chain Management",
-    description: "Comprehensive supply chain management platform that uses blockchain technology to provide transparency, traceability, and efficiency across the entire supply chain ecosystem.",
-    category: "Blockchain",
-    subcategory: "Supply Chain",
-    price: 4499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "End-to-end supply chain tracking",
-      "Smart contract automation",
-      "Real-time inventory management",
-      "Supplier verification and rating",
-      "Quality control monitoring",
-      "Compliance and certification tracking",
-      "Payment automation",
-      "Risk assessment and mitigation",
-      "Sustainability tracking",
-      "Mobile and IoT integration"
-    ],
-    benefits: [
-      "Improve supply chain transparency by 100%",
-      "Reduce fraud and counterfeiting by 90%",
-      "Optimize inventory by 40%",
-      "Automate compliance processes",
-      "Enhance supplier relationships"
-    ],
-    useCases: [
-      "Global logistics and shipping",
-      "Food safety and traceability",
-      "Pharmaceutical supply chains",
-      "Luxury goods authentication",
-      "Manufacturing supply chains"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Logistics providers",
-      "Retail chains",
-      "Food producers",
-      "Pharmaceutical companies"
-    ],
-    tags: ["Blockchain", "Supply Chain", "IoT", "Automation", "Transparency"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,499 - $12,000/month",
-    roi: "200-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Ethereum", "Hyperledger", "React", "Node.js", "PostgreSQL"],
-      integrations: ["ERP systems", "WMS", "TMS", "IoT devices", "Payment gateways"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Blockchain security", "End-to-end encryption"]
-    },
-    competitors: ["IBM Food Trust", "VeChain", "Walmart Blockchain", "Maersk TradeLens"],
-    marketSize: "$67.8 billion by 2027"
-  },
-
-  // Edge Computing & IoT Management Platform
-  {
-    id: "edge-computing-iot-management",
-    title: "Edge Computing & IoT Management Platform",
-    description: "Advanced edge computing platform that manages IoT devices, processes data at the edge, and provides real-time analytics and automation capabilities.",
-    category: "Edge Computing",
-    subcategory: "IoT Management",
-    price: 5999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Distributed edge computing nodes",
-      "Real-time IoT device management",
-      "Edge AI and machine learning",
-      "Local data processing and storage",
-      "Automatic device provisioning",
-      "Edge security and encryption",
-      "Bandwidth optimization",
-      "Predictive maintenance",
-      "Scalable edge infrastructure",
-      "Cloud-edge synchronization"
-    ],
-    benefits: [
-      "Reduce latency by 90%",
-      "Lower bandwidth costs by 70%",
-      "Improve reliability by 85%",
-      "Real-time decision making",
-      "Scalable IoT deployment"
-    ],
-    useCases: [
-      "Smart manufacturing",
-      "Autonomous vehicles",
-      "Smart cities",
-      "Healthcare monitoring",
-      "Industrial automation"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Smart city operators",
-      "Healthcare providers",
-      "Transportation companies",
-      "Energy utilities"
-    ],
-    tags: ["Edge Computing", "IoT", "Real-time", "Automation", "AI"],
-    estimatedDelivery: "14-18 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,999 - $18,000/month",
-    roi: "250-450%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Kubernetes", "Docker", "Python", "React", "Node.js"],
-      integrations: ["IoT protocols", "Cloud platforms", "Analytics tools", "Security systems"],
-      apiEndpoints: 400,
-      uptime: "99.95%",
-      security: ["SOC 2", "ISO 27001", "Edge security", "Device authentication"]
-    },
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge"],
-    marketSize: "$43.4 billion by 2027"
-  },
-
-  // Zero-Trust Security Architecture
-  {
-    id: "zero-trust-security-architecture",
-    title: "Zero-Trust Security Architecture Platform",
-    description: "Comprehensive zero-trust security platform that implements continuous verification, least-privilege access, and micro-segmentation for modern enterprise environments.",
-    category: "Cybersecurity",
-    subcategory: "Zero-Trust",
-    price: 7999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Continuous identity verification",
-      "Micro-segmentation and isolation",
-      "Least-privilege access control",
-      "Real-time threat detection",
-      "Behavioral analytics",
-      "Multi-factor authentication",
-      "API security and monitoring",
-      "Cloud security integration",
-      "Compliance automation",
-      "Security orchestration"
-    ],
-    benefits: [
-      "Reduce security breaches by 95%",
-      "Improve compliance by 90%",
-      "Simplify security management",
-      "Adaptive security posture",
-      "Future-proof security"
-    ],
-    useCases: [
-      "Enterprise security",
-      "Cloud migration",
-      "Remote workforce",
-      "DevOps security",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "Large enterprises",
-      "Government agencies",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Technology companies"
-    ],
-    tags: ["Zero-Trust", "Cybersecurity", "Identity", "Access Control", "Compliance"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$7,999 - $22,000/month",
-    roi: "300-600%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["Identity providers", "SIEM systems", "Cloud platforms", "Network devices"],
-      apiEndpoints: 250,
-      uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]
-    },
-    competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
-    marketSize: "$51.6 billion by 2027"
-  },
-
-  // DevOps Automation & CI/CD Platform
-  {
-    id: "devops-automation-cicd",
-    title: "DevOps Automation & CI/CD Platform",
-    description: "Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment, with advanced monitoring and optimization.",
-    category: "DevOps",
-    subcategory: "Automation",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
     features: [
       "Automated CI/CD pipelines",
       "Infrastructure as Code (IaC)",
+      "Multi-cloud management",
+      "Automated testing and deployment",
       "Container orchestration",
-      "Automated testing and QA",
-      "Deployment automation",
-      "Monitoring and observability",
-      "Performance optimization",
+      "Monitoring and alerting",
       "Security scanning",
+      "Cost optimization",
       "Team collaboration tools",
-      "Multi-cloud support"
+      "API for integrations"
     ],
     benefits: [
       "Reduce deployment time by 80%",
-      "Improve code quality by 60%",
-      "Reduce operational costs by 40%",
-      "Faster time to market",
-      "Better team productivity"
-    ],
-    useCases: [
-      "Software development",
-      "Web application deployment",
-      "Mobile app development",
-      "Microservices architecture",
-      "Cloud-native applications"
+      "Improve code quality and reliability",
+      "Reduce infrastructure costs by 30%",
+      "Enable faster time to market",
+      "Better team collaboration",
+      "Automated compliance and security"
     ],
     targetAudience: [
-      "Software companies",
-      "IT departments",
-      "Startups",
-      "Digital agencies",
-      "Enterprise development teams"
+      "Software development teams",
+      "DevOps engineers",
+      "IT operations teams",
+      "Startups and scale-ups",
+      "Enterprise companies",
+      "Cloud-native businesses"
     ],
-    tags: ["DevOps", "CI/CD", "Automation", "Cloud", "Monitoring"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "professional",
-    marketPrice: "$3,999 - $12,000/month",
-    roi: "200-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Jenkins", "GitLab", "Docker", "Kubernetes", "React", "Node.js"],
-      integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners"],
-      apiEndpoints: 200,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Secure pipelines", "Access control"]
-    },
-    competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],
-    marketSize: "$25.8 billion by 2027"
-  },
-
-  // Data Center Modernization & Hybrid Cloud
-  {
-    id: "data-center-modernization-hybrid-cloud",
-    title: "Data Center Modernization & Hybrid Cloud Platform",
-    description: "Comprehensive platform for modernizing legacy data centers and implementing hybrid cloud solutions that optimize performance, cost, and scalability.",
-    category: "Infrastructure",
-    subcategory: "Data Center",
-    price: 8999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Legacy system migration",
-      "Hybrid cloud orchestration",
+    useCases: [
+      "Continuous integration and deployment",
       "Infrastructure automation",
-      "Performance optimization",
-      "Cost optimization",
-      "Disaster recovery",
-      "Backup and archiving",
-      "Security and compliance",
-      "Monitoring and analytics",
-      "Capacity planning"
+      "Cloud resource management",
+      "Application monitoring",
+      "Security automation",
+      "Cost optimization"
+    ],
+    technologies: [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Jenkins",
+      "GitLab CI",
+      "AWS",
+      "Azure",
+      "Google Cloud"
+    ],
+    integrations: [
+      "GitHub",
+      "GitLab",
+      "Bitbucket",
+      "Jira",
+      "Slack",
+      "Microsoft Teams",
+      "PagerDuty",
+      "Datadog"
+    ],
+    customDevelopment: true,
+    trainingIncluded: true,
+    freeConsultation: true,
+    moneyBackGuarantee: true,
+    sla: "99.5% uptime guarantee",
+    availability: "24/7 cloud-based access",
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],
+    security: [
+      "End-to-end encryption",
+      "Role-based access control",
+      "Regular security audits",
+      "Data backup and recovery",
+      "Compliance monitoring"
+    ],
+    deployment: ["Cloud-based SaaS", "On-premise options", "Hybrid deployment"],
+    support: [
+      "Email and phone support",
+      "Live chat during business hours",
+      "Video tutorials",
+      "Knowledge base",
+      "Implementation assistance"
+    ],
+    marketPrice: "$79-499/month",
+    competitors: ["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions"],
+    roi: "250% ROI within 4 months",
+    implementationTime: "1-2 weeks",
+    innovationLevel: "Advanced automation technology",
+    marketSize: "$8.2 billion DevOps market",
+    growthRate: "24% annual growth",
+    tags: ["devops", "automation", "cloud", "CI/CD", "infrastructure"],
+    image: "/images/services/cloud-devops-automation-platform.jpg",
+    demoUrl: "https://ziontechgroup.com/demo/cloud-devops-automation-platform",
+    documentationUrl: "https://ziontechgroup.com/docs/cloud-devops-automation-platform",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    createdAt: "2025-01-15",
+    featured: true,
+    trending: true,
+    rating: 4.8,
+    reviewCount: 189
+  },
+  {
+    id: "blockchain-enterprise-solutions",
+    name: "Blockchain Enterprise Solutions",
+    category: "Blockchain & Web3",
+    description: "Enterprise-grade blockchain solutions that enable secure, transparent, and efficient business processes. Features include smart contract development, decentralized applications (dApps), supply chain tracking, and digital identity management.",
+    shortDescription: "Enterprise blockchain and Web3 development platform",
+    pricing: {
+      starter: {
+        price: 149,
+        period: "month",
+        features: ["Basic smart contracts", "Blockchain integration", "Basic dApp development", "Email support", "Up to 3 projects"],
+        support: "Email support",
+        responseTime: "< 48 hours"
+      },
+      professional: {
+        price: 399,
+        period: "month",
+        features: ["All starter features", "Advanced dApp development", "Multi-chain support", "Priority support", "Up to 15 projects"],
+        support: "Priority support",
+        responseTime: "< 24 hours"
+      },
+      enterprise: {
+        price: 999,
+        period: "month",
+        features: ["All professional features", "Custom blockchain solutions", "Advanced integrations", "Dedicated support", "Unlimited projects", "White-label options"],
+        support: "Dedicated support",
+        responseTime: "< 12 hours"
+      }
+    },
+    features: [
+      "Smart contract development",
+      "Decentralized application (dApp) creation",
+      "Multi-blockchain support",
+      "Supply chain tracking",
+      "Digital identity management",
+      "Token creation and management",
+      "Blockchain analytics",
+      "Security auditing",
+      "Integration APIs",
+      "Custom blockchain networks"
     ],
     benefits: [
-      "Reduce infrastructure costs by 50%",
-      "Improve performance by 70%",
-      "Enhance scalability and flexibility",
-      "Better disaster recovery",
-      "Future-proof infrastructure"
-    ],
-    useCases: [
-      "Enterprise data centers",
-      "Cloud migration",
-      "Digital transformation",
-      "Disaster recovery",
-      "Performance optimization"
+      "Increase transparency and trust",
+      "Reduce operational costs by 25%",
+      "Improve supply chain efficiency",
+      "Enable new business models",
+      "Enhanced security and immutability",
+      "Automated compliance and auditing"
     ],
     targetAudience: [
-      "Large enterprises",
-      "Government agencies",
       "Financial institutions",
+      "Supply chain companies",
       "Healthcare organizations",
-      "Educational institutions"
-    ],
-    tags: ["Data Center", "Hybrid Cloud", "Migration", "Optimization", "Automation"],
-    estimatedDelivery: "18-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,999 - $25,000/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["VMware", "OpenStack", "Kubernetes", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Cloud platforms", "Storage systems", "Network devices", "Monitoring tools"],
-      apiEndpoints: 350,
-      uptime: "99.95%",
-      security: ["SOC 2", "ISO 27001", "Encryption", "Access control"]
-    },
-    competitors: ["VMware", "Microsoft", "IBM", "HPE"],
-    marketSize: "$78.9 billion by 2027"
-  },
-
-  // Network Virtualization & SDN Platform
-  {
-    id: "network-virtualization-sdn",
-    title: "Network Virtualization & Software-Defined Networking Platform",
-    description: "Advanced network virtualization platform that implements software-defined networking (SDN) to provide flexible, scalable, and programmable network infrastructure.",
-    category: "Networking",
-    subcategory: "SDN",
-    price: 6499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Software-defined networking",
-      "Network virtualization",
-      "Centralized network control",
-      "Automated provisioning",
-      "Traffic optimization",
-      "Security policy enforcement",
-      "Network monitoring",
-      "Load balancing",
-      "Quality of service",
-      "Multi-tenant support"
-    ],
-    benefits: [
-      "Reduce network costs by 40%",
-      "Improve network agility by 80%",
-      "Enhance security and compliance",
-      "Automated network management",
-      "Scalable infrastructure"
+      "Government agencies",
+      "Real estate companies",
+      "Technology startups"
     ],
     useCases: [
-      "Enterprise networking",
-      "Data center networks",
-      "Cloud networking",
-      "Wide area networks",
-      "Network automation"
+      "Supply chain tracking",
+      "Digital identity verification",
+      "Smart contracts for business",
+      "Tokenization of assets",
+      "Decentralized finance (DeFi)",
+      "Non-fungible tokens (NFTs)"
     ],
-    targetAudience: [
-      "Large enterprises",
-      "Service providers",
-      "Data centers",
-      "Cloud providers",
-      "Network operators"
+    technologies: [
+      "Ethereum",
+      "Polygon",
+      "Solana",
+      "Hyperledger Fabric",
+      "Solidity",
+      "Web3.js",
+      "IPFS",
+      "MetaMask"
     ],
-    tags: ["SDN", "Network Virtualization", "Automation", "Scalability", "Security"],
-    estimatedDelivery: "14-18 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,499 - $18,000/month",
-    roi: "250-450%",
-    innovationLevel: "Advanced",
+    integrations: [
+      "ERP systems",
+      "CRM platforms",
+      "Payment gateways",
+      "Banking systems",
+      "Cloud platforms",
+      "Mobile applications",
+      "Web applications",
+      "IoT devices"
+    ],
+    customDevelopment: true,
+    trainingIncluded: true,
+    freeConsultation: true,
+    moneyBackGuarantee: true,
+    sla: "99.5% uptime guarantee",
+    availability: "24/7 cloud-based access",
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "Financial regulations"],
+    security: [
+      "Cryptographic security",
+      "Multi-signature wallets",
+      "Regular security audits",
+      "Cold storage options",
+      "Compliance monitoring"
+    ],
+    deployment: ["Cloud-based SaaS", "On-premise options", "Hybrid deployment"],
+    support: [
+      "Email and phone support",
+      "Live chat during business hours",
+      "Video tutorials",
+      "Knowledge base",
+      "Implementation assistance"
+    ],
+    marketPrice: "$149-999/month",
+    competitors: ["ConsenSys", "R3 Corda", "IBM Blockchain", "Microsoft Azure Blockchain"],
+    roi: "300% ROI within 8 months",
+    implementationTime: "2-4 weeks",
+    innovationLevel: "Cutting-edge blockchain technology",
+    marketSize: "$19.9 billion blockchain market",
+    growthRate: "87% annual growth",
+    tags: ["blockchain", "Web3", "smart contracts", "dApps", "decentralization"],
+    image: "/images/services/blockchain-enterprise-solutions.jpg",
+    demoUrl: "https://ziontechgroup.com/demo/blockchain-enterprise-solutions",
+    documentationUrl: "https://ziontechgroup.com/docs/blockchain-enterprise-solutions",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["OpenFlow", "OpenDaylight", "Python", "React", "Node.js"],
-      integrations: ["Network devices", "Cloud platforms", "Monitoring tools", "Security systems"],
-      apiEndpoints: 280,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Network segmentation", "Access control"]
-    },
-    competitors: ["Cisco", "VMware", "Juniper", "Arista"],
-    marketSize: "$32.7 billion by 2027"
+    createdAt: "2025-01-20",
+    featured: true,
+    trending: true,
+    rating: 4.7,
+    reviewCount: 134
   },
-
-  // API Management & Integration Platform
   {
-    id: "api-management-integration",
-    title: "API Management & Integration Platform",
-    description: "Comprehensive API management platform that provides API design, development, testing, deployment, and monitoring capabilities with advanced integration features.",
-    category: "Integration",
-    subcategory: "API Management",
-    price: 3499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: "quantum-computing-solutions",
+    name: "Quantum Computing Solutions",
+    category: "Quantum Technology",
+    description: "Revolutionary quantum computing solutions that solve complex problems impossible for classical computers. Features include quantum algorithm development, quantum machine learning, optimization problems, and quantum simulation capabilities.",
+    shortDescription: "Quantum computing development and consulting platform",
+    pricing: {
+      starter: {
+        price: 299,
+        period: "month",
+        features: ["Basic quantum algorithms", "Quantum simulation", "Basic consulting", "Email support", "Up to 10 quantum jobs/month"],
+        support: "Email support",
+        responseTime: "< 48 hours"
+      },
+      professional: {
+        price: 799,
+        period: "month",
+        features: ["All starter features", "Advanced quantum algorithms", "Quantum ML models", "Priority support", "Up to 100 quantum jobs/month"],
+        support: "Priority support",
+        responseTime: "< 24 hours"
+      },
+      enterprise: {
+        price: 1999,
+        period: "month",
+        features: ["All professional features", "Custom quantum solutions", "Advanced integrations", "Dedicated support", "Unlimited quantum jobs", "White-label options"],
+        support: "Dedicated support",
+        responseTime: "< 12 hours"
+      }
+    },
     features: [
-      "API design and development",
-      "API gateway and routing",
-      "Authentication and authorization",
-      "Rate limiting and throttling",
-      "API versioning",
-      "Documentation and testing",
-      "Monitoring and analytics",
-      "Integration connectors",
-      "Workflow automation",
-      "Developer portal"
+      "Quantum algorithm development",
+      "Quantum machine learning",
+      "Optimization problem solving",
+      "Quantum simulation",
+      "Quantum cryptography",
+      "Quantum error correction",
+      "Hybrid quantum-classical computing",
+      "Quantum software development",
+      "Quantum consulting services",
+      "API for quantum applications"
     ],
     benefits: [
-      "Accelerate API development by 70%",
-      "Improve API security by 90%",
-      "Reduce integration costs by 50%",
-      "Better developer experience",
-      "Enhanced API governance"
+      "Solve previously impossible problems",
+      "10,000x faster computation for specific tasks",
+      "Unprecedented optimization capabilities",
+      "Future-proof technology investment",
+      "Competitive advantage in research",
+      "Breakthrough scientific discoveries"
+    ],
+    targetAudience: [
+      "Research institutions",
+      "Pharmaceutical companies",
+      "Financial services",
+      "Government agencies",
+      "Technology companies",
+      "Universities"
     ],
     useCases: [
-      "Microservices architecture",
-      "Third-party integrations",
-      "Mobile app backends",
-      "B2B integrations",
-      "Digital transformation"
+      "Drug discovery and molecular modeling",
+      "Financial risk assessment",
+      "Climate modeling and prediction",
+      "Cryptography and security",
+      "Logistics optimization",
+      "Machine learning acceleration"
     ],
-    targetAudience: [
-      "Software companies",
-      "Enterprises",
-      "Digital agencies",
-      "Startups",
-      "Government agencies"
+    technologies: [
+      "IBM Qiskit",
+      "Google Cirq",
+      "Microsoft Q#",
+      "Amazon Braket",
+      "Rigetti Forest",
+      "D-Wave Ocean",
+      "Python",
+      "Quantum algorithms"
     ],
-    tags: ["API Management", "Integration", "Microservices", "Security", "Developer Experience"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "professional",
-    marketPrice: "$3,499 - $10,000/month",
-    roi: "200-400%",
-    innovationLevel: "Advanced",
+    integrations: [
+      "Classical computing systems",
+      "Cloud platforms",
+      "Scientific software",
+      "Machine learning frameworks",
+      "Data analysis tools",
+      "Research databases",
+      "Simulation platforms",
+      "Visualization tools"
+    ],
+    customDevelopment: true,
+    trainingIncluded: true,
+    freeConsultation: true,
+    moneyBackGuarantee: true,
+    sla: "99.5% uptime guarantee",
+    availability: "24/7 cloud-based access",
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "Research compliance"],
+    security: [
+      "Quantum-resistant encryption",
+      "Secure quantum communication",
+      "Regular security audits",
+      "Data backup and recovery",
+      "Compliance monitoring"
+    ],
+    deployment: ["Cloud-based SaaS", "On-premise options", "Hybrid deployment"],
+    support: [
+      "Email and phone support",
+      "Live chat during business hours",
+      "Video tutorials",
+      "Knowledge base",
+      "Implementation assistance"
+    ],
+    marketPrice: "$299-1999/month",
+    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
+    roi: "500% ROI within 12 months",
+    implementationTime: "4-8 weeks",
+    innovationLevel: "Revolutionary quantum technology",
+    marketSize: "$65.0 billion quantum computing market",
+    growthRate: "32% annual growth",
+    tags: ["quantum computing", "quantum algorithms", "quantum ML", "optimization", "innovation"],
+    image: "/images/services/quantum-computing-solutions.jpg",
+    demoUrl: "https://ziontechgroup.com/demo/quantum-computing-solutions",
+    documentationUrl: "https://ziontechgroup.com/docs/quantum-computing-solutions",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Kong", "Apigee", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["Cloud platforms", "Databases", "Message queues", "Authentication systems"],
-      apiEndpoints: 150,
-      uptime: "99.9%",
-      security: ["SOC 2", "OAuth 2.0", "JWT", "API security"]
-    },
-    competitors: ["Apigee", "Kong", "MuleSoft", "Tyk"],
-    marketSize: "$19.8 billion by 2027"
+    createdAt: "2025-01-25",
+    featured: true,
+    trending: true,
+    rating: 4.9,
+    reviewCount: 89
   },
-
-  // Digital Twin & Simulation Platform
   {
-    id: "digital-twin-simulation",
-    title: "Digital Twin & Simulation Platform",
-    description: "Advanced digital twin platform that creates virtual replicas of physical systems, enabling real-time monitoring, simulation, and predictive analytics.",
-    category: "Simulation",
-    subcategory: "Digital Twin",
-    price: 7999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: "iot-edge-computing-platform",
+    name: "IoT Edge Computing Platform",
+    category: "Internet of Things",
+    description: "Advanced IoT edge computing platform that processes data at the edge, reducing latency and bandwidth costs. Features include real-time data processing, device management, predictive maintenance, and edge AI capabilities.",
+    shortDescription: "AI-powered IoT edge computing and device management platform",
+    pricing: {
+      starter: {
+        price: 69,
+        period: "month",
+        features: ["Basic device management", "Data collection", "Basic analytics", "Email support", "Up to 100 devices"],
+        support: "Email support",
+        responseTime: "< 24 hours"
+      },
+      professional: {
+        price: 179,
+        period: "month",
+        features: ["All starter features", "Edge AI processing", "Predictive maintenance", "Priority support", "Up to 1,000 devices"],
+        support: "Priority support",
+        responseTime: "< 8 hours"
+      },
+      enterprise: {
+        price: 449,
+        period: "month",
+        features: ["All professional features", "Custom edge AI", "Advanced integrations", "Dedicated support", "Unlimited devices", "White-label options"],
+        support: "Dedicated support",
+        responseTime: "< 4 hours"
+      }
+    },
     features: [
-      "3D digital twin creation",
-      "Real-time data synchronization",
-      "Predictive analytics",
-      "Simulation and modeling",
-      "IoT integration",
-      "Visualization and dashboards",
-      "Historical data analysis",
-      "Scenario planning",
-      "Collaboration tools",
-      "Mobile and AR support"
-    ],
-    benefits: [
-      "Improve operational efficiency by 60%",
-      "Reduce maintenance costs by 40%",
-      "Enhance decision making",
+      "Edge AI processing",
+      "Real-time data analytics",
+      "Device management and monitoring",
       "Predictive maintenance",
-      "Virtual training and testing"
+      "Data collection and storage",
+      "Edge security and encryption",
+      "Cloud-edge synchronization",
+      "Custom edge applications",
+      "Performance monitoring",
+      "API for integrations"
     ],
-    useCases: [
-      "Manufacturing optimization",
-      "Smart city planning",
-      "Healthcare simulation",
-      "Infrastructure monitoring",
-      "Product development"
+    benefits: [
+      "Reduce latency by 90%",
+      "Lower bandwidth costs by 60%",
+      "Improve device reliability",
+      "Enable real-time decision making",
+      "Better data privacy and security",
+      "Scalable IoT deployment"
     ],
     targetAudience: [
       "Manufacturing companies",
-      "Smart city operators",
-      "Healthcare providers",
-      "Engineering firms",
-      "Research institutions"
+      "Smart cities",
+      "Healthcare organizations",
+      "Retail chains",
+      "Energy companies",
+      "Transportation companies"
     ],
-    tags: ["Digital Twin", "Simulation", "IoT", "3D Modeling", "Predictive Analytics"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$7,999 - $22,000/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
+    useCases: [
+      "Industrial IoT monitoring",
+      "Smart city infrastructure",
+      "Healthcare device management",
+      "Retail analytics",
+      "Energy monitoring",
+      "Fleet management"
+    ],
+    technologies: [
+      "Edge computing frameworks",
+      "Machine learning models",
+      "Real-time databases",
+      "Message queues",
+      "Containerization",
+      "Microservices",
+      "REST APIs",
+      "MQTT protocol"
+    ],
+    integrations: [
+      "Cloud platforms (AWS, Azure, GCP)",
+      "IoT devices and sensors",
+      "Industrial equipment",
+      "Mobile applications",
+      "Web dashboards",
+      "Analytics platforms",
+      "Notification systems",
+      "Database systems"
+    ],
+    customDevelopment: true,
+    trainingIncluded: true,
+    freeConsultation: true,
+    moneyBackGuarantee: true,
+    sla: "99.5% uptime guarantee",
+    availability: "24/7 cloud-based access",
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "Industry standards"],
+    security: [
+      "End-to-end encryption",
+      "Device authentication",
+      "Secure data transmission",
+      "Regular security updates",
+      "Compliance monitoring"
+    ],
+    deployment: ["Cloud-based SaaS", "On-premise options", "Hybrid deployment"],
+    support: [
+      "Email and phone support",
+      "Live chat during business hours",
+      "Video tutorials",
+      "Knowledge base",
+      "Implementation assistance"
+    ],
+    marketPrice: "$69-449/month",
+    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
+    roi: "200% ROI within 6 months",
+    implementationTime: "2-4 weeks",
+    innovationLevel: "Advanced edge computing technology",
+    marketSize: "$15.7 billion edge computing market",
+    growthRate: "37% annual growth",
+    tags: ["IoT", "edge computing", "AI", "device management", "real-time analytics"],
+    image: "/images/services/iot-edge-computing-platform.jpg",
+    demoUrl: "https://ziontechgroup.com/demo/iot-edge-computing-platform",
+    documentationUrl: "https://ziontechgroup.com/docs/iot-edge-computing-platform",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Unity3D", "Unreal Engine", "Python", "React", "Node.js", "PostgreSQL"],
-      integrations: ["IoT platforms", "CAD software", "PLM systems", "Analytics tools"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Data encryption", "Access control"]
-    },
-    competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"],
-    marketSize: "$86.1 billion by 2027"
+    createdAt: "2025-01-30",
+    featured: true,
+    trending: true,
+    rating: 4.6,
+    reviewCount: 167
   }
 ];
+
+export default innovativeITServices;

@@ -61,7 +61,8 @@ import {
   Atom as AtomIcon,
   Rocket as RocketIcon,
   Leaf as LeafIcon,
-  Link as LinkIcon2
+  Link as LinkIcon2,
+  Package
 } from 'lucide-react';
 import { innovativeServices2025 } from '../data/innovativeServices2025';
 
@@ -100,20 +101,13 @@ export function EnhancedHeader() {
     { name: 'Home', href: '/', current: location.pathname === '/' },
     { name: 'About', href: '/about', current: location.pathname === '/about' },
     { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
-    { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions') },
     { name: 'AI Services', href: '/ai-services', current: location.pathname.startsWith('/ai-services') },
     { name: 'IT Services', href: '/it-services', current: location.pathname.startsWith('/it-services') },
     { name: 'Micro SaaS', href: '/micro-saas', current: location.pathname.startsWith('/micro-saas') },
+    { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions') },
     { name: 'Marketplace', href: '/marketplace', current: location.pathname.startsWith('/marketplace') },
     { name: 'Resources', href: '/resources', current: location.pathname.startsWith('/resources') },
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
-    { name: 'Blog', href: '/blog', current: location.pathname === '/blog' },
-    { name: 'Careers', href: '/careers', current: location.pathname === '/careers' },
-    { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },
-    { name: 'News', href: '/news', current: location.pathname === '/news' },
-    { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },
-    { name: 'Help', href: '/help', current: location.pathname === '/help' },
-    { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },
     { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' }
   ];
 
@@ -162,128 +156,116 @@ export function EnhancedHeader() {
       badge: 'New'
     },
     {
-      name: 'AI Business Intelligence',
-      href: '/services/ai-business-intelligence',
+      name: 'AI Business Intelligence Platform',
+      href: '/services/ai-business-intelligence-platform',
       icon: Brain,
-      description: 'AI-powered business insights',
+      description: 'AI-powered business insights and analytics',
       category: 'AI & Machine Learning',
       color: 'from-purple-600 to-indigo-700',
       badge: 'Popular'
     },
     {
-      name: 'AI Financial Trading',
-      href: '/services/ai-financial-trading',
+      name: 'AI Financial Trading Platform',
+      href: '/services/ai-financial-trading-platform',
       icon: TrendingUp,
-      description: 'AI-powered financial trading platform',
+      description: 'AI-powered automated trading and portfolio management',
       category: 'AI & Machine Learning',
       color: 'from-green-600 to-emerald-700',
       badge: 'Popular'
     },
     {
-      name: 'AI IoT Edge Computing',
-      href: '/services/ai-iot-edge-computing',
-      icon: Cpu,
-      description: 'AI-powered IoT edge computing',
-      category: 'AI & Machine Learning',
-      color: 'from-cyan-600 to-blue-700',
-      badge: 'Featured'
-    },
-
-    // Quantum Computing
-    {
-      name: 'Quantum AI Hybrid Platform',
-      href: '/services/quantum-ai-hybrid-platform',
-      icon: Atom,
-      description: 'Quantum-AI integration for unprecedented power',
-      category: 'Quantum Computing',
-      color: 'from-violet-600 to-purple-700',
-      badge: 'Featured'
-    },
-
-    // Blockchain & Web3
-    {
-      name: 'Blockchain Enterprise Solutions',
-      href: '/services/blockchain-enterprise-solutions',
-      icon: LinkIcon,
-      description: 'Enterprise-grade blockchain solutions',
-      category: 'Blockchain & Web3',
-      color: 'from-green-600 to-emerald-700',
-      badge: 'Popular'
-    },
-
-    // Space Technology
-    {
-      name: 'Space Technology Solutions',
-      href: '/services/space-technology-solutions',
-      icon: Satellite,
-      description: 'Terrestrial applications of space technology',
-      category: 'Space Technology',
-      color: 'from-slate-600 to-gray-700',
-      badge: 'Featured'
-    },
-
-    // Green Technology
-    {
-      name: 'Green Technology Solutions',
-      href: '/services/green-technology-solutions',
-      icon: Leaf,
-      description: 'Sustainable technology solutions',
-      category: 'Green Technology',
-      color: 'from-green-500 to-emerald-600',
-      badge: 'Popular'
-    },
-
-    // Cybersecurity
-    {
-      name: 'AI Cybersecurity Platform',
-      href: '/services/ai-cybersecurity-platform',
+      name: 'AI Cybersecurity Suite',
+      href: '/services/ai-cybersecurity-suite',
       icon: Shield,
-      description: 'AI-powered cybersecurity',
-      category: 'Cybersecurity',
+      description: 'AI-powered threat detection and response',
+      category: 'AI & Machine Learning',
       color: 'from-red-600 to-pink-700',
       badge: 'New'
     },
 
-    // IT & Infrastructure
+    // Micro SaaS Solutions
     {
-      name: 'Cloud DevOps Automation',
-      href: '/services/cloud-devops-automation',
+      name: 'AI Content Studio Pro',
+      href: '/services/ai-content-studio-pro',
+      icon: PenTool,
+      description: 'AI-powered content creation and optimization',
+      category: 'Micro SaaS',
+      color: 'from-blue-600 to-cyan-700',
+      badge: 'New'
+    },
+    {
+      name: 'Smart Inventory Manager',
+      href: '/services/smart-inventory-manager',
+      icon: Package,
+      description: 'AI-powered inventory optimization and management',
+      category: 'Micro SaaS',
+      color: 'from-green-600 to-emerald-700',
+      badge: 'Popular'
+    },
+    {
+      name: 'AI Customer Support Automation',
+      href: '/services/ai-customer-support-automation',
+      icon: MessageCircle,
+      description: 'AI-powered customer support automation platform',
+      category: 'Micro SaaS',
+      color: 'from-purple-600 to-indigo-700',
+      badge: 'Featured'
+    },
+    {
+      name: 'Financial Analytics Dashboard',
+      href: '/services/financial-analytics-dashboard',
+      icon: BarChart3,
+      description: 'AI-powered financial analytics and reporting',
+      category: 'Micro SaaS',
+      color: 'from-yellow-600 to-orange-700',
+      badge: 'Popular'
+    },
+    {
+      name: 'HR Talent Management Suite',
+      href: '/services/hr-talent-management-suite',
+      icon: Users,
+      description: 'AI-powered HR and talent management platform',
+      category: 'Micro SaaS',
+      color: 'from-pink-600 to-rose-700',
+      badge: 'New'
+    },
+
+    // IT Infrastructure & DevOps
+    {
+      name: 'Cloud DevOps Automation Platform',
+      href: '/services/cloud-devops-automation-platform',
       icon: Cloud,
-      description: 'DevOps automation platform',
+      description: 'AI-powered DevOps automation and cloud management',
       category: 'IT & Infrastructure',
       color: 'from-blue-600 to-indigo-700',
       badge: 'Popular'
     },
     {
-      name: 'IT Infrastructure',
-      href: '/services/it-infrastructure',
-      icon: Server,
-      description: 'Infrastructure management',
+      name: 'Blockchain Enterprise Solutions',
+      href: '/services/blockchain-enterprise-solutions',
+      icon: LinkIcon,
+      description: 'Enterprise blockchain and Web3 development',
       category: 'IT & Infrastructure',
-      color: 'from-gray-600 to-slate-700',
-      badge: 'Popular'
+      color: 'from-green-600 to-emerald-700',
+      badge: 'Featured'
     },
-
-    // Micro SaaS
     {
-      name: 'Micro CRM Platform',
-      href: '/services/micro-crm-platform',
-      icon: Users,
-      description: 'Customer relationship management',
-      category: 'Micro SaaS',
-      color: 'from-blue-600 to-cyan-700',
-      badge: 'Popular'
+      name: 'Quantum Computing Solutions',
+      href: '/services/quantum-computing-solutions',
+      icon: Atom,
+      description: 'Quantum computing development and consulting',
+      category: 'IT & Infrastructure',
+      color: 'from-violet-600 to-purple-700',
+      badge: 'Revolutionary'
     },
-
-    // Data & Analytics
     {
-      name: 'Advanced Data Analytics',
-      href: '/services/advanced-data-analytics',
-      icon: BarChart3,
-      description: 'Data analytics platform',
-      category: 'Data & Analytics',
-      color: 'from-indigo-600 to-purple-700',
-      badge: 'Popular'
+      name: 'IoT Edge Computing Platform',
+      href: '/services/iot-edge-computing-platform',
+      icon: Cpu,
+      description: 'AI-powered IoT edge computing and device management',
+      category: 'IT & Infrastructure',
+      color: 'from-cyan-600 to-blue-700',
+      badge: 'Advanced'
     },
 
     // Digital Transformation
