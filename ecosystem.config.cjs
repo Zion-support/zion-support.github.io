@@ -243,6 +243,72 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // INTELLIGENT AUTOMATION SYSTEMS
+    {
+      name: 'ai-code-review-automation',
+      script: './scripts/automation/ai-code-review-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './logs/ai-code-review.log',
+      error_file: './logs/ai-code-review-error.log',
+      out_file: './logs/ai-code-review-out.log'
+    },
+
+    {
+      name: 'smart-dependency-intelligence',
+      script: './scripts/automation/smart-dependency-intelligence.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/smart-dependency-intelligence.log',
+      error_file: './logs/smart-dependency-intelligence-error.log',
+      out_file: './logs/smart-dependency-intelligence-out.log'
+    },
+
+    {
+      name: 'predictive-issue-detection',
+      script: './scripts/automation/predictive-issue-detection.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: './logs/predictive-issue-detection.log',
+      error_file: './logs/predictive-issue-detection-error.log',
+      out_file: './logs/predictive-issue-detection-out.log'
+    },
+
+    {
+      name: 'intelligent-build-pipeline',
+      script: './scripts/automation/intelligent-build-pipeline.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: './logs/intelligent-build-pipeline.log',
+      error_file: './logs/intelligent-build-pipeline-error.log',
+      out_file: './logs/intelligent-build-pipeline-out.log'
+    }
     }
   ]
 };

@@ -37,7 +37,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             "lowPrice": "599",
             "highPrice": "25000",
             "description": "Enterprise AI and Technology Solutions"
-
+        }
     };
     // Merge with provided structured data
     const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
@@ -103,9 +103,6 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta httpEquiv="X-Frame-Options" content="DENY"/>
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block"/>
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
-<<<<<<< HEAD
-    </Helmet>);
-}}
-=======
-    </Helmet>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    </Helmet>
+  );
+}

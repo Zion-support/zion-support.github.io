@@ -214,6 +214,11 @@ export function Footer() {
       icon: BrainIcon,
       links: [
         { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Micro SaaS Platform', path: '/services/ai-micro-saas-platform', icon: Brain },
+        { name: 'Quantum AI Trading Platform', path: '/services/quantum-ai-trading-platform', icon: Atom },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'AI Solutions Overview', path: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: TrendingUp },
         { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: DollarSign },
         { name: 'AI IoT Edge Computing', path: '/services/ai-iot-edge-computing', icon: Cpu },

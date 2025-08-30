@@ -113,6 +113,9 @@ export function Sidebar() {
       icon: Zap,
       description: 'Our technology services',
       subItems: [
+        { name: 'AI Micro SaaS Platform', href: '/services/ai-micro-saas-platform', icon: Brain },
+        { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-platform', icon: Atom },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
