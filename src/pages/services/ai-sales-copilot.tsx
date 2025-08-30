@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
+  Users, 
   TrendingUp, 
   Target, 
+  BarChart3, 
   Zap, 
   Shield, 
+  Brain, 
   CheckCircle,
   ArrowRight,
   Star,
@@ -38,97 +39,68 @@ import {
   BarChart,
   Users2,
   Settings,
-  Palette,
-  Calculator,
-  PieChart,
-  Target,
-  Scale,
-  Gavel,
-  Clipboard,
-  BookOpen,
-  LineChart,
-  PieChart as PieChartIcon,
-  Activity as ActivityIcon
+  Palette
 } from 'lucide-react';
 
-export default function AIBusinessIntelligence() {
+export default function AISalesCopilot() {
   const features = [
     {
       icon: Brain,
-      title: "Predictive Analytics",
-      description: "AI-powered forecasting and trend analysis for strategic decision making"
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Dashboards",
-      description: "Live data visualization and interactive reporting across all business metrics"
+      title: "Intelligent Lead Scoring",
+      description: "AI-powered lead qualification and prioritization for maximum conversion rates"
     },
     {
       icon: Target,
-      title: "Goal Tracking",
-      description: "Automated monitoring and progress tracking for business objectives and KPIs"
+      title: "Predictive Analytics",
+      description: "Forecast sales outcomes and identify high-value opportunities with machine learning"
+    },
+    {
+      icon: Users,
+      title: "Customer Behavior Analysis",
+      description: "Deep insights into customer preferences and buying patterns"
     },
     {
       icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into business performance and operational efficiency"
+      title: "Sales Performance Optimization",
+      description: "Real-time recommendations to improve sales team effectiveness"
     },
     {
       icon: Zap,
-      title: "Automated Insights",
-      description: "AI-generated recommendations and actionable insights from your data"
+      title: "Automated Follow-ups",
+      description: "Smart scheduling and personalized follow-up sequences"
     },
     {
-      icon: Shield,
-      title: "Data Security",
-      description: "Enterprise-grade security and compliance for sensitive business data"
+      icon: BarChart3,
+      title: "Advanced Reporting",
+      description: "Comprehensive dashboards and actionable insights"
     }
   ];
 
   const benefits = [
-    "Increase decision-making speed by 300% with real-time insights",
-    "Improve business performance by 40% through predictive analytics",
-    "Reduce reporting time by 80% with automated dashboards",
-    "Identify new opportunities with AI-powered trend analysis",
-    "Optimize operations with data-driven recommendations",
-    "Achieve better ROI through intelligent business insights"
+    "Increase sales conversion rates by up to 300%",
+    "Reduce sales cycle time by 40%",
+    "Improve lead qualification accuracy by 85%",
+    "Boost sales team productivity by 60%",
+    "Enhance customer engagement and retention",
+    "Real-time performance monitoring and optimization"
   ];
 
   const useCases = [
     {
-      title: "Executive Leadership",
-      description: "C-level executives and board members needing strategic business insights"
+      title: "Enterprise Sales Teams",
+      description: "Large organizations with complex sales processes and multiple stakeholders"
     },
     {
-      title: "Sales & Marketing",
-      description: "Teams requiring customer behavior analysis and performance metrics"
+      title: "B2B SaaS Companies",
+      description: "Software companies selling to businesses with long sales cycles"
     },
     {
-      title: "Operations Management",
-      description: "Managers optimizing processes and resource allocation"
+      title: "Consulting Firms",
+      description: "Professional services companies managing multiple client relationships"
     },
     {
-      title: "Financial Planning",
-      description: "Finance teams analyzing trends and forecasting business performance"
-    }
-  ];
-
-  const analyticsTypes = [
-    {
-      title: "Descriptive Analytics",
-      description: "What happened - historical data analysis and reporting"
-    },
-    {
-      title: "Diagnostic Analytics",
-      description: "Why it happened - root cause analysis and investigation"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "What will happen - forecasting and trend prediction"
-    },
-    {
-      title: "Prescriptive Analytics",
-      description: "What should we do - actionable recommendations and optimization"
+      title: "Manufacturing & Distribution",
+      description: "Companies with complex product catalogs and pricing structures"
     }
   ];
 
@@ -145,16 +117,16 @@ export default function AIBusinessIntelligence() {
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
-              <span>AI-Powered Business Intelligence</span>
+              <span>AI-Powered Sales Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Business Intelligence
+              AI Sales Copilot
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your business data into actionable intelligence with AI-powered analytics, 
-              predictive insights, and real-time dashboards that drive strategic decision making.
+              Transform your sales process with intelligent automation, predictive analytics, 
+              and AI-driven insights that boost conversion rates and accelerate revenue growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -195,10 +167,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced BI Features
+              Intelligent Sales Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive business intelligence capabilities powered by artificial intelligence
+              Leverage cutting-edge AI to automate, optimize, and scale your sales operations
             </p>
           </motion.div>
           
@@ -232,10 +204,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Business Intelligence
+              Transform Your Sales Performance
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience measurable improvements in decision-making and business performance
+              Experience measurable improvements in every aspect of your sales process
             </p>
           </motion.div>
           
@@ -273,7 +245,7 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
 
-      {/* Analytics Types Section */}
+      {/* Use Cases Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -283,51 +255,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Four Levels of Analytics Intelligence
+              Perfect For Your Business
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From historical analysis to predictive insights and actionable recommendations
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsTypes.map((type, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <BarChart3 className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
-                    <p className="text-zion-slate-light">{type.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-zion-blue-dark/30 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Perfect For Your Team
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored business intelligence solutions for various roles and departments
+              Whether you're a startup or enterprise, our AI Sales Copilot adapts to your needs
             </p>
           </motion.div>
           
@@ -341,7 +272,7 @@ export default function AIBusinessIntelligence() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users2 className="w-8 h-8 text-white" />
+                  <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-zion-slate-light text-sm">{useCase.description}</p>
@@ -360,10 +291,10 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Unlock Your Business Intelligence?
+              Ready to Revolutionize Your Sales?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already making smarter decisions with AI-powered insights
+              Join thousands of companies already using AI to transform their sales performance
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -372,7 +303,7 @@ export default function AIBusinessIntelligence() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
-                Start Analyzing Today
+                Get Started Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
               

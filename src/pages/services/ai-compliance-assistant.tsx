@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  Zap, 
   Shield, 
-  CheckCircle,
+  CheckCircle, 
+  AlertTriangle, 
+  FileText, 
+  Zap, 
+  Brain, 
+  BarChart3,
   ArrowRight,
   Star,
   Award,
@@ -45,90 +45,87 @@ import {
   Scale,
   Gavel,
   Clipboard,
-  BookOpen,
-  LineChart,
-  PieChart as PieChartIcon,
-  Activity as ActivityIcon
+  BookOpen
 } from 'lucide-react';
 
-export default function AIBusinessIntelligence() {
+export default function AIComplianceAssistant() {
   const features = [
     {
+      icon: Shield,
+      title: "Automated Compliance Monitoring",
+      description: "24/7 monitoring of regulatory requirements and compliance status across all systems"
+    },
+    {
+      icon: CheckCircle,
+      title: "Real-time Risk Assessment",
+      description: "Instant identification and evaluation of compliance risks and violations"
+    },
+    {
+      icon: FileText,
+      title: "Document Management",
+      description: "Intelligent document review, classification, and compliance verification"
+    },
+    {
       icon: Brain,
-      title: "Predictive Analytics",
-      description: "AI-powered forecasting and trend analysis for strategic decision making"
+      title: "AI-Powered Auditing",
+      description: "Machine learning algorithms that continuously improve compliance detection accuracy"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Proactive Alerts",
+      description: "Early warning system for potential compliance issues before they become violations"
     },
     {
       icon: BarChart3,
-      title: "Real-time Dashboards",
-      description: "Live data visualization and interactive reporting across all business metrics"
-    },
-    {
-      icon: Target,
-      title: "Goal Tracking",
-      description: "Automated monitoring and progress tracking for business objectives and KPIs"
-    },
-    {
-      icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into business performance and operational efficiency"
-    },
-    {
-      icon: Zap,
-      title: "Automated Insights",
-      description: "AI-generated recommendations and actionable insights from your data"
-    },
-    {
-      icon: Shield,
-      title: "Data Security",
-      description: "Enterprise-grade security and compliance for sensitive business data"
+      title: "Comprehensive Reporting",
+      description: "Detailed compliance reports and analytics for stakeholders and regulators"
     }
   ];
 
   const benefits = [
-    "Increase decision-making speed by 300% with real-time insights",
-    "Improve business performance by 40% through predictive analytics",
-    "Reduce reporting time by 80% with automated dashboards",
-    "Identify new opportunities with AI-powered trend analysis",
-    "Optimize operations with data-driven recommendations",
-    "Achieve better ROI through intelligent business insights"
+    "Reduce compliance violations by up to 90% through proactive monitoring",
+    "Automate 80% of routine compliance tasks and documentation",
+    "Achieve 100% audit readiness with real-time compliance tracking",
+    "Reduce compliance costs by 60% through intelligent automation",
+    "Improve regulatory reporting accuracy and timeliness",
+    "Ensure consistent compliance across all business units and locations"
+  ];
+
+  const complianceAreas = [
+    {
+      title: "GDPR & Data Privacy",
+      description: "Personal data protection, consent management, and privacy compliance"
+    },
+    {
+      title: "SOX & Financial Compliance",
+      description: "Financial reporting, internal controls, and audit requirements"
+    },
+    {
+      title: "HIPAA & Healthcare",
+      description: "Patient data protection and healthcare information security"
+    },
+    {
+      title: "ISO Standards",
+      description: "Quality management, information security, and environmental standards"
+    }
   ];
 
   const useCases = [
     {
-      title: "Executive Leadership",
-      description: "C-level executives and board members needing strategic business insights"
+      title: "Financial Services",
+      description: "Banks, insurance companies, and fintech firms with strict regulatory requirements"
     },
     {
-      title: "Sales & Marketing",
-      description: "Teams requiring customer behavior analysis and performance metrics"
+      title: "Healthcare Organizations",
+      description: "Hospitals, clinics, and health tech companies handling sensitive patient data"
     },
     {
-      title: "Operations Management",
-      description: "Managers optimizing processes and resource allocation"
+      title: "E-commerce & Retail",
+      description: "Online businesses managing customer data and payment compliance"
     },
     {
-      title: "Financial Planning",
-      description: "Finance teams analyzing trends and forecasting business performance"
-    }
-  ];
-
-  const analyticsTypes = [
-    {
-      title: "Descriptive Analytics",
-      description: "What happened - historical data analysis and reporting"
-    },
-    {
-      title: "Diagnostic Analytics",
-      description: "Why it happened - root cause analysis and investigation"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "What will happen - forecasting and trend prediction"
-    },
-    {
-      title: "Prescriptive Analytics",
-      description: "What should we do - actionable recommendations and optimization"
+      title: "Manufacturing & Supply Chain",
+      description: "Companies with complex regulatory requirements across multiple jurisdictions"
     }
   ];
 
@@ -144,17 +141,17 @@ export default function AIBusinessIntelligence() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4" />
-              <span>AI-Powered Business Intelligence</span>
+              <Shield className="w-4 h-4" />
+              <span>AI-Powered Compliance</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Business Intelligence
+              AI Compliance Assistant
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your business data into actionable intelligence with AI-powered analytics, 
-              predictive insights, and real-time dashboards that drive strategic decision making.
+              Stay ahead of regulatory requirements with intelligent compliance automation, 
+              real-time monitoring, and AI-driven risk assessment that keeps your business compliant 24/7.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -195,10 +192,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced BI Features
+              Intelligent Compliance Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive business intelligence capabilities powered by artificial intelligence
+              Advanced AI capabilities that automate and streamline your compliance operations
             </p>
           </motion.div>
           
@@ -232,10 +229,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Business Intelligence
+              Transform Your Compliance Operations
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience measurable improvements in decision-making and business performance
+              Experience significant improvements in compliance efficiency and risk reduction
             </p>
           </motion.div>
           
@@ -273,7 +270,7 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
 
-      {/* Analytics Types Section */}
+      {/* Compliance Areas Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -283,15 +280,15 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Four Levels of Analytics Intelligence
+              Comprehensive Compliance Coverage
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From historical analysis to predictive insights and actionable recommendations
+              Support for major regulatory frameworks and industry standards
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsTypes.map((type, index) => (
+            {complianceAreas.map((area, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -301,11 +298,11 @@ export default function AIBusinessIntelligence() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <BarChart3 className="w-6 h-6 text-white" />
+                    <Scale className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
-                    <p className="text-zion-slate-light">{type.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
+                    <p className="text-zion-slate-light">{area.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -324,10 +321,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Perfect For Your Team
+              Perfect For Your Industry
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored business intelligence solutions for various roles and departments
+              Tailored compliance solutions for various industry requirements
             </p>
           </motion.div>
           
@@ -341,7 +338,7 @@ export default function AIBusinessIntelligence() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users2 className="w-8 h-8 text-white" />
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-zion-slate-light text-sm">{useCase.description}</p>
@@ -360,10 +357,10 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Unlock Your Business Intelligence?
+              Ready to Simplify Compliance?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already making smarter decisions with AI-powered insights
+              Join organizations already automating their compliance operations with AI
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -372,7 +369,7 @@ export default function AIBusinessIntelligence() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
-                Start Analyzing Today
+                Start Compliant Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
               

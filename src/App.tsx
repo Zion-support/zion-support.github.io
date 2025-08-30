@@ -40,6 +40,13 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// Additional Service Pages
+const AISalesCopilot = createLazyComponent(() => import('./pages/services/ai-sales-copilot'));
+const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/cloud-finops-optimizer'));
+const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/ai-compliance-assistant'));
+const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
+const AICustomerSupportAutomation = createLazyComponent(() => import('./pages/services/ai-customer-support-automation'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -83,6 +90,16 @@ const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Team = createLazyComponent(() => import('./pages/Team'));
 const Events = createLazyComponent(() => import('./pages/Events'));
+
+// Additional missing pages
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const Community = createLazyComponent(() => import('./pages/Community'));
+const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const Security = createLazyComponent(() => import('./pages/Security'));
+const Compliance = createLazyComponent(() => import('./pages/Compliance'));
+const SystemStatus = createLazyComponent(() => import('./pages/SystemStatus'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -172,6 +189,13 @@ function App() {
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                     
+                    {/* Additional Service Pages */}
+                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                    <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+                    
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                     
@@ -215,6 +239,17 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/team" element={<Team />} />
                     <Route path="/events" element={<Events />} />
+                    
+                    {/* Additional missing pages */}
+                    <Route path="/docs" element={<Documentation />} />
+                    <Route path="/documentation" element={<Documentation />} />
+                    <Route path="/community" element={<Community />} />
+                    <Route path="/marketplace" element={<Marketplace />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+                    <Route path="/accessibility" element={<Accessibility />} />
+                    <Route path="/security" element={<Security />} />
+                    <Route path="/compliance" element={<Compliance />} />
+                    <Route path="/status" element={<SystemStatus />} />
                   </Routes>
                 </AnimatePresence>
               </main>

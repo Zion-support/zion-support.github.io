@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
   BarChart3, 
   TrendingUp, 
-  Target, 
+  DollarSign, 
+  Cloud, 
   Zap, 
   Shield, 
+  Brain, 
   CheckCircle,
   ArrowRight,
   Star,
@@ -42,93 +43,87 @@ import {
   Calculator,
   PieChart,
   Target,
-  Scale,
-  Gavel,
-  Clipboard,
-  BookOpen,
-  LineChart,
-  PieChart as PieChartIcon,
-  Activity as ActivityIcon
+  AlertTriangle
 } from 'lucide-react';
 
-export default function AIBusinessIntelligence() {
+export default function CloudFinOpsOptimizer() {
   const features = [
     {
-      icon: Brain,
-      title: "Predictive Analytics",
-      description: "AI-powered forecasting and trend analysis for strategic decision making"
+      icon: Calculator,
+      title: "Cost Optimization Engine",
+      description: "AI-powered cost analysis and optimization recommendations for cloud resources"
     },
     {
       icon: BarChart3,
-      title: "Real-time Dashboards",
-      description: "Live data visualization and interactive reporting across all business metrics"
+      title: "Real-time Cost Monitoring",
+      description: "Live tracking of cloud spending with instant alerts and notifications"
     },
     {
       icon: Target,
-      title: "Goal Tracking",
-      description: "Automated monitoring and progress tracking for business objectives and KPIs"
+      title: "Budget Management",
+      description: "Set and enforce budgets with automated cost controls and forecasting"
     },
     {
       icon: TrendingUp,
       title: "Performance Analytics",
-      description: "Comprehensive insights into business performance and operational efficiency"
-    },
-    {
-      icon: Zap,
-      title: "Automated Insights",
-      description: "AI-generated recommendations and actionable insights from your data"
+      description: "Comprehensive insights into resource utilization and performance metrics"
     },
     {
       icon: Shield,
-      title: "Data Security",
-      description: "Enterprise-grade security and compliance for sensitive business data"
+      title: "Compliance Tracking",
+      description: "Monitor and ensure compliance with financial and regulatory requirements"
+    },
+    {
+      icon: Brain,
+      title: "Predictive Cost Modeling",
+      description: "Machine learning models to forecast future costs and optimize spending"
     }
   ];
 
   const benefits = [
-    "Increase decision-making speed by 300% with real-time insights",
-    "Improve business performance by 40% through predictive analytics",
-    "Reduce reporting time by 80% with automated dashboards",
-    "Identify new opportunities with AI-powered trend analysis",
-    "Optimize operations with data-driven recommendations",
-    "Achieve better ROI through intelligent business insights"
+    "Reduce cloud costs by up to 40% through intelligent optimization",
+    "Improve resource utilization efficiency by 60%",
+    "Eliminate waste with automated cost anomaly detection",
+    "Achieve better budget predictability and control",
+    "Streamline financial operations and reporting",
+    "Ensure compliance with cost governance policies"
   ];
 
   const useCases = [
     {
-      title: "Executive Leadership",
-      description: "C-level executives and board members needing strategic business insights"
+      title: "Enterprise Cloud Users",
+      description: "Large organizations managing complex multi-cloud environments"
     },
     {
-      title: "Sales & Marketing",
-      description: "Teams requiring customer behavior analysis and performance metrics"
+      title: "Startups & Scale-ups",
+      description: "Growing companies optimizing cloud costs during rapid expansion"
     },
     {
-      title: "Operations Management",
-      description: "Managers optimizing processes and resource allocation"
+      title: "Financial Services",
+      description: "Banks and fintech companies with strict cost compliance requirements"
     },
     {
-      title: "Financial Planning",
-      description: "Finance teams analyzing trends and forecasting business performance"
+      title: "E-commerce & SaaS",
+      description: "Digital businesses with variable cloud usage patterns"
     }
   ];
 
-  const analyticsTypes = [
+  const optimizationStrategies = [
     {
-      title: "Descriptive Analytics",
-      description: "What happened - historical data analysis and reporting"
+      title: "Resource Right-sizing",
+      description: "Automatically adjust resource allocation based on actual usage patterns"
     },
     {
-      title: "Diagnostic Analytics",
-      description: "Why it happened - root cause analysis and investigation"
+      title: "Reserved Instance Optimization",
+      description: "Maximize savings through strategic reserved instance purchases"
     },
     {
-      title: "Predictive Analytics",
-      description: "What will happen - forecasting and trend prediction"
+      title: "Spot Instance Management",
+      description: "Leverage spot instances for non-critical workloads to reduce costs"
     },
     {
-      title: "Prescriptive Analytics",
-      description: "What should we do - actionable recommendations and optimization"
+      title: "Storage Tier Optimization",
+      description: "Move data to appropriate storage tiers based on access patterns"
     }
   ];
 
@@ -144,17 +139,17 @@ export default function AIBusinessIntelligence() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4" />
-              <span>AI-Powered Business Intelligence</span>
+              <Cloud className="w-4 h-4" />
+              <span>Cloud Financial Operations</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Business Intelligence
+              Cloud FinOps Optimizer
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your business data into actionable intelligence with AI-powered analytics, 
-              predictive insights, and real-time dashboards that drive strategic decision making.
+              Master cloud cost management with intelligent FinOps automation, real-time monitoring, 
+              and AI-driven optimization strategies that maximize your cloud investment.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -195,10 +190,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced BI Features
+              Comprehensive FinOps Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive business intelligence capabilities powered by artificial intelligence
+              Everything you need to optimize cloud costs and maximize financial efficiency
             </p>
           </motion.div>
           
@@ -232,10 +227,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Business Intelligence
+              Transform Your Cloud Economics
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience measurable improvements in decision-making and business performance
+              Experience significant cost savings and improved financial control
             </p>
           </motion.div>
           
@@ -273,7 +268,7 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
 
-      {/* Analytics Types Section */}
+      {/* Optimization Strategies Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -283,15 +278,15 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Four Levels of Analytics Intelligence
+              Intelligent Optimization Strategies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From historical analysis to predictive insights and actionable recommendations
+              AI-powered strategies that automatically optimize your cloud infrastructure
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsTypes.map((type, index) => (
+            {optimizationStrategies.map((strategy, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -301,11 +296,11 @@ export default function AIBusinessIntelligence() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <BarChart3 className="w-6 h-6 text-white" />
+                    <Target className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
-                    <p className="text-zion-slate-light">{type.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{strategy.title}</h3>
+                    <p className="text-zion-slate-light">{strategy.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -324,10 +319,10 @@ export default function AIBusinessIntelligence() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Perfect For Your Team
+              Perfect For Your Organization
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored business intelligence solutions for various roles and departments
+              Whether you're a startup or enterprise, our FinOps solution scales with your needs
             </p>
           </motion.div>
           
@@ -341,7 +336,7 @@ export default function AIBusinessIntelligence() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users2 className="w-8 h-8 text-white" />
+                  <Cloud className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-zion-slate-light text-sm">{useCase.description}</p>
@@ -360,10 +355,10 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Unlock Your Business Intelligence?
+              Ready to Optimize Your Cloud Costs?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already making smarter decisions with AI-powered insights
+              Join organizations already saving millions with intelligent FinOps automation
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -372,7 +367,7 @@ export default function AIBusinessIntelligence() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
-                Start Analyzing Today
+                Start Optimizing Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
               
