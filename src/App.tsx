@@ -18,6 +18,10 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 
+// Layout Components
+import { Header } from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
+
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = React.lazy(importFn);
@@ -37,6 +41,8 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const ServicesShowcase2025 = createLazyComponent(() => import('./pages/ServicesShowcase2025'));
 
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
@@ -75,8 +81,11 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="App">
+            {/* Header */}
+            <Header />
+            
             {/* Main Content */}
-            <main id="main-content">
+            <main id="main-content" className="pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -89,6 +98,8 @@ function App() {
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/services-showcase-2025" element={<ServicesShowcase2025 />} />
 
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
@@ -143,6 +154,9 @@ function App() {
                 </AnimatePresence>
               </Suspense>
             </main>
+
+            {/* Footer */}
+            <Footer />
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
