@@ -57,7 +57,9 @@ import {
   BarChart,
   Users2,
   Settings as SettingsIcon,
-  Palette
+  Palette,
+  Phone,
+  Mail
 } from 'lucide-react';
 import { MainNavigation } from './header/MainNavigation';
 import { cn } from '@/lib/utils';
@@ -126,6 +128,18 @@ export function Header({ className }: HeaderProps) {
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <MainNavigation />
+          </div>
+
+          {/* Contact Info - Desktop */}
+          <div className="hidden lg:flex items-center space-x-4 text-sm text-zion-slate-light">
+            <a href="tel:+13024640950" className="flex items-center space-x-2 hover:text-zion-cyan transition-colors">
+              <Phone className="w-4 h-4" />
+              <span>+1 302 464 0950</span>
+            </a>
+            <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-2 hover:text-zion-cyan transition-colors">
+              <Mail className="w-4 h-4" />
+              <span>kleber@ziontechgroup.com</span>
+            </a>
           </div>
 
           {/* Right Side Actions */}

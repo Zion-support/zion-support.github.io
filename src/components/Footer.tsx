@@ -55,7 +55,9 @@ import {
   BarChart,
   Users2,
   Settings,
-  Palette
+  Palette,
+  Clock,
+  Award as AwardIcon
 } from 'lucide-react';
 
 export function Footer() {
@@ -83,6 +85,23 @@ export function Footer() {
               Leading provider of innovative AI, IT, and Micro SAAS solutions. 
               Transforming businesses through cutting-edge technology and expert consulting.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-2 text-sm">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-zion-cyan" />
+                <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">+1 302 464 0950</a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-zion-cyan" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-zion-cyan" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+            </div>
+
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 <Linkedin className="w-5 h-5" />
