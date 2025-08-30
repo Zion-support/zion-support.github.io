@@ -14,7 +14,7 @@ import { Shield,
   MapPin
  } from 'lucide-react.ts';
 
-export default function Terms(...args[]):  {
+export default function Terms() {
   const lastUpdated = 'December 15, 2024';
 
   const termsSections = [

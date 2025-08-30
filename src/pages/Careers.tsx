@@ -1,10 +1,11 @@
-import React, { useState } from 'react.ts';
-import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Mail, Phone, MapPinIcon  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Mail, Phone, MapPinIcon } from 'lucide-react';
 
-export default function Careers(...args[]):  {
+export default function Careers() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
+
   const departments = [
     { id: 'all', name: 'All Departments', count: 25 },
     { id: 'engineering', name: 'Engineering', count: 12 },
@@ -14,6 +15,7 @@ export default function Careers(...args[]):  {
     { id: 'marketing', name: 'Marketing', count: 3 },
     { id: 'operations', name: 'Operations', count: 2 }
   ];
+
   const locations = [
     { id: 'all', name: 'All Locations', count: 25 },
     { id: 'remote', name: 'Remote', count: 15 },
@@ -21,6 +23,7 @@ export default function Careers(...args[]):  {
     { id: 'new-york', name: 'New York, NY', count: 3 },
     { id: 'london', name: 'London, UK', count: 2 }
   ];
+
   const jobOpenings = [
     {
       id: 1,
@@ -30,7 +33,7 @@ export default function Careers(...args[]):  {
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements[
+      requirements: [
         'Advanced degree in Computer Science, AI, or related field',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with large language models and NLP',
@@ -45,7 +48,7 @@ export default function Careers(...args[]):  {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Protect our systems and clients with advanced security solutions.',
-      requirements[
+      requirements: [
         'Bachelor\'s degree in Cybersecurity or related field',
         'Certifications: CISSP, CEH, or similar',
         'Experience with penetration testing and vulnerability assessment',
@@ -60,7 +63,7 @@ export default function Careers(...args[]):  {
       type: 'Full-time',
       experience: '4+ years',
       description: 'Design and implement scalable cloud infrastructure solutions.',
-      requirements[
+      requirements: [
         'Bachelor\'s degree in Computer Science or related field',
         'AWS, Azure, or GCP certifications',
         'Experience with Kubernetes and Docker',
@@ -75,7 +78,7 @@ export default function Careers(...args[]):  {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Drive product strategy and development for our technology solutions.',
-      requirements[
+      requirements: [
         'Bachelor\'s degree in Business, Engineering, or related field',
         'Experience in B2B SaaS product management',
         'Strong analytical and communication skills',
@@ -83,6 +86,7 @@ export default function Careers(...args[]):  {
       ]
     }
   ];
+
   const benefits = [
     {
       icon: <Heart className="w-6 h-6" />,
@@ -115,6 +119,7 @@ export default function Careers(...args[]):  {
       description: 'Regular team building, hackathons, and social events'
     }
   ];
+
   const values = [
     {
       title: 'Innovation First',
@@ -132,12 +137,23 @@ export default function Careers(...args[]):  {
       title: 'Impact',
       description: 'We focus on creating meaningful solutions that make a real difference.'
     }
-  };
+  ];
+
   const contactInfo = [
     { icon: Mail, label: "Email", value: "careers@ziontechgroup.com", href: "mailto:careers@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
     { icon: MapPinIcon, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" }
   ];
+
+  const filteredJobs = jobOpenings.filter(job => {
+    const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         job.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesDepartment = selectedDepartment === 'all' || job.department.toLowerCase().includes(selectedDepartment);
+    const matchesLocation = selectedLocation === 'all' || job.location.toLowerCase().includes(selectedLocation);
+    
+    return matchesSearch && matchesDepartment && matchesLocation;
+  });
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -165,6 +181,7 @@ export default function Careers(...args[]):  {
           </div>
         </div>
       </section>
+
       {/* Why Work With Us */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,8 +193,8 @@ export default function Careers(...args[]):  {
               We're building the future of technology, and we need brilliant minds to join us on this journey
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                   <div className="text-zion-cyan">
@@ -195,6 +212,7 @@ export default function Careers(...args[]):  {
           </div>
         </div>
       </section>
+
       {/* Our Values */}
       <section className="py-20 bg-zion-slate-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,11 +221,11 @@ export default function Careers(...args[]):  {
               Our Values
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              These core principles guide everything we do and shape our comp culture
+              These core principles guide everything we do and shape our company culture
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {values.map((value, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {values.map((value, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">
                   {value.title}
@@ -220,6 +238,7 @@ export default function Careers(...args[]):  {
           </div>
         </div>
       </section>
+
       {/* Open Positions */}
       <section id="open-positions" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -228,52 +247,84 @@ export default function Careers(...args[]):  {
               Open Positions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Ready to make an impact? Explore our current opportunities and find your perfect role
+              Find your next opportunity to make a difference in the world of technology
             </p>
           </div>
+
+          {/* Search and Filters */}
+          <div className="mb-8 space-y-4">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Search positions..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+              <select
+                value={selectedDepartment}
+                onChange={(e) => setSelectedDepartment(e.target.value)}
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {departments.map(dept => (
+                  <option key={dept.id} value={dept.id}>
+                    {dept.name} ({dept.count})
+                  </option>
+                ))}
+              </select>
+              <select
+                value={selectedLocation}
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {locations.map(loc => (
+                  <option key={loc.id} value={loc.id}>
+                    {loc.name} ({loc.count})
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Job Listings */}
           <div className="space-y-6">
-            {openPositions.map((position) => (
-              <div key={position.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+            {filteredJobs.map(job => (
+              <div key={job.id} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-zion-slate-dark mb-2">
-                      {position.title}
+                      {job.title}
                     </h3>
                     <div className="flex flex-wrap gap-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center">
-                        <Briefcase className="w-4 h-4 mr-2" />
-                        {position.department}
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        {position.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {position.type}
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-2" />
-                        {position.experience}
-                      </div>
+                      <span className="flex items-center gap-1">
+                        <Briefcase className="w-4 h-4" />
+                        {job.department}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-4 h-4" />
+                        {job.location}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {job.type}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <GraduationCap className="w-4 h-4" />
+                        {job.experience}
+                      </span>
                     </div>
                   </div>
-                  <div className="mt-4 lg:mt-0">
-                    <a
-                      href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}
-                      className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors"
-                    >
-                      Apply Now
-                    </a>
-                  </div>
+                  <button className="mt-4 lg:mt-0 bg-zion-cyan text-white px-6 py-2 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors">
+                    Apply Now
+                  </button>
                 </div>
                 <p className="text-zion-slate-light mb-4">
-                  {position.description}
+                  {job.description}
                 </p>
                 <div>
-                  <h4 className="font-medium text-zion-slate-dark mb-2">Requirements:</h4>
+                  <h4 className="font-semibold text-zion-slate-dark mb-2">Requirements:</h4>
                   <ul className="list-disc list-inside text-zion-slate-light space-y-1">
-                    {position.requirements.map((req, index) => (
+                    {job.requirements.map((req, index) => (
                       <li key={index}>{req}</li>
                     ))}
                   </ul>
@@ -281,104 +332,59 @@ export default function Careers(...args[]):  {
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <p className="text-zion-slate-light mb-4">
-              Don't see a position that fits? We're always looking for talented individuals
-            </p>
-            <a
-              href="mailto:careers@ziontechgroup.com?subject=General Application"
-              className="inline-flex items-center px-8 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors"
-            >
-              Send General Application
-            </a>
-          </div>
+
+          {filteredJobs.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-zion-slate-light text-lg">
+                No positions match your current filters. Try adjusting your search criteria.
+              </p>
+            </div>
+          )}
         </div>
       </section>
-      {/* Application Process */}
+
+      {/* Contact Section */}
       <section className="py-20 bg-zion-slate-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
-              Our Application Process
-            </h2>
-            <p className="text-xl text-zion-slate-light">
-              Simple, transparent, and designed to find the best fit for both you and our team
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-zion-cyan text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                1
-              </div>
-              <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                Application Review
-              </h3>
-              <p className="text-zion-slate-light">
-                Our team reviews your application and portfolio within 48 hours
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-zion-cyan text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                2
-              </div>
-              <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                Initial Interview
-              </h3>
-              <p className="text-zion-slate-light">
-                A 30-minute conversation to discuss your background and our opportunities
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-zion-cyan text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                3
-              </div>
-              <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                Technical Assessment
-              </h3>
-              <p className="text-zion-slate-light">
-                Skills-based evaluation relevant to the role you're applying for
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-zion-cyan text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                4
-              </div>
-              <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                Final Interview
-              </h3>
-              <p className="text-zion-slate-light">
-                Meet the team and discuss how you can contribute to our mission
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-8">
             Ready to Join Our Team?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Let's build the future of technology together. Start your journey with Zion Tech Group today.
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Don't see a position that fits? We're always looking for talented individuals to join our team.
+            Send us your resume and let's discuss how you can contribute to our mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#open-positions"
-              className="inline-flex items-center px-8 py-4 bg-white text-zion-purple rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              href="mailto:careers@ziontechgroup.com"
+              className="bg-zion-cyan text-white px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors"
             >
-              <Briefcase className="w-5 h-5 mr-2" />
-              View Positions
+              Send Resume
             </a>
             <a
-              href="mailto:careers@ziontechgroup.com"
-              className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300"
+              href="tel:+13024640950"
+              className="border-2 border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors"
             >
-              <Users className="w-5 h-5 mr-2" />
-              Contact Recruiting
+              Call Us
             </a>
+          </div>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            {contactInfo.map((contact, index) => (
+              <div key={index} className="text-center">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <contact.icon className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="font-semibold text-zion-slate-dark mb-1">{contact.label}</h3>
+                <a
+                  href={contact.href}
+                  className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                >
+                  {contact.value}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
     </div>
-  )}
+  );
+}

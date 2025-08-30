@@ -22,7 +22,7 @@ import { Users,
   Database
  } from 'lucide-react.ts';
 
-export default function About(...args[]):  {
+export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
@@ -62,28 +62,28 @@ export default function About(...args[]):  {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
-      expertise['AI Strategy', 'Digital Transformation', 'Business Innovation'],
+      expertise: ['AI Strategy', 'Digital Transformation', 'Business Innovation'],
       image: '/images/team/kleber-santos.jpg'
     },
     {
       name: 'Dr. Sarah Chen',
       role: 'CTO & AI Research Lead',
       bio: 'PhD in Computer Science with expertise in machine learning and artificial intelligence.',
-      expertise['Machine Learning', 'AI Research', 'Technical Architecture'],
+      expertise: ['Machine Learning', 'AI Research', 'Technical Architecture'],
       image: '/images/team/sarah-chen.jpg'
     },
     {
       name: 'Marcus Rodriguez',
       role: 'Head of Cloud & DevOps',
       bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and Google Cloud.',
-      expertise['Cloud Architecture', 'DevOps', 'Infrastructure'],
+      expertise: ['Cloud Architecture', 'DevOps', 'Infrastructure'],
       image: '/images/team/marcus-rodriguez.jpg'
     },
     {
       name: 'Dr. Emily Watson',
       role: 'Cybersecurity Director',
       bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
-      expertise['Cybersecurity', 'Compliance', 'Risk Management'],
+      expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],
       image: '/images/team/emily-watson.jpg'
     }
   ];

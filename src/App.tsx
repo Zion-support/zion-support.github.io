@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react.ts';
-import { Routes, Route  } from 'react-router-dom.ts';
+import React, { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { AppHeader  } from './layout/AppHeader';
 import { EnhancedFuturisticFooter  } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant  } from './components/ChatAssistant';
@@ -68,6 +68,9 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 // Comprehensive Services Showcase 2025
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
+// Comprehensive Services Showcase 2026
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -134,6 +137,9 @@ const ServicesSitemap = React.lazy(() => import('./pages/ServicesSitemap'));
 
 // All Services Index
 const AllServicesIndex = React.lazy(() => import('./pages/AllServicesIndex'));
+
+// All Services Index 2026
+const AllServicesIndex2026 = React.lazy(() => import('./pages/AllServicesIndex2026'));
 
 // Pricing Comparison
 const PricingComparison = React.lazy(() => import('./pages/PricingComparison'));
@@ -214,6 +220,7 @@ function App(...args[]):  {
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
               
               {/* 2027 Services Routes */}
               <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
@@ -307,6 +314,9 @@ function App(...args[]):  {
         
         {/* All Services Index Route */}
         <Route path="/all-services" element={<AllServicesIndex />} />
+        
+        {/* All Services Index 2026 Route */}
+        <Route path="/all-services-2026" element={<AllServicesIndex2026 />} />
         
         {/* Pricing Comparison Route */}
         <Route path="/pricing" element={<PricingComparison />} />

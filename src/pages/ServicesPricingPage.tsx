@@ -42,7 +42,7 @@ const pricingFeatures = [
   "Security Compliance",
   "Scalable Architecture"
 ];
-export default function ServicesPricingPage(...args[]):  {
+export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
   const filteredServices = selectedCategory === 'all' 

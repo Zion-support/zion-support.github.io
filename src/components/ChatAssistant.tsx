@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react.ts';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { MessageCircle, 
   X, 
   Send, 
@@ -18,7 +18,7 @@ import { MessageCircle,
   Shield,
   Clock,
   Star
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface ChatMessage {
 
@@ -90,20 +90,22 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   // Voice recognition setup
   useEffect(() => {
     if (enableVoice && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as ).webkitSpeechRecognition;
+      const SpeechRecognition = (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event)  => {
+      recognitionRef.current.onresult = (event) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
-        setIsListening(false)};
+        setIsListening(false);
+      };
 
-      recognitionRef.current.onerror = (event)  => {
+      recognitionRef.current.onerror = (event) => {
         console.error('Speech recognition error: ', event.error);
-        setIsListening(false)}}
+        setIsListening(false);
+      }}
   }, [enableVoice]);
 
   // Initialize with welcome message
@@ -115,7 +117,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         content: 'Hello! I\'m your AI assistant. How can I help you today?',
         timestamp: new Date(),
         metadata: {
-          suggestions[
+          suggestions: [
             'Tell me about your services',
             'Help me with pricing',
             'Schedule a consultation',
@@ -217,7 +219,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         content: `Uploaded file: ${file.name}`,
         timestamp: new Date(),
         metadata: {
-          sources[file.name],
+          sources: [file.name],
         }
       };
       setMessages(prev  => [...prev, fileMessage])}

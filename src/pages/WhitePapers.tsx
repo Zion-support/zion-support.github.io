@@ -24,7 +24,7 @@ import { FileText,
   Tag
  } from 'lucide-react.ts';
 
-export default function WhitePapers(...args[]):  {
+export default function WhitePapers() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 

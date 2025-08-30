@@ -27,7 +27,7 @@ import { Video,
   Phone
  } from 'lucide-react.ts';
 
-export default function Webinars(...args[]):  {
+export default function Webinars() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showPast, setShowPast] = useState(false);

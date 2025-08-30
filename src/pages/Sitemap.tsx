@@ -1,13 +1,13 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin  } from 'lucide-react.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin  } from 'lucide-react';
 
-export default function SitemapPage(...args[]):  {
+export default function SitemapPage() {
   const siteStructure = [
     {
       title: "Main Pages",
       icon: Home,
-      links[
+      links: [
         { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
         { name: "About Us", path: "/about", description: "Learn about our comp and mission" },
         { name: "Contact", path: "/contact", description: "Get in touch with our team" },
@@ -21,7 +21,7 @@ export default function SitemapPage(...args[]):  {
     {
       title: "Core Services",
       icon: Settings,
-      links[
+      links: [
         { name: "AI Services", path: "/ai-services", description: "Comprehensive AI solutions" },
         { name: "IT Services", path: "/it-services", description: "Enterprise IT solutions" },
         { name: "Micro SaaS", path: "/micro-saas", description: "Scalable software solutions" },
@@ -35,7 +35,7 @@ export default function SitemapPage(...args[]):  {
     {
       title: "Specialized Services",
       icon: Brain,
-      links[
+      links: [
         { name: "AI Business Intelligence", path: "/services/ai-business-intelligence", description: "Machine Learning & Data Science" },
         { name: "AI Sales Copilot", path: "/services/ai-sales-copilot", description: "AI-powered sales automation" },
         { name: "AI Compliance Assistant", path: "/services/ai-compliance-assistant", description: "Regulatory compliance automation" },
@@ -49,7 +49,7 @@ export default function SitemapPage(...args[]):  {
     {
       title: "Advanced Solutions",
       icon: Rocket,
-      links[
+      links: [
         { name: "Quantum AI Platform", path: "/services/quantum-ai-platform", description: "Next-gen quantum computing" },
         { name: "AI Cybersecurity Suite", path: "/services/ai-cybersecurity-suite", description: "Advanced security solutions" },
         { name: "AI Healthcare Analytics", path: "/services/ai-healthcare-analytics", description: "Healthcare data insights" },
@@ -63,7 +63,7 @@ export default function SitemapPage(...args[]):  {
     {
       title: "Pricing & Solutions",
       icon: DollarSign,
-      links[
+      links: [
         { name: "Pricing Guide", path: "/pricing-guide", description: "Comprehensive pricing information" },
         { name: "Pricing 2027", path: "/pricing", description: "Current year pricing strategies" },
         { name: "Pricing 2030", path: "/pricing-2030", description: "Advanced pricing strategies" },
@@ -74,7 +74,7 @@ export default function SitemapPage(...args[]):  {
     {
       title: "Support & Resources",
       icon: HelpCircle,
-      links[
+      links: [
         { name: "Help Center", path: "/help", description: "Find answers to common questions" },
         { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
         { name: "Support Portal", path: "/support", description: "Technical support and assistance" },
@@ -88,7 +88,7 @@ export default function SitemapPage(...args[]):  {
     {
       title: "Legal & Compliance",
       icon: Shield,
-      links[
+      links: [
         { name: "Privacy Policy", path: "/privacy", description: "How we protect your data" },
         { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
         { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" },

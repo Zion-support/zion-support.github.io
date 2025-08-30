@@ -31,7 +31,7 @@ import { Shield,
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
 
-export default function Security(...args[]):  {
+export default function Security() {
   const securityFeatures = [
     {
       category: 'Data Protection',

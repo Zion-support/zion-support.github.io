@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react.ts';
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink  } from 'lucide-react.ts';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink  } from 'lucide-react';
 
-export default function SystemStatus(...args[]):  {
+export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -88,8 +88,8 @@ export default function SystemStatus(...args[]):  {
       severity: 'maintenance',
       startTime: '2025-01-15T02:00:00Z',
       endTime: '2025-01-15T04:00:00Z',
-      affectedServices['AI Services'],
-      updates[
+              affectedServices: ['AI Services'],
+        updates: [
         {
           time: '2025-01-15T02:00:00Z',
           message: 'Maintenance started as scheduled'
@@ -112,8 +112,8 @@ export default function SystemStatus(...args[]):  {
       severity: 'minor',
       startTime: '2025-01-10T14:20:00Z',
       endTime: '2025-01-10T16:45:00Z',
-      affectedServices['API Gateway', 'Core Platform'],
-      updates[
+              affectedServices: ['API Gateway', 'Core Platform'],
+        updates: [
         {
           time: '2025-01-10T14:20:00Z',
           message: 'Investigating increased API response times'
