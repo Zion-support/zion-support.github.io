@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Code, 
   BookOpen, 
   Zap, 
@@ -31,11 +31,11 @@ import { Code,
   Target,
   Award,
   Lightbulb
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 =======
 import React from 'react.ts';
 import SEO from '../components/SEO';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock const DeveloperPortal: React.FC = (): JSX.Element => {
   const tools = [
@@ -71,7 +71,7 @@ import {
   Target,
   Award,
   Lightbulb
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -313,8 +313,8 @@ const data = await response.json();
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {quickStartSteps.map((step, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {quickStartSteps.map((step, index)              => (
               <motion.div
                 key={tool.title}
                 initial = {
@@ -420,8 +420,8 @@ const data = await response.json();
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {apiFeatures.map((feature, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {apiFeatures.map((feature, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -465,8 +465,8 @@ const data = await response.json();
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {codeExamples.map((example, index)            => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {codeExamples.map((example, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -508,8 +508,8 @@ const data = await response.json();
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {resources.map((resource, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {resources.map((resource, index)             => (
               <motion.div
                 key={resource.title}
                 initial = {
@@ -579,8 +579,8 @@ const data = await response.json();
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {community.map((platform, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {community.map((platform, index)             => (
               <motion.div
                 key={platform.name}
                 initial={{ opacity: 0, y: 20 }}

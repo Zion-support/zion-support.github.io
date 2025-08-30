@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { Users,
   Cpu,
   Shield,
@@ -150,7 +150,7 @@ import { Users,
 <<<<<<< HEAD
 export default function ITConsulting(...args: any[]): any {
 =======
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export default function ITConsulting(...args: []):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -370,8 +370,8 @@ export default function ITConsulting(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {services.map((service, index)            => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)             => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -468,8 +468,8 @@ export default function ITConsulting(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {expertise.map((area, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {expertise.map((area, index)             => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -556,8 +556,8 @@ export default function ITConsulting(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {benefits.map((benefit, index)            => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)             => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -601,8 +601,8 @@ export default function ITConsulting(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
-            {industries.map((industry, index)            => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {industries.map((industry, index)             => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -669,13 +669,13 @@ export default function ITConsulting(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },
               { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },
               { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },
               { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
-            ].map((phase, index)            => (
+            ].map((phase, index)             => (
               <motion.div
                 key={index}
                 className="text-center"

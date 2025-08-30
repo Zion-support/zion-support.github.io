@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
-import { motion            } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
 import { Mail,
   Lock,
   Eye,
@@ -15,7 +15,7 @@ import { Mail,
 <<<<<<< HEAD
 export default function Signup(...args: any[]): any {
 =======
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 export default function Signup(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
@@ -31,18 +31,18 @@ export default function Signup(...args[]: any):  {
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 <<<<<<< HEAD
-  const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)             => {
+  const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)              => {
     setFormData({
       ...formData,;
       [e.target.name]: e.target.value;
     })};
-  const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)            => {;
+  const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)             => {;
     setFormData({;
       ...formData,;
       [e.target.name]: e.target.value;
     });
   };
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)            => {;
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!agreedToTerms) {

@@ -1,4 +1,4 @@
-import { ProductListing             } from '@/types/listings';
+import { ProductListing              } from '@/types/listings';
 
 // Advanced AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions with real market applications

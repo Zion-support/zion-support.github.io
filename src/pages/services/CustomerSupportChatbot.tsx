@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO            } from '@/components/SEO';
-import { CheckCircle2, MessageCircle, DollarSign, ExternalLink, Phone, Mail            } from 'lucide-react.ts';
+import { SEO             } from '@/components/SEO';
+import { CheckCircle2, MessageCircle, DollarSign, ExternalLink, Phone, Mail             } from 'lucide-react.ts';
 
 const CustomerSupportChatbot: React.FC = (): JSX.Element => {
   return (
@@ -13,7 +13,7 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
           tickets. Escalation rules and CRM/Helpdesk logging included.
         </p>
 
-        <div className="mt-10 grid gap-6 sm: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
           {[
             'RAG answers with vector search and citations',
             'Zendesk, Freshdesk, Intercom integrations',
@@ -21,7 +21,7 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
             'Auto-categorize, prioritize, and tag tickets',
             'Secure PII redaction and audit logs',
             'Fallback to live agents with summaries',
-          ].map((b)            => (
+          ].map((b)             => (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>

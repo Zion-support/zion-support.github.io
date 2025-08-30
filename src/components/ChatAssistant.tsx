@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react.ts';
 <<<<<<< HEAD
-import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
 import { MessageCircle,
   X,
   Send,
@@ -57,8 +57,10 @@ interface Message {
 
 
 
+
 =======
   Star
+ 
  
  
  
@@ -84,6 +86,7 @@ interface ChatMessage {
 
 
 
+
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: string;
   type: 'user' | 'assistant' | 'system';
@@ -96,6 +99,7 @@ metadata?: {;
     suggestions?: string[];
     actionRequired?: boolean;
   
+
 
 
 
@@ -150,10 +154,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: anyanyanyanyanyanyanyanyanyanyany'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: anyanyanyanyanyanyanyanyanyanyanyany'smooth' });
   }, []);
 
-  useEffect(()            => {
+  useEffect(()             => {
     scrollToBottom();
   }, [messages, scrollToBottom]);
 
@@ -163,7 +167,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyMediaQueryListEvent)            => {
+      const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyMediaQueryListEvent)             => {
         setCurrentTheme(e.matches ? 'dark' : 'light');
       };
       
@@ -183,13 +187,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: anyanyanyanyanyanyanyanyanyanyany)            => {
+      recognitionRef.current.onresult = (event: anyanyanyanyanyanyanyanyanyanyanyany)             => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: anyanyanyanyanyanyanyanyanyanyany)            => {
+      recognitionRef.current.onerror = (event: anyanyanyanyanyanyanyanyanyanyanyany)             => {
 <<<<<<< HEAD
         // // // console.error('Speech recognition error:', event.error);
 =======
@@ -235,13 +239,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     if (!inputValue.trim() || isProcessing) return;
 
     const userMessage: ChatMessage = {
-      id: anyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
+      id: anyanyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
       type: 'user',
       content: inputValue,
       timestamp: new Date()
     };
 
-    setMessages(prev            => [...prev, userMessage]);
+    setMessages(prev             => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
     setIsProcessing(true);
@@ -251,13 +255,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const aiMessage: ChatMessage = {
-        id: anyanyanyanyanyanyanyanyanyanyany(Date.now() + 1).toString(),
+        id: anyanyanyanyanyanyanyanyanyanyanyany(Date.now() + 1).toString(),
         type: 'assistant',
         content: `I received your message: "${userMessage.content}". This is a simulated response. In a real implementation, this would connect to an AI service.`,
         timestamp: new Date()
       };
 
-      setMessages(prev            => [...prev, aiMessage]);
+      setMessages(prev             => [...prev, aiMessage]);
     } catch (error) {
       console.error('Error processing message:', error);
     } finally {
@@ -268,7 +272,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, [inputValue, isProcessing]);
 
   // Generate AI response
-  const generateAIResponse = (userInput: anyanyanyanyanyanyanyanyanyanyanystring): { content: string; metadata: any }            => {
+  const generateAIResponse = (userInput: anyanyanyanyanyanyanyanyanyanyanyanystring): { content: string; metadata: any }             => {
     const input = userInput.toLowerCase();
 
     // AI response logic based on user input
@@ -390,7 +394,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   // Handle key press
-  const handleKeyPress = (e: anyanyanyanyanyanyanyanyanyanyanyReact.KeyboardEvent)            => {
+  const handleKeyPress = (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.KeyboardEvent)             => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();

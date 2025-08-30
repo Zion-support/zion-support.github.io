@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Link            } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
 import { BarChart3,
   TrendingUp,
   PieChart,
@@ -39,7 +39,7 @@ import { BarChart3,
   AreaChart,
   ScatterPlot
 <<<<<<< HEAD
-import { SEO            } from '../components/SEO';
+import { SEO             } from '../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -222,8 +222,8 @@ const Analytics: React.FC = (): JSX.Element => {
       {/* Metrics Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {metrics.map((metric, index)            => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {metrics.map((metric, index)             => (
               <motion.div
                 key={index}
                 initial = {
@@ -306,8 +306,8 @@ const Analytics: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {analyticsFeatures.map((feature, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {analyticsFeatures.map((feature, index)             => (
               <motion.div
                 key={index}
                 initial = {
@@ -390,8 +390,8 @@ const Analytics: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {analyticsTypes.map((type, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {analyticsTypes.map((type, index)             => (
               <motion.div
                 key={index}
                 initial = {
@@ -491,8 +491,8 @@ const Analytics: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)            => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)             => (
               <motion.div
                 key={index}
                 initial = {

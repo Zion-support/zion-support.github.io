@@ -3,8 +3,8 @@ import React from 'react.ts';
 import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Search, TrendingUp, Zap, Target, Clock, Briefcase, Globe export default function AIHRTalentAcquisition(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { SEO             } from '@/components/SEO';
-import { motion             } from 'framer-motion.ts';
+import { SEO              } from '@/components/SEO';
+import { motion              } from 'framer-motion.ts';
 import { Users, 
   Brain, 
   BarChart3, 
@@ -21,7 +21,7 @@ import { Users,
   Shield,
   Cpu,
   Filter
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -161,8 +161,8 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
 
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
-              {tiers.map((t)            => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
+              {tiers.map((t)             => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
@@ -171,8 +171,8 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
                   </ul>
 =======
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -229,8 +229,8 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={benefit}
                 initial = {
@@ -285,8 +285,8 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             </button>
 =======
           
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={useCase}
                 initial = {
@@ -344,8 +344,8 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index)             => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-5 gap-6">
+            {integrations.map((integration, index)              => (
               <motion.div
                 key={integration}
                 initial = {
@@ -399,8 +399,8 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={plan.plan}
                 initial = {

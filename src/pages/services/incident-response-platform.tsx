@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO            } from '@/components/SEO';
-import { motion            } from 'framer-motion.ts';
+import { SEO             } from '@/components/SEO';
+import { motion             } from 'framer-motion.ts';
 import { Shield, 
   AlertTriangle, 
   Clock, 
@@ -21,7 +21,7 @@ import { Shield,
   Phone,
   Mail,
   MapPin
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export default function IncidentResponsePlatform(...args: any[]): any {
   const features = [
@@ -194,8 +194,8 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -238,8 +238,8 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {capabilities.map((capability, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)             => (
               <motion.div
                 key={capability.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -281,8 +281,8 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {technologies.map((tech, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {technologies.map((tech, index)             => (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -319,8 +319,8 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {responseMetrics.map((metric, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {responseMetrics.map((metric, index)             => (
               <motion.div
                 key={metric.metric}
                 initial={{ opacity: 0, y: 20 }}

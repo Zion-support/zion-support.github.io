@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link, useLocation            } from 'react-router-dom.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { Link, useLocation             } from 'react-router-dom.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
 import {
 <<<<<<< HEAD
   ChevronRight,
@@ -66,8 +66,8 @@ import {
   Target
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()            => void;
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()             => void;
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose;
 }) => {
@@ -91,7 +91,7 @@ export function Sidebar(...args: any[]): any {
   const location = useLocation();
 
 <<<<<<< HEAD
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     setExpandedSections(prev =>
       prev.includes(section)
         ? prev.filter(s => s !== section)
@@ -154,7 +154,7 @@ export function Sidebar(...args: any[]): any {
 
   ];
 
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     if (href === '/') {
       return location.pathname === '/';
 
@@ -185,9 +185,9 @@ export function Sidebar(...args: any[]): any {
     }
   ];
 
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanystring)            => location.pathname === href;
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanystring)             => location.pathname === href;
 
-  const toggleSection = (sectionName: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const toggleSection = (sectionName: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     setActiveSection(activeSection === sectionName ? null : sectionName);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };

@@ -9,9 +9,9 @@ const Equipment: React.FC = (): JSX.Element => (
 );
 =======
 import React, { useState } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { SEO            } from '../components/SEO';
-import { Link            } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
+import { SEO             } from '../components/SEO';
+import { Link             } from 'react-router-dom.ts';
 import { Server, 
   Search, 
   Filter, 
@@ -472,7 +472,7 @@ import { Server,
   YellowEyeBean,
   YellowIndianBean,
   YellowWaxBean
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export default function Equipment(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -670,7 +670,7 @@ export default function Equipment(...args: any[]): any {
     }
   ];
 
-  const toggleEquipmentExpansion = (equipmentId: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const toggleEquipmentExpansion = (equipmentId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     setExpandedEquipment(expandedEquipment === equipmentId ? null : equipmentId);
   };
 
@@ -685,7 +685,7 @@ export default function Equipment(...args: any[]): any {
     return true;
   });
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (category) {
       case 'servers': return 'bg-purple-500/20 text-purple-400';
       case 'networking': return 'bg-blue-500/20 text-blue-400';
@@ -697,7 +697,7 @@ export default function Equipment(...args: any[]): any {
     }
   };
 
-  const getConditionColor = (condition: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getConditionColor = (condition: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (condition) {
       case 'new': return 'bg-green-500/20 text-green-400';
       case 'refurbished': return 'bg-blue-500/20 text-blue-400';
@@ -707,8 +707,8 @@ export default function Equipment(...args: any[]): any {
     }
   };
 
-  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
-    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyany5 }, (_, i)            => (
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
+    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)             => (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -773,9 +773,9 @@ export default function Equipment(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200"
                 >
-                  {categories.map((category)            => (
+                  {categories.map((category)             => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -788,9 +788,9 @@ export default function Equipment(...args: any[]): any {
                 <select
                   value={selectedCondition}
                   onChange={(e) => setSelectedCondition(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200"
                 >
-                  {conditions.map((condition)            => (
+                  {conditions.map((condition)             => (
                     <option key={condition.id} value={condition.id}>
                       {condition.name} ({condition.count})
                     </option>
@@ -839,8 +839,8 @@ export default function Equipment(...args: any[]): any {
             <p className="text-xl text-gray-300">Premium technology solutions with exceptional value</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {equipmentInventory.filter(e            => e.featured).map((equipment, index) => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {equipmentInventory.filter(e             => e.featured).map((equipment, index) => (
               <motion.div
                 key={equipment.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -981,8 +981,8 @@ export default function Equipment(...args: any[]): any {
           </motion.div>
 
           {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredEquipment.map((equipment, index)            => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredEquipment.map((equipment, index)             => (
                 <motion.div
                   key={equipment.id}
                   initial={{ opacity: 0, y: 20 }}

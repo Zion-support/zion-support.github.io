@@ -1,17 +1,17 @@
 import React, { useState } from 'react.ts';
 
-import { useState            } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle            } from '@/components/ui/card';
-import { Input            } from '@/components/ui/input';
-import { Button            } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger            } from '@/components/ui/tabs';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue            } from '@/components/ui/select';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow            } from '@/components/ui/table';
-import { Badge            } from '@/components/ui/badge';
+import { useState             } from 'react.ts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle             } from '@/components/ui/card';
+import { Input             } from '@/components/ui/input';
+import { Button             } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger             } from '@/components/ui/tabs';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue             } from '@/components/ui/select';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow             } from '@/components/ui/table';
+import { Badge             } from '@/components/ui/badge';
 <<<<<<< HEAD
-import { Search, Filter import { SEO            } from '@/components/SEO';
+import { Search, Filter import { SEO             } from '@/components/SEO';
 =======
-import { Search, Filter            } from 'lucide-react.ts';
+import { Search, Filter             } from 'lucide-react.ts';
 import SEO from "@/components/SEO";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -240,12 +240,12 @@ export default function SupportRequests(...args: any[]): any {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: anyanyanyanyanyanyanyanyanyanyany)            => setSearchQuery(e.target.value)}
+                  onChange={(e: anyanyanyanyanyanyanyanyanyanyanyany)             => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
 
-              <Select value={statusFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanystring)            => setStatusFilter(value || null)}>
+              <Select value={statusFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanyanystring)             => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -257,7 +257,7 @@ export default function SupportRequests(...args: any[]): any {
                 </SelectContent>
               </Select>
 
-              <Select value={priorityFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanystring)            => setPriorityFilter(value || null)}>
+              <Select value={priorityFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanyanystring)             => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -269,7 +269,7 @@ export default function SupportRequests(...args: any[]): any {
                 </SelectContent>
               </Select>
 
-              <Select value={categoryFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanystring)            => setCategoryFilter(value || null)}>
+              <Select value={categoryFilter || ""} onValueChange={(value: anyanyanyanyanyanyanyanyanyanyanyanystring)             => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>

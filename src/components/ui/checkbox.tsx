@@ -8,8 +8,8 @@ interface CheckboxProps extends React.PropsWithChildren<{
 }> {
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  checked: anyanyanyanyanyanyanyanyanyanyanyboolean;
-  onChange: (checked: boolean)             => void;
+  checked: anyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onChange: (checked: boolean)              => void;
   label?: string;
   disabled?: boolean;
 <<<<<<< HEAD

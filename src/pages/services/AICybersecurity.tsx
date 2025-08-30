@@ -28,8 +28,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support']
 =======
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Link            } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
 import { Shield, 
   Brain, 
   Eye, 
@@ -51,8 +51,8 @@ import { Shield,
   Fingerprint,
   Key,
   Search
-           } from 'lucide-react.ts';
-import { SEO            } from '@/components/SEO';
+            } from 'lucide-react.ts';
+import { SEO             } from '@/components/SEO';
 
 export default function AICybersecurity(...args: any[]): any {
   const features = [
@@ -193,8 +193,8 @@ export default function AICybersecurity(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -230,8 +230,8 @@ export default function AICybersecurity(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {services.map((service, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)             => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -274,8 +274,8 @@ export default function AICybersecurity(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index)             => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

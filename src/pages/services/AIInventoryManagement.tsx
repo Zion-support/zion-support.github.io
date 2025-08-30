@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { SEO            } from '../../components/SEO';
+import { motion             } from 'framer-motion.ts';
+import { SEO             } from '../../components/SEO';
 import { Package, 
   TrendingUp, 
   BarChart3, 
@@ -37,7 +37,7 @@ import { Package,
   Calendar,
   MapPin,
   Store
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export default function AIInventoryManagement(...args: any[]): any {
   const features = [
@@ -313,8 +313,8 @@ export default function AIInventoryManagement(...args: any[]): any {
       {/* Key Metrics Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {keyMetrics.map((metric, index)            => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {keyMetrics.map((metric, index)             => (
               <motion.div
                 key={metric.metric}
                 initial = {
@@ -401,8 +401,8 @@ export default function AIInventoryManagement(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -499,8 +499,8 @@ export default function AIInventoryManagement(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)             => (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -597,8 +597,8 @@ export default function AIInventoryManagement(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)             => (
               <motion.div
                 key={plan.name}
                 initial = {
@@ -713,8 +713,8 @@ export default function AIInventoryManagement(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)             => (
               <motion.div
                 key={useCase.industry}
                 initial = {
@@ -811,8 +811,8 @@ export default function AIInventoryManagement(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index)             => (
               <motion.div
                 key={integration.name}
                 initial = {

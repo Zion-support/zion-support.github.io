@@ -10,6 +10,7 @@ export interface UltimateZionService {
 
 
 
+
   id: string;
   name: string;
   tagline: string;
@@ -22,6 +23,7 @@ pricing: {;
     setup: string;
     marketPrice: string;
   
+
 
 
 

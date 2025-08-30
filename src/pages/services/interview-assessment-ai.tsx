@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy            } from 'lucide-react.ts';
-import { SEO            } from '@/components/SEO';
+import { motion             } from 'framer-motion.ts';
+import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy             } from 'lucide-react.ts';
+import { SEO             } from '@/components/SEO';
 
 export default function InterviewAssessmentAI(...args: any[]): any {
   const features = [
@@ -158,8 +158,8 @@ export default function InterviewAssessmentAI(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -196,8 +196,8 @@ export default function InterviewAssessmentAI(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -231,8 +231,8 @@ export default function InterviewAssessmentAI(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {assessmentTypes.map((assessment, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {assessmentTypes.map((assessment, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -274,8 +274,8 @@ export default function InterviewAssessmentAI(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index)            => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

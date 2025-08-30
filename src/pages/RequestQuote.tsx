@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Calculator,
   Send,
@@ -21,7 +21,7 @@ import { Calculator,
   ChevronDown,
   ChevronUp,
 =======
-import { SEO            } from '../components/SEO';
+import { SEO             } from '../components/SEO';
 import { Calculator, 
   FileText, 
   Clock, 
@@ -53,6 +53,7 @@ import { Calculator,
   Info,
   HelpCircle
 interface QuoteForm {
+
 
 
 
@@ -189,6 +190,7 @@ const teamSizes = [
   Package,
   Truck,
   Headphones
+ 
  
  
  
@@ -449,23 +451,23 @@ export default function RequestQuote(...args: any[]): any {
     }
   ];
 
-  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanystring, value: string | string[])            => {
+  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanystring, value: string | string[])             => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
 
-  const toggleService = (serviceId: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const toggleService = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     setFormData(prev => ({
       ...prev,
-      services: anyanyanyanyanyanyanyanyanyanyanyprev.services.includes(serviceId)
-        ? prev.services.filter(id            => id !== serviceId)
+      services: anyanyanyanyanyanyanyanyanyanyanyanyprev.services.includes(serviceId)
+        ? prev.services.filter(id             => id !== serviceId)
         : [...prev.services, serviceId]
     }));
   };
 
-  const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -493,7 +495,7 @@ export default function RequestQuote(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)            => {;
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
 <<<<<<< HEAD
@@ -538,7 +540,7 @@ export default function RequestQuote(...args: any[]): any {
     }, 2000);
   };
 
-  const isStepValid = (step: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const isStepValid = (step: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     switch (step) {
       case 1:
         return formData.companyName && formData.industry && formData.firstName && formData.lastName && formData.email;
@@ -553,7 +555,7 @@ export default function RequestQuote(...args: any[]): any {
 
   };
 
-  const getStepIcon = (step: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const getStepIcon = (step: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     switch (step) {
       case 1: return <Building className="h-5 w-5" />;
       case 2: return <Target className="h-5 w-5" />;
@@ -563,7 +565,7 @@ export default function RequestQuote(...args: any[]): any {
 
   };
 
-  const getStepTitle = (step: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const getStepTitle = (step: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     switch (step) {
       case 1: return 'Company & Contact';
       case 2: return 'Project Details';
@@ -600,7 +602,7 @@ export default function RequestQuote(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.1 }}
 
           <div className="flex items-center justify-between max-w-4xl mx-auto">
-            {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanytotalSteps }, (_, index)            => (
+            {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanytotalSteps }, (_, index)             => (
               <div key={index + 1} className="flex items-center">
                 <div className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
                   currentStep > index + 1
@@ -1312,8 +1314,8 @@ export default function RequestQuote(...args: any[]): any {
       {/* Benefits */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)             => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -1519,9 +1521,9 @@ export default function RequestQuote(...args: any[]): any {
                             <select
                               value={formData.urgency}
                               onChange={(e) => handleInputChange('urgency', e.target.value)}
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
-                              {urgencyLevels.map((level)            => (
+                              {urgencyLevels.map((level)             => (
                                 <option key={level.value} value={level.value}>
                                   {level.label} - {level.description}
                                 </option>
@@ -1556,8 +1558,8 @@ export default function RequestQuote(...args: any[]): any {
                         
                         <div>
                           <label className="block text-white font-medium mb-4">Select Services (Optional)</label>
-                          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4">
-                            {services.map((service)            => (
+                          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4">
+                            {services.map((service)             => (
                               <div key={service.id} className="relative">
                                 <input
                                   type="checkbox"
@@ -1592,8 +1594,8 @@ export default function RequestQuote(...args: any[]): any {
 
                         <div>
                           <label className="block text-white font-medium mb-4">Preferred Contact Method</label>
-                          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
-                            {contactMethods.map((method)            => (
+                          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
+                            {contactMethods.map((method)             => (
                               <div key={method.value} className="relative">
                                 <input
                                   type="radio"

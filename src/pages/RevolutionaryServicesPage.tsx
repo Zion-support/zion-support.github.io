@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
-import { motion            } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
 import { Brain,
   Shield,
   Cpu,
@@ -130,9 +130,9 @@ import { Brain,
   ToolIcon5,
   HammerIcon5,
   ScrewdriverIcon5
-           } from 'lucide-react.ts';
-import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025            } from '../data/revolutionaryMicroSaasServices2025';
-import { COMPREHENSIVE_PRICING_GUIDE_2025            } from '../data/comprehensivePricingGuide2025';
+            } from 'lucide-react.ts';
+import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025             } from '../data/revolutionaryMicroSaasServices2025';
+import { COMPREHENSIVE_PRICING_GUIDE_2025             } from '../data/comprehensivePricingGuide2025';
 
 export function RevolutionaryServicesPage(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
@@ -209,23 +209,23 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
-  const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     if (price < 1500) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
-  const getPriceColor = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const getPriceColor = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'text-green-400';
@@ -235,7 +235,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getPriceRangeColor = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const getPriceRangeColor = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'bg-green-500/20 text-green-400';
@@ -245,7 +245,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (level) {
       case 'Revolutionary': return 'text-purple-400';
       case 'Advanced': return 'text-blue-400';
@@ -254,7 +254,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     }
   };
 
-  const getInnovationBgColor = (level: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getInnovationBgColor = (level: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (level) {
       case 'Revolutionary': return 'bg-purple-500/20';
       case 'Advanced': return 'bg-blue-500/20';
@@ -320,9 +320,9 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
-              {categories.map((category)            => (
+              {categories.map((category)             => (
                 <option key={category.id} value={category.id}>
                   {category.name}
                 </option>
@@ -333,9 +333,9 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
-              {priceRanges.map((range)            => (
+              {priceRanges.map((range)             => (
                 <option key={range.id} value={range.id}>
                   {range.name}
                 </option>
@@ -346,9 +346,9 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
-              {sortOptions.map((option)            => (
+              {sortOptions.map((option)             => (
                 <option key={option.id} value={option.id}>
                   {option.name}
                 </option>
@@ -358,8 +358,8 @@ export function RevolutionaryServicesPage(...args: any[]): any {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index)            => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index)             => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -491,8 +491,8 @@ export function RevolutionaryServicesPage(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {SPECIAL_PRICING_PACKAGES.map((package_, index)            => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {SPECIAL_PRICING_PACKAGES.map((package_, index)             => (
               <motion.div
                 key={package_.name}
                 initial={{ opacity: 0, y: 20 }}

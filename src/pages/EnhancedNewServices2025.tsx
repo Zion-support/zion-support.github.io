@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
-import { motion            } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
 import { Brain,
   Atom,
   Shield,
@@ -165,7 +165,7 @@ import { Brain,
   Mail,
   MapPin,
   Package
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export function EnhancedNewServices2025(...args: any[]): any {
   const newServices = [
@@ -751,9 +751,9 @@ export function EnhancedNewServices2025(...args: any[]): any {
               <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"></div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {newServices
-                .filter(service            => service.category === category)
+                .filter(service             => service.category === category)
                 .map((service, index) => (
                   <motion.div
                     key={service.id}

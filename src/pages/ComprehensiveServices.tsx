@@ -1,10 +1,10 @@
 import React, { useState } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck, Star, Phone, Mail, MapPin, Zap, Rocket, Car, Dna, Robot, Eye, Atom, Microscope, City, RefreshCw, Globe2            } from 'lucide-react.ts';
-import { SEO            } from '@/components/SEO';
-import { zionCuttingEdgeServices2029            } from '../../data/zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029            } from '../../data/zion-2029-emerging-tech-services';
-import { Link            } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck, Star, Phone, Mail, MapPin, Zap, Rocket, Car, Dna, Robot, Eye, Atom, Microscope, City, RefreshCw, Globe2             } from 'lucide-react.ts';
+import { SEO             } from '@/components/SEO';
+import { zionCuttingEdgeServices2029             } from '../../data/zion-2029-cutting-edge-services';
+import { zionEmergingTechServices2029             } from '../../data/zion-2029-emerging-tech-services';
+import { Link             } from 'react-router-dom.ts';
 import { Brain,
   Zap,
   Shield,
@@ -31,7 +31,7 @@ import { Brain,
   Award,
   TrendingUp
 <<<<<<< HEAD
-import { SEO            } from '../components/SEO';
+import { SEO             } from '../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -518,8 +518,8 @@ export default function ComprehensiveServices(...args: any[]): any {
       {/* Stats Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {stats.map((stat, index)            => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -556,9 +556,9 @@ export default function ComprehensiveServices(...args: any[]): any {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400/50"
+                className="px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400/50"
               >
-                {categories.map(category            => (
+                {categories.map(category             => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -602,8 +602,8 @@ export default function ComprehensiveServices(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -670,9 +670,9 @@ export default function ComprehensiveServices(...args: any[]): any {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
+              viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanytrue }}
             >
-              {sortedServices.map((service, index)            => (
+              {sortedServices.map((service, index)             => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </motion.div>

@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { Truck, 
   Brain, 
   Shield, 
@@ -29,7 +29,7 @@ import { Truck,
   ShoppingCart,
   Heart,
   Leaf
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 const AIAutonomousSupplyChain = () => {
   const features = [
@@ -266,8 +266,8 @@ const AIAutonomousSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={index}
                 initial = {
@@ -350,8 +350,8 @@ const AIAutonomousSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)             => (
               <motion.div
                 key={index}
                 initial = {
@@ -434,8 +434,8 @@ const AIAutonomousSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)             => (
               <motion.div
                 key={index}
                 initial = {
@@ -516,8 +516,8 @@ const AIAutonomousSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)            => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)             => (
               <motion.div
                 key={index}
                 initial = {

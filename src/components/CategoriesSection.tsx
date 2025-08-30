@@ -1,10 +1,10 @@
 import React from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
-import { motion            } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight const categories = [
 =======
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight            } from 'lucide-react.ts';
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight             } from 'lucide-react.ts';
 
 const categories = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -139,9 +139,9 @@ export function CategoriesSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
+          viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
-          {categories.map((category, index)            => (
+          {categories.map((category, index)             => (
             <motion.div
               key={category.title}
               variants={itemVariants}

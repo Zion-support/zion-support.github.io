@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
 <<<<<<< HEAD
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { AlertTriangle,
   RefreshCw,
   Home,
@@ -12,7 +12,7 @@ import { AlertTriangle,
   Shield,
   Zap
 =======
-import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
 import { AlertTriangle, 
   RefreshCw, 
   Home, 
@@ -22,14 +22,14 @@ import { AlertTriangle,
   Info,
   Download,
   Share2
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Props extends React.PropsWithChildren<{}> {
 
-  children: anyanyanyanyanyanyanyanyanyanyanyReactNode;
+  children: anyanyanyanyanyanyanyanyanyanyanyanyReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo)            => void;
+  onError?: (error: Error, errorInfo: ErrorInfo)             => void;
   showDetails?: boolean;
 <<<<<<< HEAD
   className?: string;
@@ -39,6 +39,7 @@ interface Props extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface State {
+
 
 
 
@@ -60,6 +61,7 @@ interface State {
 =======
   showErrorDetails: boolean;
   errorId: string;
+
 
 
 
@@ -192,12 +194,12 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 =======
       // Send to analytics endpoint
       fetch('/api/analytics/error', {
-        method: anyanyanyanyanyanyanyanyanyanyany'POST',
+        method: anyanyanyanyanyanyanyanyanyanyanyany'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(errorReport)
-      }).catch(e            => console.warn('Failed to send error report:', e));
+      }).catch(e             => console.warn('Failed to send error report:', e));
     } catch (e) {
       console.warn('Failed to prepare error report:', e);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -207,10 +209,10 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
 <<<<<<< HEAD
   private handleRetry = () => {
-    this.setState({ isRecovering: anyanyanyanyanyanyanyanyanyanyanytrue });
+    this.setState({ isRecovering: anyanyanyanyanyanyanyanyanyanyanyanytrue });
 
     // Attempt to recover by clearing error state
-    setTimeout(()            => {
+    setTimeout(()             => {
       this.setState({
         hasError: false,
         error: null,
@@ -249,7 +251,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     if (!this.state.error) return;
 
     const errorText = `
-Error Details: anyanyanyanyanyanyanyanyanyanyanyMessage: ${this.state.error.message}
+Error Details: anyanyanyanyanyanyanyanyanyanyanyanyMessage: ${this.state.error.message}
 Stack: ${this.state.error.stack}
 Component Stack: ${this.state.errorInfo?.componentStack}
 Error ID: ${this.state.errorId}
@@ -258,7 +260,7 @@ Timestamp: ${new Date().toISOString()}
     `.trim();
 
 <<<<<<< HEAD
-      navigator.clipboard.writeText(errorText).then(()            => {
+      navigator.clipboard.writeText(errorText).then(()             => {
         // Show success feedback
         const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
         if (button) {
@@ -321,7 +323,7 @@ Timestamp: ${new Date().toISOString()}
     }
   };
 
-  showToast = (message: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  showToast = (message: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     // Create and show a toast notification
     const toast = document.createElement('div');
     toast.className = 'fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50';
@@ -653,7 +655,7 @@ Timestamp: ${new Date().toISOString()}
 
 // Hook for functional components to handle errors
 export function useErrorHandler(...args: any[]): any {
-  const handleError = (error: anyanyanyanyanyanyanyanyanyanyanyError, errorInfo?: ErrorInfo)            => {
+  const handleError = (error: anyanyanyanyanyanyanyanyanyanyanyanyError, errorInfo?: ErrorInfo)             => {
     console.error('Error caught by hook:', error, errorInfo);
     
     // Log to external service
@@ -694,11 +696,11 @@ export const useErrorBoundary: [any, React.Dispatch<React.SetStateAction<any>>] 
   const [error, setError] = React.useState<any>(null);
 
   React.useEffect(() => {
-    const handleError = (event: anyanyanyanyanyanyanyanyanyanyanyErrorEvent)            => {
+    const handleError = (event: anyanyanyanyanyanyanyanyanyanyanyanyErrorEvent)             => {
       setError(event.error);
     };
 
-    const handleUnhandledRejection = (event: anyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)            => {
+    const handleUnhandledRejection = (event: anyanyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)             => {
       setError(new Error(event.reason));
     };
 

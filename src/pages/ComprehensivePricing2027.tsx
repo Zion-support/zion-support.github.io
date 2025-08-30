@@ -1,16 +1,16 @@
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
-import { Link            } from 'react-router-dom.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
 import { Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
 <<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027            } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027            } from '@/data/emergingTechServices2027';
-=======
- } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027             } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027             } from '@/data/emergingTechServices2027';
+=======
+ } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027              } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027              } from '@/data/emergingTechServices2027';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensivePricing2027(...args[]: any):  {
@@ -126,14 +126,14 @@ export default function ComprehensivePricing2027(...args[]: any):  {
   };
 
 <<<<<<< HEAD
-  const getPriceColor = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {;
+  const getPriceColor = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (price < 1000) return 'text-green-400';
     if (price < 2500) return 'text-yellow-400';
     return 'text-red-400'};
 
 <<<<<<< HEAD
-  const getPriceTier = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {;
+  const getPriceTier = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (price < 1000) return 'Starter';
     if (price < 2500) return 'Professional';
@@ -302,7 +302,7 @@ export default function ComprehensivePricing2027(...args[]: any):  {
 
 }}
             transition = {
-  { duration: anyanyanyanyanyanyanyanyanyanyany0.8,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyany0.8,
   delay: 0.6 
 
 
@@ -315,10 +315,10 @@ export default function ComprehensivePricing2027(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s             => s.price))}`, icon: anyanyanyanyanyanyanyanyanyanyanyDollarSign, color: 'from-green-500 to-emerald-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)             => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyanyanyanyanyanyanyanyanyanyanyBrain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)             => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyanyanyanyanyanyanyanyanyanyanyStar, color: 'from-yellow-500 to-orange-600' }
-            ].map((stat, index)             => (
+              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s              => s.price))}`, icon: anyanyanyanyanyanyanyanyanyanyanyanyDollarSign, color: 'from-green-500 to-emerald-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)              => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyanyanyanyanyanyanyanyanyanyanyanyBrain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)              => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyanyanyanyanyanyanyanyanyanyanyanyStar, color: 'from-yellow-500 to-orange-600' }
+            ].map((stat, index)              => (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-8 h-8 text-white" />
@@ -395,13 +395,13 @@ export default function ComprehensivePricing2027(...args[]: any):  {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
 
-                  {categories.map(category            => (
-=======
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-                >
                   {categories.map(category             => (
+=======
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                >
+                  {categories.map(category              => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -486,10 +486,10 @@ export default function ComprehensivePricing2027(...args[]: any):  {
 
 
 }}
-                transition={{ duration: anyanyanyanyanyanyanyanyanyanyany0.3 }}
+                transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyany0.3 }}
 <<<<<<< HEAD
 
-                {filteredServices.map((service, index)            => (
+                {filteredServices.map((service, index)             => (
 =======
               >
                 {filteredServices.map((service, index)  => (

@@ -1,6 +1,6 @@
 // import type { NextApiRequest, NextApiResponse } from 'next.ts'; // Removed
-import { supabase             } from '@/integrations/supabase/client';
-import { ProjectBrief, TeamRecommendation             } from '@/types';
+import { supabase              } from '@/integrations/supabase/client';
+import { ProjectBrief, TeamRecommendation              } from '@/types';
 
 // TODO: This API route was written for a Next.js environment.
 // This project uses Vite. This logic needs to be refactored,

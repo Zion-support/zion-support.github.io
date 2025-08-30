@@ -10,6 +10,7 @@ export interface ComprehensiveNewService {
 
 
 
+
   id: string;
   title: string;
   tagline: string;
@@ -22,6 +23,7 @@ pricing: {;
     setup: string;
     marketPrice: string;
   
+
 
 
 

@@ -1,6 +1,7 @@
-import { TalentProfile             } from './talent';
+import { TalentProfile              } from './talent';
 
 export interface ProjectBrief {
+
 
 
 
@@ -36,9 +37,11 @@ export interface ProjectBrief {
 
 
 
+
 }
 
 export interface TalentFilters {
+
 
 
 
@@ -66,9 +69,11 @@ export interface TalentFilters {
 
 
 
+
 }
 
 export interface RecommendedRole {
+
 
 
 
@@ -98,12 +103,14 @@ hourlyRateRange: { // Estimated;
 
 
 
+
 };
   weeklyHours: number; // Estimated
   matchedTalent: TalentProfile[]; // Talent profiles matching this role
 }
 
 export interface TeamRecommendation {
+
 
 
 
@@ -124,6 +131,7 @@ totalEstimatedRate: { // Sum of (hourlyRateRange.avg * weeklyHours) for all role
     min: number;
     max: number;
   
+
 
 
 
@@ -161,6 +169,7 @@ export interface TeamInvite {
 
 
 
+
   id?: string;
   teamRecommendationId?: string;
   talentId: string;
@@ -168,6 +177,7 @@ export interface TeamInvite {
   status: 'pending' | 'accepted' | 'declined';
   createdAt?: string;
   updatedAt?: string;
+
 
 
 

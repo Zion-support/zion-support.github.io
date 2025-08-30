@@ -10,10 +10,12 @@ interface ResourceError {
 
 
 
+
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
   error: string;
   timestamp: number;
+
 
 
 
@@ -101,14 +103,14 @@ class ResourceMonitor {
     }
   }
 
-  private monitorScript(script: anyanyanyanyanyanyanyanyanyanyanyHTMLScriptElement) {
-    script.addEventListener('error', ()            => {
+  private monitorScript(script: anyanyanyanyanyanyanyanyanyanyanyanyHTMLScriptElement) {
+    script.addEventListener('error', ()             => {
       this.handleResourceError(script.src, 'script', 'Script loading failed');
     });
   }
 
-  private monitorStylesheet(link: anyanyanyanyanyanyanyanyanyanyanyHTMLLinkElement) {
-    link.addEventListener('error', ()            => {
+  private monitorStylesheet(link: anyanyanyanyanyanyanyanyanyanyanyanyHTMLLinkElement) {
+    link.addEventListener('error', ()             => {
       this.handleResourceError(link.href, 'stylesheet', 'Stylesheet loading failed');
     });
   }
@@ -254,9 +256,9 @@ class ResourceMonitor {
 
   getErrorSummary() {
     const summary = {
-      total: anyanyanyanyanyanyanyanyanyanyanythis.errors.length,
+      total: anyanyanyanyanyanyanyanyanyanyanyanythis.errors.length,
       byType: {} as Record<string, any>,
-      recent: this.errors.filter(e            => Date.now() - e.timestamp < 60000).length // Last minute
+      recent: this.errors.filter(e             => Date.now() - e.timestamp < 60000).length // Last minute
     };
 
     this.errors.forEach(error => {

@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts'
-import { Link            } from 'react-router-dom.ts'
+import { Link             } from 'react-router-dom.ts'
 import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock export default function Careers(...args: any[]): any {
 =======
 import React from 'react.ts'
-import { Link             } from 'react-router-dom.ts'
-import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock             } from 'lucide-react.ts'
+import { Link              } from 'react-router-dom.ts'
+import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock              } from 'lucide-react.ts'
 
 
 export default function Careers(...args[]: any):  {
@@ -169,8 +169,8 @@ export default function Careers(...args[]: any):  {
 							Ready to join our mission? Check out our current openings.
 						</p>
 					</div>
-					<div className="grid gap-6 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
-						{openPositions.map((position)             => (
+					<div className="grid gap-6 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
+						{openPositions.map((position)              => (
 							<div key={position.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
 								<div className="flex items-start justify-between mb-4">
 									<div>

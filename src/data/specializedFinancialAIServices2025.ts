@@ -14,6 +14,7 @@ export interface FinancialAIService {
 
 
 
+
   id: number;
   name: string;
   category: string;
@@ -41,6 +42,7 @@ contactInfo: {;
 <<<<<<< HEAD
     address: string;
   
+
 
 
 

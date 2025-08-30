@@ -1,13 +1,13 @@
-import { RecommendedRole             } from '@/types';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription             } from '@/components/ui/card';
-import { Badge             } from '@/components/ui/badge';
-import { TalentCardPreview             } from './TalentCardPreview';
-import { Users, DollarSign, Clock, Briefcase             } from 'lucide-react.ts'; // Added Briefcase
+import { RecommendedRole              } from '@/types';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription              } from '@/components/ui/card';
+import { Badge              } from '@/components/ui/badge';
+import { TalentCardPreview              } from './TalentCardPreview';
+import { Users, DollarSign, Clock, Briefcase              } from 'lucide-react.ts'; // Added Briefcase
 
 interface RoleCardProps extends React.PropsWithChildren<{}> {
 
-  role: anyanyanyanyanyanyanyanyanyanyanyRecommendedRole;
-  onInviteTalent: (talentId: string, roleTitle: string)             => void}
+  role: anyanyanyanyanyanyanyanyanyanyanyanyRecommendedRole;
+  onInviteTalent: (talentId: string, roleTitle: string)              => void}
 
 export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
   return (
@@ -35,8 +35,8 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
         {role.matchedTalent && role.matchedTalent.length > 0 ? (
           <>
             <h4 className="text-sm font-medium text-muted-foreground mb-2.5">Suggested Talent ({role.matchedTalent.length}):</h4>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-3">
-              {role.matchedTalent.map((talent)             => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-3">
+              {role.matchedTalent.map((talent)              => (
                 <TalentCardPreview
                   key={talent.id}
                   talent={talent}

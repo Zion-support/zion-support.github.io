@@ -1,5 +1,20 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
+import { SEO              } from '../components/SEO';
+import { ADVANCED_MICRO_SAAS_SERVICES_2025              } from '../data/advancedMicroSaasServices2025';
+import { SPECIALIZED_IT_SERVICES_2025              } from '../data/specializedITServices2025';
+import { ADVANCED_AI_SERVICES_2025              } from '../data/advancedAIServices2025';
+
+const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+
+  const allServices = [
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),
+    ...SPECIALIZED_IT_SERVICES_2025.map(service              => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyany'IT Services' })),
+    ...ADVANCED_AI_SERVICES_2025.map(service              => ({ ...service, source: 'AI Solutions' }));
+=======;
+import React, { useState } from 'react.ts';
 import { SEO             } from '../components/SEO';
 import { ADVANCED_MICRO_SAAS_SERVICES_2025             } from '../data/advancedMicroSaasServices2025';
 import { SPECIALIZED_IT_SERVICES_2025             } from '../data/specializedITServices2025';
@@ -9,25 +24,10 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
 
-  const allServices = [
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),
-    ...SPECIALIZED_IT_SERVICES_2025.map(service             => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyany'IT Services' })),
-    ...ADVANCED_AI_SERVICES_2025.map(service             => ({ ...service, source: 'AI Solutions' }));
-=======;
-import React, { useState } from 'react.ts';
-import { SEO            } from '../components/SEO';
-import { ADVANCED_MICRO_SAAS_SERVICES_2025            } from '../data/advancedMicroSaasServices2025';
-import { SPECIALIZED_IT_SERVICES_2025            } from '../data/specializedITServices2025';
-import { ADVANCED_AI_SERVICES_2025            } from '../data/advancedAIServices2025';
-
-const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [searchTerm, setSearchTerm] = useState<any>('');
-
   const allServices = [;
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),;
-    ...SPECIALIZED_IT_SERVICES_2025.map(service            => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyany'IT Services' })),;
-    ...ADVANCED_AI_SERVICES_2025.map(service            => ({ ...service, source: 'AI Solutions' }));
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),;
+    ...SPECIALIZED_IT_SERVICES_2025.map(service             => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyany'IT Services' })),;
+    ...ADVANCED_AI_SERVICES_2025.map(service             => ({ ...service, source: 'AI Solutions' }));
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
@@ -188,8 +188,8 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service)             => (
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)              => (
             <div key={service.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-colors duration-200">
               <div className="flex items-start justify-between mb-4">
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${

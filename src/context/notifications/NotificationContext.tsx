@@ -12,10 +12,12 @@ interface NotificationContextType {
 
 
 
-  notifications: anyanyanyanyanyanyanyanyanyanyanyNotification[];
-  addNotification: (notification: Omit<Notification, 'id'>)            => void;
-  removeNotification: anyanyanyanyanyanyanyanyanyanyany(id: string)            => void;
-  clearNotifications: anyanyanyanyanyanyanyanyanyanyany()            => void;
+
+  notifications: anyanyanyanyanyanyanyanyanyanyanyanyNotification[];
+  addNotification: (notification: Omit<Notification, 'id'>)             => void;
+  removeNotification: anyanyanyanyanyanyanyanyanyanyanyany(id: string)             => void;
+  clearNotifications: anyanyanyanyanyanyanyanyanyanyanyany()             => void;
+
 
 
 
@@ -48,7 +50,7 @@ interface NotificationProviderProps extends React.PropsWithChildren<{}> {
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<any>([]);
 
-  const addNotification = (notification: anyanyanyanyanyanyanyanyanyanyanyOmit<Notification, 'id'>)            => {;
+  const addNotification = (notification: anyanyanyanyanyanyanyanyanyanyanyanyOmit<Notification, 'id'>)             => {;
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = {
   ...notification,;
@@ -74,7 +76,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     }
   };
 
-  const removeNotification = (id: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const removeNotification = (id: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 

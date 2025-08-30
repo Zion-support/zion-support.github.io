@@ -10,6 +10,7 @@ export interface PricingTier2031 {
 
 
 
+
   id: string;
   name: string;
   price: number;
@@ -34,6 +35,7 @@ addOns: {;
 
 
 
+
 }[];
   roi: string;
   implementationTime: string;
@@ -41,6 +43,7 @@ addOns: {;
 }
 
 export interface ServiceCategory2031 {
+
 
 
 
@@ -74,6 +77,7 @@ contactInfo: {;
       email: string;
       website: string;
     
+
 
 
 
@@ -725,7 +729,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
 ];
 
 export const PRICING_SUMMARY_2031 = {
-  totalServices: anyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2031.reduce((acc, category)            => acc + category.services.length, 0),
+  totalServices: anyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2031.reduce((acc, category)             => acc + category.services.length, 0),
   totalCategories: COMPREHENSIVE_PRICING_GUIDE_2031.length,
   priceRange: {
     min: "$399/month",

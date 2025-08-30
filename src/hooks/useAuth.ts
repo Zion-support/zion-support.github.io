@@ -1,7 +1,8 @@
 import React, { useState } from 'react.ts';
-import { useState, useEffect            } from 'react.ts';
+import { useState, useEffect             } from 'react.ts';
 
 interface User {
+
 
 
 
@@ -34,10 +35,12 @@ avatarUrl?: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AuthState {
+
 
 
 
@@ -66,17 +69,18 @@ isLoading: boolean;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function useAuth(...args[]: any):  {
   const [authState, setAuthState] = useState<any>({
-    user: anyanyanyanyanyanyanyanyanyanyanynull,
+    user: anyanyanyanyanyanyanyanyanyanyanyanynull,
     isAuthenticated: false,
     isLoading: true,
   });
 
-  useEffect(()             => {
+  useEffect(()              => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {;
       const storedUser = localStorage.getItem('zion_user');
@@ -126,7 +130,7 @@ export function useAuth(...args[]: any):  {
 
     checkAuth()}, []);
 
-  const login = async (email: anyanyanyanyanyanyanyanyanyanyanystring, _password: string)             => {
+  const login = async (email: anyanyanyanyanyanyanyanyanyanyanyanystring, _password: string)              => {
     // In a real app, you would make an API call to your backend
     const mockUser: User = {
   id: '1',
@@ -157,7 +161,7 @@ export function useAuth(...args[]: any):  {
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken')};
 
-  const register = async (email: anyanyanyanyanyanyanyanyanyanyanystring, password: string, name: string)             => {
+  const register = async (email: anyanyanyanyanyanyanyanyanyanyanyanystring, password: string, name: string)              => {
     // Implement actual registration logic here
     const mockUser: User = {
   id: '1',

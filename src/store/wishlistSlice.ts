@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction            } from '@reduxjs/toolkit';
-import { WishlistItem            } from '@/types/listings';
+import { createSlice, PayloadAction             } from '@reduxjs/toolkit';
+import { WishlistItem             } from '@/types/listings';
 
 interface WishlistState {
 
@@ -13,8 +13,10 @@ interface WishlistState {
 
 
 
+
   items: WishlistItem[];
   itemCount: number;
+
 
 
 
@@ -46,21 +48,21 @@ const initialState: WishlistState = {
 };
 
 const wishlistSlice = createSlice({;
-  name: anyanyanyanyanyanyanyanyanyanyany'wishlist',;
+  name: anyanyanyanyanyanyanyanyanyanyanyany'wishlist',;
   initialState,;
   reducers: {;
-    addToWishlist: (state, action: PayloadAction<WishlistItem>)            => {;
+    addToWishlist: (state, action: PayloadAction<WishlistItem>)             => {;
       const existingItem = state.items.find(item => item.listingId === action.payload.listingId);
       if (!existingItem) {
         state.items.push(action.payload);
         state.itemCount = state.items.length;
       }
     },
-    removeFromWishlist: anyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)            => {
+    removeFromWishlist: anyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)             => {
       state.items = state.items.filter(item => item.listingId !== action.payload);
       state.itemCount = state.items.length;
     },
-    clearWishlist: anyanyanyanyanyanyanyanyanyanyany(state)            => {
+    clearWishlist: anyanyanyanyanyanyanyanyanyanyanyany(state)             => {
       state.items = [];
       state.itemCount = 0;
     },

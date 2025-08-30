@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { Network, 
   Brain, 
   Target, 
@@ -24,7 +24,7 @@ import { Network,
   Shield,
   Users,
   GitBranch
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
   const features = [
@@ -124,8 +124,8 @@ const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

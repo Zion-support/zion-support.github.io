@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
 import { Search,
   Filter,
   Star,
@@ -18,8 +18,8 @@ import { Search,
   Clock,
   DollarSign,
 =======
-import React, { useState            } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import React, { useState             } from 'react.ts';
+import { motion             } from 'framer-motion.ts';
 import { Brain,
   Shield,
   Cpu,
@@ -69,9 +69,10 @@ import { Brain,
   Atom,
   Heart,
   Leaf
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025            } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025             } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
+
 
 
 
@@ -92,6 +93,7 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
   const [activeCategory, setActiveCategory] = useState('all');
 =======
   MapPin
+
 
 
 
@@ -145,7 +147,7 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
 
   });
 
-  const handleServiceClick = (service: anyanyanyanyanyanyanyanyanyanyany)            => {
+  const handleServiceClick = (service: anyanyanyanyanyanyanyanyanyanyanyany)             => {
     setSelectedService(service);
   };
 
@@ -205,14 +207,14 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
       }
     });
 
-  const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     if (price < 1000) return 'low';
     if (price < 5000) return 'medium';
     if (price < 15000) return 'high';
     return 'premium';
   };
 
-  const getPriceRangeColor = (range: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getPriceRangeColor = (range: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (range) {
       case 'low': return 'bg-green-100 text-green-800';
       case 'medium': return 'bg-blue-100 text-blue-800';
@@ -322,9 +324,9 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
 =======
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {categories.map(category            => (
+                {categories.map(category             => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -406,9 +408,9 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {priceRanges.map(range            => (
+                {priceRanges.map(range             => (
                   <option key={range.value} value={range.value} className="bg-slate-800 text-white">
                     {range.label}
                   </option>
@@ -450,9 +452,9 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
 
-            {sortedServices.map((service, index)            => (
+            {sortedServices.map((service, index)             => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -536,7 +538,7 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {[
               {
                 icon: Brain,
@@ -553,7 +555,7 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
                 title: "Rapid Implementation",
                 description: "Get up and running in weeks, not months, with our proven implementation methodology."
 
-            ].map((feature, index)            => (
+            ].map((feature, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -659,8 +661,8 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)            => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)             => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

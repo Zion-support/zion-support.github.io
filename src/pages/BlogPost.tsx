@@ -1,7 +1,7 @@
 
 import React from 'react.ts';
-import { useParams, Link            } from 'react-router-dom.ts';
-import { motion            } from 'framer-motion.ts';
+import { useParams, Link             } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
 import { Calendar, 
   User, 
   Clock, 
@@ -21,8 +21,8 @@ import { Calendar,
   Cpu,
   Network,
   BookOpen
-           } from 'lucide-react.ts';
-import { SEO            } from '../components/SEO';
+            } from 'lucide-react.ts';
+import { SEO             } from '../components/SEO';
 
 <<<<<<< HEAD
 const BlogPost: React.FC = (): JSX.Element => {
@@ -195,7 +195,7 @@ export default function BlogPost(...args: any[]): any {
     ]
   };
 
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -203,7 +203,7 @@ export default function BlogPost(...args: any[]): any {
     });
   };
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     const categoryIcons: { [key: string]: any } = {
       ai: Brain,
       quantum: Cpu,
@@ -216,7 +216,7 @@ export default function BlogPost(...args: any[]): any {
     return categoryIcons[category] || BookOpen;
   };
 
-  const getCategoryName = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getCategoryName = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     const categoryNames: { [key: string]: string } = {
       ai: 'Artificial Intelligence',
       quantum: 'Quantum Computing',
@@ -409,8 +409,8 @@ export default function BlogPost(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPost.relatedPosts.map((post, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {blogPost.relatedPosts.map((post, index)             => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}

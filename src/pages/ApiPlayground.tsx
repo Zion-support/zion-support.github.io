@@ -2,7 +2,7 @@ import React, { useState } from 'react.ts';
 <<<<<<< HEAD
 import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info export default function ApiPlayground(...args: any[]): any {
 =======
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info             } from 'lucide-react.ts';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info              } from 'lucide-react.ts';
 
 export default function ApiPlayground(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -255,21 +255,21 @@ export default function ApiPlayground(...args: any[]): any {
   });
 
 <<<<<<< HEAD
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />};
 
-  const getMethodColor = (method: anyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getMethodColor = (method: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'};
 
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
   };
 
-  const getMethodColor = (method: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const getMethodColor = (method: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
   };
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'stable': return 'text-green-400';
@@ -284,7 +284,7 @@ export default function ApiPlayground(...args: any[]): any {
   };
 
 <<<<<<< HEAD
-  const handleApiSelect = (api: anyanyanyanyanyanyanyanyanyanyany)            => {;
+  const handleApiSelect = (api: anyanyanyanyanyanyanyanyanyanyanyany)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
@@ -302,10 +302,10 @@ export default function ApiPlayground(...args: any[]): any {
       setIsLoading(false)}, 1500)};
 
 <<<<<<< HEAD
-  const copyToClipboard = (text: anyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const copyToClipboard = (text: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     navigator.clipboard.writeText(text)};
 =======
-  const copyToClipboard = (text: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const copyToClipboard = (text: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     navigator.clipboard.writeText(text);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

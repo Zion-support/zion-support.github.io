@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { useParams, Link             } from 'react-router-dom.ts';
-import { Helmet             } from 'react-helmet-async.ts';
+import { useParams, Link              } from 'react-router-dom.ts';
+import { Helmet              } from 'react-helmet-async.ts';
 
 export default function GenericPage(...args[]: any):  {
   const { '*': slug } = useParams();

@@ -1,20 +1,20 @@
 
 import React, { useState } from 'react.ts';
-import { useAdminQuotes            } from '@/hooks/useAdminQuotes';
-import { useAuth            } from '@/hooks/useAuth';
+import { useAdminQuotes             } from '@/hooks/useAdminQuotes';
+import { useAuth             } from '@/hooks/useAuth';
 import { Card,
   CardContent
-            } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger             } from '@/components/ui/tabs';
-import { Navigate             } from 'react-router-dom.ts';
+             } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/components/ui/tabs';
+import { Navigate              } from 'react-router-dom.ts';
 import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute             } from '@/components/ProtectedRoute';
-import { QuoteDetails             } from '@/components/quotes/QuoteDetails';
-import { ExportToCSV             } from '@/components/quotes/ExportToCSV';
+import { ProtectedRoute              } from '@/components/ProtectedRoute';
+import { QuoteDetails              } from '@/components/quotes/QuoteDetails';
+import { ExportToCSV              } from '@/components/quotes/ExportToCSV';
 import { QuoteStatusCards,
   QuotesFilter,
   QuotesTable
-            } from '@/components/admin/quotes';
+             } from '@/components/admin/quotes';
 
 export default function QuoteManager(...args[]: any):  {
   const { user } = useAuth();
@@ -43,24 +43,24 @@ export default function QuoteManager(...args[]: any):  {
   // Count quotes by status
   const statusCounts = {
   <<<<<<< HEAD
-    new: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'new').length,
-    in_review: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'in_review').length,
-    accepted: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'accepted').length,
-    responded: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'responded').length,
-  closed: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'closed').length;
+    new: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'new').length,
+    in_review: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'in_review').length,
+    accepted: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'accepted').length,
+    responded: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'responded').length,
+  closed: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'closed').length;
   ;
 
 };
 
-  const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyQuoteRequest)             => {
+  const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => {
 =======
-  new: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)            => q.status === 'new').length,
-    in_review: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)            => q.status === 'in_review').length,;
-    accepted: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)            => q.status === 'accepted').length,;
-    responded: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)            => q.status === 'responded').length,;
+  new: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'new').length,
+    in_review: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'in_review').length,;
+    accepted: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'accepted').length,;
+    responded: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'responded').length,;
   ;
   ;
-  closed: anyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)            => q.status === 'closed').length;
+  closed: anyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)             => q.status === 'closed').length;
   ;
 
 
@@ -68,7 +68,7 @@ export default function QuoteManager(...args[]: any):  {
 
 };
 
-  const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyQuoteRequest)            => {;
+  const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedQuote(quote);
     setShowDetails(true)};
@@ -132,7 +132,7 @@ export default function QuoteManager(...args[]: any):  {
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: anyanyanyanyanyanyanyanyanyanyanyQuoteRequest)             => !quote.is_archived)}
+                    quotes={quotes.filter((quote: anyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -145,7 +145,7 @@ export default function QuoteManager(...args[]: any):  {
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: anyanyanyanyanyanyanyanyanyanyanyQuoteRequest)             => quote.is_archived)}
+                    quotes={quotes.filter((quote: anyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
                     updateStatus={updateStatus}

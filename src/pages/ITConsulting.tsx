@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { Lightbulb,
   Target,
   TrendingUp,
@@ -60,7 +60,7 @@ import { Lightbulb,
   Brain,
   Network,
   Rocket
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function ITConsulting(...args: any[]): any {
@@ -316,8 +316,8 @@ export default function ITConsulting(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -362,9 +362,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {consultingServices.map((service, index)            => (
+            {consultingServices.map((service, index)             => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -448,9 +448,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {benefits.map((benefit, index)            => (
+            {benefits.map((benefit, index)             => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -496,9 +496,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
-            {industries.map((industry, index)            => (
+            {industries.map((industry, index)             => (
               <motion.div
                 key={index}
 <<<<<<< HEAD

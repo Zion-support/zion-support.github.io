@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
-import { motion            } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
 import { Phone,
   Mail,
   MapPin,
@@ -91,7 +91,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   Building,
   Car,
   Atom
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
@@ -208,7 +208,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: anyanyanyanyanyanyanyanyanyanyanyanystring, href: string)             => {
+  const createMissingPage = (name: anyanyanyanyanyanyanyanyanyanyanyanyanystring, href: string)              => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -238,9 +238,9 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: anyanyanyanyanyanyanyanyanyanyany0.6, staggerChildren: 0.1 }}
+            transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyany0.6, staggerChildren: 0.1 }}
           >
-            {stats.map((stat, index)            => (
+            {stats.map((stat, index)             => (
               <motion.div
                 key={stat.label}
                 className="text-center"

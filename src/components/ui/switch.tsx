@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-import { cn            } from '../../utils/cn';
+import { cn             } from '../../utils/cn';
 =======
 import React from 'react.ts';
-import { cn            } from '../../utils/cn';
+import { cn             } from '../../utils/cn';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SwitchProps extends React.PropsWithChildren<{}> {
 
   checked?: boolean;
-  onCheckedChange?: (checked: anyanyanyanyanyanyanyanyanyanyanyboolean)            => void;
+  onCheckedChange?: (checked: anyanyanyanyanyanyanyanyanyanyanyanyboolean)             => void;
   disabled?: boolean;
   className?: string;
   id?: string;

@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { Brain,
   Atom,
   Lock,
@@ -23,7 +23,7 @@ import { Brain,
 <<<<<<< HEAD
 const InnovativeServices: React.FC = (): JSX.Element => {
 =======
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 const InnovativeServices: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -221,8 +221,8 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {stats.map((stat, index)             => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)              => (
               <motion.div
                 key={stat.label}
                 initial = {
@@ -304,8 +304,8 @@ const InnovativeServices: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {innovations.map((innovation, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {innovations.map((innovation, index)              => (
               <motion.div
                 key={innovation.id}
                 initial = {

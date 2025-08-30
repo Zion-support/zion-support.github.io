@@ -1,7 +1,8 @@
 <<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
 import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon interface AccessibilityContextType {
+
 
 
 
@@ -25,9 +26,10 @@ import React, { createContext, useContext, useEffect, useState, ReactNode
  
  
  
+ 
 } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon             } from 'lucide-react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon              } from 'lucide-react.ts';
 
 interface AccessibilityContextType {
 
@@ -42,22 +44,24 @@ interface AccessibilityContextType {
 
 
 
+
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  highContrast: anyanyanyanyanyanyanyanyanyanyanyboolean;
-  toggleHighContrast: ()             => void;
-  reducedMotion: anyanyanyanyanyanyanyanyanyanyanyboolean;
-  toggleReducedMotion: ()             => void;
-  fontSize: anyanyanyanyanyanyanyanyanyanyanynumber;
-  increaseFontSize: ()             => void;
-  decreaseFontSize: anyanyanyanyanyanyanyanyanyanyany()             => void;
-  resetFontSize: anyanyanyanyanyanyanyanyanyanyany()             => void;
-  showSkipLinks: anyanyanyanyanyanyanyanyanyanyanyboolean;
-  setShowSkipLinks: (show: boolean)             => void;
-  voiceNavigation: anyanyanyanyanyanyanyanyanyanyanyboolean;
+  highContrast: anyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  toggleHighContrast: ()              => void;
+  reducedMotion: anyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  toggleReducedMotion: ()              => void;
+  fontSize: anyanyanyanyanyanyanyanyanyanyanyanynumber;
+  increaseFontSize: ()              => void;
+  decreaseFontSize: anyanyanyanyanyanyanyanyanyanyanyany()              => void;
+  resetFontSize: anyanyanyanyanyanyanyanyanyanyanyany()              => void;
+  showSkipLinks: anyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  setShowSkipLinks: (show: boolean)              => void;
+  voiceNavigation: anyanyanyanyanyanyanyanyanyanyanyanyboolean;
 <<<<<<< HEAD
-  toggleVoiceNavigation: ()            => void;
+  toggleVoiceNavigation: ()             => void;
 =======
-toggleVoiceNavigation: anyanyanyanyanyanyanyanyanyanyany()             => void;
+toggleVoiceNavigation: anyanyanyanyanyanyanyanyanyanyanyany()              => void;
+
 
 
 
@@ -143,7 +147,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Keyboard navigation support
   useEffect(() => {
 <<<<<<< HEAD
-    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)            => {;
+    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)             => {;
       // Skip links (Alt + S);
       if (event.altKey && event.key === 's') {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -419,7 +423,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
 <<<<<<< HEAD
-    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)            => {;
+    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       if (event.key !== 'Tab') return;
 

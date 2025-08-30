@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
-import { SEO             } from '../components/SEO';
-import { motion             } from 'framer-motion.ts';
-import { Link             } from 'react-router-dom.ts';
+import { SEO              } from '../components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
 
 const PricingComparison: React.FC = (): JSX.Element => {;
   const [selectedPlan, setSelectedPlan] = useState('monthly');
@@ -329,7 +329,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
     };
   ];
 
-  const calculateSavings = (monthlyPrice: anyanyanyanyanyanyanyanyanyanyanynumber, yearlyPrice: number)             => {;
+  const calculateSavings = (monthlyPrice: anyanyanyanyanyanyanyanyanyanyanyanynumber, yearlyPrice: number)              => {;
     const monthlyTotal = monthlyPrice * 12;
     const yearlyTotal = yearlyPrice * 12;
     const savingsPercent = Math.round((savings / monthlyTotal) * 100);
@@ -457,8 +457,8 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                         </p>
                       </div>
 
-                      <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">;
-                        {service.plans.map((plan, planIndex)             => {;
+                      <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">;
+                        {service.plans.map((plan, planIndex)              => {;
                           const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
                           return (
                             <motion.div

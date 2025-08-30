@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
-import { motion            } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
 import { Brain,
   Shield,
   Cpu,
@@ -34,9 +34,9 @@ import { Brain,
   Clock,
   Award,
   TrendingDown
-           } from 'lucide-react.ts';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025            } from '../data/innovativeMicroSaasServices2025';
-import { COMPREHENSIVE_PRICING_GUIDE_2025            } from '../data/comprehensivePricingGuide2025';
+            } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025             } from '../data/innovativeMicroSaasServices2025';
+import { COMPREHENSIVE_PRICING_GUIDE_2025             } from '../data/comprehensivePricingGuide2025';
 
 export function ComprehensiveServicesPage(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
@@ -82,18 +82,18 @@ export function ComprehensiveServicesPage(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     if (price < 1000) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
-  const getPriceColor = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {
+  const getPriceColor = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'text-green-400';
@@ -129,8 +129,8 @@ export function ComprehensiveServicesPage(...args: any[]): any {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index)            => (
+        <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index)             => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -170,9 +170,9 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {categories.map((category)            => (
+                  {categories.map((category)             => (
                     <option key={category.id} value={category.id}>{category.name}</option>
                   ))}
                 </select>
@@ -183,9 +183,9 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                 <select
                   value={priceRange}
                   onChange={(e) => setPriceRange(e.target.value)}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {priceRanges.map((range)            => (
+                  {priceRanges.map((range)             => (
                     <option key={range.id} value={range.id}>{range.name}</option>
                   ))}
                 </select>
@@ -203,8 +203,8 @@ export function ComprehensiveServicesPage(...args: any[]): any {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)             => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

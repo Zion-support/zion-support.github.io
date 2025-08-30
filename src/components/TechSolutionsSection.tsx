@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Link            } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
 import { Brain,
   Shield,
   Cloud,
@@ -16,7 +16,7 @@ import { Brain,
 <<<<<<< HEAD
 export const TechSolutionsSection: React.FC = (): JSX.Element => {
 =======
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const TechSolutionsSection: React.FC = (): JSX.Element => {
@@ -162,8 +162,8 @@ export function TechSolutionsSection(...args: any[]): any {
         </motion.div>
 
 <<<<<<< HEAD
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
-          {solutions.map((solution, index)             => {;
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
+          {solutions.map((solution, index)              => {;
             const IconComponent = solution.icon;
             return (
               <motion.div
@@ -193,8 +193,8 @@ export function TechSolutionsSection(...args: any[]): any {
                     {solution.title}
                   </h3>
 =======
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {techSolutions.map((solution, index)            => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {techSolutions.map((solution, index)             => (
             <motion.div
               key={solution.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"

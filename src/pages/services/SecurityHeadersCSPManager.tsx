@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone            } from 'lucide-react.ts';
-import { Link            } from 'react-router-dom.ts';
+import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone             } from 'lucide-react.ts';
+import { Link             } from 'react-router-dom.ts';
 
 export default function SecurityHeadersCSPManager(...args: any[]): any {
   return (
@@ -13,13 +13,13 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {
           <p className="mt-4 text-slate-300">
             Centralize HSTS, CSP, Referrer-Policy, Permissions-Policy and Subresource Integrity management across domains with rollout checks and reporting.
           </p>
-          <div className="mt-8 grid gap-4 sm: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
+          <div className="mt-8 grid gap-4 sm: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
             {[
               { title: 'Policy templates', desc: 'Prebuilt strict, balanced and relaxed CSP profiles.' },
               { title: 'Per-app overrides', desc: 'Granular exceptions with expiry and approvals.' },
               { title: 'Automated reports', desc: 'CSP report-uri ingestion with triage and fixes.' },
               { title: 'CI/CD integration', desc: 'Fail builds on insecure headers or CSP regressions.' },
-            ].map((f)            => (
+            ].map((f)             => (
               <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                 <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
                 <div className="mt-1 text-sm text-slate-300">{f.desc}</div>

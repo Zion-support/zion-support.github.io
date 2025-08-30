@@ -9,8 +9,8 @@ const Team: React.FC = (): JSX.Element => (
 );
 =======
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { SEO            } from '../components/SEO';
+import { motion             } from 'framer-motion.ts';
+import { SEO             } from '../components/SEO';
 import { Linkedin, 
   Twitter, 
   Mail, 
@@ -25,7 +25,7 @@ import { Linkedin,
   Zap,
   Heart,
   ArrowRight
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export default function Team(...args: any[]): any {
   const teamMembers = [
@@ -162,8 +162,8 @@ export default function Team(...args: any[]): any {
       {/* Stats Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {stats.map((stat, index)            => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)             => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -286,8 +286,8 @@ export default function Team(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.filter(member            => !member.featured).map((member, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.filter(member             => !member.featured).map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -373,8 +373,8 @@ export default function Team(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)             => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}

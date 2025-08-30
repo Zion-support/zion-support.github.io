@@ -1,14 +1,14 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Link            } from 'react-router-dom.ts';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor import { SEO            } from '@/components/SEO';
-=======
-import React from 'react.ts';
 import { motion             } from 'framer-motion.ts';
 import { Link             } from 'react-router-dom.ts';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor             } from 'lucide-react.ts';
-import { SEO             } from '@/components/SEO';
+import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor import { SEO             } from '@/components/SEO';
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AffiliateMarketingTracker(...args[]: any):  {
@@ -228,12 +228,12 @@ export default function AffiliateMarketingTracker(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)            => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)             => (
 =======
             
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)             => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)              => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
@@ -293,12 +293,12 @@ export default function AffiliateMarketingTracker(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)            => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)             => (
 =======
             
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)             => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)              => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
@@ -360,12 +360,12 @@ export default function AffiliateMarketingTracker(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)            => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)             => (
 =======
             
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)             => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)              => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}

@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts'
-import { Link            } from 'react-router-dom.ts'
+import { Link             } from 'react-router-dom.ts'
 import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield export default function About(...args: any[]): any {
 =======
 import React from 'react.ts'
-import { Link             } from 'react-router-dom.ts'
-import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield             } from 'lucide-react.ts'
+import { Link              } from 'react-router-dom.ts'
+import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield              } from 'lucide-react.ts'
 
 
 export default function About(...args[]: any):  {

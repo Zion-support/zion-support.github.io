@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { SEO             } from '../components/SEO';
-import { innovativeMicroSaasServices2030             } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030             } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030             } from '../data/comprehensiveAIServices2030';
+import { SEO              } from '../components/SEO';
+import { innovativeMicroSaasServices2030              } from '../data/innovativeMicroSaasServices2030';
+import { comprehensiveITServices2030              } from '../data/comprehensiveITServices2030';
+import { comprehensiveAIServices2030              } from '../data/comprehensiveAIServices2030';
 
 const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('microsaas');
@@ -14,10 +14,10 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
     let services[] = [];
 =======
 import React, { useState } from 'react.ts';
-import { SEO            } from '../components/SEO';
-import { innovativeMicroSaasServices2030            } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030            } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030            } from '../data/comprehensiveAIServices2030';
+import { SEO             } from '../components/SEO';
+import { innovativeMicroSaasServices2030             } from '../data/innovativeMicroSaasServices2030';
+import { comprehensiveITServices2030             } from '../data/comprehensiveITServices2030';
+import { comprehensiveAIServices2030             } from '../data/comprehensiveAIServices2030';
 
 const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('microsaas');
@@ -55,13 +55,13 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some((tag: anyanyanyanyanyanyanyanyanyanyanystring)             => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        service.tags.some((tag: anyanyanyanyanyanyanyanyanyanyanyanystring)              => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       )};
 =======;
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.tags.some((tag: anyanyanyanyanyanyanyanyanyanyanystring)            => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        service.tags.some((tag: anyanyanyanyanyanyanyanyanyanyanyanystring)             => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
 <<<<<<< HEAD
 
@@ -137,7 +137,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     {feature}
@@ -149,7 +149,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
               <div className="space-y-1">
-                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {benefit}
@@ -161,7 +161,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Target Audience:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.targetAudience.slice(0, 3).map((audience: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.targetAudience.slice(0, 3).map((audience: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <span key={index} className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">
                     {audience}
                   </span>
@@ -172,7 +172,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                     {tech}
                   </span>
@@ -257,7 +257,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {feature}
@@ -269,7 +269,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
               <div className="space-y-1">
-                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     {benefit}
@@ -281,7 +281,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <span key={index} className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">
                     {tech}
                   </span>
@@ -370,7 +370,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">AI Models:</h4>
               <div className="flex flex-wrap gap-2 mb-3">
-                {service.aiModels.slice(0, 4).map((model: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.aiModels.slice(0, 4).map((model: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <span key={index} className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full">
                     {model}
                   </span>
@@ -381,7 +381,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
                     {feature}
@@ -393,7 +393,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.useCases.slice(0, 4).map((useCase: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.useCases.slice(0, 4).map((useCase: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <span key={index} className="px-2 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">
                     {useCase}
                   </span>
@@ -404,7 +404,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanystring, index: number)             => (
+                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                     {tech}
                   </span>

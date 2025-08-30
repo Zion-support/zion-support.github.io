@@ -1,8 +1,9 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Star, Users            } from 'lucide-react.ts';
+import { motion             } from 'framer-motion.ts';
+import { Star, Users             } from 'lucide-react.ts';
 
 interface Testimonial {
+
 
 
 
@@ -20,6 +21,7 @@ interface Testimonial {
   company: string;
   rating: number;
   avatar: string;
+
 
 
 
@@ -62,8 +64,8 @@ export function Testimonials(...args: any[]): any {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-          {testimonials.map((testimonial, index)            => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+          {testimonials.map((testimonial, index)             => (
             <motion.div
               key={testimonial.author}
               initial={{ opacity: 0, y: 20 }}

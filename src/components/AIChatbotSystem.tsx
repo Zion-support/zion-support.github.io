@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
 import { MessageCircle,
   Send,
   Bot,
@@ -28,10 +28,11 @@ import { MessageCircle,
   AlertCircle
 <<<<<<< HEAD
 =======
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ChatMessage {
+
 
 
 
@@ -57,6 +58,7 @@ metadata?: {;
 <<<<<<< HEAD
     estimatedResponseTime?: number;
   
+
 
 
 
@@ -143,7 +145,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 }
 =======;
-          suggestions: anyanyanyanyanyanyanyanyanyanyany['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
+          suggestions: anyanyanyanyanyanyanyanyanyanyanyany['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
   estimatedResponseTime: 2;
         ;
@@ -159,7 +161,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
-  useEffect(()             => {
+  useEffect(()              => {
     if (autoScroll && messagesEndRef.current) {
 <<<<<<< HEAD
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -171,7 +173,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
   // Simulate AI response
 <<<<<<< HEAD
-  const simulateAIResponse = async (userMessage: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const simulateAIResponse = async (userMessage: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setIsTyping(true);
 
@@ -232,7 +234,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         estimatedResponseTime: 1 + Math.random() * 2
 
 =======
-        relatedServices: anyanyanyanyanyanyanyanyanyanyanyrandomResponse.relatedServices,;
+        relatedServices: anyanyanyanyanyanyanyanyanyanyanyanyrandomResponse.relatedServices,;
   ;
   ;
   estimatedResponseTime: 1 + Math.random() * 2;
@@ -247,19 +249,19 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
-    setMessages(prev            => [...prev, botMessage]);
+    setMessages(prev             => [...prev, botMessage]);
     setIsTyping(false);
   };
 
   // Handle message submission
 <<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)            => {;
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 
     const userMessage: ChatMessage = {
-  id: anyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
+  id: anyanyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
       content: inputValue,
       sender: 'user',
       timestamp: new Date(),
@@ -278,7 +280,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 };
 
-    setMessages(prev             => [...prev, userMessage]);
+    setMessages(prev              => [...prev, userMessage]);
     setInputValue('');
 
     // Generate AI response
@@ -292,12 +294,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
   // Handle file upload
 <<<<<<< HEAD
-  const handleFileUpload = (e: anyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)            => {;
+  const handleFileUpload = (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const file = e.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessage = {
-  id: anyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
+  id: anyanyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
   content: `Uploaded: ${file.name
 
 
@@ -312,7 +314,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         status: 'sent';
       };
 <<<<<<< HEAD
-      setMessages(prev            => [...prev, fileMessage]);
+      setMessages(prev             => [...prev, fileMessage]);
 
 =======
       setMessages(prev = > [...prev, fileMessage])};
@@ -321,23 +323,23 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
   // Handle suggestion click
 <<<<<<< HEAD
-  const handleSuggestionClick = (event: anyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent<HTMLElement>): void            => {;
+  const handleSuggestionClick = (event: anyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent<HTMLElement>): void             => {;
     setInputValue(suggestion)};
 
   // Rate response
-  const rateResponse = (messageId: anyanyanyanyanyanyanyanyanyanyanystring, rating: 'positive' | 'negative')             => {
+  const rateResponse = (messageId: anyanyanyanyanyanyanyanyanyanyanyanystring, rating: 'positive' | 'negative')              => {
     setMessages(prev => prev.map(msg => 
       msg.id === messageId 
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } };
         : msg;
     ))};
 =======
-  const handleSuggestionClick = (event: anyanyanyanyanyanyanyanyanyanyReact.MouseEvent<HTMLElement>): void           => {;
+  const handleSuggestionClick = (event: anyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent<HTMLElement>): void            => {;
     setInputValue(suggestion);
   };
 
   // Rate response
-  const rateResponse = (messageId: anyanyanyanyanyanyanyanyanyanyanystring, rating: 'positive' | 'negative')            => {
+  const rateResponse = (messageId: anyanyanyanyanyanyanyanyanyanyanyanystring, rating: 'positive' | 'negative')             => {
     setMessages(prev => prev.map(msg =>
       msg.id === messageId
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }

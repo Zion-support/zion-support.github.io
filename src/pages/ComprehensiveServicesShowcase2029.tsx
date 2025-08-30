@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { SEO            } from '@/components/SEO';
-import { Link            } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
+import { SEO             } from '@/components/SEO';
+import { Link             } from 'react-router-dom.ts';
 import { Brain, 
   Zap, 
   Shield, 
@@ -30,8 +30,8 @@ import { Brain,
   Filter,
   ExternalLink,
   Server
-           } from 'lucide-react.ts';
-import { innovativeServices2029, serviceCategories, pricingTiers, Service            } from '../data/innovativeServices2029';
+            } from 'lucide-react.ts';
+import { innovativeServices2029, serviceCategories, pricingTiers, Service             } from '../data/innovativeServices2029';
 
 export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -323,8 +323,8 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)             => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

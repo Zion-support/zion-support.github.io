@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { ArrowRight,
   ChevronLeft,
   ChevronRight,
@@ -44,17 +44,17 @@ import { ArrowRight,
   SortDesc,
   X
 <<<<<<< HEAD
-import { SEO            } from '../components/SEO';
-import { REVOLUTIONARY_SERVICES_2030            } from '../data/revolutionaryServices2030';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
 import { SEO             } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030             } from '../data/revolutionaryServices2030';
 =======
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO              } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030              } from '../data/revolutionaryServices2030';
+=======
 } from 'lucide-react';
-import { SEO            } from '../components/SEO';
-import { REVOLUTIONARY_SERVICES_2030            } from '../data/revolutionaryServices2030';
+import { SEO             } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030             } from '../data/revolutionaryServices2030';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -125,7 +125,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
 <<<<<<< HEAD
-  const handlePageChange = (page: anyanyanyanyanyanyanyanyanyanyanynumber)            => {;
+  const handlePageChange = (page: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' })};
@@ -137,7 +137,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
   const closeModal = () => {;
     setSelectedService(null)};
 =======
-  const handleServiceSelect = (service: anyanyanyanyanyanyanyanyanyanyany)            => {;
+  const handleServiceSelect = (service: anyanyanyanyanyanyanyanyanyanyanyany)             => {;
     setSelectedService(service);
   };
 
@@ -146,7 +146,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -180,7 +180,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
     };
     return iconMap[category] || <Rocket className="w-6 h-6" />};
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
@@ -215,7 +215,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
     return colorMap[category] || 'from-gray-500 to-slate-500'};
 
 <<<<<<< HEAD
-  const getROIColor = (roi: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const getROIColor = (roi: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     if (roiNumber >= 800) return 'text-green-400';
@@ -224,7 +224,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
     return 'text-red-400'};
 
 <<<<<<< HEAD
-  const getSetupTimeColor = (setupTime: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const getSetupTimeColor = (setupTime: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     if (weeks <= 8) return 'text-green-400';
@@ -433,8 +433,8 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service, index)             => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {currentServices.map((service, index)              => (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -550,10 +550,10 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
                   </button>
 <<<<<<< HEAD
 
-                  {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)            => i + 1).map((page) => (
+                  {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)             => i + 1).map((page) => (
 =======
                   
-                  {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)             => i + 1).map((page) => (
+                  {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)              => i + 1).map((page) => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <button
                       key={page}

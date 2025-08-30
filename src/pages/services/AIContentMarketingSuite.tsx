@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Brain,
   TrendingUp,
@@ -49,9 +49,9 @@ import { Brain,
   ShoppingCart,
   Building,
   DollarSign
-import { SEO            } from '../../components/SEO';
+import { SEO             } from '../../components/SEO';
 =======
-import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar            } from 'lucide-react.ts';
+import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar             } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AIContentMarketingSuite: React.FC = (): JSX.Element => {
@@ -385,8 +385,8 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -424,8 +424,8 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {capabilities.map((capability, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -496,8 +496,8 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {contentTypes.map((content, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {contentTypes.map((content, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -572,8 +572,8 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -618,8 +618,8 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)            => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -700,7 +700,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -722,7 +722,7 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
                 title: 'Launch & Optimize',
                 description: 'Go live with continuous monitoring and ongoing optimization support'
 
-            ].map((phase, index)            => (
+            ].map((phase, index)             => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

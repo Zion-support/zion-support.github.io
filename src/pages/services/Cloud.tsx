@@ -3,7 +3,7 @@ import React from 'react.ts';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 const CloudServices = () => {
 =======
 import React from 'react.ts';
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3             } from 'lucide-react.ts';
+import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3              } from 'lucide-react.ts';
 
 const CloudServices = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -129,8 +129,8 @@ const CloudServices = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {cloudServices.map((service, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {cloudServices.map((service, index)             => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -165,8 +165,8 @@ const CloudServices = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {cloudPlatforms.map((platform, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {cloudPlatforms.map((platform, index)             => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <platform.icon className="w-8 h-8 text-white"/>

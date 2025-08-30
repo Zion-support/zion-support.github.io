@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { Link             } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
 import { Brain, 
   Link as LinkIcon, 
   Shield, 
@@ -15,8 +15,8 @@ import { Brain,
   Activity,
   BarChart3,
   Network
-            } from 'lucide-react.ts';
-import { SEO             } from '../../components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '../../components/SEO';
 
 const AIBlockchainSupplyChain = () => {
   const features = [
@@ -204,8 +204,8 @@ const AIBlockchainSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -263,8 +263,8 @@ const AIBlockchainSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -357,8 +357,8 @@ const AIBlockchainSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -424,8 +424,8 @@ const AIBlockchainSupplyChain = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index)             => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)              => (
               <motion.div
                 key={index}
                 initial = {

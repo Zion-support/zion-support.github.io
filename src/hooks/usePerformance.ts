@@ -1,6 +1,7 @@
 import React, { useState } from 'react.ts';
-import { useEffect, useRef, useState            } from 'react.ts';
+import { useEffect, useRef, useState             } from 'react.ts';
 interface PerformanceMetrics {
+
 
 
 
@@ -50,9 +51,11 @@ export function usePerformance(...args: any[]): any {;
 
 
 
+
 }
 
 interface PerformanceOptions {
+
 
 
 
@@ -70,6 +73,7 @@ interface PerformanceOptions {
   enableNavigationTiming?: boolean;
   logToConsole?: boolean;
   sendToAnalytics?: boolean;
+
 
 
 
@@ -200,7 +204,7 @@ export function usePerformance(...args: any[]): any {
     };
   }, []);
   // Get performance rating
-  const getRating = (metric: anyanyanyanyanyanyanyanyanyanyanykeyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor'            => {
+  const getRating = (metric: anyanyanyanyanyanyanyanyanyanyanyanykeyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor'             => {
     const thresholds = {
       fcp: { good: 1800, poor: 3000 },
       lcp: { good: 2500, poor: 4000 },
@@ -245,10 +249,10 @@ export function usePerformance(...args: any[]): any {
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
-        default: anyanyanyanyanyanyanyanyanyanyanyreturn 100;
+        default: anyanyanyanyanyanyanyanyanyanyanyanyreturn 100;
 
     });
-    return Math.round(scores.reduce((sum, score)            => sum + score, 0) / scores.length);
+    return Math.round(scores.reduce((sum, score)             => sum + score, 0) / scores.length);
   };
   // Monitor long tasks
   useEffect(() => {
@@ -276,10 +280,10 @@ export function usePerformance(...args: any[]): any {
       // // console.warn('Error setting up long task observer:', error);
 
 =======
-      // // // // // // // console.warn('Error setting up long task observer: anyanyanyanyanyanyanyanyanyanyany', error);
+      // // // // // // // console.warn('Error setting up long task observer: anyanyanyanyanyanyanyanyanyanyanyany', error);
     }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-    return ()            => longTaskObserver.disconnect();
+    return ()             => longTaskObserver.disconnect();
 =======
       if (logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
@@ -363,7 +367,7 @@ export function usePerformance(...args: any[]): any {
     let firstInputTime: number | null = null;
     let firstInputDelay: number | null = null;
 
-    const firstInputHandler = (event: anyanyanyanyanyanyanyanyanyanyanyEvent)            => {
+    const firstInputHandler = (event: anyanyanyanyanyanyanyanyanyanyanyanyEvent)             => {
       if (firstInputTime !== null) return;
 
       firstInputTime = performance.now();
@@ -480,7 +484,7 @@ export function usePerformance(...args: any[]): any {
     const analyticsData = {
       ...metrics,
       performanceScore,
-      timestamp: anyanyanyanyanyanyanyanyanyanyanyDate.now(),
+      timestamp: anyanyanyanyanyanyanyanyanyanyanyanyDate.now(),
       userAgent: navigator.userAgent,
       url: window.location.href
     };
@@ -499,7 +503,7 @@ export function usePerformance(...args: any[]): any {
   }, [metrics, sendToAnalytics, getPerformanceScore]);
 
   // Auto-start monitoring on mount
-  useEffect(()            => {
+  useEffect(()             => {
     if (enableRealUserMonitoring) {
       startMonitoring();
     }
@@ -519,7 +523,7 @@ export function usePerformance(...args: any[]): any {
   return {
     metrics,
     isMonitoring,
-    performanceScore: anyanyanyanyanyanyanyanyanyanyanygetPerformanceScore(),
+    performanceScore: anyanyanyanyanyanyanyanyanyanyanyanygetPerformanceScore(),
     startMonitoring,
     stopMonitoring,
     getResourceTiming,
@@ -528,7 +532,7 @@ export function usePerformance(...args: any[]): any {
 <<<<<<< HEAD
 
 // Hook for monitoring specific performance events
-export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry)            => void) {
+export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry)             => void) {
   useEffect(() => {
     if (!('PerformanceObserver' in window)) return;
     const observer = new PerformanceObserver((list) => {
@@ -591,7 +595,7 @@ export function useComponentPerformance(...args: any[]): any {
 export function useAPIPerformance(...args: any[]): any {
   const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
 
-  const trackAPICall = useCallback((endpoint: anyanyanyanyanyanyanyanyanyanyanystring, duration: number)            => {
+  const trackAPICall = useCallback((endpoint: anyanyanyanyanyanyanyanyanyanyanyanystring, duration: number)             => {
     setApiMetrics(prev => {
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
@@ -600,7 +604,7 @@ export function useAPIPerformance(...args: any[]): any {
     });
   }, []);
 
-  const getAPIAverage = useCallback((endpoint: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getAPIAverage = useCallback((endpoint: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     const metrics = apiMetrics.get(endpoint);
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length;

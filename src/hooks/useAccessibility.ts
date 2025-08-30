@@ -1,6 +1,7 @@
-import { useEffect, useRef, useCallback, useMemo             } from 'react.ts';
+import { useEffect, useRef, useCallback, useMemo              } from 'react.ts';
 
 interface UseAccessibilityOptions {
+
 
 
 
@@ -32,10 +33,12 @@ enableLargeText?: boolean;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilityFeatures {
+
 
 
 
@@ -55,6 +58,7 @@ interface AccessibilityFeatures {
   isScreenReader: boolean;
 
 export const useAccessibility = (options: UseAccessibilityOptions = { /* empty */;
+
 
 
 
@@ -142,7 +146,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Keyboard navigation
 <<<<<<< HEAD
-  const handleKeyboardNavigation = useCallback((event: anyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)            => {;
+  const handleKeyboardNavigation = useCallback((event: anyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!enableKeyboardNavigation) return;
 
@@ -204,7 +208,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Focus management
 <<<<<<< HEAD
-  const manageFocus = useCallback((element: anyanyanyanyanyanyanyanyanyanyanyHTMLElement)            => {;
+  const manageFocus = useCallback((element: anyanyanyanyanyanyanyanyanyanyanyanyHTMLElement)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!enableFocusManagement) return;
 
@@ -230,7 +234,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Focus trap for modals
 <<<<<<< HEAD
-  const createFocusTrap = useCallback((container: anyanyanyanyanyanyanyanyanyanyanyHTMLElement)            => {;
+  const createFocusTrap = useCallback((container: anyanyanyanyanyanyanyanyanyanyanyanyHTMLElement)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!enableFocusManagement) return;
 
@@ -261,7 +265,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, []);
 
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: anyanyanyanyanyanyanyanyanyanyanyHTMLElement): HTMLElement[]             => {
+  const getFocusableElements = useCallback((container: anyanyanyanyanyanyanyanyanyanyanyanyHTMLElement): HTMLElement[]              => {
     const selector = [
       'button:not([disabled])',;
       'input:not([disabled])',;
@@ -276,7 +280,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Navigate focus
 <<<<<<< HEAD
-  const navigateFocus = useCallback((direction: anyanyanyanyanyanyanyanyanyanyany'forward' | 'backward', currentElement: HTMLElement)            => {;
+  const navigateFocus = useCallback((direction: anyanyanyanyanyanyanyanyanyanyanyany'forward' | 'backward', currentElement: HTMLElement)             => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const container = focusTrapRef.current || document.body;
     const focusableElements = getFocusableElements(container);
@@ -305,7 +309,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Vertical navigation
 <<<<<<< HEAD
-  const navigateVertical = useCallback((direction: anyanyanyanyanyanyanyanyanyanyany'up' | 'down', currentElement: HTMLElement)            => {;
+  const navigateVertical = useCallback((direction: anyanyanyanyanyanyanyanyanyanyanyany'up' | 'down', currentElement: HTMLElement)             => {;
     // Implementation for vertical navigation (e.g., in dropdowns, lists);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const container = currentElement.closest('[role="listbox"], [role="menu"], .dropdown, .list');
@@ -344,7 +348,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Horizontal navigation
 <<<<<<< HEAD
-  const navigateHorizontal = useCallback((direction: anyanyanyanyanyanyanyanyanyanyany'left' | 'right', currentElement: HTMLElement)            => {;
+  const navigateHorizontal = useCallback((direction: anyanyanyanyanyanyanyanyanyanyanyany'left' | 'right', currentElement: HTMLElement)             => {;
     // Implementation for horizontal navigation (e.g., in tabs, carousels);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const container = currentElement.closest('[role="tablist"], .tabs, .carousel');

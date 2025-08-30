@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Users,
   Handshake,
@@ -13,11 +13,11 @@ import { Users,
   Lock,
   Rocket,
   Star
-import { SEO            } from '../components/SEO';
+import { SEO             } from '../components/SEO';
 =======
 <<<<<<< HEAD
-import { SEO            } from '../components/SEO';
-import { Link            } from 'react-router-dom.ts';
+import { SEO             } from '../components/SEO';
+import { Link             } from 'react-router-dom.ts';
 =======
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 import { Handshake, 
@@ -39,7 +39,7 @@ import { Handshake,
   ChevronUp,
   Mail,
   Phone
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Partners(...args: any[]): any {
@@ -307,7 +307,7 @@ export default function Partners(...args: any[]): any {
     }
   ];
 
-  const togglePartnerExpansion = (partnerId: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const togglePartnerExpansion = (partnerId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     setExpandedPartner(expandedPartner === partnerId ? null : partnerId);
   };
 
@@ -322,7 +322,7 @@ export default function Partners(...args: any[]): any {
     return true;
   });
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (category) {
       case 'technology': return 'bg-blue-500/20 text-blue-400';
       case 'consulting': return 'bg-green-500/20 text-green-400';
@@ -402,7 +402,7 @@ export default function Partners(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Users,
@@ -434,7 +434,7 @@ export default function Partners(...args: any[]): any {
                 title: 'Technical Support',
                 description: 'Access our technical expertise and resources to enhance your solutions.'
 
-            ].map((benefit, index)            => (
+            ].map((benefit, index)             => (
 =======
           >
             <h2 className="text-4xl font-bold text-white mb-4">Why Partner With Us?</h2>
@@ -443,8 +443,8 @@ export default function Partners(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {partnershipBenefits.map((benefit, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {partnershipBenefits.map((benefit, index)             => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={benefit.title}
@@ -510,8 +510,8 @@ export default function Partners(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {partnershipTypes.map((type, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {partnershipTypes.map((type, index)             => (
               <motion.div
                 key={type.type}
                 initial={{ opacity: 0, y: 20 }}
@@ -588,8 +588,8 @@ export default function Partners(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {featuredPartners.map((partner, index)            => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {featuredPartners.map((partner, index)             => (
               <motion.div
                 key={partner.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -771,9 +771,9 @@ export default function Partners(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {partnerCategories.map((category)            => (
+                  {partnerCategories.map((category)             => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -800,8 +800,8 @@ export default function Partners(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPartners.map((partner, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPartners.map((partner, index)             => (
               <motion.div
                 key={partner.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -933,9 +933,9 @@ export default function Partners(...args: any[]): any {
   Phone,
   MapPin
 } from 'lucide-react';
-import { SEO            } from '@/components/SEO';
-import { Button            } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle            } from '@/components/ui/card';
+import { SEO             } from '@/components/SEO';
+import { Button             } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle             } from '@/components/ui/card';
 
 const Partners: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -1168,8 +1168,8 @@ const Partners: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {partnershipTypes.map((type, index)            => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {partnershipTypes.map((type, index)             => (
                 <motion.div
                   key={type.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -1252,8 +1252,8 @@ const Partners: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {partnerBenefits.map((benefit, index)            => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {partnerBenefits.map((benefit, index)             => (
                 <motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1298,8 +1298,8 @@ const Partners: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {successStories.map((story, index)            => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {successStories.map((story, index)             => (
                 <motion.div
                   key={story.partner}
                   initial={{ opacity: 0, y: 30 }}
@@ -1324,8 +1324,8 @@ const Partners: React.FC = (): JSX.Element => {
                       </p>
                       
                       <div className="space-y-2">
-                        <h4 className="text-white font-semibold">Key Results: anyanyanyanyanyanyanyanyanyanyany</h4>
-                        {story.results.map((result, resultIndex)            => (
+                        <h4 className="text-white font-semibold">Key Results: anyanyanyanyanyanyanyanyanyanyanyany</h4>
+                        {story.results.map((result, resultIndex)             => (
                           <div key={resultIndex} className="flex items-center space-x-2 text-sm">
                             <Star className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                             <span className="text-gray-300">{result}</span>
@@ -1359,8 +1359,8 @@ const Partners: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {applicationSteps.map((step, index)            => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {applicationSteps.map((step, index)             => (
                 <motion.div
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}
@@ -1417,8 +1417,8 @@ const Partners: React.FC = (): JSX.Element => {
                 and your customers.
               </p>
               
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 mb-8">
-                {contactInfo.map((contact, index)            => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 mb-8">
+                {contactInfo.map((contact, index)             => (
                   <motion.div
                     key={contact.label}
                     initial={{ opacity: 0, y: 20 }}

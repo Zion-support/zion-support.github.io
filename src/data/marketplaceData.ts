@@ -11,6 +11,7 @@ export interface MarketplaceItem {
 
 
 
+
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -27,6 +28,7 @@ seller: {;
     name: string;
     rating: number;
 verified: boolean;
+
 
 
 
@@ -205,39 +207,39 @@ export const marketplaceItems: MarketplaceItem[] = [
 
 export const marketplaceCategories = [
   {
-    id: anyanyanyanyanyanyanyanyanyanyany'products',
+    id: anyanyanyanyanyanyanyanyanyanyanyany'products',
     name: 'Products',
     description: 'Hardware and software solutions',
-    count: marketplaceItems.filter(item             => item.category === 'products').length
+    count: marketplaceItems.filter(item              => item.category === 'products').length
   },
   {
-    id: anyanyanyanyanyanyanyanyanyanyany'talent',
+    id: anyanyanyanyanyanyanyanyanyanyanyany'talent',
     name: 'Talent',
     description: 'Expert professionals and teams',
-    count: marketplaceItems.filter(item             => item.category === 'talent').length
+    count: marketplaceItems.filter(item              => item.category === 'talent').length
   },
   {
-    id: anyanyanyanyanyanyanyanyanyanyany'equipment',
+    id: anyanyanyanyanyanyanyanyanyanyanyany'equipment',
     name: 'Equipment',
     description: 'Computing and networking equipment',
-    count: marketplaceItems.filter(item             => item.category === 'equipment').length
+    count: marketplaceItems.filter(item              => item.category === 'equipment').length
   },
   {
 <<<<<<< HEAD
-    id: anyanyanyanyanyanyanyanyanyanyany'services',
+    id: anyanyanyanyanyanyanyanyanyanyanyany'services',
     name: 'Services',
     description: 'Professional services and consulting',
 <<<<<<< HEAD
-    count: marketplaceItems.filter(item            => item.category === 'services').length
+    count: marketplaceItems.filter(item             => item.category === 'services').length
 
 =======
-    count: anyanyanyanyanyanyanyanyanyanyanymarketplaceItems.filter(item             => item.category === 'services').length
+    count: anyanyanyanyanyanyanyanyanyanyanyanymarketplaceItems.filter(item              => item.category === 'services').length
   };
 =======;
-    id: anyanyanyanyanyanyanyanyanyanyany'services',;
+    id: anyanyanyanyanyanyanyanyanyanyanyany'services',;
     name: 'Services',;
     description: 'Professional services and consulting',;
-    count: marketplaceItems.filter(item            => item.category === 'services').length;
+    count: marketplaceItems.filter(item             => item.category === 'services').length;
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -245,10 +247,10 @@ export const marketplaceCategories = [
 
 export const marketplaceFilters = [
   {
-    title: anyanyanyanyanyanyanyanyanyanyany'Category',
+    title: anyanyanyanyanyanyanyanyanyanyanyany'Category',
     key: 'category',
     type: 'checkbox' as const,
-    options: marketplaceCategories.map(cat             => ({
+    options: marketplaceCategories.map(cat              => ({
       value: cat.id,
       label: cat.name,
       count: cat.count

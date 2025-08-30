@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence            } from 'framer-motion.ts';
+import { motion, AnimatePresence             } from 'framer-motion.ts';
 import { Brain,
   Zap,
   Shield,
@@ -12,9 +12,10 @@ import { Brain,
   Star,
   CheckCircle,
   Rocket
-import { Link            } from 'react-router-dom.ts';
+import { Link             } from 'react-router-dom.ts';
 
 interface AIService {
+
 
 
 
@@ -36,6 +37,7 @@ pricing: {;
     professional: number;
     enterprise: number;
   
+
 
 
 
@@ -155,7 +157,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
   });
 
 <<<<<<< HEAD
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (status) {
       case 'active': return 'bg-green-500';
       case 'beta': return 'bg-yellow-500';
@@ -164,7 +166,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
   };
 
-  const getStatusText = (status: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getStatusText = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (status) {
       case 'active': return 'Live';
       case 'beta': return 'Beta';
@@ -287,9 +289,9 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
 
-              {categories.map(category            => (
+              {categories.map(category             => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -331,9 +333,9 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
 
-              {sortedServices.map((service, index)            => (
+              {sortedServices.map((service, index)             => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -455,10 +457,10 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {sortedServices.map((service, index)            => (
+            {sortedServices.map((service, index)             => (
               <motion.div
                 key={service.id}
                 initial = {

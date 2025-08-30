@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Link            } from 'react-router-dom.ts';
+import { motion             } from 'framer-motion.ts';
+import { Link             } from 'react-router-dom.ts';
 import { TrendingUp,
   Users,
   DollarSign,
@@ -11,7 +11,7 @@ import { TrendingUp,
 <<<<<<< HEAD
 export const CaseStudiesSection: React.FC = (): JSX.Element => {
 =======
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const CaseStudiesSection: React.FC = (): JSX.Element => {
@@ -155,8 +155,8 @@ export function CaseStudiesSection(...args: any[]): any {
           </p>
         </motion.div>
 
-        <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index)             => (
+        <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index)              => (
             <motion.div
 <<<<<<< HEAD
               key={study.comp}

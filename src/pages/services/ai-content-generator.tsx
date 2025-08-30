@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO            } from '../../components/SEO';
+import { SEO             } from '../../components/SEO';
 import { FileText, 
   Brain, 
   Zap, 
@@ -10,7 +10,7 @@ import { FileText,
   BarChart3,
   Headphones,
   Bot
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export default function AIContentGenerator(...args: any[]): any {
   return (

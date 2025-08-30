@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { Brain, 
   Zap, 
   Shield, 
@@ -39,8 +39,8 @@ import { Brain,
   Database as DatabaseIcon,
   Shield as ShieldIcon,
   Zap as ZapIcon
-           } from 'lucide-react.ts';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025            } from '../data/innovativeMicroSaasServices2025';
+            } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025             } from '../data/innovativeMicroSaasServices2025';
 
 const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
   const [selectedServices, setSelectedServices] = useState<any>([]);
@@ -51,17 +51,17 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
   const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = [
-    { id: anyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
-    { id: 'AI & Business Intelligence', name: 'AI & BI', icon: Brain, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Business Intelligence').length },
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Customer Experience').length },
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Finance').length },
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Logistics').length },
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Marketing').length },
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Project Management').length },
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Human Resources').length },
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Cybersecurity').length },
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Data Management').length },;
-    { id: anyanyanyanyanyanyanyanyanyanyany'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s            => s.category === 'AI & Business Process').length },;
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
+    { id: 'AI & Business Intelligence', name: 'AI & BI', icon: Brain, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Business Intelligence').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Customer Experience').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Finance').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Logistics').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Marketing').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Project Management').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Human Resources').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Cybersecurity').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Data Management').length },;
+    { id: anyanyanyanyanyanyanyanyanyanyanyany'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s             => s.category === 'AI & Business Process').length },;
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
@@ -87,7 +87,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
       }
     });
 
-  const toggleServiceSelection = (serviceId: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const toggleServiceSelection = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     if (selectedServices.includes(serviceId)) {;
       setSelectedServices(selectedServices.filter(id => id !== serviceId));
     } else {
@@ -97,7 +97,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const toggleFeatureExpansion = (feature: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const toggleFeatureExpansion = (feature: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     if (expandedFeatures.includes(feature)) {;
       setExpandedFeatures(expandedFeatures.filter(f => f !== feature));
     } else {
@@ -105,7 +105,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanyanyanystring)            => {
+  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
     switch (level) {;
       case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100 border-purple-200';
@@ -118,7 +118,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getROIColor = (roi: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
+  const getROIColor = (roi: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
     const minROI = parseInt(roi.split('-')[0]);
     if (minROI >= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (minROI >= 300) return 'text-blue-600 bg-blue-100 border-blue-200';
@@ -126,7 +126,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     return 'text-gray-600 bg-gray-100 border-gray-200';
   };
 
-  const getPriceTier = (price: anyanyanyanyanyanyanyanyanyanyanynumber)            => {;
+  const getPriceTier = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {;
     if (price <= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (price <= 1000) return 'text-blue-600 bg-blue-100 border-blue-200';
     if (price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
@@ -254,9 +254,9 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {categories.map(category            => (
+                {categories.map(category             => (
                   <option key={category.id} value={category.id}>
                     {category.name} ({category.count})
                   </option>
@@ -335,8 +335,8 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
             </div>
           )}
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredServices.map((service)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
+            {filteredServices.map((service)             => (
               <motion.div
                 key={service.id}
                 initial = {

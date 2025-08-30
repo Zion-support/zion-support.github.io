@@ -1,9 +1,9 @@
 import React from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
+import { Link             } from 'react-router-dom.ts';
 <<<<<<< HEAD
 import { Home, ArrowLeft, Search, Mail, Phone export default function NotFound(...args: any[]): any {
 =======
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { Home, 
   Search, 
   MapPin, 
@@ -41,7 +41,7 @@ import { Home,
   Network,
   Clock,
   Globe
-           } from 'lucide-react.ts';
+            } from 'lucide-react.ts';
 
 export default function NotFound(...args: any[]): any {
   const popularPages = [
@@ -198,8 +198,8 @@ export default function NotFound(...args: any[]): any {
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Explore Our Services
           </h2>
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {serviceCategories.map((category, categoryIndex)            => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {serviceCategories.map((category, categoryIndex)             => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}

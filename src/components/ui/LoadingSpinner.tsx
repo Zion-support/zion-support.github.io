@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { cn            } from '../../lib/utils';
+import { motion             } from 'framer-motion.ts';
+import { cn             } from '../../lib/utils';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
@@ -121,7 +121,7 @@ export function SkeletonLoader(...args: any[]): any {
 export function LoadingSkeleton(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)            => (
+      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)             => (
         <motion.div
           key={index}
           className="h-4 bg-gray-300 rounded animate-pulse"
@@ -222,7 +222,7 @@ export function ContentPlaceholder(...args: any[]): any {
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: anyanyanyanyanyanyanyanyanyanyany6 }).map((_, index)            => (
+        Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyany6 }).map((_, index)             => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -237,7 +237,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: anyanyanyanyanyanyanyanyanyanyany5 }).map((_, index)            => (
+        Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyany5 }).map((_, index)             => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -251,7 +251,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: anyanyanyanyanyanyanyanyanyanyany8 }).map((_, index)            => (
+        Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyany8 }).map((_, index)             => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -265,7 +265,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: anyanyanyanyanyanyanyanyanyanyany4 }).map((_, index)            => (
+        Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyany4 }).map((_, index)             => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
@@ -289,11 +289,11 @@ export function AppLoadingSpinner(...args: any[]): any {
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
-          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: anyanyanyanyanyanyanyanyanyanyany'2s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: anyanyanyanyanyanyanyanyanyanyanyany'2s' }}></div>
         </div>
 
         {/* Floating icons */}
-        {icons.map((icon, index)            => (
+        {icons.map((icon, index)             => (
           <motion.div
             key={index}
             className="absolute text-2xl"

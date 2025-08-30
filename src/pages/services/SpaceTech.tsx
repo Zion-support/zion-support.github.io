@@ -3,7 +3,7 @@ import React from 'react.ts';
 import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database const SpaceTech = () => {
 =======
 import React from 'react.ts';
-import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database             } from 'lucide-react.ts';
+import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database              } from 'lucide-react.ts';
 
 const SpaceTech = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -244,8 +244,8 @@ const SpaceTech = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)             => (
               <motion.div
                 key={index}
                 initial = {
@@ -346,8 +346,8 @@ const SpaceTech = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {spaceTechnologies.map((tech, index)            => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {spaceTechnologies.map((tech, index)             => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>

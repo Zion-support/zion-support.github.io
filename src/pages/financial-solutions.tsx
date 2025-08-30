@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 import { DollarSign, 
   TrendingUp, 
   Shield, 
@@ -12,8 +12,8 @@ import { DollarSign,
   Star,
   Calculator,
   PieChart
-           } from 'lucide-react.ts';
-import { Link            } from 'react-router-dom.ts';
+            } from 'lucide-react.ts';
+import { Link             } from 'react-router-dom.ts';
 
 const FinancialSolutions: React.FC = (): JSX.Element => {
   const solutions = [
@@ -123,8 +123,8 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index)            => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          {benefits.map((benefit, index)             => (
             <motion.div
               key={benefit.title}
               initial={{ opacity: 0, y: 20 }}
@@ -158,8 +158,8 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((solution, index)            => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {solutions.map((solution, index)             => (
             <motion.div
               key={solution.title}
               initial={{ opacity: 0, y: 20 }}

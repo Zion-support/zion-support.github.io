@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
+import { motion             } from 'framer-motion.ts';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
 
@@ -87,7 +87,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
       case 'list':
         return (
           <div className="space-y-4">
-            {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanycount }).map((_, index)            => (
+            {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanycount }).map((_, index)             => (
               <div key={index} className="flex items-center space-x-4 p-4 border rounded-lg">
                 <Skeleton height="h-12" width="w-12" className="rounded-full" />
                 <div className="flex-1 space-y-2">
@@ -104,15 +104,15 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
         return (
           <div className="space-y-3">
             {/* Header */}
-            <div className="flex space-x-4 p-4 bg-gray-50 dark: anyanyanyanyanyanyanyanyanyanyanybg-gray-800 rounded-t-lg">
-              {Array.from({ length: 4 }).map((_, index)            => (
+            <div className="flex space-x-4 p-4 bg-gray-50 dark: anyanyanyanyanyanyanyanyanyanyanyanybg-gray-800 rounded-t-lg">
+              {Array.from({ length: 4 }).map((_, index)             => (
                 <Skeleton key={index} height="h-4" width="w-24" />
               ))}
             </div>
             {/* Rows */}
-            {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanycount }).map((_, index)            => (
+            {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanycount }).map((_, index)             => (
               <div key={index} className="flex space-x-4 p-4 border-b">
-                {Array.from({ length: anyanyanyanyanyanyanyanyanyanyany4 }).map((_, cellIndex)            => (
+                {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyany4 }).map((_, cellIndex)             => (
                   <Skeleton key={cellIndex} height="h-4" width="w-24" />
                 ))}
               </div>
@@ -125,7 +125,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
           <div className="space-y-6">
             <Skeleton height="h-8" width="w-1/3" />
             <div className="space-y-4">
-              {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanycount }).map((_, index)            => (
+              {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanycount }).map((_, index)             => (
                 <div key={index} className="space-y-2">
                   <Skeleton height="h-4" width="w-24" />
                   <Skeleton height="h-10" width="w-full" />
@@ -157,8 +157,8 @@ export const HeroSkeleton: React.FC = (): JSX.Element => (
 );
 
 export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => (
-  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-    {Array.from({ length: count }).map((_, index)            => (
+  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+    {Array.from({ length: count }).map((_, index)             => (
       <LoadingSkeleton key={index} type="card" />
     ))}
   </div>

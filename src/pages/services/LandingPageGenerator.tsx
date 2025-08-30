@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO            } from '@/components/SEO';
-import { CheckCircle2, Globe, DollarSign, ExternalLink, Phone, Mail            } from 'lucide-react.ts';
+import { SEO             } from '@/components/SEO';
+import { CheckCircle2, Globe, DollarSign, ExternalLink, Phone, Mail             } from 'lucide-react.ts';
 
 const LandingPageGenerator: React.FC = (): JSX.Element => {
   return (
@@ -13,7 +13,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
           analytics, and deployment to your stack.
         </p>
 
-        <div className="mt-10 grid gap-6 sm: anyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
           {[
             'On-brand copy and image generation',
             'SEO-ready metadata and schema',
@@ -21,7 +21,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
             'One-click deploy to Vercel/Netlify/S3',
             'Forms with spam protection and CRM sync',
             'Localization and accessibility checks',
-          ].map((b)            => (
+          ].map((b)             => (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
