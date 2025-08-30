@@ -1,381 +1,434 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+  Cloud,
+  Zap,
+  Target,
+  TrendingUp,
+  Users,
+  Shield,
+  Cpu,
+  Rocket,
+  Eye,
+  Activity,
+  Code,
+  Database,
+  Server,
+  Network,
+  BarChart3,
+  Heart,
+  Building,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Play,
+  ChevronRight,
+  Brain,
+  GitBranch,
+  Docker,
+  Kubernetes,
+  Monitor,
+  Settings,
+  RefreshCw,
+  Layers
+} from 'lucide-react';
 
-export default function CloudDevOps(...args: []):  {
+export default function CloudDevOpsPage() {
+  const cloudServices = [
+    {
+      title: 'Cloud Infrastructure',
+      description: 'Design and implement scalable cloud infrastructure solutions',
+      icon: Cloud,
+      href: '/services/cloud-infrastructure',
+      features: ['Multi-cloud Strategy', 'Auto-scaling', 'Load Balancing', 'High Availability'],
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
+      title: 'DevOps Automation',
+      description: 'Streamline development and operations with automated pipelines',
+      icon: GitBranch,
+      href: '/services/devops-automation',
+      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Deployment Automation'],
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      title: 'Container Orchestration',
+      description: 'Manage containerized applications with Kubernetes and Docker',
+      icon: Docker,
+      href: '/services/container-orchestration',
+      features: ['Kubernetes Management', 'Docker Containers', 'Service Mesh', 'Microservices'],
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      title: 'Monitoring & Observability',
+      description: 'Comprehensive monitoring and logging solutions for cloud applications',
+      icon: Monitor,
+      href: '/services/monitoring-observability',
+      features: ['Real-time Monitoring', 'Log Aggregation', 'Performance Metrics', 'Alert Management'],
+      color: 'from-orange-500 to-red-600'
+    },
+    {
+      title: 'Security & Compliance',
+      description: 'Ensure cloud security and regulatory compliance',
+      icon: Shield,
+      href: '/services/cloud-security',
+      features: ['Identity Management', 'Data Encryption', 'Compliance Monitoring', 'Threat Detection'],
+      color: 'from-red-500 to-pink-600'
+    },
+    {
+      title: 'Cost Optimization',
+      description: 'Optimize cloud costs and resource utilization',
+      icon: TrendingUp,
+      href: '/services/cloud-cost-optimization',
+      features: ['Resource Optimization', 'Cost Monitoring', 'Budget Management', 'Performance Tuning'],
+      color: 'from-yellow-500 to-orange-600'
+    }
+  ];
+
+  const devOpsCapabilities = [
+    {
+      title: 'Continuous Integration',
+      description: 'Automate code integration and testing processes',
+      icon: RefreshCw,
+      features: ['Automated Builds', 'Code Quality Checks', 'Unit Testing', 'Integration Testing']
+    },
+    {
+      title: 'Continuous Deployment',
+      description: 'Automate deployment processes for faster delivery',
+      icon: Rocket,
+      features: ['Automated Deployments', 'Blue-Green Deployments', 'Rollback Capabilities', 'Environment Management']
+    },
+    {
+      title: 'Infrastructure as Code',
+      description: 'Manage infrastructure through code and automation',
+      icon: Code,
+      features: ['Terraform', 'CloudFormation', 'Ansible', 'Version Control']
+    },
+    {
+      title: 'Monitoring & Logging',
+      description: 'Comprehensive observability and monitoring solutions',
+      icon: Activity,
+      features: ['Application Monitoring', 'Infrastructure Monitoring', 'Log Management', 'Performance Analytics']
+    }
+  ];
+
+  const cloudProviders = [
+    { name: 'AWS', icon: Cloud, description: 'Amazon Web Services solutions and optimization' },
+    { name: 'Azure', icon: Cloud, description: 'Microsoft Azure cloud services and integration' },
+    { name: 'Google Cloud', icon: Cloud, description: 'Google Cloud Platform solutions' },
+    { name: 'Multi-Cloud', icon: Globe, description: 'Hybrid and multi-cloud strategies' },
+    { name: 'Private Cloud', icon: Server, description: 'On-premises and private cloud solutions' },
+    { name: 'Edge Computing', icon: Network, description: 'Edge computing and distributed systems' }
+  ];
+
+  const benefits = [
+    { name: 'Faster Delivery', icon: Zap, description: 'Accelerate software delivery cycles' },
+    { name: 'Improved Quality', icon: CheckCircle, description: 'Better code quality and reliability' },
+    { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower infrastructure and operational costs' },
+    { name: 'Scalability', icon: Layers, description: 'Easily scale applications and infrastructure' },
+    { name: 'Security', icon: Shield, description: 'Enhanced security and compliance' },
+    { name: 'Innovation', icon: Brain, description: 'Foster innovation and experimentation' }
+  ];
+
   return (
-    <>
-      <Helmet>
-        <title>Cloud DevOps - Zion Tech Group</title>
-        <meta name = "description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />
-        <meta name="keywords" content="cloud devops, CI/CD, cloud infrastructure, automation, containerization, kubernetes, aws, azure, google cloud" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-600/10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                <Cloud className="w-4 h-4 mr-2" />
-                Cloud-Native DevOps
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Cloud
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> DevOps</span>
-              </h1>
-              
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, 
-                improve collaboration, and accelerate delivery with modern cloud infrastructure.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
-                </button>
+    <div className="min-h-screen bg-gray-900 text-white">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center">
+                <Cloud className="w-10 h-10 text-white" />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Cloud DevOps Solutions
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our cloud DevOps platform provides end-to-end solutions for modern software development 
-                and deployment workflows.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: GitBranch,
-                  title: "CI/CD Pipelines",
-                  description: "Automated build, test, and deployment pipelines for rapid delivery."
-                },
-                {
-                  icon: Cloud,
-                  title: "Cloud Infrastructure",
-                  description: "Scalable cloud infrastructure with infrastructure as code (IaC)."
-                },
-                {
-                  icon: Settings,
-                  title: "Automation",
-                  description: "Comprehensive automation of development and operations processes."
-                },
-                {
-                  icon: Users,
-                  title: "Team Collaboration",
-                  description: "Enhanced collaboration between development and operations teams."
-                },
-                {
-                  icon: Shield,
-                  title: "Security & Compliance",
-                  description: "Built-in security and compliance for cloud-native applications."
-                },
-                {
-                  icon: TrendingUp,
-                  title: "Monitoring & Analytics",
-                  description: "Real-time monitoring and analytics for application performance."
-                }
-              ].map((feature, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-slate-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* DevOps Areas Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                DevOps Service Areas
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Comprehensive DevOps services covering all aspects of modern software delivery.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Continuous Integration",
-                  description: "Automated code integration and testing workflows.",
-                  icon: GitBranch,
-                  benefits: ["Automated builds", "Code quality checks", "Test automation"]
-                },
-                {
-                  title: "Continuous Deployment",
-                  description: "Automated deployment to production environments.",
-                  icon: Server,
-                  benefits: ["Blue-green deployments", "Rollback capabilities", "Environment management"]
-                },
-                {
-                  title: "Infrastructure as Code",
-                  description: "Manage infrastructure through code and automation.",
-                  icon: Cpu,
-                  benefits: ["Terraform", "CloudFormation", "Ansible automation"]
-                },
-                {
-                  title: "Containerization",
-                  description: "Container-based application deployment and management.",
-                  icon: Cloud,
-                  benefits: ["Docker containers", "Kubernetes orchestration", "Microservices"]
-                },
-                {
-                  title: "Monitoring & Observability",
-                  description: "Comprehensive application and infrastructure monitoring.",
-                  icon: BarChart3,
-                  benefits: ["Real-time metrics", "Log aggregation", "Alert management"]
-                },
-                {
-                  title: "Security & Compliance",
-                  description: "Built-in security scanning and compliance automation.",
-                  icon: Shield,
-                  benefits: ["Vulnerability scanning", "Compliance checks", "Security policies"]
-                }
-              ].map((area, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <area.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
-                  <p className="text-slate-300 mb-4">{area.description}</p>
-                  <ul className="space-y-1">
-                    {area.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-cyan-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Technology Stack Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                DevOps Technology Stack
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Leverage industry-leading tools and technologies for your DevOps implementation.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "CI/CD Tools",
-                  description: "Jenkins, GitLab CI, GitHub Actions, and Azure DevOps.",
-                  icon: GitBranch,
-                  features: ["Pipeline automation", "Build automation", "Deployment automation"]
-                },
-                {
-                  title: "Container Platforms",
-                  description: "Docker, Kubernetes, and container orchestration tools.",
-                  icon: Cloud,
-                  features: ["Container management", "Orchestration", "Service mesh"]
-                },
-                {
-                  title: "Infrastructure Tools",
-                  description: "Terraform, CloudFormation, and Ansible for IaC.",
-                  icon: Cpu,
-                  features: ["Infrastructure automation", "Configuration management", "Provisioning"]
-                },
-                {
-                  title: "Cloud Platforms",
-                  description: "AWS, Azure, Google Cloud, and multi-cloud solutions.",
-                  icon: Server,
-                  features: ["Multi-cloud strategy", "Cloud-native services", "Scalability"]
-                },
-                {
-                  title: "Monitoring Tools",
-                  description: "Prometheus, Grafana, and ELK stack for observability.",
-                  icon: BarChart3,
-                  features: ["Metrics collection", "Log aggregation", "Visualization"]
-                },
-                {
-                  title: "Security Tools",
-                  description: "Security scanning, compliance, and vulnerability management.",
-                  icon: Shield,
-                  features: ["Vulnerability scanning", "Compliance automation", "Security policies"]
-                }
-              ].map((tech, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <tech.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{tech.title}</h3>
-                  <p className="text-slate-300 mb-4">{tech.description}</p>
-                  <ul className="space-y-1">
-                    {tech.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-sm text-cyan-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Cloud DevOps Benefits
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Transform your software delivery process with measurable improvements and efficiency gains.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="space-y-6">
-                  {[
-                    "50-80% faster deployment frequency",
-                    "60-90% reduction in lead time",
-                    "40-70% improvement in recovery time",
-                    "Enhanced team collaboration and communication",
-                    "Improved code quality and reliability",
-                    "Better resource utilization and cost optimization"
-                  ].map((benefit, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4">DevOps Metrics</h3>
-                <div className="space-y-4">
-                  {[
-                    { metric: "50-80%", label: "Deployment Speed", description: "Faster delivery" },
-                    { metric: "60-90%", label: "Lead Time", description: "Reduction" },
-                    { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
-                    { metric: "99.9%+", label: "Uptime", description: "Availability" }
-                  ].map((item, index)  => (
-                    <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
-                      <div className="text-2xl font-bold text-cyan-400 mb-1">{item.metric}</div>
-                      <div className="text-sm text-slate-300">{item.label}</div>
-                      <div className="text-xs text-slate-400">{item.description}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Implementation Process Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                DevOps Implementation Process
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our systematic approach ensures successful DevOps implementation and transformation.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  step: "01",
-                  title: "Assessment",
-                  description: "Evaluate current development and operations processes."
-                },
-                {
-                  step: "02",
-                  title: "Strategy",
-                  description: "Develop comprehensive DevOps strategy and roadmap."
-                },
-                {
-                  step: "03",
-                  title: "Implementation",
-                  description: "Implement DevOps tools and establish new workflows."
-                },
-                {
-                  step: "04",
-                  title: "Optimization",
-                  description: "Continuously monitor, optimize, and improve processes."
-                }
-              ].map((step, index)  => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-slate-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your DevOps?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Accelerate your software delivery with cloud-native DevOps solutions and automation.
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+              Cloud & DevOps
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your development and operations with modern cloud infrastructure and DevOps practices 
+              that accelerate delivery and improve reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 flex items-center justify-center group"
               >
-                Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Get Started
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
+                to="/solutions"
+                className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200 flex items-center justify-center group"
               >
-                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+                View Solutions
+                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Cloud Services Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">Our Cloud & DevOps Services</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Comprehensive cloud infrastructure and DevOps solutions designed to modernize your operations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cloudServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 group"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to={service.href}
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group-hover:translate-x-1 transition-transform"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DevOps Capabilities */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">DevOps Capabilities</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Comprehensive DevOps practices and tools to streamline your development and operations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {devOpsCapabilities.map((capability, index) => (
+              <motion.div
+                key={capability.title}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mr-4">
+                    <capability.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold">{capability.title}</h3>
+                </div>
+                <p className="text-gray-400 mb-6">{capability.description}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {capability.features.map((feature) => (
+                    <div key={feature} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cloud Providers */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">Cloud Providers We Support</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Expertise across major cloud platforms and multi-cloud strategies.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cloudProviders.map((provider, index) => (
+              <motion.div
+                key={provider.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <provider.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{provider.name}</h3>
+                <p className="text-gray-400 text-sm">{provider.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">Benefits of Cloud & DevOps</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Transform your organization with modern cloud and DevOps practices.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{benefit.name}</h3>
+                <p className="text-gray-400 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DevOps Pipeline */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">DevOps Pipeline</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              A comprehensive DevOps pipeline that automates your entire software delivery process.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+            {[
+              { name: 'Plan', icon: Target, description: 'Requirements and planning' },
+              { name: 'Code', icon: Code, description: 'Development and version control' },
+              { name: 'Build', icon: Settings, description: 'Automated builds and testing' },
+              { name: 'Test', icon: CheckCircle, description: 'Quality assurance and testing' },
+              { name: 'Deploy', icon: Rocket, description: 'Production deployment' }
+            ].map((stage, index) => (
+              <motion.div
+                key={stage.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <stage.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{stage.name}</h3>
+                <p className="text-gray-400 text-sm">{stage.description}</p>
+                {index < 4 && (
+                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <ArrowRight className="w-6 h-6 text-blue-400" />
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/20 via-cyan-900/20 to-indigo-900/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Operations?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our cloud and DevOps solutions can accelerate your digital transformation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 flex items-center justify-center group"
+              >
+                Schedule a Consultation
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200 flex items-center justify-center group"
+              >
+                View Case Studies
+                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }
