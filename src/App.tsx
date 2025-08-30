@@ -27,6 +27,13 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
+// Missing pages that need to be added to routing
+const Team = React.lazy(() => import('./pages/Team'));
+const Press = React.lazy(() => import('./pages/Press'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+
 // Enhanced services pages
 const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
@@ -204,6 +211,13 @@ function App(...args[]):  {
               
               {/* Search and Utility Routes */}
               <Route path="/search" element={<SearchPage />} />
+              
+              {/* Missing Routes */}
+              <Route path="/team" element={<Team />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
