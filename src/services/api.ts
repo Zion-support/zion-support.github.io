@@ -27,7 +27,7 @@ interface ApiClientOptions {
 }
 
 export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {
-  const { method = 'GET', body, headers } = options;
+  const { method = 'GET', body, headers = {} } = options;
   
   const config: RequestInit = {
     method,
