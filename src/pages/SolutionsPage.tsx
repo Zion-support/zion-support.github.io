@@ -299,6 +299,39 @@ export function SolutionsPage() {
           </div>
         </div>
 
+        {/* Industry Solutions CTA */}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Discover how our innovative services are transforming specific industries with tailored solutions and proven results.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/industry-solutions-2025"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                <span>Explore Industry Solutions</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/innovative-services-2025"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
+              >
+                <span>View All Services</span>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
         {/* New Services Showcase CTA */}
         <div className="text-center mb-16">
           <motion.div
@@ -317,10 +350,10 @@ export function SolutionsPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/new-services-2025"
+                to="/innovative-services-2025"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                <span>Explore New Services</span>
+                <span>Explore Innovative Services</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link

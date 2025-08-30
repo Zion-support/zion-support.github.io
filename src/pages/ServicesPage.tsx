@@ -436,10 +436,10 @@ export function ServicesPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/new-services-2025"
+                to="/innovative-services-2025"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                <span>Explore New Services</span>
+                <span>Explore Innovative Services 2025</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
