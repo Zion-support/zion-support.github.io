@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Button   } from './ui/button';
 import { AlertTriangle, RefreshCw, Home, Mail   } from 'lucide-react.ts';
 

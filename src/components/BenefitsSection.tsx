@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Bot, Clock, Globe, TrendingDown, CheckCircle   } from 'lucide-react.ts';
 import { GradientHeading   } from './GradientHeading';

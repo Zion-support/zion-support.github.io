@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react.ts';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Eye, EyeOff, Volume2, VolumeX, Type, Palette, MousePointer, Keyboard   } from 'lucide-react.ts';
 
 interface AccessibilitySettings {

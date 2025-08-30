@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext } from 'react.ts';
+import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell   } from 'lucide-react.ts';
 

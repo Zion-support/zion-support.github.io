@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { useNavigate, Link   } from 'react-router-dom.ts';
 import { Badge   } from '@/components/ui/badge';
 import { Button   } from '@/components/ui/button';

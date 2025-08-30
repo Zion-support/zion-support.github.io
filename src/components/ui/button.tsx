@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 interface ButtonProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode;

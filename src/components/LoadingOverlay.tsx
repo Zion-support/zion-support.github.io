@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { Loader2   } from 'lucide-react.ts';
 export const LoadingOverlay = ({ visible = false }) => {
     if (!visible)

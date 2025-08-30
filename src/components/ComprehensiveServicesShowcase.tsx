@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react.ts';
+import React, { useState, useMemo } from 'react';
 import { motion   } from 'framer-motion.ts';
 import { Brain, 
   Cpu, 

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react.ts';
+import React, { createContext, useContext, useState } from 'react';
 const DropdownMenuContext = createContext(undefined);
 export function DropdownMenu(...args: any[]): any {
     const [isOpen, setIsOpen] = useState(false);

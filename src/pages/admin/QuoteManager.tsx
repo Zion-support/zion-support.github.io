@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { useAdminQuotes  } from '@/hooks/useAdminQuotes';
 import { useAuth  } from '@/hooks/useAuth';
 import { Card,

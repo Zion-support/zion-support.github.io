@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react.ts';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform   } from 'framer-motion.ts';
 import { Sparkles, 
   Zap, 

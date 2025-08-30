@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { ChevronDown   } from 'lucide-react.ts';
 
 interface AccordionProps extends React.PropsWithChildren<{}> {

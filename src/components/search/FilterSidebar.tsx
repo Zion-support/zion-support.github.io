@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { Filter, X   } from 'lucide-react.ts';
 
 interface FilterOption {

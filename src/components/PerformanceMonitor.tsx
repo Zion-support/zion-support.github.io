@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react.ts';
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Activity, 
   Zap, 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { Link  } from 'react-router-dom.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Search, 

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { ReactNode   } from 'react.ts';
+import React from 'react';
+import { ReactNode   } from 'react';
 interface LayoutProps extends React.PropsWithChildren<{}> {
 
   children: ReactNode;

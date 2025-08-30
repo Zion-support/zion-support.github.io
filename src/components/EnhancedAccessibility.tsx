@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react.ts';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Volume2, 
   VolumeX, 

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react.ts';
+import React, { useEffect, useMemo } from 'react';
 import { Helmet   } from 'react-helmet-async.ts';
 import { useLocation   } from 'react-router-dom.ts';
 

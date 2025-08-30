@@ -1,5 +1,5 @@
 
-import React, { Suspense, useState, useEffect } from 'react.ts';
+import React, { Suspense, useState, useEffect } from 'react';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 

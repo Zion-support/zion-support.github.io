@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react.ts';
+import React, { Suspense } from 'react';
 import { Routes, Route   } from 'react-router-dom.ts';
 import { AppHeader   } from './layout/AppHeader';
 import { EnhancedFuturisticFooter   } from './components/EnhancedFuturisticFooter';

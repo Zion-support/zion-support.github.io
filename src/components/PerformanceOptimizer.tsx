@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react.ts';
+import React, { useEffect, useCallback, useRef } from 'react';
 
 interface PerformanceMetrics {
 
