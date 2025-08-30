@@ -50,11 +50,14 @@ export function Sidebar() {
         { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }
+        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Globe },
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Rocket },
+        { name: 'New Services 2025', href: '/new-services-2025', icon: Star }
       ]
     },
     {

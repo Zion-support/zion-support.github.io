@@ -22,6 +22,13 @@ const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServic
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
+// Service pages
+const AISolutionsPage = lazy(() => import('./pages/services/ai-solutions').then(module => ({ default: module.default })));
+const QuantumComputingPage = lazy(() => import('./pages/services/quantum-computing').then(module => ({ default: module.default })));
+const CybersecurityPage = lazy(() => import('./pages/services/cybersecurity').then(module => ({ default: module.default })));
+const CloudDevOpsPage = lazy(() => import('./pages/services/cloud-devops').then(module => ({ default: module.default })));
+const DigitalTransformationPage = lazy(() => import('./pages/services/digital-transformation').then(module => ({ default: module.default })));
+
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -74,6 +81,11 @@ export default function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/services/ai-solutions" element={<AISolutionsPage />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputingPage />} />
+                <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/services/cloud-devops" element={<CloudDevOpsPage />} />
+                <Route path="/services/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
