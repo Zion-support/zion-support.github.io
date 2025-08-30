@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { SEO } from '../components/SEO';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function CaseStudies() {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -15,17 +12,5 @@ export default function CaseStudies() {
         </p>
       </section>
     </div>
-  )};
-=======;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

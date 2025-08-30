@@ -65,7 +65,7 @@ const Terms = createLazyComponent(() => import('./pages/Terms'));
 
 // Service pages
 const Services = createLazyComponent(() => import('./pages/Services'));
-const Services2026 = createLazyComponent(() => import('./pages/Services2026'));
+// const Services2026 = createLazyComponent(() => import('./pages/Services2026'));
 const Services2027 = createLazyComponent(() => import('./pages/InnovativeServices2027'));
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
@@ -79,17 +79,17 @@ const Partners = createLazyComponent(() => import('./pages/Partners'));
 // const Team = createLazyComponent(() => import('./pages/Team'));
 const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
 const Documentation = createLazyComponent(() => import('./pages/Documentation'));
-const Developers = createLazyComponent(() => import('./pages/Developers'));
+// const Developers = createLazyComponent(() => import('./pages/Developers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
-const Status = createLazyComponent(() => import('./pages/Status'));
+// const Status = createLazyComponent(() => import('./pages/Status'));
 
 
 // Enhanced Services Showcase 2025
-const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
+// const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
-const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+// const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -97,7 +97,7 @@ const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // AI Service pages
-const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
+// const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/AIHealthcareAnalytics'));
 const AIFinancialTrading = createLazyComponent(() => import('./pages/services/AIFinancialTrading'));
 const AIContentCreationSuite = createLazyComponent(() => import('./pages/services/AIContentCreationSuite'));
@@ -151,7 +151,7 @@ const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/U
 const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
 
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
-const ZionCuttingEdgeServices2029 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2029'));
+// const ZionCuttingEdgeServices2029 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2029'));
 
 // Additional service components
 const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/AIComplianceAssistant'));
@@ -175,7 +175,7 @@ const WebsiteAnalytics = createLazyComponent(() => import('./pages/services/Webs
 
 // Additional showcase pages
 const ComprehensiveServicesShowcase2025Page = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
-const ComprehensiveServicesShowcase2027Page = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2027'));
+// const ComprehensiveServicesShowcase2027Page = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2027'));
 const ComprehensiveServicesLanding2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesLanding2025'));
 const ComprehensivePricingGuide2027 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2027'));
 const UltimateInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
@@ -268,7 +268,7 @@ function App() {
                     {/* <Route path="/team" element={<Team />} /> */}
                     <Route path="/help" element={<HelpCenter />} />
                     <Route path="/security" element={<Security />} />
-                    <Route path="/status" element={<Status />} />
+                    {/* <Route path="/status" element={<Status />} /> */}
                     <Route path="/cookies" element={<Cookies />} />
                     <Route path="/sitemap" element={<Sitemap />} />
                     <Route path="/talent" element={<Talent />} />
@@ -281,7 +281,7 @@ function App() {
                     <Route path="/marketplace/services" element={<MarketplaceServices />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/services" element={<Services />} />
-                    <Route path="/services2026" element={<Services2026 />} />
+                    {/* <Route path="/services2026" element={<Services2026 />} /> */}
                     <Route path="/services2027" element={<Services2027 />} />
 
                     {/* Service Routes */}
@@ -304,7 +304,7 @@ function App() {
                     <Route path="/training" element={<Training />} />
                     <Route path="/support" element={<Support />} />
                     <Route path="/documentation" element={<Documentation />} />
-                    <Route path="/developers" element={<Developers />} />
+                    {/* <Route path="/developers" element={<Developers />} /> */}
                     <Route path="/research-development" element={<ResearchDevelopment />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/green-it" element={<GreenIT />} />
@@ -315,19 +315,19 @@ function App() {
 
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
-                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                    {/* <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} /> */}
 
                     {/* Enhanced Services Showcase 2025 */}
                     <Route path="/enhanced-services-showcase-2025" element={
                       <Suspense fallback={<div className="loading-spinner mx-auto mt-20"></div>}>
-                        <EnhancedServicesShowcase2025 />
+                        {/* <EnhancedServicesShowcase2025 /> */}
                       </Suspense>
                     } />
 
                     {/* Comprehensive Services Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
-                    <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} />
+                    {/* <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} /> */}
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
                     <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                     {/* <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} /> */}
@@ -371,7 +371,7 @@ function App() {
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
 
                     {/* AI Service Routes */}
-                    <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                    {/* <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} /> */}
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                     <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
                     <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />
@@ -411,8 +411,8 @@ function App() {
                     <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
 
                     {/* 2029 Cutting-Edge Services */}
-                    <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
-                    <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                            {/* <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} /> */}
+        {/* <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} /> */}
 
                     {/* 404 Page */}
                     <Route

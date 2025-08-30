@@ -171,9 +171,9 @@ export default function InnovativeServices2027() {
               />
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as )}
+                onChange={(e) => setSortBy(e.target.value as string)}
                 className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-
+              >
                 <option value="innovation">Sort by Innovation</option>
                 <option value="price">Sort by Price</option>
                 <option value="roi">Sort by ROI</option>
@@ -198,47 +198,12 @@ export default function InnovativeServices2027() {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                  animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                  transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                  whileHover = {
-  { y: -10,
-  scale: 1.02 
-
-
-
-
-
-
-}}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
                   className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
+                >
 
                   {/* Service Header */}
                   <div className={`p-6 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}>

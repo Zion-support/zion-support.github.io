@@ -19,6 +19,7 @@ import {
   CheckCircle,
   Clock,
   DollarSign
+} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services";
 import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services";
@@ -41,15 +42,6 @@ export default function ZionCuttingEdgeServices2029() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 
     let matchesPrice = true;
-=======
-  
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesPrice = true;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (priceRange !== 'all') {
       const [min, max] = priceRange.split('-').map(Number);
       if (max) {
@@ -88,26 +80,8 @@ export default function ZionCuttingEdgeServices2029() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

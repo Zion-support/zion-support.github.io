@@ -1,13 +1,9 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building const ITServices: React.FC = () => {
-=======
 import { Server, Shield, Cloud, Network, Wrench, Headphones } from 'lucide-react';
 
 export default function ITServices() {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const offerings = [
     { icon: Server, title: 'Managed IT', desc: 'Proactive monitoring, patching, backups, and end-user support.' },
     { icon: Cloud, title: 'Cloud & DevOps', desc: 'Migrations, CI/CD, IaC, containerization, and FinOps.' },
@@ -69,16 +65,7 @@ export default function ITServices() {
             ))}
           </div>
         </div>
-      </section>;
-    </div>;
-  )};
-=======
-            Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+      </section>
+    </div>
   );
-}
-
 }
