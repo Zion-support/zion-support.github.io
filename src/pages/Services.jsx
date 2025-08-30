@@ -2,7 +2,9 @@ import React from 'react';
 import SEO from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { servicesCatalog } from '@/data/servicesCatalog';
-import { Phone, Mail, MapPin, ExternalLink export default function Services() {
+import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+
+export default function Services() {
     const contact = {
   mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -82,7 +84,4 @@ import { Phone, Mail, MapPin, ExternalLink export default function Services() {
 			</main>
 <<<<<<< HEAD
 		</>);
-}}
-=======
-		</>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}
