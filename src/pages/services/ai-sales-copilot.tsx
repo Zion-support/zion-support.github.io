@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   Brain,
-  Heart,
-  Activity,
-  BarChart3,
-  Shield,
   Users,
+  TrendingUp,
+  Target,
+  MessageSquare,
+  BarChart3,
+  Zap,
   CheckCircle,
   Star,
   ArrowRight,
@@ -16,6 +17,11 @@ import {
   MapPin,
   Calendar,
   DollarSign,
+  Shield,
+  Activity,
+  Globe,
+  Database,
+  Cpu,
   Lock,
   Eye,
   Clock,
@@ -23,98 +29,80 @@ import {
   Rocket,
   Briefcase,
   Building,
-  Database,
-  Cpu,
+  Heart,
+  Code,
   Server,
-  Network,
-  Zap,
-  Target,
-  TrendingUp,
-  FileText,
-  Microscope,
-  Pill,
-  Stethoscope,
-  Building2,
-  Ambulance,
-  Clipboard,
-  AlertTriangle,
-  BrainCircuit,
-  Dna,
-  TestTube,
-  Syringe,
-  HeartPulse
+  Network
 } from 'lucide-react';
 
-export function AIHealthcareAnalyticsPlatform() {
+export function AISalesCopilot() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Diagnosis Support',
-      description: 'Advanced machine learning algorithms assist healthcare professionals in accurate diagnosis',
-      benefits: ['Improve diagnostic accuracy by 40%', 'Reduce misdiagnosis rates', 'Faster treatment decisions']
+      title: 'AI-Powered Lead Scoring',
+      description: 'Intelligent lead qualification using machine learning algorithms to identify high-value prospects',
+      benefits: ['Increase conversion rates by 35%', 'Reduce sales cycle time', 'Focus on qualified leads']
     },
     {
-      icon: Activity,
-      title: 'Predictive Patient Analytics',
-      description: 'Forecast patient outcomes and identify high-risk individuals using predictive modeling',
-      benefits: ['Early intervention opportunities', 'Better resource allocation', 'Improved patient outcomes']
+      icon: MessageSquare,
+      title: 'Smart Conversation Intelligence',
+      description: 'Real-time conversation analysis and coaching for sales representatives',
+      benefits: ['Improve win rates by 28%', 'Real-time coaching', 'Best practice identification']
     },
     {
-      icon: BarChart3,
-      title: 'Real-time Health Monitoring',
-      description: 'Continuous monitoring and analysis of patient vital signs and health metrics',
-      benefits: ['24/7 patient surveillance', 'Immediate alert systems', 'Proactive care management']
-    },
-    {
-      icon: Shield,
-      title: 'HIPAA-Compliant Security',
-      description: 'Enterprise-grade security with full HIPAA compliance and data protection',
-      benefits: ['Complete regulatory compliance', 'Advanced encryption', 'Audit trail maintenance']
+      icon: Target,
+      title: 'Predictive Sales Analytics',
+      description: 'Forecast sales outcomes and identify opportunities using advanced analytics',
+      benefits: ['Accurate sales forecasting', 'Pipeline optimization', 'Revenue prediction']
     },
     {
       icon: Users,
-      title: 'Care Team Collaboration',
-      description: 'Seamless communication and coordination between healthcare professionals',
-      benefits: ['Improved care coordination', 'Reduced communication gaps', 'Better patient experience']
+      title: 'Customer Behavior Insights',
+      description: 'Deep understanding of customer preferences and buying patterns',
+      benefits: ['Personalized sales approaches', 'Higher customer satisfaction', 'Increased retention']
     },
     {
       icon: TrendingUp,
-      title: 'Population Health Insights',
-      description: 'Comprehensive analytics for population health management and public health initiatives',
-      benefits: ['Community health trends', 'Epidemiological insights', 'Preventive care strategies']
+      title: 'Automated Follow-up Sequences',
+      description: 'Intelligent follow-up scheduling and content personalization',
+      benefits: ['Never miss follow-ups', 'Consistent communication', 'Higher engagement rates']
+    },
+    {
+      icon: BarChart3,
+      title: 'Performance Analytics Dashboard',
+      description: 'Comprehensive reporting and insights for sales team optimization',
+      benefits: ['Data-driven decisions', 'Team performance tracking', 'ROI measurement']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Clinical',
-      price: '$499',
+      name: 'Starter',
+      price: '$99',
       period: '/month',
-      description: 'For individual healthcare practices',
+      description: 'Perfect for small sales teams',
       features: [
-        'Up to 10 healthcare providers',
-        'Basic AI diagnosis support',
-        'Patient analytics dashboard',
-        'HIPAA compliance',
-        'Email support',
-        'Basic integrations'
+        'Up to 5 users',
+        'Basic lead scoring',
+        'Email automation',
+        'Basic analytics',
+        'Email support'
       ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
-      name: 'Hospital',
-      price: '$1,999',
+      name: 'Professional',
+      price: '$299',
       period: '/month',
-      description: 'For hospitals and medical centers',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 100 healthcare providers',
-        'Advanced AI capabilities',
-        'Real-time monitoring',
+        'Up to 25 users',
+        'Advanced AI features',
+        'Conversation intelligence',
         'Predictive analytics',
         'Priority support',
-        'Custom integrations',
-        'Training and onboarding'
+        'Custom integrations'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -123,15 +111,14 @@ export function AIHealthcareAnalyticsPlatform() {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'For large healthcare systems',
+      description: 'For large organizations',
       features: [
-        'Unlimited healthcare providers',
-        'Full AI platform capabilities',
+        'Unlimited users',
+        'Full AI capabilities',
         'Custom AI models',
-        'Advanced security features',
-        'Dedicated support team',
-        'White-label options',
-        'API access'
+        'Advanced security',
+        'Dedicated support',
+        'White-label options'
       ],
       cta: 'Contact Sales',
       popular: false
@@ -140,86 +127,59 @@ export function AIHealthcareAnalyticsPlatform() {
 
   const useCases = [
     {
-      title: 'Hospitals & Medical Centers',
-      description: 'Comprehensive healthcare analytics for large medical facilities',
-      icon: Building2,
-      benefits: ['Improved patient outcomes', 'Better resource utilization', 'Enhanced operational efficiency']
+      title: 'B2B Sales Teams',
+      description: 'Optimize enterprise sales processes with AI-driven insights and automation',
+      icon: Building,
+      benefits: ['Increased deal size', 'Faster sales cycles', 'Better win rates']
     },
     {
-      title: 'Specialty Clinics',
-      description: 'Specialized analytics for cardiology, oncology, and other specialties',
-      icon: Stethoscope,
-      benefits: ['Specialized insights', 'Better treatment planning', 'Improved patient care']
+      title: 'E-commerce Businesses',
+      description: 'Boost online sales with personalized recommendations and intelligent follow-ups',
+      icon: ShoppingCart,
+      benefits: ['Higher conversion rates', 'Increased cart value', 'Better customer retention']
     },
     {
-      title: 'Research Institutions',
-      description: 'Advanced analytics for medical research and clinical trials',
-      icon: Microscope,
-      benefits: ['Faster research insights', 'Better data analysis', 'Improved trial outcomes']
+      title: 'Real Estate Agencies',
+      description: 'Streamline property sales with AI-powered lead qualification and follow-up',
+      icon: Home,
+      benefits: ['Faster property sales', 'Better client matching', 'Improved efficiency']
     },
     {
-      title: 'Public Health Agencies',
-      description: 'Population health analytics for public health initiatives',
-      icon: Users,
-      benefits: ['Community health insights', 'Epidemiological tracking', 'Preventive care strategies']
+      title: 'Financial Services',
+      description: 'Enhance financial product sales with compliance-aware AI assistance',
+      icon: DollarSign,
+      benefits: ['Regulatory compliance', 'Better client relationships', 'Increased sales']
     }
   ];
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Williams',
-      role: 'Chief Medical Officer',
-      company: 'Metro General Hospital',
-      content: 'The AI platform has transformed how we approach patient care, improving outcomes and efficiency.',
+      name: 'Sarah Johnson',
+      role: 'VP of Sales',
+      company: 'TechCorp Solutions',
+      content: 'AI Sales Copilot increased our team\'s productivity by 40% and improved our win rate significantly.',
       rating: 5
     },
     {
-      name: 'Dr. Michael Rodriguez',
-      role: 'Cardiologist',
-      company: 'HeartCare Specialists',
-      content: 'The predictive analytics help us identify high-risk patients before complications arise.',
+      name: 'Michael Chen',
+      role: 'Sales Director',
+      company: 'Global Innovations',
+      content: 'The predictive analytics helped us focus on the right opportunities at the right time.',
       rating: 5
     },
     {
-      name: 'Dr. Emily Chen',
-      role: 'Research Director',
-      company: 'Medical Research Institute',
-      content: 'Our research capabilities have expanded significantly with this AI-powered platform.',
+      name: 'Emily Rodriguez',
+      role: 'Head of Sales',
+      company: 'Digital Dynamics',
+      content: 'Our sales team is more efficient and our customers are happier with personalized interactions.',
       rating: 5
-    }
-  ];
-
-  const complianceFeatures = [
-    {
-      icon: Shield,
-      title: 'HIPAA Compliance',
-      description: 'Full compliance with Health Insurance Portability and Accountability Act',
-      details: ['Data encryption', 'Access controls', 'Audit logging', 'Business associate agreements']
-    },
-    {
-      icon: Lock,
-      title: 'SOC 2 Type II',
-      description: 'Service Organization Control 2 certification for security and availability',
-      details: ['Security controls', 'Availability monitoring', 'Process documentation', 'Regular audits']
-    },
-    {
-      icon: Eye,
-      title: 'GDPR Compliance',
-      description: 'General Data Protection Regulation compliance for European patients',
-      details: ['Data privacy', 'Right to be forgotten', 'Consent management', 'Data portability']
-    },
-    {
-      icon: CheckCircle,
-      title: 'FDA Guidelines',
-      description: 'Compliance with Food and Drug Administration guidelines for medical software',
-      details: ['Software validation', 'Risk management', 'Documentation', 'Quality assurance']
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-900 to-green-900 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -227,16 +187,16 @@ export function AIHealthcareAnalyticsPlatform() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              AI Healthcare Analytics Platform
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              AI Sales Copilot
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize healthcare delivery with AI-powered analytics, predictive insights, and intelligent patient care management
+              Transform your sales team with AI-powered intelligence, automation, and insights that drive revenue growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-600 hover:to-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
@@ -263,11 +223,11 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              AI-Powered Healthcare Intelligence
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              AI-Powered Sales Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to enhance patient care, improve outcomes, and optimize healthcare operations
+              Leverage cutting-edge artificial intelligence to supercharge your sales performance and drive unprecedented growth
             </p>
           </motion.div>
 
@@ -281,7 +241,7 @@ export function AIHealthcareAnalyticsPlatform() {
                 viewport={{ once: true }}
                 className="bg-gray-700/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
@@ -300,7 +260,7 @@ export function AIHealthcareAnalyticsPlatform() {
         </div>
       </section>
 
-      {/* Compliance Section */}
+      {/* Pricing Section */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -310,62 +270,11 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Enterprise-Grade Compliance & Security
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built with healthcare-grade security and full regulatory compliance to protect patient data and ensure regulatory adherence
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-cyan-400" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Healthcare-Focused Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing plans designed specifically for healthcare organizations of all sizes
+              Choose the plan that fits your business needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
 
@@ -377,7 +286,7 @@ export function AIHealthcareAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-gray-700/50 backdrop-blur-sm border rounded-xl p-8 ${
+                className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                     : 'border-gray-600'
@@ -385,7 +294,7 @@ export function AIHealthcareAnalyticsPlatform() {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -413,7 +322,7 @@ export function AIHealthcareAnalyticsPlatform() {
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-600 hover:to-green-700 text-white'
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white'
                       : 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600'
                   }`}
                 >
@@ -426,7 +335,7 @@ export function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -435,11 +344,11 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Designed for Healthcare Excellence
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Perfect for Every Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform is tailored to meet the unique needs of various healthcare organizations and specialties
+              Our AI Sales Copilot adapts to your specific business needs and industry requirements
             </p>
           </motion.div>
 
@@ -451,10 +360,10 @@ export function AIHealthcareAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6"
+                className="bg-gray-700/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -477,7 +386,7 @@ export function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -486,11 +395,11 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Trusted by Healthcare Leaders
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Trusted by Sales Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what healthcare professionals say about the transformative impact of our AI platform
+              See what our customers say about the transformative impact of AI Sales Copilot
             </p>
           </motion.div>
 
@@ -502,7 +411,7 @@ export function AIHealthcareAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-700/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -522,7 +431,7 @@ export function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 via-cyan-900 to-green-900">
+      <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -531,10 +440,10 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Ready to Transform Healthcare?
+              Ready to Transform Your Sales?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading healthcare organizations in leveraging AI to improve patient outcomes and operational efficiency
+              Join thousands of sales professionals who have already revolutionized their sales process with AI
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -557,7 +466,7 @@ export function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -582,19 +491,19 @@ export function AIHealthcareAnalyticsPlatform() {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  Healthcare-grade security and compliance
+                  Industry-leading AI technology
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  Proven AI technology in healthcare
+                  Proven track record of success
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  Dedicated healthcare support team
+                  Dedicated support and training
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  Custom solutions for your organization
+                  Custom solutions for your business
                 </li>
               </ul>
             </div>

@@ -47,6 +47,10 @@ export function Header() {
       href: '/services',
       icon: Zap,
       dropdown: [
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Brain },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform', icon: Heart },
+        { name: 'Quantum AI Trading', href: '/services/quantum-ai-trading-platform', icon: Atom },
+        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation-platform', icon: Cpu },
         { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },

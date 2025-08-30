@@ -19,6 +19,12 @@ const Support = lazy(() => import('./pages/Support').then(module => ({ default: 
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 
+// New innovative services
+const AISalesCopilot = lazy(() => import('./pages/services/ai-sales-copilot').then(module => ({ default: module.AISalesCopilot })));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/ai-healthcare-analytics-platform').then(module => ({ default: module.AIHealthcareAnalyticsPlatform })));
+const QuantumAITradingPlatform = lazy(() => import('./pages/services/quantum-ai-trading-platform').then(module => ({ default: module.QuantumAITradingPlatform })));
+const AIDevOpsAutomationPlatform = lazy(() => import('./pages/services/ai-devops-automation-platform').then(module => ({ default: module.AIDevOpsAutomationPlatform })));
+
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -72,6 +78,13 @@ export default function App() {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                
+                {/* New innovative services */}
+                <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                <Route path="/services/quantum-ai-trading-platform" element={<QuantumAITradingPlatform />} />
+                <Route path="/services/ai-devops-automation-platform" element={<AIDevOpsAutomationPlatform />} />
+                
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/about" element={<AboutPage />} />

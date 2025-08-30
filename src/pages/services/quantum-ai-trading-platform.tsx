@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   Brain,
-  Heart,
-  Activity,
+  Atom,
+  TrendingUp,
   BarChart3,
   Shield,
   Users,
@@ -29,12 +29,11 @@ import {
   Network,
   Zap,
   Target,
-  TrendingUp,
   FileText,
   Microscope,
   Pill,
   Stethoscope,
-  Building2,
+  Hospital,
   Ambulance,
   Clipboard,
   AlertTriangle,
@@ -42,79 +41,109 @@ import {
   Dna,
   TestTube,
   Syringe,
-  HeartPulse
+  HeartPulse,
+  LineChart,
+  PieChart,
+  Activity,
+  Globe,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Calendar,
+  DollarSign,
+  Shield,
+  Activity,
+  Globe,
+  Database,
+  Cpu,
+  Lock,
+  Eye,
+  Clock,
+  Award,
+  Rocket,
+  Briefcase,
+  Building,
+  Heart,
+  Code,
+  Server,
+  Network
 } from 'lucide-react';
 
-export function AIHealthcareAnalyticsPlatform() {
+export function QuantumAITradingPlatform() {
   const features = [
     {
+      icon: Atom,
+      title: 'Quantum Algorithm Optimization',
+      description: 'Leverage quantum computing to solve complex optimization problems in milliseconds',
+      benefits: ['1000x faster optimization', 'Quantum advantage in complex scenarios', 'Real-time portfolio rebalancing']
+    },
+    {
       icon: Brain,
-      title: 'AI-Powered Diagnosis Support',
-      description: 'Advanced machine learning algorithms assist healthcare professionals in accurate diagnosis',
-      benefits: ['Improve diagnostic accuracy by 40%', 'Reduce misdiagnosis rates', 'Faster treatment decisions']
+      title: 'AI-Powered Market Analysis',
+      description: 'Advanced machine learning algorithms analyze market patterns and predict trends',
+      benefits: ['95% prediction accuracy', 'Real-time market insights', 'Multi-factor analysis']
     },
     {
-      icon: Activity,
-      title: 'Predictive Patient Analytics',
-      description: 'Forecast patient outcomes and identify high-risk individuals using predictive modeling',
-      benefits: ['Early intervention opportunities', 'Better resource allocation', 'Improved patient outcomes']
-    },
-    {
-      icon: BarChart3,
-      title: 'Real-time Health Monitoring',
-      description: 'Continuous monitoring and analysis of patient vital signs and health metrics',
-      benefits: ['24/7 patient surveillance', 'Immediate alert systems', 'Proactive care management']
+      icon: LineChart,
+      title: 'High-Frequency Trading',
+      description: 'Ultra-low latency execution with quantum-enhanced decision making',
+      benefits: ['Microsecond execution', 'Quantum speed advantage', 'Optimal trade timing']
     },
     {
       icon: Shield,
-      title: 'HIPAA-Compliant Security',
-      description: 'Enterprise-grade security with full HIPAA compliance and data protection',
-      benefits: ['Complete regulatory compliance', 'Advanced encryption', 'Audit trail maintenance']
+      title: 'Quantum-Secure Infrastructure',
+      description: 'Post-quantum cryptography and advanced security protocols',
+      benefits: ['Future-proof security', 'Quantum-resistant encryption', 'Regulatory compliance']
     },
     {
-      icon: Users,
-      title: 'Care Team Collaboration',
-      description: 'Seamless communication and coordination between healthcare professionals',
-      benefits: ['Improved care coordination', 'Reduced communication gaps', 'Better patient experience']
+      icon: BarChart3,
+      title: 'Portfolio Risk Management',
+      description: 'Quantum Monte Carlo simulations for advanced risk assessment',
+      benefits: ['Real-time risk monitoring', 'Stress testing scenarios', 'Optimal position sizing']
     },
     {
-      icon: TrendingUp,
-      title: 'Population Health Insights',
-      description: 'Comprehensive analytics for population health management and public health initiatives',
-      benefits: ['Community health trends', 'Epidemiological insights', 'Preventive care strategies']
+      icon: Globe,
+      title: 'Global Market Access',
+      description: 'Trade across multiple exchanges and asset classes worldwide',
+      benefits: ['Multi-exchange connectivity', 'Global liquidity access', '24/7 trading capability']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Clinical',
-      price: '$499',
+      name: 'Professional',
+      price: '$2,999',
       period: '/month',
-      description: 'For individual healthcare practices',
+      description: 'For professional traders and small funds',
       features: [
-        'Up to 10 healthcare providers',
-        'Basic AI diagnosis support',
-        'Patient analytics dashboard',
-        'HIPAA compliance',
+        'Up to 10 trading strategies',
+        'Quantum algorithm access',
+        'Real-time market data',
+        'Basic risk management',
         'Email support',
-        'Basic integrations'
+        'API access'
       ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
-      name: 'Hospital',
-      price: '$1,999',
+      name: 'Institutional',
+      price: '$9,999',
       period: '/month',
-      description: 'For hospitals and medical centers',
+      description: 'For hedge funds and institutional investors',
       features: [
-        'Up to 100 healthcare providers',
-        'Advanced AI capabilities',
-        'Real-time monitoring',
-        'Predictive analytics',
+        'Up to 100 trading strategies',
+        'Full quantum platform access',
+        'Advanced risk management',
+        'Custom algorithm development',
         'Priority support',
-        'Custom integrations',
-        'Training and onboarding'
+        'White-label options',
+        'Dedicated account manager'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -123,15 +152,15 @@ export function AIHealthcareAnalyticsPlatform() {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'For large healthcare systems',
+      description: 'For large financial institutions',
       features: [
-        'Unlimited healthcare providers',
-        'Full AI platform capabilities',
-        'Custom AI models',
-        'Advanced security features',
-        'Dedicated support team',
-        'White-label options',
-        'API access'
+        'Unlimited trading strategies',
+        'Custom quantum hardware',
+        'Advanced compliance tools',
+        'Multi-tenant architecture',
+        '24/7 dedicated support',
+        'On-premise deployment',
+        'Custom integrations'
       ],
       cta: 'Contact Sales',
       popular: false
@@ -140,86 +169,86 @@ export function AIHealthcareAnalyticsPlatform() {
 
   const useCases = [
     {
-      title: 'Hospitals & Medical Centers',
-      description: 'Comprehensive healthcare analytics for large medical facilities',
-      icon: Building2,
-      benefits: ['Improved patient outcomes', 'Better resource utilization', 'Enhanced operational efficiency']
+      title: 'Hedge Funds',
+      description: 'Advanced quantitative strategies with quantum computing advantage',
+      icon: Building,
+      benefits: ['Alpha generation', 'Risk optimization', 'Portfolio diversification']
     },
     {
-      title: 'Specialty Clinics',
-      description: 'Specialized analytics for cardiology, oncology, and other specialties',
-      icon: Stethoscope,
-      benefits: ['Specialized insights', 'Better treatment planning', 'Improved patient care']
+      title: 'Asset Management',
+      description: 'Intelligent portfolio management with quantum-enhanced analytics',
+      icon: PieChart,
+      benefits: ['Better returns', 'Lower volatility', 'Efficient allocation']
     },
     {
-      title: 'Research Institutions',
-      description: 'Advanced analytics for medical research and clinical trials',
-      icon: Microscope,
-      benefits: ['Faster research insights', 'Better data analysis', 'Improved trial outcomes']
+      title: 'Proprietary Trading',
+      description: 'High-frequency trading with quantum speed advantage',
+      icon: Activity,
+      benefits: ['Microsecond execution', 'Market making', 'Arbitrage opportunities']
     },
     {
-      title: 'Public Health Agencies',
-      description: 'Population health analytics for public health initiatives',
-      icon: Users,
-      benefits: ['Community health insights', 'Epidemiological tracking', 'Preventive care strategies']
+      title: 'Risk Management',
+      description: 'Advanced risk assessment using quantum simulations',
+      icon: Shield,
+      benefits: ['Real-time monitoring', 'Stress testing', 'Regulatory compliance']
     }
   ];
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Williams',
-      role: 'Chief Medical Officer',
-      company: 'Metro General Hospital',
-      content: 'The AI platform has transformed how we approach patient care, improving outcomes and efficiency.',
+      name: 'Michael Chen',
+      role: 'Chief Investment Officer',
+      company: 'Quantum Capital Partners',
+      content: 'The quantum advantage has given us a significant edge in complex arbitrage strategies.',
       rating: 5
     },
     {
-      name: 'Dr. Michael Rodriguez',
-      role: 'Cardiologist',
-      company: 'HeartCare Specialists',
-      content: 'The predictive analytics help us identify high-risk patients before complications arise.',
+      name: 'Sarah Johnson',
+      role: 'Portfolio Manager',
+      company: 'Global Asset Management',
+      content: 'Our risk-adjusted returns improved by 40% after implementing the quantum platform.',
       rating: 5
     },
     {
-      name: 'Dr. Emily Chen',
-      role: 'Research Director',
-      company: 'Medical Research Institute',
-      content: 'Our research capabilities have expanded significantly with this AI-powered platform.',
+      name: 'David Rodriguez',
+      role: 'Head of Trading',
+      company: 'Mercury Trading Group',
+      content: 'The execution speed and accuracy have transformed our high-frequency trading operations.',
       rating: 5
     }
   ];
 
-  const complianceFeatures = [
+  const performanceMetrics = [
     {
-      icon: Shield,
-      title: 'HIPAA Compliance',
-      description: 'Full compliance with Health Insurance Portability and Accountability Act',
-      details: ['Data encryption', 'Access controls', 'Audit logging', 'Business associate agreements']
+      icon: TrendingUp,
+      title: '1000x Faster',
+      description: 'Quantum optimization compared to classical computing',
+      metric: '1000x'
     },
     {
-      icon: Lock,
-      title: 'SOC 2 Type II',
-      description: 'Service Organization Control 2 certification for security and availability',
-      details: ['Security controls', 'Availability monitoring', 'Process documentation', 'Regular audits']
+      icon: Target,
+      title: '95% Accuracy',
+      description: 'AI prediction accuracy in market forecasting',
+      metric: '95%'
     },
     {
-      icon: Eye,
-      title: 'GDPR Compliance',
-      description: 'General Data Protection Regulation compliance for European patients',
-      details: ['Data privacy', 'Right to be forgotten', 'Consent management', 'Data portability']
+      icon: Clock,
+      title: 'Microsecond Execution',
+      description: 'Ultra-low latency trade execution',
+      metric: '<1μs'
     },
     {
-      icon: CheckCircle,
-      title: 'FDA Guidelines',
-      description: 'Compliance with Food and Drug Administration guidelines for medical software',
-      details: ['Software validation', 'Risk management', 'Documentation', 'Quality assurance']
+      icon: DollarSign,
+      title: '40% ROI Improvement',
+      description: 'Average improvement in risk-adjusted returns',
+      metric: '40%'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-900 to-green-900 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -227,23 +256,23 @@ export function AIHealthcareAnalyticsPlatform() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              AI Healthcare Analytics Platform
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Quantum AI Trading Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize healthcare delivery with AI-powered analytics, predictive insights, and intelligent patient care management
+              Revolutionize financial trading with the world's first quantum AI platform. Experience 1000x faster optimization and unprecedented market insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-600 hover:to-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
-                className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center gap-2"
+                className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center gap-2"
               >
                 Schedule Demo
                 <Calendar className="w-5 h-5" />
@@ -253,7 +282,7 @@ export function AIHealthcareAnalyticsPlatform() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Performance Metrics Section */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -263,11 +292,51 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              AI-Powered Healthcare Intelligence
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Unprecedented Performance
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to enhance patient care, improve outcomes, and optimize healthcare operations
+              Experience the future of trading with quantum computing and AI that delivers results beyond imagination
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {performanceMetrics.map((metric, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center bg-gray-700/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <metric.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{metric.metric}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{metric.title}</h3>
+                <p className="text-gray-400 text-sm">{metric.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Quantum AI Technology Stack
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge quantum computing combined with advanced artificial intelligence for unprecedented trading capabilities
             </p>
           </motion.div>
 
@@ -279,9 +348,9 @@ export function AIHealthcareAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-700/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:border-purple-500 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
@@ -289,62 +358,11 @@ export function AIHealthcareAnalyticsPlatform() {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      <CheckCircle className="w-4 h-4 text-purple-400" />
                       {benefit}
                     </li>
                   ))}
                 </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Enterprise-Grade Compliance & Security
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built with healthcare-grade security and full regulatory compliance to protect patient data and ensure regulatory adherence
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-cyan-400" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -361,11 +379,11 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Healthcare-Focused Pricing
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Enterprise-Grade Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing plans designed specifically for healthcare organizations of all sizes
+              Access to quantum computing technology with flexible pricing for institutions of all sizes
             </p>
           </motion.div>
 
@@ -379,13 +397,13 @@ export function AIHealthcareAnalyticsPlatform() {
                 viewport={{ once: true }}
                 className={`relative bg-gray-700/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
+                    ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
                     : 'border-gray-600'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -403,7 +421,7 @@ export function AIHealthcareAnalyticsPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -413,7 +431,7 @@ export function AIHealthcareAnalyticsPlatform() {
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-600 hover:to-green-700 text-white'
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white'
                       : 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600'
                   }`}
                 >
@@ -435,11 +453,11 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Designed for Healthcare Excellence
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Designed for Financial Excellence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform is tailored to meet the unique needs of various healthcare organizations and specialties
+              Our platform is tailored to meet the unique needs of various financial institutions and trading strategies
             </p>
           </motion.div>
 
@@ -454,7 +472,7 @@ export function AIHealthcareAnalyticsPlatform() {
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl p-6"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -463,7 +481,7 @@ export function AIHealthcareAnalyticsPlatform() {
                     <ul className="space-y-2">
                       {useCase.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-cyan-400" />
+                          <CheckCircle className="w-4 h-4 text-purple-400" />
                           {benefit}
                         </li>
                       ))}
@@ -486,11 +504,11 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Trusted by Healthcare Leaders
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Trusted by Financial Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what healthcare professionals say about the transformative impact of our AI platform
+              See what financial professionals say about the transformative impact of quantum AI trading
             </p>
           </motion.div>
 
@@ -512,7 +530,7 @@ export function AIHealthcareAnalyticsPlatform() {
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                 <div>
                   <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-cyan-400 text-sm">{testimonial.role}</p>
+                  <p className="text-purple-400 text-sm">{testimonial.role}</p>
                   <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
               </motion.div>
@@ -522,7 +540,7 @@ export function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 via-cyan-900 to-green-900">
+      <section className="py-20 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -531,10 +549,10 @@ export function AIHealthcareAnalyticsPlatform() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Ready to Transform Healthcare?
+              Ready for Quantum Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading healthcare organizations in leveraging AI to improve patient outcomes and operational efficiency
+              Join leading financial institutions in leveraging quantum computing for unprecedented trading advantage
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -564,15 +582,15 @@ export function AIHealthcareAnalyticsPlatform() {
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-gray-300">
-                  <Phone className="w-5 h-5 text-cyan-400" />
+                  <Phone className="w-5 h-5 text-purple-400" />
                   <span>+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
-                  <Mail className="w-5 h-5 text-cyan-400" />
+                  <Mail className="w-5 h-5 text-purple-400" />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
-                  <MapPin className="w-5 h-5 text-cyan-400" />
+                  <MapPin className="w-5 h-5 text-purple-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
@@ -581,20 +599,20 @@ export function AIHealthcareAnalyticsPlatform() {
               <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  Healthcare-grade security and compliance
+                  <CheckCircle className="w-5 h-5 text-purple-400" />
+                  World's first quantum AI trading platform
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  Proven AI technology in healthcare
+                  <CheckCircle className="w-5 h-5 text-purple-400" />
+                  Proven track record in financial technology
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  Dedicated healthcare support team
+                  <CheckCircle className="w-5 h-5 text-purple-400" />
+                  Dedicated financial services support
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  Custom solutions for your organization
+                  <CheckCircle className="w-5 h-5 text-purple-400" />
+                  Custom solutions for your institution
                 </li>
               </ul>
             </div>

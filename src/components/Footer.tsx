@@ -68,12 +68,14 @@ export function Footer() {
       title: 'AI & Quantum Solutions',
       icon: Brain,
       links: [
+        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics-platform', icon: Heart },
+        { name: 'Quantum AI Trading', path: '/services/quantum-ai-trading-platform', icon: Atom },
+        { name: 'AI DevOps Automation', path: '/services/ai-devops-automation-platform', icon: Cpu },
         { name: 'AI Solutions Overview', path: '/services/ai-solutions', icon: Brain },
         { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: TrendingUp },
-        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
-        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom }
       ]
