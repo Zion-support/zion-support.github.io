@@ -23,6 +23,7 @@ const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServic
 const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025').then(module => ({ default: module.ComprehensiveServicesShowcase2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
+<<<<<<< HEAD
 // Enhanced Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader';
 // import { EnhancedFooter } from './components/EnhancedFooter';
@@ -184,6 +185,20 @@ const ComprehensiveServicesLanding2025 = createLazyComponent(() => import('./pag
 // const ComprehensivePricingGuide2027 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2027'));
 // const UltimateInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
 
+// New innovative services
+const AIMicroSaaSPlatform = lazy(() => import('./pages/services/ai-micro-saas-platform').then(module => ({ default: module.AIMicroSaaSPlatform })));
+const QuantumAITradingPlatform = lazy(() => import('./pages/services/quantum-ai-trading-platform').then(module => ({ default: module.QuantumAITradingPlatform })));
+const AICybersecurityPlatform = lazy(() => import('./pages/services/ai-cybersecurity-platform').then(module => ({ default: module.AICybersecurityPlatform })));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+      <p className="text-gray-400">Loading...</p>
+    </div>
+  </div>
+);
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -229,6 +244,11 @@ function App() {
             <Suspense fallback={<EnhancedLoadingSpinner />}>
               <Routes>
                 {routeElements}
+                
+                {/* New innovative services */}
+                <Route path="/services/ai-micro-saas-platform" element={<AIMicroSaaSPlatform />} />
+                <Route path="/services/quantum-ai-trading-platform" element={<QuantumAITradingPlatform />} />
+                <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
               </Routes>
             </Suspense>
           </main>
