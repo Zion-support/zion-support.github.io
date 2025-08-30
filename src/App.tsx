@@ -48,12 +48,17 @@ const Partners = React.lazy(() => import('./pages/Partners'));
 // Comprehensive pricing guides
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
 
 // Services showcase pages
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
+const ServicesComparisonMatrix2025 = React.lazy(() => import('./pages/ServicesComparisonMatrix2025'));
 
 // Core service pages
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -115,9 +120,6 @@ const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectM
 const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
-const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
-const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-const ServicesComparisonMatrix2025 = React.lazy(() => import('./pages/ServicesComparisonMatrix2025'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -169,6 +171,7 @@ function App() {
                   <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
                   <Route path="/pricing-guide" element={<PricingGuide />} />
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                  <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
                   
                   {/* Services Routes */}
                   <Route path="/services" element={<Services />} />
@@ -186,6 +189,7 @@ function App() {
                   <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
                   <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                   <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                  <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
                   <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
                   <Route path="/services-comparison-matrix-2025" element={<ServicesComparisonMatrix2025 />} />
                   
