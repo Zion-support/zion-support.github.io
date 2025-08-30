@@ -15,6 +15,8 @@ import {
   Facebook,
   Instagram,
   Github
+} from 'lucide-react';
+
 const contactMethods = [
   {
     icon: Phone,
@@ -47,7 +49,7 @@ const contactMethods = [
     description: 'Eastern Time Zone',
     action: null,
     color: 'from-orange-500 to-red-500'
-
+  }
 ];
 
 const socialLinks = [
@@ -80,7 +82,7 @@ const socialLinks = [
     icon: Github,
     url: 'https://github.com/ziontechgroup',
     color: 'hover:text-gray-400'
-
+  }
 ];
 
 const contactFormFields = [
