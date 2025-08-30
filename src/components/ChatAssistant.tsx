@@ -28,14 +28,12 @@ interface ChatMessage {
   content: string;
   timestamp: Date;
   isTyping?: boolean;
-metadata?: {;
+  metadata?: {
     confidence?: number;
     sources?: string[];
     suggestions?: string[];
     actionRequired?: boolean;
-  
-
-};
+  };
 }
 
 interface ChatAssistantProps extends React.PropsWithChildren<{}> {
@@ -75,7 +73,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: any'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
   useEffect(()   => {
