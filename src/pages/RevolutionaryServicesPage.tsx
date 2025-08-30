@@ -133,7 +133,7 @@ import {
   ScrewdriverIcon5
 } from 'lucide-react';
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data/revolutionaryMicroSaasServices2025';
-import { COMPREHENSIVE_PRICING_GUIDE_2025, SPECIAL_PRICING_PACKAGES, CONTACT_INFORMATION } from '../data/comprehensivePricingGuide2025';
+import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
 export function RevolutionaryServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
