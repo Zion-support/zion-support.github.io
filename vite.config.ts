@@ -99,22 +99,7 @@ export default defineConfig({
     host: true,
     cors: true,
   },
-  css: {
-    postcss: {
-      plugins: [
-        tailwindcss,
-        autoprefixer,
-        cssnano({
-          preset: ['default', {
-            discardComments: {
-              removeAll: true,
-            },
-            normalizeWhitespace: false,
-          }],
-        }),
-      ],
-    },
-  },
+
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),

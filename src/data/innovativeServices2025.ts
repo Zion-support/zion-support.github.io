@@ -1,40 +1,4 @@
-<<<<<<< HEAD
-export interface InnovativeService2025 {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
-=======
 import { ProductListing } from "@/types/listings";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const INNOVATIVE_SERVICES_2025: ProductListing[] = [
   // AI-Powered Business Solutions
@@ -612,7 +576,6 @@ export const INNOVATIVE_SERVICES_2025: ProductListing[] = [
       website: "https://ziontechgroup.com/micro-project-management",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-<<<<<<< HEAD
     technicalSpecs: {
       technology: ["Solidity", "Rust", "JavaScript", "Python", "Ethereum", "Polkadot"],
       integrations: ["MetaMask", "WalletConnect", "OpenSea", "Uniswap", "Chainlink"],
@@ -687,15 +650,7 @@ export const INNOVATIVE_SERVICES_2025: ProductListing[] = [
     },
     competitors: ["Watershed", "Normative", "Persefoni", "Sweep"],
     marketSize: "$8.5 billion by 2025"
-
-=======
-    marketPrice: "$1,500-3,500",
-    competitors: ["Asana", "Trello", "Monday.com", "ClickUp"],
-    roi: "150% within 3 months",
-    setupTime: "2-3 weeks",
-    integrations: ["Calendar", "File Storage", "Communication Tools", "Time Tracking", "Reporting"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export const INNOVATIVE_SERVICE_CATEGORIES_2025 = {
@@ -789,11 +744,10 @@ export const INNOVATIVE_PRICING_TIERS_2025 = {
   }
 };
 
-<<<<<<< HEAD
 export const getServicesByAIScore = (minScore: number): InnovativeService2025[] => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};}}
-=======
+};
+
 export const INNOVATIVE_CONTACT_INFO_2025 = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -811,4 +765,3 @@ export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
   "Updates": "Regular feature updates and security patches included",
   "Training": "Comprehensive onboarding and training included"
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
