@@ -1,0 +1,68 @@
+{
+  "automation": {
+    "enabled": true,
+    "interval": 30000,
+    "maxSessions": 5,
+    "enableLogging": true,
+    "autoRestart": true,
+    "healthCheckInterval": 60000,
+    "maxRetries": 3,
+    "retryDelay": 5000
+  },
+  "sessions": [
+    {
+      "id": "main-dev",
+      "name": "Main Development Chat",
+      "interval": 25000,
+      "autoProceed": true,
+      "priority": "high",
+      "commands": ["proceed", "continue", "next"]
+    },
+    {
+      "id": "code-review",
+      "name": "Code Review Assistant",
+      "interval": 35000,
+      "autoProceed": true,
+      "priority": "medium",
+      "commands": ["proceed", "review", "analyze"]
+    },
+    {
+      "id": "bug-fixes",
+      "name": "Bug Fixes Helper",
+      "interval": 40000,
+      "autoProceed": true,
+      "priority": "medium",
+      "commands": ["proceed", "fix", "debug"]
+    },
+    {
+      "id": "testing",
+      "name": "Testing Automation",
+      "interval": 45000,
+      "autoProceed": true,
+      "priority": "low",
+      "commands": ["proceed", "test", "validate"]
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation Helper",
+      "interval": 50000,
+      "autoProceed": true,
+      "priority": "low",
+      "commands": ["proceed", "document", "explain"]
+    }
+  ],
+  "cursor": {
+    "apiEndpoint": "http://localhost:3000",
+    "authToken": "",
+    "sessionTimeout": 300000,
+    "maxConcurrentRequests": 3
+  },
+  "notifications": {
+    "enableDiscord": false,
+    "discordWebhook": "",
+    "enableSlack": false,
+    "slackWebhook": "",
+    "enableEmail": false,
+    "emailRecipients": []
+  }
+}
