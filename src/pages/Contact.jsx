@@ -126,7 +126,7 @@ const contactFormFields = [
     label: 'Service Interest',
     type: 'select',
     required: true,
-    options[
+    options: [
       'AI & Analytics',
       'Cybersecurity',
       'Cloud & DevOps',
@@ -136,7 +136,7 @@ const contactFormFields = [
       'Micro SaaS Solutions',
       'Other'
     ]
-
+  }
 ];
 
 export default function Contact() {
@@ -157,7 +157,8 @@ export default function Contact() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }))};
+    }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -180,7 +181,9 @@ export default function Contact() {
         comp: '',
         service: '',
         message: ''
-      })}, 3000)};
+      });
+    }, 3000);
+  };
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -194,60 +197,15 @@ export default function Contact() {
 
         <div className="container-responsive relative z-10">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
-              initial = {
-  { opacity: 0,
-  scale: 0.8 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
               <MessageSquare className="w-10 h-10 text-white" />
