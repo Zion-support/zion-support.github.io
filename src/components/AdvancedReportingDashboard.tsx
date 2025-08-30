@@ -37,16 +37,6 @@ interface ReportData {
   rating: number;
 }
 
-interface ReportMetrics {
-  totalReports: number;
-  activeReports: number;
-  totalViews: number;
-  totalDownloads: number;
-  averageRating: number;
-  topCategories: Array<{ name: string; count: number; percentage: number }>;
-  recentActivity: Array<{ action: string; timestamp: string; user: string }>;
-}
-
 interface AdvancedReportingDashboardProps {
   showMetrics?: boolean;
   showFilters?: boolean;
@@ -57,6 +47,7 @@ interface AdvancedReportingDashboardProps {
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
   showMetrics = true,
   showFilters = true,
+  showCharts = true,
   maxReports = 15
 }) => {
   const [reports, setReports] = useState<ReportData[]>([]);
@@ -66,6 +57,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'detailed'>('grid');
+  const [showReportForm, setShowReportForm] = useState(false);
   const [selectedReport, setSelectedReport] = useState<ReportData | null>(null);
   const [showReportDetails, setShowReportDetails] = useState(false);
   const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 'title'>('date');
