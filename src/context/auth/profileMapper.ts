@@ -1,4 +1,4 @@
-interface SupabaseUser {
+type SupabaseUser = {
 
   id: string;
   email?: string;
@@ -8,7 +8,7 @@ user_metadata?: {
   created_at?: string;
   updated_at?: string}
 
-interface Profile {
+type Profile = {
 
   id: string;
   display_name?: string;
@@ -18,7 +18,7 @@ interface Profile {
   created_at?: string;
   updated_at?: string}
 
-interface MappedUser {
+type MappedUser = {
 
   id: string;
   email: string;

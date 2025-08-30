@@ -1,4 +1,4 @@
-export interface ComprehensivePricingItem2028 {
+export type ComprehensivePricingItem2028 = {
   id: string;
   title: string;
   description: string;

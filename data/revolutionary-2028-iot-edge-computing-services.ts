@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Revolutionary2028IoTEdgeComputingService {
+export type Revolutionary2028IoTEdgeComputingService = {
   id: string;
   name: string;
   tagline: string;

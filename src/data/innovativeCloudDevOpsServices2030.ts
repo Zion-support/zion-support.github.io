@@ -1,7 +1,7 @@
 // Innovative Cloud & DevOps Services 2030 - Zion Tech Group
 // Next-generation infrastructure and development solutions
 
-export interface CloudDevOpsService {
+export type CloudDevOpsService = {
 
   id: string;
   title: string;

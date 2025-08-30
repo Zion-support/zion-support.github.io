@@ -1,4 +1,4 @@
-export interface BiotechAIService {
+export type BiotechAIService = {
   id: string;
   name: string;
   tagline: string;

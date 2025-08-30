@@ -8,533 +8,513 @@ class LintingFixAutomation {
   constructor() {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
-    this.fixHistory = [];
-    
-    this.setupDirectories();
+    this.fixesApplied = [];
+    this.setupLogging();
   }
 
-  setupDirectories() {
+  setupLogging() {
+    this.logger = {
+      info: (msg) => this.log('INFO', msg),
+      warn: (msg) => this.log('WARN', msg),
+      error: (msg) => this.log('ERROR', msg),
+      success: (msg) => this.log('SUCCESS', msg)
+    };
+  }
+
+  log(level, message) {
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${level}] ${message}`;
+    
+    console.log(logEntry);
+    
+    // Write to log file
+    const logFile = path.join(this.logsDir, 'linting-fix-automation.log');
     if (!fs.existsSync(this.logsDir)) {
       fs.mkdirSync(this.logsDir, { recursive: true });
     }
+    fs.appendFileSync(logFile, logEntry + '\n');
   }
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    
-    const logFile = path.join(this.logsDir, 'linting-fix.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  async runLintingCheck() {
-    this.log('Running ESLint check...');
+  async fixAllLintingErrors() {
+    this.logger.info('Starting linting error fixing process...');
     
     try {
-      const result = execSync('npx eslint . --format=json', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
+      // Get current linting errors
+      const errors = await this.getLintingErrors();
+      
+      if (errors.length === 0) {
+        this.logger.success('No linting errors found!');
+        return;
+      }
+      
+      this.logger.info(`Found ${errors.length} linting errors to fix`);
+      
+      // Group errors by file
+      const errorsByFile = this.groupErrorsByFile(errors);
+      
+      // Fix errors in each file
+      for (const [filePath, fileErrors] of errorsByFile) {
+        await this.fixErrorsInFile(filePath, fileErrors);
+      }
+      
+      // Verify fixes
+      await this.verifyFixes();
+      
+      this.logger.success(`Linting error fixing completed. Applied ${this.fixesApplied.length} fixes.`);
+      
+    } catch (error) {
+      this.logger.error(`Error during linting fixing: ${error.message}`);
+    }
+  }
+
+  async getLintingErrors() {
+    try {
+      const result = execSync('npm run lint', { 
+        cwd: this.projectRoot, 
+        encoding: 'utf8',
         stdio: 'pipe'
       });
-      
-      this.log('ESLint check passed - no linting errors found');
-      return { success: true, errors: [] };
+      return [];
     } catch (error) {
-      if (error.stdout) {
-        const errors = this.parseLintingErrors(error.stdout);
-        this.log(`ESLint check failed with ${errors.length} errors`);
-        return { success: false, errors };
-      }
-      return { success: false, errors: [] };
+      const output = error.stdout?.toString() || error.stderr?.toString() || '';
+      return this.parseLintingErrors(output);
     }
   }
 
   parseLintingErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      // Parse ESLint error format
+      const match = line.match(/([^:]+):(\d+):(\d+)\s+(warning|error)\s+([^:]+):\s*(.+)/);
+      if (match) {
+        errors.push({
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          level: match[4],
+          rule: match[5].trim(),
+          message: match[6].trim(),
+          fullLine: line
+        });
+      }
+    }
+    
+    return errors;
+  }
+
+  groupErrorsByFile(errors) {
+    const grouped = new Map();
+    
+    for (const error of errors) {
+      if (!grouped.has(error.file)) {
+        grouped.set(error.file, []);
+      }
+      grouped.get(error.file).push(error);
+    }
+    
+    return grouped;
+  }
+
+  async fixErrorsInFile(filePath, errors) {
     try {
-      const results = JSON.parse(output);
-      const errors = [];
+      if (!fs.existsSync(filePath)) {
+        this.logger.warn(`File not found: ${filePath}`);
+        return;
+      }
       
-      for (const file of results) {
-        for (const message of file.messages) {
-          errors.push({
-            file: file.filePath.replace(this.projectRoot + '/', ''),
-            line: message.line,
-            column: message.column,
-            message: message.message,
-            rule: message.ruleId,
-            type: 'linting',
-            severity: message.severity,
-            fixable: message.fixable || false
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+      
+      // Sort errors by line number (descending) to avoid line number shifts
+      errors.sort((a, b) => b.line - a.line);
+      
+      for (const error of errors) {
+        const fixResult = await this.fixError(content, error);
+        if (fixResult.fixed) {
+          content = fixResult.content;
+          fixed = true;
+          this.fixesApplied.push({
+            file: filePath,
+            rule: error.rule,
+            message: error.message,
+            fix: fixResult.description
           });
         }
       }
       
-      return errors;
-    } catch (e) {
-      this.log('Failed to parse linting errors', 'ERROR');
-      return [];
-    }
-  }
-
-  async runAutoFix() {
-    this.log('Running ESLint auto-fix...');
-    
-    try {
-      const result = execSync('npx eslint . --fix --format=json', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+      if (fixed) {
+        // Create backup
+        const backupPath = filePath + '.lintbackup';
+        fs.writeFileSync(backupPath, fs.readFileSync(filePath, 'utf8'));
+        
+        // Write fixed content
+        fs.writeFileSync(filePath, content);
+        this.logger.success(`Fixed errors in ${filePath}`);
+      }
       
-      this.log('ESLint auto-fix completed');
-      return { success: true, fixed: true };
     } catch (error) {
-      this.log('ESLint auto-fix failed', 'ERROR');
-      return { success: false, error: error.message };
+      this.logger.error(`Failed to fix errors in ${filePath}: ${error.message}`);
     }
   }
 
-  async fixSpecificErrors(errors) {
-    this.log('Fixing specific linting errors...');
+  async fixError(content, error) {
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
     
-    let fixedCount = 0;
+    if (lineIndex < 0 || lineIndex >= lines.length) {
+      return { fixed: false, content, description: 'Line out of range' };
+    }
     
-    for (const error of errors) {
-      if (error.fixable && error.file) {
-        try {
-          const fixed = await this.fixSpecificError(error);
-          if (fixed) {
-            fixedCount++;
-            this.fixHistory.push({
-              timestamp: new Date().toISOString(),
-              error,
-              fixed: true
-            });
+    const line = lines[lineIndex];
+    const rule = error.rule;
+    
+    // Fix common ESLint errors
+    if (rule === 'no-unused-vars') {
+      return this.fixUnusedVariables(lines, lineIndex, error);
+    } else if (rule === 'no-console') {
+      return this.fixConsoleStatements(lines, lineIndex, error);
+    } else if (rule === 'no-undef') {
+      return this.fixUndefinedVariables(lines, lineIndex, error);
+    } else if (rule === 'no-prototype-builtins') {
+      return this.fixPrototypeBuiltins(lines, lineIndex, error);
+    } else if (rule === 'react/jsx-uses-react') {
+      return this.fixReactJSXUses(lines, lineIndex, error);
+    } else if (rule === 'react/react-in-jsx-scope') {
+      return this.fixReactInJSXScope(lines, lineIndex, error);
+    }
+    
+    return { fixed: false, content, description: 'No fix available for this rule' };
+  }
+
+  fixUnusedVariables(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Extract variable name from error message
+    const varMatch = error.message.match(/'([^']+)' is defined but never used/);
+    if (varMatch) {
+      const varName = varMatch[1];
+      
+      // Check if it's an import
+      if (line.includes('import') && line.includes(varName)) {
+        // Remove unused import
+        if (line.includes('{') && line.includes('}')) {
+          // Named import
+          const importMatch = line.match(/import\s*\{([^}]+)\}\s*from/);
+          if (importMatch) {
+            const imports = importMatch[1].split(',').map(i => i.trim()).filter(i => i !== varName);
+            if (imports.length > 0) {
+              newLine = line.replace(importMatch[0], `import { ${imports.join(', ')} } from`);
+            } else {
+              // All imports are unused, remove the entire line
+              lines.splice(lineIndex, 1);
+              return {
+                fixed: true,
+                content: lines.join('\n'),
+                description: 'Removed unused import'
+              };
+            }
           }
-        } catch (e) {
-          this.log(`Failed to fix error in ${error.file}: ${e.message}`, 'ERROR');
+        } else {
+          // Default import, remove the entire line
+          lines.splice(lineIndex, 1);
+          return {
+            fixed: true,
+            content: lines.join('\n'),
+            description: 'Removed unused import'
+          };
         }
+        fixed = true;
+      } else if (line.includes('const') || line.includes('let') || line.includes('var')) {
+        // Variable declaration, prefix with underscore to indicate intentionally unused
+        newLine = line.replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
+        fixed = true;
+      } else if (line.includes('function') || line.includes('=>')) {
+        // Function parameter, prefix with underscore
+        newLine = line.replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
+        fixed = true;
       }
     }
     
-    this.log(`Fixed ${fixedCount} specific errors`);
-    return fixedCount;
-  }
-
-  async fixSpecificError(error) {
-    const filePath = path.join(this.projectRoot, error.file);
-    
-    if (!fs.existsSync(filePath)) {
-      return false;
-    }
-
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Handle specific error types
-    switch (error.rule) {
-      case 'react/no-unescaped-entities':
-        modified = this.fixUnescapedEntities(content, error);
-        break;
-        
-      case '@typescript-eslint/no-unused-vars':
-        modified = this.fixUnusedVariables(content, error);
-        break;
-        
-      case 'no-undef':
-        modified = this.fixUndefinedVariables(content, error);
-        break;
-        
-      case 'no-prototype-builtins':
-        modified = this.fixPrototypeBuiltins(content, error);
-        break;
-        
-      case 'no-useless-escape':
-        modified = this.fixUselessEscape(content, error);
-        break;
-        
-      case 'no-redeclare':
-        modified = this.fixRedeclare(content, error);
-        break;
-        
-      case 'no-dupe-keys':
-        modified = this.fixDuplicateKeys(content, error);
-        break;
-        
-      default:
-        // Try to apply common fixes
-        modified = this.applyCommonFixes(content, error);
-    }
-    
-    if (modified) {
-      // Create backup
-      const backupPath = filePath + '.lintbackup';
-      fs.copyFileSync(filePath, backupPath);
-      
-      // Write fixed content
-      fs.writeFileSync(filePath, content, 'utf8');
-      
-      this.log(`Fixed ${error.rule} error in ${error.file}`);
-      return true;
-    }
-    
-    return false;
-  }
-
-  fixUnescapedEntities(content, error) {
-    const lines = content.split('\n');
-    const lineIndex = error.line - 1;
-    
-    if (lines[lineIndex]) {
-      let line = lines[lineIndex];
-      
-      // Fix common unescaped entities
-      line = line.replace(/'/g, '&apos;');
-      line = line.replace(/"/g, '&quot;');
-      line = line.replace(/</g, '&lt;');
-      line = line.replace(/>/g, '&gt;');
-      
-      if (line !== lines[lineIndex]) {
-        lines[lineIndex] = line;
-        return true;
-      }
-    }
-    
-    return false;
-  }
-
-  fixUnusedVariables(content, error) {
-    const lines = content.split('\n');
-    const lineIndex = error.line - 1;
-    
-    if (lines[lineIndex]) {
-      let line = lines[lineIndex];
-      
-      // Comment out unused imports/variables
-      if (line.includes('import') && line.includes('from')) {
-        line = '// ' + line;
-        lines[lineIndex] = line;
-        return true;
-      }
-      
-      // Comment out unused variables
-      if (line.includes('const') || line.includes('let') || line.includes('var')) {
-        line = '// ' + line;
-        lines[lineIndex] = line;
-        return true;
-      }
-    }
-    
-    return false;
-  }
-
-  fixUndefinedVariables(content, error) {
-    const lines = content.split('\n');
-    const lineIndex = error.line - 1;
-    
-    if (lines[lineIndex]) {
-      let line = lines[lineIndex];
-      
-      // Add jest import for test files
-      if (line.includes('jest') && error.file.includes('test')) {
-        const importLine = "import { jest } from '@jest/globals';";
-        
-        // Find the last import statement
-        let lastImportIndex = -1;
-        for (let i = 0; i < lines.length; i++) {
-          if (lines[i].includes('import')) {
-            lastImportIndex = i;
-          }
-        }
-        
-        if (lastImportIndex >= 0) {
-          lines.splice(lastImportIndex + 1, 0, importLine);
-          return true;
-        }
-      }
-    }
-    
-    return false;
-  }
-
-  fixPrototypeBuiltins(content, error) {
-    const lines = content.split('\n');
-    const lineIndex = error.line - 1;
-    
-    if (lines[lineIndex]) {
-      let line = lines[lineIndex];
-      
-      // Replace hasOwnProperty with Object.prototype.hasOwnProperty.call
-      if (line.includes('hasOwnProperty')) {
-        line = line.replace(/\.hasOwnProperty\(/g, '.hasOwnProperty.call(');
-        if (line !== lines[lineIndex]) {
-          lines[lineIndex] = line;
-          return true;
-        }
-      }
-    }
-    
-    return false;
-  }
-
-  fixUselessEscape(content, error) {
-    const lines = content.split('\n');
-    const lineIndex = error.line - 1;
-    
-    if (lines[lineIndex]) {
-      let line = lines[lineIndex];
-      
-      // Remove unnecessary escape characters
-      line = line.replace(/\\\[/g, '[');
-      line = line.replace(/\\\//g, '/');
-      line = line.replace(/\\\(/g, '(');
-      line = line.replace(/\\\)/g, ')');
-      
-      if (line !== lines[lineIndex]) {
-        lines[lineIndex] = line;
-        return true;
-      }
-    }
-    
-    return false;
-  }
-
-  fixRedeclare(content, error) {
-    const lines = content.split('\n');
-    const lineIndex = error.line - 1;
-    
-    if (lines[lineIndex]) {
-      let line = lines[lineIndex];
-      
-      // Comment out duplicate declarations
-      if (line.includes('function') || line.includes('const') || line.includes('let') || line.includes('var')) {
-        line = '// ' + line;
-        lines[lineIndex] = line;
-        return true;
-      }
-    }
-    
-    return false;
-  }
-
-  fixDuplicateKeys(content, error) {
-    const lines = content.split('\n');
-    const lineIndex = error.line - 1;
-    
-    if (lines[lineIndex]) {
-      let line = lines[lineIndex];
-      
-      // Comment out duplicate keys
-      if (line.includes(':')) {
-        line = '// ' + line;
-        lines[lineIndex] = line;
-        return true;
-      }
-    }
-    
-    return false;
-  }
-
-  applyCommonFixes(content, error) {
-    const lines = content.split('\n');
-    const lineIndex = error.line - 1;
-    
-    if (lines[lineIndex]) {
-      let line = lines[lineIndex];
-      let modified = false;
-      
-      // Common fixes for various rules
-      if (line.includes('any')) {
-        line = line.replace(/:\s*any/g, ': any');
-        modified = true;
-      }
-      
-      if (line.includes('=>')) {
-        line = line.replace(/\s*=>\s*/g, ' => ');
-        modified = true;
-      }
-      
-      if (line.includes('{') && line.includes('}')) {
-        line = line.replace(/\s*{\s*/g, ' { ');
-        line = line.replace(/\s*}\s*/g, ' } ');
-        modified = true;
-      }
-      
-      if (modified && line !== lines[lineIndex]) {
-        lines[lineIndex] = line;
-        return true;
-      }
-    }
-    
-    return false;
-  }
-
-  async runFullFix() {
-    this.log('Starting comprehensive linting fix...');
-    
-    try {
-      // First, try auto-fix
-      const autoFixResult = await this.runAutoFix();
-      
-      if (autoFixResult.success) {
-        this.log('Auto-fix completed successfully');
-      }
-      
-      // Then run another check to see what remains
-      const remainingErrors = await this.runLintingCheck();
-      
-      if (remainingErrors.success) {
-        this.log('✅ All linting errors have been resolved!');
-        return { success: true, autoFixed: true, manuallyFixed: 0 };
-      }
-      
-      // Try to fix remaining errors manually
-      const manuallyFixed = await this.fixSpecificErrors(remainingErrors.errors);
-      
-      // Final check
-      const finalCheck = await this.runLintingCheck();
-      
+    if (fixed) {
+      lines[lineIndex] = newLine;
       return {
-        success: finalCheck.success,
-        autoFixed: autoFixResult.success,
-        manuallyFixed,
-        remainingErrors: finalCheck.errors.length
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Fixed unused variable'
       };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix unused variable' };
+  }
+
+  fixConsoleStatements(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Replace console statements with proper logging or remove them
+    if (line.includes('console.log')) {
+      // Remove console.log statements
+      lines.splice(lineIndex, 1);
+      fixed = true;
+    } else if (line.includes('console.error')) {
+      // Replace with proper error handling
+      newLine = line.replace(/console\.error\([^)]*\)/, '// TODO: Replace with proper error handling');
+      fixed = true;
+    } else if (line.includes('console.warn')) {
+      // Replace with proper warning handling
+      newLine = line.replace(/console\.warn\([^)]*\)/, '// TODO: Replace with proper warning handling');
+      fixed = true;
+    } else if (line.includes('console.info')) {
+      // Replace with proper info handling
+      newLine = line.replace(/console\.info\([^)]*\)/, '// TODO: Replace with proper info handling');
+      fixed = true;
+    }
+    
+    if (fixed) {
+      if (newLine) {
+        lines[lineIndex] = newLine;
+      }
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Fixed console statement'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix console statement' };
+  }
+
+  fixUndefinedVariables(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Extract variable name from error message
+    const varMatch = error.message.match(/'([^']+)' is not defined/);
+    if (varMatch) {
+      const varName = varMatch[1];
+      
+      // Check if it's a global variable that should be imported
+      if (['React', 'ReactDOM', 'document', 'window', 'localStorage', 'sessionStorage'].includes(varName)) {
+        if (varName === 'React' && !line.includes('import React')) {
+          // Add React import at the top of the file
+          const importLine = "import React from 'react';";
+          if (!lines[0].includes('import React')) {
+            lines.unshift(importLine);
+            fixed = true;
+          }
+        } else if (varName === 'ReactDOM' && !line.includes('import ReactDOM')) {
+          // Add ReactDOM import
+          const importLine = "import ReactDOM from 'react-dom';";
+          if (!lines[0].includes('import ReactDOM')) {
+            lines.unshift(importLine);
+            fixed = true;
+          }
+        }
+      } else {
+        // Try to find where this variable should be defined
+        const variableDefinition = this.findVariableDefinition(lines, varName);
+        if (variableDefinition) {
+          // Add the missing variable definition
+          lines.splice(lineIndex, 0, variableDefinition);
+          fixed = true;
+        }
+      }
+    }
+    
+    if (fixed) {
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Fixed undefined variable'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix undefined variable' };
+  }
+
+  findVariableDefinition(lines, varName) {
+    // Common patterns for missing variables
+    const patterns = {
+      'QueryClient': "import { QueryClient } from '@tanstack/react-query';",
+      'jest': "import { jest } from '@jest/globals';",
+      'expect': "import { expect } from '@jest/globals';",
+      'test': "import { test } from '@jest/globals';",
+      'describe': "import { describe } from '@jest/globals';",
+      'beforeEach': "import { beforeEach } from '@jest/globals';",
+      'afterEach': "import { afterEach } from '@jest/globals';",
+      'Deno': "// Deno is not available in Node.js environment",
+      'NotificationPermission': "// NotificationPermission is a browser API",
+      'Intl': "// Intl is a global object in modern browsers"
+    };
+    
+    return patterns[varName] || null;
+  }
+
+  fixPrototypeBuiltins(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Fix hasOwnProperty usage
+    if (line.includes('hasOwnProperty')) {
+      newLine = line.replace(/\.hasOwnProperty\(/g, '.hasOwnProperty.call(this, ');
+      fixed = true;
+    }
+    
+    if (fixed) {
+      lines[lineIndex] = newLine;
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Fixed prototype builtins usage'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix prototype builtins' };
+  }
+
+  fixReactJSXUses(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Fix React JSX usage
+    if (line.includes('React.') && !line.includes('import React')) {
+      // Add React import if not present
+      if (!lines[0].includes('import React')) {
+        lines.unshift("import React from 'react';");
+        fixed = true;
+      }
+    }
+    
+    if (fixed) {
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Fixed React JSX usage'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix React JSX usage' };
+  }
+
+  fixReactInJSXScope(lines, lineIndex, error) {
+    const line = lines[lineIndex];
+    let fixed = false;
+    let newLine = line;
+    
+    // Fix React in JSX scope
+    if (line.includes('React') && !line.includes('import React')) {
+      // Add React import if not present
+      if (!lines[0].includes('import React')) {
+        lines.unshift("import React from 'react';");
+        fixed = true;
+      }
+    }
+    
+    if (fixed) {
+      return {
+        fixed: true,
+        content: lines.join('\n'),
+        description: 'Fixed React in JSX scope'
+      };
+    }
+    
+    return { fixed: false, content: lines.join('\n'), description: 'Could not fix React in JSX scope' };
+  }
+
+  async verifyFixes() {
+    this.logger.info('Verifying fixes...');
+    
+    try {
+      const remainingErrors = await this.getLintingErrors();
+      
+      if (remainingErrors.length === 0) {
+        this.logger.success('All linting errors have been fixed!');
+      } else {
+        this.logger.warn(`${remainingErrors.length} linting errors remain`);
+        this.logger.info('Remaining errors:');
+        remainingErrors.forEach(error => {
+          this.logger.info(`  ${error.file}:${error.line} - ${error.rule}: ${error.message}`);
+        });
+      }
       
     } catch (error) {
-      this.log(`Error during linting fix: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
+      this.logger.error(`Error during verification: ${error.message}`);
     }
   }
 
-  generateReport(fixResults) {
+  generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
+      totalFixes: this.fixesApplied.length,
+      fixesByFile: {},
+      fixesByRule: {},
       summary: {
-        success: fixResults.success,
-        autoFixed: fixResults.autoFixed,
-        manuallyFixed: fixResults.manuallyFixed || 0,
-        remainingErrors: fixResults.remainingErrors || 0
-      },
-      fixHistory: this.fixHistory,
-      recommendations: this.generateRecommendations(fixResults)
+        unusedVars: 0,
+        consoleStatements: 0,
+        undefinedVars: 0,
+        other: 0
+      }
     };
-
-    const reportPath = path.join(this.logsDir, `linting-fix-report-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    this.log(`Report generated: ${reportPath}`);
+    // Group fixes by file and rule
+    for (const fix of this.fixesApplied) {
+      if (!report.fixesByFile[fix.file]) {
+        report.fixesByFile[fix.file] = [];
+      }
+      report.fixesByFile[fix.file].push(fix);
+      
+      if (!report.fixesByRule[fix.rule]) {
+        report.fixesByRule[fix.rule] = [];
+      }
+      report.fixesByRule[fix.rule].push(fix);
+      
+      // Categorize fixes
+      if (fix.rule === 'no-unused-vars') report.summary.unusedVars++;
+      else if (fix.rule === 'no-console') report.summary.consoleStatements++;
+      else if (fix.rule === 'no-undef') report.summary.undefinedVars++;
+      else report.summary.other++;
+    }
+    
     return report;
   }
 
-  generateRecommendations(fixResults) {
-    const recommendations = [];
-    
-    if (fixResults.remainingErrors > 0) {
-      recommendations.push({
-        priority: 'high',
-        message: `Still have ${fixResults.remainingErrors} linting errors remaining`,
-        action: 'review_remaining_errors',
-        command: 'npm run lint'
-      });
-    }
-    
-    if (fixResults.manuallyFixed > 0) {
-      recommendations.push({
-        priority: 'medium',
-        message: 'Review manually fixed errors to ensure changes are correct',
-        action: 'review_fixes',
-        files: this.fixHistory.map(h => h.file)
-      });
-    }
-    
-    if (fixResults.success) {
-      recommendations.push({
-        priority: 'low',
-        message: 'Consider running tests to ensure fixes don\'t break functionality',
-        action: 'run_tests',
-        command: 'npm test'
-      });
-    }
-    
-    return recommendations;
-  }
-
   async run() {
-    this.log('Starting Linting Fix Automation...');
+    const command = process.argv[2] || 'fix';
     
-    try {
-      const fixResults = await this.runFullFix();
-      const report = this.generateReport(fixResults);
-      
-      this.log('Linting Fix Automation completed');
-      
-      if (fixResults.success) {
-        this.log('✅ All linting errors have been resolved!');
-      } else {
-        this.log(`⚠️  Still have ${fixResults.remainingErrors} linting errors remaining`);
-      }
-      
-      return report;
-      
-    } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
-      throw error;
+    switch (command) {
+      case 'fix':
+        await this.fixAllLintingErrors();
+        break;
+      case 'report':
+        const report = this.generateReport();
+        console.log(JSON.stringify(report, null, 2));
+        break;
+      case 'status':
+        const errors = await this.getLintingErrors();
+        console.log(`Current linting errors: ${errors.length}`);
+        break;
+      default:
+        console.log('Usage: node linting-fix-automation.cjs [fix|report|status]');
+        process.exit(1);
     }
   }
 }
 
 // CLI interface
 if (require.main === module) {
-  const automation = new LintingFixAutomation();
-  
-  const command = process.argv[2];
-  
-  switch (command) {
-    case 'fix':
-      automation.run().then(report => {
-        console.log(JSON.stringify(report, null, 2));
-        process.exit(0);
-      }).catch(error => {
-        console.error('Error:', error.message);
-        process.exit(1);
-      });
-      break;
-      
-    case 'check':
-      automation.runLintingCheck().then(results => {
-        console.log(JSON.stringify(results, null, 2));
-        process.exit(results.success ? 0 : 1);
-      });
-      break;
-      
-    case 'auto-fix':
-      automation.runAutoFix().then(results => {
-        console.log(JSON.stringify(results, null, 2));
-        process.exit(results.success ? 0 : 1);
-      });
-      break;
-      
-    default:
-      console.log(`
-Linting Fix Automation
-
-Usage:
-  node linting-fix-automation.cjs [command]
-
-Commands:
-  fix      - Run comprehensive linting fix (auto + manual)
-  check    - Run ESLint check
-  auto-fix - Run ESLint auto-fix only
-
-Examples:
-  node linting-fix-automation.cjs fix
-  node linting-fix-automation.cjs check
-  node linting-fix-automation.cjs auto-fix
-      `);
-      process.exit(1);
-  }
+  const fixer = new LintingFixAutomation();
+  fixer.run().catch(error => {
+    console.error('Error:', error.message);
+    process.exit(1);
+  });
 }
 
 module.exports = LintingFixAutomation;

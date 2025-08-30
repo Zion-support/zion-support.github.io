@@ -1,4 +1,4 @@
-export interface InnovativeMicroSaas2031 {
+export type InnovativeMicroSaas2031 = {
   id: string;
   name: string;
   tagline: string;

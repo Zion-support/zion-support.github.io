@@ -1,4 +1,4 @@
-export interface Service {
+export type Service = {
   id: string;
   name: string;
   category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics';

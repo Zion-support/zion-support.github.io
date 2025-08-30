@@ -1,4 +1,4 @@
-export interface EnterpriseITBreakthroughService2029 {
+export type EnterpriseITBreakthroughService2029 = {
   id: string;
   name: string;
   tagline: string;

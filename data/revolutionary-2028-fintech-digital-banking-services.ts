@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Revolutionary2028FintechDigitalBankingService {
+export type Revolutionary2028FintechDigitalBankingService = {
   id: string;
   name: string;
   tagline: string;

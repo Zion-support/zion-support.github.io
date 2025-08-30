@@ -1,4 +1,4 @@
-export interface EnterpriseItService {
+export type EnterpriseItService = {
   id: string;
   name: string;
   tagline: string;

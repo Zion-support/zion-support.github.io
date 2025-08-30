@@ -1,4 +1,4 @@
-export interface QuantumAiService2025 {
+export type QuantumAiService2025 = {
   id: string;
   name: string;
   tagline: string;

@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useMemo  } from 'react.ts';
 
-interface SEOData {
+type SEOData = {
 
   title: string;
   description: string;
@@ -12,7 +12,7 @@ interface SEOData {
   noindex?: boolean;
   structuredData?: object}
 
-interface UseSEOOptions {
+type UseSEOOptions = {
 
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
@@ -297,7 +297,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
 // Type declarations
 declare global {
-  interface Window {
+  type Window = {
 
     gtag?: (...args[])  => void;
     dataLayer?[]}

@@ -1,4 +1,4 @@
-export interface Zion2026AIMarketplaceService {
+export type Zion2026AIMarketplaceService = {
   id: string;
   name: string;
   description: string;

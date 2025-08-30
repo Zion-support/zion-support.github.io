@@ -1,4 +1,4 @@
-export interface EmergingTechService {
+export type EmergingTechService = {
 
   id: string;
   title: string;

@@ -1,4 +1,4 @@
-export interface AIBreakthroughService2029 {
+export type AIBreakthroughService2029 = {
   id: string;
   name: string;
   tagline: string;

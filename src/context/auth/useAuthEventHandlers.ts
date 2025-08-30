@@ -1,6 +1,6 @@
 import { useCallback  } from 'react.ts';
 
-interface User {
+type User = {
 
   id: string;
   email: string;

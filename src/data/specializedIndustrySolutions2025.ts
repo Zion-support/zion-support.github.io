@@ -1,4 +1,4 @@
-export interface IndustrySolution {
+export type IndustrySolution = {
 
   id: string;
   title: string;

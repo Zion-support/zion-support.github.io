@@ -1,4 +1,4 @@
-export interface AdvancedAIService {
+export type AdvancedAIService = {
 
   id: string;
   title: string;

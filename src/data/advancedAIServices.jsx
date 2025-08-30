@@ -1,3 +1,4 @@
+import React from 'react';
 export const ADVANCED_AI_SERVICES = [
     // AI-Powered Financial Trading Platform
     {

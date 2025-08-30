@@ -1,4 +1,4 @@
-export interface ComprehensiveItSolution {
+export type ComprehensiveItSolution = {
   id: string;
   name: string;
   tagline: string;

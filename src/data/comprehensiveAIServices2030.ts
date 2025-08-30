@@ -1,14 +1,14 @@
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
 
-export interface ServiceContact {
+export type ServiceContact = {
 
   phone: string;
   email: string;
   website: string;
   address: string}
 
-export interface AIService {
+export type AIService = {
 
   id: number;
   name: string;

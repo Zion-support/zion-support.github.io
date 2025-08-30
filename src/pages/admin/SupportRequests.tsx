@@ -133,7 +133,7 @@ export default function SupportRequests(...args[]):  {
     setCategoryFilter(null)};
   
   return (
-    <>
+    <Fragment>
       <SEO 
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"

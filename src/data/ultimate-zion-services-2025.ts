@@ -1,4 +1,4 @@
-export interface UltimateZionService {
+export type UltimateZionService = {
   id: string;
   name: string;
   tagline: string;

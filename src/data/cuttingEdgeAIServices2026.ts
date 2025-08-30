@@ -1,4 +1,4 @@
-export interface CuttingEdgeAIService2026 {
+export type CuttingEdgeAIService2026 = {
   id: string;
   title: string;
   description: string;

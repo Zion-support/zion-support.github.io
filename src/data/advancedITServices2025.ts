@@ -1,4 +1,4 @@
-export interface AdvancedITService {
+export type AdvancedITService = {
 
   id: string;
   title: string;

@@ -1,4 +1,4 @@
-export interface InnovativeService2027 {
+export type InnovativeService2027 = {
 
   id: string;
   name: string;

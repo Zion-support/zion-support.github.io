@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface MarketValidatedService {
+export type MarketValidatedService = {
 	id: string;
 	name: string;
 	tagline: string;

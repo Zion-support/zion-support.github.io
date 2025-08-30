@@ -1,4 +1,4 @@
-export interface PricingTier2031 {
+export type PricingTier2031 = {
   id: string;
   name: string;
   price: number;
@@ -18,7 +18,7 @@ export interface PricingTier2031 {
   supportLevel: string;
 }
 
-export interface ServiceCategory2031 {
+export type ServiceCategory2031 = {
   id: string;
   name: string;
   description: string;

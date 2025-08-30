@@ -1,4 +1,4 @@
-export interface SpecializedITService {
+export type SpecializedITService = {
 
   id: string;
   title: string;

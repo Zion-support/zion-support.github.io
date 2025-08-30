@@ -1,4 +1,4 @@
-export interface EmergingTechService2029V2 {
+export type EmergingTechService2029V2 = {
   id: string;
   name: string;
   description: string;

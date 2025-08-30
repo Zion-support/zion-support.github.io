@@ -15,7 +15,7 @@ declare module '*.module.css' {
 }
 declare module '@tanstack/react-query';
 declare module 'react-day-picker' {
-  export interface DateRange {
+  export type DateRange = {
     from?: Date;
     to?: Date;
   }

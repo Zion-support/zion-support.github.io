@@ -1,14 +1,14 @@
 // Innovative Micro SAAS Services 2030 - Zion Tech Group
 // Cutting-edge, real-world micro SAAS solutions with market data and pricing
 
-export interface ServiceContact {
+export type ServiceContact = {
 
   phone: string;
   email: string;
   website: string;
   address: string}
 
-export interface MicroSaasService {
+export type MicroSaasService = {
 
   id: number;
   name: string;

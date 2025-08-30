@@ -1,3 +1,4 @@
+import React from 'react';
 export const INNOVATIVE_IT_SERVICES = [
     // Quantum Computing as a Service (QCaaS)
     {

@@ -1,4 +1,4 @@
-export interface EnterpriseSolution {
+export type EnterpriseSolution = {
 
   id: string;
   title: string;

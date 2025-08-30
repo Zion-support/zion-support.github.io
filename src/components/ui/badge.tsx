@@ -1,3 +1,4 @@
+import React from 'react';
 import * as React from 'react.ts'
 import { cva, type VariantProps  } from 'class-variance-authority.ts'
 import { cn  } from '../../utils/cn'

@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface RevolutionarySpecializedIndustrySolution2029 {
+export type RevolutionarySpecializedIndustrySolution2029 = {
   id: string;
   name: string;
   tagline: string;

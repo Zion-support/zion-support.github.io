@@ -1,4 +1,4 @@
-export interface RealServiceQ22025 {
+export type RealServiceQ22025 = {
   id: string;
   name: string;
   tagline: string;

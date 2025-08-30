@@ -1,4 +1,4 @@
-export interface RevolutionaryPricingTier2030 {
+export type RevolutionaryPricingTier2030 = {
 
   id: string;
   name: string;
@@ -14,7 +14,7 @@ export interface RevolutionaryPricingTier2030 {
   includedSupport: string;
   customOptions: string[]}
 
-export interface RevolutionaryPricingGuide2030 {
+export type RevolutionaryPricingGuide2030 = {
 
   serviceId: string;
   serviceTitle: string;

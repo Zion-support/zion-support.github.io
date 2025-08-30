@@ -1,4 +1,4 @@
-export interface NewOperationalService2025 {
+export type NewOperationalService2025 = {
   id: string;
   name: string;
   tagline: string;

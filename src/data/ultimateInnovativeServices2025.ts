@@ -1,4 +1,4 @@
-export interface UltimateInnovativeService {
+export type UltimateInnovativeService = {
 
   id: string;
   title: string;

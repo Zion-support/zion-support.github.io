@@ -1,4 +1,4 @@
-export interface Listing {
+export type Listing = {
   id: string;
   title: string;
   description: string;
@@ -56,7 +56,7 @@ export interface TalentListing extends Listing {
   references?: string[];
 }
 
-export interface CartItem {
+export type CartItem = {
   id: string;
   title: string;
   price: number;
@@ -65,7 +65,7 @@ export interface CartItem {
   image?: string;
 }
 
-export interface WishlistItem {
+export type WishlistItem = {
   id: string;
   userId: string;
   listingId: string;

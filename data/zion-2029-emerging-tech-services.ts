@@ -1,4 +1,4 @@
-export interface ZionEmergingTechService2029 {
+export type ZionEmergingTechService2029 = {
   id: string;
   name: string;
   tagline: string;

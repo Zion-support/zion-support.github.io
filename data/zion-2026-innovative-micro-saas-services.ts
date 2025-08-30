@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Zion2026InnovativeMicroSAASService {
+export type Zion2026InnovativeMicroSAASService = {
   id: string;
   name: string;
   tagline: string;

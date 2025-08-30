@@ -1,4 +1,4 @@
-export interface MarketplaceItem {
+export type MarketplaceItem = {
 
   id: string;
   title: string;

@@ -1,3 +1,4 @@
+import React from 'react';
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
     // AI-Powered Video Content Creation
     {

@@ -1,4 +1,4 @@
-export interface QuantumSpaceService {
+export type QuantumSpaceService = {
   id: string;
   name: string;
   tagline: string;

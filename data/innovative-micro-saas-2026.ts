@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface InnovativeMicroSaas2026 {
+export type InnovativeMicroSaas2026 = {
   id: string;
   name: string;
   tagline: string;

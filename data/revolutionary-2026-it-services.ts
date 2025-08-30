@@ -1,4 +1,4 @@
-export interface Revolutionary2026ItService {
+export type Revolutionary2026ItService = {
   id: string;
   name: string;
   tagline: string;

@@ -1,6 +1,6 @@
 import { useState, useCallback  } from 'react.ts';
 
-interface Toast {
+type Toast = {
 
   id: string;
   title?: string;

@@ -1,4 +1,4 @@
-export interface AdditionalInnovativeService2025 {
+export type AdditionalInnovativeService2025 = {
   id: string;
   title: string;
   description: string;

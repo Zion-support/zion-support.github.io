@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedBlockchainWeb3Service {
+export type AdvancedBlockchainWeb3Service = {
   id: string;
   name: string;
   tagline: string;

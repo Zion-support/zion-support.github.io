@@ -1,6 +1,6 @@
 import { toast  } from 'react-hot-toast.ts'
 
-interface ToastOptions {
+type ToastOptions = {
 
 duration?: number;
 position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"}

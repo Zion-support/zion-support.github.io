@@ -1,4 +1,4 @@
-export interface SpecializedITInfrastructureService {
+export type SpecializedITInfrastructureService = {
   id: string;
   name: string;
   tagline: string;

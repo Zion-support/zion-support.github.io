@@ -1,4 +1,4 @@
-export interface ExpandedInnovativeService {
+export type ExpandedInnovativeService = {
 
   id: string;
   title: string;

@@ -1,3 +1,4 @@
+import React from 'react';
 import SEO from '../SEO';
 const Mobile = () => {
     const mobileFeatures = [

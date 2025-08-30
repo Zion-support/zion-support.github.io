@@ -1,3 +1,4 @@
+import React from 'react';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink } from 'lucide-react';
 
 export default function SystemStatus() {

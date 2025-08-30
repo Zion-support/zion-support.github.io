@@ -1,3 +1,4 @@
+import React from 'react';
 export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
     // Quantum Computing as a Service
     {

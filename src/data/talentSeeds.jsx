@@ -1,3 +1,4 @@
+import React from 'react';
 export const TALENT_SEEDS = [
     {
         id: 'seed-1',

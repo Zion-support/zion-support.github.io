@@ -1,4 +1,4 @@
-export interface ProfessionalService {
+export type ProfessionalService = {
   id: string;
   name: string;
   tagline: string;

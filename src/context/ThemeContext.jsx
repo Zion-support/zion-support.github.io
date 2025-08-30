@@ -1,3 +1,4 @@
+import React from 'react';
 import * as React from 'react';
 const ThemeContext = React.createContext(undefined);
 export const ThemeProvider = ({ children }) => {

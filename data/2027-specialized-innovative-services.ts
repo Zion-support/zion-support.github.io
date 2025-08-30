@@ -1,4 +1,4 @@
-export interface SpecializedInnovativeService2027 {
+export type SpecializedInnovativeService2027 = {
   id: string;
   name: string;
   tagline: string;

@@ -1,6 +1,6 @@
 import { useState, useEffect  } from 'react.ts';
 
-interface User {
+type User = {
 
   id: string;
   email: string;
@@ -11,7 +11,7 @@ interface User {
   createdAt?: string;
   updatedAt?: string}
 
-interface AuthTokens {
+type AuthTokens = {
 
   accessToken: string | null;
   refreshToken: string | null}

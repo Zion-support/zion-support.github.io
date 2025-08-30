@@ -1,4 +1,4 @@
-export interface ComprehensiveService {
+export type ComprehensiveService = {
   id: string;
   name: string;
   tagline: string;

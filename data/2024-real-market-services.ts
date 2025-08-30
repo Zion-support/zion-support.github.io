@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface RealMarketService {
+export type RealMarketService = {
   id: string;
   name: string;
   tagline: string;

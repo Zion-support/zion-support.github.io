@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Revolutionary2028CybersecurityBlockchainService {
+export type Revolutionary2028CybersecurityBlockchainService = {
   id: string;
   name: string;
   tagline: string;

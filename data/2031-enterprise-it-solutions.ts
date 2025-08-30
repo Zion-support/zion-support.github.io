@@ -1,4 +1,4 @@
-export interface EnterpriseITSolution2031 {
+export type EnterpriseITSolution2031 = {
   id: string;
   name: string;
   tagline: string;

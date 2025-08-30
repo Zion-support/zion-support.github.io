@@ -1,4 +1,4 @@
-export interface SpecializedIndustrySolution2026 {
+export type SpecializedIndustrySolution2026 = {
   id: string;
   title: string;
   description: string;

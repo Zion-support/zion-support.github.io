@@ -1,4 +1,4 @@
-export interface AdvancedCybersecurityService2027 {
+export type AdvancedCybersecurityService2027 = {
   id: string;
   title: string;
   description: string;

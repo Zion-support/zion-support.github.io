@@ -1,3 +1,4 @@
+import React from 'react';
 export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
     // AI-Powered Legal Document Automation
     {

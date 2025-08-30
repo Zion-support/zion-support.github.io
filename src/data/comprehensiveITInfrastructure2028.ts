@@ -1,4 +1,4 @@
-export interface ComprehensiveITInfrastructureService2028 {
+export type ComprehensiveITInfrastructureService2028 = {
   id: string;
   title: string;
   description: string;

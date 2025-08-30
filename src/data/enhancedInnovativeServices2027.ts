@@ -1,4 +1,4 @@
-export interface EnhancedService2027 {
+export type EnhancedService2027 = {
 
   id: string;
   title: string;

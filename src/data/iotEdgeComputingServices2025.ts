@@ -1,4 +1,4 @@
-export interface IoTEdgeService {
+export type IoTEdgeService = {
 
   id: string;
   title: string;

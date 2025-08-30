@@ -1,4 +1,4 @@
-export interface PricingTier {
+export type PricingTier = {
   name: string;
   price: string;
   billing: 'month' | 'year' | 'project' | 'hour';
@@ -10,7 +10,7 @@ export interface PricingTier {
   savings?: string;
 }
 
-export interface ServicePricing {
+export type ServicePricing = {
   id: string;
   title: string;
   description: string;

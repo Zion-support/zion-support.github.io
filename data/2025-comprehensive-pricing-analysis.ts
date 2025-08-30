@@ -1,4 +1,4 @@
-export interface PricingAnalysis {
+export type PricingAnalysis = {
   serviceId: string;
   serviceName: string;
   category: string;

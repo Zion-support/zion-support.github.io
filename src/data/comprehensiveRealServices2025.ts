@@ -1,4 +1,4 @@
-export interface ComprehensiveRealService {
+export type ComprehensiveRealService = {
   id: string;
   title: string;
   description: string;

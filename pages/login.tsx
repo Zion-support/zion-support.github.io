@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head.ts'
 import { motion  } from 'framer-motion.ts'
 import { useState  } from 'react.ts'

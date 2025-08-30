@@ -1,13 +1,13 @@
 import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
-interface PerformanceMetrics {
+type PerformanceMetrics = {
 
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number}
 
-interface UsePerformanceOptimizationOptions {
+type UsePerformanceOptimizationOptions = {
 
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
@@ -212,7 +212,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
 // Type declaration for gtag
 declare global {
-  interface Window {
+  type Window = {
 
     gtag?: (...args[])  => void}
 }

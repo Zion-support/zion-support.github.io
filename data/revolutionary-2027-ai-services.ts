@@ -1,4 +1,4 @@
-export interface Revolutionary2027AiService {
+export type Revolutionary2027AiService = {
   id: string;
   name: string;
   tagline: string;

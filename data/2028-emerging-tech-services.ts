@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface EmergingTech2028Service {
+export type EmergingTech2028Service = {
   id: string;
   name: string;
   tagline: string;

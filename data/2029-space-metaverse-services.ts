@@ -1,4 +1,4 @@
-export interface SpaceMetaverseService2029 {
+export type SpaceMetaverseService2029 = {
   id: string;
   name: string;
   description: string;

@@ -1,4 +1,4 @@
-export interface ZionCuttingEdgeService2029 {
+export type ZionCuttingEdgeService2029 = {
   id: string;
   name: string;
   tagline: string;

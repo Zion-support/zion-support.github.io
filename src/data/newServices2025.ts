@@ -1,4 +1,4 @@
-export interface NewService {
+export type NewService = {
   id: string;
   title: string;
   description: string;

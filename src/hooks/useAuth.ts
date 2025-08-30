@@ -1,6 +1,6 @@
 import { useState, useEffect  } from 'react.ts';
 
-interface User {
+type User = {
 
   id: string;
   email: string;
@@ -10,7 +10,7 @@ interface User {
   displayName?: string;
   avatarUrl?: string}
 
-interface AuthState {
+type AuthState = {
 
   user: User | null;
   isAuthenticated: boolean;

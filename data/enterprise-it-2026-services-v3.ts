@@ -1,4 +1,4 @@
-export interface EnterpriseIt2026ServiceV3 {
+export type EnterpriseIt2026ServiceV3 = {
   id: string;
   name: string;
   tagline: string;

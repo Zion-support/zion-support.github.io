@@ -1,4 +1,4 @@
-export interface Real2025Q2Addition {
+export type Real2025Q2Addition = {
   id: string;
   name: string;
   tagline: string;

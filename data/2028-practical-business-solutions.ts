@@ -1,4 +1,4 @@
-export interface PracticalBusinessSolution2028 {
+export type PracticalBusinessSolution2028 = {
   id: string;
   name: string;
   tagline: string;

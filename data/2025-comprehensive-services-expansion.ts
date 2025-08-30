@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface ComprehensiveService {
+export type ComprehensiveService = {
   id: string;
   name: string;
   tagline: string;

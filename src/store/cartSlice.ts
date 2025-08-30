@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { CartItem } from '@/types/listings';
 
-interface CartState {
+type CartState = {
   items: CartItem[];
   total: number;
   itemCount: number;

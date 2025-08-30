@@ -50,7 +50,7 @@ async function apiRequest<T>(
   }
 }
 
-interface ApiClientOptions {
+type ApiClientOptions = {
   method?: string;
   body?: string;
   headers?: Record<string, string>;

@@ -1,4 +1,4 @@
-export interface FuturisticInnovation2031 {
+export type FuturisticInnovation2031 = {
   id: string;
   name: string;
   tagline: string;

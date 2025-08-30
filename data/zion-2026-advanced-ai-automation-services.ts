@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../src/types/service-variants';
 
-export interface Zion2026AdvancedAIAutomationService {
+export type Zion2026AdvancedAIAutomationService = {
   id: string;
   name: string;
   tagline: string;

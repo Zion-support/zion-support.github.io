@@ -1,4 +1,4 @@
-export interface ZionService {
+export type ZionService = {
   id: string;
   title: string;
   description: string;

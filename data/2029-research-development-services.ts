@@ -1,4 +1,4 @@
-export interface ResearchDevelopmentService2029 {
+export type ResearchDevelopmentService2029 = {
   id: string;
   name: string;
   description: string;

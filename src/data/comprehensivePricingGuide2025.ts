@@ -1,4 +1,4 @@
-export interface ComprehensivePricingGuide {
+export type ComprehensivePricingGuide = {
 
   id: string;
   title: string;

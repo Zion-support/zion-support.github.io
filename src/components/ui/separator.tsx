@@ -1,3 +1,4 @@
+import React from 'react';
 import * as React from 'react.ts'
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import { cn  } from '../../utils/cn'

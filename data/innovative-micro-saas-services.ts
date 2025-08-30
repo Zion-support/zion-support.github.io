@@ -1,4 +1,4 @@
-export interface InnovativeMicroSaasService {
+export type InnovativeMicroSaasService = {
   id: string;
   name: string;
   tagline: string;

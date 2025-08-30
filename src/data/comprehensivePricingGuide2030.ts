@@ -4,7 +4,7 @@ import { COMPREHENSIVE_SERVICES_INDEX_2030  } from './comprehensiveServicesIndex
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
 
-export interface PricingTier {
+export type PricingTier = {
 
   name: string;
   price: number;
@@ -13,7 +13,7 @@ export interface PricingTier {
   setupTime: string;
   support: string}
 
-export interface ServicePricing {
+export type ServicePricing = {
 
   serviceId: string;
   serviceName: string;

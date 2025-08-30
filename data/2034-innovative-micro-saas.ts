@@ -1,4 +1,4 @@
-export interface MicroSaasService2034 {
+export type MicroSaasService2034 = {
   id: string;
   name: string;
   description: string;

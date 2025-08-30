@@ -1,3 +1,4 @@
+import React from 'react';
 export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
     // AI-Powered Brain-Computer Interface Platform
     {

@@ -1,5 +1,5 @@
 import { useState, useEffect  } from 'react.ts';
-interface ResponsiveState {
+type ResponsiveState = {
 
   screenWidth: number;
   screenHeight: number;

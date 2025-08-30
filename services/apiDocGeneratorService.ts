@@ -1,4 +1,4 @@
-export interface APIDocumentation {
+export type APIDocumentation = {
   id: string;
   name: string;
   version: string;
@@ -13,7 +13,7 @@ export interface APIDocumentation {
     coverage: number;
     languages: string[];
     frameworks: string[]}}
-export interface APIEndpoint {
+export type APIEndpoint = {
   id: string;
   path: string;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';
@@ -26,30 +26,30 @@ export interface APIEndpoint {
   deprecated: boolean;
   rateLimit?: RateLimit;
   authentication?: AuthenticationRequirement}
-export interface APIParameter {
+export type APIParameter = {
   name: string;
   in: 'path' | 'query' | 'header' | 'cookie';
   required: boolean;
   schema: APISchema;
   description: string;
   example?;deprecated?: boolean}
-export interface APIRequestBody {
+export type APIRequestBody = {
   required: boolean;
   content: Record<string, APIContent>;
   description?: string}
-export interface APIContent {
+export type APIContent = {
   schema: APISchema;
   example?;examples?: Record<string, APIExample>}
-export interface APIResponse {
+export type APIResponse = {
   code: string;
   description: string;
   content?: Record<string, APIContent>;
   headers?: Record<string, APIHeader>}
-export interface APIHeader {
+export type APIHeader = {
   description: string;
   schema: APISchema;
   required: boolean}
-export interface APISchema {
+export type APISchema = {
   type?: string;
   format?: string;
   description?: string;
@@ -67,7 +67,7 @@ export interface APISchema {
   pattern?: string;
   default?;nullable?: boolean;
   $ref?: string}
-export interface APIExample {
+export type APIExample = {
   id: string;
   name: string;
   summary: string;
@@ -75,24 +75,24 @@ export interface APIExample {
   request: ExampleRequest;
   response: ExampleResponse;
   tags: string[]}
-export interface ExampleRequest {
+export type ExampleRequest = {
   method: string;
   url: string;
   headers: Record<string, string>;
   body?}
-export interface ExampleResponse {
+export type ExampleResponse = {
   status: number;
   headers: Record<string, string>;
   body}
-export interface RateLimit {
+export type RateLimit = {
   requests: number;
   window: string;
   description?: string}
-export interface AuthenticationRequirement {
+export type AuthenticationRequirement = {
   type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
   description: string;
   required: boolean}
-export interface DocumentationConfig {
+export type DocumentationConfig = {
   outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
   includeExamples: boolean;
   includeSchemas: boolean;

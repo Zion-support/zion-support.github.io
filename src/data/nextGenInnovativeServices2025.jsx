@@ -1,3 +1,4 @@
+import React from 'react';
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
     // Quantum AI Orchestration Platform
     {

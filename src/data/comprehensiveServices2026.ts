@@ -1,14 +1,14 @@
 // Comprehensive Services 2026 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
 
-export interface ServiceContact {
+export type ServiceContact = {
 
   phone: string;
   email: string;
   website: string;
   address: string}
 
-export interface MicroSaasService {
+export type MicroSaasService = {
 
   id: number;
   name: string;
@@ -34,7 +34,7 @@ export interface MicroSaasService {
   marketSize: string;
   growthRate: string}
 
-export interface ITService {
+export type ITService = {
 
   id: number;
   name: string;
@@ -57,7 +57,7 @@ export interface ITService {
   marketSize: string;
   compliance: string[]}
 
-export interface AIService {
+export type AIService = {
 
   id: number;
   name: string;

@@ -1,3 +1,4 @@
+import React from 'react';
 export const advancedRealServices2025 = [
     // AI-Powered Legal Document Analysis Platform
     {

@@ -1,7 +1,7 @@
 import { specializedIndustrySolutions2026  } from '@/data/2026-specialized-industry-solutions';
 
 // Interface for the existing service structure
-export interface Service {
+export type Service = {
 
   id: string;
   title: string;

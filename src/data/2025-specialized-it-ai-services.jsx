@@ -1,3 +1,4 @@
+import React from 'react';
 export const specializedITServices2025 = [
     // Neuromorphic Computing Platform
     {

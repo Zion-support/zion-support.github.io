@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface CuttingEdgeITInfrastructureInnovation2025 {
+export type CuttingEdgeITInfrastructureInnovation2025 = {
   id: string;
   name: string;
   tagline: string;

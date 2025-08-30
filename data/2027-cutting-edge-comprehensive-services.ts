@@ -1,4 +1,4 @@
-export interface CuttingEdgeComprehensiveService2027 {
+export type CuttingEdgeComprehensiveService2027 = {
   id: string;
   name: string;
   tagline: string;

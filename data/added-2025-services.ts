@@ -1,4 +1,4 @@
-export interface AddedService {
+export type AddedService = {
   id: string;
   name: string;
   tagline: string;
