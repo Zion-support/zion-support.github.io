@@ -149,7 +149,7 @@ const UltimateServicesShowcase2025 = createLazyComponent(() => import('./compone
 const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = createLazyComponent(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
-const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 const ZionCuttingEdgeServices2029 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2029'));
 
