@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe const News = () => {
+import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe } from 'lucide-react';
+
+const News = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -88,12 +90,15 @@ import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLi
       excerpt: "Comprehensive analysis of AI adoption patterns and emerging trends in enterprise technology.",
       image: "/images/news/market-trends.jpg",
       featured: false
-
+    }
   ];
 
   const filteredNews = newsItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                         item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory});
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
