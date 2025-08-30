@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import {
-  Zap,
+import { Zap,
   Brain,
   Shield,
   Cloud,
@@ -99,8 +98,8 @@ import {
   Eye,
   Sparkles
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-} from 'lucide-react';
-export function EnhancedFooter() {
+ } from 'lucide-react.ts';
+export function EnhancedFooter(...args: any[]): any {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -161,7 +160,7 @@ export function EnhancedFooter() {
       ]
     },
     {
-      title: "Company",
+      title: "Comp",
       links: [
 <<<<<<< HEAD
         { name: 'About Us', href: '/about', icon: Users },
@@ -443,8 +442,8 @@ export function EnhancedFooter() {
         {/* Quick Links Section */}
         <div className="mt-12 pt-8 border-t border-zion-slate-light/20">
           <h4 className="text-lg font-semibold text-white mb-6 text-center">Quick Access</h4>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {quickLinks.map((link) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-4">
+            {quickLinks.map((link)  => (
               <Link
                 key={link.name}
                 to={link.href}
@@ -593,7 +592,7 @@ export function EnhancedFooter() {
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                 {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
                 {section.title === "Solutions" && <Target className="w-5 h-5 mr-2 text-blue-400" />}
-                {section.title === "Company" && <Users className="w-5 h-5 mr-2 text-purple-400" />}
+                {section.title === "Comp" && <Users className="w-5 h-5 mr-2 text-purple-400" />}
                 {section.title === "Resources" && <BookOpen className="w-5 h-5 mr-2 text-green-400" />}
                 {section.title === "Support" && <HelpCircle className="w-5 h-5 mr-2 text-pink-400" />}
                 {section.title}
@@ -662,8 +661,8 @@ export function EnhancedFooter() {
               viewport={{ once: true }}
               className="flex items-center space-x-4"
             >
-              <span className="text-slate-400 text-sm mr-2">Follow us:</span>
-              {socialLinks.map((social, index) => (
+              <span className="text-slate-400 text-sm mr-2">Follow us: any</span>
+              {socialLinks.map((social, index)  => (
                 <motion.a
                   key={social.name}
                   href={social.href}

@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import {
-  DollarSign,
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { DollarSign,
   TrendingUp,
   Users,
   Clock,
@@ -16,24 +15,24 @@ import {
   Cpu,
   Brain
 <<<<<<< HEAD
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
+import { ALL_PRICING_GUIDES_2026, marketSummary2026  } from '../data/comprehensivePricingGuide2026';
 
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
   const [selectedTier, setSelectedTier] = useState<any>('all');
 =======
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
+import { SEO  } from '../components/SEO';
+import { ALL_PRICING_GUIDES_2026, marketSummary2026  } from '../data/comprehensivePricingGuide2026';
 
-const ComprehensivePricingGuide2026: React.FC = () => {;
-  const [selectedService, setSelectedService] = useState<string>('all');
-  const [selectedTier, setSelectedTier] = useState<string>('all');
+const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
+  const [selectedService, setSelectedService] = useState<any>('all');
+  const [selectedTier, setSelectedTier] = useState<any>('all');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];
@@ -53,7 +52,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   }, [selectedService]);
 
 <<<<<<< HEAD
-  const getServiceIcon = (serviceName: string) => {;
+  const getServiceIcon = (serviceName: anystring)  => {;
     switch (serviceName) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
@@ -68,7 +67,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const getTierColor = (tierName: string) => {;
+  const getTierColor = (tierName: anystring)  => {;
     switch (tierName) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Starter': return 'from-green-500 to-emerald-500';
@@ -155,13 +154,13 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
 <<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
 
-                    {services.map(service => (
-=======
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
-                  >
                     {services.map(service  => (
+=======
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {services.map(service   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <option key={service} value={service} className="bg-zinc-800 text-white">
                         {service === 'all' ? 'All Services' : service}
@@ -177,13 +176,13 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                     value={selectedTier}
                     onChange={(e) => setSelectedTier(e.target.value)}
 <<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
 
-                    {tiers.map(tier => (
-=======
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
-                  >
                     {tiers.map(tier  => (
+=======
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {tiers.map(tier   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <option key={tier} value={tier} className="bg-zinc-800 text-white">
                         {tier === 'all' ? 'All Tiers' : tier}
@@ -268,8 +267,8 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                   {/* Competitors */}
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3 text-center">Competitor Pricing</h4>
-                    <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
-                      {servicePricing.marketAnalysis.competitors.map((competitor, idx)  => (
+                    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-3">
+                      {servicePricing.marketAnalysis.competitors.map((competitor, idx)   => (
                         <div key={idx} className="bg-white/5 rounded-lg p-3 text-center">
                           <span className="text-zinc-300">{competitor}</span>
                         </div>
@@ -279,8 +278,8 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 </div>
 
                 {/* Pricing Tiers */}
-                <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
-                  {servicePricing.pricingTiers.map((tier, tierIndex)  => (
+                <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
+                  {servicePricing.pricingTiers.map((tier, tierIndex)   => (
                     <motion.div
                       key={tier.name}
                       initial = {

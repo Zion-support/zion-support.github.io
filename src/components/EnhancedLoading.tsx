@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Loader2,
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Loader2,
   CheckCircle,
   AlertCircle,
   Zap,
@@ -12,12 +11,14 @@ import {
   Network,
   Shield
 <<<<<<< HEAD
-interface LoadingSpinnerProps {
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean;
 =======
- } from 'lucide-react';
+  
+} from 'lucide-react';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
@@ -26,11 +27,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   fullScreen?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function LoadingSpinner({
-  size = 'md',
-  text = 'Loading...',
-  fullScreen = false
-}: LoadingSpinnerProps) {
+export function LoadingSpinner(...args: any[]): any {
   const sizeClasses = {
   sm: 'w-8 h-8',
     md: 'w-16 h-16',;
@@ -248,9 +245,11 @@ export function LoadingSpinner({
   );
 <<<<<<< HEAD
 
-interface PageLoaderProps {
+interface PageLoaderProps extends React.PropsWithChildren<{}> {
+
   pageName?: string;
 =======
+
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -259,7 +258,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
   pageName?: string}
 
-export function PageLoader(...args[]):  {
+export function PageLoader(...args[]: any):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
       <div className="text-center">
@@ -534,10 +533,10 @@ interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {;
   className?: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function SkeletonLoader(...args[]):  {
+export function SkeletonLoader(...args[]: any):  {
   return (
     <div className = {`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index)  => (
+      {Array.from({ length: anylines }).map((_, index)   => (
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"

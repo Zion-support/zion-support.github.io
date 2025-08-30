@@ -1,17 +1,16 @@
-import React from 'react';
+import React from 'react.ts';
 <<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Shield, FileSearch, ClipboardCheck, Lock, DollarSign, ExternalLink const DSRPortal: React.FC = () => {
+import { Link  } from 'react-router-dom.ts';
+import { Shield, FileSearch, ClipboardCheck, Lock, DollarSign, ExternalLink const DSRPortal: React.FC = (): JSX.Element => {
 	const features = [
 		{ icon: FileSearch, title: 'Intake + Verification', desc: 'Hosted forms with ID verification and secure attachments.' },
 		{ icon: ClipboardCheck, title: 'Workflow Automation', desc: 'Route to owners, track SLAs, export/delete across systems.' },
 		{ icon: Lock, title: 'Security & Audit', desc: 'Encryption, access controls, and immutable audit logs.' }
 	];
 =======
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Shield, 
   FileText, 
   Target, 
   Zap, 
@@ -38,9 +37,9 @@ import {
   Heart,
   GraduationCap,
   Home
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function DSRPortal() {
+export default function DSRPortal(...args: any[]): any {
   const features = [
     {
       icon: Shield,
@@ -247,8 +246,8 @@ export default DSRPortal;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -346,8 +345,8 @@ export default DSRPortal;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -445,8 +444,8 @@ export default DSRPortal;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {dataRights.map((right, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {dataRights.map((right, index)  => (
               <motion.div
                 key={right.right}
                 initial = {
@@ -544,8 +543,8 @@ export default DSRPortal;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 initial = {

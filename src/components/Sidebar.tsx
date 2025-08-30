@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 import {
 <<<<<<< HEAD
   ChevronRight,
@@ -64,11 +64,13 @@ import {
   TestTube,
   Code,
   Target
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface SidebarProps extends React.PropsWithChildren<{}> {
 
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  isOpen: anyboolean;
+  onClose: ()  => void;
+
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose;
+}) => {
 =======
   Eye,
   Cpu,
@@ -80,16 +82,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   Settings,
   Menu,
   X
-} from 'lucide-react';
+} from 'lucide-react.ts';
 
-export function Sidebar() {
+export function Sidebar(...args: any[]): any {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<any>(null);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const location = useLocation();
 
 <<<<<<< HEAD
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: anystring)  => {
     setExpandedSections(prev =>
       prev.includes(section)
         ? prev.filter(s => s !== section)
@@ -152,7 +154,7 @@ export function Sidebar() {
 
   ];
 
-  const isActive = (href: string) => {
+  const isActive = (href: anystring)  => {
     if (href === '/') {
       return location.pathname === '/';
 
@@ -183,9 +185,9 @@ export function Sidebar() {
     }
   ];
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: anystring)  => location.pathname === href;
 
-  const toggleSection = (sectionName: string) => {
+  const toggleSection = (sectionName: anystring)  => {
     setActiveSection(activeSection === sectionName ? null : sectionName);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };

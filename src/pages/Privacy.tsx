@@ -1,11 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import {
-  Shield,
+import { Shield,
   Lock,
   Eye,
   Database,
@@ -18,9 +17,8 @@ import {
   FileText,
   Mail,
 =======
-import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 
@@ -35,10 +33,10 @@ import {
   CheckCircle,
 <<<<<<< HEAD
   AlertTriangle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 import SEO from '../components/SEO';
 
-const Privacy: React.FC = () => {
+const Privacy: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -51,16 +49,16 @@ const Privacy: React.FC = () => {
   Mail,
   Phone,
   MapPin
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
   Settings,
   Trash2,
   Download
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 
-const Privacy: React.FC = () => {
+const Privacy: React.FC = (): JSX.Element => {
   const lastUpdated = 'December 15, 2024';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -380,8 +378,8 @@ const Privacy: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {privacyPrinciples.map((principle, index)   => (
               <motion.div
 <<<<<<< HEAD
                 key={principle.title}
@@ -513,8 +511,8 @@ const Privacy: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid lg: grid-cols-3 gap-8">
-            {dataCategories.map((category, index)  => (
+          <div className="grid lg: anygrid-cols-3 gap-8">
+            {dataCategories.map((category, index)   => (
               <motion.div
 <<<<<<< HEAD
                 key={category.title}
@@ -793,8 +791,8 @@ const Privacy: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userRights.map((right, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right, index)  => (
               <motion.div
                 key={index}
                 initial = {
@@ -1185,8 +1183,8 @@ const Privacy: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {userRights.map((right, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right, index)   => (
               <motion.div
                 key={right.right}
                 initial = {
@@ -1333,8 +1331,8 @@ const Privacy: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {privacyPrinciples.map((principle, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {privacyPrinciples.map((principle, index)  => (
                 <motion.div
                   key={principle.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1382,8 +1380,8 @@ const Privacy: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {dataCategories.map((category, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+              {dataCategories.map((category, index)  => (
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1436,8 +1434,8 @@ const Privacy: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {dataUses.map((use, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {dataUses.map((use, index)  => (
                 <motion.div
                   key={use.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1489,8 +1487,8 @@ const Privacy: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {dataRights.map((right, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {dataRights.map((right, index)  => (
                 <motion.div
                   key={right.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1538,8 +1536,8 @@ const Privacy: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {securityMeasures.map((measure, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {securityMeasures.map((measure, index)  => (
                 <motion.div
                   key={measure.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1591,8 +1589,8 @@ const Privacy: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {contactInfo.map((info, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {contactInfo.map((info, index)  => (
                 <motion.div
                   key={info.title}
                   initial={{ opacity: 0, y: 30 }}

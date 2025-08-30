@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom.ts';
 import {
   Brain,
   Network,
@@ -244,7 +244,7 @@ const InnovativeServicesShowcase2028 = () => {
 
   ];
 
-  const getColorClasses = (color: string) => {
+  const getColorClasses = (color: anystring)  => {
     const colorMap: { [key: string]: string } = {
       blue: 'from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600',
       green: 'from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600',
@@ -255,8 +255,7 @@ const InnovativeServicesShowcase2028 = () => {
     };
     return colorMap[color] || 'from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700';
 =======
-import { 
-  Search, 
+import { Search, 
   Filter, 
   Star, 
   TrendingUp, 
@@ -281,12 +280,12 @@ import {
   Phone,
   Mail,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
-import { EMERGING_TECH_INNOVATIVE_SERVICES_2028 } from '../data/emergingTechInnovativeServices2028';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028  } from '../data/innovativeMicroSaasServices2028';
+import { EMERGING_TECH_INNOVATIVE_SERVICES_2028  } from '../data/emergingTechInnovativeServices2028';
 
-export default function InnovativeServicesShowcase2028() {
+export default function InnovativeServicesShowcase2028(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('All');
@@ -309,7 +308,7 @@ export default function InnovativeServicesShowcase2028() {
     return matchesSearch && matchesCategory && matchesInnovationLevel;
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'Quantum Computing & AI':
         return <Brain className="w-6 h-6" />;
@@ -349,7 +348,7 @@ export default function InnovativeServicesShowcase2028() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (level: anystring)  => {
     switch (level) {
       case 'Revolutionary':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
@@ -492,8 +491,8 @@ export default function InnovativeServicesShowcase2028() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -520,9 +519,9 @@ export default function InnovativeServicesShowcase2028() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none cursor-pointer"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none cursor-pointer"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category}
                   </option>
@@ -536,9 +535,9 @@ export default function InnovativeServicesShowcase2028() {
               <select
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none cursor-pointer"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none cursor-pointer"
               >
-                {innovationLevels.map(level => (
+                {innovationLevels.map(level  => (
                   <option key={level} value={level} className="bg-slate-800 text-white">
                     {level}
                   </option>
@@ -568,8 +567,8 @@ export default function InnovativeServicesShowcase2028() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {featuredServices.map((service, index) => (
+          <div className="grid lg: anygrid-cols-2 gap-8">
+            {featuredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -643,8 +642,8 @@ export default function InnovativeServicesShowcase2028() {
 =======
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

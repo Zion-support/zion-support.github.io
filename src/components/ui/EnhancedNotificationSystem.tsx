@@ -1,42 +1,46 @@
 <<<<<<< HEAD
-import React, { useState, useEffect, createContext, useContext } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell export type NotificationType = 'success' | 'error' | 'warning' | 'info';
-=======
 import React, { useState, useEffect, createContext, useContext } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell  } from 'lucide-react';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell export type NotificationType = 'success' | 'error' | 'warning' | 'info';
+=======
+import React, { useState, useEffect, createContext, useContext  } from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell   } from 'lucide-react.ts';
 
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface Notification {
 
-  id: string;
+
+  id: anystring;
   type: NotificationType;
   title: string;
   message: string;
   duration?: number;
-action?: {
+action?: {;
     label: string;
 <<<<<<< HEAD
-    onClick: () => void;
-  };
+    onClick: ()  => void;
+  
+};
 =======
-    onClick: ()  => void}}
+    onClick: any()   => void}}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface NotificationContextType {
 
-  notifications: Notification[];
+
+  notifications: anyNotification[];
 <<<<<<< HEAD
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
-  clearAll: () => void;
-=======
   addNotification: (notification: Omit<Notification, 'id'>)  => void;
-  removeNotification: (id: string)  => void;
-  clearAll: ()  => void}
+  removeNotification: any(id: string)  => void;
+  clearAll: any()  => void;
+=======
+  addNotification: any(notification: Omit<Notification, 'id'>)   => void;
+  removeNotification: any(id: string)   => void;
+clearAll: any()   => void;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const NotificationContext = createContext<NotificationContextType | null>(null);
@@ -50,10 +54,12 @@ export const useNotifications = () => {;
   return context;
 };
 
-interface NotificationProviderProps {
+interface NotificationProviderProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
 =======
-    throw new Error('useNotifications must be used within a NotificationProvider')}
+    throw new Error('useNotifications must be used within a NotificationProvider')
+}
   return context};
 
 interface NotificationProviderProps extends React.PropsWithChildren<{}> {
@@ -65,7 +71,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   const [notifications, setNotifications] = useState<any>([]);
 
 <<<<<<< HEAD
-  const addNotification = (notification: Omit<Notification, 'id'>) => {;
+  const addNotification = (notification: anyOmit<Notification, 'id'>)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = {
@@ -98,7 +104,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   };
 
 <<<<<<< HEAD
-  const removeNotification = (id: string)  => {;
+  const removeNotification = (id: anystring)   => {;
     setNotifications(prev => prev.filter(n => n.id !== id))};
 
   const clearAll = () => {;
@@ -117,7 +123,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 
 const NotificationContainer: React.FC = (): JSX.Element => {;
 =======;
-  const removeNotification = (id: string) => {;
+  const removeNotification = (id: anystring)  => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
@@ -142,7 +148,7 @@ const NotificationContainer: React.FC = (): JSX.Element => {;
   );
 };
 
-const NotificationContainer: React.FC = () => {;
+const NotificationContainer: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const { notifications, removeNotification, clearAll } = useNotifications();
 
@@ -225,16 +231,16 @@ interface NotificationItemProps extends React.PropsWithChildren<{}> {
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  notification: Notification;
+  notification: anyNotification;
 <<<<<<< HEAD
-  onRemove: (id: string) => void;
+  onRemove: (id: string)  => void;
 =======
-  onRemove: (id: string)  => void}
+  onRemove: any(id: string)   => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
 <<<<<<< HEAD
-  const getIcon = (type: NotificationType) => {;
+  const getIcon = (type: anyNotificationType)  => {;
     switch (type) {;
       case 'success':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -253,7 +259,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
   };
 
 <<<<<<< HEAD
-  const getBorderColor = (type: NotificationType) => {;
+  const getBorderColor = (type: anyNotificationType)  => {;
     switch (type) {;
       case 'success':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -272,7 +278,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
   };
 
 <<<<<<< HEAD
-  const getBackgroundColor = (type: NotificationType) => {;
+  const getBackgroundColor = (type: anyNotificationType)  => {;
     switch (type) {;
       case 'success':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -349,24 +355,24 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 
 // Utility functions for easy notification creation
 export const notify = {
-  success: (title: string, message: string, options?: Partial<Notification>)  => {
+  success: any(title: string, message: string, options?: Partial<Notification>)   => {
     // This would be used with the context
 <<<<<<< HEAD
 <<<<<<< HEAD
     // // // console.log('Success notification:', { title, message, ...options });
 =======
-    console.log('Success notification: ', { title, message,
+    console.log('Success notification: any', { title, message,
   ...options 
 
 })},
-  error: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Error notification: ', { title, message, ...options })},
-  warning: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Warning notification: ', { title, message, ...options })},
-  info: (title: string, message: string, options?: Partial<Notification>)  => {
+  error: (title: string, message: string, options?: Partial<Notification>)   => {
+    console.log('Error notification: any', { title, message, ...options })},
+  warning: (title: string, message: string, options?: Partial<Notification>)   => {
+    console.log('Warning notification: any', { title, message, ...options })},
+  info: (title: string, message: string, options?: Partial<Notification>)   => {
     console.log('Info notification:', { title, message, ...options })};
 =======;
-    console.log('Success notification:', { title, message,;
+    console.log('Success notification: any', { title, message,;
   ;
   ;
   ;
@@ -378,26 +384,26 @@ export const notify = {
 });
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
-  error: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // console.log('Error notification:', { title, message, ...options });
+  error: (title: string, message: string, options?: Partial<Notification>)  => {
+    // // // console.log('Error notification: any', { title, message, ...options });
   },
-  warning: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // console.log('Warning notification:', { title, message, ...options });
+  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+    // // // console.log('Warning notification: any', { title, message, ...options });
   },
-  info: (title: string, message: string, options?: Partial<Notification>) => {
+  info: (title: string, message: string, options?: Partial<Notification>)  => {
     // // // console.log('Info notification:', { title, message, ...options });
 
 };}}}}}}}}}}}
 =======
-    // // // // // // // console.log('Success notification:', { title, message, ...options });
+    // // // // // // // console.log('Success notification: any', { title, message, ...options });
   },
-  error: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // // // // // console.log('Error notification:', { title, message, ...options });
+  error: (title: string, message: string, options?: Partial<Notification>)  => {
+    // // // // // // // console.log('Error notification: any', { title, message, ...options });
   },
-  warning: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // // // // // console.log('Warning notification:', { title, message, ...options });
+  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+    // // // // // // // console.log('Warning notification: any', { title, message, ...options });
   },
-  info: (title: string, message: string, options?: Partial<Notification>) => {
+  info: (title: string, message: string, options?: Partial<Notification>)  => {
     // // // // // // // console.log('Info notification:', { title, message, ...options });
   }
 <<<<<<< HEAD

@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function DigitalTransformation() {
+export default function DigitalTransformation(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
@@ -14,8 +14,8 @@ export default function DigitalTransformation() {
     </div>
   );
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import {
   Rocket,
   Cpu,
@@ -37,7 +37,7 @@ import {
   FileText,
   Monitor,
   Smartphone
-export default function DigitalTransformation() {
+export default function DigitalTransformation(...args: any[]): any {
   const features = [
     {
       icon: Rocket,
@@ -257,8 +257,8 @@ export default function DigitalTransformation() {
               and position you for future success.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -369,8 +369,8 @@ export default function DigitalTransformation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial = {
@@ -455,8 +455,8 @@ export default function DigitalTransformation() {
               each with unique challenges and opportunities.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -498,8 +498,8 @@ export default function DigitalTransformation() {
               each with unique challenges and opportunities.
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {industries.map((industry, index)  => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -564,13 +564,13 @@ export default function DigitalTransformation() {
               A proven methodology that ensures successful digital transformation outcomes.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
             {[
               { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' },
               { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' },
               { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
               { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div
                 key={index}
                 className="text-center"

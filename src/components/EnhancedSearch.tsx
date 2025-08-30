@@ -1,22 +1,23 @@
 <<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield   } from 'lucide-react.ts';
+import { useNavigate   } from 'react-router-dom.ts';
+import { useDebounce   } from '@/hooks/useDebounce';
+=======
+import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield  } from 'lucide-react';
-import { useNavigate  } from 'react-router-dom.ts';
+<<<<<<< HEAD
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield import { useNavigate  } from 'react-router-dom.ts';
 import { useDebounce  } from '@/hooks/useDebounce';
 =======
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield import { useNavigate } from 'react-router-dom';
-import { useDebounce } from '@/hooks/useDebounce';
-=======
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight  } from 'lucide-react.ts';
+import { useNavigate  } from 'react-router-dom.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SearchResult {
+
 
   id: string;
   title: string;
@@ -28,15 +29,18 @@ interface SearchResult {
 <<<<<<< HEAD
   relevance: number;
 =======
-  relevance: number}
+relevance: number;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SearchFilter {
 
+
   type: string[];
   category: string[];
 <<<<<<< HEAD
-  tags: string[]}
+tags: string[];
+}
 =======
   tags: string[];
 <<<<<<< HEAD
@@ -45,15 +49,19 @@ interface SearchFilter {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface SearchSuggestion {
-  text: string;
+
+  text: anystring;
   type: 'recent' | 'trending' | 'ai';
+
 }
 
-interface EnhancedSearchProps {
+interface EnhancedSearchProps extends React.PropsWithChildren<{}> {
+
   className?: string;
   placeholder?: string;
-  onSearch?: (query: string) => void;
+  onSearch?: (query: string)  => void;
   variant?: 'default' | 'futuristic' | 'minimal';
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -112,8 +120,8 @@ const searchData: SearchResult[] = [
     category: 'Comp',
     tags['About', 'Comp', 'Mission', 'Values'],
 =======
-    category: 'Company',
-    tags: ['About', 'Company', 'Mission', 'Values'],
+    category: 'Comp',
+    tags: ['About', 'Comp', 'Mission', 'Values'],
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 85
   },
@@ -181,25 +189,20 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {;
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
 ];
 
-export function EnhancedSearch({ 
-  className = '',;
-  placeholder = 'Search for AI services, quantum solutions...',;
-  onSearch,;
-  variant = 'default';
-}: EnhancedSearchProps) {;
+export function EnhancedSearch(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [results, setResults] = useState<any>([]);
+  const [suggestions, setSuggestions] = useState<any>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [filters, setFilters] = useState<SearchFilter>({
+  const [filters, setFilters] = useState<any>({
     type: [],
     category: [],
     tags: []
   });
   const [showFilters, setShowFilters] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [recentSearches, setRecentSearches] = useState<any>([]);
   
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const searchRef = useRef<HTMLDivElement>(null);
@@ -267,7 +270,7 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent)  => {
+    const handleClickOutside = (event: anyMouseEvent)   => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
 <<<<<<< HEAD
         setIsOpen(false);
@@ -278,14 +281,14 @@ export function EnhancedSearch({
       try {;
         setRecentSearches(JSON.parse(saved));
       } catch (error) {
-        console.error('Failed to parse recent searches:', error);
+        console.error('Failed to parse recent searches: any', error);
       }
     }
   }, []);
 
   // Handle click outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {;
+  useEffect(()  => {
+    const handleClickOutside = (event: anyMouseEvent)  => {;
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -300,7 +303,7 @@ export function EnhancedSearch({
   // Handle keyboard navigation
   useEffect(() => {
 <<<<<<< HEAD
-    const handleKeyDown = (event: KeyboardEvent)  => {
+    const handleKeyDown = (event: anyKeyboardEvent)   => {
       if (event.key === 'Escape') {;
         setIsOpen(false)} else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {;
         event.preventDefault();
@@ -316,7 +319,7 @@ export function EnhancedSearch({
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const handleSearch = useCallback((searchQuery: string)  => {
+  const handleSearch = useCallback((searchQuery: anystring)   => {
     if (searchQuery.trim()) {;
       // Add to recent searches;
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -333,23 +336,23 @@ export function EnhancedSearch({
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [recentSearches]);
 
-  const handleResultClick = (result: SearchResult)  => {;
+  const handleResultClick = (result: anySearchResult)   => {;
     handleSearch(result.title);
     router(result.url);
 =======
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown = (event: anyKeyboardEvent)  => {;
       if (!isOpen) return;
 
       switch (event.key) {
         case 'ArrowDown':
           event.preventDefault();
           setSelectedIndex(prev = > ;
-            prev < results.length - 1 ? prev + 1 : prev;
+            prev < results.length - 1 ? prev + 1: anyprev;
           );
           break;
         case 'ArrowUp':
           event.preventDefault();
-          setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+          setSelectedIndex(prev  => prev > 0 ? prev - 1 : -1);
           break;
         case 'Enter':
           event.preventDefault();
@@ -420,14 +423,14 @@ export function EnhancedSearch({
     return () => clearTimeout(timeoutId);
   }, [query, filters, handleSearch]);
 
-  const handleResultClick = (result: SearchResult) => {;
+  const handleResultClick = (result: anySearchResult)  => {;
     router(result.url);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setIsOpen(false);
     setQuery('')};
 
 <<<<<<< HEAD
-  const toggleFilter = (filterType: keyof SearchFilter, value: string)  => {
+  const toggleFilter = (filterType: anykeyof SearchFilter, value: string)   => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -438,10 +441,10 @@ export function EnhancedSearch({
   const clearFilters = () => {;
     setFilters({ type[], category[], tags[] })};
 
-  const getTypeIcon = (type: string)  => {
+  const getTypeIcon = (type: anystring)   => {
     switch (type) {
 =======;
-  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
+  const toggleFilter = (filterType: anykeyof SearchFilter, value: string)  => {;
     setFilters(prev => ({;
       ...prev,;
       [filterType]: prev[filterType].includes(value);
@@ -454,7 +457,7 @@ export function EnhancedSearch({
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: string) => {;
+  const getTypeIcon = (type: anystring)  => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'service': return <Code className="h-4 w-4" />;

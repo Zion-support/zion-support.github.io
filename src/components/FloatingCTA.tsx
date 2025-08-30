@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  MessageCircle,
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { MessageCircle,
   X,
   ArrowRight,
   Phone,
@@ -97,9 +96,9 @@ import {
   Volume2,
   VolumeX
 <<<<<<< HEAD
-const FloatingCTA: React.FC = () => {
+const FloatingCTA: React.FC = (): JSX.Element => {
 =======
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const FloatingCTA: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -335,8 +334,8 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
               </div>
 
               {/* Contact Methods */}
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">
-                {contactMethods.map((method, index)  => (
+              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
+                {contactMethods.map((method, index)   => (
                   <motion.div
                     key={index}
                     initial = {

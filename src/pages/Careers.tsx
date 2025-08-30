@@ -1,16 +1,15 @@
 <<<<<<< HEAD
-import { Briefcase, Clock, Globe, GraduationCap, Heart, Mail, MapPin, MapPinIcon, Phone, Users, Zap import { useState } from 'react';
+import { Briefcase, Clock, Globe, GraduationCap, Heart, Mail, MapPin, MapPinIcon, Phone, Users, Zap import { useState  } from 'react.ts';
 
-export default function Careers() {
+export default function Careers(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Briefcase, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Briefcase, 
   Users, 
   Globe, 
   Zap, 
@@ -39,14 +38,14 @@ import {
   Phone,
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   ExternalLink
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+ } from 'lucide-react.ts';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 
-const Careers: React.FC = () => {
+const Careers: React.FC = (): JSX.Element => {
 <<<<<<< HEAD
-  const [expandedJob, setExpandedJob] = useState<string | null>(null);
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
+  const [expandedJob, setExpandedJob] = useState<any>(null);
+  const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const departments = [
@@ -236,18 +235,17 @@ const Careers: React.FC = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Positions', count: jobListings.length },
-    { id: 'ai', name: 'AI & ML', count: jobListings.filter(job => job.category === 'ai').length },
-    { id: 'security', name: 'Security', count: jobListings.filter(job => job.category === 'security').length },
-    { id: 'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job => job.category === 'cloud').length },
-    { id: 'engineering', name: 'Engineering', count: jobListings.filter(job => job.category === 'engineering').length },
-    { id: 'data', name: 'Data & Analytics', count: jobListings.filter(job => job.category === 'data').length },
-    { id: 'product', name: 'Product', count: jobListings.filter(job => job.category === 'product').length }
+    { id: any'all', name: 'All Positions', count: jobListings.length },
+    { id: 'ai', name: 'AI & ML', count: jobListings.filter(job  => job.category === 'ai').length },
+    { id: any'security', name: 'Security', count: jobListings.filter(job  => job.category === 'security').length },
+    { id: any'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job  => job.category === 'cloud').length },
+    { id: any'engineering', name: 'Engineering', count: jobListings.filter(job  => job.category === 'engineering').length },
+    { id: any'data', name: 'Data & Analytics', count: jobListings.filter(job  => job.category === 'data').length },
+    { id: any'product', name: 'Product', count: jobListings.filter(job  => job.category === 'product').length }
   ];
 
   const filteredJobs = selectedCategory === 'all'
-    ? jobListings
-    : jobListings.filter(job => job.category === selectedCategory);
+    ? jobListings: anyjobListings.filter(job  => job.category === selectedCategory);
 
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   const companyValues = [
@@ -275,8 +273,7 @@ const Careers: React.FC = () => {
   ];
 
   const filteredJobs = selectedDepartment === 'all' 
-    ? jobListings 
-    : jobListings.filter(job => job.department === selectedDepartment);
+    ? jobListings: anyjobListings.filter(job  => job.department === selectedDepartment);
 =======
       icon: Shield,
       title: "Security & Trust",
@@ -358,7 +355,7 @@ const Careers: React.FC = () => {
   ];
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: anystring)  => {
     switch (categoryId) {
       case 'ai':
         return Brain;
@@ -377,7 +374,7 @@ const Careers: React.FC = () => {
     }
   };
 
-  const getCategoryName = (categoryId: string) => {
+  const getCategoryName = (categoryId: anystring)  => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
@@ -466,8 +463,8 @@ const Careers: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {companyValues.map((value, index)  => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -668,8 +665,8 @@ const Careers: React.FC = () => {
 
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                        {job.benefits.map((benefit, idx) => (
+                      <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-3">
+                        {job.benefits.map((benefit, idx)  => (
                           <div key={idx} className="flex items-center gap-2 text-gray-300">
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                             <span>{benefit}</span>
@@ -731,7 +728,7 @@ const Careers: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 step: '1',
@@ -753,7 +750,7 @@ const Careers: React.FC = () => {
                 title: 'Offer',
                 description: 'Receive your offer and join the Zion Tech family'
               }
-            ].map((step, index) => (
+            ].map((step, index)  => (
               <motion.div
                 key={step.step}
                 initial={{ opacity: 0, y: 20 }}
@@ -837,8 +834,8 @@ const Careers: React.FC = () => {
                 </p>
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {filteredJobs.map((job, index) => (
+              <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+                {filteredJobs.map((job, index)  => (
                   <motion.div
                     key={job.id}
                     initial={{ opacity: 0, y: 30 }}
@@ -985,8 +982,8 @@ const Careers: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {companyValues.map((value, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {companyValues.map((value, index)  => (
                 <motion.div
                   key={value.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1033,8 +1030,8 @@ const Careers: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, y: 30 }}

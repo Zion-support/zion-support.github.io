@@ -1,5 +1,6 @@
 export interface NextGenAIService {
 
+
   id: string;
   title: string;
   description: string;
@@ -10,11 +11,12 @@ export interface NextGenAIService {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
+pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+custom: string;
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -381,14 +383,14 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 <<<<<<< HEAD
-export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[]  => {
+export const getNextGenAIServicesByCategory = (category: anystring): NextGenAIService[]   => {
   if (category === 'All') {;
     return NEXT_GEN_AI_SERVICES_2025};
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
 export const getAllNextGenAIServices = (): NextGenAIService[] => {;
   return NEXT_GEN_AI_SERVICES_2025};
 =======
-export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[] => {;
+export const getNextGenAIServicesByCategory = (category: anystring): NextGenAIService[]  => {;
   if (category === 'All') {;
     return NEXT_GEN_AI_SERVICES_2025;
 

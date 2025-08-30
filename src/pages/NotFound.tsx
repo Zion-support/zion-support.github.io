@@ -1,11 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 <<<<<<< HEAD
-import { Home, ArrowLeft, Search, Mail, Phone export default function NotFound() {
+import { Home, ArrowLeft, Search, Mail, Phone export default function NotFound(...args: any[]): any {
 =======
-import { motion } from 'framer-motion';
-import { 
-  Home, 
+import { motion  } from 'framer-motion.ts';
+import { Home, 
   Search, 
   MapPin, 
   ArrowRight, 
@@ -42,9 +41,9 @@ import {
   Network,
   Clock,
   Globe
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function NotFound() {
+export default function NotFound(...args: any[]): any {
   const popularPages = [
     { name: 'Home', path: '/', icon: Home, description: 'Main landing page' },
     { name: 'Services', path: '/services', icon: Zap, description: 'All our services' },
@@ -199,8 +198,8 @@ export default function NotFound() {
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Explore Our Services
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, categoryIndex) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {serviceCategories.map((category, categoryIndex)  => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}

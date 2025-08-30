@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp const AIHealthcareAnalyticsPlatform: React.FC = () => {
+import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 =======
 import { 
   Heart, 
@@ -323,7 +323,7 @@ import {
   CloudHail10,
   CloudSnow10,
   CloudSleet10
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const AIHealthcareAnalyticsPlatform = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -657,14 +657,14 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
 =======
       {/* Key Metrics Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {keyMetrics.map((item, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {keyMetrics.map((item, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -713,9 +713,9 @@ const AIHealthcareAnalyticsPlatform = () => {
 =======
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            {features.map((feature, index) => (
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -757,8 +757,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -791,8 +791,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -825,8 +825,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {complianceStandards.map((standard, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-4">
+            {complianceStandards.map((standard, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -859,13 +859,13 @@ const AIHealthcareAnalyticsPlatform = () => {
 <<<<<<< HEAD
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)  => (
 =======
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -963,8 +963,8 @@ const AIHealthcareAnalyticsPlatform = () => {
 <<<<<<< HEAD
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -1004,8 +1004,8 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
           
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

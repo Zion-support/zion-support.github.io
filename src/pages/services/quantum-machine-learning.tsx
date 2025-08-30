@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react.ts';
 import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, Globe, Users, Cpu, Network, BarChart3, Activity, Atom, Rocket const QuantumMachineLearning: React.FC = () => {
+import { motion  } from 'framer-motion.ts';
+import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, Globe, Users, Cpu, Network, BarChart3, Activity, Atom, Rocket const QuantumMachineLearning: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -180,8 +180,8 @@ import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, G
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -262,8 +262,8 @@ import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, G
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {applications.map((application, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {applications.map((application, index)  => (
               <motion.div
                 key={application.title}
                 initial = {

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 import {
   Brain,
   Cloud,
@@ -17,7 +17,7 @@ import {
   DollarSign,
   Gauge,
   HelpCircle
-export function ServicesShowcase() {
+export function ServicesShowcase(...args: any[]): any {
   const services = [
     {
       icon: Brain,
@@ -218,14 +218,16 @@ export function ServicesShowcase() {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '@/data/innovativeMicroSaasServices2025';
 
-interface ServiceShowcaseProps {
+interface ServiceShowcaseProps extends React.PropsWithChildren<{}> {
+
   className?: string;
+
 }
 
-export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+export function ServicesShowcase(...args: any[]): any {
+  const [expandedCategories, setExpandedCategories] = useState<any>([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025];
@@ -238,9 +240,9 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
     }
     acc[category].push(service);
     return acc;
-  }, {} as Record<string, typeof allServices>);
+  }, {} as Record<string, any>);
 
-  const toggleCategory = (category: string) => {
+  const toggleCategory = (category: anystring)  => {
     setExpandedCategories(prev =>
       prev.includes(category)
         ? prev.filter(c => c !== category)
@@ -274,7 +276,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
     }
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     const colors = {
       'AI & Machine Learning': 'from-zion-purple to-zion-purple-dark',
       'Cloud & DevOps': 'from-zion-cyan to-zion-cyan-dark',
@@ -287,8 +289,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
   };
 
   const filteredServices = selectedCategory === 'all'
-    ? allServices
-    : allServices.filter(service =>
+    ? allServices: anyallServices.filter(service  =>
         service.category.toLowerCase().includes(selectedCategory.toLowerCase())
       );
 
@@ -364,10 +365,10 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
 <<<<<<< HEAD
 
-          {services.map((service, index) => (
+          {services.map((service, index)  => (
 =======
         >
           {filteredServices.map((service, index) => (

@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react.ts';
 
-import { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
+import { useState  } from 'react.ts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Input  } from '@/components/ui/input';
+import { Button  } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components/ui/table';
+import { Badge  } from '@/components/ui/badge';
 <<<<<<< HEAD
-import { Search, Filter import { SEO } from "@/components/SEO";
+import { Search, Filter import { SEO  } from '@/components/SEO';
 =======
-import { Search, Filter } from "lucide-react";
+import { Search, Filter  } from 'lucide-react.ts';
 import SEO from "@/components/SEO";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -106,11 +106,11 @@ const MOCK_SUPPORT_REQUESTS = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export default function SupportRequests() {
+export default function SupportRequests(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [statusFilter, setStatusFilter] = useState<any>(null);
+  const [priorityFilter, setPriorityFilter] = useState<any>(null);
+  const [categoryFilter, setCategoryFilter] = useState<any>(null);
 
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
@@ -240,12 +240,12 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: ) => setSearchQuery(e.target.value)}
+                  onChange={(e: any)  => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
 
-              <Select value={statusFilter || ""} onValueChange={(value: string) => setStatusFilter(value || null)}>
+              <Select value={statusFilter || ""} onValueChange={(value: anystring)  => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -257,7 +257,7 @@ export default function SupportRequests() {
                 </SelectContent>
               </Select>
 
-              <Select value={priorityFilter || ""} onValueChange={(value: string) => setPriorityFilter(value || null)}>
+              <Select value={priorityFilter || ""} onValueChange={(value: anystring)  => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -269,7 +269,7 @@ export default function SupportRequests() {
                 </SelectContent>
               </Select>
 
-              <Select value={categoryFilter || ""} onValueChange={(value: string) => setCategoryFilter(value || null)}>
+              <Select value={categoryFilter || ""} onValueChange={(value: anystring)  => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>

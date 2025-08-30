@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { Logo  } from '@/components/header/Logo';
+import { PointsBadge  } from '@/components/loyalty/PointsBadge';
+import { UserMenu  } from '@/components/header/UserMenu';
+import { LanguageSelector  } from '@/components/header/LanguageSelector';
+import { ModeToggle  } from '@/components/ModeToggle';
+import { useAuth  } from '@/hooks/useAuth';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { useMessaging  } from '@/context/MessagingContext';
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions  } from '@/data/marketplaceData';
+import { slugify  } from '@/lib/slugify';
+import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+import { Menu, X, ShoppingCart import { useTranslation  } from 'react-i18next.ts';
+import { useSelector  } from 'react-redux.ts';
 import type { RootState } from '@/store';
 
 <<<<<<< HEAD
-export function PrimaryNav(...args[]):  {
+export function PrimaryNav(...args[]: any):  {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
   const isMobile = useIsMobile();
@@ -34,11 +34,11 @@ export function PrimaryNav(...args[]):  {
     unreadCount = messaging.unreadCount} catch {
     // context not available
 
-  const cartCount = useSelector((s: RootState)  =>;
+  const cartCount = useSelector((s: anyRootState)   =>;
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0),;
   );
 
-  const handleSubmit = (e: React.FormEvent)  => {;
+  const handleSubmit = (e: anyReact.FormEvent)   => {;
     e.preventDefault();
     if (query.trim()) {
 <<<<<<< HEAD

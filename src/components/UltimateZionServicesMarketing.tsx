@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
 
-const UltimateZionServicesMarketing: React.FC = () => {;
+const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -71,7 +71,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
     };
   ];
 
-  const getServicesByCategory = (categoryId: string) => {;
+  const getServicesByCategory = (categoryId: anystring)  => {;
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId);
   };
@@ -300,9 +300,9 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 }} 
-            transition={{ duration: 0.6 }}
+            transition={{ duration: any0.6 }}
           >
-            {categories.map((category) => (
+            {categories.map((category)  => (
               <button 
                 key={category.id} 
                 onClick={() => setSelectedCategory(category.id)} 
@@ -423,9 +423,9 @@ const UltimateZionServicesMarketing: React.FC = () => {;
             }} 
             initial="hidden" 
             whileInView="visible" 
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {selectedServices.map((service, index) => (
+            {selectedServices.map((service, index)  => (
               <motion.div 
                 key={service.id} 
                 variants = {

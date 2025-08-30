@@ -1,13 +1,13 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
+import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = (): JSX.Element => {
+=======
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud   } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const PricingSection: React.FC = (): JSX.Element => {
@@ -123,7 +123,7 @@ const pricingTiers = [
 ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export function PricingSection() {
+export function PricingSection(...args: any[]): any {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -168,8 +168,8 @@ export function PricingSection() {
         </motion.div>
 
 <<<<<<< HEAD
-        <div className="grid md: grid-cols-3 gap-8 mb-12">;
-          {plans.map((plan, index)  => {;
+        <div className="grid md: anygrid-cols-3 gap-8 mb-12">;
+          {plans.map((plan, index)   => {;
             const IconComponent = plan.icon;
             return (
               <motion.div
@@ -199,8 +199,8 @@ export function PricingSection() {
                       Most Popular
                     </span>
 =======
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingTiers.map((tier, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pricingTiers.map((tier, index)  => (
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}

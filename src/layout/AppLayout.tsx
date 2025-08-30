@@ -1,13 +1,13 @@
 <<<<<<< HEAD
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-export function AppLayout({ children }: { children: React.ReactNode }) {
+import { Header  } from '../components/Header';
+import { Footer  } from '../components/Footer';
+export function AppLayout(...args: any[]): any {
 =======
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Header  } from "../components/Header";
-import { Footer  } from "../components/Footer";
-export function AppLayout(...args[]):  {
+import { Header   } from '../components/Header';
+import { Footer   } from '../components/Footer';
+export function AppLayout(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	return (
 		<div className = "min-h-screen bg-black text-white">
@@ -17,10 +17,10 @@ export function AppLayout(...args[]):  {
 		</div>
 	)};
 =======;
-import React from 'react';
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-export function AppLayout({ children }: { children: React.ReactNode }) {
+import React from 'react.ts';
+import { Header  } from '../components/Header';
+import { Footer  } from '../components/Footer';
+export function AppLayout(...args: any[]): any {
 	return (
 		<div className = "min-h-screen bg-black text-white">;
 			<main className="pt-20">;

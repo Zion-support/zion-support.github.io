@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICybersecurity() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICybersecurity(...args: any[]): any {
   const features = [
     'AI-powered cybersecurity optimization',
     'Intelligent threat detection and response',
@@ -27,11 +27,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$3,499/mo',
       details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support']
 =======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Shield, 
   Brain, 
   Eye, 
   Lock, 
@@ -52,10 +51,10 @@ import {
   Fingerprint,
   Key,
   Search
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function AICybersecurity() {
+export default function AICybersecurity(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -194,8 +193,8 @@ export default function AICybersecurity() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -231,8 +230,8 @@ export default function AICybersecurity() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -275,8 +274,8 @@ export default function AICybersecurity() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

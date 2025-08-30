@@ -1,17 +1,21 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useCallback, useState } from 'react.ts';
 
-interface BundleAnalyzerProps {
+interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
   showUI?: boolean;
+
 }
 
 interface BundleMetrics {
+
   totalSize: number;
   chunkCount: number;
-  largestChunk: {
+largestChunk: {;
     name: string;
     size: number;
-  };
+  
+};
   averageChunkSize: number;
   gzipSavings: number;
 }
@@ -20,7 +24,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
   enabled = true,
   showUI = false
 }) => {
-  const [metrics, setMetrics] = useState<BundleMetrics>({
+  const [metrics, setMetrics] = useState<any>({
     totalSize: 0,
     chunkCount: 0,
     largestChunk: { name: '', size: 0 },
@@ -39,9 +43,9 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       // Calculate bundle metrics
       let totalSize = 0;
       let chunkCount = 0;
-      let largestChunk = { name: '', size: 0 };
+      let largestChunk = { name: any'', size: 0 };
       
-      resourceEntries.forEach((entry: any) => {
+      resourceEntries.forEach((entry: )  => {
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
           const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size;
@@ -115,13 +119,13 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     // Apply optimizations
     optimizations.forEach(optimization => {
-      console.log(`🔧 Optimization: ${optimization}`);
+      console.log(`🔧 Optimization: any${optimization}`);
     });
 
     return optimizations;
   }, [enabled, metrics]);
 
-  useEffect(() => {
+  useEffect(()  => {
     if (!enabled) return;
 
     // Analyze bundle after page load

@@ -1,20 +1,22 @@
 <<<<<<< HEAD
-interface ButtonProps {
-=======
-import React from 'react.ts';
 interface ButtonProps extends React.PropsWithChildren<{}> {
 
+=======
+import React from 'react.ts';
+interface ButtonProps extends React.PropsWithChildren<{
+}> {
+
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  children: React.ReactNode;
+  children: anyReact.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
-  onClick?: ()  => void;
+  onClick?: ()   => void;
   type?: 'button' | 'submit' | 'reset';
 <<<<<<< HEAD
   disabled?: boolean}
-export function Button(...args[]):  {
+export function Button(...args[]: any):  {
 =======
   disabled?: boolean;
 <<<<<<< HEAD
@@ -22,16 +24,7 @@ export function Button(...args[]):  {
 =======
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export function Button({
-  children,
-  variant = 'default',
-  size = 'md',
-  asChild = false,
-  className = '',
-  onClick,
-  type = 'button',
-  disabled = false
-}: ButtonProps) {
+export function Button(...args: any[]): any {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',

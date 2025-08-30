@@ -1,30 +1,30 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { useNavigate, Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { DollarSign import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
-=======
 import React, { useState } from 'react.ts';
 import { useNavigate, Link  } from 'react-router-dom.ts';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { ProductListing  } from '@/types/listings';
-import { DollarSign  } from 'lucide-react';
-import { RatingStars  } from '@/components/RatingStars';
+import { DollarSign import { RatingStars  } from '@/components/RatingStars';
 import { FavoriteButton  } from '@/components/FavoriteButton';
 import { useDispatch  } from 'react-redux.ts';
+=======
+import React, { useState } from 'react.ts';
+import { useNavigate, Link   } from 'react-router-dom.ts';
+import { Badge   } from '@/components/ui/badge';
+import { Button   } from '@/components/ui/button';
+import { ProductListing   } from '@/types/listings';
+import { DollarSign   } from 'lucide-react.ts';
+import { RatingStars   } from '@/components/RatingStars';
+import { FavoriteButton   } from '@/components/FavoriteButton';
+import { useDispatch   } from 'react-redux.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
+import { addItem  } from '@/store/cartSlice';
 ; // Import next/image
 
-  listing: ProductListing;
+  listing: anyProductListing;
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string)  => void;
+  onRequestQuote?: (id: string)   => void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
@@ -36,12 +36,7 @@ import { addItem } from '@/store/cartSlice';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-export function ProductListingCard({
-  listing,
-  view = 'grid',;
-  onRequestQuote,;
-  detailBasePath = '/marketplace/listing';
-}: ProductListingCardProps) {;
+export function ProductListingCard(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const isGrid = view === 'grid';
   const navigate = useNavigate();
@@ -77,7 +72,7 @@ export function ProductListingCard({
     navigate(`${detailBasePath}/${listing.id}`);
   };
 
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote = (e: anyReact.MouseEvent)  => {
     e.preventDefault();
     e.stopPropagation();
 

@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain,
   Cpu,
   Cloud,
   Shield,
@@ -29,18 +28,19 @@ import {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
- } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-import { EXPANDED_INNOVATIVE_SERVICES_2025  } from "../data/expandedInnovativeServices2025";
-import { EMERGING_TECH_SERVICES_2025  } from "../data/emergingTechServices2025";
+  } from 'lucide-react.ts';
+import { Link   } from 'react-router-dom.ts';
+import { EXPANDED_INNOVATIVE_SERVICES_2025   } from '../data/expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025   } from '../data/emergingTechServices2025';
 =======
 } from 'lucide-react';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { Link } from 'react-router-dom';
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
+import { Link  } from 'react-router-dom.ts';
+import { EXPANDED_INNOVATIVE_SERVICES_2025  } from '../data/expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface Service {
+
 
   id: string;
   title: string;
@@ -60,10 +60,11 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
-    website: string};
+website: string;
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -80,14 +81,14 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
   };
 <<<<<<< HEAD
 
-const ComprehensiveServicesShowcase: React.FC = () => {
+const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
 =======
 }
-const ComprehensiveServicesShowcase: React.FC = () => {;
+const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   // Combine all services
   const allServices: Service[] = [
@@ -114,7 +115,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anystring)   => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Customer Experience':;
@@ -160,7 +161,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 <<<<<<< HEAD
-  const getInnovationLevelColor = (level: string) => {;
+  const getInnovationLevelColor = (level: anystring)  => {;
     switch (level) {;
       case 'Cutting-edge':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -262,13 +263,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
 
-                {categories.map(category => (
-=======
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
                 {categories.map(category  => (
+=======
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {categories.map(category   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
@@ -283,13 +284,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
 
-                {innovationLevels.map(level => (
-=======
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
                 {innovationLevels.map(level  => (
+=======
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {innovationLevels.map(level   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={level} value={level}>
                     {level === 'all' ? 'All Levels' : level}
@@ -303,8 +304,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 initial = {

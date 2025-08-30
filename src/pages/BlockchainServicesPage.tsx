@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Link,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link,
   Coins,
   Shield,
   Zap,
@@ -27,7 +26,7 @@ import {
 <<<<<<< HEAD
 const BlockchainServicesPage = () => {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 const BlockchainServicesPage = () => {;
@@ -169,19 +168,18 @@ const BlockchainServicesPage = () => {;
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', count: blockchainServices.length },
+    { id: any'all', name: 'All Services', count: blockchainServices.length },
 <<<<<<< HEAD
-    { id: 'Development', name: 'Development', count: blockchainServices.filter(s  => s.category === 'Development').length },
-    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
-    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
-    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
-    { id: 'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },;
-    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length };
+    { id: 'Development', name: 'Development', count: blockchainServices.filter(s   => s.category === 'Development').length },
+    { id: any'DeFi', name: 'DeFi', count: blockchainServices.filter(s   => s.category === 'DeFi').length },
+    { id: any'NFTs', name: 'NFTs', count: blockchainServices.filter(s   => s.category === 'NFTs').length },
+    { id: any'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s   => s.category === 'Enterprise').length },
+    { id: any'Security', name: 'Security', count: blockchainServices.filter(s   => s.category === 'Security').length },;
+    { id: any'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s   => s.category === 'Interoperability').length };
   ];
 
   const filteredServices = selectedCategory === 'all'
-    ? blockchainServices
-    : blockchainServices.filter(service => service.category === selectedCategory);
+    ? blockchainServices: anyblockchainServices.filter(service  => service.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
@@ -261,8 +259,8 @@ const BlockchainServicesPage = () => {;
       {/* Services Grid */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {filteredServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 initial = {
@@ -380,7 +378,7 @@ const BlockchainServicesPage = () => {;
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: Shield,
@@ -413,7 +411,7 @@ const BlockchainServicesPage = () => {;
                 description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
 <<<<<<< HEAD
 
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
 =======
               }
             ].map((feature, index)  => (

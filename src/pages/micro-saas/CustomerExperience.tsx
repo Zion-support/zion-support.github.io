@@ -1,13 +1,13 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap export default function CustomerExperience() {
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react';
+import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap export default function CustomerExperience(...args: any[]): any {
+=======
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap   } from 'lucide-react.ts';
 
-export default function CustomerExperience(...args[]):  {
+export default function CustomerExperience(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
@@ -169,8 +169,8 @@ export default function CustomerExperience(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -253,8 +253,8 @@ export default function CustomerExperience(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {capabilities.map((capability, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)   => (
               <motion.div
                 key={capability.title}
                 initial = {

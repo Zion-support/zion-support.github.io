@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO   } from '@/components/SEO';
 
 type Service = {;
   name: string;
@@ -42,7 +42,7 @@ const services: Service[] = [
 ];
 
 <<<<<<< HEAD
-const groupByCategory = (items: Service[]) => items.reduce<Record<string, Service[]>>((acc, s) => {;
+const groupByCategory = (items: anyService[])  => items.reduce<Record<string, any>>((acc, s) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   (acc[s.category] = acc[s.category] || []).push(s);
 <<<<<<< HEAD
@@ -53,7 +53,7 @@ const groupByCategory = (items: Service[]) => items.reduce<Record<string, Servic
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-const ServicesCatalog: React.FC = () => {;
+const ServicesCatalog: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const grouped = groupByCategory(services);
   return (
@@ -69,8 +69,8 @@ const ServicesCatalog: React.FC = () => {;
         {Object.entries(grouped).map(([category, list]) => (
           <div key={category}>
             <h2 className="text-2xl font-semibold mb-4">{category}</h2>
-            <div className="grid md: grid-cols-3 gap-6">
-              {list.map(item  => (
+            <div className="grid md: anygrid-cols-3 gap-6">
+              {list.map(item   => (
                 <a key={item.name} href={`https://ziontechgroup.com${item.path}`} className="block p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
                   <h3 className="font-semibold text-lg mb-1">{item.name}</h3>
                   <p className="text-slate-300 text-sm mb-3">{item.summary}</p>

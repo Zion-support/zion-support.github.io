@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React from 'react.ts';
+import { Route, Routes  } from 'react-router-dom.ts';
 import NotFound from "@/pages/NotFound";
 
 <<<<<<< HEAD

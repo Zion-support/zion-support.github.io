@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 =======
-import React from 'react';
-import { SEO } from '../components/SEO';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export default function CaseStudies() {
+export default function CaseStudies(...args: any[]): any {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <SEO title="Case Studies - Zion Tech Group" description="Client success stories and outcomes." />

@@ -3,6 +3,7 @@
 
 export interface PricingTier {
 
+
   name: string;
   price: number;
   currency: string;
@@ -18,10 +19,12 @@ export interface PricingTier {
   setupTime: string;
   supportLevel: string;
   innovationLevel: string;
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ServicePricing {
+
   id: string;
   title: string;
   description: string;
@@ -32,12 +35,13 @@ export interface ServicePricing {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
     address: string;
-  };
+  
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];

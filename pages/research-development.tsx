@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket export default function ResearchDevelopment() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket  } from 'lucide-react'
+import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket export default function ResearchDevelopment(...args: any[]): any {
+=======
+import React from 'react.ts'
+import { Link   } from 'react-router-dom.ts'
+import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket   } from 'lucide-react.ts'
 
 
-export default function ResearchDevelopment(...args[]):  {
+export default function ResearchDevelopment(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const researchAreas = [
 		{
@@ -128,8 +128,8 @@ export default function ResearchDevelopment(...args[]):  {
 							We concentrate our efforts on technologies that will shape the future of business
 						</p>
 					</div>
-					<div className="grid gap-8 lg:grid-cols-3">
-						{researchAreas.map((area, index) => {
+					<div className="grid gap-8 lg: anygrid-cols-3">
+						{researchAreas.map((area, index)  => {
 							const IconComponent = area.icon
 							const colorClasses = {
 								blue: 'bg-blue-100 text-blue-600',

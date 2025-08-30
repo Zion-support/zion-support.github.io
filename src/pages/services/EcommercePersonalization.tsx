@@ -1,13 +1,13 @@
 // removed duplicate old section
 
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3 const EcommercePersonalization: React.FC = () => {
-=======
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
+import { ShoppingCart, Sparkles, CheckCircle, BarChart3 const EcommercePersonalization: React.FC = (): JSX.Element => {
+=======
+import React from 'react.ts';
+import { SEO   } from '@/components/SEO';
+import { ShoppingCart, Sparkles, CheckCircle, BarChart3   } from 'lucide-react.ts';
 
 const EcommercePersonalization: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain,
   Shield,
   Cloud,
   Zap,
@@ -12,8 +11,8 @@ import {
   Mail,
   MapPin,
 =======
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useEffect  } from 'react.ts';
+import { motion   } from 'framer-motion.ts';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -33,25 +32,25 @@ import { Brain,
   DollarSign,
   Search
 <<<<<<< HEAD
-import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
+import { innovativeAIServices2030  } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030  } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030  } from '../data/innovativeCloudDevOpsServices2030';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { innovativeAIServices2030  } from "../data/innovativeAIServices2030";
-import { innovativeCybersecurityServices2030  } from "../data/innovativeCybersecurityServices2030";
-import { innovativeCloudDevOpsServices2030  } from "../data/innovativeCloudDevOpsServices2030";
+import { innovativeAIServices2030   } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030   } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030   } from '../data/innovativeCloudDevOpsServices2030';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
 =======;
 } from 'lucide-react';
-import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
-import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
-import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
+import { innovativeAIServices2030  } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030  } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030  } from '../data/innovativeCloudDevOpsServices2030';
 
-const InnovativeServicesShowcase2030: React.FC = () => {;
+const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -189,8 +188,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 initial = {
@@ -406,7 +405,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Award,
@@ -429,7 +428,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 description: "Round-the-clock technical support and consultation"
 <<<<<<< HEAD
 
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
 =======
               }
             ].map((feature, index)  => (

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Zap, 
@@ -45,13 +44,13 @@ import {
   Pause,
   Volume2,
   VolumeX
-} from 'lucide-react';
-import { innovativeMicroSAASServices2029 } from '../../data/innovative-micro-saas-2029';
+ } from 'lucide-react.ts';
+import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
 
-export default function InnovativeServicesShowcase2029() {
+export default function InnovativeServicesShowcase2029(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
@@ -237,12 +236,12 @@ export default function InnovativeServicesShowcase2029() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className={`grid gap-6 ${
               viewMode === 'grid' 
-                ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+                ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}
           >
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

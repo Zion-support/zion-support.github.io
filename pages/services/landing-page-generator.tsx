@@ -1,7 +1,7 @@
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
 
-export default function LandingPageGenerator(...args[]):  {
+export default function LandingPageGenerator(...args[]: any):  {
   return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>

@@ -1,13 +1,11 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-  innovativeMicroSaasServices2031,
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { innovativeMicroSaasServices2031,
   innovativeITInfrastructureServices2031,
   innovativeAIServices2031
-} from '../src/data/innovativeServices2031';
-import {
-  Brain,
+ } from '../src/data/innovativeServices2031';
+import { Brain,
   Cloud,
   CheckCircle,
   TrendingUp,
@@ -19,12 +17,11 @@ import { innovativeMicroSaasServices2031,
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
 <<<<<<< HEAD
- } from "../src/data/innovativeServices2031";
+  } from '../src/data/innovativeServices2031';
 import { Brain, 
 =======
-} from "../src/data/innovativeServices2031";
-import { 
-  Brain, 
+ } from '../src/data/innovativeServices2031';
+import { Brain, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Cloud, 
   CheckCircle, 
@@ -41,17 +38,17 @@ import {
   Award,
   Clock
 <<<<<<< HEAD
-const InnovativeServicesShowcase2031: React.FC = () => {
+const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
   const scrollToContact = () => {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {;
   const scrollToContact = () => {;
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
 =======
-const InnovativeServicesShowcase2031: React.FC = () => {;
+const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {;
   const scrollToContact = () => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });

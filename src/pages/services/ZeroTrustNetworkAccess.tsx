@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react.ts';
 <<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import {
-  Shield,
+import { Link  } from 'react-router-dom.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Shield,
   Lock,
   Users,
   Globe,
   Zap,
   CheckCircle,
 =======
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Lock, 
   Eye, 
   CheckCircle, 
@@ -41,7 +39,7 @@ import {
   Building,
   Cloud,
   Wifi
-const ZeroTrustNetworkAccess: React.FC = () => {
+const ZeroTrustNetworkAccess: React.FC = (): JSX.Element => {
 =======
   Monitor,
   AlertTriangle,
@@ -50,7 +48,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
   Server,
   Database,
   Smartphone
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const ZeroTrustNetworkAccess = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -301,8 +299,8 @@ const ZeroTrustNetworkAccess = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/40 transition-all duration-300">
                   <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-3 rounded-lg w-fit mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -354,8 +352,8 @@ const ZeroTrustNetworkAccess = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial = {
@@ -438,8 +436,8 @@ const ZeroTrustNetworkAccess = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityLayers.map((layer, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {securityLayers.map((layer, index)  => (
               <motion.div
                 key={index}
                 initial = {
@@ -624,8 +622,8 @@ const ZeroTrustNetworkAccess = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {securityBenefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {securityBenefits.map((benefit, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <div className="flex items-center mb-4">
                     <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-3 rounded-lg mr-4">
@@ -672,8 +670,8 @@ const ZeroTrustNetworkAccess = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial = {
@@ -733,8 +731,8 @@ const ZeroTrustNetworkAccess = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {useCases.map((useCase, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-3 rounded-lg w-fit mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -766,8 +764,8 @@ const ZeroTrustNetworkAccess = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {complianceFeatures.map((feature, index) => (
+            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+              {complianceFeatures.map((feature, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-purple-400/40 transition-all duration-300">
                   <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <span className="text-white font-medium text-sm">{feature}</span>
@@ -789,8 +787,8 @@ const ZeroTrustNetworkAccess = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular
                     ? 'border-purple-400 bg-gradient-to-br from-purple-600/20 to-blue-600/20'

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion.ts';
 import { Brain, 
   Shield, 
   Zap, 
@@ -29,9 +29,9 @@ import { Brain,
   Mail,
   MapPin,
   ExternalLink
- } from 'lucide-react';
-import { INNOVATIVE_SERVICES  } from "../data/servicesData";
-export default function InnovativeServicesShowcase2026(...args[]):  {
+  } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES   } from '../data/servicesData';
+export default function InnovativeServicesShowcase2026(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -58,16 +58,15 @@ export default function InnovativeServicesShowcase2026(...args[]):  {
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
 =======
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
+import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026  } from '../data/innovativeMicroSaasServices2026';
 
-const InnovativeServicesShowcase2026: React.FC = () => {
+const InnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
 =======
-import {
-  Brain,
+import { Brain,
   Shield,
   Zap,
   Cloud,
@@ -95,9 +94,9 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { INNOVATIVE_SERVICES } from '../data/servicesData';
-export default function InnovativeServicesShowcase2026() {
+ } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES  } from '../data/servicesData';
+export default function InnovativeServicesShowcase2026(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
@@ -137,7 +136,7 @@ export default function InnovativeServicesShowcase2026() {
     return filtered;
   }, [searchQuery, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
     switch (category) {;
       case 'AI & Automation':;
         return <Cpu className="w-5 h-5" />;
@@ -176,7 +175,7 @@ export default function InnovativeServicesShowcase2026() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getInnovationBadge = (level: string) => {
+  const getInnovationBadge = (level: anystring)  => {
     const colors = {
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
       'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;
@@ -326,14 +325,14 @@ export default function InnovativeServicesShowcase2026() {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                  className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
+                  className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
 
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
 =======
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {categories.map(category  => (
+                  {categories.map(category   => (
                     <option key={category.id} value={category.id}>{category.name}</option>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   ))}
@@ -366,8 +365,8 @@ export default function InnovativeServicesShowcase2026() {
         animate="visible"
       >
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial = {

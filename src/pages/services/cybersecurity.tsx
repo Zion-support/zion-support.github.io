@@ -1,7 +1,6 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { Shield, 
   Brain, 
   Zap, 
   Users, 
@@ -11,9 +10,9 @@ import {
   BarChart3,
   AlertTriangle,
   Eye
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Cybersecurity() {
+export default function Cybersecurity(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO 

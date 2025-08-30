@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Sparkles,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Sparkles,
   Users,
   Target,
   CheckCircle,
@@ -39,13 +38,13 @@ import {
   Network,
   Settings as SettingsIcon
 <<<<<<< HEAD
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const Match: React.FC = () => {;
+const Match: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -310,8 +309,8 @@ const Match: React.FC = () => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial = {
@@ -487,7 +486,7 @@ const Match: React.FC = () => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
                 step: "01",
@@ -507,7 +506,7 @@ const Match: React.FC = () => {;
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
 
-            ].map((step, index) => (
+            ].map((step, index)  => (
               <motion.div
                 key={index}
                 initial = {

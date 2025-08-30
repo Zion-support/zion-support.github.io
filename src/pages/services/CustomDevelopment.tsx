@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Code,
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Code,
   Smartphone,
   Globe,
   Database,
@@ -25,11 +24,11 @@ import {
   Cpu,
   Network
 <<<<<<< HEAD
-export default function CustomDevelopment() {
+export default function CustomDevelopment(...args: any[]): any {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
-export default function CustomDevelopment(...args[]):  {
+export default function CustomDevelopment(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const services = [
     {
@@ -239,8 +238,8 @@ export default function CustomDevelopment(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
@@ -345,8 +344,8 @@ export default function CustomDevelopment(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
@@ -441,8 +440,8 @@ export default function CustomDevelopment(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -531,8 +530,8 @@ export default function CustomDevelopment(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {industries.map((industry, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
@@ -616,13 +615,13 @@ export default function CustomDevelopment(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
             {[
               { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
               { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },
               { step: '03', title: 'Development', description: 'Build the application using agile development practices' },
               { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div
                 key={index}
                 className="text-center"

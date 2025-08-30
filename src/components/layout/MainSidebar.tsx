@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
 <<<<<<< HEAD
-import { cn } from '@/lib/utils';
-import {
-  Home,
+import { cn  } from '@/lib/utils';
+import { Home,
   Briefcase,
   Users,
   Settings,
@@ -111,9 +110,10 @@ import {
   Leaf,
   HardDrive,
   RefreshCw
-interface MainSidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface MainSidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyboolean;
+  onClose: ()  => void;
 =======
   PenTool,
   Atom,
@@ -129,24 +129,27 @@ interface MainSidebarProps {
   Mail,
   MapPin,
   Users
-} from 'lucide-react';
+ 
+} from 'lucide-react.ts';
 
 interface SidebarItem {
+
   name: string;
   href: string;
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function MainSidebar() {
+export function MainSidebar(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+  const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: anystring)  => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -296,7 +299,7 @@ export function MainSidebar() {
       ]
     },
     {
-      name: 'Company',
+      name: 'Comp',
       href: '#',
       icon: Info,
       children: [

@@ -1,9 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import {
-  Brain,
+import { SEO  } from '@/components/SEO';
+import { Brain,
   Users,
   TrendingUp,
   Target,
@@ -95,7 +94,7 @@ import {
 <<<<<<< HEAD
   Award,
   ThumbsUp
-export default function AICustomerSuccessPlatform() {
+export default function AICustomerSuccessPlatform(...args: any[]): any {
 =======
   Calendar,
   MessageSquare2,
@@ -240,7 +239,7 @@ export default function AICustomerSuccessPlatform() {
   UserEditOff,
   UserSearch3,
   UserSearchOff
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const AICustomerSuccessPlatform = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -476,8 +475,8 @@ const AICustomerSuccessPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -522,8 +521,8 @@ const AICustomerSuccessPlatform = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -566,8 +565,8 @@ const AICustomerSuccessPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -618,8 +617,8 @@ const AICustomerSuccessPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -652,8 +651,8 @@ const AICustomerSuccessPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -746,8 +745,8 @@ const AICustomerSuccessPlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-5 gap-6">
+            {integrations.map((integration, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

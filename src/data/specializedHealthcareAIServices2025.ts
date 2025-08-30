@@ -3,6 +3,7 @@
 
 export interface HealthcareAIService {
 
+
   id: number;
   name: string;
   category: string;
@@ -23,13 +24,14 @@ export interface HealthcareAIService {
   clinicalValidation: string[];
   useCases: string[];
   technologies: string[];
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
 <<<<<<< HEAD
     address: string;
-  };
+  
+};
 =======
     address: string}}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect  } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 <<<<<<< HEAD
 import {
   Accessibility,
@@ -23,23 +23,25 @@ import {
   Moon,
   Settings
 interface AccessibilitySettings {
+
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
 
-export function Accessibility() {
+export function Accessibility(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
-    highContrast: false,
-    reducedMotion: false,
-    soundEnabled: true,
-    theme: 'auto'
-  });
+  const [settings, setSettings] = useState<any>({
+fontSize: any16,;
+highContrast: false,;
+reducedMotion: false,;
+soundEnabled: true,;
+theme: 'auto';
+  
+});
 
-  useEffect(() => {
+  useEffect(()  => {
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -48,7 +50,7 @@ export function Accessibility() {
       applySettings(parsed);
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = (e: anyKeyboardEvent)  => {;
       if (e.ctrlKey) {;
         switch (e.key) {;
           case '=':;
@@ -72,7 +74,7 @@ export function Accessibility() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {;
+  const applySettings = (newSettings: anyAccessibilitySettings)  => {;
     const root = document.documentElement;
 
     // Apply font size
@@ -103,14 +105,14 @@ export function Accessibility() {
   };
 
 <<<<<<< HEAD
-  const updateSetting = (key: keyof AccessibilitySettings, value: ) => {
+  const updateSetting = (key: anykeyof AccessibilitySettings, value: )  => {
     const newSettings = {
   ...settings,;
   [key]: value ;
 
 };
 =======
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = (key: anykeyof AccessibilitySettings, value: )  => {
     const newSettings = {
   ...settings,;
   ;

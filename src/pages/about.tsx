@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-const About: React.FC = () => {
+const About: React.FC = (): JSX.Element => {
 =======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO  } from '@/components/SEO';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO   } from '@/components/SEO';
 import { Users, 
   Target, 
   Award, 
@@ -23,9 +23,9 @@ import { Users,
   Cloud,
   Lock,
   Database
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
-export default function About() {
+export default function About(...args: any[]): any {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
@@ -280,8 +280,8 @@ export default function About() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div 
                 key={index}
                 className="text-center group"
@@ -320,8 +320,8 @@ export default function About() {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)  => (
               <motion.div
                 key={index}
                 className="text-center group"
@@ -367,8 +367,8 @@ export default function About() {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index)   => (
               <motion.div
                 key={index}
                 className="group"

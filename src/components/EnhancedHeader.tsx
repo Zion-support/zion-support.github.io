@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Menu,
   X,
   Search,
   User,
@@ -51,13 +50,13 @@ import {
   FileText,
   Sparkles as SparklesIcon
 <<<<<<< HEAD
-import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
+import { enhancedServicesCatalog2025  } from '../data/enhancedServicesCatalog2025';
 =======
 } from 'lucide-react';
-import { enhancedServicesCatalog2025 } from "../data/enhancedServicesCatalog2025";
+import { enhancedServicesCatalog2025  } from '../data/enhancedServicesCatalog2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function EnhancedHeader() {
+export function EnhancedHeader(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -74,7 +73,7 @@ export function EnhancedHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {;
+  const handleSearch = async (e: anyReact.FormEvent)  => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -414,8 +413,8 @@ export function EnhancedHeader() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center space-x-8">
-              {navigation.slice(0, 6).map((item) => (
+            <nav className="hidden xl: anyflex items-center space-x-8">
+              {navigation.slice(0, 6).map((item)  => (
                 <Link
                   key={item.name}
                   to={item.href}
@@ -547,7 +546,7 @@ export function EnhancedHeader() {
                           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group"
 
                           View All Services
-                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="ml-2 w-4 h-4 group-hover: anytranslate-x-1 transition-transform" />
                         </Link>
                       </div>
                     </motion.div>
@@ -556,7 +555,7 @@ export function EnhancedHeader() {
               </div>
 
               {/* Additional Navigation Items */}
-              {navigation.slice(6, 10).map((item) => (
+              {navigation.slice(6, 10).map((item)  => (
                 <Link
                   key={item.name}
                   to={item.href}

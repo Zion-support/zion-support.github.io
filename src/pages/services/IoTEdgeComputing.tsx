@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import {
-  Cpu,
+import { Cpu,
   Zap,
   CheckCircle,
   BarChart3,
@@ -15,9 +14,8 @@ import {
   Rocket,
   Target,
 =======
-import { Link } from 'react-router-dom';
-import { 
-  Cpu, 
+import { Link  } from 'react-router-dom.ts';
+import { Cpu, 
   Network, 
   Zap, 
   Globe, 
@@ -41,11 +39,11 @@ import {
 =======
   Router,
   Satellite
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { SEO } from '@/components/SEO';
+import { SEO  } from '@/components/SEO';
 
-export default function IoTEdgeComputing() {
+export default function IoTEdgeComputing(...args: any[]): any {
   const features = [
     {
       icon: Cpu,
@@ -260,8 +258,8 @@ export default function IoTEdgeComputing() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {iotApplications.map((app, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {iotApplications.map((app, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -312,8 +310,8 @@ export default function IoTEdgeComputing() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {edgeCapabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {edgeCapabilities.map((capability, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -418,9 +416,9 @@ export default function IoTEdgeComputing() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 =======
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            {features.map((feature, index) => (
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -478,12 +476,12 @@ export default function IoTEdgeComputing() {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
 =======
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={service.title}
@@ -523,8 +521,8 @@ export default function IoTEdgeComputing() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {deviceSupport.map((device, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {deviceSupport.map((device, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
@@ -561,8 +559,8 @@ export default function IoTEdgeComputing() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
@@ -664,8 +662,8 @@ export default function IoTEdgeComputing() {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {techStack.map((tech, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
+            {techStack.map((tech, index)  => (
               <motion.a
                 key={index}
                 href={tech.url}
@@ -682,8 +680,8 @@ export default function IoTEdgeComputing() {
               </motion.a>
 =======
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Phone,
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone,
   Mail,
   MapPin,
   Globe,
@@ -25,17 +24,17 @@ import {
   MessageCircle,
   Zap as ZapIcon
 <<<<<<< HEAD
-export const FuturisticFooter: React.FC = () => {
+export const FuturisticFooter: React.FC = (): JSX.Element => {
   const scrollToTop = () => {
 =======
 <<<<<<< HEAD
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 export const FuturisticFooter: React.FC = (): JSX.Element => {;
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' })};
 =======
 } from 'lucide-react';
-export const FuturisticFooter: React.FC = () => {;
+export const FuturisticFooter: React.FC = (): JSX.Element => {;
   const scrollToTop = () => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     window.scrollTo({ top: 0, behavior: 'smooth' });

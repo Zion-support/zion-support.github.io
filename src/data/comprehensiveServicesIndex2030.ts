@@ -1,5 +1,5 @@
-import { ProductListing  } from '@/types/listings';
-import { REVOLUTIONARY_SERVICES_2030  } from "./revolutionaryServices2030";
+import { ProductListing   } from '@/types/listings';
+import { REVOLUTIONARY_SERVICES_2030   } from './revolutionaryServices2030';
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
@@ -43,37 +43,37 @@ export const SERVICE_CATEGORIES_2030 = [
 
 // Service Statistics
 export const SERVICE_STATISTICS_2030 = {
-  totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
+  totalServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
   averagePrice: Math.round(
 <<<<<<< HEAD
-    COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => sum + service.price, 0) /
+    COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) /
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
-  averageRating: Math.round(
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => sum + service.rating, 0) /
+  averageRating: anyMath.round(
+    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) /
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured).length,
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service =>
+  featuredServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
+  aiServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service  =>
 =======
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
-  averageRating: Math.round(
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) / 
+  averageRating: anyMath.round(
+    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)   => sum + service.rating, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+  featuredServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service   => service.featured).length,
+  aiServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service   => 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     service.category.includes('AI') || service.aiScore > 90
 <<<<<<< HEAD
   ).length,
 <<<<<<< HEAD
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service =>
+  emergingTechServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service  =>
 =======
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+  emergingTechServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service   => 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     service.category === 'Emerging Technology'
   ).length
@@ -81,7 +81,7 @@ export const SERVICE_STATISTICS_2030 = {
   ).length,;
   ;
   ;
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
+  emergingTechServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;
     service.category === 'Emerging Technology';
   ).length;
 ;

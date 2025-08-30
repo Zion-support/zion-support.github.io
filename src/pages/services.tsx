@@ -1,9 +1,8 @@
 <<<<<<< HEAD
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -37,7 +36,7 @@ import {
   FileText,
   Search,
   Clock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 type Service = {
   title: string;
@@ -126,7 +125,7 @@ const microSaaS: Service[] = [
 ];
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const Services: React.FC = () => {
+const Services: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const serviceCategories = [
@@ -426,8 +425,7 @@ const Services: React.FC = () => {
   ];
 
   const filteredServices = activeCategory === 'all' 
-    ? coreServices 
-    : coreServices.filter(service => service.category === activeCategory);
+    ? coreServices: anycoreServices.filter(service  => service.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -443,8 +441,8 @@ const Services: React.FC = () => {
 
         <section className="mt-14">
           <h2 className="text-2xl font-semibold text-cyan-300 mb-6">Enterprise Services</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredServices.map((s) => (
+          <div className="grid sm: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredServices.map((s)  => (
               <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 transition-colors">
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
                 <p className="text-slate-300 mb-4">{s.description}</p>
@@ -463,8 +461,8 @@ const Services: React.FC = () => {
 
         <section className="mt-16">
           <h2 className="text-2xl font-semibold text-purple-300 mb-6">Micro SaaS Products</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {microSaaS.map((s) => (
+          <div className="grid sm: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {microSaaS.map((s)  => (
               <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition-colors">
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
                 <p className="text-slate-300 mb-4">{s.description}</p>

@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import {
-  Search,
+import { Search,
   BookOpen,
   MessageCircle,
   Phone,
   Mail,
   Clock,
 =======
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
+import { SEO  } from '../components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { Search, 
   BookOpen, 
   MessageCircle, 
   Phone, 
@@ -29,7 +27,7 @@ import {
   Globe,
 <<<<<<< HEAD
   Rocket
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
   ArrowRight,
   ExternalLink,
@@ -37,7 +35,7 @@ import { SEO } from '../components/SEO';
 } from 'lucide-react';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function Help(...args[]):  {
+export default function Help(...args[]: any):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -422,12 +420,12 @@ export default function Help(...args[]):  {
               className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
                 selectedCategory === 'all'
                   ? 'bg-cyan-400 text-white border-cyan-400'
-                  : 'bg-slate-800/50 text-gray-300 border-slate-600/50 hover:border-cyan-400/50 hover:text-cyan-400'
+                  : 'bg-slate-800/50 text-gray-300 border-slate-600/50 hover: anyborder-cyan-400/50 hover:text-cyan-400'
               }`}
             >
               All Categories
             </button>
-            {helpCategories.map((category) => (
+            {helpCategories.map((category)  => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -475,8 +473,8 @@ export default function Help(...args[]):  {
           </motion.div>
 <<<<<<< HEAD
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickActions.map((action, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {quickActions.map((action, index)   => (
               <motion.div
                 key={action.title}
                 initial = {
@@ -497,8 +495,8 @@ export default function Help(...args[]):  {
                 className="group"
 =======
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {popularArticles.map((article, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {popularArticles.map((article, index)  => (
               <motion.div
                 key={article.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -601,8 +599,8 @@ export default function Help(...args[]):  {
               </p>
             </motion.div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredCategories.map((category, index)  => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredCategories.map((category, index)   => (
                 <motion.div
                   key={category.id}
                   initial = {
@@ -817,8 +815,8 @@ export default function Help(...args[]):  {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.articles.map((article, articleIndex) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+                {category.articles.map((article, articleIndex)  => (
                   <motion.div
                     key={article.title}
                     initial={{ opacity: 0, y: 20 }}
@@ -872,8 +870,8 @@ export default function Help(...args[]):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {supportOptions.map((option, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {supportOptions.map((option, index)  => (
               <motion.div
                 key={option.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -913,8 +911,8 @@ export default function Help(...args[]):  {
                     className="border-t border-slate-700/50"
 
                     <div className="p-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {category.articles.map((article, articleIndex) => (
+                      <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                        {category.articles.map((article, articleIndex)  => (
                           <a
                             key={articleIndex}
                             href={article.url}
@@ -984,7 +982,7 @@ export default function Help(...args[]):  {
             <p className="text-gray-300">Explore more helpful resources and materials</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {[
               {
                 icon: BookOpen,
@@ -1007,7 +1005,7 @@ export default function Help(...args[]):  {
                 url: '/help/downloads',
                 color: 'from-purple-500 to-purple-600'
 
-            ].map((resource, index) => (
+            ].map((resource, index)  => (
               <motion.a
                 key={index}
                 href={resource.url}

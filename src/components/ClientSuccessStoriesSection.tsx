@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Star,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Star,
   Quote,
   TrendingUp,
   Users,
@@ -10,9 +9,9 @@ import {
   ArrowRight,
   Heart
 <<<<<<< HEAD
-export const ClientSuccessStoriesSection: React.FC = () => {
+export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
 =======
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
@@ -123,7 +122,7 @@ const successStories = [
 ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export function ClientSuccessStoriesSection() {
+export function ClientSuccessStoriesSection(...args: any[]): any {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -172,9 +171,9 @@ export function ClientSuccessStoriesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16"
 
-          {successMetrics.map((metric, index) => {
+          {successMetrics.map((metric, index)  => {
 =======
           initial = {
   { opacity: 0,
@@ -191,9 +190,9 @@ export function ClientSuccessStoriesSection() {
   delay: 0.1 
 
 }}
-          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16"
         >;
-          {successMetrics.map((metric, index)  => {;
+          {successMetrics.map((metric, index)   => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const IconComponent = metric.icon;
             return (
@@ -212,8 +211,8 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md: grid-cols-2 gap-8 mb-12">
-          {testimonials.map((testimonial, index)  => (
+        <div className="grid md: anygrid-cols-2 gap-8 mb-12">
+          {testimonials.map((testimonial, index)   => (
             <motion.div
 <<<<<<< HEAD
               key={testimonial.name}

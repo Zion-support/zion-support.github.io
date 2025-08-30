@@ -1,11 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Eye, ArrowRight, CheckCircle, Cloud, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import { Eye, ArrowRight, CheckCircle, Cloud, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom.ts';
 =======
-import {
-  Cpu,
+import { Cpu,
   Eye,
   BarChart3,
   Zap,
@@ -23,11 +22,11 @@ import {
   Play,
   Pause,
   RotateCcw
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function DigitalTwin() {
+export default function DigitalTwin(...args: any[]): any {
   const features = [
     {
       icon: Eye,
@@ -366,8 +365,8 @@ export default function DigitalTwin() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={feature.title}
                   initial = {
@@ -451,8 +450,8 @@ export default function DigitalTwin() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
                   initial = {
@@ -545,8 +544,8 @@ export default function DigitalTwin() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricing.map((plan, index)  => (
                 <motion.div
                   key={plan.name}
                   initial = {
@@ -665,8 +664,8 @@ export default function DigitalTwin() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={benefit.title}
                   initial = {
@@ -750,8 +749,8 @@ export default function DigitalTwin() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {technologies.map((tech, index) => (
+            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+              {technologies.map((tech, index)  => (
                 <motion.div
                   key={tech.name}
                   initial = {
@@ -871,8 +870,8 @@ export default function DigitalTwin() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -909,8 +908,8 @@ export default function DigitalTwin() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -951,8 +950,8 @@ export default function DigitalTwin() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -988,7 +987,7 @@ export default function DigitalTwin() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -1010,7 +1009,7 @@ export default function DigitalTwin() {
                 title: 'Optimization',
                 description: 'Fine-tune the system and implement advanced analytics and automation'
               }
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

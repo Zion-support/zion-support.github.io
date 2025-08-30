@@ -1,9 +1,8 @@
 
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ChevronDown,
+import React, { useState, useRef, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { ChevronDown,
   Menu,
   X,
   Home,
@@ -19,28 +18,26 @@ import {
   BarChart3
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationLink {
 
-  key: string;
+
+  key: anystring;
   href: string;
   name: string;
 <<<<<<< HEAD
-  matches: (path: string) => boolean;
+  matches: (path: string)  => boolean;
   children?: NavigationLink[];
 =======
-  matches: (path: string)  => boolean;
-  children?: NavigationLink[]}
+  matches: any(path: string)   => boolean;
+children?: NavigationLink[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {;
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
-}) {
+export function MainNavigation(...args: any[]): any {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -52,7 +49,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   // Close dropdowns when clicking outside
   useEffect(() => {
 <<<<<<< HEAD
-    const handleClickOutside = (event: MouseEvent) => {;
+    const handleClickOutside = (event: anyMouseEvent)  => {;
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         setIsServicesOpen(false);
@@ -71,132 +68,132 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
   const baseLinks: NavigationLink[] = [
     {
-      key: 'home',
+      key: any'home',
       href: '/',
       name: 'Home',
 <<<<<<< HEAD
-      matches: (path: string)  => path = == '/'
+      matches: (path: string)   => path = == '/'
 =======
-      matches: (path: string) => path = == '/'
+      matches: any(path: string)  => path = == '/'
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     },
     {
-      key: 'services',
+      key: any'services',
       href: '/services',
       name: 'Services',
-      matches: (path: string)  => path.startsWith('/services'),
+      matches: (path: string)   => path.startsWith('/services'),
       children[
         {
-          key: 'ai-services',
+          key: any'ai-services',
           href: '/services/ai',
           name: 'AI & Analytics',
-          matches: (path: string)  => path.startsWith('/services/ai')
+          matches: (path: string)   => path.startsWith('/services/ai')
         },
         {
-          key: 'quantum',
+          key: any'quantum',
           href: '/services/quantum',
           name: 'Quantum Computing',
-          matches: (path: string)  => path.startsWith('/services/quantum')
+          matches: (path: string)   => path.startsWith('/services/quantum')
         },
         {
-          key: 'blockchain',
+          key: any'blockchain',
           href: '/services/blockchain',
           name: 'Blockchain',
-          matches: (path: string)  => path.startsWith('/services/blockchain')
+          matches: (path: string)   => path.startsWith('/services/blockchain')
         },
         {
-          key: 'iot',
+          key: any'iot',
           href: '/services/iot',
           name: 'IoT & Edge',
-          matches: (path: string)  => path.startsWith('/services/iot')
+          matches: (path: string)   => path.startsWith('/services/iot')
         },
         {
-          key: 'cybersecurity',
+          key: any'cybersecurity',
           href: '/services/cybersecurity',
           name: 'Cybersecurity',
-          matches: (path: string)  => path.startsWith('/services/cybersecurity')
+          matches: (path: string)   => path.startsWith('/services/cybersecurity')
         },
         {
-          key: 'healthcare',
+          key: any'healthcare',
           href: '/services/healthcare',
           name: 'Healthcare',
-          matches: (path: string)  => path.startsWith('/services/healthcare')
+          matches: (path: string)   => path.startsWith('/services/healthcare')
         },
         {
-          key: 'finance',
+          key: any'finance',
           href: '/services/finance',
           name: 'Finance',
-          matches: (path: string)  => path.startsWith('/services/finance')
+          matches: (path: string)   => path.startsWith('/services/finance')
         },
         {
-          key: 'manufacturing',
+          key: any'manufacturing',
           href: '/services/manufacturing',
           name: 'Manufacturing',
-          matches: (path: string)  => path.startsWith('/services/manufacturing')
+          matches: (path: string)   => path.startsWith('/services/manufacturing')
         },
         {
-          key: 'sustainability',
+          key: any'sustainability',
           href: '/services/sustainability',
           name: 'Sustainability',
-          matches: (path: string)  => path.startsWith('/services/sustainability')
+          matches: (path: string)   => path.startsWith('/services/sustainability')
         }
       ]
     },
     {
-      key: 'ai-services',
+      key: any'ai-services',
       href: '/ai-services',
       name: 'AI Services',
-      matches: (path: string)  => path.startsWith('/ai-services')
+      matches: (path: string)   => path.startsWith('/ai-services')
     },
     {
-      key: 'it-services',
+      key: any'it-services',
       href: '/it-services',
       name: 'IT Services',
-      matches: (path: string)  => path.startsWith('/it-services')
+      matches: (path: string)   => path.startsWith('/it-services')
     },
     {
-      key: 'micro-saas',
+      key: any'micro-saas',
       href: '/micro-saas',
       name: 'Micro SAAS',
-      matches: (path: string)  => path.startsWith('/micro-saas')
+      matches: (path: string)   => path.startsWith('/micro-saas')
     },
     {
-      key: 'marketplace',
+      key: any'marketplace',
       href: '/marketplace',
       name: 'Marketplace',
-      matches: (path: string)  => path.startsWith('/marketplace')
+      matches: (path: string)   => path.startsWith('/marketplace')
     },
     {
-      key: 'about',
+      key: any'about',
       href: '/about',
       name: 'About',
-      matches: (path: string)  => path.startsWith('/about')
+      matches: (path: string)   => path.startsWith('/about')
     },
     {
 <<<<<<< HEAD
-      key: 'contact',
+      key: any'contact',
       href: '/contact',
       name: 'Contact',
 <<<<<<< HEAD
-      matches: (path: string) => path.startsWith('/contact')
+      matches: (path: string)  => path.startsWith('/contact')
 
 =======
-      matches: (path: string)  => path.startsWith('/contact')
+      matches: any(path: string)   => path.startsWith('/contact')
     };
 =======;
-      key: 'contact',;
+      key: any'contact',;
       href: '/contact',;
       name: 'Contact',;
-      matches: (path: string) => path.startsWith('/contact');
+      matches: (path: string)  => path.startsWith('/contact');
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const isActive = (link: NavigationLink)  => link.matches(location.pathname);
+  const isActive = (link: anyNavigationLink)   => link.matches(location.pathname);
 
 <<<<<<< HEAD
-  const renderDropdown = (link: NavigationLink, isOpen: boolean, setIsOpen: (open: boolean) => void) => {;
+  const renderDropdown = (link: anyNavigationLink, isOpen: boolean, setIsOpen: (open: boolean)  => void) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!link.children) return null;
 
@@ -283,8 +280,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   return (
     <nav className = {`${className}`}>
       {/* Desktop Navigation */}
-      <div className="hidden lg: flex items-center space-x-1">
-        {baseLinks.map((link)  => (
+      <div className="hidden lg: anyflex items-center space-x-1">
+        {baseLinks.map((link)   => (
           <div key={link.key}>
             {link.children ? (
               renderDropdown(

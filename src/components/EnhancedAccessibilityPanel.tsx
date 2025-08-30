@@ -1,16 +1,15 @@
 <<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Eye,
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Eye,
   EyeOff,
   Volume2,
   VolumeX,
   Type,
   Contrast,
 =======
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect, useCallback  } from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Eye, 
   EyeOff, 
   Volume2, 
@@ -27,10 +26,11 @@ import { Eye,
   AlertTriangle
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface AccessibilitySettings {
+
 
   highContrast: boolean;
   largeText: boolean;
@@ -42,11 +42,12 @@ interface AccessibilitySettings {
 <<<<<<< HEAD
   fontSize: 'small' | 'medium' | 'large' | 'extra-large';
 =======
-  fontSize: 'small' | 'medium' | 'large' | 'extra-large'}
+fontSize: 'small' | 'medium' | 'large' | 'extra-large';
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-export const EnhancedAccessibilityPanel: React.FC = () => {;
+export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<any>({
@@ -90,7 +91,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
   // Apply accessibility settings to the document
 <<<<<<< HEAD
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {;
+  const applySettings = useCallback((newSettings: anyAccessibilitySettings)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const root = document.documentElement;
 
@@ -211,7 +212,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
   // Handle keyboard navigation
 <<<<<<< HEAD
-  const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {;
+  const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)  => {;
     const focusableElements = document.querySelectorAll(;
       'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -253,7 +254,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
   // Screen reader announcements
 <<<<<<< HEAD
-  const announceToScreenReader = useCallback((message: string) => {;
+  const announceToScreenReader = useCallback((message: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!settings.screenReader) return;
 
@@ -282,14 +283,14 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
   // Update settings
 <<<<<<< HEAD
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value)  => {
+  const updateSetting = useCallback((key: anykeyof AccessibilitySettings, value)   => {
     const newSettings = {
   ...settings,;
   [key]: value ;
 
 };
 =======
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback((key: anykeyof AccessibilitySettings, value: )  => {
     const newSettings = {
   ...settings,;
   ;
@@ -386,7 +387,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   // Handle escape key
   useEffect(() => {
 <<<<<<< HEAD
-    const handleEscape = (event: KeyboardEvent) => {;
+    const handleEscape = (event: anyKeyboardEvent)  => {;
       if (event.key === 'Escape' && isOpen) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         setIsOpen(false);

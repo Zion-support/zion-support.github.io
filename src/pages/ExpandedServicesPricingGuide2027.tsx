@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search,
   Filter,
   Grid3X3,
   List,
@@ -60,14 +59,13 @@ import {
   Info,
   AlertTriangle,
   Zap
-import { SEO } from '@/components/SEO';
-import {
-  ALL_EXPANDED_SERVICES_PRICING,
+import { SEO  } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing
-} from '@/data/expandedServicesPricing2027';
+ } from '@/data/expandedServicesPricing2027';
 
 <<<<<<< HEAD
-const ExpandedServicesPricingGuide2027: React.FC = () => {;
+const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -93,7 +91,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anystring)   => {
     switch (category) {
       case 'Cybersecurity':;
 =======;
@@ -106,7 +104,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
     switch (category) {;
       case 'Cybersecurity':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -131,7 +129,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const getCategoryColor = (category: string) => {;
+  const getCategoryColor = (category: anystring)  => {;
     switch (category) {;
       case 'Cybersecurity':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -156,7 +154,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const getMarketPositionColor = (position: string) => {;
+  const getMarketPositionColor = (position: anystring)  => {;
     switch (position) {;
       case 'leader':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -177,7 +175,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const renderPricingCard = (pricing: ExpandedServicePricing) => {;
+  const renderPricingCard = (pricing: anyExpandedServicePricing)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(pricing.category);
     const categoryColor = getCategoryColor(pricing.category);
@@ -751,13 +749,13 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
 
-                {categories.map((category) => (
-=======
-                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-              >
                 {categories.map((category)  => (
+=======
+                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+              >
+                {categories.map((category)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>
                     {category}
@@ -777,8 +775,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {filteredPricing.map((pricing)   => renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">

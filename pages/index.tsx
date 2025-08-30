@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react.ts'
 <<<<<<< HEAD
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom.ts'
 <<<<<<< HEAD
-import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock export default function Index() {
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock export default function Index(...args: any[]): any {
 	const features = [
 =======
 import { 
@@ -37,9 +37,9 @@ import {
   Clock,
   DollarSign,
   ShoppingCart
-} from 'lucide-react'
+ } from 'lucide-react.ts'
 
-export default function Index() {
+export default function Index(...args: any[]): any {
 	const heroFeatures = [
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 		{
@@ -49,12 +49,12 @@ export default function Index() {
 			href: '/services/ai-business-intelligence',
 			color: 'from-blue-500 to-purple-600'
 =======
-import Link from 'next/link'
-import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock } from 'lucide-react'
+import Link from 'next/link.ts'
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock  } from 'lucide-react.ts'
 
 
 
-export default function Index(...args[]):  {
+export default function Index(...args[]: any):  {
 	const features = [
 		{
 			icon: Brain,
@@ -310,8 +310,8 @@ export default function Index(...args[]):  {
 						</div>
 
 						{/* Hero Features */}
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-							{heroFeatures.map((feature, index) => (
+						<div className="grid grid-cols-1 md: anygrid-cols-3 gap-6 mt-16">
+							{heroFeatures.map((feature, index)  => (
 								<div key={index} className="group">
 									<Link to={feature.href} className="block">
 										<div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
@@ -333,14 +333,14 @@ export default function Index(...args[]):  {
 			<section className="py-16 bg-white">
 <<<<<<< HEAD
 				<div className="max-w-7xl mx-auto px-6 lg:px-8">
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-						{stats.map((stat, index) => (
+					<div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+						{stats.map((stat, index)  => (
 							<div key={index} className="text-center">
 								<div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
 =======
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-						{stats.map((stat) => (
+					<div className="grid grid-cols-2 lg: anygrid-cols-4 gap-8">
+						{stats.map((stat)  => (
 							<div key={stat.label} className="text-center">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-4">
 									<stat.icon className="h-8 w-8 text-blue-600" />
@@ -374,8 +374,8 @@ export default function Index(...args[]):  {
 								<h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
 									{serviceCategory.category}
 								</h3>
-								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-									{serviceCategory.items.map((service, serviceIndex) => (
+								<div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+									{serviceCategory.items.map((service, serviceIndex)  => (
 										<div key={serviceIndex} className="group">
 											<Link to={service.href} className="block">
 												<div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
@@ -403,8 +403,8 @@ export default function Index(...args[]):  {
 							We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
 						</p>
 					</div>
-					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-						{features.map((feature) => (
+					<div className="grid gap-8 md: anygrid-cols-2 lg:grid-cols-3">
+						{features.map((feature)  => (
 							<div key={feature.title} className="text-center group">
 								<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
 									<feature.icon className="h-8 w-8 text-white" />
@@ -448,8 +448,8 @@ export default function Index(...args[]):  {
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						{industries.map((industry, index) => (
+					<div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+						{industries.map((industry, index)  => (
 							<div key={index} className="group">
 								<Link to={industry.href} className="block">
 									<div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200 hover:border-blue-300 transition-all duration-300 group-hover:scale-105">
@@ -566,8 +566,8 @@ export default function Index(...args[]):  {
 =======
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-						{testimonials.map((testimonial, index) => (
+					<div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+						{testimonials.map((testimonial, index)  => (
 							<div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
 								<div className="flex items-center gap-1 mb-4">
 									{[...Array(5)].map((_, i) => (

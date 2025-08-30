@@ -1,5 +1,6 @@
 export interface ServiceContact {
 
+
   phone: string;
   email: string;
   website: string;
@@ -7,9 +8,11 @@ export interface ServiceContact {
   address: string;
 
 =======
-  address: string}
+address: string;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface MicroSaasService {
+
 
   id: number;
   name: string;
@@ -34,9 +37,11 @@ export interface MicroSaasService {
   trialPeriod: string;
 
 =======
-  trialPeriod: string}
+trialPeriod: string;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface ITService {
+
 
   id: number;
   name: string;
@@ -58,9 +63,11 @@ export interface ITService {
   support: string;
 
 =======
-  support: string}
+support: string;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface AIService {
+
 
   id: number;
   name: string;
@@ -84,7 +91,8 @@ export interface AIService {
   useCases: string[];
 
 =======
-  useCases: string[]}
+useCases: string[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services

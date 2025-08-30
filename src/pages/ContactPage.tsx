@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Phone,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone,
   Mail,
   MapPin,
   Clock,
@@ -17,9 +16,9 @@ import {
   Github,
   Facebook,
   Instagram
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export function ContactPage() {
+export function ContactPage(...args: any[]): any {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -33,14 +32,14 @@ export function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -187,8 +186,8 @@ export function ContactPage() {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {contactMethods.map((method, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {contactMethods.map((method, index)  => (
             <motion.div
               key={method.title}
               initial={{ opacity: 0, y: 20 }}
@@ -295,17 +294,17 @@ export function ContactPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="comp" className="block text-sm font-medium text-gray-300 mb-2">
                     Company
                   </label>
                   <input
                     type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    id="comp"
+                    name="comp"
+                    value={formData.comp}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your Company"
+                    placeholder="Your Comp"
                   />
                 </div>
                 <div>

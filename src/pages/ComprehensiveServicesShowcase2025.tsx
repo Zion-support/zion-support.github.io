@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search,
   Filter,
   Star,
   ArrowRight,
@@ -19,10 +18,9 @@ import {
   Clock,
   DollarSign,
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { useState  } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain,
   Shield,
   Cpu,
   Rocket,
@@ -71,21 +69,23 @@ import {
   Atom,
   Heart,
   Leaf
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
+
   mobile: string;
   email: string;
   address: string;
   website: string;
 
-const ComprehensiveServicesShowcase2025: React.FC = () => {
+const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
   const [activeCategory, setActiveCategory] = useState('all');
 =======
   MapPin
+
 } from 'lucide-react';
 
-export default function ComprehensiveServicesShowcase2025() {
+export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -125,7 +125,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
   });
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service: any)  => {
     setSelectedService(service);
   };
 
@@ -185,14 +185,14 @@ export default function ComprehensiveServicesShowcase2025() {
       }
     });
 
-  const getPriceRange = (price: number) => {
+  const getPriceRange = (price: anynumber)  => {
     if (price < 1000) return 'low';
     if (price < 5000) return 'medium';
     if (price < 15000) return 'high';
     return 'premium';
   };
 
-  const getPriceRangeColor = (range: string) => {
+  const getPriceRangeColor = (range: anystring)  => {
     switch (range) {
       case 'low': return 'bg-green-100 text-green-800';
       case 'medium': return 'bg-blue-100 text-blue-800';
@@ -302,9 +302,9 @@ export default function ComprehensiveServicesShowcase2025() {
 =======
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -386,9 +386,9 @@ export default function ComprehensiveServicesShowcase2025() {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {priceRanges.map(range => (
+                {priceRanges.map(range  => (
                   <option key={range.value} value={range.value} className="bg-slate-800 text-white">
                     {range.label}
                   </option>
@@ -430,9 +430,9 @@ export default function ComprehensiveServicesShowcase2025() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
 
-            {sortedServices.map((service, index) => (
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -516,7 +516,7 @@ export default function ComprehensiveServicesShowcase2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {[
               {
                 icon: Brain,
@@ -533,7 +533,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 title: "Rapid Implementation",
                 description: "Get up and running in weeks, not months, with our proven implementation methodology."
 
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -639,8 +639,8 @@ export default function ComprehensiveServicesShowcase2025() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

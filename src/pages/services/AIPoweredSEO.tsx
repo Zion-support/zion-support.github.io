@@ -1,12 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Search, Brain, TrendingUp, BarChart3, Target, Zap, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, MousePointer, Smartphone import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import { Search, Brain, TrendingUp, BarChart3, Target, Zap, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, MousePointer, Smartphone import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom.ts';
 =======
-import { SEO } from '../../components/SEO';
-import { 
-  Search, 
+import { SEO  } from '../../components/SEO';
+import { Search, 
   TrendingUp, 
   Target, 
   Zap, 
@@ -26,10 +25,10 @@ import {
   MousePointer,
   Smartphone,
   Monitor
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AIPoweredSEO() {
+export default function AIPoweredSEO(...args: any[]): any {
   const features = [
     {
       icon: Search,
@@ -286,8 +285,8 @@ export default function AIPoweredSEO() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {aiCapabilities.map((capability, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {aiCapabilities.map((capability, index)  => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
@@ -325,8 +324,8 @@ export default function AIPoweredSEO() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
@@ -415,8 +414,8 @@ export default function AIPoweredSEO() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricing.map((plan, index)  => (
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
@@ -482,8 +481,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -577,8 +576,8 @@ export default function AIPoweredSEO() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
@@ -745,8 +744,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {seoProcess.map((stage, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {seoProcess.map((stage, index)  => (
               <motion.div
                 key={stage.stage}
                 initial = {
@@ -844,8 +843,8 @@ export default function AIPoweredSEO() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 initial = {

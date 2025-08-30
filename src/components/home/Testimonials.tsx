@@ -1,13 +1,16 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote interface Testimonial {
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Quote interface Testimonial {
+
+=======
+import React, { useState  
+} from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { ChevronLeft, ChevronRight, Star, Quote   } from 'lucide-react.ts';
 
 interface Testimonial {
+
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: number;
@@ -20,11 +23,12 @@ interface Testimonial {
 <<<<<<< HEAD
   industry: string;
 =======
-  industry: string}
+industry: string;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-const Testimonials: React.FC = () => {;
+const Testimonials: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -78,7 +82,7 @@ const Testimonials: React.FC = () => {;
   const prevTestimonial = () => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
-  const goToTestimonial = (index: number)  => {;
+  const goToTestimonial = (index: anynumber)   => {;
     setCurrentIndex(index)};
 =======
   const nextTestimonial = () => {;
@@ -89,7 +93,7 @@ const Testimonials: React.FC = () => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number) => {;
+  const goToTestimonial = (index: anynumber)  => {;
     setCurrentIndex(index);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

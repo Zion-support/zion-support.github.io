@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain,
   Atom,
   Rocket,
   Shield,
@@ -23,11 +22,11 @@ import {
   Mail,
   MapPin
 <<<<<<< HEAD
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from "../data/innovativeServices2027";
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory   } from '../data/innovativeServices2027';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
@@ -46,7 +45,7 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
 };
 =======
 } from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const categoryColors: { [key: string]: string } = {
@@ -76,9 +75,9 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
         if (entry.isIntersecting) {
           setIsVisible(true)};
 =======;
-export const InnovativeServicesShowcase2027: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [expandedService, setExpandedService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -111,10 +110,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
     : getServicesByCategory(selectedCategory);
 
 <<<<<<< HEAD
-  const toggleServiceExpansion = (serviceId: string)  => {;
+  const toggleServiceExpansion = (serviceId: anystring)   => {;
     setExpandedService(expandedService === serviceId ? null : serviceId)};
 =======
-  const toggleServiceExpansion = (serviceId: string) => {;
+  const toggleServiceExpansion = (serviceId: anystring)  => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -230,20 +229,19 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-<<<<<<< HEAD
-                  : 'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
+<<<<<<< HEAD: any'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
               }`}
 
               All Categories
             </button>
-            {serviceCategories2027.map((category)  => {
+            {serviceCategories2027.map((category)   => {
 =======;
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';
+                  : 'bg-zion-slate-light/50 text-gray-300 hover: anybg-zion-slate-light/70 hover:text-white';
               }`};
             >;
               All Categories;
             </button>;
-            {serviceCategories2027.map((category) => {;
+            {serviceCategories2027.map((category)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const Icon = categoryIcons[category];
               return (
@@ -323,10 +321,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
 <<<<<<< HEAD
 
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((service, index)  => (
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >

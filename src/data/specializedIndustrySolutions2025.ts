@@ -1,5 +1,6 @@
 export interface IndustrySolution {
 
+
   id: string;
   title: string;
   description: string;
@@ -10,11 +11,12 @@ export interface IndustrySolution {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
+pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+custom: string;
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -468,14 +470,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 <<<<<<< HEAD
-export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[]  => {
+export const getIndustrySolutionsByIndustry = (industry: anystring): IndustrySolution[]   => {
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};
 export const getAllIndustrySolutions = (): IndustrySolution[] => {;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
 =======
-export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[] => {;
+export const getIndustrySolutionsByIndustry = (industry: anystring): IndustrySolution[]  => {;
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
 

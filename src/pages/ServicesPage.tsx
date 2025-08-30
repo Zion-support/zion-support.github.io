@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,
@@ -11,11 +10,10 @@ import {
   Globe,
   Cpu,
 =======
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain,
   Shield,
   Cpu,
   Rocket,
@@ -45,9 +43,9 @@ import {
   MapPin,
 <<<<<<< HEAD
   Globe as GlobeIcon
-import { SEO } from "@/components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES } from "@/data/additionalServices2025";
+import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES  } from '@/data/additionalServices2025';
 =======
   Palette,
   Camera,
@@ -205,7 +203,7 @@ import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES } 
 } from 'lucide-react';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function ServicesPage() {
+export function ServicesPage(...args: any[]): any {
   const location = useLocation();
   const currentService = location.pathname.split('/').pop();
 
@@ -1526,9 +1524,9 @@ export function ServicesPage() {
             className="flex flex-wrap gap-3 mb-8 justify-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: any0.6 }}
 
-            {categories.map((category) => (
+            {categories.map((category)  => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -1558,9 +1556,9 @@ export function ServicesPage() {
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {priceRanges.map((range) => (
+                  {priceRanges.map((range)  => (
                     <option key={range.id} value={range.id}>{range.name}</option>
 =======
           {/* Service Content */}
@@ -1577,8 +1575,8 @@ export function ServicesPage() {
                   <Zap className="w-7 h-7 text-cyan-400" />
                   <span>Key Features</span>
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {currentServiceData.features.map((feature, index) => (
+                <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                  {currentServiceData.features.map((feature, index)  => (
                     <div key={index} className="flex items-center space-x-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       <span>{feature}</span>
@@ -1595,9 +1593,9 @@ export function ServicesPage() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {sortOptions.map((option) => (
+                  {sortOptions.map((option)  => (
                     <option key={option.id} value={option.id}>{option.name}</option>
 =======
               <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
@@ -1621,8 +1619,8 @@ export function ServicesPage() {
                   <Target className="w-7 h-7 text-green-400" />
                   <span>Use Cases</span>
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {currentServiceData.useCases.map((useCase, index) => (
+                <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                  {currentServiceData.useCases.map((useCase, index)  => (
                     <div key={index} className="flex items-center space-x-3 text-gray-300">
                       <div className="w-2 h-2 bg-green-400 rounded-full flex-shrink-0"></div>
                       <span>{useCase}</span>
@@ -1643,9 +1641,9 @@ export function ServicesPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: any0.5 }}
 
-                {sortedServices.map((service, index) => (
+                {sortedServices.map((service, index)  => (
                   <motion.div
                     key={service.id}
                     className="card-futuristic group"
@@ -1783,8 +1781,8 @@ export function ServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SPECIALIZED_SERVICES.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {SPECIALIZED_SERVICES.map((service, index)  => (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"
@@ -1905,8 +1903,8 @@ export function ServicesPage() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

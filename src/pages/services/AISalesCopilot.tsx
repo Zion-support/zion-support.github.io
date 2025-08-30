@@ -1,17 +1,16 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import { Link   } from 'react-router-dom.ts';
 import { TrendingUp, 
 =======
-import React from 'react';
+import React from 'react.ts';
 <<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Brain, MessageCircle, Zap, CheckCircle, BarChart3, Sparkles, ArrowRight export default function AISalesCopilot() {
+import { Link  } from 'react-router-dom.ts';
+import { Brain, MessageCircle, Zap, CheckCircle, BarChart3, Sparkles, ArrowRight export default function AISalesCopilot(...args: any[]): any {
 =======
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Users, 
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Users, 
   TrendingUp, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Target, 
@@ -24,7 +23,7 @@ import {
   CheckCircle,
   Shield,
   FileText
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const AISalesCopilot = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -364,8 +363,8 @@ const AISalesCopilot = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful AI Features</h2>
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-12">
+            {features.map((feature, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-8 hover:border-blue-500/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white"/>
@@ -407,8 +406,8 @@ const AISalesCopilot = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -464,8 +463,8 @@ const AISalesCopilot = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Seamless Integrations</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all">
                 <h3 className="text-xl font-bold text-white mb-3">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
@@ -627,8 +626,8 @@ const AISalesCopilot = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {salesProcess.map((stage, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {salesProcess.map((stage, index)  => (
               <motion.div
                 key={stage.stage}
                 initial = {
@@ -732,8 +731,8 @@ const AISalesCopilot = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

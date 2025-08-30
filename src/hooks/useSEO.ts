@@ -1,6 +1,7 @@
-import { useEffect, useCallback, useMemo  } from 'react.ts';
+import { useEffect, useCallback, useMemo   } from 'react.ts';
 
 interface SEOData {
+
 
   title: string;
   description: string;
@@ -13,10 +14,12 @@ interface SEOData {
 <<<<<<< HEAD
   structuredData?: object;
 =======
-  structuredData?: object}
+structuredData?: object;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UseSEOOptions {
+
 
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
@@ -24,7 +27,8 @@ interface UseSEOOptions {
 <<<<<<< HEAD
   enableAnalytics?: boolean;
 
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ }) => {
+export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */;
+}) => {
   const {
     enableAutoTitle = true,
     enableStructuredData = true,
@@ -55,13 +59,13 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: string)  => {
+  const updateTitle = useCallback((title: anystring)   => {
     if (typeof document !== 'null') {;
       document.title = title};
   }, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData)  => {;
+  const updateMetaTags = useCallback((data: anySEOData)   => {;
     if (typeof document === 'null') return;
 =======
   const canonicalUrl = useMemo(() => {;
@@ -77,14 +81,14 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: string) => {;
+  const updateTitle = useCallback((title: anystring)  => {;
     if (typeof document !== 'null') {;
       document.title = title;
 
   }, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData) => {;
+  const updateMetaTags = useCallback((data: anySEOData)  => {;
     if (typeof document === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -148,15 +152,15 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
   // Update Open Graph tags
 <<<<<<< HEAD
-  const updateOpenGraphTags = useCallback((data: SEOData)  => {;
+  const updateOpenGraphTags = useCallback((data: anySEOData)   => {;
     if (typeof document === 'null') return;
 =======
-  const updateOpenGraphTags = useCallback((data: SEOData) => {;
+  const updateOpenGraphTags = useCallback((data: anySEOData)  => {;
     if (typeof document === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     const ogTags = [
-      { property: 'og:title', content: fullTitle },;
+      { property: any'og:title', content: fullTitle },;
       { property: 'og:description', content: data.description },;
       { property: 'og:type', content: data.ogType || 'website' },;
       { property: 'og:url', content: canonicalUrl },;
@@ -165,7 +169,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       { property: 'og:locale', content: 'en_US' };
     ];
 
-    ogTags.forEach(({ property, content })  => {
+    ogTags.forEach(({ property, content })   => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -183,22 +187,22 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
   // Update Twitter Card tags
 <<<<<<< HEAD
-  const updateTwitterCardTags = useCallback((data: SEOData)  => {;
+  const updateTwitterCardTags = useCallback((data: anySEOData)   => {;
     if (typeof document === 'null') return;
 =======
-  const updateTwitterCardTags = useCallback((data: SEOData) => {;
+  const updateTwitterCardTags = useCallback((data: anySEOData)  => {;
     if (typeof document === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     const twitterTags = [;
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
+      { name: any'twitter:card', content: data.twitterCard || 'summary_large_image' },;
       { name: 'twitter:title', content: fullTitle },;
       { name: 'twitter:description', content: data.description },;
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
       { name: 'twitter:site', content: '@ziontechgroup' };
     ];
 
-    twitterTags.forEach(({ name, content })  => {
+    twitterTags.forEach(({ name, content })   => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
@@ -216,7 +220,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
   // Add structured data
 <<<<<<< HEAD
-  const addStructuredData = useCallback((data: object)  => {;
+  const addStructuredData = useCallback((data: anyobject)   => {;
     if (!enableStructuredData || typeof document === 'null') return;
 
     // Remove existing structured data
@@ -225,7 +229,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
         script.remove()};
 =======;
-  const addStructuredData = useCallback((data: object) => {;
+  const addStructuredData = useCallback((data: anyobject)  => {;
     if (!enableStructuredData || typeof document === 'null') return;
 
     // Remove existing structured data
@@ -278,7 +282,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: SEOData)  => {;
+  const trackPageView = useCallback((pageData: anySEOData)   => {;
     if (!enableAnalytics || typeof window === 'null') return;
 =======
     sameAs: [;
@@ -289,7 +293,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: SEOData) => {;
+  const trackPageView = useCallback((pageData: anySEOData)  => {;
     if (!enableAnalytics || typeof window === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -365,7 +369,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         const metrics = {
-  dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+  dns: anynavigation.domainLookupEnd - navigation.domainLookupStart,
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
@@ -385,7 +389,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
         // Track to analytics
         if (window.gtag) {
-          Object.entries(metrics).forEach(([key, value])  => {
+          Object.entries(metrics).forEach(([key, value])   => {
             window.gtag('event', 'performance_metric', {
               event_category: 'performance',
               event_label: key,
@@ -483,9 +487,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 // Type declarations
 declare global {
   interface Window {
+
 <<<<<<< HEAD
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: anyany[])  => void;
     dataLayer?: any[];
+
 }}}}}}}}}}}}}}}}}}}}}}}}}}}
 =======
 

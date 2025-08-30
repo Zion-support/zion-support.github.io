@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
 import {
   Brain,
@@ -24,7 +24,7 @@ import {
   Cpu,
   Globe,
   Zap
-export default function Sitemap() {
+export default function Sitemap(...args: any[]): any {
   const sitemapSections = [
     {
       title: 'Core Pages',
@@ -135,10 +135,9 @@ export default function Sitemap() {
         { name: 'Micro SaaS Services', href: '/micro-saas-services', description: 'SaaS services' },
         { name: 'Micro SaaS Services 2028', href: '/micro-saas-services-2028', description: '2028 SaaS services' }
 =======
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-import { 
-  Home, 
+import { SEO  } from '../components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { Home, 
   Building, 
   Users, 
   FileText, 
@@ -169,9 +168,9 @@ import {
   MapPin,
   Phone,
   Mail
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Sitemap() {
+export default function Sitemap(...args: any[]): any {
   const currentYear = new Date().getFullYear();
 
   const sitemapSections = [
@@ -356,8 +355,8 @@ export default function Sitemap() {
 
       {/* Sitemap Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {sitemapSections.map((section, sectionIndex) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          {sitemapSections.map((section, sectionIndex)  => (
 =======
     <>
       <SEO 
@@ -485,8 +484,8 @@ export default function Sitemap() {
 
         {/* Sitemap Content */}
         <div className="container mx-auto px-4 pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sitemapSections.map((section, sectionIndex) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {sitemapSections.map((section, sectionIndex)  => (
               <motion.div
                 key={section.title}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-blue-light/20"

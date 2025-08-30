@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Zap,
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Zap,
   Code,
   Database,
   Users,
@@ -22,7 +21,7 @@ import {
   Globe
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const MicroSAASPage = () => {
   const saasServices = [
@@ -187,13 +186,13 @@ const MicroSAASPage = () => {
           initial="hidden"
           animate="visible"
 <<<<<<< HEAD
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
+          className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 mb-16"
 
-          {saasServices.map((service, index) => (
-=======
-          className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16"
-        >
           {saasServices.map((service, index)  => (
+=======
+          className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 mb-16"
+        >
+          {saasServices.map((service, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <motion.div
               key={service.id}
@@ -295,8 +294,8 @@ const MicroSAASPage = () => {
               and how they can transform your business.
             </p>
           </div>
-          <div className="grid grid-cols-2 md: grid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index)  => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-4">
+            {saasBenefits.map((benefit, index)   => (
               <motion.div
                 key={benefit}
                 initial = {

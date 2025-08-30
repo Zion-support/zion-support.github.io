@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  User,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { User,
   Mail,
   Phone,
   Building,
@@ -12,8 +11,8 @@ import {
   Save,
   Edit,
 =======
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState  } from 'react.ts';
+import { motion   } from 'framer-motion.ts';
 import { User, 
   Mail, 
   Phone, 
@@ -50,10 +49,11 @@ import { User,
   Rocket
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface UserProfile {
+
 
   firstName: string;
   lastName: string;
@@ -68,10 +68,12 @@ interface UserProfile {
 <<<<<<< HEAD
   avatar: string;
 =======
-  avatar: string}
+avatar: string;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface NotificationSettings {
+
 
   emailNotifications: boolean;
   pushNotifications: boolean;
@@ -81,22 +83,19 @@ interface NotificationSettings {
 <<<<<<< HEAD
   weeklyReports: boolean;
 =======
-  weeklyReports: boolean}
+weeklyReports: boolean;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecuritySettings {
+
 
   twoFactorEnabled: boolean;
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
 <<<<<<< HEAD
-  loginHistory: Array<{
-    date: string;
-    location: string;
-    device: string;
-    status: 'success' | 'failed';
-  }>;
+loginHistory: Array<any>;
 =======
 loginHistory: Array<any>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -105,8 +104,8 @@ loginHistory: Array<any>}
 const Profile: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('profile');
 =======
-const Profile: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
+const Profile: React.FC = (): JSX.Element => {;
+  const [activeTab, setActiveTab] = useState<any>('profile');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -243,22 +242,22 @@ const Profile: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const handleNotificationToggle = (key: keyof NotificationSettings)  => {
+  const handleNotificationToggle = (key: anykeyof NotificationSettings)   => {
     setNotifications(prev => ({
       ...prev,;
       [key]: !prev[key];
     }))};
 
-  const getPasswordStrength = (password: string)  => {;
+  const getPasswordStrength = (password: anystring)   => {;
 =======;
-  const handleNotificationToggle = (key: keyof NotificationSettings) => {;
+  const handleNotificationToggle = (key: anykeyof NotificationSettings)  => {;
     setNotifications(prev => ({;
       ...prev,;
       [key]: !prev[key];
     }));
   };
 
-  const getPasswordStrength = (password: string) => {;
+  const getPasswordStrength = (password: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
@@ -336,8 +335,8 @@ const Profile: React.FC = () => {;
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
-          {stats.map((stat, index)  => (
+        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
+          {stats.map((stat, index)   => (
             <motion.div
               key={stat.label}
               initial = {
@@ -499,7 +498,7 @@ const Profile: React.FC = () => {;
 
 }))}
 =======
-                value={profile.company}
+                value={profile.comp}
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   company: e.target.value 
@@ -557,13 +556,13 @@ const Profile: React.FC = () => {;
 }))}
                 disabled={!isEditing}
 <<<<<<< HEAD
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
 
-                {industries.map((industry) => (
-=======
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
-              >
                 {industries.map((industry)  => (
+=======
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {industries.map((industry)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
@@ -664,8 +663,8 @@ const Profile: React.FC = () => {;
       {/* Achievements */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
-          {achievements.map((achievement, index)  => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
+          {achievements.map((achievement, index)   => (
             <motion.div
               key={achievement.title}
               initial = {

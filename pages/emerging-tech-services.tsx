@@ -1,19 +1,19 @@
 <<<<<<< HEAD
 import type { NextPage } from 'next.ts';
 import Head from 'next/head.ts';
-import { useState  } from 'react.ts';
-import { EMERGING_TECH_SERVICES_2027  } from "../data/emergingTechServices2027";
+import { useState   } from 'react.ts';
+import { EMERGING_TECH_SERVICES_2027   } from '../data/emergingTechServices2027';
 
 const EmergingTechServices: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 =======
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
-import { EMERGING_TECH_SERVICES_2027 } from "../data/emergingTechServices2027";
+import type { NextPage } from 'next.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { useState  } from 'react.ts';
+import { EMERGING_TECH_SERVICES_2027  } from '../data/emergingTechServices2027';
 
 const EmergingTechServices: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
@@ -50,7 +50,7 @@ const EmergingTechServices: NextPage = () => {;
   });
 
 <<<<<<< HEAD
-  const getInnovationColor = (level: string) => {;
+  const getInnovationColor = (level: anystring)  => {;
     switch (level) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Revolutionary': return 'from-red-500 to-pink-600';
@@ -65,7 +65,7 @@ const EmergingTechServices: NextPage = () => {;
   };
 
 <<<<<<< HEAD
-  const getBadgeColor = (badge: string) => {;
+  const getBadgeColor = (badge: anystring)  => {;
     switch (badge) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
@@ -145,13 +145,13 @@ const EmergingTechServices: NextPage = () => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
 
-                {categories.map((category) => (
-=======
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-              >
                 {categories.map((category)  => (
+=======
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+              >
+                {categories.map((category)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category.id} value={category.id}>
                     {category.name}
@@ -199,8 +199,8 @@ const EmergingTechServices: NextPage = () => {;
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index)  => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index)   => (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"

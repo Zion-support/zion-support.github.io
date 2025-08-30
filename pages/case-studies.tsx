@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap export default function CaseStudies() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react'
+import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap export default function CaseStudies(...args: any[]): any {
+=======
+import React from 'react.ts'
+import { Link   } from 'react-router-dom.ts'
+import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap   } from 'lucide-react.ts'
 
 
-export default function CaseStudies(...args[]):  {
+export default function CaseStudies(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const caseStudies = [
 		{
@@ -175,8 +175,8 @@ export default function CaseStudies(...args[]):  {
 							Explore how we've helped businesses across different industries achieve their goals
 						</p>
 					</div>
-					<div className="grid gap-8 lg: grid-cols-2">
-						{caseStudies.slice(1).map((study)  => (
+					<div className="grid gap-8 lg: anygrid-cols-2">
+						{caseStudies.slice(1).map((study)   => (
 							<div key={study.id} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
 								<div className="flex items-center justify-between mb-4">
 									<div className="flex items-center gap-2">
@@ -184,7 +184,7 @@ export default function CaseStudies(...args[]):  {
 										<span className="text-sm text-gray-500">{study.industry}</span>
 									</div>
 									<div className="flex items-center gap-1">
-										{Array.from({ length: study.rating }).map((_, i)  => (
+										{Array.from({ length: anystudy.rating }).map((_, i)   => (
 											<Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
 										))}
 									</div>

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search,
   Filter,
   Star,
   TrendingUp,
@@ -85,13 +84,13 @@ import {
   PlayCircle,
   PauseCircle
 <<<<<<< HEAD
-import { revolutionary2025AdvancedMicroSaasServices } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-2025-specialized-it-ai-services';
+import { revolutionary2025AdvancedMicroSaasServices  } from '../data/revolutionary-2025-advanced-micro-saas-v2';
+import { revolutionary2025SpecializedITAIServices  } from '../data/revolutionary-2025-specialized-it-ai-services';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices  } from "../data/revolutionary-2025-advanced-micro-saas-v2";
-import { revolutionary2025SpecializedITAIServices  } from "../data/revolutionary-2025-specialized-it-ai-services";
+import { revolutionary2025AdvancedMicroSaasServices   } from '../data/revolutionary-2025-advanced-micro-saas-v2';
+import { revolutionary2025SpecializedITAIServices   } from '../data/revolutionary-2025-specialized-it-ai-services';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
@@ -99,12 +98,12 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
   const [services, setServices] = useState<any>(ALL_SERVICES);
 =======
 } from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices } from "../data/revolutionary-2025-advanced-micro-saas-v2";
-import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-2025-specialized-it-ai-services";
+import { revolutionary2025AdvancedMicroSaasServices  } from '../data/revolutionary-2025-advanced-micro-saas-v2';
+import { revolutionary2025SpecializedITAIServices  } from '../data/revolutionary-2025-specialized-it-ai-services';
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-const Revolutionary2025ServicesShowcase: React.FC = () => {;
-  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
+  const [services, setServices] = useState<any>(ALL_SERVICES);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -190,7 +189,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     });
     setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-  const handleServiceSelect = (serviceId: string) => {
+  const handleServiceSelect = (serviceId: anystring)  => {
     setSelectedServices(prev =>
       prev.includes(serviceId)
         ? prev.filter(id => id !== serviceId)
@@ -805,8 +804,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             </p>
           </div>
           {viewMode === 'grid' && (
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index)   => (
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"

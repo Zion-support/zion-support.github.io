@@ -4,13 +4,15 @@ type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
 
-  theme: Theme;
+
+  theme: anyTheme;
 <<<<<<< HEAD
-  setTheme: (theme: Theme) => void;
+  setTheme: (theme: Theme)  => void;
   isDark: boolean;
 =======
-  setTheme: (theme: Theme)  => void;
-  isDark: boolean}
+  setTheme: any(theme: Theme)   => void;
+isDark: boolean;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
@@ -30,10 +32,12 @@ export const useTheme = () => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 <<<<<<< HEAD
-interface ThemeProviderProps {
+interface ThemeProviderProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
 =======
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
+interface ThemeProviderProps extends React.PropsWithChildren<{
+}> {
 
   children: React.ReactNode}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -43,7 +47,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<any>(() => {
     if (typeof window !== 'null') {
 =======
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [theme, setTheme] = useState<any>(() => {
     if (typeof window !== 'null') {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       const saved = localStorage.getItem('theme') as Theme;
@@ -109,9 +113,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     updateTheme();
 
     if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
       mediaQuery.addEventListener('change', updateTheme);
-      return () => mediaQuery.removeEventListener('change', updateTheme);
+      return ()  => mediaQuery.removeEventListener('change', updateTheme);
 
 =======
         root.classList.remove('dark')}
@@ -120,9 +124,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     updateTheme();
     
     if (theme = == 'system') {;
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
       mediaQuery.addEventListener('change', updateTheme);
-      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
+      return ()   => mediaQuery.removeEventListener('change', updateTheme)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [theme]);
 

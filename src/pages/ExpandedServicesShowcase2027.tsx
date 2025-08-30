@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search,
   Filter,
   Grid3X3,
   List,
@@ -56,17 +55,16 @@ import {
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
-import { SEO } from '@/components/SEO';
-import {
-  ALL_EXPANDED_SERVICES_2027,
+import { SEO  } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_2027,
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027
-} from '@/data/expandedInnovativeServices2027';
+ } from '@/data/expandedInnovativeServices2027';
 
 <<<<<<< HEAD
-const ExpandedServicesShowcase2027: React.FC = () => {;
+const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -88,7 +86,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
     switch (category) {;
       case 'Cybersecurity':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -113,7 +111,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const getCategoryColor = (category: string) => {;
+  const getCategoryColor = (category: anystring)  => {;
     switch (category) {;
       case 'Cybersecurity':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -138,21 +136,21 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const formatPrice = (pricing: ExpandedService2027['pricing'])  => {
+  const formatPrice = (pricing: anyExpandedService2027['pricing'])   => {
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees'};
     return `$${pricing.basePrice.toLocaleString()}/month`};
 
-  const renderServiceCard = (service: ExpandedService2027)  => {;
+  const renderServiceCard = (service: anyExpandedService2027)   => {;
 =======;
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+  const formatPrice = (pricing: anyExpandedService2027['pricing'])  => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: ExpandedService2027) => {;
+  const renderServiceCard = (service: anyExpandedService2027)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
@@ -377,7 +375,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
       </motion.div>;
     )};
 
-  const renderServiceList = (service: ExpandedService2027)  => {;
+  const renderServiceList = (service: anyExpandedService2027)   => {;
 =======;
               </a>;
             </div>;
@@ -387,7 +385,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
     );
   };
 
-  const renderServiceList = (service: ExpandedService2027) => {;
+  const renderServiceList = (service: anyExpandedService2027)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
@@ -672,13 +670,13 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
 
-                {EXPANDED_SERVICE_CATEGORIES.map((category) => (
-=======
-                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-              >
                 {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
+=======
+                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+              >
+                {EXPANDED_SERVICE_CATEGORIES.map((category)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>
                     {category}
@@ -722,8 +720,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service) =>
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            {filteredServices.map((service)  =>
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>

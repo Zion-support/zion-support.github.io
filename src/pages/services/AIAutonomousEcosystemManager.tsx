@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Network, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Network, 
   Brain, 
   Target, 
   BarChart3, 
@@ -25,9 +24,9 @@ import {
   Shield,
   Users,
   GitBranch
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AIAutonomousEcosystemManager: React.FC = () => {
+const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -125,8 +124,8 @@ const AIAutonomousEcosystemManager: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

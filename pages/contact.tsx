@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact() {
-=======
 import React, { useState } from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact(...args: any[]): any {
+=======
+import React, { useState  } from 'react.ts'
+import { Link   } from 'react-router-dom.ts'
+import { Mail, Phone, MapPin, Send, CheckCircle   } from 'lucide-react.ts'
 
 
-export default function Contact(...args[]):  {
+export default function Contact(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const [formData, setFormData] = useState({
 		name: '',
@@ -19,17 +19,17 @@ export default function Contact(...args[]):  {
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
 <<<<<<< HEAD
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = (e: anyReact.FormEvent)  => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
 <<<<<<< HEAD
 		// // // console.log('Form submitted:', formData)
 =======
-		// // // // // // // console.log('Form submitted:', formData)
+		// // // // // // // console.log('Form submitted: any', formData)
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 		setIsSubmitted(true)
 		// Reset form after submission
-		setTimeout(() => {
+		setTimeout(()  => {
 			setIsSubmitted(false)
 			setFormData({ name: '', email: '', company: '', message: '' })
 		}, 3000)
@@ -37,7 +37,7 @@ export default function Contact(...args[]):  {
 =======
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+	const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 		setFormData({
 			...formData,

@@ -1,21 +1,23 @@
 <<<<<<< HEAD
 import React, { Suspense, lazy } from 'react.ts'
-import { LoadingSpinner  } from "./ui/LoadingSpinner"
+import { LoadingSpinner   } from './ui/LoadingSpinner'
 =======
-import React, { Suspense, lazy } from 'react'
-import { LoadingSpinner } from "./ui/LoadingSpinner"
+import React, { Suspense, lazy } from 'react.ts'
+import { LoadingSpinner  } from './ui/LoadingSpinner'
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 <<<<<<< HEAD
-interface LazyLoaderProps {
-  component: React.ComponentType<any>
-  fallback?: React.ReactNode
-  props?: any
+interface LazyLoaderProps extends React.PropsWithChildren<{}> {
 
-export const LazyLoader: React.FC<LazyLoaderProps> = ({
-  component: Component,
+component: React.ComponentType<any>;
+fallback?: React.ReactNode;
+props?: any;
+
+export const LazyLoader: React.FC<LazyLoaderProps> = ({;
+component: Component,;
   fallback = <LoadingSpinner />,
-  props = { /* empty */ }
+  props = { /* empty */ 
+}
 }) => {
   return (
     <Suspense fallback={fallback}>

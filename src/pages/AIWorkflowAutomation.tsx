@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain,
   Zap,
   Shield,
   CheckCircle,
@@ -267,7 +266,7 @@ import {
   Treap,
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const workflowSolutions = [
@@ -544,15 +543,14 @@ const workflowBenefits = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export default function AIWorkflowAutomation(...args[]):  {
+export default function AIWorkflowAutomation(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Process Automation', 'Document Processing', 'Workflow Orchestration', 'Decision Automation', 'Analytics', 'Task Management'];
 
   const filteredSolutions = selectedCategory === 'All'
-    ? workflowSolutions
-    : workflowSolutions.filter(solution => solution.category === selectedCategory);
+    ? workflowSolutions: anyworkflowSolutions.filter(solution  => solution.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
@@ -687,8 +685,8 @@ export default function AIWorkflowAutomation(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {workflowBenefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {workflowBenefits.map((benefit, index)   => (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -731,8 +729,8 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
 
                 <div className="space-y-2">
-                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
-                  {benefit.examples.map((example, exampleIndex)  => (
+                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: anyany</h4>
+                  {benefit.examples.map((example, exampleIndex)   => (
                     <div key={exampleIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span className="text-zion-slate-light text-sm">{example}</span>
@@ -778,8 +776,8 @@ export default function AIWorkflowAutomation(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {workflowTechnologies.map((technology, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {workflowTechnologies.map((technology, index)   => (
               <motion.div
                 key={technology.name}
                 initial = {
@@ -870,8 +868,8 @@ export default function AIWorkflowAutomation(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index)   => (
               <motion.div
                 key={step.step}
                 initial = {
@@ -976,8 +974,8 @@ export default function AIWorkflowAutomation(...args[]):  {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSolutions.map((solution, index)   => (
               <motion.div
                 key={solution.id}
                 initial = {
@@ -1093,8 +1091,8 @@ export default function AIWorkflowAutomation(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {successStories.map((story, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {successStories.map((story, index)   => (
               <motion.div
                 key={story.id}
                 initial = {

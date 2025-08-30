@@ -1,7 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
 
-interface SEOProps {
+interface SEOProps extends React.PropsWithChildren<{}> {
+
   title: string;
   description: string;
   keywords?: string;
@@ -14,22 +15,11 @@ interface SEOProps {
   nofollow?: boolean;
   author?: string;
 
-export function SEO({
-  title,
-  description,
-  keywords,
-  ogImage = '/og-image.jpg',
-  canonicalUrl,
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noindex = false,
-  nofollow = false,
-  author
-}: SEOProps) {
+export function SEO(...args: any[]): any {;
   // Generate meta robots content
   const robotsContent = [
-    noindex ? 'noindex' : 'index',
-    nofollow ? 'nofollow' : 'follow'
+noindex ? 'noindex' : 'index',;
+nofollow ? 'nofollow' : 'follow';
   ].join(',');
 =======
   image?: string;
@@ -38,18 +28,10 @@ export function SEO({
   noindex?: boolean;
   structuredData?: object;
   children?: React.ReactNode;
+
 }
 
-export function SEO({ 
-  title, 
-  description, 
-  keywords, 
-  image, 
-  url, 
-  type = 'website',
-  noindex = false,
-  structuredData 
-}: SEOProps) {
+export function SEO(...args: any[]): any {
   const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const defaultImage = '/images/zion-tech-group-og.jpg';
@@ -220,7 +202,7 @@ export function SEO({
 }
 
 // Specialized SEO components for different page types
-export function HomePageSEO() {
+export function HomePageSEO(...args: any[]): any {
   return (
     <SEO
       title="AI-Powered Business Solutions & Quantum Computing | Zion Tech Group"
@@ -243,7 +225,7 @@ export function HomePageSEO() {
   );
 }
 
-export function ServicesPageSEO() {
+export function ServicesPageSEO(...args: any[]): any {
   return (
     <SEO
       title="AI Services, Quantum Computing & IT Solutions | Zion Tech Group"
@@ -265,7 +247,7 @@ export function ServicesPageSEO() {
   );
 }
 
-export function ContactPageSEO() {
+export function ContactPageSEO(...args: any[]): any {
   return (
     <SEO
       title="Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions"
@@ -292,21 +274,7 @@ export function ContactPageSEO() {
   );
 }
 
-export function BlogPostSEO({ 
-  title, 
-  description, 
-  author, 
-  publishedDate, 
-  image, 
-  slug 
-}: {
-  title: string;
-  description: string;
-  author: string;
-  publishedDate: string;
-  image: string;
-  slug: string;
-}) {
+export function BlogPostSEO(...args: any[]): any {
   return (
     <SEO
       title={title}

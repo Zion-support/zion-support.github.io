@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-	Rocket,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Rocket,
 	Brain,
 	Zap,
 	Shield,
@@ -17,9 +16,10 @@ import {
 	Pause
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ServiceShowcase {
+
 
 	id: string;
 	title: string;
@@ -32,7 +32,8 @@ interface ServiceShowcase {
 	status: 'active' | 'beta' | 'new';
 
 =======
-	status: 'active' | 'beta' | 'new'}
+status: 'active' | 'beta' | 'new';
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const futuristicServices: ServiceShowcase[] = [
 	{
@@ -96,7 +97,7 @@ const futuristicServices: ServiceShowcase[] = [
 		status: 'active'
 
 ];
-export default function FuturisticServicesShowcase(...args[]):  {
+export default function FuturisticServicesShowcase(...args[]: any):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
@@ -105,7 +106,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
 		return () => clearInterval(interval)}, [isPlaying]);
-	const getStatusColor = (status: string)  => {
+	const getStatusColor = (status: anystring)   => {
 		switch (status) {;
 =======;
 		const interval = setInterval(() => {;
@@ -113,7 +114,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: string) => {;
+	const getStatusColor = (status: anystring)  => {;
 		switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'bg-green-500';
@@ -127,7 +128,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
 <<<<<<< HEAD
-	const getStatusText = (status: string) => {;
+	const getStatusText = (status: anystring)  => {;
 		switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'NEW';
@@ -327,8 +328,8 @@ export default function FuturisticServicesShowcase(...args[]):  {
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
 						Explore All Services
 					</h3>
-					<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-						{futuristicServices.map((service, index)  => (
+					<div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+						{futuristicServices.map((service, index)   => (
 							<motion.div
 								key={service.id}
 								initial = {

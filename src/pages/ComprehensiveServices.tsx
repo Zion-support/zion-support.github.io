@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck, Star, Phone, Mail, MapPin, Zap, Rocket, Car, Dna, Robot, Eye, Atom, Microscope, City, RefreshCw, Globe2 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck, Star, Phone, Mail, MapPin, Zap, Rocket, Car, Dna, Robot, Eye, Atom, Microscope, City, RefreshCw, Globe2  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { zionCuttingEdgeServices2029  } from '../../data/zion-2029-cutting-edge-services';
+import { zionEmergingTechServices2029  } from '../../data/zion-2029-emerging-tech-services';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Zap,
   Shield,
   Cloud,
@@ -32,16 +31,16 @@ import {
   Award,
   TrendingUp
 <<<<<<< HEAD
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function ComprehensiveServices() {
+export default function ComprehensiveServices(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('popular');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('popular');
 
   // Combine all services
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
@@ -519,8 +518,8 @@ export default function ComprehensiveServices() {
       {/* Stats Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -557,9 +556,9 @@ export default function ComprehensiveServices() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+                className="px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus: anyoutline-none focus:border-cyan-400/50"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -603,8 +602,8 @@ export default function ComprehensiveServices() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -671,9 +670,9 @@ export default function ComprehensiveServices() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: anytrue }}
             >
-              {sortedServices.map((service, index) => (
+              {sortedServices.map((service, index)  => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </motion.div>

@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Cloud,
   Shield,
   Rocket,
@@ -11,9 +10,9 @@ import {
   Lock,
   Heart,
 =======
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState  } from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -67,30 +66,30 @@ import {
   revolutionaryMicroSaasServices2028,
   revolutionaryITInfrastructureServices2028,
   revolutionaryAIServices2028
-} from '@/data/innovativeMicroSaasServices2028';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+ } from '@/data/innovativeMicroSaasServices2028';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
 =======
  } from 'lucide-react';
 import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
- } from '@/data/innovativeMicroSaasServices2028';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
+  } from '@/data/innovativeMicroSaasServices2028';
+import { SEO   } from '@/components/SEO';
+import { Button   } from '@/components/ui/button';
+import { Badge   } from '@/components/ui/badge';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function ComprehensiveServicesLanding2028(...args[]):  {
+export default function ComprehensiveServicesLanding2028(...args[]: any):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
 
 <<<<<<< HEAD
   const allServices = [;
-    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),;
-    ...revolutionaryITInfrastructureServices2028.map(s => ({ ...s, type: 'IT Infrastructure' })),;
-    ...revolutionaryAIServices2028.map(s => ({ ...s, type: 'AI Services' }));
+    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: any'Micro SaaS' })),;
+    ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: any'IT Infrastructure' })),;
+    ...revolutionaryAIServices2028.map(s  => ({ ...s, type: 'AI Services' }));
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
@@ -141,7 +140,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   ];
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
     switch (category) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Legal Tech': return Scale;
@@ -163,7 +162,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (category: anystring)   => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',;
@@ -350,8 +349,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       {/* Stats Section */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)   => (
               <motion.div
                 key={stat.label}
                 initial = {
@@ -436,8 +435,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.slice(0, 6).map((service, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {allServices.slice(0, 6).map((service, index)   => (
               <motion.div
                 key={service.id}
                 initial = {

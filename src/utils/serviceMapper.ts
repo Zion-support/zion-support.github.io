@@ -1,11 +1,12 @@
 <<<<<<< HEAD
-import { specializedIndustrySolutions2026  } from '@/data/2026-specialized-industry-solutions';
+import { specializedIndustrySolutions2026   } from '@/data/2026-specialized-industry-solutions';
 =======
-import { specializedIndustrySolutions2026 } from "../../data/2026-specialized-industry-solutions";
+import { specializedIndustrySolutions2026  } from '../../data/2026-specialized-industry-solutions';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Interface for the existing service structure
 export interface Service {
+
 
   id: string;
   title: string;
@@ -25,11 +26,12 @@ export interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

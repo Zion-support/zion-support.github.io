@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Rocket,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Rocket,
   Brain,
   Zap,
   Globe,
@@ -33,9 +32,9 @@ import {
   Globe2,
   ShieldCheck
 <<<<<<< HEAD
-const InnovativeServicesHub: React.FC = () => {
+const InnovativeServicesHub: React.FC = (): JSX.Element => {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 const InnovativeServicesHub: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -410,14 +409,14 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-          {serviceCategories.map((category)  => {;
+        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          {serviceCategories.map((category)   => {;
 =======;
           </p>;
         </div>;
 ;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-          {serviceCategories.map((category) => {;
+        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">;
+          {serviceCategories.map((category)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const IconComponent = category.icon;
             return (
@@ -526,8 +525,8 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
-          {featuredServices.map((service, index)  => (
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
+          {featuredServices.map((service, index)   => (
             <motion.div
               key={index}
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"

@@ -1,21 +1,26 @@
 <<<<<<< HEAD
-import React from 'react';
+import React from 'react.ts';
 import { Filter, X interface FilterOption {
+
   value: string;
   label: string;
   count?: number;
 =======
 import React from 'react.ts';
-import { Filter, X  } from 'lucide-react';
+import { Filter, X   
+} from 'lucide-react.ts';
 
 interface FilterOption {
 
+
   value: string;
   label: string;
-  count?: number}
+count?: number;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterGroup {
+
 
   title: string;
   key: string;
@@ -23,30 +28,24 @@ interface FilterGroup {
 <<<<<<< HEAD
   type: 'checkbox' | 'radio' | 'range';
 =======
-  type: 'checkbox' | 'radio' | 'range'}
+type: any'checkbox' | 'radio' | 'range';
+}
 
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: ()  => void;
-  isOpen: boolean;
+  onFilterChange: (key: string, value: string, checked: boolean)   => void;
+  onClearFilters: any()   => void;
+  isOpen: anyboolean;
 <<<<<<< HEAD
-  onClose: () => void;
+  onClose: ()  => void;
 =======
-  onClose: ()  => void}
+  onClose: any()   => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function FilterSidebar({
-  filters,
-  selectedFilters,
-  onFilterChange,
-  onClearFilters,
-  isOpen,
-  onClose
-}: FilterSidebarProps) {
+export function FilterSidebar(...args: any[]): any {
   return (
     <>
       {/* Mobile overlay */}
@@ -85,7 +84,7 @@ export function FilterSidebar({
               className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors underline"
 
 =======
-              className="text-sm text-zion-cyan hover: text-zion-cyan-light transition-colors underline"
+              className="text-sm text-zion-cyan hover: anytext-zion-cyan-light transition-colors underline"
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Clear all
@@ -94,7 +93,7 @@ export function FilterSidebar({
 
           {/* Filter groups */}
 <<<<<<< HEAD
-          {filters.map((group)  => (
+          {filters.map((group)   => (
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
 

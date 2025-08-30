@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react.ts';
 <<<<<<< HEAD
-import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter export default function Documentation() {
+import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter export default function Documentation(...args: any[]): any {
 =======
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Search, 
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Search, 
   BookOpen, 
   Code, 
   FileText, 
@@ -22,9 +21,9 @@ import {
   Cloud,
   Shield,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Documentation() {
+export default function Documentation(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -147,8 +146,7 @@ export default function Documentation() {
   ];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories 
-    : docCategories.filter(category => category.id === selectedCategory);
+    ? docCategories: anydocCategories.filter(category  => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
@@ -234,7 +232,7 @@ export default function Documentation() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const getDifficultyColor = (difficulty: string) => {;
+  const getDifficultyColor = (difficulty: anystring)  => {;
     switch (difficulty) {;
       case 'beginner': return 'bg-green-500';
       case 'intermediate': return 'bg-yellow-500';
@@ -243,7 +241,7 @@ export default function Documentation() {
 
   };
 
-  const getDifficultyText = (difficulty: string) => {;
+  const getDifficultyText = (difficulty: anystring)  => {;
     switch (difficulty) {;
       case 'beginner': return 'Beginner';
       case 'intermediate': return 'Intermediate';
@@ -375,9 +373,9 @@ export default function Documentation() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {sortOptions.map((option) => (
+                  {sortOptions.map((option)  => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -468,8 +466,8 @@ export default function Documentation() {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {filteredCategories.map((category, index) => (
+            <div className="grid md: anygrid-cols-2 gap-8">
+              {filteredCategories.map((category, index)  => (
                 <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -526,8 +524,8 @@ export default function Documentation() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Featured Resources
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {featuredResources.map((resource, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6 max-w-6xl mx-auto">
+            {featuredResources.map((resource, index)  => (
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -568,8 +566,8 @@ export default function Documentation() {
           </h2>
 
           {filteredItems.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-              {filteredItems.map((item) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-6 max-w-6xl mx-auto">
+              {filteredItems.map((item)  => (
                 <div
                   key={item.id}
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
@@ -593,8 +591,8 @@ export default function Documentation() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {apiDocs.map((api, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {apiDocs.map((api, index)  => (
               <motion.div
                 key={api.name}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -675,8 +673,8 @@ export default function Documentation() {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              {popularGuides.map((guide, index) => (
+            <div className="grid md: anygrid-cols-2 gap-8">
+              {popularGuides.map((guide, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -739,7 +737,7 @@ export default function Documentation() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: anygrid-cols-3 gap-8">
             {[
               {
                 title: 'Video Tutorials',
@@ -762,7 +760,7 @@ export default function Documentation() {
                 count: '25+ downloads',
                 href: '/downloads'
               }
-            ].map((resource, index) => (
+            ].map((resource, index)  => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, y: 30 }}

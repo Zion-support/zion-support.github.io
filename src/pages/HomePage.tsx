@@ -1,8 +1,7 @@
-import React, { Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { Suspense, lazy } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain,
   Shield,
   Cpu,
   Rocket,
@@ -36,7 +35,7 @@ import {
   Search,
   Menu,
   X
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 // Lazy load components for better performance
 const LazyTestimonials = lazy(() => import('../components/Testimonials'));
@@ -60,7 +59,7 @@ const HeroSkeleton = () => (
   </div>
 );
 
-export function HomePage() {
+export function HomePage(...args: any[]): any {
   const heroFeatures = [
     { icon: Brain, text: 'AI-Powered Solutions', description: 'Transform your business with cutting-edge artificial intelligence' },
     { icon: Atom, text: 'Quantum Computing', description: 'Harness the power of quantum mechanics for unprecedented computational capabilities' },

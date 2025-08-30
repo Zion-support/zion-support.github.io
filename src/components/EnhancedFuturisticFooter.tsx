@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Phone,
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone,
   Mail,
   MapPin,
   Globe,
@@ -80,7 +79,7 @@ import {
   Sun,
   Moon,
   Infinity
-export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
 =======
   Smartphone,
   Monitor,
@@ -92,10 +91,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   Building,
   Car,
   Atom
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 <<<<<<< HEAD
-export const EnhancedFuturisticFooter: React.FC = () => {;
+export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const currentYear = new Date().getFullYear();
@@ -111,7 +110,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
       ]
     },
     {
-      title: 'Company',
+      title: 'Comp',
       links: [
         { name: 'About', href: '/about' },
         { name: 'Careers', href: '/careers' },
@@ -209,7 +208,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: anystring, href: string)  => {
+  const createMissingPage = (name: anyanystring, href: string)   => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -239,9 +238,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+            transition={{ duration: any0.6, staggerChildren: 0.1 }}
           >
-            {stats.map((stat, index) => (
+            {stats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
                 className="text-center"

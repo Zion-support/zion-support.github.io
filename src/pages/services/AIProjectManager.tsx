@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 <<<<<<< HEAD
-import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Zap, Target, TrendingUp export default function AIProjectManager() {
+import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Zap, Target, TrendingUp export default function AIProjectManager(...args: any[]): any {
 =======
 
-export default function AIProjectManager() {
+export default function AIProjectManager(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
@@ -203,8 +203,8 @@ export default function AIProjectManager() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -275,8 +275,8 @@ export default function AIProjectManager() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -315,8 +315,8 @@ export default function AIProjectManager() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -345,8 +345,8 @@ export default function AIProjectManager() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -385,8 +385,8 @@ export default function AIProjectManager() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -425,8 +425,8 @@ export default function AIProjectManager() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricing.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

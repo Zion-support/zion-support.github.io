@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import {
-  Activity,
+import { Activity,
   Clock,
   Zap,
   AlertTriangle,
@@ -15,10 +14,11 @@ import {
   HardDrive,
   Wifi
 =======
-import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown } from 'lucide-react';
+import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface PerformanceMetrics {
+
   fcp: number;
   lcp: number;
   fid: number;
@@ -35,6 +35,7 @@ interface PerformanceMetrics {
   memoryUsage?: number;
   cpuUsage?: number;
 =======
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -56,7 +57,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {;
   const [scores, setScores] = useState<Record<string, any>>({});
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-  const calculateScore = useCallback((metric: number, thresholds: number[]): PerformanceScore  => {;
+  const calculateScore = useCallback((metric: anynumber, thresholds: number[]): PerformanceScore   => {;
     if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
     if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
     if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
@@ -74,28 +75,25 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {;
       // Cumulative Layout Shift
       const cls = clsEntry ? (clsEntry as ).value : null;
 =======
-interface PerformanceMonitorProps {
+interface PerformanceMonitorProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
 <<<<<<< HEAD
   showMetrics?: boolean;
-  onPerformanceIssue?: (issue: string) => void;
+  onPerformanceIssue?: (issue: anystring)  => void;
 =======
   autoRefresh?: boolean;
   refreshInterval?: number;
   showDetails?: boolean;
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function PerformanceMonitor({ 
-  enabled = true, 
-  autoRefresh = true, 
-  refreshInterval = 30000,
-  showDetails = false 
-}: PerformanceMonitorProps) {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+export function PerformanceMonitor(...args: any[]): any {
+  const [metrics, setMetrics] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [alerts, setAlerts] = useState<string[]>([]);
+  const [alerts, setAlerts] = useState<any>([]);
 
   const calculateMetrics = useCallback(() => {
     if (!window.performance) return null;
@@ -125,7 +123,7 @@ export function PerformanceMonitor({
     };
   }, []);
 
-  const getPerformanceScore = useCallback((metrics: PerformanceMetrics) => {
+  const getPerformanceScore = useCallback((metrics: anyPerformanceMetrics)  => {
     let score = 100;
 <<<<<<< HEAD
 
@@ -155,7 +153,7 @@ export function PerformanceMonitor({
   // Collect performance metrics
   const collectMetrics = useCallback(() => {
     if ('performance' in window) {
-      const perf = (window as any).performance;
+      const perf = (window as ).performance;
       const navigation = perf.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 
       if (navigation) {
@@ -183,7 +181,7 @@ export function PerformanceMonitor({
           const clsObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             const clsValue = 0;
-            entries.forEach((entry: any) => {
+            entries.forEach((entry: any)  => {
               if (entry.value) {
                 clsValue += entry.value;
 
@@ -197,7 +195,7 @@ export function PerformanceMonitor({
           const fidObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             if (entries.length > 0) {
-              const lastEntry = entries[entries.length - 1] as any;
+              const lastEntry = entries[entries.length - 1] as ;
               newMetrics.firstInputDelay = lastEntry.processingStart - lastEntry.startTime;
 
           });
@@ -261,20 +259,20 @@ export function PerformanceMonitor({
     return Math.max(0, score);
   }, []);
 
-  const getPerformanceColor = useCallback((score: number) => {
+  const getPerformanceColor = useCallback((score: anynumber)  => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
   }, []);
 
-  const getPerformanceStatus = useCallback((score: number) => {
+  const getPerformanceStatus = useCallback((score: anynumber)  => {
     if (score >= 90) return 'Excellent';
     if (score >= 70) return 'Good';
     if (score >= 50) return 'Needs Improvement';
     return 'Poor';
   }, []);
 
-  const checkPerformanceIssues = useCallback((metrics: PerformanceMetrics) => {
+  const checkPerformanceIssues = useCallback((metrics: anyPerformanceMetrics)  => {
     const newAlerts: string[] = [];
     
     if (metrics.fcp > 1800) {

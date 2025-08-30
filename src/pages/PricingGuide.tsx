@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Calculator,
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Calculator,
   Check,
   X,
   Star,
@@ -12,8 +11,8 @@ import {
   Shield,
   Cpu,
 =======
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState  } from 'react.ts';
+import { Link   } from 'react-router-dom.ts';
 import { Calculator, 
   Check, 
   X, 
@@ -41,18 +40,18 @@ import { Calculator,
   Atom,
   Satellite
 <<<<<<< HEAD
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { SEO  } from "../components/SEO";
+import { SEO   } from '../components/SEO';
 =======
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
+import { SEO  } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function PricingGuide(...args[]):  {
+export default function PricingGuide(...args[]: any):  {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
@@ -202,7 +201,7 @@ export default function PricingGuide(...args[]):  {
   ];
 
 <<<<<<< HEAD
-  const calculatePrice = (price: number) => {;
+  const calculatePrice = (price: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
     const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
@@ -304,12 +303,12 @@ export default function PricingGuide(...args[]):  {
           </div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
 =======
           
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                 plan.popular
@@ -353,8 +352,8 @@ export default function PricingGuide(...args[]):  {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
-                  {plan.features.map((feature, featureIndex)  => (
+                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: anyany</h4>
+                  {plan.features.map((feature, featureIndex)   => (
                     <div key={featureIndex} className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
@@ -363,8 +362,8 @@ export default function PricingGuide(...args[]):  {
 
                   {plan.notIncluded.length > 0 && (
                     <>
-                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
-                      {plan.notIncluded.map((feature, featureIndex)  => (
+                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: anyany</h4>
+                      {plan.notIncluded.map((feature, featureIndex)   => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
@@ -388,12 +387,12 @@ export default function PricingGuide(...args[]):  {
           </div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {servicePricing.map((category, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {servicePricing.map((category, index)  => (
 =======
           
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {servicePricing.map((category, index)  => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {servicePricing.map((category, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-6">

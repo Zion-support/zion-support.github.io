@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 import {
   CheckCircle,
   AlertTriangle,
@@ -12,7 +12,7 @@ import {
   Zap,
   Shield,
   Activity
-const Status: React.FC = () => (
+const Status: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />
 		<div className="text-center text-white">
@@ -25,11 +25,10 @@ const Status: React.FC = () => (
 export default Status;
 }
 =======
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  CheckCircle, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { CheckCircle, 
   AlertTriangle, 
   XCircle, 
   Clock, 
@@ -45,9 +44,9 @@ import {
   AlertCircle,
   Info,
   ExternalLink
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Status() {
+export default function Status(...args: any[]): any {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -211,7 +210,7 @@ export default function Status() {
     }
   ];
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: anystring)  => {
     switch (status) {
       case 'operational':
         return 'text-green-400 bg-green-500/20';
@@ -226,7 +225,7 @@ export default function Status() {
     }
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: anystring)  => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
@@ -241,7 +240,7 @@ export default function Status() {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (severity: anystring)  => {
     switch (severity) {
       case 'low':
         return 'bg-blue-500/20 text-blue-400';
@@ -362,8 +361,8 @@ export default function Status() {
             <p className="text-xl text-gray-300">Key performance indicators and trends</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {performanceMetrics.map((metric, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {performanceMetrics.map((metric, index)  => (
               <motion.div
                 key={metric.metric}
                 initial={{ opacity: 0, y: 20 }}
@@ -406,8 +405,8 @@ export default function Status() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index)  => (
               <motion.div
                 key={service.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -456,8 +455,8 @@ export default function Status() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {regions.map((region, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+            {regions.map((region, index)  => (
               <motion.div
                 key={region.name}
                 initial={{ opacity: 0, y: 20 }}

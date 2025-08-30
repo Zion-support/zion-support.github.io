@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Eye, 
   AlertTriangle, 
   Target, 
@@ -35,9 +34,9 @@ import {
   TrendingUp,
   Activity,
   ShieldCheck
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIAutonomousThreatIntelligence() {
+export default function AIAutonomousThreatIntelligence(...args: any[]): any {
   const features = [
     {
       icon: Eye,
@@ -205,8 +204,8 @@ export default function AIAutonomousThreatIntelligence() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -256,8 +255,8 @@ export default function AIAutonomousThreatIntelligence() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {threatTypes.map((threat, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {threatTypes.map((threat, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -311,8 +310,8 @@ export default function AIAutonomousThreatIntelligence() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

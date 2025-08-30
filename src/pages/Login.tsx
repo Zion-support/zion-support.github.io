@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const Login: React.FC = () => (
+const Login: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Login</h1>
@@ -8,11 +8,10 @@ const Login: React.FC = () => (
 	</div>
 );
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Mail, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Mail, 
   Lock, 
   Eye, 
   EyeOff, 
@@ -45,10 +44,10 @@ import {
   Monitor,
   Tablet,
   Laptop
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Login() {
+export default function Login(...args: any[]): any {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -67,7 +66,7 @@ export default function Login() {
   const [submitted, setSubmitted] = useState(false);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -76,13 +75,13 @@ export default function Login() {
   };
 
 <<<<<<< HEAD
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
+  const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement>)   => {
     setFormData({
       ...formData,;
       [e.target.name]: e.target.value;
     })};
 
-  const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setIsSubmitting(true);
@@ -254,14 +253,14 @@ export default function Login() {
                   </div>
                   
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="comp" className="block text-sm font-medium text-white mb-2">
                       Company
                     </label>
                     <input
                       type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
+                      id="comp"
+                      name="comp"
+                      value={formData.comp}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
                       placeholder="Company Name (Optional)"

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause interface Testimonial {
+
   id: number;
   name: string;
   role: string;
@@ -21,7 +22,8 @@ import {
   Users,
   Award,
   TrendingUp
-} from 'lucide-react';
+ 
+} from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const InteractiveTestimonials: React.FC = (): JSX.Element => {;
@@ -102,7 +104,7 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {;
   const previousTestimonial = () => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
-  const goToTestimonial = (index: number)  => {;
+  const goToTestimonial = (index: anynumber)   => {;
     setCurrentIndex(index)};
 
   const togglePlayPause = () => {;
@@ -190,7 +192,7 @@ const testimonials = [
 
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
 
-export function InteractiveTestimonials() {
+export function InteractiveTestimonials(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
 
@@ -219,7 +221,7 @@ export function InteractiveTestimonials() {
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (index: anynumber)  => {
     setCurrentIndex(index);
   };
 
@@ -307,12 +309,12 @@ export function InteractiveTestimonials() {
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               selectedCategory === null
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                : 'bg-white/10 text-gray-300 hover: anybg-white/20 border border-white/20'
             }`}
 
             All Categories
           </button>
-          {categories.map((category) => (
+          {categories.map((category)  => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -396,8 +398,8 @@ export function InteractiveTestimonials() {
                 </p>
               </blockquote>
 
-              <div className="grid md: grid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (
+              <div className="grid md: anygrid-cols-3 gap-6">
+                {Object.entries(currentTestimonial.metrics).map(([key, value])   => (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}
