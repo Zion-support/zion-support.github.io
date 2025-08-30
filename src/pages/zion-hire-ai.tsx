@@ -1,13 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
   Users, 
-  Clock, 
-  Zap, 
   Brain, 
-  Shield,
+  Target, 
+  Zap, 
+  Shield, 
   CheckCircle,
   ArrowRight,
   Star,
@@ -23,6 +21,7 @@ import {
   Chip,
   Wifi,
   ShieldCheck,
+  Bot,
   Workflow,
   Eye,
   Sparkles,
@@ -37,117 +36,118 @@ import {
   Users2,
   Settings,
   Palette,
-  Headphones,
-  Phone,
-  Mail,
-  Chat,
-  HelpCircle,
-  TrendingUp,
-  Target,
-  BarChart3,
-  Globe,
-  Languages,
-  Smartphone as Mobile,
+  Search,
+  Filter,
+  Calendar,
+  Clock,
+  FileText,
   Monitor,
-  Tablet
+  Gauge,
+  TrendingUp,
+  Award,
+  Briefcase,
+  GraduationCap,
+  UserCheck,
+  UserX,
+  UserPlus,
+  Clipboard,
+  Mail,
+  Phone,
+  Video,
+  MessageCircle
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
-export default function AICustomerSupportAutomation() {
+export default function ZionHireAI() {
   const features = [
     {
-      icon: <Bot className="w-6 h-6" />,
-      title: "Intelligent Chatbots",
-      description: "AI-powered chatbots that understand context and provide accurate, helpful responses 24/7."
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "Multi-Channel Support",
-      description: "Unified customer support across chat, email, phone, and social media platforms."
-    },
-    {
       icon: <Brain className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP to understand customer intent and provide personalized solutions."
+      title: "AI-Powered Candidate Matching",
+      description: "Advanced algorithms that match candidates to job requirements with high accuracy."
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support without the need for human agents to be online."
+      icon: <Search className="w-6 h-6" />,
+      title: "Intelligent Talent Sourcing",
+      description: "Automated discovery of qualified candidates from multiple sources and platforms."
+    },
+    {
+      icon: <Filter className="w-6 h-6" />,
+      title: "Smart Screening & Assessment",
+      description: "Automated candidate screening with AI-driven skill and culture fit assessment."
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Human-AI Collaboration",
-      description: "Seamless handoff between AI and human agents for complex customer issues."
+      title: "Bias-Free Hiring",
+      description: "AI algorithms designed to eliminate unconscious bias in the hiring process."
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Insights",
-      description: "Comprehensive reporting on customer interactions, satisfaction, and support efficiency."
+      icon: <BarChart className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Data-driven insights to predict candidate success and retention."
+    },
+    {
+      icon: <Workflow className="w-6 h-6" />,
+      title: "Automated Workflows",
+      description: "Streamlined hiring processes with intelligent automation and scheduling."
     }
   ];
 
   const benefits = [
-    "Reduce support costs by 60%",
-    "Improve response time by 80%",
-    "Increase customer satisfaction by 40%",
-    "Handle 70% of inquiries automatically",
-    "Provide 24/7 customer support",
-    "Scale support operations efficiently"
+    "Reduce time-to-hire by 60%",
+    "Improve candidate quality by 40%",
+    "Eliminate hiring bias",
+    "Reduce recruitment costs by 50%",
+    "Enhance candidate experience",
+    "Scale hiring operations efficiently"
   ];
 
-  const supportChannels = [
+  const hiringSolutions = [
     {
-      channel: "Live Chat",
-      description: "Real-time AI-powered chat support with instant responses"
+      solution: "Talent Sourcing",
+      description: "AI-powered candidate discovery and passive talent engagement"
     },
     {
-      channel: "Email Support",
-      description: "Automated email categorization and intelligent response generation"
+      solution: "Resume Parsing",
+      description: "Intelligent extraction and analysis of candidate information"
     },
     {
-      channel: "Phone Support",
-      description: "AI voice assistants and intelligent call routing"
+      solution: "Skill Assessment",
+      description: "Automated technical and soft skill evaluation"
     },
     {
-      channel: "Social Media",
-      description: "Automated social media monitoring and response management"
+      solution: "Interview Scheduling",
+      description: "Smart calendar management and interview coordination"
     },
     {
-      channel: "Mobile Apps",
-      description: "In-app support with push notifications and chat integration"
+      solution: "Cultural Fit Analysis",
+      description: "AI-driven assessment of candidate-company compatibility"
     },
     {
-      channel: "Self-Service",
-      description: "Intelligent knowledge base and FAQ automation"
+      solution: "Onboarding Automation",
+      description: "Streamlined new hire integration and training"
     }
   ];
 
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Order tracking, returns processing, and product support automation"
+      industry: "Technology Companies",
+      description: "Fast-paced hiring for technical roles with skill validation"
     },
     {
-      industry: "SaaS & Technology",
-      description: "Technical support, account management, and feature assistance"
+      industry: "Enterprise Organizations",
+      description: "Large-scale recruitment with compliance and diversity focus"
     },
     {
-      industry: "Healthcare",
-      description: "Appointment scheduling, general inquiries, and basic health information"
+      industry: "Startups",
+      description: "Efficient hiring for growth-stage companies with limited resources"
     },
     {
-      industry: "Financial Services",
-      description: "Account inquiries, transaction support, and basic financial guidance"
+      industry: "Recruitment Agencies",
+      description: "Enhanced candidate matching and client service delivery"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
-      <SEO 
-        title="AI Customer Support Automation Services - Zion Tech Group"
-        description="Revolutionary AI-powered customer support automation that reduces costs, improves response times, and enhances customer satisfaction. 24/7 intelligent support across all channels."
-      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -158,17 +158,17 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full mb-6">
-              <Bot className="w-5 h-5" />
-              <span className="text-sm font-medium">AI-Powered Support</span>
+              <Users className="w-5 h-5" />
+              <span className="text-sm font-medium">AI-Powered Hiring</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Support Automation
+              Zion Hire AI
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your customer support with intelligent automation, 24/7 availability, 
-              and AI-powered solutions that deliver exceptional customer experiences at scale.
+              Transform your talent acquisition with AI-powered hiring solutions that deliver 
+              better candidates, faster hiring, and bias-free recruitment processes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -194,11 +194,11 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Support Automation Features
+              Revolutionary AI Hiring Features
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI Customer Support Automation platform provides everything you need to deliver 
-              exceptional customer experiences while reducing support costs and improving efficiency.
+              Our AI-powered hiring platform combines cutting-edge technology with proven 
+              recruitment strategies to deliver exceptional hiring outcomes.
             </p>
           </motion.div>
 
@@ -223,7 +223,7 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Hiring Solutions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -234,16 +234,16 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Multi-Channel Support Coverage
+              Comprehensive Hiring Solutions
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Deliver consistent, high-quality customer support across all channels with our 
-              unified AI-powered platform.
+              Our platform offers end-to-end AI solutions for every stage of the hiring process, 
+              from sourcing to onboarding.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportChannels.map((channel, index) => (
+            {hiringSolutions.map((solution, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -253,15 +253,15 @@ export default function AICustomerSupportAutomation() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  {index === 0 && <Chat className="w-8 h-8 text-white" />}
-                  {index === 1 && <Mail className="w-8 h-8 text-white" />}
-                  {index === 2 && <Phone className="w-8 h-8 text-white" />}
-                  {index === 3 && <Globe className="w-8 h-8 text-white" />}
-                  {index === 4 && <Mobile className="w-8 h-8 text-white" />}
-                  {index === 5 && <HelpCircle className="w-8 h-8 text-white" />}
+                  {index === 0 && <Search className="w-8 h-8 text-white" />}
+                  {index === 1 && <FileText className="w-8 h-8 text-white" />}
+                  {index === 2 && <Target className="w-8 h-8 text-white" />}
+                  {index === 3 && <Calendar className="w-8 h-8 text-white" />}
+                  {index === 4 && <Users2 className="w-8 h-8 text-white" />}
+                  {index === 5 && <UserPlus className="w-8 h-8 text-white" />}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">{channel.channel}</h3>
-                <p className="text-zion-slate-light text-sm text-center">{channel.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{solution.solution}</h3>
+                <p className="text-zion-slate-light text-sm text-center">{solution.description}</p>
               </motion.div>
             ))}
           </div>
@@ -279,11 +279,11 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Customer Support Automation?
+              Why Choose Zion Hire AI?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Experience unprecedented efficiency in customer support with our intelligent 
-              automation platform and AI-powered solutions.
+              Experience the future of talent acquisition with our intelligent AI platform designed 
+              to revolutionize your hiring process.
             </p>
           </motion.div>
 
@@ -335,11 +335,11 @@ export default function AICustomerSupportAutomation() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Hiring Process?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of organizations who have already revolutionized their customer 
-              support operations and achieved unprecedented customer satisfaction.
+              Join leading organizations who have already revolutionized their talent acquisition 
+              with AI-powered hiring solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

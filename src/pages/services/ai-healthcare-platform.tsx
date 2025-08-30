@@ -1,13 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
-  Users, 
-  Clock, 
-  Zap, 
+  Heart, 
+  Stethoscope, 
   Brain, 
-  Shield,
+  Shield, 
+  Zap, 
+  Users, 
   CheckCircle,
   ArrowRight,
   Star,
@@ -23,6 +22,7 @@ import {
   Chip,
   Wifi,
   ShieldCheck,
+  Bot,
   Workflow,
   Eye,
   Sparkles,
@@ -37,117 +37,114 @@ import {
   Users2,
   Settings,
   Palette,
-  Headphones,
-  Phone,
-  Mail,
-  Chat,
-  HelpCircle,
-  TrendingUp,
-  Target,
-  BarChart3,
-  Globe,
-  Languages,
-  Smartphone as Mobile,
+  Activity as VitalSigns,
   Monitor,
-  Tablet
+  Target,
+  TrendingUp,
+  Calendar,
+  Clock,
+  FileText,
+  Pill,
+  Microscope,
+  XRay,
+  Bed,
+  Ambulance,
+  Hospital,
+  UserCheck,
+  Clipboard
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
-export default function AICustomerSupportAutomation() {
+export default function AIHealthcarePlatform() {
   const features = [
     {
-      icon: <Bot className="w-6 h-6" />,
-      title: "Intelligent Chatbots",
-      description: "AI-powered chatbots that understand context and provide accurate, helpful responses 24/7."
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "Multi-Channel Support",
-      description: "Unified customer support across chat, email, phone, and social media platforms."
-    },
-    {
       icon: <Brain className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP to understand customer intent and provide personalized solutions."
+      title: "AI-Powered Diagnostics",
+      description: "Advanced machine learning algorithms for accurate disease detection and diagnosis."
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support without the need for human agents to be online."
+      icon: <Monitor className="w-6 h-6" />,
+      title: "Patient Monitoring",
+      description: "Real-time health monitoring with predictive analytics and early warning systems."
+    },
+    {
+      icon: <Stethoscope className="w-6 h-6" />,
+      title: "Clinical Decision Support",
+      description: "Intelligent assistance for healthcare providers in treatment planning and decision making."
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "HIPAA Compliant",
+      description: "Enterprise-grade security and privacy protection for sensitive health data."
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Human-AI Collaboration",
-      description: "Seamless handoff between AI and human agents for complex customer issues."
+      title: "Patient Engagement",
+      description: "Personalized health recommendations and interactive patient communication tools."
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Insights",
-      description: "Comprehensive reporting on customer interactions, satisfaction, and support efficiency."
+      icon: <BarChart className="w-6 h-6" />,
+      title: "Health Analytics",
+      description: "Comprehensive health data analysis and population health insights."
     }
   ];
 
   const benefits = [
-    "Reduce support costs by 60%",
-    "Improve response time by 80%",
-    "Increase customer satisfaction by 40%",
-    "Handle 70% of inquiries automatically",
-    "Provide 24/7 customer support",
-    "Scale support operations efficiently"
+    "Improve diagnostic accuracy by 40%",
+    "Reduce healthcare costs by 30%",
+    "Enhance patient outcomes by 50%",
+    "Streamline clinical workflows",
+    "Enable preventive healthcare",
+    "Support remote patient monitoring"
   ];
 
-  const supportChannels = [
+  const healthcareSolutions = [
     {
-      channel: "Live Chat",
-      description: "Real-time AI-powered chat support with instant responses"
+      solution: "Diagnostic Imaging AI",
+      description: "AI-powered analysis of X-rays, MRIs, and CT scans for accurate diagnosis"
     },
     {
-      channel: "Email Support",
-      description: "Automated email categorization and intelligent response generation"
+      solution: "Predictive Analytics",
+      description: "Early detection of health risks and disease progression prediction"
     },
     {
-      channel: "Phone Support",
-      description: "AI voice assistants and intelligent call routing"
+      solution: "Drug Discovery",
+      description: "AI-accelerated pharmaceutical research and drug development"
     },
     {
-      channel: "Social Media",
-      description: "Automated social media monitoring and response management"
+      solution: "Personalized Medicine",
+      description: "Tailored treatment plans based on individual genetic and health data"
     },
     {
-      channel: "Mobile Apps",
-      description: "In-app support with push notifications and chat integration"
+      solution: "Telemedicine Platform",
+      description: "Remote healthcare delivery with AI-powered triage and consultation"
     },
     {
-      channel: "Self-Service",
-      description: "Intelligent knowledge base and FAQ automation"
+      solution: "Health Records Management",
+      description: "Intelligent electronic health records with automated data extraction"
     }
   ];
 
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Order tracking, returns processing, and product support automation"
+      industry: "Hospitals & Clinics",
+      description: "Clinical decision support, patient monitoring, and workflow optimization"
     },
     {
-      industry: "SaaS & Technology",
-      description: "Technical support, account management, and feature assistance"
+      industry: "Research Institutions",
+      description: "Medical research, drug discovery, and clinical trial optimization"
     },
     {
-      industry: "Healthcare",
-      description: "Appointment scheduling, general inquiries, and basic health information"
+      industry: "Pharmaceutical Companies",
+      description: "Drug development, clinical research, and market analysis"
     },
     {
-      industry: "Financial Services",
-      description: "Account inquiries, transaction support, and basic financial guidance"
+      industry: "Health Insurance",
+      description: "Risk assessment, fraud detection, and claims processing automation"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
-      <SEO 
-        title="AI Customer Support Automation Services - Zion Tech Group"
-        description="Revolutionary AI-powered customer support automation that reduces costs, improves response times, and enhances customer satisfaction. 24/7 intelligent support across all channels."
-      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -158,17 +155,17 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full mb-6">
-              <Bot className="w-5 h-5" />
-              <span className="text-sm font-medium">AI-Powered Support</span>
+              <Heart className="w-5 h-5" />
+              <span className="text-sm font-medium">AI-Powered Healthcare</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Support Automation
+              AI Healthcare Platform
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your customer support with intelligent automation, 24/7 availability, 
-              and AI-powered solutions that deliver exceptional customer experiences at scale.
+              Revolutionize healthcare delivery with AI-powered diagnostics, predictive analytics, 
+              and intelligent clinical decision support for better patient outcomes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -194,11 +191,11 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Support Automation Features
+              Comprehensive Healthcare AI Features
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI Customer Support Automation platform provides everything you need to deliver 
-              exceptional customer experiences while reducing support costs and improving efficiency.
+              Our AI Healthcare Platform provides cutting-edge technology to transform 
+              healthcare delivery and improve patient care outcomes.
             </p>
           </motion.div>
 
@@ -223,7 +220,7 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Healthcare Solutions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -234,16 +231,16 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Multi-Channel Support Coverage
+              Advanced Healthcare Solutions
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Deliver consistent, high-quality customer support across all channels with our 
-              unified AI-powered platform.
+              Our platform offers comprehensive AI solutions designed specifically for 
+              healthcare challenges and opportunities.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportChannels.map((channel, index) => (
+            {healthcareSolutions.map((solution, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -253,15 +250,15 @@ export default function AICustomerSupportAutomation() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  {index === 0 && <Chat className="w-8 h-8 text-white" />}
-                  {index === 1 && <Mail className="w-8 h-8 text-white" />}
-                  {index === 2 && <Phone className="w-8 h-8 text-white" />}
-                  {index === 3 && <Globe className="w-8 h-8 text-white" />}
-                  {index === 4 && <Mobile className="w-8 h-8 text-white" />}
-                  {index === 5 && <HelpCircle className="w-8 h-8 text-white" />}
+                  {index === 0 && <XRay className="w-8 h-8 text-white" />}
+                  {index === 1 && <TrendingUp className="w-8 h-8 text-white" />}
+                  {index === 2 && <Pill className="w-8 h-8 text-white" />}
+                  {index === 3 && <UserCheck className="w-8 h-8 text-white" />}
+                  {index === 4 && <Smartphone className="w-8 h-8 text-white" />}
+                  {index === 5 && <Clipboard className="w-8 h-8 text-white" />}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">{channel.channel}</h3>
-                <p className="text-zion-slate-light text-sm text-center">{channel.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{solution.solution}</h3>
+                <p className="text-zion-slate-light text-sm text-center">{solution.description}</p>
               </motion.div>
             ))}
           </div>
@@ -279,11 +276,11 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Customer Support Automation?
+              Why Choose AI Healthcare Platform?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Experience unprecedented efficiency in customer support with our intelligent 
-              automation platform and AI-powered solutions.
+              Experience the future of healthcare with our intelligent AI platform designed 
+              to improve patient care and clinical outcomes.
             </p>
           </motion.div>
 
@@ -335,11 +332,11 @@ export default function AICustomerSupportAutomation() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Healthcare with AI?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of organizations who have already revolutionized their customer 
-              support operations and achieved unprecedented customer satisfaction.
+              Join leading healthcare organizations who have already embraced AI technology 
+              to improve patient care and clinical outcomes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

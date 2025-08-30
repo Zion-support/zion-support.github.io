@@ -1,14 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
-  Users, 
-  Clock, 
+  Shield, 
+  CheckCircle, 
+  AlertTriangle, 
+  FileText, 
   Zap, 
   Brain, 
-  Shield,
-  CheckCircle,
+  Users,
   ArrowRight,
   Star,
   Rocket,
@@ -23,6 +22,7 @@ import {
   Chip,
   Wifi,
   ShieldCheck,
+  Bot,
   Workflow,
   Eye,
   Sparkles,
@@ -37,117 +37,112 @@ import {
   Users2,
   Settings,
   Palette,
-  Headphones,
-  Phone,
-  Mail,
-  Chat,
-  HelpCircle,
-  TrendingUp,
-  Target,
-  BarChart3,
-  Globe,
-  Languages,
-  Smartphone as Mobile,
+  Gavel,
+  Scale,
+  Clipboard,
   Monitor,
-  Tablet
+  Target,
+  TrendingUp,
+  Calendar,
+  Clock,
+  Search,
+  Filter,
+  Bell,
+  BookOpen,
+  GraduationCap
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
-export default function AICustomerSupportAutomation() {
+export default function AIComplianceAssistant() {
   const features = [
     {
-      icon: <Bot className="w-6 h-6" />,
-      title: "Intelligent Chatbots",
-      description: "AI-powered chatbots that understand context and provide accurate, helpful responses 24/7."
+      icon: <Monitor className="w-6 h-6" />,
+      title: "Real-time Compliance Monitoring",
+      description: "Continuous monitoring of regulatory requirements and automated compliance status tracking."
     },
     {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "Multi-Channel Support",
-      description: "Unified customer support across chat, email, phone, and social media platforms."
+      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Risk Assessment & Alerts",
+      description: "AI-powered risk identification and proactive alerting for compliance violations."
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP to understand customer intent and provide personalized solutions."
+      icon: <FileText className="w-6 h-6" />,
+      title: "Automated Documentation",
+      description: "Intelligent document generation and management for compliance requirements."
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support without the need for human agents to be online."
+      icon: <Scale className="w-6 h-6" />,
+      title: "Regulatory Updates",
+      description: "Stay current with changing regulations through automated monitoring and updates."
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Human-AI Collaboration",
-      description: "Seamless handoff between AI and human agents for complex customer issues."
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Compliance Auditing",
+      description: "Comprehensive audit trails and reporting for regulatory compliance verification."
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Insights",
-      description: "Comprehensive reporting on customer interactions, satisfaction, and support efficiency."
+      icon: <Shield className="w-6 h-6" />,
+      title: "Policy Management",
+      description: "Centralized policy creation, distribution, and enforcement across your organization."
     }
   ];
 
   const benefits = [
-    "Reduce support costs by 60%",
-    "Improve response time by 80%",
-    "Increase customer satisfaction by 40%",
-    "Handle 70% of inquiries automatically",
-    "Provide 24/7 customer support",
-    "Scale support operations efficiently"
+    "Reduce compliance violations by 80%",
+    "Automate 70% of compliance tasks",
+    "Ensure 24/7 regulatory monitoring",
+    "Streamline audit preparation",
+    "Minimize compliance risks",
+    "Improve regulatory reporting accuracy"
   ];
 
-  const supportChannels = [
+  const complianceAreas = [
     {
-      channel: "Live Chat",
-      description: "Real-time AI-powered chat support with instant responses"
+      area: "GDPR & Data Privacy",
+      description: "Automated data protection compliance and privacy regulation monitoring"
     },
     {
-      channel: "Email Support",
-      description: "Automated email categorization and intelligent response generation"
+      area: "SOX & Financial Compliance",
+      description: "Financial reporting compliance and internal control monitoring"
     },
     {
-      channel: "Phone Support",
-      description: "AI voice assistants and intelligent call routing"
+      area: "HIPAA & Healthcare",
+      description: "Healthcare data protection and patient privacy compliance"
     },
     {
-      channel: "Social Media",
-      description: "Automated social media monitoring and response management"
+      area: "ISO Standards",
+      description: "Quality management and information security compliance"
     },
     {
-      channel: "Mobile Apps",
-      description: "In-app support with push notifications and chat integration"
+      area: "Industry Regulations",
+      description: "Sector-specific compliance requirements and monitoring"
     },
     {
-      channel: "Self-Service",
-      description: "Intelligent knowledge base and FAQ automation"
+      area: "Environmental Compliance",
+      description: "Sustainability and environmental regulation compliance"
     }
   ];
 
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Order tracking, returns processing, and product support automation"
-    },
-    {
-      industry: "SaaS & Technology",
-      description: "Technical support, account management, and feature assistance"
+      industry: "Financial Services",
+      description: "SOX, Basel III, and financial regulatory compliance automation"
     },
     {
       industry: "Healthcare",
-      description: "Appointment scheduling, general inquiries, and basic health information"
+      description: "HIPAA, FDA, and healthcare compliance monitoring"
     },
     {
-      industry: "Financial Services",
-      description: "Account inquiries, transaction support, and basic financial guidance"
+      industry: "Manufacturing",
+      description: "ISO, OSHA, and manufacturing safety compliance"
+    },
+    {
+      industry: "Technology",
+      description: "GDPR, SOC2, and cybersecurity compliance management"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
-      <SEO 
-        title="AI Customer Support Automation Services - Zion Tech Group"
-        description="Revolutionary AI-powered customer support automation that reduces costs, improves response times, and enhances customer satisfaction. 24/7 intelligent support across all channels."
-      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -158,17 +153,17 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full mb-6">
-              <Bot className="w-5 h-5" />
-              <span className="text-sm font-medium">AI-Powered Support</span>
+              <Shield className="w-5 h-5" />
+              <span className="text-sm font-medium">AI-Powered Compliance</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Support Automation
+              AI Compliance Assistant
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your customer support with intelligent automation, 24/7 availability, 
-              and AI-powered solutions that deliver exceptional customer experiences at scale.
+              Transform your compliance operations with intelligent automation, real-time monitoring, 
+              and AI-powered risk assessment to ensure regulatory adherence across all business areas.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -194,11 +189,11 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Support Automation Features
+              Comprehensive Compliance Features
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI Customer Support Automation platform provides everything you need to deliver 
-              exceptional customer experiences while reducing support costs and improving efficiency.
+              Our AI Compliance Assistant provides everything you need to master regulatory compliance 
+              and minimize compliance risks across your organization.
             </p>
           </motion.div>
 
@@ -223,7 +218,7 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Compliance Areas Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -234,16 +229,16 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Multi-Channel Support Coverage
+              Comprehensive Compliance Coverage
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Deliver consistent, high-quality customer support across all channels with our 
-              unified AI-powered platform.
+              Our platform covers all major compliance areas to ensure your organization meets 
+              regulatory requirements across industries and jurisdictions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportChannels.map((channel, index) => (
+            {complianceAreas.map((area, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -253,15 +248,10 @@ export default function AICustomerSupportAutomation() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  {index === 0 && <Chat className="w-8 h-8 text-white" />}
-                  {index === 1 && <Mail className="w-8 h-8 text-white" />}
-                  {index === 2 && <Phone className="w-8 h-8 text-white" />}
-                  {index === 3 && <Globe className="w-8 h-8 text-white" />}
-                  {index === 4 && <Mobile className="w-8 h-8 text-white" />}
-                  {index === 5 && <HelpCircle className="w-8 h-8 text-white" />}
+                  <Gavel className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">{channel.channel}</h3>
-                <p className="text-zion-slate-light text-sm text-center">{channel.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{area.area}</h3>
+                <p className="text-zion-slate-light text-sm text-center">{area.description}</p>
               </motion.div>
             ))}
           </div>
@@ -279,11 +269,11 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Customer Support Automation?
+              Why Choose AI Compliance Assistant?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Experience unprecedented efficiency in customer support with our intelligent 
-              automation platform and AI-powered solutions.
+              Experience unprecedented control over your compliance operations with our intelligent 
+              automation platform and expert compliance practices.
             </p>
           </motion.div>
 
@@ -335,11 +325,11 @@ export default function AICustomerSupportAutomation() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Compliance Operations?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of organizations who have already revolutionized their customer 
-              support operations and achieved unprecedented customer satisfaction.
+              Join thousands of organizations who have already revolutionized their compliance 
+              processes and achieved unprecedented regulatory adherence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
