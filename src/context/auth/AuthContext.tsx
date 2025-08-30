@@ -29,7 +29,7 @@ interface AuthContextType {
 login: (email: string, password: string)  => Promise<any>;
   register: (name: string, email: string, password: string)  => Promise<any>;
   signup: (email: string, password: string, userData: any)  => Promise<any>;
-  logout: any()  => Promise<any>;
+  logout: () => Promise<any>;
   resetPassword: any(email: string)  => Promise<any>;
   updateProfile: any(updates: Partial<User>)  => Promise<any>;
   loginWithGoogle: any()  => Promise<any>;

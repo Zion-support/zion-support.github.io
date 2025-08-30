@@ -49,6 +49,62 @@ module.exports = {
       }
     },
 
+    // Comprehensive error fixer - runs every 30 minutes (HIGH PRIORITY)
+    {
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // TypeScript error fixer - runs every 45 minutes (HIGH PRIORITY)
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '2700000' // 45 minutes
+      }
+    },
+
+    // JSX error fixer - runs every 40 minutes (HIGH PRIORITY)
+    {
+      name: 'jsx-error-fixer',
+      script: './scripts/automation/jsx-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '2400000' // 40 minutes
+      }
+    },
+
+    // Master error fixer - runs every hour (COORDINATES ALL ERROR FIXERS)
+    {
+      name: 'master-error-fixer',
+      script: './scripts/automation/master-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
     // Continuous link checker - runs every 30 minutes
     {
       name: 'link-checker',

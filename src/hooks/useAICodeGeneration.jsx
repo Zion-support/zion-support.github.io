@@ -53,7 +53,7 @@ export const useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed to generate code:', error);
+            // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -88,7 +88,7 @@ export const useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed to analyze code:', error);
+            // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -135,7 +135,7 @@ export const useAICodeGeneration = () => {
             return optimizedCode;
         }
         catch (error) {
-            console.error('Failed to optimize code:', error);
+            // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -161,7 +161,7 @@ export const useAICodeGeneration = () => {
             return testCode;
         }
         catch (error) {
-            console.error('Failed to generate tests:', error);
+            // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -187,7 +187,7 @@ export const useAICodeGeneration = () => {
             return docs;
         }
         catch (error) {
-            console.error('Failed to generate documentation:', error);
+            // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -300,7 +300,7 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  console.log(\`Server running on port \${PORT}\`);
+  // console.log(\`Server running on port \${PORT}\`);
 });`;
     };
     const generatePythonCode = (prompt, _options) => {
@@ -343,9 +343,9 @@ if __name__ == "__main__":
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
-console.log("Generated code placeholder");
-console.log("Prompt:", "${prompt}");
-console.log("Language:", "${options.language}");`;
+// console.log("Generated code placeholder");
+// console.log("Prompt:", "${prompt}");
+// console.log("Language:", "${options.language}");`;
     };
     // Helper functions for code analysis
     const calculateComplexity = (code) => {

@@ -109,7 +109,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   }, [autoDetect, enabled]);
 
   // Touch optimization
-  useEffect(()  => {
+  useEffect(() => {
     if (!enabled || !settings.touchOptimized || !isMobile) return;
 
     // Add touch-action CSS for better touch handling
@@ -146,7 +146,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Apply touch optimization classes
     document.body.classList.add('touch-optimized');
 
-    return ()  => {
+    return () => {
       document.body.classList.remove('touch-optimized');
       if (style.parentNode) {
         style.parentNode.removeChild(style);
@@ -257,7 +257,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     document.addEventListener('touchstart', handleTouchStart, { passive: true });
     document.addEventListener('touchend', handleTouchEnd, { passive: true });
 
-    return ()  => {
+    return () => {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchend', handleTouchEnd);
     };
@@ -339,7 +339,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     nav.setAttribute('aria-label', 'Mobile navigation');
 
     const navItems = [
-      { href: any'/', label: 'Home', icon: '🏠' },
+      { href: string/', label: 'Home', icon: '🏠' },
       { href: '/services', label: 'Services', icon: '⚙️' },
       { href: '/about', label: 'About', icon: 'ℹ️' },
       { href: '/contact', label: 'Contact', icon: '📞' },
@@ -430,7 +430,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     window.addEventListener('scroll', handleScroll, { passive: anytrue });
 
-    return ()  => {
+    return () => {
       document.body.classList.remove('mobile-performance');
       if (style.parentNode) {
         style.parentNode.removeChild(style);
@@ -500,7 +500,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     document.body.appendChild(notification);
 
-    setTimeout(()  => {
+    setTimeout(() => {
       if (notification.parentNode) {
         notification.parentNode.removeChild(notification);
       }

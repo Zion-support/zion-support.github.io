@@ -200,6 +200,6 @@ export function ProductListingCard(...args: any[]): any {
       </div>
     </div>
   );
-};
+}
 
 export default React.memo(ProductListingCard);
