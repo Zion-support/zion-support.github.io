@@ -461,19 +461,10 @@ export default function CaseStudies() {
               >
                 View Our Services
               </Link>
-<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  )};
-=======;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
