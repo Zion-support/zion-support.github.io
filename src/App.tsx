@@ -42,12 +42,15 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensiveServicesShowcase2032 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2032'));
 
 // 2031 Cutting-Edge Services
 const ZionCuttingEdgeServices2031 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2031'));
 
 // Comprehensive Pricing Guide 2031
 const ComprehensivePricingGuide2031 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2031'));
+// Comprehensive Pricing Guide 2032
+const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
 
 // Additional pages that actually exist
 const Solutions = createLazyComponent(() => import('./pages/solutions'));
@@ -168,12 +171,16 @@ function App() {
                     
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/comprehensive-services-showcase-2032" element={<ComprehensiveServicesShowcase2032 />} />
                     
                     {/* 2031 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2031" element={<ZionCuttingEdgeServices2031 />} />
                     
                     {/* Comprehensive Pricing Guide 2031 */}
                     <Route path="/comprehensive-pricing-guide-2031" element={<ComprehensivePricingGuide2031 />} />
+                    
+                    {/* Comprehensive Pricing Guide 2032 */}
+                    <Route path="/comprehensive-pricing-guide-2032" element={<ComprehensivePricingGuide2032 />} />
                     
                     {/* Additional pages */}
                     <Route path="/solutions" element={<Solutions />} />
