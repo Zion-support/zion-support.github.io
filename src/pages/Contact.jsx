@@ -228,26 +228,8 @@ export default function Contact() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -261,36 +243,9 @@ export default function Contact() {
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.title}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -324,26 +279,8 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Form */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: -30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
@@ -354,26 +291,8 @@ export default function Contact() {
 
               {submitSuccess ? (
                 <motion.div
-                  initial = {
-  { opacity: 0,
-  scale: 0.9 
-
-
-
-
-
-
-}}
-                  animate = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
-}}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   className="bg-green-500/20 border border-green-500/40 rounded-2xl p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -438,7 +357,7 @@ export default function Contact() {
                             onChange={handleInputChange}
                             required={field.required}
                             className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"
-
+                          >
                             <option value="">Select a service</option>
                             {field.options.map(option => (
                               <option key={option} value={option}>{option}</option>
@@ -480,7 +399,7 @@ export default function Contact() {
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-
+                  >
                     {isSubmitting ? 'Sending Message...' : 'Send Message'}
                   </button>
                 </form>
@@ -489,39 +408,16 @@ export default function Contact() {
 
             {/* Comp Info */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-8"
-
+            >
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">About Zion Tech Group</h3>
                 <p className="text-zion-slate-light leading-relaxed mb-6">
-<<<<<<< HEAD
                   We are a leading technology company specializing in AI, cybersecurity, cloud solutions,
                   and digital transformation. Our team of experts is dedicated to helping businesses
-=======
-                  We are a leading technology comp specializing in AI, cybersecurity, cloud solutions, 
-                  and digital transformation. Our team of experts is dedicated to helping businesses 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   leverage cutting-edge technology to achieve their goals.
                 </p>
                 <div className="flex items-center gap-3 text-zion-cyan">
@@ -541,7 +437,7 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       className={`p-3 bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-xl text-zion-slate-light ${social.color} hover:border-zion-cyan/40 transition-all duration-300`}
                       title={social.name}
-
+                    >
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
@@ -578,29 +474,11 @@ export default function Contact() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
+          >
             <h2 className="text-4xl font-bold text-white mb-4">Visit Our Office</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Located in the heart of Middletown, Delaware, our office is easily accessible
@@ -625,9 +503,5 @@ export default function Contact() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-}}}}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}

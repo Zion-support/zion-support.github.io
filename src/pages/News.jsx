@@ -241,7 +241,7 @@ const News = () => {
         </div>
       </section>
     </div>
-  )};
+  );
+}
 
 export default News;
-}}
