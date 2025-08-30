@@ -225,14 +225,6 @@ function App() {
           </a>
           {header}
           
-          <main id="main-content" className="flex-1">
-            <Suspense fallback={<EnhancedLoadingSpinner />}>
-              <Routes>
-                {routeElements}
-              </Routes>
-            </Suspense>
-          </main>
-
             {/* Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
 
@@ -249,7 +241,7 @@ function App() {
             <EnhancedHeader />
 
             {/* Main Content */}
-            <main className="flex-1">
+            <main id="main-content" className="flex-1">
               <Suspense fallback={<LoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -496,7 +488,7 @@ function App() {
             /> */}
           </div>
         </Router>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }
