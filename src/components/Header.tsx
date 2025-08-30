@@ -89,7 +89,11 @@ export function Header() {
         { name: 'Case Studies', href: '/case-studies', icon: FileText },
         { name: 'Research & Development', href: '/research-development', icon: Activity },
         { name: 'Documentation', href: '/docs', icon: FileText },
-        { name: 'API Reference', href: '/api', icon: Cpu }
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+        { name: 'Support', href: '/support', icon: FileText },
+        { name: 'Training', href: '/training', icon: FileText },
+        { name: 'Helpdesk', href: '/help', icon: FileText }
       ]
     },
     {

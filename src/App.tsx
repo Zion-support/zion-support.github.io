@@ -43,6 +43,7 @@ function App() {
             <Route path="/training" element={<BlogPage />} />
             <Route path="/community" element={<BlogPage />} />
             <Route path="/support" element={<BlogPage />} />
+            <Route path="/sitemap" element={<BlogPage />} />
             <Route path="/privacy-policy" element={<BlogPage />} />
             <Route path="/terms-of-service" element={<BlogPage />} />
             <Route path="/cookie-policy" element={<BlogPage />} />

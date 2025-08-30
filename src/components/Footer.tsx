@@ -116,7 +116,10 @@ export function Footer() {
         { name: 'API Reference', path: '/api', icon: Code },
         { name: 'Developer Portal', path: '/developer', icon: Cpu },
         { name: 'Help Center', path: '/help', icon: HelpCircle },
-        { name: 'Training & Certification', path: '/training', icon: GraduationCap }
+        { name: 'Training & Certification', path: '/training', icon: GraduationCap },
+        { name: 'Support Center', path: '/support', icon: HelpCircle },
+        { name: 'Technical Helpdesk', path: '/help', icon: HelpCircle },
+        { name: 'Site Map', path: '/sitemap', icon: FileText }
       ]
     }
   ];
