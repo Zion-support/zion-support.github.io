@@ -83,6 +83,7 @@ export const PerformanceOptimizer = ({ children }) => {
                 .catch((registrationError) => {
                     // console.warn('SW registration failed: ', registrationError);
                 });
+        });
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {
