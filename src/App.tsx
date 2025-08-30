@@ -8,9 +8,9 @@ import { Footer } from './components/Footer';
 
 // Enhanced Components - only import existing ones
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import ErrorBoundary from './components/ErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import LoadingSpinner from './components/ui/LoadingSpinner';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import EnhancedSEO from './components/EnhancedSEO';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance - only import existing ones
 const Home = lazy(() => import('./pages/Home'));
