@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles          } from 'lucide-react.ts';
-import { SEO          } from '@/components/SEO';
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES          } from '../../data/revolutionary-2029-cutting-edge-services';
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES          } from '../../data/revolutionary-2029-emerging-tech-services';
+import { motion           } from 'framer-motion.ts';
+import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles           } from 'lucide-react.ts';
+import { SEO           } from '@/components/SEO';
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES           } from '../../data/revolutionary-2029-cutting-edge-services';
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES           } from '../../data/revolutionary-2029-emerging-tech-services';
 
 export default function ComprehensivePricingGuide2029(...args: any[]): any {
   const [selectedPlan, setSelectedPlan] = useState('enterprise');
@@ -75,57 +75,57 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
     {
       name: 'AI & Analytics',
       icon: <BarChart3 className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Analytics'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Analytics'))
     },
     {
       name: 'AI & Automation',
       icon: <Zap className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Automation'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Automation'))
     },
     {
       name: 'AI & Cybersecurity',
       icon: <Shield className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Cybersecurity') || s.category.includes('Security'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Cybersecurity') || s.category.includes('Security'))
     },
     {
       name: 'AI & Marketing',
       icon: <Target className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Marketing'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Marketing'))
     },
     {
       name: 'AI & Healthcare',
       icon: <Brain className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Healthcare') || s.category.includes('Medical'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Healthcare') || s.category.includes('Medical'))
     },
     {
       name: 'AI & Development',
       icon: <Code className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Development'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Development'))
     },
     {
       name: 'AI & Supply Chain',
       icon: <Truck className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Supply Chain'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Supply Chain'))
     },
     {
       name: 'AI & FinTech',
       icon: <TrendingUp className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('FinTech') || s.category.includes('Financial'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('FinTech') || s.category.includes('Financial'))
     },
     {
       name: 'Space Technology',
       icon: <Rocket className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Space'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Space'))
     },
     {
       name: 'Quantum Technology',
       icon: <Atom className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => s.category.includes('Quantum'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => s.category.includes('Quantum'))
     },
     {
       name: 'Emerging Tech',
       icon: <Sparkles className="w-6 h-6" />,
-      services: anyanyanyanyanyanyanyanyanyallServices.filter(s          => !s.category.includes('AI') && !s.category.includes('Space') && !s.category.includes('Quantum'))
+      services: anyanyanyanyanyanyanyanyanyanyallServices.filter(s           => !s.category.includes('AI') && !s.category.includes('Space') && !s.category.includes('Quantum'))
     }
   ];
 
@@ -184,8 +184,8 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
 
       {/* Pricing Plans */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-          {pricingPlans.map((plan, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+          {pricingPlans.map((plan, index)           => (
             <motion.div
               key={plan.id}
               initial={{ opacity: 0, y: 20 }}
@@ -271,8 +271,8 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
               </div>
 
               {category.services.length > 0 ? (
-                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.services.map((service)          => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.services.map((service)           => (
                     <div key={service.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
                       <div className="flex items-start justify-between mb-3">
                         <div className="text-2xl">{service.icon}</div>
@@ -393,7 +393,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
         <div className="space-y-6">
           {[
             {
-              question: anyanyanyanyanyanyanyanyany"Can I mix and match services from different categories?",
+              question: anyanyanyanyanyanyanyanyanyany"Can I mix and match services from different categories?",
               answer: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."
             },
             {
@@ -412,7 +412,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
               question: "Do you offer free trials?",
               answer: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."
             }
-          ].map((faq, index)          => (
+          ].map((faq, index)           => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}

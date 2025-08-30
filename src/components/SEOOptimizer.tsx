@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 import { Search,
   TrendingUp,
   Target,
@@ -19,10 +19,11 @@ import { Search,
   RefreshCw
 <<<<<<< HEAD
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SEOAnalysis {
+
 
 
 
@@ -49,10 +50,12 @@ lastUpdated: Date;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOIssue {
+
 
 
 
@@ -81,10 +84,12 @@ category: 'content' | 'technical' | 'performance' | 'accessibility';
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOSuggestion {
+
 
 
 
@@ -112,10 +117,12 @@ estimatedImpact: number;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOMetrics {
+
 
 
 
@@ -145,9 +152,10 @@ coreWebVitals: {;
 
 
 
+
 };
 =======
-    cls: anyanyanyanyanyanyanyanyanynumber}}
+    cls: anyanyanyanyanyanyanyanyanyanynumber}}
 
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -156,9 +164,9 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
   autoAnalyze?: boolean;
   showDetails?: boolean;
 <<<<<<< HEAD
-  onAnalysisComplete?: (analysis: SEOAnalysis)          => void;
+  onAnalysisComplete?: (analysis: SEOAnalysis)           => void;
 =======
-  onAnalysisComplete?: (analysis: anyanyanyanyanyanyanyanyanySEOAnalysis)           => void}
+  onAnalysisComplete?: (analysis: anyanyanyanyanyanyanyanyanyanySEOAnalysis)            => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -288,7 +296,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Get score color
 <<<<<<< HEAD
-  const getScoreColor = (score: anyanyanyanyanyanyanyanyanynumber)          => {;
+  const getScoreColor = (score: anyanyanyanyanyanyanyanyanyanynumber)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
@@ -296,7 +304,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Get score background
 <<<<<<< HEAD
-  const getScoreBackground = (score: anyanyanyanyanyanyanyanyanynumber)          => {;
+  const getScoreBackground = (score: anyanyanyanyanyanyanyanyanyanynumber)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
@@ -304,7 +312,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Get impact color
 <<<<<<< HEAD
-  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (impact) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'high': return 'text-red-500';
@@ -320,7 +328,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Get priority color
 <<<<<<< HEAD
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'high': return 'text-red-500 bg-red-50 border-red-200';

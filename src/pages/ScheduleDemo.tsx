@@ -1,20 +1,21 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket           } from 'lucide-react.ts';
-import { SEO           } from '../components/SEO';
+import { motion            } from 'framer-motion.ts';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket            } from 'lucide-react.ts';
+import { SEO            } from '../components/SEO';
 =======
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket import { SEO          } from '../components/SEO';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket import { SEO           } from '../components/SEO';
 =======
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket          } from 'lucide-react.ts';
-import { SEO          } from '../components/SEO';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket           } from 'lucide-react.ts';
+import { SEO           } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface DemoFormData {
+
 
 
 
@@ -38,6 +39,7 @@ interface DemoFormData {
   message: string;
 =======
 message: string;
+
 
 
 
@@ -91,24 +93,24 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
   ];
 
 <<<<<<< HEAD
-  const handleServiceToggle = (serviceId: anyanyanyanyanyanyanyanyanystring)           => {
+  const handleServiceToggle = (serviceId: anyanyanyanyanyanyanyanyanyanystring)            => {
     setFormData(prev => ({
       ...prev,
-      services: anyanyanyanyanyanyanyanyanyprev.services.includes(serviceId)
-        ? prev.services.filter(id           => id !== serviceId);
+      services: anyanyanyanyanyanyanyanyanyanyprev.services.includes(serviceId)
+        ? prev.services.filter(id            => id !== serviceId);
         [...prev.services, serviceId];
     }))};
 
-  const handleServiceToggle = (serviceId: anyanyanyanyanyanyanyanyanystring)          => {;
+  const handleServiceToggle = (serviceId: anyanyanyanyanyanyanyanyanyanystring)           => {;
     setFormData(prev => ({;
       ...prev,;
-      services: anyanyanyanyanyanyanyanyanyprev.services.includes(serviceId);
-        ? prev.services.filter(id          => id !== serviceId);
+      services: anyanyanyanyanyanyanyanyanyanyprev.services.includes(serviceId);
+        ? prev.services.filter(id           => id !== serviceId);
         : [...prev.services, serviceId];
     }));
   };
 
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {;
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setIsSubmitting(true);
@@ -539,8 +541,8 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Services of Interest
                     </label>
-                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-3">
-                      {availableServices.map((service)           => (
+                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-3">
+                      {availableServices.map((service)            => (
                         <label key={service.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-colors">
                           <input
                             type="checkbox"

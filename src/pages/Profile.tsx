@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { User,
   Mail,
   Phone,
@@ -11,8 +11,8 @@ import { User,
   Save,
   Edit,
 =======
-import React, { useState          } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
+import React, { useState           } from 'react.ts';
+import { motion            } from 'framer-motion.ts';
 import { User, 
   Mail, 
   Phone, 
@@ -49,10 +49,11 @@ import { User,
   Rocket
 <<<<<<< HEAD
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface UserProfile {
+
 
 
 
@@ -85,10 +86,12 @@ avatar: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface NotificationSettings {
+
 
 
 
@@ -116,10 +119,12 @@ weeklyReports: boolean;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecuritySettings {
+
 
 
 
@@ -138,6 +143,7 @@ interface SecuritySettings {
 loginHistory: Array<any>;
 =======
 loginHistory: Array<any>;
+
 
 
 
@@ -290,22 +296,22 @@ const Profile: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanykeyof NotificationSettings)           => {
+  const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanyanykeyof NotificationSettings)            => {
     setNotifications(prev => ({
       ...prev,;
       [key]: !prev[key];
     }))};
 
-  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanystring)           => {;
+  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanyanystring)            => {;
 =======;
-  const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanykeyof NotificationSettings)          => {;
+  const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanyanykeyof NotificationSettings)           => {;
     setNotifications(prev => ({;
       ...prev,;
       [key]: !prev[key];
     }));
   };
 
-  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanyanystring)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
@@ -383,8 +389,8 @@ const Profile: React.FC = (): JSX.Element => {;
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
-          {stats.map((stat, index)           => (
+        <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
+          {stats.map((stat, index)            => (
             <motion.div
               key={stat.label}
               initial = {
@@ -604,13 +610,13 @@ const Profile: React.FC = (): JSX.Element => {;
 }))}
                 disabled={!isEditing}
 <<<<<<< HEAD
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
 
-                {industries.map((industry)          => (
-=======
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
-              >
                 {industries.map((industry)           => (
+=======
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {industries.map((industry)            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
@@ -711,8 +717,8 @@ const Profile: React.FC = (): JSX.Element => {;
       {/* Achievements */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
-          {achievements.map((achievement, index)           => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
+          {achievements.map((achievement, index)            => (
             <motion.div
               key={achievement.title}
               initial = {

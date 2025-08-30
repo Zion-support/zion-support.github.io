@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { cn          } from '../../utils/cn';
+import { cn           } from '../../utils/cn';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
 
@@ -49,7 +49,7 @@ export function Skeleton(...args: any[]): any {
 export function SkeletonText(...args: any[]): any {
   return (
     <div className={cn('space-y-2', className)}>
-      {Array.from({ length: anyanyanyanyanyanyanyanyanylines }).map((_, i)          => (
+      {Array.from({ length: anyanyanyanyanyanyanyanyanyanylines }).map((_, i)           => (
         <Skeleton
           key={i}
           variant="text"
@@ -85,15 +85,15 @@ export function SkeletonTable(...args: any[]): any {
     <div className={cn('space-y-3', className)}>
       {/* Header */}
       <div className="flex space-x-4">
-        {Array.from({ length: anyanyanyanyanyanyanyanyanycolumns }).map((_, i)          => (
+        {Array.from({ length: anyanyanyanyanyanyanyanyanyanycolumns }).map((_, i)           => (
           <Skeleton key={i} variant="text" width={120} height={20} />
         ))}
       </div>
       
       {/* Rows */}
-      {Array.from({ length: anyanyanyanyanyanyanyanyanyrows }).map((_, rowIndex)          => (
+      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyrows }).map((_, rowIndex)           => (
         <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: anyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)          => (
+          {Array.from({ length: anyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)           => (
             <Skeleton
               key={colIndex}
               variant="text"
@@ -114,10 +114,10 @@ export function SkeletonGrid(...args: any[]): any {
       columns === 1 && 'grid-cols-1',
       columns === 2 && 'grid-cols-1 md:grid-cols-2',
       columns === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
-      columns === 4 && 'grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4',
+      columns === 4 && 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4',
       className
     )}>
-      {Array.from({ length: items }).map((_, i)          => (
+      {Array.from({ length: items }).map((_, i)           => (
         <SkeletonCard key={i} />
       ))}
     </div>

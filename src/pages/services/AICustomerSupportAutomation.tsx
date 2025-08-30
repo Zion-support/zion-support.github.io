@@ -1,9 +1,9 @@
 import React from 'react.ts';
 <<<<<<< HEAD
-import { SEO          } from '@/components/SEO';
+import { SEO           } from '@/components/SEO';
 import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield export default function AICustomerSupportAutomation(...args: any[]): any {
 =======
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { MessageCircle, 
   Bot, 
   Brain, 
@@ -32,8 +32,8 @@ import { MessageCircle,
   FileText,
   Calendar,
   UserCheck
-         } from 'lucide-react.ts';
-import { SEO          } from '../../components/SEO';
+          } from 'lucide-react.ts';
+import { SEO           } from '../../components/SEO';
 
 const AICustomerSupportAutomation = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -332,8 +332,8 @@ const AICustomerSupportAutomation = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -387,8 +387,8 @@ const AICustomerSupportAutomation = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)           => (
 <<<<<<< HEAD
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -409,8 +409,8 @@ const AICustomerSupportAutomation = () => {
             <p className="text-xl text-slate-300">See how AI transforms your customer support operations</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)           => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
@@ -466,8 +466,8 @@ const AICustomerSupportAutomation = () => {
             <p className="text-xl text-slate-300">Choose the plan that fits your support volume and needs</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)           => (
               <div
                 key={index}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
@@ -538,8 +538,8 @@ const AICustomerSupportAutomation = () => {
             <p className="text-xl text-slate-300">Works with your existing tools and platforms</p>
           </div>
 
-          <div className="grid grid-cols-3 md: anyanyanyanyanyanyanyanyanygrid-cols-5 gap-6 max-w-4xl mx-auto">
-            {integrations.map((integration, index)          => (
+          <div className="grid grid-cols-3 md: anyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6 max-w-4xl mx-auto">
+            {integrations.map((integration, index)           => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-green-500/50 transition-all duration-300">
                 <p className="text-sm font-medium text-slate-300">{integration}</p>
               </div>
@@ -571,8 +571,8 @@ const AICustomerSupportAutomation = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -618,8 +618,8 @@ const AICustomerSupportAutomation = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -665,8 +665,8 @@ const AICustomerSupportAutomation = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)          => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -740,8 +740,8 @@ const AICustomerSupportAutomation = () => {
             </h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {testimonials.map((testimonial, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {testimonials.map((testimonial, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}

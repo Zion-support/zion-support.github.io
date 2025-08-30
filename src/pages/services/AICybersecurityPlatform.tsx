@@ -1,6 +1,6 @@
 import React from 'react.ts';
 <<<<<<< HEAD
-import { Helmet          } from 'react-helmet-async.ts';
+import { Helmet           } from 'react-helmet-async.ts';
 import { Shield, 
   Lock, 
   Eye, 
@@ -29,7 +29,7 @@ import { Shield,
 <<<<<<< HEAD
   Tablet,
   Laptop
-import { SEO          } from '../../components/SEO';
+import { SEO           } from '../../components/SEO';
 =======
   Monitor,
   CreditCard
@@ -358,11 +358,11 @@ export default function AICybersecurityPlatform(...args: any[]): any {
               <span>1000+ Protected Organizations</span>
             </div>
 =======
-import { SEO          } from '../../components/SEO';
-import { Button          } from '../../components/ui/Button';
-import { Card          } from '../../components/ui/Card';
-import { Badge          } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu          } from 'lucide-react.ts';
+import { SEO           } from '../../components/SEO';
+import { Button           } from '../../components/ui/Button';
+import { Card           } from '../../components/ui/Card';
+import { Badge           } from '../../components/ui/Badge';
+import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu           } from 'lucide-react.ts';
 
 const AICybersecurityPlatform: React.FC = (): JSX.Element => {
   return (
@@ -472,8 +472,8 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
-            {features.map((feature, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
+            {features.map((feature, index)           => (
 <<<<<<< HEAD
               <motion.div
                 key={index}
@@ -614,9 +614,9 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
 <<<<<<< HEAD
-            {capabilities.map((capability, index)          => (
+            {capabilities.map((capability, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -667,8 +667,8 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {threatIntelligence.map((intel, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {threatIntelligence.map((intel, index)           => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{intel.title}</h3>
                 <p className="text-gray-600 mb-6">{intel.description}</p>
@@ -715,8 +715,8 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           </div>
 
 <<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -730,8 +730,8 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{useCase.industry}</h3>
 =======
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFrameworks.map((framework, index)          => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceFrameworks.map((framework, index)           => (
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <framework.icon className="w-10 h-10 text-white" />
@@ -773,8 +773,8 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
 <<<<<<< HEAD
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -869,8 +869,8 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -885,8 +885,8 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
 =======
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)           => (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
                 plan.popular ? 'border-red-500 ring-4 ring-red-500/20' : 'border-gray-200'
               }`}>
@@ -951,7 +951,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -973,7 +973,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
                 title: 'Go Live',
                 description: 'Activate full protection with continuous monitoring and ongoing support'
 
-            ].map((phase, index)          => (
+            ].map((phase, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

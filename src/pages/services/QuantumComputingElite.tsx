@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Atom, 
   Cpu, 
   Zap, 
@@ -22,7 +22,7 @@ import { Atom,
   Rocket,
   Microscope,
   TestTube
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 const QuantumComputingElite: React.FC = (): JSX.Element => {
   const features = [
@@ -205,8 +205,8 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -245,8 +245,8 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumApplications.map((app, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {quantumApplications.map((app, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -282,8 +282,8 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
-            {quantumTechnologies.map((tech, index)          => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {quantumTechnologies.map((tech, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -321,8 +321,8 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

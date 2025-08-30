@@ -72,8 +72,8 @@ import SEO from '@/components/SEO';
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {services.map((service, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)           => (
               <motion.div
                 key={index}
                 initial = {
@@ -281,8 +281,8 @@ import SEO from '@/components/SEO';
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)           => (
               <motion.div
                 key={index}
                 initial = {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
-import { Link, useLocation          } from 'react-router-dom.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { Link, useLocation           } from 'react-router-dom.ts';
 import { Menu,
   X,
   ChevronDown,
@@ -34,7 +34,7 @@ import { Menu,
   Clock
 <<<<<<< HEAD
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationItem {
@@ -48,9 +48,11 @@ interface NavigationItem {
 
 
 
+
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
+
 
 
 
@@ -183,7 +185,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {;
 
   useEffect(() => {
 <<<<<<< HEAD
-    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyMouseEvent)          => {;
+    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyMouseEvent)           => {;
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
 <<<<<<< HEAD
@@ -209,7 +211,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
 <<<<<<< HEAD
-  const toggleExpanded = (label: anyanyanyanyanyanyanyanyanystring)          => {;
+  const toggleExpanded = (label: anyanyanyanyanyanyanyanyanyanystring)           => {;
     setExpandedItems(prev => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       const newSet = new Set(prev);
@@ -229,18 +231,18 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-  const handleNavigation = (path: anyanyanyanyanyanyanyanyanystring)          => {;
+  const handleNavigation = (path: anyanyanyanyanyanyanyanyanyanystring)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setIsOpen(false);
     setExpandedItems(new Set())};
 
 <<<<<<< HEAD
-  const isActive = (path: anyanyanyanyanyanyanyanyanystring)           => {
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanystring)            => {
     if (path === '/') {;
       return activePath === '/'};
     return activePath.startsWith(path)};
 =======
-  const isActive = (path: anyanyanyanyanyanyanyanyanystring)          => {;
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanystring)           => {;
     if (path === '/') {;
       return activePath === '/';
 

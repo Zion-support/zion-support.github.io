@@ -1,4 +1,4 @@
-import { Route, Routes          } from 'react-router-dom.ts';
+import { Route, Routes           } from 'react-router-dom.ts';
 import EnterprisePlans from '../pages/EnterprisePlans';
 import EnterpriseAdmin from '../pages/EnterpriseAdmin';
 import CompWorkspace from '../pages/CompWorkspace';

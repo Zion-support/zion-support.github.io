@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 <<<<<<< HEAD
 import { HelpCircle,
   MessageCircle,
@@ -18,9 +18,10 @@ import { HelpCircle,
   Shield,
   Globe,
   ArrowRight
-import { SEO          } from '../components/SEO';
+import { SEO           } from '../components/SEO';
 
 interface SupportChannel {
+
 
 
 
@@ -47,6 +48,7 @@ questions: {;
     question: string;
     answer: string;
   
+
 
 
 
@@ -209,7 +211,7 @@ import { HelpCircle,
   Globe,
   Target,
   TrendingUp
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Support(...args: any[]): any {
@@ -379,7 +381,7 @@ export default function Support(...args: any[]): any {
     }
   ];
 
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
@@ -508,8 +510,8 @@ export default function Support(...args: any[]): any {
 
       {/* Support Categories */}
       <div className="container-responsive py-16">
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-          {supportCategories.map((category, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          {supportCategories.map((category, index)           => (
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 20 }}
@@ -579,12 +581,12 @@ export default function Support(...args: any[]): any {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
               selectedCategory === null
                 ? 'bg-cyan-400 text-slate-900 shadow-lg shadow-cyan-400/25'
-                : 'bg-slate-700/50 text-gray-300 hover: anyanyanyanyanyanyanyanyanybg-slate-600/50 hover:text-white'
+                : 'bg-slate-700/50 text-gray-300 hover: anyanyanyanyanyanyanyanyanyanybg-slate-600/50 hover:text-white'
             }`}
 
             All Categories
           </button>
-          {faqCategories.map((category)          => (
+          {faqCategories.map((category)           => (
             <button
               key={category.title}
               onClick={() => setSelectedCategory(category.title)}
@@ -668,8 +670,8 @@ export default function Support(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {helpTopics.map((section, index)          => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {helpTopics.map((section, index)           => (
                 <motion.div
                   key={section.category}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -771,8 +773,8 @@ export default function Support(...args: any[]): any {
             </div>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {contactMethods.map((method, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {contactMethods.map((method, index)           => (
                 <motion.div
                   key={method.type}
                   initial={{ opacity: 0, y: 20 }}
@@ -868,8 +870,8 @@ export default function Support(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {supportResources.map((resource, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {supportResources.map((resource, index)           => (
                 <motion.div
                   key={resource.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -909,7 +911,7 @@ export default function Support(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { name: 'AI Services', status: 'operational', icon: Brain },
                 { name: 'Cloud Infrastructure', status: 'operational', icon: Cloud },
@@ -917,7 +919,7 @@ export default function Support(...args: any[]): any {
                 { name: 'Data Analytics', status: 'operational', icon: TrendingUp },
                 { name: 'API Services', status: 'operational', icon: Globe },
                 { name: 'Support Portal', status: 'operational', icon: HelpCircle }
-              ].map((service, index)          => (
+              ].map((service, index)           => (
                 <motion.div
                   key={service.name}
                   initial={{ opacity: 0, y: 20 }}

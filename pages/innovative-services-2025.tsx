@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices           } from '../src/data/innovativeServices2025';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices            } from '../src/data/innovativeServices2025';
 const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
 =======;
 import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices          } from '../src/data/innovativeServices2025';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices           } from '../src/data/innovativeServices2025';
 const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
@@ -231,13 +231,13 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
 
-                {categories.map(category          => (
-=======
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-              >
                 {categories.map(category           => (
+=======
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {categories.map(category            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
@@ -252,13 +252,13 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
 <<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
 
-                {priceRanges.map(range          => (
-=======
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-              >
                 {priceRanges.map(range           => (
+=======
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {priceRanges.map(range            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
@@ -271,13 +271,13 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
 <<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
 
-                {sortOptions.map(option          => (
-=======
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-              >
                 {sortOptions.map(option           => (
+=======
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {sortOptions.map(option            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
@@ -292,8 +292,8 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
           </p>
         </div>
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service)           => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)            => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>

@@ -1,6 +1,6 @@
 import React from 'react.ts';
 <<<<<<< HEAD
-import { Link          } from 'react-router-dom.ts';
+import { Link           } from 'react-router-dom.ts';
 import { FileText, Users, BarChart3, Mic, Video, Shield, DollarSign, ExternalLink const InterviewAssessmentAI: React.FC = (): JSX.Element => {
 	const modules = [
 		{ icon: Mic, title: 'Speech + Transcription', desc: 'Real-time or recorded interviews with diarization and sentiment.' },
@@ -10,8 +10,8 @@ import { FileText, Users, BarChart3, Mic, Video, Shield, DollarSign, ExternalLin
 		{ icon: Shield, title: 'Compliance', desc: 'Bias testing, retention policy, candidate opt-out and audit trail.' }
 	];
 =======
-import { motion          } from 'framer-motion.ts';
-import { SEO          } from '../../components/SEO';
+import { motion           } from 'framer-motion.ts';
+import { SEO           } from '../../components/SEO';
 import { Users, 
   Brain, 
   Target, 
@@ -34,7 +34,7 @@ import { Users,
   Video,
   Download,
   Share2
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function InterviewAssessmentAI(...args: any[]): any {
   const features = [
@@ -238,8 +238,8 @@ export default InterviewAssessmentAI;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)           => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -337,8 +337,8 @@ export default InterviewAssessmentAI;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)           => (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -436,8 +436,8 @@ export default InterviewAssessmentAI;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {assessmentTypes.map((type, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {assessmentTypes.map((type, index)           => (
               <motion.div
                 key={type.type}
                 initial = {
@@ -535,8 +535,8 @@ export default InterviewAssessmentAI;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)           => (
               <motion.div
                 key={useCase.industry}
                 initial = {

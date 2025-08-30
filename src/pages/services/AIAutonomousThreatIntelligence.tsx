@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Shield, 
   Eye, 
   AlertTriangle, 
@@ -34,7 +34,7 @@ import { Shield,
   TrendingUp,
   Activity,
   ShieldCheck
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function AIAutonomousThreatIntelligence(...args: any[]): any {
   const features = [
@@ -204,8 +204,8 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {features.map((feature, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -255,8 +255,8 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {threatTypes.map((threat, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {threatTypes.map((threat, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -310,8 +310,8 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

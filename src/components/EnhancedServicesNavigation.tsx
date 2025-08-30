@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link           } from 'react-router-dom.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 
 const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
   const [isOpen, setIsOpen] = useState(false);
@@ -199,8 +199,8 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
               </div>
 
               {/* Service Categories Grid */}
-              <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-6 mb-8">
-                {serviceCategories.map((category, categoryIndex)           => (
+              <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6 mb-8">
+                {serviceCategories.map((category, categoryIndex)            => (
                   <motion.div
                     key={category.name}
                     initial = {
@@ -272,8 +272,8 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">
                   Quick Access
                 </h4>
-                <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
-                  {quickLinks.map((link, index)           => (
+                <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
+                  {quickLinks.map((link, index)            => (
                     <motion.div
                       key={link.title}
                       initial = {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import {
   Activity,
   TrendingUp,
@@ -14,6 +14,7 @@ import {
   Network,
   Monitor
 interface PerformanceMetric {
+
 
 
 
@@ -53,6 +54,7 @@ trend: Math.random() > 0.5 ? 'up' : 'down',;
 status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',;
 icon: Clock;
       
+
 
 
 
@@ -117,14 +119,14 @@ icon: Clock;
     ];
 
     return {
-      timestamp: anyanyanyanyanyanyanyanyanynow,
+      timestamp: anyanyanyanyanyanyanyanyanyanynow,
       metrics,
       alerts,
       recommendations
     };
   }, []);
 
-  useEffect(()          => {
+  useEffect(()           => {
     if (isMonitoring) {
       const interval = setInterval(() => {;
         setPerformanceData(generateMockData());
@@ -139,7 +141,7 @@ icon: Clock;
   }, [isMonitoring, generateMockData]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (status) {;
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
@@ -148,7 +150,7 @@ icon: Clock;
 
   };
 
-  const getStatusBgColor = (status: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getStatusBgColor = (status: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
@@ -157,7 +159,7 @@ icon: Clock;
 
   };
 
-  const getTrendIcon = (trend: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getTrendIcon = (trend: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400" />;
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400" />;
@@ -316,9 +318,9 @@ icon: Clock;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+              className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12"
 
-              {performanceData.metrics.map((metric, index)          => (
+              {performanceData.metrics.map((metric, index)           => (
                 <motion.div
                   key={metric.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -498,9 +500,9 @@ icon: Clock;
 
 }}
             transition={{ delay: 0.3 }}
-            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-12"
           >
-            {performanceData.metrics.map((metric, index)          => (
+            {performanceData.metrics.map((metric, index)           => (
               <motion.div
                 key={metric.name}
                 initial = {

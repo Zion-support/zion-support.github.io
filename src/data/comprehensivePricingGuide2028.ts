@@ -8,6 +8,7 @@ export interface ComprehensivePricingPlan2028 {
 
 
 
+
   id: string;
   name: string;
   description: string;
@@ -23,6 +24,7 @@ addOns: {;
     price: number;
     description: string;
   
+
 
 
 
@@ -54,6 +56,7 @@ export interface ServiceCategory2028 {
 
 
 
+
   id: string;
   name: string;
   description: string;
@@ -67,6 +70,7 @@ services: {;
     features: string[];
     benefits: string[];
   
+
 
 
 

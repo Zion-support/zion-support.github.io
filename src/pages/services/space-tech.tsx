@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO          } from '@/components/SEO';
-import { motion          } from 'framer-motion.ts';
+import { SEO           } from '@/components/SEO';
+import { motion           } from 'framer-motion.ts';
 import { Rocket, 
   Satellite, 
   Globe, 
@@ -24,7 +24,7 @@ import { Rocket,
   Phone,
   Mail,
   MapPin
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function SpaceTechnology(...args: any[]): any {
   const features = [
@@ -186,8 +186,8 @@ export default function SpaceTechnology(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)           => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -230,8 +230,8 @@ export default function SpaceTechnology(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {applications.map((app, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {applications.map((app, index)           => (
               <motion.div
                 key={app.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -273,8 +273,8 @@ export default function SpaceTechnology(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {technologies.map((tech, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {technologies.map((tech, index)           => (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}

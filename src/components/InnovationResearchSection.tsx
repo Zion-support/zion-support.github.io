@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Lightbulb,
   TestTube,
   BookOpen,
@@ -13,7 +13,7 @@ import { Lightbulb,
 <<<<<<< HEAD
 export const InnovationResearchSection: React.FC = (): JSX.Element => {
 =======
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const InnovationResearchSection: React.FC = (): JSX.Element => {
@@ -148,10 +148,10 @@ export function InnovationResearchSection(...args: any[]): any {
 
         {/* Innovation Metrics */}
         <motion.div 
-          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
 <<<<<<< HEAD
 
-          {stats.map((stat, index)          => {
+          {stats.map((stat, index)           => {
             const IconComponent = stat.icon;
             return (
               <div key={stat.label} className="text-center">
@@ -168,9 +168,9 @@ export function InnovationResearchSection(...args: any[]): any {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: anyanyanyanyanyanyanyanyany0.6, delay: 0.2 }}
+          transition={{ duration: anyanyanyanyanyanyanyanyanyany0.6, delay: 0.2 }}
         >
-          {innovationMetrics.map((metric, index)          => (
+          {innovationMetrics.map((metric, index)           => (
             <div key={metric.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{metric.icon}</span>
@@ -181,8 +181,8 @@ export function InnovationResearchSection(...args: any[]): any {
 
 <<<<<<< HEAD
         {/* Research Areas Grid */}
-        <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
-          {researchAreas.map((area, index)           => {;
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
+          {researchAreas.map((area, index)            => {;
             const IconComponent = area.icon;
             return (
 =======
@@ -225,8 +225,8 @@ export function InnovationResearchSection(...args: any[]): any {
             Active Research Areas
           </h3>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {researchAreas.map((area, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {researchAreas.map((area, index)           => (
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               <motion.div
                 key={area.title}

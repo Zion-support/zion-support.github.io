@@ -39,14 +39,14 @@ function ReturnsManagement(...args: any[]): any {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {[{
             plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns', '1 brand portal', '1 store integration']
           },{
             plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns', '3 brand portals', 'All major carriers']
           },{
             plan: 'Scale', price: 'Custom', features: ['Unlimited returns', 'SLA + SSO', 'Dedicated success manager']
-          }].map(({ plan, price, features })          => (
+          }].map(({ plan, price, features })           => (
             <div key={plan} className="card-futuristic">
               <h3 className="text-lg font-semibold">{plan}</h3>
               <p className="text-2xl mt-2">{price}</p>

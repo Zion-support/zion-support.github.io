@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { SEO          } from '@/components/SEO';
-import { Link          } from 'react-router-dom.ts';
-import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare          } from 'lucide-react.ts';
+import { SEO           } from '@/components/SEO';
+import { Link           } from 'react-router-dom.ts';
+import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare           } from 'lucide-react.ts';
 
 export default function MicroSaaS(...args: any[]): any {
   const products = [
@@ -52,8 +52,8 @@ export default function MicroSaaS(...args: any[]): any {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-            {products.map((p)          => (
+          <div className="mt-12 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {products.map((p)           => (
               <div key={p.name} className="card-futuristic">
                 <h3 className="text-white font-semibold">{p.name}</h3>
                 <div className="mt-1 text-slate-400">{p.price}</div>

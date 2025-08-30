@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 import { HelpCircle, 
   MessageCircle, 
   Phone, 
@@ -41,7 +41,7 @@ import { HelpCircle,
   ExternalLink,
   Code,
   DollarSign
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function Helpdesk(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -214,9 +214,9 @@ export default function Helpdesk(...args: any[]): any {
   ];
 
   const filteredIssues = selectedCategory === 'all' 
-    ? commonIssues: anyanyanyanyanyanyanyanyanycommonIssues.filter(issue          => issue.category === selectedCategory);
+    ? commonIssues: anyanyanyanyanyanyanyanyanyanycommonIssues.filter(issue           => issue.category === selectedCategory);
 
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
@@ -224,7 +224,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanystring)          => {
+  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanystring)           => {
     switch (priority) {
       case 'high': return 'text-red-400 bg-red-400/20 border-red-400/30';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
@@ -233,7 +233,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanystring)          => {
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanystring)           => {
     switch (status) {
       case 'resolved': return 'text-green-400 bg-green-400/20 border-green-400/30';
       case 'investigating': return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
@@ -302,8 +302,8 @@ export default function Helpdesk(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-          {supportChannels.map((channel, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          {supportChannels.map((channel, index)           => (
             <motion.div
               key={channel.type}
               initial={{ opacity: 0, y: 20 }}
@@ -347,8 +347,8 @@ export default function Helpdesk(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-          {quickSolutions.map((solution, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          {quickSolutions.map((solution, index)           => (
             <motion.div
               key={solution.title}
               initial={{ opacity: 0, y: 20 }}
@@ -385,8 +385,8 @@ export default function Helpdesk(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-          {systemStatus.map((service, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+          {systemStatus.map((service, index)           => (
             <motion.div
               key={service.service}
               initial={{ opacity: 0, y: 20 }}

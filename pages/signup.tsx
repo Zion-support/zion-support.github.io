@@ -1,6 +1,6 @@
 import Head from 'next/head.ts'
-import { motion           } from 'framer-motion.ts'
-import { useState           } from 'react.ts'
+import { motion            } from 'framer-motion.ts'
+import { useState            } from 'react.ts'
 import { User,
   Mail,
   Lock,
@@ -18,7 +18,7 @@ import { User,
 <<<<<<< HEAD
 export default function Signup(...args: any[]): any {
 =======
-          } from 'lucide-react.ts'
+           } from 'lucide-react.ts'
 
 export default function Signup(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -69,7 +69,7 @@ export default function Signup(...args[]: any):  {
   ]
 
 <<<<<<< HEAD
-  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLSelectElement>)          => {
+  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLSelectElement>)           => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -97,7 +97,7 @@ export default function Signup(...args[]: any):  {
 =======
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault()
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Eye,
   EyeOff,
@@ -23,10 +23,11 @@ import {
   X,
   CheckCircle,
   AlertTriangle
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface AccessibilitySettings {
+
 
 
 
@@ -45,6 +46,7 @@ interface AccessibilitySettings {
   focusIndicator: boolean;
 
 interface AccessibilityEnhancerProps extends React.PropsWithChildren<{
+
 
 
 
@@ -121,7 +123,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
 =======
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyKeyboardEvent)          => {;
+    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyKeyboardEvent)           => {;
       // Skip if not in keyboard navigation mode;
       if (!settings.keyboardNavigation) return;
 
@@ -168,7 +170,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
   }, [settings.keyboardNavigation]);
 
   // Arrow key navigation helper
-  const navigateWithArrows = (container: anyanyanyanyanyanyanyanyanyElement, direction: string)          => {
+  const navigateWithArrows = (container: anyanyanyanyanyanyanyanyanyanyElement, direction: string)           => {
     const focusableElements = Array.from(container.querySelectorAll(;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     )).filter(el => !(el as HTMLElement).hidden);
@@ -239,7 +241,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
     style.textContent = `
       /* High contrast mode */;
       .high-contrast {;
-        --text-primary: anyanyanyanyanyanyanyanyany#ffffff !important;
+        --text-primary: anyanyanyanyanyanyanyanyanyany#ffffff !important;
         --text-secondary: #e5e7eb !important;
         --bg-primary: #000000 !important;
         --bg-secondary: #1f2937 !important;
@@ -314,13 +316,13 @@ export function AccessibilityEnhancer(...args: any[]): any {
     `;
     document.head.appendChild(style);
 
-    return ()          => {
+    return ()           => {
       document.head.removeChild(style);
     };
   }, []);
 
   // Apply accessibility settings to the document
-  const applySettings = (newSettings: anyanyanyanyanyanyanyanyanyAccessibilitySettings)          => {
+  const applySettings = (newSettings: anyanyanyanyanyanyanyanyanyanyAccessibilitySettings)           => {
     const root = document.documentElement;
     
     // High contrast
@@ -365,7 +367,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
     // Screen reader announcements
     if (settings.screenReader) {
-      const announce = (message: anyanyanyanyanyanyanyanyanystring)          => {
+      const announce = (message: anyanyanyanyanyanyanyanyanyanystring)           => {
         const announcement = document.createElement('div');
         announcement.setAttribute('aria-live', 'polite');
         announcement.setAttribute('aria-atomic', 'true');
@@ -387,7 +389,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
   useEffect(() => {
     if (!enabled || !settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyKeyboardEvent)          => {
+    const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyKeyboardEvent)           => {
       // Skip if user is typing in an input
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return;
@@ -462,11 +464,11 @@ export function AccessibilityEnhancer(...args: any[]): any {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus: anyanyanyanyanyanyanyanyanynot-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';
+    skipLink.className = 'skip-link sr-only focus: anyanyanyanyanyanyanyanyanyanynot-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';
 
     document.body.insertBefore(skipLink, document.body.firstChild);
 
-    return ()          => {
+    return ()           => {
       if (document.body.contains(skipLink)) {
         document.body.removeChild(skipLink);
 
@@ -481,7 +483,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
   };
 
   // Save settings to localStorage
-  const saveSettings = (newSettings: anyanyanyanyanyanyanyanyanyAccessibilitySettings)          => {
+  const saveSettings = (newSettings: anyanyanyanyanyanyanyanyanyanyAccessibilitySettings)           => {
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
     setSettings(newSettings);
     applySettings(newSettings);
@@ -489,9 +491,9 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
   // Update individual setting
   const updateSetting = <K extends keyof AccessibilitySettings>(
-    key: anyanyanyanyanyanyanyanyanyK, 
+    key: anyanyanyanyanyanyanyanyanyanyK, 
     value: AccessibilitySettings[K]
-  )          => {
+  )           => {
     const newSettings = { ...settings, [key]: value };
     saveSettings(newSettings);
     
@@ -506,7 +508,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
   // Reset to default settings
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: anyanyanyanyanyanyanyanyanyfalse,
+      highContrast: anyanyanyanyanyanyanyanyanyanyfalse,
       largeText: false,
       reducedMotion: false,
       highSaturation: false,
@@ -516,7 +518,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     saveSettings(defaultSettings);
-    setNotifications(prev          => [...prev, 'Settings reset to default']);
+    setNotifications(prev           => [...prev, 'Settings reset to default']);
     setTimeout(() => {
       setNotifications(prev => prev.filter(n => n !== 'Settings reset to default'));
     }, 3000);
@@ -525,30 +527,30 @@ export function AccessibilityEnhancer(...args: any[]): any {
   // Quick accessibility actions
   const quickActions = [
     {
-      name: anyanyanyanyanyanyanyanyany'High Contrast',
+      name: anyanyanyanyanyanyanyanyanyany'High Contrast',
       icon: Contrast,
-      action: ()          => updateSetting('highContrast', !settings.highContrast),
-      active: anyanyanyanyanyanyanyanyanysettings.highContrast,
+      action: ()           => updateSetting('highContrast', !settings.highContrast),
+      active: anyanyanyanyanyanyanyanyanyanysettings.highContrast,
       description: 'Increase contrast for better readability'
     },
     {
       name: 'Large Text',
       icon: Type,
-      action: ()          => updateSetting('largeText', !settings.largeText),
-      active: anyanyanyanyanyanyanyanyanysettings.largeText,
+      action: ()           => updateSetting('largeText', !settings.largeText),
+      active: anyanyanyanyanyanyanyanyanyanysettings.largeText,
       description: 'Increase text size for better readability'
     },
     {
       name: 'Reduced Motion',
       icon: EyeOff,
-      action: ()          => updateSetting('reducedMotion', !settings.reducedMotion),
-      active: anyanyanyanyanyanyanyanyanysettings.reducedMotion,
+      action: ()           => updateSetting('reducedMotion', !settings.reducedMotion),
+      active: anyanyanyanyanyanyanyanyanyanysettings.reducedMotion,
       description: 'Reduce animations for motion sensitivity'
     },
     {
       name: 'High Saturation',
       icon: Eye,
-      action: ()          => updateSetting('highSaturation', !settings.highSaturation),
+      action: ()           => updateSetting('highSaturation', !settings.highSaturation),
       active: settings.highSaturation,
       description: 'Increase color saturation'
     }

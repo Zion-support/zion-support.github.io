@@ -2,7 +2,7 @@
 import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 export default function AIWorkflowAutomation(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Workflow, 
   Zap, 
   Brain, 
@@ -39,8 +39,8 @@ import { Workflow,
   GitBranch,
   Code,
   Terminal
-         } from 'lucide-react.ts';
-import { SEO          } from '../../components/SEO';
+          } from 'lucide-react.ts';
+import { SEO           } from '../../components/SEO';
 
 export default function AIWorkflowAutomation(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -280,8 +280,8 @@ export default function AIWorkflowAutomation(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -316,8 +316,8 @@ export default function AIWorkflowAutomation(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {capabilities.map((capability, index)          => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -365,8 +365,8 @@ export default function AIWorkflowAutomation(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -409,8 +409,8 @@ export default function AIWorkflowAutomation(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -482,8 +482,8 @@ export default function AIWorkflowAutomation(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

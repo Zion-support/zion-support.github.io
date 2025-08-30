@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation          } from 'react-router-dom.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { Link, useLocation           } from 'react-router-dom.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 import { Menu,
   X,
   Search,
@@ -220,7 +220,7 @@ import { Menu,
 <<<<<<< HEAD
 export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
@@ -249,7 +249,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
     setActiveDropdown(null)}, [location.pathname]);
 
 <<<<<<< HEAD
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {;
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -262,10 +262,10 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanystring)           => {;
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanystring)            => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
 =======
-  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanystring)          => {;
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanystring)           => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

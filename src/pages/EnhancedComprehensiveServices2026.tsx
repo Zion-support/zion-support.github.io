@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -57,19 +57,20 @@ import { Brain,
   List
 <<<<<<< HEAD
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
 <<<<<<< HEAD
+import { ultimateInnovativeServices2026            } from '../data/ultimateInnovativeServices2026';
+import { zion2026ComprehensiveServices            } from '../data/zion2026ComprehensiveServices';
+=======
 import { ultimateInnovativeServices2026           } from '../data/ultimateInnovativeServices2026';
 import { zion2026ComprehensiveServices           } from '../data/zion2026ComprehensiveServices';
-=======
-import { ultimateInnovativeServices2026          } from '../data/ultimateInnovativeServices2026';
-import { zion2026ComprehensiveServices          } from '../data/zion2026ComprehensiveServices';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
+
 
 
 
@@ -92,6 +93,7 @@ pricing: {;
     enterprise: number;
     currency: string;
 billingCycle: string;
+
 
 
 
@@ -253,7 +255,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (category) {;
       case 'Artificial Intelligence':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -286,7 +288,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (status.toLowerCase()) {;
       case 'live':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -307,13 +309,13 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getInnovationBadge = (service: anyanyanyanyanyanyanyanyanyService)           => {
+  const getInnovationBadge = (service: anyanyanyanyanyanyanyanyanyanyService)            => {
     if (service.innovationLevel === 'Revolutionary') {
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>} else if (service.innovationLevel === 'Cutting-Edge') {;
       return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>};
     return null};
 =======
-  const getInnovationBadge = (service: anyanyanyanyanyanyanyanyanyService)          => {;
+  const getInnovationBadge = (service: anyanyanyanyanyanyanyanyanyanyService)           => {;
     if (service.innovationLevel === 'Revolutionary') {;
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
     } else if (service.innovationLevel = == 'Cutting-Edge') {;
@@ -406,13 +408,13 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
 
-                {categories.map(category          => (
-=======
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
-              >
                 {categories.map(category           => (
+=======
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
+              >
+                {categories.map(category            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>{category}</option>
                 ))}
@@ -462,9 +464,9 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {;
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {viewMode === 'grid' ? (
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredServices.map((service, index)           => (
+              {filteredServices.map((service, index)            => (
                 <motion.div
                   key={service.id}
                   initial = {

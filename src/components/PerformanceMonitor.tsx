@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Activity,
   Clock,
@@ -14,10 +14,11 @@ import { Activity,
   HardDrive,
   Wifi
 =======
-import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown          } from 'lucide-react.ts';
+import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown           } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface PerformanceMetrics {
+
 
 
 
@@ -52,6 +53,7 @@ interface PerformanceMetrics {
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -73,7 +75,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {;
   const [scores, setScores] = useState<Record<string, any>>({});
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-  const calculateScore = useCallback((metric: anyanyanyanyanyanyanyanyanynumber, thresholds: number[]): PerformanceScore           => {;
+  const calculateScore = useCallback((metric: anyanyanyanyanyanyanyanyanyanynumber, thresholds: number[]): PerformanceScore            => {;
     if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
     if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
     if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
@@ -96,7 +98,7 @@ interface PerformanceMonitorProps extends React.PropsWithChildren<{}> {
   enabled?: boolean;
 <<<<<<< HEAD
   showMetrics?: boolean;
-  onPerformanceIssue?: (issue: anyanyanyanyanyanyanyanyanystring)          => void;
+  onPerformanceIssue?: (issue: anyanyanyanyanyanyanyanyanyanystring)           => void;
 =======
   autoRefresh?: boolean;
   refreshInterval?: number;
@@ -139,7 +141,7 @@ export function PerformanceMonitor(...args: any[]): any {
     };
   }, []);
 
-  const getPerformanceScore = useCallback((metrics: anyanyanyanyanyanyanyanyanyPerformanceMetrics)          => {
+  const getPerformanceScore = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyPerformanceMetrics)           => {
     let score = 100;
 <<<<<<< HEAD
 
@@ -197,7 +199,7 @@ export function PerformanceMonitor(...args: any[]): any {
           const clsObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             const clsValue = 0;
-            entries.forEach((entry: anyanyanyanyanyanyanyanyany)          => {
+            entries.forEach((entry: anyanyanyanyanyanyanyanyanyany)           => {
               if (entry.value) {
                 clsValue += entry.value;
 
@@ -275,20 +277,20 @@ export function PerformanceMonitor(...args: any[]): any {
     return Math.max(0, score);
   }, []);
 
-  const getPerformanceColor = useCallback((score: anyanyanyanyanyanyanyanyanynumber)          => {
+  const getPerformanceColor = useCallback((score: anyanyanyanyanyanyanyanyanyanynumber)           => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
   }, []);
 
-  const getPerformanceStatus = useCallback((score: anyanyanyanyanyanyanyanyanynumber)          => {
+  const getPerformanceStatus = useCallback((score: anyanyanyanyanyanyanyanyanyanynumber)           => {
     if (score >= 90) return 'Excellent';
     if (score >= 70) return 'Good';
     if (score >= 50) return 'Needs Improvement';
     return 'Poor';
   }, []);
 
-  const checkPerformanceIssues = useCallback((metrics: anyanyanyanyanyanyanyanyanyPerformanceMetrics)          => {
+  const checkPerformanceIssues = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyPerformanceMetrics)           => {
     const newAlerts: string[] = [];
     
     if (metrics.fcp > 1800) {

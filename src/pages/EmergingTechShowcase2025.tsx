@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 import { Brain,
   Cpu,
   Atom,
@@ -12,8 +12,8 @@ import { Brain,
   Dna,
   Microscope,
 =======
-import React, { useState, useEffect          } from 'react.ts';
-import { motion, AnimatePresence           } from 'framer-motion.ts';
+import React, { useState, useEffect           } from 'react.ts';
+import { motion, AnimatePresence            } from 'framer-motion.ts';
 import { Brain, 
   Cpu, 
   Atom, 
@@ -42,11 +42,11 @@ import { Brain,
   Pause,
   RotateCcw
 <<<<<<< HEAD
-import { EMERGING_TECH_SERVICES_2025          } from '../data/emergingTechServices2025';
+import { EMERGING_TECH_SERVICES_2025           } from '../data/emergingTechServices2025';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { EMERGING_TECH_SERVICES_2025           } from '../data/emergingTechServices2025';
+import { EMERGING_TECH_SERVICES_2025            } from '../data/emergingTechServices2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
@@ -54,7 +54,7 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>(null);
 =======
 } from 'lucide-react';
-import { EMERGING_TECH_SERVICES_2025          } from '../data/emergingTechServices2025';
+import { EMERGING_TECH_SERVICES_2025           } from '../data/emergingTechServices2025';
 
 const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
@@ -81,7 +81,7 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
 
 <<<<<<< HEAD
     const filteredServices = selectedCategory === 'all';
-    ? EMERGING_TECH_SERVICES_2025: anyanyanyanyanyanyanyanyanyEMERGING_TECH_SERVICES_2025.filter(service           => service.category === selectedCategory);
+    ? EMERGING_TECH_SERVICES_2025: anyanyanyanyanyanyanyanyanyanyEMERGING_TECH_SERVICES_2025.filter(service            => service.category === selectedCategory);
 
   useEffect(() => {
     if (autoPlay) {
@@ -90,7 +90,7 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
       return () => clearInterval(interval)}
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)           => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)            => {;
 =======;
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
@@ -105,13 +105,13 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
 
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe};
 
 <<<<<<< HEAD
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-blue-500 to-purple-600'};
@@ -345,12 +345,12 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
           </div>
 <<<<<<< HEAD
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)           => (
 =======
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)           => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={service.id}

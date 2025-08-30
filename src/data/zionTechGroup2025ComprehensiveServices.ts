@@ -8,6 +8,7 @@ export interface ZionService {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -24,6 +25,7 @@ contactInfo: {;
     address: string;
     website: string;
   
+
 
 
 
@@ -697,18 +699,18 @@ export const zionTechGroup2025Services: ZionService[] = [
   }
 ];
 
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyZionService['category'])          => {;
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyZionService['category'])           => {;
   return zionTechGroup2025Services.filter(service => service.category === category);
 };
 
-export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanynumber, maxPrice: number)          => {;
+export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)           => {;
   return zionTechGroup2025Services.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
 
-export const searchServices = (query: anyanyanyanyanyanyanyanyanystring)          => {;
+export const searchServices = (query: anyanyanyanyanyanyanyanyanyanystring)           => {;
   const lowercaseQuery = query.toLowerCase();
   return zionTechGroup2025Services.filter(service = >;
     service.title.toLowerCase().includes(lowercaseQuery) ||;

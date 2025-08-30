@@ -1,17 +1,17 @@
-import { TeamRecommendation, ProjectBrief           } from '@/types';
-import { RoleCard           } from './RoleCard';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter           } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle           } from '@/components/ui/alert';
-import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase           } from 'lucide-react.ts'; // Target changed to Bullseye
-import { BudgetStatusDisplay           } from './BudgetStatusDisplay'; // New import
+import { TeamRecommendation, ProjectBrief            } from '@/types';
+import { RoleCard            } from './RoleCard';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter            } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle            } from '@/components/ui/alert';
+import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase            } from 'lucide-react.ts'; // Target changed to Bullseye
+import { BudgetStatusDisplay            } from './BudgetStatusDisplay'; // New import
 
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
-  recommendation: anyanyanyanyanyanyanyanyanyTeamRecommendation;
+  recommendation: anyanyanyanyanyanyanyanyanyanyTeamRecommendation;
   projectBrief: ProjectBrief; // For budget comparison
-  onInviteTalent: (talentId: string, roleTitle: string)           => void;
-  // onEditRole: anyanyanyanyanyanyanyanyany(roleId: string)           => void; // For future add/remove
-  // onRemoveRole: anyanyanyanyanyanyanyanyany(roleId: string)           => void; // For future add/remove
+  onInviteTalent: (talentId: string, roleTitle: string)            => void;
+  // onEditRole: anyanyanyanyanyanyanyanyanyany(roleId: string)            => void; // For future add/remove
+  // onRemoveRole: anyanyanyanyanyanyanyanyanyany(roleId: string)            => void; // For future add/remove
 
 }
 
@@ -79,7 +79,7 @@ export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInvi
   )};
 
 // Helper component for summary cards
-const InfoCard = ({ title, value, icon }: { title: anyanyanyanyanyanyanyanyanystring; value: string; icon: React.ReactNode })           => (
+const InfoCard = ({ title, value, icon }: { title: anyanyanyanyanyanyanyanyanyanystring; value: string; icon: React.ReactNode })            => (
   <Card className = "bg-secondary/50 p-3 shadow-sm">
     <div className="flex items-center text-muted-foreground mb-1">
       {icon}

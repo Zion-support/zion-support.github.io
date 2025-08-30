@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link          } from 'react-router-dom.ts';
-import { motion          } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Zap,
   Brain,
@@ -98,7 +98,7 @@ import {
   Eye,
   Sparkles
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 export function EnhancedFooter(...args: any[]): any {
   const currentYear = new Date().getFullYear();
 
@@ -442,8 +442,8 @@ export function EnhancedFooter(...args: any[]): any {
         {/* Quick Links Section */}
         <div className="mt-12 pt-8 border-t border-zion-slate-light/20">
           <h4 className="text-lg font-semibold text-white mb-6 text-center">Quick Access</h4>
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-4">
-            {quickLinks.map((link)          => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-4">
+            {quickLinks.map((link)           => (
               <Link
                 key={link.name}
                 to={link.href}
@@ -661,8 +661,8 @@ export function EnhancedFooter(...args: any[]): any {
               viewport={{ once: true }}
               className="flex items-center space-x-4"
             >
-              <span className="text-slate-400 text-sm mr-2">Follow us: anyanyanyanyanyanyanyanyany</span>
-              {socialLinks.map((social, index)          => (
+              <span className="text-slate-400 text-sm mr-2">Follow us: anyanyanyanyanyanyanyanyanyany</span>
+              {socialLinks.map((social, index)           => (
                 <motion.a
                   key={social.name}
                   href={social.href}

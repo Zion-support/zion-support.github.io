@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 import { Bot, 
   Zap, 
   Shield, 
@@ -23,8 +23,8 @@ import { Bot,
   Database,
   Rocket,
   Star
-          } from 'lucide-react.ts';
-import { SEO           } from '@/components/SEO';
+           } from 'lucide-react.ts';
+import { SEO            } from '@/components/SEO';
 
 const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
   const features = [
@@ -168,8 +168,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index)            => (
                 <motion.div
                   key={index}
                   initial = {
@@ -212,8 +212,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {useCases.map((useCase, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {useCases.map((useCase, index)            => (
                 <motion.div
                   key={index}
                   initial = {
@@ -256,8 +256,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index)            => (
                 <motion.div
                   key={index}
                   initial = {
@@ -297,8 +297,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
-              {industries.map((industry, index)           => (
+            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
+              {industries.map((industry, index)            => (
                 <motion.div
                   key={index}
                   initial = {
@@ -337,8 +337,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {testimonials.map((testimonial, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {testimonials.map((testimonial, index)            => (
                 <motion.div
                   key={index}
                   initial = {

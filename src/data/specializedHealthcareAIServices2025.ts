@@ -12,6 +12,7 @@ export interface HealthcareAIService {
 
 
 
+
   id: number;
   name: string;
   category: string;
@@ -39,6 +40,7 @@ contactInfo: {;
 <<<<<<< HEAD
     address: string;
   
+
 
 
 

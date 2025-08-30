@@ -1,9 +1,9 @@
 import React from 'react.ts';
 <<<<<<< HEAD
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation import { SEO          } from '../../components/SEO';
+import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation import { SEO           } from '../../components/SEO';
 =======
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation          } from 'lucide-react.ts';
-import { SEO          } from '../../components/SEO';
+import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation           } from 'lucide-react.ts';
+import { SEO           } from '../../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIAutonomousVehiclePlatform(...args: any[]): any {
@@ -154,8 +154,8 @@ export default function AIAutonomousVehiclePlatform(...args: any[]): any {
                 Experience the future of transportation with our AI-enhanced autonomous platform
               </p>
             </div>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)           => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                     <Brain className="w-6 h-6 text-white" />
@@ -178,8 +178,8 @@ export default function AIAutonomousVehiclePlatform(...args: any[]): any {
                 Choose the perfect plan for your autonomous vehicle journey
               </p>
             </div>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {tiers.map((tier, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {tiers.map((tier, index)           => (
                 <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'
                 } hover:border-blue-400/50 transition-all duration-300`}>
@@ -222,8 +222,8 @@ export default function AIAutonomousVehiclePlatform(...args: any[]): any {
                 Discover how autonomous vehicles can revolutionize your business
               </p>
             </div>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-              {useCases.map((useCase, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {useCases.map((useCase, index)           => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                     <TrendingUp className="w-5 h-5 text-white" />
@@ -246,8 +246,8 @@ export default function AIAutonomousVehiclePlatform(...args: any[]): any {
                 Unlock unprecedented transportation efficiency and safety
               </p>
             </div>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)           => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Star className="w-4 h-4 text-white" />
@@ -270,8 +270,8 @@ export default function AIAutonomousVehiclePlatform(...args: any[]): any {
                 Autonomous vehicle solutions for every sector
               </p>
             </div>
-            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index)          => (
+            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+              {industries.map((industry, index)           => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Globe className="w-8 h-8 text-white" />

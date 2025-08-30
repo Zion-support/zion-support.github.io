@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { Link          } from 'react-router-dom.ts';
+import { Link           } from 'react-router-dom.ts';
 import { Eye,
   Shield,
   CheckCircle,
@@ -26,7 +26,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
   Phone,
   Mail,
   MessageCircle
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function AccessibilityPage(...args: any[]): any {
   const currentYear = new Date().getFullYear();
@@ -197,8 +197,8 @@ export default function AccessibilityPage(...args: any[]): any {
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature, index)            => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -212,8 +212,8 @@ export default function AccessibilityPage(...args: any[]): any {
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-4">
-                {complianceStandards.map((standard, index)           => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-4">
+                {complianceStandards.map((standard, index)            => (
                   <div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                     <span className="text-blue-400 font-semibold">{standard}</span>
                   </div>
@@ -225,8 +225,8 @@ export default function AccessibilityPage(...args: any[]): any {
           {/* Testing Areas */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {testingAreas.map((area, index)           => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {testingAreas.map((area, index)            => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
                   <ul className="space-y-2">

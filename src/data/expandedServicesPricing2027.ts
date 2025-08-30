@@ -12,6 +12,7 @@ export interface ExpandedServicePricing {
 
 
 
+
   serviceId: string;
   serviceName: string;
   category: string;
@@ -26,6 +27,7 @@ starter: {;
       bestFor: string[];
       setupFee: number;
 contractTerm: string;
+
 
 
 
@@ -1175,16 +1177,16 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
 
 // Helper functions
 <<<<<<< HEAD
-export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null           => {;
+export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null            => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
 
-export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
+export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]            => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
 
-export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
+export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]            => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
 
-export const searchPricing = (query: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
+export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]            => {;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > 
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
@@ -1192,19 +1194,19 @@ export const searchPricing = (query: anyanyanyanyanyanyanyanyanystring): Expande
     pricing.subcategory.toLowerCase().includes(lowercaseQuery);
   )};
 =======
-export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null          => {;
+export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null           => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
 
-export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]          => {;
+export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
 };
 
-export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]          => {;
+export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
 };
 
-export const searchPricing = (query: anyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]          => {;
+export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]           => {;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||

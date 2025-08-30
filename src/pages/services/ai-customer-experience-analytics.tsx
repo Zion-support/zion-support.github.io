@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO           } from '../../components/SEO';
-import { motion           } from 'framer-motion.ts';
+import { SEO            } from '../../components/SEO';
+import { motion            } from 'framer-motion.ts';
 
 const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
   return (
@@ -73,7 +73,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "AI Sentiment Analysis",
@@ -105,7 +105,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   description: "Dynamic content personalization based on real-time customer behavior and preferences.",
                   icon: "🎯"
                 }
-              ].map((feature, index)           => (
+              ].map((feature, index)            => (
                 <motion.div
                   key={index}
                   initial = {
@@ -161,7 +161,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { metric: "35%", description: "Increase in customer satisfaction scores" },
                 { metric: "25%", description: "Reduction in customer churn rate" },
@@ -169,7 +169,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                 { metric: "60%", description: "Faster customer issue resolution" },
                 { metric: "45%", description: "Increase in customer engagement" },
                 { metric: "30%", description: "Boost in customer retention rates" }
-              ].map((benefit, index)           => (
+              ].map((benefit, index)            => (
                 <motion.div
                   key={index}
                   initial = {
@@ -224,7 +224,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {[
                 {
                   industry: "E-commerce",
@@ -246,7 +246,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   description: "Improve patient experiences with personalized care plans and proactive health monitoring.",
                   features: ["Patient journey optimization", "Care plan personalization", "Health outcome tracking"]
                 }
-              ].map((useCase, index)           => (
+              ].map((useCase, index)            => (
                 <motion.div
                   key={index}
                   initial = {
@@ -309,7 +309,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {[
                 {
                   name: "Starter",
@@ -360,7 +360,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)           => (
+              ].map((plan, index)            => (
                 <motion.div
                   key={index}
                   initial = {

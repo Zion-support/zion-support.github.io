@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 import { Brain,
 <<<<<<< HEAD
   Workflow,
@@ -26,10 +26,11 @@ import { Brain,
   Clock,
   CheckCircle,
   Search
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 interface Service {
+
 
 
 
@@ -51,6 +52,7 @@ interface Service {
   marketSize: string;
   path: string;
 category: string;
+
 
 
 
@@ -425,7 +427,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
   const [hoveredService, setHoveredService] = useState<any>(null);
 
   const filteredServices = selectedCategory === 'All'
-    ? services: anyanyanyanyanyanyanyanyanyservices.filter(service          => service.category === selectedCategory);
+    ? services: anyanyanyanyanyanyanyanyanyanyservices.filter(service           => service.category === selectedCategory);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
@@ -515,7 +517,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
 
 =======
           viewport = {
-  { once: anyanyanyanyanyanyanyanyanytrue,
+  { once: anyanyanyanyanyanyanyanyanyanytrue,
   margin: "-100px" 
 
 
@@ -526,7 +528,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
 }}
         >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          {services.map((service, index)          => (
+          {services.map((service, index)           => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -747,7 +749,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
 
 =======
           transition = {
-  { duration: anyanyanyanyanyanyanyanyany0.6,
+  { duration: anyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.3 
 
 
@@ -758,7 +760,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
 }}
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
-          {categories.map((category, index)          => (
+          {categories.map((category, index)           => (
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -807,8 +809,8 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
         {/* Services Grid */}
         <div className="max-w-7xl mx-auto">
           {filteredServices.length > 0 ? (
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)            => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </div>

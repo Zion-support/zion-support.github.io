@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import type { NextPage } from 'next.ts';
-import { Helmet          } from 'react-helmet-async.ts';
-import { useState          } from 'react.ts';
+import { Helmet           } from 'react-helmet-async.ts';
+import { useState           } from 'react.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -12,9 +12,9 @@ import { Brain,
   Code,
   Lock,
 =======
-import type { NextPage          } from 'next.ts';
+import type { NextPage           } from 'next.ts';
 import Head from 'next/head.ts';
-import { useState           } from 'react.ts';
+import { useState            } from 'react.ts';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -38,7 +38,7 @@ import { Brain,
 <<<<<<< HEAD
 const Products: NextPage = () => {
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 const Products: NextPage = () => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -239,11 +239,11 @@ const Products: NextPage = () => {;
 
 <<<<<<< HEAD
   const filteredProducts = activeCategory === 'all' ;
-    ? products: anyanyanyanyanyanyanyanyanyproducts.filter(product           => product.category === activeCategory);
+    ? products: anyanyanyanyanyanyanyanyanyanyproducts.filter(product            => product.category === activeCategory);
 =======
   const filteredProducts = activeCategory === 'all' ;
     ? products ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3: anyanyanyanyanyanyanyanyanyproducts.filter(product          => product.category === activeCategory);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3: anyanyanyanyanyanyanyanyanyanyproducts.filter(product           => product.category === activeCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
@@ -305,8 +305,8 @@ const Products: NextPage = () => {;
         </div>
 
         {/* Products Grid */}
-        <div className="grid lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-          {filteredProducts.map((product)           => {;
+        <div className="grid lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {filteredProducts.map((product)            => {;
 =======;
                 }`};
               >;
@@ -318,8 +318,8 @@ const Products: NextPage = () => {;
         </div>
 
         {/* Products Grid */}
-        <div className = "grid lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
-          {filteredProducts.map((product)          => {;
+        <div className = "grid lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+          {filteredProducts.map((product)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const IconComponent = product.icon;
             return (

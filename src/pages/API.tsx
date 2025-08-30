@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 import { Code, 
   Search, 
   Filter,
@@ -24,15 +24,15 @@ import { Code,
   Key,
   Database,
   Lock
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 =======
 import React from 'react.ts';
 import SEO from '../components/SEO';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink const API: React.FC = (): JSX.Element => {
 =======
-import { Link          } from 'react-router-dom.ts';
+import { Link           } from 'react-router-dom.ts';
 import { Code,
   Search,
   Filter,
@@ -55,7 +55,7 @@ import { Code,
   Key,
   Database,
   Lock
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 const API: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -297,8 +297,8 @@ export default function API(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {apiCategories.map((category, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {apiCategories.map((category, index)            => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -379,8 +379,8 @@ export default function API(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {quickStartExamples.map((example, index)           => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {quickStartExamples.map((example, index)            => (
               <motion.div
                 key={endpoint.path}
                 initial = {
@@ -475,8 +475,8 @@ export default function API(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {sdks.map((sdk, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {sdks.map((sdk, index)           => (
               <motion.div
                 key={sdk.name}
                 initial = {

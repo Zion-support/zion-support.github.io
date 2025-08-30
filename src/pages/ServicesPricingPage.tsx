@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
 <<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle          } from '@/components/ui/card';
-import { Badge          } from '@/components/ui/badge';
-import { Button          } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger          } from '@/components/ui/tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle           } from '@/components/ui/card';
+import { Badge           } from '@/components/ui/badge';
+import { Button           } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger           } from '@/components/ui/tabs';
 import { Check,
   X,
   Star,
@@ -25,10 +25,10 @@ import { Check,
   DollarSign,
   Clock
 <<<<<<< HEAD
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS          } from '@/data/expandedServices';
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS           } from '@/data/expandedServices';
 =======
  } from 'lucide-react';
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS           } from '@/data/expandedServices';
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS            } from '@/data/expandedServices';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Group services by category for better organization
 <<<<<<< HEAD
@@ -63,7 +63,7 @@ export default function ServicesPricingPage(...args: any[]): any {
   const filteredServices = selectedCategory === 'all'
     ? EXPANDED_SERVICES
     : servicesByCategory[selectedCategory] || [];
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)           => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)            => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
       'Customer Intelligence': <Users className="h-5 w-5" />,
@@ -88,7 +88,7 @@ export default function ServicesPricingPage(...args: any[]): any {
     };
     return categoryIcons[category] || <Zap className="h-5 w-5" />};
 =======
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Check, 
   Star, 
   Zap, 
@@ -103,10 +103,10 @@ import { Check,
   Users,
   Clock,
   Award
-         } from 'lucide-react.ts';
-import { SEO          } from '@/components/SEO';
-import { Button          } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle          } from '@/components/ui/card';
+          } from 'lucide-react.ts';
+import { SEO           } from '@/components/SEO';
+import { Button           } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle           } from '@/components/ui/card';
 
 const ServicesPricingPage: React.FC = (): JSX.Element => {
   const [selectedPlan, setSelectedPlan] = useState('starter');
@@ -273,11 +273,11 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
     }
   ];
 
-  const calculatePrice = (plan: anyanyanyanyanyanyanyanyany)          => {
+  const calculatePrice = (plan: anyanyanyanyanyanyanyanyanyany)           => {
     return billingCycle === 'monthly' ? plan.price.monthly : plan.price.annual;
   };
 
-  const calculateSavings = (plan: anyanyanyanyanyanyanyanyany)          => {
+  const calculateSavings = (plan: anyanyanyanyanyanyanyanyanyany)           => {
     if (billingCycle === 'annual') {
       return Math.round((plan.price.monthly * 12 - plan.price.annual) / (plan.price.monthly * 12) * 100);
     }
@@ -364,8 +364,8 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)           => (
                 <motion.div
                   key={plan.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -442,8 +442,8 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               ))}
             </TabsList>
             <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service)           => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredServices.map((service)            => (
                   <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-start justify-between mb-3">
@@ -605,8 +605,8 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {serviceCategories.map((category, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {serviceCategories.map((category, index)           => (
                 <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -678,8 +678,8 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {addOns.map((addon, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {addOns.map((addon, index)           => (
                 <motion.div
                   key={addon.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -741,8 +741,8 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {testimonials.map((testimonial, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {testimonials.map((testimonial, index)           => (
                 <motion.div
                   key={testimonial.name}
                   initial={{ opacity: 0, y: 30 }}

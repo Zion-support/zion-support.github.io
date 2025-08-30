@@ -8,7 +8,9 @@ interface MimeTypeMapping {
 
 
 
+
   [key: string]: string;
+
 
 
 
@@ -200,8 +202,8 @@ class MimeTypeFallback {
     }
   }
 
-  injectResource(url: anyanyanyanyanyanyanyanyanystring, type: 'script' | 'stylesheet'): Promise<any> {
-    return new Promise((resolve, reject)          => {
+  injectResource(url: anyanyanyanyanyanyanyanyanyanystring, type: 'script' | 'stylesheet'): Promise<any> {
+    return new Promise((resolve, reject)           => {
       const element = this.createResourceElement(url, type);
       
       element.onload = () => {

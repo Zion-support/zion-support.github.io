@@ -1,4 +1,4 @@
-import { API_BASE_URL          } from '../config/constants';
+import { API_BASE_URL           } from '../config/constants';
 
 interface ApiResponse<T = any> {
   success: boolean;
@@ -33,9 +33,11 @@ interface ApiClientOptions {
 
 
 
+
   method?: string;
   body?: string;
   headers?: Record<string, any>;
+
 
 
 
@@ -106,27 +108,27 @@ export async function apiClient(...args: any[]): any {;
 export const api = {
 <<<<<<< HEAD
   // Health check
-  health: anyanyanyanyanyanyanyanyany()          => apiRequest('/health'),
+  health: anyanyanyanyanyanyanyanyanyany()           => apiRequest('/health'),
 
   // Users
-  getUsers: anyanyanyanyanyanyanyanyany()          => apiRequest<Array<any>>('/users'),
-  getUser: anyanyanyanyanyanyanyany(id: number)          => apiRequest<{ id: anyanyanyanyanyanyanyanyanynumber; name: string; email: string }>(`/users/${id}`),
-  createUser: (userData: { name: string; email: string })          =>
+  getUsers: anyanyanyanyanyanyanyanyanyany()           => apiRequest<Array<any>>('/users'),
+  getUser: anyanyanyanyanyanyanyanyany(id: number)           => apiRequest<{ id: anyanyanyanyanyanyanyanyanyanynumber; name: string; email: string }>(`/users/${id}`),
+  createUser: (userData: { name: string; email: string })           =>
     apiRequest<{ id: number; name: string; email: string; createdAt: string }>('/users', {
       method: 'POST',
       body: JSON.stringify(userData),
     }),
 =======
-  get: anyanyanyanyanyanyanyanyany(endpoint: string, headers?: Record<string, any>)          => 
-    apiClient(endpoint, { method: anyanyanyanyanyanyanyanyany'GET', headers: headers || {} }),
+  get: anyanyanyanyanyanyanyanyanyany(endpoint: string, headers?: Record<string, any>)           => 
+    apiClient(endpoint, { method: anyanyanyanyanyanyanyanyanyany'GET', headers: headers || {} }),
   
-  post: (endpoint: string, data: , headers?: Record<string, any>)          => 
-    apiClient(endpoint, { method: anyanyanyanyanyanyanyanyany'POST', body: JSON.stringify(data), headers: headers || {} }),
+  post: (endpoint: string, data: , headers?: Record<string, any>)           => 
+    apiClient(endpoint, { method: anyanyanyanyanyanyanyanyanyany'POST', body: JSON.stringify(data), headers: headers || {} }),
   
-  put: (endpoint: string, data: , headers?: Record<string, any>)          => 
-    apiClient(endpoint, { method: anyanyanyanyanyanyanyanyany'PUT', body: JSON.stringify(data), headers: headers || {} }),
+  put: (endpoint: string, data: , headers?: Record<string, any>)           => 
+    apiClient(endpoint, { method: anyanyanyanyanyanyanyanyanyany'PUT', body: JSON.stringify(data), headers: headers || {} }),
   
-  delete: (endpoint: string, headers?: Record<string, any>)          => 
+  delete: (endpoint: string, headers?: Record<string, any>)           => 
     apiClient(endpoint, { method: 'DELETE', headers: headers || {} }),
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };

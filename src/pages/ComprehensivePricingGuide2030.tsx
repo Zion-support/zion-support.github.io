@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Brain,
   Shield,
   Cloud,
@@ -10,9 +10,9 @@ import { Brain,
   Mail,
   MapPin,
 =======
-import React, { useState, useMemo          } from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import React, { useState, useMemo           } from 'react.ts';
+import { motion            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 import { CheckCircle, 
   Star, 
   Zap, 
@@ -48,9 +48,9 @@ import { CheckCircle,
   Lock,
   Heart,
   Sparkles
-          } from 'lucide-react.ts';
-import { INNOVATIVE_SERVICES_2025           } from '@/data/innovativeServices2025';
-import { SEO           } from '@/components/SEO';
+           } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES_2025            } from '@/data/innovativeServices2025';
+import { SEO            } from '@/components/SEO';
 
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -76,7 +76,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
 ;
     return filtered}, [services, selectedCategory, selectedPricingModel]);
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)           => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)            => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
@@ -96,7 +96,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
         return Zap}
   };
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)           => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanystring)            => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
@@ -118,14 +118,14 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
   ArrowRight,
   Search
 <<<<<<< HEAD
-import { innovativeAIServices2030          } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030          } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030          } from '../data/innovativeCloudDevOpsServices2030';
+import { innovativeAIServices2030           } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030           } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030           } from '../data/innovativeCloudDevOpsServices2030';
 =======
 } from 'lucide-react';
-import { innovativeAIServices2030          } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030          } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030          } from '../data/innovativeCloudDevOpsServices2030';
+import { innovativeAIServices2030           } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030           } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030           } from '../data/innovativeCloudDevOpsServices2030';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
@@ -152,14 +152,14 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
     if (category.toLowerCase().includes('ai')) return Brain;
     if (category.toLowerCase().includes('cybersecurity')) return Shield;
     if (category.toLowerCase().includes('cloud')) return Cloud;
     return Star;
   };
 
-  const getPricingTier = (price: anyanyanyanyanyanyanyanyanynumber)          => {;
+  const getPricingTier = (price: anyanyanyanyanyanyanyanyanyanynumber)           => {;
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
     if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
     if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
@@ -517,8 +517,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
           >
             Market Insights & Trends
           </motion.h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {marketInsights.map((insight, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index)            => (
               <motion.div
 <<<<<<< HEAD
                 key={insight.title}
@@ -614,8 +614,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
           >
             Flexible Pricing Tiers
           </motion.h2>
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index)           => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)            => (
               <motion.div
                 key={tier.name}
                 initial = {
@@ -707,9 +707,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {categories.map(category           => (
+              {categories.map(category            => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -718,9 +718,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
             <select
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {pricingModels.map(model           => (
+              {pricingModels.map(model            => (
                 <option key={model} value={model} className="bg-slate-800 text-white">
                   {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
                 </option>
@@ -729,14 +729,14 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
           </div>
 
           {/* Services Grid */}
-          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service, index)           => {;
+          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {filteredServices.map((service, index)            => {;
 =======;
       {/* Services Grid */};
       <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
-            {filteredServices.map((service, index)          => {;
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+            {filteredServices.map((service, index)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const CategoryIcon = getCategoryIcon(service.category);
 <<<<<<< HEAD
@@ -1092,7 +1092,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: DollarSign,
@@ -1124,7 +1124,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
                 title: "24/7 Support",
                 description: "Round-the-clock support included in all plans. No additional support fees."
 
-            ].map((benefit, index)          => (
+            ].map((benefit, index)           => (
               <motion.div
                 key={index}
                 initial = {

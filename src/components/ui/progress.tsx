@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { cn          } from '../../lib/utils';
+import { cn           } from '../../lib/utils';
 
 interface ProgressProps extends React.PropsWithChildren<{}> {
 

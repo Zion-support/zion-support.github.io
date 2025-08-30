@@ -8,6 +8,7 @@ export interface InnovativeMicroSaasService2025 {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -32,6 +33,7 @@ contactInfo: {;
     website: string;
     address: string;
   
+
 
 
 

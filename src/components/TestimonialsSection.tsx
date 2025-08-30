@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe const testimonials = [
 =======
@@ -12,9 +12,10 @@ import {
   Award,
   TrendingUp,
   Users
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 interface Testimonial {
+
 
 
 
@@ -34,6 +35,7 @@ interface Testimonial {
   industry: string;
   results: string[];
   verified: boolean;
+
 
 
 
@@ -142,7 +144,7 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanynumber)          => {
+  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanynumber)           => {
     setCurrentTestimonial(index);
   };
 
@@ -170,8 +172,8 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
             Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
         </div>
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index)           => (
             <div
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
@@ -252,9 +254,9 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: anyanyanyanyanyanyanyanyany0.8, delay: 0.2 }}
+          transition={{ duration: anyanyanyanyanyanyanyanyanyany0.8, delay: 0.2 }}
         >
-          {stats.map((stat, index)          => (
+          {stats.map((stat, index)           => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
                 <stat.icon className="w-8 h-8 text-white" />

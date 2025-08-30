@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet          } from 'react-helmet-async.ts';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link          } from 'react-router-dom.ts';
+import { Helmet           } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link           } from 'react-router-dom.ts';
 =======
 import React from 'react.ts';
-import { Helmet           } from 'react-helmet-async.ts';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database           } from 'lucide-react.ts';
-import { Link           } from 'react-router-dom.ts';
+import { Helmet            } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database            } from 'lucide-react.ts';
+import { Link            } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function DigitalTwin(...args: []):  {
@@ -69,7 +69,7 @@ export default function DigitalTwin(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Cpu,
@@ -102,7 +102,7 @@ export default function DigitalTwin(...args: []):  {
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
 <<<<<<< HEAD
 
-              ].map((feature, index)          => (
+              ].map((feature, index)           => (
 =======
                 }
               ].map((feature, index)  => (
@@ -131,7 +131,7 @@ export default function DigitalTwin(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Manufacturing",
@@ -170,7 +170,7 @@ export default function DigitalTwin(...args: []):  {
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
 <<<<<<< HEAD
 
-              ].map((application, index)          => (
+              ].map((application, index)           => (
 =======
                 }
               ].map((application, index)  => (
@@ -230,11 +230,11 @@ export default function DigitalTwin(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Core Components</h3>
                 <div className="space-y-4">
                   {[
-                    { component: anyanyanyanyanyanyanyanyany"Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
+                    { component: anyanyanyanyanyanyanyanyanyany"Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
                     { component: "Processing Engine", icon: Cpu, color: "from-purple-500 to-pink-500" },
                     { component: "Visualization", icon: Eye, color: "from-emerald-500 to-teal-500" },
                     { component: "Analytics", icon: BarChart3, color: "from-orange-500 to-red-500" }
-                  ].map((item, index)           => (
+                  ].map((item, index)            => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />

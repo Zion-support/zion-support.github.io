@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { Link          } from 'react-router-dom.ts';
-import { motion          } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
 import { Mail,
   ArrowLeft,
   CheckCircle,
@@ -9,9 +9,9 @@ import { Mail,
   Shield,
   Lock,
 =======
-import React, { useState          } from 'react.ts';
-import { Link           } from 'react-router-dom.ts';
-import { motion           } from 'framer-motion.ts';
+import React, { useState           } from 'react.ts';
+import { Link            } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
 import { Mail, 
   ArrowLeft, 
   CheckCircle, 
@@ -28,7 +28,7 @@ import { Mail,
 <<<<<<< HEAD
 const ForgotPassword: React.FC = (): JSX.Element => {
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 const ForgotPassword: React.FC = (): JSX.Element => {;
@@ -46,7 +46,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {;
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
 <<<<<<< HEAD
-  const handleEmailSubmit = async (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {;
+  const handleEmailSubmit = async (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
@@ -80,7 +80,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const handleVerificationSubmit = async (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {;
+  const handleVerificationSubmit = async (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!verificationCode || verificationCode.length !== 6) {
@@ -114,7 +114,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const handlePasswordReset = async (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {;
+  const handlePasswordReset = async (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!newPassword || newPassword.length < 8) {
@@ -157,7 +157,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanyanystring)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };

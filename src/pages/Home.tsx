@@ -1,6 +1,6 @@
 import React, { Suspense, useState, useEffect } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 <<<<<<< HEAD
 import {
   Users,
@@ -72,10 +72,10 @@ const FuturisticBackground = React.memo(() => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size: anyanyanyanyanyanyanyanyany50px_50px] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size: anyanyanyanyanyanyanyanyanyany50px_50px] animate-pulse"></div>
 
       {/* Optimized floating particles */}
-      {particles.map((particle)          => (
+      {particles.map((particle)           => (
         <motion.div
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
@@ -103,31 +103,31 @@ const FuturisticBackground = React.memo(() => {
 
 FuturisticBackground.displayName = 'FuturisticBackground';
 =======
-import { CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, BarChart3, Target, Lightbulb, Database, Network, Eye, Globe2, Smartphone, Monitor, Server, Atom, Car, Scale, Leaf, Factory, Building, Clock, Phone, Mail, TrendingUp          } from 'lucide-react.ts';
-import { CategoriesSection          } from '@/components/CategoriesSection';
-import { BenefitsSection          } from '@/components/BenefitsSection';
-import { HowItWorksSection          } from '@/components/HowItWorksSection';
-import { NewsletterSection          } from '@/components/NewsletterSection';
-import { FeaturedListingsSection          } from '@/components/FeaturedListingsSection';
-import { SEO          } from '@/components/SEO';
-import { HeroSection          } from '@/components/HeroSection';
-import { QuickAccess          } from '@/components/home/QuickAccess';
-import { FeatureCTAs          } from '@/components/home/FeatureCTAs';
-import { FeatureHighlights          } from '@/components/home/FeatureHighlights';
-import { ITServiceRequestHero          } from '@/components/home/ITServiceRequestHero';
-import { FloatingCTA          } from '@/components/FloatingCTA';
-import { PricingSection          } from '@/components/PricingSection';
-import { TechSolutionsSection          } from '@/components/TechSolutionsSection';
-import { CaseStudiesSection          } from '@/components/CaseStudiesSection';
-import { TeamExpertiseSection          } from '@/components/TeamExpertiseSection';
-import { GlobalPresenceSection          } from '@/components/GlobalPresenceSection';
-import { InnovationResearchSection          } from '@/components/InnovationResearchSection';
-import { ClientSuccessStoriesSection          } from '@/components/ClientSuccessStoriesSection';
-import { TechnologyStackSection          } from '@/components/TechnologyStackSection';
-import { SecurityComplianceSection          } from '@/components/SecurityComplianceSection';
-import { AIServicesShowcase          } from '@/components/AIServicesShowcase';
-import { InteractiveTestimonials          } from '@/components/InteractiveTestimonials';
-import { ServicesShowcase          } from '@/components/ServicesShowcase';
+import { CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, BarChart3, Target, Lightbulb, Database, Network, Eye, Globe2, Smartphone, Monitor, Server, Atom, Car, Scale, Leaf, Factory, Building, Clock, Phone, Mail, TrendingUp           } from 'lucide-react.ts';
+import { CategoriesSection           } from '@/components/CategoriesSection';
+import { BenefitsSection           } from '@/components/BenefitsSection';
+import { HowItWorksSection           } from '@/components/HowItWorksSection';
+import { NewsletterSection           } from '@/components/NewsletterSection';
+import { FeaturedListingsSection           } from '@/components/FeaturedListingsSection';
+import { SEO           } from '@/components/SEO';
+import { HeroSection           } from '@/components/HeroSection';
+import { QuickAccess           } from '@/components/home/QuickAccess';
+import { FeatureCTAs           } from '@/components/home/FeatureCTAs';
+import { FeatureHighlights           } from '@/components/home/FeatureHighlights';
+import { ITServiceRequestHero           } from '@/components/home/ITServiceRequestHero';
+import { FloatingCTA           } from '@/components/FloatingCTA';
+import { PricingSection           } from '@/components/PricingSection';
+import { TechSolutionsSection           } from '@/components/TechSolutionsSection';
+import { CaseStudiesSection           } from '@/components/CaseStudiesSection';
+import { TeamExpertiseSection           } from '@/components/TeamExpertiseSection';
+import { GlobalPresenceSection           } from '@/components/GlobalPresenceSection';
+import { InnovationResearchSection           } from '@/components/InnovationResearchSection';
+import { ClientSuccessStoriesSection           } from '@/components/ClientSuccessStoriesSection';
+import { TechnologyStackSection           } from '@/components/TechnologyStackSection';
+import { SecurityComplianceSection           } from '@/components/SecurityComplianceSection';
+import { AIServicesShowcase           } from '@/components/AIServicesShowcase';
+import { InteractiveTestimonials           } from '@/components/InteractiveTestimonials';
+import { ServicesShowcase           } from '@/components/ServicesShowcase';
 
 export default function Home(...args: any[]): any {
   const [isLoading, setIsLoading] = useState(true);
@@ -184,7 +184,7 @@ const serviceCategories = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Enhanced hero section component
-const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: anyanyanyanyanyanyanyanyany()          => void }) => {
+const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: anyanyanyanyanyanyanyanyanyany()           => void }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroSlides = useMemo(() => [
@@ -584,8 +584,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: anyanyanyanyan
               {heroSlides[currentSlide].description}
             </p>
             
-            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-3">
-              {heroSlides[currentSlide].features.map((feature, index)          => (
+            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-3">
+              {heroSlides[currentSlide].features.map((feature, index)           => (
                 <div key={index} className="flex items-center space-x-2 text-sm">
                   <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
@@ -644,8 +644,8 @@ const StatsSection = React.memo(() => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index)           => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 30 }}
@@ -761,9 +761,9 @@ const FeaturedServices = React.memo(() => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanytrue, margin: "-50px" }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanytrue, margin: "-50px" }}
           >
-            {serviceCategories.map((category, index)          => (
+            {serviceCategories.map((category, index)           => (
               <motion.div
                 key={category.name}
                 variants={itemVariants}
@@ -956,8 +956,8 @@ const FeaturedServices = React.memo(() => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {serviceCategories.map((service, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {serviceCategories.map((service, index)           => (
             <motion.div
               key={service.name}
               initial={{ opacity: 0, y: 30 }}
@@ -1078,8 +1078,8 @@ export default Home;
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index)          => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index)           => (
             <motion.div
               key={testimonial.name}
               initial={{ opacity: 0, y: 30 }}

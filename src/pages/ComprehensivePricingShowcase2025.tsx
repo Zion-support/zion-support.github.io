@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Helmet          } from 'react-helmet-async.ts';
+import { motion           } from 'framer-motion.ts';
+import { Helmet           } from 'react-helmet-async.ts';
 import { Search, 
     Filter, 
     TrendingUp, 
@@ -24,8 +24,8 @@ import { Search,
     ExternalLink,
     Crown,
     Sparkles
-         } from 'lucide-react.ts';
-import { comprehensivePricingGuide2025, ServicePricing          } from '../data/comprehensive-pricing-guide-2025';
+          } from 'lucide-react.ts';
+import { comprehensivePricingGuide2025, ServicePricing           } from '../data/comprehensive-pricing-guide-2025';
 
 const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -33,14 +33,14 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
     const [selectedService, setSelectedService] = useState<any>(null);
 
     const categories = [
-        { id: anyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },
-        { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s          => s.category === 'Fintech').length },
-        { id: anyanyanyanyanyanyanyanyany'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s          => s.category === 'Healthtech').length },
-        { id: anyanyanyanyanyanyanyanyany'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s          => s.category === 'Edutech').length },
-        { id: anyanyanyanyanyanyanyanyany'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s          => s.category === 'Martech').length },
-        { id: anyanyanyanyanyanyanyanyany'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s          => s.category === 'Micro SaaS').length },
-        { id: anyanyanyanyanyanyanyanyany'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s          => s.category === 'AI Services').length },
-        { id: anyanyanyanyanyanyanyanyany'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s          => s.category === 'IT Services').length }
+        { id: anyanyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },
+        { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s           => s.category === 'Fintech').length },
+        { id: anyanyanyanyanyanyanyanyanyany'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s           => s.category === 'Healthtech').length },
+        { id: anyanyanyanyanyanyanyanyanyany'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s           => s.category === 'Edutech').length },
+        { id: anyanyanyanyanyanyanyanyanyany'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s           => s.category === 'Martech').length },
+        { id: anyanyanyanyanyanyanyanyanyany'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s           => s.category === 'Micro SaaS').length },
+        { id: anyanyanyanyanyanyanyanyanyany'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s           => s.category === 'AI Services').length },
+        { id: anyanyanyanyanyanyanyanyanyany'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s           => s.category === 'IT Services').length }
     ];
 
     const filteredServices = useMemo(() => {
@@ -61,7 +61,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         return filtered;
     }, [searchTerm, selectedCategory]);
 
-    const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)          => {
+    const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
         const colors: { [key: string]: string } = {
             'Fintech': 'from-green-500 to-emerald-600',
             'Healthtech': 'from-red-500 to-pink-600',
@@ -74,7 +74,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
-    const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {
+    const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
         const icons: { [key: string]: React.ReactNode } = {
             'Fintech': <DollarSign className="w-5 h-5" />,
             'Healthtech': <Heart className="w-5 h-5" />,
@@ -183,9 +183,9 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             <select
                                 value={selectedCategory}
                                 onChange={(e) => setSelectedCategory(e.target.value)}
-                                className="px-4 py-3 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="px-4 py-3 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent"
                             >
-                                {categories.map(category          => (
+                                {categories.map(category           => (
                                     <option key={category.id} value={category.id}>
                                         {category.name} ({category.count})
                                     </option>
@@ -246,8 +246,8 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                     {/* Pricing Tiers */}
                                     <div className="p-8">
                                         <h4 className="text-2xl font-bold text-gray-800 mb-6 text-center">Pricing Plans</h4>
-                                        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-                                            {service.pricing.map((tier, tierIndex)          => (
+                                        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+                                            {service.pricing.map((tier, tierIndex)           => (
                                                 <div
                                                     key={tierIndex}
                                                     className={`relative rounded-xl border-2 p-6 ${

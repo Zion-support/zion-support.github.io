@@ -9,6 +9,7 @@ export interface EmergingTechService {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -31,6 +32,7 @@ contactInfo: {;
     phone: string;
     email: string;
 website: string;
+
 
 
 

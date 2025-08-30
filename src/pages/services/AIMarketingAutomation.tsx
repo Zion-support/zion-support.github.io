@@ -1,9 +1,9 @@
 import React from 'react.ts';
 <<<<<<< HEAD
-import { SEO          } from '@/components/SEO';
+import { SEO           } from '@/components/SEO';
 import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, TrendingUp, MessageSquare, Mail as MailIcon, Share2, Filter export default function AIMarketingAutomation(...args: any[]): any {
 =======
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Target, 
   TrendingUp, 
   Users, 
@@ -24,8 +24,8 @@ import { Target,
   Cpu,
   Heart,
   Eye
-         } from 'lucide-react.ts';
-import { SEO          } from '../../components/SEO';
+          } from 'lucide-react.ts';
+import { SEO           } from '../../components/SEO';
 
 const AIMarketingAutomation = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -204,8 +204,8 @@ const AIMarketingAutomation = () => {
             </p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)           => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-purple-400" />
@@ -225,8 +225,8 @@ const AIMarketingAutomation = () => {
             <p className="text-xl text-slate-300">See how AI transforms your marketing performance</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)           => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
@@ -282,8 +282,8 @@ const AIMarketingAutomation = () => {
             <p className="text-xl text-slate-300">Reach your audience across all channels with unified AI automation</p>
           </div>
 
-          <div className="grid grid-cols-3 md: anyanyanyanyanyanyanyanyanygrid-cols-5 gap-6 max-w-5xl mx-auto">
-            {channels.map((channel, index)          => (
+          <div className="grid grid-cols-3 md: anyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6 max-w-5xl mx-auto">
+            {channels.map((channel, index)           => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-purple-500/50 transition-all duration-300">
                 <p className="text-sm font-medium text-slate-300">{channel}</p>
               </div>
@@ -300,8 +300,8 @@ const AIMarketingAutomation = () => {
             <p className="text-xl text-slate-300">Choose the plan that fits your marketing needs</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)           => (
               <div
                 key={index}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
@@ -415,8 +415,8 @@ const AIMarketingAutomation = () => {
               </p>
             </motion.div>
 
-            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index)          => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)           => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -452,8 +452,8 @@ const AIMarketingAutomation = () => {
               </p>
             </motion.div>
 
-            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)          => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)           => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -490,8 +490,8 @@ const AIMarketingAutomation = () => {
               </p>
             </motion.div>
 
-            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)          => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)           => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -531,8 +531,8 @@ const AIMarketingAutomation = () => {
                   </ul>
 
 <<<<<<< HEAD
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index)           => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center">
                 <Target className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold">{useCase}</h3>

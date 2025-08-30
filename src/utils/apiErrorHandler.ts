@@ -1,6 +1,6 @@
-import { toast          } from '@/hooks/use-toast';
+import { toast           } from '@/hooks/use-toast';
 
-export const showApiError = (error: anyanyanyanyanyanyanyanyany, fallbackMessage?: string)          => {;
+export const showApiError = (error: anyanyanyanyanyanyanyanyanyany, fallbackMessage?: string)           => {;
   const message = error?.message || fallbackMessage || 'An unexpected error occurred';
   toast({
     variant: "destructive",
@@ -23,7 +23,7 @@ export const showApiError = (error: anyanyanyanyanyanyanyanyany, fallbackMessage
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
 
-export const handleApiError = (error: anyanyanyanyanyanyanyanyany, fallbackMessage?: string)          => {;
+export const handleApiError = (error: anyanyanyanyanyanyanyanyanyany, fallbackMessage?: string)           => {;
   showApiError(error, fallbackMessage);
   return { error: error?.message || fallbackMessage || 'An unexpected error occurred' };
 };}

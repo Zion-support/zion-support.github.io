@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react.ts';
 <<<<<<< HEAD
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight import { useSearchParams          } from 'react-router-dom.ts';
+import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight import { useSearchParams           } from 'react-router-dom.ts';
 =======
-import { motion          } from 'framer-motion.ts';
-import { SEO          } from '../components/SEO';
-import { Link          } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
+import { SEO           } from '../components/SEO';
+import { Link           } from 'react-router-dom.ts';
 import { Search, 
   Filter, 
   Grid, 
@@ -181,7 +181,7 @@ import { Search,
   Cockatoo,
   Canary,
   Finch
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function SearchPage(...args: any[]): any {
@@ -429,7 +429,7 @@ export default function SearchPage(...args: any[]): any {
     ]);
   }, []);
 
-  const performSearch = async (query: anyanyanyanyanyanyanyanyanystring)          => {
+  const performSearch = async (query: anyanyanyanyanyanyanyanyanyanystring)           => {
     if (!query.trim()) {
       setSearchResults([]);
       return;
@@ -471,21 +471,21 @@ export default function SearchPage(...args: any[]): any {
     }
   };
 
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {;
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {;
     e.preventDefault();
     performSearch(searchQuery);
   };
 
-  const handleQuickSearch = (query: anyanyanyanyanyanyanyanyanystring)          => {
+  const handleQuickSearch = (query: anyanyanyanyanyanyanyanyanyanystring)           => {
     setSearchQuery(query);
     performSearch(query);
   };
 
-  const toggleItemExpansion = (itemId: anyanyanyanyanyanyanyanyanystring)          => {
+  const toggleItemExpansion = (itemId: anyanyanyanyanyanyanyanyanyanystring)           => {
     setExpandedItem(expandedItem === itemId ? null : itemId);
   };
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)          => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -500,7 +500,7 @@ export default function SearchPage(...args: any[]): any {
     }
   };
 
-  const getTypeColor = (type: anyanyanyanyanyanyanyanyanystring)          => {
+  const getTypeColor = (type: anyanyanyanyanyanyanyanyanyanystring)           => {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
       case 'service': return 'bg-green-500/20 text-green-400';
@@ -512,7 +512,7 @@ export default function SearchPage(...args: any[]): any {
     }
   };
 
-  const renderStars = (rating: anyanyanyanyanyanyanyanyanynumber)          => {
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanynumber)           => {
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -533,7 +533,7 @@ export default function SearchPage(...args: any[]): any {
     return stars;
   };
 
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanystring)          => {
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanystring)           => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
@@ -607,14 +607,14 @@ export default function SearchPage(...args: any[]): any {
     setLoading(false);
   };
 
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
 
   };
 
-  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanystring)          => {
+  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanystring)           => {
     switch (type) {
       case 'service':
         return <Server className="w-5 h-5 text-zion-cyan" />;
@@ -627,7 +627,7 @@ export default function SearchPage(...args: any[]): any {
 
   };
 
-  const getTypeLabel = (type: anyanyanyanyanyanyanyanyanystring)          => {
+  const getTypeLabel = (type: anyanyanyanyanyanyanyanyanyanystring)           => {
     switch (type) {
       case 'service':
         return 'Service';
@@ -706,7 +706,7 @@ export default function SearchPage(...args: any[]): any {
                   {category.icon}
                   {category.name}
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                    {category.id === 'all' ? results.length: anyanyanyanyanyanyanyanyanyresults.filter(r          => r.type === category.id).length}
+                    {category.id === 'all' ? results.length: anyanyanyanyanyanyanyanyanyanyresults.filter(r           => r.type === category.id).length}
                   </span>
                 </button>
               ))}
@@ -718,9 +718,9 @@ export default function SearchPage(...args: any[]): any {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                {sortOptions.map((option)          => (
+                {sortOptions.map((option)           => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>
@@ -830,8 +830,8 @@ export default function SearchPage(...args: any[]): any {
               {/* Search Categories */}
               <div>
                 <h3 className="text-xl font-bold text-white mb-6">Browse by Category</h3>
-                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {categories.slice(1).map((category)          => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {categories.slice(1).map((category)           => (
                     <button
                       key={category.id}
                       onClick={() => {
@@ -877,9 +877,9 @@ export default function SearchPage(...args: any[]): any {
                       setSelectedCategory(e.target.value);
                       performSearch(searchQuery);
                     }}
-                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >
-                    {categories.map((category)          => (
+                    {categories.map((category)           => (
                       <option key={category.id} value={category.id}>
                         {category.name}
                       </option>
@@ -893,9 +893,9 @@ export default function SearchPage(...args: any[]): any {
                       setSelectedType(e.target.value);
                       performSearch(searchQuery);
                     }}
-                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >
-                    {types.map((type)          => (
+                    {types.map((type)           => (
                       <option key={type.id} value={type.id}>
                         {type.name}
                       </option>
@@ -983,8 +983,8 @@ export default function SearchPage(...args: any[]): any {
               {!isSearching && searchResults.length > 0 && (
                 <>
                   {viewMode === 'grid' ? (
-                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                      {searchResults.map((item, index)          => (
+                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                      {searchResults.map((item, index)           => (
                         <motion.div
                           key={item.id}
                           initial={{ opacity: 0, y: 20 }}

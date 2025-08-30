@@ -2,7 +2,7 @@
 const Contact: React.FC = (): JSX.Element => {
 =======
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Phone, 
   Mail, 
   MapPin, 
@@ -13,7 +13,7 @@ import { Phone,
   User,
   MessageSquare,
   Building
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function Contact(...args: any[]): any {
   const [formData, setFormData] = useState({
@@ -46,12 +46,12 @@ export default function Contact(...args: any[]): any {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<any>('idle');
 
-  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)          => {
+  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)           => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyReact.FormEvent)           => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -295,9 +295,9 @@ export default function Contact(...args: any[]): any {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400 transition-colors"
                 >
-                  {serviceOptions.map((option)          => (
+                  {serviceOptions.map((option)           => (
                     <option key={option.value} value={option.value} className="bg-slate-800 text-white">
                       {option.label}
                     </option>

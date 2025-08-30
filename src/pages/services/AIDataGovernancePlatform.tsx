@@ -2,7 +2,7 @@
 import { Database, Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Lock, Eye, Users, FileText, Zap, Globe export default function AIDataGovernancePlatform(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Database, 
   Shield, 
   Lock, 
@@ -23,7 +23,7 @@ import { Database,
   AlertTriangle,
   Globe,
   Key
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -181,8 +181,8 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
 
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
-              {tiers.map((t)          => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
+              {tiers.map((t)           => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
@@ -257,8 +257,8 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index)           => (
                 <motion.div
                   key={feature.title}
                   className="group relative p-6 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm hover:border-blue-500/40 transition-all duration-300"
@@ -312,8 +312,8 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-              {complianceFrameworks.map((framework, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {complianceFrameworks.map((framework, index)           => (
                 <motion.div
                   key={framework}
                   className="flex items-center gap-4 p-4 rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10"
@@ -350,8 +350,8 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)           => (
                 <motion.div
                   key={plan.name}
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
@@ -426,8 +426,8 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index)          => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index)           => (
                 <motion.div
                   key={benefit}
                   className="flex items-start gap-4 p-6 rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10"

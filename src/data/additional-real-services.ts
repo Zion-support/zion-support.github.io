@@ -11,6 +11,7 @@ export interface AdditionalService {
 
 
 
+
 	id: string;
 	name: string;
 	category: string;
@@ -28,6 +29,7 @@ export interface AdditionalService {
 	icon?: string; // emoji or simple text icon
 	popular?: boolean;
 	launchDate?: string;
+
 
 
 

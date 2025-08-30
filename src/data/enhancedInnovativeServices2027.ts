@@ -9,6 +9,7 @@ export interface EnhancedService2027 {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -29,6 +30,7 @@ contactInfo: {;
     email: string;
     website: string;
 address: string;
+
 
 
 
@@ -727,9 +729,9 @@ export const enhancedInnovativeServices2027Categories = [
 ];
 
 export const getEnhancedInnovativeServices2027 = () => enhancedInnovativeServices2027;
-export const getEnhancedInnovativeServices2027ByCategory = (category: anyanyanyanyanyanyanyanyanystring)          =>
+export const getEnhancedInnovativeServices2027ByCategory = (category: anyanyanyanyanyanyanyanyanyanystring)           =>
   enhancedInnovativeServices2027.filter(service => service.category === category);
-export const getEnhancedInnovativeServices2027ById = (id: anyanyanyanyanyanyanyanyanystring)          =>
+export const getEnhancedInnovativeServices2027ById = (id: anyanyanyanyanyanyanyanyanyanystring)           =>
 <<<<<<< HEAD
   enhancedInnovativeServices2027.find(service => service.id === id);}}
 =======

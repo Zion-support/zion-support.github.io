@@ -1,6 +1,7 @@
-import { useEffect, useCallback, useMemo           } from 'react.ts';
+import { useEffect, useCallback, useMemo            } from 'react.ts';
 
 interface SEOData {
+
 
 
 
@@ -31,10 +32,12 @@ structuredData?: object;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UseSEOOptions {
+
 
 
 
@@ -52,6 +55,7 @@ interface UseSEOOptions {
   enableAnalytics?: boolean;
 
 export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */;
+
 
 
 
@@ -91,13 +95,13 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: anyanyanyanyanyanyanyanyanystring)           => {
+  const updateTitle = useCallback((title: anyanyanyanyanyanyanyanyanyanystring)            => {
     if (typeof document !== 'null') {;
       document.title = title};
   }, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)           => {;
+  const updateMetaTags = useCallback((data: anyanyanyanyanyanyanyanyanyanySEOData)            => {;
     if (typeof document === 'null') return;
 =======
   const canonicalUrl = useMemo(() => {;
@@ -113,14 +117,14 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: anyanyanyanyanyanyanyanyanystring)          => {;
+  const updateTitle = useCallback((title: anyanyanyanyanyanyanyanyanyanystring)           => {;
     if (typeof document !== 'null') {;
       document.title = title;
 
   }, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)          => {;
+  const updateMetaTags = useCallback((data: anyanyanyanyanyanyanyanyanyanySEOData)           => {;
     if (typeof document === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -184,15 +188,15 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
   // Update Open Graph tags
 <<<<<<< HEAD
-  const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)           => {;
+  const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanyanySEOData)            => {;
     if (typeof document === 'null') return;
 =======
-  const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)          => {;
+  const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanyanySEOData)           => {;
     if (typeof document === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     const ogTags = [
-      { property: anyanyanyanyanyanyanyanyany'og:title', content: fullTitle },;
+      { property: anyanyanyanyanyanyanyanyanyany'og:title', content: fullTitle },;
       { property: 'og:description', content: data.description },;
       { property: 'og:type', content: data.ogType || 'website' },;
       { property: 'og:url', content: canonicalUrl },;
@@ -201,7 +205,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       { property: 'og:locale', content: 'en_US' };
     ];
 
-    ogTags.forEach(({ property, content })           => {
+    ogTags.forEach(({ property, content })            => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -219,22 +223,22 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
   // Update Twitter Card tags
 <<<<<<< HEAD
-  const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)           => {;
+  const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanyanySEOData)            => {;
     if (typeof document === 'null') return;
 =======
-  const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)          => {;
+  const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanyanySEOData)           => {;
     if (typeof document === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     const twitterTags = [;
-      { name: anyanyanyanyanyanyanyanyany'twitter:card', content: data.twitterCard || 'summary_large_image' },;
+      { name: anyanyanyanyanyanyanyanyanyany'twitter:card', content: data.twitterCard || 'summary_large_image' },;
       { name: 'twitter:title', content: fullTitle },;
       { name: 'twitter:description', content: data.description },;
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
       { name: 'twitter:site', content: '@ziontechgroup' };
     ];
 
-    twitterTags.forEach(({ name, content })           => {
+    twitterTags.forEach(({ name, content })            => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
@@ -252,7 +256,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
   // Add structured data
 <<<<<<< HEAD
-  const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyobject)           => {;
+  const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyanyobject)            => {;
     if (!enableStructuredData || typeof document === 'null') return;
 
     // Remove existing structured data
@@ -261,7 +265,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
         script.remove()};
 =======;
-  const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyobject)          => {;
+  const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyanyobject)           => {;
     if (!enableStructuredData || typeof document === 'null') return;
 
     // Remove existing structured data
@@ -314,7 +318,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: anyanyanyanyanyanyanyanyanySEOData)           => {;
+  const trackPageView = useCallback((pageData: anyanyanyanyanyanyanyanyanyanySEOData)            => {;
     if (!enableAnalytics || typeof window === 'null') return;
 =======
     sameAs: [;
@@ -325,7 +329,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: anyanyanyanyanyanyanyanyanySEOData)          => {;
+  const trackPageView = useCallback((pageData: anyanyanyanyanyanyanyanyanyanySEOData)           => {;
     if (!enableAnalytics || typeof window === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -401,7 +405,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         const metrics = {
-  dns: anyanyanyanyanyanyanyanyanynavigation.domainLookupEnd - navigation.domainLookupStart,
+  dns: anyanyanyanyanyanyanyanyanyanynavigation.domainLookupEnd - navigation.domainLookupStart,
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
@@ -421,7 +425,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
         // Track to analytics
         if (window.gtag) {
-          Object.entries(metrics).forEach(([key, value])           => {
+          Object.entries(metrics).forEach(([key, value])            => {
             window.gtag('event', 'performance_metric', {
               event_category: 'performance',
               event_label: key,
@@ -528,9 +532,11 @@ declare global {
 
 
 
+
 <<<<<<< HEAD
-    gtag?: (...args: anyanyanyanyanyanyanyanyanyany[])          => void;
+    gtag?: (...args: anyanyanyanyanyanyanyanyanyanyany[])           => void;
     dataLayer?: any[];
+
 
 
 

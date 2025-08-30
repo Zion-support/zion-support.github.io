@@ -1,9 +1,9 @@
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 import SEO from '@/components/SEO';
-import { Button          } from '@/components/ui/button';
-import { Badge          } from '@/components/ui/badge';
+import { Button           } from '@/components/ui/button';
+import { Badge           } from '@/components/ui/badge';
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking(...args: any[]): any {
   const features: { title: string; description: string }[] = [
     {
@@ -143,8 +143,8 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       {/* Feature grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((f)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((f)           => (
               <motion.div
                 key={f.title}
                 initial = {
@@ -210,8 +210,8 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       {/* Plans */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {plans.map((plan, i)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {plans.map((plan, i)           => (
               <motion.div
                 key={plan.name}
                 initial = {

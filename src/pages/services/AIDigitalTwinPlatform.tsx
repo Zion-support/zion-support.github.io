@@ -136,8 +136,8 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
             <p className="text-xl text-gray-600">Transform your operations with intelligent digital twin technology</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)           => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="w-6 h-6 text-blue-600" />
@@ -156,8 +156,8 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
           <p className="text-xl text-gray-600">Trusted by leading organizations across industries</p>
         </div>
 
-        <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map((useCase, index)          => (
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+          {useCases.map((useCase, index)           => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
               <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <Monitor className="w-5 h-5 text-blue-600" />
@@ -176,8 +176,8 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
             <p className="text-xl text-gray-600">Choose the plan that fits your digital twin needs</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)           => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                 plan.popular ? 'border-blue-500' : 'border-gray-200'
               } p-8`}>

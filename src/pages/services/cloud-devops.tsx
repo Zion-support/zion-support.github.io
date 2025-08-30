@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet          } from 'react-helmet-async.ts';
-import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server import { Link          } from 'react-router-dom.ts';
+import { Helmet           } from 'react-helmet-async.ts';
+import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server import { Link           } from 'react-router-dom.ts';
 =======
 import React from 'react.ts';
-import { Helmet           } from 'react-helmet-async.ts';
-import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server           } from 'lucide-react.ts';
-import { Link           } from 'react-router-dom.ts';
+import { Helmet            } from 'react-helmet-async.ts';
+import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server            } from 'lucide-react.ts';
+import { Link            } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function CloudDevOps(...args: []):  {
@@ -69,7 +69,7 @@ export default function CloudDevOps(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: GitBranch,
@@ -102,7 +102,7 @@ export default function CloudDevOps(...args: []):  {
                   description: "Real-time monitoring and analytics for application performance."
 <<<<<<< HEAD
 
-              ].map((feature, index)          => (
+              ].map((feature, index)           => (
 =======
                 }
               ].map((feature, index)  => (
@@ -131,7 +131,7 @@ export default function CloudDevOps(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Continuous Integration",
@@ -170,7 +170,7 @@ export default function CloudDevOps(...args: []):  {
                   benefits: ["Vulnerability scanning", "Compliance checks", "Security policies"]
 <<<<<<< HEAD
 
-              ].map((area, index)          => (
+              ].map((area, index)           => (
 =======
                 }
               ].map((area, index)  => (
@@ -207,7 +207,7 @@ export default function CloudDevOps(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "CI/CD Tools",
@@ -246,7 +246,7 @@ export default function CloudDevOps(...args: []):  {
                   features: ["Vulnerability scanning", "Compliance automation", "Security policies"]
 <<<<<<< HEAD
 
-              ].map((tech, index)          => (
+              ].map((tech, index)           => (
 =======
                 }
               ].map((tech, index)  => (
@@ -306,11 +306,11 @@ export default function CloudDevOps(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">DevOps Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: anyanyanyanyanyanyanyanyany"50-80%", label: "Deployment Speed", description: "Faster delivery" },
+                    { metric: anyanyanyanyanyanyanyanyanyany"50-80%", label: "Deployment Speed", description: "Faster delivery" },
                     { metric: "60-90%", label: "Lead Time", description: "Reduction" },
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
                     { metric: "99.9%+", label: "Uptime", description: "Availability" }
-                  ].map((item, index)           => (
+                  ].map((item, index)            => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -335,7 +335,7 @@ export default function CloudDevOps(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -358,7 +358,7 @@ export default function CloudDevOps(...args: []):  {
                   description: "Continuously monitor, optimize, and improve processes."
 <<<<<<< HEAD
 
-              ].map((step, index)          => (
+              ].map((step, index)           => (
 =======
                 }
               ].map((step, index)  => (

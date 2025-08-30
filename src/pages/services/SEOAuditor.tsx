@@ -1,6 +1,6 @@
 import React from 'react.ts'
-import { SEO          } from '../../components/SEO'
-import { Shield, BarChart3, Search, Zap, CheckCircle2, Link as LinkIcon          } from 'lucide-react.ts'
+import { SEO           } from '../../components/SEO'
+import { Shield, BarChart3, Search, Zap, CheckCircle2, Link as LinkIcon           } from 'lucide-react.ts'
 
 export default function SEOAuditor(...args: any[]): any {
   const features = [
@@ -53,8 +53,8 @@ export default function SEOAuditor(...args: any[]): any {
       </section>
 
       <section className="py-10">
-        <div className="container-responsive grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-          {pricing.map((p)          => (
+        <div className="container-responsive grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {pricing.map((p)           => (
             <div key={p.tier} className="card-futuristic">
               <div className="text-sm text-zion-blue-light/70">{p.tier}</div>
               <div className="text-3xl font-bold text-white mt-2">{p.price}</div>

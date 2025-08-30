@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react.ts';
-import { Link          } from 'react-router-dom.ts';
-import { motion          } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
 import { Search,
   ArrowRight,
   DollarSign,
@@ -28,12 +28,12 @@ import { Search,
   Mail,
   MapPin
 <<<<<<< HEAD
-import { SEO          } from '@/components/SEO';
+import { SEO           } from '@/components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026          } from '../data/innovativeMicroSaasServices2026';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026           } from '../data/innovativeMicroSaasServices2026';
 
 const Services2026: React.FC = (): JSX.Element => {;
   const [query, setQuery] = useState('');
@@ -43,16 +43,16 @@ const Services2026: React.FC = (): JSX.Element => {;
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026];
 
   const categories = [
-    { id: anyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: GitFork, count: allServices.length },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s          => s.category === 'AI & Analytics').length },
-    { id: anyanyanyanyanyanyanyanyany'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s          => s.category === 'Quantum Computing').length },
-    { id: anyanyanyanyanyanyanyanyany'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s          => s.category === 'Cybersecurity').length },;
-    { id: anyanyanyanyanyanyanyanyany'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s          => s.category === 'IoT & Edge Computing').length },;
-    { id: anyanyanyanyanyanyanyanyany'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s          => s.category === 'AI & Content').length },;
-    { id: anyanyanyanyanyanyanyanyany'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s          => s.category === 'Digital Twin').length },;
-    { id: anyanyanyanyanyanyanyanyany'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s          => s.category === 'AI & HR').length },;
-    { id: anyanyanyanyanyanyanyanyany'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s          => s.category === 'Sustainability').length },;
-    { id: anyanyanyanyanyanyanyanyany'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s          => s.category === 'AI & IoT').length };
+    { id: anyanyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: GitFork, count: allServices.length },
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s           => s.category === 'AI & Analytics').length },
+    { id: anyanyanyanyanyanyanyanyanyany'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s           => s.category === 'Quantum Computing').length },
+    { id: anyanyanyanyanyanyanyanyanyany'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s           => s.category === 'Cybersecurity').length },;
+    { id: anyanyanyanyanyanyanyanyanyany'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s           => s.category === 'IoT & Edge Computing').length },;
+    { id: anyanyanyanyanyanyanyanyanyany'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s           => s.category === 'AI & Content').length },;
+    { id: anyanyanyanyanyanyanyanyanyany'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s           => s.category === 'Digital Twin').length },;
+    { id: anyanyanyanyanyanyanyanyanyany'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s           => s.category === 'AI & HR').length },;
+    { id: anyanyanyanyanyanyanyanyanyany'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s           => s.category === 'Sustainability').length },;
+    { id: anyanyanyanyanyanyanyanyanyany'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s           => s.category === 'AI & IoT').length };
   ];
 
   const filteredAndSorted = useMemo(() => {
@@ -247,8 +247,8 @@ const Services2026: React.FC = (): JSX.Element => {;
               </p>
             </div>
 
-            <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-              {featuredServices.map((service)          => (
+            <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+              {featuredServices.map((service)           => (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -339,8 +339,8 @@ const Services2026: React.FC = (): JSX.Element => {;
             </p>
           </div>
 
-          <div className="grid gap-6 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {filteredAndSorted.map((service)          => (
+          <div className="grid gap-6 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {filteredAndSorted.map((service)           => (
               <motion.div
                 key={service.id}
                 initial = {

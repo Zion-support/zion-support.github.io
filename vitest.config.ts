@@ -1,4 +1,4 @@
-import { defineConfig           } from 'vitest/config.ts';
+import { defineConfig            } from 'vitest/config.ts';
 import path from 'node:path.ts';
 export default defineConfig({
   resolve: {

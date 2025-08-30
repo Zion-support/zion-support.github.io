@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 
 interface Props extends React.PropsWithChildren<{}> {
 
@@ -18,10 +18,12 @@ interface State {
 
 
 
+
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
   retryCount: number;
+
 
 
 
@@ -61,7 +63,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.logError(error, errorInfo);
   }
 
-  logError = (error: anyanyanyanyanyanyanyanyanyError, errorInfo: ErrorInfo)          => {
+  logError = (error: anyanyanyanyanyanyanyanyanyanyError, errorInfo: ErrorInfo)           => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');

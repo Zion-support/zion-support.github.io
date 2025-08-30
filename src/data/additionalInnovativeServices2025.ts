@@ -8,6 +8,7 @@ export interface AdditionalInnovativeService2025 {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -31,6 +32,7 @@ contactInfo: {;
     email: string;
     website: string;
   
+
 
 
 

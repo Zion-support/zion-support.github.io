@@ -1,5 +1,5 @@
 
-import { supabase          } from '@/integrations/supabase/client';
+import { supabase           } from '@/integrations/supabase/client';
 
 export async function createJob(...args: any[]): any {
   const { data, error } = await supabase

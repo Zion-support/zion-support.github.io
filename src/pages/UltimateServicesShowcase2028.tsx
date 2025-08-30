@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 import { Search, 
   Filter, 
   Star, 
@@ -27,8 +27,8 @@ import { Search,
   Clock,
   DollarSign,
   BarChart3
-         } from 'lucide-react.ts';
-import { INNOVATIVE_SERVICES_2028          } from '../data/innovativeServices2028';
+          } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES_2028           } from '../data/innovativeServices2028';
 
 const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -65,7 +65,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       }
     });
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {
     const icons: Record<string, any> = {
       'AI & Enterprise': <Brain className="w-5 h-5" />,
       'Quantum Computing': <Zap className="w-5 h-5" />,
@@ -81,7 +81,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
     return icons[category] || <Sparkles className="w-5 h-5" />;
   };
 
-  const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanystring)          => {
+  const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanyanystring)           => {
     switch (level) {
       case 'revolutionary':
         return 'from-purple-500 to-pink-500';
@@ -199,9 +199,9 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                  className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus: anyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 >
-                  {categories.map(category          => (
+                  {categories.map(category           => (
                     <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -261,11 +261,11 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' 
-              ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6' 
+              ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6' 
               : 'space-y-6'
             }
           >
-            {filteredServices.map((service)          => (
+            {filteredServices.map((service)           => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}

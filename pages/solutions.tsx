@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { Link          } from 'react-router-dom.ts';
+import { Link           } from 'react-router-dom.ts';
 <<<<<<< HEAD
 import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database export default function Solutions(...args: any[]): any {
   const solutions = [
@@ -53,7 +53,7 @@ import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock,
 
   ]
 =======
-import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award          } from 'lucide-react.ts';
+import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award           } from 'lucide-react.ts';
 
 export default function Solutions(...args: any[]): any {
 	const industrySolutions = [
@@ -149,8 +149,8 @@ export default function Solutions(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {solutions.map((solution, index)          => (
+          <div className="grid grid-cols-1 gap-8 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {solutions.map((solution, index)           => (
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${solution.color} text-white mb-6`}>
                   <solution.icon className="h-6 w-6" />
@@ -295,8 +295,8 @@ export default function Solutions(...args: any[]): any {
 						<h2 className="text-2xl font-bold text-gray-900 mb-4">Proven Results</h2>
 						<p className="text-gray-600">Our solutions consistently deliver measurable business value</p>
 					</div>
-					<div className="grid grid-cols-2 lg: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-						{successMetrics.map((metric)          => (
+					<div className="grid grid-cols-2 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+						{successMetrics.map((metric)           => (
 							<div key={metric.label} className="text-center">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-4">
 									<metric.icon className="h-8 w-8 text-blue-600" />
@@ -318,8 +318,8 @@ export default function Solutions(...args: any[]): any {
 							Tailored solutions designed for your industry's unique challenges and requirements.
 						</p>
 					</div>
-					<div className="grid gap-8 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-						{industrySolutions.map((solution)          => (
+					<div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+						{industrySolutions.map((solution)           => (
 							<div key={solution.title} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group">
 								<div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
 									<solution.icon className="w-8 h-8 text-white" />
@@ -355,8 +355,8 @@ export default function Solutions(...args: any[]): any {
 							Cutting-edge technology solutions that power modern businesses.
 						</p>
 					</div>
-					<div className="grid gap-8 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-						{technologySolutions.map((solution)          => (
+					<div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+						{technologySolutions.map((solution)           => (
 							<div key={solution.title} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-200">
 								<div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
 									<solution.icon className="w-8 h-8 text-white" />
@@ -392,8 +392,8 @@ export default function Solutions(...args: any[]): any {
 							Solutions for the most common business challenges and opportunities.
 						</p>
 					</div>
-					<div className="grid gap-6 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-						{useCaseSolutions.map((solution)          => (
+					<div className="grid gap-6 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+						{useCaseSolutions.map((solution)           => (
 							<div key={solution.title} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 group">
 								<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
 									<solution.icon className="w-6 h-6 text-blue-600" />

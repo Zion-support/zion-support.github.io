@@ -9,6 +9,7 @@ export interface EmergingTechService2027 {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -35,6 +36,7 @@ author: {;
     id: string;
     avatarUrl?: string;
 verified: boolean;
+
 
 
 

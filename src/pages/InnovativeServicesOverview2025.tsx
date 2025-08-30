@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -22,7 +22,7 @@ import { Brain,
   Target,
   Zap,
   Globe
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 const InnovativeServicesOverview2025 = () => {
   const serviceCategories = [
@@ -163,8 +163,8 @@ const InnovativeServicesOverview2025 = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {serviceCategories.map((service, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {serviceCategories.map((service, index)           => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -237,8 +237,8 @@ const InnovativeServicesOverview2025 = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalServices.map((service, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {additionalServices.map((service, index)           => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

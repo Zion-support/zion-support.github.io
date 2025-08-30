@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link          } from 'react-router-dom.ts';
-import { motion          } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -25,8 +25,8 @@ import { Brain,
   Workflow,
   Sparkles,
   Award
-         } from 'lucide-react.ts';
-import { SEO          } from '../../components/SEO';
+          } from 'lucide-react.ts';
+import { SEO           } from '../../components/SEO';
 
 export default function Solutions(...args: any[]): any {
   const solutionCategories = [
@@ -198,8 +198,8 @@ export default function Solutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredSolutions.map((solution, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredSolutions.map((solution, index)           => (
               <motion.div
                 key={solution.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -269,8 +269,8 @@ export default function Solutions(...args: any[]): any {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.solutions.map((solution, solutionIndex)          => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.solutions.map((solution, solutionIndex)           => (
                     <Link
                       key={solution.name}
                       to={solution.href}

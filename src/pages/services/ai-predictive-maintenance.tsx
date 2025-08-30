@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import SEO from '../../components/SEO';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -180,8 +180,8 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)           => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -262,8 +262,8 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {applications.map((application, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {applications.map((application, index)           => (
               <motion.div
                 key={application.title}
                 initial = {

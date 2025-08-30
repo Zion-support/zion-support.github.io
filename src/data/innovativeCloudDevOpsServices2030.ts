@@ -12,6 +12,7 @@ export interface CloudDevOpsService {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -24,6 +25,7 @@ pricing: {;
     currency: string;
     pricingModel: string;
 marketPrice: string;
+
 
 
 

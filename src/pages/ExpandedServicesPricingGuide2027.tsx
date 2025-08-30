@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 import { Search,
   Filter,
   Grid3X3,
@@ -59,10 +59,10 @@ import { Search,
   Info,
   AlertTriangle,
   Zap
-import { SEO          } from '@/components/SEO';
+import { SEO           } from '@/components/SEO';
 import { ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing
-         } from '@/data/expandedServicesPricing2027';
+          } from '@/data/expandedServicesPricing2027';
 
 <<<<<<< HEAD
 const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
@@ -91,7 +91,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)           => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)            => {
     switch (category) {
       case 'Cybersecurity':;
 =======;
@@ -104,7 +104,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (category) {;
       case 'Cybersecurity':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -129,7 +129,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (category) {;
       case 'Cybersecurity':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -154,7 +154,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getMarketPositionColor = (position: anyanyanyanyanyanyanyanyanystring)          => {;
+  const getMarketPositionColor = (position: anyanyanyanyanyanyanyanyanyanystring)           => {;
     switch (position) {;
       case 'leader':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -175,7 +175,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const renderPricingCard = (pricing: anyanyanyanyanyanyanyanyanyExpandedServicePricing)          => {;
+  const renderPricingCard = (pricing: anyanyanyanyanyanyanyanyanyanyExpandedServicePricing)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(pricing.category);
     const categoryColor = getCategoryColor(pricing.category);
@@ -749,13 +749,13 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
 
-                {categories.map((category)          => (
-=======
-                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-              >
                 {categories.map((category)           => (
+=======
+                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+              >
+                {categories.map((category)            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>
                     {category}
@@ -775,8 +775,8 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {;
 
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {filteredPricing.map((pricing)           => renderPricingCard(pricing))}
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {filteredPricing.map((pricing)            => renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">

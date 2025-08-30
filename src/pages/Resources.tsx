@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link          } from 'react-router-dom.ts';
-import { motion          } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
 import {
 <<<<<<< HEAD
   FileText,
@@ -461,7 +461,7 @@ const Resources: React.FC = (): JSX.Element => {;
   const featuredResources = resources.filter(resource => resource.featured);
   const regularResources = filteredResources.filter(resource => !resource.featured);
 
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanystring)           => {;
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanystring)            => {;
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -470,7 +470,7 @@ const Resources: React.FC = (): JSX.Element => {;
     });
   };
 
-  const getResourceIcon = (type: anyanyanyanyanyanyanyanyanystring)           => {
+  const getResourceIcon = (type: anyanyanyanyanyanyanyanyanyanystring)            => {
     switch (type) {
       case 'White Paper':;
       case 'Research Paper':;
@@ -624,8 +624,8 @@ const Resources: React.FC = (): JSX.Element => {;
           <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-8 uppercase tracking-wider">
             Featured Resources
           </h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredResources.map((resource, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredResources.map((resource, index)           => (
               <motion.div
                 key={resource.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -663,8 +663,8 @@ const Resources: React.FC = (): JSX.Element => {;
         </motion.div>
 
         {/* Resource Categories */}
-        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-          {resourceCategories.map((category, categoryIndex)          => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {resourceCategories.map((category, categoryIndex)           => (
             <motion.div
 <<<<<<< HEAD
               key={category.title}
@@ -712,8 +712,8 @@ const Resources: React.FC = (): JSX.Element => {;
               <p className="text-zion-slate-light">Our most popular and valuable resources</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
-              {featuredResources.map((resource, index)           => {;
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+              {featuredResources.map((resource, index)            => {;
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
                   <motion.article
@@ -866,8 +866,8 @@ const Resources: React.FC = (): JSX.Element => {;
           </motion.div>
 
 <<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
-            {regularResources.map((resource, index)           => {;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
+            {regularResources.map((resource, index)            => {;
               const ResourceIcon = getResourceIcon(resource.type);
               return (
                 <motion.article
@@ -906,8 +906,8 @@ const Resources: React.FC = (): JSX.Element => {;
                           {resource.readTime || resource.duration}
                         </span>
 =======
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.filter(cat          => cat.featured).map((category, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {resourceCategories.filter(cat           => cat.featured).map((category, index) => (
               <motion.div
                 key={category.id}
                 initial = {
@@ -1087,8 +1087,8 @@ const Resources: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {resourceCategories.map((category, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {resourceCategories.map((category, index)           => (
               <motion.div
                 key={category.id}
                 id={category.id}
@@ -1194,8 +1194,8 @@ const Resources: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalResources.map((resource, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {additionalResources.map((resource, index)           => (
               <motion.div
                 key={resource.id}
                 id={resource.id}

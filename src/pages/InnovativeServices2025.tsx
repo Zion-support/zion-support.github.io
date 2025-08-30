@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
-import { Link          } from 'react-router-dom.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -138,7 +138,7 @@ import { Brain,
   CalendarWeek2,
   CalendarMonth2,
   CalendarYear2
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function InnovativeServices2025(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -397,11 +397,11 @@ export default function InnovativeServices2025(...args: any[]): any {
   ];
 
   const categories = [
-    { id: anyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: Star, count: services.length },
-    { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s          => s.category === 'AI & ML').length },
-    { id: anyanyanyanyanyanyanyanyany'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s          => s.category === 'IT Infrastructure').length },
-    { id: anyanyanyanyanyanyanyanyany'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s          => s.category === 'Micro SaaS').length },
-    { id: anyanyanyanyanyanyanyanyany'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s          => s.category === 'Emerging Tech').length }
+    { id: anyanyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: Star, count: services.length },
+    { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s           => s.category === 'AI & ML').length },
+    { id: anyanyanyanyanyanyanyanyanyany'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s           => s.category === 'IT Infrastructure').length },
+    { id: anyanyanyanyanyanyanyanyanyany'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s           => s.category === 'Micro SaaS').length },
+    { id: anyanyanyanyanyanyanyanyanyany'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s           => s.category === 'Emerging Tech').length }
   ];
 
   const filteredServices = services.filter(service => {
@@ -551,9 +551,9 @@ export default function InnovativeServices2025(...args: any[]): any {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {sortedServices.map((service, index)          => (
+              {sortedServices.map((service, index)           => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

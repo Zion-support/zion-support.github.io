@@ -9,8 +9,8 @@ const GreenIT: React.FC = (): JSX.Element => (
 );
 =======
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { SEO          } from '../components/SEO';
+import { motion           } from 'framer-motion.ts';
+import { SEO           } from '../components/SEO';
 import { Leaf, 
   Zap, 
   Sun, 
@@ -181,7 +181,7 @@ import { Leaf,
   BatteryLow as BatteryLow10,
   BatteryMedium as BatteryMedium10,
   BatteryEmpty as BatteryEmpty10
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function GreenIT(...args: any[]): any {
   const [expandedSection, setExpandedSection] = useState<any>(null);
@@ -598,12 +598,12 @@ export default function GreenIT(...args: any[]): any {
     }
   ];
 
-  const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanystring)          => {
+  const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanystring)           => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 
   const filteredSolutions = selectedCategory === 'all' 
-    ? greenSolutions: anyanyanyanyanyanyanyanyanygreenSolutions.filter(solution          => solution.category === selectedCategory);
+    ? greenSolutions: anyanyanyanyanyanyanyanyanyanygreenSolutions.filter(solution           => solution.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -659,8 +659,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {environmentalImpact.map((impact, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {environmentalImpact.map((impact, index)           => (
               <motion.div
                 key={impact.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -712,8 +712,8 @@ export default function GreenIT(...args: any[]): any {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSolutions.map((solution, index)           => (
               <motion.div
                 key={solution.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -825,8 +825,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {certifications.map((cert, index)          => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {certifications.map((cert, index)           => (
               <motion.div
                 key={cert.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -860,8 +860,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {caseStudies.map((study, index)          => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {caseStudies.map((study, index)           => (
               <motion.div
                 key={study.title}
                 initial={{ opacity: 0, y: 20 }}

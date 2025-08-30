@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import SEO from '../../components/SEO';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database const SustainableTechnology: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -180,8 +180,8 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)           => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -262,8 +262,8 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {solutions.map((solution, index)          => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {solutions.map((solution, index)           => (
               <motion.div
                 key={solution.title}
                 initial = {

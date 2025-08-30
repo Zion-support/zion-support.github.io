@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Rocket,
   Zap,
   Shield,
@@ -27,7 +27,7 @@ import { Rocket,
 <<<<<<< HEAD
 const DigitalTransformation = () => {
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 const DigitalTransformation = () => {;
@@ -239,8 +239,8 @@ const DigitalTransformation = () => {;
       {/* Stats Section */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index)           => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
+            {stats.map((stat, index)            => (
               <motion.div
                 key={index}
                 initial = {
@@ -296,8 +296,8 @@ const DigitalTransformation = () => {;
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {transformationServices.map((service, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {transformationServices.map((service, index)            => (
               <motion.div
                 key={index}
                 initial = {
@@ -367,8 +367,8 @@ const DigitalTransformation = () => {;
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-              {transformationPhases.map((phase, index)           => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {transformationPhases.map((phase, index)            => (
                 <motion.div
                   key={index}
                   initial = {
@@ -449,12 +449,12 @@ const DigitalTransformation = () => {;
                         className="space-y-2"
 <<<<<<< HEAD
 
-                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: anyanyanyanyanyanyanyanyany</div>
-                        {phase.activities.map((activity, activityIndex)          => (
-=======
-                      >
                         <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: anyanyanyanyanyanyanyanyanyany</div>
                         {phase.activities.map((activity, activityIndex)           => (
+=======
+                      >
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: anyanyanyanyanyanyanyanyanyanyany</div>
+                        {phase.activities.map((activity, activityIndex)            => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />
@@ -483,8 +483,8 @@ const DigitalTransformation = () => {;
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index)           => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index)            => (
               <motion.div
                 key={index}
                 initial = {

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 import { Brain,
   Rocket,
   Zap,
@@ -13,8 +13,8 @@ import { Brain,
   TrendingUp,
 =======
 import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
+import { motion            } from 'framer-motion.ts';
+import { Link            } from 'react-router-dom.ts';
 import { Brain, 
   Rocket, 
   Zap, 
@@ -43,17 +43,17 @@ import { Brain,
   Heart,
   Zap as Lightning
 <<<<<<< HEAD
-import { SEO          } from '../components/SEO';
-import { emergingTechServices2030          } from '../data/emergingTechServices2030';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
 import { SEO           } from '../components/SEO';
 import { emergingTechServices2030           } from '../data/emergingTechServices2030';
 =======
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO            } from '../components/SEO';
+import { emergingTechServices2030            } from '../data/emergingTechServices2030';
+=======
 } from 'lucide-react';
-import { SEO          } from '../components/SEO';
-import { emergingTechServices2030          } from '../data/emergingTechServices2030';
+import { SEO           } from '../components/SEO';
+import { emergingTechServices2030           } from '../data/emergingTechServices2030';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -222,14 +222,14 @@ export default function EmergingTech2030(...args[]: any):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {emergingTechServices2030.map((service, index)           => {;
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {emergingTechServices2030.map((service, index)            => {;
 =======;
               </p>;
             </motion.div>;
 ;
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
-              {emergingTechServices2030.map((service, index)          => {;
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
+              {emergingTechServices2030.map((service, index)           => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
 
@@ -338,7 +338,7 @@ export default function EmergingTech2030(...args[]: any):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Award,
@@ -377,7 +377,7 @@ export default function EmergingTech2030(...args[]: any):  {
                   color: 'from-red-500 to-pink-600'
 <<<<<<< HEAD
 
-              ].map((feature, index)          => (
+              ].map((feature, index)           => (
 =======
                 }
               ].map((feature, index)  => (

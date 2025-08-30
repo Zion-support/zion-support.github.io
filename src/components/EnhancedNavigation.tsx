@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence          } from 'framer-motion.ts';
-import { Link, useLocation          } from 'react-router-dom.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
+import { Link, useLocation           } from 'react-router-dom.ts';
 import { Menu, 
   X, 
   ChevronDown, 
@@ -26,7 +26,7 @@ import { Menu,
   Building,
   Rocket,
   Star
-         } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 interface NavigationItem {
 
@@ -38,11 +38,13 @@ interface NavigationItem {
 
 
 
-  label: anyanyanyanyanyanyanyanyanystring;
+
+  label: anyanyanyanyanyanyanyanyanyanystring;
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
   featured?: boolean;
+
 
 
 
@@ -57,7 +59,7 @@ interface NavigationItem {
 interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
 
   className?: string;
-  onThemeChange?: (theme: 'light' | 'dark' | 'system')          => void;
+  onThemeChange?: (theme: 'light' | 'dark' | 'system')           => void;
 
 }
 
@@ -224,7 +226,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     setActiveDropdown(null);
   }, [location]);
 
-  const handleThemeChange = useCallback((newTheme: anyanyanyanyanyanyanyanyany'light' | 'dark' | 'system')          => {;
+  const handleThemeChange = useCallback((newTheme: anyanyanyanyanyanyanyanyanyany'light' | 'dark' | 'system')           => {;
     setTheme(newTheme);
     onThemeChange?.(newTheme);
     
@@ -241,7 +243,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]);
 
-  const toggleDropdown = (label: anyanyanyanyanyanyanyanyanystring)          => {
+  const toggleDropdown = (label: anyanyanyanyanyanyanyanyanyanystring)           => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
@@ -277,8 +279,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg: anyanyanyanyanyanyanyanyanyflex items-center space-x-8">
-            {navigationItems.map((item)          => (
+          <div className="hidden lg: anyanyanyanyanyanyanyanyanyanyflex items-center space-x-8">
+            {navigationItems.map((item)           => (
               <div key={item.label} className="relative group">
                 {item.children ? (
                   <button

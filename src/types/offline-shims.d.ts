@@ -2,13 +2,13 @@
 
 // React stubs
 declare module 'react' {
-  export type FC<P = any> = (props: anyanyanyanyanyanyanyanyanyP)          => ;
+  export type FC<P = any> = (props: anyanyanyanyanyanyanyanyanyanyP)           => ;
   export type ReactNode = ;
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
   export interface KeyboardEvent<T = any> {};
   export interface RefObject<T> { current: T };
-  export type RefCallback<T> = (value: anyanyanyanyanyanyanyanyanyT)          => void;
+  export type RefCallback<T> = (value: anyanyanyanyanyanyanyanyanyanyT)           => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
   export function useRef<T = any>(initial: T): { current: T };
@@ -39,6 +39,8 @@ declare namespace JSX {
 
 
 
+
+
 }
   interface IntrinsicElements {
 
@@ -50,8 +52,10 @@ declare namespace JSX {
 
 
 
+
     [elemName: string]: ;
   
+
 
 
 

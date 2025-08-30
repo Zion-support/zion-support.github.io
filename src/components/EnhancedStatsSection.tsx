@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, useAnimation          } from 'framer-motion.ts';
-import { useInView          } from 'react-intersection-observer.ts';
+import { motion, useAnimation           } from 'framer-motion.ts';
+import { useInView           } from 'react-intersection-observer.ts';
 import { Users,
   Globe,
   TrendingUp,
@@ -11,10 +11,11 @@ import { Users,
   Rocket
 <<<<<<< HEAD
 =======
-          } from 'lucide-react.ts';
+           } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Stat {
+
 
 
 
@@ -35,6 +36,7 @@ interface Stat {
   gradient: string;
 =======
 gradient: string;
+
 
 
 
@@ -112,11 +114,11 @@ export default function EnhancedStatsSection(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: anyanyanyanyanyanyanyanyany0.3,
+    threshold: anyanyanyanyanyanyanyanyanyany0.3,
     triggerOnce: true
   });
 
-  useEffect(()           => {
+  useEffect(()            => {
     if (inView) {
 <<<<<<< HEAD
       controls.start('visible');
@@ -239,8 +241,8 @@ export default function EnhancedStatsSection(...args[]: any):  {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {stats.map((stat, index)           => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {stats.map((stat, index)            => (
             <motion.div
               key={stat.id}
               initial = {

@@ -10,12 +10,14 @@ import { X interface Filter {
 
 
 
+
   key: string;
   value: string;
   label: string;
 =======
 import React from 'react.ts';
 import { X   
+ 
  
  
  
@@ -37,9 +39,11 @@ interface Filter {
 
 
 
-  key: anyanyanyanyanyanyanyanyanystring;
+
+  key: anyanyanyanyanyanyanyanyanyanystring;
   value: string;
 label: string;
+
 
 
 
@@ -55,11 +59,11 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
 
   filters: Filter[];
 <<<<<<< HEAD
-  onRemoveFilter: (key: string)          => void;
-  onClearAll: anyanyanyanyanyanyanyanyany()          => void;
+  onRemoveFilter: (key: string)           => void;
+  onClearAll: anyanyanyanyanyanyanyanyanyany()           => void;
 =======
-  onRemoveFilter: anyanyanyanyanyanyanyanyany(key: string)           => void;
-  onClearAll: anyanyanyanyanyanyanyanyany()           => void}
+  onRemoveFilter: anyanyanyanyanyanyanyanyanyany(key: string)            => void;
+  onClearAll: anyanyanyanyanyanyanyanyanyany()            => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
@@ -69,9 +73,9 @@ export function ActiveFiltersBar(...args: any[]): any {;
 
   return (
     <div className = "flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
-      <span className="text-sm text-zion-slate-light mr-2">Active filters: anyanyanyanyanyanyanyanyany</span>
+      <span className="text-sm text-zion-slate-light mr-2">Active filters: anyanyanyanyanyanyanyanyanyany</span>
 
-      {filters.map((filter)          => (
+      {filters.map((filter)           => (
         <div
           key={filter.key}
           className="inline-flex items-center gap-2 px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30"
