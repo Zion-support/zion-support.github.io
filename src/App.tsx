@@ -1,28 +1,57 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Sidebar } from './components/Sidebar';
+import { HomePage } from './pages/HomePage';
+import { ServicesPage } from './pages/ServicesPage';
+import { SolutionsPage } from './pages/SolutionsPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+import { BlogPage } from './pages/BlogPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
-function Placeholder() {
+function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-8 text-center">
-      <div>
-        <h1 className="text-3xl font-bold mb-4">Zion Tech Group</h1>
-        <p className="text-gray-600 mb-6">Visit our main site for the full experience.</p>
-        <a href="https://ziontechgroup.com" className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg">Go to ziontechgroup.com</a>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Header />
+      <div className="flex pt-16">
+        <Sidebar />
+        <main className="flex-1 ml-64 min-h-screen">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/*" element={<ServicesPage />} />
+            <Route path="/solutions" element={<SolutionsPage />} />
+            <Route path="/solutions/*" element={<SolutionsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/about/*" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/*" element={<BlogPage />} />
+            <Route path="/careers" element={<AboutPage />} />
+            <Route path="/partners" element={<AboutPage />} />
+            <Route path="/press" element={<AboutPage />} />
+            <Route path="/case-studies" element={<BlogPage />} />
+            <Route path="/research-development" element={<BlogPage />} />
+            <Route path="/docs" element={<BlogPage />} />
+            <Route path="/api" element={<BlogPage />} />
+            <Route path="/developer" element={<BlogPage />} />
+            <Route path="/help" element={<BlogPage />} />
+            <Route path="/training" element={<BlogPage />} />
+            <Route path="/community" element={<BlogPage />} />
+            <Route path="/support" element={<BlogPage />} />
+            <Route path="/privacy-policy" element={<BlogPage />} />
+            <Route path="/terms-of-service" element={<BlogPage />} />
+            <Route path="/cookie-policy" element={<BlogPage />} />
+            <Route path="/request-quote" element={<ContactPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
       </div>
+      <Footer />
     </div>
   );
 }
 
-function App() {
-  return (
-    <Routes>
-      <Route path="*" element={<Placeholder />} />
-    </Routes>
-  );
-}
-
-export default App;
-export default App;
-export default App;
-export default App;
 export default App;
