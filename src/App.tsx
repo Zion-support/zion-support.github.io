@@ -14,6 +14,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ d
 const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
 const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesShowcase').then(module => ({ default: module.RevolutionaryServicesShowcase })));
 const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
 const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
@@ -65,13 +66,14 @@ export default function App() {
         <Header />
         <div className="flex pt-16">
           <Sidebar />
-          <main className="flex-1 ml-64 min-h-screen">
+          <main className="flex-1 lg:ml-64 min-h-screen">
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/about" element={<AboutPage />} />

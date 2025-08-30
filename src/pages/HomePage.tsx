@@ -35,7 +35,10 @@ import {
   HelpCircle,
   Search,
   Menu,
-  X
+  X,
+  Sparkles,
+  Crown,
+  Gem
 } from 'lucide-react';
 
 // Lazy load components for better performance
@@ -229,15 +232,105 @@ export function HomePage() {
           </Suspense>
 
           <div className="text-center mt-12">
-            <Link
-              to="/services"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-              aria-label="View all our services"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/revolutionary-services"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                aria-label="Explore our revolutionary services"
+              >
+                <span>Explore Revolutionary Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                aria-label="View all our services"
+              >
+                <span>View All Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Revolutionary Services Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900 to-pink-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center">
+                <Sparkles className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Revolutionary Services 2025
+            </h2>
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+              Discover our cutting-edge micro SAAS services, AI-powered platforms, and emerging technology solutions. 
+              Each service is designed with proven ROI and market-leading capabilities.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
-              <span>View All Services</span>
+              <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Crown className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Revolutionary Innovation</h3>
+              <p className="text-purple-100 text-sm">Breakthrough technologies that redefine industry standards</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Gem className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Advanced Technology</h3>
+              <p className="text-purple-100 text-sm">State-of-the-art solutions with proven performance</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Star className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Proven ROI</h3>
+              <p className="text-purple-100 text-sm">Measurable results and exceptional value delivery</p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <Link
+              to="/revolutionary-services"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <span>Explore Revolutionary Services</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 

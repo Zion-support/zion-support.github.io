@@ -32,6 +32,7 @@ import {
 export function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
@@ -54,7 +55,8 @@ export function Sidebar() {
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Revolutionary Services 2025', href: '/revolutionary-services', icon: Sparkles }
       ]
     },
     {
@@ -114,14 +116,31 @@ export function Sidebar() {
   };
 
   return (
-    <motion.aside
-      className={`fixed left-0 top-16 h-full bg-gray-900/95 backdrop-blur-md border-r border-gray-700 transition-all duration-300 z-40 ${
-        isCollapsed ? 'w-16' : 'w-64'
-      }`}
-      initial={{ x: -256 }}
-      animate={{ x: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    <>
+      {/* Mobile Overlay */}
+      {isMobileOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setIsMobileOpen(false)}
+        />
+      )}
+
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setIsMobileOpen(!isMobileOpen)}
+        className="fixed top-20 left-4 z-50 lg:hidden bg-gray-800 text-white p-2 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors"
+      >
+        {isMobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+      </button>
+
+      <motion.aside
+        className={`fixed left-0 top-16 h-full bg-gray-900/95 backdrop-blur-md border-r border-gray-700 transition-all duration-300 z-40 ${
+          isCollapsed ? 'w-16' : 'w-64'
+        } ${isMobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}
+        initial={{ x: -256 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.3 }}
+      >
       {/* Toggle Button */}
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
@@ -234,6 +253,7 @@ export function Sidebar() {
           </div>
         )}
       </nav>
-    </motion.aside>
+      </motion.aside>
+    </>
   );
 }
