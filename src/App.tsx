@@ -110,6 +110,15 @@ const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 
+// New AI-powered micro SAAS services from merge branch
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
+const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ServicesComparisonMatrix2025 = React.lazy(() => import('./pages/ServicesComparisonMatrix2025'));
+
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -159,6 +168,7 @@ function App() {
                   <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
                   <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
                   <Route path="/pricing-guide" element={<PricingGuide />} />
+                  <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                   
                   {/* Services Routes */}
                   <Route path="/services" element={<Services />} />
@@ -176,6 +186,8 @@ function App() {
                   <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
                   <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                   <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                  <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+                  <Route path="/services-comparison-matrix-2025" element={<ServicesComparisonMatrix2025 />} />
                   
                   {/* Individual Service Routes */}
                   <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -217,6 +229,12 @@ function App() {
                   <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
                   <Route path="/services/ai-blockchain-supply-chain" element={<AIBlockchainSupplyChain />} />
                   <Route path="/services/ai-cyber-threat-intelligence" element={<AICyberThreatIntelligence />} />
+                  
+                  {/* New AI-powered micro SAAS service routes */}
+                  <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+                  <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+                  <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+                  <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
                   
                   {/* Search and Utility Routes */}
                   <Route path="/search" element={<SearchPage />} />
