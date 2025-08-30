@@ -50,6 +50,7 @@ interface ReportMetrics {
 interface AdvancedReportingDashboardProps {
   showMetrics?: boolean;
   showFilters?: boolean;
+  showCharts?: boolean;
   maxReports?: number;
 }
 
