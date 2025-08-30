@@ -13,7 +13,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$2,999',
         period: '/month',
         description: 'Next-generation financial analytics platform combining quantum computing with AI to provide unprecedented insights into market trends, risk assessment, and investment opportunities.',
-        features[
+        features: [
             'Quantum-enhanced market prediction algorithms',
             'AI-powered risk assessment with 99.9% accuracy',
             'Real-time portfolio optimization using quantum algorithms',
@@ -36,11 +36,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '1 week',
         category: 'Financial Technology & Quantum Computing',
         realService: true,
-        technology['Quantum computing, TensorFlow, PyTorch, Python, React, Node.js, PostgreSQL, Redis'],
-        integrations['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, Fidelity, Charles Schwab'],
-        useCases['Portfolio optimization, Risk management, Market prediction, Fraud detection, Algorithmic trading'],
+        technology: ['Quantum computing, TensorFlow, PyTorch, Python, React, Node.js, PostgreSQL, Redis'],
+        integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, Fidelity, Charles Schwab'],
+        useCases: ['Portfolio optimization, Risk management, Market prediction, Fraud detection, Algorithmic trading'],
         roi: 'Financial institutions report 300% improvement in trading performance and 80% reduction in risk exposure.',
-        competitors['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
+        competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
         marketSize: '$35B financial analytics market',
         growthRate: '200% YoY',
         contactInfo: contact,
@@ -55,7 +55,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$4,999/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Quantum advantage guarantee', 'AI model explainability', 'Regulatory compliance automation'],
+        specialFeatures: ['Quantum advantage guarantee', 'AI model explainability', 'Regulatory compliance automation'],
         industryFocus['Financial Services', 'Investment Management', 'Trading', 'Risk Management'],
         compliance['SOX', 'GLBA', 'PCI-DSS', 'SOC 2 Type II']
     },
@@ -67,7 +67,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$1,499',
         period: '/month',
         description: 'Groundbreaking AI research platform that autonomously conducts research, analyzes data, generates hypotheses, and discovers new insights across multiple domains.',
-        features[
+        features: [
             'Autonomous research planning and execution',
             'Multi-domain knowledge synthesis',
             'Automated hypothesis generation and testing',
@@ -90,11 +90,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '2 weeks',
         category: 'Research & Development & AI',
         realService: true,
-        technology['GPT-4, Claude, LLaMA, Python, FastAPI, React, PostgreSQL, Vector databases'],
-        integrations['PubMed, arXiv, Google Scholar, ResearchGate, Mendeley, EndNote'],
-        useCases['Scientific research, Drug discovery, Market research, Policy analysis, Academic research'],
+        technology: ['GPT-4, Claude, LLaMA, Python, FastAPI, React, PostgreSQL, Vector databases'],
+        integrations: ['PubMed, arXiv, Google Scholar, ResearchGate, Mendeley, EndNote'],
+        useCases: ['Scientific research, Drug discovery, Market research, Policy analysis, Academic research'],
         roi: 'Research organizations report 500% increase in research efficiency and 300% improvement in discovery rates.',
-        competitors['No direct competitors - innovative new category'],
+        competitors: ['No direct competitors - innovative new category'],
         marketSize: '$15B research tools market',
         growthRate: '250% YoY',
         contactInfo: contact,
@@ -109,7 +109,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$2,999/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Autonomous discovery algorithms', 'Cross-domain knowledge synthesis', 'Real-time collaboration tools'],
+        specialFeatures: ['Autonomous discovery algorithms', 'Cross-domain knowledge synthesis', 'Real-time collaboration tools'],
         industryFocus['Research & Development', 'Academia', 'Pharmaceuticals', 'Government', 'Technology'],
         compliance['GDPR', 'HIPAA', 'FERPA', 'SOC 2 Type II']
     },
@@ -121,7 +121,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$899',
         period: '/month',
         description: 'Revolutionary IoT management platform that combines quantum-resistant encryption with AI-powered monitoring to provide unprecedented security and management capabilities.',
-        features[
+        features: [
             'Quantum-resistant encryption for all IoT devices',
             'AI-powered threat detection and prevention',
             'Real-time device monitoring and management',
@@ -144,11 +144,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '1 week',
         category: 'IoT & Cybersecurity',
         realService: true,
-        technology['Quantum-resistant algorithms, AI/ML, Python, React, Node.js, Kubernetes, Docker'],
-        integrations['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP, HTTP/HTTPS'],
-        useCases['Smart manufacturing, Healthcare monitoring, Energy management, Transportation, Smart cities'],
+        technology: ['Quantum-resistant algorithms, AI/ML, Python, React, Node.js, Kubernetes, Docker'],
+        integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP, HTTP/HTTPS'],
+        useCases: ['Smart manufacturing, Healthcare monitoring, Energy management, Transportation, Smart cities'],
         roi: 'Organizations report 400% improvement in IoT security and 200% reduction in device management costs.',
-        competitors['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'],
+        competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'],
         marketSize: '$25B IoT platform market',
         growthRate: '180% YoY',
         contactInfo: contact,
@@ -163,7 +163,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$1,799/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Quantum security guarantee', 'AI-powered threat prevention', 'Edge computing optimization'],
+        specialFeatures: ['Quantum security guarantee', 'AI-powered threat prevention', 'Edge computing optimization'],
         industryFocus['Manufacturing', 'Healthcare', 'Energy', 'Transportation', 'Smart Cities'],
         compliance['ISO 27001', 'SOC 2 Type II', 'GDPR', 'HIPAA']
     },
@@ -175,7 +175,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$1,799',
         period: '/month',
         description: 'Advanced supply chain optimization platform that uses AI to autonomously manage inventory, predict demand, optimize routes, and adapt to changing market conditions.',
-        features[
+        features: [
             'Autonomous demand forecasting with 95% accuracy',
             'Real-time inventory optimization',
             'AI-powered route optimization',
@@ -198,11 +198,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '2 weeks',
         category: 'Supply Chain & Logistics',
         realService: true,
-        technology['AI/ML, Python, React, Node.js, PostgreSQL, Redis, AWS, Azure'],
-        integrations['SAP, Oracle, NetSuite, Shopify, WooCommerce, WMS systems'],
-        useCases['Inventory management, Demand forecasting, Route optimization, Supplier management, Cost optimization'],
+        technology: ['AI/ML, Python, React, Node.js, PostgreSQL, Redis, AWS, Azure'],
+        integrations: ['SAP, Oracle, NetSuite, Shopify, WooCommerce, WMS systems'],
+        useCases: ['Inventory management, Demand forecasting, Route optimization, Supplier management, Cost optimization'],
         roi: 'Companies report 300% improvement in supply chain efficiency and 200% reduction in operational costs.',
-        competitors['SAP SCM, Oracle SCM, Manhattan Associates, JDA Software'],
+        competitors: ['SAP SCM, Oracle SCM, Manhattan Associates, JDA Software'],
         marketSize: '$18B supply chain management market',
         growthRate: '160% YoY',
         contactInfo: contact,
@@ -217,7 +217,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$3,599/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Autonomous optimization', 'Real-time adaptation', 'Sustainability tracking'],
+        specialFeatures: ['Autonomous optimization', 'Real-time adaptation', 'Sustainability tracking'],
         industryFocus['Manufacturing', 'Retail', 'E-commerce', 'Logistics', 'Distribution'],
         compliance['ISO 9001', 'SOC 2 Type II', 'GDPR']
     },
@@ -229,7 +229,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$3,499',
         period: '/month',
         description: 'Revolutionary platform for developing and deploying quantum-enhanced neural networks that combine the power of quantum computing with advanced AI capabilities.',
-        features[
+        features: [
             'Quantum neural network design tools',
             'Hybrid classical-quantum algorithms',
             'Real-time quantum simulation',
@@ -252,11 +252,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '3 weeks',
         category: 'Quantum Computing & AI',
         realService: true,
-        technology['Quantum computing, Qiskit, Cirq, Python, TensorFlow, PyTorch, React, Node.js'],
-        integrations['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, Classical AI frameworks'],
-        useCases['AI research, Drug discovery, Financial modeling, Climate modeling, Defense applications'],
+        technology: ['Quantum computing, Qiskit, Cirq, Python, TensorFlow, PyTorch, React, Node.js'],
+        integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, Classical AI frameworks'],
+        useCases: ['AI research, Drug discovery, Financial modeling, Climate modeling, Defense applications'],
         roi: 'Research organizations report 1000% improvement in AI model performance and 500% reduction in training time.',
-        competitors['No direct competitors - innovative new category'],
+        competitors: ['No direct competitors - innovative new category'],
         marketSize: '$8B quantum computing market',
         growthRate: '300% YoY',
         contactInfo: contact,
@@ -271,7 +271,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$6,999/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Quantum advantage guarantee', 'Hybrid algorithm development', 'Real-time quantum simulation'],
+        specialFeatures: ['Quantum advantage guarantee', 'Hybrid algorithm development', 'Real-time quantum simulation'],
         industryFocus['Research & Development', 'Technology', 'Defense', 'Pharmaceuticals', 'Finance'],
         compliance['ITAR', 'SOC 2 Type II', 'ISO 27001']
     },
@@ -283,7 +283,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$2,199',
         period: '/month',
         description: 'Revolutionary business operations platform that uses AI to autonomously manage and optimize all aspects of business operations, from finance to HR to customer service.',
-        features[
+        features: [
             'Autonomous financial management and optimization',
             'AI-powered HR and talent management',
             'Automated customer service and support',
@@ -306,11 +306,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '3 weeks',
         category: 'Business Operations & AI',
         realService: true,
-        technology['AI/ML, Python, React, Node.js, PostgreSQL, Redis, AWS, Azure'],
-        integrations['SAP, Oracle, Salesforce, HubSpot, QuickBooks, Xero, ADP'],
-        useCases['Financial management, HR operations, Customer service, Process optimization, Performance monitoring'],
+        technology: ['AI/ML, Python, React, Node.js, PostgreSQL, Redis, AWS, Azure'],
+        integrations: ['SAP, Oracle, Salesforce, HubSpot, QuickBooks, Xero, ADP'],
+        useCases: ['Financial management, HR operations, Customer service, Process optimization, Performance monitoring'],
         roi: 'Companies report 400% improvement in operational efficiency and 300% reduction in operational costs.',
-        competitors['SAP ERP, Oracle ERP, NetSuite, Microsoft Dynamics'],
+        competitors: ['SAP ERP, Oracle ERP, NetSuite, Microsoft Dynamics'],
         marketSize: '$45B ERP market',
         growthRate: '140% YoY',
         contactInfo: contact,
@@ -325,7 +325,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$4,399/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Autonomous operations', 'AI decision making', 'Multi-department coordination'],
+        specialFeatures: ['Autonomous operations', 'AI decision making', 'Multi-department coordination'],
         industryFocus['Manufacturing', 'Retail', 'Services', 'Technology', 'Healthcare'],
         compliance['SOX', 'SOC 2 Type II', 'GDPR', 'HIPAA']
     },
@@ -337,7 +337,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$1,299',
         period: '/month',
         description: 'Revolutionary healthcare data platform that combines quantum-resistant encryption with AI-powered analytics to provide unprecedented security and insights for healthcare organizations.',
-        features[
+        features: [
             'Quantum-resistant encryption for all healthcare data',
             'AI-powered data analytics and insights',
             'Real-time patient monitoring and alerts',
@@ -360,11 +360,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '4 weeks',
         category: 'Healthcare & Cybersecurity',
         realService: true,
-        technology['Quantum-resistant algorithms, AI/ML, Python, React, Node.js, HIPAA-compliant cloud'],
-        integrations['Epic, Cerner, Practice Fusion, Allscripts, Medical devices, Research databases'],
-        useCases['Patient data management, Clinical research, Drug development, Population health, Predictive medicine'],
+        technology: ['Quantum-resistant algorithms, AI/ML, Python, React, Node.js, HIPAA-compliant cloud'],
+        integrations: ['Epic, Cerner, Practice Fusion, Allscripts, Medical devices, Research databases'],
+        useCases: ['Patient data management, Clinical research, Drug development, Population health, Predictive medicine'],
         roi: 'Healthcare organizations report 500% improvement in data security and 300% improvement in patient outcomes.',
-        competitors['Epic, Cerner, Allscripts, Practice Fusion'],
+        competitors: ['Epic, Cerner, Allscripts, Practice Fusion'],
         marketSize: '$28B healthcare IT market',
         growthRate: '120% YoY',
         contactInfo: contact,
@@ -379,7 +379,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$2,599/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Quantum security guarantee', 'AI-powered insights', 'HIPAA compliance automation'],
+        specialFeatures: ['Quantum security guarantee', 'AI-powered insights', 'HIPAA compliance automation'],
         industryFocus['Healthcare', 'Pharmaceuticals', 'Research', 'Medical Devices'],
         compliance['HIPAA', 'HITECH', 'SOC 2 Type II', 'ISO 27001']
     },
@@ -391,7 +391,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$999',
         period: '/month',
         description: 'Advanced marketing platform that uses AI to autonomously create, optimize, and execute marketing campaigns across all channels with unprecedented precision and efficiency.',
-        features[
+        features: [
             'Autonomous campaign creation and optimization',
             'AI-powered content generation and personalization',
             'Real-time performance monitoring and optimization',
@@ -414,11 +414,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '1 week',
         category: 'Marketing & AI',
         realService: true,
-        technology['AI/ML, GPT-4, Claude, Python, React, Node.js, PostgreSQL, Redis'],
-        integrations['HubSpot, Salesforce, Mailchimp, Facebook Ads, Google Ads, LinkedIn Ads'],
-        useCases['Campaign management, Content creation, Audience targeting, Performance optimization, ROI tracking'],
+        technology: ['AI/ML, GPT-4, Claude, Python, React, Node.js, PostgreSQL, Redis'],
+        integrations: ['HubSpot, Salesforce, Mailchimp, Facebook Ads, Google Ads, LinkedIn Ads'],
+        useCases: ['Campaign management, Content creation, Audience targeting, Performance optimization, ROI tracking'],
         roi: 'Companies report 300% improvement in marketing ROI and 200% reduction in campaign management time.',
-        competitors['HubSpot, Marketo, Pardot, ActiveCampaign'],
+        competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],
         marketSize: '$22B marketing automation market',
         growthRate: '180% YoY',
         contactInfo: contact,
@@ -433,7 +433,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$1,999/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Autonomous campaign management', 'AI content generation', 'Real-time optimization'],
+        specialFeatures: ['Autonomous campaign management', 'AI content generation', 'Real-time optimization'],
         industryFocus['E-commerce', 'B2B', 'SaaS', 'Marketing Agencies', 'Retail'],
         compliance['GDPR', 'CCPA', 'SOC 2 Type II']
     },
@@ -445,7 +445,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$1,599',
         period: '/month',
         description: 'Revolutionary cloud infrastructure platform that combines quantum-resistant security with AI-powered optimization to provide unprecedented performance, security, and efficiency.',
-        features[
+        features: [
             'Quantum-resistant encryption for all data and communications',
             'AI-powered infrastructure optimization',
             'Real-time performance monitoring and scaling',
@@ -468,11 +468,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '2 weeks',
         category: 'Cloud Infrastructure & Cybersecurity',
         realService: true,
-        technology['Quantum-resistant algorithms, AI/ML, Kubernetes, Docker, Python, React, Node.js'],
-        integrations['AWS, Azure, Google Cloud, VMware, OpenStack, Kubernetes'],
-        useCases['Application hosting, Data storage, Infrastructure management, Disaster recovery, Edge computing'],
+        technology: ['Quantum-resistant algorithms, AI/ML, Kubernetes, Docker, Python, React, Node.js'],
+        integrations: ['AWS, Azure, Google Cloud, VMware, OpenStack, Kubernetes'],
+        useCases: ['Application hosting, Data storage, Infrastructure management, Disaster recovery, Edge computing'],
         roi: 'Organizations report 400% improvement in security and 200% improvement in performance.',
-        competitors['AWS, Azure, Google Cloud, IBM Cloud'],
+        competitors: ['AWS, Azure, Google Cloud, IBM Cloud'],
         marketSize: '$120B cloud infrastructure market',
         growthRate: '160% YoY',
         contactInfo: contact,
@@ -487,7 +487,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$3,199/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Quantum security guarantee', 'AI optimization', 'Multi-cloud management'],
+        specialFeatures: ['Quantum security guarantee', 'AI optimization', 'Multi-cloud management'],
         industryFocus['Technology', 'Finance', 'Healthcare', 'Government', 'Enterprise'],
         compliance['SOC 2 Type II', 'ISO 27001', 'PCI-DSS', 'HIPAA']
     },
@@ -499,7 +499,7 @@ export const ultimateInnovativeServices2025 = [
         price: '$1,899',
         period: '/month',
         description: 'Advanced legal platform that uses AI to autonomously analyze legal documents, draft contracts, manage cases, and provide legal insights with unprecedented accuracy and efficiency.',
-        features[
+        features: [
             'AI-powered legal document analysis and review',
             'Autonomous contract drafting and optimization',
             'Real-time case management and tracking',
@@ -522,11 +522,11 @@ export const ultimateInnovativeServices2025 = [
         setupTime: '2 weeks',
         category: 'Legal Technology & AI',
         realService: true,
-        technology['AI/ML, GPT-4, Claude, Python, React, Node.js, PostgreSQL, Vector databases'],
-        integrations['DocuSign, Adobe Sign, Microsoft Word, Google Docs, Legal research databases'],
-        useCases['Contract management, Legal research, Case management, Risk assessment, Compliance monitoring'],
+        technology: ['AI/ML, GPT-4, Claude, Python, React, Node.js, PostgreSQL, Vector databases'],
+        integrations: ['DocuSign, Adobe Sign, Microsoft Word, Google Docs, Legal research databases'],
+        useCases: ['Contract management, Legal research, Case management, Risk assessment, Compliance monitoring'],
         roi: 'Legal organizations report 400% improvement in efficiency and 300% reduction in document review time.',
-        competitors['DocuSign, ContractPodAi, Evisort, Kira Systems'],
+        competitors: ['DocuSign, ContractPodAi, Evisort, Kira Systems'],
         marketSize: '$12B legal tech market',
         growthRate: '140% YoY',
         contactInfo: contact,
@@ -541,7 +541,7 @@ export const ultimateInnovativeServices2025 = [
             professional: '$3,799/month',
             enterprise: 'Custom pricing'
         },
-        specialFeatures['Autonomous legal analysis', 'AI contract drafting', 'Multi-jurisdiction support'],
+        specialFeatures: ['Autonomous legal analysis', 'AI contract drafting', 'Multi-jurisdiction support'],
         industryFocus['Legal Services', 'Corporate', 'Government', 'Technology', 'Finance'],
         compliance['SOC 2 Type II', 'ISO 27001', 'GDPR']
     }

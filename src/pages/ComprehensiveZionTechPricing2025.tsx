@@ -11,14 +11,14 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getPrice = (service: ) => {
+  const getPrice = (service: any) => {
     if (billingCycle === 'yearly' && service.pricing?.yearly) {
       return service.pricing.yearly;
     }
     return service.price;
   };
 
-  const getSavings = (service: ) => {
+  const getSavings = (service: any) => {
     if (billingCycle === 'yearly' && service.pricing?.yearly) {
       return (service.price * 12 - service.pricing.yearly).toLocaleString();
     }

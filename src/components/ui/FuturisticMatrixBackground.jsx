@@ -15,7 +15,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Matrix characters
-        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;:,.<>?";
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;: any,.<>?";
         const matrixArray = matrix.split("");
         const fontSize = intensity === 'high' ? 14 : intensity === 'medium' ? 12 : 10;
         const columns = canvas.width / fontSize;

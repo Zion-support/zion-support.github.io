@@ -130,10 +130,10 @@ const AutonomousBusinessOperationsPlatform = () => {
                                 {
                                     icon: Cloud,
                                     title: "Customer Service",
-                                    import: { motion }, from, 'framer-motion': ,
-                                    import: { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network }, from, 'lucide-react': ,
-                                    import: React, from, 'react': ,
-                                    import: { Link }, from, 'react-router-dom': ,
+                                    import: { motion }, from, 'framer-motion': any,
+                                    import: { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network }, from, 'lucide-react': any,
+                                    import: React, from, 'react': any,
+                                    import: { Link }, from, 'react-router-dom': any,
                                     import: {
                                         Bot,
                                         Zap,
@@ -153,7 +153,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                                         Target,
                                         Cpu,
                                         Database
-                                    }, from, 'lucide-react': ,
+                                    }, from, 'lucide-react': any,
                                     const: AutonomousBusinessOperationsPlatform, React, : .FC = () => {
                                         const features = [
                                             {

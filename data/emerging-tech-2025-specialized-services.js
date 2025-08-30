@@ -10,7 +10,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         subcategory: 'Identity & Authentication',
         price: '$1,299',
         period: '/month',
-        features[
+        features: [
             'Self-sovereign identity management',
             'Zero-knowledge proof verification',
             'Verifiable credentials',
@@ -30,7 +30,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Seamless cross-platform authentication',
             'Cost-effective identity management'
         ],
-        useCases[
+        useCases: [
             'Enterprise authentication',
             'Financial services KYC',
             'Healthcare identity verification',
@@ -46,7 +46,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Educational institutions',
             'Technology companies'
         ],
-        technology[
+        technology: [
             'Blockchain',
             'Zero-Knowledge Proofs',
             'Verifiable Credentials',
@@ -54,7 +54,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Distributed Systems',
             'Web3 Protocols'
         ],
-        integrations[
+        integrations: [
             'Ethereum',
             'Polygon',
             'Solana',
@@ -64,7 +64,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         ],
         marketPosition: 'First enterprise-grade decentralized identity platform with zero-knowledge proofs',
         roi: '400% ROI through fraud prevention and compliance automation',
-        competitors['Microsoft Entra', 'Okta', 'Auth0', 'Spruce ID'],
+        competitors: ['Microsoft Entra', 'Okta', 'Auth0', 'Spruce ID'],
         marketSize: '$18.7B identity and access management market',
         growthRate: '320% annual growth in decentralized identity',
         contactInfo: {
@@ -90,7 +90,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         subcategory: 'DeFi & Analytics',
         price: '$899',
         period: '/month',
-        features[
+        features: [
             'Real-time DeFi market analysis',
             'AI-powered yield optimization',
             'Cross-chain portfolio tracking',
@@ -110,7 +110,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Reduced gas costs',
             'Professional-grade analytics'
         ],
-        useCases[
+        useCases: [
             'DeFi portfolio management',
             'Yield farming optimization',
             'Risk management',
@@ -126,7 +126,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Institutional investors',
             'DeFi protocols'
         ],
-        technology[
+        technology: [
             'Artificial Intelligence',
             'Machine Learning',
             'Blockchain Analytics',
@@ -134,7 +134,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Cross-chain Technology',
             'Real-time Data Processing'
         ],
-        integrations[
+        integrations: [
             'Ethereum',
             'Polygon',
             'BSC',
@@ -144,7 +144,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         ],
         marketPosition: 'First AI-powered DeFi analytics platform with cross-chain optimization',
         roi: '300% ROI through yield optimization and risk reduction',
-        competitors['DeFi Pulse', 'DeFi Llama', 'Zapper', 'DeBank'],
+        competitors: ['DeFi Pulse', 'DeFi Llama', 'Zapper', 'DeBank'],
         marketSize: '$12.8B DeFi analytics market',
         growthRate: '450% annual growth in DeFi analytics',
         contactInfo: {
@@ -171,7 +171,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         subcategory: 'Fleet Management & Logistics',
         price: '$2,499',
         period: '/month',
-        features[
+        features: [
             'Real-time fleet tracking',
             'AI-powered route optimization',
             'Predictive maintenance alerts',
@@ -191,7 +191,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Enhanced driver safety',
             'Comprehensive fleet analytics'
         ],
-        useCases[
+        useCases: [
             'Logistics and delivery',
             'Transportation companies',
             'Construction fleets',
@@ -207,7 +207,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Government agencies',
             'Emergency services'
         ],
-        technology[
+        technology: [
             'Internet of Things',
             'Edge Computing',
             'Artificial Intelligence',
@@ -215,7 +215,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Real-time Analytics',
             'GPS and Telematics'
         ],
-        integrations[
+        integrations: [
             'GPS Systems',
             'Vehicle Telematics',
             'Weather APIs',
@@ -225,7 +225,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         ],
         marketPosition: 'First autonomous IoT fleet management system with AI-powered optimization',
         roi: '400% ROI through cost reduction and efficiency improvements',
-        competitors['Samsara', 'Verizon Connect', 'Geotab', 'Fleet Complete'],
+        competitors: ['Samsara', 'Verizon Connect', 'Geotab', 'Fleet Complete'],
         marketSize: '$25.5B fleet management market',
         growthRate: '280% annual growth in IoT fleet management',
         contactInfo: {
@@ -251,7 +251,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         subcategory: 'Manufacturing & Industry 4.0',
         price: '$3,999',
         period: '/month',
-        features[
+        features: [
             'Edge AI processing on manufacturing equipment',
             'Real-time quality control',
             'Predictive maintenance',
@@ -271,7 +271,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Enhanced worker safety',
             'Automated quality control'
         ],
-        useCases[
+        useCases: [
             'Manufacturing optimization',
             'Quality control',
             'Predictive maintenance',
@@ -287,7 +287,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Food processing plants',
             'Chemical plants'
         ],
-        technology[
+        technology: [
             'Edge Computing',
             'Artificial Intelligence',
             'Machine Learning',
@@ -295,7 +295,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Real-time Analytics',
             'Industrial Automation'
         ],
-        integrations[
+        integrations: [
             'PLC Systems',
             'SCADA Systems',
             'ERP Systems',
@@ -305,7 +305,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         ],
         marketPosition: 'First edge AI manufacturing platform with real-time optimization',
         roi: '500% ROI through efficiency improvements and cost reduction',
-        competitors['Siemens Mindsphere', 'GE Predix', 'PTC ThingWorx', 'SAP Leonardo'],
+        competitors: ['Siemens Mindsphere', 'GE Predix', 'PTC ThingWorx', 'SAP Leonardo'],
         marketSize: '$18.2B edge computing market',
         growthRate: '380% annual growth in edge AI manufacturing',
         contactInfo: {
@@ -332,7 +332,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         subcategory: 'Environmental Management',
         price: '$1,799',
         period: '/month',
-        features[
+        features: [
             'Real-time carbon footprint tracking',
             'AI-powered sustainability optimization',
             'Automated sustainability reporting',
@@ -352,7 +352,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Cost savings through efficiency',
             'Enhanced brand reputation'
         ],
-        useCases[
+        useCases: [
             'Corporate sustainability',
             'ESG compliance',
             'Carbon accounting',
@@ -368,7 +368,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Government agencies',
             'Non-profit organizations'
         ],
-        technology[
+        technology: [
             'Artificial Intelligence',
             'Machine Learning',
             'IoT Sensors',
@@ -376,7 +376,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Sustainability Metrics',
             'ESG Reporting Tools'
         ],
-        integrations[
+        integrations: [
             'ERP Systems',
             'Energy Management Systems',
             'Waste Management Systems',
@@ -386,7 +386,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         ],
         marketPosition: 'First AI-powered carbon footprint management platform with real-time optimization',
         roi: '300% ROI through sustainability optimization and compliance automation',
-        competitors['Watershed', 'Normative', 'Persefoni', 'Carbon Analytics'],
+        competitors: ['Watershed', 'Normative', 'Persefoni', 'Carbon Analytics'],
         marketSize: '$8.9B sustainability management market',
         growthRate: '420% annual growth in AI sustainability',
         contactInfo: {
@@ -419,7 +419,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         subcategory: 'Energy & Smart Grid',
         price: '$4,999',
         period: '/month',
-        features[
+        features: [
             'Real-time grid monitoring',
             'AI-powered demand prediction',
             'Renewable energy integration',
@@ -439,7 +439,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Predictive maintenance prevents outages',
             'Optimized energy distribution'
         ],
-        useCases[
+        useCases: [
             'Utility grid management',
             'Renewable energy integration',
             'Demand response programs',
@@ -455,7 +455,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Commercial buildings',
             'Government agencies'
         ],
-        technology[
+        technology: [
             'Artificial Intelligence',
             'Machine Learning',
             'IoT Sensors',
@@ -463,7 +463,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Energy Management Systems',
             'Predictive Analytics'
         ],
-        integrations[
+        integrations: [
             'SCADA Systems',
             'Energy Management Systems',
             'Renewable Energy Systems',
@@ -473,7 +473,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         ],
         marketPosition: 'First AI-powered smart grid platform with comprehensive energy optimization',
         roi: '600% ROI through energy optimization and grid reliability improvements',
-        competitors['Schneider Electric', 'Siemens', 'GE Grid Solutions', 'ABB'],
+        competitors: ['Schneider Electric', 'Siemens', 'GE Grid Solutions', 'ABB'],
         marketSize: '$32.1B smart grid market',
         growthRate: '350% annual growth in AI smart grid',
         contactInfo: {
@@ -500,7 +500,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         subcategory: 'Satellite Analytics & Earth Observation',
         price: '$2,999',
         period: '/month',
-        features[
+        features: [
             'Real-time satellite data processing',
             'AI-powered image analysis',
             'Climate change monitoring',
@@ -520,7 +520,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Agricultural optimization',
             'Urban planning insights'
         ],
-        useCases[
+        useCases: [
             'Climate change monitoring',
             'Agricultural optimization',
             'Urban planning',
@@ -536,7 +536,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Insurance companies',
             'Research institutions'
         ],
-        technology[
+        technology: [
             'Satellite Technology',
             'Artificial Intelligence',
             'Machine Learning',
@@ -544,7 +544,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Big Data Analytics',
             'Geospatial Analysis'
         ],
-        integrations[
+        integrations: [
             'Satellite Data Providers',
             'GIS Systems',
             'Weather APIs',
@@ -554,7 +554,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         ],
         marketPosition: 'First AI-powered satellite data analytics platform with global coverage',
         roi: '400% ROI through data-driven insights and optimization',
-        competitors['Planet Labs', 'Maxar Technologies', 'Airbus Defence and Space', 'DigitalGlobe'],
+        competitors: ['Planet Labs', 'Maxar Technologies', 'Airbus Defence and Space', 'DigitalGlobe'],
         marketSize: '$4.2B satellite data analytics market',
         growthRate: '280% annual growth in satellite analytics',
         contactInfo: {
@@ -581,7 +581,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         subcategory: 'Synthetic Biology & Bioengineering',
         price: '$6,999',
         period: '/month',
-        features[
+        features: [
             'AI-powered DNA design',
             'Protein engineering automation',
             'Metabolic pathway optimization',
@@ -601,7 +601,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Enhanced safety profiles',
             'Regulatory compliance automation'
         ],
-        useCases[
+        useCases: [
             'Drug development',
             'Agricultural biotechnology',
             'Industrial biotechnology',
@@ -617,7 +617,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Government agencies',
             'Academic institutions'
         ],
-        technology[
+        technology: [
             'Artificial Intelligence',
             'Machine Learning',
             'Synthetic Biology',
@@ -625,7 +625,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
             'Computational Biology',
             'Gene Editing'
         ],
-        integrations[
+        integrations: [
             'Laboratory Information Systems',
             'DNA Synthesis Platforms',
             'Sequencing Platforms',
@@ -635,7 +635,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         ],
         marketPosition: 'First AI-powered synthetic biology platform with comprehensive design capabilities',
         roi: '1500% ROI through accelerated biological system development',
-        competitors['Ginkgo Bioworks', 'Twist Bioscience', 'Benchling', 'DNA Script'],
+        competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Benchling', 'DNA Script'],
         marketSize: '$15.8B synthetic biology market',
         growthRate: '450% annual growth in AI synthetic biology',
         contactInfo: {

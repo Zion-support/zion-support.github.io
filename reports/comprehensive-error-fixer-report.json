@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-08-30T02:32:04.960Z",
+  "timestamp": "2025-08-30T04:56:41.719Z",
   "summary": "Comprehensive Error Fixer completed",
   "status": "partial",
-  "duration": "11027ms",
+  "duration": "23777ms",
   "results": {
     "typescript": {
       "success": true,
@@ -12,7 +12,7 @@
     "eslint": {
       "success": false,
       "errorsFixed": 0,
-      "filesProcessed": 0
+      "filesProcessed": 1
     },
     "build": {
       "success": false,
@@ -22,11 +22,11 @@
     "overall": {
       "success": false,
       "totalErrorsFixed": 0,
-      "totalFilesProcessed": 6
+      "totalFilesProcessed": 7
     }
   },
   "performance": {
-    "totalDuration": 11027,
-    "averageTimePerFix": 11027
+    "totalDuration": 23777,
+    "averageTimePerFix": 23777
   }
 }
