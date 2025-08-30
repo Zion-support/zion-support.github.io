@@ -113,8 +113,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } else {
       return { status: 'poor', color: 'text-red-400', icon: <AlertTriangle className="w-4 h-4" /> };
     }
-  };
-
+  }, []);
   useEffect(() => {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
