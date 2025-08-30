@@ -1,10 +1,11 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { DollarSign, 
-  TrendingUp, 
-  Users, 
-  Clock, 
-  CheckCircle, 
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import {
+  DollarSign,
+  TrendingUp,
+  Users,
+  Clock,
+  CheckCircle,
   Star,
   Phone,
   Mail,
@@ -14,10 +15,9 @@ import { DollarSign,
   Shield,
   Cpu,
   Brain
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO  } from "../components/SEO";
-import { ALL_PRICING_GUIDES_2026, marketSummary2026  } from "../data/comprehensivePricingGuide2026";
+} from 'lucide-react';
+import SEO from '../components/SEO';
+import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
 
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
@@ -35,12 +35,15 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];
   const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
 
-  const filtered = ALL_PRICING_GUIDES_2026;
-    
+  const filteredPricing = useMemo(() => {
+    let filtered = ALL_PRICING_GUIDES_2026;
+
     if (selectedService !== 'all') {
-      filtered = filtered.filter(service => service.serviceName === selectedService)};
-    ;
-    return filtered}, [selectedService]);
+      filtered = filtered.filter(service => service.serviceName === selectedService);
+    }
+
+    return filtered;
+  }, [selectedService]);
 
 <<<<<<< HEAD
   const getServiceIcon = (serviceName: string) => {;
@@ -64,38 +67,20 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
   return (
     <>
-      <SEO 
-        title = "Comprehensive Pricing Guide 2026 - Zion Tech Group"
+      <SEO
+        title="Comprehensive Pricing Guide 2026 - Zion Tech Group"
         description="Explore detailed pricing for Zion Tech Group's revolutionary 2026 services. Compare pricing tiers, ROI analysis, and market comparisons."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, 2026 services, Zion Tech Group"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20">
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20"></div>
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <motion.h1 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
             >
@@ -104,75 +89,21 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 Guide 2026
               </span>
             </motion.h1>
-            <motion.p 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
             >
-              Transparent pricing for revolutionary services. Compare pricing tiers, analyze ROI, and understand the value proposition 
+              Transparent pricing for revolutionary services. Compare pricing tiers, analyze ROI, and understand the value proposition
               of Zion Tech Group's cutting-edge 2026 solutions.
             </motion.p>
-            
+
             {/* Market Summary Cards */}
-            <motion.div 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
             >
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -300,7 +231,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                       <div className="text-zinc-400">Competitors</div>
                     </div>
                   </div>
-                  
+
                   {/* Competitors */}
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3 text-center">Competitor Pricing</h4>
@@ -477,32 +408,14 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
         {/* Market Trends Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 rounded-3xl p-12 border border-white/10"
             >
               <h2 className="text-4xl font-bold text-white mb-8 text-center">Market Trends & Competitive Advantages</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Key Trends */}
                 <div>
@@ -537,27 +450,9 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
         {/* Contact CTA Section */}
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
-            <motion.div 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/10"
             >
@@ -565,7 +460,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services 
+                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services
                 can transform your business with unprecedented ROI and performance improvements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

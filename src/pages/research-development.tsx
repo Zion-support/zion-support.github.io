@@ -379,8 +379,9 @@ export default function ResearchDevelopment(...args[]):  {
   const filteredProjects = researchProjects.filter(project => {;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    return matchesArea && matchesStatus && matchesSearch});
+
+    return matchesArea && matchesStatus && matchesSearch;
+  });
 
 <<<<<<< HEAD
   const getAreaIcon = (areaName: string) => {;
@@ -443,7 +444,7 @@ export default function ResearchDevelopment(...args[]):  {
               Advancing Technology Frontiers
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Explore Zion Tech Group's cutting-edge research initiatives, innovative projects, 
+              Explore Zion Tech Group's cutting-edge research initiatives, innovative projects,
               and breakthrough technologies that are shaping the future of technology.
             </p>
           </motion.div>
@@ -583,7 +584,7 @@ export default function ResearchDevelopment(...args[]):  {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{area.name}</h3>
                   <p className="text-zion-slate-light mb-4">{area.description}</p>
-                  
+
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Research Focus</h4>
                     <div className="space-y-1">
@@ -983,7 +984,7 @@ export default function ResearchDevelopment(...args[]):  {
                     <h3 className="text-xl font-bold text-white mb-2">{patent.title}</h3>
                     <div className="flex items-center gap-2 mb-3">
                       <span className={`px-3 py-1 text-xs rounded-full border ${
-                        patent.status === 'Granted' 
+                        patent.status === 'Granted'
                           ? 'bg-green-500/20 text-green-400 border-green-500/30'
                           : 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30'
                       }`}>
@@ -1061,7 +1062,7 @@ export default function ResearchDevelopment(...args[]):  {
               Collaborate with Our Research Team
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Partner with Zion Tech Group on cutting-edge research projects, 
+              Partner with Zion Tech Group on cutting-edge research projects,
               explore licensing opportunities, or join our research initiatives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

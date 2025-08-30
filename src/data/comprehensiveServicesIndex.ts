@@ -141,9 +141,9 @@ export const getServicesByInnovationLevel = (level: string) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => ;
-    service.price >= minPrice && service.price <= maxPrice;
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return ALL_COMPREHENSIVE_SERVICES.filter(service =>
+    service.price >= minPrice && service.price <= maxPrice
   );
 };
 

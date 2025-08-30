@@ -23,17 +23,24 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   isOpen: boolean;
   onClose: ()  => void}
 
-export function FilterSidebar(...args[]):  {
+export function FilterSidebar({
+  filters,
+  selectedFilters,
+  onFilterChange,
+  onClearFilters,
+  isOpen,
+  onClose
+}: FilterSidebarProps) {
   return (
     <>
       {/* Mobile overlay */}
       {isOpen && (
-        <div 
-          className = "fixed inset-0 bg-black/50 z-40 lg:hidden"
+        <div
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
-      
+
       {/* Sidebar */}
       <div className={`
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none
@@ -51,7 +58,7 @@ export function FilterSidebar(...args[]):  {
             <X className="w-5 h-5 text-zion-slate-light" />
           </button>
         </div>
-        
+
         <div className="p-4 space-y-6">
           {/* Clear all button */}
           <div className="flex justify-between items-center">
@@ -63,13 +70,13 @@ export function FilterSidebar(...args[]):  {
               Clear all
             </button>
           </div>
-          
+
           {/* Filter groups */}
 <<<<<<< HEAD
           {filters.map((group)  => (
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
-              
+
               <div className="space-y-2">
                 {group.options.map((option) => {
 =======;
@@ -81,7 +88,7 @@ export function FilterSidebar(...args[]):  {
                 {group.options.map((option) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
-                  
+
                   return (
                     <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
                       <input

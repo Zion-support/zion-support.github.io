@@ -1,38 +1,20 @@
-<<<<<<< HEAD
-import { enhancedRealMicroSaasServices  } from "../data/enhanced-real-micro-saas-services";
-import { additionalEnhancedServices  } from "../data/additional-real-services";
-import { innovativeMicroSaasServices  } from "../data/innovative-micro-saas-services";
-import { innovativeAIServices  } from "../data/innovative-ai-services";
-import { enterpriseITServices  } from "../data/enterprise-it-services";
-import { nextGenerationAIServices  } from "../data/next-generation-ai-services";
-import { emergingTechnologyServices  } from "../data/emerging-technology-services";
-import { comprehensiveITSolutions  } from "../data/comprehensive-it-solutions";
-import { realMarketServices  } from "../data/real-market-services";
-import { serviceExpansions2025  } from "../data/service-expansions-2025";
-import { verifiedRealServices2025Batch2  } from "../data/verified-real-services-2025-batch2";
-import { realOperationalServices  } from "../data/real-operational-services";
-import { newOperationalServices2025  } from "../data/new-operational-services-2025";
-import { innovative2025Services  } from "../data/innovative-2025-services";
-import { emergingTech2025Services  } from "../data/emerging-tech-2025-services";
-import { professionalServices  } from "../data/professional-services";
-export type ServiceRecord = ;const allServiceArrays: ServiceRecord[][] = [
-=======
-import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-import { additionalEnhancedServices } from "../data/additional-real-services";
-import { innovativeMicroSaasServices } from "../data/innovative-micro-saas-services";
-import { innovativeAIServices } from "../data/innovative-ai-services";
-import { enterpriseITServices } from "../data/enterprise-it-services";
-import { nextGenerationAIServices } from "../data/next-generation-ai-services";
-import { emergingTechnologyServices } from "../data/emerging-technology-services";
-import { comprehensiveITSolutions } from "../data/comprehensive-it-solutions";
-import { realMarketServices } from "../data/real-market-services";
-import { serviceExpansions2025 } from "../data/service-expansions-2025";
-import { verifiedRealServices2025Batch2 } from "../data/verified-real-services-2025-batch2";
-import { realOperationalServices } from "../data/real-operational-services";
-import { newOperationalServices2025 } from "../data/new-operational-services-2025";
-import { innovative2025Services } from "../data/innovative-2025-services";
-import { emergingTech2025Services } from "../data/emerging-tech-2025-services";
-import { professionalServices } from "../data/professional-services";
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { realMarketServices } from '../data/real-market-services';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
+import { realOperationalServices } from '../data/real-operational-services';
+import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import { professionalServices } from '../data/professional-services';
+import { real2029Q2Additions } from '../data/real-2029-q2-additions';
 export type ServiceRecord = any;
 const allServiceArrays: ServiceRecord[][] = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -52,6 +34,7 @@ const allServiceArrays: ServiceRecord[][] = [
 	innovative2025Services,
 	emergingTech2025Services,
 	professionalServices
+	,real2029Q2Additions
 ];
 export function findServiceBySlug(slug: string): ServiceRecord | null {
 	for (const arr of allServiceArrays) {

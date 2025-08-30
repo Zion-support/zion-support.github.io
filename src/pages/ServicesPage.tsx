@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Server,
+  Zap,
+  Globe,
+  Cpu,
   Database,
   Network,
   Lock,
@@ -28,28 +29,58 @@ import { Brain,
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon
- } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+  Globe as GlobeIcon,
+  Sparkles,
+  Target,
+  Award,
+  Lightbulb,
+  BarChart3,
+  Layers,
+  Cpu as CpuIcon,
+  Shield as ShieldIcon,
+  Brain as BrainIcon,
+  Rocket as RocketIcon,
+  Truck,
+  Scale,
+  Building
+} from 'lucide-react';
+import SEO from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { EXPANDED_MICRO_SAAS_SERVICES_2025 } from "@/data/expandedMicroSaasServices2025";
+import { SPECIALIZED_SERVICES_2025 } from "@/data/specializedServices2025";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
+  const [activeTab, setActiveTab] = useState('all');
+
+  // Combine all services
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...EXPANDED_MICRO_SAAS_SERVICES_2025,
+    ...SPECIALIZED_SERVICES_2025
+  ];
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },;
-    { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },;
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },;
-    { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-zion-pink to-zion-purple' },;
-    { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-blue' },;
-    { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-zion-blue to-zion-purple' },;
-    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green' };
+    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-zion-cyan to-zion-blue' },
+    { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
+    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
+    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
+    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
+    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
+    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
+    { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-cyan' },
+    { id: 'healthcare', name: 'Healthcare', icon: Shield, color: 'from-zion-blue to-zion-purple' },
+    { id: 'logistics', name: 'Logistics', icon: Truck, color: 'from-zion-orange to-zion-blue' },
+    { id: 'legal', name: 'Legal Tech', icon: Scale, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'education', name: 'Education', icon: BookOpen, color: 'from-zion-cyan to-zion-green' },
+    { id: 'manufacturing', name: 'Manufacturing', icon: CpuIcon, color: 'from-zion-blue to-zion-orange' },
+    { id: 'real-estate', name: 'Real Estate', icon: Building, color: 'from-zion-purple to-zion-green' }
   ];
 
   const priceRanges = [;
@@ -67,28 +98,28 @@ export default function ServicesPage() {
     { id: 'popular', name: 'Most Popular' };
   ];
 
-  // Filter and sort services
-  const allServices = [;
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,;
-    ...SPECIALIZED_SERVICES,;
-    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,;
-    ...ADDITIONAL_SPECIALIZED_SERVICES;
+  const tabs = [
+    { id: 'all', name: 'All Services', count: allServices.length },
+    { id: 'micro-saas', name: 'Micro SAAS', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
+    { id: 'expanded', name: 'Expanded Services', count: EXPANDED_MICRO_SAAS_SERVICES_2025.length },
+    { id: 'specialized', name: 'Specialized', count: SPECIALIZED_SERVICES_2025.length }
   ];
-  
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+
+  const filteredServices = allServices.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-    
-    const matchesCategory = selectedCategory === 'all' || ;
+
+    const matchesCategory = selectedCategory === 'all' ||
                            service.category.toLowerCase().includes(selectedCategory);
-    
-    const matchesPrice = selectedPriceRange === 'all' || ;
-                        (selectedPriceRange === 'budget' && service.price <= 1000) ||;
-                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||;
+
+    const matchesPrice = selectedPriceRange === 'all' ||
+                        (selectedPriceRange === 'budget' && service.price <= 1000) ||
+                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 5000);
-    
-    return matchesSearch && matchesCategory && matchesPrice});
+
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {;
@@ -107,7 +138,8 @@ export default function ServicesPage() {
   const getCategoryIcon = (category: string) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.icon : Zap};
+    return cat ? cat.icon : Sparkles;
+  };
 
 <<<<<<< HEAD
   const getCategoryColor = (category: string) => {;
@@ -115,26 +147,41 @@ export default function ServicesPage() {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
+  const getInnovationLevelColor = (level: string) => {
+    switch (level) {
+      case 'Cutting-edge':
+        return 'bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30';
+      case 'Advanced':
+        return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30';
+      default:
+        return 'bg-zion-blue/20 text-zion-blue border-zion-blue/30';
+    }
+  };
+
   return (
     <>
-      <SEO 
-        title = "Innovative Micro SAAS Services - Zion Tech Group"
+      <SEO
+        title="Innovative Micro SAAS Services - Zion Tech Group"
         description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services."
         canonical="/services"
         url="https://ziontechgroup.com/services"
       />
-      
+
       {/* Hero Section */}
-      <section className="bg-futuristic min-h-[60vh] flex items-center relative overflow-hidden">
-        {/* Animated background elements */}
+      <section className="bg-futuristic min-h-[70vh] flex items-center relative overflow-hidden">
+        {/* Enhanced animated background elements */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
+          <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse float"></div>
+          <div className="absolute bottom-20 right-20 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000 float-delayed"></div>
+          <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000 float-slow"></div>
+          <div className="absolute top-40 right-40 w-16 h-16 border border-zion-cyan rounded-full animate-pulse delay-3000 float-fast"></div>
         </div>
 
+        {/* Neon grid background */}
+        <div className="absolute inset-0 bg-neon-grid opacity-5"></div>
+
         <div className="container-responsive relative z-10">
-          <motion.div 
+          <motion.div
             className="text-center max-w-4xl mx-auto"
             initial = {
   { opacity: 0,
@@ -158,33 +205,46 @@ export default function ServicesPage() {
 }}
             transition={{ duration: 0.8 }}
           >
+            <motion.div
+              className="mb-6"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-4">
+                <Sparkles className="w-4 h-4" />
+                <span>2025 Innovation Hub</span>
+              </div>
+            </motion.div>
+
             <h1 className="heading-responsive font-bold mb-6">
-              <span className="text-gradient">Innovative Micro SAAS</span>
+              <span className="text-gradient">Next-Generation</span>
               <br />
-              <span className="text-white">Services & Solutions</span>
+              <span className="text-white">Micro SAAS Platform</span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing, 
+              Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing,
               discover the future of business technology with our comprehensive micro SAAS platform.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <div className="relative group">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 group-hover:text-zion-cyan transition-colors duration-300" />
                 <input
                   type="text"
                   placeholder="Search for services, technologies, or solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
+                  className="input-futuristic w-full pl-12 pr-4 py-4 text-lg placeholder-zion-slate-light"
                 />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
               </div>
             </div>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <motion.div 
+              <motion.div
                 className="text-center"
                 initial = {
   { opacity: 0,
@@ -220,7 +280,7 @@ export default function ServicesPage() {
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="text-center"
                 initial = {
   { opacity: 0,
@@ -256,7 +316,7 @@ export default function ServicesPage() {
                 <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="text-center"
                 initial = {
   { opacity: 0,
@@ -297,11 +357,38 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Service Tabs */}
+      <section className="py-8 bg-zion-slate-dark/50 border-b border-zion-cyan/20">
+        <div className="container-responsive">
+          <motion.div 
+            className="flex flex-wrap gap-2 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
+                    : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white'
+                }`}
+              >
+                {tab.name}
+                <span className="px-2 py-1 bg-white/20 rounded-full text-xs">{tab.count}</span>
+              </button>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Filters and Categories */}
       <section className="py-12 bg-zion-slate-dark/50">
         <div className="container-responsive">
           {/* Category Pills */}
-          <motion.div 
+          <motion.div
             className="flex flex-wrap gap-3 mb-8 justify-center"
             initial = {
   { opacity: 0,
@@ -329,20 +416,20 @@ export default function ServicesPage() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 group ${
                   selectedCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white'
                 }`}
               >
-                <category.icon className="w-4 h-4" />
+                <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 {category.name}
               </button>
             ))}
           </motion.div>
 
           {/* Advanced Filters */}
-          <motion.div 
+          <motion.div
             className="flex flex-col md:flex-row gap-4 items-center justify-between"
             initial = {
   { opacity: 0,
@@ -406,7 +493,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
+              Showing {sortedServices.length} of {currentServices.length} services
             </div>
           </motion.div>
         </div>
@@ -417,7 +504,7 @@ export default function ServicesPage() {
         <div className="container-responsive">
           <AnimatePresence mode="wait">
             {sortedServices.length > 0 ? (
-              <motion.div 
+              <motion.div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -427,37 +514,10 @@ export default function ServicesPage() {
                 {sortedServices.map((service, index)  => (
                   <motion.div
                     key={service.id}
-                    className="card-futuristic group"
-                    initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                    animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                    transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                    className="card-neon group"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ y: -10 }}
                   >
                     {/* Service Header */}
@@ -473,11 +533,11 @@ export default function ServicesPage() {
                           <div className="text-sm text-zion-slate-light">per month</div>
                         </div>
                       </div>
-                      
+
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                         {service.title}
                       </h3>
-                      
+
                       <p className="text-zion-slate-light leading-relaxed">
                         {service.description}
                       </p>
@@ -489,8 +549,8 @@ export default function ServicesPage() {
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-zion-cyan font-medium">{service.category}</span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          service.innovationLevel === 'Cutting-edge' 
-                            ? 'bg-zion-cyan/20 text-zion-cyan' 
+                          service.innovationLevel === 'Cutting-edge'
+                            ? 'bg-zion-cyan/20 text-zion-cyan'
                             : 'bg-zion-purple/20 text-zion-purple'
                         }`}>
                           {service.innovationLevel}
@@ -499,10 +559,12 @@ export default function ServicesPage() {
 
                       {/* ROI & Market Price */}
                       <div className="flex items-center justify-between text-sm">
-                        <div className="flex items-center gap-1 text-zion-green">
-                          <TrendingUp className="w-4 h-4" />
-                          <span>ROI: {service.roi}</span>
-                        </div>
+                        {service.roi && (
+                          <div className="flex items-center gap-1 text-zion-green">
+                            <TrendingUp className="w-4 h-4" />
+                            <span>ROI: {service.roi}</span>
+                          </div>
+                        )}
                         <div className="text-zion-slate-light">
                           Market: {service.marketPrice}
                         </div>
@@ -510,7 +572,10 @@ export default function ServicesPage() {
 
                       {/* Key Features */}
                       <div className="space-y-2">
-                        <h4 className="text-sm font-semibold text-white">Key Features:</h4>
+                        <h4 className="text-sm font-semibold text-white flex items-center gap-2">
+                          <Lightbulb className="w-4 h-4 text-zion-cyan" />
+                          Key Features:
+                        </h4>
                         <div className="grid grid-cols-1 gap-1">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
@@ -534,10 +599,10 @@ export default function ServicesPage() {
                           <span>{service.supportLevel}</span>
                         </div>
                       </div>
-                      
+
                       <Link
                         to={`/services/${service.id}`}
-                        className="btn-futuristic px-4 py-2 text-sm"
+                        className="btn-cyber px-4 py-2 text-sm"
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -547,7 +612,7 @@ export default function ServicesPage() {
                 ))}
               </motion.div>
             ) : (
-              <motion.div 
+              <motion.div
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -582,7 +647,7 @@ export default function ServicesPage() {
       {/* Specialized Services Section */}
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
         <div className="container-responsive">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial = {
   { opacity: 0,
@@ -654,19 +719,19 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Rocket className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                   {service.description}
                 </p>
-                
+
                 <div className="text-zion-cyan font-bold mb-4">
                   {service.marketPrice}
                 </div>
-                
+
                 <Link
                   to={`/services/${service.id}`}
                   className="btn-neon w-full"
@@ -677,11 +742,8 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
-        <div className="container-responsive text-center">
+        <div className="container-responsive text-center relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
@@ -709,28 +771,28 @@ export default function ServicesPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Get in touch with our technology experts to discuss your specific needs and discover 
+              Get in touch with our technology experts to discuss your specific needs and discover
               how our innovative solutions can drive your business forward.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="btn-futuristic px-8 py-4 text-lg"
+                className="btn-futuristic px-8 py-4 text-lg group"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                 Get Free Consultation
               </Link>
-              
+
               <a
                 href="tel:+13024640950"
-                className="btn-neon px-8 py-4 text-lg"
+                className="btn-neon px-8 py-4 text-lg group"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                 Call Now: +1 302 464 0950
               </a>
             </div>
-            
+
             <div className="mt-8 text-zion-slate-light">
               <p className="mb-2">📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>📧 <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>

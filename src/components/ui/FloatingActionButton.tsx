@@ -204,39 +204,11 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
               <motion.a
                 key={action.label}
                 href={action.href}
-                initial = {
-  { opacity: 0, x: 20,
-  scale: 0.8 
-
-
-
-
-
-
-}}
-                animate = {
-  { opacity: 1, x: 0,
-  scale: 1 
-
-
-
-
-
-
-}}
-                exit = {
-  { opacity: 0, x: 20,
-  scale: 0.8 
-
-
-
-
-
-
-}}
-                transition = {
-  { 
-                  duration: 0.3, 
+                initial={{ opacity: 0, x: 20, scale: 0.8 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 20, scale: 0.8 }}
+                transition={{
+                  duration: 0.3,
                   delay: action.delay,
                   type: "spring",
   stiffness: 200

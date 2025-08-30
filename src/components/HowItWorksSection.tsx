@@ -267,28 +267,7 @@ export function HowItWorksSection() {
       </div>
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
-        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition = {
-  { duration: 20, repeat: Infinity,
-  ease: "linear" 
-
-}}/>
-        <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition = {
-  { duration: 25, repeat: Infinity,
-  ease: "linear" 
-
-}}/>
-        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate = {
-  { scale: [1, 1.2,
-  1] 
-
-}} transition = {
-  { duration: 3, repeat: Infinity,
-  ease: "easeInOut" 
-
-}}/>
-=======
-        <motion.div 
+        <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}
           transition = {
@@ -302,7 +281,7 @@ export function HowItWorksSection() {
 
 }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotate: -360 }}
           transition = {
@@ -316,7 +295,7 @@ export function HowItWorksSection() {
 
 }}
         />
-        <motion.div 
+        <motion.div
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
           animate = {
   { scale: [1, 1.2,
@@ -341,19 +320,9 @@ export function HowItWorksSection() {
         />
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </div>
+
       <div className="container mx-auto px-4 relative z-10">
-<<<<<<< HEAD
-        <motion.div className="text-center mb-20" initial = {
-  { opacity: 0,
-  y: 20 
-
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-=======
-        <motion.div 
+        <motion.div
           className="text-center mb-20"
           initial = {
   { opacity: 0,
@@ -383,13 +352,24 @@ export function HowItWorksSection() {
             How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Our streamlined process ensures your project success from concept to completion. 
+            Our streamlined process ensures your project success from concept to completion.
             Experience the Zion difference with our proven methodology.
           </p>
         </motion.div>
         {/* Stats section */}
-        <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {stats.map((stat, index) => (<motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              variants={statsVariants}
+              className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
+            >
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
               </div>
@@ -397,7 +377,14 @@ export function HowItWorksSection() {
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
             </motion.div>))}
         </motion.div>
-        <motion.div className="relative" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+
+        <motion.div
+          className="relative"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {/* Enhanced connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
             <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition = {
@@ -574,7 +561,7 @@ export function HowItWorksSection() {
                           </li>
                         ))}
                       </ul>
-                      
+
                       {/* Arrow pointer */}
                       <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-blue-dark border-l border-t border-zion-cyan/30 rotate-45"></div>
                     </motion.div>
@@ -603,7 +590,7 @@ export function HowItWorksSection() {
 =======
 
         {/* Call to action */}
-        <motion.div 
+        <motion.div
           className="text-center mt-16"
           initial = {
   { opacity: 0,

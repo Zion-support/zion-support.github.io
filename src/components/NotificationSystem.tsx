@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { CheckCircle, 
-  AlertTriangle, 
-  Info, 
-  X, 
-  Bell, 
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  X,
+  Bell,
   Settings,
   Volume2,
   VolumeX,
@@ -99,17 +100,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     if (!settings.autoDismiss) return;
 
     const timeouts: NodeJS.Timeout[] = [];
-    
-<<<<<<< HEAD
-    notifications.forEach(notification = > {
-      if (notification.duration !== 0) {;
-        const timeout = setTimeout(() => {;
-          dismissNotification(notification.id)}, notification.duration || settings.defaultDuration);
-        timeouts.push(timeout)}
-=======
-    notifications.forEach(notification = > {;
-      if (notification.duration !== 0) {;
-        const timeout = setTimeout(() => {;
+
+    notifications.forEach(notification => {
+      if (notification.duration !== 0) {
+        const timeout = setTimeout(() => {
           dismissNotification(notification.id);
         }, notification.duration || settings.defaultDuration);
         timeouts.push(timeout);
@@ -204,9 +198,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, []);
 
   // Mark notification as read
-  const markAsRead = useCallback((id: string) => {;
-    setNotifications(prev => ;
-      prev.map(n => n.id === id ? { ...n, read: true } : n);
+  const markAsRead = useCallback((id: string) => {
+    setNotifications(prev =>
+      prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
   }, []);
 
@@ -224,7 +218,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const getNotificationIcon = (type: NotificationType, priority: string) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const iconProps = { className: "w-5 h-5" };
-    
+
     switch (type) {
       case 'success':
         return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`} />;
@@ -245,7 +239,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const getNotificationStyles = (type: NotificationType, priority: string) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const baseStyles = "border-l-4 ";
-    
+
     switch (type) {
       case 'success':
         return baseStyles + (priority === 'high' ? 'border-green-600 bg-green-50' : 'border-green-500 bg-green-50/80');
@@ -302,7 +296,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           title="Notifications"
         >
           <Bell className="w-6 h-6 text-zion-slate-dark" />
-          
+
           {/* Unread count badge */}
           {unreadCount > 0 && (
             <motion.div
@@ -362,7 +356,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}
           >
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings</h3>
-            
+
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Sound</span>
@@ -534,7 +528,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                         <div className="flex-shrink-0 mt-0.5">
                           {notification.icon || getNotificationIcon(notification.type, notification.priority)}
                         </div>
-                        
+
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
                             <h4 className={`text-sm font-medium ${
@@ -549,22 +543,22 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                               <X className="w-3 h-3 text-zion-slate/60" />
                             </button>
                           </div>
-                          
+
                           <p className={`text-sm mt-1 ${
                             notification.read ? 'text-zion-slate/60' : 'text-zion-slate'
                           }`}>
                             {notification.message}
                           </p>
-                          
+
                           <div className="flex items-center justify-between mt-3">
                             <span className="text-xs text-zion-slate/50">
-                              {notification.timestamp.toLocaleTimeString()};
-                            </span>;
-                            ;
-                            <div className="flex items-center space-x-2">;
-                              {notification.action && (;
-                                <button;
-                                  onClick={() => {;
+                              {notification.timestamp.toLocaleTimeString()}
+                            </span>
+
+                            <div className="flex items-center space-x-2">
+                              {notification.action && (
+                                <button
+                                  onClick={() => {
                                     notification.action!.onClick();
 <<<<<<< HEAD
                                     markAsRead(notification.id)}}
@@ -578,7 +572,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                                   {notification.action.label}
                                 </button>
                               )}
-                              
+
                               {!notification.read && (
                                 <button
                                   onClick={() => markAsRead(notification.id)}

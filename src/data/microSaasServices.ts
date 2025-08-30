@@ -1085,240 +1085,48 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z"
-  },
-  {
-    id: "iot-health-monitoring",
-    title: "IoT Health Monitoring Platform",
-    description: "Comprehensive health monitoring platform using IoT devices for real-time health tracking and preventive care.",
-    category: "IoT & Edge",
-    subcategory: "Healthcare",
-    price: 129,
-    currency: "$",
-    pricingModel: "monthly",
-    features[
-      "Real-time monitoring",
-      "Health analytics",
-      "Alert system",
-      "Device integration",
-      "Data visualization",
-      "Mobile app",
-      "Caregiver access",
-      "HIPAA compliance"
-    ],
-    benefits[
-      "Early health issue detection",
-      "Reduce healthcare costs",
-      "Better patient outcomes",
-      "24/7 monitoring",
-      "Preventive care"
-    ],
-    targetAudience["Healthcare providers", "Patients", "Caregivers", "Insurance companies", "Wellness centers"],
-    marketPrice: "$129-349/month",
-    website: "https://ziontechgroup.com/iot-health-monitoring",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags["IoT", "Healthcare", "Monitoring", "Preventive Care", "Wearables"],
-    aiScore: 91,
-    rating: 4.7,
-    reviewCount: 203,
-    featured: false,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z"
-  },
-  {
-    id: "ai-legal-document-review",
-    title: "AI Legal Document Review Platform",
-    description: "Intelligent legal document review platform using AI for contract analysis, risk assessment, and compliance checking.",
-    category: "AI Services",
-    subcategory: "Legal Tech",
-    price: 179,
-    currency: "$",
-    pricingModel: "monthly",
-    features[
-      "AI document analysis",
-      "Risk assessment",
-      "Compliance checking",
-      "Contract templates",
-      "Legal research",
-      "Collaboration tools",
-      "Version control",
-      "Audit trail"
-    ],
-    benefits[
-      "Reduce review time by 80%",
-      "Improve accuracy",
-      "Risk mitigation",
-      "Cost savings",
-      "Better compliance"
-    ],
-    targetAudience["Law firms", "Legal departments", "Compliance officers", "Contract managers", "Risk managers"],
-    marketPrice: "$179-499/month",
-    website: "https://ziontechgroup.com/ai-legal-document-review",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Legal", "Document Review", "Contract Analysis", "Compliance", "Risk Assessment"],
-    aiScore: 93,
-    rating: 4.8,
-    reviewCount: 156,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z"
-  },
-  {
-    id: "quantum-cybersecurity-suite",
-    title: "Quantum Cybersecurity Suite",
-    description: "Future-proof cybersecurity platform using quantum-resistant encryption and AI-powered threat detection.",
-    category: "Quantum Computing",
-    subcategory: "Cybersecurity",
-    price: 399,
-    currency: "$",
-    pricingModel: "monthly",
-    features[
-      "Quantum-resistant encryption",
-      "AI threat detection",
-      "Zero-trust architecture",
-      "Compliance monitoring",
-      "Incident response",
-      "Security analytics",
-      "24/7 monitoring",
-      "Expert support"
-    ],
-    benefits[
-      "Future-proof security",
-      "Advanced threat protection",
-      "Compliance assurance",
-      "Risk reduction",
-      "Peace of mind"
-    ],
-    targetAudience["Enterprises", "Financial institutions", "Healthcare", "Government", "Critical infrastructure"],
-    marketPrice: "$399-1,199/month",
-    website: "https://ziontechgroup.com/quantum-cybersecurity",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags["Quantum Security", "Cybersecurity", "Encryption", "Threat Detection", "Compliance"],
-    aiScore: 96,
-    rating: 4.9,
-    reviewCount: 134,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z"
-  },
-  {
-    id: "ai-powered-project-management",
-    title: "AI-Powered Project Management Platform",
-    description: "Intelligent project management platform using AI for task optimization, resource allocation, and risk prediction.",
-    category: "AI Services",
-    subcategory: "Project Management",
-    price: 119,
-    currency: "$",
-    pricingModel: "monthly",
-    features[
-      "AI task optimization",
-      "Resource allocation",
-      "Risk prediction",
-      "Progress tracking",
-      "Team collaboration",
-      "Time management",
-      "Budget tracking",
-      "Reporting tools"
-    ],
-    benefits[
-      "Improve project success rate",
-      "Optimize resources",
-      "Reduce delays",
-      "Better collaboration",
-      "Data-driven decisions"
-    ],
-    targetAudience["Project managers", "Teams", "Consultants", "Agencies", "Enterprises"],
-    marketPrice: "$119-349/month",
-    website: "https://ziontechgroup.com/ai-project-management",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Project Management", "Task Optimization", "Resource Management", "Risk Assessment", "Collaboration"],
-    aiScore: 89,
-    rating: 4.6,
-    reviewCount: 278,
-    featured: false,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z";
-  };
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-25T09:15:00.000Z"
+  }
 ];
-export const getMicroSaasServiceById = (id: string): MicroSaasService | null  => {;
-  return MICRO_SAAS_SERVICES.find(service => service.id === id)};
+export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
+  return MICRO_SAAS_SERVICES.find(service => service.id === id);
+};
 export const MICRO_SAAS_CATEGORIES = [
   'AI Business Solutions',
-  'IT Infrastructure', 
+  'IT Infrastructure',
   'Data Analytics',
   'AI Development',
   'FinTech',
   'HealthTech',
-  'E-commerce',;
-  'EdTech';
+  'E-commerce',
+  'EdTech'
 ];
 export const PRICING_TIERS = [
   {
     name: 'Starter',
     price: 29,
-    features['Basic features', 'Email support', '1 user']
+    features: ['Basic features', 'Email support', '1 user']
   },
   {
-    name: 'Professional', 
+    name: 'Professional',
     price: 99,
-    features['Advanced features', 'Priority support', 'Up to 10 users']
+    features: ['Advanced features', 'Priority support', 'Up to 10 users']
   },
   {
     name: 'Enterprise',
     price: 299,
-    features['Custom features', '24/7 support', 'Unlimited users'];
-  };
+    features: ['Custom features', '24/7 support', 'Unlimited users']
+  }
 ];
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
-  phone: '+1 (555) 123-4567',
-  address: '123 Tech Street, Innovation City,
-  IC 12345';
-;
-
+  phone: '+1 302 464 0950',
+  address: '364 E Main St STE 1008 Middletown DE 19709'
 };
-export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[]  => {;
-  return MICRO_SAAS_SERVICES.filter(service => service.category === category)};
-export const getMicroSaasCategories = (): string[] => {;
-  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))]};
-=======
-      verified: true;
-    },;
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-25T09:15:00.000Z";
-  };
-];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
+  return MICRO_SAAS_SERVICES.filter(service => service.category === category);
+};
+export const getMicroSaasCategories = (): string[] => {
+  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
+};

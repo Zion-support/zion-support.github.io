@@ -161,6 +161,58 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Monitor Models',
 				href: 'https://ziontechgroup.com/services'
 			}
+			,
+			{
+				id: 'gdpr-dsar-portal',
+				title: 'GDPR DSAR Portal',
+				description: 'Secure intake, verification, and fulfillment of Data Subject Access Requests with audit trails.',
+				category: 'Micro SaaS',
+				price: '$129',
+				billing: 'month',
+				features: [
+					'Identity verification',
+					'Data discovery connectors',
+					'Audit logs and exports',
+					'Self-service portal and SLA tracking',
+					'Webhook automation'
+				],
+				ctaLabel: 'Launch Portal',
+				href: 'https://ziontechgroup.com/services/gdpr-dsar-portal'
+			},
+			{
+				id: 'email-deliverability-monitor-saas',
+				title: 'Email Deliverability Monitor',
+				description: 'Inbox placement checks, DMARC/SPF/DKIM validation, and reputation alerts for marketing and transactional mail.',
+				category: 'Micro SaaS',
+				price: '$39',
+				billing: 'month',
+				features: [
+					'DMARC/SPF/DKIM verification',
+					'Inbox placement and blocklist tracking',
+					'Recommendations and weekly reports',
+					'Integrations: SES, SendGrid, Mailgun',
+					'Alerts to Slack/Email'
+				],
+				ctaLabel: 'Improve Inbox Rate',
+				href: 'https://ziontechgroup.com/services/email-deliverability-monitor'
+			},
+			{
+				id: 'pdf-render-api-saas',
+				title: 'PDF Render API',
+				description: 'Reliable HTML-to-PDF at scale with templates, assets, and async callbacks.',
+				category: 'Micro SaaS',
+				price: '$29',
+				billing: 'month',
+				features: [
+					'Chromium renderer with fonts',
+					'Async rendering and webhooks',
+					'Templates and asset hosting',
+					'Storage destinations (S3/GCS/Azure)',
+					'Usage analytics and quotas'
+				],
+				ctaLabel: 'Generate PDFs',
+				href: 'https://ziontechgroup.com/services/pdf-render-api'
+			}
 		]
 	},
 	{
@@ -269,6 +321,111 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Deploy Copilots',
 				href: 'https://ziontechgroup.com/services'
+			},
+
+			// New Innovative AI Services Added
+			{
+				id: 'quantum-consciousness-simulation-2030',
+				title: 'Quantum Consciousness Simulation Platform 2030',
+				description: 'Revolutionary quantum computing platform that simulates human consciousness, enabling breakthrough research in cognitive science, psychology, and artificial general intelligence.',
+				category: 'AI Solutions',
+				price: '$25,000',
+				billing: 'month',
+				features: [
+					'Quantum neural network simulation',
+					'Consciousness modeling algorithms',
+					'Real-time cognitive state analysis',
+					'Multi-dimensional consciousness mapping',
+					'Quantum memory and learning systems',
+					'Consciousness transfer protocols',
+					'Advanced research tools and APIs',
+					'Collaborative research workspace',
+					'Real-time visualization and analytics',
+					'Quantum-classical hybrid processing'
+				],
+				ctaLabel: 'Research Access',
+				href: 'https://ziontechgroup.com/contact'
+			},
+
+			{
+				id: 'autonomous-healthcare-diagnostics-2026',
+				title: 'Autonomous Healthcare Diagnostics Platform 2026',
+				description: 'AI-powered autonomous healthcare diagnostics platform that provides real-time medical imaging analysis, disease prediction, and treatment recommendations with FDA approval and HIPAA compliance.',
+				category: 'AI Solutions',
+				price: '$7,999',
+				billing: 'month',
+				features: [
+					'AI-powered medical imaging analysis',
+					'Real-time disease detection and classification',
+					'Predictive health analytics',
+					'Automated radiology reporting',
+					'Treatment recommendation engine',
+					'Patient risk assessment',
+					'Clinical decision support',
+					'HIPAA-compliant data handling',
+					'FDA-approved algorithms',
+					'Multi-modality imaging support'
+				],
+				ctaLabel: 'Healthcare Integration',
+				href: 'https://ziontechgroup.com/contact'
+			},
+
+			{
+				id: 'quantum-creative-ai-studio-2026',
+				title: 'Quantum Creative AI Studio 2026',
+				description: 'Revolutionary quantum-powered creative AI platform that generates high-quality content, designs, and creative assets with unprecedented creativity and originality.',
+				category: 'AI Solutions',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'Quantum-powered content generation',
+					'AI-driven design creation',
+					'Multi-format content generation',
+					'Brand consistency automation',
+					'Creative asset optimization',
+					'Real-time collaboration tools',
+					'Version control and management',
+					'Performance analytics',
+					'Mobile app for creators',
+					'API integration capabilities'
+				],
+				ctaLabel: 'Creative Access',
+				href: 'https://ziontechgroup.com/contact'
+			}
+			,
+			{
+				id: 'synthetic-data-generator',
+				title: 'Synthetic Data Generator',
+				description: 'Privacy-safe synthetic data for analytics, testing, and ML with differential privacy.',
+				category: 'AI Solutions',
+				price: '$119',
+				billing: 'month',
+				features: [
+					'DP and PII masking',
+					'Tabular/time-series/text modes',
+					'Utility and drift reports',
+					'SDKs and REST API',
+					'Warehouse integrations'
+				],
+				ctaLabel: 'Generate Data',
+				href: 'https://ziontechgroup.com/services/synthetic-data-generator'
+			},
+			{
+				id: 'ai-meeting-notes-agent',
+				title: 'AI Meeting Notes Agent',
+				description: 'Transcribes meetings, extracts action items, and syncs summaries to CRM/PM tools.',
+				category: 'AI Solutions',
+				price: '$69',
+				billing: 'month',
+				features: [
+					'Accurate transcripts',
+					'Action items and owners',
+					'CRM/PM sync',
+					'Security and auditability',
+					'Multi-platform support'
+				],
+				ctaLabel: 'Start Recording',
+				href: 'https://ziontechgroup.com/services/ai-meeting-notes-agent'
 			}
 		]
 	},
@@ -361,6 +518,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Cut Cloud Costs',
 				href: 'https://ziontechgroup.com/services'
+			}
+			,
+			{
+				id: 'managed-kubernetes-sre',
+				title: 'Managed Kubernetes SRE',
+				description: 'Hands-on SRE for clusters: upgrades, security baselines, autoscaling, and incident response.',
+				category: 'IT Services',
+				price: '$2,500',
+				billing: 'month',
+				features: [
+					'24/7 on-call rotation',
+					'Golden paths and GitOps',
+					'SLOs and error budgets',
+					'DR and backup testing',
+					'Cost and performance tuning'
+				],
+				ctaLabel: 'Stabilize Clusters',
+				href: 'https://ziontechgroup.com/services/managed-kubernetes-sre'
+			},
+			{
+				id: 'zero-trust-rollout-coaching',
+				title: 'Zero Trust Rollout Coaching',
+				description: 'Architect and guide a pragmatic Zero Trust deployment with measurable milestones and runbooks.',
+				category: 'IT Services',
+				price: '$4,000',
+				billing: 'project',
+				features: [
+					'Current-state assessment',
+					'Policy and identity baselines',
+					'ZTN, SWG, CASB patterns',
+					'Pilot-to-prod plan',
+					'Executive reporting'
+				],
+				ctaLabel: 'Plan Zero Trust',
+				href: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching'
 			}
 		]
 	},
@@ -587,6 +779,24 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Harden Resilience',
 				href: 'https://ziontechgroup.com/services'
 			}
+			,
+			{
+				id: 'data-contracts-platform',
+				title: 'Data Contracts Platform',
+				description: 'Define and enforce data contracts across services with schema checks, drift alerts, and lineage.',
+				category: 'Cloud & DevOps',
+				price: '$149',
+				billing: 'month',
+				features: [
+					'Contract registry and versioning',
+					'CI gates and PR annotations',
+					'Drift detection and alerts',
+					'Lineage and impact analysis',
+					'Connectors for CI/CD and warehouses'
+				],
+				ctaLabel: 'Enforce Contracts',
+				href: 'https://ziontechgroup.com/services/data-contracts-platform'
+			}
 		]
 	},
 	{
@@ -594,37 +804,94 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'quantum-computing',
 		items[
 			{
-				id: 'quantum-financial-trading',
-				title: 'Quantum Financial Trading Platform',
-				description: 'Revolutionary trading platform using quantum algorithms for portfolio optimization and risk assessment.',
+				id: 'quantum-cybersecurity-suite-2026',
+				title: 'Quantum Cybersecurity Suite 2026',
+				description: 'Revolutionary cybersecurity platform leveraging quantum-resistant algorithms and quantum key distribution for unbreakable encryption and threat detection.',
 				category: 'Quantum Computing',
-				price: '$25,000',
+				price: '$8,999',
 				billing: 'month',
-				features[
-					'Quantum portfolio optimization',
-					'Risk modeling',
-					'Real-time trading',
-					'Compliance tools',
-					'Performance analytics'
+				features: [
+					'Quantum-resistant encryption algorithms',
+					'Quantum key distribution (QKD)',
+					'AI-powered threat detection with 99.99% accuracy',
+					'Zero-trust architecture implementation',
+					'Real-time threat intelligence feeds',
+					'Automated incident response',
+					'Compliance automation (SOC 2, ISO 27001, NIST)',
+					'Quantum-safe certificate management',
+					'Advanced behavioral analytics',
+					'Cloud-native security architecture'
 				],
-				ctaLabel: 'Trading Demo',
+				ctaLabel: 'Quantum Security',
 				href: 'https://ziontechgroup.com/contact'
 			},
+
 			{
-				id: 'quantum-drug-discovery',
-				title: 'Quantum Drug Discovery Platform',
-				description: 'Advanced drug discovery platform leveraging quantum computing for molecular modeling and drug design.',
+				id: 'quantum-financial-trading-platform-2026',
+				title: 'Quantum Financial Trading Platform 2026',
+				description: 'Revolutionary quantum computing-powered financial trading platform that provides ultra-fast market analysis, risk assessment, and automated trading strategies with quantum advantage.',
 				category: 'Quantum Computing',
-				price: '$45,000',
+				price: '$15,999',
 				billing: 'month',
-				features[
-					'Quantum molecular modeling',
-					'Drug design algorithms',
-					'Clinical trial optimization',
-					'Research collaboration',
-					'Regulatory support'
+				features: [
+					'Quantum-powered market analysis',
+					'Ultra-fast trading execution (<1ms latency)',
+					'AI-driven risk assessment',
+					'Portfolio optimization algorithms',
+					'Real-time market sentiment analysis',
+					'Automated trading strategies',
+					'Regulatory compliance automation',
+					'Multi-asset class support',
+					'Advanced risk management',
+					'Performance analytics dashboard'
 				],
-				ctaLabel: 'Research Access',
+				ctaLabel: 'Quantum Trading',
+				href: 'https://ziontechgroup.com/contact'
+			},
+
+			{
+				id: 'quantum-logistics-optimization-2026',
+				title: 'Quantum Logistics Optimization Platform 2026',
+				description: 'Revolutionary quantum computing-powered logistics platform that optimizes routes, reduces costs, and improves efficiency for complex supply chain and transportation networks.',
+				category: 'Quantum Computing',
+				price: '$6,999',
+				billing: 'month',
+				features: [
+					'Quantum route optimization algorithms',
+					'Real-time traffic and weather integration',
+					'Multi-modal transportation optimization',
+					'Dynamic pricing optimization',
+					'Fleet management automation',
+					'Predictive maintenance scheduling',
+					'Sustainability optimization',
+					'Real-time tracking and visibility',
+					'Automated dispatching',
+					'Performance analytics dashboard'
+				],
+				ctaLabel: 'Quantum Logistics',
+				href: 'https://ziontechgroup.com/contact'
+			},
+
+			{
+				id: 'quantum-biological-computing-2030',
+				title: 'Quantum Biological Computing Platform 2030',
+				description: 'Revolutionary platform that combines quantum computing with biological systems, enabling unprecedented breakthroughs in drug discovery, genetic engineering, and biological computing.',
+				category: 'Quantum Computing',
+				price: '$18,999',
+				billing: 'month',
+				features: [
+					'Quantum-biological hybrid processing',
+					'DNA computing integration',
+					'Protein folding simulation',
+					'Drug discovery acceleration',
+					'Genetic engineering optimization',
+					'Biological circuit design',
+					'Real-time biological monitoring',
+					'Quantum biological sensors',
+					'Biological data encryption',
+					'Advanced research tools'
+				],
+				ctaLabel: 'Quantum Biology',
 				href: 'https://ziontechgroup.com/contact'
 			}
 		]
@@ -1092,482 +1359,119 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
+
+	// New Service Categories Added
 	{
-		name: 'AI-Powered Business Intelligence',
-		slug: 'ai-business-intelligence',
-		items[
+		name: 'Supply Chain & Logistics',
+		slug: 'supply-chain-logistics',
+		items: [
 			{
-				id: 'ai-predictive-analytics-platform',
-				title: 'AI Predictive Analytics Platform',
-				description: 'Advanced predictive analytics platform using machine learning to forecast business trends, customer behavior, and market opportunities.',
-				category: 'AI Solutions',
-				price: '$1,299',
-				billing: 'month',
-				features[
-					'Real-time data processing',
-					'Advanced ML algorithms',
-					'Custom forecasting models',
-					'Interactive dashboards',
-					'API integrations',
-					'Automated reporting'
-				],
-				ctaLabel: 'Start Analytics',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'ai-customer-segmentation-engine',
-				title: 'AI Customer Segmentation Engine',
-				description: 'Intelligent customer segmentation using AI to identify patterns, predict lifetime value, and optimize marketing strategies.',
-				category: 'AI Solutions',
-				price: '$899',
-				billing: 'month',
-				features[
-					'Dynamic segmentation',
-					'Behavioral analysis',
-					'Predictive scoring',
-					'Marketing automation',
-					'ROI tracking',
-					'Real-time updates'
-				],
-				ctaLabel: 'Segment Customers',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'ai-market-intelligence-suite',
-				title: 'AI Market Intelligence Suite',
-				description: 'Comprehensive market intelligence platform that monitors competitors, tracks trends, and identifies new opportunities using AI.',
-				category: 'AI Solutions',
-				price: '$1,599',
-				billing: 'month',
-				features[
-					'Competitor monitoring',
-					'Market trend analysis',
-					'Opportunity identification',
-					'Risk assessment',
-					'Custom alerts',
-					'Strategic insights'
-				],
-				ctaLabel: 'Get Intelligence',
-				href: 'https://ziontechgroup.com/contact'
-			}
-		]
-	},
-	{
-		name: 'Advanced Cybersecurity',
-		slug: 'advanced-cybersecurity',
-		items[
-			{
-				id: 'ai-threat-hunting-platform',
-				title: 'AI Threat Hunting Platform',
-				description: 'Proactive threat hunting platform using AI to detect, analyze, and respond to advanced cyber threats in real-time.',
-				category: 'Cybersecurity',
-				price: '$2,499',
-				billing: 'month',
-				features[
-					'AI-powered threat detection',
-					'Behavioral analysis',
-					'Automated response',
-					'Threat intelligence',
-					'Incident management',
-					'Compliance reporting'
-				],
-				ctaLabel: 'Hunt Threats',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'quantum-encryption-suite',
-				title: 'Quantum Encryption Suite',
-				description: 'Future-proof encryption solutions using quantum-resistant algorithms to protect data against emerging threats.',
-				category: 'Cybersecurity',
-				price: '$3,999',
-				billing: 'month',
-				features[
-					'Quantum-resistant algorithms',
-					'Post-quantum cryptography',
-					'Key management',
-					'Hardware security modules',
-					'Compliance certifications',
-					'Migration support'
-				],
-				ctaLabel: 'Secure Future',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'ai-security-operations-center',
-				title: 'AI Security Operations Center',
-				description: 'Intelligent SOC platform that automates security monitoring, incident response, and threat intelligence using AI.',
-				category: 'Cybersecurity',
-				price: '$4,999',
-				billing: 'month',
-				features[
-					'24/7 AI monitoring',
-					'Automated incident response',
-					'Threat intelligence feeds',
-					'Security orchestration',
-					'Compliance automation',
-					'Expert support'
-				],
-				ctaLabel: 'Deploy SOC',
-				href: 'https://ziontechgroup.com/contact'
-			}
-		]
-	},
-	{
-		name: 'Cloud-Native Development',
-		slug: 'cloud-native-development',
-		items[
-			{
-				id: 'kubernetes-orchestration-platform',
-				title: 'Kubernetes Orchestration Platform',
-				description: 'Enterprise-grade Kubernetes management platform with advanced orchestration, monitoring, and automation capabilities.',
-				category: 'Cloud & DevOps',
-				price: '$1,899',
-				billing: 'month',
-				features[
-					'Multi-cluster management',
-					'Advanced scheduling',
-					'Resource optimization',
-					'Monitoring & alerting',
-					'Security policies',
-					'Disaster recovery'
-				],
-				ctaLabel: 'Deploy K8s',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'serverless-architecture-platform',
-				title: 'Serverless Architecture Platform',
-				description: 'Complete serverless development platform with automated scaling, monitoring, and cost optimization.',
-				category: 'Cloud & DevOps',
-				price: '$1,299',
-				billing: 'month',
-				features[
-					'Function orchestration',
-					'Auto-scaling',
-					'Cost optimization',
-					'Performance monitoring',
-					'API management',
-					'DevOps integration'
-				],
-				ctaLabel: 'Go Serverless',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'microservices-mesh-platform',
-				title: 'Microservices Mesh Platform',
-				description: 'Service mesh platform for managing microservices communication, security, and observability at scale.',
-				category: 'Cloud & DevOps',
-				price: '$2,199',
-				billing: 'month',
-				features[
-					'Service discovery',
-					'Load balancing',
-					'Security policies',
-					'Observability',
-					'Traffic management',
-					'Circuit breaking'
-				],
-				ctaLabel: 'Mesh Services',
-				href: 'https://ziontechgroup.com/contact'
-			}
-		]
-	},
-	{
-		name: 'Data Engineering & Analytics',
-		slug: 'data-engineering-analytics',
-		items[
-			{
-				id: 'real-time-data-pipeline-platform',
-				title: 'Real-Time Data Pipeline Platform',
-				description: 'High-performance data pipeline platform for real-time streaming analytics, ETL processing, and data transformation.',
-				category: 'Data & Analytics',
-				price: '$2,799',
-				billing: 'month',
-				features[
-					'Real-time streaming',
-					'Data transformation',
-					'Quality monitoring',
-					'Scalable processing',
-					'API integrations',
-					'Data governance'
-				],
-				ctaLabel: 'Build Pipeline',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'ai-data-quality-platform',
-				title: 'AI Data Quality Platform',
-				description: 'Intelligent data quality platform that automatically detects, cleans, and validates data using AI and machine learning.',
-				category: 'Data & Analytics',
-				price: '$1,599',
-				billing: 'month',
-				features[
-					'AI-powered data cleaning',
-					'Quality scoring',
-					'Automated validation',
-					'Data profiling',
-					'Compliance monitoring',
-					'Real-time alerts'
-				],
-				ctaLabel: 'Improve Quality',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'data-catalog-governance-platform',
-				title: 'Data Catalog & Governance Platform',
-				description: 'Comprehensive data catalog with governance, lineage tracking, and compliance management for enterprise data.',
-				category: 'Data & Analytics',
-				price: '$2,199',
-				billing: 'month',
-				features[
-					'Data cataloging',
-					'Lineage tracking',
-					'Governance policies',
-					'Compliance reporting',
-					'Access control',
-					'Data discovery'
-				],
-				ctaLabel: 'Catalog Data',
-				href: 'https://ziontechgroup.com/contact'
-			}
-		]
-	},
-	{
-		name: 'DevOps & Automation',
-		slug: 'devops-automation',
-		items[
-			{
-				id: 'ai-powered-devops-platform',
-				title: 'AI-Powered DevOps Platform',
-				description: 'Intelligent DevOps platform that automates CI/CD, infrastructure management, and operational tasks using AI.',
-				category: 'Cloud & DevOps',
-				price: '$2,499',
-				billing: 'month',
-				features[
-					'AI-powered automation',
-					'Intelligent CI/CD',
-					'Infrastructure as code',
-					'Monitoring & alerting',
-					'Performance optimization',
-					'Security scanning'
-				],
-				ctaLabel: 'Automate DevOps',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'gitops-workflow-platform',
-				title: 'GitOps Workflow Platform',
-				description: 'GitOps workflow platform for declarative infrastructure management, deployment automation, and version control.',
-				category: 'Cloud & DevOps',
-				price: '$1,799',
-				billing: 'month',
-				features[
-					'Git-based workflows',
-					'Declarative infrastructure',
-					'Automated deployments',
-					'Rollback capabilities',
-					'Compliance tracking',
-					'Team collaboration'
-				],
-				ctaLabel: 'GitOps Workflow',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'chaos-engineering-platform',
-				title: 'Chaos Engineering Platform',
-				description: 'Chaos engineering platform for testing system resilience, identifying weaknesses, and improving reliability.',
-				category: 'Cloud & DevOps',
-				price: '$1,299',
-				billing: 'month',
-				features[
-					'Automated testing',
-					'Resilience scoring',
-					'Failure injection',
-					'Recovery testing',
-					'Performance analysis',
-					'Best practices'
-				],
-				ctaLabel: 'Test Resilience',
-				href: 'https://ziontechgroup.com/contact'
-			}
-		]
-	},
-	{
-		name: 'Enterprise Integration',
-		slug: 'enterprise-integration',
-		items[
-			{
-				id: 'api-gateway-management-platform',
-				title: 'API Gateway Management Platform',
-				description: 'Enterprise API gateway platform with advanced routing, security, monitoring, and developer portal capabilities.',
-				category: 'IT Services',
-				price: '$2,999',
-				billing: 'month',
-				features[
-					'Advanced routing',
-					'Security policies',
-					'Rate limiting',
-					'Developer portal',
-					'Analytics & monitoring',
-					'API versioning'
-				],
-				ctaLabel: 'Manage APIs',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'enterprise-service-bus-platform',
-				title: 'Enterprise Service Bus Platform',
-				description: 'Modern ESB platform for enterprise integration, message routing, and service orchestration.',
-				category: 'IT Services',
-				price: '$3,499',
-				billing: 'month',
-				features[
-					'Message routing',
-					'Service orchestration',
-					'Data transformation',
-					'Protocol support',
-					'Monitoring & alerting',
-					'High availability'
-				],
-				ctaLabel: 'Integrate Services',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'data-sync-orchestration-platform',
-				title: 'Data Sync Orchestration Platform',
-				description: 'Intelligent data synchronization platform for multi-cloud, hybrid, and on-premises data integration.',
-				category: 'Data & Analytics',
-				price: '$2,199',
-				billing: 'month',
-				features[
-					'Multi-cloud sync',
-					'Real-time replication',
-					'Conflict resolution',
-					'Data validation',
-					'Performance monitoring',
-					'Disaster recovery'
-				],
-				ctaLabel: 'Sync Data',
-				href: 'https://ziontechgroup.com/contact'
-			}
-		]
-	},
-	{
-		name: 'AI Training & Customization',
-		slug: 'ai-training-customization',
-		items[
-			{
-				id: 'custom-ai-model-training',
-				title: 'Custom AI Model Training Platform',
-				description: 'Enterprise AI model training platform for custom machine learning models tailored to specific business needs.',
-				category: 'AI Solutions',
+				id: 'autonomous-supply-chain-platform-2026',
+				title: 'Autonomous Supply Chain Platform 2026',
+				description: 'AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency.',
+				category: 'Supply Chain & Logistics',
 				price: '$5,999',
 				billing: 'month',
-				features[
-					'Custom model training',
-					'Data preprocessing',
-					'Hyperparameter optimization',
-					'Model evaluation',
-					'Deployment pipeline',
-					'Performance monitoring'
+				features: [
+					'AI-powered demand forecasting with 98% accuracy',
+					'Autonomous inventory optimization',
+					'Real-time supply chain visibility',
+					'Predictive disruption detection',
+					'Automated supplier selection',
+					'Dynamic pricing optimization',
+					'Sustainability tracking and reporting',
+					'Multi-modal transportation optimization',
+					'Risk assessment and mitigation',
+					'Compliance automation'
 				],
-				ctaLabel: 'Train Models',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'ai-fine-tuning-platform',
-				title: 'AI Fine-Tuning Platform',
-				description: 'Platform for fine-tuning pre-trained AI models with domain-specific data for improved accuracy and relevance.',
-				category: 'AI Solutions',
-				price: '$3,999',
-				billing: 'month',
-				features[
-					'Model fine-tuning',
-					'Domain adaptation',
-					'Performance optimization',
-					'Version control',
-					'A/B testing',
-					'Rollback capabilities'
-				],
-				ctaLabel: 'Fine-tune AI',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'ai-model-ops-platform',
-				title: 'AI Model Operations Platform',
-				description: 'Comprehensive MLOps platform for managing the entire AI model lifecycle from development to production.',
-				category: 'AI Solutions',
-				price: '$4,499',
-				billing: 'month',
-				features[
-					'Model lifecycle management',
-					'Version control',
-					'Deployment automation',
-					'Performance monitoring',
-					'Model governance',
-					'Compliance tracking'
-				],
-				ctaLabel: 'Manage Models',
+				ctaLabel: 'Supply Chain',
 				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
+
 	{
-		name: 'Sustainability & Green Tech',
-		slug: 'sustainability-green-tech',
-		items[
+		name: 'Energy Management',
+		slug: 'energy-management',
+		items: [
 			{
-				id: 'carbon-footprint-tracking-platform',
-				title: 'Carbon Footprint Tracking Platform',
-				description: 'Comprehensive platform for tracking, analyzing, and reducing carbon footprint across business operations.',
-				category: 'Green Tech',
-				price: '$1,299',
+				id: 'autonomous-energy-management-2026',
+				title: 'Autonomous Energy Management Platform 2026',
+				description: 'AI-powered autonomous energy management platform that optimizes energy consumption, predicts demand, and automates energy trading for utilities, commercial buildings, and industrial facilities.',
+				category: 'Energy Management',
+				price: '$5,499',
 				billing: 'month',
-				features[
-					'Carbon tracking',
-					'Emissions calculation',
-					'Reduction strategies',
-					'Sustainability reporting',
-					'Compliance monitoring',
-					'Goal setting'
+				features: [
+					'AI-powered energy consumption optimization',
+					'Real-time demand forecasting',
+					'Automated energy trading',
+					'Smart grid integration',
+					'Renewable energy optimization',
+					'Predictive maintenance for energy assets',
+					'Carbon footprint tracking',
+					'Energy efficiency recommendations',
+					'Real-time monitoring dashboard',
+					'Mobile app for energy managers'
 				],
-				ctaLabel: 'Track Carbon',
+				ctaLabel: 'Energy Management',
 				href: 'https://ziontechgroup.com/contact'
-			},
+			}
+		]
+	},
+
+	{
+		name: 'Manufacturing Intelligence',
+		slug: 'manufacturing-intelligence',
+		items: [
 			{
-				id: 'energy-optimization-platform',
-				title: 'Energy Optimization Platform',
-				description: 'AI-powered energy optimization platform for reducing energy consumption and costs in data centers and facilities.',
-				category: 'Green Tech',
-				price: '$2,199',
+				id: 'autonomous-manufacturing-intelligence-2026',
+				title: 'Autonomous Manufacturing Intelligence Platform 2026',
+				description: 'AI-powered autonomous manufacturing platform that optimizes production, predicts maintenance, and automates quality control.',
+				category: 'Manufacturing Intelligence',
+				price: '$5,999',
 				billing: 'month',
-				features[
-					'Energy monitoring',
-					'AI optimization',
-					'Cost analysis',
-					'Predictive maintenance',
-					'Renewable integration',
-					'Sustainability metrics'
+				features: [
+					'AI-powered production optimization',
+					'Predictive maintenance scheduling',
+					'Automated quality control',
+					'Real-time monitoring and alerting',
+					'Supply chain integration',
+					'Energy efficiency optimization',
+					'Sustainability tracking',
+					'Performance analytics dashboard',
+					'Mobile app for operators',
+					'API integration capabilities'
 				],
-				ctaLabel: 'Optimize Energy',
+				ctaLabel: 'Manufacturing',
 				href: 'https://ziontechgroup.com/contact'
-			},
+			}
+		]
+	},
+
+	{
+		name: 'Data Center Management',
+		slug: 'data-center-management',
+		items: [
 			{
-				id: 'circular-economy-platform',
-				title: 'Circular Economy Platform',
-				description: 'Platform for implementing circular economy principles, waste reduction, and sustainable resource management.',
-				category: 'Green Tech',
-				price: '$1,899',
+				id: 'autonomous-data-center-manager-2026',
+				title: 'Autonomous Data Center Manager 2026',
+				description: 'AI-powered autonomous data center management platform that optimizes performance, reduces costs, and prevents downtime through predictive analytics and automated operations.',
+				category: 'Data Center Management',
+				price: '$4,499',
 				billing: 'month',
-				features[
-					'Waste tracking',
-					'Resource optimization',
-					'Circular design tools',
-					'Sustainability metrics',
-					'Compliance reporting',
-					'Best practices'
+				features: [
+					'AI-powered performance optimization',
+					'Predictive maintenance scheduling',
+					'Automated capacity planning',
+					'Real-time monitoring and alerting',
+					'Energy efficiency optimization',
+					'Security threat detection',
+					'Compliance automation',
+					'Multi-cloud orchestration',
+					'Disaster recovery automation',
+					'Cost optimization engine'
 				],
-				ctaLabel: 'Go Circular',
+				ctaLabel: 'Data Center',
 				href: 'https://ziontechgroup.com/contact'
 			}
 		]

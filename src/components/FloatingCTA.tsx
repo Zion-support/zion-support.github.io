@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { MessageCircle, 
-  X, 
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  MessageCircle,
+  X,
   ArrowRight,
   Phone,
   Mail,
@@ -95,7 +96,7 @@ import { MessageCircle,
   MicOff,
   Volume2,
   VolumeX
- } from 'lucide-react';
+} from 'lucide-react';
 
 const FloatingCTA: React.FC = (): JSX.Element => {;
   const [isOpen, setIsOpen] = useState(false);

@@ -1,4 +1,5 @@
-import { useState, useEffect  } from 'react.ts';
+import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface User {
 
@@ -28,7 +29,7 @@ export function useAuth(...args[]):  {
     const checkAuth = () => {;
       const storedUser = localStorage.getItem('zion_user');
       const token = localStorage.getItem('authToken');
-      
+
       if (storedUser && token) {
         try {
           const user = JSON.parse(storedUser);
@@ -60,31 +61,20 @@ export function useAuth(...args[]):  {
       email,
       name: 'John Doe',
       role: 'user',
-      userType: 'creator',;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
+      userType: 'creator',
+    };
 
-
-
-
-
-
-};
-    
     setAuthState({
       user: mockUser,
       isAuthenticated: true,
       isLoading: false,
     });
-    
+
     localStorage.setItem('authToken', 'dummy-token');
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    
-    return mockUser};
+
+    return mockUser;
+  };
 
   const logout = () => {;
     setAuthState({;
@@ -100,31 +90,21 @@ export function useAuth(...args[]):  {
     const mockUser: User = {
   id: '1',
       email,
-      name,;
-  ;
-  ;
-  ;
-  ;
-  role: 'user';
-    ;
+      name,
+      role: 'user'
+    };
 
-
-
-
-
-
-};
-    
     setAuthState({
       user: mockUser,
       isAuthenticated: true,
       isLoading: false,
     });
-    
+
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken', 'dummy-token');
-    
-    return mockUser};
+
+    return mockUser;
+  };
 
   return {
     user: authState.user,

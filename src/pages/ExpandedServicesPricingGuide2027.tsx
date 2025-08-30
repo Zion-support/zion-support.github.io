@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, 
-  Filter, 
-  Grid3X3, 
-  List, 
-  ChevronDown, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
   ChevronUp,
   Star,
   Users,
@@ -59,11 +60,12 @@ import { Search,
   Info,
   AlertTriangle,
   Zap
- } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { ALL_EXPANDED_SERVICES_PRICING,
-  type ExpandedServicePricing 
- } from '@/data/expandedServicesPricing2027';
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import {
+  ALL_EXPANDED_SERVICES_PRICING,
+  type ExpandedServicePricing
+} from '@/data/expandedServicesPricing2027';
 
 <<<<<<< HEAD
 const ExpandedServicesPricingGuide2027: React.FC = () => {;
@@ -80,8 +82,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
     if (selectedCategory !== 'All') {
       pricing = pricing.filter(p => p.category === selectedCategory)}
     if (searchQuery) {
-<<<<<<< HEAD
-      pricing = pricing.filter(p => 
+      pricing = pricing.filter(p =>
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
@@ -238,7 +239,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-starter' && (
                     <motion.div
@@ -318,7 +319,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-professional' && (
                     <motion.div
@@ -395,7 +396,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-enterprise' && (
                     <motion.div
@@ -482,8 +483,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
               <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3">
                 <h6 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">ROI Category</h6>
                 <p className="text-sm text-purple-600 dark:text-purple-300">
-                  {parseInt(pricing.roiAnalysis.annualROI) >= 500 ? 'Exceptional' : 
-                   parseInt(pricing.roiAnalysis.annualROI) >= 300 ? 'Excellent' : 
+                  {parseInt(pricing.roiAnalysis.annualROI) >= 500 ? 'Exceptional' :
+                   parseInt(pricing.roiAnalysis.annualROI) >= 300 ? 'Excellent' :
                    parseInt(pricing.roiAnalysis.annualROI) >= 200 ? 'Good' : 'Standard'}
                 </p>
               </div>
@@ -527,7 +528,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
                 <span>{pricing.contactInfo.phone}</span>
               </div>
             </div>
-            
+
             <div className="flex space-x-2">
               <a
                 href={`mailto:${pricing.contactInfo.email}`}
@@ -562,8 +563,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      <SEO 
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <SEO
         title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
         description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
@@ -635,10 +636,10 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services. 
+              Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services.
               Find the perfect pricing tier for your business needs.
             </motion.p>
-            
+
             {/* Contact Info */}
             <motion.div
               initial = {
@@ -770,7 +771,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our pricing is designed to provide maximum value at competitive rates. 
+            Our pricing is designed to provide maximum value at competitive rates.
             Contact us today to discuss your specific needs and get a customized quote.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">

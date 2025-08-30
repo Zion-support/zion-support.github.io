@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Rocket, 
-	Brain, 
-	Zap, 
-	Shield, 
-	Globe, 
-	TrendingUp, 
-	Heart, 
-	DollarSign, 
-	Eye, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+	Rocket,
+	Brain,
+	Zap,
+	Shield,
+	Globe,
+	TrendingUp,
+	Heart,
+	DollarSign,
+	Eye,
 	Bot,
 	ArrowRight,
 	Star,
@@ -126,27 +127,9 @@ export default function FuturisticServicesShowcase(...args[]):  {
 			<div className="container mx-auto px-4">
 				{/* Header */}
 				<div className="text-center mb-16">
-					<motion.h2 
-						initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-						whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+					<motion.h2
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
 						className="text-4xl md:text-6xl font-bold text-white mb-6"
 					>
@@ -155,37 +138,10 @@ export default function FuturisticServicesShowcase(...args[]):  {
 							Service Showcase
 						</span>
 					</motion.h2>
-					<motion.p 
-						initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-						whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-						transition = {
-  { duration: 0.6,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+					<motion.p
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6, delay: 0.2 }}
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
 					>
 						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.
@@ -208,8 +164,8 @@ export default function FuturisticServicesShowcase(...args[]):  {
 										key={index}
 										onClick={() => setCurrentService(index)}
 										className={`w-3 h-3 rounded-full transition-all ${
-											index === currentService 
-												? 'bg-zion-cyan scale-125' 
+											index === currentService
+												? 'bg-zion-cyan scale-125'
 												: 'bg-white/30 hover:bg-white/50'
 										}`}
 									/>
@@ -327,45 +283,15 @@ export default function FuturisticServicesShowcase(...args[]):  {
 										</div>
 										{/* Animated particles */}
 										<motion.div
-<<<<<<< HEAD
-											animate = {
-  { 
-												rotate[0, 360],
-												scale[1, 1.1,
-  1]
-											
-
-}}
-											transition = {
-  { 
-=======
-											animate = {
-  { 
+											animate={{
 												rotate: [0, 360],
-												scale: [1, 1.1,
-  1]
-											
-
-
-
-
-
-
-}}
-											transition = {
-  { 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-												duration: 20, 
+												scale: [1, 1.1, 1]
+											}}
+											transition={{
+												duration: 20,
 												repeat: Infinity,
-  ease: "linear" 
-											
-
-
-
-
-
-
-}}
+												ease: "linear"
+											}}
 											className="absolute inset-0"
 										>
 											<div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/60 rounded-full"></div>

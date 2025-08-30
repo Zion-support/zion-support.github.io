@@ -1,6 +1,7 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
   Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
@@ -201,17 +202,18 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredServices = getAllServices().filter(service => {;
-    const matchesCategory = selectedCategory === 'all' || ;
+  const filteredServices = getAllServices().filter(service => {
+    const matchesCategory = selectedCategory === 'all' ||
       service.type.toLowerCase().includes(selectedCategory.replace('-', ' '));
-    
+
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = price < 500;
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
     else if (priceRange === 'high') matchesPrice = price > 10000;
-    
-    return matchesCategory && matchesPrice});
+
+    return matchesCategory && matchesPrice;
+  });
 
 <<<<<<< HEAD
   const calculateROI = (roi: string)  => {;
@@ -230,98 +232,26 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
           >
             Comprehensive Pricing Guide 2028
           </motion.h1>
-          <motion.p 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
           >
             Complete pricing analysis, ROI calculations, and market positioning for all our innovative services
           </motion.p>
-          <motion.div 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
           >
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
@@ -340,64 +270,19 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       {/* Market Overview */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
-          <motion.h2 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
           >
             Market Overview & Growth Potential
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.1 
-
-
-
-
-
-
-}}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
@@ -407,37 +292,10 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               <p className="text-4xl font-bold text-zion-cyan mb-2">$89.2B</p>
               <p className="text-zion-slate-light">Combined market value across all service categories</p>
             </motion.div>
-            <motion.div 
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">
@@ -447,37 +305,10 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               <p className="text-4xl font-bold text-zion-purple mb-2">320%</p>
               <p className="text-zion-slate-light">Annual growth rate across all service categories</p>
             </motion.div>
-            <motion.div 
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.3 
-
-
-
-
-
-
-}}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">
@@ -654,27 +485,9 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       {/* ROI Calculator */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
-          <motion.h2 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
           >
@@ -695,16 +508,16 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                   </div>
                   <div>
                     <label className="block text-zion-slate-light mb-2">Current Monthly Cost</label>
-                    <input 
-                      type="number" 
+                    <input
+                      type="number"
                       placeholder="$0"
                       className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
                     />
                   </div>
                   <div>
                     <label className="block text-zion-slate-light mb-2">Expected Efficiency Gain (%)</label>
-                    <input 
-                      type="number" 
+                    <input
+                      type="number"
                       placeholder="25"
                       className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
                     />
@@ -740,98 +553,26 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
           >
             Ready to Maximize Your ROI?
           </motion.h2>
-          <motion.p 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
           >
             Contact our team to discuss how our innovative services can deliver exceptional returns on your investment
           </motion.p>
-          <motion.div 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a

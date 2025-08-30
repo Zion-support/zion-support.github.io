@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
+import { SEO } from '../../components/SEO';
 import { 
   Users, 
   Brain, 
@@ -46,51 +46,22 @@ export default function InterviewAssessmentAI() {
     {
       icon: BarChart3,
       title: "Performance Analytics",
-      description: "Detailed insights and scoring with automated feedback generation."
-    },
-    {
-      icon: Users,
-      title: "Candidate Matching",
-      description: "AI-driven candidate-job fit analysis and recommendation engine.";
-    },;
-    {;
-      icon: Clock,;
-      title: "Automated Scheduling",;
-      description: "Intelligent interview scheduling and coordination across teams.";
-    };
-  ];
-
-  const benefits = [
-    {
-      icon: Zap,
-      title: "Faster Hiring",
-      description: "Reduce time-to-hire by 60% with AI-powered assessment automation."
+      description: "Data-driven insights into hiring effectiveness and candidate performance."
     },
     {
       icon: Shield,
-      title: "Bias Elimination",
-      description: "Ensure fair and consistent evaluation standards across all candidates."
-    },
-    {
-      icon: BarChart3,
-      title: "Better Decisions",
-      description: "Make data-driven hiring decisions with comprehensive candidate insights."
-    },
-    {
-      icon: Clock,
-      title: "Cost Reduction",
-      description: "Lower recruitment costs through automated screening and assessment."
-    },
-    {
-      icon: Star,
-      title: "Quality Hires",
-      description: "Improve hire quality and retention with better candidate-job matching.";
-    },;
-    {;
-      icon: Award,;
-      title: "Compliance",;
-      description: "Maintain hiring compliance and audit trails for regulatory requirements.";
-    };
+      title: "Bias-Free Evaluation",
+      description: "Objective assessment algorithms that eliminate unconscious bias in hiring."
+    }
+  ];
+
+  const benefits = [
+    "Reduce hiring time by 50-70% with automated assessments",
+    "Improve hiring quality by 40-60% through AI insights",
+    "Reduce bias in hiring decisions by 80-90%",
+    "Enhance candidate experience with 24/7 availability",
+    "Lower cost per hire by 30-50%",
+    "Improve retention rates by 25-40%"
   ];
 
   const assessmentTypes = [
@@ -148,20 +119,14 @@ export default function InterviewAssessmentAI() {
       icon: TrendingUp
     },
     {
-      industry: "Education",
-      description: "Teaching, administration, and educational leadership assessments",
-      icon: GraduationCap;
-    },;
-    {;
-      industry: "Manufacturing",;
-      description: "Production, quality control, and operational role assessments",;
-      icon: Settings;
-    };
+      industry: "Manufacturing",
+      description: "Engineering recruitment, technical skills, and safety compliance assessment"
+    }
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
         title="Interview Assessment AI - Zion Tech Group"
         description="Transform your hiring process with AI-powered interview assessment. Evaluate candidates intelligently, eliminate bias, and make better hiring decisions."
       />

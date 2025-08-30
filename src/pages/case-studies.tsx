@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
-import { CheckCircle,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  CheckCircle,
   TrendingUp,
   Users,
   DollarSign,
@@ -180,16 +181,18 @@ export default function CaseStudies(...args[]):  {
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredCaseStudies = caseStudies.filter(study => {;
-    const matchesTechnology = selectedTechnology === 'All' || ;
+  const filteredCaseStudies = caseStudies.filter(study => {
+    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
+    const matchesTechnology = selectedTechnology === 'All' ||
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
 <<<<<<< HEAD
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    return matchesIndustry && matchesTechnology && matchesSearch});
+
+    return matchesIndustry && matchesTechnology && matchesSearch;
+  });
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -228,8 +231,8 @@ export default function CaseStudies(...args[]):  {
               Real Results, Real Impact
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover how Zion Tech Group has transformed businesses across industries with 
-              cutting-edge technology solutions. Our case studies showcase measurable results 
+              Discover how Zion Tech Group has transformed businesses across industries with
+              cutting-edge technology solutions. Our case studies showcase measurable results
               and proven success stories.
             </p>
           </motion.div>
@@ -451,7 +454,7 @@ export default function CaseStudies(...args[]):  {
               Ready to Create Your Success Story?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Let's discuss how Zion Tech Group can transform your business with 
+              Let's discuss how Zion Tech Group can transform your business with
               cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

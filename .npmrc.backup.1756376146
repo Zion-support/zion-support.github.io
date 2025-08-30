@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+# npm configuration
+engine-strict=true
+package-lock=true
+=======
+# Enable npm usage
+engine-strict=true
+package-lock=true
+shamefully-hoist=false
+
+# Use npm as package manager
+# package-manager=npm
+>>>>>>> origin/cursor/install-dependencies-failed-yarn-module-not-found-a4a9

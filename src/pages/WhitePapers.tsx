@@ -1,29 +1,8 @@
 
+
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { SEO  } from "../components/SEO";
-import { FileText, 
-  Download, 
-  Calendar, 
-  Users, 
-  Eye, 
-  Search,
-  Filter,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Heart,
-  Globe,
-  Star,
-  TrendingUp,
-  Award,
-  Zap,
-  BookOpen,
-  ExternalLink,
-  Clock,
-  Tag
- } from 'lucide-react';
+import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
+import SEO from '@/components/SEO';
 
 export default function WhitePapers() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -60,7 +39,40 @@ export default function WhitePapers() {
   const whitePapers = [
     {
       id: 1,
-      title: 'The Future of AI-Powered Business Intelligence: A Comprehensive Guide',
+      title: 'AI Autonomous Research: Revolutionizing Business Intelligence',
+      description: 'Comprehensive guide on implementing AI Autonomous Research Assistant systems that discover, analyze, and synthesize information across multiple sources autonomously.',
+      category: 'ai-ml',
+      author: 'Dr. Sarah Chen, AI Research Director',
+      publishDate: '2025-01-25',
+      readTime: '35 min',
+      downloads: 18750,
+      rating: 4.9,
+      featured: true,
+      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Innovation'],
+      coverImage: '/images/whitepapers/ai-autonomous-research.jpg',
+      fileSize: '3.2 MB',
+      language: 'English'
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
+      description: 'Strategic guide on implementing AI-powered supply chain optimization solutions that predict demand, optimize inventory, and significantly reduce operational costs.',
+      category: 'ai-ml',
+      author: 'Michael Rodriguez, Supply Chain AI Specialist',
+      publishDate: '2025-01-23',
+      readTime: '28 min',
+      downloads: 16230,
+      rating: 4.8,
+      featured: true,
+      tags: ['Supply Chain', 'AI Optimization', 'Cost Reduction', 'Predictive Analytics'],
+      coverImage: '/images/whitepapers/ai-supply-chain-optimization.jpg',
+      fileSize: '2.8 MB',
+      language: 'English'
+    },
+    {
+      id: 3,
+      title: 'The Future of AI in Enterprise: 2025 and Beyond',
+      description: 'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments. Learn how organizations can leverage AI for competitive advantage.',
       category: 'ai-ml',
       author: 'Dr. Sarah Chen, Chief AI Scientist',
       publishDate: '2024-01-15',
@@ -74,15 +86,18 @@ export default function WhitePapers() {
       readMore: '/white-papers/ai-powered-business-intelligence-2024'
     },
     {
-      id: 2,
-      title: 'Zero Trust Security Architecture: Implementation Best Practices',
-      category: 'cybersecurity',
-      author: 'Marcus Rodriguez, Head of Cybersecurity',
-      publishDate: '2023-12-20',
-      downloads: 1956,
-      views: 8900,
-      summary: 'Comprehensive guide to implementing zero trust security architecture in enterprise environments.',
-      tags: ['Cybersecurity', 'Zero Trust', 'Network Security', 'Enterprise'],
+      id: 7,
+      title: 'Zero-Trust Security Architecture: A Comprehensive Guide',
+      description: 'Deep dive into zero-trust security principles, implementation strategies, and best practices for modern organizations.',
+      category: 'security',
+      author: 'Michael Rodriguez, Chief Security Officer',
+      publishDate: '2025-01-18',
+      readTime: '30 min',
+      downloads: 12890,
+      rating: 4.8,
+      featured: true,
+      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Best Practices'],
+      coverImage: '/images/whitepapers/zero-trust-security.jpg',
       fileSize: '3.1 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/zero-trust-security-architecture-2023.pdf',
@@ -246,8 +261,11 @@ export default function WhitePapers() {
                          paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    return matchesCategory && matchesSearch});
+
+    const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
+
+    return matchesSearch && matchesCategory;
+  });
 
 <<<<<<< HEAD
   const stats = [
@@ -422,44 +440,35 @@ export default function WhitePapers() {
       </section>
 
       {/* White Papers Grid */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredWhitePapers.map((paper, index)  => (
-              <motion.article
-                key={paper.id}
-                initial = {
-  { opacity: 0,
-  y: 20 
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            White Papers Library
+          </h2>
 
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                {/* Header */}
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded-full">
-                      {categories.find(c => c.id === paper.category)?.name}
-                    </span>
-                    <div className="flex items-center space-x-4 text-sm text-slate-400">
-                      <div className="flex items-center space-x-1">
-                        <Download className="w-4 h-4" />
-                        <span>{paper.downloads}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Eye className="w-4 h-4" />
-                        <span>{paper.views}</span>
-                      </div>
+          {filteredPapers.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredPapers.map((paper) => (
+                <div
+                  key={paper.id}
+                  className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
+                    paper.featured ? 'ring-2 ring-zion-cyan' : ''
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                        {categories.find(c => c.id === paper.category)?.name}
+                      </span>
+                      {paper.featured && (
+                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Calendar className="w-4 h-4" />
+                      {formatDate(paper.publishDate)}
                     </div>
                   </div>
                   

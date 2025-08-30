@@ -1,14 +1,15 @@
 
-import React, { useState, useRef, useEffect } from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { ChevronDown, 
-  Menu, 
-  X, 
-  Home, 
-  Settings, 
-  Users, 
-  Building, 
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  ChevronDown,
+  Menu,
+  X,
+  Home,
+  Settings,
+  Users,
+  Building,
   Globe,
   Zap,
   Brain,
@@ -360,7 +361,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                           {link.name}
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`} />
                         </button>
-                        
+
                         {activeDropdown === link.key && (
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child) => (

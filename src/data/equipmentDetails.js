@@ -170,8 +170,9 @@ export const equipmentDetails = [
 export const getEquipmentByCategory = (category) => {
   return equipmentDetails.filter(equipment => equipment.category === category)};
 
-export const searchTerm = query.toLowerCase();
-  return equipmentDetails.filter(equipment => 
+export const searchEquipment = (query) => {
+  const searchTerm = query.toLowerCase();
+  return equipmentDetails.filter(equipment =>
     equipment.name.toLowerCase().includes(searchTerm) ||
     equipment.description.toLowerCase().includes(searchTerm) ||
     equipment.category.toLowerCase().includes(searchTerm)

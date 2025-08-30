@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
+import { SEO } from '../../components/SEO';
 import { 
   MessageCircle, 
   Brain, 
@@ -47,58 +47,34 @@ export default function HelpdeskPlatform() {
       description: "Unified support across email, chat, phone, and social media channels."
     },
     {
-      icon: Ticket,
-      title: "Ticket Management",
-      description: "Comprehensive ticket creation, tracking, and resolution workflow management."
+      icon: Target,
+      title: "Smart Ticket Routing",
+      description: "AI-driven ticket classification and automatic assignment to best agents."
     },
     {
-      icon: Users,
-      title: "Agent Management",
-      description: "Efficient agent assignment, workload balancing, and performance tracking."
+      icon: Zap,
+      title: "Automated Workflows",
+      description: "Intelligent automation for common support scenarios and escalations."
     },
     {
       icon: BarChart3,
-      title: "Analytics & Reporting",
-      description: "Real-time insights into support performance and customer satisfaction metrics.";
-    },;
-    {;
-      icon: Clock,;
-      title: "SLA Management",;
-      description: "Automated service level agreement monitoring and escalation workflows.";
-    };
+      title: "Performance Analytics",
+      description: "Comprehensive insights into support metrics and customer satisfaction."
+    },
+    {
+      icon: Shield,
+      title: "Knowledge Management",
+      description: "Centralized knowledge base with AI-powered search and suggestions."
+    }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
-      title: "Improved Response Times",
-      description: "Reduce customer wait times with AI-powered automation and intelligent routing."
-    },
-    {
-      icon: Users,
-      title: "Enhanced Customer Experience",
-      description: "Provide consistent, high-quality support across all channels and touchpoints."
-    },
-    {
-      icon: BarChart3,
-      title: "Better Performance Insights",
-      description: "Track key metrics and identify areas for improvement with detailed analytics."
-    },
-    {
-      icon: Clock,
-      title: "Increased Efficiency",
-      description: "Automate repetitive tasks and focus agents on complex customer issues."
-    },
-    {
-      icon: Star,
-      title: "Higher Customer Satisfaction",
-      description: "Improve CSAT scores through faster resolution and personalized support.";
-    },;
-    {;
-      icon: Award,;
-      title: "Cost Optimization",;
-      description: "Reduce support costs while maintaining or improving service quality.";
-    };
+    "Reduce support response time by 60-80% with AI automation",
+    "Improve customer satisfaction scores by 40-60%",
+    "Reduce support costs by 30-50% through automation",
+    "Increase agent productivity by 50-70%",
+    "Provide 24/7 customer support availability",
+    "Enhance first-call resolution rates by 35-55%"
   ];
 
   const supportChannels = [
@@ -157,19 +133,13 @@ export default function HelpdeskPlatform() {
     },
     {
       industry: "Education",
-      description: "Student and faculty support for educational institutions",
-      icon: GraduationCap;
-    },;
-    {;
-      industry: "Manufacturing",;
-      description: "Product support and technical assistance for manufacturing companies",;
-      icon: Settings;
-    };
+      description: "Student support, course assistance, and technical help"
+    }
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
         title="Helpdesk Platform - Zion Tech Group"
         description="Transform customer support with our AI-powered helpdesk platform. Streamline ticket management, improve response times, and enhance customer satisfaction."
       />

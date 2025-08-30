@@ -269,7 +269,40 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  console.log(\`Server running on port \${PORT}\`)});`};
+  console.log(\`Server running on port \${PORT}\`);
+});`;
+    };
+    const generatePythonCode = (prompt, _options) => {
+        return `#!/usr/bin/env python3
+"""
+Generated Python code based on prompt: ${prompt}
+"""
+
+import asyncio
+from typing import Optional, List, Dict, Any
+from dataclasses import dataclass
+
+@dataclass
+class GeneratedClass:
+    """Generated class based on prompt."""
+
+    def __init__(self):
+        # TODO: Implement initialization
+        pass
+
+    async def process_data(self, data: Any) -> Any:
+        """Process data based on prompt requirements."""
+        # TODO: Implement data processing logic
+        return data
+
+async def main():
+    """Main function."""
+    instance = GeneratedClass()
+    # TODO: Implement main logic based on prompt
+
+if __name__ == "__main__":
+    asyncio.run(main())`;
+    };
     const generateGenericCode = (prompt, options) => {
         return `// Generated ${options.language} code based on prompt: ${prompt}
 // Framework: ${options.framework || 'none'}
@@ -393,7 +426,25 @@ describe('GeneratedComponent', () => {
   it('handles user interactions', () => {
     render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality
-  })});`};
+  });
+});`;
+    };
+    const generatePytestTests = (_code) => {
+        return `import pytest
+from generated_module import GeneratedClass
+
+class TestGeneratedClass:
+    def test_initialization(self):
+        instance = GeneratedClass()
+        assert instance is not None
+
+    def test_process_data(self):
+        instance = GeneratedClass()
+        result = instance.process_data("test")
+        assert result == "test"
+
+    # TODO: Add more specific test cases based on class functionality`;
+    };
     const generateGenericTests = (_code, language) => {
         return `// Generated tests for ${language} code
 // TODO: Implement specific test cases based on code functionality
@@ -406,22 +457,39 @@ describe('Generated Code Tests', () => {
     const generateJSDoc = (_code) => {
         return `/**
  * Generated Component
- * 
+ *
  * This component was generated based on user requirements.
- * 
+ *
  * @component
  * @example
  * <GeneratedComponent />
  */
 export const GeneratedComponent = () => {
   // Component implementation
-};`};
+};`;
+    };
+    const generatePythonDoc = (_code) => {
+        return `"""
+Generated Module
+
+This module was generated based on user requirements.
+"""
+
+def generated_function():
+    """
+    Generated function with docstring.
+
+    Returns:
+        str: Description of return value
+    """
+    pass`;
+    };
     const generateGenericDocs = (_code, language) => {
         return `/**
  * Generated ${language} Code
- * 
+ *
  * This code was generated based on user requirements.
- * 
+ *
  * TODO: Add specific documentation based on code functionality
  */`};
     // Cleanup timeout on unmount

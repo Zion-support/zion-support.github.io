@@ -182,7 +182,7 @@ const itemVariants = {
 
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial = {
   { opacity: 0,
@@ -211,13 +211,13 @@ const itemVariants = {
               Explore Categories
             </h2>
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation. 
+              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation.
               Everything you need to accelerate your digital transformation in one place.
             </p>
           </motion.div>
         )}
-        
-        <motion.div 
+
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -236,15 +236,11 @@ const itemVariants = {
 }}
             >
               <Link to={category.link} className="group block h-full">
-                <motion.div 
+                <motion.div
                   className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark"
                   variants={cardVariants}
                   whileHover={{ scale: 1.02 }}
-                  transition = {
-  { type: "spring", stiffness: 400,
-  damping: 10 
-
-}}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
                   {/* Icon with enhanced background */}
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl`}>
@@ -271,21 +267,12 @@ const itemVariants = {
             </motion.div>
           ))}
         </motion.div>
-        
+
         {/* Special Services Section */}
-        <motion.div 
-<<<<<<< HEAD
+        <motion.div
           className="mt-16"
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
@@ -340,21 +327,12 @@ const itemVariants = {
             ))}
           </div>
         </motion.div>
-        
+
         {/* CTA Section */}
-        <motion.div 
-<<<<<<< HEAD
+        <motion.div
           className="mt-16 flex justify-center"
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
@@ -396,8 +374,8 @@ const itemVariants = {
 }}
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
-          <Link 
-            to="/services" 
+          <Link
+            to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
           >
 <<<<<<< HEAD

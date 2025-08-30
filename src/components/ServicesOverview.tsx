@@ -1,14 +1,15 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Shield, 
-  Rocket, 
-  Lock, 
-  Cpu, 
-  Code, 
-  Users, 
-  Globe, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Shield,
+  Rocket,
+  Lock,
+  Cpu,
+  Code,
+  Users,
+  Globe,
   Heart,
   TrendingUp,
   Zap,
@@ -143,10 +144,10 @@ export function ServicesOverview(...args[]):  {
       <div className="absolute inset-0 opacity-10">
         <div className="cyber-grid w-full h-full"></div>
       </div>
-      
+
       <div className="container-responsive relative z-10">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial = {
   { opacity: 0,
@@ -176,8 +177,8 @@ export function ServicesOverview(...args[]):  {
             <span className="text-white">Services Portfolio</span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms. 
-            From cutting-edge quantum computing to practical business applications, we provide the technology 
+            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.
+            From cutting-edge quantum computing to practical business applications, we provide the technology
             solutions your business needs to thrive in the digital age.
           </p>
         </motion.div>
@@ -226,16 +227,16 @@ export function ServicesOverview(...args[]):  {
                   <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   {/* Category Info */}
                   <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300 text-center">
                     {category.name}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">
                     {category.description}
                   </p>
-                  
+
                   {/* Service Count */}
                   <div className="text-center">
                     <div className="text-2xl font-bold text-zion-cyan mb-1">
@@ -245,7 +246,7 @@ export function ServicesOverview(...args[]):  {
                       Services Available
                     </div>
                   </div>
-                  
+
                   {/* Hover Arrow */}
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRight className="w-5 h-5 text-zion-cyan" />
@@ -257,7 +258,7 @@ export function ServicesOverview(...args[]):  {
         </div>
 
         {/* Featured Services */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial = {
   { opacity: 0,
@@ -284,9 +285,9 @@ export function ServicesOverview(...args[]):  {
           <h2 className="heading-responsive font-bold mb-8 text-center">
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
-          
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index)  => (
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
                 className="card-futuristic group"
@@ -336,19 +337,19 @@ export function ServicesOverview(...args[]):  {
                     <div className="text-sm text-zion-slate-light">per month</div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-cyan font-medium">{service.category}</span>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      service.innovationLevel === 'Cutting-edge' 
-                        ? 'bg-zion-cyan/20 text-zion-cyan' 
+                      service.innovationLevel === 'Cutting-edge'
+                        ? 'bg-zion-cyan/20 text-zion-cyan'
                         : 'bg-zion-purple/20 text-zion-purple'
                     }`}>
                       {service.innovationLevel}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-1 text-zion-green">
                       <TrendingUp className="w-4 h-4" />
@@ -359,7 +360,7 @@ export function ServicesOverview(...args[]):  {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">
                   <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                     <div className="flex items-center gap-1">
@@ -371,7 +372,7 @@ export function ServicesOverview(...args[]):  {
                       <span>{service.supportLevel}</span>
                     </div>
                   </div>
-                  
+
                   <Link
                     to={`/services/${service.id}`}
                     className="btn-futuristic px-4 py-2 text-sm"
@@ -386,7 +387,7 @@ export function ServicesOverview(...args[]):  {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div
           className="text-center"
           initial = {
   { opacity: 0,
@@ -415,10 +416,10 @@ export function ServicesOverview(...args[]):  {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Get in touch with our technology experts to discuss your specific needs and discover 
+              Get in touch with our technology experts to discuss your specific needs and discover
               how our innovative solutions can drive your business forward.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
                 to="/contact"
@@ -427,7 +428,7 @@ export function ServicesOverview(...args[]):  {
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
-              
+
               <a
                 href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg"
@@ -436,7 +437,7 @@ export function ServicesOverview(...args[]):  {
                 Call Now: +1 302 464 0950
               </a>
             </div>
-            
+
             {/* Contact Info Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">
@@ -445,7 +446,7 @@ export function ServicesOverview(...args[]):  {
                 <p className="text-sm text-zion-slate-light">364 E Main St STE 1008</p>
                 <p className="text-sm text-zion-slate-light">Middletown DE 19709</p>
               </div>
-              
+
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-purple/20">
                 <Mail className="w-8 h-8 text-zion-purple mx-auto mb-2" />
                 <p className="font-medium text-white mb-1">Email</p>
@@ -453,7 +454,7 @@ export function ServicesOverview(...args[]):  {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              
+
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-blue/20">
                 <Globe className="w-8 h-8 text-zion-blue mx-auto mb-2" />
                 <p className="font-medium text-white mb-1">Website</p>

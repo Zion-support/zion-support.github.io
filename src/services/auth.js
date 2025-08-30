@@ -14,21 +14,30 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Mock validation
       if (!credentials.email || !credentials.password) {
         throw new Error('Email and password are required');
       }
-      
+
       // Mock successful login
+      const mockUser = {
+        id: 1,
+        email: credentials.email,
+        name: 'John Doe',
+        role: 'user',
+        avatar: null,
+        createdAt: new Date().toISOString()
+      };
+
       const mockToken = 'mock-jwt-token-' + Date.now();
-      
+
       // Store in localStorage
       this.token = mockToken;
       this.user = mockUser;
       localStorage.setItem('token', mockToken);
       localStorage.setItem('user', JSON.stringify(mockUser));
-      
+
       return {
         user: mockUser,
         token: mockToken
@@ -43,21 +52,30 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Mock validation
       if (!userData.email || !userData.password || !userData.name) {
         throw new Error('Name, email, and password are required');
       }
-      
+
       // Mock successful registration
+      const mockUser = {
+        id: Date.now(),
+        email: userData.email,
+        name: userData.name,
+        role: 'user',
+        avatar: null,
+        createdAt: new Date().toISOString()
+      };
+
       const mockToken = 'mock-jwt-token-' + Date.now();
-      
+
       // Store in localStorage
       this.token = mockToken;
       this.user = mockUser;
       localStorage.setItem('token', mockToken);
       localStorage.setItem('user', JSON.stringify(mockUser));
-      
+
       return {
         user: mockUser,
         token: mockToken
@@ -72,13 +90,13 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 500));
-      
+
       // Clear localStorage
       this.token = null;
       this.user = null;
       localStorage.removeItem('token');
       localStorage.removeItem('user');
-      
+
       return true;
     } catch (error) {
       throw new Error('Logout failed');
@@ -110,16 +128,16 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 500));
-      
+
       if (!this.token) {
         throw new Error('No token to refresh');
       }
-      
+
       // Mock token refresh
       const newToken = 'mock-jwt-token-refreshed-' + Date.now();
       this.token = newToken;
       localStorage.setItem('token', newToken);
-      
+
       return newToken;
     } catch (error) {
       throw new Error('Token refresh failed');
@@ -131,11 +149,11 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!email) {
         throw new Error('Email is required');
       }
-      
+
       // Mock successful password reset request
       return {
         message: 'Password reset email sent successfully',
@@ -151,11 +169,11 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!token || !newPassword) {
         throw new Error('Token and new password are required');
       }
-      
+
       // Mock successful password reset
       return {
         message: 'Password reset successfully'
@@ -170,28 +188,21 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
       }
-      
+
       // Mock profile update
       const updatedUser = {
   ...this.user,
         ...profileData,
-  updatedAt: new Date().toISOString()
-      
+        updatedAt: new Date().toISOString()
+      };
 
-
-
-
-
-
-};
-      
       this.user = updatedUser;
       localStorage.setItem('user', JSON.stringify(updatedUser));
-      
+
       return updatedUser;
     } catch (error) {
       throw new Error(error.message || 'Profile update failed');
@@ -203,15 +214,15 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
       }
-      
+
       if (!currentPassword || !newPassword) {
         throw new Error('Current and new passwords are required');
       }
-      
+
       // Mock password change
       return {
         message: 'Password changed successfully'
@@ -226,18 +237,18 @@ class AuthService {
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       if (!token) {
         throw new Error('Verification token is required');
       }
-      
+
       // Mock email verification
       if (this.user) {
         this.user.emailVerified = true;
         this.user.verifiedAt = new Date().toISOString();
         localStorage.setItem('user', JSON.stringify(this.user));
       }
-      
+
       return {
         message: 'Email verified successfully'
       };
@@ -249,22 +260,14 @@ class AuthService {
   // Get user permissions
   getUserPermissions() {
     if (!this.user) return [];
-    
+
     // Mock permissions based on user role
     const permissions = {
   user: ['read:own', 'write:own'],
       admin: ['read:all', 'write:all', 'delete:all', 'manage:users'],
-      moderator: ['read:all', 'write:all',
-  'moderate:content']
-    
+      moderator: ['read:all', 'write:all', 'moderate:content']
+    };
 
-
-
-
-
-
-};
-    
     return permissions[this.user.role] || [];
   }
 

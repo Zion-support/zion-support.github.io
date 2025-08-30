@@ -1,74 +1,94 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Shield, 
-  TrendingUp, 
-  Zap, 
-  Globe, 
-  Users, 
-  BarChart3, 
-  Lock, 
-  Eye, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Clock, 
-  DollarSign, 
-  Target, 
-  Lightbulb, 
-  Award, 
-  ShieldCheck, 
-  Server, 
-  Smartphone, 
-  Monitor, 
-  Wifi, 
-  Beaker, 
-  Syringe, 
-  Stethoscope, 
-  Heart, 
-  Ear, 
-  Hand, 
-  Footprints, 
-  Bone, 
-  Tooth, 
-  Pill, 
-  Thermometer, 
-  Scale, 
-  Calculator, 
-  PieChart, 
-  TrendingDown, 
-  Minus, 
-  Plus, 
-  Equal, 
-  Divide, 
-  Percent, 
-  Euro, 
-  Bitcoin, 
-  CreditCard, 
-  Wallet, 
-  Banknote, 
-  Coins, 
-  PiggyBank, 
-  Key, 
-  Fingerprint, 
-  QrCode, 
-  Barcode, 
-  Scan, 
-  Camera, 
-  VideoOff, 
-  Mic, 
-  MicOff, 
-  Volume2, 
-  VolumeX, 
-  Play, 
-  Pause, 
-  Rewind, 
-  FastForward, 
-  Shuffle, 
-  Repeat, 
-  Repeat1, 
-  PlayCircle, 
+
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Shield,
+  TrendingUp,
+  Zap,
+  Globe,
+  Users,
+  BarChart3,
+  Lock,
+  Eye,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign,
+  Target,
+  Lightbulb,
+  Award,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayCircle,
   PauseCircle,
   Mail,
   Phone,
@@ -101,6 +121,8 @@ const categories = [
   Truck,;
   Briefcase;
 } from 'lucide-react';
+import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -251,8 +273,8 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         </div>
       )}
       <div className="relative mb-6 overflow-hidden rounded-xl">
-        <img 
-          src={service.images[0]} 
+        <img
+          src={service.images[0]}
           alt={service.title}
           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
         />
@@ -369,33 +391,20 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
       </div>;
     </motion.div>;
   );
-  
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <motion.h1 
-            initial = {
-  { opacity: 0,
-  y: -20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO
+        title="Comprehensive Services Overview 2027 - Zion Tech Group"
+        description="Explore our comprehensive portfolio of innovative AI, IT, and business solutions. From AI-powered chatbots to quantum computing services, discover cutting-edge technology solutions."
+        keywords="AI services, IT solutions, business automation, cybersecurity, blockchain, quantum computing, Zion Tech Group"
+      />
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
@@ -525,7 +534,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 </div>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as )}
+                  onChange={(e) => setSortBy(e.target.value as any)}
                   className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
                 >
                   <option value="rating">Sort by Rating</option>
@@ -566,11 +575,11 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           </div>
           {/* Services Grid */}
           <div className={`grid gap-8 ${
-            viewMode === 'grid' 
-              ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' 
+            viewMode === 'grid'
+              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
               : 'grid-cols-1'
           }`}>
-            {filteredServices.map((service)  => (
+            {filteredServices.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
@@ -621,7 +630,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8">
-            Our team of experts is ready to help you implement the perfect solution for your needs. 
+            Our team of experts is ready to help you implement the perfect solution for your needs.
             Get in touch today for a personalized consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

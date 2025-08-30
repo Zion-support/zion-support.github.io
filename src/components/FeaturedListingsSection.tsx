@@ -80,49 +80,14 @@ const featuredListings = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
-const featuredServices = [
-  {
-    title: 'AI-Powered Business Intelligence',
-    description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-    category: 'AI Solutions',
-    rating: 4.9,
-    reviews: 127,
-    price: 'From $2,500',
-    image: '🤖',
-    link: '/services/ai',
-    features['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
-  },
-  {
-    title: 'Cloud Migration & Optimization',
-    description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
-    category: 'Cloud & DevOps',
-    rating: 4.8,
-    reviews: 89,
-    price: 'From $5,000',
-    image: '☁️',
-    link: '/services/cloud',
-    features['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
-  },
-  {
-    title: 'Cybersecurity Assessment & Implementation',
-    description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
-    category: 'Cybersecurity',
-    rating: 4.9,
-    reviews: 156,
-    price: 'From $3,500',
-    image: '🔒',
-    link: '/services/cybersecurity',
-    features['Security Audits', 'Threat Detection', 'Incident Response'];
-  };
-];
-
-export function FeaturedListingsSection(...args[]):  {
+export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<any>(null);
+  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
   const [showFilters, setShowFilters] = useState(false);
 
-  const filteredListings = selectedCategory === "All" ;
-    ? featuredListings: featuredListings.filter(listing  => listing.category === selectedCategory);
+  const filteredListings = selectedCategory === "All"
+    ? featuredListings
+    : featuredListings.filter(listing => listing.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -131,16 +96,17 @@ export function FeaturedListingsSection(...args[]):  {
       transition: {
         staggerChildren: 0.15,
         delayChildren: 0.1
-      };
-    };
+      }
+    }
   };
 
-  const renderStars = (rating: number)  => {
-    return Array.from({ length: 5 }, (_, i)  => (
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ★;
-      </span>;
-    ))};
+        ★
+      </span>
+    ));
+  };
 
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -176,92 +142,60 @@ export function FeaturedListingsSection(...args[]):  {
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             Discover our most popular and innovative technology solutions that are transforming businesses worldwide
           </p>
-<<<<<<< HEAD
         </div>
-        
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index)  => (
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredServices.map((service, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
                     {service.category}
-=======
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredListings.map((listing, index) => (
-            <motion.div
-              key={listing.id}
-              className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              viewport={{ once: true }}
-              transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-            >
-              <div className="relative">
-                <img 
-                  src={listing.image} 
-                  alt={listing.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-3 left-3">
-                  <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-                    {listing.category}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </span>
                 </div>
-                <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 px-2 py-1 rounded-full">
-                  <span className="text-yellow-400 text-sm">★</span>
-                  <span className="text-white text-xs">{listing.rating}</span>
-                  <span className="text-gray-300 text-xs">({listing.reviews})</span>
+
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.image}
                 </div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">
-                  {listing.title}
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {service.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-                  {listing.description}
+
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {service.description}
                 </p>
-                
+
+                <div className="mb-4">
+                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-blue-400">{listing.price}</span>
-                  <Link 
-                    to={`/services/${listing.id}`}
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors duration-200"
+                  <span className="text-2xl font-bold text-gray-900">{service.price}</span>
+                  <Link
+                    to={service.link}
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
                   >
-                    Learn More
+                    Learn More →
                   </Link>
                 </div>
+              </div>
+
+              <div className="px-6 pb-6">
+                <Link
+                  to={service.link}
+                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
+                >
+                  Get Started
+                </Link>
               </div>
             </motion.div>
           ))}

@@ -1,24 +1,24 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const CloudServices = () => {
     const cloudServices = [
         {
             title: "Cloud Migration & Strategy",
             description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",
             price: "From $8,500/project",
-            features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
+            features: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
         },
         {
             title: "Cloud-Native Development",
             description: "Build scalable applications using cloud-native technologies and microservices architecture.",
             price: "From $12,000/project",
-            features["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
+            features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
         },
         {
             title: "Cloud Security & Compliance",
             description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
             price: "From $6,500/month",
-            features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
+            features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -63,5 +63,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-    </div>)};
+    </div>);
+};
 export default CloudServices;

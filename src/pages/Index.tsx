@@ -1,39 +1,39 @@
 import React from 'react';
 
-
-import { Footer  } from '@/components/Footer';
-import { TrustedBySection  } from '@/components/TrustedBySection';
-import { TestimonialCarousel  } from '@/components/TestimonialCarousel';
-import { FloatingCTA  } from '@/components/FloatingCTA';
-import { HeroSection  } from '@/components/HeroSection';
-import { CategoriesSection  } from '@/components/CategoriesSection';
-import { BenefitsSection  } from '@/components/BenefitsSection';
-import { HowItWorksSection  } from '@/components/HowItWorksSection';
-import { WaitlistSection  } from '@/components/WaitlistSection';
-import { BlogSection  } from '@/components/BlogSection';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Link  } from 'react-router-dom.ts';
-import { FeaturedListingsSection  } from '@/components/FeaturedListingsSection';
-import { FeaturesGuideSection  } from '@/components/FeaturesGuideSection';
-import { SocialShareSection  } from '@/components/SocialShareSection';
-import { useTranslation  } from 'react-i18next.ts';
-import { useLanguage  } from '@/context/LanguageContext';
-import { ArrowRight, 
-  Users, 
-  Zap, 
-  Settings, 
+import { Footer } from "@/components/Footer";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+import { FloatingCTA } from "@/components/FloatingCTA";
+import { HeroSection } from "@/components/HeroSection";
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { WaitlistSection } from "@/components/WaitlistSection";
+import { BlogSection } from "@/components/BlogSection";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
+import { SocialShareSection } from "@/components/SocialShareSection";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/context/LanguageContext";
+import {
+  ArrowRight,
+  Users,
+  Zap,
+  Settings,
   Search,
-  MessageSquare, 
+  MessageSquare,
   Sparkles,
   BarChart3,
   Smartphone
- } from 'lucide-react';
+} from "lucide-react";
 
-export default function Index(...args[]):  {
+export default function Index() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-  
+
   // Tools and features showcase
   const toolsFeatures = [
     {
@@ -76,20 +76,20 @@ export default function Index(...args[]):  {
       title: "Mobile App",
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
-      link: "/mobile-launch";
-    };
+      link: "/mobile-launch"
+    }
   ];
 
   return (
-    <div className = "min-h-screen bg-zion-blue text-white">
-      <SEO 
-        title={t("home.seo_title")} 
-        description={t("home.seo_description")} 
+    <div className="min-h-screen bg-zion-blue text-white">
+      <SEO
+        title={t("home.seo_title")}
+        description={t("home.seo_description")}
         keywords={t("home.seo_keywords")}
         canonical="https://ziontechgroup.com/"
       />
               <HeroSection />
-      
+
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -101,12 +101,12 @@ export default function Index(...args[]):  {
               {t("home.tools_description")}
             </p>
           </div>
-          
-          <div className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
-            {toolsFeatures.map((feature, index)  => (
-              <Link 
-                key={index} 
-                to={feature.link} 
+
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
+            {toolsFeatures.map((feature, index) => (
+              <Link
+                key={index}
+                to={feature.link}
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -122,69 +122,26 @@ export default function Index(...args[]):  {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Quick Links */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Our Services</h3>
-            <p className="text-gray-300 mb-6">
-              Discover our comprehensive range of technology services including AI development, cloud migration, cybersecurity, and more.
-            </p>
-            <a href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-              Learn More
-            </a>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Our Products</h3>
-            <p className="text-gray-300 mb-6">
-              Explore our innovative product portfolio including AI-powered solutions, SaaS platforms, and security tools.
-            </p>
-            <a href="/products" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-              View Products
-            </a>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Get In Touch</h3>
-            <p className="text-gray-300 mb-6">
-              Ready to transform your business? Contact us for a free consultation and custom solution design.
-            </p>
-            <a href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
+      <CategoriesSection />
+      <BenefitsSection />
 
-      {/* Call to Action */}
-      <div className="text-center py-16">
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 text-gray-300">
-            Let's discuss how our technology solutions can help you achieve your goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
-              📞 Call +1 (302) 464-0950
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
-              ✉️ Get Quote
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <TestimonialCarousel />
+      <TrustedBySection />
+      <BlogSection />
+
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />
+
+      <WaitlistSection />
+      <FloatingCTA />
+      <Footer />
     </div>
   )};
 =======;

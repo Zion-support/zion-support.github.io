@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Check, Star, Brain, Cpu, Database, Network, Shield, Zap, 
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
  } from 'lucide-react';
@@ -16,18 +17,18 @@ export default function ComprehensivePricing2027(...args[]):  {
   const [expandedService, setExpandedService] = useState<any>(null);
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
-  
+
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-  
+
   const filteredServices = allServices
-    .filter(service => 
-      (selectedCategory === 'All' || service.category === service.category) &&;
-      (searchQuery === '' || ;
-        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-    );
-    .sort((a, b) => {;
+    .filter(service =>
+      (selectedCategory === 'All' || service.category === service.category) &&
+      (searchQuery === '' ||
+        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
+    )
+    .sort((a, b) => {
       if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
       return b.rating - a.rating});
@@ -126,7 +127,7 @@ export default function ComprehensivePricing2027(...args[]):  {
       </div>
 
       {/* Header Section */}
-      <motion.section 
+      <motion.section
         className="relative z-10 pt-20 pb-16 px-6"
         initial = {
   { opacity: 0,
@@ -151,7 +152,7 @@ export default function ComprehensivePricing2027(...args[]):  {
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             initial = {
   { opacity: 0,
@@ -186,7 +187,7 @@ export default function ComprehensivePricing2027(...args[]):  {
           >
             Comprehensive Pricing 2027
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             initial = {
   { opacity: 0,
@@ -219,12 +220,12 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 }}
           >
-            Transparent pricing for our cutting-edge technology services. 
+            Transparent pricing for our cutting-edge technology services.
             Choose the perfect solution for your business needs and budget.
           </motion.p>
-          
+
           {/* Pricing Stats */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
             initial = {
   { opacity: 0,
@@ -276,7 +277,7 @@ export default function ComprehensivePricing2027(...args[]):  {
       </motion.section>
 
       {/* Search and Filters */}
-      <motion.section 
+      <motion.section
         className="relative z-10 px-6 pb-12"
         initial = {
   { opacity: 0,
@@ -375,7 +376,7 @@ export default function ComprehensivePricing2027(...args[]):  {
       </motion.section>
 
       {/* Services Grid */}
-      <motion.section 
+      <motion.section
         className="relative z-10 px-6 pb-20"
         variants={containerVariants}
         initial="hidden"
@@ -384,7 +385,7 @@ export default function ComprehensivePricing2027(...args[]):  {
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
-              <motion.div 
+              <motion.div
                 className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
                 key={viewMode}
                 initial = {
@@ -459,7 +460,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-4">
                           {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span 
+                            <span
                               key={tagIndex}
                               className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
                             >
@@ -563,17 +564,8 @@ export default function ComprehensivePricing2027(...args[]):  {
                               </div>
 
                               {/* CTA Button */}
-                              <button 
-                                onClick = {
-  () => window.open(service.website,
-  '_blank')
-
-
-
-
-
-
-}
+                              <button
+                                onClick={() => window.open(service.website, '_blank')}
                                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
                               >
                                 Get Started
@@ -586,8 +578,8 @@ export default function ComprehensivePricing2027(...args[]):  {
                       <div className="flex gap-6">
                         {/* Service Image */}
                         <div className="relative w-48 h-32 overflow-hidden rounded-lg flex-shrink-0">
-                          <img 
-                            src={service.images[0]} 
+                          <img
+                            src={service.images[0]}
                             alt={service.title}
                             className="w-full h-full object-cover"
                           />
@@ -607,9 +599,9 @@ export default function ComprehensivePricing2027(...args[]):  {
                               <div className="text-xs text-zion-slate-light">per {service.pricingModel}</div>
                             </div>
                           </div>
-                          
+
                           <p className="text-gray-300 text-sm">{service.description}</p>
-                          
+
                           <div className="flex items-center gap-4 text-sm text-gray-400">
                             <div className="flex items-center gap-1">
                               <Brain className="w-4 h-4 text-zion-cyan" />
@@ -628,7 +620,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                           <div className="flex items-center justify-between">
                             <div className="flex flex-wrap gap-2">
                               {service.tags.slice(0, 4).map((tag, tagIndex) => (
-                                <span 
+                                <span
                                   key={tagIndex}
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
                                 >
@@ -636,18 +628,9 @@ export default function ComprehensivePricing2027(...args[]):  {
                                 </span>
                               ))}
                             </div>
-                            
-                            <button 
-                              onClick = {
-  () => window.open(service.website,
-  '_blank')
 
-
-
-
-
-
-}
+                            <button
+                              onClick={() => window.open(service.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
                             >
                               Get Started
@@ -660,7 +643,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                 ))}
               </motion.div>
             ) : (
-              <motion.div 
+              <motion.div
                 className="text-center py-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -676,7 +659,7 @@ export default function ComprehensivePricing2027(...args[]):  {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section 
+      <motion.section
         className="relative z-10 px-6 pb-20"
         initial = {
   { opacity: 0,
@@ -718,14 +701,14 @@ export default function ComprehensivePricing2027(...args[]):  {
               Get in touch with our experts to discuss pricing, implementation, and how these innovative services can drive your success
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
               >
                 Contact Our Team
               </Link>
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
               >
                 Call +1 302 464 0950

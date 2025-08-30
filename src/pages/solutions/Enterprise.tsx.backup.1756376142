@@ -1,0 +1,639 @@
+import React from 'react';
+<<<<<<< HEAD
+import SEO from '@/components/SEO';
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
+              <Building className="w-4 h-4 mr-2" />
+              Enterprise Solutions
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Enterprise
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Solutions</span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Enterprise-grade solutions designed for large organizations with 
+              complex requirements, scalability needs, and compliance demands.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Start Enterprise Project
+              </button>
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2" />
+                Schedule Consultation
+              </button>
+=======
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  Building, 
+  Shield, 
+  Cloud, 
+  Server, 
+  BarChart3, 
+  Users, 
+  Zap, 
+  Lock,
+  Globe,
+  Cpu,
+  Network,
+  TrendingUp,
+  Rocket,
+  Target,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Activity,
+  Workflow,
+  Database,
+  Key,
+  Eye,
+  Heart,
+  Brain
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
+export default function EnterpriseSolutions() {
+  const enterpriseServices = [
+    {
+      category: 'Cloud & Infrastructure',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      services: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation and scaling' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual system replicas and simulation' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'Smart device networks and edge processing' }
+      ]
+    },
+    {
+      category: 'AI & Automation',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      services: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics and ML insights' },
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'Intelligent project planning and execution' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', description: 'End-to-end workflow optimization' },
+        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', description: 'Self-directed research and analysis' }
+      ]
+    },
+    {
+      category: 'Security & Compliance',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      services: [
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'AI-powered threat detection and response' },
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', description: 'Modern zero-trust security frameworks' },
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', description: 'Web security hardening and compliance' },
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', description: 'GDPR/CCPA compliance and data privacy' }
+      ]
+    },
+    {
+      category: 'Data & Analytics',
+      icon: BarChart3,
+      color: 'from-green-500 to-emerald-500',
+      services: [
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence and insights' },
+        { name: 'AI Data Analytics', href: '/services/ai-data-analytics', description: 'AI-powered data analysis' },
+        { name: 'Performance Analytics', href: '/services/performance-analytics', description: 'Real-time performance monitoring' },
+        { name: 'Website Analytics', href: '/services/website-analytics', description: 'Comprehensive web analytics' }
+      ]
+    },
+    {
+      category: 'Digital Transformation',
+      icon: Rocket,
+      color: 'from-yellow-500 to-orange-500',
+      services: [
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Strategic technology consulting' },
+        { name: 'IT Consulting', href: '/services/it-consulting', description: 'Technology strategy and planning' },
+        { name: 'Sustainable Technology', href: '/services/sustainable-technology', description: 'Green IT and sustainability solutions' },
+        { name: '5G Enterprise Solutions', href: '/services/5g-enterprise', description: 'Next-generation enterprise connectivity' }
+      ]
+    },
+    {
+      category: 'Financial Operations',
+      icon: TrendingUp,
+      color: 'from-indigo-500 to-purple-500',
+      services: [
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization and management' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Financial operations automation' },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial analysis' },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'Efficient returns processing' }
+      ]
+    }
+  ];
+
+  const enterpriseCapabilities = [
+    {
+      title: 'Scalable Infrastructure',
+      description: 'Enterprise-grade cloud infrastructure that scales with your business needs',
+      icon: Server,
+      features: ['Auto-scaling', 'Load Balancing', 'High Availability', 'Disaster Recovery']
+    },
+    {
+      title: 'Advanced Security',
+      description: 'Multi-layered security with zero-trust architecture and compliance frameworks',
+      icon: Shield,
+      features: ['Zero Trust Security', 'Compliance Management', 'Threat Detection', 'Data Protection']
+    },
+    {
+      title: 'AI-Powered Analytics',
+      description: 'Intelligent insights and automation for data-driven decision making',
+      icon: Brain,
+      features: ['Predictive Analytics', 'Machine Learning', 'Process Automation', 'Performance Optimization']
+    },
+    {
+      title: 'Enterprise Integration',
+      description: 'Seamless integration with existing enterprise systems and workflows',
+      icon: Workflow,
+      features: ['API Management', 'Data Integration', 'Workflow Automation', 'System Connectivity']
+    }
+  ];
+
+  const benefits = [
+    'Increased operational efficiency and productivity',
+    'Enhanced security and compliance',
+    'Improved scalability and performance',
+    'Better data insights and analytics',
+    'Reduced operational costs',
+    'Faster time to market',
+    'Competitive advantage through innovation',
+    'Future-proof technology infrastructure'
+  ];
+
+  const industries = [
+    'Financial Services',
+    'Healthcare',
+    'Manufacturing',
+    'Retail & E-commerce',
+    'Technology',
+    'Government',
+    'Education',
+    'Energy & Utilities'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO 
+        title="Enterprise Solutions - Zion Tech Group" 
+        description="Comprehensive enterprise technology solutions including cloud infrastructure, AI automation, security, data analytics, and digital transformation services." 
+      />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
+                <Building className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Enterprise
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Modernize operations with secure cloud, data platforms, AI-driven workflows, and enterprise-grade integrations 
+              designed to scale with your business and drive digital transformation.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-400/25"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/request-quote"
+                className="px-8 py-4 border border-blue-400/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Request Quote
+              </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-eaf4
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Enterprise-Grade Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform provides enterprise-level capabilities designed for 
+              large organizations with complex requirements.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+=======
+      {/* Enterprise Capabilities */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">
+              Enterprise Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our comprehensive enterprise solutions cover all aspects of modern business technology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {enterpriseCapabilities.map((capability, index) => (
+              <motion.div
+                key={capability.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <capability.icon className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{capability.title}</h3>
+                <p className="text-gray-300 mb-6">{capability.description}</p>
+                <div className="space-y-2">
+                  {capability.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-400" />
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-eaf4
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Enterprise Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From strategy to implementation, we provide 
+              comprehensive enterprise solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <p className="text-gray-300">{service.description}</p>
+                  </div>
+                </div>
+=======
+      {/* Enterprise Services by Category */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">
+              Enterprise Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive range of enterprise-grade services organized by category
+            </p>
+          </motion.div>
+
+          <div className="space-y-12">
+            {enterpriseServices.map((category, categoryIndex) => (
+              <motion.div
+                key={category.category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * categoryIndex }}
+                className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8"
+              >
+                <div className="flex items-center gap-4 mb-8">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{category.category}</h3>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {category.services.map((service, serviceIndex) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="group p-6 bg-slate-700/30 border border-slate-600/30 rounded-xl hover:border-blue-400/50 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105"
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                            {service.name}
+                          </h4>
+                          <p className="text-gray-400 text-sm leading-relaxed">
+                            {service.description}
+                          </p>
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-blue-400 transition-colors group-hover:translate-x-1" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-eaf4
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+<<<<<<< HEAD
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Enterprise Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience measurable improvements in scalability, security, and operational efficiency.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {benefits.slice(3).map((benefit, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our enterprise solutions adapt to various industries, providing 
+              tailored solutions for large-scale operations.
+=======
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">
+              Enterprise Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the transformative benefits of our enterprise solutions
+>>>>>>> origin/cursor/website-audit-and-enhancement-eaf4
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
+=======
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="text-center p-6"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-6 h-6 text-blue-400" />
+                </div>
+                <p className="text-gray-300 leading-relaxed">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our enterprise solutions are designed for organizations across all major industries
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="text-center p-6 bg-slate-800/30 border border-slate-700/50 rounded-xl hover:border-blue-400/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Building className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{industry}</h3>
+>>>>>>> origin/cursor/website-audit-and-enhancement-eaf4
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Start Your Enterprise Project Today
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join large organizations worldwide that use our enterprise solutions to 
+              scale operations and drive business success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
+                Contact Sales
+              </button>
+=======
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-400/20 rounded-2xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Enterprise?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let our enterprise experts help you implement scalable solutions that drive business growth and innovation.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-400/25"
+                >
+                  Schedule Enterprise Consultation
+                </Link>
+                <Link
+                  to="/request-quote"
+                  className="px-8 py-4 border border-blue-400/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-300"
+                >
+                  Get Enterprise Quote
+                </Link>
+              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-eaf4
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Enterprise;
+

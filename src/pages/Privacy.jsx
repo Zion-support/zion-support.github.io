@@ -1,6 +1,6 @@
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/ui/GradientHeading";
 
 export default function Privacy() {

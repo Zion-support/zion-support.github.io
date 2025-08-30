@@ -1,18 +1,3 @@
-<<<<<<< HEAD = ======;
-import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function Training() {
-	return (
-		<div className = "min-h-screen bg-slate-900 text-white py-16">;
-			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />;
-			<div className="container mx-auto px-4 max-w-4xl">;
-				<h1 className="text-4xl font-bold mb-4">Training</h1>;
-				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>;
-			</div>;
-		</div>;
-	);
-}
 
 import React, { useState } from 'react';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -54,6 +39,60 @@ export default function Training() {
   const trainingPrograms = [
     {
       id: 1,
+      title: 'AI Autonomous Research Assistant Implementation',
+      description: 'Comprehensive training on implementing and managing AI Autonomous Research Assistant systems for enterprise research and intelligence.',
+      category: 'ai-ml',
+      level: 'intermediate',
+      format: 'hybrid',
+      duration: '10 weeks',
+      hours: 60,
+      price: 3999,
+      location: 'Online + San Francisco',
+      startDate: '2025-02-15',
+      instructor: 'Dr. Sarah Chen',
+      rating: 4.9,
+      students: 89,
+      featured: true,
+      certification: 'AI Autonomous Research Specialist',
+      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Research Automation'],
+      modules: [
+        'AI Autonomous Research Fundamentals',
+        'System Architecture and Design',
+        'Data Source Integration',
+        'Research Workflow Automation',
+        'Quality Assurance and Validation'
+      ],
+      skills: ['AI Research', 'System Architecture', 'Data Integration', 'Workflow Automation', 'Quality Assurance']
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization Specialist',
+      description: 'Advanced training on implementing AI-powered supply chain optimization solutions for cost reduction and efficiency improvement.',
+      category: 'ai-ml',
+      level: 'advanced',
+      format: 'hybrid',
+      duration: '12 weeks',
+      hours: 80,
+      price: 4499,
+      location: 'Online + Chicago',
+      startDate: '2025-02-20',
+      instructor: 'Michael Rodriguez',
+      rating: 4.8,
+      students: 67,
+      featured: true,
+      certification: 'AI Supply Chain Optimization Expert',
+      tags: ['Supply Chain', 'AI Optimization', 'Cost Reduction', 'Predictive Analytics'],
+      modules: [
+        'Supply Chain AI Fundamentals',
+        'Demand Forecasting and Planning',
+        'Inventory Optimization Algorithms',
+        'Route Optimization and Logistics',
+        'Performance Measurement and ROI'
+      ],
+      skills: ['Supply Chain Management', 'AI Optimization', 'Predictive Analytics', 'Logistics', 'Performance Analysis']
+    },
+    {
+      id: 3,
       title: 'AI Fundamentals for Business Leaders',
       description: 'Essential AI concepts and strategies for business leaders to drive digital transformation and innovation.',
       category: 'ai-ml',
@@ -80,7 +119,7 @@ export default function Training() {
       skills: ['AI Strategy', 'Business Analysis', 'Change Management', 'Data Literacy']
     },
     {
-      id: 2,
+      id: 8,
       title: 'Advanced Cybersecurity Architecture',
       description: 'Comprehensive training on designing and implementing enterprise-grade security architectures.',
       category: 'security',
@@ -244,10 +283,13 @@ export default function Training() {
     const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          program.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
+    const matchesCategory = activeCategory === 'all' || program.category === activeCategory;
+    const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
     const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
-    
-    return matchesSearch && matchesCategory && matchesLevel && matchesFormat});
+
+    return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
+  });
 
 <<<<<<< HEAD
   const getCategoryIcon = (categoryId: string)  => {;
@@ -436,7 +478,7 @@ export default function Training() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       {getCategoryIcon(program.category)}
@@ -447,10 +489,10 @@ export default function Training() {
                         {levels.find(l => l.id === program.level)?.name}
                       </span>
                     </div>
-                    
+
                     <h3 className="text-xl font-semibold text-white mb-2">{program.title}</h3>
                     <p className="text-zion-slate-light text-sm mb-4">{program.description}</p>
-                    
+
                     <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
@@ -461,7 +503,7 @@ export default function Training() {
                         ${program.price.toLocaleString()}
                       </div>
                     </div>
-                    
+
                     <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                       Learn More
                     </button>
@@ -479,7 +521,7 @@ export default function Training() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             All Training Programs
           </h2>
-          
+
           {filteredPrograms.length > 0 ? (
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredPrograms.map((program)  => (

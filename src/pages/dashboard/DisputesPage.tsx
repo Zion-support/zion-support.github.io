@@ -1,20 +1,19 @@
 
-import { SEO  } from '@/components/SEO';
-import { DisputeDashboard  } from '@/components/disputes';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import SEO from '@/components/SEO';
+import { DisputeDashboard } from '@/components/disputes';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
 
 function DisputesPage(...args[]):  {
   return (
     <ProtectedRoute>
       <>
-        <SEO 
-          title = "Dispute Resolution Center | Zion AI Marketplace" 
+        <SEO
+          title="Dispute Resolution Center | Zion AI Marketplace"
           description="View and manage disputes between clients and talents"
         />
-<<<<<<< HEAD
-        
+
         <DisputeDashboard />
-        
+
       </>
     </ProtectedRoute>
   )};

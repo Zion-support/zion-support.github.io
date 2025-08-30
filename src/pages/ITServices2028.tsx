@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
   Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
@@ -214,8 +215,8 @@ const ITServices2028: React.FC = () => {;
     { id: 'analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
   ];
 
-  const filteredServices = itServices2028.filter(service => {;
-    const matchesCategory = selectedCategory === 'all' || ;
+  const filteredServices = itServices2028.filter(service => {
+    const matchesCategory = selectedCategory === 'all' ||
       service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -227,98 +228,26 @@ const ITServices2028: React.FC = () => {;
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
           >
             IT Services 2028
           </motion.h1>
-          <motion.p 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
           >
             Cutting-edge IT solutions powered by quantum computing and artificial intelligence
           </motion.p>
-          <motion.div 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
           >
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
@@ -496,98 +425,26 @@ const ITServices2028: React.FC = () => {;
       {/* Contact Section */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
           >
             Ready to Transform Your IT Infrastructure?
           </motion.h2>
-          <motion.p 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
           >
             Contact our team of IT experts to discuss how our innovative services can revolutionize your technology infrastructure
           </motion.p>
-          <motion.div 
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a

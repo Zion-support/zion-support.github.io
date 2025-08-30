@@ -1,11 +1,11 @@
-
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, 
-  Globe, 
-  Shield, 
-  Zap, 
-  Users, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Brain,
+  Globe,
+  Shield,
+  Zap,
+  Users,
   TrendingUp,
   CheckCircle,
   ArrowRight,
@@ -13,14 +13,14 @@ import { Brain,
   Award,
   Clock,
   Heart
- } from 'lucide-react';
+} from 'lucide-react';
 
 const highlights = [
   {
     icon: Brain,
     title: 'AI-Powered Intelligence',
     description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-    features['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
+    features: ['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
     color: 'from-zion-purple to-zion-purple-dark',
     bgColor: 'bg-zion-purple/10',
     borderColor: 'border-zion-purple/20'
@@ -29,7 +29,7 @@ const highlights = [
     icon: Globe,
     title: 'Global Network',
     description: 'Connect with professionals and businesses from over 150 countries worldwide.',
-    features['Multi-language Support', 'Local Expertise', '24/7 Availability'],
+    features: ['Multi-language Support', 'Local Expertise', '24/7 Availability'],
     color: 'from-zion-cyan to-zion-cyan-dark',
     bgColor: 'bg-zion-cyan/10',
     borderColor: 'border-zion-cyan/20'
@@ -38,11 +38,11 @@ const highlights = [
     icon: Shield,
     title: 'Enterprise Security',
     description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-    features['Data Protection', 'Access Control', 'Audit Trails'],
+    features: ['Data Protection', 'Access Control', 'Audit Trails'],
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'bg-zion-blue/10',
-    borderColor: 'border-zion-blue/20';
-  };
+    borderColor: 'border-zion-blue/20'
+  }
 ];
 
 const features = [
@@ -169,11 +169,18 @@ export function FeatureHighlights(...args[]):  {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Why Choose Zion Tech Group?
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">
+            <Award className="w-4 h-4" />
+            <span>Why Choose Zion</span>
+          </div>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Built for the Future of Work
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Our innovative solutions combine cutting-edge technology with proven business value to deliver exceptional results
+
+          <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+            Experience the next generation of talent marketplace with cutting-edge AI,
+            global reach, and enterprise-grade security.
           </p>
         </motion.div>
 
@@ -183,26 +190,23 @@ export function FeatureHighlights(...args[]):  {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg: grid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
         >
-          {highlights.map((highlight, index)  => (
+          {highlights.map((highlight, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover = {
-  { 
-                y: -10, 
+              whileHover={{
+                y: -10,
                 scale: 1.02,
-  transition: { duration: 0.3 
-
-}
+                transition: { duration: 0.3 }
               }}
               className="group"
             >
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
+
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -213,7 +217,7 @@ export function FeatureHighlights(...args[]):  {
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                     {highlight.title}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {highlight.description}
                   </p>
@@ -239,46 +243,31 @@ export function FeatureHighlights(...args[]):  {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
-          {features.map((feature, index)  => (
+          {features.map((feature, index) => (
             <motion.div
-              key={feature.title}
-              className="text-center group"
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              viewport={{ once: true }}
-              transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+              key={index}
+              variants={itemVariants}
+              whileHover={{
+                y: -5,
+                scale: 1.02,
+                transition: { duration: 0.3 }
+              }}
+              className="group"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">{feature.icon}</span>
+              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
+                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+                </div>
+
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                  {feature.description}
+                </p>
               </div>
               
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
@@ -292,7 +281,6 @@ export function FeatureHighlights(...args[]):  {
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Achievements Section */}
         <motion.div
           variants={containerVariants}
@@ -304,9 +292,9 @@ export function FeatureHighlights(...args[]):  {
           <h3 className="text-2xl font-bold text-white mb-12">
             Trusted by Industry Leaders
           </h3>
-          
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {achievements.map((achievement, index)  => (
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
                 variants={achievementVariants}
@@ -337,7 +325,7 @@ export function FeatureHighlights(...args[]):  {
           <h3 className="text-2xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
           </h3>
-          
+
           <motion.div
             variants={techVariants}
             className="flex flex-wrap justify-center gap-4"
@@ -356,40 +344,8 @@ export function FeatureHighlights(...args[]):  {
 
         {/* CTA Section */}
         <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
-        <motion.div 
-          className="mt-16 text-center"
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
@@ -419,4 +375,5 @@ export function FeatureHighlights(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+

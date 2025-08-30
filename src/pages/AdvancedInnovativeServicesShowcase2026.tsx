@@ -1,14 +1,15 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  Cpu, 
-  Database, 
-  Network, 
-  Lock, 
-  TrendingUp, 
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Brain,
+  Zap,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  TrendingUp,
   Users,
   Search,
   Filter,
@@ -117,7 +118,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
-      <motion.div 
+      <motion.div
         className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 py-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -125,7 +126,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl font-bold text-white mb-6"
             initial = {
   { y: -50,
@@ -160,7 +161,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
           >
             Advanced Innovative Services 2026
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8"
             initial = {
   { y: 50,
@@ -195,7 +196,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
           >
             Revolutionary AI, Quantum Computing, and Futuristic Technology Solutions
           </motion.p>
-          <motion.div 
+          <motion.div
             className="flex flex-wrap justify-center gap-4 text-sm"
             initial = {
   { scale: 0.8,
@@ -245,7 +246,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
       </motion.div>
 
       {/* Filter and Search Section */}
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 py-8"
         initial = {
   { opacity: 0,
@@ -327,7 +328,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
       </motion.div>
 
       {/* Services Grid */}
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 pb-20"
         variants={containerVariants}
         initial="hidden"
@@ -438,7 +439,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         </div>
 
         {filteredServices.length === 0 && (
-          <motion.div 
+          <motion.div
             className="text-center py-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -451,7 +452,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
       </motion.div>
 
       {/* Contact Section */}
-      <motion.div 
+      <motion.div
         className="bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-indigo-900/20 border-t border-slate-700/50"
         initial = {
   { opacity: 0,
@@ -490,7 +491,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions. 
+              Our team of experts is ready to help you implement these cutting-edge solutions.
               Get in touch today to start your journey into the future of technology.
             </p>
           </div>

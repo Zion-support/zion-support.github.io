@@ -1,7 +1,7 @@
 export interface Service {
   id: string;
   name: string;
-  category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics';
+  category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'Education' | 'Marketing';
   description: string;
   features: string[];
   benefits: string[];
@@ -15,6 +15,10 @@ export interface Service {
   icon: string;
   isPopular?: boolean;
   isNew?: boolean}
+
+// Import enhanced services
+import { enhancedServices2025 } from './enhanced-2025-services';
+import { specializedIndustryServices } from './specialized-industry-services';
 
 export const services: Service[] = [
   // AI Services
@@ -44,7 +48,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/ai-chatbot-platform',
+    link: 'https://ziontechgroup.com/services/ai-chatbot-platform',
     icon: '🤖',
     isPopular: true
   },
@@ -74,7 +78,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/ai-content-generator',
+    link: 'https://ziontechgroup.com/services/ai-content-generator',
     icon: '✍️'
   },
   {
@@ -103,7 +107,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/ai-data-analytics',
+    link: 'https://ziontechgroup.com/services/ai-data-analytics',
     icon: '📊',
     isNew: true
   },
@@ -135,7 +139,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/managed-it-services',
+    link: 'https://ziontechgroup.com/services/managed-it-services',
     icon: '🖥️'
   },
   {
@@ -164,7 +168,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/cybersecurity-suite',
+    link: 'https://ziontechgroup.com/services/cybersecurity-suite',
     icon: '🔒',
     isPopular: true
   },
@@ -194,7 +198,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'one-time'
     },
-    link: '/services/cloud-migration',
+    link: 'https://ziontechgroup.com/services/cloud-migration',
     icon: '☁️'
   },
 
@@ -225,7 +229,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/project-management-platform',
+    link: 'https://ziontechgroup.com/services/project-management-platform',
     icon: '📋'
   },
   {
@@ -254,7 +258,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/crm-system',
+    link: 'https://ziontechgroup.com/services/crm-system',
     icon: '👥',
     isPopular: true
   },
@@ -284,7 +288,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/hr-management-system',
+    link: 'https://ziontechgroup.com/services/hr-management-system',
     icon: '👨‍💼'
   },
 
@@ -315,7 +319,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'one-time'
     },
-    link: '/services/web-development',
+    link: 'https://ziontechgroup.com/services/web-development',
     icon: '🌐'
   },
   {
@@ -344,7 +348,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'one-time'
     },
-    link: '/services/mobile-app-development',
+    link: 'https://ziontechgroup.com/services/mobile-app-development',
     icon: '📱'
   },
   {
@@ -373,7 +377,7 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'one-time'
     },
-    link: '/services/api-development',
+    link: 'https://ziontechgroup.com/services/api-development',
     icon: '🔌'
   },
 
@@ -404,30 +408,42 @@ export const services: Service[] = [
       currency: 'USD',
       period: 'month'
     },
-    link: '/services/business-intelligence',
+    link: 'https://ziontechgroup.com/services/business-intelligence',
     icon: '📈'
   }
 ];
 
-<<<<<<< HEAD
-export const getServicesByCategory = (category: Service['category']) => {;
-  return services.filter(service => service.category === category)};
+// Enhanced Services from 2025
+export const enhancedServices = enhancedServices2025;
 
-export const getPopularServices = () => {;
-  return services.filter(service => service.isPopular)};
+// Specialized Industry Services
+export const specializedServices = specializedIndustryServices;
 
-export const getNewServices = () => {;
-  return services.filter(service => service.isNew)};
-=======
-export const getServicesByCategory = (category: Service['category']) => {;
-  return services.filter(service => service.category === category);
+// Combined Services Array
+export const allServices = [
+  ...services,
+  ...enhancedServices2025,
+  ...specializedIndustryServices
+];
+
+export const getServicesByCategory = (category: Service['category']) => {
+  return allServices.filter(service => service.category === category);
 };
 
-export const getPopularServices = () => {;
-  return services.filter(service => service.isPopular);
+export const getPopularServices = () => {
+  return allServices.filter(service => service.isPopular);
 };
 
-export const getNewServices = () => {;
-  return services.filter(service => service.isNew);
+export const getNewServices = () => {
+  return allServices.filter(service => service.isNew);
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export const getServicesByIndustry = (industry: string) => {
+  return specializedIndustryServices.filter(service => service.industry === industry);
+};
+
+export const getServicesByAudience = (audience: string) => {
+  return enhancedServices2025.filter(service => 
+    service.targetAudience.includes(audience)
+  );
+};

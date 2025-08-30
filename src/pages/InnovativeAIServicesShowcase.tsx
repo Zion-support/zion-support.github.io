@@ -6,7 +6,7 @@ import {
   CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
   BarChart3, Shield, Briefcase, Package, Target
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function InnovativeAIServicesShowcase() {
   const services = [

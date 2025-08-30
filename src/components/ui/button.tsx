@@ -14,17 +14,16 @@ export function Button(...args[]):  {
 =======
   disabled?: boolean;
 }
-export function Button({ 
-  children, 
-  variant = 'default', 
-  size = 'md',;
-  asChild = false,;
-  className = '', ;
-  onClick,;
-  type = 'button',;
-  disabled = false;
-}: ButtonProps) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export function Button({
+  children,
+  variant = 'default',
+  size = 'md',
+  asChild = false,
+  className = '',
+  onClick,
+  type = 'button',
+  disabled = false
+}: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',

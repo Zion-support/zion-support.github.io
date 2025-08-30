@@ -4,12 +4,12 @@ import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu  } from 'l
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Leaf, 
-  Zap, 
-  Shield, 
-  Globe, 
-  TrendingUp, 
+import {
+  Leaf,
+  Zap,
+  Shield,
+  Globe,
+  TrendingUp,
   Settings,
   Database,
   Cloud,
@@ -29,8 +29,7 @@ import {
   Award,
   BarChart3
 } from 'lucide-react';
-import { SEO } from "../../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+import SEO from '../../components/SEO';
 
 export default function GreenIT() {
   const features = [
@@ -134,12 +133,12 @@ export default function GreenIT() {
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
         title="Green IT Services - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
@@ -177,7 +176,7 @@ export default function GreenIT() {
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your IT infrastructure with sustainable, energy-efficient solutions. 
+              Transform your IT infrastructure with sustainable, energy-efficient solutions.
               Reduce carbon footprint, lower costs, and meet environmental compliance standards.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -293,8 +292,8 @@ export default function GreenIT() {
                 What is Green IT?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Green IT, or Green Information Technology, focuses on designing, manufacturing, 
-                using, and disposing of computers, servers, and associated subsystems efficiently 
+                Green IT, or Green Information Technology, focuses on designing, manufacturing,
+                using, and disposing of computers, servers, and associated subsystems efficiently
                 and effectively with minimal or no impact on the environment.
               </p>
               <div className="space-y-4">
@@ -321,7 +320,7 @@ export default function GreenIT() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial = {
   { opacity: 0,
@@ -412,7 +411,7 @@ export default function GreenIT() {
               Key Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Green IT platform provides comprehensive capabilities for sustainable 
+              Our Green IT platform provides comprehensive capabilities for sustainable
               technology implementation and environmental impact reduction.
             </p>
           </motion.div>
@@ -495,7 +494,7 @@ export default function GreenIT() {
               Core Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive Green IT solutions designed to transform your technology 
+              Comprehensive Green IT solutions designed to transform your technology
               infrastructure into a sustainable, energy-efficient ecosystem.
             </p>
           </motion.div>
@@ -588,7 +587,7 @@ export default function GreenIT() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Green IT solutions are transforming industries across the globe, 
+              Green IT solutions are transforming industries across the globe,
               enabling sustainable operations and environmental responsibility.
             </p>
           </motion.div>
@@ -681,7 +680,7 @@ export default function GreenIT() {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how Green IT solutions can transform your organization 
+              Discover how Green IT solutions can transform your organization
               and drive measurable business and environmental outcomes.
             </p>
           </motion.div>
@@ -866,7 +865,7 @@ export default function GreenIT() {
               Ready to Go Green with Your IT?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how Green IT solutions can transform your technology infrastructure, 
+              Discover how Green IT solutions can transform your technology infrastructure,
               reduce environmental impact, and drive cost savings.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

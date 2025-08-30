@@ -16,13 +16,7 @@ export default function EnterpriseRoutes() {
       <Route path="/enterprise/demo" element={<EnterpriseDemo />} />
       <Route path="/company/:compSlug" element={<CompWorkspace />} />
       <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
-    </Routes>;
-=======;
-      <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />;
-      <Route path="/enterprise/demo" element={<EnterpriseDemo />} />;
-      <Route path="/company/:companySlug" element={<CompanyWorkspace />} />;
-      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />;
-    </Routes>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+    </Routes>
   );
 }

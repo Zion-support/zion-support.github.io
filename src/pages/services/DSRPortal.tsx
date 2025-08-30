@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
+import { SEO } from '../../components/SEO';
 import { 
   Shield, 
   FileText, 
@@ -44,58 +44,34 @@ export default function DSRPortal() {
       description: "AI-powered processing of data subject requests with intelligent routing."
     },
     {
-      icon: Eye,
+      icon: Target,
       title: "Data Discovery & Mapping",
-      description: "Automated discovery and mapping of personal data across all systems and databases."
+      description: "Automated discovery and mapping of personal data across systems."
+    },
+    {
+      icon: Zap,
+      title: "Compliance Workflows",
+      description: "Streamlined workflows for handling privacy requests and compliance tasks."
     },
     {
       icon: BarChart3,
-      title: "Compliance Monitoring",
-      description: "Real-time monitoring of compliance status and request fulfillment metrics."
+      title: "Compliance Analytics",
+      description: "Real-time insights into privacy compliance and request processing metrics."
     },
     {
-      icon: Clock,
-      title: "Workflow Automation",
-      description: "Automated workflows for request validation, processing, and response generation.";
-    },;
-    {;
-      icon: CheckCircle,;
-      title: "Audit Trails",;
-      description: "Complete audit trails for all data subject rights activities and compliance.";
-    };
+      icon: Lock,
+      title: "Secure Data Handling",
+      description: "Enterprise-grade security for sensitive personal data processing."
+    }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
-      title: "Regulatory Compliance",
-      description: "Ensure full compliance with GDPR, CCPA, and other privacy regulations."
-    },
-    {
-      icon: Shield,
-      title: "Data Protection",
-      description: "Protect personal data and maintain customer trust through proper rights management."
-    },
-    {
-      icon: Clock,
-      title: "Efficient Processing",
-      description: "Reduce response times and improve efficiency in handling data subject requests."
-    },
-    {
-      icon: BarChart3,
-      title: "Transparency",
-      description: "Provide clear visibility into data processing activities and compliance status."
-    },
-    {
-      icon: Users,
-      title: "Customer Trust",
-      description: "Build and maintain customer trust through transparent data rights management.";
-    },;
-    {;
-      icon: Award,;
-      title: "Risk Mitigation",;
-      description: "Minimize legal and reputational risks associated with data privacy violations.";
-    };
+    "Ensure 100% GDPR and CCPA compliance with automated workflows",
+    "Reduce response time to data subject requests by 80-90%",
+    "Minimize compliance risks and potential fines by 95%",
+    "Streamline data discovery and mapping processes by 70%",
+    "Improve audit trail and compliance reporting efficiency",
+    "Enhance customer trust through transparent data handling"
   ];
 
   const dataRights = [
@@ -154,19 +130,13 @@ export default function DSRPortal() {
     },
     {
       industry: "Education",
-      description: "Manage student data rights and educational privacy compliance",
-      icon: GraduationCap;
-    },;
-    {;
-      industry: "Real Estate",;
-      description: "Handle client data rights and real estate privacy compliance",;
-      icon: Home;
-    };
+      description: "Student data, academic records, and educational service information"
+    }
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
         title="DSR Portal - Zion Tech Group"
         description="Streamline data subject rights management with our AI-powered DSR portal. Ensure GDPR and CCPA compliance with automated request processing."
       />

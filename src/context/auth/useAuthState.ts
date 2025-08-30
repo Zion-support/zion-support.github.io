@@ -1,4 +1,5 @@
-import { useState, useEffect  } from 'react.ts';
+import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface User {
 

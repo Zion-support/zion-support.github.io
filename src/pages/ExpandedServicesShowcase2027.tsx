@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, 
-  Filter, 
-  Grid3X3, 
-  List, 
-  ChevronDown, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
   ChevronUp,
   Star,
   Users,
@@ -55,14 +56,15 @@ import { Search,
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
- } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { ALL_EXPANDED_SERVICES_2027, 
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import {
+  ALL_EXPANDED_SERVICES_2027,
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
-  type ExpandedService2027 
- } from '@/data/expandedInnovativeServices2027';
+  type ExpandedService2027
+} from '@/data/expandedInnovativeServices2027';
 
 <<<<<<< HEAD
 const ExpandedServicesShowcase2027: React.FC = () => {;
@@ -334,7 +336,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                 {service.status.toUpperCase()}
               </span>
             </div>
-            
+
             <div className="flex space-x-2">
               <a
                 href={`mailto:${service.contactInfo.email}`}
@@ -485,8 +487,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      <SEO 
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <SEO
         title="Expanded Innovative Services 2027 - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions."
         keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology"
@@ -558,10 +560,10 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. 
+              Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services.
               From quantum cybersecurity to healthcare AI, explore cutting-edge solutions that drive innovation and growth.
             </motion.p>
-            
+
             {/* Contact Info */}
             <motion.div
               initial = {
@@ -663,8 +665,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors duration-200 ${
-                    viewMode === 'grid' 
-                      ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm' 
+                    viewMode === 'grid'
+                      ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                   }`}
                 >
@@ -673,8 +675,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors duration-200 ${
-                    viewMode === 'list' 
-                      ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm' 
+                    viewMode === 'list'
+                      ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                   }`}
                 >
@@ -694,8 +696,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service)  => 
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            {filteredServices.map((service) =>
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>
@@ -719,7 +721,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our innovative services are designed to drive growth, efficiency, and competitive advantage. 
+            Our innovative services are designed to drive growth, efficiency, and competitive advantage.
             Contact us today to discuss how we can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">

@@ -32,8 +32,21 @@ import {
   Building,
   Phone
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027";
-import { SEO } from "../components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
+import SEO from '../components/SEO';
+
+const categoryIcons: { [key: string]: React.ComponentType<any> } = {
+  'AI & Customer Success': Brain,
+  'Blockchain & DeFi': Lock,
+  'Quantum Computing': Zap,
+  'AI & Healthcare': Heart,
+  'Metaverse & AR/VR': Eye,
+  'Autonomous Systems': Car,
+  'Green Tech': Leaf,
+  'Space Tech': Satellite,
+  'FinTech': Banknote,
+  'IoT & Smart Cities': Building
+};
 
 const categoryColors: { [key: string]: string } = {
   'AI & Customer Success': 'from-cyan-500 to-blue-600',

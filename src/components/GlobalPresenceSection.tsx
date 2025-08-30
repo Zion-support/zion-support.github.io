@@ -1,13 +1,14 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Globe, 
-  MapPin, 
-  Users, 
-  Clock, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Globe,
+  MapPin,
+  Users,
+  Clock,
   Star,
   Award,
   CheckCircle
- } from 'lucide-react';
+} from 'lucide-react';
 
 <<<<<<< HEAD
 export const GlobalPresenceSection: React.FC = (): JSX.Element => {
@@ -139,8 +140,9 @@ export function GlobalPresenceSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Global Presence
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Serving clients worldwide with innovative technology solutions and local expertise
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Serving clients worldwide with local expertise and global reach.
+            Our distributed team ensures 24/7 support and cultural understanding.
           </p>
         </motion.div>
 
@@ -422,10 +424,24 @@ export function GlobalPresenceSection() {
 
 }}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to go global?</span>
-<<<<<<< HEAD
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Go Global?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Whether you're expanding internationally or need local expertise,
+              our global presence ensures you get the support you need, when you need it.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Find Your Local Team
+                <MapPin className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+                Global Services
+                <Globe className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>;

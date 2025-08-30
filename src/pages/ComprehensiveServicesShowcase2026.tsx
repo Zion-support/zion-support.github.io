@@ -1,86 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-<<<<<<< HEAD
-  ShieldCheckIcon, 
-  CpuChipIcon, 
-  CloudIcon, 
-  LockClosedIcon,
-  ChartBarIcon,
-  CogIcon,
-  GlobeAltIcon,
-  CubeIcon,
-  BeakerIcon,
-  CurrencyDollarIcon,
-  UserGroupIcon,
-  DocumentTextIcon,
-  EyeIcon,
-  LightBulbIcon,
-  SparklesIcon
-} from '@heroicons/react/24/outline';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
-import { COMPREHENSIVE_IT_SERVICES_2026 } from "../data/comprehensiveITServices2026";
-import { COMPREHENSIVE_AI_SERVICES_2026 } from "../data/comprehensiveAIServices2026";
-
-const ComprehensiveServicesShowcase2026: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 100000]);
-
-  const allServices = [
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2026,
-    ...COMPREHENSIVE_IT_SERVICES_2026,;
-    ...COMPREHENSIVE_AI_SERVICES_2026;
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, count: allServices.length },
-    { id: 'Micro SaaS', name: 'Micro SaaS', icon: CubeIcon, count: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length },
-    { id: 'IT Services', name: 'IT Services', icon: CpuChipIcon, count: COMPREHENSIVE_IT_SERVICES_2026.length },
-    { id: 'AI Solutions', name: 'AI Solutions', icon: LightBulbIcon, count: COMPREHENSIVE_AI_SERVICES_2026.length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: ShieldCheckIcon, count: allServices.filter(s => s.tags.includes('Cybersecurity') || s.tags.includes('Security')).length },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: CloudIcon, count: allServices.filter(s => s.tags.includes('Cloud') || s.tags.includes('DevOps')).length },
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', icon: GlobeAltIcon, count: allServices.filter(s => s.tags.includes('Blockchain') || s.tags.includes('Web3')).length },
-    { id: 'Healthcare', name: 'Healthcare', icon: BeakerIcon, count: allServices.filter(s => s.tags.includes('Healthcare') || s.tags.includes('Medical')).length },;
-    { id: 'Finance', name: 'Finance', icon: CurrencyDollarIcon, count: allServices.filter(s => s.tags.includes('Finance') || s.tags.includes('Trading')).length };
-  ];
-
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
-    
-    return matchesCategory && matchesSearch && matchesPrice;
-  });
-
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
-      case 'Micro SaaS': return CubeIcon;
-      case 'IT Services': return CpuChipIcon;
-      case 'AI Solutions': return BrainIcon;
-      case 'Cybersecurity': return ShieldCheckIcon;
-      case 'Cloud & DevOps': return CloudIcon;
-      case 'Blockchain & Web3': return GlobeAltIcon;
-      case 'Healthcare': return BeakerIcon;
-      case 'Finance': return CurrencyDollarIcon;
-      default: return SparklesIcon;
-    }
-  };
-
-  const formatPrice = (price: number, model: string) => {;
-    if (model === 'monthly') {;
-      return `$${price.toLocaleString()}/month`;
-    } else if (model = == 'project') {;
-      return `$${price.toLocaleString()}/project`;
-=======
-  Search, 
-  Filter, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cpu, 
+import {
+  Search,
+  Filter,
+  Star,
+  Zap,
+  Brain,
+  Shield,
+  Cpu,
   Network,
   Phone,
   Mail,
@@ -92,8 +19,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { 
+import { SEO } from '../components/SEO';
+import {
   revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,
   revolutionaryAIServices2026,
@@ -108,10 +35,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const filtered = ALL_REVOLUTIONARY_SERVICES_2026;
     if (searchTerm) {
       const lowerQuery = searchTerm.toLowerCase();
-      filtered = filtered.filter(service => ;
-        service.name.toLowerCase().includes(lowerQuery) ||;
-        service.description.toLowerCase().includes(lowerQuery) ||;
-        service.tags.some(tag => tag.toLowerCase().includes(lowerQuery));
+      filtered = filtered.filter(service =>
+        service.name.toLowerCase().includes(lowerQuery) ||
+        service.description.toLowerCase().includes(lowerQuery) ||
+        service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
       );
     }
     if (selectedCategory !== 'all') {
@@ -242,8 +169,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   }`}
 =======
     <>
-      <SEO 
-        title = "Revolutionary Services 2026 - Zion Tech Group"
+      <SEO
+        title="Revolutionary Services 2026 - Zion Tech Group"
         description="Discover Zion Tech Group's revolutionary 2026 micro SAAS, IT infrastructure, and AI services. Quantum computing, edge AI, autonomous agents, and more."
         keywords="quantum computing, edge AI, autonomous AI, blockchain, micro SAAS, IT services, AI services, 2026, Zion Tech Group"
       />
@@ -252,27 +179,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
         <section className="relative overflow-hidden py-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <motion.h1 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
             >
@@ -281,73 +190,19 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 2026
               </span>
             </motion.h1>
-            <motion.p 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
             >
-              Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services. 
+              Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.
               Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
             </motion.p>
-            <motion.div 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4 text-sm text-zinc-400"
             >
               <span className="flex items-center gap-2">
@@ -714,27 +569,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
         {/* Contact CTA Section */}
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
-            <motion.div 
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 rounded-3xl p-12 border border-white/10"
             >
@@ -742,7 +579,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-                Join the future with Zion Tech Group's revolutionary 2026 services. 
+                Join the future with Zion Tech Group's revolutionary 2026 services.
                 Get in touch to discuss how we can help you achieve quantum advantage and AI supremacy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

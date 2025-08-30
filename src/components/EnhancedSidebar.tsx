@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Home,
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Home,
   Brain,
   Cloud,
   Server,
@@ -71,9 +72,11 @@ export const EnhancedSidebar: React.FC = () => {;
       icon: Home,
       items[
         { name: "Home", href: "/", icon: Home },
-        { name: "Services", href: "/services", icon: Zap },
         { name: "Solutions", href: "/solutions", icon: Target },
-        { name: "Pricing", href: "/pricing", icon: DollarSign },
+        { name: "Services", href: "/services", icon: Zap },
+        { name: "Case Studies", href: "/case-studies", icon: FileText },
+        { name: "Blog", href: "/blog", icon: FileText },
+        { name: "Partners", href: "/partners", icon: Handshake },
         { name: "About", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
         { name: "Careers", href: "/careers", icon: Briefcase },
@@ -86,68 +89,35 @@ export const EnhancedSidebar: React.FC = () => {;
       items[
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain }
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
+        { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain },
+        { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users },
+        { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar },
+        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
+        { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
       ]
     },
     {
       title: "Security & Compliance",
       icon: Shield,
       items: [
-        { name: "AI Cybersecurity Suite", href: "/services/ai-cybersecurity-suite", icon: Shield },
-        { name: "Zero Trust Network Access", href: "/services/zero-trust-network-access", icon: Lock },
-        { name: "Security Headers & CSP", href: "/services/security-headers-csp", icon: Shield },
-        { name: "DSR Privacy Portal", href: "/services/dsr-portal", icon: Lock },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant", icon: CheckCircle },
-        { name: "AI Compliance Copilot", href: "/services/ai-compliance-copilot", icon: CheckCircle },
-        { name: "SOC2 Compliance Automation", href: "/services/soc2-compliance-automation", icon: CheckCircle },
-        { name: "GDPR Cookie Compliance", href: "/services/gdpr-cookie-compliance", icon: CheckCircle }
-      ]
-    },
-    {
-      title: "Emerging Technologies",
-      icon: Atom,
-      items: [
-        { name: "Quantum Computing", href: "/services/quantum-computing", icon: Atom },
-        { name: "AI Quantum Hybrid Platform", href: "/services/ai-quantum-hybrid-platform", icon: Atom },
-        { name: "Quantum AI Platform", href: "/services/quantum-ai-platform", icon: Atom },
-        { name: "Space Technology", href: "/services/space-tech", icon: Rocket },
-        { name: "Sustainable Technology", href: "/services/sustainable-technology", icon: Leaf },
-        { name: "Green IT Solutions", href: "/services/green-it", icon: Leaf },
-        { name: "Quantum Machine Learning", href: "/services/quantum-machine-learning", icon: Atom },
-        { name: "Quantum Financial Trading", href: "/services/quantum-financial-trading", icon: TrendingUp }
-      ]
-    },
-    {
-      title: "Industry Solutions",
-      icon: Building,
-      items: [
-        { name: "Enterprise Solutions", href: "/solutions/enterprise", icon: Building },
-        { name: "Healthcare Solutions", href: "/solutions/healthcare", icon: Heart },
-        { name: "Financial Solutions", href: "/solutions/financial", icon: TrendingUp },
-        { name: "Government Solutions", href: "/solutions/government", icon: Shield },
-        { name: "SMB Solutions", href: "/solutions/smb", icon: Building },
-        { name: "Startup Solutions", href: "/solutions/startup", icon: Rocket },
-        { name: "Manufacturing Solutions", href: "/solutions/manufacturing", icon: Factory },
-        { name: "Retail Solutions", href: "/solutions/retail", icon: ShoppingCart },
-        { name: "Education Solutions", href: "/solutions/education", icon: BookOpen },
-        { name: "Energy Solutions", href: "/solutions/energy", icon: Zap }
-      ]
-    },
-    {
-      title: "Resources & Support",
-      icon: BookOpen,
-      items[
+        { name: "Documentation", href: "/documentation", icon: FileText },
+        { name: "API Reference", href: "/api", icon: Code },
+        { name: "Developer Portal", href: "/developer", icon: Cpu },
+        { name: "Support Center", href: "/help-center", icon: HelpCircle },
         { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
-        { name: "Help Center", href: "/help", icon: HelpCircle },
-        { name: "Support", href: "/support", icon: HelpCircle },
-<<<<<<< HEAD
-        { name: "Sitemap", href: "/sitemap", icon: Globe },
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
         { name: "Login", href: "/login", icon: User },
-        { name: "Sitemap", href: "/sitemap", icon: Globe }
-      ];
-    };
+        { name: "Support", href: "/support", icon: HelpCircle }
+      ]
+    }
+  ];
+
+  const quickActions = [
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
+    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
+    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
 
   return (
@@ -173,7 +143,7 @@ export const EnhancedSidebar: React.FC = () => {;
     <aside className = "hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
       <div className="p-6">
         {/* Logo Section */}
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial = {
   { opacity: 0,
@@ -215,7 +185,7 @@ export const EnhancedSidebar: React.FC = () => {;
             <div key={section.title} className="space-y-2">
 =======
         {/* Quick Actions */}
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial = {
   { opacity: 0,
@@ -468,13 +438,7 @@ export const EnhancedSidebar: React.FC = () => {;
         </nav>
 
         {/* Contact Info */}
-<<<<<<< HEAD
-        <div className="mt-8 pt-6 border-t border-slate-700/50">
-          <div className="space-y-3">
-            <div className="flex items-center space-x-3 text-sm text-slate-400">
-              <Phone className="w-4 h-4" />
-=======
-        <motion.div 
+        <motion.div
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
           initial = {
   { opacity: 0,

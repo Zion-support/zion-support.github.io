@@ -105,15 +105,16 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
 
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
-  
+
   // Get unique categories
   const categories = Array.from(new Set(allServices.map(service => service.category)));
-  
+
   // Filter services based on selection and search
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = searchQuery === '' || ;
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = searchQuery === '' ||
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch});
 
@@ -128,7 +129,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
             Revolutionary 2027 Micro SAAS Solutions
           </h2>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Transform your business with our cutting-edge micro SAAS services. 
+            Transform your business with our cutting-edge micro SAAS services.
             From AI automation to quantum computing, we provide innovative solutions that drive growth and innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -280,7 +281,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                   <p className="text-sm text-zion-slate-light mb-4 line-clamp-3">
                     {service.description}
                   </p>
-                  
+
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
                     <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
@@ -364,7 +365,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our innovative solutions to drive growth, 
+              Join thousands of businesses already using our innovative solutions to drive growth,
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

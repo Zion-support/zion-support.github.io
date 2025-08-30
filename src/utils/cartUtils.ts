@@ -22,7 +22,7 @@ export const calculateCartTotal = (items: CartItem[]): number => {;
 export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const existingItem = cart.find(cartItem => cartItem.id === item.id);
-  
+
   if (existingItem) {
     return cart.map(cartItem = >;
       cartItem.id === item.id;
@@ -30,7 +30,7 @@ export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {;
         : cartItem;
     );
   }
-  
+
   return [...cart, item];
 };
 
@@ -51,9 +51,9 @@ export const updateQuantity = (cart: CartItem[], itemId: string, quantity: numbe
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return removeFromCart(cart, itemId);
   }
-  
-  return cart.map(item = >;
-    item.id === itemId ? { ...item, quantity } : item;
+
+  return cart.map(item =>
+    item.id === itemId ? { ...item, quantity } : item
   );
 };
 
@@ -66,16 +66,10 @@ export const getCartKey = (userId: string): string  => {;
   return `cart_${userId}`;
 };
 
-export const merged = [...existingItems];
-=======
-export const getCartKey = (userId: string): string => {;
-  return `cart_${userId}`;
-};
+export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]): CartItem[] => {
+  const merged = [...existingItems];
 
-export const merged = [...existingItems];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  
-  newItems.forEach(newItem = > {;
+  newItems.forEach(newItem => {
     const existingIndex = merged.findIndex(item => item.id === newItem.id);
     if (existingIndex >= 0 && merged[existingIndex]) {
       merged[existingIndex].quantity += newItem.quantity;
@@ -83,6 +77,6 @@ export const merged = [...existingItems];
       merged.push(newItem);
     }
   });
-  
+
   return merged;
 };

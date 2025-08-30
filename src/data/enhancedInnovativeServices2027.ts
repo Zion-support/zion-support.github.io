@@ -698,11 +698,8 @@ export const enhancedInnovativeServices2027Categories = [
   'Federated Learning Solutions';
 ];
 
-<<<<<<< HEAD
-export const getEnhancedInnovativeServices2027ByCategory = (category: string)  => ;
+export const getEnhancedInnovativeServices2027 = () => enhancedInnovativeServices2027;
+export const getEnhancedInnovativeServices2027ByCategory = (category: string) =>
   enhancedInnovativeServices2027.filter(service => service.category === category);
-export const getEnhancedInnovativeServices2027ByCategory = (category: string) => ;
-  enhancedInnovativeServices2027.filter(service => service.category === category);
-export const getEnhancedInnovativeServices2027ById = (id: string) => ;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export const getEnhancedInnovativeServices2027ById = (id: string) =>
   enhancedInnovativeServices2027.find(service => service.id === id);

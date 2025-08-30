@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
+import { SEO } from '../../components/SEO';
 import { 
   Shield, 
   Lock, 
@@ -49,61 +49,37 @@ export default function SecurityHeadersCSP() {
     {
       icon: Lock,
       title: "Content Security Policy",
-      description: "Advanced CSP rules to prevent XSS, injection attacks, and data exfiltration."
+      description: "Advanced CSP configuration and monitoring for XSS protection."
     },
     {
-      icon: Eye,
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of security headers and policy violations."
+      icon: Target,
+      title: "Threat Detection",
+      description: "Real-time monitoring and alerting for security violations."
     },
-    {
-      icon: Code,
-      title: "Automated Testing",
-      description: "Automated testing and validation of security headers across all endpoints."
-    },
-    {
-      icon: FileText,
-      title: "Compliance Reporting",
-      description: "Detailed compliance reports for security standards and regulations.";
-    },;
-    {;
-      icon: Monitor,;
-      title: "Threat Detection",;
-      description: "Advanced threat detection and automated response for policy violations.";
-    };
-  ];
-
-  const benefits = [
     {
       icon: Zap,
-      title: "Enhanced Security",
-      description: "Protect against XSS, CSRF, clickjacking, and other web vulnerabilities."
-    },
-    {
-      icon: Shield,
-      title: "Compliance Ready",
-      description: "Meet security standards including OWASP, PCI DSS, and GDPR requirements."
+      title: "Automated Security",
+      description: "Intelligent automation of security header management and updates."
     },
     {
       icon: BarChart3,
-      title: "Risk Reduction",
-      description: "Significantly reduce security risks and potential data breaches."
+      title: "Security Analytics",
+      description: "Comprehensive insights into security posture and threat landscape."
     },
     {
-      icon: Clock,
-      title: "Automated Protection",
-      description: "Continuous security monitoring and automated threat response."
-    },
-    {
-      icon: Star,
-      title: "Trust Building",
-      description: "Build customer trust with robust security measures and compliance.";
-    },;
-    {;
-      icon: Award,;
-      title: "Cost Savings",;
-      description: "Prevent costly security incidents and reduce compliance costs.";
-    };
+      icon: Server,
+      title: "Infrastructure Security",
+      description: "Server-level security hardening and configuration optimization."
+    }
+  ];
+
+  const benefits = [
+    "Reduce security vulnerabilities by 80-90% with proper headers",
+    "Improve security score by 40-60% on security testing platforms",
+    "Minimize XSS and injection attacks by 95%",
+    "Enhance compliance with security standards and regulations",
+    "Improve website security posture and trust indicators",
+    "Reduce security incident response time by 70%"
   ];
 
   const securityHeaders = [
@@ -128,15 +104,15 @@ export default function SecurityHeadersCSP() {
       icon: Key
     },
     {
-      header: "Referrer Policy",
-      description: "Control referrer information leakage",
-      icon: Network;
-    },;
-    {;
-      header: "Permissions Policy",;
-      description: "Control browser feature access",;
-      icon: Fingerprint;
-    };
+      header: "X-XSS-Protection",
+      description: "Enable browser XSS filtering",
+      icon: AlertTriangle
+    },
+    {
+      header: "Referrer-Policy",
+      description: "Control referrer information in HTTP requests",
+      icon: Eye
+    }
   ];
 
   const useCases = [
@@ -157,24 +133,13 @@ export default function SecurityHeadersCSP() {
     },
     {
       industry: "Government",
-      description: "Secure government websites and protect citizen information",
-      icon: Building
-    },
-    {
-      industry: "Education",
-      description: "Protect student data and educational platform security",
-      icon: GraduationCap;
-    },;
-    {;
-      industry: "Technology",;
-      description: "Secure SaaS applications and web services",;
-      icon: Cpu;
-    };
+      description: "Public data security, compliance requirements, and citizen information protection"
+    }
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
         title="Security Headers CSP - Zion Tech Group"
         description="Secure your web applications with comprehensive security headers and Content Security Policy implementation. Protect against XSS, CSRF, and other web vulnerabilities."
       />

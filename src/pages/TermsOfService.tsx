@@ -1,15 +1,13 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { FileText, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  AlertTriangle, 
- 
-  CheckCircle, 
-  ArrowRight, 
-  Download, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  FileText,
+  Shield,
+  Users,
+  Globe,
+  Mail,
+  Phone,
+  MapPin,
   Calendar,
   CheckCircle,
   AlertTriangle,
@@ -226,10 +224,24 @@ const TermsOfService = () => {;
                   These Terms apply to all visitors, users, and others who access or use our website and services.
                 </p>
               </div>
-              
+            </motion.div>
+
+            {/* Services Description */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Shield className="w-8 h-8 text-zion-cyan" />
+                Description of Services
+              </h2>
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  {compName} provides technology consulting, software development, AI solutions, cybersecurity services, and related technology services. Our services include:
+                  {companyName} provides technology consulting, software development, AI solutions, cybersecurity services, and related technology services. Our services include:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -254,28 +266,16 @@ const TermsOfService = () => {;
                   </li>
                 </ul>
                 <p>
-                  We reserve the right to modify, suspend, or discontinue  part of our services at  time without notice.
+                  We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.
                 </p>
               </div>
             </motion.div>
 
             {/* User Accounts */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -283,7 +283,7 @@ const TermsOfService = () => {;
                 <Users className="w-8 h-8 text-zion-cyan" />
                 User Accounts and Responsibilities
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   When you create an account with us, you must provide accurate, complete, and current information. You are responsible for:
@@ -299,7 +299,7 @@ const TermsOfService = () => {;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Notifying us immediately of  unauthorized use
+                    Notifying us immediately of any unauthorized use
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -314,21 +314,9 @@ const TermsOfService = () => {;
 
             {/* Acceptable Use */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.3 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -336,7 +324,7 @@ const TermsOfService = () => {;
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Acceptable Use Policy
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   You agree not to use our website or services to:
@@ -344,7 +332,7 @@ const TermsOfService = () => {;
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Violate  applicable laws or regulations
+                    Violate any applicable laws or regulations
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -375,21 +363,9 @@ const TermsOfService = () => {;
 
             {/* Intellectual Property */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -397,10 +373,10 @@ const TermsOfService = () => {;
                 <Lock className="w-8 h-8 text-zion-cyan" />
                 Intellectual Property Rights
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  Our website and services contain content that is owned by {compName} or its licensors, including but not limited to:
+                  Our website and services contain content that is owned by {companyName} or its licensors, including but not limited to:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -431,21 +407,9 @@ const TermsOfService = () => {;
 
             {/* Privacy and Data */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.5 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -453,7 +417,7 @@ const TermsOfService = () => {;
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 Privacy and Data Protection
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.
@@ -469,21 +433,9 @@ const TermsOfService = () => {;
 
             {/* Limitation of Liability */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.6 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -491,10 +443,10 @@ const TermsOfService = () => {;
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Limitation of Liability
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  To the maximum extent permitted by law, {compName} shall not be liable for  indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+                  To the maximum extent permitted by law, {companyName} shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -515,28 +467,16 @@ const TermsOfService = () => {;
                   </li>
                 </ul>
                 <p>
-                  Our total liability to you for  claims arising from these Terms or your use of our services shall not exceed the amount you paid us in the 12 months preceding the claim.
+                  Our total liability to you for any claims arising from these Terms or your use of our services shall not exceed the amount you paid us in the 12 months preceding the claim.
                 </p>
               </div>
             </motion.div>
 
             {/* Disclaimers */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.7 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -544,10 +484,10 @@ const TermsOfService = () => {;
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Disclaimers
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  Our services are provided "as is" and "as available" without  warranties of  kind, either express or implied.
+                  Our services are provided "as is" and "as available" without any warranties of any kind, either express or implied.
                 </p>
                 <p>
                   We do not warrant that:
@@ -578,21 +518,9 @@ const TermsOfService = () => {;
 
             {/* Indemnification */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.8 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -600,10 +528,10 @@ const TermsOfService = () => {;
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Indemnification
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  You agree to indemnify, defend, and hold harmless {compName} and its officers, directors, employees, agents, and affiliates from and against  claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:
+                  You agree to indemnify, defend, and hold harmless {companyName} and its officers, directors, employees, agents, and affiliates from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -616,7 +544,7 @@ const TermsOfService = () => {;
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Your violation of  third-party rights
+                    Your violation of any third-party rights
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -628,21 +556,9 @@ const TermsOfService = () => {;
 
             {/* Termination */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.9 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -650,10 +566,10 @@ const TermsOfService = () => {;
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Termination
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  We may terminate or suspend your access to our services immediately, without prior notice or liability, for  reason whatsoever, including without limitation if you breach these Terms.
+                  We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.
                 </p>
                 <p>
                   Upon termination, your right to use our services will cease immediately. If you wish to terminate your account, you may simply discontinue using our services.
@@ -666,21 +582,9 @@ const TermsOfService = () => {;
 
             {/* Governing Law */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 1.0 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -688,7 +592,7 @@ const TermsOfService = () => {;
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 Governing Law and Dispute Resolution
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
@@ -704,21 +608,9 @@ const TermsOfService = () => {;
 
             {/* Changes to Terms */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 1.1 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.1 }}
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -726,58 +618,66 @@ const TermsOfService = () => {;
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to These Terms
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  We reserve the right to modify or replace these Terms at  time. If a revision is material, we will provide at least 30 days notice prior to  new terms taking effect.
+                  We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
                 </p>
                 <p>
                   What constitutes a material change will be determined at our sole discretion.
                 </p>
                 <p>
-                  By continuing to access or use our services after  revisions become effective, you agree to be bound by the revised terms.
+                  By continuing to access or use our services after any revisions become effective, you agree to be bound by the revised terms.
                 </p>
               </div>
             </motion.div>
 
             {/* Contact Information */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 1.2 
-
-}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
                 Contact Information
               </h2>
-              
+
               <p className="text-zion-slate-light mb-6">
-                If you have  questions about these Terms of Service, please contact us:
+                If you have any questions about these Terms of Service, please contact us:
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="flex items-center gap-2 text-sm text-slate-500">
-                  <Calendar className="w-4 h-4" />
-                  <span>Last Updated: {lastUpdated}</span>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-zion-slate-light">
+                    <Mail className="w-5 h-5 text-zion-cyan" />
+                    <span>{email}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-zion-slate-light">
+                    <Phone className="w-5 h-5 text-zion-cyan" />
+                    <span>{phone}</span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3 text-zion-slate-light">
+                    <MapPin className="w-5 h-5 text-zion-cyan mt-0.5" />
+                    <span>{address}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-zion-slate-light">
+                    <Globe className="w-5 h-5 text-zion-cyan" />
+                    <span>{website}</span>
+                  </div>
                 </div>
                 <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                   <Download className="w-4 h-4" />
                   Download PDF
                 </button>
               </div>
+
+              <p className="text-zion-slate-light mt-6">
+                We will respond to your inquiry within 30 days of receipt.
+              </p>
             </motion.div>
           </div>
 <<<<<<< HEAD

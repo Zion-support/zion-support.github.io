@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Loader2, 
-  CheckCircle, 
-  AlertCircle, 
-  Zap, 
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+  Zap,
   Sparkles,
   TrendingUp,
   Cpu,
@@ -18,7 +19,11 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   text?: string;
   fullScreen?: boolean}
 
-export function LoadingSpinner(...args[]):  {
+export function LoadingSpinner({
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false
+}: LoadingSpinnerProps) {
   const sizeClasses = {
   sm: 'w-8 h-8',
     md: 'w-16 h-16',;
@@ -29,15 +34,8 @@ export function LoadingSpinner(...args[]):  {
   lg: 'w-32 h-32';
   ;
 
-
-
-
-
-
-};
-
-  const containerClasses = fullScreen ;
-    ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50';
+  const containerClasses = fullScreen
+    ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
     : 'flex items-center justify-center p-8';
 
   return (
@@ -46,42 +44,12 @@ export function LoadingSpinner(...args[]):  {
         {/* Animated Logo */}
         <motion.div
           className="relative mx-auto mb-4"
-          animate = {
-  { 
+          animate={{
             rotate: 360,
-<<<<<<< HEAD
-            scale[1, 1.1,
-  1]
-          
-
-}}
-          transition = {
-  { 
-            rotate: { duration: 2, repeat: Infinity,
-  ease: "linear" 
-
-},
-=======
-            scale: [1, 1.1,
-  1]
-          
-
-
-
-
-}}
-          transition = {
-  { 
-            rotate: { duration: 2, repeat: Infinity,
-  ease: "linear" 
-
-
-
-
-
-
-},
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            rotate: { duration: 2, repeat: Infinity, ease: "linear" },
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
         >
@@ -123,7 +91,7 @@ export function LoadingSpinner(...args[]):  {
             />
             <span className="text-2xl font-bold text-white relative z-10">Z</span>
           </div>
-          
+
           {/* Glow Effect */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50"

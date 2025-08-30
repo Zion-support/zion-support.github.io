@@ -1,68 +1,104 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Eye, 
-  Shield, 
-  CheckCircle, 
-  AlertTriangle, 
-  BarChart3, 
-  Users, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Eye,
+  Shield,
+  CheckCircle,
+  AlertTriangle,
+  BarChart3,
+  Users,
   Globe,
-  Zap,
-  Target,
-  Award,
   ArrowRight,
-  Accessibility,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
- } from 'lucide-react';
+  Star,
+  Heart,
+  Users,
+  Zap,
+  Lock,
+  FileText,
+  Phone,
+  Mail,
+  MessageCircle
+} from 'lucide-react';
 
-const AccessibilityAuditor: React.FC = (): JSX.Element => {
-  const features = [
+export default function AccessibilityPage() {
+  const currentYear = new Date().getFullYear();
+
+  const accessibilityFeatures = [
     {
-      title: "Automated Testing",
-      description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
-      icon: "🔍"
+      category: 'Visual Accessibility',
+      icon: Eye,
+      features: [
+        'High contrast mode support',
+        'Adjustable font sizes',
+        'Color-blind friendly design',
+        'Clear typography and spacing',
+        'Alternative text for images',
+        'Focus indicators for navigation'
+      ]
     },
     {
-      title: "Manual Review",
-      description: "Expert manual accessibility audits by certified professionals",
-      icon: "👁️"
+      category: 'Auditory Accessibility',
+      icon: Ear,
+      features: [
+        'Closed captions for videos',
+        'Audio descriptions',
+        'Volume controls',
+        'Visual alerts and notifications',
+        'Transcripts for audio content'
+      ]
     },
     {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring and alerting for accessibility issues",
-      icon: "📊";
-    },;
-    {;
-      title: "Compliance Reporting",;
-      description: "Detailed reports with actionable recommendations",;
-      icon: "📋";
-    };
+      category: 'Motor Accessibility',
+      icon: Hand,
+      features: [
+        'Keyboard navigation support',
+        'Voice control compatibility',
+        'Large click targets',
+        'Customizable timing',
+        'Alternative input methods'
+      ]
+    },
+    {
+      category: 'Cognitive Accessibility',
+      icon: Brain,
+      features: [
+        'Clear and simple language',
+        'Consistent navigation structure',
+        'Logical content organization',
+        'Reduced distractions',
+        'Step-by-step instructions'
+      ]
+    }
   ];
 
-  const complianceStandards = [;
-    "WCAG 2.1 AA",;
-    "Section 508",;
-    "ADA Title III",;
-    "EN 301 549",;
-    "ISO 9241-171";
-  ];
-
-  const testingAreas = [
+  const complianceStandards = [
     {
-      category: "Visual Accessibility",
-      items["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
+      standard: 'WCAG 2.1 AA',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
+      color: 'text-green-500'
     },
     {
-      category: "Content Accessibility",
-<<<<<<< HEAD
-      items["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
+      standard: 'Section 508',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Federal accessibility requirements for electronic and information technology',
+      color: 'text-green-500'
     },
     {
-      category: "Technical Accessibility",
-      items["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
+      standard: 'ADA Title III',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'Americans with Disabilities Act requirements for public accommodations',
+      color: 'text-green-500'
+    },
+    {
+      standard: 'EN 301 549',
+      status: 'Compliant',
+      icon: CheckCircle,
+      description: 'European accessibility requirements for ICT products and services',
+      color: 'text-green-500'
     }
 =======;
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
@@ -73,6 +109,50 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
+
+  const accessibilityTools = [
+    {
+      name: 'Screen Reader Support',
+      description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver',
+      icon: Monitor
+    },
+    {
+      name: 'Mobile Accessibility',
+      description: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',
+      icon: Smartphone
+    },
+    {
+      name: 'Voice Navigation',
+      description: 'Voice control support for hands-free navigation and interaction',
+      icon: Globe
+    },
+    {
+      name: 'Customizable Interface',
+      description: 'Personalizable themes, fonts, and layout options to meet individual needs',
+      icon: Zap
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -86,12 +166,12 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ensure your digital products are accessible to everyone. Our comprehensive 
-              accessibility auditing service helps you meet compliance standards and 
+              Ensure your digital products are accessible to everyone. Our comprehensive
+              accessibility auditing service helps you meet compliance standards and
               provide inclusive user experiences.
             </p>
           </div>
-          
+
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
@@ -105,7 +185,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
               ))}
             </div>
           </div>
-          
+
           {/* Compliance Standards */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -119,7 +199,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
               </div>
             </div>
           </div>
-          
+
           {/* Testing Areas */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
@@ -139,7 +219,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
               ))}
             </div>
           </div>
-          
+
           {/* Process */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Audit Process</h2>
@@ -151,7 +231,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
                 <h3 className="text-lg font-semibold text-white mb-2">Initial Assessment</h3>
                 <p className="text-gray-300 text-sm">Comprehensive review of your current accessibility status</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -159,7 +239,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
                 <h3 className="text-lg font-semibold text-white mb-2">Automated Testing</h3>
                 <p className="text-gray-300 text-sm">Run comprehensive automated accessibility tests</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -167,7 +247,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
                 <h3 className="text-lg font-semibold text-white mb-2">Manual Review</h3>
                 <p className="text-gray-300 text-sm">Expert manual testing and validation</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>
@@ -177,7 +257,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
               </div>
             </div>
           </div>
-          
+
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Accessibility Auditor?</h2>
@@ -203,7 +283,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Technical Benefits</h3>
                 <ul className="space-y-3 text-gray-300">
@@ -227,13 +307,13 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
               </div>
             </div>
           </div>
-          
+
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Make Your Digital Products Accessible?</h3>
               <p className="text-gray-300 mb-6">
-                Get a comprehensive accessibility audit and ensure your products are 
+                Get a comprehensive accessibility audit and ensure your products are
                 inclusive for all users. Contact us today to get started.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -264,7 +344,4 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
       </section>;
     </div>;
   );
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-export default AccessibilityAuditor;
+}

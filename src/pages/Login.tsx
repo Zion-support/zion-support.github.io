@@ -1,23 +1,68 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Mail, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Mail, 
   Lock, 
   Eye, 
   EyeOff, 
+  User, 
+  Building, 
+  Globe, 
   ArrowRight,
+  CheckCircle,
+  AlertCircle,
   Shield,
   Zap,
-  Users
- } from 'lucide-react';
+  Brain,
+  Cloud,
+  Server,
+  BarChart3,
+  Code,
+  Network,
+  Atom,
+  TrendingUp,
+  Heart,
+  MessageCircle,
+  ExternalLink,
+  Github,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Google,
+  Apple,
+  Smartphone,
+  Monitor,
+  Tablet,
+  Laptop
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-export default function Login(...args[]):  {
+export default function Login() {
+  const [isLogin, setIsLogin] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
-    password: ''
+    password: '',
+    confirmPassword: '',
+    firstName: '',
+    lastName: '',
+    company: '',
+    phone: '',
+    acceptTerms: false,
+    acceptMarketing: false
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
 
 <<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
@@ -29,515 +74,443 @@ export default function Login(...args[]):  {
   const handleSubmit = async (e: React.FormEvent) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
-    setIsLoading(true);
+    setIsSubmitting(true);
     
-    // Simulate API call
+    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    // Here you would typically make an API call to authenticate
-    console.log('Login attempt:', formData);
+    setIsSubmitting(false);
+    setSubmitted(true);
     
-    setIsLoading(false)};
+    // Reset form after 5 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        email: '',
+        password: '',
+        confirmPassword: '',
+        firstName: '',
+        lastName: '',
+        company: '',
+        phone: '',
+        acceptTerms: false,
+        acceptMarketing: false
+      });
+    }, 5000);
+  };
+
+  const socialLoginOptions = [
+    { name: 'Google', icon: Google, color: 'bg-red-500 hover:bg-red-600' },
+    { name: 'Apple', icon: Apple, color: 'bg-black hover:bg-gray-800' },
+    { name: 'GitHub', icon: Github, color: 'bg-gray-800 hover:bg-gray-900' },
+    { name: 'LinkedIn', icon: Linkedin, color: 'bg-blue-600 hover:bg-blue-700' }
+  ];
 
   const features = [
-<<<<<<< HEAD
     {
-      icon: <Shield className="h-6 w-6 text-zion-cyan" />,
-      title: "Enterprise Security",
-      description: "Bank-level security protocols protect your data and ensure compliance"
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Access cutting-edge artificial intelligence and machine learning services'
     },
     {
-      icon: <Zap className="h-6 w-6 text-zion-purple" />,
-      title: "Lightning Fast",
-      description: "Optimized performance for seamless user experience across all devices"
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions for modern business needs'
     },
     {
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,
-      title: "Team Collaboration",
-      description: "Built-in tools for seamless team communication and project management";
-    };
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Advanced security and compliance solutions'
+    },
+    {
+      icon: Zap,
+      title: 'Digital Transformation',
+      description: 'Transform your business with innovative technology'
+    }
+  ];
+
+  const stats = [
+    { number: '10,000+', label: 'Active Users' },
+    { number: '500+', label: 'Enterprise Clients' },
+    { number: '99.9%', label: 'Uptime' },
+    { number: '24/7', label: 'Support' }
   ];
 
   return (
-    <div className = "min-h-screen bg-zion-blue text-white flex">
-      {/* Left Side - Login Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
-        <div className="w-full max-w-md">
-          {/* Header */}
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-8"
-          >
-            <Link to="/" className="inline-block mb-6">
-              <div className="text-3xl font-bold text-zion-cyan">Zion Tech Group</div>
-            </Link>
-            <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
-            <p className="text-zion-slate-light">
-              Sign in to your account to continue
-            </p>
-          </motion.div>
-=======;
-    { icon: Brain, title: 'AI-Powered Solutions', description: 'Advanced artificial intelligence services' },;
-    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud computing solutions' },;
-    { icon: Shield, title: 'Enterprise Security', description: 'Military-grade cybersecurity protection' },;
-    { icon: Atom, title: 'Quantum Computing', description: 'Next-generation computational power' },;
-    { icon: Network, title: 'IoT & Edge Computing', description: 'Smart device networks & processing' },;
-    { icon: Leaf, title: 'Sustainable Technology', description: 'Green IT & eco-friendly solutions' };
-  ];
-
-  const stats = [;
-    { number: '500+', label: 'Enterprise Clients', icon: Building },;
-    { number: '99.9%', label: 'Uptime SLA', icon: Activity },;
-    { number: '24/7', label: 'Support Available', icon: MessageCircle },;
-    { number: '50+', label: 'AI Services', icon: Brain };
-  ];
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex">
-      {/* Left Side - Login Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
-        <motion.div
-          initial = {
-  { opacity: 0,
-  x: -50 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-          transition={{ duration: 0.5 }}
-          className="w-full max-w-md"
-        >
-          {/* Logo & Header */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-4">
-              <Zap className="h-8 w-8 text-white" />
+    <div className="min-h-screen bg-futuristic">
+      <SEO 
+        title={isLogin ? "Login - Zion Tech Group" : "Sign Up - Zion Tech Group"}
+        description={isLogin ? "Access your Zion Tech Group account to manage your projects and services." : "Join Zion Tech Group to access cutting-edge technology solutions and AI services."}
+      />
+      
+      <div className="flex min-h-screen">
+        {/* Left Side - Form */}
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
+          <div className="w-full max-w-md">
+            {/* Header */}
+            <div className="text-center mb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan via-blue-500 to-zion-purple rounded-2xl flex items-center justify-center">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h1 className="text-3xl font-bold text-white mb-2">
+                  {isLogin ? 'Welcome Back' : 'Create Your Account'}
+                </h1>
+                <p className="text-zion-slate-light">
+                  {isLogin 
+                    ? 'Sign in to access your dashboard and projects' 
+                    : 'Join thousands of businesses transforming with AI technology'
+                  }
+                </p>
+              </motion.div>
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h1>
-            <p className="text-gray-600">Sign in to your Zion Tech Group account</p>
-          </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-          {/* Login Form */}
-          <motion.form
-            onSubmit={handleSubmit}
-            className="space-y-6"
-            initial = {
-  { opacity: 0,
-  y: 20 
+            {/* Social Login */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-6"
+            >
+              <div className="grid grid-cols-2 gap-3">
+                {socialLoginOptions.map((option) => (
+                  <button
+                    key={option.name}
+                    className={`${option.color} text-white px-4 py-3 rounded-lg font-medium transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2`}
+                  >
+                    <option.icon className="w-5 h-5" />
+                    {option.name}
+                  </button>
+                ))}
+              </div>
+              <div className="relative my-6">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-zion-slate-light/20" />
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-futuristic text-zion-slate-light">Or continue with</span>
+                </div>
+              </div>
+            </motion.div>
 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
+            {/* Form */}
+            <motion.form
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              onSubmit={handleSubmit}
+              className="space-y-4"
+            >
+              {!isLogin && (
+                <>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                        placeholder="First Name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                      placeholder="Company Name (Optional)"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                      placeholder="Phone Number (Optional)"
+                    />
+                  </div>
+                </>
+              )}
 
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-}}
-          >
-            {/* Email Field */}
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Email Address
-              </label>
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                  Email Address
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
-                  onChange={handleChange}
+                  onChange={handleInputChange}
                   required
-                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  placeholder="Enter your email address"
+                  className="w-full px-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                  placeholder="Enter your email"
                 />
               </div>
-            </div>
 
-            {/* Password Field */}
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Password
-              </label>
-              <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                <input
-                  type={showPassword ? "text" : "password"}
-                  id="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
-                  className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  placeholder="Enter your password"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                >
-                  {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-                </button>
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
+                  Password
+                </label>
+                <div className="relative">
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    id="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 pr-12 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                    placeholder="Enter your password"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-zion-slate-light hover:text-white transition-colors duration-200"
+                  >
+                    {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                  </button>
+                </div>
               </div>
-            </div>
 
-            {/* Remember Me & Forgot Password */}
-            <div className="flex items-center justify-between">
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-purple/30 rounded focus:ring-zion-cyan focus:ring-2"
-                />
-                <span className="ml-2 text-sm text-zion-slate-light">Remember me</span>
-              </label>
-              <Link
-                to="/forgot-password"
-                className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors"
-              >
-                Forgot password?
-              </Link>
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-zion-purple hover:bg-zion-purple/80 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-            >
-              {isLoading ? (
-                <>
-                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  Signing In...
-                </>
-              ) : (
-                <>
-                  Sign In
-                  <ArrowRight className="h-5 w-5" />
-                </>
+              {!isLogin && (
+                <div>
+                  <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
+                    Confirm Password
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showConfirmPassword ? 'text' : 'password'}
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      value={formData.confirmPassword}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 pr-12 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                      placeholder="Confirm your password"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-zion-slate-light hover:text-white transition-colors duration-200"
+                    >
+                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                    </button>
+                  </div>
+                </div>
               )}
-            </button>
 
-            {/* Divider */}
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-zion-purple/30"></div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-zion-blue text-zion-slate-light">Or continue with</span>
-              </div>
-            </div>
-          </div>
+              {!isLogin && (
+                <div className="space-y-3">
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="acceptTerms"
+                      checked={formData.acceptTerms}
+                      onChange={handleInputChange}
+                      required
+                      className="w-4 h-4 text-zion-cyan bg-zion-slate-light/10 border-zion-slate-light/20 rounded focus:ring-zion-cyan focus:ring-2"
+                    />
+                    <span className="ml-2 text-sm text-zion-slate-light">
+                      I agree to the{' '}
+                      <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200">
+                        Terms of Service
+                      </Link>{' '}
+                      and{' '}
+                      <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200">
+                        Privacy Policy
+                      </Link>
+                    </span>
+                  </label>
+                  
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="acceptMarketing"
+                      checked={formData.acceptMarketing}
+                      onChange={handleInputChange}
+                      className="w-4 h-4 text-zion-cyan bg-zion-slate-light/10 border-zion-slate-light/20 rounded focus:ring-zion-cyan focus:ring-2"
+                    />
+                    <span className="ml-2 text-sm text-zion-slate-light">
+                      I want to receive updates about new features and services
+                    </span>
+                  </label>
+                </div>
+              )}
 
-            {/* Social Login Buttons */}
-            <div className="grid grid-cols-2 gap-3">
+              {isLogin && (
+                <div className="flex items-center justify-between">
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      className="w-4 h-4 text-zion-cyan bg-zion-slate-light/10 border-zion-slate-light/20 rounded focus:ring-zion-cyan focus:ring-2"
+                    />
+                    <span className="ml-2 text-sm text-zion-slate-light">Remember me</span>
+                  </label>
+                  <Link to="/forgot-password" className="text-sm text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200">
+                    Forgot password?
+                  </Link>
+                </div>
+              )}
+
               <button
-                type="button"
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white hover:bg-zion-purple/20 transition-all duration-300"
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-4 rounded-lg font-medium hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                  <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                  <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                  <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                </svg>
-                Google
+                {isSubmitting ? (
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    {isLogin ? 'Signing In...' : 'Creating Account...'}
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center gap-2">
+                    {isLogin ? 'Sign In' : 'Create Account'}
+                    <ArrowRight className="w-5 h-5" />
+                  </div>
+                )}
               </button>
-              <button
-                type="button"
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white hover:bg-zion-purple/20 transition-all duration-300"
-              >
-                <svg className="w-5 h-5" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                LinkedIn
-              </button>
-            </div>
+            </motion.form>
 
-            {/* Sign Up Link */}
-            <div className="text-center">
+            {/* Success Message */}
+            {submitted && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-center"
+              >
+                <CheckCircle className="w-6 h-6 text-green-400 mx-auto mb-2" />
+                <p className="text-green-400 font-medium">
+                  {isLogin ? 'Successfully signed in!' : 'Account created successfully!'}
+                </p>
+                <p className="text-green-400/80 text-sm mt-1">
+                  Redirecting to dashboard...
+                </p>
+              </motion.div>
+            )}
+
+            {/* Toggle Form Type */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-6 text-center"
+            >
               <p className="text-zion-slate-light">
-                Don't have an account?{' '}
-                <Link
-                  to="/signup"
-                  className="text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors"
+                {isLogin ? "Don't have an account?" : "Already have an account?"}{' '}
+                <button
+                  onClick={() => setIsLogin(!isLogin)}
+                  className="text-zion-cyan hover:text-zion-cyan/80 font-medium transition-colors duration-200"
                 >
-                  Sign up for free
-                </Link>
+                  {isLogin ? 'Sign up' : 'Sign in'}
+                </button>
               </p>
-            </div>
-          </motion.form>
+            </motion.div>
+          </div>
         </div>
-      </div>
 
-<<<<<<< HEAD
-      {/* Right Side - Features & Info */}
-      <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
-        <div className="w-full max-w-lg mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  x: 30 
+        {/* Right Side - Features & Stats */}
+        <div className="hidden lg:flex flex-1 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark p-8">
+          <div className="w-full max-w-2xl mx-auto">
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="grid grid-cols-2 gap-6 mb-12"
+            >
+              {stats.map((stat, index) => (
+                <div key={stat.label} className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-zion-slate-light text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
 
-}}
-            animate = {
-  { opacity: 1,
-  x: 0 
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-}}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Transform Your Business with AI
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-12 leading-relaxed">
-              Access cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 
-              Join thousands of businesses already leveraging our technology to drive growth and innovation.
-=======
-      {/* Right Side - Company Info & Features */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 p-12 text-white">
-        <motion.div
-          initial = {
-  { opacity: 0,
-  x: 50 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-          transition = {
-  { duration: 0.5,
-  delay: 0.2 
-
-
-
-
-
-
-}}
-          className="w-full max-w-lg mx-auto"
-        >
-          {/* Company Header */}
-          <div className="mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-3xl mb-6">
-              <Zap className="h-10 w-10 text-white" />
-            </div>
-            <h2 className="text-4xl font-bold mb-4">Zion Tech Group</h2>
-            <p className="text-xl text-blue-100 leading-relaxed">
-              Leading the future of technology with cutting-edge AI, quantum computing, and sustainable solutions for enterprises worldwide.
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-            </p>
-
-<<<<<<< HEAD
-            {/* Features List */}
-            <div className="space-y-8">
+            {/* Features */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="space-y-6"
+            >
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Why Choose Zion Tech Group?
+              </h2>
               {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  className="flex items-start gap-4"
-                  initial = {
-  { opacity: 0,
-  x: 30 
-
-}}
-                  animate = {
-  { opacity: 1,
-  x: 0 
-
-}}
-                  transition = {
-  { duration: 0.8,
-  delay: 0.6 + index * 0.1 
-
-}}
-                >
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    {feature.icon}
+                <div key={feature.title} className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                    <p className="text-zion-slate-light">{feature.description}</p>
+                    <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </div>
-
-            {/* Stats */}
-            <motion.div
-              className="mt-16 grid grid-cols-3 gap-8 text-center"
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 1 
-
-}}
-            >
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">500+</div>
-                <div className="text-zion-slate-light text-sm">Happy Clients</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">100+</div>
-                <div className="text-zion-slate-light text-sm">Projects Delivered</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">99.9%</div>
-                <div className="text-zion-slate-light text-sm">Uptime</div>
-              </div>
             </motion.div>
-          </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-12 text-center"
+            >
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Get in Touch
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>
-  )}
-=======
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-6 mb-12">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-xl mb-3">
-                  <stat.icon className="h-6 w-6 text-white" />
-                </div>
-                <div className="text-2xl font-bold">{stat.number}</div>
-                <div className="text-sm text-blue-100">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Features */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-4">Our Core Services</h3>
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial = {
-  { opacity: 0,
-  x: 20 
-
-
-
-
-
-
-}}
-                animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                transition={{ delay: 0.6 + index * 0.1 }}
-                className="flex items-start space-x-3"
-              >
-                <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                  <feature.icon className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-white">{feature.title}</h4>
-                  <p className="text-sm text-blue-100">{feature.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Contact Info */}
-          <div className="mt-12 pt-8 border-t border-white/20">
-            <div className="flex items-center space-x-4 text-sm text-blue-100">
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                +1 (555) 123-4567
-              </div>
-              <div className="flex items-center">
-                <MailIcon className="h-4 w-4 mr-2" />
-                contact@ziontechgroup.com
-              </div>
-            </div>
-            <div className="mt-2 text-sm text-blue-100">
-              <MapPin className="h-4 w-4 inline mr-2" />;
-              123 Innovation Drive, Tech Valley, CA 94000;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
   );
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

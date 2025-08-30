@@ -311,7 +311,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
                 { name: 'SaaS Billing Anomaly Guard', price: '$119/mo', href: '/services/saas-billing-anomaly-guard' },
                 { name: 'ML Feature Store Starter', price: '$149/mo', href: '/services/ml-feature-store-starter' },
                 { name: 'Edge Cron Orchestrator', price: '$59/mo', href: '/services/edge-cron-orchestrator' },
-                { name: 'GDPR DSAR Portal', price: '$99/mo', href: '/services/gdpr-dsar-portal' },
+                { name: 'GDPR DSAR Portal', price: '$129/mo', href: '/services/gdpr-dsar-portal' },
                 { name: 'SOC 2 Evidence Collector', price: '$149/mo', href: '/services/soc2-evidence-collector' },
                 { name: 'SEO Change Monitor', price: '$69/mo', href: '/services/seo-change-monitor' },
                 { name: 'CI/CD Flaky Test Detector', price: '$59/mo', href: '/services/cicd-flaky-test-detector' },
@@ -319,8 +319,12 @@ export default function ServicesAdvertisingPage(...args[]):  {
                 { name: 'Data Pipeline SLA Tracker', price: '$89/mo', href: '/services/data-pipeline-sla-tracker' },
                 { name: 'Edge Image Optimizer', price: '$39/mo', href: '/services/edge-image-optimizer' },
                 { name: 'Managed Kubernetes SRE', price: '$2,500/mo', href: '/services/managed-kubernetes-sre' },
-                { name: 'Zero Trust Rollout Coaching', price: '$4,000/engagement', href: '/services/zero-trust-rollout-coaching' }
-              ].map((o)  => (
+                { name: 'Zero Trust Rollout Coaching', price: '$4,000/engagement', href: '/services/zero-trust-rollout-coaching' },
+                { name: 'PDF Render API', price: '$29/mo', href: '/services/pdf-render-api' },
+                { name: 'Email Deliverability Monitor', price: '$39/mo', href: '/services/email-deliverability-monitor' },
+                { name: 'Synthetic Data Generator', price: '$119/mo', href: '/services/synthetic-data-generator' },
+                { name: 'AI Meeting Notes Agent', price: '$69/mo', href: '/services/ai-meeting-notes-agent' }
+              ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>

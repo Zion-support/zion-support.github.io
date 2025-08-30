@@ -1,17 +1,18 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link, 
-  Coins, 
-  Shield, 
-  Zap, 
-  Database, 
-  Globe, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Lock, 
-  Network, 
-  Wallet, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Link,
+  Coins,
+  Shield,
+  Zap,
+  Database,
+  Globe,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Lock,
+  Network,
+  Wallet,
   BarChart3,
   Star,
   Award,
@@ -164,19 +165,8 @@ const BlockchainServicesPage = () => {;
     { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length };
   ];
 
-  const filteredServices = selectedCategory === 'all' ;
-    ? blockchainServices: blockchainServices.filter(service  => service.category === selectedCategory);
-=======
-    { id: 'Development', name: 'Development', count: blockchainServices.filter(s = > s.category === 'Development').length },;
-    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length },;
-    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length },;
-    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length },;
-    { id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length },;
-    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s => s.category === 'Interoperability').length };
-  ];
-
-  const filteredServices = selectedCategory === 'all' ;
-    ? blockchainServices ;
+  const filteredServices = selectedCategory === 'all'
+    ? blockchainServices
     : blockchainServices.filter(service => service.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -188,14 +178,14 @@ const BlockchainServicesPage = () => {;
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Network className="w-12 h-12 text-white" />
             </div>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Blockchain{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -203,10 +193,10 @@ const BlockchainServicesPage = () => {;
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge blockchain solutions. From smart contracts to DeFi platforms, 
+            Transform your business with cutting-edge blockchain solutions. From smart contracts to DeFi platforms,
             we build secure, scalable, and innovative blockchain applications.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Get Started
@@ -298,7 +288,7 @@ const BlockchainServicesPage = () => {;
                   <service.icon className="w-16 h-16 text-zion-cyan z-10" />
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10"></div>
                 </div>
-                
+
                 <div className="p-6">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
@@ -311,7 +301,7 @@ const BlockchainServicesPage = () => {;
                       </p>
                     </div>
                   </div>
-                  
+
                   {/* Badge */}
                   <div className="mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -325,7 +315,7 @@ const BlockchainServicesPage = () => {;
                       {service.badge}
                     </span>
                   </div>
-                  
+
                   {/* Price */}
                   <div className="mb-6">
                     <div className="flex items-baseline gap-2">
@@ -335,7 +325,7 @@ const BlockchainServicesPage = () => {;
                       <span className="text-zion-slate-light">{service.period}</span>
                     </div>
                   </div>
-                  
+
                   {/* Features */}
                   <div className="space-y-3 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
@@ -350,7 +340,7 @@ const BlockchainServicesPage = () => {;
                       </div>
                     )}
                   </div>
-                  
+
                   {/* CTA */}
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                     Get Started
@@ -371,7 +361,7 @@ const BlockchainServicesPage = () => {;
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We combine deep blockchain expertise with cutting-edge technology to deliver 
+              We combine deep blockchain expertise with cutting-edge technology to deliver
               solutions that drive real business value.
             </p>
           </div>
@@ -446,7 +436,7 @@ const BlockchainServicesPage = () => {;
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
               </motion.div>
@@ -462,10 +452,10 @@ const BlockchainServicesPage = () => {;
             Ready to Build the Future?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Let's discuss how blockchain technology can transform your business. 
+            Let's discuss how blockchain technology can transform your business.
             Our experts are ready to help you navigate the blockchain landscape.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Start Your Project

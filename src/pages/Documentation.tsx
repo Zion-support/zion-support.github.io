@@ -261,9 +261,9 @@ export default function Documentation() {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-    
+
     return matchesSearch && matchesCategory;
   });
 
@@ -578,46 +578,22 @@ export default function Documentation() {
   { opacity: 0,
   y: 30 
 
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
+      {/* Documentation Items */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Documentation Library
+          </h2>
 
-}}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              API Documentation
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Integrate with our services using our comprehensive APIs
-            </p>
-          </motion.div>
-          
-          <div className="grid md: grid-cols-2 gap-8">
-            {apiDocs.map((api, index)  => (
-              <motion.div
-                key={api.name}
-                initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
-                viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+          {filteredItems.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+              {filteredItems.map((item) => (
+                <div
+                  key={item.id}
+                  className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
+                    item.featured ? 'ring-2 ring-zion-cyan' : ''
+                  }`}
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">{api.name}</h3>
@@ -933,13 +909,13 @@ export default function Documentation() {
             Can't find what you're looking for? Our support team is here to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="/support"
               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
             >
               Contact Support
             </a>
-            <a 
+            <a
               href="/help"
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
             >;

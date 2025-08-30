@@ -1,0 +1,724 @@
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  AlertTriangle, 
+  RefreshCw, 
+  Home, 
+  Bug, 
+  X, 
+<<<<<<< HEAD
+  Info,
+  AlertCircle,
+  CheckCircle,
+  RotateCcw
+} from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
+=======
+  Info, 
+  Copy, 
+  CheckCircle,
+  ExternalLink,
+  Shield,
+  Zap,
+  RotateCcw
+} from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  showDetails?: boolean;
+  enableReporting?: boolean;
+<<<<<<< HEAD
+=======
+  recoveryOptions?: boolean;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+}
+
+interface State {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
+  showDetails: boolean;
+  isReporting: boolean;
+  reportSent: boolean;
+<<<<<<< HEAD
+  retryCount: number;
+=======
+  recoveryAttempted: boolean;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+}
+
+export class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: '',
+      showDetails: false,
+<<<<<<< HEAD
+      isReporting: false,
+      reportSent: false,
+      retryCount: 0
+=======
+      isReporting: boolean,
+      reportSent: false,
+      recoveryAttempted: false
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+    };
+  }
+
+  static getDerivedStateFromError(error: Error): Partial<State> {
+<<<<<<< HEAD
+    // Generate unique error ID for tracking
+=======
+    // Generate a unique error ID for tracking
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    
+    return {
+      hasError: true,
+      error,
+      errorId,
+<<<<<<< HEAD
+      retryCount: 0
+=======
+      showDetails: false,
+      isReporting: false,
+      reportSent: false,
+      recoveryAttempted: false
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ errorInfo });
+    
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+<<<<<<< HEAD
+    // Report error to external service (optional)
+    this.reportError(error, errorInfo);
+  }
+
+  // Report error to external service
+  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
+    if (!this.props.enableReporting) return;
+
+    try {
+      this.setState({ isReporting: true });
+
+      // Example error reporting to external service
+      const errorReport = {
+        id: this.state.errorId,
+=======
+    // Report error to external service (if enabled)
+    if (this.props.enableReporting) {
+      this.reportError(error, errorInfo);
+    }
+
+    // Log error to localStorage for debugging
+    this.logErrorToStorage(error, errorInfo);
+  }
+
+  // Log error to localStorage for debugging
+  private logErrorToStorage = (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      const errorLog = {
+        timestamp: new Date().toISOString(),
+        errorId: this.state.errorId,
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        viewport: {
+          width: window.innerWidth,
+          height: window.innerHeight
+        }
+      };
+
+      const existingLogs = JSON.parse(localStorage.getItem('zion-error-logs') || '[]');
+      existingLogs.unshift(errorLog);
+      
+      // Keep only last 10 errors
+      if (existingLogs.length > 10) {
+        existingLogs.splice(10);
+      }
+      
+      localStorage.setItem('zion-error-logs', JSON.stringify(existingLogs));
+    } catch (e) {
+      // Silently fail if localStorage is not available
+    }
+  };
+
+  // Report error to external service
+  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
+    this.setState({ isReporting: true });
+
+    try {
+      // Example error reporting to external service
+      // In production, you might use Sentry, LogRocket, or similar
+      const errorReport = {
+        errorId: this.state.errorId,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        url: window.location.href,
+<<<<<<< HEAD
+        userAgent: navigator.userAgent,
+        timestamp: new Date().toISOString(),
+        version: process.env.npm_package_version || 'unknown'
+      };
+
+      // Send to error reporting service (replace with your service)
+      await fetch('/api/errors', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(errorReport)
+      });
+
+      this.setState({ reportSent: true });
+    } catch (reportError) {
+      console.warn('Failed to report error:', reportError);
+=======
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        viewport: {
+          width: window.innerWidth,
+          height: window.innerHeight
+        }
+      };
+
+      // Send to your error reporting service
+      // await fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorReport)
+      // });
+
+      this.setState({ reportSent: true });
+    } catch (e) {
+      console.warn('Failed to report error:', e);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+    } finally {
+      this.setState({ isReporting: false });
+    }
+  };
+
+<<<<<<< HEAD
+  // Retry the component
+  private handleRetry = () => {
+    this.setState(prevState => ({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: prevState.retryCount + 1
+    }));
+  };
+
+  // Go to home page
+  private handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  // Toggle error details
+  private toggleDetails = () => {
+    this.setState(prevState => ({
+      showDetails: !prevState.showDetails
+    }));
+  };
+
+  // Copy error details to clipboard
+  private copyErrorDetails = async () => {
+    if (!this.state.error) return;
+
+    const errorText = `
+Error Details:
+Message: ${this.state.error.message}
+Stack: ${this.state.error.stack}
+Component Stack: ${this.state.errorInfo?.componentStack}
+=======
+  // Copy error details to clipboard
+  private copyErrorDetails = async () => {
+    if (!this.state.error || !this.state.errorInfo) return;
+
+    const errorDetails = `
+Error Details:
+Message: ${this.state.error.message}
+Stack: ${this.state.error.stack}
+Component Stack: ${this.state.errorInfo.componentStack}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+Error ID: ${this.state.errorId}
+URL: ${window.location.href}
+Timestamp: ${new Date().toISOString()}
+    `.trim();
+
+    try {
+<<<<<<< HEAD
+      await navigator.clipboard.writeText(errorText);
+      // Show success message
+      this.setState({ reportSent: true });
+      setTimeout(() => this.setState({ reportSent: false }), 2000);
+    } catch (err) {
+      console.warn('Failed to copy error details:', err);
+    }
+  };
+
+=======
+      await navigator.clipboard.writeText(errorDetails);
+      // Show success feedback
+      const button = document.querySelector('[data-copy-button]') as HTMLElement;
+      if (button) {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
+        setTimeout(() => {
+          button.innerHTML = originalText;
+        }, 2000);
+      }
+    } catch (e) {
+      console.warn('Failed to copy error details:', e);
+    }
+  };
+
+  // Attempt to recover from error
+  private attemptRecovery = () => {
+    this.setState({ recoveryAttempted: true });
+    
+    // Clear error state and attempt to re-render
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: '',
+      showDetails: false,
+      isReporting: false,
+      reportSent: false,
+      recoveryAttempted: false
+    });
+
+    // Force a re-render
+    this.forceUpdate();
+  };
+
+  // Reset error boundary
+  private resetErrorBoundary = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: '',
+      showDetails: false,
+      isReporting: false,
+      reportSent: false,
+      recoveryAttempted: false
+    });
+  };
+
+  // Navigate to home page
+  private goHome = () => {
+    window.location.href = '/';
+  };
+
+  // Refresh the page
+  private refreshPage = () => {
+    window.location.reload();
+  };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
+          <motion.div
+<<<<<<< HEAD
+            className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-red-200 dark:border-red-800"
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-red-500 to-red-600 text-white p-6 rounded-t-2xl">
+              <div className="flex items-center space-x-3">
+                <AlertTriangle className="w-8 h-8" />
+                <div>
+                  <h1 className="text-2xl font-bold">Something went wrong</h1>
+                  <p className="text-red-100 mt-1">
+                    We encountered an unexpected error. Don't worry, we're working to fix it.
+                  </p>
+=======
+            className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-red-500 to-red-600 p-6 text-white">
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-red-400/20 rounded-full">
+                  <AlertTriangle className="w-8 h-8" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold">Something went wrong</h1>
+                  <p className="text-red-100">We've encountered an unexpected error</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+                </div>
+              </div>
+            </div>
+
+<<<<<<< HEAD
+            {/* Content */}
+            <div className="p-6 space-y-6">
+              {/* Error Summary */}
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+                <div className="flex items-start space-x-3">
+                  <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h3 className="font-medium text-red-800 dark:text-red-200">
+                      Error Information
+                    </h3>
+                    <p className="text-sm text-red-700 dark:text-red-300 mt-1">
+                      {this.state.error?.message || 'An unexpected error occurred'}
+                    </p>
+                    <div className="mt-2 text-xs text-red-600 dark:text-red-400">
+                      Error ID: {this.state.errorId}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={this.handleRetry}
+                  className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2"
+                >
+                  <RefreshCw className="w-5 h-5" />
+                  <span>Try Again</span>
+                </button>
+                
+                <button
+                  onClick={this.handleGoHome}
+                  className="flex-1 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2"
+                >
+                  <Home className="w-5 h-5" />
+                  <span>Go Home</span>
+                </button>
+              </div>
+
+              {/* Error Details Toggle */}
+              <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                <button
+                  onClick={this.toggleDetails}
+                  className="w-full flex items-center justify-between text-left p-3 bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-lg transition-colors duration-200"
+                >
+                  <span className="font-medium text-gray-700 dark:text-gray-300">
+                    {this.state.showDetails ? 'Hide' : 'Show'} Technical Details
+                  </span>
+                  <motion.div
+                    animate={{ rotate: this.state.showDetails ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X className="w-5 h-5 text-gray-500" />
+                  </motion.div>
+                </button>
+
+                {/* Error Details */}
+                <AnimatePresence>
+                  {this.state.showDetails && (
+                    <motion.div
+                      className="mt-3 bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-auto max-h-64"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="space-y-3">
+                        <div>
+                          <div className="text-cyan-400 font-semibold">Error Message:</div>
+                          <div className="text-red-300">{this.state.error?.message}</div>
+                        </div>
+                        
+                        {this.state.error?.stack && (
+                          <div>
+                            <div className="text-cyan-400 font-semibold">Stack Trace:</div>
+                            <div className="text-gray-300 whitespace-pre-wrap">
+                              {this.state.error.stack}
+                            </div>
+                          </div>
+                        )}
+                        
+                        {this.state.errorInfo?.componentStack && (
+                          <div>
+                            <div className="text-cyan-400 font-semibold">Component Stack:</div>
+                            <div className="text-gray-300 whitespace-pre-wrap">
+                              {this.state.errorInfo.componentStack}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      
+                      {/* Copy Button */}
+                      <button
+                        onClick={this.copyErrorDetails}
+                        className="mt-3 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs transition-colors duration-200"
+                      >
+                        Copy Details
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Error Reporting Status */}
+              {this.props.enableReporting && (
+                <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <Bug className="w-5 h-5 text-gray-500" />
+                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                        Error Reporting
+                      </span>
+                    </div>
+                    
+                    {this.state.isReporting ? (
+                      <div className="flex items-center space-x-2 text-yellow-600">
+                        <RotateCcw className="w-4 h-4 animate-spin" />
+                        <span className="text-sm">Reporting...</span>
+                      </div>
+                    ) : this.state.reportSent ? (
+                      <div className="flex items-center space-x-2 text-green-600">
+                        <CheckCircle className="w-4 h-4" />
+                        <span className="text-sm">Reported</span>
+                      </div>
+                    ) : (
+                      <div className="text-sm text-gray-500">
+                        Automatic
+                      </div>
+=======
+            {/* Error Content */}
+            <div className="p-6 space-y-6">
+              {/* Error Message */}
+              <div className="text-center">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+                </p>
+                
+                {this.state.error && (
+                  <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 text-left">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Error ID</span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400 font-mono">{this.state.errorId}</span>
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">
+                      {this.state.error.message}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Recovery Options */}
+              {this.props.recoveryOptions && (
+                <div className="space-y-3">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-blue-500" />
+                    Recovery Options
+                  </h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <button
+                      onClick={this.attemptRecovery}
+                      className="flex items-center justify-center gap-2 p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors duration-200"
+                      disabled={this.state.recoveryAttempted}
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                      {this.state.recoveryAttempted ? 'Recovery Attempted' : 'Try to Recover'}
+                    </button>
+                    
+                    <button
+                      onClick={this.refreshPage}
+                      className="flex items-center justify-center gap-2 p-3 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors duration-200"
+                    >
+                      <RefreshCw className="w-4 h-4" />
+                      Refresh Page
+                    </button>
+                    
+                    <button
+                      onClick={this.goHome}
+                      className="flex items-center justify-center gap-2 p-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors duration-200"
+                    >
+                      <Home className="w-4 h-4" />
+                      Go to Home
+                    </button>
+                    
+                    <button
+                      onClick={this.resetErrorBoundary}
+                      className="flex items-center justify-center gap-2 p-3 bg-gray-500 hover:bg-gray-600 text-white rounded-lg transition-colors duration-200"
+                    >
+                      <Shield className="w-4 h-4" />
+                      Reset Boundary
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Error Details Toggle */}
+              {this.state.error && this.state.errorInfo && (
+                <div>
+                  <button
+                    onClick={() => this.setState(prev => ({ showDetails: !prev.showDetails }))}
+                    className="w-full flex items-center justify-center gap-2 p-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg transition-colors duration-200"
+                  >
+                    <Bug className="w-4 h-4" />
+                    {this.state.showDetails ? 'Hide' : 'Show'} Technical Details
+                  </button>
+
+                  {this.state.showDetails && (
+                    <motion.div
+                      className="mt-4 bg-gray-50 dark:bg-gray-700 rounded-lg p-4 space-y-4"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <h4 className="text-sm font-semibold text-gray-900 dark:text-white">Error Stack</h4>
+                        <button
+                          onClick={this.copyErrorDetails}
+                          data-copy-button
+                          className="flex items-center gap-2 text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                        >
+                          <Copy className="w-3 h-3" />
+                          Copy
+                        </button>
+                      </div>
+                      
+                      <div className="bg-gray-100 dark:bg-gray-800 rounded p-3 text-xs font-mono text-gray-700 dark:text-gray-300 overflow-x-auto">
+                        <div className="whitespace-pre-wrap">{this.state.error.stack}</div>
+                      </div>
+
+                      <div>
+                        <h5 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Component Stack</h5>
+                        <div className="bg-gray-100 dark:bg-gray-800 rounded p-3 text-xs font-mono text-gray-700 dark:text-gray-300 overflow-x-auto">
+                          <div className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
+              )}
+
+              {/* Error Reporting */}
+              {this.props.enableReporting && (
+                <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Info className="w-4 h-4 text-blue-500" />
+                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                        Help us improve by reporting this error
+                      </span>
+                    </div>
+                    
+                    {this.state.reportSent ? (
+                      <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+                        <CheckCircle className="w-4 h-4" />
+                        Reported
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => this.reportError(this.state.error!, this.state.errorInfo!)}
+                        disabled={this.state.isReporting}
+                        className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white text-sm rounded-lg transition-colors duration-200"
+                      >
+                        {this.state.isReporting ? (
+                          <>
+                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                            Reporting...
+                          </>
+                        ) : (
+                          <>
+                            <Bug className="w-4 h-4" />
+                            Report Error
+                          </>
+                        )}
+                      </button>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+                    )}
+                  </div>
+                </div>
+              )}
+
+<<<<<<< HEAD
+              {/* Help Information */}
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <div className="flex items-start space-x-3">
+                  <Info className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h3 className="font-medium text-blue-800 dark:text-blue-200">
+                      Need Help?
+                    </h3>
+                    <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">
+                      If this error persists, please contact our support team with the Error ID above.
+                    </p>
+                    <div className="mt-2 flex space-x-3">
+                      <a
+                        href="/contact"
+                        className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        Contact Support
+                      </a>
+                      <a
+                        href="/help"
+                        className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        Help Center
+                      </a>
+                    </div>
+=======
+              {/* Support Information */}
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <Info className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <div className="text-sm text-blue-800 dark:text-blue-200">
+                    <p className="font-medium mb-1">Need help?</p>
+                    <p className="mb-2">If this problem persists, please contact our support team.</p>
+                    <a
+                      href="/contact"
+                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      Contact Support
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;

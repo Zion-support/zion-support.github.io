@@ -2,8 +2,51 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';
-<<<<<<< HEAD
-import { SEO } from "../components/SEO";
+import SEO from '../components/SEO';
+const transformationServices = [
+    {
+        title: "Strategy & Planning",
+        description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
+        icon: Rocket,
+        features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
+        color: "from-purple-500 to-pink-500"
+    },
+    {
+        title: "Process Automation",
+        description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
+        icon: Zap,
+        features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
+        color: "from-blue-500 to-cyan-500"
+    },
+    {
+        title: "Technology Modernization",
+        description: "Legacy system modernization and cloud-native architecture implementation.",
+        icon: Cpu,
+        features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
+        color: "from-green-500 to-emerald-500"
+    },
+    {
+        title: "Data & Analytics",
+        description: "Data-driven insights and business intelligence solutions for informed decision-making.",
+        icon: Database,
+        features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
+        color: "from-orange-500 to-red-500"
+    },
+    {
+        title: "Customer Experience",
+        description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
+        icon: Users,
+        features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
+        color: "from-indigo-500 to-purple-500"
+    },
+    {
+        title: "Security & Compliance",
+        description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
+        icon: Shield,
+        features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
+        color: "from-yellow-500 to-orange-500"
+    }
+];
 const transformationPhases = [
     {
         phase: "01",

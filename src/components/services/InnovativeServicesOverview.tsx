@@ -30,7 +30,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 
   const filteredServices = useMemo(() => {;
     let services = INNOVATIVE_SERVICES_2025;
-    
+
     if (category) {
       services = getServicesByCategory(category)} else {
       switch (activeTab) {;
@@ -53,10 +53,12 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           services = getServicesByCategory('Development');
           break;
         default:
-          services = INNOVATIVE_SERVICES_2025}
-    };
-    ;
-    return services.slice(0, maxServices)}, [activeTab, category, maxServices]);
+          services = INNOVATIVE_SERVICES_2025;
+      }
+    }
+
+    return services.slice(0, maxServices);
+  }, [activeTab, category, maxServices]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className = "bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
@@ -67,9 +69,9 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           <span className="text-sm text-gray-600">{service.rating}</span>
         </div>
       </div>
-      
+
       <p className="text-gray-600 text-sm mb-3 line-clamp-2">{service.description}</p>
-      
+
       <div className="flex items-center justify-between mb-3">
         <span className="text-lg font-bold text-blue-600">{service.marketPrice}</span>
         <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">
@@ -94,7 +96,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           <span>Delivery: {service.estimatedDelivery}</span>
           <span>Support: {service.supportLevel}</span>
         </div>
-        
+
         <div className="flex space-x-2">
           <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm hover:bg-blue-700 transition-colors">
             Get Quote
@@ -119,7 +121,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Discover Zion Tech Group's comprehensive suite of cutting-edge AI, IT, and Micro SAAS solutions designed to transform your business operations and drive innovation.
           </p>
-          
+
           {/* Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
@@ -196,7 +198,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
               Schedule a Consultation

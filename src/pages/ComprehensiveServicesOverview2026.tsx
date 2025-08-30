@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Server,
+  Zap,
+  Globe,
+  Cpu,
   Database,
   Network,
   Lock,
@@ -80,9 +81,9 @@ import { Brain,
   Cpu as CpuIcon2,
   Network as NetworkIcon,
   Leaf as LeafIcon
- } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
+} from 'lucide-react';
+import SEO from "@/components/SEO";
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
 export default function ComprehensiveServicesOverview2026(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -213,21 +214,8 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
     };
   ];
 
-  const filteredCategories = selectedCategory === 'all' ;
-    ? serviceCategories: serviceCategories.filter(cat  => cat.id === selectedCategory);
-
-  const toggleCategoryExpansion = (categoryId: string)  => {;
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId)};
-=======
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Sustainable Technology'),;
-      marketSize: '$1.2 trillion by 2027',;
-      avgROI: '300-800%',;
-      innovationLevel: 'Advanced';
-    };
-  ];
-
-  const filteredCategories = selectedCategory === 'all' ;
-    ? serviceCategories ;
+  const filteredCategories = selectedCategory === 'all'
+    ? serviceCategories
     : serviceCategories.filter(cat => cat.id === selectedCategory);
 
   const toggleCategoryExpansion = (categoryId: string) => {;
@@ -239,13 +227,13 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
   const avgROI = '400-1500%';
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO
         title="Comprehensive Services Overview 2026 | Zion Tech Group"
         description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology."
         keywords="comprehensive services, quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -280,10 +268,10 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-              Discover our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. 
+              Discover our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories.
               From Quantum AI to Sustainable Technology, we're shaping the future of innovation.
             </p>
-            
+
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <motion.div
@@ -319,7 +307,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">Explore by Category</h2>
             <p className="text-zion-slate-300">Filter our services by technology category</p>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setSelectedCategory('all')}
@@ -428,7 +416,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                   {/* Innovation Level Badge */}
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`px-4 py-2 rounded-full text-sm font-semibold ${
-                      category.innovationLevel === 'Revolutionary' 
+                      category.innovationLevel === 'Revolutionary'
                         ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                         : category.innovationLevel === 'Cutting-edge'
                         ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
@@ -535,12 +523,12 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                                   </div>
                                 </div>
                               </div>
-                              
+
                               <p className="text-zion-slate-300 text-sm mb-4">{service.description}</p>
-                              
+
                               <div className="flex items-center gap-2 mb-4">
                                 <div className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                                  service.innovationLevel === 'Revolutionary' 
+                                  service.innovationLevel === 'Revolutionary'
                                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                                     : service.innovationLevel === 'Cutting-edge'
                                     ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
@@ -552,7 +540,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                                   ROI: {service.roi}
                                 </div>
                               </div>
-                              
+
                               <div className="flex flex-wrap gap-2 mb-4">
                                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
                                   <span
@@ -563,7 +551,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                                   </span>
                                 ))}
                               </div>
-                              
+
                               <Link
                                 to="/contact"
                                 className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm"
@@ -615,7 +603,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
               Ready to Explore the Future?
             </h2>
             <p className="text-xl text-zion-slate-300 mb-8">
-              Our comprehensive portfolio of revolutionary micro SAAS services is designed to transform your business. 
+              Our comprehensive portfolio of revolutionary micro SAAS services is designed to transform your business.
               Contact us today to discover how we can help you achieve breakthrough results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

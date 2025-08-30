@@ -96,8 +96,9 @@ export const getRecentBlogPosts = (limit = 3) => {
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
     .slice(0, limit)};
 
-export const searchTerm = query.toLowerCase();
-  return blogPosts.filter(post => 
+export const searchBlogPosts = (query) => {
+  const searchTerm = query.toLowerCase();
+  return blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchTerm) ||
     post.excerpt.toLowerCase().includes(searchTerm) ||
     post.content.toLowerCase().includes(searchTerm) ||

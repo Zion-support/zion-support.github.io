@@ -1,10 +1,11 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  CheckCircle, 
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
   AlertCircle,
   Clock,
   MessageSquare,
@@ -71,7 +72,7 @@ export function EnhancedContact(...args[]):  {
   const handleInputChange = (field: keyof ContactFormData, value: string) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setFormData(prev => ({ ...prev, [field]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev = > ({ ...prev, [field]: '' }))};
@@ -81,7 +82,7 @@ export function EnhancedContact(...args[]):  {
   const handleSubmit = async (e: React.FormEvent) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return}
 
@@ -90,7 +91,7 @@ export function EnhancedContact(...args[]):  {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setIsSubmitted(true);
       setFormData({
         name: '',
@@ -174,7 +175,7 @@ export function EnhancedContact(...args[]):  {
           >
             <CheckCircle className="w-10 h-10 text-white" />
           </motion.div>
-          
+
           <motion.h2
             initial = {
   { opacity: 0,
@@ -201,7 +202,7 @@ export function EnhancedContact(...args[]):  {
           >
             Message Sent Successfully!
           </motion.h2>
-          
+
           <motion.p
             initial = {
   { opacity: 0,
@@ -228,7 +229,7 @@ export function EnhancedContact(...args[]):  {
           >
             Thank you for reaching out to us. We'll get back to you within 24 hours.
           </motion.p>
-          
+
           <motion.button
             initial = {
   { opacity: 0,
@@ -301,7 +302,7 @@ export function EnhancedContact(...args[]):  {
             Get in Touch
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss how our AI-powered solutions 
+            Ready to transform your business? Let's discuss how our AI-powered solutions
             can help you achieve your goals.
           </p>
         </motion.div>
@@ -332,7 +333,7 @@ export function EnhancedContact(...args[]):  {
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>
-            
+
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -445,7 +446,7 @@ export function EnhancedContact(...args[]):  {
             className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20"
           >
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
@@ -467,8 +468,8 @@ export function EnhancedContact(...args[]):  {
 
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-                    errors.name 
-                      ? 'border-red-500 focus:ring-red-500' 
+                    errors.name
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Enter your full name"
@@ -535,8 +536,8 @@ export function EnhancedContact(...args[]):  {
 
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-                    errors.email 
-                      ? 'border-red-500 focus:ring-red-500' 
+                    errors.email
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Enter your email address"
@@ -697,8 +698,8 @@ export function EnhancedContact(...args[]):  {
 
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
-                    errors.message 
-                      ? 'border-red-500 focus:ring-red-500' 
+                    errors.message
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Tell us about your project or inquiry..."

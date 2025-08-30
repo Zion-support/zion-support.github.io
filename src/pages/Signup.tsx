@@ -1,10 +1,11 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Mail, 
-  Lock, 
-  Eye, 
-  EyeOff, 
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
   User,
   Building,
   ArrowRight,
@@ -405,7 +406,7 @@ export default function Signup(...args[]):  {
               Join the AI Revolution
             </h2>
             <p className="text-xl text-zion-slate-light mb-12 leading-relaxed">
-              Get access to cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 
+              Get access to cutting-edge AI solutions, cybersecurity services, and digital transformation expertise.
               Start your journey towards business innovation today.
             </p>
             {/* Features List */}
