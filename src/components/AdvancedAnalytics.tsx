@@ -1,18 +1,18 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import {
-    Activity,
-    Award,
-    BarChart3,
-    Clock,
-    Eye,
-    Monitor,
-    MousePointer,
-    Smartphone,
-    Tablet,
-    Target,
-    Users,
-    X,
-    Zap
+  Activity,
+  Award,
+  BarChart3,
+  Clock,
+  Eye,
+  Monitor,
+  MousePointer,
+  Smartphone,
+  Tablet,
+  Target,
+  Users,
+  X,
+  Zap
 } from 'lucide-react';
 import React, { useCallback, useEffect, useState } from 'react';
 
