@@ -33,6 +33,8 @@ import {
   X,
   ChevronDown,
   ChevronUp
+} from 'lucide-react';
+
 const ComprehensivePricing2028 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -117,7 +119,7 @@ const ComprehensivePricing2028 = () => {
       benefits: ['99.99% threat detection', '24/7 protection', '<1s response time', 'Global threat coverage'],
       useCases: ['Enterprise Security', 'Remote Work Security', 'Cloud Security', 'Compliance Requirements'],
       color: 'red'
-
+    }
   ];
 
   const filteredServices = selectedCategory === 'all'
@@ -157,8 +159,7 @@ const ComprehensivePricing2028 = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
-
+            className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
               Comprehensive Pricing 2028
@@ -191,8 +192,7 @@ const ComprehensivePricing2028 = () => {
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'
-                }`}
-
+                }`}>
                 {category.icon}
                 <span className="ml-2">{category.name}</span>
               </motion.button>
@@ -211,8 +211,7 @@ const ComprehensivePricing2028 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${getBorderColor(service.color)} transition-all duration-300`}
-
+                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${getBorderColor(service.color)} transition-all duration-300`}>
                 <div className="flex items-start justify-between mb-6">
                   {/* Icon will be added here based on service.icon */}
                   <span className="text-sm text-gray-400 bg-slate-700/50 px-3 py-1 rounded-full">

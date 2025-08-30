@@ -361,7 +361,7 @@ export default function InnovativeServices2027() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg"
                 onClick={() => window.location.href = '/contact'}
-
+              >
                 Schedule a Consultation
               </motion.button>
               <motion.button
@@ -369,7 +369,7 @@ export default function InnovativeServices2027() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gray-800/50 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-lg"
                 onClick={() => window.location.href = '/pricing'}
-
+              >
                 View Pricing Plans
               </motion.button>
             </div>
@@ -387,7 +387,7 @@ export default function InnovativeServices2027() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
-
+            >
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
@@ -398,7 +398,7 @@ export default function InnovativeServices2027() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
-
+            >
               <MessageCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
@@ -409,7 +409,7 @@ export default function InnovativeServices2027() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
-
+            >
               <Building className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -419,4 +419,4 @@ export default function InnovativeServices2027() {
       </section>
     </div>
   );
-}}}
+}

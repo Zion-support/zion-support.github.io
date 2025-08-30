@@ -9,6 +9,7 @@ import {
   CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
   Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon,
   Calculator, PieChart, BarChart
+} from 'lucide-react';
 import {
   revolutionaryMicroSaasServices2025,
   advancedITInfrastructureServices2025,
@@ -47,7 +48,7 @@ export default function ComprehensivePricingGuide2025() {
           ...advancedITInfrastructureServices2025,
           ...revolutionaryAIServices2025
         ];
-
+    }
   };
 
   const getFilteredServices = () => {
@@ -60,6 +61,7 @@ export default function ComprehensivePricingGuide2025() {
         if (selectedPricingModel === 'project') return service.projectRate;
         return true;
       });
+    }
 
     return services;
   };
@@ -82,6 +84,7 @@ export default function ComprehensivePricingGuide2025() {
         if (service.price) return total + (service.price * roiPercentage / 100);
         if (service.hourlyRate) return total + ((service.hourlyRate * 160) * roiPercentage / 100);
         if (service.projectRate) return total + (service.projectRate * roiPercentage / 100);
+      }
 
       return total;
     }, 0);

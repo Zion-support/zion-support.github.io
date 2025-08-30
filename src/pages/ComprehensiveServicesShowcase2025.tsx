@@ -56,6 +56,7 @@ import {
   Atom,
   Heart,
   Leaf
+} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
@@ -63,6 +64,7 @@ interface ServiceContact {
   email: string;
   address: string;
   website: string;
+}
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -128,7 +130,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       default:
         return 0;
-
+    }
   });
 
   const handleServiceClick = (service: any) => {
@@ -145,8 +147,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-
-
+      }
+    }
   };
 
   const itemVariants = {

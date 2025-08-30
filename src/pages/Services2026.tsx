@@ -214,7 +214,7 @@ const Services2026: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 rounded-3xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
-
+                >
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-xs uppercase tracking-wide text-cyan-300/80 font-semibold">
                       {service.category}
@@ -252,7 +252,7 @@ const Services2026: React.FC = () => {
                     <Link
                       to={`/services/${service.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline"
-
+                    >
                       Learn More
                       <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -288,7 +288,7 @@ const Services2026: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/10"
-
+              >
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-xs uppercase tracking-wide text-cyan-300/70 font-semibold">
                     {service.category}
@@ -327,7 +327,7 @@ const Services2026: React.FC = () => {
                   <Link
                     to={`/services/${service.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline"
-
+                  >
                     View Details
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -360,7 +360,7 @@ const Services2026: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="text-cyan-400 hover:text-cyan-300 font-medium text-sm"
-
+                >
                   +1 302 464 0950
                 </a>
               </div>

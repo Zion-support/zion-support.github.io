@@ -452,7 +452,7 @@ export default function Developers() {
               <Link
                 to="/docs"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
-
+              >
                 Browse Docs
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -469,7 +469,7 @@ export default function Developers() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
-
+              >
                 Join Community
                 <ExternalLink className="ml-2 w-4 h-4" />
               </a>
@@ -484,7 +484,7 @@ export default function Developers() {
               <Link
                 to="/contact"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
-
+              >
                 Contact Support
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -494,4 +494,4 @@ export default function Developers() {
       </section>
     </div>
   );
-}}}}}}
+}

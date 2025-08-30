@@ -148,6 +148,7 @@ export default function WhitePapers() {
   const getCategoryCount = (categoryId: string) => {
     if (categoryId === 'all') {
       return whitePapers.length;
+    }
 
     return whitePapers.filter(paper => paper.category === categoryId).length;
   };
@@ -180,6 +181,7 @@ export default function WhitePapers() {
       return (downloads / 1000000).toFixed(1) + 'M';
     } else if (downloads >= 1000) {
       return (downloads / 1000).toFixed(1) + 'K';
+    }
 
     return downloads.toString();
   };

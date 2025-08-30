@@ -39,6 +39,7 @@ import {
   Mail as MailIcon,
   MapPin,
   Globe as GlobeIcon
+} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
 
@@ -81,7 +82,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
         return <Leaf className="w-6 h-6" />;
       default:
         return <Sparkles className="w-6 h-6" />;
-
+    }
   };
 
   const getPriceRangeFilter = (range: string) => {
@@ -96,7 +97,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
         return (service: InnovativeService2025) => service.price >= 5000;
       default:
         return () => true;
-
+    }
   };
 
   const filteredServices = INNOVATIVE_SERVICES_2025.filter(service => {
@@ -119,7 +120,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
         return 'bg-gradient-to-r from-green-500 to-emerald-500';
       default:
         return 'bg-gradient-to-r from-gray-500 to-slate-500';
-
+    }
   };
 
   const toggleServiceExpansion = (serviceId: string) => {
@@ -128,6 +129,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
       newExpanded.delete(serviceId);
     } else {
       newExpanded.add(serviceId);
+    }
 
     setExpandedServices(newExpanded);
   };
@@ -154,8 +156,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
-
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full border border-green-400/30 mb-6">
               <DollarSign className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">Comprehensive Pricing Guide 2027</span>
@@ -208,8 +209,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer"
-
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer">
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -222,8 +222,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer"
-
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer">
                   {priceRanges.map(range => (
                     <option key={range} value={range}>{range}</option>
                   ))}
@@ -244,8 +243,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300"
-
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300">
                 {/* Service Header */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">

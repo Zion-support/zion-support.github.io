@@ -1,5 +1,7 @@
 import React from 'react';
-import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Package, Globe export default function AISupplyChainOptimization() {
+import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Package, Globe } from 'lucide-react';
+
+export default function AISupplyChainOptimization() {
   const features = [
     'AI-powered demand forecasting and inventory optimization',
     'Real-time supply chain monitoring and analytics',

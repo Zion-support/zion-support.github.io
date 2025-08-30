@@ -41,7 +41,6 @@ function MicroCRM() {
       </section>
     </div>
   );
+}
 
 export default MicroCRM;
-
-}

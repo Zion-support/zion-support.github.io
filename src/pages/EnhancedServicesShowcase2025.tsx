@@ -51,6 +51,7 @@ import {
   ShoppingCart,
   Gauge,
   MessageCircle as MessageCircleIcon
+} from 'lucide-react';
 import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
 
 export default function EnhancedServicesShowcase2025() {
@@ -87,7 +88,7 @@ export default function EnhancedServicesShowcase2025() {
             return a.name.localeCompare(b.name);
           default:
             return 0;
-
+        }
       });
   }, [searchTerm, selectedCategory, sortBy]);
 
@@ -104,7 +105,7 @@ export default function EnhancedServicesShowcase2025() {
       whileHover={{ y: -10 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5 }}>
 
       {/* Service Header */}
       <div className="flex items-start justify-between mb-4">

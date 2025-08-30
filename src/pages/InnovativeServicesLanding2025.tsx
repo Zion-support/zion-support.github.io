@@ -9,6 +9,8 @@ import {
   Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
   CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
   Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon
+} from 'lucide-react';
+
 export default function InnovativeServicesLanding2025() {
   const featuredServices = [
     {
@@ -37,7 +39,7 @@ export default function InnovativeServicesLanding2025() {
       icon: Brain,
       color: "from-purple-500 to-pink-500",
       benefits: ["500% research acceleration", "70% cost reduction", "24/7 research capability"]
-
+    }
   ];
 
   const innovationHighlights = [
@@ -64,7 +66,7 @@ export default function InnovativeServicesLanding2025() {
       description: "Advanced IoT platforms with edge computing capabilities for real-time data processing",
       icon: Network,
       color: "from-cyan-500 to-blue-500"
-
+    }
   ];
 
   const marketStats = [
