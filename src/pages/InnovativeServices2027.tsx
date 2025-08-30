@@ -277,7 +277,7 @@ export default function InnovativeServices2027() {
                           <span
                             key={idx}
                             className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-full"
-
+                          >
                             {tag}
                           </span>
                         ))}
@@ -290,7 +290,7 @@ export default function InnovativeServices2027() {
                       whileTap={{ scale: 0.95 }}
                       className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg"
                       onClick={() => window.location.href = '/contact'}
-
+                    >
                       Get Started - Contact Us
                     </motion.button>
 
@@ -321,11 +321,10 @@ export default function InnovativeServices2027() {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-16"
-
+            >
               <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
               <button
                 onClick={() => {
@@ -333,21 +332,7 @@ export default function InnovativeServices2027() {
                   setSearchQuery('');
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-
-=======
-              initial={{ opacity: 0 }};
-              animate={{ opacity: 1 }};
-              className="text-center py-16";
-            >;
-              <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={() => {;
-                  setSelectedCategory('all');
-                  setSearchQuery('');
-                }}
-                className = "px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 View All Services
               </button>
             </motion.div>
@@ -359,29 +344,11 @@ export default function InnovativeServices2027() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Lead the Future?
             </h2>
@@ -395,7 +362,7 @@ export default function InnovativeServices2027() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg"
                 onClick={() => window.location.href = '/contact'}
-
+              >
                 Schedule a Consultation
               </motion.button>
               <motion.button
@@ -403,7 +370,7 @@ export default function InnovativeServices2027() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gray-800/50 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-lg"
                 onClick={() => window.location.href = '/pricing'}
-
+              >
                 View Pricing Plans
               </motion.button>
             </div>
@@ -416,95 +383,41 @@ export default function InnovativeServices2027() {
         <div className="container-responsive">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: -30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
-
+            >
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
             </motion.div>
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
-
+            >
               <MessageCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
-
+            >
               <Building className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}}}
+}
