@@ -95,24 +95,6 @@ export function EnhancedLoadingSpinner({
           animate="animate"
         >
           {text}
-<<<<<<< HEAD
-        </motion.p>
-      )}
-      
-      {showProgress && (
-        <div className="w-full max-w-xs">
-          <div className="bg-gray-200 rounded-full h-2">
-            <motion.div
-              className="bg-blue-500 h-2 rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-          <p className="text-sm text-gray-500 mt-2 text-center">{progress}%</p>
-        </div>
-      )}
-=======
         </motion.div>
       )}
       
@@ -131,7 +113,6 @@ export function EnhancedLoadingSpinner({
           </div>
         </div>
       )}
->>>>>>> ef1fb22a9ebab80d3543d1232ecce12b719b9705
     </div>
   );
 }
