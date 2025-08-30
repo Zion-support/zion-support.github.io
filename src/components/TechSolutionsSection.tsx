@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const techSolutions = [
@@ -121,3 +120,5 @@ export function TechSolutionsSection() {
     </section>
   );
 }
+
+export default TechSolutionsSection;

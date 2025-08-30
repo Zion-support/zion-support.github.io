@@ -1,44 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe, 
-  Cpu, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Users,
-  Target,
-  Award,
-  Sparkles,
-  Rocket,
-  BarChart3,
-  MessageSquare,
-  Mail,
-  Database,
-  Network,
-  Cloud,
-  Smartphone,
-  Palette,
-  Leaf,
-  Code,
-  Wallet,
-  Box,
-  Phone,
-  Mail as MailIcon,
-  MapPin,
-  Globe as GlobeIcon,
-  ExternalLink
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
 

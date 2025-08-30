@@ -466,3 +466,5 @@ export const getIndustrySolutionsByIndustry = (industry: string): IndustrySoluti
 export const getAllIndustrySolutions = (): IndustrySolution[] => {
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
 };
+
+export default getIndustrySolutionsByIndustry;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const securityFeatures = [
@@ -208,3 +207,5 @@ export function SecurityComplianceSection() {
     </section>
   );
 }
+
+export default SecurityComplianceSection;

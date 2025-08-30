@@ -571,3 +571,5 @@ export const getPricingGuideStats = () => {
     subcategories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide => guide.subcategory))]
   };
 };
+
+export default getPricingGuideByServiceId;

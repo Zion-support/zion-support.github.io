@@ -1,32 +1,4 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Building, 
-  Users, 
-  TrendingUp, 
-  ArrowRight, 
-  Search, 
-  Filter, 
-  Calendar,
-  Star,
-  Eye,
-  Share2,
-  Bookmark,
-  Target,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Atom,
-  Network,
-  Heart,
-  DollarSign,
-  Clock,
-  MapPin,
-  Factory
-} from 'lucide-react';
 
 export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('all');

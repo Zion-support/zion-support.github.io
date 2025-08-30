@@ -31,3 +31,6 @@ export async function earnTokensForReferral(
     body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })
   });
 }
+
+
+export default earnTokensForAction;

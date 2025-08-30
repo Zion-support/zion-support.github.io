@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from '@/types/listings';
 
 // Enhanced real micro SAAS services and solutions
 export const ENHANCED_SERVICES: ProductListing[] = [
@@ -1268,3 +1268,5 @@ export const CONTACT_INFO = {
   website: "https://ziontechgroup.com",
   domain: "ziontechgroup.com"
 };
+
+export default ENHANCED_SERVICE_CATEGORIES;

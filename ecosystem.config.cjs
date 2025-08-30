@@ -35,7 +35,49 @@ module.exports = {
       }
     },
 
-    // 🧠 NEW: Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    // 🏥 NEW: Project Health Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    {
+      name: 'project-health-monitor',
+      script: './scripts/automation/project-health-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // 🔧 NEW: Comprehensive Error Fixer - runs every 10 minutes
+    {
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // 🎨 NEW: Lucide React Icon Fixer - runs every 30 minutes
+    {
+      name: 'lucide-react-icon-fixer',
+      script: './scripts/automation/lucide-react-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // 🧠 Intelligent Predictive Monitor - runs every 5 minutes
     {
       name: 'intelligent-predictive-monitor',
       script: './scripts/automation/intelligent-predictive-monitor.cjs',

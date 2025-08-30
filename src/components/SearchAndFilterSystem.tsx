@@ -1,22 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  X, 
-  ChevronDown, 
-  Check, 
-  Star,
-  Tag,
-  MapPin,
-  Calendar,
-  Users,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe
-} from 'lucide-react';
 
 interface SearchResult {
   id: string;
@@ -467,3 +449,5 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     </div>
   );
 };
+
+export default filterOptions;

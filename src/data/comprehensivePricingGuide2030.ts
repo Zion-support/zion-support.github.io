@@ -1,5 +1,5 @@
-import { ProductListing } from "@/types/listings";
-import { COMPREHENSIVE_SERVICES_INDEX_2030 } from "./comprehensiveServicesIndex2030";
+import { ProductListing } from '@/types/listings';
+import { COMPREHENSIVE_SERVICES_INDEX_2030 } from './comprehensiveServicesIndex2030';
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
@@ -383,3 +383,5 @@ export const PRICING_CONTACT_2030 = {
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
   responseTime: "Within 24 hours for pricing inquiries"
 };
+
+export default PRICING_ANALYSIS_2030;

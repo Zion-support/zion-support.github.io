@@ -302,7 +302,7 @@ export class ServiceWorkerManager {
 
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
+        applicationServerKey: this.urlBase64ToUint8Array(process.env.REACT_APP_VAPID_PUBLIC_KEY || '') as Uint8Array
       });
 
       console.log('Push subscription created:', subscription);
@@ -340,3 +340,5 @@ export const getCacheSize = () => serviceWorkerManager.getCacheSize();
 export const requestBackgroundSync = (tag: string) => serviceWorkerManager.requestBackgroundSync(tag);
 export const requestNotificationPermission = () => serviceWorkerManager.requestNotificationPermission();
 export const subscribeToPushNotifications = () => serviceWorkerManager.subscribeToPushNotifications();
+
+export default existingRegistration;

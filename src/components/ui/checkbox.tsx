@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface CheckboxProps {
   checked: boolean;
@@ -22,3 +21,5 @@ export function Checkbox({ checked, onChange, label, disabled = false, className
     </label>
   );
 }
+
+export default Checkbox;

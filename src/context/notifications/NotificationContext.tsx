@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface Notification {
   id: string;
@@ -64,3 +63,6 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     </NotificationContext.Provider>
   );
 };
+
+
+export default NotificationContext;

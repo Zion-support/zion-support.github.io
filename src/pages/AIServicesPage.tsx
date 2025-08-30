@@ -1,29 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Play,
-  BarChart3,
-  Cpu,
-  Eye,
-  MessageSquare,
-  Database,
-  Network,
-  Rocket,
-  Target,
-  Award,
-  Clock,
-  Star,
-  Heart
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {

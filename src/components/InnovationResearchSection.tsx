@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const researchAreas = [
@@ -187,3 +186,5 @@ export function InnovationResearchSection() {
     </section>
   );
 }
+
+export default InnovationResearchSection;

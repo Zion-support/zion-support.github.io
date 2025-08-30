@@ -855,3 +855,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2031: InnovativeMicroSaasService2031
     marketSize: "$25.6 billion by 2031"
   }
 ];
+
+export default trading;

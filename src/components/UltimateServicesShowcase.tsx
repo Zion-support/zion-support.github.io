@@ -1,31 +1,10 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Globe, 
-  Code, 
-  BarChart3, 
-  Users, 
-  ShoppingCart,
-  MessageSquare,
-  FileText,
-  Settings,
-  Zap,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-
-// Import the new services
 import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';
 import { enterpriseITInfrastructureServices2025 } from '../../data/2025-enterprise-it-infrastructure-services';
 import { innovativeMicroSaasSolutions2025 } from '../../data/2025-innovative-micro-saas-solutions';
+
+// Import the new services
 
 interface Service {
   id: string;

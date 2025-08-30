@@ -995,3 +995,5 @@ export const SPECIALIZED_SERVICES_2026 = [
     }
   }
 ];
+
+export default SPECIALIZED_SERVICES_2026;

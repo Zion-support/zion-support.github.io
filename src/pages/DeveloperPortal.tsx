@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock } from 'lucide-react';

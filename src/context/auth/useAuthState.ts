@@ -63,3 +63,5 @@ export const useAuthState = () => {
     setTokens
   };
 };
+
+export default useAuthState;

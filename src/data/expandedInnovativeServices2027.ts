@@ -1094,3 +1094,5 @@ export const searchExpandedServices = (query: string): ExpandedService2027[] => 
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   );
 };
+
+export default to;

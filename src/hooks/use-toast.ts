@@ -47,3 +47,5 @@ export const toast = ({ title, description, variant = 'default', duration = 5000
   // In a real implementation, this would dispatch to a global toast system
   console.log('Toast:', { title, description, variant, duration });
 };
+
+export default useToast;

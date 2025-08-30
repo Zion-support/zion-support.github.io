@@ -1180,3 +1180,5 @@ export const searchPricing = (query: string): ExpandedServicePricing[] => {
     pricing.subcategory.toLowerCase().includes(lowercaseQuery)
   );
 };
+
+export default ALL_EXPANDED_SERVICES_PRICING;

@@ -1109,3 +1109,5 @@ export const getRevolutionaryServicesStats = () => {
 };
 
 export const ALL_REVOLUTIONARY_SERVICES_2030 = REVOLUTIONARY_SERVICES_2030;
+
+export default getRevolutionaryServicesByCategory;

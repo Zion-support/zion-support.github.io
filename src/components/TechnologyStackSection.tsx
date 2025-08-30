@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const technologyCategories = [
@@ -221,3 +220,5 @@ export function TechnologyStackSection() {
     </section>
   );
 }
+
+export default TechnologyStackSection;

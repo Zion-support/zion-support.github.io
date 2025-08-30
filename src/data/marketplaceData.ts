@@ -233,3 +233,5 @@ export const marketplaceFilters = [
     ]
   }
 ];
+
+export default marketplaceCategories;

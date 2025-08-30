@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, Zap, Brain, Rocket, Globe } from 'lucide-react';
 
@@ -154,3 +153,5 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
     </AnimatePresence>
   );
 };
+
+export default loadingMessages;

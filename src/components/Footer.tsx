@@ -1,65 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Building,
-  Users,
-  FileText,
-  Video,
-  TestTube,
-  TrendingUp,
-  CheckCircle,
-  Briefcase,
-  Newspaper,
-  Target,
-  Rocket,
-  Heart,
-  DollarSign,
-  HelpCircle,
-  Activity,
-  Cpu,
-  GraduationCap,
-  BarChart3,
-  Sparkles,
-  Award,
-  ArrowRight,
-  Star,
-  Lock,
-  Eye,
-  Atom,
-  Network,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  MessageCircle,
-  Server,
-  ShoppingCart,
-  Smartphone,
-  Database,
-  Clock,
-  Code,
-  BookOpen,
-  Truck,
-  ExternalLink,
-  ChevronDown,
-  Copyright
-} from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface FooterLink {
   name: string;
@@ -374,3 +314,6 @@ export function Footer() {
     </footer>
   );
 }
+
+
+export default Footer;

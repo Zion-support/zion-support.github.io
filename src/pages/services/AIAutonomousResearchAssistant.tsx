@@ -1,27 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Search, 
-  BookOpen, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Database,
-  BarChart3,
-  FileText,
-  Lightbulb,
-  Target,
-  Award,
-  Rocket,
-  Sparkles
-} from 'lucide-react';
 
 const AIAutonomousResearchAssistant = () => {
   const features = [

@@ -55,3 +55,5 @@ export const getUserData = (): any => {
     return null;
   }
 };
+
+export default cleanupAuthState;

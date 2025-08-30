@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from '@/components/SEO';
 
 export function SitemapPage() {
@@ -97,3 +96,6 @@ export function SitemapPage() {
     </div>
   );
 }
+
+
+export default SitemapPage;

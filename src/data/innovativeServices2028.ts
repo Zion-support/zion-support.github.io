@@ -586,3 +586,5 @@ export const contactInfo = {
     instagram: "https://www.instagram.com/ziontechgroup"
   }
 };
+
+export default innovativeServices2028;

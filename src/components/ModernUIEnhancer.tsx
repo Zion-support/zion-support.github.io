@@ -1,15 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { 
-  Sparkles, 
-  Zap, 
-  Star, 
-  Palette, 
-  Eye, 
-  Layers,
-  Settings,
-  X
-} from 'lucide-react';
 
 interface UISettings {
   glassmorphism: boolean;
@@ -648,3 +637,5 @@ export const ModernUIEnhancer: React.FC = () => {
     </>
   );
 };
+
+export default containerRef;

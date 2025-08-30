@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '../../lib/utils';
 
 interface ProgressProps {
@@ -21,3 +20,6 @@ const Progress: React.FC<ProgressProps> = ({ value, max = 100, className }) => {
 };
 
 export { Progress };
+
+
+export default percentage;

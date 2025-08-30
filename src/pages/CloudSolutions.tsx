@@ -1,21 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Lock, 
-  BarChart3,
-  ArrowRight,
-  CheckCircle,
-  Play,
-  Code,
-  Settings,
-  Users
-} from 'lucide-react';
 
 export default function CloudSolutions() {
   const cloudServices = [

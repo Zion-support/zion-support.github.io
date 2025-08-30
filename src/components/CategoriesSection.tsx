@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -173,3 +172,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>
   );
 }
+
+export default CategoriesSection;

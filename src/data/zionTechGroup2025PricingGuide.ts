@@ -702,3 +702,5 @@ export const searchPricing = (query: string) => {
     service.category.toLowerCase().includes(lowercaseQuery)
   );
 };
+
+export default getPricingByCategory;

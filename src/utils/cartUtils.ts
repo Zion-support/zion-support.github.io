@@ -60,3 +60,5 @@ export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]):
   
   return merged;
 };
+
+export default calculateCartTotal;

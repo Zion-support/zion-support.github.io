@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface SkeletonProps {
@@ -174,3 +173,5 @@ export function GridSkeleton({
     </div>
   );
 }
+
+export default Skeleton;

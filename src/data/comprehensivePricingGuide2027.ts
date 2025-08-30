@@ -883,3 +883,6 @@ export const pricingSubcategories2027 = {
   'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
   'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
 };
+
+
+export default getComprehensivePricingGuide2027;

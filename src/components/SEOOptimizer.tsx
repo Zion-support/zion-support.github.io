@@ -1,24 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  CheckCircle, 
-  AlertTriangle,
-  Info,
-  Settings,
-  BarChart3,
-  Globe,
-  Smartphone,
-  Monitor,
-  Eye,
-  Clock,
-  Star,
-  ArrowUpRight,
-  RefreshCw
-} from 'lucide-react';
 
 interface SEOAnalysis {
   score: number;
@@ -517,3 +497,6 @@ export const useSEOOptimization = () => {
     optimizePage
   };
 };
+
+
+export default analyzeSEO;

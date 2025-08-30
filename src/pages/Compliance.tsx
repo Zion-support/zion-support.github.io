@@ -1,27 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  CheckCircle, 
-  Award, 
-  FileText, 
-  Users, 
-  Globe,
-  Lock,
-  Eye,
-  Database,
-  Server,
-  Network,
-  Zap,
-  Brain,
-  Cloud,
-  Rocket,
-  Building,
-  Monitor,
-  Clock,
-  AlertTriangle,
-  Info
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Compliance() {

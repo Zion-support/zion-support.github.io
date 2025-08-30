@@ -1,34 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Users, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  MessageCircle, 
-  BarChart3, 
-  Clock, 
-  Award, 
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Phone,
-  Mail,
-  Calendar,
-  CheckCircle,
-  Shield,
-  FileText,
-  ShoppingCart,
-  Home,
-  DollarSign,
-  Heart
-} from 'lucide-react';
 
 export default function AISalesCopilot() {
   const features = [

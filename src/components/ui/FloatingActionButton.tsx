@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, MessageCircle, Phone, Mail, ArrowUp, X } from 'lucide-react';
 
@@ -116,3 +115,5 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     </div>
   );
 };
+
+export default actions;

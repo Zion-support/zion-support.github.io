@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface SelectProps {
   children: React.ReactNode;
@@ -70,3 +69,5 @@ interface SelectContentProps {
 export function SelectContent({ children }: SelectContentProps) {
   return <div className="relative">{children}</div>;
 }
+
+export default Select;

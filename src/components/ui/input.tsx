@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
@@ -12,3 +11,5 @@ export function Input({ className = '', ...props }: InputProps) {
     />
   );
 }
+
+export default Input;

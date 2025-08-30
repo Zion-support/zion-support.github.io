@@ -120,3 +120,5 @@ export const getServicesByCategory = (category: string): InnovativeService2027[]
   }
   return innovativeServices2027.filter(service => service.category === category);
 };
+
+export default serviceCategories2027;

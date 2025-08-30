@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const globalOffices = [
@@ -153,3 +152,5 @@ export function GlobalPresenceSection() {
     </section>
   );
 }
+
+export default GlobalPresenceSection;

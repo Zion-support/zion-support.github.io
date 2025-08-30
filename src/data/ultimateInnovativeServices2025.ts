@@ -631,3 +631,5 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     }
   }
 ];
+
+export default SERVICE_CATEGORIES;

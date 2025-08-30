@@ -42,3 +42,5 @@ export const mapProfileToUser = (supabaseUser: SupabaseUser, profile: Profile): 
     updatedAt: profile.updated_at || supabaseUser.updated_at
   };
 };
+
+export default mapProfileToUser;

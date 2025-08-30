@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface FormProps {
   children: React.ReactNode;
@@ -53,3 +52,5 @@ export function FormMessage({ children, className = '' }: FormMessageProps) {
   if (!children) return null;
   return <p className={`text-sm ${className}`}>{children}</p>;
 }
+
+export default Form;

@@ -701,3 +701,5 @@ export const getEnhancedInnovativeServices2027ByCategory = (category: string) =>
   enhancedInnovativeServices2027.filter(service => service.category === category);
 export const getEnhancedInnovativeServices2027ById = (id: string) => 
   enhancedInnovativeServices2027.find(service => service.id === id);
+
+export default by;

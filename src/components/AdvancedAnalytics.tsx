@@ -1,25 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  Clock, 
-  Globe,
-  X,
-  Activity,
-  Zap,
-  Target,
-  Award,
-  Calendar,
-  MapPin,
-  Laptop,
-  Monitor,
-  Smartphone,
-  Tablet
-} from 'lucide-react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -416,3 +395,5 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     </AnimatePresence>
   );
 }
+
+export default AdvancedAnalytics;

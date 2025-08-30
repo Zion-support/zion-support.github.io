@@ -1,4 +1,3 @@
-import React, { useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -423,3 +422,6 @@ export function SEO({
     </Helmet>
   );
 }
+
+
+export default SEO;

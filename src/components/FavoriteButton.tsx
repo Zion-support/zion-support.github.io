@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
 
 interface FavoriteButtonProps {
@@ -42,3 +41,5 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     </button>
   );
 }
+
+export default FavoriteButton;

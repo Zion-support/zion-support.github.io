@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -103,3 +102,5 @@ export function FloatingCTA() {
     </>
   );
 }
+
+export default FloatingCTA;

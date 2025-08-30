@@ -1,27 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Atom, 
-  Lock, 
-  Wifi, 
-  Shield, 
-  Eye, 
-  Globe2, 
-  Leaf,
-  Zap,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Code,
-  Users,
-  BarChart3,
-  TrendingUp,
-  Lightbulb,
-  Target,
-  Award
-} from 'lucide-react';
 
 const InnovativeServices: React.FC = () => {
   const innovations = [

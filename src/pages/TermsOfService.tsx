@@ -1,14 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  FileText, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  AlertTriangle, 
- 
+
   CheckCircle, 
   ArrowRight, 
   Download, 

@@ -802,3 +802,5 @@ export const allInnovativeServices2031 = {
   itInfrastructure: innovativeITInfrastructureServices2031,
   ai: innovativeAIServices2031
 };
+
+export default allInnovativeServices2031;

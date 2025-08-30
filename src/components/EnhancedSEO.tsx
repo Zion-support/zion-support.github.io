@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -185,3 +184,5 @@ export function EnhancedSEO({
     </Helmet>
   );
 }
+
+export default EnhancedSEO;

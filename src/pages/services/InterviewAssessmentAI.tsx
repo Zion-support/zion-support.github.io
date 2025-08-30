@@ -1,30 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Users, 
-  Brain, 
-  Target, 
-  Zap, 
-  BarChart3, 
-  Clock, 
-  Award, 
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  CheckCircle,
-  Eye,
-  MessageCircle,
-  FileText,
-  Shield,
-  TrendingUp,
-  UserCheck,
-  Calendar,
-  Video,
-  Download,
-  Share2
-} from 'lucide-react';
 
 export default function InterviewAssessmentAI() {
   const features = [

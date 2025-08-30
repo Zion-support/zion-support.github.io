@@ -1,22 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Search, 
-  User, 
-  Settings,
-  Bell,
-  Sun,
-  Moon,
-  Monitor,
-  Globe,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
 
 interface NavigationItem {
   label: string;
@@ -344,3 +327,5 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     </nav>
   );
 };
+
+export default location;

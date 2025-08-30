@@ -1,51 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, 
-  Tablet, 
-  Monitor, 
-  RotateCw, 
-  Touch, 
-  Hand, 
-  Wifi, 
-  Battery, 
-  Settings, 
-  X, 
-  CheckCircle, 
-  AlertTriangle, 
-  Info,
-  Zap,
-  Shield,
-  Target,
-  Award,
-  BarChart3,
-  Palette,
-  RotateCcw,
-  Save,
-  Loader2,
-  Smartphone as PhoneIcon,
-  Wifi as WifiIcon,
-  Battery as BatteryIcon,
-  Signal,
-  Volume2,
-  VolumeX,
-  Sun,
-  Moon,
-  Eye,
-  EyeOff,
-  Fingerprint,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  ArrowDown,
-  Pinch,
-  RotateCw as Rotate,
-  Shake,
-  MousePointer,
-  Clock,
-  DoubleArrow,
-  Move
-} from 'lucide-react';
 
 interface MobileSettings {
   touchGestures: boolean;
@@ -918,3 +871,5 @@ export function MobileExperienceEnhancer({
     </>
   );
 }
+
+export default MobileExperienceEnhancer;

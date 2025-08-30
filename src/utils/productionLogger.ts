@@ -6,3 +6,5 @@ export function logErrorToProduction(message: string, error?: any): void {
   }
   // TODO: Implement production error logging service
 }
+
+export default logErrorToProduction;

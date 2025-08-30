@@ -1,4 +1,3 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from 'lucide-react';
 
@@ -230,3 +229,5 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
 // Export as ErrorBoundary for backward compatibility
 export const ErrorBoundary = EnhancedErrorBoundary;
+
+export default errorReport;

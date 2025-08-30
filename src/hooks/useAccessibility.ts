@@ -340,3 +340,5 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     navigateHorizontal
   };
 };
+
+export default useAccessibility;

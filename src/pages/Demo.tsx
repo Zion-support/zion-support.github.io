@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause, RotateCcw, Download, Share2, Star, Users, Zap, Brain, Cloud, Shield, ShoppingCart, MessageCircle, BarChart3, Code, Globe, ArrowRight, CheckCircle, XCircle, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';

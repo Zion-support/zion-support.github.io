@@ -121,3 +121,6 @@ export function useAuth() {
     isAdmin: authState.user?.role === 'admin'
   };
 }
+
+
+export default useAuth;

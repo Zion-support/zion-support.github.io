@@ -1,28 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  CheckCircle, 
-  AlertTriangle, 
-  FileText, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  BarChart3,
-  TrendingUp,
-  Clock,
-  Award,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2
-} from 'lucide-react';
 
 export default function AIComplianceAssistant() {
   const features = [

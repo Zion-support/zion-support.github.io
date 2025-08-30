@@ -380,3 +380,6 @@ export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {
   return IOT_EDGE_COMPUTING_SERVICES_2025;
 };
+
+
+export default getIoTEdgeServicesByCategory;

@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from '@/types/listings';
 
 export const ULTIMATE_REAL_SERVICES_2025: ProductListing[] = [
   {
@@ -636,3 +636,5 @@ export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   scalability: "Built to scale with your business growth",
   integration: "Seamless integration with existing systems and workflows"
 };
+
+export default ULTIMATE_SERVICE_CATEGORIES_2025;

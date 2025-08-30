@@ -1,19 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Database, 
-  Users, 
-  Globe, 
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Privacy() {

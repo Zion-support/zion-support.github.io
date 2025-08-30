@@ -1,40 +1,4 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  User, 
-  Mail, 
-  Phone, 
-  Building, 
-  Globe, 
-  MapPin, 
-  Camera, 
-  Save, 
-  Edit, 
-  X,
-  Shield,
-  Bell,
-  Palette,
-  Key,
-  Trash2,
-  Download,
-  Upload,
-  Eye,
-  EyeOff,
-  CheckCircle,
-  AlertCircle,
-  Settings,
-  UserCheck,
-  CreditCard,
-  Activity,
-  BarChart3,
-  Calendar,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Rocket
-} from 'lucide-react';
 
 interface UserProfile {
   firstName: string;

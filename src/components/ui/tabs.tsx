@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface TabsContextType {
   activeTab: string;
@@ -93,3 +92,6 @@ export function TabsContent({ children, value, className = '' }: TabsContentProp
     </div>
   );
 }
+
+
+export default Tabs;

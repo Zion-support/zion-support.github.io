@@ -332,3 +332,5 @@ declare global {
     dataLayer?: any[];
   }
 }
+
+export default useSEO;

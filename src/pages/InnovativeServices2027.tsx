@@ -1,37 +1,4 @@
-import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Award,
-  Zap,
-  Eye,
-  BarChart3,
-  Smartphone,
-  Building2,
-  Car,
-  Leaf,
-  Satellite,
-  Banknote,
-  Building,
-  Phone
-} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { SEO } from '../components/SEO';
 

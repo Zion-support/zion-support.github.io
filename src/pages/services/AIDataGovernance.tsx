@@ -1,48 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
-  Database, 
-  Lock, 
-  Eye, 
-  Search, 
-  FileText, 
-  Users, 
-  CheckCircle,
-  AlertTriangle,
-  BarChart3,
-  Zap,
-  Globe,
-  Cpu,
-  Key,
-  Fingerprint,
-  ShieldCheck,
-  FileCheck,
-  UserCheck,
-  Clock,
-  TrendingUp,
-  DollarSign,
-  Building,
-  Server,
-  Cloud,
-  Network,
-  Monitor,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Trash2,
-  Archive,
-  Copy,
-  Move,
-  Link,
-  Unlink,
-  EyeOff,
-  EyeOn,
-  LockOpen,
-  LockClosed
-} from 'lucide-react';
 
 const AIDataGovernance: React.FC = () => {
   const features = [

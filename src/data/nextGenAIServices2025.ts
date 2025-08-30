@@ -380,3 +380,5 @@ export const getNextGenAIServicesByCategory = (category: string): NextGenAIServi
 export const getAllNextGenAIServices = (): NextGenAIService[] => {
   return NEXT_GEN_AI_SERVICES_2025;
 };
+
+export default getNextGenAIServicesByCategory;

@@ -1,6 +1,4 @@
-import { Route } from "react-router-dom";
-import TalentDirectory from "../pages/TalentDirectory";
-import TalentsPage from "../pages/TalentsPage";
+import { Route } from 'react-router-dom';
 
 export default function TalentRoutes() {
   return (

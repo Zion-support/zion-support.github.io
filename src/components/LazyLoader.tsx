@@ -1,5 +1,4 @@
-import React, { Suspense, lazy } from 'react'
-import { LoadingSpinner } from './ui/LoadingSpinner'
+import { LoadingSpinner } from './ui/LoadingSpinner';
 
 interface LazyLoaderProps {
   component: React.ComponentType<any>
@@ -25,3 +24,5 @@ export const LazyServices = lazy(() => import('../pages/Services'))
 export const LazyAbout = lazy(() => import('../pages/About'))
 export const LazyContact = lazy(() => import('../pages/Contact'))
 export const LazyPricing = lazy(() => import('../pages/Pricing'))
+
+export default LazyHome;

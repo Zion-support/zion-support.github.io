@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const teamExpertise = [
@@ -145,3 +144,5 @@ export function TeamExpertiseSection() {
     </section>
   );
 }
+
+export default TeamExpertiseSection;

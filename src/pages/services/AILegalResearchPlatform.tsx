@@ -1,38 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  BookOpen, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket,
-  Scale,
-  FileText,
-  Search,
-  Gavel,
-  Library,
-  Briefcase,
-  Award
-} from 'lucide-react';
 
 export default function AILegalResearchPlatform() {
   const features = [

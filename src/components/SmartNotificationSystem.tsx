@@ -1,22 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Bell, 
-  X, 
-  CheckCircle, 
-  AlertCircle, 
-  Info, 
-  XCircle,
-  Settings,
-  Volume2,
-  VolumeX,
-  Clock,
-  Star,
-  MessageSquare,
-  Zap,
-  TrendingUp,
-  Award
-} from 'lucide-react';
 
 interface Notification {
   id: string;
@@ -423,3 +405,5 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
     </AnimatePresence>
   );
 }
+
+export default SmartNotificationSystem;

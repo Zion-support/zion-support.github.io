@@ -1,4 +1,4 @@
-import { toast } from "react-hot-toast"
+import { toast } from 'react-hot-toast';
 
 interface ToastOptions {
   duration?: number
@@ -12,3 +12,5 @@ export function useToast() {
 
   return { showToast }
 }
+
+export default useToast;

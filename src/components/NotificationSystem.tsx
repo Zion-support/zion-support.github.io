@@ -1,20 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  CheckCircle, 
-  AlertTriangle, 
-  Info, 
-  X, 
-  Bell, 
-  Settings,
-  Volume2,
-  VolumeX,
-  Zap,
-  Star,
-  MessageSquare,
-  Shield,
-  Clock
-} from 'lucide-react';
 
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 
@@ -532,3 +516,5 @@ export const notificationUtils = {
     }
   }
 };
+
+export default audioRef;

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { RefreshCw, X, CheckCircle } from 'lucide-react';
 
 export function PWAUpdater() {
@@ -99,3 +98,5 @@ export function PWAUpdater() {
     </div>
   );
 }
+
+export default PWAUpdater;

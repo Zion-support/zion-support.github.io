@@ -75,3 +75,5 @@ export function map2026ServicesToExistingStructure(): Service[] {
     compliance: ["SOC 2", "ISO 27001"] // Default compliance
   }));
 }
+
+export default map2026ServicesToExistingStructure;

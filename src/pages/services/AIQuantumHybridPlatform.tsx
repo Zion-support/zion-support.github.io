@@ -1,33 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Database, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Rocket,
-  Target,
-  BarChart3,
-  Cloud,
-  Network,
-  Eye,
-  Code,
-  GitFork,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  TestTube
-} from 'lucide-react';
 
 const AIQuantumHybridPlatform: React.FC = () => {
   const features = [

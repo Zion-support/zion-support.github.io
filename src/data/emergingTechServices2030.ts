@@ -1094,3 +1094,5 @@ export const getEmergingTechServicesStats = () => {
 };
 
 export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;
+
+export default getEmergingTechServicesByCategory;

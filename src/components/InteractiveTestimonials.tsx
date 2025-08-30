@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
@@ -237,3 +236,5 @@ export function InteractiveTestimonials() {
     </section>
   );
 }
+
+export default InteractiveTestimonials;

@@ -1,4 +1,3 @@
-import React, { useState, useMemo } from 'react';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../data/innovativeServices2025';
 
 const InnovativeServicesShowcase: React.FC = () => {

@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 

@@ -19,25 +19,7 @@ class ApiError extends Error {
 }
 
 // Generic fetch wrapper with error handling
-async function apiRequest<T>(
-  endpoint: string,
-  options: RequestInit = {}
-): Promise<ApiResponse<T>> {
-  const url = `${API_BASE_URL}${endpoint}`;
-  
-  const config: RequestInit = {
-    headers: {
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
-    ...options,
-  };
-
-  try {
-    const response = await fetch(url, config);
-    
-    if (!response.ok) {
-      throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
+// Removed unused apiRequest function`);
     }
     
     const data = await response.json();
@@ -102,3 +84,5 @@ export const api = {
 // Export types for use in components
 export type { ApiResponse };
 export { ApiError };
+
+export default apiRequest;

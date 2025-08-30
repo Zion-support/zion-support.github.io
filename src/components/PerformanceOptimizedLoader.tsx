@@ -1,4 +1,3 @@
-import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 
 interface LoaderProps {
@@ -152,3 +151,5 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
     </div>
   );
 }
+
+export default SkeletonLoader;

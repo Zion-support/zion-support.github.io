@@ -699,3 +699,5 @@ export const PRICING_SUMMARY_2031 = {
     address: "364 E Main St STE 1008 Middletown DE 19709"
   }
 };
+
+export default PRICING_SUMMARY_2031;

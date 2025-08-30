@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const caseStudies = [
@@ -148,3 +147,5 @@ export function CaseStudiesSection() {
     </section>
   );
 }
+
+export default CaseStudiesSection;

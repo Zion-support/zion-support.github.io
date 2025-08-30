@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon } from 'lucide-react';
 
@@ -293,3 +292,5 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
 
   return <>{children}</>;
 };
+
+export default AccessibilityContext;

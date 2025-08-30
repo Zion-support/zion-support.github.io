@@ -182,3 +182,5 @@ export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig):
   const generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
 }
+
+export default to;

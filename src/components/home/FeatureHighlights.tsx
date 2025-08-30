@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const features = [
@@ -94,3 +93,5 @@ export function FeatureHighlights() {
     </section>
   );
 }
+
+export default FeatureHighlights;

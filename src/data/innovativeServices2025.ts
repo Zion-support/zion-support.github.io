@@ -703,3 +703,5 @@ export const getTopRatedServices = (limit: number = 5): InnovativeService2025[] 
 export const getServicesByAIScore = (minScore: number): InnovativeService2025[] => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };
+
+export default getServicesByCategory;

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,29 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  Globe, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink,
-  TrendingUp,
-  Shield,
-  Cloud,
-  Brain,
-  Database,
-  Code,
-  Zap,
-  Heart,
-  DollarSign,
-  Link,
-  Users,
-  CheckCircle
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function EnhancedServicesPage() {

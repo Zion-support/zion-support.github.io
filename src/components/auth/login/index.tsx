@@ -25,3 +25,5 @@ export function LoginContent() {
     </div>
   );
 }
+
+export default LoginContent;

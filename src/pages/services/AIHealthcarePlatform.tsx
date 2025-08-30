@@ -1,37 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Heart, 
-  Stethoscope, 
-  Brain, 
-  Target, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Users, 
-  Globe, 
-  Shield,
-  BarChart3,
-  Rocket,
-  Sparkles,
-  Database,
-  Zap,
-  Activity,
-  Monitor,
-  AlertTriangle,
-  TrendingUp,
-  Award,
-  ArrowRight,
-  Pill,
-  Microscope,
-  TestTube,
-  FileText,
-  Lock,
-  Eye,
-  Cpu,
-  Network
-} from 'lucide-react';
 
 const AIHealthcarePlatform = () => {
   const features = [

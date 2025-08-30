@@ -619,3 +619,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketSize: "$12.8 billion by 2026"
   }
 ];
+
+export default virtualization;

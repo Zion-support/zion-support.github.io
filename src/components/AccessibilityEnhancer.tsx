@@ -1,21 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  Type, 
-  Volume2, 
-  VolumeX, 
-  MousePointer, 
-  Keyboard, 
-  Settings,
-  X,
-  Plus,
-  Minus,
-  Contrast,
-  Accessibility,
-  CheckCircle,
-  AlertTriangle
-} from 'lucide-react';
 
 interface AccessibilitySettings {
   fontSize: number;

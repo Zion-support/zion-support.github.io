@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '../../utils/cn';
 
 interface SwitchProps {
@@ -51,3 +50,5 @@ export function Switch({
     </button>
   );
 }
+
+export default Switch;

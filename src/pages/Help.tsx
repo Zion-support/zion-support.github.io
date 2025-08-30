@@ -1,29 +1,4 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Clock, 
-  FileText,
-  Video,
-  Download,
-  ExternalLink,
-  ChevronDown,
-  ChevronRight,
-  HelpCircle,
-  Settings,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Lock,
-  Users,
-  Globe,
-  Rocket
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Help() {

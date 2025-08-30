@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Mail, Send, CheckCircle } from 'lucide-react';
 
 export const FooterNewsletter: React.FC = () => {
@@ -86,3 +85,6 @@ export const FooterNewsletter: React.FC = () => {
     </div>
   );
 };
+
+
+export default handleSubmit;

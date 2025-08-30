@@ -412,3 +412,5 @@ export const ALL_REVOLUTIONARY_SERVICES_2026 = [
   ...revolutionaryITInfrastructureServices2026,
   ...revolutionaryAIServices2026
 ];
+
+export default ALL_REVOLUTIONARY_SERVICES_2026;

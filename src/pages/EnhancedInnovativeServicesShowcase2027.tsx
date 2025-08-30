@@ -1,44 +1,4 @@
-import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  CheckCircle,
-  Clock,
-  Users,
-  Target,
-  BarChart3,
-  Rocket,
-  Cpu,
-  Network,
-  Database,
-  Lock,
-  Leaf,
-  Scale,
-  Stethoscope,
-  Car,
-  Building2,
-  DollarSign,
-  Award,
-  Lightbulb,
-  ArrowRight,
-  ChevronRight,
-  ChevronLeft,
-  Play,
-  Eye,
-  X,
-  Beaker
-} from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
 
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {

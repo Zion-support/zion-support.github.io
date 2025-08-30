@@ -380,3 +380,5 @@ export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSo
 export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
 };
+
+export default getEnterpriseSolutionsByCategory;

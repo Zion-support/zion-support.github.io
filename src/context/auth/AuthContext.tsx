@@ -1,4 +1,3 @@
-import React, { createContext, useContext } from 'react';
 
 interface User {
   id: string;
@@ -45,3 +44,5 @@ export const useAuth = () => {
 
 export { AuthContext };
 export type { User, AuthTokens, AuthContextType };
+
+export default AuthContext;

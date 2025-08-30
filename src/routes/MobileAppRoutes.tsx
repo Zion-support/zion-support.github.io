@@ -1,5 +1,4 @@
-import { Route } from "react-router-dom";
-import MobileLaunchPage from "../pages/MobileLaunchPage";
+import { Route } from 'react-router-dom';
 
 export default function MobileAppRoutes() {
   return (

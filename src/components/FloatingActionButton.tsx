@@ -1,22 +1,4 @@
-import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Plus, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  ArrowUp, 
-  Settings, 
-  HelpCircle,
-  X,
-  ChevronUp,
-  ChevronDown,
-  Star,
-  Share2,
-  Bookmark,
-  Download,
-  Search
-} from 'lucide-react';
 
 interface FloatingActionButtonProps {
   enabled?: boolean;
@@ -310,3 +292,5 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
     </>
   );
 }
+
+export default FloatingActionButton;

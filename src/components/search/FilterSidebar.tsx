@@ -1,4 +1,3 @@
-import React from 'react';
 import { Filter, X } from 'lucide-react';
 
 interface FilterOption {
@@ -109,3 +108,5 @@ export function FilterSidebar({
     </>
   );
 }
+
+export default FilterSidebar;

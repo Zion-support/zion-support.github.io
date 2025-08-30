@@ -1,19 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Accessibility as AccessibilityIcon, 
-  Type, 
-  Eye, 
-  Volume2, 
-  Keyboard, 
-  X,
-  Plus,
-  Minus,
-  Contrast,
-  Sun,
-  Moon,
-  Settings
-} from 'lucide-react';
 
 interface AccessibilitySettings {
   fontSize: number;
@@ -328,3 +314,5 @@ export function Accessibility() {
     </>
   );
 }
+
+export default Accessibility;

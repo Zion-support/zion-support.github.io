@@ -1,4 +1,3 @@
-import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin } from 'lucide-react';
 import { SEO } from '@/components/SEO';

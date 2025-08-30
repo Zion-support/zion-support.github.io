@@ -1,36 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  Search, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight,
-  Lock,
-  Database,
-  BarChart3,
-  Zap,
-  Globe,
-  Clock,
-  DollarSign,
-  Star,
-  Award,
-  Monitor,
-  Smartphone,
-  Cloud,
-  Activity,
-  Target,
-  Lightbulb,
-  Gauge,
-  Code,
-  Bug,
-  Eye,
-  FileText,
-  Settings,
-  Users,
-  TrendingUp
-} from 'lucide-react';
 
 export default function SmartContractRiskScanner() {
   const features = [

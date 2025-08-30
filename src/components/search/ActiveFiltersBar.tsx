@@ -1,4 +1,3 @@
-import React from 'react';
 import { X } from 'lucide-react';
 
 interface Filter {
@@ -46,3 +45,5 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
     </div>
   );
 }
+
+export default ActiveFiltersBar;

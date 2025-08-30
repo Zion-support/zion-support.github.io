@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Loader2, Zap, Brain, Cloud, Atom } from 'lucide-react';
 
@@ -186,3 +185,5 @@ export function EnhancedLoadingSpinner({
 
 // Export as ZionLoadingSpinner for backward compatibility
 export const ZionLoadingSpinner = EnhancedLoadingSpinner;
+
+export default EnhancedLoadingSpinner;

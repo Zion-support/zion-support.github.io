@@ -666,3 +666,5 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketSize: "$34.2 billion by 2031"
   }
 ];
+
+export default AI;

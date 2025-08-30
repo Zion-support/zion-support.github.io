@@ -1,4 +1,3 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface VirtualScrollProps<T> {
@@ -183,3 +182,5 @@ export function ServiceVirtualScroll({
     />
   );
 }
+
+export default VirtualScroll;

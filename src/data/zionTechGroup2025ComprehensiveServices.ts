@@ -699,3 +699,5 @@ export const searchServices = (query: string) => {
     service.features.some(feature => feature.toLowerCase().includes(lowercaseQuery))
   );
 };
+
+export default getServicesByCategory;

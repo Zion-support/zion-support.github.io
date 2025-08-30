@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const successStories = [
@@ -202,3 +201,5 @@ export function ClientSuccessStoriesSection() {
     </section>
   );
 }
+
+export default ClientSuccessStoriesSection;

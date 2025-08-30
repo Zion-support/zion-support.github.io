@@ -1,35 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, 
-  X, 
-  Send, 
-  Bot, 
-  User, 
-  Sparkles, 
-  Mic, 
-  MicOff, 
-  Paperclip, 
-  Image, 
-  FileText, 
-  Video, 
-  Smile,
-  Settings,
-  Zap,
-  Brain,
-  TrendingUp,
-  Lightbulb,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Loader2,
-  ChevronDown,
-  ChevronUp,
-  Minimize2,
-  Maximize2,
-  Volume2,
-  VolumeX
-} from 'lucide-react';
 
 interface Message {
   id: string;
@@ -575,3 +544,6 @@ export function ChatAssistant({
     </AnimatePresence>
   );
 }
+
+
+export default ChatAssistant;

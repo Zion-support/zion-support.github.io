@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, Wifi, WifiOff, CheckCircle, AlertCircle } from 'lucide-react';
 
@@ -117,3 +116,5 @@ export function ServiceWorker() {
     </AnimatePresence>
   );
 }
+
+export default ServiceWorker;

@@ -1,70 +1,4 @@
-import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Users, 
-  MessageCircle, 
-  FileText, 
-  Calendar, 
-  CheckCircle, 
-  Clock,
-  AlertCircle,
-  Plus,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Edit,
-  Trash2,
-  Eye,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Database,
-  Server,
-  Lock,
-  Unlock,
-  Wifi,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Video,
-  Phone,
-  Mail,
-  Send,
-  Paperclip,
-  Image,
-  File,
-  Folder,
-  Tag,
-  UserPlus,
-  Settings,
-  Bell,
-  Heart,
-  ThumbsUp,
-  ThumbsDown,
-  Reply,
-  Forward,
-  Archive,
-  Pin,
-  Bookmark,
-  Link,
-  Copy,
-  MoreHorizontal,
-  ChevronDown,
-  ChevronUp,
-  ArrowRight,
-  ArrowLeft,
-  RefreshCw,
-  TrendingUp,
-  Activity,
-  Target,
-  BarChart3,
-  PieChart
-} from 'lucide-react';
 
 interface TeamMember {
   id: string;
@@ -1035,3 +969,5 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     </div>
   );
 };
+
+export default getStatusDisplay;
