@@ -93,6 +93,7 @@ const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+const CuttingEdgeServices2025 = lazy(() => import('./pages/CuttingEdgeServices2025'));
 // const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Sitemap-aligned pages
@@ -319,6 +320,7 @@ function App() {
 
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+                    <Route path="/cutting-edge-services-2025" element={<CuttingEdgeServices2025 />} />
                     {/* <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} /> */}
 
                     {/* Enhanced Services Showcase 2025 */}
@@ -333,6 +335,7 @@ function App() {
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     {/* <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} /> */}
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+                    <Route path="/cutting-edge-services-2025" element={<CuttingEdgeServices2025 />} />
                     {/* <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} /> */}
                     {/* <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} /> */}
                     {/* <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} /> */}

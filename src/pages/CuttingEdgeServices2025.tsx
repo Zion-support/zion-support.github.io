@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   CUTTING_EDGE_SERVICES_2025, 
   SERVICE_CATEGORIES, 
+  PRICING_TIERS, 
   CONTACT_INFO 
 } from '../data/2025-cutting-edge-innovative-services';
 import { 
@@ -25,26 +26,13 @@ import {
   Clock,
   DollarSign,
   Target,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Leaf,
-  Satellite,
-  CreditCard,
-  Heart,
-  Truck,
-  Eye,
-  Bot,
-  ShieldCheck,
-  Monitor,
-  Smartphone
+  Rocket
 } from 'lucide-react';
 
-const ComprehensiveServicesLanding2025: React.FC = () => {
+const CuttingEdgeServices2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'aiScore'>('aiScore');
 
   const filteredServices = CUTTING_EDGE_SERVICES_2025
     .filter(service => {
@@ -54,6 +42,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => {
+      switch (sortBy) {
+        case 'price': return a.price - b.price;
+        case 'rating': return b.rating - a.rating;
+        case 'aiScore': return b.aiScore - a.aiScore;
+        default: return 0;
+      }
     });
 
   const containerVariants = {
@@ -77,32 +73,11 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
     }
   };
 
-  const getCategoryIcon = (categoryId: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'ai-ml': <Brain className="w-8 h-8" />,
-      'quantum': <Cpu className="w-8 h-8" />,
-      'edge-iot': <Network className="w-8 h-8" />,
-      'blockchain': <Globe className="w-8 h-8" />,
-      'cybersecurity': <Shield className="w-8 h-8" />,
-      'sustainability': <Leaf className="w-8 h-8" />,
-      'space-tech': <Satellite className="w-8 h-8" />,
-      'fintech': <CreditCard className="w-8 h-8" />,
-      'healthcare': <Heart className="w-8 h-8" />,
-      'supply-chain': <Truck className="w-8 h-8" />,
-      'digital-twin': <Eye className="w-8 h-8" />,
-      'autonomous': <Bot className="w-8 h-8" />,
-      'data-governance': <ShieldCheck className="w-8 h-8" />,
-      'ar-vr': <Monitor className="w-8 h-8" />,
-      '5g-networking': <Smartphone className="w-8 h-8" />
-    };
-    return iconMap[categoryId] || <Zap className="w-8 h-8" />;
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -110,18 +85,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-green-400">
+              2025 Cutting-Edge
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 {" "}Innovative Services
-              </span>
-              <br />
-              <span className="text-3xl md:text-4xl text-gray-300 mt-4 block">
-                2025 Edition
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover Zion Tech Group's complete portfolio of cutting-edge micro SAAS solutions. 
-              From AI-powered intelligence to quantum computing, we're your partner in digital transformation.
+              Transform your business with Zion Tech Group's revolutionary micro SAAS solutions. 
+              From AI-powered intelligence to quantum computing, we're leading the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -129,14 +100,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: {CONTACT_INFO.phone}
+                Get Started Today
               </a>
               <a
                 href={`mailto:${CONTACT_INFO.email}`}
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get Free Consultation
+                Request Demo
               </a>
             </div>
           </motion.div>
@@ -158,16 +129,16 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
               <div className="text-gray-400">Innovative Services</div>
             </motion.div>
             <motion.div variants={itemVariants} className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">15+</div>
-              <div className="text-gray-400">Technology Categories</div>
-            </motion.div>
-            <motion.div variants={itemVariants} className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">98%</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">98%</div>
               <div className="text-gray-400">Average AI Score</div>
             </motion.div>
             <motion.div variants={itemVariants} className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">4.9</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">4.9</div>
               <div className="text-gray-400">Customer Rating</div>
+            </motion.div>
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-400">Global Support</div>
             </motion.div>
           </motion.div>
         </div>
@@ -198,83 +169,23 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                   <option key={category.id} value={category.id}>{category.name}</option>
                 ))}
               </select>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as 'price' | 'rating' | 'aiScore')}
+                className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="aiScore">Sort by AI Score</option>
+                <option value="rating">Sort by Rating</option>
+                <option value="price">Sort by Price</option>
+              </select>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Service Categories Overview */}
+      {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Explore Our Service Categories</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover comprehensive solutions across cutting-edge technology domains designed to accelerate your business growth.
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {SERVICE_CATEGORIES.map((category) => (
-              <motion.div
-                key={category.id}
-                variants={itemVariants}
-                className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group cursor-pointer"
-                onClick={() => setSelectedCategory(category.id)}
-              >
-                <div className="flex items-center mb-4">
-                  <div className="text-blue-400 mr-4 group-hover:text-blue-300 transition-colors">
-                    {getCategoryIcon(category.id)}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                      {category.name}
-                    </h3>
-                    <p className="text-gray-400 text-sm">
-                      {category.services.length} services available
-                    </p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                  {category.description}
-                </p>
-                <div className="flex items-center text-blue-400 text-sm font-medium group-hover:text-blue-300 transition-colors">
-                  Explore Services
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Featured Services */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Featured Services</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our most popular and innovative solutions that are transforming businesses worldwide.
-            </p>
-          </motion.div>
-
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -282,7 +193,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredServices.filter(service => service.featured).slice(0, 6).map((service) => (
+            {filteredServices.map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -294,7 +205,9 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                     <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm font-medium rounded-full">
                       {service.category}
                     </span>
-                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                    {service.featured && (
+                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                    )}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                     {service.title}
@@ -366,65 +279,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
         </div>
       </section>
 
-      {/* Why Choose Zion Tech Group */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We're not just a technology company – we're your strategic partner in digital transformation.
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            <motion.div variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Proven Excellence</h3>
-              <p className="text-gray-400">4.9/5 customer rating with 1000+ successful implementations</p>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">AI-First Approach</h3>
-              <p className="text-gray-400">98% average AI score across all our innovative solutions</p>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-green-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Expert Team</h3>
-              <p className="text-gray-400">Certified professionals with deep industry expertise</p>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-orange-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">24/7 Support</h3>
-              <p className="text-gray-400">Round-the-clock technical support and maintenance</p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
+      {/* Pricing Tiers */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -434,9 +289,72 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Flexible Pricing Plans</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Contact our team of experts to discuss how our comprehensive services can drive innovation and growth for your organization.
+              Choose the perfect plan for your business needs. All plans include our cutting-edge technology and expert support.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            {Object.entries(PRICING_TIERS).map(([key, tier]) => (
+              <motion.div
+                key={key}
+                variants={itemVariants}
+                className={`bg-slate-800 rounded-xl p-8 border-2 ${
+                  key === 'enterprise' 
+                    ? 'border-blue-500 bg-gradient-to-br from-slate-800 to-slate-700' 
+                    : 'border-slate-700'
+                }`}
+              >
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-400 mb-4">{tier.description}</p>
+                  <div className="text-3xl font-bold text-blue-400">{tier.priceRange}</div>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={`mailto:${CONTACT_INFO.email}?subject=Pricing inquiry for ${tier.name} plan`}
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    key === 'enterprise'
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                  }`}
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Contact our team of experts to discuss how our cutting-edge services can drive innovation and growth for your organization.
             </p>
           </motion.div>
 
@@ -552,7 +470,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -589,4 +507,4 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   );
 };
 
-export default ComprehensiveServicesLanding2025;
+export default CuttingEdgeServices2025;
