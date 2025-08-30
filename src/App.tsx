@@ -304,7 +304,7 @@ function App() {
           
           <Footer />
           <ChatAssistant />
-          {/* <PerformanceOptimizer /> */}
+          <PerformanceOptimizer />
           <AccessibilityEnhancer />
         </div>
       </Router>

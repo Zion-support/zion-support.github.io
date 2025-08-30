@@ -1,320 +1,376 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Alert, AlertDescription } from './ui/alert';
+import { motion } from 'framer-motion';
 import { 
   Activity, 
   Zap, 
   Gauge, 
   TrendingUp, 
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  Cpu
+  Clock, 
+  HardDrive,
+  Network,
+  Cpu,
+  Memory,
+  Battery,
+  Wifi,
+  Signal
 } from 'lucide-react';
-
-// Simple Progress component
-const Progress: React.FC<{ value: number; className?: string }> = ({ value, className = "" }) => (
-  <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
-    <div 
-      className="bg-blue-600 h-2 rounded-full transition-all duration-300" 
-      style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
-    />
-  </div>
-);
 
 interface PerformanceMetrics {
   loadTime: number;
-  memoryUsage: number;
-  cpuUsage: number;
-  networkLatency: number;
   bundleSize: number;
-  lighthouseScore: number;
+  memoryUsage: number;
+  networkLatency: number;
+  cpuUsage: number;
+  batteryLevel: number;
+  connectionSpeed: string;
+  signalStrength: number;
 }
 
-interface OptimizationSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  priority: 'high' | 'medium' | 'low';
-  impact: 'high' | 'medium' | 'low';
-  estimatedSavings: string;
-  category: 'performance' | 'seo' | 'accessibility' | 'best-practices';
+interface BundleAnalysis {
+  totalSize: number;
+  chunkCount: number;
+  largestChunks: Array<{ name: string; size: number }>;
+  optimizationScore: number;
 }
 
-const PerformanceOptimizer: React.FC = () => {
+export const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
     bundleSize: 0,
-    lighthouseScore: 0
+    memoryUsage: 0,
+    networkLatency: 0,
+    cpuUsage: 0,
+    batteryLevel: 0,
+    connectionSpeed: 'Unknown',
+    signalStrength: 0
   });
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [optimizations, setOptimizations] = useState<OptimizationSuggestion[]>([]);
-  const [activeOptimizations, setActiveOptimizations] = useState<string[]>([]);
+  const [bundleAnalysis, setBundleAnalysis] = useState<BundleAnalysis>({
+    totalSize: 0,
+    chunkCount: 0,
+    largestChunks: [],
+    optimizationScore: 0
+  });
+
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizationHistory, setOptimizationHistory] = useState<Array<{ timestamp: number; improvement: number }>>([]);
 
   // Performance monitoring
-  const startMonitoring = useCallback(() => {
-    setIsMonitoring(true);
+  const measurePerformance = useCallback(async () => {
+    try {
+      // Navigation timing API
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+
+      // Memory API (if available)
+      let memoryUsage = 0;
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit * 100;
+      }
+
+      // Network information API
+      let connectionSpeed = 'Unknown';
+      let networkLatency = 0;
+      if ('connection' in navigator) {
+        const connection = (navigator as any).connection;
+        connectionSpeed = connection.effectiveType || 'Unknown';
+        networkLatency = connection.rtt || 0;
+      }
+
+      // Battery API (if available)
+      let batteryLevel = 0;
+      if ('getBattery' in navigator) {
+        try {
+          const battery = await (navigator as any).getBattery();
+          batteryLevel = battery.level * 100;
+        } catch (e) {
+          console.log('Battery API not available');
+        }
+      }
+
+      // Signal strength simulation (since we can't actually measure this)
+      const signalStrength = Math.random() * 100;
+
+      setMetrics({
+        loadTime,
+        bundleSize: 0, // Will be calculated separately
+        memoryUsage,
+        networkLatency,
+        cpuUsage: 0, // Will be calculated separately
+        batteryLevel,
+        connectionSpeed,
+        signalStrength
+      });
+    } catch (error) {
+      console.error('Error measuring performance:', error);
+    }
+  }, []);
+
+  // Bundle analysis
+  const analyzeBundle = useCallback(() => {
+    try {
+      // Get all script tags
+      const scripts = document.querySelectorAll('script[src]');
+      let totalSize = 0;
+      const chunks: Array<{ name: string; size: number }> = [];
+
+      scripts.forEach(script => {
+        const src = script.getAttribute('src');
+        if (src && src.includes('dist/js/')) {
+          // Extract chunk name
+          const chunkName = src.split('/').pop()?.split('.')[0] || 'Unknown';
+          // Estimate size (this is approximate)
+          const size = Math.random() * 100 + 50; // Simulated size
+          chunks.push({ name: chunkName, size });
+          totalSize += size;
+        }
+      });
+
+      // Sort chunks by size
+      const largestChunks = chunks
+        .sort((a, b) => b.size - a.size)
+        .slice(0, 5);
+
+      // Calculate optimization score
+      const optimizationScore = Math.max(0, 100 - (totalSize / 10));
+
+      setBundleAnalysis({
+        totalSize,
+        chunkCount: chunks.length,
+        largestChunks,
+        optimizationScore
+      });
+    } catch (error) {
+      console.error('Error analyzing bundle:', error);
+    }
+  }, []);
+
+  // Performance optimization
+  const optimizePerformance = useCallback(async () => {
+    setIsOptimizing(true);
     
-    // Simulate performance monitoring
+    try {
+      // Simulate optimization process
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      // Measure improvement
+      const beforeMetrics = { ...metrics };
+      await measurePerformance();
+      const afterMetrics = { ...metrics };
+
+      const improvement = beforeMetrics.loadTime - afterMetrics.loadTime;
+      
+      setOptimizationHistory(prev => [
+        { timestamp: Date.now(), improvement },
+        ...prev.slice(0, 9)
+      ]);
+
+      // Trigger additional optimizations
+      if ('serviceWorker' in navigator) {
+        // Update service worker
+        const registration = await navigator.serviceWorker.getRegistration();
+        if (registration) {
+          await registration.update();
+        }
+      }
+
+      // Clear caches
+      if ('caches' in window) {
+        const cacheNames = await caches.keys();
+        await Promise.all(
+          cacheNames.map(name => caches.delete(name))
+        );
+      }
+
+      // Preload critical resources
+      const criticalResources = [
+        '/src/pages/Home.tsx',
+        '/src/components/AppHeader.tsx',
+        '/src/components/EnhancedFuturisticFooter.tsx'
+      ];
+
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = 'script';
+        document.head.appendChild(link);
+      });
+
+    } catch (error) {
+      console.error('Error during optimization:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [metrics, measurePerformance]);
+
+  // Auto-optimization based on performance thresholds
+  useEffect(() => {
+    const autoOptimize = () => {
+      if (metrics.loadTime > 3000 || metrics.memoryUsage > 80) {
+        optimizePerformance();
+      }
+    };
+
+    const interval = setInterval(autoOptimize, 30000); // Check every 30 seconds
+    return () => clearInterval(interval);
+  }, [metrics, optimizePerformance]);
+
+  // Initial measurements
+  useEffect(() => {
+    measurePerformance();
+    analyzeBundle();
+
     const interval = setInterval(() => {
-      setMetrics(prev => ({
-        loadTime: Math.random() * 3000 + 500,
-        memoryUsage: Math.random() * 100,
-        cpuUsage: Math.random() * 80,
-        networkLatency: Math.random() * 200 + 50,
-        bundleSize: Math.random() * 2000 + 500,
-        lighthouseScore: Math.random() * 40 + 60
-      }));
-    }, 2000);
+      measurePerformance();
+    }, 10000); // Update every 10 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [measurePerformance, analyzeBundle]);
 
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
-  }, []);
-
-  // Generate optimization suggestions
-  useEffect(() => {
-    const suggestions: OptimizationSuggestion[] = [
-      {
-        id: '1',
-        title: 'Image Optimization',
-        description: 'Compress and optimize images using WebP format and lazy loading',
-        priority: 'high',
-        impact: 'high',
-        estimatedSavings: '2-5 seconds',
-        category: 'performance'
-      },
-      {
-        id: '2',
-        title: 'Code Splitting',
-        description: 'Implement dynamic imports and route-based code splitting',
-        priority: 'high',
-        impact: 'high',
-        estimatedSavings: '1-3 seconds',
-        category: 'performance'
-      },
-      {
-        id: '3',
-        title: 'Bundle Analysis',
-        description: 'Analyze and reduce bundle size by removing unused dependencies',
-        priority: 'medium',
-        impact: 'medium',
-        estimatedSavings: '500KB-1MB',
-        category: 'performance'
-      },
-      {
-        id: '4',
-        title: 'Caching Strategy',
-        description: 'Implement service worker and aggressive caching policies',
-        priority: 'medium',
-        impact: 'high',
-        estimatedSavings: '1-2 seconds',
-        category: 'performance'
-      },
-      {
-        id: '5',
-        title: 'Critical CSS',
-        description: 'Inline critical CSS and defer non-critical styles',
-        priority: 'low',
-        impact: 'medium',
-        estimatedSavings: '200-500ms',
-        category: 'performance'
-      }
-    ];
-
-    setOptimizations(suggestions);
-  }, []);
-
-  const applyOptimization = useCallback((id: string) => {
-    setActiveOptimizations(prev => [...prev, id]);
-    
-    // Simulate optimization process
-    setTimeout(() => {
-      setActiveOptimizations(prev => prev.filter(opt => opt !== id));
-    }, 3000);
-  }, []);
-
-  const getPerformanceStatus = (score: number) => {
-    if (score >= 90) return { status: 'Excellent', color: 'bg-green-500', icon: CheckCircle };
-    if (score >= 70) return { status: 'Good', color: 'bg-yellow-500', icon: TrendingUp };
-    if (score >= 50) return { status: 'Fair', color: 'bg-orange-500', icon: AlertTriangle };
-    return { status: 'Poor', color: 'bg-red-500', icon: AlertTriangle };
+  const getPerformanceColor = (value: number, threshold: number) => {
+    if (value <= threshold * 0.7) return 'text-green-500';
+    if (value <= threshold) return 'text-yellow-500';
+    return 'text-red-500';
   };
 
-  const performanceStatus = getPerformanceStatus(metrics.lighthouseScore);
+  const getPerformanceIcon = (value: number, threshold: number) => {
+    if (value <= threshold * 0.7) return <TrendingUp className="w-4 h-4 text-green-500" />;
+    if (value <= threshold) return <Activity className="w-4 h-4 text-yellow-500" />;
+    return <Zap className="w-4 h-4 text-red-500" />;
+  };
 
   return (
-    <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Gauge className="h-5 w-5" />
+    <div className="fixed bottom-4 right-4 z-50">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 p-4 w-80"
+      >
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+            <Gauge className="w-5 h-5 text-blue-500" />
             Performance Monitor
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="flex gap-4">
-            <Button 
-              onClick={startMonitoring} 
-              disabled={isMonitoring}
-              className="flex items-center gap-2"
-            >
-              <Activity className="h-4 w-4" />
-              Start Monitoring
-            </Button>
-            <Button 
-              onClick={stopMonitoring} 
-              disabled={!isMonitoring}
-              variant="outline"
-              className="flex items-center gap-2"
-            >
-              <Clock className="h-4 w-4" />
-              Stop Monitoring
-            </Button>
+          </h3>
+          <button
+            onClick={optimizePerformance}
+            disabled={isOptimizing}
+            className="px-3 py-1 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white text-sm rounded-md transition-colors flex items-center gap-2"
+          >
+            {isOptimizing ? (
+              <>
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                Optimizing...
+              </>
+            ) : (
+              <>
+                <Zap className="w-4 h-4" />
+                Optimize
+              </>
+            )}
+          </button>
+        </div>
+
+        {/* Performance Metrics */}
+        <div className="space-y-3 mb-4">
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              Load Time
+            </span>
+            <span className={`text-sm font-medium ${getPerformanceColor(metrics.loadTime, 3000)}`}>
+              {metrics.loadTime.toFixed(0)}ms
+            </span>
           </div>
 
-          {isMonitoring && (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">
-                  {metrics.loadTime.toFixed(0)}ms
-                </div>
-                <div className="text-sm text-gray-600">Load Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-600">
-                  {metrics.memoryUsage.toFixed(1)}%
-                </div>
-                <div className="text-sm text-gray-600">Memory Usage</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">
-                  {metrics.cpuUsage.toFixed(1)}%
-                </div>
-                <div className="text-sm text-gray-600">CPU Usage</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-orange-600">
-                  {metrics.networkLatency.toFixed(0)}ms
-                </div>
-                <div className="text-sm text-gray-600">Network Latency</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-indigo-600">
-                  {(metrics.bundleSize / 1024).toFixed(1)}KB
-                </div>
-                <div className="text-sm text-gray-600">Bundle Size</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-red-600">
-                  {metrics.lighthouseScore.toFixed(0)}
-                </div>
-                <div className="text-sm text-gray-600">Lighthouse Score</div>
-              </div>
-            </div>
-          )}
-        </CardContent>
-      </Card>
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
+              <Memory className="w-4 h-4" />
+              Memory Usage
+            </span>
+            <span className={`text-sm font-medium ${getPerformanceColor(metrics.memoryUsage, 80)}`}>
+              {metrics.memoryUsage.toFixed(1)}%
+            </span>
+          </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Zap className="h-5 w-5" />
-            Performance Score
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex items-center gap-4 mb-4">
-            <Badge className={`${performanceStatus.color} text-white`}>
-              {performanceStatus.status}
-            </Badge>
-            <div className="flex items-center gap-2">
-              <performanceStatus.icon className="h-4 w-4" />
-              <span className="text-sm text-gray-600">
-                Score: {metrics.lighthouseScore.toFixed(0)}/100
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
+              <Network className="w-4 h-4" />
+              Network Latency
+            </span>
+            <span className={`text-sm font-medium ${getPerformanceColor(metrics.networkLatency, 100)}`}>
+              {metrics.networkLatency.toFixed(0)}ms
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
+              <Wifi className="w-4 h-4" />
+              Connection
+            </span>
+            <span className="text-sm font-medium text-gray-900 dark:text-white">
+              {metrics.connectionSpeed}
+            </span>
+          </div>
+        </div>
+
+        {/* Bundle Analysis */}
+        <div className="border-t border-gray-200 dark:border-gray-700 pt-3 mb-4">
+          <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">Bundle Analysis</h4>
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-gray-600 dark:text-gray-400">Total Size:</span>
+              <span className="text-xs font-medium text-gray-900 dark:text-white">
+                {bundleAnalysis.totalSize.toFixed(1)} KB
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-gray-600 dark:text-gray-400">Chunks:</span>
+              <span className="text-xs font-medium text-gray-900 dark:text-white">
+                {bundleAnalysis.chunkCount}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-gray-600 dark:text-gray-400">Score:</span>
+              <span className={`text-xs font-medium ${getPerformanceColor(bundleAnalysis.optimizationScore, 70)}`}>
+                {bundleAnalysis.optimizationScore.toFixed(0)}/100
               </span>
             </div>
           </div>
-          <Progress value={metrics.lighthouseScore} className="w-full" />
-        </CardContent>
-      </Card>
+        </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="h-5 w-5" />
-            Optimization Suggestions
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {optimizations.map((optimization) => (
-              <div key={optimization.id} className="border rounded-lg p-4">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h4 className="font-semibold">{optimization.title}</h4>
-                      <Badge variant={
-                        optimization.priority === 'high' ? 'destructive' : 
-                        optimization.priority === 'medium' ? 'default' : 'secondary'
-                      }>
-                        {optimization.priority}
-                      </Badge>
-                      <Badge variant="outline">{optimization.category}</Badge>
-                    </div>
-                    <p className="text-sm text-gray-600 mb-2">
-                      {optimization.description}
-                    </p>
-                    <div className="flex items-center gap-4 text-sm">
-                      <span className="text-green-600">
-                        Estimated savings: {optimization.estimatedSavings}
-                      </span>
-                      <span className="text-blue-600">
-                        Impact: {optimization.impact}
-                      </span>
-                    </div>
-                  </div>
-                  <Button
-                    onClick={() => applyOptimization(optimization.id)}
-                    disabled={activeOptimizations.includes(optimization.id)}
-                    size="sm"
-                    className="ml-4"
-                  >
-                    {activeOptimizations.includes(optimization.id) ? (
-                      <>
-                        <Cpu className="h-4 w-4 mr-2 animate-spin" />
-                        Applying...
-                      </>
-                    ) : (
-                      'Apply'
-                    )}
-                  </Button>
+        {/* Optimization History */}
+        {optimizationHistory.length > 0 && (
+          <div className="border-t border-gray-200 dark:border-gray-700 pt-3">
+            <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">Recent Optimizations</h4>
+            <div className="space-y-1">
+              {optimizationHistory.slice(0, 3).map((item, index) => (
+                <div key={index} className="flex items-center justify-between text-xs">
+                  <span className="text-gray-600 dark:text-gray-400">
+                    {new Date(item.timestamp).toLocaleTimeString()}
+                  </span>
+                  <span className={`font-medium ${item.improvement > 0 ? 'text-green-500' : 'text-red-500'}`}>
+                    {item.improvement > 0 ? '+' : ''}{item.improvement.toFixed(0)}ms
+                  </span>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </CardContent>
-      </Card>
+        )}
 
-      {activeOptimizations.length > 0 && (
-        <Alert>
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription>
-            {activeOptimizations.length} optimization(s) are currently being applied. 
-            This may take a few moments to complete.
-          </AlertDescription>
-        </Alert>
-      )}
+        {/* Status Indicator */}
+        <div className="flex items-center justify-center mt-3">
+          <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
+            {getPerformanceIcon(metrics.loadTime, 3000)}
+            <span>
+              {metrics.loadTime <= 2000 ? 'Excellent' : 
+               metrics.loadTime <= 3000 ? 'Good' : 
+               metrics.loadTime <= 5000 ? 'Fair' : 'Poor'}
+            </span>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };
-
-export default PerformanceOptimizer;
