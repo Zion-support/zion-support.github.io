@@ -77,6 +77,62 @@ module.exports = {
       }
     },
 
+    // 🆕 NEW: Comprehensive Code Quality Automator - runs every 2 hours (HIGH PRIORITY)
+    {
+      name: 'comprehensive-code-quality-automator',
+      script: './scripts/automation/comprehensive-code-quality-automator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // 🆕 NEW: ESLint Auto-Fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    {
+      name: 'eslint-auto-fixer',
+      script: './scripts/automation/eslint-auto-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // 🆕 NEW: TypeScript Error Fixer - runs every 30 minutes (HIGH PRIORITY)
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // 🆕 NEW: Unused Import Cleaner - runs every hour
+    {
+      name: 'unused-import-cleaner',
+      script: './scripts/automation/unused-import-cleaner.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',

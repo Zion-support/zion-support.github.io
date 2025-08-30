@@ -157,7 +157,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   }, [allServices]);
 
   const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
+    const filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());

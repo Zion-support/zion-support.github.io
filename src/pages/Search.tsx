@@ -98,7 +98,7 @@ export default function Search() {
     await new Promise(resolve => setTimeout(resolve, 500));
     
     // Filter results based on search query and category
-    let filteredResults = mockResults.filter(result => {
+    const filteredResults = mockResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));

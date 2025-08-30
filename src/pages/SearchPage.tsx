@@ -263,7 +263,7 @@ export default function SearchPage() {
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 800));
     
-    let filtered = mockSearchResults.filter(result => {
+    const filtered = mockSearchResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
