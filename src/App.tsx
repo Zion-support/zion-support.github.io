@@ -248,7 +248,7 @@ function App() {
             <main className="flex-1">
               <Suspense fallback={<LoadingSpinner />}>
                 <AnimatePresence mode="wait">
-                  <Routes>
+                  <Suspense fallback={<div>Loading...</div>}><Routes>
                     {/* Core Routes */}
                     <Route
                       path="/"
@@ -451,7 +451,7 @@ function App() {
                         </motion.div>
                       }
                     />
-                  </Routes>
+                  </Routes></Suspense>
                 </AnimatePresence>
               </Suspense>
             </main>
