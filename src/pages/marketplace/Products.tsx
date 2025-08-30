@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const Products: React.FC = () => (
+const Products: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Marketplace - Products</h1>
@@ -8,10 +8,9 @@ const Products: React.FC = () => (
 	</div>
 );
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Star, 
   ShoppingCart, 
@@ -64,15 +63,15 @@ import {
   Infinity,
   Zap as ZapIcon,
   MessageCircle
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
-export default function MarketplaceProducts() {
+export default function MarketplaceProducts(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [showFilters, setShowFilters] = useState(false);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -380,15 +379,15 @@ export default function MarketplaceProducts() {
     }
   });
 
-  const formatPrice = (price: number, currency: string) => {
+  const formatPrice = (price: anynumber, currency: string)  => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency
     }).format(price);
   };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: anynumber)  => {
+    return Array.from({ length: any5 }, (_, i)  => (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -478,9 +477,9 @@ export default function MarketplaceProducts() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:border-zion-cyan"
               >
-                {sortOptions.map((option) => (
+                {sortOptions.map((option)  => (
                   <option key={option.id} value={option.id}>
                     {option.name}
                   </option>
@@ -515,9 +514,9 @@ export default function MarketplaceProducts() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:border-zion-cyan"
                   >
-                    {categories.map((category) => (
+                    {categories.map((category)  => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
@@ -531,9 +530,9 @@ export default function MarketplaceProducts() {
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:border-zion-cyan"
                   >
-                    {priceRanges.map((range) => (
+                    {priceRanges.map((range)  => (
                       <option key={range.id} value={range.id}>
                         {range.name}
                       </option>
@@ -565,7 +564,7 @@ export default function MarketplaceProducts() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between text-zion-slate-light">
             <span>Showing {sortedProducts.length} of {products.length} products</span>
-            <span>Sort by: {sortOptions.find(opt => opt.id === sortBy)?.name}</span>
+            <span>Sort by: any{sortOptions.find(opt  => opt.id === sortBy)?.name}</span>
           </div>
         </div>
       </section>
@@ -580,8 +579,8 @@ export default function MarketplaceProducts() {
               <p className="text-zion-slate-light">Try adjusting your search or filter criteria.</p>
             </div>
           ) : (
-            <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-              {sortedProducts.map((product, index) => (
+            <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+              {sortedProducts.map((product, index)  => (
                 <motion.article
                   key={product.id}
                   initial={{ opacity: 0, y: 20 }}

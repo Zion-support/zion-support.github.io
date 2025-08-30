@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import {
-  Shield,
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Shield,
   Brain,
   BarChart3,
   AlertTriangle,
@@ -12,8 +11,8 @@ import {
   Target,
 =======
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
+import { SEO   } from '@/components/SEO';
+import { motion   } from 'framer-motion.ts';
 import { Shield, 
   Brain, 
   BarChart3, 
@@ -31,9 +30,9 @@ import { Shield,
   Eye,
   Cpu
 <<<<<<< HEAD
-const AIFinancialFraudDetection: React.FC = () => {
+const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -238,12 +237,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {features.map((feature, index)  => (
 =======
           
-          <div className="grid md: grid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {features.map((feature, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={feature.title}
@@ -328,12 +327,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
 =======
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={benefit}
@@ -417,12 +416,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-6">
+            {useCases.map((useCase, index)  => (
 =======
           
-          <div className="grid grid-cols-2 md: grid-cols-3 gap-6">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-6">
+            {useCases.map((useCase, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={useCase}
@@ -506,12 +505,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-5 gap-6">
+            {integrations.map((integration, index)  => (
 =======
           
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index)  => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-5 gap-6">
+            {integrations.map((integration, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={integration}
@@ -592,12 +591,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)  => (
 =======
           
-          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)  => (
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={plan.plan}

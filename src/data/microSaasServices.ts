@@ -1,5 +1,6 @@
 export interface MicroSaasService {
 
+
   id: string;
   title: string;
   description: string;
@@ -26,11 +27,12 @@ export interface MicroSaasService {
   featured: boolean;
   location: string;
   availability: string;
-author: {
+author: {;
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean};
+verified: boolean;
+};
   images: string[];
 <<<<<<< HEAD
   createdAt: string;
@@ -1098,7 +1100,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
+export const getMicroSaasServiceById = (id: anystring): MicroSaasService | undefined  => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
 export const MICRO_SAAS_CATEGORIES = [
@@ -1133,7 +1135,7 @@ export const CONTACT_INFO = {
   phone: '+1 302 464 0950',
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };
-export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
+export const getMicroSaasServicesByCategory = (category: anystring): MicroSaasService[]  => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
 export const getMicroSaasCategories = (): string[] => {

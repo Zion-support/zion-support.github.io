@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe const testimonials = [
 =======
@@ -12,9 +12,10 @@ import {
   Award,
   TrendingUp,
   Users
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Testimonial {
+
   id: number;
   name: string;
   position: string;
@@ -25,6 +26,7 @@ interface Testimonial {
   industry: string;
   results: string[];
   verified: boolean;
+
 }
 
 const testimonials: Testimonial[] = [
@@ -112,7 +114,7 @@ const stats = [
   { icon: CheckCircle, value: "99.9%", label: "Uptime", description: "Reliable service delivery" }
 ];
 
-export const TestimonialsSection: React.FC = () => {
+export const TestimonialsSection: React.FC = (): JSX.Element => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -124,7 +126,7 @@ export const TestimonialsSection: React.FC = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (index: anynumber)  => {
     setCurrentTestimonial(index);
   };
 
@@ -152,8 +154,8 @@ export const TestimonialsSection: React.FC = () => {
             Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index)  => (
             <div
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
@@ -234,9 +236,9 @@ export const TestimonialsSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: any0.8, delay: 0.2 }}
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat, index)  => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
                 <stat.icon className="w-8 h-8 text-white" />
@@ -277,7 +279,7 @@ export const TestimonialsSection: React.FC = () => {
                   <div className="space-y-3">
                     <h4 className="text-xl font-semibold text-white">{current.name}</h4>
                     <p className="text-cyan-400">{current.position}</p>
-                    <p className="text-gray-300">{current.company}</p>
+                    <p className="text-gray-300">{current.comp}</p>
                     <p className="text-sm text-gray-400">{current.industry} Industry</p>
                   </div>
                 </div>

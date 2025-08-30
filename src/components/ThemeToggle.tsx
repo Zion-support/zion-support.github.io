@@ -1,23 +1,25 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react.ts';
 import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 =======
-import React, { useState, useEffect } from 'react.ts';
-import { Sun, Moon, Monitor  } from 'lucide-react';
+import React, { useState, useEffect  } from 'react.ts';
+import { Sun, Moon, Monitor   } from 'lucide-react.ts';
 
 type Theme = 'dark' | 'light' | 'system';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-export function ThemeToggle(...args[]):  {
+export function ThemeToggle(...args[]: any):  {
   const [theme, setTheme] = useState<any>('system');
 =======
-interface ThemeToggleProps {
+interface ThemeToggleProps extends React.PropsWithChildren<{}> {
+
   className?: string;
+
 }
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
-  const [theme, setTheme] = useState<Theme>('system');
+  const [theme, setTheme] = useState<any>('system');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [mounted, setMounted] = useState(false);
 
@@ -97,16 +99,16 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       </motion.button>
       
       {/* Theme indicator tooltip */}
-      <div className="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-        {themes.find(t => t.value === theme)?.label} theme
+      <div className="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded opacity-0 group-hover: anyopacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+        {themes.find(t  => t.value === theme)?.label} theme
       </div>
     </div>
   );
 }
 
 // Alternative dropdown version for more explicit theme selection
-export function ThemeToggleDropdown() {
-  const [theme, setTheme] = useState<Theme>('system');
+export function ThemeToggleDropdown(...args: any[]): any {
+  const [theme, setTheme] = useState<any>('system');
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -193,9 +195,9 @@ export function ThemeToggleDropdown() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
+            className="absolute top-full right-0 mt-2 w-32 bg-white dark: anybg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
           >
-            {themes.map((themeOption) => (
+            {themes.map((themeOption)  => (
               <button
                 key={themeOption.value}
                 onClick={() => {

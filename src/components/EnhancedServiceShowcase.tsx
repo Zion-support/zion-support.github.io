@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Cloud,
   Shield,
   Zap,
@@ -20,15 +19,17 @@ import {
   CheckCircle
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Service {
 
+
   id: string;
   title: string;
   description: string;
-icon: React.ComponentType<{ className?: string}>;
+icon: React.ComponentType<{ className?: string;
+}>;
   category: string;
   features: string[];
   pricing: string;
@@ -164,7 +165,7 @@ const categories = [
 ];
 
 <<<<<<< HEAD
-export const EnhancedServiceShowcase: React.FC = () => {;
+export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [hoveredService, setHoveredService] = useState<any>(null);
@@ -197,12 +198,11 @@ export const EnhancedServiceShowcase: React.FC = () => {;
     return () => observer.disconnect()}, []);
 
   const filteredServices = selectedCategory === 'All Services'
-    ? services
-    : services.filter(service => service.category === selectedCategory);
+    ? services: anyservices.filter(service  => service.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const renderStars = (rating: number)  => {
-    return Array.from({ length: 5 }, (_, i)  => (
+  const renderStars = (rating: anynumber)   => {
+    return Array.from({ length: any5 }, (_, i)   => (
       <Star
         key={i}
         className={`w-4 h-4 ${

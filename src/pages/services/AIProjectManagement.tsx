@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react.ts';
 <<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { Calendar, Users, BarChart3, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Target, TrendingUp export default function AIProjectManagement() {
+import { SEO  } from '@/components/SEO';
+import { Calendar, Users, BarChart3, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Target, TrendingUp export default function AIProjectManagement(...args: any[]): any {
   const features = [
     'AI-powered task prioritization and scheduling',
     'Predictive resource allocation and capacity planning',
@@ -54,14 +54,14 @@ import { Calendar, Users, BarChart3, Zap, Check, ExternalLink, Phone, Mail, Arro
     'Research institutions'
   ];
 =======
-import { SEO } from '../../components/SEO';
-import { Button } from '../../components/ui/Button';
-import { Card } from '../../components/ui/Card';
-import { Badge } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail } from 'lucide-react';
+import { SEO  } from '../../components/SEO';
+import { Button  } from '../../components/ui/Button';
+import { Card  } from '../../components/ui/Card';
+import { Badge  } from '../../components/ui/Badge';
+import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail  } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const AIProjectManagement: React.FC = () => {
+const AIProjectManagement: React.FC = (): JSX.Element => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -176,8 +176,8 @@ const AIProjectManagement: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="w-6 h-6 text-blue-400" />
@@ -252,8 +252,8 @@ const AIProjectManagement: React.FC = () => {
             <p className="text-xl text-slate-300">Choose the plan that fits your team size and needs</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)  => (
               <div
                 key={index}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${

@@ -1,13 +1,13 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight export default function EnhancedNavigation2025() {
-=======
 import React, { useState, useEffect } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight export default function EnhancedNavigation2025(...args: any[]): any {
+=======
+import React, { useState, useEffect  } from 'react.ts';
 import Link from 'next/link.ts';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight   } from 'lucide-react.ts';
 
-export default function EnhancedNavigation2025(...args[]):  {
+export default function EnhancedNavigation2025(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -72,10 +72,10 @@ export default function EnhancedNavigation2025(...args[]):  {
 	];
 
 <<<<<<< HEAD
-	const toggleDropdown = (name: string)  => {;
+	const toggleDropdown = (name: anystring)   => {;
 		setActiveDropdown(activeDropdown === name ? null : name)};
 =======
-	const toggleDropdown = (name: string) => {;
+	const toggleDropdown = (name: anystring)  => {;
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -128,8 +128,8 @@ export default function EnhancedNavigation2025(...args[]):  {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<div className="hidden lg: flex lg:items-center lg:space-x-8">
-						{navigation.map((item)  => (
+					<div className="hidden lg: anyflex lg:items-center lg:space-x-8">
+						{navigation.map((item)   => (
 							<div key={item.name} className="relative group">
 								{item.children ? (
 									<button

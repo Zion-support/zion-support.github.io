@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  Shield,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Shield,
   Zap,
   Brain,
   TrendingUp,
@@ -20,8 +19,8 @@ import {
   Clock,
 =======
 import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
+import { SEO   } from '../../components/SEO';
+import { motion   } from 'framer-motion.ts';
 import { Shield, 
   Brain, 
   Eye, 
@@ -46,14 +45,14 @@ import { Shield,
   Monitor,
   Activity
 <<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
 =======
  } from 'lucide-react';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AICybersecuritySuite(...args[]):  {
+export default function AICybersecuritySuite(...args[]: any):  {
   const features = [
     {
       icon: Brain,
@@ -522,8 +521,8 @@ export default function AICybersecuritySuite(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityMetrics.map((metric, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {securityMetrics.map((metric, index)  => (
               <motion.div
                 key={index}
                 initial = {
@@ -626,8 +625,8 @@ export default function AICybersecuritySuite(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -767,8 +766,8 @@ export default function AICybersecuritySuite(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {services.map((service, index)   => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -937,8 +936,8 @@ export default function AICybersecuritySuite(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 gap-8">
-            {securityModules.map((module, index)  => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {securityModules.map((module, index)   => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -1043,8 +1042,8 @@ export default function AICybersecuritySuite(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial = {
@@ -1100,8 +1099,8 @@ export default function AICybersecuritySuite(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)   => (
               <motion.div
                 key={index}
                 initial = {

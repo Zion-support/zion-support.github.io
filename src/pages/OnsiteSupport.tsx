@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Users,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Users,
   MapPin,
   Clock,
   CheckCircle,
@@ -28,11 +27,11 @@ import {
   Info,
   ArrowRight,
   Globe
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from "../components/SEO";
+import { motion   } from 'framer-motion.ts';
+import { SEO   } from '../components/SEO';
 import { Wrench, 
   Clock, 
   Shield, 
@@ -50,7 +49,7 @@ import { Wrench,
   Monitor,
   HardDrive,
   Router
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 =======
   Zap, 
   Brain, 
@@ -74,11 +73,11 @@ import { Wrench,
   ArrowRight,
   Globe
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
+import { SEO  } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function OnsiteSupport(...args[]):  {
+export default function OnsiteSupport(...args[]: any):  {
   const services = [
     {
       icon: Server,
@@ -518,8 +517,8 @@ export default function OnsiteSupport(...args[]):  {
             Our Onsite Support Services
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {supportServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {supportServices.map((service, index)  => (
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
@@ -532,8 +531,8 @@ export default function OnsiteSupport(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={service.title}
@@ -683,8 +682,8 @@ export default function OnsiteSupport(...args[]):  {
           Service Coverage Areas
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {coverageAreas.map((area, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+          {coverageAreas.map((area, index)  => (
             <motion.div
               key={area.title}
               initial = {
@@ -729,8 +728,8 @@ export default function OnsiteSupport(...args[]):  {
 
               <div className="space-y-4">
                 <div className="space-y-3">
-                  <h4 className="text-slate-300 font-medium">Coverage:</h4>
-                  {area.areas.map((location, idx) => (
+                  <h4 className="text-slate-300 font-medium">Coverage: any</h4>
+                  {area.areas.map((location, idx)  => (
                     <div key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                       <span className="text-slate-300 text-sm">{location}</span>
@@ -788,8 +787,8 @@ export default function OnsiteSupport(...args[]):  {
             Support Tiers & Pricing
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {supportTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {supportTiers.map((tier, index)  => (
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
@@ -802,8 +801,8 @@ export default function OnsiteSupport(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
 <<<<<<< HEAD
@@ -869,8 +868,8 @@ export default function OnsiteSupport(...args[]):  {
 
                 <div className="space-y-4">
                   <div className="space-y-3">
-                    <h4 className="text-slate-300 font-medium">Features:</h4>
-                    {tier.features.map((feature, idx) => (
+                    <h4 className="text-slate-300 font-medium">Features: any</h4>
+                    {tier.features.map((feature, idx)  => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-slate-300 text-sm">{feature}</span>
@@ -953,8 +952,8 @@ export default function OnsiteSupport(...args[]):  {
           Our Response Process
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          {responseProcess.map((step, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-5 gap-6">
+          {responseProcess.map((step, index)  => (
             <motion.div
               key={step.step}
               initial = {
@@ -1115,8 +1114,8 @@ export default function OnsiteSupport(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {responseTimes.map((item, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {responseTimes.map((item, index)   => (
               <motion.div
                 key={item.priority}
                 initial = {
@@ -1235,8 +1234,8 @@ export default function OnsiteSupport(...args[]):  {
           Get Onsite Support
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {contactInfo.map((contact, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          {contactInfo.map((contact, index)  => (
             <motion.div
               key={contact.title}
               initial = {

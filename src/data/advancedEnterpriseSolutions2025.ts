@@ -1,5 +1,6 @@
 export interface EnterpriseSolution {
 
+
   id: string;
   title: string;
   description: string;
@@ -10,11 +11,12 @@ export interface EnterpriseSolution {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
+pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+custom: string;
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -376,14 +378,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
 
 ];
 <<<<<<< HEAD
-export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[]  => {
+export const getEnterpriseSolutionsByCategory = (category: anystring): EnterpriseSolution[]   => {
   if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category)};
 export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
 =======
-export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {;
+export const getEnterpriseSolutionsByCategory = (category: anystring): EnterpriseSolution[]  => {;
   if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
 

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const GreenIT: React.FC = () => (
+const GreenIT: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Green IT</h1>
@@ -8,11 +8,10 @@ const GreenIT: React.FC = () => (
 	</div>
 );
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Leaf, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Leaf, 
   Zap, 
   Sun, 
   Wind, 
@@ -182,10 +181,10 @@ import {
   BatteryLow as BatteryLow10,
   BatteryMedium as BatteryMedium10,
   BatteryEmpty as BatteryEmpty10
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function GreenIT() {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+export default function GreenIT(...args: any[]): any {
+  const [expandedSection, setExpandedSection] = useState<any>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -556,7 +555,7 @@ export default function GreenIT() {
 
   const caseStudies = [
     {
-      title: 'Fortune 500 Manufacturing Company',
+      title: 'Fortune 500 Manufacturing Comp',
       industry: 'Manufacturing',
       challenge: 'High energy costs and carbon footprint from outdated IT infrastructure',
       solution: 'Implemented server virtualization, cloud optimization, and smart energy monitoring',
@@ -599,13 +598,12 @@ export default function GreenIT() {
     }
   ];
 
-  const toggleSection = (sectionId: string) => {
+  const toggleSection = (sectionId: anystring)  => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 
   const filteredSolutions = selectedCategory === 'all' 
-    ? greenSolutions 
-    : greenSolutions.filter(solution => solution.category === selectedCategory);
+    ? greenSolutions: anygreenSolutions.filter(solution  => solution.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -661,8 +659,8 @@ export default function GreenIT() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {environmentalImpact.map((impact, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {environmentalImpact.map((impact, index)  => (
               <motion.div
                 key={impact.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -714,8 +712,8 @@ export default function GreenIT() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSolutions.map((solution, index)  => (
               <motion.div
                 key={solution.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -827,8 +825,8 @@ export default function GreenIT() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {certifications.map((cert, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {certifications.map((cert, index)  => (
               <motion.div
                 key={cert.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -862,8 +860,8 @@ export default function GreenIT() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {caseStudies.map((study, index)  => (
               <motion.div
                 key={study.title}
                 initial={{ opacity: 0, y: 20 }}

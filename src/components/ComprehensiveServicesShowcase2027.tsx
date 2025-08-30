@@ -1,21 +1,21 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components/ui/card';
+import { Badge   } from '@/components/ui/badge';
+import { Button   } from '@/components/ui/button';
+import { cuttingEdgeComprehensiveServices2027   } from '../../data/2027-cutting-edge-comprehensive-services';
+import { specializedInnovativeServices2027   } from '../../data/2027-specialized-innovative-services';
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film   } from 'lucide-react.ts';
+import { Link   } from 'react-router-dom.ts';
+=======
+import React, { useState } from 'react.ts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
-import { cuttingEdgeComprehensiveServices2027  } from "../../data/2027-cutting-edge-comprehensive-services";
-import { specializedInnovativeServices2027  } from "../../data/2027-specialized-innovative-services";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
-import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film import { Link } from "react-router-dom";
+import { cuttingEdgeComprehensiveServices2027  } from '../../data/2027-cutting-edge-comprehensive-services';
+import { specializedInnovativeServices2027  } from '../../data/2027-specialized-innovative-services';
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film import { Link  } from 'react-router-dom.ts';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Autonomous Systems': Brain,
@@ -42,10 +42,10 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Entertainment & Media Technology': Film
 };
 =======
-import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
-import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
-import { Link } from "react-router-dom";
+import { cuttingEdgeComprehensiveServices2027  } from '../../data/2027-cutting-edge-comprehensive-services';
+import { specializedInnovativeServices2027  } from '../../data/2027-specialized-innovative-services';
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film  } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -140,7 +140,7 @@ const contactInfo = {
 
 };
 
-export function ComprehensiveServicesShowcase2027(...args[]):  {
+export function ComprehensiveServicesShowcase2027(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState<any>('');
 
@@ -236,8 +236,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         {/* Featured Services */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((service)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service)   => (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center mb-4 text-2xl`}>
@@ -294,8 +294,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
             All Services ({filteredServices.length})
           </h3>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredServices.map((service)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredServices.map((service)   => (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
@@ -325,8 +325,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
 
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
-                    {service.features.slice(0, 3).map((feature, index)  => (
+                    <h4 className="font-semibold text-white text-sm">Key Features: anyany</h4>
+                    {service.features.slice(0, 3).map((feature, index)   => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
                         {feature}
@@ -386,8 +386,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         {/* Benefits Section */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index)   => (
               <div key={index} className="text-center">
                 <div className="mx-auto w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4">
                   {benefit.icon}

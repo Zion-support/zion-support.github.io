@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react.ts';
 import SEO from "@/components/SEO";
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Zap,
   Shield,
   Database,
@@ -22,9 +21,9 @@ import {
   MapPin,
   ExternalLink,
   Search
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025  } from '@/data/ultimateRealServices2025';
 
-export default function UltimateServicesShowcase2025() {
+export default function UltimateServicesShowcase2025(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -37,7 +36,7 @@ export default function UltimateServicesShowcase2025() {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
     if (category === 'all') return <Rocket className="w-6 h-6" />;
 <<<<<<< HEAD
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
@@ -159,9 +158,9 @@ export default function UltimateServicesShowcase2025() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
 
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -208,8 +207,8 @@ export default function UltimateServicesShowcase2025() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Service Guarantees</h2>
             <p className="text-xl text-gray-300">We stand behind every solution with comprehensive guarantees</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(ULTIMATE_SERVICE_GUARANTEES_2025).map(([key, value]) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {Object.entries(ULTIMATE_SERVICE_GUARANTEES_2025).map(([key, value])  => (
               <div key={key} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600/20 rounded-lg mb-4">
                   <CheckCircle className="w-6 h-6 text-green-400" />
@@ -231,8 +230,8 @@ export default function UltimateServicesShowcase2025() {
             <h2 className="text-4xl font-bold text-white mb-4">Pricing Tiers</h2>
             <p className="text-xl text-gray-300">Choose the perfect solution for your business needs</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {Object.entries(ULTIMATE_PRICING_TIERS_2025).map(([tier, details]) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {Object.entries(ULTIMATE_PRICING_TIERS_2025).map(([tier, details])  => (
               <div key={tier} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-2">{tier}</h3>
                 <p className="text-3xl font-bold text-blue-400 mb-4">{details.range}</p>
@@ -259,8 +258,8 @@ export default function UltimateServicesShowcase2025() {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+          {filteredServices.map((service)  => (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105 group"

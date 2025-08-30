@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Shield, Eye, Lock, Database, Users, ArrowRight export default function Privacy() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { Shield, Eye, Lock, Database, Users, ArrowRight  } from 'lucide-react'
+import { Shield, Eye, Lock, Database, Users, ArrowRight export default function Privacy(...args: any[]): any {
+=======
+import React from 'react.ts'
+import { Link   } from 'react-router-dom.ts'
+import { Shield, Eye, Lock, Database, Users, ArrowRight   } from 'lucide-react.ts'
 
 
-export default function Privacy(...args[]):  {
+export default function Privacy(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	return (
 		<>

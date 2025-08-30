@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const ITOnsiteServices: React.FC = () => {
+const ITOnsiteServices: React.FC = (): JSX.Element => {
 =======
 import React from 'react.ts';
 

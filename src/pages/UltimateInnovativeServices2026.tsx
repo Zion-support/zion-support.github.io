@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,
@@ -56,14 +55,14 @@ import {
   Globe2,
   Leaf
 <<<<<<< HEAD
-import { SEO } from "@/components/SEO";
+import { SEO  } from '@/components/SEO';
 =======
 } from 'lucide-react';
 import SEO from "@/components/SEO";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
+import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
 
-export default function UltimateInnovativeServices2026(...args[]):  {
+export default function UltimateInnovativeServices2026(...args[]: any):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -101,13 +100,13 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   ];
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Zap};
 
 <<<<<<< HEAD
-  const getCategoryColor = (category: string) => {;
+  const getCategoryColor = (category: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const cat = categories.find(c => c.id === category);
     return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
@@ -151,10 +150,10 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   });
 
 <<<<<<< HEAD
-  const toggleServiceExpansion = (serviceId: string)  => {;
+  const toggleServiceExpansion = (serviceId: anystring)   => {;
     setExpandedService(expandedService === serviceId ? null : serviceId)};
 =======
-  const toggleServiceExpansion = (serviceId: string) => {;
+  const toggleServiceExpansion = (serviceId: anystring)  => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -258,13 +257,13 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
 
-                {categories.map(category => (
-=======
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
                 {categories.map(category  => (
+=======
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {categories.map(category   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
                     {category.name}
@@ -279,13 +278,13 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
 <<<<<<< HEAD
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
 
-                {priceRanges.map(range => (
-=======
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
                 {priceRanges.map(range  => (
+=======
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {priceRanges.map(range   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
                     {range.name}
@@ -297,8 +296,8 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="text-zion-slate-300">Sort by: any</span>
-            {sortOptions.map(option  => (
+            <span className="text-zion-slate-300">Sort by: anyany</span>
+            {sortOptions.map(option   => (
               <button
                 key={option.id}
                 onClick={() => setSortBy(option.id)}
@@ -327,9 +326,9 @@ export default function UltimateInnovativeServices2026(...args[]):  {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {sortedServices.map((service, index)  => (
+              {sortedServices.map((service, index)   => (
                 <motion.div
                   key={service.id}
                   initial = {

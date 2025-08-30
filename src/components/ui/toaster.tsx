@@ -1,6 +1,6 @@
 
-import { Toaster as HotToaster  } from 'react-hot-toast.ts'
+import { Toaster as HotToaster   } from 'react-hot-toast.ts'
 
-export function Toaster(...args[]):  {
+export function Toaster(...args[]: any):  {
   return <HotToaster />
 }

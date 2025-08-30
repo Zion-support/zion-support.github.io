@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const Talent: React.FC = () => (
+const Talent: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Talent</h1>
@@ -8,12 +8,11 @@ const Talent: React.FC = () => (
 	</div>
 );
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { Users, 
   Search, 
   Filter, 
   Grid, 
@@ -473,14 +472,14 @@ import {
   YellowEyeBean,
   YellowIndianBean,
   YellowWaxBean
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Talent() {
+export default function Talent(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedExperience, setSelectedExperience] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedTalent, setExpandedTalent] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedTalent, setExpandedTalent] = useState<any>(null);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const categories = [
@@ -616,7 +615,7 @@ export default function Talent() {
     }
   ];
 
-  const toggleTalentExpansion = (talentId: string) => {
+  const toggleTalentExpansion = (talentId: anystring)  => {
     setExpandedTalent(expandedTalent === talentId ? null : talentId);
   };
 
@@ -631,7 +630,7 @@ export default function Talent() {
     return true;
   });
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -642,7 +641,7 @@ export default function Talent() {
     }
   };
 
-  const getExperienceColor = (experience: string) => {
+  const getExperienceColor = (experience: anystring)  => {
     switch (experience) {
       case 'junior': return 'bg-green-500/20 text-green-400';
       case 'mid': return 'bg-blue-500/20 text-blue-400';
@@ -652,12 +651,12 @@ export default function Talent() {
     }
   };
 
-  const getAvailabilityColor = (availability: string) => {
+  const getAvailabilityColor = (availability: anystring)  => {
     return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
   };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: anynumber)  => {
+    return Array.from({ length: any5 }, (_, i)  => (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -722,9 +721,9 @@ export default function Talent() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {categories.map((category) => (
+                  {categories.map((category)  => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -737,9 +736,9 @@ export default function Talent() {
                 <select
                   value={selectedExperience}
                   onChange={(e) => setSelectedExperience(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {experienceLevels.map((level) => (
+                  {experienceLevels.map((level)  => (
                     <option key={level.id} value={level.id}>
                       {level.name} ({level.count})
                     </option>
@@ -788,8 +787,8 @@ export default function Talent() {
             <p className="text-xl text-gray-300">Top-tier talent with exceptional track records</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {talentPool.filter(t => t.featured).map((talent, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {talentPool.filter(t  => t.featured).map((talent, index) => (
               <motion.div
                 key={talent.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -924,8 +923,8 @@ export default function Talent() {
           </motion.div>
 
           {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTalent.map((talent, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredTalent.map((talent, index)  => (
                 <motion.div
                   key={talent.id}
                   initial={{ opacity: 0, y: 20 }}

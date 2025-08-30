@@ -1,14 +1,14 @@
 import React from 'react.ts';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { CompDashboard  } from '@/components/enterprise/workspace/CompDashboard';
-import { useAuth  } from '@/hooks/useAuth';
-import { Navigate, useParams  } from 'react-router-dom.ts';
-import SEOHead from "../components/SEOHead.jsx";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { useCompWorkspace  } from '@/hooks/useCompWorkspace';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-export default function CompWorkspace(...args[]):  {
+import { Header   } from '@/components/Header';
+import { Footer   } from '@/components/Footer';
+import { CompDashboard   } from '@/components/enterprise/workspace/CompDashboard';
+import { useAuth   } from '@/hooks/useAuth';
+import { Navigate, useParams   } from 'react-router-dom.ts';
+import SEOHead from '../components/SEOHead.jsx';
+import { ProtectedRoute   } from '@/components/ProtectedRoute';
+import { useCompWorkspace   } from '@/hooks/useCompWorkspace';
+import { useWhitelabel   } from '@/context/WhitelabelContext';
+export default function CompWorkspace(...args[]: any):  {
     const { compSlug } = useParams();
     const { user } = useAuth();
     const { comp, isLoading, error } = useCompWorkspace(compSlug);
@@ -31,10 +31,10 @@ export default function CompWorkspace(...args[]):  {
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
       </div>);
 
-    if (error || !company) {
+    if (error || !comp) {
         return <Navigate to="/"/>;
 
-    // In white-label mode, use the tenant's theme instead of the company's theme
+    // In white-label mode, use the tenant's theme instead of the comp's theme
     const effectiveTheme = isWhitelabel ? {;
         primaryColor: tenant?.primary_color || company.theme?.primaryColor,;
         backgroundColor: company.theme?.backgroundColor || 'var(--background)',;
@@ -63,7 +63,7 @@ export default function CompWorkspace(...args[]):  {
       <SEO title = {`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}/>;
       <Header customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl} customTheme={effectiveTheme}/>;
       <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>;
-        <CompanyDashboard company={company}/>;
+        <CompanyDashboard company={comp}/>;
       </main>;
       <Footer />;
     </ProtectedRoute>);

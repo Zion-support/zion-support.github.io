@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Plus,
+import React, { useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Plus,
   MessageCircle,
   Phone,
   Mail,
@@ -10,9 +9,8 @@ import {
   Settings,
   HelpCircle,
 =======
-import React, { useState, useCallback, useEffect } from 'react';
-import { 
-  Plus, 
+import React, { useState, useCallback, useEffect  } from 'react.ts';
+import { Plus, 
   MessageCircle, 
   Phone, 
   Mail, 
@@ -28,29 +26,35 @@ import {
   Download,
 <<<<<<< HEAD
   Search
-interface FloatingActionButtonProps {
+interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
 =======
   Printer
-} from 'lucide-react';
+ 
+} from 'lucide-react.ts';
 
 interface FloatingAction {
-  id: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+
+  id: anystring;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
   label: string;
-  action: () => void;
+  action: ()  => void;
   color: string;
   priority: 'high' | 'medium' | 'low';
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-interface FloatingActionButtonProps {
+interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
+
   actions?: FloatingAction[];
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
   showScrollToTop?: boolean;
   showContactActions?: boolean;
   showUtilityActions?: boolean;
+
 }
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
@@ -63,20 +67,20 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
+  const [currentTheme, setCurrentTheme] = useState<any>('light');
 
 <<<<<<< HEAD
   // Hide button when scrolling down, show when scrolling up
   const handleScroll = useCallback(() => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const isScrollingDown = scrollTop > (window as any).lastScrollTop;
+    const isScrollingDown = scrollTop > (window as ).lastScrollTop;
 
     if (isScrollingDown && scrollTop > 100) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
 
-    (window as any).lastScrollTop = scrollTop;
+    (window as ).lastScrollTop = scrollTop;
   }, []);
 =======
   // Detect theme
@@ -85,7 +89,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: MediaQueryListEvent) => {
+      const handleChange = (e: anyMediaQueryListEvent)  => {
         setCurrentTheme(e.matches ? 'dark' : 'light');
       };
       
@@ -111,21 +115,21 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   // Quick actions
   const quickActions = [
     {
-      icon: MessageCircle,
+      icon: anyMessageCircle,
       label: 'Chat Support',
-      action: () => {
+      action: ()  => {
         // Trigger chat support
         const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
         if (chatButton) chatButton.click();
       },
-      color: 'from-blue-500 to-blue-600',
+      color: any'from-blue-500 to-blue-600',
       delay: 0.1
     },
     {
       icon: Phone,
       label: 'Call Us',
-      action: () => {
-        window.location.href = 'tel:+1-555-0123';
+      action: ()  => {
+        window.location.href = 'tel: any+1-555-0123';
       },
       color: 'from-green-500 to-green-600',
       delay: 0.2
@@ -133,8 +137,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     {
       icon: Mail,
       label: 'Email',
-      action: () => {
-        window.location.href = 'mailto:contact@ziontechgroup.com';
+      action: ()  => {
+        window.location.href = 'mailto: anycontact@ziontechgroup.com';
       },
       color: 'from-purple-500 to-purple-600',
       delay: 0.3
@@ -142,20 +146,20 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     {
       icon: Search,
       label: 'Search',
-      action: () => {
+      action: ()  => {
         const searchInput = document.querySelector('[data-search-input]') as HTMLInputElement;
         if (searchInput) {
           searchInput.focus();
           searchInput.click();
 
       },
-      color: 'from-orange-500 to-orange-600',
+      color: any'from-orange-500 to-orange-600',
       delay: 0.4
     },
     {
       icon: Bookmark,
       label: 'Bookmark',
-      action: () => {
+      action: ()  => {
         if (navigator.share) {
           navigator.share({
             title: 'Zion Tech Group',
@@ -169,13 +173,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           window.open(bookmarkUrl, '_blank');
 
       },
-      color: 'from-red-500 to-red-600',
+      color: any'from-red-500 to-red-600',
       delay: 0.5
     },
     {
       icon: Download,
       label: 'Download App',
-      action: () => {
+      action: ()  => {
         // Trigger app download or PWA install
         const installButton = document.querySelector('[data-pwa-install]') as HTMLElement;
         if (installButton) {
@@ -191,7 +195,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             window.open('https://play.google.com/store/apps/details?id=com.ziontechgroup.app', '_blank');
           } else {
             // Show PWA install prompt
-            const deferredPrompt = (window as any).deferredPrompt;
+            const deferredPrompt = (window as ).deferredPrompt;
             if (deferredPrompt) {
               deferredPrompt.prompt();
 
@@ -207,13 +211,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     // Contact actions
     ...(showContactActions ? [
       {
-        id: 'contact',
+        id: any'contact',
         icon: MessageCircle,
         label: 'Contact Us',
-        action: () => {
+        action: ()  => {
           const contactSection = document.getElementById('contact');
           if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
+            contactSection.scrollIntoView({ behavior: any'smooth' });
           }
         },
         color: 'bg-blue-500 hover:bg-blue-600',
@@ -223,8 +227,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'phone',
         icon: Phone,
         label: 'Call Now',
-        action: () => {
-          window.location.href = 'tel:+1234567890';
+        action: ()  => {
+          window.location.href = 'tel: any+1234567890';
         },
         color: 'bg-green-500 hover:bg-green-600',
         priority: 'high' as const
@@ -233,8 +237,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'email',
         icon: Mail,
         label: 'Send Email',
-        action: () => {
-          window.location.href = 'mailto:info@ziontechgroup.com';
+        action: ()  => {
+          window.location.href = 'mailto: anyinfo@ziontechgroup.com';
         },
         color: 'bg-purple-500 hover:bg-purple-600',
         priority: 'medium' as const
@@ -243,10 +247,10 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'location',
         icon: MapPin,
         label: 'Get Directions',
-        action: () => {
+        action: ()  => {
           window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank');
         },
-        color: 'bg-red-500 hover:bg-red-600',
+        color: any'bg-red-500 hover:bg-red-600',
         priority: 'medium' as const
       }
     ] : []),
@@ -257,7 +261,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'bookmark',
         icon: Bookmark,
         label: 'Bookmark Page',
-        action: () => {
+        action: ()  => {
           if (navigator.share) {
             navigator.share({
               title: document.title,
@@ -272,14 +276,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           }
         },
-        color: 'bg-yellow-500 hover:bg-yellow-600',
+        color: any'bg-yellow-500 hover:bg-yellow-600',
         priority: 'low' as const
       },
       {
         id: 'share',
         icon: Share2,
         label: 'Share Page',
-        action: () => {
+        action: ()  => {
           if (navigator.share) {
             navigator.share({
               title: document.title,
@@ -293,14 +297,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           }
         },
-        color: 'bg-indigo-500 hover:bg-indigo-600',
+        color: any'bg-indigo-500 hover:bg-indigo-600',
         priority: 'low' as const
       },
       {
         id: 'download',
         icon: Download,
         label: 'Download Brochure',
-        action: () => {
+        action: ()  => {
           // Create a temporary link to trigger download
           const link = document.createElement('a');
           link.href = '/brochure.pdf'; // Adjust path as needed
@@ -309,14 +313,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           link.click();
           document.body.removeChild(link);
         },
-        color: 'bg-teal-500 hover:bg-teal-600',
+        color: any'bg-teal-500 hover:bg-teal-600',
         priority: 'low' as const
       },
       {
         id: 'print',
         icon: Printer,
         label: 'Print Page',
-        action: () => {
+        action: ()  => {
           window.print();
         },
         color: 'bg-gray-500 hover:bg-gray-600',
@@ -346,7 +350,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   }, []);
 
   // Show notification
-  const showNotification = useCallback((message: string) => {
+  const showNotification = useCallback((message: anystring)  => {
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `

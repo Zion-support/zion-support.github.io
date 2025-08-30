@@ -1,9 +1,8 @@
 
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
+import React from 'react.ts';
+import { useParams, Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Calendar, 
   User, 
   Clock, 
   Tag, 
@@ -22,11 +21,11 @@ import {
   Cpu,
   Network,
   BookOpen
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
 <<<<<<< HEAD
-const BlogPost: React.FC = () => {
+const BlogPost: React.FC = (): JSX.Element => {
 	return (
 		<div className="min-h-screen bg-slate-950 text-white py-16">
 			<SEO title="Blog Post" description="Read our latest insights and articles from Zion Tech Group." />
@@ -40,7 +39,7 @@ const BlogPost: React.FC = () => {
 export default BlogPost
 }
 =======
-export default function BlogPost() {
+export default function BlogPost(...args: any[]): any {
   const { slug } = useParams();
 
   // Mock blog post data - in a real app, this would come from an API
@@ -196,7 +195,7 @@ export default function BlogPost() {
     ]
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -204,7 +203,7 @@ export default function BlogPost() {
     });
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const categoryIcons: { [key: string]: any } = {
       ai: Brain,
       quantum: Cpu,
@@ -217,7 +216,7 @@ export default function BlogPost() {
     return categoryIcons[category] || BookOpen;
   };
 
-  const getCategoryName = (category: string) => {
+  const getCategoryName = (category: anystring)  => {
     const categoryNames: { [key: string]: string } = {
       ai: 'Artificial Intelligence',
       quantum: 'Quantum Computing',
@@ -410,8 +409,8 @@ export default function BlogPost() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPost.relatedPosts.map((post, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {blogPost.relatedPosts.map((post, index)  => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}

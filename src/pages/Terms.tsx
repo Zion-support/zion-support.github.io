@@ -1,19 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import {
-  FileText,
+import { FileText,
   Shield,
   Users,
   Globe,
   CheckCircle,
 =======
-import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   FileText, 
   CheckCircle, 
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
@@ -27,7 +25,7 @@ import {
   MapPin,
 <<<<<<< HEAD
   Calendar
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
   Calendar,
   CheckCircle,
@@ -43,7 +41,7 @@ import { SEO } from '../components/SEO';
 <<<<<<< HEAD
 import SEO from '../components/SEO';
 
-const Terms: React.FC = () => {
+const Terms: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -52,7 +50,7 @@ const Terms: React.FC = () => {
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function Terms() {
+export default function Terms(...args: any[]): any {
   const lastUpdated = 'December 15, 2024';
 
   const termsSections = [
@@ -299,8 +297,8 @@ export default function Terms() {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {termsSections.map((section, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {termsSections.map((section, index)   => (
 =======
       
       <div className="relative overflow-hidden">
@@ -388,8 +386,8 @@ export default function Terms() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userObligations.map((obligation, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {userObligations.map((obligation, index)  => (
               <motion.div
                 key={index}
                 initial = {
@@ -569,8 +567,8 @@ export default function Terms() {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid md: grid-cols-2 gap-6">
-              {prohibitedActivities.map((activity, index)  => (
+            <div className="grid md: anygrid-cols-2 gap-6">
+              {prohibitedActivities.map((activity, index)   => (
                 <motion.div
                   key={index}
 <<<<<<< HEAD
@@ -754,8 +752,8 @@ export default function Terms() {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid md: grid-cols-2 gap-6">
-              {terminationConditions.map((condition, index)  => (
+            <div className="grid md: anygrid-cols-2 gap-6">
+              {terminationConditions.map((condition, index)   => (
                 <motion.div
                   key={index}
                   initial = {
@@ -1141,8 +1139,8 @@ export default function Terms() {
           <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               {/* Terms Sections */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                {termsSections.map((section, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                {termsSections.map((section, index)  => (
                   <motion.div
                     key={section.title}
                     initial={{ opacity: 0, y: 30 }}
@@ -1178,8 +1176,8 @@ export default function Terms() {
                   User Obligations
                 </h2>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {userObligations.map((obligation, index) => (
+                <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+                  {userObligations.map((obligation, index)  => (
                     <motion.div
                       key={obligation.obligation}
                       initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -1435,8 +1433,8 @@ export default function Terms() {
                 </h2>
                 
                 <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {prohibitedActivities.map((activity, index) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {prohibitedActivities.map((activity, index)  => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
@@ -1466,8 +1464,8 @@ export default function Terms() {
                 </h2>
                 
                 <div className="bg-orange-900/20 border border-orange-500/30 rounded-xl p-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {terminationConditions.map((condition, index) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {terminationConditions.map((condition, index)  => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, x: 20 }}
@@ -1501,8 +1499,8 @@ export default function Terms() {
                   on any provision, please don't hesitate to contact our legal team.
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  {contactInfo.map((contact, index) => (
+                <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6 max-w-4xl mx-auto">
+                  {contactInfo.map((contact, index)  => (
                     <motion.div
                       key={contact.label}
                       initial={{ opacity: 0, y: 20 }}

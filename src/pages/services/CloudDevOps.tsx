@@ -1,11 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Cloud, Zap, Shield, BarChart3, Users, Clock, CheckCircle, ArrowRight, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import { Cloud, Zap, Shield, BarChart3, Users, Clock, CheckCircle, ArrowRight, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom.ts';
 =======
-import {
-  Cloud,
+import { Cloud,
   GitBranch,
   Server,
   Zap,
@@ -15,7 +14,7 @@ import {
   Cpu,
   Lock,
   BarChart3
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const CloudDevOps = () => {
@@ -233,8 +232,8 @@ const CloudDevOps = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -315,8 +314,8 @@ const CloudDevOps = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -367,8 +366,8 @@ const CloudDevOps = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricing.map((plan, index)  => (
                 <motion.div
                   key={plan.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -449,9 +448,9 @@ const CloudDevOps = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -498,8 +497,8 @@ const CloudDevOps = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {technologies.map((tech, index) => (
+            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+              {technologies.map((tech, index)  => (
                 <motion.div
                   key={tech.name}
                   initial={{ opacity: 0, scale: 0.8 }}

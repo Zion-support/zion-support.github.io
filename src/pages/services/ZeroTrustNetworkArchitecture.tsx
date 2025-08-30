@@ -1,16 +1,16 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
+import { SEO   } from '../../components/SEO';
+import { motion   } from 'framer-motion.ts';
+import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck   } from 'lucide-react.ts';
+=======
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
-import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck  } from 'lucide-react';
-=======
-import React from 'react';
-import { SEO } from "../../components/SEO";
-import { motion } from 'framer-motion';
 <<<<<<< HEAD
-import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck export default function ZeroTrustNetworkArchitecture() {
+import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck export default function ZeroTrustNetworkArchitecture(...args: any[]): any {
 =======
-import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck } from 'lucide-react';
+import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck  } from 'lucide-react.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function ZeroTrustNetworkArchitecture(...args: []):  {
@@ -221,8 +221,8 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -304,8 +304,8 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)   => (
               <motion.div
                 key={service.title}
                 initial = {
@@ -400,8 +400,8 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={benefit.name}
                 initial = {

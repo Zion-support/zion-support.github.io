@@ -11,9 +11,9 @@ import React from 'react.ts';
     </div>;
   )};
 =======
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react.ts';
 
-export const FuturisticAnimatedBackground: React.FC = () => {;
+export const FuturisticAnimatedBackground: React.FC = (): JSX.Element => {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -62,16 +62,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     const time = 0;
 
     // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
-      maxLife: number;
-    }> = [];
+    const particles: Array<any> = [];
 
     // Create particles
     const createParticle = () => {;

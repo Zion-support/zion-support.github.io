@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import {
-  Shield,
+import { Shield,
   Cookie,
   Settings,
   Eye,
@@ -10,9 +9,8 @@ import {
   Check,
   X,
 =======
-import { SEO } from '../components/SEO';
-import { 
-  Cookie, 
+import { SEO  } from '../components/SEO';
+import { Cookie, 
   Shield, 
   Settings, 
   Eye, 
@@ -26,7 +24,7 @@ import {
   ChevronDown,
 <<<<<<< HEAD
   ChevronUp
-const Cookies = () => {
+const Cookies: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [expandedSections, setExpandedSections] = useState({
 =======
   ChevronUp,
@@ -34,10 +32,10 @@ const Cookies = () => {
   Globe,
   BarChart3,
   Users
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Cookies() {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+export default function Cookies(...args: any[]): any {
+  const [expandedSection, setExpandedSection] = useState<any>(null);
   const [cookiePreferences, setCookiePreferences] = useState({
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     essential: true,
@@ -159,11 +157,11 @@ export default function Cookies() {
   ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const toggleSection = (sectionId: string) => {
+  const toggleSection = (sectionId: anystring)  => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 
-  const updateCookiePreference = (type: string, enabled: boolean) => {
+  const updateCookiePreference = (type: anystring, enabled: boolean)  => {
     if (type === 'essential') return; // Essential cookies cannot be disabled
     
     setCookiePreferences(prev => ({
@@ -524,8 +522,8 @@ export default function Cookies() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cookieTypes.map((type, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {cookieTypes.map((type, index)  => (
               <motion.div
                 key={type.id}
                 initial={{ opacity: 0, y: 20 }}

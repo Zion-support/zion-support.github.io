@@ -1,5 +1,5 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from 'react.ts';
+import { cn  } from '@/lib/utils';
 
 <<<<<<< HEAD
 const badgeVariants = cva(
@@ -41,18 +41,20 @@ export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> { /* empty */ }
 
-function Badge({ className, variant, size, ...props }: BadgeProps) {
+function Badge(...args: any[]): any {
   return (
     <div className={cn(badgeVariants({ variant, size }), className)} {...props} />
   )
 
 export { Badge, badgeVariants </div>}}}
 =======
-interface BadgeProps {
+interface BadgeProps extends React.PropsWithChildren<{}> {
+
   variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'success' | 'warning';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   className?: string;
+
 }
 
 const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(

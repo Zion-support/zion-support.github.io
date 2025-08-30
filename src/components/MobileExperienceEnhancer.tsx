@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
 <<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Smartphone,
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Smartphone,
   Tablet,
   Monitor,
   Hand,
@@ -17,7 +16,7 @@ import {
   RotateCcw,
   Move,
 =======
-import { motion, AnimatePresence, PanInfo } from 'framer-motion';
+import { motion, AnimatePresence, PanInfo  } from 'framer-motion.ts';
 import { 
   Smartphone, 
   Tablet, 
@@ -54,6 +53,7 @@ import {
   Tablet as TabletIcon,
   Monitor as DesktopIcon
 interface MobileOptimization {
+
   id: string;
   name: string;
   description: string;
@@ -69,25 +69,25 @@ interface TouchGesture {
   action: string;
   enabled: boolean;
 
-export function MobileExperienceEnhancer() {
+export function MobileExperienceEnhancer(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
-  const [deviceType, setDeviceType] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
+  const [deviceType, setDeviceType] = useState<any>('desktop');
   const [touchGestures, setTouchGestures] = useState<Set<string>>(new Set());
   const [mobileOptimizations, setMobileOptimizations] = useState<Set<string>>(new Set());
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
 
   // Touch gesture handlers
-  const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
-  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number } | null>(null);
-  const [pinchDistance, setPinchDistance] = useState<number>(0);
-  const [rotationAngle, setRotationAngle] = useState<number>(0);
+  const [touchStart, setTouchStart] = useState<any>(null);
+  const [touchEnd, setTouchEnd] = useState<any>(null);
+  const [pinchDistance, setPinchDistance] = useState<any>(0);
+  const [rotationAngle, setRotationAngle] = useState<any>(0);
 
   // Mobile-specific settings
   const [mobileFontSize, setMobileFontSize] = useState(16);
   const [mobileSpacing, setMobileSpacing] = useState(1);
-  const [mobileLayout, setMobileLayout] = useState<'grid' | 'list' | 'compact'>('grid');
-  const [mobileTheme, setMobileTheme] = useState<'light' | 'dark' | 'auto'>('auto');
+  const [mobileLayout, setMobileLayout] = useState<any>('grid');
+  const [mobileTheme, setMobileTheme] = useState<any>('auto');
   const [mobileAnimations, setMobileAnimations] = useState(true);
   const [mobileGestures, setMobileGestures] = useState(true);
 
@@ -222,7 +222,7 @@ export function MobileExperienceEnhancer() {
   ];
 
   // Touch event handlers
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+  const handleTouchStart = useCallback((e: anyReact.TouchEvent)  => {
     if (!mobileGestures) return;
 
     const touch = e.touches[0];
@@ -240,7 +240,7 @@ export function MobileExperienceEnhancer() {
 
   }, [mobileGestures]);
 
-  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+  const handleTouchMove = useCallback((e: anyReact.TouchEvent)  => {
     if (!mobileGestures) return;
 
     // Handle pinch zoom
@@ -269,7 +269,7 @@ export function MobileExperienceEnhancer() {
 
   }, [mobileGestures, pinchDistance]);
 
-  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+  const handleTouchEnd = useCallback((e: anyReact.TouchEvent)  => {
     if (!mobileGestures || !touchStart) return;
 
     const touch = e.changedTouches[0];
@@ -305,7 +305,7 @@ export function MobileExperienceEnhancer() {
   }, [mobileGestures, touchStart]);
 
   // Handle swipe gestures
-  const handleSwipe = useCallback((direction: 'left' | 'right' | 'up' | 'down') => {
+  const handleSwipe = useCallback((direction: any'left' | 'right' | 'up' | 'down')  => {
     const gestureId = `swipe-${direction}`;
     if (touchGestures.has(gestureId)) {
       // Execute gesture action
@@ -347,7 +347,7 @@ export function MobileExperienceEnhancer() {
   }, [touchGestures]);
 
   // Apply mobile optimizations
-  const applyMobileOptimization = useCallback((optimizationId: string, enabled: boolean) => {
+  const applyMobileOptimization = useCallback((optimizationId: anystring, enabled: boolean)  => {
     setMobileOptimizations(prev => {
       const newSet = new Set(prev);
       if (enabled) {
@@ -403,7 +403,7 @@ export function MobileExperienceEnhancer() {
   }, []);
 
   // Toggle touch gesture
-  const toggleTouchGesture = useCallback((gestureId: string, enabled: boolean) => {
+  const toggleTouchGesture = useCallback((gestureId: anystring, enabled: boolean)  => {
     setTouchGestures(prev => {
       const newSet = new Set(prev);
       if (enabled) {
@@ -486,6 +486,7 @@ export function MobileExperienceEnhancer() {
 } from 'lucide-react';
 
 interface MobileMetrics {
+
   screenWidth: number;
   screenHeight: number;
   pixelRatio: number;
@@ -494,22 +495,21 @@ interface MobileMetrics {
   connectionType: string;
   batteryLevel: number;
   isCharging: boolean;
+
 }
 
-interface MobileExperienceEnhancerProps {
+interface MobileExperienceEnhancerProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
   showControls?: boolean;
   autoOptimize?: boolean;
+
 }
 
-export function MobileExperienceEnhancer({ 
-  enabled = true, 
-  showControls = false, 
-  autoOptimize = true 
-}: MobileExperienceEnhancerProps) {
+export function MobileExperienceEnhancer(...args: any[]): any {
   const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState<MobileMetrics | null>(null);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [metrics, setMetrics] = useState<any>(null);
+  const [optimizations, setOptimizations] = useState<any>([]);
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [mobileScore, setMobileScore] = useState(85);
   const [gestureMode, setGestureMode] = useState(false);
@@ -530,19 +530,19 @@ export function MobileExperienceEnhancer({
     if (!isMobile && !isTablet) return;
 
     const metrics: MobileMetrics = {
-      screenWidth: window.innerWidth,
+      screenWidth: anywindow.innerWidth,
       screenHeight: window.innerHeight,
       pixelRatio: window.devicePixelRatio || 1,
       orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait',
       touchSupport: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
-      connectionType: (navigator as any).connection?.effectiveType || 'unknown',
+      connectionType: (navigator as ).connection?.effectiveType || 'unknown',
       batteryLevel: 0,
       isCharging: false
     };
 
     // Get battery information if available
     if ('getBattery' in navigator) {
-      (navigator as any).getBattery().then((battery: any) => {
+      (navigator as ).getBattery().then((battery: )  => {
         metrics.batteryLevel = Math.round(battery.level * 100);
         metrics.isCharging = battery.charging;
         setMetrics(prev => prev ? { ...prev, ...metrics } : metrics);
@@ -551,7 +551,7 @@ export function MobileExperienceEnhancer({
 
     // Get connection information if available
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as ).connection;
       if (connection) {
         metrics.connectionType = connection.effectiveType || 'unknown';
       }
@@ -647,7 +647,7 @@ export function MobileExperienceEnhancer({
     if (!metrics?.touchSupport) return;
 
     // Swipe navigation
-    const handleTouchStart = (e: TouchEvent) => {
+    const handleTouchStart = (e: anyTouchEvent)  => {
       const touch = e.touches[0];
       touchStartRef.current = {
         x: touch.clientX,
@@ -656,7 +656,7 @@ export function MobileExperienceEnhancer({
       };
     };
 
-    const handleTouchEnd = (e: TouchEvent) => {
+    const handleTouchEnd = (e: anyTouchEvent)  => {
       if (!touchStartRef.current) return;
 
       const touch = e.changedTouches[0];
@@ -690,7 +690,7 @@ export function MobileExperienceEnhancer({
 
     // Double tap to zoom
     let lastTap = 0;
-    const handleDoubleTap = (e: TouchEvent) => {
+    const handleDoubleTap = (e: anyTouchEvent)  => {
       const currentTime = new Date().getTime();
       const tapLength = currentTime - lastTap;
       
@@ -705,12 +705,12 @@ export function MobileExperienceEnhancer({
       lastTap = currentTime;
     };
 
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchstart', handleTouchStart, { passive: anytrue });
     document.addEventListener('touchend', handleTouchEnd, { passive: true });
     document.addEventListener('touchend', handleDoubleTap, { passive: true });
 
     // Cleanup function
-    return () => {
+    return ()  => {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchend', handleTouchEnd);
       document.removeEventListener('touchend', handleDoubleTap);
@@ -1086,8 +1086,8 @@ export function MobileExperienceEnhancer({
                       {isOptimizing ? 'Optimizing...' : 'Auto-Optimize'}
                     </button>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {mobileOptimizationFeatures.map((optimization) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {mobileOptimizationFeatures.map((optimization)  => (
                       <div
                         key={optimization.id}
                         className={`p-4 rounded-xl border transition-all ${
@@ -1157,8 +1157,8 @@ export function MobileExperienceEnhancer({
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     Touch Gestures
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {availableTouchGestures.map((gesture) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {availableTouchGestures.map((gesture)  => (
                       <div
                         key={gesture.id}
                         className={`p-4 rounded-xl border transition-all ${

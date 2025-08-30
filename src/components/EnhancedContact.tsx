@@ -1,11 +1,9 @@
 <<<<<<< HEAD
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-=======
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Mail,
+import { AnimatePresence, motion  } from 'framer-motion.ts';
+import { =======
+import React, { useState  } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Mail,
   Phone,
   MapPin,
   Send,
@@ -19,8 +17,8 @@ import {
   MapPin,
   Phone,
   Send
-} from 'lucide-react';
-import React, { useState } from 'react';
+ } from 'lucide-react.ts';
+import React, { useState } from 'react.ts';
 =======
   MessageSquare,
   Building,
@@ -30,18 +28,22 @@ import React, { useState } from 'react';
 
 interface ContactFormData {
 
+
   name: string;
   email: string;
   phone: string;
   comp: string;
   service: string;
-  message: string}
+message: string;
+}
 
 interface ContactFormErrors {
 
-  [key: string]: string}
 
-export function EnhancedContact(...args[]):  {
+[key: string]: string;
+}
+
+export function EnhancedContact(...args[]: any):  {
   const [formData, setFormData] = useState<any>({
     name: '',
     email: '',
@@ -102,16 +104,16 @@ export function EnhancedContact(...args[]):  {
     return Object.keys(newErrors).length === 0};
 
 <<<<<<< HEAD
-  const handleInputChange = (field: keyof ContactFormData, value: string) => {
-    setFormData((prev: ContactFormData) => ({ ...prev, [field]: value }));
+  const handleInputChange = (field: anykeyof ContactFormData, value: string)  => {
+    setFormData((prev: anyContactFormData)  => ({ ...prev, [field]: value }));
 
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors((prev: ContactFormErrors) => ({ ...prev, [field]: '' }));
+      setErrors((prev: anyContactFormErrors)  => ({ ...prev, [field]: '' }));
     }
 =======
 <<<<<<< HEAD
-  const handleInputChange = (field: keyof ContactFormData, value: string) => {;
+  const handleInputChange = (field: anykeyof ContactFormData, value: string)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setFormData(prev => ({ ...prev, [field]: value }));
 
@@ -122,7 +124,7 @@ export function EnhancedContact(...args[]):  {
   };
 
 <<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
 
@@ -689,10 +691,10 @@ export function EnhancedContact(...args[]):  {
 
 }
 =======
-                    id="company"
-                    value={formData.company}
+                    id="comp"
+                    value={formData.comp}
                     onChange = {
-  (e) => handleInputChange('company',
+  (e) => handleInputChange('comp',
   e.target.value)
 
 
@@ -734,10 +736,10 @@ export function EnhancedContact(...args[]):  {
 
 
 }
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
-                  {services.map(service  => (
+                  {services.map(service   => (
                     <option key={service.value} value={service.value}>
                       {service.label}
                     </option>

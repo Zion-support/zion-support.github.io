@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  TrendingUp,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { TrendingUp,
   Users,
   DollarSign,
   Clock,
@@ -10,9 +9,9 @@ import {
   Star,
   CheckCircle
 <<<<<<< HEAD
-export const CaseStudiesSection: React.FC = () => {
+export const CaseStudiesSection: React.FC = (): JSX.Element => {
 =======
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const CaseStudiesSection: React.FC = (): JSX.Element => {
@@ -113,7 +112,7 @@ const caseStudies = [
 ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export function CaseStudiesSection() {
+export function CaseStudiesSection(...args: any[]): any {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -156,11 +155,11 @@ export function CaseStudiesSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg: grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index)  => (
+        <div className="grid lg: anygrid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index)   => (
             <motion.div
 <<<<<<< HEAD
-              key={study.company}
+              key={study.comp}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}

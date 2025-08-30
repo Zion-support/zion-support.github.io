@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Zap,
   Lock,
   Cloud,
@@ -27,18 +26,18 @@ import {
   ChevronDown,
   ChevronUp
 <<<<<<< HEAD
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from '../data/innovativeServices2028';
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo  } from '../data/innovativeServices2028';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo  } from "../data/innovativeServices2028";
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo   } from '../data/innovativeServices2028';
 =======
 } from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo  } from '../data/innovativeServices2028';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function InnovativeServices2028(...args[]):  {
+export default function InnovativeServices2028(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
@@ -70,7 +69,7 @@ export default function InnovativeServices2028(...args[]):  {
   });
 
 <<<<<<< HEAD
-  const getCategoryIcon = (categoryName: string) => {;
+  const getCategoryIcon = (categoryName: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
@@ -90,7 +89,7 @@ export default function InnovativeServices2028(...args[]):  {
   };
 
 <<<<<<< HEAD
-  const getCategoryColor = (categoryName: string) => {;
+  const getCategoryColor = (categoryName: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const category = serviceCategories.find(cat => cat.name === categoryName);
     return category?.color || 'from-purple-500 to-pink-500'};
@@ -221,8 +220,8 @@ export default function InnovativeServices2028(...args[]):  {
       {/* Services Grid */}
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
-            {sortedServices.map((service, index)  => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {sortedServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 initial = {
@@ -453,8 +452,8 @@ export default function InnovativeServices2028(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)   => (
               <motion.div
                 key={tier.name}
                 initial = {

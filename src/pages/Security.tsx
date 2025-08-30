@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const Security: React.FC = () => (
+const Security: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Security</h1>
@@ -8,11 +8,10 @@ const Security: React.FC = () => (
 	</div>
 );
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Shield, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Shield, 
   Lock, 
   Eye, 
   Key, 
@@ -30,10 +29,10 @@ import {
   ChevronDown,
   ChevronUp,
   Mail
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Security() {
-  const [expandedCompliance, setExpandedCompliance] = useState<string | null>(null);
+export default function Security(...args: any[]): any {
+  const [expandedCompliance, setExpandedCompliance] = useState<any>(null);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const securityFeatures = [
@@ -219,7 +218,7 @@ export default function Security() {
     }
   ];
 
-  const toggleCompliance = (name: string) => {
+  const toggleCompliance = (name: anystring)  => {
     setExpandedCompliance(expandedCompliance === name ? null : name);
   };
 
@@ -257,8 +256,8 @@ export default function Security() {
       {/* Security Metrics */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityMetrics.map((metric, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {securityMetrics.map((metric, index)  => (
               <motion.div
                 key={metric.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -292,8 +291,8 @@ export default function Security() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securityFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {securityFeatures.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -417,8 +416,8 @@ export default function Security() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {bestPractices.map((practice, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {bestPractices.map((practice, index)  => (
               <motion.div
                 key={practice.title}
                 initial={{ opacity: 0, y: 20 }}

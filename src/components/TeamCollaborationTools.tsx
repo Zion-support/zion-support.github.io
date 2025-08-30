@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Users,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Users,
   MessageCircle,
   FileText,
   Calendar,
@@ -66,10 +65,11 @@ import {
   PieChart
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface TeamMember {
+
 
   id: string;
   name: string;
@@ -83,10 +83,12 @@ interface TeamMember {
 <<<<<<< HEAD
   availability: 'available' | 'busy' | 'unavailable';
 =======
-  availability: 'available' | 'busy' | 'unavailable'}
+availability: 'available' | 'busy' | 'unavailable';
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Project {
+
 
   id: string;
   name: string;
@@ -103,10 +105,12 @@ interface Project {
 <<<<<<< HEAD
   tags: string[];
 =======
-  tags: string[]}
+tags: string[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Task {
+
 
   id: string;
   title: string;
@@ -122,10 +126,12 @@ interface Task {
 <<<<<<< HEAD
   comments: Comment[];
 =======
-  comments: Comment[]}
+comments: Comment[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Comment {
+
 
   id: string;
   author: string;
@@ -135,10 +141,12 @@ interface Comment {
 <<<<<<< HEAD
   replies: Comment[];
 =======
-  replies: Comment[]}
+replies: Comment[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Message {
+
 
   id: string;
   sender: string;
@@ -147,7 +155,8 @@ interface Message {
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
 <<<<<<< HEAD
-  reactions: { type: string; count: number }[];
+  reactions: { type: string; count: number 
+}[];
   isRead: boolean;
 =======
   reactions: { type: string; count: number 
@@ -156,6 +165,7 @@ interface Message {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FileItem {
+
 
   id: string;
   name: string;
@@ -170,7 +180,8 @@ interface FileItem {
 <<<<<<< HEAD
   version: string;
 =======
-  version: string}
+version: string;
+}
 
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -205,12 +216,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showFileSharing = true,;
   maxItems = 20;
 }) => {;
-  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
-  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [files, setFiles] = useState<FileItem[]>([]);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeTab, setActiveTab] = useState<any>('team');
+  const [teamMembers, setTeamMembers] = useState<any>([]);
+  const [projects, setProjects] = useState<any>([]);
+  const [messages, setMessages] = useState<any>([]);
+  const [files, setFiles] = useState<any>([]);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showTaskForm, setShowTaskForm] = useState(false);
@@ -416,7 +427,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get status color and icon
 <<<<<<< HEAD
-  const getStatusDisplay = (status: string) => {;
+  const getStatusDisplay = (status: anystring)  => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
@@ -433,7 +444,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get project status color
 <<<<<<< HEAD
-  const getProjectStatusColor = (status: string) => {;
+  const getProjectStatusColor = (status: anystring)  => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'planning': return 'text-blue-400 bg-blue-400/20';
@@ -451,7 +462,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get priority color
 <<<<<<< HEAD
-  const getPriorityColor = (priority: string) => {;
+  const getPriorityColor = (priority: anystring)  => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'low': return 'text-green-400 bg-green-400/20';
@@ -468,7 +479,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get file type icon
 <<<<<<< HEAD
-  const getFileTypeIcon = (type: string) => {;
+  const getFileTypeIcon = (type: anystring)  => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'document': return <FileText className="w-5 h-5" />;
@@ -486,7 +497,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Format file size
 <<<<<<< HEAD
-  const formatFileSize = (size: number) => {;
+  const formatFileSize = (size: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
@@ -494,16 +505,16 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Handle project selection
 <<<<<<< HEAD
-  const handleProjectSelect = (project: Project)  => {;
+  const handleProjectSelect = (project: anyProject)   => {;
     setSelectedProject(project)};
 
   // Handle message reactions
-  const handleProjectSelect = (project: Project) => {;
+  const handleProjectSelect = (project: anyProject)  => {;
     setSelectedProject(project);
   };
 
   // Handle message reactions
-  const handleMessageReaction = (messageId: string, reactionType: string) => {;
+  const handleMessageReaction = (messageId: anystring, reactionType: string)  => {;
     setMessages(prev => prev.map(msg => {;
       if (msg.id === messageId) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -704,8 +715,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.map((member, index)   => (
               <motion.div
                 key={member.id}
                 initial = {

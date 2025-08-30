@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Shield,
   Cloud,
   Zap,
@@ -92,13 +91,13 @@ import {
   Volume2,
   VolumeX
 <<<<<<< HEAD
-const QuickAccess: React.FC = () => {
+const QuickAccess: React.FC = (): JSX.Element => {
 =======
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const QuickAccess: React.FC = () => {;
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+const QuickAccess: React.FC = (): JSX.Element => {;
+  const [hoveredCategory, setHoveredCategory] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState<any>(null);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const QuickAccess: React.FC = (): JSX.Element => {
@@ -339,8 +338,8 @@ const QuickAccess: React.FC = (): JSX.Element => {
         </div>
 
         {/* Quick Links Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {quickLinks.map((link, index)  => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {quickLinks.map((link, index)   => (
             <motion.div
               key={index}
               initial = {
@@ -548,8 +547,8 @@ const QuickAccess: React.FC = (): JSX.Element => {
             <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {categories.map((category, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-4">
+            {categories.map((category, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

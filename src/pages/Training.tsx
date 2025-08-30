@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function Training() {
+export default function Training(...args: any[]): any {
 	return (
 		<div className="min-h-screen bg-slate-900 text-white py-16">
 			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />
@@ -13,13 +13,12 @@ export default function Training() {
 		</div>
 	);
 
-import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Training() {
+import React, { useState } from 'react.ts';
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Training(...args: any[]): any {
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
+import React, { useState  } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { GraduationCap, 
   BookOpen, 
   Users, 
   Clock, 
@@ -55,12 +54,12 @@ import {
   Palette, 
   Smartphone, 
   Eye
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 
-const Training: React.FC = () => {
+const Training: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -196,11 +195,11 @@ const Training: React.FC = () => {
   });
 
 <<<<<<< HEAD
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: anystring)  => {
     return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
   };
 
-  const getLevelColor = (level: string) => {
+  const getLevelColor = (level: anystring)  => {
     switch (level) {
       case 'beginner': return 'text-green-400';
       case 'intermediate': return 'text-yellow-400';
@@ -210,7 +209,7 @@ const Training: React.FC = () => {
 
   };
 
-  const getFormatIcon = (format: string) => {
+  const getFormatIcon = (format: anystring)  => {
     switch (format) {
       case 'online': return <Globe className="w-4 h-4" />;
       case 'in-person': return <MapPin className="w-4 h-4" />;
@@ -220,7 +219,7 @@ const Training: React.FC = () => {
 
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -398,7 +397,7 @@ const Training: React.FC = () => {
                         className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 ${
                           activeFormat === format.id
                             ? 'bg-green-600 text-white'
-                            : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
+                            : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anybg-zion-slate-dark hover:text-white'
                         }`}
                       >
                         {format.name}
@@ -414,14 +413,14 @@ const Training: React.FC = () => {
 
 <<<<<<< HEAD
       {/* Featured Programs */}
-      {trainingPrograms.filter(p => p.featured).length > 0 && (
+      {trainingPrograms.filter(p  => p.featured).length > 0 && (
         <div className="py-12 bg-zion-slate-dark">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Training Programs
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {trainingPrograms.filter(p => p.featured).map((program) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {trainingPrograms.filter(p  => p.featured).map((program) => (
                 <div
                   key={program.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
@@ -442,9 +441,9 @@ const Training: React.FC = () => {
             className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: any0.6, delay: 0.6 }}
           >
-            {filteredPrograms.map((program, index) => (
+            {filteredPrograms.map((program, index)  => (
               <motion.div
                 key={program.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -550,8 +549,8 @@ const Training: React.FC = () => {
           </h2>
 
           {filteredPrograms.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredPrograms.map((program) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredPrograms.map((program)  => (
                 <div
                   key={program.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"

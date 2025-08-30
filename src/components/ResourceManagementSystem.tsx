@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Users,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Users,
   Calendar,
   Clock,
   Target,
@@ -42,11 +41,12 @@ import {
   Unlock
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Resource {
+
 
   id: string;
   name: string;
@@ -66,12 +66,14 @@ interface Resource {
 <<<<<<< HEAD
   utilization: number;
 =======
-  utilization: number}
+utilization: number;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface ResourceStats {
+
 
   totalResources: number;
   availableResources: number;
@@ -81,7 +83,7 @@ interface ResourceStats {
   currentUtilization: number;
   averageCost: number;
 <<<<<<< HEAD
-  topDepartments: Array<{ name: string; count: number; percentage: number }>;
+  topDepartments: Array<any>;
 =======
   topDepartments: Array<any>}
 
@@ -115,11 +117,11 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   showCharts = true,;
   maxResources = 20;
 }) => {;
-  const [resources, setResources] = useState<Resource[]>([]);
-  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [resources, setResources] = useState<any>([]);
+  const [filteredResources, setFilteredResources] = useState<any>([]);
+  const [selectedType, setSelectedType] = useState<any>('all');
+  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+  const [selectedPriority, setSelectedPriority] = useState<any>('all');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -130,7 +132,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   useEffect(() => {
     const sampleResources: Resource[] = [
       {
-        id: '1',
+        id: any'1',
         name: 'AI Development Team',
         type: 'human',
         category: 'Development',
@@ -225,7 +227,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     setFilteredResources(sampleResources)}, []);
 
   // Filter resources
-  useEffect(()  => {
+  useEffect(()   => {
     let filtered = resources;
 
     if (selectedType !== 'all') {
@@ -272,14 +274,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   // Calculate resource stats
   const resourceStats = {
   <<<<<<< HEAD
-    totalResources: resources.length,
-    availableResources: resources.filter(r  => r.status === 'available').length,
-    allocatedResources: resources.filter(r  => r.status === 'allocated').length,
-    maintenanceResources: resources.filter(r  => r.status === 'maintenance').length,
-    totalCapacity: resources.reduce((sum, r)  => sum + r.capacity, 0),
-    currentUtilization: resources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: resources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: (()  => {
+    totalResources: anyresources.length,
+    availableResources: resources.filter(r   => r.status === 'available').length,
+    allocatedResources: anyresources.filter(r   => r.status === 'allocated').length,
+    maintenanceResources: anyresources.filter(r   => r.status === 'maintenance').length,
+    totalCapacity: anyresources.reduce((sum, r)   => sum + r.capacity, 0),
+    currentUtilization: anyresources.reduce((sum, r)   => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: anyresources.reduce((sum, r)   => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: any(()   => {
       const deptCounts = resources.reduce((acc,;
   r) => {;
         acc[r.department] = (acc[r.department] || 0) + 1;
@@ -289,12 +291,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 =======
   totalResources: resources.length,
     availableResources: resources.filter(r = > r.status === 'available').length,
-    allocatedResources: resources.filter(r => r.status === 'allocated').length,
-    maintenanceResources: resources.filter(r => r.status === 'maintenance').length,
-    totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
-    currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,;
-    topDepartments: (() => {;
+    allocatedResources: anyresources.filter(r  => r.status === 'allocated').length,
+    maintenanceResources: anyresources.filter(r  => r.status === 'maintenance').length,
+    totalCapacity: anyresources.reduce((sum, r)  => sum + r.capacity, 0),
+    currentUtilization: anyresources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,;
+    topDepartments: any(()  => {;
       const deptCounts = resources.reduce((acc,;
   ;
   ;
@@ -303,14 +305,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
 <<<<<<< HEAD
-      }, { /* empty */ } as Record<string, number>);
+      }, { /* empty */ } as Record<string, any>);
 =======
       
 
 
 
 
-}, {} as Record<string, number>);
+}, {} as Record<string, any>);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -318,15 +320,15 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         .map(([name, count]) => ({
           name,
           count,
-          percentage: (count / resources.length) * 100
+          percentage: any(count / resources.length) * 100
         }))
-        .sort((a, b)  => b.count - a.count)
+        .sort((a, b)   => b.count - a.count)
         .slice(0, 5)})()
   };
 
   // Get status color and icon
 <<<<<<< HEAD
-  const getStatusDisplay = (status: string) => {;
+  const getStatusDisplay = (status: anystring)  => {;
     switch (status) {;
       case 'available':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -348,7 +350,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Get type icon
 <<<<<<< HEAD
-  const getTypeIcon = (type: string) => {;
+  const getTypeIcon = (type: anystring)  => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'human': return <Users className="w-5 h-5" />;
@@ -366,7 +368,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Get priority color
 <<<<<<< HEAD
-  const getPriorityColor = (priority: string) => {;
+  const getPriorityColor = (priority: anystring)  => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'low': return 'text-green-400 bg-green-400/20';
@@ -383,7 +385,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Format currency
 <<<<<<< HEAD
-  const formatCurrency = (amount: number)  => {
+  const formatCurrency = (amount: anynumber)   => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -392,9 +394,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     }).format(amount)};
 
   // Get utilization color
-  const getUtilizationColor = (utilization: number)  => {
+  const getUtilizationColor = (utilization: anynumber)   => {
 =======;
-  const formatCurrency = (amount: number) => {;
+  const formatCurrency = (amount: anynumber)  => {;
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
@@ -404,7 +406,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get utilization color
-  const getUtilizationColor = (utilization: number) => {;
+  const getUtilizationColor = (utilization: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
@@ -666,8 +668,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Departments by Resources</h3>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-4">
-            {resourceStats.topDepartments.map((dept, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
+            {resourceStats.topDepartments.map((dept, index)   => (
               <motion.div
                 key={dept.name}
                 initial = {

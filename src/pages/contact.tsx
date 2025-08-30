@@ -1,10 +1,9 @@
 <<<<<<< HEAD
-const Contact: React.FC = () => {
+const Contact: React.FC = (): JSX.Element => {
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Phone, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone, 
   Mail, 
   MapPin, 
   Clock, 
@@ -14,9 +13,9 @@ import {
   User,
   MessageSquare,
   Building
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Contact() {
+export default function Contact(...args: any[]): any {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,14 +44,14 @@ export default function Contact() {
   ];
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<any>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -258,14 +257,14 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">
+                  <label htmlFor="comp" className="block text-white font-medium mb-2">
                     Company
                   </label>
                   <input
                     type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    id="comp"
+                    name="comp"
+                    value={formData.comp}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
                     placeholder="Your company name"
@@ -296,9 +295,9 @@ export default function Contact() {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:border-cyan-400 transition-colors"
                 >
-                  {serviceOptions.map((option) => (
+                  {serviceOptions.map((option)  => (
                     <option key={option.value} value={option.value} className="bg-slate-800 text-white">
                       {option.label}
                     </option>

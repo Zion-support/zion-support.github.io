@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function Webinars() {
+export default function Webinars(...args: any[]): any {
 	return (
 		<div className="min-h-screen bg-slate-900 text-white py-16">
 			<SEO title="Webinars - Zion Tech Group" description="Upcoming and past webinars." />
@@ -13,15 +13,14 @@ export default function Webinars() {
 		</div>
 	);
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars() {
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars(...args: any[]): any {
 =======
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  BookOpen, 
+import React, { useState  } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { BookOpen, 
   Brain, 
   Shield, 
   Cloud, 
@@ -45,12 +44,12 @@ import {
   Share2,
   ArrowRight,
   CheckCircle
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 
-const Webinars: React.FC = () => {
+const Webinars: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
@@ -217,7 +216,7 @@ const Webinars: React.FC = () => {
   const allWebinars = [...upcomingWebinars, ...pastWebinars];
 
 <<<<<<< HEAD
-  const filteredWebinars = (showPast ? pastWebinars: upcomingWebinars).filter(webinar  => {;
+  const filteredWebinars = (showPast ? pastWebinars: anyupcomingWebinars).filter(webinar   => {;
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -248,7 +247,7 @@ const Webinars: React.FC = () => {
       />
       
 =======
-      currentAttendees: 189,;
+      currentAttendees: any189,;
       featured: false,;
       tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
       thumbnail: '/images/webinars/zero-trust-security-2025.jpg',;
@@ -258,7 +257,7 @@ const Webinars: React.FC = () => {
   ];
 
   // Update counts
-  React.useEffect(() => {
+  React.useEffect(()  => {
     categories.forEach(cat = > {;
       cat.count = webinars.filter(w => w.category === cat.id).length;
     });
@@ -303,17 +302,17 @@ const Webinars: React.FC = () => {
     return matchesCategory && matchesSearch && matchesTimeFilter;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: anystring)  => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : BookOpen;
   };
 
-  const getCategoryName = (categoryId: string) => {
+  const getCategoryName = (categoryId: anystring)  => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       weekday: 'long', 
@@ -324,7 +323,7 @@ const Webinars: React.FC = () => {
   };
 
 <<<<<<< HEAD
-  const formatTimeUntil = (dateString: string) => {;
+  const formatTimeUntil = (dateString: anystring)  => {;
     const now = new Date();
     const webinarDate = new Date(dateString);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -336,10 +335,10 @@ const Webinars: React.FC = () => {
     return `${Math.ceil(diffDays / 30)} months`;
   };
 
-  const getCategoryIcon = (categoryId: string) => {;
+  const getCategoryIcon = (categoryId: anystring)  => {;
     return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
 =======
-  const getRegistrationStatus = (webinar: any) => {
+  const getRegistrationStatus = (webinar: any)  => {
     if (webinar.isLive) {
       return { status: 'Live Now', color: 'from-red-500 to-pink-500', icon: Play };
     } else if (webinar.attendees >= webinar.maxAttendees) {
@@ -628,9 +627,9 @@ const Webinars: React.FC = () => {
               </motion.div>
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
-                {filteredWebinars.map((webinar) => (
+                {filteredWebinars.map((webinar)  => (
                   <motion.div
                     key={webinar.id}
                     initial={{ opacity: 0, y: 20 }}

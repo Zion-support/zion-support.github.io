@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Atom,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Atom,
   Cpu,
   Zap,
   Brain,
@@ -25,11 +24,11 @@ import {
   Lock,
   Eye
 <<<<<<< HEAD
-export default function QuantumTechnology() {
+export default function QuantumTechnology(...args: any[]): any {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
-export default function QuantumTechnology(...args[]):  {
+export default function QuantumTechnology(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
@@ -262,8 +261,7 @@ export default function QuantumTechnology(...args[]):  {
   };
 
   const filteredApplications = selectedApplication === 'all'
-    ? quantumApplications
-    : quantumApplications.filter(app => app.category === selectedApplication);
+    ? quantumApplications: anyquantumApplications.filter(app  => app.category === selectedApplication);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
@@ -374,9 +372,9 @@ export default function QuantumTechnology(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 
-            {quantumServices.map((service, index) => (
+            {quantumServices.map((service, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -470,10 +468,10 @@ export default function QuantumTechnology(...args[]):  {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 <<<<<<< HEAD
 
-            {applications.map((app) => {
+            {applications.map((app)  => {
 =======
           >
             {applications.map((app)  => {
@@ -499,9 +497,9 @@ export default function QuantumTechnology(...args[]):  {
 
 }};
             transition={{ duration: 0.6 }};
-            viewport={{ once: true }};
+            viewport={{ once: anytrue }};
           >;
-            {applications.map((app) => {;
+            {applications.map((app)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               const Icon = app.icon;
@@ -537,9 +535,9 @@ export default function QuantumTechnology(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 
-            {filteredApplications.map((app, index) => (
+            {filteredApplications.map((app, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -628,9 +626,9 @@ export default function QuantumTechnology(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 
-            {quantumTechnologies.map((tech, index) => (
+            {quantumTechnologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -717,9 +715,9 @@ export default function QuantumTechnology(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 
-            {quantumAdvantages.map((advantage, index) => (
+            {quantumAdvantages.map((advantage, index)  => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -778,7 +776,7 @@ export default function QuantumTechnology(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 
             {[
               {
@@ -805,7 +803,7 @@ export default function QuantumTechnology(...args[]):  {
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
 
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div
                 key={index}
                 className="relative"

@@ -1,41 +1,42 @@
 <<<<<<< HEAD
-import { GetStaticPaths, GetStaticProps  } from 'next.ts'
+import { GetStaticPaths, GetStaticProps   } from 'next.ts'
 import Head from 'next/head.ts'
 import Link from 'next/link.ts'
 import React from 'react.ts'
-import { innovativeRealMicroSaasServices2025  } from "../../data/2025-innovative-real-micro-saas-services"
-import { advancedITServices  } from "../../data/advanced-it-services"
-import { innovativeAIServices  } from "../../data/innovative-ai-services"
-import { addedMicroSaaS2025  } from "../../data/2025-added-micro-saas"
-import { addedITServices2025  } from "../../data/2025-added-it-services"
-import { addedAIServices2025  } from "../../data/2025-added-ai-services"
+import { innovativeRealMicroSaasServices2025   } from '../../data/2025-innovative-real-micro-saas-services'
+import { advancedITServices   } from '../../data/advanced-it-services'
+import { innovativeAIServices   } from '../../data/innovative-ai-services'
+import { addedMicroSaaS2025   } from '../../data/2025-added-micro-saas'
+import { addedITServices2025   } from '../../data/2025-added-it-services'
+import { addedAIServices2025   } from '../../data/2025-added-ai-services'
 =======
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import React from 'react'
-import { innovativeRealMicroSaasServices2025 } from "../../data/2025-innovative-real-micro-saas-services"
-import { advancedITServices } from "../../data/advanced-it-services"
-import { innovativeAIServices } from "../../data/innovative-ai-services"
-import { addedMicroSaaS2025 } from "../../data/2025-added-micro-saas"
-import { addedITServices2025 } from "../../data/2025-added-it-services"
-import { addedAIServices2025 } from "../../data/2025-added-ai-services"
+import { GetStaticPaths, GetStaticProps  } from 'next.ts'
+import { Helmet  } from 'react-helmet-async.ts';
+import { Link  } from 'react-router-dom.ts';
+import React from 'react.ts'
+import { innovativeRealMicroSaasServices2025  } from '../../data/2025-innovative-real-micro-saas-services'
+import { advancedITServices  } from '../../data/advanced-it-services'
+import { innovativeAIServices  } from '../../data/innovative-ai-services'
+import { addedMicroSaaS2025  } from '../../data/2025-added-micro-saas'
+import { addedITServices2025  } from '../../data/2025-added-it-services'
+import { addedAIServices2025  } from '../../data/2025-added-ai-services'
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface ServiceItem {
-<<<<<<< HEAD
-	id: string
-	name: string
-	tagline: string
-	price: string
-	period: string
-	description?: string
-	features: string[]
-	icon?: string
-	color?: string
-	textColor?: string
 
-function collectAllServices(): ServiceItem[] {
-	const arrays: any[] = [
+<<<<<<< HEAD
+id: string;
+name: string;
+tagline: string;
+price: string;
+period: string;
+description?: string;
+features: string[];
+icon?: string;
+color?: string;
+textColor?: string;
+
+function collectAllServices(): ServiceItem[] {;
+const arrays: any[] = [;
 		innovativeRealMicroSaasServices2025,
 		advancedITServices,
 		innovativeAIServices,
@@ -48,17 +49,18 @@ function collectAllServices(): ServiceItem[] {
 		for (const item of arr) {
 			if (item && item.id && !map.has(item.id)) {
 				map.set(item.id, {
-					id: item.id,
-					name: item.name,
-					tagline: item.tagline,
-					price: item.price,
-					period: item.period,
-					description: item.description,
-					features: Array.isArray(item.features) ? item.features : [],
-					icon: item.icon,
-					color: item.color,
-					textColor: item.textColor,
-				})
+id: item.id,;
+name: item.name,;
+tagline: item.tagline,;
+price: item.price,;
+period: item.period,;
+description: item.description,;
+features: Array.isArray(item.features) ? item.features : [],;
+icon: item.icon,;
+color: item.color,;
+textColor: item.textColor,;
+				
+})
 
 
 
@@ -97,10 +99,10 @@ function collectAllServices(): ServiceItem[] {
 	return { props: { service } }
 <<<<<<< HEAD
 
-export default function ServiceDetail({ service }: { service: ServiceItem }) {
+export default function ServiceDetail(...args: any[]): any {
 =======
 }
-export default function ServiceDetail(...args[]):  {
+export default function ServiceDetail(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'

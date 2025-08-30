@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
 <<<<<<< HEAD
   Workflow,
   Shield,
@@ -27,10 +26,11 @@ import {
   Clock,
   CheckCircle,
   Search
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 interface Service {
+
 
   id: string;
   title: string;
@@ -42,7 +42,8 @@ interface Service {
   roi: string;
   marketSize: string;
   path: string;
-  category: string}
+category: string;
+}
 
 const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
   <motion.div
@@ -250,7 +251,7 @@ const services: Service[] = [
 
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
-export default function EnhancedServicesShowcase(...args[]):  {
+export default function EnhancedServicesShowcase(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -284,7 +285,7 @@ export default function EnhancedServicesShowcase(...args[]):  {
 }}
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const EnhancedServicesShowcase: React.FC = () => {
+export const EnhancedServicesShowcase: React.FC = (): JSX.Element => {
   const services = [
     {
       title: 'AI Workflow Automation',
@@ -403,13 +404,12 @@ export const EnhancedServicesShowcase: React.FC = () => {
 
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
-export default function EnhancedServicesShowcase() {
+export default function EnhancedServicesShowcase(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [hoveredService, setHoveredService] = useState<any>(null);
 
   const filteredServices = selectedCategory === 'All'
-    ? services
-    : services.filter(service => service.category === selectedCategory);
+    ? services: anyservices.filter(service  => service.category === selectedCategory);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
@@ -499,7 +499,7 @@ export default function EnhancedServicesShowcase() {
 
 =======
           viewport = {
-  { once: true,
+  { once: anytrue,
   margin: "-100px" 
 
 
@@ -510,7 +510,7 @@ export default function EnhancedServicesShowcase() {
 }}
         >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          {services.map((service, index) => (
+          {services.map((service, index)  => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -731,7 +731,7 @@ export default function EnhancedServicesShowcase() {
 
 =======
           transition = {
-  { duration: 0.6,
+  { duration: any0.6,
   delay: 0.3 
 
 
@@ -742,7 +742,7 @@ export default function EnhancedServicesShowcase() {
 }}
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
-          {categories.map((category, index) => (
+          {categories.map((category, index)  => (
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -791,8 +791,8 @@ export default function EnhancedServicesShowcase() {
         {/* Services Grid */}
         <div className="max-w-7xl mx-auto">
           {filteredServices.length > 0 ? (
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)   => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </div>

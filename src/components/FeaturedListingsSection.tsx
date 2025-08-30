@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar import { Link } from 'react-router-dom';
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar import { Link  } from 'react-router-dom.ts';
+=======
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar   } from 'lucide-react.ts';
+import { Link   } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const featuredListings = [
@@ -128,14 +128,13 @@ const featuredServices = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export function FeaturedListingsSection() {
+export function FeaturedListingsSection(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
+  const [hoveredListing, setHoveredListing] = useState<any>(null);
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredListings = selectedCategory === "All"
-    ? featuredListings
-    : featuredListings.filter(listing => listing.category === selectedCategory);
+    ? featuredListings: anyfeaturedListings.filter(listing  => listing.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -148,8 +147,8 @@ export function FeaturedListingsSection() {
 
   };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: anynumber)  => {
+    return Array.from({ length: any5 }, (_, i)  => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
@@ -192,8 +191,8 @@ export function FeaturedListingsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredServices.map((service, index)  => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">

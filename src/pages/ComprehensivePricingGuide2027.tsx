@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import {
-  Search,
+import { Search,
   Filter,
   Star,
   TrendingUp,
@@ -14,9 +13,8 @@ import {
   Lock,
   ArrowRight,
 =======
-import { Link } from 'react-router-dom';
-import {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { Link  } from 'react-router-dom.ts';
+import { >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   Star,
   Zap,
@@ -61,7 +59,7 @@ import {
   Mail as MailIcon,
   MapPin,
   Globe as GlobeIcon
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
   Brain,
   Cpu,
@@ -84,10 +82,11 @@ import { SEO } from '../components/SEO';
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
+import { INNOVATIVE_SERVICES_2025, InnovativeService2025  } from '../data/innovativeServices2025';
 
 <<<<<<< HEAD
 interface Service {
+
 
   id: string;
   title: string;
@@ -107,10 +106,11 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
-    website: string};
+website: string;
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -165,7 +165,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
   ];
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'AI & Automation':
         return <Brain className="w-6 h-6" />;
@@ -192,18 +192,17 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 
   };
 
-  const getPriceRangeFilter = (range: string) => {
+  const getPriceRangeFilter = (range: anystring)  => {
     switch (range) {
       case 'Under $1,000':
-        return (service: InnovativeService2025) => service.price < 1000;
+        return (service: anyInnovativeService2025)  => service.price < 1000;
       case '$1,000 - $2,999':
-        return (service: InnovativeService2025) => service.price >= 1000 && service.price <= 2999;
+        return (service: anyInnovativeService2025)  => service.price >= 1000 && service.price <= 2999;
       case '$3,000 - $4,999':
-        return (service: InnovativeService2025) => service.price >= 3000 && service.price <= 4999;
+        return (service: anyInnovativeService2025)  => service.price >= 3000 && service.price <= 4999;
       case '$5,000+':
-        return (service: InnovativeService2025) => service.price >= 5000;
-      default:
-        return () => true;
+        return (service: anyInnovativeService2025)  => service.price >= 5000;
+      default: anyreturn ()  => true;
 
   };
 
@@ -217,7 +216,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (level: anystring)  => {
     switch (level) {
       case 'Revolutionary':
         return 'bg-gradient-to-r from-purple-500 to-pink-500';
@@ -230,7 +229,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 
   };
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: anystring)  => {
     const newExpanded = new Set(expandedServices);
     if (newExpanded.has(serviceId)) {
       newExpanded.delete(serviceId);
@@ -240,7 +239,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
     setExpandedServices(newExpanded);
   };
 =======
-  const getCategoryIcon = (category: string)  => {;
+  const getCategoryIcon = (category: anystring)   => {;
     switch (category) {;
       case 'AI Security': return <Shield className="w-5 h-5" />;
       case 'AI Finance': return <DollarSign className="w-5 h-5" />;
@@ -256,7 +255,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
       default: return <Target className = "w-5 h-5" />};
   };
 
-  const getInnovationLevelColor = (level: string)  => {;
+  const getInnovationLevelColor = (level: anystring)   => {;
     switch (level) {;
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Cutting-edge': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -264,7 +263,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
       default: return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
 
-  const toggleServiceExpansion = (serviceId: string)  => {;
+  const toggleServiceExpansion = (serviceId: anystring)   => {;
     const newExpanded = new Set(expandedServices);
     if (newExpanded.has(serviceId)) {
       newExpanded.delete(serviceId)} else {
@@ -272,7 +271,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
     setExpandedServices(newExpanded)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const getPriceRangeLabel = (range: string)  => {;
+  const getPriceRangeLabel = (range: anystring)   => {;
     switch (range) {;
       case '0-1000': return '$0 - $1,000/month';
       case '1000-2500': return '$1,000 - $2,500/month';
@@ -337,7 +336,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
           </motion.div>
         </div>
 =======
-export default function ComprehensivePricingGuide2027() {
+export default function ComprehensivePricingGuide2027(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = React.useState('all');
 
   const allServices = [...REAL_INNOVATIVE_SERVICES_2025, ...COMPREHENSIVE_MICRO_SAAS_SERVICES_2025];
@@ -366,24 +365,24 @@ export default function ComprehensivePricingGuide2027() {
     return selectedCategory === 'all' || service.category === selectedCategory;
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Sparkles;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-purple-500 to-pink-500';
   };
 
-  const getPricingTier = (price: number) => {
+  const getPricingTier = (price: anynumber)  => {
     if (price < 200) return { tier: 'Starter', icon: Star, color: 'from-green-500 to-emerald-500' };
     if (price < 1000) return { tier: 'Professional', icon: Gem, color: 'from-blue-500 to-cyan-500' };
     if (price < 3000) return { tier: 'Business', icon: Crown, color: 'from-purple-500 to-pink-500' };
     return { tier: 'Enterprise', icon: Diamond, color: 'from-red-500 to-orange-500' };
   };
 
-  const getInnovationBadge = (level: string) => {
+  const getInnovationBadge = (level: anystring)  => {
     switch (level.toLowerCase()) {
       case 'advanced':
         return { text: 'Advanced AI', color: 'bg-gradient-to-r from-purple-500 to-pink-500', icon: Brain };
@@ -509,9 +508,9 @@ export default function ComprehensivePricingGuide2027() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer"
 
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -523,9 +522,9 @@ export default function ComprehensivePricingGuide2027() {
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer"
 
-                  {priceRanges.map(range => (
+                  {priceRanges.map(range  => (
                     <option key={range} value={range}>{range}</option>
                   ))}
                 </select>
@@ -564,8 +563,8 @@ export default function ComprehensivePricingGuide2027() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -606,8 +605,8 @@ export default function ComprehensivePricingGuide2027() {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-white mb-4">What's Included:</h4>
-                  {tier.features.map((feature, featureIndex) => (
+                  <h4 className="font-semibold text-white mb-4">What's Included: any</h4>
+                  {tier.features.map((feature, featureIndex)  => (
                     <div key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
@@ -656,8 +655,8 @@ export default function ComprehensivePricingGuide2027() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -920,8 +919,8 @@ export default function ComprehensivePricingGuide2027() {
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-white text-sm">Key Benefits:</h4>
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                    <h4 className="font-semibold text-white text-sm">Key Benefits: any</h4>
+                    {service.benefits.slice(0, 3).map((benefit, benefitIndex)  => (
                       <div key={benefitIndex} className="flex items-start space-x-2">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                         <span className="text-zion-slate-light text-sm">{benefit}</span>
@@ -1002,7 +1001,7 @@ export default function ComprehensivePricingGuide2027() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
                 tier: 'Starter', 
@@ -1036,7 +1035,7 @@ export default function ComprehensivePricingGuide2027() {
                 description: 'For large corporations',
                 features: ['Full customization', '24/7 support', 'White-label options']
               }
-            ].map((tier, index) => (
+            ].map((tier, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -1073,8 +1072,8 @@ export default function ComprehensivePricingGuide2027() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
             <h3 className="text-xl font-semibold text-white mb-4 text-center">Filter Services by Category</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-              {categories.map(category => (
+            <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-3">
+              {categories.map(category  => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}

@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO  } from "../components/SEO";
+import { SEO   } from '../components/SEO';
 =======
-import React from 'react';
-import { SEO } from "../components/SEO";
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default function ServicesComparisonPage(...args[]):  {
+export default function ServicesComparisonPage(...args[]: any):  {
   return (
     <>
       <SEO

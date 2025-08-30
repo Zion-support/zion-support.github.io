@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Calendar,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Calendar,
   Clock,
   CheckCircle,
   Circle,
@@ -26,10 +25,11 @@ import {
   Settings
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Project {
+
 
   id: string;
   name: string;
@@ -46,10 +46,12 @@ interface Project {
 <<<<<<< HEAD
   milestones: Milestone[];
 =======
-  milestones: Milestone[]}
+milestones: Milestone[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Milestone {
+
 
   id: string;
   title: string;
@@ -60,7 +62,8 @@ interface Milestone {
 <<<<<<< HEAD
   priority: 'low' | 'medium' | 'high';
 =======
-  priority: 'low' | 'medium' | 'high'}
+priority: 'low' | 'medium' | 'high';
+}
 
 interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -88,10 +91,10 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   showStats = true,;
   maxProjects = 10;
 }) => {;
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [projects, setProjects] = useState<any>([]);
+  const [filteredProjects, setFilteredProjects] = useState<any>([]);
+  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+  const [selectedPriority, setSelectedPriority] = useState<any>('all');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('timeline');
@@ -102,7 +105,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   useEffect(() => {
     const sampleProjects: Project[] = [
       {
-        id: '1',
+        id: any'1',
         name: 'AI-Powered Customer Analytics Platform',
         description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
         status: 'active',
@@ -218,7 +221,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     setFilteredProjects(sampleProjects)}, []);
 
   // Filter projects
-  useEffect(()  => {
+  useEffect(()   => {
     let filtered = projects;
 
     if (selectedStatus !== 'all') {
@@ -259,28 +262,28 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   // Calculate project stats
   const projectStats = {
   <<<<<<< HEAD
-    total: projects.length,
-    active: projects.filter(p  => p.status === 'active').length,
-    completed: projects.filter(p  => p.status === 'completed').length,
-    onHold: projects.filter(p  => p.status === 'on-hold').length,
-    totalBudget: projects.reduce((sum, p)  => sum + p.budget, 0),
-    averageProgress: projects.reduce((sum, p)  => sum + p.progress,
+    total: anyprojects.length,
+    active: projects.filter(p   => p.status === 'active').length,
+    completed: anyprojects.filter(p   => p.status === 'completed').length,
+    onHold: anyprojects.filter(p   => p.status === 'on-hold').length,
+    totalBudget: anyprojects.reduce((sum, p)   => sum + p.budget, 0),
+    averageProgress: anyprojects.reduce((sum, p)   => sum + p.progress,
   0) / projects.length || 0;
   ;
 
 };
 
   // Get status color and icon
-  const getStatusDisplay = (status: string)  => {
+  const getStatusDisplay = (status: anystring)   => {
     switch (status) {
       case 'planning':
 =======
-  total: projects.length,
-    active: projects.filter(p => p.status === 'active').length,
-    completed: projects.filter(p => p.status === 'completed').length,
-    onHold: projects.filter(p => p.status === 'on-hold').length,;
-    totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),;
-    averageProgress: projects.reduce((sum, p) => sum + p.progress,;
+  total: anyprojects.length,
+    active: projects.filter(p  => p.status === 'active').length,
+    completed: anyprojects.filter(p  => p.status === 'completed').length,
+    onHold: anyprojects.filter(p  => p.status === 'on-hold').length,;
+    totalBudget: anyprojects.reduce((sum, p)  => sum + p.budget, 0),;
+    averageProgress: anyprojects.reduce((sum, p)  => sum + p.progress,;
   ;
   ;
   0) / projects.length || 0;
@@ -292,7 +295,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 };
 
   // Get status color and icon
-  const getStatusDisplay = (status: string) => {;
+  const getStatusDisplay = (status: anystring)  => {;
     switch (status) {;
       case 'planning':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -316,7 +319,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Get priority color
 <<<<<<< HEAD
-  const getPriorityColor = (priority: string) => {;
+  const getPriorityColor = (priority: anystring)  => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'low': return 'text-green-400 bg-green-400/20';
@@ -333,7 +336,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Get milestone status color
 <<<<<<< HEAD
-  const getMilestoneStatusColor = (status: string) => {;
+  const getMilestoneStatusColor = (status: anystring)  => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
@@ -350,7 +353,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Format currency
 <<<<<<< HEAD
-  const formatCurrency = (amount: number)  => {
+  const formatCurrency = (amount: anynumber)   => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -359,9 +362,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     }).format(amount)};
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: string)  => {
+  const getDaysRemaining = (endDate: anystring)   => {
 =======;
-  const formatCurrency = (amount: number) => {;
+  const formatCurrency = (amount: anynumber)  => {;
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
@@ -371,7 +374,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: string) => {;
+  const getDaysRemaining = (endDate: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const end = new Date(endDate);
     const today = new Date();

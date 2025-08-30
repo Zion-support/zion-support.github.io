@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import {
-  Users,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, useAnimation  } from 'framer-motion.ts';
+import { useInView  } from 'react-intersection-observer.ts';
+import { Users,
   Globe,
   TrendingUp,
   Star,
@@ -12,10 +11,11 @@ import {
   Rocket
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Stat {
+
 
   id: string;
   icon: React.ComponentType<any>;
@@ -26,7 +26,8 @@ interface Stat {
 <<<<<<< HEAD
   gradient: string;
 =======
-  gradient: string}
+gradient: string;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const stats: Stat[] = [
@@ -87,19 +88,19 @@ const stats: Stat[] = [
 ];
 
 <<<<<<< HEAD
-export default function EnhancedStatsSection() {
-  const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({ /* empty */ });
+export default function EnhancedStatsSection(...args: any[]): any {
+  const [countedValues, setCountedValues] = useState<any>({ /* empty */ });
 =======
-export default function EnhancedStatsSection(...args[]):  {
+export default function EnhancedStatsSection(...args[]: any):  {
   const [countedValues, setCountedValues] = useState<any>({});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: any0.3,
     triggerOnce: true
   });
 
-  useEffect(()  => {
+  useEffect(()   => {
     if (inView) {
 <<<<<<< HEAD
       controls.start('visible');
@@ -222,8 +223,8 @@ export default function EnhancedStatsSection(...args[]):  {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-          {stats.map((stat, index)  => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {stats.map((stat, index)   => (
             <motion.div
               key={stat.id}
               initial = {

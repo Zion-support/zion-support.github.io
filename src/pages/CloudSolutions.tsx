@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Cloud,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Cloud,
   Server,
   Database,
   Shield,
@@ -16,11 +15,11 @@ import {
   Settings,
   Users
 <<<<<<< HEAD
-export default function CloudSolutions() {
+export default function CloudSolutions(...args: any[]): any {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
-export default function CloudSolutions(...args[]):  {
+export default function CloudSolutions(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const cloudServices = [
     {
@@ -297,9 +296,9 @@ export default function CloudSolutions(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 
-            {cloudServices.map((service, index) => (
+            {cloudServices.map((service, index)  => (
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -383,9 +382,9 @@ export default function CloudSolutions(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -444,9 +443,9 @@ export default function CloudSolutions(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
 
-            {technologies.map((tech, index) => (
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 className="text-center group"

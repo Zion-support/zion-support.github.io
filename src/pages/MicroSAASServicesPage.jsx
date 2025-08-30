@@ -1,628 +1,39 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
-export default function MicroSAASServicesPage() {
-    const microSAASServices = [
-        {
-            id: "crm-saas",
-            title: "ZionCRM Pro",
-            description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.",
-            icon: <Users className="h-8 w-8 text-blue-500"/>,
-            price: 29,
-            currency: "$",
-            features: [
-                "Contact Management",
-                "Sales Pipeline",
-                "Lead Scoring",
-                "Email Automation",
-                "Analytics Dashboard",
-                "Mobile App"
-            ],
-            category: "Business Tools",
-            badge: "Popular",
-            link: "https://ziontechgroup.com/zion-crm",
-            details: "Streamline your sales process with our comprehensive CRM solution. Track leads, manage contacts, and close more deals with intelligent automation and insights.",
-            pricing: {
-                starter: "$29/month",
-                professional: "$79/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.8,
-            reviewCount: 342
-        },
-        {
-            id: "project-management",
-            title: "ZionProject Hub",
-            description: "Project management platform with task tracking, team collaboration, and resource management.",
-            icon: <Calendar className="h-8 w-8 text-green-500"/>,
-            price: 19,
-            currency: "$",
-            features: [
-                "Task Management",
-                "Team Collaboration",
-                "Time Tracking",
-                "Resource Planning",
-                "Gantt Charts",
-                "File Sharing"
-            ],
-            category: "Project Management",
-            badge: "Essential",
-            link: "https://ziontechgroup.com/zion-project",
-            details: "Keep your projects on track with our intuitive project management platform. Collaborate with your team, track progress, and deliver results on time.",
-            pricing: {
-                starter: "$19/month",
-                professional: "$49/month",
-                enterprise: "$99/month"
-            },
-            freeTrial: "30 days",
-            rating: 4.7,
-            reviewCount: 267
-        },
-        {
-            id: "analytics-platform",
-            title: "ZionAnalytics",
-            description: "Business intelligence platform with real-time dashboards, reporting, and data visualization.",
-            icon: <BarChart3 className="h-8 w-8 text-purple-500"/>,
-            price: 39,
-            currency: "$",
-            features: [
-                "Real-time Dashboards",
-                "Custom Reports",
-                "Data Integration",
-                "Predictive Analytics",
-                "Export Options",
-                "API Access"
-            ],
-            category: "Analytics",
-            badge: "Insightful",
-            link: "https://ziontechgroup.com/zion-analytics",
-            details: "Transform your data into actionable insights with our powerful analytics platform. Create custom dashboards, generate reports, and make data-driven decisions.",
-            pricing: {
-                starter: "$39/month",
-                professional: "$89/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "21 days",
-            rating: 4.9,
-            reviewCount: 189
-        },
-        {
-            id: "communication-tool",
-            title: "ZionChat",
-            description: "Team communication platform with chat, video calls, and file sharing capabilities.",
-            icon: <MessageSquare className="h-8 w-8 text-orange-500"/>,
-            price: 15,
-            currency: "$",
-            features: [
-                "Team Chat",
-                "Video Calls",
-                "File Sharing",
-                "Screen Sharing",
-                "Mobile App",
-                "Integrations"
-            ],
-            category: "Communication",
-            badge: "Collaborative",
-            link: "https://ziontechgroup.com/zion-chat",
-            details: "Connect your team with our modern communication platform. Chat, call, and collaborate seamlessly across all devices and platforms.",
-            pricing: {
-                starter: "$15/month",
-                professional: "$39/month",
-                enterprise: "$79/month"
-            },
-            freeTrial: "7 days",
-            rating: 4.6,
-            reviewCount: 198
-        },
-        {
-            id: "document-management",
-            title: "ZionDocs",
-            description: "Document management system with version control, collaboration, and secure storage.",
-            icon: <FileText className="h-8 w-8 text-cyan-500"/>,
-            price: 25,
-            currency: "$",
-            features: [
-                "Document Storage",
-                "Version Control",
-                "Collaborative Editing",
-                "Search & Indexing",
-                "Access Control",
-                "Backup & Recovery"
-            ],
-            category: "Document Management",
-            badge: "Secure",
-            link: "https://ziontechgroup.com/zion-docs",
-            details: "Organize and secure your documents with our enterprise-grade document management system. Collaborate with your team while maintaining version control and security.",
-            pricing: {
-                starter: "$25/month",
-                professional: "$59/month",
-                enterprise: "$129/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.8,
-            reviewCount: 156
-        },
-        {
-            id: "payment-processor",
-            title: "ZionPay",
-            description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",
-            icon: <CreditCard className="h-8 w-8 text-emerald-500"/>,
-            price: 0,
-            currency: "$",
-            features: [
-                "Multiple Payment Methods",
-                "Recurring Billing",
-                "Invoice Generation",
-                "Fraud Protection",
-                "Analytics Dashboard",
-                "API Integration"
-            ],
-            category: "Payments",
-            badge: "Free",
-            link: "https://ziontechgroup.com/zion-pay",
-            details: "Accept payments from customers worldwide with our secure payment processing solution. Support multiple payment methods and automate your billing processes.",
-            pricing: {
-                starter: "2.9% + $0.30",
-                professional: "2.5% + $0.30",
-                enterprise: "2.2% + $0.30"
-            },
-            freeTrial: "No setup fees",
-            rating: 4.9,
-            reviewCount: 423
-        },
-        {
-            id: "marketing-automation",
-            title: "ZionMarketing",
-            description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",
-            icon: <BarChart className="h-8 w-8 text-pink-500"/>,
-            price: 49,
-            currency: "$",
-            features: [
-                "Email Campaigns",
-                "Lead Nurturing",
-                "A/B Testing",
-                "Conversion Tracking",
-                "Marketing Analytics",
-                "CRM Integration"
-            ],
-            category: "Marketing",
-            badge: "Automated",
-            link: "https://ziontechgroup.com/zion-marketing",
-            details: "Automate your marketing efforts and nurture leads effectively with our comprehensive marketing automation platform. Track conversions and optimize your campaigns.",
-            pricing: {
-                starter: "$49/month",
-                professional: "$99/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.7,
-            reviewCount: 234
-        },
-        {
-            id: "inventory-management",
-            title: "ZionInventory",
-            description: "Inventory management system with stock tracking, order management, and supplier management.",
-            icon: <Building className="h-8 w-8 text-indigo-500"/>,
-            price: 35,
-            currency: "$",
-            features: [
-                "Stock Tracking",
-                "Order Management",
-                "Supplier Management",
-                "Barcode Scanning",
-                "Low Stock Alerts",
-                "Reporting Tools"
-            ],
-            category: "Inventory",
-            badge: "Efficient",
-            link: "https://ziontechgroup.com/zion-inventory",
-            details: "Keep track of your inventory in real-time with our comprehensive inventory management system. Prevent stockouts and optimize your supply chain.",
-            pricing: {
-                starter: "$35/month",
-                professional: "$79/month",
-                enterprise: "$149/month"
-            },
-            freeTrial: "21 days",
-            rating: 4.8,
-            reviewCount: 178
-        },
-        {
-            id: "hr-management",
-            title: "ZionHR",
-            description: "Human resources management platform with employee onboarding, time tracking, and performance management.",
-            icon: <Users className="h-8 w-8 text-teal-500"/>,
-            price: 45,
-            currency: "$",
-            features: [
-                "Employee Onboarding",
-                "Time Tracking",
-                "Performance Reviews",
-                "Leave Management",
-                "Payroll Integration",
-                "Compliance Tools"
-            ],
-            category: "HR Management",
-            badge: "Comprehensive",
-            link: "https://ziontechgroup.com/zion-hr",
-            details: "Streamline your HR processes with our comprehensive human resources management platform. Manage employees, track performance, and ensure compliance.",
-            pricing: {
-                starter: "$45/month",
-                professional: "$89/month",
-                enterprise: "$179/month"
-            },
-            freeTrial: "30 days",
-            rating: 4.6,
-            reviewCount: 145
-        },
-        {
-            id: "accounting-software",
-            title: "ZionBooks",
-            description: "Cloud-based accounting software with invoicing, expense tracking, and financial reporting.",
-            icon: <BarChart3 className="h-8 w-8 text-amber-500"/>,
-            price: 30,
-            currency: "$",
-            features: [
-                "Invoicing",
-                "Expense Tracking",
-                "Financial Reports",
-                "Bank Reconciliation",
-                "Tax Preparation",
-                "Multi-currency"
-            ],
-            category: "Accounting",
-            badge: "Financial",
-            link: "https://ziontechgroup.com/zion-books",
-            details: "Manage your business finances with our cloud-based accounting software. Create invoices, track expenses, and generate comprehensive financial reports.",
-            pricing: {
-                starter: "$30/month",
-                professional: "$69/month",
-                enterprise: "$129/month"
-            },
-            freeTrial: "30 days",
-            rating: 4.8,
-            reviewCount: 267
-        },
-        {
-            id: "ecommerce-platform",
-            title: "ZionShop",
-            description: "E-commerce platform with online store creation, payment processing, and inventory management.",
-            icon: <Globe className="h-8 w-8 text-red-500"/>,
-            price: 40,
-            currency: "$",
-            features: [
-                "Online Store Builder",
-                "Payment Processing",
-                "Inventory Management",
-                "Order Fulfillment",
-                "Marketing Tools",
-                "Analytics Dashboard"
-            ],
-            category: "E-commerce",
-            badge: "Complete",
-            link: "https://ziontechgroup.com/zion-shop",
-            details: "Create and manage your online store with our comprehensive e-commerce platform. Sell products, process payments, and grow your business online.",
-            pricing: {
-                starter: "$40/month",
-                professional: "$89/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.7,
-            reviewCount: 198
-        },
-        {
-            id: "learning-platform",
-            title: "ZionAcademy",
-            description: "Online learning management system with course creation, student management, and progress tracking.",
-            icon: <FileText className="h-8 w-8 text-violet-500"/>,
-            price: 55,
-            currency: "$",
-            features: [
-                "Course Creation",
-                "Student Management",
-                "Progress Tracking",
-                "Assessment Tools",
-                "Video Streaming",
-                "Mobile Learning"
-            ],
-            category: "Education",
-            badge: "Educational",
-            link: "https://ziontechgroup.com/zion-academy",
-            details: "Create and deliver online courses with our comprehensive learning management system. Engage students and track their progress effectively.",
-            pricing: {
-                starter: "$55/month",
-                professional: "$109/month",
-                enterprise: "$249/month"
-            },
-            freeTrial: "21 days",
-            rating: 4.9,
-            reviewCount: 167
-        },
-        {
-            id: "ai-content-generator",
-            title: "ZionAI Writer",
-            description: "AI-powered content generation platform for blogs, marketing copy, and creative writing.",
-            icon: <BarChart3 className="h-8 w-8 text-rose-500"/>,
-            price: 39,
-            currency: "$",
-            features: [
-                "AI Content Generation",
-                "SEO Optimization",
-                "Plagiarism Detection",
-                "Multi-language Support",
-                "Content Templates",
-                "Brand Voice Training"
-            ],
-            category: "AI Tools",
-            badge: "AI-Powered",
-            link: "https://ziontechgroup.com/zion-ai-writer",
-            details: "Generate high-quality, SEO-optimized content in seconds with our advanced AI writing platform. Save time and improve your content strategy.",
-            pricing: {
-                starter: "$39/month",
-                professional: "$79/month",
-                enterprise: "$159/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.8,
-            reviewCount: 234
-        },
-        {
-            id: "blockchain-wallet",
-            title: "ZionWallet",
-            description: "Secure cryptocurrency wallet with DeFi integration, staking, and portfolio management.",
-            icon: <Globe className="h-8 w-8 text-emerald-500"/>,
-            price: 0,
-            currency: "$",
-            features: [
-                "Multi-chain Support",
-                "DeFi Integration",
-                "Staking Rewards",
-                "Portfolio Tracking",
-                "Security Features",
-                "Mobile & Desktop"
-            ],
-            category: "Blockchain",
-            badge: "Web3 Ready",
-            link: "https://ziontechgroup.com/zion-wallet",
-            details: "Manage your cryptocurrency portfolio with our secure, multi-chain wallet. Access DeFi protocols and earn staking rewards.",
-            pricing: {
-                starter: "Free",
-                professional: "$9/month",
-                enterprise: "$29/month"
-            },
-            freeTrial: "Always free",
-            rating: 4.7,
-            reviewCount: 189
-        },
-        {
-            id: "quantum-computing",
-            title: "ZionQuantum",
-            description: "Quantum computing platform for complex problem solving and optimization.",
-            icon: <BarChart3 className="h-8 w-8 text-indigo-500"/>,
-            price: 299,
-            currency: "$",
-            features: [
-                "Quantum Algorithms",
-                "Problem Optimization",
-                "API Access",
-                "Quantum Simulators",
-                "Expert Support",
-                "Research Tools"
-            ],
-            category: "Quantum Computing",
-            badge: "Cutting-Edge",
-            link: "https://ziontechgroup.com/zion-quantum",
-            details: "Access quantum computing power for complex optimization problems, cryptography, and scientific research.",
-            pricing: {
-                starter: "$299/month",
-                professional: "$799/month",
-                enterprise: "$1,999/month"
-            },
-            freeTrial: "7 days",
-            rating: 4.9,
-            reviewCount: 89
-        },
-        {
-            id: "iot-platform",
-            title: "ZionIoT Hub",
-            description: "Internet of Things platform for device management, data collection, and automation.",
-            icon: <Building className="h-8 w-8 text-cyan-500"/>,
-            price: 45,
-            currency: "$",
-            features: [
-                "Device Management",
-                "Real-time Monitoring",
-                "Data Analytics",
-                "Automation Rules",
-                "API Integration",
-                "Mobile App"
-            ],
-            category: "IoT",
-            badge: "Connected",
-            link: "https://ziontechgroup.com/zion-iot",
-            details: "Connect and manage your IoT devices with our comprehensive platform. Monitor, analyze, and automate your connected ecosystem.",
-            pricing: {
-                starter: "$45/month",
-                professional: "$89/month",
-                enterprise: "$179/month"
-            },
-            freeTrial: "30 days",
-            rating: 4.8,
-            reviewCount: 156
-        },
-        {
-            id: "cybersecurity-suite",
-            title: "ZionShield",
-            description: "Comprehensive cybersecurity platform with threat detection, vulnerability scanning, and incident response.",
-            icon: <Shield className="h-8 w-8 text-red-500"/>,
-            price: 89,
-            currency: "$",
-            features: [
-                "Threat Detection",
-                "Vulnerability Scanning",
-                "Incident Response",
-                "Security Monitoring",
-                "Compliance Tools",
-                "24/7 Support"
-            ],
-            category: "Cybersecurity",
-            badge: "Secure",
-            link: "https://ziontechgroup.com/zion-shield",
-            details: "Protect your business with our advanced cybersecurity platform. Detect threats, prevent attacks, and respond to incidents in real-time.",
-            pricing: {
-                starter: "$89/month",
-                professional: "$179/month",
-                enterprise: "$399/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.9,
-            reviewCount: 312
-        },
-        {
-            id: "data-visualization",
-            title: "ZionViz",
-            description: "Advanced data visualization platform with interactive charts, dashboards, and reporting tools.",
-            icon: <BarChart3 className="h-8 w-8 text-purple-500"/>,
-            price: 49,
-            currency: "$",
-            features: [
-                "Interactive Charts",
-                "Custom Dashboards",
-                "Real-time Data",
-                "Export Options",
-                "Templates Library",
-                "Collaboration Tools"
-            ],
-            category: "Data Visualization",
-            badge: "Visual",
-            link: "https://ziontechgroup.com/zion-viz",
-            details: "Transform your data into compelling visual stories with our advanced visualization platform. Create interactive dashboards and reports.",
-            pricing: {
-                starter: "$49/month",
-                professional: "$99/month",
-                enterprise: "$199/month"
-            },
-            freeTrial: "21 days",
-            rating: 4.7,
-            reviewCount: 178
-        },
-        {
-            id: "workflow-automation",
-            title: "ZionFlow",
-            description: "No-code workflow automation platform for business process optimization and task automation.",
-            icon: <Zap className="h-8 w-8 text-yellow-500"/>,
-            price: 35,
-            currency: "$",
-            features: [
-                "Drag & Drop Builder",
-                "Workflow Templates",
-                "Integration Hub",
-                "Conditional Logic",
-                "Analytics Dashboard",
-                "Mobile Access"
-            ],
-            category: "Automation",
-            badge: "Efficient",
-            link: "https://ziontechgroup.com/zion-flow",
-            details: "Automate your business processes with our intuitive no-code platform. Build complex workflows without writing a single line of code.",
-            pricing: {
-                starter: "$35/month",
-                professional: "$69/month",
-                enterprise: "$139/month"
-            },
-            freeTrial: "30 days",
-            rating: 4.8,
-            reviewCount: 203
-        },
-        {
-            id: "supply-chain",
-            title: "ZionSupply",
-            description: "End-to-end supply chain management platform with real-time tracking and optimization.",
-            icon: <Building className="h-8 w-8 text-blue-500"/>,
-            price: 69,
-            currency: "$",
-            features: [
-                "Inventory Tracking",
-                "Supplier Management",
-                "Demand Forecasting",
-                "Route Optimization",
-                "Real-time Updates",
-                "Analytics Reports"
-            ],
-            category: "Supply Chain",
-            badge: "Optimized",
-            link: "https://ziontechgroup.com/zion-supply",
-            details: "Optimize your supply chain operations with real-time tracking, demand forecasting, and intelligent route optimization.",
-            pricing: {
-                starter: "$69/month",
-                professional: "$139/month",
-                enterprise: "$279/month"
-            },
-            freeTrial: "21 days",
-            rating: 4.8,
-            reviewCount: 167
-        },
-        {
-            id: "customer-support",
-            title: "ZionSupport",
-            description: "AI-powered customer support platform with chatbots, ticket management, and knowledge base.",
-            icon: <MessageSquare className="h-8 w-8 text-green-500"/>,
-            price: 29,
-            currency: "$",
-            features: [
-                "AI Chatbots",
-                "Ticket Management",
-                "Knowledge Base",
-                "Live Chat",
-                "Analytics Dashboard",
-                "Multi-channel Support"
-            ],
-            category: "Customer Support",
-            badge: "AI-Powered",
-            link: "https://ziontechgroup.com/zion-support",
-            details: "Deliver exceptional customer support with our AI-powered platform. Automate responses and provide instant solutions.",
-            pricing: {
-                starter: "$29/month",
-                professional: "$59/month",
-                enterprise: "$119/month"
-            },
-            freeTrial: "14 days",
-            rating: 4.7,
-            reviewCount: 234
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
+import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
+import SEO from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+const categories = [
+    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"/>, count: MICRO_SAAS_SERVICES.length },
+    { id: 'AI Services', name: 'AI Services', icon: <Zap className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('AI Services').length },
+    { id: 'IT Services', name: 'IT Services', icon: <Code className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('IT Services').length },
+    { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('Business Solutions').length }
+];
+const pricingModels = [
+    { id: 'all', name: 'All Pricing' },
+    { id: 'monthly', name: 'Monthly' },
+    { id: 'yearly', name: 'Yearly' },
+    { id: 'one-time', name: 'One-time' },
+    { id: 'usage-based', name: 'Usage-based' }
+];
+export default function MicroSaasServicesPage() {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPricing, setSelectedPricing] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
+    const [sortBy, setSortBy] = useState('rating');
+    useEffect(() => {
+        let filtered = MICRO_SAAS_SERVICES;
+        // Filter by category
+        if (selectedCategory !== 'all') {
+            filtered = filtered.filter(service => service.category === selectedCategory);
         }
-    ];
-    const categories = [
-        "All Services",
-        "Business Tools",
-        "Project Management",
-        "Analytics",
-        "Communication",
-        "Document Management",
-        "Payments",
-        "Marketing",
-        "Inventory",
-        "HR Management",
-        "Accounting",
-        "E-commerce",
-        "Education",
-        "AI Tools",
-        "Blockchain",
-        "Quantum Computing",
-        "IoT",
-        "Cybersecurity",
-        "Data Visualization",
-        "Automation",
-        "Supply Chain",
-        "Customer Support"
-    ];
-    const [selectedCategory, setSelectedCategory] = React.useState("All Services");
-    const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
-    React.useEffect(() => {
-        if (selectedCategory === "All Services") {
-            setFilteredServices(microSAASServices);
+        // Filter by pricing model
+        if (selectedPricing !== 'all') {
+            filtered = filtered.filter(service => service.pricingModel === selectedPricing);
         }
         // Filter by search query
         if (searchQuery.trim()) {
@@ -676,7 +87,7 @@ export default function MicroSAASServicesPage() {
 import React, {useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
+import SEO from '@/components/SEO';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
@@ -705,12 +116,8 @@ export default function MicroSaasServicesPage() { /* empty */ }
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-<<<<<<< HEAD
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-=======
-  const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -868,9 +275,7 @@ export default function MicroSaasServicesPage() { /* empty */ }
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation. Transform your business with cutting-edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/micro-saas-services"/>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
-<<<<<<< HEAD
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"/>
         <div className="container mx-auto px-4 relative z-10">
@@ -892,66 +297,76 @@ export default function MicroSaasServicesPage() { /* empty */ }
                 kleber@ziontechgroup.com
               </Button>
             </div>
-=======
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-            Micro SAAS Services
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Powerful, affordable software solutions designed for modern businesses. From CRM to project management, 
-            our micro SAAS services help you grow without breaking the bank.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Explore SAAS Solutions
-            </Button>
-            <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Start Free Trial
-            </Button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </div>
 
       {/* Contact Info Banner */}
-      <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-center">
-            <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-zion-cyan"/>
-              <span className="text-white">+1 302 464 0950</span>
+      <div className="bg-zion-blue-dark/50 border-b border-zion-blue-light/20 py-4">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-zion-slate-light">
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4 text-zion-cyan"/>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
-            <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-zion-cyan"/>
-              <span className="text-white">kleber@ziontechgroup.com</span>
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4 text-zion-cyan"/>
+              <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="h-5 w-5 text-zion-cyan"/>
-              <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4 text-zion-cyan"/>
+              <span>kleber@ziontechgroup.com</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Category Filter */}
-      <div className="py-8 bg-zion-blue-dark/50">
+      {/* Filters and Search */}
+      <div className="sticky top-16 z-40 bg-zion-slate-dark/80 backdrop-blur-md border-b border-zion-blue-light/20 py-4">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (<Button key={category} onClick={() => setSelectedCategory(category)} className={`${selectedCategory === category
+          <div className="flex flex-col lg:flex-row gap-4 items-center">
+            {/* Search */}
+            <div className="flex-1 max-w-md">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"/>
+                <Input placeholder="Search services..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue-dark/50 border-zion-blue-light/30 text-white placeholder:text-zion-slate-light focus:border-zion-purple"/>
+              </div>
+            </div>
+
+            {/* Category Filters */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (<Button key={category.id} variant={selectedCategory === category.id ? "default" : "outline"} size="sm" onClick={() => setSelectedCategory(category.id)} className={selectedCategory === category.id
                 ? "bg-zion-purple text-white"
-                : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}>
-                {category}
-              </Button>))}
+                : "border-zion-blue-light/30 text-zion-slate-light hover:border-zion-purple hover:text-zion-purple"}>
+                  {category.icon}
+                  <span className="ml-2">{category.name}</span>
+                  <Badge variant="secondary" className="ml-2 bg-zion-blue-light/20 text-zion-slate-light">
+                    {category.count}
+                  </Badge>
+                </Button>))}
+            </div>
+
+            {/* Pricing Filter */}
+            <div className="flex gap-2">
+              {pricingModels.map((model) => (<Button key={model.id} variant={selectedPricing === model.id ? "default" : "outline"} size="sm" onClick={() => setSelectedPricing(model.id)} className={selectedPricing === model.id
+                ? "bg-zion-cyan text-white"
+                : "border-zion-blue-light/30 text-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan"}>
+                  {model.name}
+                </Button>))}
+            </div>
+
+            {/* Sort */}
+            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-zion-blue-dark/50 border border-zion-blue-light/30 text-white rounded-md px-3 py-2 text-sm focus:border-zion-purple focus:outline-none">
+              <option value="rating">Sort by Rating</option>
+              <option value="price">Sort by Price</option>
+              <option value="aiScore">Sort by AI Score</option>
+              <option value="newest">Sort by Newest</option>
+            </select>
           </div>
         </div>
       </div>
 
       {/* Services Grid */}
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-12">
         {filteredServices.length === 0 ? (<div className="text-center py-20">
             <div className="text-6xl mb-4">🔍</div>
@@ -976,103 +391,31 @@ export default function MicroSaasServicesPage() { /* empty */ }
               {filteredServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
             </div>
           </>)}
-=======
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (<Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="p-3 rounded-lg bg-zion-blue-dark/50 group-hover:bg-zion-purple/20 transition-colors">
-                      {service.icon}
-                    </div>
-                    {service.badge && (<Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
-                        {service.badge}
-                      </Badge>)}
-                  </div>
-                  <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-zion-slate-light text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pb-4">
-                  <div className="mb-4">
-                    <p className="text-sm text-zion-slate-light mb-3">{service.details}</p>
-                    <div className="grid grid-cols-2 gap-2 mb-4">
-                      {service.features.slice(0, 4).map((feature, index) => (<div key={index} className="flex items-center text-xs text-zion-cyan">
-                          <CheckCircle className="w-3 h-3 mr-2"/>
-                          {feature}
-                        </div>))}
-                    </div>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-2">Pricing Plans:</h4>
-                      <div className="space-y-1">
-                        {Object.entries(service.pricing).map(([plan, price]) => (<div key={plan} className="flex justify-between text-xs">
-                            <span className="text-zion-slate-light capitalize">{plan}:</span>
-                            <span className="text-zion-cyan font-semibold">{String(price)}</span>
-                          </div>))}
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
-                      <span>Free Trial:</span>
-                      <span className="text-zion-cyan font-semibold">{service.freeTrial}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (<Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'}`}/>))}
-                      <span className="text-sm text-zion-slate-light ml-2">({service.reviewCount})</span>
-                    </div>
-                  </div>
-                  <div className="text-center mb-4">
-                    <span className="text-3xl font-bold text-zion-cyan">
-                      {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
-                    </span>
-                    <span className="text-zion-slate-light">
-                      {service.price === 0 ? '' : '/month'}
-                    </span>
-                  </div>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/25 transition-all">
-                    <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2"/>
-                      Start Free Trial
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>))}
-          </div>
-        </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
+      <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">
-            Ready to Transform Your Business with Micro SAAS?
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
           </h2>
-<<<<<<< HEAD
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Our team of experts is ready to help you implement the perfect solution for your business needs.
             Get in touch today for a personalized consultation.
-=======
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
-            improve productivity, and drive growth. No long-term contracts, cancel time.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
-              Start Free Trial
+            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover:from-zion-purple-light hover:to-zion-cyan-light">
+              <Phone className="w-5 h-5 mr-2"/>
+              Call Now: +1 302 464 0950
             </Button>
-            <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <Phone className="h-5 w-5 mr-2"/>
-              Call +1 302 464 0950
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white">
+              <Mail className="w-5 h-5 mr-2"/>
+              Email Us
             </Button>
           </div>
         </div>
       </div>
-    </div>)}
+    </div>
+  );
+}</></></></></></>);
+}

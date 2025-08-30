@@ -1,21 +1,17 @@
-import React from 'react';
-import { cn } from '../../utils/cn';
+import React from 'react.ts';
+import { cn  } from '../../utils/cn';
 
-interface SkeletonProps {
+interface SkeletonProps extends React.PropsWithChildren<{}> {
+
   className?: string;
   width?: string | number;
   height?: string | number;
   variant?: 'text' | 'circular' | 'rectangular' | 'rounded';
   animation?: 'pulse' | 'wave' | 'none';
+
 }
 
-export function Skeleton({ 
-  className, 
-  width, 
-  height, 
-  variant = 'rectangular',
-  animation = 'pulse' 
-}: SkeletonProps) {
+export function Skeleton(...args: any[]): any {
   const baseClasses = 'bg-gray-300 dark:bg-gray-700';
   
   const variantClasses = {
@@ -50,10 +46,10 @@ export function Skeleton({
 }
 
 // Predefined skeleton components for common use cases
-export function SkeletonText({ lines = 3, className }: { lines?: number; className?: string }) {
+export function SkeletonText(...args: any[]): any {
   return (
     <div className={cn('space-y-2', className)}>
-      {Array.from({ length: lines }).map((_, i) => (
+      {Array.from({ length: anylines }).map((_, i)  => (
         <Skeleton
           key={i}
           variant="text"
@@ -65,7 +61,7 @@ export function SkeletonText({ lines = 3, className }: { lines?: number; classNa
   );
 }
 
-export function SkeletonCard({ className }: { className?: string }) {
+export function SkeletonCard(...args: any[]): any {
   return (
     <div className={cn('p-6 space-y-4', className)}>
       <div className="flex items-center space-x-4">
@@ -84,24 +80,20 @@ export function SkeletonCard({ className }: { className?: string }) {
   );
 }
 
-export function SkeletonTable({ rows = 5, columns = 4, className }: { 
-  rows?: number; 
-  columns?: number; 
-  className?: string 
-}) {
+export function SkeletonTable(...args: any[]): any {
   return (
     <div className={cn('space-y-3', className)}>
       {/* Header */}
       <div className="flex space-x-4">
-        {Array.from({ length: columns }).map((_, i) => (
+        {Array.from({ length: anycolumns }).map((_, i)  => (
           <Skeleton key={i} variant="text" width={120} height={20} />
         ))}
       </div>
       
       {/* Rows */}
-      {Array.from({ length: rows }).map((_, rowIndex) => (
+      {Array.from({ length: anyrows }).map((_, rowIndex)  => (
         <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: columns }).map((_, colIndex) => (
+          {Array.from({ length: anycolumns }).map((_, colIndex)  => (
             <Skeleton
               key={colIndex}
               variant="text"
@@ -115,32 +107,24 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
   );
 }
 
-export function SkeletonGrid({ 
-  items = 6, 
-  columns = 3, 
-  className 
-}: { 
-  items?: number; 
-  columns?: number; 
-  className?: string 
-}) {
+export function SkeletonGrid(...args: any[]): any {
   return (
     <div className={cn(
       'grid gap-6',
       columns === 1 && 'grid-cols-1',
       columns === 2 && 'grid-cols-1 md:grid-cols-2',
       columns === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
-      columns === 4 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
+      columns === 4 && 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4',
       className
     )}>
-      {Array.from({ length: items }).map((_, i) => (
+      {Array.from({ length: items }).map((_, i)  => (
         <SkeletonCard key={i} />
       ))}
     </div>
   );
 }
 
-export function SkeletonHero({ className }: { className?: string }) {
+export function SkeletonHero(...args: any[]): any {
   return (
     <div className={cn('space-y-8', className)}>
       {/* Title */}

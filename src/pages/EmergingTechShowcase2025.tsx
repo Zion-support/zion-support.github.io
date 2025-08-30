@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain,
   Cpu,
   Atom,
   Zap,
@@ -13,8 +12,8 @@ import {
   Dna,
   Microscope,
 =======
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect  } from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Brain, 
   Cpu, 
   Atom, 
@@ -43,11 +42,11 @@ import { Brain,
   Pause,
   RotateCcw
 <<<<<<< HEAD
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { EMERGING_TECH_SERVICES_2025  } from "../data/emergingTechServices2025";
+import { EMERGING_TECH_SERVICES_2025   } from '../data/emergingTechServices2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
@@ -55,11 +54,11 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>(null);
 =======
 } from 'lucide-react';
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
+import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
 
-const EmergingTechShowcase2025: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedService, setSelectedService] = useState<any>(null);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [autoPlay, setAutoPlay] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,7 +81,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 <<<<<<< HEAD
     const filteredServices = selectedCategory === 'all';
-    ? EMERGING_TECH_SERVICES_2025: EMERGING_TECH_SERVICES_2025.filter(service  => service.category === selectedCategory);
+    ? EMERGING_TECH_SERVICES_2025: anyEMERGING_TECH_SERVICES_2025.filter(service   => service.category === selectedCategory);
 
   useEffect(() => {
     if (autoPlay) {
@@ -91,7 +90,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
       return () => clearInterval(interval)}
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: string)  => {;
+  const getCategoryIcon = (category: anystring)   => {;
 =======;
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
@@ -106,13 +105,13 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe};
 
 <<<<<<< HEAD
-  const getCategoryColor = (category: string) => {;
+  const getCategoryColor = (category: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-blue-500 to-purple-600'};
@@ -346,12 +345,12 @@ const EmergingTechShowcase2025: React.FC = () => {;
           </div>
 <<<<<<< HEAD
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
 =======
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={service.id}

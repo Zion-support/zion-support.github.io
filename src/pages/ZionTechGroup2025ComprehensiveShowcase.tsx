@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Star, 
   Shield, 
@@ -19,15 +18,15 @@ import {
   Users,
   Target,
   Lightbulb
-} from 'lucide-react';
-import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices } from "../data/zionTechGroup2025ComprehensiveServices";
+ } from 'lucide-react.ts';
+import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices  } from '../data/zionTechGroup2025ComprehensiveServices';
 
-const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
+const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [priceRange, setPriceRange] = useState<any>([0, 10000]);
+  const [sortBy, setSortBy] = useState<any>('name');
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   const filteredServices = useMemo(() => {;
     let services = zionTechGroup2025Services;
@@ -70,7 +69,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
     { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo-500' };
   ];
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
     const categoryData = categories.find(cat => cat.id === category);
     if (categoryData) {
       const IconComponent = categoryData.icon;
@@ -79,7 +78,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
     return <Globe className="w-5 h-5" />;
   };
 
-  const getCategoryColor = (category: string) => {;
+  const getCategoryColor = (category: anystring)  => {;
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.color || 'bg-gray-500';
   };
@@ -299,9 +298,9 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -474,8 +473,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
                         {/* Full Features List */}
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Complete Feature List</h4>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            {service.features.map((feature, idx) => (
+                          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
+                            {service.features.map((feature, idx)  => (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span>{feature}</span>
@@ -487,8 +486,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
                         {/* Full Benefits List */}
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Complete Benefits</h4>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            {service.benefits.map((benefit, idx) => (
+                          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
+                            {service.benefits.map((benefit, idx)  => (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                                 <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />
                                 <span>{benefit}</span>
@@ -500,8 +499,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
                         {/* Use Cases */}
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Use Cases</h4>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            {service.useCases.map((useCase, idx) => (
+                          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
+                            {service.useCases.map((useCase, idx)  => (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                                 <Target className="w-4 h-4 text-orange-400 flex-shrink-0" />
                                 <span>{useCase}</span>

@@ -1,16 +1,15 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { MobileSidebarToggle  } from "./MobileSidebarToggle";
+import { Link, useLocation   } from 'react-router-dom.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { MobileSidebarToggle   } from './MobileSidebarToggle';
 import { Menu, 
 =======
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MobileSidebarToggle } from './MobileSidebarToggle';
-import {
-  Menu,
+import React, { useState, useEffect  } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { MobileSidebarToggle  } from './MobileSidebarToggle';
+import { Menu,
   X,
   Search,
   User,
@@ -186,14 +185,14 @@ import {
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
 <<<<<<< HEAD
-export const FuturisticNavigation: React.FC = () => {
+export const FuturisticNavigation: React.FC = (): JSX.Element => {
 =======
 <<<<<<< HEAD
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 export const FuturisticNavigation: React.FC = (): JSX.Element => {;
 =======;
 } from 'lucide-react';
-export const FuturisticNavigation: React.FC = () => {;
+export const FuturisticNavigation: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
@@ -214,24 +213,24 @@ export const FuturisticNavigation: React.FC = () => {;
   useEffect(() => {
 <<<<<<< HEAD
     setActiveDropdown(null)}, [location.pathname]);
-  const handleSearch = (e: React.FormEvent)  => {;
+  const handleSearch = (e: anyReact.FormEvent)   => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
 =======;
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch = (e: React.FormEvent) => {;
+  const handleSearch = (e: anyReact.FormEvent)  => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
 
   };
-  const toggleDropdown = (dropdown: string) => {;
+  const toggleDropdown = (dropdown: anystring)  => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
-  const toggleDropdown = (dropdown: string)  => {;
+  const toggleDropdown = (dropdown: anystring)   => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   // Enhanced service categories with better organization
   const serviceCategories = [

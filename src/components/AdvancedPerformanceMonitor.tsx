@@ -1,13 +1,16 @@
 <<<<<<< HEAD
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info interface PerformanceMetrics {
-=======
 import React, { useEffect, useState, useCallback, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info  } from 'lucide-react';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info interface PerformanceMetrics {
+
+=======
+import React, { useEffect, useState, useCallback, useMemo  
+} from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info   } from 'lucide-react.ts';
 
 interface PerformanceMetrics {
+
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   fps: number;
@@ -18,10 +21,12 @@ interface PerformanceMetrics {
 <<<<<<< HEAD
   timestamp: number;
 =======
-  timestamp: number}
+timestamp: number;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface PerformanceAlert {
+
 
   id: string;
   type: 'warning' | 'error' | 'info' | 'success';
@@ -31,7 +36,8 @@ interface PerformanceAlert {
 <<<<<<< HEAD
   timestamp: number;
 =======
-  timestamp: number}
+timestamp: number;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
@@ -113,15 +119,15 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       const end = performance.now();
       const latency = end - start;
 <<<<<<< HEAD
-      setMetrics(prev => ({ ...prev, networkLatency: latency }));
+      setMetrics(prev => ({ ...prev, networkLatency: anylatency }));
     } catch (error) {
       // If health check fails, use a default value
-      setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+      setMetrics(prev  => ({ ...prev, networkLatency: 0 }));
 
 =======
-      setMetrics(prev = > ({ ...prev, networkLatency: latency }))} catch (error) {
+      setMetrics(prev = > ({ ...prev, networkLatency: anylatency }))} catch (error) {
       // If health check fails, use a default value;
-      setMetrics(prev  => ({ ...prev, networkLatency: 0 }))};
+      setMetrics(prev   => ({ ...prev, networkLatency: 0 }))};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
@@ -161,7 +167,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 
   // Performance alerts
 <<<<<<< HEAD
-  const checkPerformanceAlerts = useCallback((metrics: PerformanceMetrics) => {;
+  const checkPerformanceAlerts = useCallback((metrics: anyPerformanceMetrics)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newAlerts: PerformanceAlert[] = [];
 
@@ -217,7 +223,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 
     if (metrics.networkLatency > 1000) {
       newAlerts.push({
-        id: `network-${Date.now()}`,
+        id: any`network-${Date.now()}`,
         type: 'warning',
         message: `High network latency: ${metrics.networkLatency.toFixed(0)}ms`,
         metric: 'networkLatency',
@@ -227,7 +233,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       });
 
     if (newAlerts.length > 0) {
-      setAlerts(prev => [...prev, ...newAlerts]);
+      setAlerts(prev  => [...prev, ...newAlerts]);
 
 =======
       })}
@@ -296,14 +302,14 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-  const getScoreColor = (score: number) => {;
+  const getScoreColor = (score: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 80) return 'text-green-400';
     if (score >= 60) return 'text-yellow-400';
     return 'text-red-400'};
 
 <<<<<<< HEAD
-  const getScoreIcon = (score: number) => {;
+  const getScoreIcon = (score: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 80) return <CheckCircle className="w-4 h-4" />;
     if (score >= 60) return <AlertTriangle className="w-4 h-4" />;

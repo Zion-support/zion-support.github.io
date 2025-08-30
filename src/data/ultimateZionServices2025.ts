@@ -3,16 +3,19 @@
 
 export interface ServiceContact {
 
+
   phone: string;
   email: string;
   website: string;
 <<<<<<< HEAD
   address: string;
 =======
-  address: string}
+address: string;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface MicroSaasService {
+
 
   id: number;
   name: string;
@@ -41,10 +44,12 @@ export interface MicroSaasService {
 <<<<<<< HEAD
   technologies: string[];
 =======
-  technologies: string[]}
+technologies: string[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ITService {
+
 
   id: number;
   name: string;
@@ -70,10 +75,12 @@ export interface ITService {
 <<<<<<< HEAD
   technologies: string[];
 =======
-  technologies: string[]}
+technologies: string[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface AIService {
+
 
   id: number;
   name: string;
@@ -100,7 +107,8 @@ export interface AIService {
 <<<<<<< HEAD
   technologies: string[];
 =======
-  technologies: string[]}
+technologies: string[];
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Zion Tech Group Contact Information

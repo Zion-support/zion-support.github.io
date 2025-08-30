@@ -1,19 +1,19 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
+import { SEO   } from '../../components/SEO';
+import { motion   } from 'framer-motion.ts';
+import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle   } from 'lucide-react.ts';
+=======
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle  } from 'lucide-react';
-=======
-import React from 'react';
-import { SEO } from "../../components/SEO";
-import { motion } from 'framer-motion';
 <<<<<<< HEAD
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle export default function BlockchainEnterpriseSolutions() {
+import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle export default function BlockchainEnterpriseSolutions(...args: any[]): any {
 =======
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle } from 'lucide-react';
+import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle  } from 'lucide-react.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default function BlockchainEnterpriseSolutions(...args[]):  {
+export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
@@ -224,8 +224,8 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -306,8 +306,8 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)   => (
               <motion.div
                 key={service.title}
                 initial = {
@@ -402,8 +402,8 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={useCase.name}
                 initial = {

@@ -2,6 +2,7 @@
 // Comprehensive pricing for cutting-edge micro SAAS, IT, and AI services
 
 export interface PricingTier {
+
   id: string;
   name: string;
   price: number;
@@ -12,9 +13,11 @@ export interface PricingTier {
   recommendedFor: string[];
   savings?: number;
   popular?: boolean;
+
 }
 
 export interface EnterprisePricing {
+
   id: string;
   name: string;
   description: string;
@@ -36,13 +39,14 @@ export interface RevolutionaryPricingGuide2030 {
   marketSize: string;
   competitors: string[];
   pricingTiers: RevolutionaryPricingTier2030[];
-  enterprisePricing: {
+enterprisePricing: {;
     custom: string;
     features: string[];
     support: string[];
     sla: string;
     roi: string;
-  };
+  
+};
   marketAnalysis: {
     averageMarketPrice: string;
     priceRange: string;
@@ -68,16 +72,18 @@ export interface RevolutionaryPricingGuide2030 {
   };
 
 export interface ServicePricing {
+
   serviceId: string;
   serviceName: string;
   category: string;
   tiers: PricingTier[];
   enterprise: EnterprisePricing;
-  marketComparison: {
+marketComparison: {;
     competitors: string[];
     ourAdvantage: string;
     priceDifference: string;
-  };
+  
+};
 }
 
 // Zion Tech Group Contact Information
@@ -758,11 +764,11 @@ export const pricingRecommendations = {
 };
 
 <<<<<<< HEAD
-export const getPricingGuideByCategory = (category: string): RevolutionaryPricingGuide2030[] => {
+export const getPricingGuideByCategory = (category: anystring): RevolutionaryPricingGuide2030[]  => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => guide.category === category);
 };
 
-export const getPricingGuideByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryPricingGuide2030[] => {
+export const getPricingGuideByPriceRange = (minPrice: anynumber, maxPrice: number): RevolutionaryPricingGuide2030[]  => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => {
     const minGuidePrice = Math.min(...guide.pricingTiers.map(tier => tier.monthlyPrice));
     return minGuidePrice >= minPrice && minGuidePrice <= maxPrice;
@@ -788,10 +794,10 @@ export const getPricingGuideStats = () => {
   return {
     totalServices,
     totalTiers,
-    averageStarterPrice: Math.round(averageStarterPrice),
+    averageStarterPrice: anyMath.round(averageStarterPrice),
     averageEnterprisePrice: Math.round(averageEnterprisePrice),
-    categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide => guide.category))],
-    subcategories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide => guide.subcategory))]
+    categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide  => guide.category))],
+    subcategories: any[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide  => guide.subcategory))]
   };
 };}}}}}}}}}
 =======

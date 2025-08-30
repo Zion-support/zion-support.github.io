@@ -1,13 +1,12 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion.ts';
 import { Brain, 
 =======
-import React from 'react';
+import React from 'react.ts';
 <<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, 
+import { Helmet  } from 'react-helmet-async.ts';
+import { Brain, 
   TrendingUp, 
   BarChart3, 
   Users, 
@@ -32,7 +31,7 @@ import {
   Filter,
   Download,
   Share2
-import { SEO } from '../../components/SEO';
+import { SEO  } from '../../components/SEO';
 =======
   Database,
   Cpu,
@@ -40,9 +39,8 @@ import { SEO } from '../../components/SEO';
 } from 'lucide-react';
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import { motion  } from 'framer-motion.ts';
+import { Brain,
   BarChart3,
   TrendingUp,
   Zap,
@@ -59,10 +57,10 @@ import {
   Clock,
   DollarSign,
   Lightbulb
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const AIBusinessIntelligence: React.FC = () => {
+const AIBusinessIntelligence: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -575,8 +573,8 @@ const AIBusinessIntelligence: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 lg:gap-12">
+            {features.map((feature, index)  => (
 <<<<<<< HEAD
               <motion.div
                 key={index}
@@ -598,8 +596,8 @@ const AIBusinessIntelligence: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
 <<<<<<< HEAD
@@ -709,8 +707,8 @@ const AIBusinessIntelligence: React.FC = () => {
           </motion.div>
 <<<<<<< HEAD
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
 <<<<<<< HEAD
                 key={index}
@@ -899,8 +897,8 @@ const AIBusinessIntelligence: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
 <<<<<<< HEAD
               <motion.div
                 key={index}
@@ -923,8 +921,8 @@ const AIBusinessIntelligence: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={useCase.industry}
 <<<<<<< HEAD
@@ -1046,8 +1044,8 @@ const AIBusinessIntelligence: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -1058,8 +1056,8 @@ const AIBusinessIntelligence: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-cyan-400" />
 =======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
                 plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'
               }`}>
@@ -1123,7 +1121,7 @@ const AIBusinessIntelligence: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -1145,7 +1143,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 title: 'Deployment',
                 description: 'Launch your solution and provide training and ongoing support'
 
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

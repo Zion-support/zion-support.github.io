@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const News: React.FC = () => (
+const News: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">News</h1>
@@ -10,9 +10,9 @@ const News: React.FC = () => (
 
 export default News;
 =======
-import React from 'react';
+import React from 'react.ts';
 
-export default function News() {
+export default function News(...args: any[]): any {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
       <div className="max-w-2xl text-center">

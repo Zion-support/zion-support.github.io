@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -51,19 +51,20 @@ import { Brain,
   X
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
 <<<<<<< HEAD
-import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from "../data/ultimateInnovativeServices2026";
-import { ALL_REVOLUTIONARY_SERVICES_2026  } from "../data/comprehensiveServices2026";
+import { ULTIMATE_INNOVATIVE_SERVICES_2026   } from '../data/ultimateInnovativeServices2026';
+import { ALL_REVOLUTIONARY_SERVICES_2026   } from '../data/comprehensiveServices2026';
 =======
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "../data/ultimateInnovativeServices2026";
-import { comprehensiveServices } from "../data/comprehensiveServices";
+import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '../data/ultimateInnovativeServices2026';
+import { comprehensiveServices  } from '../data/comprehensiveServices';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
+
 
   id: string;
   name: string;
@@ -71,12 +72,13 @@ interface Service {
   description: string;
   features: string[];
   benefits: string[];
-pricing: {
+pricing: {;
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string};
+billingCycle: string;
+};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -95,7 +97,7 @@ pricing: {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-const ComprehensiveServicesShowcase2027: React.FC = () => {;
+const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
@@ -226,7 +228,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
     switch (category) {;
       case 'Artificial Intelligence':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -259,7 +261,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const getStatusColor = (status: string) => {;
+  const getStatusColor = (status: anystring)  => {;
     switch (status.toLowerCase()) {;
       case 'live':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -362,13 +364,13 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-500"
 
-                {categories.map(category => (
-=======
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
-              >
                 {categories.map(category  => (
+=======
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-500"
+              >
+                {categories.map(category   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>{category}</option>
                 ))}
@@ -394,9 +396,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 initial = {

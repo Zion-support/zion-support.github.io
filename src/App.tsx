@@ -20,9 +20,9 @@ const Training = lazy(() => import('./pages/Training').then(module => ({ default
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025').then(module => ({ default: module.ComprehensiveServicesShowcase2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
-<<<<<<< HEAD
 // Enhanced Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
@@ -82,31 +82,7 @@ const Documentation = createLazyComponent(() => import('./pages/Documentation'))
 const Developers = createLazyComponent(() => import('./pages/Developers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Status = createLazyComponent(() => import('./pages/Status'));
-const Training = createLazyComponent(() => import('./pages/Training'));
-const Support = createLazyComponent(() => import('./pages/Support'));
-const Events = createLazyComponent(() => import('./pages/Events'));
-const Security = createLazyComponent(() => import('./pages/Security'));
-const Cookies = createLazyComponent(() => import('./pages/Cookies'));
-const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
-const Talent = createLazyComponent(() => import('./pages/Talent'));
-const Equipment = createLazyComponent(() => import('./pages/Equipment'));
-const GreenIT = createLazyComponent(() => import('./pages/GreenIT'));
-const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));
-const MarketplaceProducts = createLazyComponent(() => import('./pages/marketplace/Products'));
-const MarketplaceTalent = createLazyComponent(() => import('./pages/marketplace/Talent'));
-const MarketplaceEquipment = createLazyComponent(() => import('./pages/marketplace/Equipment'));
-const MarketplaceServices = createLazyComponent(() => import('./pages/marketplace/Services'));
-const Login = createLazyComponent(() => import('./pages/Login'));
-const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
-const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
-const FAQ = createLazyComponent(() => import('./pages/FAQ'));
-const SearchPage = createLazyComponent(() => import('./pages/SearchPage'));
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));
-const ResearchDevelopment = createLazyComponent(() => import('./pages/research-development'));
-const MobileLaunch = createLazyComponent(() => import('./pages/MobileLaunch'));
-const Analytics = createLazyComponent(() => import('./pages/Analytics'));
-const Match = createLazyComponent(() => import('./pages/Match'));
-const Solutions = createLazyComponent(() => import('./pages/solutions'));
+
 
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
@@ -173,7 +149,7 @@ const UltimateServicesShowcase2025 = createLazyComponent(() => import('./compone
 const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = createLazyComponent(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
-const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 const ZionCuttingEdgeServices2029 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2029'));
 
@@ -203,31 +179,7 @@ const ComprehensiveServicesShowcase2027Page = createLazyComponent(() => import('
 const ComprehensiveServicesLanding2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesLanding2025'));
 const ComprehensivePricingGuide2027 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2027'));
 const UltimateInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
-const NewServicesShowcase2025 = createLazyComponent(() => import('./pages/NewServicesShowcase2025'));
 
-// Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 via-red-800 to-red-900">
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
-      <p className="text-red-200 mb-4">{error.message}</p>
-      <button
-        onClick={resetErrorBoundary}
-        className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-
-        Try again
-      </button>
-=======
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    </div>
-  </div>
-);
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -258,9 +210,8 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-export default function App() {
+function App() {
   return (
-<<<<<<< HEAD
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => { /* empty */ }} />}>
         <Router>
@@ -303,10 +254,10 @@ export default function App() {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.3 }}
-
+                        >
                           <Home />
                         </motion.div>
-
+                      }
                     />
                     <Route path="/home2026" element={<Home2026 />} />
                     <Route path="/about" element={<About />} />
@@ -473,7 +424,7 @@ export default function App() {
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.3 }}
                           className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-
+                        >
                           <div className="text-center text-white">
                             <h1 className="text-6xl font-bold mb-4">404</h1>
                             <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
@@ -483,18 +434,18 @@ export default function App() {
                             <button
                               onClick={() => window.history.back()}
                               className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
-
+                            >
                               Go Back
                             </button>
                             <button
                               onClick={() => window.location.href = '/'}
                               className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-
+                            >
                               Go Home
                             </button>
                           </div>
                         </motion.div>
-
+                      }
                     />
                   </Routes>
                 </AnimatePresence>
@@ -522,56 +473,6 @@ export default function App() {
       </ErrorBoundary>
     </HelmetProvider>
   );
-
-export default App;}}}
-=======
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <div className="min-h-screen bg-gray-900 text-white">
-        <Header />
-        <div className="flex pt-16">
-          <Sidebar />
-          <main className="flex-1 ml-64 min-h-screen">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/services/*" element={<ServicesPage />} />
-                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
-                <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/solutions" element={<SolutionsPage />} />
-                <Route path="/solutions/*" element={<SolutionsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/about/*" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/*" element={<BlogPage />} />
-                <Route path="/careers" element={<AboutPage />} />
-                <Route path="/partners" element={<AboutPage />} />
-                <Route path="/press" element={<AboutPage />} />
-                <Route path="/case-studies" element={<BlogPage />} />
-                <Route path="/research-development" element={<BlogPage />} />
-                <Route path="/docs" element={<BlogPage />} />
-                <Route path="/api" element={<BlogPage />} />
-                <Route path="/developer" element={<BlogPage />} />
-                <Route path="/help" element={<Helpdesk />} />
-                <Route path="/training" element={<Training />} />
-                <Route path="/community" element={<BlogPage />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/privacy-policy" element={<BlogPage />} />
-                <Route path="/terms-of-service" element={<BlogPage />} />
-                <Route path="/cookie-policy" element={<BlogPage />} />
-                <Route path="/request-quote" element={<ContactPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
-          </main>
-        </div>
-        <Footer />
-      </div>
-    </ErrorBoundary>
-  );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default App;

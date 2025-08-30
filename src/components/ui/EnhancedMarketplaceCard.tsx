@@ -1,15 +1,17 @@
-import React from 'react';
+import React from 'react.ts';
 
-interface EnhancedMarketplaceCardProps {
+interface EnhancedMarketplaceCardProps extends React.PropsWithChildren<{}> {
+
   title: string;
   description: string;
   className?: string;
 
 <<<<<<< HEAD
-const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   title,
   description,
   className = ""
+
 }) => {
   return (
     <div className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 ${className}`}>

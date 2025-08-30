@@ -1,4 +1,5 @@
 export interface SpecializedService {
+
   id: string;
   title: string;
   description: string;
@@ -14,11 +15,12 @@ export interface SpecializedService {
   estimatedDelivery: string;
   supportLevel: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
 }
 
 export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [

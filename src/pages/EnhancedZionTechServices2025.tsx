@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data/enhancedZionTechServices2025";
+import React, { useState } from 'react.ts';
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory  } from '../data/enhancedZionTechServices2025';
 
-const EnhancedZionTechServices2025: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('name');
+const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+  const [sortBy, setSortBy] = useState<any>('name');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
 <<<<<<< HEAD
@@ -118,9 +118,9 @@ const EnhancedZionTechServices2025: React.FC = () => {;
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
 
-              {categories.map(category => (
+              {categories.map(category  => (
                 <option key={category} value={category}>{category}</option>
               ))}
             </select>
@@ -138,8 +138,8 @@ const EnhancedZionTechServices2025: React.FC = () => {;
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedServices.map((service)  => (
             <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105">
               {/* Service Header */}
               <div className="mb-4">

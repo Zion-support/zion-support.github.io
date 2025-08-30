@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Bot, Clock, Globe, TrendingDown, CheckCircle import { GradientHeading } from './GradientHeading';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle import { GradientHeading  } from './GradientHeading';
 =======
-import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star  } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Benefit {
+
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -15,21 +16,22 @@ interface Benefit {
   stats: string;
   features: string[];
 
-const benefits: Benefit[] = [
+const benefits: Benefit[] = [;
   {
-    title: "AI-Powered Matchmaking",
-    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-    icon: <Bot className="w-8 h-8" />,
-    color: "from-zion-cyan to-zion-cyan-dark",
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-    stats: "95% Match Rate",
-    features: [
+title: "AI-Powered Matchmaking",;
+description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",;
+icon: <Bot className="w-8 h-8" />,;
+color: "from-zion-cyan to-zion-cyan-dark",;
+bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",;
+stats: "95% Match Rate",;
+features: [;
       "Intelligent service matching",
       "Real-time availability",
       "Expert talent matching",
       "Personalized recommendations"
     ]
-  },
+  
+},
   {
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
@@ -74,8 +76,8 @@ const benefits: Benefit[] = [
 
 ];
 
-export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+export function BenefitsSection(...args: any[]): any {
+  const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -161,9 +163,9 @@ export function BenefitsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: anytrue }}
 
-          {stats.map((stat, index) => (
+          {stats.map((stat, index)  => (
             <motion.div
               key={index}
               variants={statsVariants}
@@ -191,8 +193,8 @@ export function BenefitsSection() {
           </div>
 
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 max-w-5xl mx-auto">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
 <<<<<<< HEAD
@@ -264,9 +266,9 @@ export function BenefitsSection() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: any0.3 }}
 
-                        {benefit.features.map((feature, idx) => (
+                        {benefit.features.map((feature, idx)  => (
                           <motion.div
                             key={idx}
                             className="flex items-center gap-2 text-zion-slate-light/80 text-sm"
@@ -308,8 +310,8 @@ export function BenefitsSection() {
             <p className="text-gray-300 text-lg">Real results that speak for themselves</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

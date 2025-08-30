@@ -1,16 +1,18 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from 'react.ts';
+import { cn  } from '@/lib/utils';
 
-interface GradientHeadingProps {
+interface GradientHeadingProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   className?: string;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 <<<<<<< HEAD
-export const GradientHeading: React.FC<GradientHeadingProps> = ({
+export const GradientHeading: React.FC<GradientHeadingProps> = ({;
   children,
   className = '',
-  as: Component = 'h2'
+as: Component = 'h2';
+
 }) => {
   return (
     <Component

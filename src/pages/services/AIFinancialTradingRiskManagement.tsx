@@ -1,17 +1,16 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  TrendingUp,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { TrendingUp,
   Shield,
   Clock,
   Zap,
   Search,
 =======
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { motion   } from 'framer-motion.ts';
+import { SEO   } from '@/components/SEO';
 import { TrendingUp, 
   Shield, 
   Clock, 
@@ -32,11 +31,11 @@ import { TrendingUp,
   AlertTriangle,
   Target
 <<<<<<< HEAD
-export default function AIFinancialTradingRiskManagement() {
+export default function AIFinancialTradingRiskManagement(...args: any[]): any {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
-export default function AIFinancialTradingRiskManagement(...args[]):  {
+export default function AIFinancialTradingRiskManagement(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
@@ -276,8 +275,8 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)   => (
                 <motion.div
                   key={index}
                   initial = {
@@ -359,8 +358,8 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {servicePackages.map((pkg, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {servicePackages.map((pkg, index)   => (
                 <motion.div
                   key={index}
                   initial = {
@@ -454,8 +453,8 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportedAssets.map((asset, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {supportedAssets.map((asset, index)   => (
                 <motion.div
                   key={index}
                   initial = {
@@ -534,8 +533,8 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index)   => (
                 <motion.div
                   key={index}
                   initial = {
@@ -616,8 +615,8 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologies.map((tech, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {technologies.map((tech, index)   => (
                 <motion.div
                   key={index}
                   initial = {

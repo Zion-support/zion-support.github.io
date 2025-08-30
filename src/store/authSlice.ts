@@ -1,19 +1,23 @@
-import { createSlice, PayloadAction  } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction   } from '@reduxjs/toolkit';
 
 interface User {
+
   id: string;
   email: string;
   name: string;
   avatar?: string;
+
 }
 
 interface AuthState {
+
 
   isLoggedIn: boolean;
   user:  | null;
   token: string | null;
 <<<<<<< HEAD
 =======
+
 
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -39,40 +43,40 @@ const initialState: AuthState = {
 
 <<<<<<< HEAD
 const authSlice = createSlice({
-  name: 'auth',
+  name: any'auth',
   initialState,
   reducers: {;
-    setLoggedIn: (state, action: PayloadAction<boolean>)  => {;
+    setLoggedIn: (state, action: PayloadAction<boolean>)   => {;
       state.isLoggedIn = action.payload;
     },
-    setUser: (state, action: PayloadAction<any>)  => {
+    setUser: any(state, action: PayloadAction<any>)   => {
 =======
 const authSlice = createSlice({;
-  name: 'auth',;
+  name: any'auth',;
   initialState,;
   reducers: {;
-    setUser: (state, action: PayloadAction<User>) => {;
+    setUser: (state, action: PayloadAction<User>)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
     },
-    setToken: (state, action: PayloadAction<string>)  => {
+    setToken: any(state, action: PayloadAction<string>)   => {
       state.token = action.payload;
     },
-    logout: (state)  => {
+    logout: any(state)   => {
       state.isLoggedIn = false;
       state.user = null;
       state.isAuthenticated = false;
       state.error = null;
     },
-    setLoading: (state, action: PayloadAction<boolean>) => {
+    setLoading: any(state, action: PayloadAction<boolean>)  => {
       state.isLoading = action.payload;
     },
-    setError: (state, action: PayloadAction<string>) => {
+    setError: any(state, action: PayloadAction<string>)  => {
       state.error = action.payload;
     },
-    clearError: (state) => {
+    clearError: any(state)  => {
       state.error = null;
     },
   },

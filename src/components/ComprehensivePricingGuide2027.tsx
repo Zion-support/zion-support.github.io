@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  DollarSign,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { DollarSign,
   TrendingUp,
   Clock,
   Users,
@@ -23,22 +22,22 @@ import {
   Brain,
   Rocket
 <<<<<<< HEAD
-import { servicesCatalog } from '../data/servicesCatalog';
-import { innovativeServices2027 } from '../data/innovativeServices2027';
+import { servicesCatalog  } from '../data/servicesCatalog';
+import { innovativeServices2027  } from '../data/innovativeServices2027';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { servicesCatalog  } from "../data/servicesCatalog";
-import { innovativeServices2027  } from "../data/innovativeServices2027";
+import { servicesCatalog   } from '../data/servicesCatalog';
+import { innovativeServices2027   } from '../data/innovativeServices2027';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 =======;
 } from 'lucide-react';
-import { servicesCatalog } from "../data/servicesCatalog";
-import { innovativeServices2027 } from "../data/innovativeServices2027";
+import { servicesCatalog  } from '../data/servicesCatalog';
+import { innovativeServices2027  } from '../data/innovativeServices2027';
 
-export const ComprehensivePricingGuide2027: React.FC = () => {;
+export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
@@ -77,11 +76,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
         ...item,
-        source: 'catalog',
+        source: any'catalog',
         category: category.name
       }))
     ),
-    ...innovativeServices2027.map(service  => ({
+    ...innovativeServices2027.map(service   => ({
       ...service,;
       source: 'innovative',;
       category: service.category,;
@@ -138,7 +137,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   ;
 
 <<<<<<< HEAD
-  const getPriceRange = (price: string)  => {
+  const getPriceRange = (price: anystring)   => {
 =======
 
 
@@ -147,7 +146,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 };
 
-  const getPriceRange = (price: string) => {;
+  const getPriceRange = (price: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
@@ -155,7 +154,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     return 'High'};
 
 <<<<<<< HEAD
-  const getPriceColor = (price: string) => {;
+  const getPriceColor = (price: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const range = getPriceRange(price);
     switch (range) {
@@ -170,7 +169,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anystring)   => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
@@ -301,13 +300,13 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
 
-                {categories.map(category => (
-=======
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
                 {categories.map(category  => (
+=======
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+              >
+                {categories.map(category   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
@@ -320,13 +319,13 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
 
-                {priceRanges.map(range => (
-=======
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
                 {priceRanges.map(range  => (
+=======
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+              >
+                {priceRanges.map(range   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
@@ -410,10 +409,10 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
 <<<<<<< HEAD
 
-          {sortedServices.map((service, index) => (
+          {sortedServices.map((service, index)  => (
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >

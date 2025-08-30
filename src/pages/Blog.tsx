@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import {
-  Calendar, Clock, User, Tag, Search, Filter,
+import { Calendar, Clock, User, Tag, Search, Filter,
   ArrowRight, BookOpen, TrendingUp, Star, Eye
-function Blog() {
+function Blog(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
 =======
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
+import { SEO  } from '../components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { Search, 
   Calendar, 
   User, 
   Tag, 
@@ -25,9 +23,10 @@ import {
   ShoppingCart,
   BookOpen,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface BlogPost {
+
   id: string;
   title: string;
   excerpt: string;
@@ -42,13 +41,16 @@ interface BlogPost {
   featured: boolean;
   views: number;
   likes: number;
+
 }
 
 interface Category {
+
   name: string;
-  icon: any;
+  icon: ;
   count: number;
   color: string;
+
 }
 
 const categories: Category[] = [
@@ -113,7 +115,7 @@ const blogPosts: BlogPost[] = [
   }
 ];
 
-export default function Blog() {
+export default function Blog(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -223,7 +225,7 @@ export default function Blog() {
   });
 
 <<<<<<< HEAD
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -366,9 +368,9 @@ export default function Blog() {
               Featured Articles
             </motion.h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {filteredPosts
-                .filter(post => post.featured)
+                .filter(post  => post.featured)
                 .map((post, index) => (
                   <motion.article
                     key={post.id}
@@ -447,9 +449,9 @@ export default function Blog() {
             Latest Articles
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts
-              .filter(post => !post.featured)
+              .filter(post  => !post.featured)
               .map((post, index) => (
 =======
       {/* Categories Grid */}
@@ -465,8 +467,8 @@ export default function Blog() {
             <p className="text-gray-300">Discover insights in your area of interest</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {categories.map((category, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {categories.map((category, index)  => (
               <motion.div
                 key={category.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -510,8 +512,8 @@ export default function Blog() {
               <p className="text-gray-400">Try adjusting your search terms or filters</p>
             </motion.div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sortedPosts.map((post, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedPosts.map((post, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.article
                   key={post.id}

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  CheckCircle,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { CheckCircle,
   Star,
   DollarSign,
   Clock,
@@ -42,12 +41,12 @@ import {
   Tool,
   Hammer,
   Screwdriver
-} from 'lucide-react';
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
+ } from 'lucide-react.ts';
+import { COMPREHENSIVE_PRICING_GUIDE_2025  } from '../data/comprehensivePricingGuide2025';
 
-export function PricingPage() {
+export function PricingPage(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [selectedService, setSelectedService] = useState<any>(null);
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Globe, color: 'from-blue-500 to-cyan-600' },
@@ -68,12 +67,12 @@ export function PricingPage() {
     selectedCategory === 'all' || service.category === selectedCategory
   );
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
@@ -136,8 +135,8 @@ export function PricingPage() {
         </div>
 
         {/* Services Pricing Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-          {filteredServices.map((service, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -267,8 +266,8 @@ export function PricingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {SPECIAL_PRICING_PACKAGES.map((package_, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {SPECIAL_PRICING_PACKAGES.map((package_, index)  => (
               <motion.div
                 key={package_.name}
                 initial={{ opacity: 0, y: 20 }}

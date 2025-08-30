@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Menu,
   X,
   Search,
   User,
@@ -219,12 +218,12 @@ import {
   Psi,
   Omega
 <<<<<<< HEAD
-export const EnhancedFuturisticNavigation: React.FC = () => {
+export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 <<<<<<< HEAD
-export const EnhancedFuturisticNavigation: React.FC = () => {;
+export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -250,7 +249,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
     setActiveDropdown(null)}, [location.pathname]);
 
 <<<<<<< HEAD
-  const handleSearch = (e: React.FormEvent) => {;
+  const handleSearch = (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -263,10 +262,10 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
   };
 
 <<<<<<< HEAD
-  const toggleDropdown = (dropdown: string)  => {;
+  const toggleDropdown = (dropdown: anystring)   => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
 =======
-  const toggleDropdown = (dropdown: string) => {;
+  const toggleDropdown = (dropdown: anystring)  => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -1,4 +1,5 @@
 export interface Service {
+
   id: string;
   name: string;
   category: 'ai' | 'it' | 'micro-saas' | 'cybersecurity' | 'cloud' | 'data' | 'automation' | 'compliance' | 'analytics' | 'integration';
@@ -6,12 +7,13 @@ export interface Service {
   description: string;
   features: string[];
   benefits: string[];
-  pricing: {
+pricing: {;
     monthly: string;
     yearly: string;
     enterprise: string;
     setup: string;
-  };
+  
+};
   targetMarket: string;
   useCases: string[];
   technologies: string[];

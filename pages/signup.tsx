@@ -1,6 +1,6 @@
 import Head from 'next/head.ts'
-import { motion  } from 'framer-motion.ts'
-import { useState  } from 'react.ts'
+import { motion   } from 'framer-motion.ts'
+import { useState   } from 'react.ts'
 import { User,
   Mail,
   Lock,
@@ -16,11 +16,11 @@ import { User,
   Brain,
   Cloud
 <<<<<<< HEAD
-export default function Signup() {
+export default function Signup(...args: any[]): any {
 =======
- } from 'lucide-react'
+  } from 'lucide-react.ts'
 
-export default function Signup(...args[]):  {
+export default function Signup(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     firstName: '',
@@ -39,7 +39,7 @@ export default function Signup(...args[]):  {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 <<<<<<< HEAD
-  const [errors, setErrors] = useState<Record<string, string>>({ /* empty */ })
+  const [errors, setErrors] = useState<Record<string, any>>({ /* empty */ })
 =======
   const [errors, setErrors] = useState<Record<string, any>>({})
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -69,7 +69,7 @@ export default function Signup(...args[]):  {
   ]
 
 <<<<<<< HEAD
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLSelectElement>)  => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -78,7 +78,7 @@ export default function Signup(...args[]):  {
 
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = { /* empty */ }
+    const newErrors: Record<string, any> = { /* empty */ }
 
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required'
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required'
@@ -97,7 +97,7 @@ export default function Signup(...args[]):  {
 =======
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault()
 

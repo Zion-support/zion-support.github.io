@@ -1,17 +1,19 @@
 <<<<<<< HEAD
 export interface ComprehensivePricingItem2027 {
+
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
-    starter: {
+pricing: {;
+starter: {;
       price: string;
       billing: string;
       features: string[];
       limitations: string[];
-    };
+    
+};
     professional: {
       price: string;
       billing: string;
@@ -224,7 +226,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 =======
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
@@ -1474,9 +1476,9 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = (category: string) =>
+export const getComprehensivePricingGuide2027ByCategory = (category: anystring)  =>
   comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = (id: string) =>
+export const getComprehensivePricingGuide2027ById = (id: anystring)  =>
   comprehensivePricingGuide2027.find(item => item.id === id);
 export const pricingCategories2027 = [;
   'Metaverse Solutions',;

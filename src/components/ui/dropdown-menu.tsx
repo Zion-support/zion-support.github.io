@@ -11,9 +11,9 @@ const DropdownMenu(...args[]):  {
         {children}
       </div>
     </DropdownMenuContext.Provider>)}
-export function DropdownMenuTrigger(...args[]):  {;
+export function DropdownMenuTrigger(...args[]: any):  {;
 =======;
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react.ts';
 const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value = {
@@ -32,10 +32,10 @@ const DropdownMenu({ children }) {
     </DropdownMenuContext.Provider>);
 <<<<<<< HEAD
 
-export function DropdownMenuTrigger({ children, asChild = false }) {
+export function DropdownMenuTrigger(...args: any[]): any {
 =======
 }
-export function DropdownMenuTrigger({ children, asChild = false }) {;
+export function DropdownMenuTrigger(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const context = useContext(DropdownMenuContext);
@@ -54,7 +54,7 @@ export function DropdownMenuTrigger({ children, asChild = false }) {;
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>)}
-export function DropdownMenuContent(...args[]):  {;
+export function DropdownMenuContent(...args[]: any):  {;
 =======;
         return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
         {children};
@@ -65,10 +65,10 @@ export function DropdownMenuContent(...args[]):  {;
     </div>);
 <<<<<<< HEAD
 
-export function DropdownMenuContent({ children, align = 'start', className = '' }) {
+export function DropdownMenuContent(...args: any[]): any {
 =======
 }
-export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
+export function DropdownMenuContent(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const context = useContext(DropdownMenuContext);
@@ -87,7 +87,7 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     return (<div className = {`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
       {children}
     </div>)}
-export function DropdownMenuItem(...args[]):  {
+export function DropdownMenuItem(...args[]: any):  {
 =======;
   start: 'left-0',;
         center: 'left-1/2 transform -translate-x-1/2',;
@@ -105,10 +105,10 @@ export function DropdownMenuItem(...args[]):  {
     </div>);
 <<<<<<< HEAD
 
-export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {
+export function DropdownMenuItem(...args: any[]): any {
 =======
 }
-export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {;
+export function DropdownMenuItem(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const context = useContext(DropdownMenuContext);

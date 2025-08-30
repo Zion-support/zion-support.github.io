@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Mail,
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail,
   Lock,
   Eye,
   EyeOff,
@@ -14,10 +13,10 @@ import {
   Users,
   CheckCircle
 <<<<<<< HEAD
-export default function Signup() {
+export default function Signup(...args: any[]): any {
 =======
- } from 'lucide-react';
-export default function Signup(...args[]):  {
+  } from 'lucide-react.ts';
+export default function Signup(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     firstName: '',
@@ -32,18 +31,18 @@ export default function Signup(...args[]):  {
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 <<<<<<< HEAD
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
+  const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement>)   => {
     setFormData({
       ...formData,;
       [e.target.name]: e.target.value;
     })};
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+  const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {;
     setFormData({;
       ...formData,;
       [e.target.name]: e.target.value;
     });
   };
-  const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (!agreedToTerms) {

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const Team: React.FC = () => (
+const Team: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Our Team</h1>
@@ -8,11 +8,10 @@ const Team: React.FC = () => (
 	</div>
 );
 =======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Linkedin, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Linkedin, 
   Twitter, 
   Mail, 
   Globe, 
@@ -26,9 +25,9 @@ import {
   Zap,
   Heart,
   ArrowRight
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Team() {
+export default function Team(...args: any[]): any {
   const teamMembers = [
     {
       name: 'Kleber Santos',
@@ -163,8 +162,8 @@ export default function Team() {
       {/* Stats Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -287,8 +286,8 @@ export default function Team() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.filter(member => !member.featured).map((member, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.filter(member  => !member.featured).map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -374,8 +373,8 @@ export default function Team() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)  => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}

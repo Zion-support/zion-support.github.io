@@ -1,4 +1,5 @@
 export interface AdditionalService {
+
   id: string;
   title: string;
   description: string;
@@ -15,11 +16,12 @@ export interface AdditionalService {
   marketPrice: string;
   roi?: string;
   innovationLevel?: string;
-  contactInfo?: {
+contactInfo?: {;
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
 
 <<<<<<< HEAD
 export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [

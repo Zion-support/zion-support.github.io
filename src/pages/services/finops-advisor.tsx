@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart import { Link } from 'react-router-dom';
-=======
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart import { Link  } from 'react-router-dom.ts';
+=======
+import React from 'react.ts';
+import { Helmet   } from 'react-helmet-async.ts';
+import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart   } from 'lucide-react.ts';
+import { Link   } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function FinOpsAdvisor(...args: []):  {
@@ -69,7 +69,7 @@ export default function FinOpsAdvisor(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Calculator,
@@ -102,7 +102,7 @@ export default function FinOpsAdvisor(...args: []):  {
                   description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
 <<<<<<< HEAD
 
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
 =======
                 }
               ].map((feature, index)  => (
@@ -131,7 +131,7 @@ export default function FinOpsAdvisor(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Compute Resources",
@@ -170,7 +170,7 @@ export default function FinOpsAdvisor(...args: []):  {
                   benefits: ["Support plans", "Licensing", "Service agreements"]
 <<<<<<< HEAD
 
-              ].map((area, index) => (
+              ].map((area, index)  => (
 =======
                 }
               ].map((area, index)  => (
@@ -207,7 +207,7 @@ export default function FinOpsAdvisor(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   step: "01",
@@ -225,7 +225,7 @@ export default function FinOpsAdvisor(...args: []):  {
                   description: "Establish ongoing cost management processes and governance."
 <<<<<<< HEAD
 
-              ].map((step, index) => (
+              ].map((step, index)  => (
 =======
                 }
               ].map((step, index)  => (
@@ -277,11 +277,11 @@ export default function FinOpsAdvisor(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Cost Savings Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "30-40%", label: "Cost Reduction", description: "Average savings" },
+                    { metric: any"30-40%", label: "Cost Reduction", description: "Average savings" },
                     { metric: "50-60%", label: "Resource Utilization", description: "Improvement" },
                     { metric: "70%", label: "Faster Decisions", description: "Optimization speed" },
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }
-                  ].map((item, index)  => (
+                  ].map((item, index)   => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-emerald-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -306,7 +306,7 @@ export default function FinOpsAdvisor(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Cost Management Tools",
@@ -345,7 +345,7 @@ export default function FinOpsAdvisor(...args: []):  {
                   features: ["REST APIs", "Custom integrations", "Automated workflows"]
 <<<<<<< HEAD
 
-              ].map((tool, index) => (
+              ].map((tool, index)  => (
 =======
                 }
               ].map((tool, index)  => (
@@ -382,7 +382,7 @@ export default function FinOpsAdvisor(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -405,7 +405,7 @@ export default function FinOpsAdvisor(...args: []):  {
                   description: "Continuously monitor, optimize, and improve cost management."
 <<<<<<< HEAD
 
-              ].map((step, index) => (
+              ].map((step, index)  => (
 =======
                 }
               ].map((step, index)  => (

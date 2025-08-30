@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import {
-  Check,
+import { SEO  } from '@/components/SEO';
+import { Check,
   Star,
   Zap,
   Brain,
@@ -16,10 +15,9 @@ import {
   Crown,
   Sparkles
 =======
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-import { 
-  Check, 
+import { SEO  } from '../components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { Check, 
   Star, 
   Zap, 
   Brain, 
@@ -33,12 +31,12 @@ import {
   Phone,
   Mail,
   Calendar
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export default function Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+export default function Pricing(...args: any[]): any {
+  const [billingCycle, setBillingCycle] = useState<any>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<any>(null);
 
   const pricingPlans = [
     {
@@ -263,8 +261,8 @@ export default function Pricing() {
                     <p className="text-xl text-gray-300">{service.description}</p>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {service.pricing.map((plan, planIndex) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+                    {service.pricing.map((plan, planIndex)  => (
                       <div
                         key={planIndex}
                         className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 ${
@@ -360,8 +358,8 @@ export default function Pricing() {
       {/* Pricing Plans */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -451,8 +449,8 @@ export default function Pricing() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {enterpriseFeatures.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-6">
+              {enterpriseFeatures.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -483,8 +481,8 @@ export default function Pricing() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {servicePackages.map((pkg, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {servicePackages.map((pkg, index)  => (
               <motion.div
                 key={pkg.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -567,8 +565,8 @@ export default function Pricing() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {addOns.map((addon, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-4xl mx-auto">
+            {addOns.map((addon, index)  => (
               <motion.div
                 key={addon.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -603,7 +601,7 @@ export default function Pricing() {
             <p className="text-xl text-gray-300">Get answers to common pricing questions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
                 question: "Can I change my plan at any time?",
@@ -621,7 +619,7 @@ export default function Pricing() {
                 question: "Do you offer discounts for nonprofits?",
                 answer: "Yes, we offer special pricing for qualified nonprofit organizations. Contact us for more details about our nonprofit discount program."
               }
-            ].map((faq, index) => (
+            ].map((faq, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

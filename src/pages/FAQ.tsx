@@ -1,24 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react.ts';
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain import { SEO } from '../components/SEO';
+import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain import { SEO  } from '../components/SEO';
 
 interface FAQItem {
+
   id: string;
   question: string;
   answer: string;
   category: string;
   icon: React.ComponentType<any>;
 
-const faqData: FAQItem[] = [
+const faqData: FAQItem[] = [;
   {
-    id: 'ai-services',
-    question: 'What AI services does Zion Tech Group offer?',
-    answer: 'We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, AI-powered cybersecurity, and custom AI solution development for businesses.',
-    category: 'AI Services',
-    icon: Brain
-  },
+id: 'ai-services',;
+question: 'What AI services does Zion Tech Group offer?',;
+answer: 'We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, AI-powered cybersecurity, and custom AI solution development for businesses.',;
+category: 'AI Services',;
+icon: Brain;
+  
+},
   {
     id: 'cybersecurity',
     question: 'How does Zion Tech Group ensure cybersecurity?',
@@ -72,16 +74,15 @@ const faqData: FAQItem[] = [
 
 const categories = ['All', 'AI Services', 'Security', 'Cloud', 'Support', 'General'];
 
-export default function FAQ() {
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+export default function FAQ(...args: any[]): any {
+  const [activeItem, setActiveItem] = useState<any>(null);
   const [selectedCategory, setSelectedCategory] = useState('All');
 =======
-import { SEO } from '../components/SEO';
+import { SEO  } from '../components/SEO';
 =======
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
-import { 
-  Search, 
+import { Search, 
   ChevronDown, 
   ChevronUp,
 <<<<<<< HEAD
@@ -104,7 +105,7 @@ import {
   Zap,
   Users,
   Globe
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 =======
   MessageCircle,
   Star,
@@ -113,18 +114,18 @@ import {
   Lock,
   CheckCircle
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
-const FAQ: React.FC = () => {
+const FAQ: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
 <<<<<<< HEAD
   const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set([0]));
 
-  const toggleItem = (index: number) => {
+  const toggleItem = (index: anynumber)  => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(index)) {
       newExpanded.delete(index);
@@ -133,9 +134,9 @@ const FAQ: React.FC = () => {
     }
     setExpandedItems(newExpanded);
 =======
-  const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({});
+  const [openItems, setOpenItems] = useState<any>({});
 
-  const toggleItem = (categoryIndex: number, questionIndex: number) => {
+  const toggleItem = (categoryIndex: anynumber, questionIndex: number)  => {
     const key = `${categoryIndex}-${questionIndex}`;
     setOpenItems(prev => ({
       ...prev,
@@ -420,7 +421,7 @@ const FAQ: React.FC = () => {
 =======
   const filteredCategories = faqCategories.map(category => ({
     ...category,
-    questions: category.questions.filter(q =>
+    questions: anycategory.questions.filter(q  =>
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -668,8 +669,8 @@ const FAQ: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {contactInfo.map((info, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-4xl mx-auto">
+            {contactInfo.map((info, index)  => (
               <motion.div
                 key={info.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -959,8 +960,8 @@ const FAQ: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {contactInfo.map((info, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {contactInfo.map((info, index)  => (
                 <motion.div
                   key={info.title}
                   initial={{ opacity: 0, y: 30 }}

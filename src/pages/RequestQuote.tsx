@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import {
-  Calculator,
+import { Calculator,
   Send,
   CheckCircle,
   AlertCircle,
@@ -22,9 +21,8 @@ import {
   ChevronDown,
   ChevronUp,
 =======
-import { SEO } from '../components/SEO';
-import { 
-  Calculator, 
+import { SEO  } from '../components/SEO';
+import { Calculator, 
   FileText, 
   Clock, 
   CheckCircle, 
@@ -55,6 +53,7 @@ import {
   Info,
   HelpCircle
 interface QuoteForm {
+
   // Company Information
   companyName: string;
   industry: string;
@@ -180,10 +179,11 @@ const teamSizes = [
   Package,
   Truck,
   Headphones
+ 
 } from 'lucide-react';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function RequestQuote() {
+export default function RequestQuote(...args: any[]): any {
   const [formData, setFormData] = useState({
     companyName: '',
     contactName: '',
@@ -201,7 +201,7 @@ export default function RequestQuote() {
   });
 
   const [formStep, setFormStep] = useState(1);
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [expandedService, setExpandedService] = useState<any>(null);
   const [isSubmitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -429,23 +429,23 @@ export default function RequestQuote() {
     }
   ];
 
-  const handleInputChange = (field: string, value: string | string[]) => {
+  const handleInputChange = (field: anystring, value: string | string[])  => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
 
-  const toggleService = (serviceId: string) => {
+  const toggleService = (serviceId: anystring)  => {
     setFormData(prev => ({
       ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(id => id !== serviceId)
+      services: anyprev.services.includes(serviceId)
+        ? prev.services.filter(id  => id !== serviceId)
         : [...prev.services, serviceId]
     }));
   };
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: anystring)  => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -473,7 +473,7 @@ export default function RequestQuote() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
 <<<<<<< HEAD
@@ -518,7 +518,7 @@ export default function RequestQuote() {
     }, 2000);
   };
 
-  const isStepValid = (step: number) => {
+  const isStepValid = (step: anynumber)  => {
     switch (step) {
       case 1:
         return formData.companyName && formData.industry && formData.firstName && formData.lastName && formData.email;
@@ -533,7 +533,7 @@ export default function RequestQuote() {
 
   };
 
-  const getStepIcon = (step: number) => {
+  const getStepIcon = (step: anynumber)  => {
     switch (step) {
       case 1: return <Building className="h-5 w-5" />;
       case 2: return <Target className="h-5 w-5" />;
@@ -543,7 +543,7 @@ export default function RequestQuote() {
 
   };
 
-  const getStepTitle = (step: number) => {
+  const getStepTitle = (step: anynumber)  => {
     switch (step) {
       case 1: return 'Company & Contact';
       case 2: return 'Project Details';
@@ -580,7 +580,7 @@ export default function RequestQuote() {
           transition={{ duration: 0.6, delay: 0.1 }}
 
           <div className="flex items-center justify-between max-w-4xl mx-auto">
-            {Array.from({ length: totalSteps }, (_, index) => (
+            {Array.from({ length: anytotalSteps }, (_, index)  => (
               <div key={index + 1} className="flex items-center">
                 <div className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
                   currentStep > index + 1
@@ -1292,8 +1292,8 @@ export default function RequestQuote() {
       {/* Benefits */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -1499,9 +1499,9 @@ export default function RequestQuote() {
                             <select
                               value={formData.urgency}
                               onChange={(e) => handleInputChange('urgency', e.target.value)}
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
-                              {urgencyLevels.map((level) => (
+                              {urgencyLevels.map((level)  => (
                                 <option key={level.value} value={level.value}>
                                   {level.label} - {level.description}
                                 </option>
@@ -1536,8 +1536,8 @@ export default function RequestQuote() {
                         
                         <div>
                           <label className="block text-white font-medium mb-4">Select Services (Optional)</label>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {services.map((service) => (
+                          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                            {services.map((service)  => (
                               <div key={service.id} className="relative">
                                 <input
                                   type="checkbox"
@@ -1572,8 +1572,8 @@ export default function RequestQuote() {
 
                         <div>
                           <label className="block text-white font-medium mb-4">Preferred Contact Method</label>
-                          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            {contactMethods.map((method) => (
+                          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4">
+                            {contactMethods.map((method)  => (
                               <div key={method.value} className="relative">
                                 <input
                                   type="radio"

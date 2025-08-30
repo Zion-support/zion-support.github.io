@@ -1,36 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { cn } from "../../lib/utils";
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { cn  } from '../../lib/utils';
 
-interface LoadingSpinnerProps {
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: string;
   text?: string;
 <<<<<<< HEAD
 
-export default function LoadingSpinner({
-  size = 'md',
-  color = 'primary',
-  className = '',
-  showText = false,
-  text = 'Loading...'
-=======
-  className?: string;
-}
-
-export function LoadingSpinner({ 
-  size = 'md', 
-  color = 'text-cyan-400',
-  text,
-  className = '' 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-}: LoadingSpinnerProps) {
+export default function LoadingSpinner(...args: any[]): any {;
   const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-    xl: 'w-20 h-20'
-  };
+sm: 'w-8 h-8',;
+md: 'w-12 h-12',;
+lg: 'w-16 h-16',;
+xl: 'w-20 h-20';
+  
+};
 
   const textSizes = {
     sm: 'text-sm',
@@ -79,22 +65,7 @@ export function LoadingSpinner({
 
 <<<<<<< HEAD
 // Optimized skeleton loader
-export function SkeletonLoader({
-  className = '',
-  lines = 3,
-  height = 'h-4'
-}: {
-  className?: string;
-  lines?: number;
-  height?: string;
-=======
-// Enhanced loading spinner with dots
-export function LoadingDots({ 
-  size = 'md',
-  color = 'text-cyan-400',
-  text,
-  className = ''
-}: LoadingSpinnerProps) {
+export function SkeletonLoader(...args: any[]): any {
   const dotSizes = {
     sm: 'w-2 h-2',
     md: 'w-3 h-3',
@@ -147,17 +118,10 @@ export function LoadingDots({
 }
 
 // Skeleton loading component
-export function LoadingSkeleton({ 
-  lines = 3,
-  className = ''
-}: { 
-  lines?: number;
-  className?: string;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-}) {
+export function LoadingSkeleton(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: anylines }).map((_, index)  => (
         <motion.div
           key={index}
           className="h-4 bg-gray-300 rounded animate-pulse"
@@ -173,13 +137,7 @@ export function LoadingSkeleton({
   );
 
 // Button loading state
-export function ButtonLoader({ 
-  size = 'md',
-  className = '' 
-}: { 
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-}) {
+export function ButtonLoader(...args: any[]): any {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -189,13 +147,7 @@ export function ButtonLoader({
 
 // Page loading overlay
 <<<<<<< HEAD
-export function PageLoaderOverlay({
-  text = 'Loading page...',
-  showSpinner = true
-}: {
-  text?: string;
-  showSpinner?: boolean;
-}) {
+export function PageLoaderOverlay(...args: any[]): any {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -212,13 +164,7 @@ export function PageLoaderOverlay({
           className="mt-4 text-lg text-gray-300 font-medium"
 
 =======
-export function PageLoaderOverlay({ 
-  text = "Loading...",
-  className = '' 
-}: { 
-  text?: string;
-  className?: string;
-}) {
+export function PageLoaderOverlay(...args: any[]): any {
   return (
     <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>
       <div className="bg-white rounded-lg p-6 shadow-xl">
@@ -229,13 +175,7 @@ export function PageLoaderOverlay({
 }
 
 // Full page loading component
-export function FullPageLoader({ 
-  text = "Loading Zion Tech Group...",
-  className = ''
-}: {
-  text?: string;
-  className?: string;
-}) {
+export function FullPageLoader(...args: any[]): any {
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>
       <div className="text-center text-white">
@@ -270,13 +210,7 @@ export function FullPageLoader({
   );
 
 // Content loading placeholder
-export function ContentPlaceholder({
-  className = '',
-  variant = 'default'
-}: {
-  className?: string;
-  variant?: 'default' | 'card' | 'list' | 'grid';
-}) {
+export function ContentPlaceholder(...args: any[]): any {
   const variants = {
     default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
@@ -288,7 +222,7 @@ export function ContentPlaceholder({
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: 6 }).map((_, index) => (
+        Array.from({ length: any6 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -303,7 +237,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 5 }).map((_, index) => (
+        Array.from({ length: any5 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -317,7 +251,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: any8 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -331,7 +265,7 @@ export function ContentPlaceholder({
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: 4 }).map((_, index) => (
+        Array.from({ length: any4 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
@@ -345,7 +279,7 @@ export function ContentPlaceholder({
   );
 
 // Enhanced app loading spinner for main app loading
-export function AppLoadingSpinner() {
+export function AppLoadingSpinner(...args: any[]): any {
   const icons = ['🤖', '☁️', '🔒', '💡'];
 
   return (
@@ -355,11 +289,11 @@ export function AppLoadingSpinner() {
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
-          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: any'2s' }}></div>
         </div>
 
         {/* Floating icons */}
-        {icons.map((icon, index) => (
+        {icons.map((icon, index)  => (
           <motion.div
             key={index}
             className="absolute text-2xl"

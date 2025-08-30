@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Building, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Building, 
   Heart, 
   DollarSign, 
   Truck, 
@@ -23,9 +22,9 @@ import {
   Award,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Solutions() {
+export default function Solutions(...args: any[]): any {
   const industrySolutions = [
     {
       title: 'Enterprise Solutions',
@@ -262,8 +261,8 @@ export default function Solutions() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {successMetrics.map((item, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {successMetrics.map((item, index)  => (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -291,8 +290,8 @@ export default function Solutions() {
           <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-12 uppercase tracking-wider">
             Industry Solutions
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {industrySolutions.map((solution, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {industrySolutions.map((solution, index)  => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -319,14 +318,14 @@ export default function Solutions() {
                   
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-300 mb-3">Key Features</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {solution.features.map((feature, featureIndex) => (
+                    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
+                      {solution.features.map((feature, featureIndex)  => (
                         <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
 =======
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
 import { Building, 
   Shield, 
   Cloud, 
@@ -340,8 +339,8 @@ import { Building,
   CheckCircle,
   ArrowRight,
   Play
- } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+  } from 'lucide-react.ts';
+import { SEO   } from '@/components/SEO';
 
 const Solutions: React.FC = (): JSX.Element => {;
   const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -485,7 +484,7 @@ const Solutions: React.FC = (): JSX.Element => {;
   ];
 
   const filteredSolutions = selectedIndustry === 'all' ;
-    ? solutions: solutions.filter(solution  => solution.industry === selectedIndustry);
+    ? solutions: anysolutions.filter(solution   => solution.industry === selectedIndustry);
 
   return (
     <>
@@ -551,8 +550,8 @@ const Solutions: React.FC = (): JSX.Element => {;
         {/* Solutions Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredSolutions.map((solution, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredSolutions.map((solution, index)   => (
                 <motion.div
                   key={solution.id}
                   initial = {
@@ -640,8 +639,8 @@ const Solutions: React.FC = (): JSX.Element => {;
           <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-12 uppercase tracking-wider">
             Technology Solutions
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologySolutions.map((tech, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {technologySolutions.map((tech, index)  => (
               <motion.div
                 key={tech.title}
                 initial={{ opacity: 0, y: 20 }}

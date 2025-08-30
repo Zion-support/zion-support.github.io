@@ -1,23 +1,23 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown import { Link, useLocation } from 'react-router-dom';
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
-import { Link, useLocation  } from 'react-router-dom.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown import { Link, useLocation  } from 'react-router-dom.ts';
+=======
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown   } from 'lucide-react.ts';
+import { Link, useLocation   } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-export const MobileSidebarToggle: React.FC = () => {;
+export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
 <<<<<<< HEAD
-  const toggleSection = (section: string) => {;
+  const toggleSection = (section: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
@@ -34,7 +34,7 @@ export const MobileSidebarToggle: React.FC = () => {;
     setExpandedSections(newExpanded)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const isActive = (path: string)  => location.pathname === path;
+  const isActive = (path: anystring)   => location.pathname === path;
 
   const navigationSections = [
     {

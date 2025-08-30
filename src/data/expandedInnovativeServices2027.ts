@@ -3,6 +3,7 @@
 
 export interface ExpandedService2027 {
 
+
   id: string;
   name: string;
   category: string;
@@ -12,15 +13,16 @@ export interface ExpandedService2027 {
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-pricing: {
+pricing: {;
     model: string;
     basePrice: number;
     currency: string;
-pricingTiers: {
+pricingTiers: {;
       starter: number;
       professional: number;
       enterprise: number;
-      custom: string};
+custom: string;
+};
     freeTier: boolean;
     trialPeriod: string};
   marketPrice: string;
@@ -1072,17 +1074,17 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 
 // Helper function to get services by category
 <<<<<<< HEAD
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[]  => {
+export const getExpandedServicesByCategory = (category: anystring): ExpandedService2027[]   => {
   if (category === 'All') {;
     return ALL_EXPANDED_SERVICES_2027};
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};
 
 // Helper function to get services by subcategory
-export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[]  => {;
+export const getExpandedServicesBySubcategory = (subcategory: anystring): ExpandedService2027[]   => {;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)};
 
 // Helper function to search services
-export const searchExpandedServices = (query: string): ExpandedService2027[]  => {;
+export const searchExpandedServices = (query: anystring): ExpandedService2027[]   => {;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_2027.filter(service = > 
     service.name.toLowerCase().includes(lowercaseQuery) ||
@@ -1092,7 +1094,7 @@ export const searchExpandedServices = (query: string): ExpandedService2027[]  =>
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
   )};
 =======
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;
+export const getExpandedServicesByCategory = (category: anystring): ExpandedService2027[]  => {;
   if (category === 'All') {;
     return ALL_EXPANDED_SERVICES_2027;
 
@@ -1100,12 +1102,12 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
 };
 
 // Helper function to get services by subcategory
-export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {;
+export const getExpandedServicesBySubcategory = (subcategory: anystring): ExpandedService2027[]  => {;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory);
 };
 
 // Helper function to search services
-export const searchExpandedServices = (query: string): ExpandedService2027[] => {;
+export const searchExpandedServices = (query: anystring): ExpandedService2027[]  => {;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_2027.filter(service =>
     service.name.toLowerCase().includes(lowercaseQuery) ||

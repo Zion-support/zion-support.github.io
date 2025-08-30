@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Menu,
   X,
   ChevronDown,
   Brain,
@@ -36,12 +35,12 @@ import {
   Briefcase,
   Newspaper,
   DollarSign
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export function Header() {
+export function Header(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
@@ -116,20 +115,20 @@ export function Header() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: anystring)  => location.pathname === href;
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for:', searchQuery);
+      console.log('Searching for: any', searchQuery);
       setIsSearchOpen(false);
       setSearchQuery('');
     }
   };
 
   // Close mobile menu when route changes
-  useEffect(() => {
+  useEffect(()  => {
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);

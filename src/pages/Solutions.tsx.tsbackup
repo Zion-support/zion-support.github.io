@@ -11,24 +11,6 @@ import { Building,
   Database,
   Lock,
   TrendingUp,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingCart,
-  Settings,
   CheckCircle,
   ArrowRight,
   Play
@@ -38,86 +20,14 @@ import { SEO  } from '@/components/SEO';
 const Solutions: React.FC = (): JSX.Element => {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
-const industrySolutions = [
-  {
-    industry: 'Healthcare',
-    icon: Heart,
-    solutions: [
-      'Electronic Health Records',
-      'Telemedicine Platforms',
-      'Medical Imaging AI',
-      'Patient Data Analytics',
-      'Healthcare Security',
-      'Regulatory Compliance'
-    ],
-    color: 'from-pink-500 to-rose-600'
-  },
-  {
-    industry: 'Finance',
-    icon: DollarSign,
-    solutions: [
-      'Fintech Applications',
-      'Risk Management',
-      'Fraud Detection',
-      'Regulatory Compliance',
-      'Digital Banking',
-      'Blockchain Solutions'
-    ],
-    color: 'from-green-500 to-emerald-600'
-  },
-  {
-    industry: 'Manufacturing',
-    icon: Cpu,
-    solutions: [
-      'Smart Manufacturing',
-      'Predictive Maintenance',
-      'Quality Control',
-      'Supply Chain Optimization',
-      'Industrial IoT',
-      'Automation Systems'
-    ],
-    color: 'from-blue-500 to-cyan-600'
-  },
-  {
-    industry: 'Retail',
-    icon: ShoppingCart,
-    solutions: [
-      'E-commerce Platforms',
-      'Customer Analytics',
-      'Inventory Management',
-      'Omnichannel Solutions',
-      'Personalization',
-      'Supply Chain Management'
-    ],
-    color: 'from-purple-500 to-indigo-600'
-  },
-  {
-    industry: 'Education',
-    icon: BookOpen,
-    solutions: [
-      'Learning Management Systems',
-      'Virtual Classrooms',
-      'Student Analytics',
-      'Content Management',
-      'Assessment Tools',
-      'Collaboration Platforms'
-    ],
-    color: 'from-yellow-500 to-orange-600'
-  },
-  {
-    industry: 'Government',
-    icon: Shield,
-    solutions: [
-      'Digital Services',
-      'Data Security',
-      'Process Automation',
-      'Citizen Engagement',
-      'Regulatory Compliance',
-      'Infrastructure Management'
-    ],
-    color: 'from-gray-500 to-slate-600'
-  }
-];
+  const industries = [
+    { id: 'all', name: 'All Industries', icon: Building },
+    { id: 'healthcare', name: 'Healthcare', icon: Shield },
+    { id: 'finance', name: 'Financial Services', icon: Lock },
+    { id: 'manufacturing', name: 'Manufacturing', icon: Building },
+    { id: 'retail', name: 'Retail & E-commerce', icon: Users },
+    { id: 'technology', name: 'Technology', icon: Brain }
+  ];
 
   const solutions = [
     {
@@ -125,13 +35,13 @@ const industrySolutions = [
       title: 'AI-Powered Healthcare Analytics',
       industry: 'healthcare',
       description: 'Transform patient care with predictive analytics and intelligent diagnosis support.',
-      features[
+      features: [
         'Predictive disease modeling',
         'Medical image analysis',
         'Patient risk assessment',
         'Drug discovery optimization'
       ],
-      benefits[
+      benefits: [
         'Improved diagnostic accuracy',
         'Reduced healthcare costs',
         'Enhanced patient outcomes',
@@ -146,13 +56,13 @@ const industrySolutions = [
       title: 'Cybersecurity for Financial Services',
       industry: 'finance',
       description: 'Protect financial institutions with advanced threat detection and compliance solutions.',
-      features[
+      features: [
         'Real-time threat monitoring',
         'Compliance automation',
         'Fraud detection systems',
         'Secure transaction processing'
       ],
-      benefits[
+      benefits: [
         'Enhanced security posture',
         'Regulatory compliance',
         'Reduced fraud losses',
@@ -167,13 +77,13 @@ const industrySolutions = [
       title: 'Smart Manufacturing Platform',
       industry: 'manufacturing',
       description: 'Optimize production with IoT sensors, predictive maintenance, and quality control.',
-      features[
+      features: [
         'Predictive maintenance',
         'Quality control automation',
         'Supply chain optimization',
         'Energy efficiency monitoring'
       ],
-      benefits[
+      benefits: [
         'Reduced downtime',
         'Improved product quality',
         'Lower operational costs',
@@ -188,13 +98,13 @@ const industrySolutions = [
       title: 'E-commerce Personalization Engine',
       industry: 'retail',
       description: 'Boost sales with AI-driven product recommendations and customer insights.',
-      features[
+      features: [
         'Personalized recommendations',
         'Customer behavior analysis',
         'Dynamic pricing optimization',
         'Inventory management'
       ],
-      benefits[
+      benefits: [
         'Increased conversion rates',
         'Higher customer retention',
         'Optimized pricing strategies',
@@ -209,13 +119,13 @@ const industrySolutions = [
       title: 'Cloud-Native Development Platform',
       industry: 'technology',
       description: 'Accelerate software development with cloud-native tools and DevOps automation.',
-      features[
+      features: [
         'Container orchestration',
         'CI/CD pipelines',
         'Microservices architecture',
         'Auto-scaling infrastructure'
       ],
-      benefits[
+      benefits: [
         'Faster time to market',
         'Reduced infrastructure costs',
         'Improved scalability',
@@ -230,13 +140,13 @@ const industrySolutions = [
       title: 'Data Intelligence Platform',
       industry: 'technology',
       description: 'Unlock insights from your data with advanced analytics and machine learning.',
-      features[
+      features: [
         'Data warehousing',
         'Real-time analytics',
         'Machine learning models',
         'Business intelligence dashboards'
       ],
-      benefits[
+      benefits: [
         'Data-driven decisions',
         'Improved operational efficiency',
         'Competitive advantage',

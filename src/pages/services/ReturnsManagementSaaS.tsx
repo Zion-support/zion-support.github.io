@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon const ReturnsManagementSaaS: React.FC = () => {
-=======
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
-import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon  } from 'lucide-react';
+import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
+=======
+import React from 'react.ts';
+import { SEO   } from '@/components/SEO';
+import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon   } from 'lucide-react.ts';
 
 const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

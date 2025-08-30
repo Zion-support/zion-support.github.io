@@ -1,5 +1,6 @@
 export interface AdvancedAIService {
 
+
   id: string;
   title: string;
   description: string;
@@ -18,10 +19,11 @@ export interface AdvancedAIService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
-    website: string};
+website: string;
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

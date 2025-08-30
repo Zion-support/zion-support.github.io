@@ -1,30 +1,34 @@
 <<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon interface AccessibilityContextType {
-=======
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react';
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon interface AccessibilityContextType {
+
+=======
+import React, { createContext, useContext, useEffect, useState, ReactNode  
+} from 'react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon   } from 'lucide-react.ts';
 
 interface AccessibilityContextType {
 
+
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  highContrast: boolean;
-  toggleHighContrast: ()  => void;
-  reducedMotion: boolean;
-  toggleReducedMotion: ()  => void;
-  fontSize: number;
-  increaseFontSize: ()  => void;
-  decreaseFontSize: ()  => void;
-  resetFontSize: ()  => void;
-  showSkipLinks: boolean;
-  setShowSkipLinks: (show: boolean)  => void;
-  voiceNavigation: boolean;
+  highContrast: anyboolean;
+  toggleHighContrast: ()   => void;
+  reducedMotion: anyboolean;
+  toggleReducedMotion: ()   => void;
+  fontSize: anynumber;
+  increaseFontSize: ()   => void;
+  decreaseFontSize: any()   => void;
+  resetFontSize: any()   => void;
+  showSkipLinks: anyboolean;
+  setShowSkipLinks: (show: boolean)   => void;
+  voiceNavigation: anyboolean;
 <<<<<<< HEAD
-  toggleVoiceNavigation: () => void;
+  toggleVoiceNavigation: ()  => void;
 =======
-  toggleVoiceNavigation: ()  => void}
+toggleVoiceNavigation: any()   => void;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
@@ -38,10 +42,12 @@ export const useAccessibility = () => {;
   return context;
 };
 
-interface AccessibilityProviderProps {
+interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
+
   children: ReactNode;
 =======
-    throw new Error('useAccessibility must be used within an AccessibilityProvider')}
+    throw new Error('useAccessibility must be used within an AccessibilityProvider')
+}
   return context};
 
 interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
@@ -97,7 +103,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Keyboard navigation support
   useEffect(() => {
 <<<<<<< HEAD
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown = (event: anyKeyboardEvent)  => {;
       // Skip links (Alt + S);
       if (event.altKey && event.key === 's') {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -359,7 +365,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   children,
   isActive = true
 }) => {
-  const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
+  const [focusedElement, setFocusedElement] = useState<any>(null);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   useEffect(() => {
@@ -373,7 +379,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
 <<<<<<< HEAD
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown = (event: anyKeyboardEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       if (event.key !== 'Tab') return;
 

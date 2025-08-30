@@ -1,13 +1,13 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: React.FC = () => {
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
+import { ArrowRight, Rocket, MessageCircle, Calendar, Star const CTASection: React.FC = (): JSX.Element => {
+=======
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
+import { ArrowRight, Rocket, MessageCircle, Calendar, Star   } from 'lucide-react.ts';
 
 const CTASection: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -195,10 +195,10 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: anytrue }}
 <<<<<<< HEAD
 
-          {features.map((feature, index) => (
+          {features.map((feature, index)  => (
 =======
         >
           {features.map((feature, index)  => (

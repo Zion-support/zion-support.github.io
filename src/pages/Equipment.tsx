@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-const Equipment: React.FC = () => (
+const Equipment: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Equipment</h1>
@@ -8,12 +8,11 @@ const Equipment: React.FC = () => (
 	</div>
 );
 =======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-import { 
-  Server, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { Server, 
   Search, 
   Filter, 
   Grid, 
@@ -473,14 +472,14 @@ import {
   YellowEyeBean,
   YellowIndianBean,
   YellowWaxBean
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Equipment() {
+export default function Equipment(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedCondition, setSelectedCondition] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedEquipment, setExpandedEquipment] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedEquipment, setExpandedEquipment] = useState<any>(null);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const categories = [
@@ -671,7 +670,7 @@ export default function Equipment() {
     }
   ];
 
-  const toggleEquipmentExpansion = (equipmentId: string) => {
+  const toggleEquipmentExpansion = (equipmentId: anystring)  => {
     setExpandedEquipment(expandedEquipment === equipmentId ? null : equipmentId);
   };
 
@@ -686,7 +685,7 @@ export default function Equipment() {
     return true;
   });
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     switch (category) {
       case 'servers': return 'bg-purple-500/20 text-purple-400';
       case 'networking': return 'bg-blue-500/20 text-blue-400';
@@ -698,7 +697,7 @@ export default function Equipment() {
     }
   };
 
-  const getConditionColor = (condition: string) => {
+  const getConditionColor = (condition: anystring)  => {
     switch (condition) {
       case 'new': return 'bg-green-500/20 text-green-400';
       case 'refurbished': return 'bg-blue-500/20 text-blue-400';
@@ -708,8 +707,8 @@ export default function Equipment() {
     }
   };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: anynumber)  => {
+    return Array.from({ length: any5 }, (_, i)  => (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -774,9 +773,9 @@ export default function Equipment() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200"
                 >
-                  {categories.map((category) => (
+                  {categories.map((category)  => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -789,9 +788,9 @@ export default function Equipment() {
                 <select
                   value={selectedCondition}
                   onChange={(e) => setSelectedCondition(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200"
                 >
-                  {conditions.map((condition) => (
+                  {conditions.map((condition)  => (
                     <option key={condition.id} value={condition.id}>
                       {condition.name} ({condition.count})
                     </option>
@@ -840,8 +839,8 @@ export default function Equipment() {
             <p className="text-xl text-gray-300">Premium technology solutions with exceptional value</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {equipmentInventory.filter(e => e.featured).map((equipment, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {equipmentInventory.filter(e  => e.featured).map((equipment, index) => (
               <motion.div
                 key={equipment.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -982,8 +981,8 @@ export default function Equipment() {
           </motion.div>
 
           {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredEquipment.map((equipment, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredEquipment.map((equipment, index)  => (
                 <motion.div
                   key={equipment.id}
                   initial={{ opacity: 0, y: 20 }}

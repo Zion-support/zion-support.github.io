@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
 
 interface SEOData {
+
   title: string;
   description: string;
   keywords: string[];
@@ -10,11 +11,12 @@ interface SEOData {
   canonicalUrl?: string;
   structuredData?: object;
 
-interface EnhancedSEOManagerProps {
+interface EnhancedSEOManagerProps extends React.PropsWithChildren<{}> {
   seoData: SEOData;
   children: React.ReactNode;
 
-const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
+const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children;
+}) => {
   useEffect(() => {
     // Update meta tags dynamically
     const updateMetaTags = () => {;
@@ -40,7 +42,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags
-      const updateOGTag = (property: string, content: string) => {;
+      const updateOGTag = (property: anystring, content: string)  => {;
         let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
           ogTag = document.createElement('meta');
@@ -57,7 +59,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       
       // Update Twitter Card tags
-      const updateTwitterTag = (name: string, content: string) => {;
+      const updateTwitterTag = (name: anystring, content: string)  => {;
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
           twitterTag = document.createElement('meta');

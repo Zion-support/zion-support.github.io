@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Star,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star,
   MessageCircle,
   ThumbsUp,
   ThumbsDown,
@@ -18,11 +17,12 @@ import {
   Search
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Feedback {
+
 
   id: string;
   customerName: string;
@@ -37,19 +37,21 @@ interface Feedback {
 <<<<<<< HEAD
   verified: boolean;
 =======
-  verified: boolean}
+verified: boolean;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface FeedbackStats {
 
+
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
 <<<<<<< HEAD
-  topCategories: Array<{ category: string; count: number; percentage: number }>;
+  topCategories: Array<any>;
 =======
   topCategories: Array<any>}
 
@@ -78,9 +80,9 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   showFilters = true,;
   maxFeedback = 10;
 }) => {;
-  const [feedback, setFeedback] = useState<Feedback[]>([]);
-  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
-  const [stats, setStats] = useState<FeedbackStats>({
+  const [feedback, setFeedback] = useState<any>([]);
+  const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
+  const [stats, setStats] = useState<any>({
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     totalFeedback: 0,
     averageRating: 0,
@@ -93,16 +95,16 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
-    rating: 0,
+    rating: any0,
     comment: '',
     category: 'overall' as Feedback['category']
   });
 
   // Sample feedback data
-  useEffect(()  => {
+  useEffect(()   => {
     const sampleFeedback: Feedback[] = [
       {
-        id: '1',
+        id: any'1',
         customerName: 'Sarah Johnson',
         rating: 5,
         comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',
@@ -172,7 +174,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     setFilteredFeedback(sampleFeedback)}, []);
 
   // Calculate stats
-  useEffect(()  => {
+  useEffect(()   => {
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
@@ -183,7 +185,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         acc[f.category] = (acc[f.category] || 0) + 1;
 <<<<<<< HEAD
         return acc;
-      }, { /* empty */ } as Record<string, number>);
+      }, { /* empty */ } as Record<string, any>);
 =======
         return acc}, {} as Record<string, any>);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -191,17 +193,17 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
 <<<<<<< HEAD
-          category: category.charAt(0).toUpperCase() + category.slice(1),
+          category: anycategory.charAt(0).toUpperCase() + category.slice(1),
           count,
           percentage: (count / totalFeedback) * 100
         }))
-        .sort((a, b)  => b.count - a.count);
+        .sort((a, b)   => b.count - a.count);
 =======;
-          category: category.charAt(0).toUpperCase() + category.slice(1),;
+          category: anycategory.charAt(0).toUpperCase() + category.slice(1),;
           count,;
           percentage: (count / totalFeedback) * 100;
         }));
-        .sort((a, b) => b.count - a.count);
+        .sort((a, b)  => b.count - a.count);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         .slice(0, 4);
 
@@ -277,7 +279,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
 };
 =======
-      tags: [],;
+      tags: any[],;
   ;
   ;
   verified: false;
@@ -289,12 +291,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-    setFeedback(prev  => [feedback, ...prev]);
+    setFeedback(prev   => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
+  const handleVote = (feedbackId: anystring, type: 'helpful' | 'unhelpful')   => {
     setFeedback(prev => prev.map(f => {
 <<<<<<< HEAD
       if (f.id === feedbackId) {
@@ -306,7 +308,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       return f}))};
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string)  => {
+  const getSentimentColor = (sentiment: anystring)   => {
     switch (sentiment) {;
 =======;
       if (f.id === feedbackId) {;
@@ -321,7 +323,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {;
+  const getSentimentColor = (sentiment: anystring)  => {;
     switch (sentiment) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'positive': return 'text-green-400 bg-green-400/20';
@@ -335,7 +337,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (category: anystring)   => {
     const colors = {
   'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
@@ -501,8 +503,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.topCategories.map((category, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-4">
+            {stats.topCategories.map((category, index)   => (
               <motion.div
                 key={category.category}
                 initial = {

@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import {
-  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
+import { Link  } from 'react-router-dom.ts';
+import { Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
   MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
   Atom, Network, Eye, PenTool, Heart, Building, Truck,
   Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
@@ -56,10 +55,10 @@ import {
   Newspaper,
   BookOpen,
   ExternalLink
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export default function InnovativeServicesLanding2025() {
+export default function InnovativeServicesLanding2025(...args: any[]): any {
   const featuredServices = [
     {
       name: 'AI Workflow Orchestrator',
@@ -264,8 +263,8 @@ export default function InnovativeServicesLanding2025() {
       {/* Market Statistics */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {marketStats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {marketStats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -307,8 +306,8 @@ export default function InnovativeServicesLanding2025() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {innovationHighlights.map((highlight, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {innovationHighlights.map((highlight, index)  => (
               <motion.div
                 key={highlight.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -367,8 +366,8 @@ export default function InnovativeServicesLanding2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredServices.map((service, index)  => (
               <motion.div
                 key={service.name}
 <<<<<<< HEAD
@@ -507,8 +506,8 @@ export default function InnovativeServicesLanding2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category, index)  => (
               <motion.div
                 key={category.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -616,7 +615,7 @@ export default function InnovativeServicesLanding2025() {
               </p>
             </motion.div>
 =======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Star,
@@ -638,7 +637,7 @@ export default function InnovativeServicesLanding2025() {
                 title: 'Proven Results',
                 description: 'Track record of successful implementations and ROI'
               }
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}

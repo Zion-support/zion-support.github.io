@@ -1,20 +1,21 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket   } from 'lucide-react.ts';
+import { SEO   } from '../components/SEO';
+=======
+import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket  } from 'lucide-react';
-import { SEO  } from "../components/SEO";
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 <<<<<<< HEAD
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket import { SEO } from '../components/SEO';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket import { SEO  } from '../components/SEO';
 =======
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
-import { SEO } from "../components/SEO";
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket  } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface DemoFormData {
+
 
   firstName: string;
   lastName: string;
@@ -28,7 +29,8 @@ interface DemoFormData {
 <<<<<<< HEAD
   message: string;
 =======
-  message: string}
+message: string;
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ScheduleDemo: React.FC = (): JSX.Element => {
@@ -73,24 +75,24 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
   ];
 
 <<<<<<< HEAD
-  const handleServiceToggle = (serviceId: string)  => {
+  const handleServiceToggle = (serviceId: anystring)   => {
     setFormData(prev => ({
       ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(id  => id !== serviceId);
+      services: anyprev.services.includes(serviceId)
+        ? prev.services.filter(id   => id !== serviceId);
         [...prev.services, serviceId];
     }))};
 
-  const handleServiceToggle = (serviceId: string) => {;
+  const handleServiceToggle = (serviceId: anystring)  => {;
     setFormData(prev => ({;
       ...prev,;
-      services: prev.services.includes(serviceId);
-        ? prev.services.filter(id => id !== serviceId);
+      services: anyprev.services.includes(serviceId);
+        ? prev.services.filter(id  => id !== serviceId);
         : [...prev.services, serviceId];
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setIsSubmitting(true);
@@ -400,7 +402,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 }))}
 =======
-                        value={formData.company}
+                        value={formData.comp}
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   company: e.target.value 
@@ -521,8 +523,8 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Services of Interest
                     </label>
-                    <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
-                      {availableServices.map((service)  => (
+                    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-3">
+                      {availableServices.map((service)   => (
                         <label key={service.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-colors">
                           <input
                             type="checkbox"

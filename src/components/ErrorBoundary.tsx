@@ -1,8 +1,7 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
-import {
-  AlertTriangle,
+import { motion  } from 'framer-motion.ts';
+import { AlertTriangle,
   RefreshCw,
   Home,
   Bug,
@@ -13,10 +12,11 @@ import {
   Info,
   Zap,
   CheckCircle
-interface Props {
-  children: ReactNode;
+interface Props extends React.PropsWithChildren<{}> {
+
+  children: anyReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
   showDetails?: boolean;
 
 interface State {
@@ -26,18 +26,21 @@ interface State {
   showStack: boolean;
   errorId: string;
 =======
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft  
+} from 'lucide-react.ts';
 
 interface Props extends React.PropsWithChildren<{}> {
-  children: ReactNode;
+  children: anyReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
 }
 
 interface State {
+
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -96,7 +99,7 @@ export class ErrorBoundary extends Component<Props, State> {
     // Log to external service (you can replace this with your error logging service)
     this.logErrorToService(error, errorInfo);
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)  => {
     try {
       // Example: Send to error logging service
       const errorData = {
@@ -157,8 +160,7 @@ export class ErrorBoundary extends Component<Props, State> {
   private handleCopyError = () => {
     if (this.state.error && this.state.errorInfo) {
       const errorText = `
-Error Details:
-Message: ${this.state.error.message}
+Error Details: anyMessage: ${this.state.error.message}
 Stack: ${this.state.error.stack}
 Component Stack: ${this.state.errorInfo.componentStack}
 Error ID: ${this.state.errorId}
@@ -167,7 +169,7 @@ URL: ${window.location.href}
 User Agent: ${navigator.userAgent}
       `.trim();
 
-      navigator.clipboard.writeText(errorText).then(() => {
+      navigator.clipboard.writeText(errorText).then(()  => {
         // Show success feedback
         const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
         if (button) {
@@ -426,8 +428,8 @@ User Agent: ${navigator.userAgent}
 
 
 // Hook-based error boundary for functional components
-export function useErrorHandler() {
-  const [error, setError] = React.useState<Error | null>(null);
+export function useErrorHandler(...args: any[]): any {
+  const [error, setError] = React.useState<any>(null);
 
   React.useEffect(() => {
     if (error) {
@@ -441,7 +443,7 @@ export function useErrorHandler() {
     }
   }, [error]);
 
-  const handleError = React.useCallback((error: Error) => {
+  const handleError = React.useCallback((error: anyError)  => {
     setError(error);
   }, []);
 
@@ -454,11 +456,11 @@ export function useErrorHandler() {
 
 // Higher-order component for error boundaries
 export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
+  Component: anyReact.ComponentType<P>,
   fallback?: ReactNode,
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void
 ) {
-  return function WithErrorBoundary(props: P) {
+  return function WithErrorBoundary(...args: any[]): any {
     return (
       <ErrorBoundary fallback={fallback} onError={onError}>
         <Component {...props} />
@@ -468,8 +470,8 @@ export function withErrorBoundary<P extends object>(
 
 <<<<<<< HEAD
 // Hook for functional components to catch errors
-export function useErrorHandler() {
-  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
+export function useErrorHandler(...args: any[]): any {
+  return React.useCallback((error: anyError, errorInfo?: ErrorInfo)  => {
 <<<<<<< HEAD
     // // // console.error('Error caught by useErrorHandler:', error, errorInfo);
 =======
@@ -487,10 +489,10 @@ export function useErrorHandler() {
 // Global error handler for unhandled errors
 if (typeof window !== 'undefined') {
   window.addEventListener('error', (event) => {
-    console.error('Unhandled error:', event.error);
+    console.error('Unhandled error: any', event.error);
   });
 
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener('unhandledrejection', (event)  => {
     console.error('Unhandled promise rejection:', event.reason);
   });
 }

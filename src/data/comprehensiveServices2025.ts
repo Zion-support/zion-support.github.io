@@ -2,6 +2,7 @@
 // Real, Innovative Micro SAAS, IT Infrastructure, and AI Services
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
@@ -79,9 +80,9 @@ export interface AIService {
   ethicalAI: string[];
 
 // Zion Tech Group Contact Information
-const zionContact: ServiceContact = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
+const zionContact: ServiceContact = {;
+phone: "+1 302 464 0950",;
+email: "kleber@ziontechgroup.com",;
   website: "https://ziontechgroup.com",;
   ;
   ;
@@ -89,6 +90,7 @@ const zionContact: ServiceContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
+
 
 
 

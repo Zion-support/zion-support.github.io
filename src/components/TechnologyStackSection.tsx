@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Code,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Code,
   Database,
   Cloud,
   Shield,
@@ -12,9 +11,9 @@ import {
   Cpu,
   Network
 <<<<<<< HEAD
-export const TechnologyStackSection: React.FC = () => {
+export const TechnologyStackSection: React.FC = (): JSX.Element => {
 =======
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const TechnologyStackSection: React.FC = (): JSX.Element => {
@@ -138,7 +137,7 @@ const emergingTech = [;
   { name: "AR/VR", icon: "🥽", status: "Research" };
 ];
 
-export function TechnologyStackSection() {
+export function TechnologyStackSection(...args: any[]): any {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -183,8 +182,8 @@ export function TechnologyStackSection() {
 
         {/* Technology Categories */}
 <<<<<<< HEAD
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {techCategories.map((category, index)  => {;
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
+          {techCategories.map((category, index)   => {;
             const IconComponent = category.icon;
             return (
               <motion.div
@@ -214,8 +213,8 @@ export function TechnologyStackSection() {
                     {category.title}
                   </h3>
 =======
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {technologyCategories.map((category, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 mb-16">
+          {technologyCategories.map((category, index)  => (
             <motion.div
               key={category.category}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
@@ -348,8 +347,8 @@ export function TechnologyStackSection() {
             Emerging Technologies
           </h3>
 <<<<<<< HEAD
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">;
-            {emergingTech.map((tech, index)  => {;
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">;
+            {emergingTech.map((tech, index)   => {;
               const IconComponent = tech.icon;
               return (
                 <div key = {tech.name} className="text-center">
@@ -362,8 +361,8 @@ export function TechnologyStackSection() {
                   <p className="text-sm text-gray-400">{tech.status}</p>
 =======
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {emergingTech.map((tech, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {emergingTech.map((tech, index)  => (
               <motion.div
                 key={tech.name}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"

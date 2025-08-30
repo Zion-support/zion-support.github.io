@@ -23,7 +23,7 @@ import { Twitter,
   Award
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const footerNavigation = {
@@ -124,7 +124,7 @@ const EnhancedFooter: React.FC = (): JSX.Element => {;
 	const scrollToTop = () => {;
 		window.scrollTo({ top: 0, behavior: 'smooth' })};
 =======
-const EnhancedFooter: React.FC = () => {;
+const EnhancedFooter: React.FC = (): JSX.Element => {;
 	const scrollToTop = () => {;
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
@@ -180,7 +180,7 @@ const EnhancedFooter: React.FC = () => {;
 
 						{/* Social media */}
 						<div className="flex space-x-4">
-							{socialLinks.map(({ name, href, icon: Icon })  => (
+							{socialLinks.map(({ name, href, icon: anyIcon })   => (
 								<a
 									key={name}
 									href={href}
@@ -218,8 +218,8 @@ const EnhancedFooter: React.FC = () => {;
 
 				{/* Quick Links Section */}
 				<div className="py-8 border-t border-zion-blue-light mb-8">
-					<div className="grid grid-cols-2 md: grid-cols-4 gap-6">
-						{quickLinks.map((link)  => (
+					<div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+						{quickLinks.map((link)   => (
 							<Link
 								key={link.name}
 								href={link.href}

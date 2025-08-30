@@ -14,7 +14,7 @@ declare module 'jspdf' {
     setLineWidth(...args: any[]): void;
     splitTextToSize(text: string, size: number): string[];
 <<<<<<< HEAD
-    output(type?: string): any;
+    output(type?: string): ;
 
 =======
     output(type?: string): ;

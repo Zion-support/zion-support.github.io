@@ -1,8 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Search,
+import React, { useState, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Search,
   Filter,
   Star,
   TrendingUp,
@@ -52,17 +51,17 @@ import {
   Gauge,
   MessageCircle as MessageCircleIcon
 <<<<<<< HEAD
-import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
+import { enhancedServicesCatalog2025, EnhancedService  } from '../data/enhancedServicesCatalog2025';
 =======
 } from 'lucide-react';
-import { enhancedServicesCatalog2025, EnhancedService } from "../data/enhancedServicesCatalog2025";
+import { enhancedServicesCatalog2025, EnhancedService  } from '../data/enhancedServicesCatalog2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function EnhancedServicesShowcase2025() {
+export default function EnhancedServicesShowcase2025(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
 
   // Get unique categories
   const categories = ['all', ...new Set(enhancedServicesCatalog2025.map(service => service.category))];
@@ -113,7 +112,7 @@ export default function EnhancedServicesShowcase2025() {
 
 };
 
-  const ServiceCard = ({ service }: { service: EnhancedService }) => (
+  const ServiceCard = ({ service }: { service: anyEnhancedService })  => (
     <motion.div
       key={service.id}
       className="neon-card hover:scale-105 transition-all duration-300 cursor-pointer group"
@@ -271,7 +270,7 @@ export default function EnhancedServicesShowcase2025() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
-  const ServiceList = ({ service }: { service: EnhancedService }) => (
+  const ServiceList = ({ service }: { service: anyEnhancedService })  => (
     <motion.div
       key={service.id}
       className="neon-card p-6 hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
@@ -426,13 +425,13 @@ export default function EnhancedServicesShowcase2025() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="grid grid-cols-1 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
               {[
                 { icon: Rocket, label: 'Services', value: '50+', color: 'text-cyan-400' },
                 { icon: Users, label: 'Customers', value: '500+', color: 'text-purple-400' },
                 { icon: TrendingUp, label: 'Growth', value: '300%', color: 'text-green-400' },
                 { icon: Award, label: 'Awards', value: '25+', color: 'text-yellow-400' }
-              ].map((stat, index) => (
+              ].map((stat, index)  => (
                 <motion.div
                   key={stat.label}
                   className="text-center"
@@ -523,9 +522,9 @@ export default function EnhancedServicesShowcase2025() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus: anyoutline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
 
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -593,8 +592,8 @@ export default function EnhancedServicesShowcase2025() {
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8' : 'space-y-6'}>
-                {filteredServices.map((service) => (
+              <div className={viewMode === 'grid' ? 'grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8' : 'space-y-6'}>
+                {filteredServices.map((service)  => (
                   viewMode === 'grid' ? (
                     <ServiceCard key={service.id} service={service} />
                   ) : (

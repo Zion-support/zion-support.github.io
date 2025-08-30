@@ -1,11 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Server, Network, Shield, Database, Cloud, Zap, CheckCircle, ArrowRight, Cpu, HardDrive, Monitor, Users, Globe, Lock, BarChart3, Clock import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import { Server, Network, Shield, Database, Cloud, Zap, CheckCircle, ArrowRight, Cpu, HardDrive, Monitor, Users, Globe, Lock, BarChart3, Clock import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom.ts';
 =======
-import {
-  Server,
+import { Server,
   Shield,
   Cloud,
   Database,
@@ -16,7 +15,7 @@ import {
   Cpu,
   HardDrive,
   Check
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ITInfrastructure = () => {
@@ -241,8 +240,8 @@ const ITInfrastructure = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -339,8 +338,8 @@ const ITInfrastructure = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {infrastructureTypes.map((type, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {infrastructureTypes.map((type, index)  => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300"
@@ -394,8 +393,8 @@ const ITInfrastructure = () => {
             </motion.div>
 
 <<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300"
@@ -433,8 +432,8 @@ const ITInfrastructure = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricing.map((plan, index)  => (
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
@@ -509,9 +508,9 @@ const ITInfrastructure = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 =======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}

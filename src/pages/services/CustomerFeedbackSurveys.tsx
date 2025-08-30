@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react.ts';
 import SEO from '@/components/SEO';
 
-export default function CustomerFeedbackSurveys(...args[]):  {
+export default function CustomerFeedbackSurveys(...args[]: any):  {
   return (
     <div className = "min-h-screen bg-futuristic text-white">
       <SEO

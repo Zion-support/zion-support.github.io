@@ -1,7 +1,8 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProps {
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   message?: string;
   showProgress?: boolean;
   progress?: number;
@@ -9,28 +10,25 @@ import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProp
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
 =======
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  
+} from 'framer-motion.ts';
 
-interface EnhancedLoadingSpinnerProps {
+interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
   showProgress?: boolean;
   progress?: number;
   variant?: 'default' | 'futuristic' | 'minimal';
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function EnhancedLoadingSpinner({
-  size = 'md',
-  text = 'Loading...',
-  showProgress = false,
-  progress = 0,
-<<<<<<< HEAD
-  variant = 'default',
-  size = 'lg',
-  className = ''
-}) => {
+  size = 'md': any, text = 'Loading...': any, showProgress = false: any, progress = 0: any, <<<<<<< HEAD
+  variant = 'default': any, size = 'lg': any, className = ''
+}: any) => {
   const [currentMessage, setCurrentMessage] = useState(message);
   const [messageIndex, setMessageIndex] = useState(0);
 
@@ -248,17 +246,19 @@ export const TechLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'var
   <EnhancedLoadingSpinner {...props} variant="tech" />
 );
 
-interface LoadingOverlayProps {
+interface LoadingOverlayProps extends React.PropsWithChildren<{}> {
+
   isOpen: boolean;
   message?: string;
   progress?: number;
   variant?: 'default' | 'ai' | 'tech' | 'global';
 
-export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
+export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({;
   isOpen,
   message,
   progress,
   variant = 'default',
+
 }) => {
   return (
     <AnimatePresence>

@@ -1,8 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-    Accessibility,
+import { AnimatePresence, motion  } from 'framer-motion.ts';
+import { Accessibility,
     AlertTriangle,
     CheckCircle,
     Contrast,
@@ -12,12 +11,11 @@ import {
     X,
     ZoomIn,
     ZoomOut
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState  } from 'react.ts';
 =======
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Eye,
+import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Eye,
   EyeOff,
   Volume2,
   VolumeX,
@@ -38,12 +36,11 @@ import {
   Users,
   Smartphone,
   Monitor
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { 
-  Eye, 
+import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
+import { Eye, 
   EyeOff, 
   Type, 
   Volume2, 
@@ -57,9 +54,10 @@ import {
   X,
   Check,
   AlertTriangle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -68,10 +66,12 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicators: boolean;
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilityAnnouncement {
+
   id: string;
 <<<<<<< HEAD
   name: string;
@@ -88,28 +88,29 @@ interface AccessibilityAudit {
   recommendation: string;
   wcagCriteria: string;
 
-export default function EnhancedAccessibilityEnhancer() {
+export default function EnhancedAccessibilityEnhancer(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeFeatures, setActiveFeatures] = useState<Set<string>>(new Set());
-  const [auditResults, setAuditResults] = useState<AccessibilityAudit[]>([]);
+  const [auditResults, setAuditResults] = useState<any>([]);
   const [isAuditing, setIsAuditing] = useState(false);
   const [fontSize, setFontSize] = useState(16);
-  const [contrastMode, setContrastMode] = useState<'normal' | 'high' | 'inverted'>('normal');
+  const [contrastMode, setContrastMode] = useState<any>('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
   const [focusIndicator, setFocusIndicator] = useState(true);
   const [screenReaderMode, setScreenReaderMode] = useState(false);
   const [keyboardNavigation, setKeyboardNavigation] = useState(true);
   const [colorBlindMode, setColorBlindMode] = useState(false);
 
-  const accessibilityFeatures: AccessibilityFeature[] = [
+const accessibilityFeatures: AccessibilityFeature[] = [;
     {
-      id: 'high-contrast',
-      name: 'High Contrast Mode',
-      description: 'Increase contrast for better readability',
-      enabled: false,
-      category: 'visual',
-      wcagLevel: 'AA'
-    },
+id: 'high-contrast',;
+name: 'High Contrast Mode',;
+description: 'Increase contrast for better readability',;
+enabled: false,;
+category: 'visual',;
+wcagLevel: 'AA';
+    
+},
     {
       id: 'large-text',
       name: 'Large Text',
@@ -161,7 +162,7 @@ export default function EnhancedAccessibilityEnhancer() {
   ];
 
   // Apply accessibility features
-  const applyFeature = useCallback((featureId: string, enabled: boolean) => {
+  const applyFeature = useCallback((featureId: anystring, enabled: boolean)  => {
     const feature = accessibilityFeatures.find(f => f.id === featureId);
     if (!feature) return;
 
@@ -247,9 +248,9 @@ export default function EnhancedAccessibilityEnhancer() {
   timestamp: Date;
 }
 
-const EnhancedAccessibilityEnhancer: React.FC = () => {
+const EnhancedAccessibilityEnhancer: React.FC = (): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>(() => {
+  const [settings, setSettings] = useState<any>(() => {
     const saved = localStorage.getItem('accessibility-settings');
     return saved ? JSON.parse(saved) : {
       highContrast: false,
@@ -263,8 +264,8 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     };
   });
   
-  const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[]>([]);
-  const [currentAnnouncement, setCurrentAnnouncement] = useState<AccessibilityAnnouncement | null>(null);
+  const [announcements, setAnnouncements] = useState<any>([]);
+  const [currentAnnouncement, setCurrentAnnouncement] = useState<any>(null);
 
   // Memoized settings object for performance
   const settingsObject = useMemo(() => ({
@@ -326,7 +327,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 =======
   // Handle keyboard shortcuts
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: anyKeyboardEvent)  => {
       // Ctrl/Cmd + Shift + A to toggle accessibility panel
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'A') {
         e.preventDefault();
@@ -385,7 +386,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       const tabIndex = element.getAttribute('tabindex');
       if (tabIndex === '-1' && !element.getAttribute('aria-hidden')) {
         results.push({
-          id: `keyboard-${index}`,
+          id: any`keyboard-${index}`,
           issue: 'Element not keyboard accessible',
           severity: 'high',
           element: element.outerHTML.slice(0, 100),
@@ -396,7 +397,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     });
 
     // Simulate audit time
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve  => setTimeout(resolve, 2000));
 
     setAuditResults(results);
     setIsAuditing(false);
@@ -450,13 +451,13 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   // Announce changes to screen readers
   const announce = useCallback((message: string, type: 'info' | 'success' | 'warning' | 'error' = 'info') => {
     const announcement: AccessibilityAnnouncement = {
-      id: Date.now().toString(),
+      id: anyDate.now().toString(),
       message,
       type,
       timestamp: new Date()
     };
     
-    setAnnouncements(prev => [...prev, announcement]);
+    setAnnouncements(prev  => [...prev, announcement]);
     setCurrentAnnouncement(announcement);
     
     // Remove announcement after 5 seconds
@@ -471,7 +472,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   }, []);
 
   // Handle setting changes
-  const handleSettingChange = useCallback((key: keyof AccessibilitySettings, value: boolean) => {
+  const handleSettingChange = useCallback((key: anykeyof AccessibilitySettings, value: boolean)  => {
     setSettings(prev => ({ ...prev, [key]: value }));
     
     const settingNames = {
@@ -514,7 +515,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   }, []);
 
   // Get setting icon
-  const getSettingIcon = (key: keyof AccessibilitySettings) => {
+  const getSettingIcon = (key: anykeyof AccessibilitySettings)  => {
     const icons = {
       highContrast: Palette,
       largeText: Type,
@@ -529,7 +530,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   };
 
   // Get setting description
-  const getSettingDescription = (key: keyof AccessibilitySettings) => {
+  const getSettingDescription = (key: anykeyof AccessibilitySettings)  => {
     const descriptions = {
       highContrast: 'Increases contrast for better visibility',
       largeText: 'Makes text larger and easier to read',
@@ -544,7 +545,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   };
 
   // Get keyboard shortcut
-  const getKeyboardShortcut = (key: keyof AccessibilitySettings) => {
+  const getKeyboardShortcut = (key: anykeyof AccessibilitySettings)  => {
     const shortcuts = {
       highContrast: 'Ctrl/Cmd + Shift + H',
       largeText: 'Ctrl/Cmd + Shift + L',
@@ -660,8 +661,8 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     Accessibility Features
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {accessibilityFeatures.map((feature) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {accessibilityFeatures.map((feature)  => (
                       <div
                         key={feature.id}
                         className={`p-4 rounded-xl border transition-all ${
@@ -852,8 +853,8 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 
             {/* Settings Grid */}
             <div className="p-6 overflow-y-auto max-h-[60vh]">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {Object.entries(settings).map(([key, value]) => {
+              <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                {Object.entries(settings).map(([key, value])  => {
                   const settingKey = key as keyof AccessibilitySettings;
                   const Icon = getSettingIcon(settingKey);
                   const description = getSettingDescription(settingKey);

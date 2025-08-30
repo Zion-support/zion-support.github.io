@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search,
   HelpCircle,
   MessageCircle,
   Phone,
@@ -33,29 +32,26 @@ import {
 <<<<<<< HEAD
   MapPin
 interface FAQItem {
+
 =======
   CheckCircle,
   AlertCircle,
   Info
-} from 'lucide-react';
+ 
+} from 'lucide-react.ts';
 
 interface HelpSection {
+
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: string;
   title: string;
-  icon: any;
+  icon: ;
   description: string;
-  articles: Array<{
-    title: string;
-    description: string;
-    path?: string;
-    external?: boolean;
-    difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
-    readTime: string;
-  }>;
+articles: Array<any>;
 }
 
 interface FAQItem {
+
   question: string;
   answer: string;
   category: string;
@@ -66,7 +62,7 @@ interface HelpCategory {
   id: string;
   title: string;
   description: string;
-  icon: any;
+  icon: ;
   color: string;
   articleCount: number;
   path: string;
@@ -74,13 +70,14 @@ interface HelpCategory {
 interface SupportOption {
   title: string;
   description: string;
-  icon: any;
+  icon: ;
   color: string;
   action: string;
   path: string;
 
-const helpCategories: HelpCategory[] = [
+const helpCategories: HelpCategory[] = [;
 =======
+
 }
 
 const helpSections: HelpSection[] = [
@@ -404,12 +401,12 @@ const faqData: FAQItem[] = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export function HelpCenter() {
+export function HelpCenter(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
 
-  const handleSearch = (query: string) => {
+  const handleSearch = (query: anystring)  => {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
@@ -424,11 +421,10 @@ export function HelpCenter() {
   };
 
   const filteredFAQ = selectedCategory === 'All' 
-    ? faqData 
-    : faqData.filter(item => item.category === selectedCategory);
+    ? faqData: anyfaqData.filter(item  => item.category === selectedCategory);
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'getting-started': return BookOpen;
       case 'services': return Code;
@@ -440,7 +436,7 @@ export function HelpCenter() {
 
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     switch (category) {
       case 'getting-started': return 'text-blue-500';
       case 'services': return 'text-purple-500';
@@ -498,8 +494,8 @@ export function HelpCenter() {
           transition={{ duration: 0.6, delay: 0.2 }}
 
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {helpCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {helpCategories.map((category, index)  => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -533,8 +529,8 @@ export function HelpCenter() {
           transition={{ duration: 0.6, delay: 0.4 }}
 
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportOptions.map((option, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index)  => (
               <motion.div
                 key={option.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -576,12 +572,12 @@ export function HelpCenter() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory === 'all'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
+                    : 'bg-white/10 text-zion-slate-light hover: anybg-white/20'
                 }`}
 
                 All Categories
               </button>
-              {helpCategories.map(category => (
+              {helpCategories.map(category  => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -682,8 +678,8 @@ export function HelpCenter() {
                               <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
                               <div className="mt-4 flex items-center gap-4 text-sm text-zion-slate-light">
                                 <span className={`flex items-center gap-1 ${getCategoryColor(faq.category)}`}>
-                                  {getCategoryIcon(faq.category)({ className: "h-4 w-4" })}
-                                  {helpCategories.find(c => c.id === faq.category)?.title}
+                                  {getCategoryIcon(faq.category)({ className: any"h-4 w-4" })}
+                                  {helpCategories.find(c  => c.id === faq.category)?.title}
                                 </span>
                                 <span className="flex items-center gap-1">
                                   <Lightbulb className="h-4 w-4" />

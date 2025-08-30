@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search,
   Filter,
   X,
   ChevronDown,
@@ -18,10 +17,11 @@ import {
   Globe
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SearchResult {
+
 
   id: string;
   title: string;
@@ -34,10 +34,12 @@ interface SearchResult {
 <<<<<<< HEAD
   type: 'service' | 'article' | 'team' | 'technology';
 =======
-  type: 'service' | 'article' | 'team' | 'technology'}
+type: 'service' | 'article' | 'team' | 'technology';
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterOption {
+
 
   id: string;
   label: string;
@@ -45,13 +47,14 @@ interface FilterOption {
 <<<<<<< HEAD
   count: number;
 =======
-  count: number}
+count: anynumber;
+}
 
 interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   data: SearchResult[];
-  onResultsChange?: (results: SearchResult[])  => void;
+  onResultsChange?: (results: SearchResult[])   => void;
   placeholder?: string;
 <<<<<<< HEAD
   showFilters?: boolean;
@@ -78,7 +81,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
 <<<<<<< HEAD
-    }, { /* empty */ } as Record<string, number>);
+    }, { /* empty */ } as Record<string, any>);
 =======
     }, {} as Record<string, any>);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -87,19 +90,19 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
 <<<<<<< HEAD
-    }, { /* empty */ } as Record<string, number>);
+    }, { /* empty */ } as Record<string, any>);
 =======
     }, {} as Record<string, any>);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return {
-      categories: Object.entries(categories).map(([key, count])  => ({
-        id: key,
+      categories: anyObject.entries(categories).map(([key, count])   => ({
+        id: anykey,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
         count
       })),
-      types: Object.entries(types).map(([key, count]) => ({
+      types: Object.entries(types).map(([key, count])  => ({
         id: key,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
@@ -148,7 +151,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       case 'name':
         results = results.sort((a, b) => a.title.localeCompare(b.title));
         break;
-      default: // relevance
+      default: any// relevance
         // Keep original order for relevance
         break;
 
@@ -156,12 +159,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   }, [data, searchQuery, selectedCategory, activeFilters, sortBy]);
 
   // Update parent component with results
-  useEffect(() => {
+  useEffect(()  => {
     onResultsChange?.(filteredResults);
   }, [filteredResults, onResultsChange]);
 
   // Toggle filter
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter = (filterId: anystring)  => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -179,7 +182,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get icon for type
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: anystring)  => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
       case 'article': return <Tag className="w-4 h-4" />;
@@ -190,7 +193,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     const colors = {
       'ai': 'text-purple-400',
       'cloud': 'text-blue-400',

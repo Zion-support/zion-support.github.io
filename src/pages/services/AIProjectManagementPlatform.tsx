@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  Brain,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain,
   Target,
   TrendingUp,
   Users,
@@ -34,10 +33,10 @@ import {
   PieChart,
   Activity
 =======
-import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen } from 'lucide-react';
+import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export default function AIProjectManagementPlatform() {
+export default function AIProjectManagementPlatform(...args: any[]): any {
   const features = [
     'AI-powered project planning and scheduling optimization',
     'Intelligent resource allocation and workload balancing',
@@ -166,8 +165,8 @@ export default function AIProjectManagementPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -202,8 +201,8 @@ export default function AIProjectManagementPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -238,8 +237,8 @@ export default function AIProjectManagementPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -274,8 +273,8 @@ export default function AIProjectManagementPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -415,8 +414,8 @@ export default function AIProjectManagementPlatform() {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Project Plans</h3>
-            <div className="grid md:grid-cols-1 gap-4">
-              {tiers.map((t) => (
+            <div className="grid md: anygrid-cols-1 gap-4">
+              {tiers.map((t)  => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-indigo-600 mb-2">{t.price}</div>
@@ -465,8 +464,8 @@ export default function AIProjectManagementPlatform() {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Project Management Tools</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {projectTools.map((t) => (
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {projectTools.map((t)  => (
               <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <FolderOpen className="w-6 h-6 text-indigo-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{t}</div>
@@ -477,8 +476,8 @@ export default function AIProjectManagementPlatform() {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {aiCapabilities.map((c) => (
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {aiCapabilities.map((c)  => (
               <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-indigo-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{c}</div>

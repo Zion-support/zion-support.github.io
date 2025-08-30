@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { SEOHead } from '../components/seo/SEOHead';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import {
-  Shield,
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEOHead  } from '../components/seo/SEOHead';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { Shield,
   Lock,
   Eye,
   AlertTriangle,
@@ -25,8 +24,8 @@ import {
   Key,
   Monitor,
   TrendingUp
-} from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
+ } from 'lucide-react.ts';
+import { ENHANCED_SERVICES  } from '@/data/enhancedServices';
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   service.category.includes('Cybersecurity') ||
@@ -51,34 +50,34 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   Server,
   Key
 } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
+import { COMPREHENSIVE_SERVICES  } from '@/data/comprehensiveServices';
+import { TrustedBySection  } from '@/components/TrustedBySection';
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
 );
 const SECURITY_SERVICE_CATEGORIES = [
   {
-    id: 'threat-detection',
+    id: any'threat-detection',
     name: 'Threat Detection & Response',
     description: 'AI-powered security monitoring and incident response',
     icon: Eye,
-    services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
+    services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Threat Detection'))
   },
   {
-    id: 'zero-trust',
+    id: any'zero-trust',
     name: 'Zero Trust Security',
     description: 'Identity verification and access management',
     icon: Lock,
-    services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
+    services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Zero Trust'))
   }
 ];
-export default function CybersecurityServicesPage() {
+export default function CybersecurityServicesPage(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
     return categoryData?.icon || Shield;
   };
-  const getPricingModelLabel = (model: string) => {
+  const getPricingModelLabel = (model: anystring)  => {
     switch (model) {
       case 'one-time': return 'One-time';
       case 'monthly': return 'Monthly';
@@ -152,8 +151,8 @@ export default function CybersecurityServicesPage() {
                 Comprehensive cybersecurity solutions designed to protect your business from all angles
               </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              {SECURITY_SERVICE_CATEGORIES.map((category) => {
+            <div className="grid gap-6 md: anygrid-cols-2">
+              {SECURITY_SERVICE_CATEGORIES.map((category)  => {
                 const IconComponent = category.icon;
                 return (
                   <Card key={category.id} className="text-center hover:shadow-lg transition-shadow cursor-pointer border-red-500/20">
@@ -194,16 +193,16 @@ export default function CybersecurityServicesPage() {
                 ))}
               </TabsList>
               <TabsContent value="all" className="space-y-6">
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {CYBERSECURITY_SERVICES.map((service) => (
+                <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
+                  {CYBERSECURITY_SERVICES.map((service)  => (
                     <SecurityServiceCard key={service.id} service={service} />
                   ))}
                 </div>
               </TabsContent>
               {SECURITY_SERVICE_CATEGORIES.map((category) => (
                 <TabsContent key={category.id} value={category.id} className="space-y-6">
-                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {category.services.map((service) => (
+                  <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
+                    {category.services.map((service)  => (
                       <SecurityServiceCard key={service.id} service={service} />
                     ))}
                   </div>
@@ -319,7 +318,7 @@ export default function CybersecurityServicesPage() {
                 Our security solutions help you meet industry standards and regulatory requirements
               </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
+            <div className="grid gap-6 md: anygrid-cols-3 lg:grid-cols-6">
               {[
                 { name: 'SOC2', icon: '🔒', description: 'Security Controls' },
                 { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' },
@@ -327,7 +326,7 @@ export default function CybersecurityServicesPage() {
                 { name: 'PCI DSS', icon: '💳', description: 'Payment Security' },
                 { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
                 { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
-              ].map((standard) => (
+              ].map((standard)  => (
                 <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-lg w-16 h-16 mb-4 flex items-center justify-center">
@@ -394,16 +393,15 @@ export default function CybersecurityServicesPage() {
   );
 }
 // Security Service Card Component
-function SecurityServiceCard({ service }: { service: any }) {
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import {
-  Search,
+function SecurityServiceCard(...args: any[]): any {
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Input  } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+import { Search,
   Star,
   Clock,
   Users,
@@ -426,12 +424,12 @@ import {
   Network,
   Key,
   ShieldCheck
-} from 'lucide-react';
-import { EXPANDED_SERVICES, type ExpandedService } from '@/data/expandedServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
+ } from 'lucide-react.ts';
+import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedServices';
+import { TrustedBySection  } from '@/components/TrustedBySection';
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<string>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
+  const [priceRange, setPriceRange] = useState<any>('all');
   // Filter only security services
   const securityServices = EXPANDED_SERVICES.filter(service =>
     service.category === 'Security Services'
@@ -447,7 +445,7 @@ import { TrustedBySection } from '@/components/TrustedBySection';
     else if (priceRange === 'high') matchesPrice = service.price >= 1000;
     return matchesSearch && matchesSubcategory && matchesPrice;
   });
-  const getPricingModelIcon = (model: string) => {
+  const getPricingModelIcon = (model: anystring)  => {
     switch (model) {
       case 'monthly': return <Clock className="w-4 h-4" />;
       case 'hourly': return <Zap className="w-4 h-4" />;
@@ -455,8 +453,8 @@ import { TrustedBySection } from '@/components/TrustedBySection';
       default: return <DollarSign className="w-4 h-4" />;
     }
   };
-  const getPricingModelText = (model: string) => {
-  const getPricingModelLabel = (model: string) => {
+  const getPricingModelText = (model: anystring)  => {
+  const getPricingModelLabel = (model: anystring)  => {
     switch (model) {
       case 'one-time': return 'One-time';
       case 'monthly': return 'Monthly';
@@ -526,7 +524,7 @@ import { TrustedBySection } from '@/components/TrustedBySection';
         <div className="space-y-2">
           <h4 className="font-medium text-sm">Key Features:</h4>
           <ul className="space-y-1">
-            {service.features.slice(0, 3).map((feature: string, index: number) => (
+            {service.features.slice(0, 3).map((feature: anystring, index: number)  => (
               <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
                 <CheckCircle className="h-3 w-3 text-green-600" />
                 {feature}
@@ -578,7 +576,7 @@ import { TrustedBySection } from '@/components/TrustedBySection';
   Database,
   Monitor
 } from "lucide-react";
-import { CYBERSECURITY_SERVICES } from "@/data/expandedServices";
+import { CYBERSECURITY_SERVICES  } from '@/data/expandedServices';
 const CybersecurityServicesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
@@ -697,8 +695,8 @@ const CybersecurityServicesPage = () => {
               Comprehensive security solutions to protect your business from all angles
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CYBERSECURITY_SERVICES.map((service) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {CYBERSECURITY_SERVICES.map((service)  => (
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
                 <div className="relative">
                   <img
@@ -816,8 +814,8 @@ const CybersecurityServicesPage = () => {
               security challenges and protect your business assets.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securityServices.map((service) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {securityServices.map((service)  => (
               <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg mr-4">
@@ -876,8 +874,8 @@ const CybersecurityServicesPage = () => {
               comprehensive protection for your business.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {securityTechnologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {securityTechnologies.map((tech, index)  => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
@@ -900,8 +898,8 @@ const CybersecurityServicesPage = () => {
               requirements across multiple sectors.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {complianceStandards.map((standard, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {complianceStandards.map((standard, index)  => (
               <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-white" />
@@ -924,8 +922,8 @@ const CybersecurityServicesPage = () => {
               and 24/7 security monitoring services.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {threatIntelligence.map((intel, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {threatIntelligence.map((intel, index)  => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                   <Eye className="w-8 h-8 text-white" />
@@ -963,7 +961,7 @@ const CybersecurityServicesPage = () => {
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-white text-xl font-bold mb-3">Proven Track Record</h3>
+              <h3 className="text-white text-xl font-bold mb-3">Proven Track Record<string, any>
               <p className="text-zion-slate-light">
                 Successfully protected over 500+ businesses from cyber threats
                 with zero major security breaches.

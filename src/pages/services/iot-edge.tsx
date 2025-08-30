@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield import { Link } from 'react-router-dom';
-=======
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield import { Link  } from 'react-router-dom.ts';
+=======
+import React from 'react.ts';
+import { Helmet   } from 'react-helmet-async.ts';
+import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield   } from 'lucide-react.ts';
+import { Link   } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function IoTEdge(...args: []):  {
@@ -69,7 +69,7 @@ export default function IoTEdge(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Cpu,
@@ -102,7 +102,7 @@ export default function IoTEdge(...args: []):  {
                   description: "Enterprise-grade security with encryption and access controls."
 <<<<<<< HEAD
 
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
 =======
                 }
               ].map((feature, index)  => (
@@ -131,7 +131,7 @@ export default function IoTEdge(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Smart Manufacturing",
@@ -170,7 +170,7 @@ export default function IoTEdge(...args: []):  {
                   benefits: ["Inventory tracking", "Supply chain", "Customer insights"]
 <<<<<<< HEAD
 
-              ].map((application, index) => (
+              ].map((application, index)  => (
 =======
                 }
               ].map((application, index)  => (
@@ -230,11 +230,11 @@ export default function IoTEdge(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "90%", label: "Reduced Latency" },
+                    { metric: any"90%", label: "Reduced Latency" },
                     { metric: "60%", label: "Bandwidth Savings" },
                     { metric: "99.9%", label: "Uptime Reliability" },
                     { metric: "24/7", label: "Local Processing" }
-                  ].map((item, index)  => (
+                  ].map((item, index)   => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-indigo-400">{item.metric}</span>
@@ -258,7 +258,7 @@ export default function IoTEdge(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   title: "IoT Protocols",
@@ -277,7 +277,7 @@ export default function IoTEdge(...args: []):  {
                   description: "TLS encryption, device authentication, and secure communication"
 <<<<<<< HEAD
 
-              ].map((technology, index) => (
+              ].map((technology, index)  => (
 =======
                 }
               ].map((technology, index)  => (
@@ -306,7 +306,7 @@ export default function IoTEdge(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -329,7 +329,7 @@ export default function IoTEdge(...args: []):  {
                   description: "Monitor performance and continuously optimize the system."
 <<<<<<< HEAD
 
-              ].map((step, index) => (
+              ].map((step, index)  => (
 =======
                 }
               ].map((step, index)  => (

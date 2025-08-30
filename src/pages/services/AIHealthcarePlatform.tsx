@@ -1,9 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import {
-  Heart,
+import { Link  } from 'react-router-dom.ts';
+import { Heart,
   Stethoscope,
   Brain,
   Target,
@@ -54,9 +53,9 @@ const AIHealthcarePlatform = () => {
   Shield,
   Users,
   Stethoscope
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AIHealthcarePlatform: React.FC = () => {
+const AIHealthcarePlatform: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
@@ -380,8 +379,8 @@ const AIHealthcarePlatform: React.FC = () => {
           </motion.div>
           
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -421,8 +420,8 @@ const AIHealthcarePlatform: React.FC = () => {
 
             Healthcare Modules
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {healthcareModules.map((module, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {healthcareModules.map((module, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -454,8 +453,8 @@ const AIHealthcarePlatform: React.FC = () => {
 
             Compliance & Security
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {complianceFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {complianceFeatures.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -503,8 +502,8 @@ const AIHealthcarePlatform: React.FC = () => {
 
             Why Choose AI Healthcare Platform?
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

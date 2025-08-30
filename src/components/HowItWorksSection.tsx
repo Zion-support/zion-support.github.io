@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield const steps = [
 =======
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield  } from 'lucide-react.ts';
 const steps = [
 <<<<<<< HEAD
     {
@@ -183,7 +183,7 @@ const stats = [;
   { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
-export function HowItWorksSection() {
+export function HowItWorksSection(...args: any[]): any {
     const [hoveredStep, setHoveredStep] = useState(null);
     const [activeStep, setActiveStep] = useState(0);
     const containerVariants = {
@@ -400,9 +400,9 @@ export function HowItWorksSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: anytrue }}
 
-          {stats.map((stat, index) => (
+          {stats.map((stat, index)  => (
             <motion.div
               key={index}
               variants={statsVariants}
@@ -431,8 +431,8 @@ export function HowItWorksSection() {
 
 }}/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
-            {steps.map((step, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+            {steps.map((step, index)  => (
 <<<<<<< HEAD
               <motion.div 
                 key={index} 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion.ts';
 import Link from 'next/link.ts';
 import { Calendar,
   Clock,
@@ -23,7 +23,7 @@ import { Calendar,
   CheckCircle
 <<<<<<< HEAD
 =======
- } from 'lucide-react';
+  } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const events = [
@@ -170,7 +170,7 @@ const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
 
-export default function Events(...args[]):  {
+export default function Events(...args[]: any):  {
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
@@ -193,7 +193,7 @@ export default function Events(...args[]):  {
   const pastEvents = filteredEvents.filter(event => event.status === 'past');
 
 <<<<<<< HEAD
-  const formatDate = (dateString: string) => {;
+  const formatDate = (dateString: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
@@ -204,7 +204,7 @@ export default function Events(...args[]):  {
     })};
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (category: anystring)  => {;
     switch (category) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'AI & ML': return Brain;
@@ -222,7 +222,7 @@ export default function Events(...args[]):  {
   };
 
 <<<<<<< HEAD
-  const getStatusBadge = (status: string) => {;
+  const getStatusBadge = (status: anystring)  => {;
     if (status === 'upcoming') {;
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
     } else {
@@ -304,13 +304,13 @@ export default function Events(...args[]):  {
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
 <<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {eventTypes.map(type => (
-=======
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
                   {eventTypes.map(type  => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {eventTypes.map(type   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={type} value={type}>{type}</option>
                   ))}
@@ -323,13 +323,13 @@ export default function Events(...args[]):  {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {categories.map(category => (
-=======
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
                   {categories.map(category  => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {categories.map(category   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -342,13 +342,13 @@ export default function Events(...args[]):  {
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
 <<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {statuses.map(status => (
-=======
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
                   {statuses.map(status  => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {statuses.map(status   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={status} value={status}>
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
@@ -395,14 +395,14 @@ export default function Events(...args[]):  {
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {upcomingEvents.map((event, index)  => {;
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {upcomingEvents.map((event, index)   => {;
 =======;
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
             </motion.div>;
 ;
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-              {upcomingEvents.map((event, index) => {;
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">;
+              {upcomingEvents.map((event, index)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
@@ -574,14 +574,14 @@ export default function Events(...args[]):  {
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {pastEvents.map((event, index)  => {;
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {pastEvents.map((event, index)   => {;
 =======;
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>;
             </motion.div>;
 ;
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-              {pastEvents.map((event, index) => {;
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">;
+              {pastEvents.map((event, index)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (

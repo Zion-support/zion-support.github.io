@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react.ts';
 <<<<<<< HEAD
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe export default function AICustomerExperienceAnalytics() {
+import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe export default function AICustomerExperienceAnalytics(...args: any[]): any {
 =======
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Users, 
   BarChart3, 
   Heart, 
@@ -25,9 +24,9 @@ import {
   Activity,
   PieChart,
   LineChart
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AICustomerExperienceAnalytics: React.FC = () => {
+const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
 <<<<<<< HEAD
@@ -222,8 +221,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
 
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+            <div className="grid md: anygrid-cols-3 gap-4">
+              {tiers.map((t)  => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
@@ -298,8 +297,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={feature.title}
                   className="group relative p-6 rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm hover:border-emerald-500/40 transition-all duration-300"
@@ -339,8 +338,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
       <section className="py-16 bg-zion-slate-light/10">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-zion-slate-dark text-center mb-12">Use Cases & Industries</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase)  => (
               <div key={useCase} className="bg-white rounded-xl p-6 shadow-md border border-zion-slate-light/20">
                 <Target className="w-12 h-12 text-zion-cyan mb-4" />
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">{useCase}</h3>
@@ -403,8 +402,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {analyticsCapabilities.map((capability, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {analyticsCapabilities.map((capability, index)  => (
                 <motion.div
                   key={capability}
                   className="flex items-start gap-4 p-4 rounded-xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10"
@@ -441,8 +440,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={plan.name}
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
@@ -517,8 +516,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={benefit}
                   className="flex items-start gap-4 p-6 rounded-xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10"

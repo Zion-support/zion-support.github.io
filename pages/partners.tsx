@@ -1,15 +1,14 @@
 <<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion'
-import {
-  Handshake,
+import { Helmet  } from 'react-helmet-async.ts';
+import { motion  } from 'framer-motion.ts'
+import { Handshake,
   Shield,
   Cloud,
   Brain,
   Users,
 =======
 import Head from 'next/head.ts'
-import { motion  } from 'framer-motion.ts'
+import { motion   } from 'framer-motion.ts'
 import { Handshake, 
   Shield, 
   Cloud, 
@@ -24,7 +23,7 @@ import { Handshake,
   Lock,
   Rocket
 <<<<<<< HEAD
-export default function Partners() {
+export default function Partners(...args: any[]): any {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
 
@@ -101,7 +100,7 @@ export default function Partners() {
 =======
  } from 'lucide-react'
 
-export default function Partners(...args[]):  {
+export default function Partners(...args[]: any):  {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   
@@ -312,12 +311,12 @@ export default function Partners(...args[]):  {
             </motion.div>
 <<<<<<< HEAD
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)  => (
 =======
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index)  => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={benefit.title}
@@ -453,12 +452,12 @@ export default function Partners(...args[]):  {
                   </div>
 <<<<<<< HEAD
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {category.partners.map((partner, partnerIndex) => (
+                  <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                    {category.partners.map((partner, partnerIndex)  => (
 =======
                   
-                  <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
-                    {category.partners.map((partner, partnerIndex)  => (
+                  <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                    {category.partners.map((partner, partnerIndex)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <motion.div
                         key={partner.name}
@@ -556,12 +555,12 @@ export default function Partners(...args[]):  {
             </motion.div>
 <<<<<<< HEAD
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {partnershipLevels.map((level, index) => (
+            <div className="grid md: anygrid-cols-3 gap-8">
+              {partnershipLevels.map((level, index)  => (
 =======
             
-            <div className="grid md: grid-cols-3 gap-8">
-              {partnershipLevels.map((level, index)  => (
+            <div className="grid md: anygrid-cols-3 gap-8">
+              {partnershipLevels.map((level, index)   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={level.name}

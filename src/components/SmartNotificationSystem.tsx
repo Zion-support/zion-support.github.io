@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 import {
   Bell,
   X,
@@ -17,25 +17,28 @@ import {
   TrendingUp,
   Award
 interface Notification {
-  id: string;
+
+  id: anystring;
   type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
   title: string;
   message: string;
   timestamp: Date;
   read: boolean;
-  action?: {
+action?: {;
     label: string;
-    onClick: () => void;
-  };
+    onClick: ()  => void;
+  
+};
   priority: 'low' | 'medium' | 'high';
   category: string;
   expiresAt?: Date;
 
-interface Props {
+interface Props extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
 
-export function SmartNotificationSystem({ enabled = true }: Props) {;
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+export function SmartNotificationSystem(...args: any[]): any {;
+  const [notifications, setNotifications] = useState<any>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -43,28 +46,29 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
 
   // Generate sample notifications
   const generateSampleNotifications = useCallback(() => {
-    const sampleNotifications: Notification[] = [
+const sampleNotifications: Notification[] = [;
       {
-        id: '1',
-        type: 'success',
-        title: 'Welcome to Zion Tech Group!',
-        message: 'Your account has been successfully created. Explore our AI-powered solutions.',
-        timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
-        read: false,
-        priority: 'high',
-        category: 'onboarding',
-        action: {
-          label: 'Get Started',
+id: any'1',;
+type: 'success',;
+title: 'Welcome to Zion Tech Group!',;
+message: 'Your account has been successfully created. Explore our AI-powered solutions.',;
+timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago;
+read: false,;
+priority: 'high',;
+category: 'onboarding',;
+action: {;
+label: 'Get Started',;
 <<<<<<< HEAD
-          onClick: () => // // console.log('Get Started clicked')
+onClick: ()  => // // console.log('Get Started clicked');
 
 =======
-          onClick: () => console.log('Get Started clicked')
-        }
+onClick: any()  => console.log('Get Started clicked');
+        
+}
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
-        id: '2',
+        id: any'2',
         type: 'achievement',
         title: 'Performance Milestone Reached!',
         message: 'Your website performance score has improved to 95%. Great job!',
@@ -75,15 +79,15 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
         action: {
           label: 'View Details',
 <<<<<<< HEAD
-          onClick: () => // // console.log('View Details clicked')
+          onClick: ()  => // // console.log('View Details clicked')
 
 =======
-          onClick: () => console.log('View Details clicked')
+          onClick: any()  => console.log('View Details clicked')
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
-        id: '3',
+        id: any'3',
         type: 'info',
         title: 'New Feature Available',
         message: 'Try our new AI-powered content generator. Create engaging content in seconds.',
@@ -105,20 +109,20 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
         action: {
           label: 'Update Now',
 <<<<<<< HEAD
-          onClick: () => // // console.log('Update Now clicked')
+          onClick: ()  => // // console.log('Update Now clicked')
 
 
 =======
-          onClick: () => console.log('Update Now clicked')
+          onClick: any()  => console.log('Update Now clicked')
         }
       }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-        priority: 'high',;
+        priority: any'high',;
         category: 'security',;
         action: {;
           label: 'Update Now',;
-          onClick: () => console.log('Update Now clicked');
+          onClick: ()  => console.log('Update Now clicked');
         };
       };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -159,18 +163,18 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
 
   // Mark notification as read
 <<<<<<< HEAD
-  const markAsRead = useCallback((id: string) => {
+  const markAsRead = useCallback((id: anystring)  => {
     setNotifications(prev => {
       const updated = prev.map(n =>
         n.id === id ? { ...n, read: true } : n
 =======
-  const markAsRead = useCallback((id: string) => {;
+  const markAsRead = useCallback((id: anystring)  => {;
     setNotifications(prev => {;
       const updated = prev.map(n => ;
-        n.id === id ? { ...n, read: true } : n;
+        n.id === id ? { ...n, read: anytrue } : n;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       );
-      setUnreadCount(updated.filter(n => !n.read).length);
+      setUnreadCount(updated.filter(n  => !n.read).length);
       return updated;
     });
   }, []);
@@ -185,7 +189,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
   }, []);
 
   // Remove notification
-  const removeNotification = useCallback((id: string) => {;
+  const removeNotification = useCallback((id: anystring)  => {;
     setNotifications(prev => {;
       const filtered = prev.filter(n => n.id !== id);
       setUnreadCount(filtered.filter(n => !n.read).length);
@@ -205,7 +209,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
   }, [isMuted]);
 
   // Get notification icon
-  const getNotificationIcon = (type: Notification['type']) => {;
+  const getNotificationIcon = (type: anyNotification['type'])  => {;
     switch (type) {;
       case 'success':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -223,7 +227,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
   };
 
   // Get priority color
-  const getPriorityColor = (priority: Notification['priority']) => {;
+  const getPriorityColor = (priority: anyNotification['priority'])  => {;
     switch (priority) {;
       case 'high':;
         return 'border-l-red-500';
@@ -237,7 +241,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
   };
 
   // Format timestamp
-  const formatTimestamp = (timestamp: Date) => {;
+  const formatTimestamp = (timestamp: anyDate)  => {;
     const now = new Date();
     const diff = now.getTime() - timestamp.getTime();
     const minutes = Math.floor(diff / (1000 * 60));

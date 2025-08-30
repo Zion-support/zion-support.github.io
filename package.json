@@ -21,7 +21,11 @@
     "fix:all": "npm run lint:fix || true",
     "install:all": "npm install && cd server && npm install",
     "preview": "vite preview",
-    "lint:fix": "node scripts/pm2/lint-fixer.js",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "clean": "rm -rf dist node_modules/.vite",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist",
     "pm2:start": "pm2 start ecosystem.config.js",
     "pm2:stop": "pm2 stop ecosystem.config.js",
     "pm2:restart": "pm2 restart ecosystem.config.js",
@@ -66,7 +70,14 @@
     "health:full": "npm run health:check && npm run security:scan && npm run perf:check",
     "dashboard": "node scripts/pm2/automation-dashboard.js",
     "docs:update": "npm run docs:generate && npm run quality:check",
+<<<<<<< HEAD
     "docs:full": "npm run docs:generate && npm run seo:check"
+=======
+    "docs:full": "npm run docs:generate && npm run seo:check",
+    "automation:start": "./scripts/start-error-automation.sh",
+    "automation:error-fix": "node scripts/automation/error-fixer-automation.cjs",
+    "automation:comprehensive": "node scripts/automation/comprehensive-error-automation.cjs"
+>>>>>>> f6d16c383bce1933798e7ba30527ed336c76cadd
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -111,8 +122,21 @@
     "fuse.js": "^7.0.0",
     "i18next": "^25.4.2",
     "i18next-browser-languagedetector": "^8.2.0",
+<<<<<<< HEAD
     "lucide-react": "^0.294.0",
     "node-cron": "^4.2.1",
+=======
+    "input-otp": "^1.1.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
+    "lodash.debounce": "^4.0.8",
+    "lucide-react": "^0.323.0",
+    "next": "^14.2.5",
+    "next-themes": "^0.2.1",
+    "node-cron": "^4.2.1",
+    "notistack": "^3.0.0",
+    "postcss-preset-env": "^10.3.1",
+>>>>>>> f6d16c383bce1933798e7ba30527ed336c76cadd
     "react": "^18.3.1",
     "react-day-picker": "^8.9.1",
     "react-dom": "^18.3.1",
@@ -156,6 +180,28 @@
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
     "typescript": "^5.9.2",
+<<<<<<< HEAD
     "vite": "^5.4.19"
+=======
+    "vite": "^5.4.19",
+    "vite-plugin-compression": "^0.5.1",
+    "vitest": "^1.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+>>>>>>> f6d16c383bce1933798e7ba30527ed336c76cadd
   }
 }
