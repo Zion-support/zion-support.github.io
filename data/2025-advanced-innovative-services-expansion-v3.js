@@ -519,11 +519,9 @@ export const advancedInnovativeServices2025V3 = [
         customers: 156,
         rating: 4.8,
         reviews: 203
-
+    }
 ];
-=======
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
 export const advancedITServices2025 = [
     // Quantum Computing Infrastructure Setup
     {
@@ -534,7 +532,7 @@ export const advancedITServices2025 = [
         description: 'Complete quantum computing infrastructure design, implementation, and optimization for research institutions and enterprises exploring quantum applications.',
         hourlyRate: 150,
         projectRate: '$50,000 - $200,000',
-        features[
+        features: [
             'Quantum hardware selection',
             'Infrastructure design',
             'Quantum software stack',
@@ -544,14 +542,14 @@ export const advancedITServices2025 = [
             'Training and documentation',
             'Ongoing support'
         ],
-        benefits[
+        benefits: [
             'Early quantum advantage',
             'Research capabilities',
             'Competitive positioning',
             'Innovation leadership',
             'Future-proof infrastructure'
         ],
-        targetAudience['Research institutions', 'Technology companies', 'Financial institutions', 'Government agencies', 'Pharmaceutical companies'],
+        targetAudience: ['Research institutions', 'Technology companies', 'Financial institutions', 'Government agencies', 'Pharmaceutical companies'],
         contactInfo: {
             mobile: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
@@ -561,14 +559,14 @@ export const advancedITServices2025 = [
         marketPrice: '$75,000 - $300,000',
         responseTime: '24 hours',
         sla: '99.9% uptime guarantee',
-        certifications['Quantum Computing Certified', 'IBM Quantum Network Partner', 'Microsoft Quantum Partner'],
+        certifications: ['Quantum Computing Certified', 'IBM Quantum Network Partner', 'Microsoft Quantum Partner'],
         deliveryTime: '8-12 weeks',
         support: '24/7 technical support',
         realService: true,
-        technology['IBM Quantum', 'Microsoft Azure Quantum', 'Google Quantum', 'Rigetti Computing', 'D-Wave Systems'],
-        useCases['Research and development', 'Optimization problems', 'Cryptography research', 'Drug discovery', 'Financial modeling'],
+        technology: ['IBM Quantum', 'Microsoft Azure Quantum', 'Google Quantum', 'Rigetti Computing', 'D-Wave Systems'],
+        useCases: ['Research and development', 'Optimization problems', 'Cryptography research', 'Drug discovery', 'Financial modeling'],
         roi: 'Research institutions report breakthrough capabilities worth millions in research value.',
-        competitors['IBM Quantum', 'Microsoft Quantum', 'Google Quantum', 'D-Wave'],
+        competitors: ['IBM Quantum', 'Microsoft Quantum', 'Google Quantum', 'D-Wave'],
         marketSize: '$800M quantum computing market',
         growthRate: '120% annual growth'
     },
@@ -581,7 +579,7 @@ export const advancedITServices2025 = [
         description: 'Comprehensive AI infrastructure consulting services including hardware selection, cloud architecture, and optimization for enterprise AI workloads.',
         hourlyRate: 125,
         projectRate: '$25,000 - $100,000',
-        features[
+        features: [
             'AI infrastructure assessment',
             'Hardware recommendations',
             'Cloud architecture design',
@@ -591,14 +589,14 @@ export const advancedITServices2025 = [
             'Security implementation',
             'Monitoring setup'
         ],
-        benefits[
+        benefits: [
             'Optimized AI performance',
             'Cost-effective infrastructure',
             'Scalable architecture',
             'Reduced deployment time',
             'Expert guidance'
         ],
-        targetAudience['Enterprises', 'AI startups', 'Research institutions', 'Technology companies', 'Financial institutions'],
+        targetAudience: ['Enterprises', 'AI startups', 'Research institutions', 'Technology companies', 'Financial institutions'],
         contactInfo: {
             mobile: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
@@ -608,14 +606,14 @@ export const advancedITServices2025 = [
         marketPrice: '$35,000 - $150,000',
         responseTime: '48 hours',
         sla: '99.5% response time guarantee',
-        certifications['AWS Solutions Architect', 'Google Cloud Professional', 'Microsoft Azure Solutions Architect', 'NVIDIA Deep Learning Institute'],
+        certifications: ['AWS Solutions Architect', 'Google Cloud Professional', 'Microsoft Azure Solutions Architect', 'NVIDIA Deep Learning Institute'],
         deliveryTime: '4-8 weeks',
         support: 'Business hours support',
         realService: true,
-        technology['AWS', 'Google Cloud', 'Microsoft Azure', 'NVIDIA GPUs', 'Kubernetes', 'Docker'],
-        useCases['AI model training', 'Inference optimization', 'Data pipeline design', 'MLOps implementation', 'Performance tuning'],
+        technology: ['AWS', 'Google Cloud', 'Microsoft Azure', 'NVIDIA GPUs', 'Kubernetes', 'Docker'],
+        useCases: ['AI model training', 'Inference optimization', 'Data pipeline design', 'MLOps implementation', 'Performance tuning'],
         roi: 'Companies report 300% ROI through optimized AI infrastructure and reduced costs.',
-        competitors['Accenture', 'Deloitte', 'IBM', 'Capgemini'],
+        competitors: ['Accenture', 'Deloitte', 'IBM', 'Capgemini'],
         marketSize: '$2.1B AI infrastructure market',
         growthRate: '45% annual growth'
     },
