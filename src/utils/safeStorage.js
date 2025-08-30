@@ -35,12 +35,12 @@ function safeConsoleError(message, error) {
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
-        // // // // // // // // // // // // // // // // // // // console.error(message, error);
+        // // // // // // // // // // // // // // // // // // // // console.error(message, error);
 
 =======
-        // // // // // // // // // // // // // // // // // // // // // // // console.error(message, error);
+        // // // // // // // // // // // // // // // // // // // // // // // // console.error(message, error);
 =======
-        // // // // // // // // // // // // // // // // // // // // console.error(message, error);
+        // // // // // // // // // // // // // // // // // // // // // console.error(message, error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
@@ -61,12 +61,12 @@ export const safeStorage = {
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-      // // // // // // // // // // // // // // // // // // // console.warn('Failed to get item from localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // console.warn('Failed to get item from localStorage:', error);
 =======
-      // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to get item from localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to get item from localStorage:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-      // // // // // // // // // // // // // // // // // // // // console.warn('Failed to get item from localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to get item from localStorage:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       return null;
 
@@ -79,12 +79,12 @@ export const safeStorage = {
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-      // // // // // // // // // // // // // // // // // // // console.warn('Failed to set item in localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // console.warn('Failed to set item in localStorage:', error);
 =======
-      // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to set item in localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to set item in localStorage:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-      // // // // // // // // // // // // // // // // // // // // console.warn('Failed to set item in localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to set item in localStorage:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       return false;
 
@@ -97,12 +97,12 @@ export const safeStorage = {
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-      // // // // // // // // // // // // // // // // // // // console.warn('Failed to remove item from localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // console.warn('Failed to remove item from localStorage:', error);
 =======
-      // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to remove item from localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to remove item from localStorage:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-      // // // // // // // // // // // // // // // // // // // // console.warn('Failed to remove item from localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to remove item from localStorage:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       return false;
 
@@ -115,12 +115,12 @@ export const safeStorage = {
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-      // // // // // // // // // // // // // // // // // // // console.warn('Failed to clear localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // console.warn('Failed to clear localStorage:', error);
 =======
-      // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to clear localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to clear localStorage:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-      // // // // // // // // // // // // // // // // // // // // console.warn('Failed to clear localStorage:', error);
+      // // // // // // // // // // // // // // // // // // // // // console.warn('Failed to clear localStorage:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       return false;
 
