@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedHeader } from './components/EnhancedHeader';
+import { Footer } from './components/Footer';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
@@ -41,6 +42,11 @@ const RequestQuote = lazy(() => import('./pages/RequestQuote'));
 const Login = lazy(() => import('./pages/Login'));
 const Signup = lazy(() => import('./pages/Signup'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+
+// Additional pages for navigation
+const EnhancedServices = lazy(() => import('./pages/EnhancedServices'));
+const ITOnsiteServices = lazy(() => import('./pages/ITOnsiteServices'));
+const Pricing = lazy(() => import('./pages/Pricing'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }) => (
@@ -109,11 +115,17 @@ function App() {
                   <Route path="/request-quote" element={<RequestQuote />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
+                  <Route path="/enhanced-services" element={<EnhancedServices />} />
+                  <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+                  <Route path="/pricing" element={<Pricing />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </AnimatePresence>
             </Suspense>
           </main>
+          
+          {/* Footer */}
+          <Footer />
           
           {/* Floating Action Button */}
           <FloatingActionButton />

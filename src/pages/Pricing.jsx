@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import { SEO } from '@/components/SEO';
 
 const Pricing = () => {
   const pricingTiers = [
@@ -8,7 +8,7 @@ const Pricing = () => {
       price: "$19",
       period: "/month",
       description: "Perfect for individuals and small teams getting started with AI tools",
-      features[
+      features: [
         "AI Content Generation (100 credits/month)",
         "Basic AI Image Editing",
         "AI Meeting Assistant (5 hours/month)",
@@ -25,7 +25,7 @@ const Pricing = () => {
       price: "$49",
       period: "/month",
       description: "Ideal for growing businesses and professional teams",
-      features[
+      features: [
         "Everything in Starter",
         "AI Content Generation (500 credits/month)",
         "Advanced AI Image & Video Editing",
@@ -46,7 +46,7 @@ const Pricing = () => {
       price: "$99",
       period: "/month",
       description: "Comprehensive solution for established businesses",
-      features[
+      features: [
         "Everything in Professional",
         "AI Content Generation (2000 credits/month)",
         "AI Code Assistant (Advanced)",
@@ -71,7 +71,7 @@ const Pricing = () => {
       price: "Custom",
       period: "",
       description: "Tailored solutions for large organizations with specific requirements",
-      features[
+      features: [
         "Everything in Business",
         "Unlimited AI Content Generation",
         "Custom AI Model Training",
@@ -90,7 +90,7 @@ const Pricing = () => {
       popular: false,
       cta: "Contact Sales",
       link: "/contact"
-
+    }
   ];
 
   return (
@@ -129,7 +129,7 @@ const Pricing = () => {
                     ? 'border-blue-500 shadow-lg shadow-blue-500/25'
                     : 'border-white/10'
                 }`}
-
+              >
                 {tier.popular && (
                   <div className="text-center mb-4">
                     <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -163,7 +163,7 @@ const Pricing = () => {
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                       : 'bg-transparent border border-white text-white hover:bg-white hover:text-slate-900'
                   }`}
-
+                >
                   {tier.cta}
                 </a>
               </div>
@@ -183,20 +183,20 @@ const Pricing = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-
+            >
               📞 Call +1 (302) 464-0950
             </a>
             <a
               href="/contact"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-
+            >
               Contact Sales
             </a>
           </div>
         </div>
       </section>
     </div>
-  )};
+  );
+};
 
 export default Pricing;
-}

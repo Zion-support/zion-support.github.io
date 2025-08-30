@@ -26,13 +26,15 @@ import {
   Code,
   Truck,
   FileText
+} from 'lucide-react';
+
 const onsiteServices = [
   {
     id: 1,
     title: "Network Infrastructure Setup",
     description: "Complete network design, installation, and configuration for businesses of all sizes.",
     icon: Network,
-    features[
+    features: [
       "Network design & planning",
       "Hardware installation",
       "Configuration & optimization",
@@ -41,14 +43,14 @@ const onsiteServices = [
     price: "From $5,000",
     timeline: "3-7 days",
     category: "Infrastructure",
-    coverage["Local", "Regional", "National"]
+    coverage: ["Local", "Regional", "National"]
   },
   {
     id: 2,
     title: "Server Installation & Configuration",
     description: "Professional server setup, configuration, and optimization for optimal performance.",
     icon: Server,
-    features[
+    features: [
       "Hardware installation",
       "OS configuration",
       "Security hardening",
@@ -57,14 +59,14 @@ const onsiteServices = [
     price: "From $3,000",
     timeline: "2-5 days",
     category: "Servers",
-    coverage["Local", "Regional", "National"]
+    coverage: ["Local", "Regional", "National"]
   },
   {
     id: 3,
     title: "Cybersecurity Assessment",
     description: "Comprehensive security audit and vulnerability assessment of your IT infrastructure.",
     icon: Shield,
-    features[
+    features: [
       "Security audit",
       "Vulnerability scanning",
       "Penetration testing",
@@ -73,14 +75,14 @@ const onsiteServices = [
     price: "From $4,000",
     timeline: "3-6 days",
     category: "Security",
-    coverage["Local", "Regional", "National"]
+    coverage: ["Local", "Regional", "National"]
   },
   {
     id: 4,
     title: "Data Center Setup",
     description: "Complete data center design, construction, and equipment installation.",
     icon: Database,
-    features[
+    features: [
       "Facility design",
       "Equipment installation",
       "Power & cooling setup",
@@ -89,14 +91,14 @@ const onsiteServices = [
     price: "From $25,000",
     timeline: "2-4 weeks",
     category: "Data Centers",
-    coverage["Regional", "National"]
+    coverage: ["Regional", "National"]
   },
   {
     id: 5,
     title: "Workstation Deployment",
     description: "Bulk workstation setup, configuration, and deployment for enterprise environments.",
     icon: Monitor,
-    features[
+    features: [
       "Hardware setup",
       "Software installation",
       "User configuration",
@@ -105,14 +107,14 @@ const onsiteServices = [
     price: "From $150/unit",
     timeline: "1-3 days",
     category: "Workstations",
-    coverage["Local", "Regional", "National"]
+    coverage: ["Local", "Regional", "National"]
   },
   {
     id: 6,
     title: "Emergency IT Support",
     description: "24/7 emergency on-site IT support for critical system failures and issues.",
     icon: Activity,
-    features[
+    features: [
       "24/7 availability",
       "Rapid response",
       "Critical issue resolution",
@@ -121,9 +123,8 @@ const onsiteServices = [
     price: "From $200/hour",
     timeline: "2-8 hours",
     category: "Emergency Support",
-<<<<<<< HEAD
     coverage: ["Local", "Regional", "National"]
-
+  }
 ];
 
 const serviceAreas = [
@@ -147,11 +148,7 @@ const serviceAreas = [
     coverage: "Extended coverage",
     icon: Globe,
     color: "text-blue-400"
-
-=======
-    coverage["Local", "Regional", "National"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -181,7 +178,7 @@ const successStories = [
     solution: "Provided 24/7 emergency support and system recovery",
     results: "2-hour response time, minimal downtime, $500K saved",
     logo: "FS"
-
+  }
 ];
 
 const processSteps = [
@@ -212,7 +209,7 @@ const processSteps = [
     description: "Comprehensive testing and client training",
     icon: CheckCircle,
     duration: "1-2 days"
-
+  }
 ];
 
 export default function ITOnsiteServices() {
@@ -226,96 +223,51 @@ export default function ITOnsiteServices() {
     : onsiteServices.filter(service => service.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-blue-500/20"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/30 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="container-responsive relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
+          >
             <motion.div
-              initial = {
-  { opacity: 0,
-  scale: 0.8 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
-              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mb-8"
+            >
               <Wrench className="w-10 h-10 text-white" />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IT On-Site
-              <span className="text-gradient block">Services</span>
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent block">Services</span>
             </h1>
 
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
+            <p className="text-xl text-gray-300 leading-relaxed mb-8">
               Professional on-site IT services delivered by certified technicians.
               From network setup to emergency support, we bring expertise directly to your location.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2 text-zion-cyan">
+              <div className="flex items-center gap-2 text-cyan-400">
                 <Wrench className="w-4 h-4" />
                 <span>Professional Installation</span>
               </div>
-              <div className="flex items-center gap-2 text-zion-purple">
+              <div className="flex items-center gap-2 text-purple-400">
                 <Clock className="w-4 h-4" />
                 <span>24/7 Support</span>
               </div>
-              <div className="flex items-center gap-2 text-zion-blue">
+              <div className="flex items-center gap-2 text-blue-400">
                 <Truck className="w-4 h-4" />
                 <span>Nationwide Coverage</span>
               </div>
@@ -325,34 +277,16 @@ export default function ITOnsiteServices() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container-responsive">
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
+          >
             <h2 className="text-4xl font-bold text-white mb-4">Service Coverage Areas</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide on-site IT services across multiple coverage areas with guaranteed response times
             </p>
           </motion.div>
@@ -361,51 +295,24 @@ export default function ITOnsiteServices() {
             {serviceAreas.map((area, index) => (
               <motion.div
                 key={area.region}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/30 border border-cyan-500/20 rounded-2xl p-6 text-center hover:border-cyan-500/40 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <area.icon className={`w-8 h-8 ${area.color}`} />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{area.region}</h3>
-                <p className="text-zion-slate-light mb-4 leading-relaxed">
-                  Response Time: <span className="text-zion-cyan font-semibold">{area.response}</span>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  Response Time: <span className="text-cyan-400 font-semibold">{area.response}</span>
                 </p>
-                <p className="text-zion-slate-light mb-4 leading-relaxed">
-                  Coverage: <span className="text-zion-cyan font-semibold">{area.coverage}</span>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  Coverage: <span className="text-cyan-400 font-semibold">{area.coverage}</span>
                 </p>
 
-                <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
+                <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30">
                   Available
                 </span>
               </motion.div>
@@ -416,33 +323,15 @@ export default function ITOnsiteServices() {
 
       {/* Process Section */}
       <section className="py-20">
-        <div className="container-responsive">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
+          >
             <h2 className="text-4xl font-bold text-white mb-4">Our Service Process</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               A proven methodology that ensures successful on-site IT service delivery
             </p>
           </motion.div>
@@ -451,50 +340,23 @@ export default function ITOnsiteServices() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-
+              >
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
                   </div>
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
-                <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
+                <p className="text-gray-300 mb-4 leading-relaxed">{step.description}</p>
+                <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30">
                   {step.duration}
                 </span>
               </motion.div>
@@ -504,34 +366,16 @@ export default function ITOnsiteServices() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container-responsive">
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
+          >
             <h2 className="text-4xl font-bold text-white mb-4">On-Site IT Services</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive on-site IT services delivered by certified professionals
             </p>
           </motion.div>
@@ -544,10 +388,10 @@ export default function ITOnsiteServices() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25'
+                    : 'bg-slate-800/30 text-gray-300 border border-cyan-500/20 hover:border-cyan-500/40'
                 }`}
-
+              >
                 {category}
               </button>
             ))}
@@ -557,51 +401,24 @@ export default function ITOnsiteServices() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/30 border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedService(service)}
-
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
                 <div className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -610,23 +427,23 @@ export default function ITOnsiteServices() {
                   {service.coverage.map((cov, covIndex) => (
                     <span
                       key={covIndex}
-                      className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
+                      className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded border border-purple-500/30"
+                    >
                       {cov}
                     </span>
                   ))}
                 </div>
 
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-zion-cyan font-semibold">{service.price}</span>
-                  <span className="text-zion-slate-light text-sm">{service.timeline}</span>
+                  <span className="text-cyan-400 font-semibold">{service.price}</span>
+                  <span className="text-gray-300 text-sm">{service.timeline}</span>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
+                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">
                     {service.category}
                   </span>
-                  <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
+                  <button className="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -639,33 +456,15 @@ export default function ITOnsiteServices() {
 
       {/* Success Stories */}
       <section className="py-20">
-        <div className="container-responsive">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
+          >
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Organizations that have benefited from our professional on-site IT services
             </p>
           </motion.div>
@@ -674,60 +473,33 @@ export default function ITOnsiteServices() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/30 border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300"
+              >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">{story.comp}</h3>
-                    <p className="text-zion-slate-light text-sm">{story.industry}</p>
+                    <p className="text-gray-300 text-sm">{story.industry}</p>
                   </div>
                 </div>
 
                 <div className="space-y-4 mb-6">
                   <div>
-                    <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
-                    <p className="text-zion-slate-light text-sm">{story.challenge}</p>
+                    <h4 className="text-cyan-400 font-semibold mb-2">Challenge</h4>
+                    <p className="text-gray-300 text-sm">{story.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="text-zion-cyan font-semibold mb-2">Solution</h4>
-                    <p className="text-zion-slate-light text-sm">{story.solution}</p>
+                    <h4 className="text-cyan-400 font-semibold mb-2">Solution</h4>
+                    <p className="text-gray-300 text-sm">{story.solution}</p>
                   </div>
                   <div>
-                    <h4 className="text-zion-cyan font-semibold mb-2">Results</h4>
-                    <p className="text-zion-slate-light text-sm">{story.results}</p>
+                    <h4 className="text-cyan-400 font-semibold mb-2">Results</h4>
+                    <p className="text-gray-300 text-sm">{story.results}</p>
                   </div>
                 </div>
 
@@ -735,7 +507,7 @@ export default function ITOnsiteServices() {
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
-                  <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
+                  <span className="text-gray-300 text-sm ml-2">5.0 Rating</span>
                 </div>
               </motion.div>
             ))}
@@ -744,34 +516,16 @@ export default function ITOnsiteServices() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
-        <div className="container-responsive">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-blue-500/10">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
+          >
             <h2 className="text-4xl font-bold text-white mb-6">Need On-Site IT Services?</h2>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Let's discuss how our professional on-site IT services can help your organization
               with infrastructure setup, maintenance, and emergency support.
             </p>
@@ -779,14 +533,14 @@ export default function ITOnsiteServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
+              >
                 Schedule Service
               </a>
               <a
                 href="/contact"
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
+                className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
                 Get Quote
               </a>
             </div>
@@ -794,9 +548,5 @@ export default function ITOnsiteServices() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-}}}}}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}

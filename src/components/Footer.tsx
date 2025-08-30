@@ -56,7 +56,10 @@ import {
   Cpu as CpuIcon,
   Database as DatabaseIcon,
   Users as UsersIcon,
-  Workflow
+  Workflow,
+  MessageCircle,
+  BarChart3,
+  Smartphone
 } from 'lucide-react';
 
 export function Footer() {
