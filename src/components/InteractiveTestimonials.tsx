@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Star, 
   Quote, 
   ChevronLeft, 
@@ -9,7 +9,7 @@ import { Star,
   Users,
   Award,
   TrendingUp
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 export const InteractiveTestimonials: React.FC = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -90,7 +90,7 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: anynumber)  => {
+  const goToTestimonial = (index: anyanynumber)   => {
     setCurrentIndex(index);
   };
 
@@ -171,8 +171,8 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
                 </p>
               </blockquote>
 
-              <div className="grid md: anygrid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (
+              <div className="grid md: anyanygrid-cols-3 gap-6">
+                {Object.entries(currentTestimonial.metrics).map(([key, value])   => (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}

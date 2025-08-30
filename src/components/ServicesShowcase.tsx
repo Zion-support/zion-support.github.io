@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion.ts';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -30,8 +30,8 @@ import { Brain,
   Globe as GlobeIcon,
   ChevronDown,
   ChevronUp
- } from 'lucide-react.ts';
-import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '@/data/innovativeMicroSaasServices2025';
+  } from 'lucide-react.ts';
+import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025   } from '@/data/innovativeMicroSaasServices2025';
 
 interface ServiceShowcaseProps extends React.PropsWithChildren<{}> {
 
@@ -68,7 +68,7 @@ export function ServicesShowcase(...args: any[]): any {
     { id: 'Sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green', count: servicesByCategory['Sustainability']?.length || 0 }
   ];
 
-  const toggleCategory = (category: anystring)  => {
+  const toggleCategory = (category: anyanystring)   => {
     setExpandedCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)
@@ -76,18 +76,18 @@ export function ServicesShowcase(...args: any[]): any {
     );
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: anyanystring)   => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: anyanystring)   => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices: anyallServices.filter(service  => 
+    ? allServices: anyanyallServices.filter(service   => 
         service.category.toLowerCase().includes(selectedCategory.toLowerCase())
       );
 
@@ -181,8 +181,8 @@ export function ServicesShowcase(...args: any[]): any {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
-          {filteredServices.map((service, index)  => (
+        <div className="grid grid-cols-1 lg: anyanygrid-cols-2 xl:grid-cols-3 gap-8">
+          {filteredServices.map((service, index)   => (
             <motion.div
               key={service.id}
               className="bg-zion-slate-dark/50 rounded-2xl p-6 border border-zion-slate-light/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 group"

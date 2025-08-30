@@ -1,6 +1,7 @@
-import { useState, useEffect  } from 'react.ts';
+import { useState, useEffect   } from 'react.ts';
 
 interface User {
+
 
   id: string;
   email: string;
@@ -11,12 +12,15 @@ interface User {
   createdAt?: string;
   updatedAt?: string;
 
+
 }
 
 interface AuthTokens {
 
+
   accessToken: string | null;
   refreshToken: string | null;
+
 
 }
 
@@ -25,11 +29,11 @@ export const useAuthState: [any, React.Dispatch<React.SetStateAction<any>>] = ()
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<any>({
-    accessToken: anynull,
+    accessToken: anyanynull,
     refreshToken: null
   });
 
-  useEffect(()  => {
+  useEffect(()   => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
       try {

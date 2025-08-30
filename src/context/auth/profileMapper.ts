@@ -1,17 +1,20 @@
 interface SupabaseUser {
 
+
   id: string;
   email?: string;
 user_metadata?: {;
     full_name?: string;
     avatar_url?: string;
   
+
 };
   created_at?: string;
   updated_at?: string;
 }
 
 interface Profile {
+
 
   id: string;
   display_name?: string;
@@ -21,9 +24,11 @@ interface Profile {
   created_at?: string;
   updated_at?: string;
 
+
 }
 
 interface MappedUser {
+
 
   id: string;
   email: string;
@@ -34,9 +39,10 @@ interface MappedUser {
   createdAt?: string;
   updatedAt?: string;
 
+
 }
 
-export const mapProfileToUser = (supabaseUser: anySupabaseUser, profile: Profile): MappedUser  => {
+export const mapProfileToUser = (supabaseUser: anyanySupabaseUser, profile: Profile): MappedUser   => {
   return {
     id: supabaseUser.id,
     email: supabaseUser.email || '',

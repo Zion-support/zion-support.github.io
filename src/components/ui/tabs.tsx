@@ -2,8 +2,10 @@ import React, { createContext, useContext, useState, ReactNode } from 'react.ts'
 
 interface TabsContextType {
 
-  activeTab: anystring;
-  setActiveTab: (tab: string)  => void;
+
+  activeTab: anyanystring;
+  setActiveTab: (tab: string)   => void;
+
 
 }
 
@@ -11,10 +13,10 @@ const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps extends React.PropsWithChildren<{}> {
 
-  children: anyReactNode;
+  children: anyanyReactNode;
   defaultValue?: string;
   value?: string;
-  onValueChange?: (value: string)  => void;
+  onValueChange?: (value: string)   => void;
   className?: string;
 
 }
@@ -22,7 +24,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
 export function Tabs(...args: any[]): any {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: anystring)  => {
+  const handleTabChange = (tab: anyanystring)   => {
     setActiveTab(tab);
     if (onValueChange) {
       onValueChange(tab);

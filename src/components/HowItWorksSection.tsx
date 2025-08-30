@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield  } from 'lucide-react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield   } from 'lucide-react.ts';
 
 const steps = [
   {
@@ -166,9 +166,9 @@ export function HowItWorksSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: anytrue }}
+          viewport={{ once: anyanytrue }}
         >
-          {stats.map((stat, index)  => (
+          {stats.map((stat, index)   => (
             <motion.div 
               key={index} 
               variants={statsVariants}
@@ -196,8 +196,8 @@ export function HowItWorksSection(...args: any[]): any {
           </div>
 
           {/* Steps grid */}
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-8 relative">
-            {steps.map((step, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-5 gap-8 relative">
+            {steps.map((step, index)   => (
               <motion.div
                 key={index}
                 variants={containerVariants}

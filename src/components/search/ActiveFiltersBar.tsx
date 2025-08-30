@@ -1,19 +1,21 @@
 import React from 'react.ts';
-import { X  } from 'lucide-react.ts';
+import { X   } from 'lucide-react.ts';
 
 interface Filter {
 
-  key: anystring;
+
+  key: anyanystring;
   value: string;
   label: string;
+
 
 }
 
 interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
 
   filters: Filter[];
-  onRemoveFilter: (key: string)  => void;
-  onClearAll: any()  => void;
+  onRemoveFilter: (key: string)   => void;
+  onClearAll: anyany()   => void;
 
 }
 
@@ -24,9 +26,9 @@ export function ActiveFiltersBar(...args: any[]): any {
 
   return (
     <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
-      <span className="text-sm text-zion-slate-light mr-2">Active filters: any</span>
+      <span className="text-sm text-zion-slate-light mr-2">Active filters: anyany</span>
       
-      {filters.map((filter)  => (
+      {filters.map((filter)   => (
         <div
           key={filter.key}
           className="inline-flex items-center gap-2 px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30"

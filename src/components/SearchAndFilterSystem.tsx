@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Search, 
   Filter, 
   X, 
@@ -15,11 +15,12 @@ import { Search,
   Cloud,
   Shield,
   Globe
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 interface SearchResult {
 
-  id: anystring;
+
+  id: anyanystring;
   title: string;
   description: string;
   category: string;
@@ -29,21 +30,24 @@ interface SearchResult {
   rating?: number;
   type: 'service' | 'article' | 'team' | 'technology';
 
+
 }
 
 interface FilterOption {
+
 
   id: string;
   label: string;
   value: string;
   count: number;
 
+
 }
 
 interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
 
   data: SearchResult[];
-  onResultsChange?: (results: SearchResult[])  => void;
+  onResultsChange?: (results: SearchResult[])   => void;
   placeholder?: string;
   showFilters?: boolean;
 
@@ -75,13 +79,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     }, {} as Record<string, any>);
 
     return {
-      categories: anyObject.entries(categories).map(([key, count])  => ({
-        id: anykey,
+      categories: anyanyObject.entries(categories).map(([key, count])   => ({
+        id: anyanykey,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
         count
       })),
-      types: Object.entries(types).map(([key, count])  => ({
+      types: Object.entries(types).map(([key, count])   => ({
         id: key,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
@@ -130,7 +134,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       case 'name':
         results = results.sort((a, b) => a.title.localeCompare(b.title));
         break;
-      default: any// relevance
+      default: anyany// relevance
         // Keep original order for relevance
         break;
     }
@@ -139,12 +143,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   }, [data, searchQuery, selectedCategory, activeFilters, sortBy]);
 
   // Update parent component with results
-  useEffect(()  => {
+  useEffect(()   => {
     onResultsChange?.(filteredResults);
   }, [filteredResults, onResultsChange]);
 
   // Toggle filter
-  const toggleFilter = (filterId: anystring)  => {
+  const toggleFilter = (filterId: anyanystring)   => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -162,7 +166,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get icon for type
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: anyanystring)   => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
       case 'article': return <Tag className="w-4 h-4" />;
@@ -173,7 +177,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: anyanystring)   => {
     const colors = {
       'ai': 'text-purple-400',
       'cloud': 'text-blue-400',

@@ -1,17 +1,17 @@
 import React, { useState } from 'react.ts';
-import { GradientHeading  } from '@/components/GradientHeading';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { useNavigate  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react.ts';
+import { GradientHeading   } from '@/components/GradientHeading';
+import { Button   } from '@/components/ui/button';
+import { Input   } from '@/components/ui/input';
+import { useNavigate   } from 'react-router-dom.ts';
+import { motion   } from 'framer-motion.ts';
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle   } from 'lucide-react.ts';
 
 export function ITServiceRequestHero(...args: any[]): any {
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: anyanyReact.FormEvent)   => {
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);

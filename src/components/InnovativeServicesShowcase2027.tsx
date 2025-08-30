@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Brain, 
   Atom, 
   Rocket, 
@@ -21,8 +21,8 @@ import { Brain,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
+  } from 'lucide-react.ts';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory   } from '../data/innovativeServices2027';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Consciousness': Brain,
@@ -81,7 +81,7 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
     ? innovativeServices2027 
     : getServicesByCategory(selectedCategory);
 
-  const toggleServiceExpansion = (serviceId: anystring)  => {
+  const toggleServiceExpansion = (serviceId: anyanystring)   => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -140,12 +140,12 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-zion-slate-light/50 text-gray-300 hover: anybg-zion-slate-light/70 hover:text-white'
+                  : 'bg-zion-slate-light/50 text-gray-300 hover: anyanybg-zion-slate-light/70 hover:text-white'
               }`}
             >
               All Categories
             </button>
-            {serviceCategories2027.map((category)  => {
+            {serviceCategories2027.map((category)   => {
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -170,9 +170,9 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map((service, index)  => (
+          {filteredServices.map((service, index)   => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

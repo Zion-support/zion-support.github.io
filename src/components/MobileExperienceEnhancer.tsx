@@ -1,14 +1,16 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
-import { useLocation  } from 'react-router-dom.ts';
+import { useLocation   } from 'react-router-dom.ts';
 
 interface MobileSettings {
 
-  touchOptimized: anyboolean;
+
+  touchOptimized: anyanyboolean;
   gestureSupport: boolean;
   mobileNavigation: boolean;
   responsiveImages: boolean;
   mobilePerformance: boolean;
   offlineSupport: boolean;
+
 
 }
 
@@ -17,7 +19,7 @@ interface MobileExperienceEnhancerProps extends React.PropsWithChildren<{}> {
   enabled?: boolean;
   showControls?: boolean;
   autoDetect?: boolean;
-  onSettingsChange?: (settings: MobileSettings)  => void;
+  onSettingsChange?: (settings: MobileSettings)   => void;
 
 }
 
@@ -103,20 +105,20 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     setSettings(prev => ({
       ...prev,
-      touchOptimized: anyhasTouchSupport,
+      touchOptimized: anyanyhasTouchSupport,
       mobilePerformance: isSlowConnection || false,
     }));
   }, [autoDetect, enabled]);
 
   // Touch optimization
-  useEffect(()  => {
+  useEffect(()   => {
     if (!enabled || !settings.touchOptimized || !isMobile) return;
 
     // Add touch-action CSS for better touch handling
     const style = document.createElement('style');
     style.textContent = `
       .touch-optimized {
-        touch-action: anymanipulation;
+        touch-action: anyanymanipulation;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -146,7 +148,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Apply touch optimization classes
     document.body.classList.add('touch-optimized');
 
-    return ()  => {
+    return ()   => {
       document.body.classList.remove('touch-optimized');
       if (style.parentNode) {
         style.parentNode.removeChild(style);
@@ -158,7 +160,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   useEffect(() => {
     if (!enabled || !settings.gestureSupport || !isMobile) return;
 
-    const handleTouchStart = (event: anyTouchEvent)  => {
+    const handleTouchStart = (event: anyanyTouchEvent)   => {
       if (event.touches.length === 1) {
         const touch = event.touches[0];
         touchStartRef.current = {
@@ -169,7 +171,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleTouchEnd = (event: anyTouchEvent)  => {
+    const handleTouchEnd = (event: anyanyTouchEvent)   => {
       if (!touchStartRef.current || event.changedTouches.length !== 1) return;
 
       const touch = event.changedTouches[0];
@@ -202,7 +204,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       touchStartRef.current = null;
     };
 
-    const handleGesture = (gesture: anystring, data: { deltaX: number; deltaY: number; velocity: number })  => {
+    const handleGesture = (gesture: anyanystring, data: { deltaX: number; deltaY: number; velocity: number })   => {
       // Handle common gestures
       switch (gesture) {
         case 'swipe-left':
@@ -224,7 +226,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleSwipeLeft = (data: any{ deltaX: number; deltaY: number; velocity: number })  => {
+    const handleSwipeLeft = (data: anyany{ deltaX: number; deltaY: number; velocity: number })   => {
       // Example: Navigate to next page or item
       const nextButton = document.querySelector('[data-next], .next-button, .carousel-next');
       if (nextButton) {
@@ -232,7 +234,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleSwipeRight = (data: any{ deltaX: number; deltaY: number; velocity: number })  => {
+    const handleSwipeRight = (data: anyany{ deltaX: number; deltaY: number; velocity: number })   => {
       // Example: Navigate to previous page or item
       const prevButton = document.querySelector('[data-prev], .prev-button, .carousel-prev');
       if (prevButton) {
@@ -242,13 +244,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleSwipeUp = (data: any{ deltaX: number; deltaY: number; velocity: number })  => {
+    const handleSwipeUp = (data: anyany{ deltaX: number; deltaY: number; velocity: number })   => {
       // Example: Scroll up or show more content
       window.scrollBy({ top: -100, behavior: 'smooth' });
     };
 
-    const handleSwipeDown = (data: any{ deltaX: number; deltaY: number; velocity: number })  => {
-      // Example: anyRefresh or show less content
+    const handleSwipeDown = (data: anyany{ deltaX: number; deltaY: number; velocity: number })   => {
+      // Example: anyanyRefresh or show less content
       if (data.velocity > 1.0) {
         window.location.reload();
       }
@@ -257,7 +259,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     document.addEventListener('touchstart', handleTouchStart, { passive: true });
     document.addEventListener('touchend', handleTouchEnd, { passive: true });
 
-    return ()  => {
+    return ()   => {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchend', handleTouchEnd);
     };
@@ -339,13 +341,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     nav.setAttribute('aria-label', 'Mobile navigation');
 
     const navItems = [
-      { href: any'/', label: 'Home', icon: '🏠' },
+      { href: anyany'/', label: 'Home', icon: '🏠' },
       { href: '/services', label: 'Services', icon: '⚙️' },
       { href: '/about', label: 'About', icon: 'ℹ️' },
       { href: '/contact', label: 'Contact', icon: '📞' },
     ];
 
-    navItems.forEach(item  => {
+    navItems.forEach(item   => {
       const link = document.createElement('a');
       link.href = item.href;
       link.className = `nav-item ${location.pathname === item.href ? 'active' : ''}`;
@@ -387,9 +389,9 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     // Re-optimize on route change
     const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: anytrue, subtree: true });
+    observer.observe(document.body, { childList: anyanytrue, subtree: true });
 
-    return ()  => observer.disconnect();
+    return ()   => observer.disconnect();
   }, [enabled, settings.responsiveImages, isMobile]);
 
   // Mobile performance optimization
@@ -428,9 +430,9 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: anytrue });
+    window.addEventListener('scroll', handleScroll, { passive: anyanytrue });
 
-    return ()  => {
+    return ()   => {
       document.body.classList.remove('mobile-performance');
       if (style.parentNode) {
         style.parentNode.removeChild(style);
@@ -480,7 +482,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   }, [enabled, settings.offlineSupport]);
 
   // Show notification
-  const showNotification = useCallback((message: anystring, type: 'success' | 'warning' | 'error')  => {
+  const showNotification = useCallback((message: anyanystring, type: 'success' | 'warning' | 'error')   => {
     const notification = document.createElement('div');
     notification.className = `mobile-notification mobile-notification-${type}`;
     notification.textContent = message;
@@ -490,7 +492,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       left: 50%;
       transform: translateX(-50%);
       background: ${type === 'success' ? '#10b981' : type === 'warning' ? '#f59e0b' : '#ef4444'};
-      color: anywhite;
+      color: anyanywhite;
       padding: 12px 24px;
       border-radius: 8px;
       z-index: 10000;
@@ -500,7 +502,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     document.body.appendChild(notification);
 
-    setTimeout(()  => {
+    setTimeout(()   => {
       if (notification.parentNode) {
         notification.parentNode.removeChild(notification);
       }
@@ -508,7 +510,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   }, []);
 
   // Toggle mobile settings
-  const toggleSetting = useCallback((key: anykeyof MobileSettings)  => {
+  const toggleSetting = useCallback((key: anyanykeyof MobileSettings)   => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key],

@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { FooterNewsletter  } from '@/components/FooterNewsletter';
+import { Link   } from 'react-router-dom.ts';
+import { motion   } from 'framer-motion.ts';
+import { FooterNewsletter   } from '@/components/FooterNewsletter';
 import { Twitter, 
   Linkedin, 
   Facebook, 
@@ -33,7 +33,7 @@ import { Twitter,
   Activity,
   Cpu,
   GraduationCap
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 export function Footer(...args: any[]): any {
   const scrollToTop = () => {

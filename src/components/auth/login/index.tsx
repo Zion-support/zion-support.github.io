@@ -1,4 +1,4 @@
-import { LoginForm  } from './LoginForm';
+import { LoginForm   } from './LoginForm';
 
 export function LoginContent(...args: any[]): any {
   return (

@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Phone, Mail, MapPin, ArrowRight  } from 'lucide-react.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
+import { Phone, Mail, MapPin, ArrowRight   } from 'lucide-react.ts';
 export function ContactSection(...args: any[]): any {
   const contactInfo = [
     {
@@ -40,8 +40,8 @@ export function ContactSection(...args: any[]): any {
             Ready to transform your business? Contact us today to discuss your technology needs
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 mb-12">
-          {contactInfo.map((contact, index)  => (
+        <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8 mb-12">
+          {contactInfo.map((contact, index)   => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}

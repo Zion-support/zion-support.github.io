@@ -1,21 +1,23 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon   } from 'lucide-react.ts';
 
 interface AccessibilityContextType {
 
-  highContrast: anyboolean;
-  toggleHighContrast: ()  => void;
-  reducedMotion: anyboolean;
-  toggleReducedMotion: ()  => void;
-  fontSize: anynumber;
-  increaseFontSize: ()  => void;
-  decreaseFontSize: any()  => void;
-  resetFontSize: any()  => void;
-  showSkipLinks: anyboolean;
-  setShowSkipLinks: (show: boolean)  => void;
-  voiceNavigation: anyboolean;
-  toggleVoiceNavigation: ()  => void;
+
+  highContrast: anyanyboolean;
+  toggleHighContrast: ()   => void;
+  reducedMotion: anyanyboolean;
+  toggleReducedMotion: ()   => void;
+  fontSize: anyanynumber;
+  increaseFontSize: ()   => void;
+  decreaseFontSize: anyany()   => void;
+  resetFontSize: anyany()   => void;
+  showSkipLinks: anyanyboolean;
+  setShowSkipLinks: (show: boolean)   => void;
+  voiceNavigation: anyanyboolean;
+  toggleVoiceNavigation: ()   => void;
+
 
 }
 
@@ -79,7 +81,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: anyanyKeyboardEvent)   => {
       // Skip links (Alt + S)
       if (event.altKey && event.key === 's') {
         event.preventDefault();
@@ -275,7 +277,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: anyanyKeyboardEvent)   => {
       if (event.key !== 'Tab') return;
 
       if (event.shiftKey) {

@@ -2,8 +2,8 @@ import React from 'react.ts';
 
 interface FormProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
-  onSubmit?: (e: React.FormEvent)  => void;
+  children: anyanyReact.ReactNode;
+  onSubmit?: (e: React.FormEvent)   => void;
 
 }
 
@@ -44,14 +44,14 @@ export function FormLabel(...args: any[]): any {
 
 interface FormFieldProps extends React.PropsWithChildren<{}> {
 
-  control: anyany;
+  control: anyanyany;
   name: string;
-  render: (props: any)  => React.ReactNode;
+  render: (props: any)   => React.ReactNode;
 
 }
 
-export function FormField(...args: any[]): any {
-  return render({ field: any{ name, value: '', onChange: ()  => {} } });
+export function FormField(...args: anyany[]): any {
+  return render({ field: any{ name, value: '', onChange: ()   => {} } });
 }
 
 interface FormMessageProps extends React.PropsWithChildren<{}> {

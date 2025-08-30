@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react.ts';
-import { motion, AnimatePresence, useScroll, useTransform  } from 'framer-motion.ts';
+import { motion, AnimatePresence, useScroll, useTransform   } from 'framer-motion.ts';
 import { Sparkles, 
   Zap, 
   Star, 
@@ -8,9 +8,10 @@ import { Sparkles,
   Layers,
   Settings,
   X
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 interface UISettings {
+
 
   glassmorphism: boolean;
   particleEffects: boolean;
@@ -19,6 +20,7 @@ interface UISettings {
   modernShadows: boolean;
   colorThemes: boolean;
   depthLayers: boolean;
+
 
 }
 
@@ -398,11 +400,11 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '');
   };
 
-  const toggleSetting = (setting: anykeyof UISettings)  => {
+  const toggleSetting = (setting: anyanykeyof UISettings)   => {
     setSettings(prev => ({ ...prev, [setting]: !prev[setting] }));
   };
 
-  const changeTheme = (theme: anystring)  => {
+  const changeTheme = (theme: anyanystring)   => {
     setActiveTheme(theme);
   };
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { MessageCircle, 
   X, 
   ArrowRight,
@@ -95,7 +95,7 @@ import { MessageCircle,
   MicOff,
   Volume2,
   VolumeX
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 const FloatingCTA: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
@@ -190,8 +190,8 @@ const FloatingCTA: React.FC = (): JSX.Element => {
               </div>
 
               {/* Contact Methods */}
-              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
-                {contactMethods.map((method, index)  => (
+              <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-4 mb-8">
+                {contactMethods.map((method, index)   => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { Link, useLocation   } from 'react-router-dom.ts';
 import { Menu, 
   X, 
   ChevronDown, 
@@ -32,13 +32,15 @@ import { Menu,
   Mail,
   MapPin,
   Clock
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 interface NavigationItem {
+
 
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
+
 }>;
   children?: NavigationItem[];
   description?: string;
@@ -147,7 +149,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
   }, [location]);
 
   useEffect(() => {
-    const handleClickOutside = (event: anyMouseEvent)  => {
+    const handleClickOutside = (event: anyanyMouseEvent)   => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -164,7 +166,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
     };
   }, [isOpen]);
 
-  const toggleExpanded = (label: anystring)  => {
+  const toggleExpanded = (label: anyanystring)   => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);
       if (newSet.has(label)) {
@@ -176,12 +178,12 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
     });
   };
 
-  const handleNavigation = (path: anystring)  => {
+  const handleNavigation = (path: anyanystring)   => {
     setIsOpen(false);
     setExpandedItems(new Set());
   };
 
-  const isActive = (path: anystring)  => {
+  const isActive = (path: anyanystring)   => {
     if (path === '/') {
       return activePath === '/';
     }

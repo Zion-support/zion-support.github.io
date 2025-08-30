@@ -2,6 +2,7 @@ import React from 'react.ts';
 
 interface ForumCategoryInfo {
 
+
   id: string;
   name: string;
   description: string;
@@ -13,6 +14,7 @@ lastPost?: {;
     author: string;
     date: string;
   
+
 };
 }
 
@@ -118,8 +120,8 @@ export default function ForumCategories(...args: any[]): any {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category)  => (
+        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category)   => (
             <div 
               key={category.id} 
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 group cursor-pointer"

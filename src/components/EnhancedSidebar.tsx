@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link, useLocation   } from 'react-router-dom.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Home,
   Brain,
   Cloud,
@@ -42,13 +42,13 @@ import { Home,
   Leaf,
   Building,
   User
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 export const EnhancedSidebar: React.FC = (): JSX.Element => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: anystring)  => {
+  const toggleSection = (section: anyanystring)   => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
@@ -58,7 +58,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
     setExpandedSections(newExpanded);
   };
 
-  const isActive = (path: anystring)  => location.pathname === path;
+  const isActive = (path: anyanystring)   => location.pathname === path;
 
   const navigationSections = [
     {

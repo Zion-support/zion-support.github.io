@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Calendar, 
   Clock, 
   CheckCircle, 
@@ -23,9 +23,10 @@ import { Calendar,
   Trash2,
   Eye,
   Settings
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 interface Project {
+
 
   id: string;
   name: string;
@@ -41,9 +42,11 @@ interface Project {
   tags: string[];
   milestones: Milestone[];
 
+
 }
 
 interface Milestone {
+
 
   id: string;
   title: string;
@@ -52,6 +55,7 @@ interface Milestone {
   status: 'pending' | 'in-progress' | 'completed' | 'overdue';
   assignee: string;
   priority: 'low' | 'medium' | 'high';
+
 
 }
 
@@ -81,7 +85,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   useEffect(() => {
     const sampleProjects: Project[] = [
       {
-        id: any'1',
+        id: anyany'1',
         name: 'AI-Powered Customer Analytics Platform',
         description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
         status: 'active',
@@ -198,7 +202,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   }, []);
 
   // Filter projects
-  useEffect(()  => {
+  useEffect(()   => {
     let filtered = projects;
 
     if (selectedStatus !== 'all') {
@@ -223,16 +227,16 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Calculate project stats
   const projectStats = {
-    total: anyprojects.length,
-    active: projects.filter(p  => p.status === 'active').length,
-    completed: anyprojects.filter(p  => p.status === 'completed').length,
-    onHold: anyprojects.filter(p  => p.status === 'on-hold').length,
-    totalBudget: anyprojects.reduce((sum, p)  => sum + p.budget, 0),
-    averageProgress: anyprojects.reduce((sum, p)  => sum + p.progress, 0) / projects.length || 0
+    total: anyanyprojects.length,
+    active: projects.filter(p   => p.status === 'active').length,
+    completed: anyanyprojects.filter(p   => p.status === 'completed').length,
+    onHold: anyanyprojects.filter(p   => p.status === 'on-hold').length,
+    totalBudget: anyanyprojects.reduce((sum, p)   => sum + p.budget, 0),
+    averageProgress: anyanyprojects.reduce((sum, p)   => sum + p.progress, 0) / projects.length || 0
   };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anystring)  => {
+  const getStatusDisplay = (status: anyanystring)   => {
     switch (status) {
       case 'planning':
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
@@ -250,7 +254,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: anyanystring)   => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -261,7 +265,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get milestone status color
-  const getMilestoneStatusColor = (status: anystring)  => {
+  const getMilestoneStatusColor = (status: anyanystring)   => {
     switch (status) {
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
       case 'in-progress': return 'text-blue-400 bg-blue-400/20';
@@ -272,7 +276,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Format currency
-  const formatCurrency = (amount: anynumber)  => {
+  const formatCurrency = (amount: anyanynumber)   => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -282,7 +286,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: anystring)  => {
+  const getDaysRemaining = (endDate: anyanystring)   => {
     const end = new Date(endDate);
     const today = new Date();
     const diffTime = end.getTime() - today.getTime();

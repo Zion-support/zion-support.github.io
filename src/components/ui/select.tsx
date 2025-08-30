@@ -2,10 +2,10 @@ import React from 'react.ts';
 
 interface SelectProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: anyanyReact.ReactNode;
   className?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>)  => void;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>)   => void;
   disabled?: boolean;
 
 }

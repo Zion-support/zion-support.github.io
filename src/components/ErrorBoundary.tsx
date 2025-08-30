@@ -1,21 +1,23 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
-import { Button  } from './ui/button';
-import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react.ts';
+import { Button   } from './ui/button';
+import { AlertTriangle, RefreshCw, Home, Mail   } from 'lucide-react.ts';
 
 interface Props extends React.PropsWithChildren<{}> {
 
-  children: anyReactNode;
+  children: anyanyReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
+  onError?: (error: Error, errorInfo: ErrorInfo)   => void;
 
 }
 
 interface State {
 
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
+
 
 }
 
@@ -59,11 +61,11 @@ export class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)  => {
+  private logErrorToService = (error: anyanyError, errorInfo: ErrorInfo)   => {
     try {
       // Send error to your error tracking service (e.g., Sentry, LogRocket, etc.)
       const errorData = {
-        errorId: anythis.state.errorId,
+        errorId: anyanythis.state.errorId,
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
@@ -80,7 +82,7 @@ export class ErrorBoundary extends Component<Props, State> {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(errorData),
-      }).catch(()  => {
+      }).catch(()   => {
         // Silently fail if error logging fails
       });
     } catch (logError) {
@@ -217,11 +219,11 @@ export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] =
   const [error, setError] = React.useState<any>(null);
 
   React.useEffect(() => {
-    const handleError = (event: anyErrorEvent)  => {
+    const handleError = (event: anyanyErrorEvent)   => {
       setError(event.error);
     };
 
-    const handleUnhandledRejection = (event: anyPromiseRejectionEvent)  => {
+    const handleUnhandledRejection = (event: anyanyPromiseRejectionEvent)   => {
       setError(new Error(event.reason));
     };
 
@@ -239,10 +241,10 @@ export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] =
 
 // Higher-order component for error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: anyReact.ComponentType<P>,
+  Component: anyanyReact.ComponentType<P>,
   errorBoundaryProps?: Partial<Props>
-)  => {
-  const WrappedComponent = (props: anyP)  => (
+)   => {
+  const WrappedComponent = (props: anyanyP)   => (
     <ErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </ErrorBoundary>

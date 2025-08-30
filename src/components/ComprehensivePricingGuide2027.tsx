@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { DollarSign, 
   TrendingUp, 
   Clock, 
@@ -21,9 +21,9 @@ import { DollarSign,
   Shield,
   Brain,
   Rocket
- } from 'lucide-react.ts';
-import { servicesCatalog  } from '../data/servicesCatalog';
-import { innovativeServices2027  } from '../data/innovativeServices2027';
+  } from 'lucide-react.ts';
+import { servicesCatalog   } from '../data/servicesCatalog';
+import { innovativeServices2027   } from '../data/innovativeServices2027';
 
 export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -55,11 +55,11 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     ...servicesCatalog.flatMap(category => 
       category.items.map(item => ({
         ...item,
-        source: any'catalog',
+        source: anyany'catalog',
         category: category.name
       }))
     ),
-    ...innovativeServices2027.map(service  => ({
+    ...innovativeServices2027.map(service   => ({
       ...service,
       source: 'innovative',
       category: service.category,
@@ -108,14 +108,14 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-  const getPriceRange = (price: anystring)  => {
+  const getPriceRange = (price: anyanystring)   => {
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High';
   };
 
-  const getPriceColor = (price: anystring)  => {
+  const getPriceColor = (price: anyanystring)   => {
     const range = getPriceRange(price);
     switch (range) {
       case 'Low': return 'text-green-400';
@@ -125,7 +125,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: anyanystring)   => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
@@ -211,9 +211,9 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyanyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
-                {categories.map(category  => (
+                {categories.map(category   => (
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
                   </option>
@@ -224,9 +224,9 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyanyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
-                {priceRanges.map(range  => (
+                {priceRanges.map(range   => (
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
                   </option>
@@ -264,9 +264,9 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map((service, index)  => (
+          {sortedServices.map((service, index)   => (
             <motion.div
               key={`${service.source}-${service.id}`}
               initial={{ opacity: 0, y: 20 }}

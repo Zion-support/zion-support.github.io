@@ -1,12 +1,12 @@
 import React from 'react.ts';
 interface ButtonProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: anyanyReact.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
-  onClick?: ()  => void;
+  onClick?: ()   => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
 

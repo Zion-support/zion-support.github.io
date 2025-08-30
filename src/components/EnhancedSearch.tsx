@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield  } from 'lucide-react.ts';
-import { useNavigate  } from 'react-router-dom.ts';
-import { useDebounce  } from '@/hooks/useDebounce';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield   } from 'lucide-react.ts';
+import { useNavigate   } from 'react-router-dom.ts';
+import { useDebounce   } from '@/hooks/useDebounce';
 
 interface SearchResult {
+
 
   id: string;
   title: string;
@@ -15,13 +16,16 @@ interface SearchResult {
   tags: string[];
   relevance: number;
 
+
 }
 
 interface SearchFilter {
 
+
   type: string[];
   category: string[];
   tags: string[];
+
 
 }
 
@@ -154,7 +158,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: anyMouseEvent)  => {
+    const handleClickOutside = (event: anyanyMouseEvent)   => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -166,7 +170,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: anyanyKeyboardEvent)   => {
       if (event.key === 'Escape') {
         setIsOpen(false);
       } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
@@ -180,7 +184,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleSearch = useCallback((searchQuery: anystring)  => {
+  const handleSearch = useCallback((searchQuery: anyanystring)   => {
     if (searchQuery.trim()) {
       // Add to recent searches
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -193,14 +197,14 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     }
   }, [recentSearches]);
 
-  const handleResultClick = (result: anySearchResult)  => {
+  const handleResultClick = (result: anyanySearchResult)   => {
     handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
     setQuery('');
   };
 
-  const toggleFilter = (filterType: anykeyof SearchFilter, value: string)  => {
+  const toggleFilter = (filterType: anyanykeyof SearchFilter, value: string)   => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -213,7 +217,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: anyanystring)   => {
     switch (type) {
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;

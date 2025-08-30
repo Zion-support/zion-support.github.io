@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
+import { motion   } from 'framer-motion.ts';
 import { Phone, 
   Mail, 
   MapPin, 
@@ -23,7 +23,7 @@ import { Phone,
   HelpCircle,
   MessageCircle,
   Zap as ZapIcon
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 export const FuturisticFooter: React.FC = (): JSX.Element => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

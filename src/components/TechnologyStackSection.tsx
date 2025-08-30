@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion.ts';
 import { Code, 
   Database, 
   Cloud, 
@@ -10,7 +10,7 @@ import { Code,
   Server,
   Cpu,
   Network
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 
 export const TechnologyStackSection: React.FC = (): JSX.Element => {
   const techCategories = [
@@ -96,8 +96,8 @@ export const TechnologyStackSection: React.FC = (): JSX.Element => {
         </motion.div>
 
         {/* Technology Categories */}
-        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {techCategories.map((category, index)  => {
+        <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {techCategories.map((category, index)   => {
             const IconComponent = category.icon;
             return (
               <motion.div
@@ -139,8 +139,8 @@ export const TechnologyStackSection: React.FC = (): JSX.Element => {
           <h3 className="text-2xl font-bold text-center mb-8">
             Emerging Technologies
           </h3>
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {emergingTech.map((tech, index)  => {
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {emergingTech.map((tech, index)   => {
               const IconComponent = tech.icon;
               return (
                 <div key={tech.name} className="text-center">

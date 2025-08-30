@@ -2,8 +2,8 @@ import React from 'react.ts';
 
 interface CheckboxProps extends React.PropsWithChildren<{}> {
 
-  checked: anyboolean;
-  onChange: (checked: boolean)  => void;
+  checked: anyanyboolean;
+  onChange: (checked: boolean)   => void;
   label?: string;
   disabled?: boolean;
   className?: string;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { Activity, 
   Zap, 
   Clock, 
@@ -11,8 +11,9 @@ import { Activity,
   BarChart3,
   Gauge,
   Monitor
- } from 'lucide-react.ts';
+  } from 'lucide-react.ts';
 interface PerformanceMetrics {
+
 
   fcp: number | null;
   lcp: number | null;
@@ -22,12 +23,15 @@ interface PerformanceMetrics {
   domLoad: number | null;
   windowLoad: number | null;
 
+
 }
 interface PerformanceScore {
+
 
   score: number;
   grade: 'A' | 'B' | 'C' | 'D' | 'F';
   color: string;
+
 
 }
 export const PerformanceMonitor: React.FC = (): JSX.Element => {
@@ -44,7 +48,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
   const [scores, setScores] = useState<Record<string, any>>({});
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-  const calculateScore = useCallback((metric: anynumber, thresholds: number[]): PerformanceScore  => {
+  const calculateScore = useCallback((metric: anyanynumber, thresholds: number[]): PerformanceScore   => {
     if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
     if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
     if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
@@ -109,8 +113,8 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
           }
         }
       });
-      observer.observe({ entryTypes: any['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
-      return ()  => observer.disconnect();
+      observer.observe({ entryTypes: anyany['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      return ()   => observer.disconnect();
     }
     // Update metrics periodically
     const interval = setInterval(updateMetrics, 10000);
@@ -122,7 +126,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
     if (unit === 's') return `${(value / 1000).toFixed(2)}s`;
     return value.toFixed(3);
   };
-  const getMetricColor = (score: anyPerformanceScore): string  => {
+  const getMetricColor = (score: anyanyPerformanceScore): string   => {
     return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700');
   };
   return (

@@ -1,21 +1,21 @@
 import React, { useState } from 'react.ts';
-import { useNavigate, Link  } from 'react-router-dom.ts';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { ProductListing  } from '@/types/listings';
-import { DollarSign  } from 'lucide-react.ts';
-import { RatingStars  } from '@/components/RatingStars';
-import { FavoriteButton  } from '@/components/FavoriteButton';
-import { useDispatch  } from 'react-redux.ts';
+import { useNavigate, Link   } from 'react-router-dom.ts';
+import { Badge   } from '@/components/ui/badge';
+import { Button   } from '@/components/ui/button';
+import { ProductListing   } from '@/types/listings';
+import { DollarSign   } from 'lucide-react.ts';
+import { RatingStars   } from '@/components/RatingStars';
+import { FavoriteButton   } from '@/components/FavoriteButton';
+import { useDispatch   } from 'react-redux.ts';
 import type { AppDispatch } from '@/store';
-import { addItem  } from '@/store/cartSlice';
+import { addItem   } from '@/store/cartSlice';
 import Image from 'next/image.ts'; // Import next/image
 
 interface ProductListingCardProps extends React.PropsWithChildren<{}> {
 
-  listing: anyProductListing;
+  listing: anyanyProductListing;
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string)  => void;
+  onRequestQuote?: (id: string)   => void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
@@ -51,7 +51,7 @@ export function ProductListingCard(...args: any[]): any {
     navigate(`${detailBasePath}/${listing.id}`);
   };
   
-  const handleRequestQuote = (e: anyReact.MouseEvent)  => {
+  const handleRequestQuote = (e: anyanyReact.MouseEvent)   => {
     e.preventDefault();
     e.stopPropagation();
     
