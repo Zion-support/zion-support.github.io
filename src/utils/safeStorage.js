@@ -33,8 +33,13 @@ function safeConsoleError(message, error) {
     if (env === 'production') return;
 
     try {
+<<<<<<< HEAD
         // // // console.error(message, error);
 
+=======
+        // // // // // // // console.error(message, error);
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     catch {
         // Silent fail if console.error causes recursion
 
@@ -44,7 +49,11 @@ export const safeStorage = {
     try {
       return localStorage.getItem(key);
     } catch (error) {
+<<<<<<< HEAD
       // // // console.warn('Failed to get item from localStorage:', error);
+=======
+      // // // // // // // console.warn('Failed to get item from localStorage:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return null;
 
   },
@@ -54,7 +63,11 @@ export const safeStorage = {
       localStorage.setItem(key, value);
       return true;
     } catch (error) {
+<<<<<<< HEAD
       // // // console.warn('Failed to set item in localStorage:', error);
+=======
+      // // // // // // // console.warn('Failed to set item in localStorage:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return false;
 
   },
@@ -64,7 +77,11 @@ export const safeStorage = {
       localStorage.removeItem(key);
       return true;
     } catch (error) {
+<<<<<<< HEAD
       // // // console.warn('Failed to remove item from localStorage:', error);
+=======
+      // // // // // // // console.warn('Failed to remove item from localStorage:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return false;
 
   },
@@ -74,7 +91,11 @@ export const safeStorage = {
       localStorage.clear();
       return true;
     } catch (error) {
+<<<<<<< HEAD
       // // // console.warn('Failed to clear localStorage:', error);
+=======
+      // // // // // // // console.warn('Failed to clear localStorage:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return false;
 
 

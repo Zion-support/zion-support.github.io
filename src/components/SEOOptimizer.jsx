@@ -79,8 +79,13 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
             });
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Error analyzing SEO:', error);
 
+=======
+            // // // // // // // console.error('Error analyzing SEO:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
             setIsAnalyzing(false);
 

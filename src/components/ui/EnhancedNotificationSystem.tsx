@@ -193,6 +193,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
     // This would be used with the context
+<<<<<<< HEAD
     // // // console.log('Success notification:', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>) => {
@@ -205,3 +206,17 @@ export const notify = {
     // // // console.log('Info notification:', { title, message, ...options });
 
 };}}}}}}}}}}}
+=======
+    // // // // // // // console.log('Success notification:', { title, message, ...options });
+  },
+  error: (title: string, message: string, options?: Partial<Notification>) => {
+    // // // // // // // console.log('Error notification:', { title, message, ...options });
+  },
+  warning: (title: string, message: string, options?: Partial<Notification>) => {
+    // // // // // // // console.log('Warning notification:', { title, message, ...options });
+  },
+  info: (title: string, message: string, options?: Partial<Notification>) => {
+    // // // // // // // console.log('Info notification:', { title, message, ...options });
+  }
+};
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

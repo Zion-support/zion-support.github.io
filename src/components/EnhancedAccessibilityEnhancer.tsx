@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { AnimatePresence, motion } from 'framer-motion';
 import {
     Accessibility,
@@ -11,6 +12,33 @@ import {
     ZoomIn,
     ZoomOut
 import { useCallback, useEffect, useState } from 'react';
+=======
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Keyboard,
+  MousePointer,
+  Accessibility,
+  CheckCircle,
+  AlertTriangle,
+  X,
+  Settings,
+  Contrast,
+  Type,
+  ZoomIn,
+  ZoomOut,
+  RotateCcw,
+  Info,
+  Shield,
+  Users,
+  Smartphone,
+  Monitor
+} from 'lucide-react';
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 interface AccessibilityFeature {
   id: string;

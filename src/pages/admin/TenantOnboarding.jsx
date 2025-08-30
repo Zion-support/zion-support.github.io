@@ -90,7 +90,11 @@ export default function TenantOnboarding() {
             });
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error creating tenant:", error);
+=======
+            // // // // // // // console.error("Error creating tenant:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error("Failed to create tenant", {
                 description: error.message
             });

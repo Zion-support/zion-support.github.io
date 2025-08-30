@@ -109,7 +109,11 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       // In a real app, you would send the data to your backend
+<<<<<<< HEAD
       // // // console.log('Quote request submitted:', formData);
+=======
+      // // // // // // // console.log('Quote request submitted:', formData);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       setIsSubmitted(true);
       setFormData({
@@ -128,7 +132,11 @@ import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const Quot
         agreeToMarketing: false
       });
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error('Error submitting quote request:', error);
+=======
+      // // // // // // // console.error('Error submitting quote request:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       setErrors({ submit: 'Failed to submit request. Please try again.' });
     } finally {
       setIsSubmitting(false);

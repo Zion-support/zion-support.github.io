@@ -7,11 +7,20 @@ export function Sonner({ position = 'bottom-right', richColors = true, closeButt
     </div>);
 
 export const toast = {
+<<<<<<< HEAD
     success: (message) => // // console.log('Success:', message),
     error: (message) => // // console.log('Error:', message),
     info: (message) => // // console.log('Info:', message),
     warning: (message) => // // console.log('Warning:', message),
     loading: (message) => // // console.log('Loading:', message),
     dismiss: (toastId) => // // console.log('Dismiss:', toastId)
+=======
+    success: (message) => // // // // // // // console.log('Success:', message),
+    error: (message) => // // // // // // // console.log('Error:', message),
+    info: (message) => // // // // // // // console.log('Info:', message),
+    warning: (message) => // // // // // // // console.log('Warning:', message),
+    loading: (message) => // // // // // // // console.log('Loading:', message),
+    dismiss: (toastId) => // // // // // // // console.log('Dismiss:', toastId)
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
 }

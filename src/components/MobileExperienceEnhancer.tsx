@@ -239,6 +239,10 @@ export function MobileExperienceEnhancer() {
       if (pinchDistance > 0) {
         const scale = distance / pinchDistance;
         document.documentElement.style.setProperty('--mobile-zoom', scale.toString());
+<<<<<<< HEAD
+=======
+      }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       // Handle rotation
       const angle = Math.atan2(
@@ -271,7 +275,12 @@ export function MobileExperienceEnhancer() {
         handleSwipe('up');
       } else if (diffY < -50) {
         handleSwipe('down');
+<<<<<<< HEAD
 
+=======
+      }
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     setTouchStart(null);
     setTouchEnd(null);
@@ -287,6 +296,7 @@ export function MobileExperienceEnhancer() {
       switch (direction) {
         case 'left':
           // Navigate next
+<<<<<<< HEAD
           // // console.log('Swipe left - Next');
           break;
         case 'right':
@@ -300,6 +310,21 @@ export function MobileExperienceEnhancer() {
         case 'down':
           // Refresh
           // // console.log('Swipe down - Refresh');
+=======
+          // // // // // // console.log('Swipe left - Next');
+          break;
+        case 'right':
+          // Navigate previous
+          // // // // // // console.log('Swipe right - Previous');
+          break;
+        case 'up':
+          // Expand
+          // // // // // // console.log('Swipe up - Expand');
+          break;
+        case 'down':
+          // Refresh
+          // // // // // // console.log('Swipe down - Refresh');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
           break;
 
 

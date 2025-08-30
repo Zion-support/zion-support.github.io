@@ -22,7 +22,11 @@ class EnhancedErrorBoundary extends Component {
     componentDidCatch(error, errorInfo) {
         this.setState({ errorInfo });
         // Log error to console
+<<<<<<< HEAD
         // // // console.error('Error caught by boundary:', error, errorInfo);
+=======
+        // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         // Call custom error handler if provided
         if (this.props.onError) {
             this.props.onError(error, errorInfo);
@@ -57,8 +61,13 @@ class EnhancedErrorBoundary extends Component {
         // Log to console for development
         if (process.env.NODE_ENV === 'development') {
             console.group('Error Report');
+<<<<<<< HEAD
             // // // console.log('Error ID:', errorReport.id);
             // // // console.log('Error Details:', errorReport);
+=======
+            // // // // // // // console.log('Error ID:', errorReport.id);
+            // // // // // // // console.log('Error Details:', errorReport);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             console.groupEnd();
 
         // In production, you would send this to your error reporting service

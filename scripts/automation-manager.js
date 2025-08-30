@@ -8,7 +8,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 // // // console.log('🔧 PM2 Automation Manager');
+=======
+// // // // // // // console.log('🔧 PM2 Automation Manager');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 class AutomationManager {
   constructor() {
@@ -27,7 +31,11 @@ class AutomationManager {
     ];
 
   async showHelp() {
+<<<<<<< HEAD
     // // // console.log(`
+=======
+    // // // // // // // console.log(`
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 🔧 PM2 Automation Manager - Available Commands:
 
 📊 Status & Monitoring:
@@ -65,17 +73,28 @@ class AutomationManager {
         this.automationProcesses.includes(proc.name)
       );
 
+<<<<<<< HEAD
       // // // console.log('📊 Automation Processes Status:');
       // // // console.log('─'.repeat(80));
       // // // console.log('Name'.padEnd(25) + 'Status'.padEnd(10) + 'Memory'.padEnd(10) + 'CPU'.padEnd(8) + 'Uptime'.padEnd(15) + 'Restarts');
       // // // console.log('─'.repeat(80));
+=======
+      // // // // // // // console.log('📊 Automation Processes Status:');
+      // // // // // // // console.log('─'.repeat(80));
+      // // // // // // // console.log('Name'.padEnd(25) + 'Status'.padEnd(10) + 'Memory'.padEnd(10) + 'CPU'.padEnd(8) + 'Uptime'.padEnd(15) + 'Restarts');
+      // // // // // // // console.log('─'.repeat(80));
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       automationProcesses.forEach(proc => {
         const statusIcon = proc.pm2_env.status === 'online' ? '🟢' : proc.pm2_env.status === 'errored' ? '🔴' : '🟡';
         const memory = `${Math.round(proc.monit.memory / 1024 / 1024)}MB`;
         const uptime = this.formatUptime(proc.pm2_env.pm_uptime);
 
+<<<<<<< HEAD
         // // // console.log(
+=======
+        // // // // // // // console.log(
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
           proc.name.padEnd(25) +
           `${statusIcon} ${proc.pm2_env.status}`.padEnd(10) +
           memory.padEnd(10) +
@@ -88,6 +107,7 @@ class AutomationManager {
       const onlineCount = automationProcesses.filter(p => p.pm2_env.status === 'online').length;
       const totalCount = automationProcesses.length;
 
+<<<<<<< HEAD
       // // // console.log('');
       // // // console.log(`📈 Summary: ${onlineCount}/${totalCount} processes online`);
 
@@ -109,6 +129,32 @@ class AutomationManager {
 
   async stopAll() {
     // // // console.log('🛑 Stopping all automation processes...');
+=======
+      // // // // // // // console.log('');
+      // // // // // // // console.log(`📈 Summary: ${onlineCount}/${totalCount} processes online`);
+
+      if (onlineCount < totalCount) {
+        // // // // // // // console.log('⚠️  Some processes are not running. Use "check" to see details.');
+      }
+
+    } catch (error) {
+      // // // // // // // console.error('❌ Failed to get status:', error.message);
+    }
+  }
+
+  async startAll() {
+    // // // // // // // console.log('🚀 Starting all automation processes...');
+    try {
+      execSync('pm2 start ecosystem.config.cjs --only automation', { stdio: 'inherit' });
+      // // // // // // // console.log('✅ All automation processes started');
+    } catch (error) {
+      // // // // // // // console.error('❌ Failed to start processes:', error.message);
+    }
+  }
+
+  async stopAll() {
+    // // // // // // // console.log('🛑 Stopping all automation processes...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     try {
       this.automationProcesses.forEach(processName => {
         try {
@@ -117,6 +163,7 @@ class AutomationManager {
           // Process might not be running
 
       });
+<<<<<<< HEAD
       // // // console.log('✅ All automation processes stopped');
     } catch (error) {
       // // // console.error('❌ Failed to stop processes:', error.message);
@@ -135,8 +182,31 @@ class AutomationManager {
     if (!this.automationProcesses.includes(processName)) {
       // // // console.error(`❌ Invalid process name: ${processName}`);
       // // // console.log('Valid processes:', this.automationProcesses.join(', '));
+=======
+      // // // // // // // console.log('✅ All automation processes stopped');
+    } catch (error) {
+      // // // // // // // console.error('❌ Failed to stop processes:', error.message);
+    }
+  }
+
+  async restartAll() {
+    // // // // // // // console.log('🔄 Restarting all automation processes...');
+    try {
+      execSync('pm2 restart ecosystem.config.cjs --only automation', { stdio: 'inherit' });
+      // // // // // // // console.log('✅ All automation processes restarted');
+    } catch (error) {
+      // // // // // // // console.error('❌ Failed to restart processes:', error.message);
+    }
+  }
+
+  async restartProcess(processName) {
+    if (!this.automationProcesses.includes(processName)) {
+      // // // // // // // console.error(`❌ Invalid process name: ${processName}`);
+      // // // // // // // console.log('Valid processes:', this.automationProcesses.join(', '));
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return;
 
+<<<<<<< HEAD
     // // // console.log(`🔄 Restarting ${processName}...`);
     try {
       execSync(`pm2 restart ${processName}`, { stdio: 'inherit' });
@@ -147,6 +217,19 @@ class AutomationManager {
 
   async deleteAll() {
     // // // console.log('🗑️  Deleting all automation processes...');
+=======
+    // // // // // // // console.log(`🔄 Restarting ${processName}...`);
+    try {
+      execSync(`pm2 restart ${processName}`, { stdio: 'inherit' });
+      // // // // // // // console.log(`✅ ${processName} restarted`);
+    } catch (error) {
+      // // // // // // // console.error(`❌ Failed to restart ${processName}:`, error.message);
+    }
+  }
+
+  async deleteAll() {
+    // // // // // // // console.log('🗑️  Deleting all automation processes...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     try {
       this.automationProcesses.forEach(processName => {
         try {
@@ -155,6 +238,7 @@ class AutomationManager {
           // Process might not exist
 
       });
+<<<<<<< HEAD
       // // // console.log('✅ All automation processes deleted');
     } catch (error) {
       // // // console.error('❌ Failed to delete processes:', error.message);
@@ -164,8 +248,21 @@ class AutomationManager {
     if (!this.automationProcesses.includes(processName)) {
       // // // console.error(`❌ Invalid process name: ${processName}`);
       // // // console.log('Valid processes:', this.automationProcesses.join(', '));
+=======
+      // // // // // // // console.log('✅ All automation processes deleted');
+    } catch (error) {
+      // // // // // // // console.error('❌ Failed to delete processes:', error.message);
+    }
+  }
+
+  async showLogs(processName) {
+    if (!this.automationProcesses.includes(processName)) {
+      // // // // // // // console.error(`❌ Invalid process name: ${processName}`);
+      // // // // // // // console.log('Valid processes:', this.automationProcesses.join(', '));
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return;
 
+<<<<<<< HEAD
     // // // console.log(`📝 Showing logs for ${processName}...`);
     try {
       execSync(`pm2 logs ${processName} --lines 50`, { stdio: 'inherit' });
@@ -183,6 +280,27 @@ class AutomationManager {
 
   async checkHealth() {
     // // // console.log('🔍 Checking automation health...');
+=======
+    // // // // // // // console.log(`📝 Showing logs for ${processName}...`);
+    try {
+      execSync(`pm2 logs ${processName} --lines 50`, { stdio: 'inherit' });
+    } catch (error) {
+      // // // // // // // console.error(`❌ Failed to show logs for ${processName}:`, error.message);
+    }
+  }
+
+  async openMonit() {
+    // // // // // // // console.log('📊 Opening PM2 monitoring interface...');
+    try {
+      execSync('pm2 monit', { stdio: 'inherit' });
+    } catch (error) {
+      // // // // // // // console.error('❌ Failed to open monitoring interface:', error.message);
+    }
+  }
+
+  async checkHealth() {
+    // // // // // // // console.log('🔍 Checking automation health...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     try {
       const output = execSync('pm2 jlist', { encoding: 'utf8' });
@@ -197,9 +315,14 @@ class AutomationManager {
       );
 
       if (failedProcesses.length === 0) {
+<<<<<<< HEAD
         // // // console.log('✅ All automation processes are healthy');
+=======
+        // // // // // // // console.log('✅ All automation processes are healthy');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         return;
 
+<<<<<<< HEAD
       // // // console.log(`⚠️  Found ${failedProcesses.length} failed processes:`);
       failedProcesses.forEach(proc => {
         // // // console.log(`  🔴 ${proc.name}: ${proc.pm2_env.status} (restarts: ${proc.pm2_env.restart_time})`);
@@ -213,6 +336,22 @@ class AutomationManager {
 
   async autoFix() {
     // // // console.log('🔧 Auto-fixing failed processes...');
+=======
+      // // // // // // // console.log(`⚠️  Found ${failedProcesses.length} failed processes:`);
+      failedProcesses.forEach(proc => {
+        // // // // // // // console.log(`  🔴 ${proc.name}: ${proc.pm2_env.status} (restarts: ${proc.pm2_env.restart_time})`);
+      });
+
+      // // // // // // // console.log('\n💡 Use "fix" command to automatically restart failed processes');
+
+    } catch (error) {
+      // // // // // // // console.error('❌ Failed to check health:', error.message);
+    }
+  }
+
+  async autoFix() {
+    // // // // // // // console.log('🔧 Auto-fixing failed processes...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     try {
       const output = execSync('pm2 jlist', { encoding: 'utf8' });
@@ -224,14 +363,23 @@ class AutomationManager {
       );
 
       if (failedProcesses.length === 0) {
+<<<<<<< HEAD
         // // // console.log('✅ No failed processes to fix');
+=======
+        // // // // // // // console.log('✅ No failed processes to fix');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         return;
 
+<<<<<<< HEAD
       // // // console.log(`🔄 Restarting ${failedProcesses.length} failed processes...`);
+=======
+      // // // // // // // console.log(`🔄 Restarting ${failedProcesses.length} failed processes...`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       failedProcesses.forEach(proc => {
         try {
           execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe' });
+<<<<<<< HEAD
           // // // console.log(`✅ Restarted ${proc.name}`);
         } catch (error) {
           // // // console.error(`❌ Failed to restart ${proc.name}:`, error.message);
@@ -243,6 +391,20 @@ class AutomationManager {
     } catch (error) {
       // // // console.error('❌ Failed to auto-fix:', error.message);
 
+=======
+          // // // // // // // console.log(`✅ Restarted ${proc.name}`);
+        } catch (error) {
+          // // // // // // // console.error(`❌ Failed to restart ${proc.name}:`, error.message);
+        }
+      });
+
+      // // // // // // // console.log('✅ Auto-fix completed');
+
+    } catch (error) {
+      // // // // // // // console.error('❌ Failed to auto-fix:', error.message);
+    }
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   formatUptime(uptime) {
     if (!uptime) return 'N/A';
@@ -289,8 +451,13 @@ async function main() {
 
     case 'logs':
       if (!processName) {
+<<<<<<< HEAD
         // // // console.error('❌ Please specify a process name');
         // // // console.log('Example: node scripts/automation-manager.js logs console-error-fixer');
+=======
+        // // // // // // // console.error('❌ Please specify a process name');
+        // // // // // // // console.log('Example: node scripts/automation-manager.js logs console-error-fixer');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         return;
 
       await manager.showLogs(processName);
@@ -309,7 +476,11 @@ async function main() {
       break;
 
     default:
+<<<<<<< HEAD
       // // // console.error(`❌ Unknown command: ${command}`);
+=======
+      // // // // // // // console.error(`❌ Unknown command: ${command}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       await manager.showHelp();
       break;
 

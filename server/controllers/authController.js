@@ -6,8 +6,13 @@ if (!jwtSecret) {
   throw new Error('JWT_SECRET not defined');
 
 exports.loginUser = async function (req, res) {
+<<<<<<< HEAD
   // // // console.info('[LOGIN]', req.body.email);
   // // // console.info('[ENV] JWT_SECRET:', jwtSecret);
+=======
+  // // // // // // // console.info('[LOGIN]', req.body.email);
+  // // // // // // // console.info('[ENV] JWT_SECRET:', jwtSecret);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   try {
     const email = req.body.email.toLowerCase().trim();
     const user = await User.findOne({ email }).select('+passwordHash');
@@ -22,7 +27,11 @@ exports.loginUser = async function (req, res) {
       user: { id: user._id, email: user.email, name: user.name },
     });
   } catch (err) {
+<<<<<<< HEAD
     // // // console.error(err);
+=======
+    // // // // // // // console.error(err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     res.status(500).json({ message: 'Server error' });
 
 };
@@ -49,8 +58,13 @@ exports.registerUser = async function (req, res) {
       return res
         .status(409)
         .json({ code: 'EMAIL_EXISTS', message: 'Email already registered' });
+<<<<<<< HEAD
 
     // // // console.error(err);
+=======
+    }
+    // // // // // // // console.error(err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return res.status(500).json({ message: 'Server error' });
 
 };

@@ -44,7 +44,11 @@ class AutomationFactory {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+<<<<<<< HEAD
     // // // // // console.log(`[${level}] ${message}`);
+=======
+    // // // // // // // // console.log(`[${level}] ${message}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
   loadExistingScripts() {
@@ -86,7 +90,11 @@ class CodeQualityMonitor {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
+<<<<<<< HEAD
     // // // // // console.log(message);
+=======
+    // // // // // // // // console.log(message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
   async analyzeCodeQuality() {
@@ -178,8 +186,13 @@ class CodeQualityMonitor {
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
+<<<<<<< HEAD
     // // // // // console.log('Metrics:', metrics);
 
+=======
+    // // // // // // // // console.log('Metrics:', metrics);
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 });
 `;
     const scriptPath = path.join(__dirname, 'code-quality-monitor.js');
@@ -208,7 +221,11 @@ class PerformanceOptimizer {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
+<<<<<<< HEAD
     // // // // // console.log(message);
+=======
+    // // // // // // // // console.log(message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
   async optimizePerformance() {
@@ -302,8 +319,13 @@ class PerformanceOptimizer {
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {
   if (report) {
+<<<<<<< HEAD
     // // // // // console.log('Performance report:', report);
 
+=======
+    // // // // // // // // console.log('Performance report:', report);
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 });
 `;
     const scriptPath = path.join(__dirname, 'performance-optimizer.js');
@@ -387,12 +409,17 @@ optimizer.optimizePerformance().then(report => {
     this.log('Generated all automation scripts');
 
   listScripts() {
+<<<<<<< HEAD
     // // // // // console.log('\\nAvailable Automation Scripts:');
+=======
+    // // // // // // // // console.log('\\nAvailable Automation Scripts:');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     for (const [name, script] of this.scripts) {
       const status = this.runningScripts.has(name) ? 'RUNNING' : script.status.toUpperCase();
       const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : 'Never';
 
+<<<<<<< HEAD
       // // // // // console.log(`\n${name}:`);
       // // // // // console.log(`  Description: ${script.description}`);
       // // // // // console.log(`  Status: ${status}`);
@@ -406,6 +433,22 @@ optimizer.optimizePerformance().then(report => {
       // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
 
 
+=======
+      // // // // // // // // console.log(`\n${name}:`);
+      // // // // // // // // console.log(`  Description: ${script.description}`);
+      // // // // // // // // console.log(`  Status: ${status}`);
+      // // // // // // // // console.log(`  Last Run: ${lastRun}`);
+      // // // // // // // // console.log(`  Success Count: ${script.successCount}`);
+      // // // // // // // // console.log(`  Error Count: ${script.errorCount}`);
+    }
+
+    // // // // // // // // console.log('\nRunning Scripts:');
+    for (const [name, info] of this.runningScripts) {
+      const duration = Date.now() - info.startTime;
+      // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
+    }
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   startContinuousMode() {
     this.log('Starting continuous monitoring mode...');
 
@@ -452,10 +495,18 @@ switch (command) {
     factory.startContinuousMode();
     break;
   default:
+<<<<<<< HEAD
     // // // // // console.log('Usage:');
     // // // // // console.log('  node automation-factory.js list');
     // // // // // console.log('  node automation-factory.js run [script-name]');
     // // // // // console.log('  node automation-factory.js generate');
     // // // // // console.log('  node automation-factory.js continuous');
+=======
+    // // // // // // // // console.log('Usage:');
+    // // // // // // // // console.log('  node automation-factory.js list');
+    // // // // // // // // console.log('  node automation-factory.js run [script-name]');
+    // // // // // // // // console.log('  node automation-factory.js generate');
+    // // // // // // // // console.log('  node automation-factory.js continuous');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     break;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

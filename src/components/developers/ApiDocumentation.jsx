@@ -52,7 +52,11 @@ export function ApiDocumentation() {
 });
 
 const data = await response.json();
+<<<<<<< HEAD
 // // // console.log(data);`,
+=======
+// // // // // // // console.log(data);`,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             python: `import requests
 
 headers = {
@@ -111,7 +115,11 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`
 });
 
 const data = await response.json();
+<<<<<<< HEAD
 // // // console.log(data);`,
+=======
+// // // // // // // console.log(data);`,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             python: `import requests
 
 headers = {
@@ -194,7 +202,11 @@ print(data)`
 });
 
 const data = await response.json();
+<<<<<<< HEAD
 // // // console.log(data);`,
+=======
+// // // // // // // console.log(data);`,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             python: `import requests
 import json
 
@@ -263,7 +275,11 @@ print(data)`
 });
 
 const data = await response.json();
+<<<<<<< HEAD
 // // // console.log(data);`,
+=======
+// // // // // // // console.log(data);`,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             python: `import requests
 
 headers = {
@@ -316,7 +332,11 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
 });
 
 const data = await response.json();
+<<<<<<< HEAD
 // // // console.log(data);`,
+=======
+// // // // // // // console.log(data);`,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             python: `import requests
 
 headers = {
@@ -409,7 +429,11 @@ print(data)`
 });
 
 const data = await response.json();
+<<<<<<< HEAD
 // // // console.log(data);`,
+=======
+// // // // // // // console.log(data);`,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             python: `import requests
 import json
 
@@ -474,7 +498,11 @@ print(data)`
 });
 
 const data = await response.json();
+<<<<<<< HEAD
 // // // console.log(data);`,
+=======
+// // // // // // // console.log(data);`,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             python: `import requests
 
 headers = {
@@ -551,7 +579,11 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 
   // Process the webhook event
   const event = JSON.parse(payload);
+<<<<<<< HEAD
   // // // console.log('Received valid webhook:', event);
+=======
+  // // // // // // // console.log('Received valid webhook:', event);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received');

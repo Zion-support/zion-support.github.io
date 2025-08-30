@@ -996,7 +996,11 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
 
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here
+<<<<<<< HEAD
     // // // console.log('Service clicked:', service);
+=======
+    // // // // // // // console.log('Service clicked:', service);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, []);
 
   const clearFilters = useCallback(() => {setSearchTerm('')};

@@ -38,7 +38,11 @@ export function PrimaryNav() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
+<<<<<<< HEAD
             // // // console.log('PrimaryNav search submit:', query);
+=======
+            // // // // // // // console.log('PrimaryNav search submit:', query);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             navigate(`/search/${slugify(query)}`);
             setQuery('');
 
@@ -58,7 +62,11 @@ export function PrimaryNav() {
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {
+<<<<<<< HEAD
             // // // console.log('PrimaryNav search suggestion selected:', sugg);
+=======
+            // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page

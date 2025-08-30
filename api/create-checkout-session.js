@@ -41,7 +41,11 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ sessionId: session.id });
   } catch (err) {
+<<<<<<< HEAD
     // // // console.error('Create checkout session error:', err);
+=======
+    // // // // // // // console.error('Create checkout session error:', err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     res.statusCode = 500;
     res.json({ error: err.message });
 

@@ -115,13 +115,21 @@ function generateSitemap() {
     const sitemapContent = generateSitemapXML();
     const sitemapPath = path.join(publicDir, 'sitemap.xml');
     fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
+<<<<<<< HEAD
     // // // console.log('✅ Sitemap generated successfully at:', sitemapPath);
+=======
+    // // // // // // // console.log('✅ Sitemap generated successfully at:', sitemapPath);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     // Generate and write robots.txt
     const robotsContent = generateRobotsTxt();
     const robotsPath = path.join(publicDir, 'robots.txt');
     fs.writeFileSync(robotsPath, robotsContent, 'utf8');
+<<<<<<< HEAD
     // // // console.log('✅ Robots.txt generated successfully at:', robotsPath);
+=======
+    // // // // // // // console.log('✅ Robots.txt generated successfully at:', robotsPath);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     // Generate a JSON version for programmatic use
     const sitemapJson = {
@@ -135,12 +143,17 @@ function generateSitemap() {
 
     const sitemapJsonPath = path.join(publicDir, 'sitemap.json');
     fs.writeFileSync(sitemapJsonPath, JSON.stringify(sitemapJson, null, 2), 'utf8');
+<<<<<<< HEAD
     // // // console.log('✅ Sitemap JSON generated successfully at:', sitemapJsonPath);
+=======
+    // // // // // // // console.log('✅ Sitemap JSON generated successfully at:', sitemapJsonPath);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     // Generate a text sitemap for simple crawlers
     const textSitemap = routes.map(route => `${BASE_URL}${route.path}`).join('\n');
     const textSitemapPath = path.join(publicDir, 'sitemap.txt');
     fs.writeFileSync(textSitemapPath, textSitemap, 'utf8');
+<<<<<<< HEAD
     // // // console.log('✅ Text sitemap generated successfully at:', textSitemapPath);
 
     // // // console.log('\n🎉 All sitemap files generated successfully!');
@@ -149,6 +162,16 @@ function generateSitemap() {
 
   } catch (error) {
     // // // console.error('❌ Error generating sitemap:', error.message);
+=======
+    // // // // // // // console.log('✅ Text sitemap generated successfully at:', textSitemapPath);
+
+    // // // // // // // console.log('\n🎉 All sitemap files generated successfully!');
+    // // // // // // // console.log(`📊 Total routes: ${routes.length}`);
+    // // // // // // // console.log(`🌐 Base URL: ${BASE_URL}`);
+
+  } catch (error) {
+    // // // // // // // console.error('❌ Error generating sitemap:', error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(1);
 
 

@@ -36,7 +36,11 @@ export function useAuth() {
             isLoading: false,
           });
         } catch (error) {
+<<<<<<< HEAD
           // // // console.error('Error parsing stored user:', error);
+=======
+          // // // // // // // console.error('Error parsing stored user:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
           setAuthState({
             user: null,
             isAuthenticated: false,

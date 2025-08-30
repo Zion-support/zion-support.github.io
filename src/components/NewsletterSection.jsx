@@ -36,7 +36,11 @@ export function NewsletterSection() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Here you would typically send the email to your newsletter service
+<<<<<<< HEAD
         // // // console.log('Newsletter subscription:', email);
+=======
+        // // // // // // // console.log('Newsletter subscription:', email);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         setIsSubscribed(true);
         setEmail('');
     };

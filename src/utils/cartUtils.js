@@ -29,7 +29,11 @@ export const getCartFromStorage = () => {
 
     return JSON.parse(cartData);
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error reading cart from storage:', error);
+=======
+    // // // // // // // console.error('Error reading cart from storage:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return [];
 
 };
@@ -44,8 +48,13 @@ export const saveCartToStorage = (cart) => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     localStorage.setItem(CART_EXPIRY_KEY, expiry.toString());
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error saving cart to storage:', error);
 
+=======
+    // // // // // // // console.error('Error saving cart to storage:', error);
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
 
 /**
@@ -56,8 +65,13 @@ export const clearCartFromStorage = () => {
     localStorage.removeItem(CART_STORAGE_KEY);
     localStorage.removeItem(CART_EXPIRY_KEY);
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error clearing cart from storage:', error);
 
+=======
+    // // // // // // // console.error('Error clearing cart from storage:', error);
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
 
 /**
@@ -68,7 +82,11 @@ export const clearCartFromStorage = () => {
  */
 export const addToCart = (currentCart, item) => {
   if (!item || !item.id) {
+<<<<<<< HEAD
     // // // console.error('Invalid item provided to addToCart');
+=======
+    // // // // // // // console.error('Invalid item provided to addToCart');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return currentCart;
 
   const existingItemIndex = currentCart.findIndex(cartItem => cartItem.id === item.id);
@@ -266,7 +284,11 @@ export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error exporting cart data:', error);
+=======
+    // // // // // // // console.error('Error exporting cart data:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return '[]';
 
 };
@@ -284,7 +306,11 @@ export const importCartData = (cartData) => {
 
     return [];
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error importing cart data:', error);
+=======
+    // // // // // // // console.error('Error importing cart data:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return [];
 
 };

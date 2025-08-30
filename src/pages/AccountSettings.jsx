@@ -25,8 +25,13 @@ export default function AccountSettings() {
 
 
         catch (e) {
+<<<<<<< HEAD
             // // // console.error('Error loading account settings', e);
 
+=======
+            // // // // // // // console.error('Error loading account settings', e);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, []);
     const handleSave = () => {
         setIsSubmitting(true);
@@ -34,11 +39,19 @@ export default function AccountSettings() {
         setTimeout(() => {
             try {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
+<<<<<<< HEAD
                 // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+=======
+                // // // // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 toast.success('Account settings updated successfully');
 
             catch (e) {
+<<<<<<< HEAD
                 // // // console.error('Failed to save settings', e);
+=======
+                // // // // // // // console.error('Failed to save settings', e);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 toast.error('Failed to save settings');
 
             finally {
@@ -72,8 +85,13 @@ export default function AccountSettings() {
 
 
             catch (error) {
+<<<<<<< HEAD
                 // // // console.error('ENS lookup error:', error);
 
+=======
+                // // // // // // // console.error('ENS lookup error:', error);
+            }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
 
         catch (error) {

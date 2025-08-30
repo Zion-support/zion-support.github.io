@@ -23,11 +23,19 @@ function fixFile(filePath) {
     );
 
     fs.writeFileSync(filePath, fixedContent);
+<<<<<<< HEAD
     // // // console.log(`Fixed: ${filePath}`);
   } catch (error) {
     // // // console.error(`Error fixing ${filePath}:`, error.message);
 
 
+=======
+    // // // // // // // console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 // Fix blog pages
 const blogDir = 'pages/blog';
 if (fs.existsSync(blogDir)) {
@@ -51,6 +59,11 @@ if (fs.existsSync(servicesDir)) {
   serviceFiles.forEach(file => {
     fixFile(path.join(servicesDir, file));
   });
+<<<<<<< HEAD
 
 // // // console.log('Variable name fixing completed!');
 }}}}}}
+=======
+}
+// // // // // // // console.log('Variable name fixing completed!');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

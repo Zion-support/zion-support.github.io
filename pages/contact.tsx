@@ -12,7 +12,11 @@ import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact(
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
+<<<<<<< HEAD
 		// // // console.log('Form submitted:', formData)
+=======
+		// // // // // // // console.log('Form submitted:', formData)
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 		setIsSubmitted(true)
 		// Reset form after submission
 		setTimeout(() => {

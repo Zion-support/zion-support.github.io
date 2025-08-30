@@ -54,7 +54,11 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   const handleCTAClick = useCallback(() => {
     // Analytics tracking could be added here
+<<<<<<< HEAD
     // // // console.log('Hero CTA clicked');
+=======
+    // // // // // // // console.log('Hero CTA clicked');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, []);
 
   const containerVariants = {

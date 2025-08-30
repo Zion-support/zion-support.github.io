@@ -8,13 +8,18 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 // // // console.log('🔒 Starting continuous security audit automation...');
+=======
+// // // // // // // console.log('🔒 Starting continuous security audit automation...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 // Get automation interval from environment variable (default: 4 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
 
 async function runSecurityAudit() {
   try {
+<<<<<<< HEAD
     // // // console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
 
     // Run npm audit
@@ -29,10 +34,27 @@ async function runSecurityAudit() {
         // // // console.log('✅ Security issues auto-fixed');
       } catch (fixError) {
         // // // console.log('❌ Could not auto-fix security issues');
+=======
+    // // // // // // // console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
+
+    // Run npm audit
+    // // // // // // // console.log('🔍 Running npm security audit...');
+    try {
+      execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
+      // // // // // // // console.log('✅ Security audit completed - no issues found');
+    } catch (error) {
+      // // // // // // // console.log('⚠️  Security issues found, attempting auto-fix...');
+      try {
+        execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit' });
+        // // // // // // // console.log('✅ Security issues auto-fixed');
+      } catch (fixError) {
+        // // // // // // // console.log('❌ Could not auto-fix security issues');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         // Don't exit, just log the error and continue
 
 
     // Check for known vulnerabilities in dependencies
+<<<<<<< HEAD
     // // // console.log('📦 Checking for known vulnerabilities...');
     try {
       execSync('npm audit --json', { stdio: 'pipe' });
@@ -49,12 +71,37 @@ async function runSecurityAudit() {
 
     // Run security scan if available
     // // // console.log('🔍 Running additional security scans...');
+=======
+    // // // // // // // console.log('📦 Checking for known vulnerabilities...');
+    try {
+      execSync('npm audit --json', { stdio: 'pipe' });
+      // // // // // // // console.log('✅ No known vulnerabilities found');
+    } catch (error) {
+      // // // // // // // console.log('⚠️  Known vulnerabilities detected');
+    }
+
+    // Check for outdated packages with security implications
+    // // // // // // // console.log('🔄 Checking for outdated packages...');
+    try {
+      execSync('npm outdated', { stdio: 'inherit' });
+    } catch (error) {
+      // // // // // // // console.log('✅ All packages are up to date');
+    }
+
+    // Run security scan if available
+    // // // // // // // console.log('🔍 Running additional security scans...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     try {
       if (fs.existsSync('security-scan.js')) {
         execSync('node security-scan.js', { stdio: 'inherit' });
 
     } catch (error) {
+<<<<<<< HEAD
       // // // console.log('ℹ️  No additional security scan available');
+=======
+      // // // // // // // console.log('ℹ️  No additional security scan available');
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     // Generate security report
     const report = {
@@ -65,18 +112,31 @@ async function runSecurityAudit() {
 
     const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
     // // // console.log(`📊 Report saved to ${reportPath}`);
 
     // // // console.log('✅ Continuous security audit completed successfully');
 
   } catch (error) {
     // // // console.error('❌ Continuous security audit failed:', error.message);
+=======
+    // // // // // // // console.log(`📊 Report saved to ${reportPath}`);
+
+    // // // // // // // console.log('✅ Continuous security audit completed successfully');
+
+  } catch (error) {
+    // // // // // // // console.error('❌ Continuous security audit failed:', error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     // Don't exit, just log the error and continue
 
 
 // Main continuous loop
 async function runContinuous() {
+<<<<<<< HEAD
   // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+=======
+  // // // // // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   // Run initial security audit
   await runSecurityAudit();
@@ -86,22 +146,39 @@ async function runContinuous() {
     await runSecurityAudit();
   }, AUTOMATION_INTERVAL);
 
+<<<<<<< HEAD
   // // // console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+=======
+  // // // // // // // console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(0);
 });
 
 process.on('SIGTERM', () => {
+<<<<<<< HEAD
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+=======
+  // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(0);
 });
 
 // Start the continuous security audit
 runContinuous().catch(error => {
+<<<<<<< HEAD
   // // // console.error('❌ Failed to start continuous security audit:', error);
+=======
+  // // // // // // // console.error('❌ Failed to start continuous security audit:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 });
 }}}}}}}}}

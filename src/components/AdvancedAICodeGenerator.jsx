@@ -237,7 +237,11 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
+=======
+      // // // // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return initialValue;
 
   });
@@ -248,8 +252,13 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
 
+=======
+      // // // // // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   };
 
   return [storedValue, setValue] as const;
@@ -304,7 +313,11 @@ export function AdvancedAICodeGenerator() {
             const newGeneration = {
                 id: Date.now().toString(),
                 prompt: aiPrompt,
+<<<<<<< HEAD
                 generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
+=======
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // // // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives: [

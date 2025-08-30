@@ -67,8 +67,13 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
             setNotes(data || []);
 
         catch (err) {
+<<<<<<< HEAD
             // // // console.error("Error fetching project notes:", err);
 
+=======
+            // // // // // // // console.error("Error fetching project notes:", err);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     const handleSubmitNote = async () => {
         if (!newNote.trim() || !project || !user)
@@ -94,7 +99,11 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
             });
 
         catch (err) {
+<<<<<<< HEAD
             // // // console.error("Error adding note:", err);
+=======
+            // // // // // // // console.error("Error adding note:", err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",

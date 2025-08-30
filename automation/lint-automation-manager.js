@@ -23,7 +23,11 @@ class LintAutomationManager {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
     // // // // // console.log(message);
+=======
+    // // // // // // // // console.log(message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
   async runLint() {
@@ -144,7 +148,11 @@ switch (command) {
     process.exit(0);
     break;
   default:
+<<<<<<< HEAD
     // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
+=======
+    // // // // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(1);
 
 // Graceful shutdown

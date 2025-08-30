@@ -166,7 +166,11 @@ export class APIDocGeneratorService {
       // Calculate coverage
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error('Error generating documentation:', error);
+=======
+      // // // // // // // console.error('Error generating documentation:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length;

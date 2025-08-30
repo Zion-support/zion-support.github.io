@@ -153,7 +153,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to generate AI suggestions:', error);
+=======
+            // // // // // // // console.error('Failed to generate AI suggestions:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });

@@ -65,7 +65,11 @@ export function AdvancedDataVisualization() {
     }, [autoRefresh]);
     const downloadChart = (format) => {
         // Simulate chart download
+<<<<<<< HEAD
         // // // console.log(`Downloading chart as ${format}`);
+=======
+        // // // // // // // console.log(`Downloading chart as ${format}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     const renderChart = () => {
         switch (selectedChartType) {

@@ -21,7 +21,11 @@ class LintErrorFixer {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
     // // // // // console.log(message);
+=======
+    // // // // // // // // console.log(message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
   async fixUnusedImports(filePath) {
@@ -184,13 +188,22 @@ switch (command) {
     if (filePath) {
       fixer.fixFile(filePath);
     } else {
+<<<<<<< HEAD
       // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>');
 
+=======
+      // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>');
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     break;
   case 'all':
     fixer.fixAllFiles();
     break;
   default:
+<<<<<<< HEAD
     // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
+=======
+    // // // // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(1);
 }}}}}}}}}}}}}}}}}}}}}}}}}}

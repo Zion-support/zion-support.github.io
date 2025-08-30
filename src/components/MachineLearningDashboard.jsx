@@ -44,8 +44,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             trackEvent('ml', 'dashboard', 'training_started');
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Training failed:', error);
 
+=======
+            // // // // // // // console.error('Training failed:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, [startTraining, trackEvent]);
     const handleStopTraining = useCallback((jobId) => {
         stopTraining(jobId);
@@ -64,14 +69,24 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             try {
                 const input = JSON.parse(predictionForm.input);
                 const result = await makePrediction(predictionForm.modelId, input);
+<<<<<<< HEAD
                 // // // console.log('Prediction result:', result);
+=======
+                // // // // // // // console.log('Prediction result:', result);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 setPredictionForm({ modelId: '', input: '' });
                 trackEvent('ml', 'dashboard', 'prediction_made');
 
             catch (error) {
+<<<<<<< HEAD
                 // // // console.error('Prediction failed:', error);
 
 
+=======
+                // // // // // // // console.error('Prediction failed:', error);
+            }
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, [predictionForm, makePrediction, trackEvent]);
     const handleExportModel = useCallback((modelId) => {
         try {
@@ -80,8 +95,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             trackEvent('ml', 'dashboard', 'model_exported');
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Export failed:', error);
 
+=======
+            // // // // // // // console.error('Export failed:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, [exportModel, trackEvent]);
     const handleImportModel = useCallback((event) => {
         const file = event.target.files?.[0];
@@ -95,8 +115,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     trackEvent('ml', 'dashboard', 'model_imported');
 
                 catch (error) {
+<<<<<<< HEAD
                     // // // console.error('Import failed:', error);
 
+=======
+                    // // // // // // // console.error('Import failed:', error);
+                }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             };
             reader.readAsText(file);
 

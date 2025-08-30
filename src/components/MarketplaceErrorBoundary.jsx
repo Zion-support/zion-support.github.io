@@ -12,7 +12,11 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
             resetErrorBoundary();
 
         catch (retryError) {
+<<<<<<< HEAD
             // // // console.error('Error during retry:', retryError);
+=======
+            // // // // // // // console.error('Error during retry:', retryError);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             Sentry.captureException(retryError);
 
     };
@@ -49,7 +53,11 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
 export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
         // Log boundary errors to Sentry
+<<<<<<< HEAD
         // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
+=======
+        // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {

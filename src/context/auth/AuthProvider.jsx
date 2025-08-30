@@ -53,7 +53,11 @@ export const AuthProvider = ({ children }) => {
         if (clientLoginResult?.error) {
             // useEmailAuth.login already shows a toast on error.
             // We just need to return the error to the caller of AuthProvider.login
+<<<<<<< HEAD
             // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+=======
+            // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();
@@ -129,12 +133,20 @@ export const AuthProvider = ({ children }) => {
 
 
                     else if (error) {
+<<<<<<< HEAD
                         // // // console.error("Error fetching user profile:", error);
+=======
+                        // // // // // // // console.error("Error fetching user profile:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                         setUser(null);
 
 
                 catch (error) {
+<<<<<<< HEAD
                     // // // console.error("Error fetching user profile:", error);
+=======
+                    // // // // // // // console.error("Error fetching user profile:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     setUser(null);
 
 

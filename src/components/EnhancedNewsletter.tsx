@@ -63,7 +63,11 @@ export const EnhancedNewsletter: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       // Here you would typically send the data to your newsletter service
+<<<<<<< HEAD
       // // // console.log('Newsletter subscription:', formData);
+=======
+      // // // // // // // console.log('Newsletter subscription:', formData);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       setStatus('success');
 
@@ -80,8 +84,13 @@ export const EnhancedNewsletter: React.FC = () => {
 
     } catch (error) {
       setStatus('error');
+<<<<<<< HEAD
       // // // console.error('Newsletter subscription error:', error);
 
+=======
+      // // // // // // // console.error('Newsletter subscription error:', error);
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   };
 
   const handleInterestToggle = (interestId: string) => {

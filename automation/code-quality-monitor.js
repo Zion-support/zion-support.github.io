@@ -5,6 +5,11 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
+<<<<<<< HEAD
+=======
+// // // // // // // // console.log('🔍 Code Quality Monitor Starting...\n');
+
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 class CodeQualityMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -29,11 +34,22 @@ class CodeQualityMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
+<<<<<<< HEAD
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
       // console.error('Failed to write to log file:', error.message);
 
+=======
+    // // // // // // // // console.log(logEntry.trim());
+
+    try {
+      fs.appendFileSync(this.logFile, logEntry);
+    } catch (error) {
+      // // // // // // // console.error('Failed to write to log file:', error.message);
+    }
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   async startMonitoring() {
     this.log('Starting code quality monitoring...');
@@ -195,11 +211,19 @@ class CodeQualityMonitor {
           const content = fs.readFileSync(file, 'utf8');
 
           // Check for potential issues
+<<<<<<< HEAD
           if (content.includes('// console.log(') && !file.includes('.test.')) {
             bugs.push({
               file: path.relative(this.projectRoot, file),
               issue: 'console.log in production code',
               line: this.findLineNumber(content, '// console.log(')
+=======
+          if (content.includes('// // // // // // // // console.log(') && !file.includes('.test.')) {
+            bugs.push({
+              file: path.relative(this.projectRoot, file),
+              issue: 'console.log in production code',
+              line: this.findLineNumber(content, '// // // // // // // // console.log(')
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             });
 
           if (content.includes('// debugger;')) {
@@ -272,6 +296,47 @@ class CodeQualityMonitor {
     } catch (error) {
       this.log(`ESLint auto-fix failed: ${error.message}`, 'WARN');
 
+<<<<<<< HEAD
+=======
+    // Try to auto-fix some common syntax issues
+    await this.autoFixCommonSyntaxIssues();
+  }
+
+  async autoFixCommonSyntaxIssues() {
+    this.log('Attempting to auto-fix common syntax issues...');
+
+    const sourceFiles = this.findSourceFiles();
+    let fixedCount = 0;
+
+    for (const file of sourceFiles) {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+        let newContent = content;
+
+        // Fix common issues
+        if (newContent.includes('// debugger; // TODO: Remove in production')) {
+          newContent = newContent.replace(/// debugger; // TODO: Remove in production/g, '// // debugger; // TODO: Remove in production // TODO: Remove in production');
+          modified = true;
+        }
+
+        if (newContent.includes('// // // // // // // // console.log(') && !file.includes('.test.')) {
+          newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(');
+          modified = true;
+        }
+
+        if (modified) {
+          fs.writeFileSync(file, newContent, 'utf8');
+          fixedCount++;
+        }
+      } catch (error) {
+        // Skip files that can't be processed
+      }
+    }
+
+    this.log(`Auto-fixed common syntax issues in ${fixedCount} files`);
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   async fixUnusedImports(errors) {
     this.log('Attempting to fix unused imports...');
@@ -348,7 +413,11 @@ class CodeQualityMonitor {
 
           // Fix console.log statements
           if (bug.issue === 'console.log in production code') {
+<<<<<<< HEAD
             newContent = newContent.replace(/console\.log\(/g, '// // console.log(');
+=======
+            newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             modified = true;
 
           // Fix debugger statements

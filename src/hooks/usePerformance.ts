@@ -40,7 +40,11 @@ export function usePerformance() {
   useEffect(() => {
     // Check if PerformanceObserver is supported
     if (!('PerformanceObserver' in window)) {
+<<<<<<< HEAD
       // // // console.warn('PerformanceObserver not supported');
+=======
+      // // // // // // // console.warn('PerformanceObserver not supported');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return;
 
     // First Contentful Paint (FCP)
@@ -85,8 +89,13 @@ export function usePerformance() {
       fidObserver.observe({ entryTypes: ['first-input'] });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
+<<<<<<< HEAD
       // // // console.warn('Error setting up performance observers:', error);
 
+=======
+      // // // // // // // console.warn('Error setting up performance observers:', error);
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     // Navigation timing metrics
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
@@ -163,7 +172,11 @@ export function usePerformance() {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 50) {
+<<<<<<< HEAD
           // // console.warn('Long task detected:', {
+=======
+          // // // // // // // console.warn('Long task detected:', {
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             duration: entry.duration,
             startTime: entry.startTime,
             name: entry.name
@@ -174,8 +187,13 @@ export function usePerformance() {
     try {
       longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch (error) {
+<<<<<<< HEAD
       // // console.warn('Error setting up long task observer:', error);
 
+=======
+      // // // // // // // console.warn('Error setting up long task observer:', error);
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return () => longTaskObserver.disconnect();
   }, []);
   return {
@@ -199,8 +217,13 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
     try {
       observer.observe({ entryTypes: [eventName] });
     } catch (error) {
+<<<<<<< HEAD
       // // // console.warn(`Error observing ${eventName}:`, error);
 
+=======
+      // // // // // // // console.warn(`Error observing ${eventName}:`, error);
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return () => observer.disconnect();
   }, [eventName, callback]);
 

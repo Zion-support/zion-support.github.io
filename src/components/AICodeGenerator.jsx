@@ -64,7 +64,11 @@ export const AICodeGenerator = () => {
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTest, form.language);
         // In a real implementation, you'd want to display the test code
+<<<<<<< HEAD
         // // // console.log('Generated tests:', testCode);
+=======
+        // // // // // // // console.log('Generated tests:', testCode);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
     }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
@@ -74,7 +78,11 @@ export const AICodeGenerator = () => {
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDoc, form.language);
         // In a real implementation, you'd want to display the documentation
+<<<<<<< HEAD
         // // // console.log('Generated docs:', docs);
+=======
+        // // // // // // // console.log('Generated docs:', docs);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
     }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard
@@ -86,8 +94,13 @@ export const AICodeGenerator = () => {
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to copy code:', error);
 
+=======
+            // // // // // // // console.error('Failed to copy code:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, [trackEvent]);
     // Apply suggestion
     const handleApplySuggestion = useCallback((suggestion) => {

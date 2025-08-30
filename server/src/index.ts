@@ -72,7 +72,11 @@ if (NODE_ENV === 'production') {
 
 // Error handling middleware
 app.use((err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+<<<<<<< HEAD
   // // // console.error(err.stack);
+=======
+  // // // // // // // console.error(err.stack);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   res.status(500).json({
     error: 'Something went wrong!',
     message: NODE_ENV === 'development' ? err.message : 'Internal server error'
@@ -85,8 +89,16 @@ app.use('*', (_req, res) => {
 });
 
 app.listen(PORT, () => {
+<<<<<<< HEAD
   // // // console.log(`🚀 Server running on port ${PORT}`);
   // // // console.log(`🌍 Environment: ${NODE_ENV}`);
   // // // console.log(`📱 Frontend: http://localhost:3000`);
   // // // console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
 });}
+=======
+  // // // // // // // console.log(`🚀 Server running on port ${PORT}`);
+  // // // // // // // console.log(`🌍 Environment: ${NODE_ENV}`);
+  // // // // // // // console.log(`📱 Frontend: http://localhost:3000`);
+  // // // // // // // console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
+});
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

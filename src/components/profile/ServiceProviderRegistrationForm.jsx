@@ -114,7 +114,11 @@ export function ServiceProviderRegistrationForm() {
             });
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error generating enhanced profile:", error);
+=======
+            // // // // // // // console.error("Error generating enhanced profile:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
@@ -177,7 +181,11 @@ export function ServiceProviderRegistrationForm() {
 
 
                 catch (error) {
+<<<<<<< HEAD
                     // // // console.error("Error enhancing profile:", error);
+=======
+                    // // // // // // // console.error("Error enhancing profile:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     // Continue with submission even if enhancement fails
 
 
@@ -242,7 +250,11 @@ export function ServiceProviderRegistrationForm() {
                     });
 
                 catch (emailError) {
+<<<<<<< HEAD
                     // // // console.error("Failed to send notification email:", emailError);
+=======
+                    // // // // // // // console.error("Failed to send notification email:", emailError);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     // Continue with submission even if email fails
 
 
@@ -256,7 +268,11 @@ export function ServiceProviderRegistrationForm() {
             }, 1500);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error creating profile:", error);
+=======
+            // // // // // // // console.error("Error creating profile:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // // // console.log("main.tsx: Start");
+=======
+// // // // // // // console.log("main.tsx: Start");
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -76,11 +80,19 @@ try {
     renderApp();
 
 catch (error) {
+<<<<<<< HEAD
     // // // console.error('Global error caught in main.tsx:', error);
+=======
+    // // // // // // // console.error('Global error caught in main.tsx:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     displayFatalError(error.message);
 
 window.addEventListener('error', (e) => {
+<<<<<<< HEAD
     // // // console.error('Unhandled error:', e.error || e.message);
+=======
+    // // // // // // // console.error('Unhandled error:', e.error || e.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     displayFatalError(e.message);
 });
 // Render the app with proper provider structure

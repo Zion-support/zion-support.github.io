@@ -55,8 +55,13 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'onboarding',
         action: {
           label: 'Get Started',
+<<<<<<< HEAD
           onClick: () => // // console.log('Get Started clicked')
 
+=======
+          onClick: () => console.log('Get Started clicked')
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
         id: '2',
@@ -69,8 +74,13 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'performance',
         action: {
           label: 'View Details',
+<<<<<<< HEAD
           onClick: () => // // console.log('View Details clicked')
 
+=======
+          onClick: () => console.log('View Details clicked')
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
         id: '3',
@@ -93,9 +103,15 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'security',
         action: {
           label: 'Update Now',
+<<<<<<< HEAD
           onClick: () => // // console.log('Update Now clicked')
 
 
+=======
+          onClick: () => console.log('Update Now clicked')
+        }
+      }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     ];
 
     setNotifications(sampleNotifications);

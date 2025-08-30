@@ -41,12 +41,20 @@ export function EnhancedNewsletterForm() {
 
             else {
                 // Handle error responses
+<<<<<<< HEAD
                 // // // console.error('Newsletter subscription failed:', data);
+=======
+                // // // // // // // console.error('Newsletter subscription failed:', data);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 toast.error(data.error || "Subscription failed. Please try again.");
 
 
         catch (err) {
+<<<<<<< HEAD
             // // // console.error('Newsletter subscription error:', err);
+=======
+            // // // // // // // console.error('Newsletter subscription error:', err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error("Unable to subscribe right now. Please try again later.");
 
         finally {

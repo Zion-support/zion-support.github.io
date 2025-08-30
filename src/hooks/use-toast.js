@@ -3,7 +3,11 @@ import { useState, useCallback } from 'react';
 // Simple toast function for direct import
 export const toast = ({ title, description, variant = 'default' }) => {
   // In a real app, this would integrate with a toast library
+<<<<<<< HEAD
   // // // console.log(`Toast [${variant}]: ${title} - ${description}`);
+=======
+  // // // // // // // console.log(`Toast [${variant}]: ${title} - ${description}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   // For now, just log to console
   // You can replace this with your preferred toast implementation

@@ -149,14 +149,22 @@ export const EnterpriseDashboard = () => {
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
             const now = new Date();
+<<<<<<< HEAD
             // // // console.log('Data refreshed at:', now.toLocaleTimeString());
+=======
+            // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString());
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
                 tab: activeTab,
                 dateRange
             });
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to refresh data:', error);
+=======
+            // // // // // // // console.error('Failed to refresh data:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });

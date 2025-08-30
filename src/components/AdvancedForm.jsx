@@ -163,9 +163,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 trackEvent('form', 'submission_error', 'form_failed', undefined, {
                     error: error instanceof Error ? error.message : 'Unknown error'
                 });
+<<<<<<< HEAD
 
             // // // console.error('Form submission failed:', error);
 
+=======
+            }
+            // // // // // // // console.error('Form submission failed:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
             setIsSubmitting(false);
 

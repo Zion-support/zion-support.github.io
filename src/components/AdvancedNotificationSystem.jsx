@@ -11,8 +11,13 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isRead: false,
         isArchived: false,
         actions: [
+<<<<<<< HEAD
             { label: 'View Details', action: () => // // console.log('View project'), variant: 'primary' },
             { label: 'Archive', action: () => // // console.log('Archive'), variant: 'secondary' }
+=======
+            { label: 'View Details', action: () => // // // // // // // console.log('View project'), variant: 'primary' },
+            { label: 'Archive', action: () => // // // // // // // console.log('Archive'), variant: 'secondary' }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         ]
     },
     {
@@ -26,8 +31,13 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isRead: false,
         isArchived: false,
         actions: [
+<<<<<<< HEAD
             { label: 'Review Activity', action: () => // // console.log('Review security'), variant: 'primary' },
             { label: 'Dismiss', action: () => // // console.log('Dismiss'), variant: 'secondary' }
+=======
+            { label: 'Review Activity', action: () => // // // // // // // console.log('Review security'), variant: 'primary' },
+            { label: 'Dismiss', action: () => // // // // // // // console.log('Dismiss'), variant: 'secondary' }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         ]
     },
     {
@@ -41,8 +51,13 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isRead: false,
         isArchived: false,
         actions: [
+<<<<<<< HEAD
             { label: 'Investigate', action: () => // // console.log('Investigate'), variant: 'primary' },
             { label: 'Acknowledge', action: () => // // console.log('Acknowledge'), variant: 'secondary' }
+=======
+            { label: 'Investigate', action: () => // // // // // // // console.log('Investigate'), variant: 'primary' },
+            { label: 'Acknowledge', action: () => // // // // // // // console.log('Acknowledge'), variant: 'secondary' }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         ]
     },
     {
@@ -56,8 +71,13 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isRead: true,
         isArchived: false,
         actions: [
+<<<<<<< HEAD
             { label: 'Deploy Now', action: () => // // console.log('Deploy'), variant: 'primary' },
             { label: 'Schedule', action: () => // // console.log('Schedule'), variant: 'secondary' }
+=======
+            { label: 'Deploy Now', action: () => // // // // // // // console.log('Deploy'), variant: 'primary' },
+            { label: 'Schedule', action: () => // // // // // // // console.log('Schedule'), variant: 'secondary' }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         ]
 
 ];

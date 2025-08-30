@@ -23,8 +23,13 @@ export function UpcomingInterviewsCard() {
                 setUpcomingInterviews(upcoming);
 
             catch (error) {
+<<<<<<< HEAD
                 // // // console.error("Error loading upcoming interviews:", error);
 
+=======
+                // // // // // // // console.error("Error loading upcoming interviews:", error);
+            }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             finally {
                 setIsLoading(false);
 

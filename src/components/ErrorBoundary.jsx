@@ -62,8 +62,13 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
                 // // // console.error('ErrorBoundary caught an error:', event.error);
 
+=======
+                // // // // // // // console.error('ErrorBoundary caught an error:', event.error);
+            }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         };
         const handleUnhandledRejection = (event) => {
             setHasError(true);
@@ -73,8 +78,13 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
                 // // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
 
+=======
+                // // // // // // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+            }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         };
         window.addEventListener('error', handleError);
         window.addEventListener('unhandledrejection', handleUnhandledRejection);
@@ -100,7 +110,11 @@ export function useErrorHandler() {
     const [error, setError] = useState(null);
     const handleError = React.useCallback((error) => {
         setError(error);
+<<<<<<< HEAD
         // // // console.error('Error caught by useErrorHandler:', error);
+=======
+        // // // // // // // console.error('Error caught by useErrorHandler:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, []);
     const clearError = React.useCallback(() => {
         setError(null);

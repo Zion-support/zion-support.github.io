@@ -89,7 +89,11 @@ export default function UpdatePassword() {
             }, 3000);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Password update error:", error);
+=======
+            // // // // // // // console.error("Password update error:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Password update failed",
                 description: error.message || "An unexpected error occurred",

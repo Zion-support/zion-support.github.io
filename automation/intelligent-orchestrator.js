@@ -20,7 +20,11 @@ class IntelligentOrchestrator {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
     // // // // // console.log(message);
+=======
+    // // // // // // // // console.log(message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
   loadAutomationSystems() {
@@ -372,6 +376,7 @@ switch (command) {
     break;
   case 'report':
     const report = orchestrator.generateIntelligenceReport();
+<<<<<<< HEAD
     // // // // // console.log(JSON.stringify(report, null, 2));
     process.exit(0);
     break;
@@ -384,6 +389,20 @@ switch (command) {
     // // // // // console.log('  optimize         - Optimize systems based on performance');
     // // // // // console.log('  status           - Show current status');
     // // // // // console.log('  report           - Generate intelligence report');
+=======
+    // // // // // // // // console.log(JSON.stringify(report, null, 2));
+    process.exit(0);
+    break;
+  default:
+    // // // // // // // // console.log('Usage: node intelligent-orchestrator.js [run|continuous|optimize|status|report] [priority|intelligent]');
+    // // // // // // // // console.log('\nCommands:');
+    // // // // // // // // console.log('  run priority     - Run priority-based execution');
+    // // // // // // // // console.log('  run intelligent  - Run intelligent execution');
+    // // // // // // // // console.log('  continuous       - Start continuous intelligent automation');
+    // // // // // // // // console.log('  optimize         - Optimize systems based on performance');
+    // // // // // // // // console.log('  status           - Show current status');
+    // // // // // // // // console.log('  report           - Generate intelligence report');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(1);
 
 // Graceful shutdown

@@ -65,7 +65,11 @@ const ScheduleDemo: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubmitted(true);
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error('Error submitting form:', error);
+=======
+      // // // // // // // console.error('Error submitting form:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false);
 

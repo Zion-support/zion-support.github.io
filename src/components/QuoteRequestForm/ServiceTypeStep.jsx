@@ -47,8 +47,13 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                 catch (err) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
                             // // // console.error('Failed to load services:', err);
 
+=======
+                            // // // // // // // console.error('Failed to load services:', err);
+                        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                         else {
                             captureException(err);
 

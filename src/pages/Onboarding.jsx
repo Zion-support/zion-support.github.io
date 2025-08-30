@@ -77,7 +77,11 @@ export default function Onboarding() {
             navigate(dashboardRoute);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Error updating profile:', error);
+=======
+            // // // // // // // console.error('Error updating profile:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',

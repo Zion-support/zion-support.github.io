@@ -22,7 +22,11 @@ export function ChatAssistantTrigger() {
             return Promise.resolve();
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error in AI chat:", error);
+=======
+            // // // // // // // console.error("Error in AI chat:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             return Promise.resolve();
 
     };

@@ -22,9 +22,15 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                 setSettings(prev => ({ ...prev, ...parsed }));
 
             catch (error) {
+<<<<<<< HEAD
                 // // // console.error('Failed to parse accessibility settings:', error);
 
 
+=======
+                // // // // // // // console.error('Failed to parse accessibility settings:', error);
+            }
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, []);
     useEffect(() => {
         // Apply settings to document

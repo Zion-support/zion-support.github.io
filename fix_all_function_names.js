@@ -56,14 +56,22 @@ function fixFunctionName(filePath) {
     );
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, "utf8");
+<<<<<<< HEAD
       // // // console.log(
+=======
+      // // // // // // // console.log(
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,
       );
       return true;
 
     return false;
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error(`Error processing ${filePath}:`, error.message);
+=======
+    // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return false;
 
 
@@ -75,9 +83,16 @@ async function fixAllFiles() {
   for (const file of files) {
     if (fixFunctionName(file)) {
       fixedCount++;
+<<<<<<< HEAD
 
 
   // // // console.log(`Fixed ${fixedCount} files.`);
 
+=======
+    }
+  }
+  // // // // // // // console.log(`Fixed ${fixedCount} files.`);
+}
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 fixAllFiles();
 }}}}}}}}}

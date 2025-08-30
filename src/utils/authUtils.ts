@@ -7,8 +7,13 @@ export const cleanupAuthState = () => {
       sessionStorage.removeItem('auth');
 
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error cleaning up auth state:', error);
 
+=======
+    // // // // // // // console.error('Error cleaning up auth state:', error);
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
 
 export const isAuthenticated = (): boolean => {
@@ -19,7 +24,11 @@ export const isAuthenticated = (): boolean => {
 
     return false;
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error checking authentication status:', error);
+=======
+    // // // // // // // console.error('Error checking authentication status:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return false;
 
 };
@@ -35,7 +44,11 @@ export const getAuthToken = (): string | null => {
 
     return null;
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error getting auth token:', error);
+=======
+    // // // // // // // console.error('Error getting auth token:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return null;
 
 };
@@ -51,7 +64,11 @@ export const getUserData = (): any => {
 
     return null;
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('Error getting user data:', error);
+=======
+    // // // // // // // console.error('Error getting user data:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return null;
 
 };}}}}}}}}}}

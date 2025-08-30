@@ -5,7 +5,11 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
+<<<<<<< HEAD
 // // // // // console.log('📦 Dependency Monitor Starting...\n');
+=======
+// // // // // // // // console.log('📦 Dependency Monitor Starting...\n');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 class DependencyMonitor {
   constructor() {
@@ -31,13 +35,23 @@ class DependencyMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
+<<<<<<< HEAD
     // // // // // console.log(logEntry.trim());
+=======
+    // // // // // // // // console.log(logEntry.trim());
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error('Failed to write to log file:', error.message);
 
+=======
+      // // // // // // // console.error('Failed to write to log file:', error.message);
+    }
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   async startMonitoring() {
     this.log('Starting dependency monitoring...');

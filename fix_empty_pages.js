@@ -51,7 +51,11 @@ function fixEmptyFiles(dir) {
       const content = fs.readFileSync(filePath, 'utf8').trim();
 
       if (!content) {
+<<<<<<< HEAD
         // // // console.log(`Fixing empty file: ${filePath}`);
+=======
+        // // // // // // // console.log(`Fixing empty file: ${filePath}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         const fileName = path.basename(file, path.extname(file));
         const pageTemplate = createPageTemplate(fileName, filePath);
         fs.writeFileSync(filePath, pageTemplate);
@@ -62,9 +66,18 @@ function fixEmptyFiles(dir) {
 // Start fixing from the pages directory
 const pagesDir = './pages';
 if (fs.existsSync(pagesDir)) {
+<<<<<<< HEAD
   // // // console.log('Fixing empty pages...');
   fixEmptyFiles(pagesDir);
   // // // console.log('Empty pages fixed successfully!');
 } else {
   // // // console.error('Pages directory not found');
 }}}}}}}
+=======
+  // // // // // // // console.log('Fixing empty pages...');
+  fixEmptyFiles(pagesDir);
+  // // // // // // // console.log('Empty pages fixed successfully!');
+} else {
+  // // // // // // // console.error('Pages directory not found');
+}
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

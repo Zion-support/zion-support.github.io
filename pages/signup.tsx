@@ -96,10 +96,17 @@ export default function Signup() {
       await new Promise(resolve => setTimeout(resolve, 2000))
 
       // Success - redirect or show success message
+<<<<<<< HEAD
       // // // console.log('Signup successful:', formData)
 
     } catch (error) {
       // // // console.error('Signup error:', error)
+=======
+      // // // // // // // console.log('Signup successful:', formData)
+
+    } catch (error) {
+      // // // // // // // console.error('Signup error:', error)
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false)
 

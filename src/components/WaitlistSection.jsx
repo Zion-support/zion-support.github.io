@@ -5,7 +5,11 @@ export function WaitlistSection() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle waitlist signup
+<<<<<<< HEAD
         // // // console.log('Waitlist signup:', email);
+=======
+        // // // // // // // console.log('Waitlist signup:', email);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     return (<section className="py-16 bg-gradient-to-r from-zion-purple to-zion-cyan">
       <div className="container mx-auto px-4 text-center">

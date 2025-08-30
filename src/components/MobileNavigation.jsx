@@ -78,7 +78,11 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     const handleSearch = (e) => {
         e.preventDefault();
         // Implement search functionality
+<<<<<<< HEAD
         // // // console.log('Search query:', searchQuery);
+=======
+        // // // // // // // console.log('Search query:', searchQuery);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     const menuVariants = {
         closed: {

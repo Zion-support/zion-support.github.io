@@ -103,7 +103,11 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
 
       // Perform search (in a real app, this would navigate to search results)
+<<<<<<< HEAD
       // // // console.log('Searching for:', query);
+=======
+      // // // // // // // console.log('Searching for:', query);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       // Close search
       setIsOpen(false);

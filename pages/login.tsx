@@ -53,10 +53,17 @@ export default function Login() {
       await new Promise(resolve => setTimeout(resolve, 2000))
 
       // Success - redirect or show success message
+<<<<<<< HEAD
       // // // console.log('Login successful:', formData)
 
     } catch (error) {
       // // // console.error('Login error:', error)
+=======
+      // // // // // // // console.log('Login successful:', formData)
+
+    } catch (error) {
+      // // // // // // // console.error('Login error:', error)
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false)
 

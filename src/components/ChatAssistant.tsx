@@ -91,7 +91,11 @@ export function ChatAssistant({
       };
 
       recognitionRef.current.onerror = (event: any) => {
+<<<<<<< HEAD
         // // // console.error('Speech recognition error:', event.error);
+=======
+        // // // // // // // console.error('Speech recognition error:', event.error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         setIsListening(false);
       };
 

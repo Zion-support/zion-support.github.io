@@ -86,8 +86,13 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
             setAnalysis(mockAnalysis);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Bundle analysis failed:', error);
 
+=======
+            // // // // // // // console.error('Bundle analysis failed:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
             setIsAnalyzing(false);
 

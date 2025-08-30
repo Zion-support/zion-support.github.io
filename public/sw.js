@@ -19,12 +19,20 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
+<<<<<<< HEAD
         // // // console.log('Caching static files');
+=======
+        // // // // // // // console.log('Caching static files');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         // Use addAll with individual error handling for each file
         return Promise.allSettled(
           STATIC_FILES.map(url =>
             cache.add(url).catch(error => {
+<<<<<<< HEAD
               // // // console.warn(`Failed to cache ${url}:`, error);
+=======
+              // // // // // // // console.warn(`Failed to cache ${url}:`, error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
               // Try to fetch and cache manually if add() fails
               return fetch(url)
                 .then(response => {
@@ -34,7 +42,11 @@ self.addEventListener('install', (event) => {
                   throw new Error(`HTTP ${response.status}`);
                 })
                 .catch(fetchError => {
+<<<<<<< HEAD
                   // // // console.warn(`Manual fetch failed for ${url}:`, fetchError);
+=======
+                  // // // // // // // console.warn(`Manual fetch failed for ${url}:`, fetchError);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                   return null; // Continue with other files
                 });
             })
@@ -44,11 +56,19 @@ self.addEventListener('install', (event) => {
       .then((results) => {
         const successful = results.filter(r => r.status === 'fulfilled').length;
         const failed = results.filter(r => r.status === 'rejected').length;
+<<<<<<< HEAD
         // // // console.log(`Static files cached: ${successful} successful, ${failed} failed`);
         return self.skipWaiting();
       })
       .catch((error) => {
         // // // console.error('Error in service worker install:', error);
+=======
+        // // // // // // // console.log(`Static files cached: ${successful} successful, ${failed} failed`);
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        // // // // // // // console.error('Error in service worker install:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       })
   );
 });
@@ -61,14 +81,22 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+<<<<<<< HEAD
               // // // console.log('Deleting old cache:', cacheName);
+=======
+              // // // // // // // console.log('Deleting old cache:', cacheName);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
               return caches.delete(cacheName);
 
           })
         );
       })
       .then(() => {
+<<<<<<< HEAD
         // // // console.log('Service Worker activated');
+=======
+        // // // // // // // console.log('Service Worker activated');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         return self.clients.claim();
       })
   );
@@ -88,11 +116,19 @@ self.addEventListener('fetch', (event) => {
     // For external requests, try to fetch from network but don't cache
     event.respondWith(
       fetch(request).catch((error) => {
+<<<<<<< HEAD
         // // // console.warn('External request failed:', url.href, error);
         // Return a fallback response for failed external requests
         // For images, return a placeholder or skip caching
         if (request.destination === 'image') {
           // // // console.log('Skipping failed external image:', url.href);
+=======
+        // // // // // // // console.warn('External request failed:', url.href, error);
+        // Return a fallback response for failed external requests
+        // For images, return a placeholder or skip caching
+        if (request.destination === 'image') {
+          // // // // // // // console.log('Skipping failed external image:', url.href);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
           return new Response('', { status: 404 });
 
         // For other external requests, return a basic error response
@@ -127,13 +163,21 @@ self.addEventListener('fetch', (event) => {
                 cache.put(request, responseToCache);
               })
               .catch((error) => {
+<<<<<<< HEAD
                 // // // console.warn('Failed to cache response:', error);
+=======
+                // // // // // // // console.warn('Failed to cache response:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
               });
 
             return response;
           })
           .catch((error) => {
+<<<<<<< HEAD
             // // // console.warn('Fetch failed, serving offline page:', error);
+=======
+            // // // // // // // console.warn('Fetch failed, serving offline page:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
             // For navigation requests, serve offline page
             if (request.mode === 'navigate') {
@@ -157,7 +201,11 @@ self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(
       // Handle background sync tasks
+<<<<<<< HEAD
       // // // console.log('Background sync triggered:', event.tag)
+=======
+      // // // // // // // console.log('Background sync triggered:', event.tag)
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     );
 
 });
@@ -218,11 +266,19 @@ self.addEventListener('message', (event) => {
 
 // Error handling
 self.addEventListener('error', (event) => {
+<<<<<<< HEAD
   // // // console.error('Service Worker error:', event.error);
+=======
+  // // // // // // // console.error('Service Worker error:', event.error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 });
 
 // Unhandled rejection handling
 self.addEventListener('unhandledrejection', (event) => {
+<<<<<<< HEAD
   // // // console.error('Service Worker unhandled rejection:', event.reason);
+=======
+  // // // // // // // console.error('Service Worker unhandled rejection:', event.reason);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 });
 }}}}}}}}}}}}}}

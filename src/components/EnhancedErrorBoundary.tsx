@@ -51,7 +51,11 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
+<<<<<<< HEAD
     // // // console.error('Error caught by boundary:', error, errorInfo);
+=======
+    // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -94,8 +98,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       errors.push(errorData);
       localStorage.setItem('error-log', JSON.stringify(errors.slice(-10))); // Keep last 10 errors
     } catch (logError) {
+<<<<<<< HEAD
       // // // console.error('Failed to log error:', logError);
 
+=======
+      // // // // // // // console.error('Failed to log error:', logError);
+    }
+  }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   private handleRetry = () => {
     this.setState({ isRecovering: true });

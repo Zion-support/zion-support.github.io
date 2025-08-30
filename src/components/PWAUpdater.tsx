@@ -25,8 +25,13 @@ import { RefreshCw, X, CheckCircle export function PWAUpdater() {
         });
 
     } catch (error) {
+<<<<<<< HEAD
       // // // console.log('Service worker not available');
 
+=======
+      // // // // // // // console.log('Service worker not available');
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   };
 
   const handleUpdate = async () => {
@@ -35,7 +40,11 @@ import { RefreshCw, X, CheckCircle export function PWAUpdater() {
       // Reload the page to apply updates
       window.location.reload();
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error('Update failed:', error);
+=======
+      // // // // // // // console.error('Update failed:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       setIsUpdating(false);
 
   };

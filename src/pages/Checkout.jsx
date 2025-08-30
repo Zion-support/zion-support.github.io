@@ -58,16 +58,27 @@ export default function CheckoutPage() {
                         });
 
                     catch (e) {
+<<<<<<< HEAD
                         // // // console.error('Failed to add points', e);
 
 
+=======
+                        // // // // // // // console.error('Failed to add points', e);
+                    }
+                }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 safeStorage.removeItem(getCartKey(user?.id));
                 navigate(`/orders/${result.id}`);
 
 
         catch (err) {
+<<<<<<< HEAD
             // // // console.error('Payment failed', err);
 
+=======
+            // // // // // // // console.error('Payment failed', err);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     return (<div className="max-w-2xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>

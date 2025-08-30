@@ -6,8 +6,13 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
             handleBook(talent);
 
         else {
+<<<<<<< HEAD
             // // // console.log("Book talent:", talent.id);
 
+=======
+            // // // // // // // console.log("Book talent:", talent.id);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     const handleMessageInternal = (talent) => {
         if (handleMessage) {

@@ -43,9 +43,15 @@ export default function CartPage() {
                 });
 
             catch (err) {
+<<<<<<< HEAD
                 // // // console.error('Failed to update cart', err);
 
 
+=======
+                // // // // // // // console.error('Failed to update cart', err);
+            }
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         setCartLoading(false);
     }, [reduxItems];
     useEffect(() => {

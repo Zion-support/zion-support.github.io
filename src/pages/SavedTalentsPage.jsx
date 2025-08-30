@@ -15,7 +15,11 @@ export default function SavedTalentsPage() {
             setIsLoading(true);
             try {
                 if (!user) {
+<<<<<<< HEAD
                     // // // console.warn("User not authenticated.");
+=======
+                    // // // // // // // console.warn("User not authenticated.");
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     return;
 
                 const { data, error } = await supabase
@@ -48,7 +52,11 @@ export default function SavedTalentsPage() {
 
 
             catch (error) {
+<<<<<<< HEAD
                 // // // console.error("Error fetching saved talents:", error);
+=======
+                // // // // // // // console.error("Error fetching saved talents:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 toast({
                     title: "Error",
                     description: "Failed to load saved talents. Please try again later.",
@@ -65,7 +73,11 @@ export default function SavedTalentsPage() {
         navigate(`/talent/${talentId}`);
     };
     const handleRequestHire = (talent) => {
+<<<<<<< HEAD
         // // // console.log("Request to hire:", talent);
+=======
+        // // // // // // // console.log("Request to hire:", talent);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         toast({
             title: "Hire Request Sent",
             description: `A hire request has been sent to ${talent.full_name}.`,
@@ -74,7 +86,11 @@ export default function SavedTalentsPage() {
     const handleToggleSave = async (talentId, isCurrentlySaved) => {
         try {
             if (!user) {
+<<<<<<< HEAD
                 // // // console.warn("User not authenticated.");
+=======
+                // // // // // // // console.warn("User not authenticated.");
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 return;
 
             if (isCurrentlySaved) {
@@ -108,7 +124,11 @@ export default function SavedTalentsPage() {
                     .eq('id', talentId)
                     .single();
                 if (talentError) {
+<<<<<<< HEAD
                     // // // console.error("Error fetching talent profile:", talentError);
+=======
+                    // // // // // // // console.error("Error fetching talent profile:", talentError);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     toast({
                         title: "Error",
                         description: "Failed to update saved talents. Please try again later.",
@@ -126,7 +146,11 @@ export default function SavedTalentsPage() {
 
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error toggling saved talent:", error);
+=======
+            // // // // // // // console.error("Error toggling saved talent:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error",
                 description: "Failed to update saved talents. Please try again later.",

@@ -20,8 +20,13 @@ export const UserMenu = () => {
             setIsOpen(false);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Logout failed:', error);
 
+=======
+            // // // // // // // console.error('Logout failed:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     if (!user) {
         return null;

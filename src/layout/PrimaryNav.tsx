@@ -43,7 +43,11 @@ export function PrimaryNav() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
+<<<<<<< HEAD
       // // // console.log('PrimaryNav search submit:', query);
+=======
+      // // // // // // // console.log('PrimaryNav search submit:', query);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       router.push(`/search/${slugify(query)}`);
       setQuery('');
 
@@ -73,7 +77,11 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
+<<<<<<< HEAD
                   // // // console.log('PrimaryNav search suggestion selected:', sugg);
+=======
+                  // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page

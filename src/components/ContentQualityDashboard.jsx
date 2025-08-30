@@ -62,8 +62,13 @@ const ContentQualityDashboard = ({ className = '' }) => {
             setReport(newReport);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Error analyzing pages:', error);
 
+=======
+            // // // // // // // console.error('Error analyzing pages:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
             setIsLoading(false);
 

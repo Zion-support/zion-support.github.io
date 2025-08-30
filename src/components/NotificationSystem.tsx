@@ -111,9 +111,15 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           // Ignore autoplay restrictions
         });
       } catch (error) {
+<<<<<<< HEAD
         // // // console.warn('Could not play notification sound:', error);
 
 
+=======
+        // // // // // // // console.warn('Could not play notification sound:', error);
+      }
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, [settings.sound]);
 
   // Trigger vibration
@@ -122,9 +128,15 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       try {
         navigator.vibrate(200);
       } catch (error) {
+<<<<<<< HEAD
         // // // console.warn('Could not trigger vibration:', error);
 
 
+=======
+        // // // // // // // console.warn('Could not trigger vibration:', error);
+      }
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, [settings.vibration]);
 
   // Add notification

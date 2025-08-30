@@ -103,7 +103,11 @@ export function EnhancedContact() {
         message: ''
       });
     } catch (error) {
+<<<<<<< HEAD
       console.error('Error submitting form:', error);
+=======
+      // // // // // // // console.error('Error submitting form:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false);
     }

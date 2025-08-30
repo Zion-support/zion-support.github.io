@@ -19,7 +19,11 @@ function ReviewsModerationContent() {
             setIsLoading(false);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error fetching reviews:", error);
+=======
+            // // // // // // // console.error("Error fetching reviews:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error",
                 description: "Failed to load reviews. Please try again later.",

@@ -27,8 +27,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             trackEvent('blockchain', 'dashboard', 'wallet_connected');
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to connect wallet:', error);
 
+=======
+            // // // // // // // console.error('Failed to connect wallet:', error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {
         if (nftForm.name.trim() && wallet) {
@@ -44,9 +49,15 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 trackEvent('blockchain', 'dashboard', 'nft_minted');
 
             catch (error) {
+<<<<<<< HEAD
                 // // // console.error('Failed to mint NFT:', error);
 
 
+=======
+                // // // // // // // console.error('Failed to mint NFT:', error);
+            }
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
     const handleSendTransaction = useCallback(async () => {
         if (transactionForm.to.trim() && transactionForm.value && wallet) {
@@ -57,9 +68,15 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 trackEvent('blockchain', 'dashboard', 'transaction_sent');
 
             catch (error) {
+<<<<<<< HEAD
                 // // // console.error('Failed to send transaction:', error);
 
 
+=======
+                // // // // // // // console.error('Failed to send transaction:', error);
+            }
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, [transactionForm, wallet, sendTransaction, trackEvent]);
     const getStatusColor = (status) => {
         switch (status) {

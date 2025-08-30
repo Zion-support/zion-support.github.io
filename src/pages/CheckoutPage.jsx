@@ -27,7 +27,11 @@ export default function CheckoutPage() {
                 setProduct(data);
 
             catch (err) {
+<<<<<<< HEAD
                 // // // console.error('Failed to load product', err);
+=======
+                // // // // // // // console.error('Failed to load product', err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 setError(err.message);
                 const fallback = NEW_PRODUCTS.find(p => p.id === id) || null;
                 setProduct(fallback);

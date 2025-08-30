@@ -47,7 +47,11 @@ export default function FraudDetection() {
             setStats(newStats);
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error fetching fraud flags:", error);
+=======
+            // // // // // // // console.error("Error fetching fraud flags:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error",
                 description: "Failed to load fraud detection data",
@@ -109,7 +113,11 @@ export default function FraudDetection() {
             fetchFraudFlags();
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error updating fraud flag:", error);
+=======
+            // // // // // // // console.error("Error updating fraud flag:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error",
                 description: "Failed to update flag",

@@ -73,7 +73,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             onClose();
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Failed to schedule interview:", error);
+=======
+            // // // // // // // console.error("Failed to schedule interview:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",

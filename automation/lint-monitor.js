@@ -25,7 +25,11 @@ class LintMonitor {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
     // // // // // console.log(message);
+=======
+    // // // // // // // // console.log(message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
   async checkLintStatus() {
@@ -221,6 +225,7 @@ switch (command) {
     break;
   case 'stats':
     const stats = monitor.getStats();
+<<<<<<< HEAD
     // // // // // console.log('📊 Monitor Statistics:');
     // // // // // console.log(`- Total Checks: ${stats.totalChecks}`);
     // // // // // console.log(`- Total Errors: ${stats.totalErrors}`);
@@ -230,6 +235,17 @@ switch (command) {
     break;
   default:
     // // // // // console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
+=======
+    // // // // // // // // console.log('📊 Monitor Statistics:');
+    // // // // // // // // console.log(`- Total Checks: ${stats.totalChecks}`);
+    // // // // // // // // console.log(`- Total Errors: ${stats.totalErrors}`);
+    // // // // // // // // console.log(`- Auto Fixes: ${stats.autoFixes}`);
+    // // // // // // // // console.log(`- Files Watched: ${stats.filesWatched}`);
+    process.exit(0);
+    break;
+  default:
+    // // // // // // // // console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(1);
 
 // Graceful shutdown

@@ -71,7 +71,11 @@ export function PerformanceOptimizations() {
         { id: 5, title: 'Service 5', description: 'Description 5', value: 500 },
     ]);
     const handleItemClick = useCallback((item) => {
+<<<<<<< HEAD
         // // // console.log('Item clicked:', item);
+=======
+        // // // // // // // console.log('Item clicked:', item);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, []);
     const addItem = useCallback(() => {
         setData(prev => [...prev, {

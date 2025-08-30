@@ -197,8 +197,13 @@ export function PerformanceOptimizer() {
       });
 
     } catch (error) {
+<<<<<<< HEAD
       // // console.error('Performance measurement failed:', error);
 
+=======
+      // // // // // // console.error('Performance measurement failed:', error);
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, []);
 
   // Enhanced optimization suggestions

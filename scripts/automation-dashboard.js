@@ -8,7 +8,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 // // // console.log('🚀 Starting PM2 Automation Dashboard...');
+=======
+// // // // // // // console.log('🚀 Starting PM2 Automation Dashboard...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 class AutomationDashboard {
   constructor() {
@@ -29,12 +33,20 @@ class AutomationDashboard {
 
       return this.processes;
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error('❌ Failed to get PM2 status:', error.message);
+=======
+      // // // // // // // console.error('❌ Failed to get PM2 status:', error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return [];
 
 
   async generateHealthReport() {
+<<<<<<< HEAD
     // // // console.log('📊 Generating automation health report...');
+=======
+    // // // // // // // console.log('📊 Generating automation health report...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -82,12 +94,18 @@ class AutomationDashboard {
 
   async displayDashboard() {
     console.clear();
+<<<<<<< HEAD
     // // // console.log('🚀 PM2 Automation Dashboard');
     // // // console.log('=' .repeat(50));
+=======
+    // // // // // // // console.log('🚀 PM2 Automation Dashboard');
+    // // // // // // // console.log('=' .repeat(50));
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     const status = await this.getPM2Status();
     const health = await this.generateHealthReport();
 
+<<<<<<< HEAD
     // // // console.log(`📊 Status: ${health.summary.onlineProcesses}/${health.summary.totalProcesses} processes online`);
     // // // console.log(`⏰ Last Updated: ${new Date().toLocaleTimeString()}`);
     // // // console.log('');
@@ -101,6 +119,21 @@ class AutomationDashboard {
     health.processes.forEach(proc => {
       const statusIcon = proc.status === 'online' ? '🟢' : proc.status === 'errored' ? '🔴' : '🟡';
       // // // console.log(
+=======
+    // // // // // // // console.log(`📊 Status: ${health.summary.onlineProcesses}/${health.summary.totalProcesses} processes online`);
+    // // // // // // // console.log(`⏰ Last Updated: ${new Date().toLocaleTimeString()}`);
+    // // // // // // // console.log('');
+
+    // Display process table
+    // // // // // // // console.log('🔄 Automation Processes:');
+    // // // // // // // console.log('─'.repeat(80));
+    // // // // // // // console.log('Name'.padEnd(25) + 'Status'.padEnd(10) + 'Memory'.padEnd(10) + 'CPU'.padEnd(8) + 'Uptime'.padEnd(15) + 'Restarts');
+    // // // // // // // console.log('─'.repeat(80));
+
+    health.processes.forEach(proc => {
+      const statusIcon = proc.status === 'online' ? '🟢' : proc.status === 'errored' ? '🔴' : '🟡';
+      // // // // // // // console.log(
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         proc.name.padEnd(25) +
         `${statusIcon} ${proc.status}`.padEnd(10) +
         proc.memory.padEnd(10) +
@@ -110,6 +143,7 @@ class AutomationDashboard {
       );
     });
 
+<<<<<<< HEAD
     // // // console.log('');
 
     // Display recommendations
@@ -121,12 +155,27 @@ class AutomationDashboard {
     // Display recent logs
     // // // console.log('📝 Recent Activity:');
     // // // console.log('─'.repeat(50));
+=======
+    // // // // // // // console.log('');
+
+    // Display recommendations
+    if (health.recommendations.length > 0) {
+      // // // // // // // console.log('💡 Recommendations:');
+      health.recommendations.forEach(rec => // // // // // // // console.log(`  ${rec}`));
+      // // // // // // // console.log('');
+    }
+
+    // Display recent logs
+    // // // // // // // console.log('📝 Recent Activity:');
+    // // // // // // // console.log('─'.repeat(50));
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     try {
       const logs = execSync('pm2 logs --lines 5 --nostream', { encoding: 'utf8' });
       const recentLogs = logs.split('\n').slice(-5).filter(line => line.trim());
       recentLogs.forEach(log => {
         if (log.includes('ERROR') || log.includes('error')) {
+<<<<<<< HEAD
           // // // console.log(`🔴 ${log}`);
         } else if (log.includes('WARN') || log.includes('warn')) {
           // // // console.log(`🟡 ${log}`);
@@ -147,6 +196,30 @@ class AutomationDashboard {
 
   async startMonitoring() {
     // // // console.log('🔄 Starting continuous monitoring...');
+=======
+          // // // // // // // console.log(`🔴 ${log}`);
+        } else if (log.includes('WARN') || log.includes('warn')) {
+          // // // // // // // console.log(`🟡 ${log}`);
+        } else {
+          // // // // // // // console.log(`ℹ️  ${log}`);
+        }
+      });
+    } catch (error) {
+      // // // // // // // console.log('  No recent logs available');
+    }
+
+    // // // // // // // console.log('');
+    // // // // // // // console.log('Commands:');
+    // // // // // // // console.log('  pm2 logs <process-name> - View specific process logs');
+    // // // // // // // console.log('  pm2 restart <process-name> - Restart specific process');
+    // // // // // // // console.log('  pm2 restart all - Restart all processes');
+    // // // // // // // console.log('  pm2 monit - Open PM2 monitoring interface');
+    // // // // // // // console.log('  Ctrl+C - Exit dashboard');
+  }
+
+  async startMonitoring() {
+    // // // // // // // console.log('🔄 Starting continuous monitoring...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     // Initial display
     await this.displayDashboard();
@@ -157,25 +230,44 @@ class AutomationDashboard {
     }, 30000);
 
   async restartFailedProcesses() {
+<<<<<<< HEAD
     // // // console.log('🔄 Restarting failed processes...');
+=======
+    // // // // // // // console.log('🔄 Restarting failed processes...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored');
 
     if (failedProcesses.length === 0) {
+<<<<<<< HEAD
       // // // console.log('✅ No failed processes to restart');
+=======
+      // // // // // // // console.log('✅ No failed processes to restart');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return;
 
     failedProcesses.forEach(proc => {
       try {
         execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit' });
+<<<<<<< HEAD
         // // // console.log(`✅ Restarted ${proc.name}`);
       } catch (error) {
         // // // console.error(`❌ Failed to restart ${proc.name}:`, error.message);
 
+=======
+        // // // // // // // console.log(`✅ Restarted ${proc.name}`);
+      } catch (error) {
+        // // // // // // // console.error(`❌ Failed to restart ${proc.name}:`, error.message);
+      }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     });
 
   async generatePerformanceReport() {
+<<<<<<< HEAD
     // // // console.log('📊 Generating performance report...');
+=======
+    // // // // // // // console.log('📊 Generating performance report...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -212,16 +304,26 @@ async function main() {
 
   // Handle graceful shutdown
   process.on('SIGINT', async () => {
+<<<<<<< HEAD
     // // // console.log('\n🛑 Shutting down automation dashboard...');
     await dashboard.generatePerformanceReport();
     // // // console.log('✅ Performance report saved');
+=======
+    // // // // // // // console.log('\n🛑 Shutting down automation dashboard...');
+    await dashboard.generatePerformanceReport();
+    // // // // // // // console.log('✅ Performance report saved');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(0);
   });
 
   try {
     await dashboard.startMonitoring();
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error('❌ Dashboard failed:', error);
+=======
+    // // // // // // // console.error('❌ Dashboard failed:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(1);
 
 

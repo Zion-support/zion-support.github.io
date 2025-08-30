@@ -45,7 +45,11 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setMessage(''); // Clear message
 
         catch (err) {
+<<<<<<< HEAD
             // // // console.error('Failed to send message:', err);
+=======
+            // // // // // // // console.error('Failed to send message:', err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed
             // setError('Failed to send message. Please try again.');

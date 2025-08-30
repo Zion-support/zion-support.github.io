@@ -29,7 +29,11 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                 setProfileData(data);
 
             catch (error) {
+<<<<<<< HEAD
                 // // // console.error("Error fetching profile:", error);
+=======
+                // // // // // // // console.error("Error fetching profile:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 setIsError(true);
                 toast({
                     title: "Error",

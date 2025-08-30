@@ -240,7 +240,11 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
         };
 
     catch (error) {
+<<<<<<< HEAD
         // // // console.error('Error generating sitemaps:', error);
+=======
+        // // // // // // // console.error('Error generating sitemaps:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         throw error;
 
 };

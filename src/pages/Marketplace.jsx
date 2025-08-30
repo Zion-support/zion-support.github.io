@@ -60,7 +60,11 @@ export default function Marketplace() {
         return true;
     });
     const handleFilterChange = (filterType, value) => {
+<<<<<<< HEAD
         // // // console.log(`Filter changed: ${filterType} = ${value}`);
+=======
+        // // // // // // // console.log(`Filter changed: ${filterType} = ${value}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         switch (filterType) {
             case 'productTypes':
                 setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
@@ -85,7 +89,11 @@ export default function Marketplace() {
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
                     // Quote request functionality would go here
+<<<<<<< HEAD
         // // // console.log(`Quote requested for ${listing.title}`);
+=======
+        // // // // // // // console.log(`Quote requested for ${listing.title}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             // Navigate to the quote request page with the listing information
             navigate("/request-quote", {
                 state: {

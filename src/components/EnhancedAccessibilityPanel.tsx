@@ -49,9 +49,15 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...prev, ...parsed });
       } catch (error) {
+<<<<<<< HEAD
         // // // console.error('Failed to parse accessibility settings:', error);
 
 
+=======
+        // // // // // // // console.error('Failed to parse accessibility settings:', error);
+      }
+    }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, []);
 
   // Apply accessibility settings to the document

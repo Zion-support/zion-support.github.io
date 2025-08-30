@@ -150,7 +150,11 @@ export default function TranslationManager() {
             });
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error(`Error translating key ${key}:`, error);
+=======
+            // // // // // // // console.error(`Error translating key ${key}:`, error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),

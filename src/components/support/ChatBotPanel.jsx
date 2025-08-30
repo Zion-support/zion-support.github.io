@@ -77,7 +77,11 @@ export function ChatBotPanel() {
 
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error in AI chat:", error);
+=======
+            // // // // // // // console.error("Error in AI chat:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 variant: "destructive",
                 title: "Communication Error",
@@ -116,7 +120,11 @@ export function ChatBotPanel() {
             };
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error("Error in AI chat:", error);
+=======
+            // // // // // // // console.error("Error in AI chat:", error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
@@ -138,7 +146,11 @@ export function ChatBotPanel() {
         try {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system
+<<<<<<< HEAD
             // // console.log("Support escalation triggered", {
+=======
+            // // // // // // // console.log("Support escalation triggered", {
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 conversationHistory: messages.map(m => ({
                     content: m.content,
                     sender: m.sender,
@@ -147,8 +159,13 @@ export function ChatBotPanel() {
             });
 
         catch (error) {
+<<<<<<< HEAD
             // // console.error("Failed to log support escalation:", error);
 
+=======
+            // // // // // // // console.error("Failed to log support escalation:", error);
+        }
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     const handleQuickReply = (text) => {
         handleSendMessage(text);

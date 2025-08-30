@@ -46,7 +46,11 @@ export default function Signup() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Here you would typically make an API call to register
+<<<<<<< HEAD
     // // // console.log('Signup attempt:', formData);
+=======
+    // // // // // // // console.log('Signup attempt:', formData);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     setIsLoading(false);
   };
   const features = [

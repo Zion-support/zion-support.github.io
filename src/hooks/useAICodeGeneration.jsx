@@ -53,7 +53,11 @@ export const useAICodeGeneration = () => {
             });
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to generate code:', error);
+=======
+            // // // // // // // console.error('Failed to generate code:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -88,7 +92,11 @@ export const useAICodeGeneration = () => {
             });
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to analyze code:', error);
+=======
+            // // // // // // // console.error('Failed to analyze code:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -135,7 +143,11 @@ export const useAICodeGeneration = () => {
             return optimizedCode;
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to optimize code:', error);
+=======
+            // // // // // // // console.error('Failed to optimize code:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -161,7 +173,11 @@ export const useAICodeGeneration = () => {
             return testCode;
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to generate tests:', error);
+=======
+            // // // // // // // console.error('Failed to generate tests:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -187,7 +203,11 @@ export const useAICodeGeneration = () => {
             return docs;
 
         catch (error) {
+<<<<<<< HEAD
             // // // console.error('Failed to generate documentation:', error);
+=======
+            // // // // // // // console.error('Failed to generate documentation:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -299,7 +319,11 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
+<<<<<<< HEAD
   // // // console.log(\`Server running on port \${PORT}\`);
+=======
+  // // // // // // // console.log(\`Server running on port \${PORT}\`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 });`;
     };
     const generatePythonCode = (prompt, _options) => {
@@ -342,9 +366,15 @@ if __name__ == "__main__":
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
+<<<<<<< HEAD
 // // // console.log("Generated code placeholder");
 // // // console.log("Prompt:", "${prompt}");
 // // // console.log("Language:", "${options.language}");`;
+=======
+// // // // // // // console.log("Generated code placeholder");
+// // // // // // // console.log("Prompt:", "${prompt}");
+// // // // // // // console.log("Language:", "${options.language}");`;
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     // Helper functions for code analysis
     const calculateComplexity = (code) => {

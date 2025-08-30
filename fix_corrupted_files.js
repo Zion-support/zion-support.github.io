@@ -50,10 +50,17 @@ function fixCorruptedFile(filePath) {
       .replace(/\s+/g, " ")
       .trim();
     fs.writeFileSync(filePath, content);
+<<<<<<< HEAD
     // // // console.log(`Fixed: ${filePath}`);
     return true;
   } catch (error) {
     // // // console.error(`Error fixing ${filePath}:`, error.message);
+=======
+    // // // // // // // console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return false;
 
 
@@ -71,8 +78,15 @@ function fixCorruptedFiles(directory) {
 
 
 // Start fixing from the pages directory
+<<<<<<< HEAD
 // // // console.log("Fixing corrupted TypeScript files...");
 fixCorruptedFiles("./pages");
 fixCorruptedFiles("./components");
 // // // console.log("Finished fixing corrupted files.");
 }}}}}
+=======
+// // // // // // // console.log("Fixing corrupted TypeScript files...");
+fixCorruptedFiles("./pages");
+fixCorruptedFiles("./components");
+// // // // // // // console.log("Finished fixing corrupted files.");
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

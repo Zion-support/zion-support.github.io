@@ -56,12 +56,20 @@ function fixFile(filePath) {
 
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
+<<<<<<< HEAD
       // // // console.log(`Fixed: ${filePath}`);
+=======
+      // // // // // // // console.log(`Fixed: ${filePath}`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return true;
 
     return false;
   } catch (error) {
+<<<<<<< HEAD
     // // // console.error(`Error fixing ${filePath}:`, error.message);
+=======
+    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return false;
 
 
@@ -84,7 +92,13 @@ function findAndFixFiles(dir) {
   return fixedCount;
 
 // Start fixing files
+<<<<<<< HEAD
 // // // console.log('Fixing invalid variable names in TypeScript files...');
 const fixedCount = findAndFixFiles('./pages');
 // // // console.log(`Fixed ${fixedCount} files.`);
 }}}}}}}}}}
+=======
+// // // // // // // console.log('Fixing invalid variable names in TypeScript files...');
+const fixedCount = findAndFixFiles('./pages');
+// // // // // // // console.log(`Fixed ${fixedCount} files.`);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

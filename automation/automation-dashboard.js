@@ -23,7 +23,11 @@ class AutomationDashboard {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
+<<<<<<< HEAD
     // // // // // console.log(message);
+=======
+    // // // // // // // // console.log(message);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     fs.appendFileSync(this.logFile, logMessage);
 
   loadAutomationSystems() {
@@ -456,25 +460,45 @@ switch (command) {
     dashboard.start(parseInt(port));
     break;
   case 'status':
+<<<<<<< HEAD
     // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
     break;
   case 'run-all':
     dashboard.runAllSystems().then(results => {
       // // // // // console.log(JSON.stringify(results, null, 2));
+=======
+    // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
+    break;
+  case 'run-all':
+    dashboard.runAllSystems().then(results => {
+      // // // // // // // // console.log(JSON.stringify(results, null, 2));
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       process.exit(0);
     });
     break;
   default:
+<<<<<<< HEAD
     // // // // // console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
     // // // // // console.log('\nCommands:');
     // // // // // console.log('  start    - Start the dashboard server');
     // // // // // console.log('  status   - Show current status');
     // // // // // console.log('  run-all  - Run all automation systems');
+=======
+    // // // // // // // // console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
+    // // // // // // // // console.log('\nCommands:');
+    // // // // // // // // console.log('  start    - Start the dashboard server');
+    // // // // // // // // console.log('  status   - Show current status');
+    // // // // // // // // console.log('  run-all  - Run all automation systems');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     process.exit(1);
 
 // Graceful shutdown
 process.on('SIGINT', () => {
+<<<<<<< HEAD
   // // // // // console.log('\n🛑 Shutting down automation dashboard...');
+=======
+  // // // // // // // // console.log('\n🛑 Shutting down automation dashboard...');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(0);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

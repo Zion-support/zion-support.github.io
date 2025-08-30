@@ -20,7 +20,11 @@ import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = () =>
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
+<<<<<<< HEAD
       // // // console.error('Newsletter subscription failed:', error);
+=======
+      // // // // // // // console.error('Newsletter subscription failed:', error);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false);
 

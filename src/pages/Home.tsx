@@ -413,7 +413,11 @@ const Home = () => {
 
   const handleGetStarted = () => {
     // Handle get started action
+<<<<<<< HEAD
     // // // console.log('Get Started clicked');
+=======
+    // // // // // // // console.log('Get Started clicked');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   };
 
   return (
