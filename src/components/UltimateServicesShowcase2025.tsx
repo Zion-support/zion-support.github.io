@@ -22,15 +22,15 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = [
-    { id: any'all', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: any'🤖' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: any'⚛️' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: any'🔗' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: any'🏥' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: any'🌐' },
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: any'🌍' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: any'✍️' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: any'🛡️' },
+    { id: stringall', name: 'All Services', count: allServices.length, icon: '🚀' },
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: string🤖' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: string⚛️' },
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: string🔗' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: string🏥' },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: string🌐' },
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: string🌍' },
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: string✍️' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: string🛡️' },
     { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: '👥' }
   ];
 
@@ -58,7 +58,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
     }
   });
 
-  const handleServiceClick = (service: anyany)  => {
+  const handleServiceClick = (service: any)  => {
     setSelectedService(service);
   };
 
@@ -201,7 +201,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: any0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             {categories.map((category)  => (
               <motion.button

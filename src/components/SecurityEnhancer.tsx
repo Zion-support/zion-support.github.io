@@ -136,7 +136,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     setThreats(sampleThreats)}, []);
 
   // Generate security checks
-  useEffect(()  => {
+  useEffect(() => {
     const checks: SecurityCheck[] = [
       {
         id: '1',

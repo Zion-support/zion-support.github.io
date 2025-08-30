@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
-import { Gift, ArrowRight, ExternalLink import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
 const REWARD_OPTIONS = [
     {
         id: 'premium-week',
@@ -29,8 +26,6 @@ const REWARD_OPTIONS = [
 ];
 export function RedeemTokensCard() {
 =======
-import { Gift, ArrowRight, ExternalLink } from "lucide-react";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
 <<<<<<< HEAD
 const RedeemTokensCard() {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

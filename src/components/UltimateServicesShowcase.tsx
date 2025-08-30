@@ -200,9 +200,9 @@ export function UltimateServicesShowcase(...args[]):  {
 
 
 =======
-    visible: {;
+    visible: {
       opacity: 1,;
-      transition: {;
+      transition: {
         staggerChildren: 0.1,;
         delayChildren: 0.2;
       };
@@ -232,7 +232,7 @@ export function UltimateServicesShowcase(...args[]):  {
 =======
       opacity: 1,;
       y: 0,;
-      transition: {;
+      transition: {
         duration: 0.6,;
         ease: "easeOut";
       };

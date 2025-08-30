@@ -733,7 +733,7 @@ export const notificationUtils = {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
-  error: (title: string, message: string, options?: Partial<Notification>)  => {
+  error: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'error',
@@ -749,7 +749,7 @@ export const notificationUtils = {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
-  info: (title: string, message: string, options?: Partial<Notification>)  => {
+  info: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'info',
@@ -765,7 +765,7 @@ export const notificationUtils = {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
-  achievement: (title: string, message: string, options?: Partial<Notification>)  => {
+  achievement: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'achievement',

@@ -202,7 +202,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       touchStartRef.current = null;
     };
 
-    const handleGesture = (gesture: anystring, data: { deltaX: number; deltaY: number; velocity: number })  => {
+    const handleGesture = (gesture: string, data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Handle common gestures
       switch (gesture) {
         case 'swipe-left':
@@ -224,7 +224,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleSwipeLeft = (data: any{ deltaX: number; deltaY: number; velocity: number })  => {
+    const handleSwipeLeft = (data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Example: Navigate to next page or item
       const nextButton = document.querySelector('[data-next], .next-button, .carousel-next');
       if (nextButton) {
@@ -232,7 +232,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleSwipeRight = (data: any{ deltaX: number; deltaY: number; velocity: number })  => {
+    const handleSwipeRight = (data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Example: Navigate to previous page or item
       const prevButton = document.querySelector('[data-prev], .prev-button, .carousel-prev');
       if (prevButton) {
@@ -242,12 +242,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleSwipeUp = (data: any{ deltaX: number; deltaY: number; velocity: number })  => {
+    const handleSwipeUp = (data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Example: Scroll up or show more content
       window.scrollBy({ top: -100, behavior: 'smooth' });
     };
 
-    const handleSwipeDown = (data: any{ deltaX: number; deltaY: number; velocity: number })  => {
+    const handleSwipeDown = (data: { deltaX: number; deltaY: number; velocity: number })  => {
       // Example: anyRefresh or show less content
       if (data.velocity > 1.0) {
         window.location.reload();
@@ -480,7 +480,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   }, [enabled, settings.offlineSupport]);
 
   // Show notification
-  const showNotification = useCallback((message: anystring, type: 'success' | 'warning' | 'error')  => {
+  const showNotification = useCallback((message: string, type: 'success' | 'warning' | 'error')  => {
     const notification = document.createElement('div');
     notification.className = `mobile-notification mobile-notification-${type}`;
     notification.textContent = message;
@@ -508,7 +508,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   }, []);
 
   // Toggle mobile settings
-  const toggleSetting = useCallback((key: anykeyof MobileSettings)  => {
+  const toggleSetting = useCallback((key: keyof MobileSettings)  => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key],

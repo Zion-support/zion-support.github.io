@@ -36,7 +36,7 @@ interface NavigationLink {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {;
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
