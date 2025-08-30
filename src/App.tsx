@@ -44,7 +44,6 @@ const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 
 // New pages that we know exist
-const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -76,6 +75,9 @@ const AICustomerSupportAutomation = lazy(() => import('./pages/services/AICustom
 const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ServicesComparisonMatrix2025 = lazy(() => import('./pages/ServicesComparisonMatrix2025'));
 
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
@@ -292,6 +294,15 @@ function App() {
                 
                 {/* Enhanced Services Showcase 2025 */}
                 <Route path="/services/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
+                
+                {/* Innovative Services Showcase 2025 */}
+                <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                
+                {/* Comprehensive Pricing Guide 2025 */}
+                <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                
+                {/* Services Comparison Matrix 2025 */}
+                <Route path="/services-comparison-matrix-2025" element={<ServicesComparisonMatrix2025 />} />
                 
                 {/* Zion Tech Group 2025 Comprehensive Showcase */}
                 <Route path="/zion-tech-group-2025-comprehensive-showcase" element={<ZionTechGroup2025ComprehensiveShowcase />} />
