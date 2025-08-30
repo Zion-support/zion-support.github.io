@@ -130,7 +130,7 @@ export default function Careers() {
       title: 'Impact',
       description: 'We focus on creating meaningful solutions that make a real difference.'
     }
-  };
+  ];
   const contactInfo = [
     { icon: Mail, label: "Email", value: "careers@ziontechgroup.com", href: "mailto:careers@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
