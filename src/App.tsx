@@ -101,9 +101,11 @@ const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // AI Service pages
-// const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
-// const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/AIHealthcareAnalytics'));
+const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
 const AIFinancialTrading = createLazyComponent(() => import('./pages/services/AIFinancialTrading'));
+const AISupplyChainRiskManagement = createLazyComponent(() => import('./pages/services/AISupplyChainRiskManagement'));
+const AIQuantumComputingPlatform = createLazyComponent(() => import('./pages/services/AIQuantumComputingPlatform'));
 // const AIContentCreationSuite = createLazyComponent(() => import('./pages/services/AIContentCreationSuite'));
 // const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/AIWorkflowOrchestrator'));
 // const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/services/AIDataGovernancePlatform'));
@@ -154,6 +156,7 @@ const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/U
 // const ComprehensivePricing2026 = createLazyComponent(() => import('./pages/ComprehensivePricing2026'));
 // const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
 
+const ComprehensiveServicesShowcase2029 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2029'));
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 // const ZionCuttingEdgeServices2029 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2029'));
 
@@ -331,6 +334,7 @@ function App() {
                     {/* Comprehensive Services Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
+                    <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
                     {/* <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} /> */}
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
                     {/* <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} /> */}
@@ -375,9 +379,11 @@ function App() {
                                           {/* <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} /> */}
 
                     {/* AI Service Routes */}
-                    {/* <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} /> */}
-                    {/* <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} /> */}
+                    <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                     <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                    <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
+                    <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
                     {/* <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} /> */}
                     {/* <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} /> */}
                     {/* <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} /> */}

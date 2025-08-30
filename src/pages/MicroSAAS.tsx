@@ -21,13 +21,59 @@ import {
 
 const microSAASSolutions = [
   {
+    id: 'ai-legal-document-automation',
+    title: 'AI Legal Document Automation',
+    description: 'Transform legal practice with AI-powered document automation. Reduce costs by 70%, eliminate errors, and streamline workflows.',
+    icon: Brain,
+    features: ['AI-powered document analysis', 'Automated document generation', 'Compliance & risk management', 'Intelligent search & discovery'],
+    href: '/services/ai-legal-document-automation',
+    color: 'from-blue-600 to-cyan-600',
+    price: '$299/month',
+    badge: 'New'
+  },
+  {
+    id: 'ai-healthcare-analytics',
+    title: 'AI Healthcare Analytics Platform',
+    description: 'Transform healthcare delivery with AI-powered analytics. Improve patient outcomes by 35%, reduce costs, and optimize operations.',
+    icon: Heart,
+    features: ['AI-powered predictive analytics', 'Real-time patient monitoring', 'Population health management', 'HIPAA-compliant security'],
+    href: '/services/ai-healthcare-analytics',
+    color: 'from-green-600 to-emerald-600',
+    price: '$1,499/month',
+    badge: 'Popular'
+  },
+  {
+    id: 'ai-supply-chain-risk-management',
+    title: 'AI Supply Chain Risk Management',
+    description: 'Transform supply chain with intelligent risk management. Reduce disruptions by 60%, improve visibility, and ensure business continuity.',
+    icon: Globe,
+    features: ['AI-powered risk assessment', 'Early warning system', 'Global supply chain visibility', 'Compliance monitoring'],
+    href: '/services/ai-supply-chain-risk-management',
+    color: 'from-orange-600 to-red-600',
+    price: '$899/month',
+    badge: 'New'
+  },
+  {
+    id: 'ai-quantum-computing-platform',
+    title: 'AI Quantum Computing Platform',
+    description: 'Transform computing capabilities with AI-powered quantum computing. Solve complex problems 1000x faster with quantum algorithms.',
+    icon: Rocket,
+    features: ['AI-enhanced quantum algorithms', 'Hybrid quantum-classical computing', 'Quantum machine learning', 'Quantum-safe security'],
+    href: '/services/ai-quantum-computing-platform',
+    color: 'from-purple-600 to-pink-600',
+    price: '$2,499/month',
+    badge: 'Premium'
+  },
+  {
     id: 'ai-business-intelligence',
     title: 'AI Business Intelligence',
     description: 'Transform your business data into actionable insights with our AI-powered BI platform.',
-    icon: Brain,
+    icon: BarChart3,
     features: ['Predictive Analytics', 'Real-time Dashboards', 'Natural Language Queries', 'Automated Reporting'],
     href: '/micro-saas/ai-business-intelligence',
-    color: 'from-blue-600 to-cyan-600'
+    color: 'from-blue-600 to-cyan-600',
+    price: '$599/month',
+    badge: 'Popular'
   },
   {
     id: 'customer-experience',
@@ -36,25 +82,9 @@ const microSAASSolutions = [
     icon: Users,
     features: ['Customer Journey Mapping', 'Sentiment Analysis', 'Omnichannel Support', 'Personalization Engine'],
     href: '/micro-saas/customer-experience',
-    color: 'from-purple-600 to-pink-600'
-  },
-  {
-    id: 'quantum-computing',
-    title: 'Quantum Computing Solutions',
-    description: 'Leverage the power of quantum computing for complex problem-solving and optimization.',
-    icon: Rocket,
-    features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'],
-    href: '/micro-saas/quantum-computing',
-    color: 'from-indigo-600 to-purple-600'
-  },
-  {
-    id: 'supply-chain',
-    title: 'Supply Chain Management',
-    description: 'Optimize your supply chain operations with AI-driven insights and automation.',
-    icon: Globe,
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
-    href: '/micro-saas/supply-chain',
-    color: 'from-green-600 to-teal-600'
+    color: 'from-purple-600 to-pink-600',
+    price: '$399/month',
+    badge: 'Popular'
   },
   {
     id: 'cybersecurity',
@@ -63,7 +93,9 @@ const microSAASSolutions = [
     icon: Shield,
     features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
     href: '/micro-saas/cybersecurity',
-    color: 'from-red-600 to-orange-600'
+    color: 'from-red-600 to-orange-600',
+    price: '$799/month',
+    badge: 'Popular'
   },
   {
     id: 'iot-edge',
@@ -72,25 +104,9 @@ const microSAASSolutions = [
     icon: Cpu,
     features: ['Edge Analytics', 'Device Management', 'Data Streaming', 'Real-time Processing'],
     href: '/micro-saas/iot-edge',
-    color: 'from-yellow-600 to-orange-600'
-  },
-  {
-    id: 'content-creation',
-    title: 'AI Content Creation',
-    description: 'Generate high-quality content at scale with our AI-powered creation platform.',
-    icon: MessageCircle,
-    features: ['Content Generation', 'SEO Optimization', 'Multi-format Support', 'Brand Consistency'],
-    href: '/micro-saas/content-creation',
-    color: 'from-pink-600 to-rose-600'
-  },
-  {
-    id: 'hr-platform',
-    title: 'HR Management Platform',
-    description: 'Streamline your HR operations with our intelligent workforce management solution.',
-    icon: Users,
-    features: ['Talent Acquisition', 'Performance Management', 'Learning & Development', 'Employee Engagement'],
-    href: '/micro-saas/hr-platform',
-    color: 'from-emerald-600 to-green-600'
+    color: 'from-yellow-600 to-orange-600',
+    price: '$699/month',
+    badge: 'Popular'
   }
 ];
 
@@ -251,13 +267,32 @@ export default function MicroSAAS() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="p-8">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${solution.color} mb-6`}>
-                    <solution.icon className="w-8 h-8 text-white" />
+                  <div className="flex items-start justify-between mb-6">
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${solution.color}`}>
+                      <solution.icon className="w-8 h-8 text-white" />
+                    </div>
+                    {solution.badge && (
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                        solution.badge === 'New' ? 'bg-green-500/20 text-green-400' :
+                        solution.badge === 'Popular' ? 'bg-blue-500/20 text-blue-400' :
+                        solution.badge === 'Premium' ? 'bg-purple-500/20 text-purple-400' :
+                        'bg-gray-500/20 text-gray-400'
+                      }`}>
+                        {solution.badge}
+                      </span>
+                    )}
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                     {solution.title}
                   </h3>
+
+                  {solution.price && (
+                    <div className="mb-4">
+                      <div className="text-2xl font-bold text-zion-cyan">{solution.price}</div>
+                      <p className="text-xs text-zion-slate-light/60">Starting price</p>
+                    </div>
+                  )}
 
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {solution.description}

@@ -61,6 +61,7 @@ export function Header() {
         { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
         { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
+        { name: 'Comprehensive Services 2029', href: '/comprehensive-services-showcase-2029', icon: Sparkles },
         { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
         { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]

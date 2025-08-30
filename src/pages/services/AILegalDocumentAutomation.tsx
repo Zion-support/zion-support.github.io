@@ -3,18 +3,22 @@ import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import {
+  FileText,
   Brain,
   Shield,
-  Heart,
-  Activity,
-  BarChart3,
+  Clock,
+  DollarSign,
   CheckCircle,
   ArrowRight,
   Users,
   Zap,
   Lock,
   Search,
-  Eye,
+  Edit3,
+  Download,
+  Share2,
+  BarChart3,
+  Target,
   TrendingUp,
   Award,
   Star,
@@ -32,19 +36,18 @@ import {
   Bot,
   Sparkles,
   Palette,
+  Eye,
   Server,
   Smartphone,
   Code,
   Layers,
-  FileText,
-  PieChart,
-  LineChart,
-  BarChart,
-  Target,
-  Clock,
-  DollarSign,
-  Calendar,
-  Play,
+  Activity,
+  FileCheck,
+  BookOpen,
+  Scale,
+  Gavel,
+  Briefcase,
+  Clipboard,
   AlertTriangle,
   CheckSquare,
   XCircle,
@@ -52,240 +55,189 @@ import {
   HelpCircle,
   Settings,
   UserCheck,
+  Calendar,
   Timer,
+  PieChart,
+  LineChart,
+  BarChart,
   TrendingDown,
   Plus,
   Minus,
   Divide,
   Percent,
   Hash,
-  Stethoscope,
-  Pill,
-  Microscope,
-  TestTube,
-  Clipboard,
-  FileCheck,
-  BookOpen,
-  Scale,
-  Gavel,
-  Briefcase,
-  ClipboardCheck,
-  AlertCircle,
-  CheckCircle2,
-  XCircle2,
-  InfoIcon,
-  HelpCircle2,
-  Settings2,
-  UserCheck2,
-  Calendar2,
-  Timer2,
-  TrendingUp2,
-  TrendingDown2,
-  Plus2,
-  Minus2,
-  Divide2,
-  Percent2,
-  Hash2
+  HashIcon
 } from 'lucide-react';
 
-export default function AIHealthcareAnalyticsPlatform() {
+export default function AILegalDocumentAutomation() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Predictive Analytics',
-      description: 'Advanced machine learning algorithms predict patient outcomes, readmission risks, and treatment effectiveness with 94.7% accuracy',
-      benefits: ['Early intervention identification', 'Risk stratification models', 'Treatment outcome prediction', 'Resource optimization']
+      title: 'AI-Powered Document Analysis',
+      description: 'Advanced natural language processing to understand and analyze legal documents with 99.2% accuracy',
+      benefits: ['Instant document classification', 'Key clause identification', 'Risk assessment scoring', 'Compliance checking']
     },
     {
-      icon: Heart,
-      title: 'Real-Time Patient Monitoring',
-      description: 'Continuous monitoring of vital signs, lab results, and clinical indicators with intelligent alert systems',
-      benefits: ['24/7 patient surveillance', 'Intelligent alert prioritization', 'Trend analysis', 'Early warning systems']
-    },
-    {
-      icon: BarChart3,
-      title: 'Population Health Management',
-      description: 'Comprehensive analytics for managing population health, identifying at-risk groups, and optimizing care delivery',
-      benefits: ['Cohort analysis', 'Social determinants tracking', 'Preventive care optimization', 'Health equity insights']
+      icon: FileText,
+      title: 'Automated Document Generation',
+      description: 'Generate legally compliant documents from templates with intelligent field population and validation',
+      benefits: ['Template library with 500+ documents', 'Smart field detection', 'Legal compliance validation', 'Multi-format export']
     },
     {
       icon: Shield,
-      title: 'HIPAA-Compliant Security',
-      description: 'Enterprise-grade security with end-to-end encryption and full HIPAA compliance for healthcare data protection',
-      benefits: ['SOC 2 Type II certified', 'HIPAA compliance', 'Role-based access control', 'Audit logging']
+      title: 'Compliance & Risk Management',
+      description: 'Built-in compliance checking against current regulations and automated risk assessment',
+      benefits: ['Real-time regulation updates', 'Risk scoring algorithms', 'Compliance audit trails', 'Regulatory change alerts']
+    },
+    {
+      icon: Search,
+      title: 'Intelligent Search & Discovery',
+      description: 'Semantic search across document repositories with AI-powered relevance ranking',
+      benefits: ['Natural language queries', 'Context-aware results', 'Document relationship mapping', 'Advanced filtering options']
     },
     {
       icon: Workflow,
-      title: 'Clinical Decision Support',
-      description: 'AI-powered clinical decision support system providing evidence-based recommendations and treatment guidelines',
-      benefits: ['Evidence-based recommendations', 'Drug interaction alerts', 'Treatment guidelines', 'Clinical pathway optimization']
+      title: 'Automated Workflow Management',
+      description: 'Streamline legal processes with intelligent routing and approval workflows',
+      benefits: ['Custom workflow builder', 'Automated task assignment', 'Deadline tracking', 'Performance analytics']
     },
     {
-      icon: Activity,
-      title: 'Operational Intelligence',
-      description: 'Real-time insights into hospital operations, resource utilization, and performance metrics',
-      benefits: ['Bed management optimization', 'Staff scheduling insights', 'Equipment utilization', 'Cost analysis']
+      icon: Lock,
+      title: 'Enterprise Security & Privacy',
+      description: 'Bank-level security with end-to-end encryption and compliance with legal industry standards',
+      benefits: ['SOC 2 Type II certified', 'GDPR compliance', 'Role-based access control', 'Audit logging']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Community Hospital',
-      price: '$1,499',
+      name: 'Starter',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small to medium community hospitals',
+      description: 'Perfect for small law firms and solo practitioners',
       features: [
-        'Up to 100 beds',
-        'Basic AI analytics',
-        'Standard reporting',
+        'Up to 100 documents/month',
+        'Basic AI analysis',
+        'Standard templates (50+)',
         'Email support',
-        'HIPAA compliance',
-        'Basic integrations'
+        'Basic compliance checking'
       ],
       popular: false,
       cta: 'Get Started',
-      href: '/contact?service=ai-healthcare-analytics&plan=community'
+      href: '/contact?service=ai-legal-document-automation&plan=starter'
     },
     {
-      name: 'Regional Medical Center',
-      price: '$2,999',
+      name: 'Professional',
+      price: '$599',
       period: '/month',
-      description: 'Ideal for regional medical centers and hospital systems',
+      description: 'Ideal for growing law firms and legal departments',
       features: [
-        'Up to 500 beds',
-        'Advanced AI analytics',
-        'Custom dashboards',
+        'Up to 1,000 documents/month',
+        'Advanced AI analysis',
+        'Premium templates (200+)',
         'Priority support',
-        'Advanced integrations',
-        'Population health tools',
-        'Clinical decision support',
+        'Advanced compliance features',
+        'Workflow automation',
         'API access'
       ],
       popular: true,
       cta: 'Get Started',
-      href: '/contact?service=ai-healthcare-analytics&plan=regional'
+      href: '/contact?service=ai-legal-document-automation&plan=professional'
     },
     {
-      name: 'Academic Medical Center',
-      price: '$5,999',
+      name: 'Enterprise',
+      price: '$1,299',
       period: '/month',
-      description: 'For large academic medical centers and research institutions',
+      description: 'For large law firms and corporate legal departments',
       features: [
-        'Unlimited beds',
+        'Unlimited documents',
         'Custom AI models',
-        'Research analytics',
+        'Custom template creation',
         'Dedicated support manager',
-        'Full integration suite',
-        'Advanced research tools',
-        'Custom development',
-        'On-premise option'
+        'Full compliance suite',
+        'Advanced analytics',
+        'Custom integrations',
+        'On-premise deployment option'
       ],
       popular: false,
       cta: 'Contact Sales',
-      href: '/contact?service=ai-healthcare-analytics&plan=academic'
+      href: '/contact?service=ai-legal-document-automation&plan=enterprise'
     }
   ];
 
   const useCases = [
     {
-      title: 'Predictive Patient Care',
-      description: 'AI algorithms predict patient deterioration and recommend interventions',
-      icon: Brain,
-      benefits: ['Reduce ICU readmissions by 35%', 'Early intervention alerts', 'Improved patient outcomes']
+      title: 'Contract Management',
+      description: 'Automate contract creation, review, and approval processes',
+      icon: FileText,
+      benefits: ['Reduce contract review time by 70%', 'Eliminate manual errors', 'Faster deal closure']
     },
     {
-      title: 'Population Health Analytics',
-      description: 'Identify at-risk populations and optimize preventive care programs',
-      icon: Users,
-      benefits: ['Target high-risk patients', 'Optimize care programs', 'Reduce healthcare costs']
+      title: 'Legal Research',
+      description: 'AI-powered case law research and precedent analysis',
+      icon: Search,
+      benefits: ['Find relevant cases 10x faster', 'Identify key precedents', 'Track legal trends']
     },
     {
-      title: 'Clinical Research Support',
-      description: 'Advanced analytics for clinical trials and research studies',
-      icon: Microscope,
-      benefits: ['Faster research insights', 'Better trial design', 'Improved data quality']
+      title: 'Compliance Monitoring',
+      description: 'Automated compliance checking and regulatory updates',
+      icon: Shield,
+      benefits: ['Stay current with regulations', 'Reduce compliance risks', 'Automated reporting']
     },
     {
-      title: 'Operational Efficiency',
-      description: 'Optimize hospital operations and resource utilization',
-      icon: Activity,
-      benefits: ['Reduce wait times', 'Optimize staffing', 'Improve resource allocation']
+      title: 'Document Review',
+      description: 'Intelligent document review with risk assessment',
+      icon: Eye,
+      benefits: ['Faster review cycles', 'Consistent quality', 'Risk identification']
     }
   ];
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Williams',
-      role: 'Chief Medical Officer',
-      company: 'Mercy Regional Medical Center',
-      content: 'This platform has revolutionized our patient care. We\'ve reduced readmissions by 35% and improved patient outcomes significantly.',
+      name: 'Sarah Johnson',
+      role: 'Managing Partner',
+      company: 'Johnson & Associates Law',
+      content: 'This platform has transformed our document workflow. We\'ve reduced document processing time by 80% and eliminated costly errors.',
       rating: 5
     },
     {
-      name: 'Dr. Michael Chen',
-      role: 'Director of Analytics',
-      company: 'University Health System',
-      content: 'The AI-powered insights have transformed our research capabilities and clinical decision-making processes.',
+      name: 'Michael Chen',
+      role: 'General Counsel',
+      company: 'TechCorp Inc.',
+      content: 'The AI-powered compliance checking has saved us countless hours and helped us avoid potential regulatory issues.',
       rating: 5
     },
     {
-      name: 'Jennifer Rodriguez',
-      role: 'VP of Operations',
-      company: 'Community Health Network',
-      content: 'Operational efficiency has improved dramatically. We\'re making data-driven decisions that save lives and resources.',
+      name: 'Emily Rodriguez',
+      role: 'Solo Practitioner',
+      company: 'Rodriguez Legal Services',
+      content: 'As a solo practitioner, this tool has been invaluable. It\'s like having a team of paralegals working 24/7.',
       rating: 5
     }
   ];
 
   const marketComparison = {
     competitors: [
-      { name: 'Epic Systems', price: '$2,000-5,000/month', features: 'Good EHR, limited AI analytics' },
-      { name: 'Cerner', price: '$1,800-4,500/month', features: 'Basic analytics, expensive' },
-      { name: 'IBM Watson Health', price: '$3,000-8,000/month', features: 'Advanced AI, very expensive' }
+      { name: 'DocuSign', price: '$15-45/user/month', features: 'Basic e-signature, limited AI' },
+      { name: 'ContractPodAi', price: '$1,200-2,500/month', features: 'Good AI, expensive' },
+      { name: 'Kira Systems', price: '$2,000-5,000/month', features: 'Advanced AI, enterprise only' }
     ],
     ourAdvantage: [
       'More affordable than competitors',
-      'Superior AI capabilities',
-      'Better user experience',
-      'Faster implementation',
-      'Superior customer support'
+      'Better AI capabilities',
+      'Comprehensive feature set',
+      'Superior customer support',
+      'Faster implementation'
     ]
   };
-
-  const complianceFeatures = [
-    {
-      title: 'HIPAA Compliance',
-      description: 'Full HIPAA compliance with end-to-end encryption and audit trails',
-      icon: Shield,
-      features: ['Data encryption at rest and in transit', 'Access controls and authentication', 'Audit logging and monitoring', 'Business associate agreements']
-    },
-    {
-      title: 'SOC 2 Type II',
-      description: 'SOC 2 Type II certification for security, availability, and confidentiality',
-      icon: Lock,
-      features: ['Security controls assessment', 'Availability monitoring', 'Confidentiality protection', 'Regular security audits']
-    },
-    {
-      title: 'FDA Compliance',
-      description: 'Compliance with FDA regulations for medical device software',
-      icon: CheckCircle,
-      features: ['Software validation', 'Risk management', 'Quality system compliance', 'Documentation standards']
-    },
-    {
-      title: 'GDPR Compliance',
-      description: 'Full GDPR compliance for international healthcare organizations',
-      icon: Globe,
-      features: ['Data protection by design', 'Right to be forgotten', 'Data portability', 'Privacy impact assessments']
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
-        title="AI Healthcare Analytics Platform | Zion Tech Group"
-        description="Transform healthcare delivery with AI-powered analytics. Improve patient outcomes, reduce costs, and optimize operations. Starting at $1,499/month."
-        keywords="AI healthcare analytics, healthcare AI, patient analytics, population health, clinical decision support, healthcare analytics platform"
-        canonicalUrl="https://ziontechgroup.com/services/ai-healthcare-analytics-platform"
+        title="AI Legal Document Automation Platform | Zion Tech Group"
+        description="Transform your legal practice with AI-powered document automation. Reduce costs by 70%, eliminate errors, and streamline workflows. Starting at $299/month."
+        keywords="AI legal automation, legal document management, contract automation, legal compliance, law firm software"
+        canonicalUrl="https://ziontechgroup.com/services/ai-legal-document-automation"
       />
 
       {/* Hero Section */}
@@ -297,25 +249,25 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Healthcare Solutions
+              AI-Powered Legal Solutions
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Healthcare
-              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> Analytics Platform</span>
+              AI Legal Document
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Automation</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform healthcare delivery with intelligent analytics. Improve patient outcomes by 35%, reduce operational costs, 
-              and optimize care delivery with AI-powered healthcare technology.
+              Transform your legal practice with intelligent document automation. Reduce costs by 70%, eliminate manual errors, 
+              and streamline workflows with AI-powered legal technology.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                to="/contact?service=ai-healthcare-analytics"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
+                to="/contact?service=ai-legal-document-automation"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -328,20 +280,20 @@ export default function AIHealthcareAnalyticsPlatform() {
 
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-green-400 mb-2">35%</div>
-                <div className="text-gray-400">Reduced Readmissions</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-emerald-400 mb-2">94.7%</div>
-                <div className="text-gray-400">AI Accuracy Rate</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">70%</div>
                 <div className="text-gray-400">Cost Reduction</div>
               </div>
               <div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+                <div className="text-gray-400">Time Savings</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
+                <div className="text-gray-400">Accuracy Rate</div>
+              </div>
+              <div>
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                <div className="text-gray-400">Monitoring</div>
+                <div className="text-gray-400">Availability</div>
               </div>
             </div>
           </motion.div>
@@ -358,11 +310,11 @@ export default function AIHealthcareAnalyticsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Healthcare Analytics Features
+              Powerful Features for Modern Legal Practice
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform combines cutting-edge technology with healthcare expertise to deliver 
-              unprecedented insights and improved patient care.
+              Our AI-powered platform combines cutting-edge technology with deep legal expertise to deliver 
+              unprecedented efficiency and accuracy.
             </p>
           </motion.div>
 
@@ -375,7 +327,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -394,7 +346,7 @@ export default function AIHealthcareAnalyticsPlatform() {
         </div>
       </section>
 
-      {/* Compliance Section */}
+      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -404,59 +356,10 @@ export default function AIHealthcareAnalyticsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Security & Compliance
+              Transparent Pricing for Every Practice Size
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built for healthcare with the highest security standards and full regulatory compliance.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
-              >
-                <div className="flex items-start mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {feature.features.map((feat, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Healthcare Organization
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your organization. All plans include our core AI features and 24/7 support.
+              Choose the plan that fits your practice. All plans include our core AI features and 24/7 support.
             </p>
           </motion.div>
 
@@ -469,13 +372,13 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-green-500/50 bg-gradient-to-br from-slate-800/80 to-green-900/20' 
+                    ? 'border-blue-500/50 bg-gradient-to-br from-slate-800/80 to-blue-900/20' 
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -503,7 +406,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                   to={plan.href}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
@@ -521,7 +424,7 @@ export default function AIHealthcareAnalyticsPlatform() {
           >
             <p className="text-gray-400 mb-4">Need a custom solution?</p>
             <Link
-              to="/contact?service=ai-healthcare-analytics&plan=custom"
+              to="/contact?service=ai-legal-document-automation&plan=custom"
               className="inline-flex items-center px-6 py-3 rounded-lg border border-gray-600 text-white font-semibold hover:border-gray-500 transition-all duration-200"
             >
               Contact Sales Team
@@ -532,7 +435,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -541,10 +444,10 @@ export default function AIHealthcareAnalyticsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Real-World Healthcare Applications
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how leading healthcare organizations are using our platform to transform patient care and operations.
+              See how leading law firms and legal departments are using our platform to transform their operations.
             </p>
           </motion.div>
 
@@ -558,7 +461,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
               >
                 <div className="flex items-start mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -581,7 +484,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* Market Comparison Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -593,7 +496,7 @@ export default function AIHealthcareAnalyticsPlatform() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how we compare to the competition and why leading healthcare organizations choose our platform.
+              See how we compare to the competition and why leading legal professionals choose our platform.
             </p>
           </motion.div>
 
@@ -629,7 +532,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -638,10 +541,10 @@ export default function AIHealthcareAnalyticsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Leading Healthcare Organizations
+              Trusted by Leading Legal Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about the transformative impact of our AI healthcare analytics platform.
+              See what our clients say about the transformative impact of our AI legal automation platform.
             </p>
           </motion.div>
 
@@ -663,7 +566,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
-                  <div className="text-sm text-green-400">{testimonial.company}</div>
+                  <div className="text-sm text-blue-400">{testimonial.company}</div>
                 </div>
               </motion.div>
             ))}
@@ -672,7 +575,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600/20 to-emerald-600/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -680,23 +583,23 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Healthcare Delivery?
+              Ready to Transform Your Legal Practice?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading healthcare organizations already using our AI-powered platform to improve patient outcomes, 
-              reduce costs, and optimize operations.
+              Join hundreds of law firms already using our AI-powered platform to streamline operations, 
+              reduce costs, and deliver better client service.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                to="/contact?service=ai-healthcare-analytics"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
+                to="/contact?service=ai-legal-document-automation"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                to="/contact?service=ai-healthcare-analytics&demo=request"
+                to="/contact?service=ai-legal-document-automation&demo=request"
                 className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-gray-500 transition-all duration-200"
               >
                 Schedule Demo
@@ -705,7 +608,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             </div>
 
             <div className="mt-8 text-sm text-gray-400">
-              <p>✓ 30-day free trial • ✓ No credit card required • ✓ Full feature access</p>
+              <p>✓ 14-day free trial • ✓ No credit card required • ✓ Full feature access</p>
             </div>
           </motion.div>
         </div>
@@ -716,17 +619,17 @@ export default function AIHealthcareAnalyticsPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <Phone className="w-8 h-8 text-green-400 mx-auto mb-4" />
+              <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>
             <div>
-              <Mail className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
+              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>
             <div>
-              <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+              <MapPin className="w-8 h-8 text-green-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
