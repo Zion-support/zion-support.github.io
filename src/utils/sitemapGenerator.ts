@@ -97,7 +97,7 @@ ${sitemapEntries}
    * Generate JSON-LD structured data for sitemap
    */
   generateStructuredData(): string {
-    const { baseUrl, urls } = this.config;
+    const { baseUrl } = this.config;
     
     const structuredData = {
       "@context": "https://schema.org",

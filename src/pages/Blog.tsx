@@ -5,7 +5,7 @@ import {
   ArrowRight, BookOpen, TrendingUp, Star, Eye
 } from 'lucide-react';
 
-function Blog() {
+export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
