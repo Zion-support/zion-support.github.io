@@ -39,32 +39,25 @@ export default function Categories() {
       color: 'from-zion-green to-zion-emerald',
       count: 36
     },
-    {;
-      id: 'development',;
-      name: 'Development',;
-      icon: <Code className="w-8 h-8" />,;
-      color: 'from-zion-indigo to-zion-purple',;
-      count: 41;
-    };
+    {
+      id: 'development',
+      name: 'Development',
+      icon: <Code className="w-8 h-8" />,
+      color: 'from-zion-indigo to-zion-purple',
+      count: 41
+    }
   ];
 
   const subCategories = {
-  'ai-ml': [
+    'ai-ml': [
       {
         name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
         icon: <Brain className="w-6 h-6" />,
         services: 12,
         talent: 8,
-  equipment: 3
-      
-
-
-
-
-
-
-},
+        equipment: 3
+      },
       {
         name: 'Computer Vision',
         description: 'Image recognition, object detection, and visual AI',

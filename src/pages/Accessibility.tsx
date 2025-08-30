@@ -1,6 +1,7 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Accessibility, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Accessibility, 
   Eye, 
   Ear, 
   Hand, 
@@ -22,12 +23,12 @@ import { Accessibility,
   Contrast,
   Type,
   ZoomIn,
-  ZoomOut
- } from 'lucide-react';
-import { SEO  } from "../components/SEO";
+  ZoomOut,
+  Users
+} from 'lucide-react';
+import { SEO } from "../components/SEO";
 
 export default function Accessibility() {
-<<<<<<< HEAD
   const accessibilityFeatures = [
     {
       category: 'Visual Accessibility',
@@ -79,37 +80,9 @@ export default function Accessibility() {
         'Error prevention and recovery',
         'Multiple ways to complete tasks',
         'Reduced distractions mode'
-      ];
-    };
+      ]
+    }
   ];
-=======
-	return (
-		<div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
-			<SEO 
-				title="Accessibility - Zion Tech Group"
-				description="Our commitment to inclusive, accessible experiences that meet WCAG 2.1 AA."
-			/>
-			<div className="container mx-auto px-4 max-w-4xl text-white">
-				<h1 className="text-4xl font-bold mb-6">Accessibility</h1>
-				<p className="text-zinc-300 mb-8">
-					We are committed to ensuring our website and services are accessible to everyone, 
-					including people with disabilities. Our goal is to conform to WCAG 2.1 AA standards.
-				</p>
-				<h2 className="text-2xl font-semibold mt-8 mb-3">Feedback</h2>
-				<p className="text-zinc-300 mb-6">
-					If you encounter accessibility barriers, please contact us at
-					{' '}<a className="text-cyan-400 underline" href="mailto:info@ziontechgroup.com">info@ziontechgroup.com</a>.
-				</p>
-				<h2 className="text-2xl font-semibold mt-8 mb-3">Compatibility</h2>;
-				<p className="text-zinc-300">;
-					We support modern browsers and assistive technologies. We continuously test and improve ;
-					the experience to ensure a high level of accessibility across platforms.;
-				</p>;
-			</div>;
-		</div>;
-	);
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const complianceStandards = [
     {
@@ -138,8 +111,8 @@ export default function Accessibility() {
       description: 'European accessibility requirements for ICT products and services',
       status: 'Fully Compliant',
       icon: CheckCircle,
-      color: 'text-green-400';
-    };
+      color: 'text-green-400'
+    }
   ];
 
   const assistiveTechnologies = [
@@ -165,8 +138,8 @@ export default function Accessibility() {
       name: 'Mobile Accessibility',
       description: 'Optimized for mobile assistive technologies',
       icon: Smartphone,
-      examples: ['iOS VoiceOver', 'Android TalkBack', 'Switch Control', 'AssistiveTouch'];
-    };
+      examples: ['iOS VoiceOver', 'Android TalkBack', 'Switch Control', 'AssistiveTouch']
+    }
   ];
 
   const accessibilityTools = [
@@ -192,14 +165,14 @@ export default function Accessibility() {
       name: 'Focus Highlighter',
       icon: CheckCircle,
       description: 'Highlight keyboard focus for better navigation',
-      shortcut: 'Tab key navigation';
-    };
+      shortcut: 'Tab key navigation'
+    }
   ];
 
   return (
     <>
       <SEO 
-        title = "Accessibility - Zion Tech Group"
+        title="Accessibility - Zion Tech Group"
         description="Zion Tech Group is committed to digital accessibility. Learn about our accessibility features, compliance standards, and commitment to inclusive design."
         canonical="/accessibility"
       />
@@ -267,25 +240,13 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Comprehensive accessibility features designed for all users</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {accessibilityFeatures.map((category, index)  => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {accessibilityFeatures.map((category, index) => (
                 <motion.div
                   key={index}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                  transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
                   <div className="flex items-center mb-6">
@@ -317,25 +278,13 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">We meet and exceed international accessibility standards</p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {complianceStandards.map((standard, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {complianceStandards.map((standard, index) => (
                 <motion.div
                   key={index}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                  transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -363,25 +312,13 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Compatible with a wide range of assistive technologies</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {assistiveTechnologies.map((tech, index)  => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {assistiveTechnologies.map((tech, index) => (
                 <motion.div
                   key={index}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                  transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
                   <div className="flex items-center mb-6">
@@ -418,25 +355,13 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Use these tools to customize your experience</p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {accessibilityTools.map((tool, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {accessibilityTools.map((tool, index) => (
                 <motion.div
                   key={index}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                  transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -533,5 +458,6 @@ export default function Accessibility() {
           </div>
         </section>
       </div>
-    </>;
-  )};
+    </>
+  );
+}

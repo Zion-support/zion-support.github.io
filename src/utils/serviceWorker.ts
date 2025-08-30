@@ -31,9 +31,9 @@ export class ServiceWorkerManager {
       }
 
       // Register new service worker with better error handling
-      const registration = await navigator.serviceWorker.register('/sw.js', {;
-        scope: '/',;
-        updateViaCache: 'none';
+      const registration = await navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+        updateViaCache: 'none'
       });
 
       console.log('Service Worker registered successfully:', registration);
@@ -63,8 +63,8 @@ export class ServiceWorkerManager {
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
             try {
-              if (newWorker.state = == 'installed' && navigator.serviceWorker.controller) {;
-                // New version available;
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New version available
                 this.showUpdateNotification();
               }
             } catch (error) {
@@ -123,13 +123,13 @@ export class ServiceWorkerManager {
     notification.innerHTML = `
       <div class="flex items-center space-x-3">
         <span>🔄 New version available</span>
-        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">;
-          Update;
-        </button>;
-        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">;
-          ✕;
-        </button>;
-      </div>;
+        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">
+          Update
+        </button>
+        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">
+                      ✕
+          </button>
+        </div>
     `;
 
     document.body.appendChild(notification);
@@ -210,9 +210,9 @@ export class ServiceWorkerManager {
 
     try {
       const cacheNames = await caches.keys();
-      await Promise.all(
-        cacheNames.map(cacheName = > caches.delete(cacheName));
-      );
+              await Promise.all(
+          cacheNames.map(cacheName => caches.delete(cacheName))
+        );
       console.log('All caches cleared');
     } catch (error) {
       console.error('Failed to clear caches:', error);
@@ -226,10 +226,12 @@ export class ServiceWorkerManager {
       const cacheNames = await caches.keys();
       let totalSize = 0;
 
-      for (const cache = await caches.open(cacheName);
+      for (const cacheName of cacheNames) {
+        const cache = await caches.open(cacheName);
         const keys = await cache.keys();
         
-        for (const response = await cache.match(request);
+        for (const request of keys) {
+          const response = await cache.match(request);
           if (response) {
             const blob = await response.blob();
             totalSize += blob.size;
@@ -253,7 +255,7 @@ export class ServiceWorkerManager {
     try {
       const registration = await this.getRegistration();
       if (registration) {
-        await (registration as ).sync.register(tag);
+        await (registration as any).sync.register(tag);
         console.log('Background sync requested:', tag);
         return true;
       }
@@ -298,9 +300,9 @@ export class ServiceWorkerManager {
         return null;
       }
 
-      const subscription = await registration.pushManager.subscribe({;
-        userVisibleOnly: true,;
-        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '');
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
       });
 
       console.log('Push subscription created:', subscription);
@@ -313,8 +315,8 @@ export class ServiceWorkerManager {
 
   private urlBase64ToUint8Array(base64String: string): Uint8Array {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding);
-      .replace(/-/g, '+');
+    const base64 = (base64String + padding)
+      .replace(/-/g, '+')
       .replace(/_/g, '/');
 
     const rawData = window.atob(base64);

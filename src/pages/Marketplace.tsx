@@ -1,36 +1,39 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
 import { 
   Search, 
   Filter, 
   Star, 
-  Users, 
-  Zap, 
-  Shield, 
-  Cloud, 
+  Heart, 
+  Eye,
+  Zap,
+  Shield,
+  Cloud,
   Brain,
-  ArrowRight,
-  ShoppingCart,
-  Heart,
-  Eye
+  Globe,
+  TrendingUp,
+  Award,
+  Users,
+  ArrowRight
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-<<<<<<< HEAD
-const Marketplace: React.FC = () => {;
+const Marketplace: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
   const categories = [
-    { id: 'all', name: 'All Solutions', count: 45 },
-    { id: 'ai', name: 'AI & Machine Learning', count: 18 },
-    { id: 'quantum', name: 'Quantum Computing', count: 8 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 12 },
-    { id: 'cloud', name: 'Cloud & DevOps', count: 15 },
-    { id: 'iot', name: 'IoT & Edge Computing', count: 10 },
-    { id: 'blockchain', name: 'Blockchain', count: 6 },;
-    { id: 'healthcare', name: 'Healthcare Tech', count: 9 };
+    { id: 'all', name: 'All Solutions', count: 45, icon: Globe },
+    { id: 'ai', name: 'AI & Machine Learning', count: 18, icon: Brain },
+    { id: 'quantum', name: 'Quantum Computing', count: 8, icon: Zap },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 12, icon: Shield },
+    { id: 'cloud', name: 'Cloud & DevOps', count: 15, icon: Cloud },
+    { id: 'iot', name: 'IoT & Edge Computing', count: 10, icon: Zap },
+    { id: 'blockchain', name: 'Blockchain', count: 6, icon: Globe },
+    { id: 'healthcare', name: 'Healthcare Tech', count: 9, icon: Brain }
   ];
 
   const solutions = [
@@ -45,7 +48,10 @@ const Marketplace: React.FC = () => {;
       users: 45,
       features: ["Quantum algorithms", "Real-time optimization", "Hybrid computing", "Enterprise scaling"],
       image: "🔮",
-      badge: "Most Popular"
+      badge: "Most Popular",
+      vendor: "QuantumTech Solutions",
+      deployment: "Cloud & On-Premise",
+      support: "24/7 Enterprise Support"
     },
     {
       id: 2,
@@ -58,7 +64,10 @@ const Marketplace: React.FC = () => {;
       users: 67,
       features: ["AI threat detection", "Real-time response", "Zero-day protection", "Compliance ready"],
       image: "🛡️",
-      badge: "Best Seller"
+      badge: "Best Seller",
+      vendor: "SecureAI Systems",
+      deployment: "Cloud & Hybrid",
+      support: "24/7 Security Support"
     },
     {
       id: 3,
@@ -71,7 +80,10 @@ const Marketplace: React.FC = () => {;
       users: 89,
       features: ["Edge processing", "Low latency", "Real-time analytics", "Scalable infrastructure"],
       image: "⚡",
-      badge: "Trending"
+      badge: "Trending",
+      vendor: "EdgeFlow Technologies",
+      deployment: "Edge & Cloud",
+      support: "Business Hours Support"
     },
     {
       id: 4,
@@ -84,7 +96,10 @@ const Marketplace: React.FC = () => {;
       users: 34,
       features: ["Predictive analytics", "Patient monitoring", "Diagnostic support", "HIPAA compliant"],
       image: "🏥",
-      badge: "New"
+      badge: "New",
+      vendor: "HealthAI Innovations",
+      deployment: "Cloud & On-Premise",
+      support: "24/7 Healthcare Support"
     },
     {
       id: 5,
@@ -97,7 +112,10 @@ const Marketplace: React.FC = () => {;
       users: 23,
       features: ["Blockchain security", "AI optimization", "Supply chain tracking", "Smart contracts"],
       image: "🔗",
-      badge: "Innovative"
+      badge: "Innovative",
+      vendor: "ChainAI Solutions",
+      deployment: "Cloud & Hybrid",
+      support: "Business Hours Support"
     },
     {
       id: 6,
@@ -110,336 +128,322 @@ const Marketplace: React.FC = () => {;
       users: 156,
       features: ["Cost optimization", "Resource management", "Budget tracking", "Automated scaling"],
       image: "☁️",
-      badge: "Cost Effective";
-    };
+      badge: "Cost Effective",
+      vendor: "CloudOpt Solutions",
+      deployment: "Multi-Cloud",
+      support: "24/7 Cloud Support"
+    }
   ];
 
-  const filteredSolutions = solutions.filter(solution => {;
-    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         solution.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredSolutions = solutions.filter(solution => {
     const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         solution.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         solution.vendor.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
   });
 
   const sortedSolutions = [...filteredSolutions].sort((a, b) => {
-    switch (sortBy) {;
-      case 'price-low':;
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-      case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+    switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
+      case 'price':
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'reviews':
         return b.reviews - a.reviews;
+      case 'users':
+        return b.users - a.users;
       default:
-        return b.users - a.users; // popularity
+        return b.reviews - a.reviews; // popularity
     }
   });
 
+  const getCategoryIcon = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.icon : Globe;
+  };
+
+  const getCategoryName = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.name : 'General';
+  };
+
+  const getBadgeColor = (badge: string) => {
+    switch (badge) {
+      case 'Most Popular':
+        return 'bg-gradient-to-r from-yellow-500 to-orange-500';
+      case 'Best Seller':
+        return 'bg-gradient-to-r from-green-500 to-emerald-500';
+      case 'Trending':
+        return 'bg-gradient-to-r from-purple-500 to-pink-500';
+      case 'New':
+        return 'bg-gradient-to-r from-blue-500 to-cyan-500';
+      case 'Innovative':
+        return 'bg-gradient-to-r from-indigo-500 to-purple-500';
+      case 'Cost Effective':
+        return 'bg-gradient-to-r from-teal-500 to-green-500';
+      default:
+        return 'bg-gradient-to-r from-gray-500 to-slate-500';
+    }
+  };
+
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <SEO 
-        title="Marketplace - Zion Tech Group"
-        description="Explore our marketplace of AI-powered technology solutions and services for enterprise transformation."
+        title="Technology Marketplace - Zion Tech Group"
+        description="Discover cutting-edge AI, quantum computing, cybersecurity, and cloud solutions from leading technology vendors in our curated marketplace."
+        keywords="technology marketplace, AI solutions, quantum computing, cybersecurity, cloud platforms, enterprise software, Zion Tech Group"
       />
       
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
-            initial = {
-  { opacity: 0,
-  y: 20 
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-blue/20"></div>
+          <div className="relative z-10 max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 mb-6">
+                <Globe className="w-5 h-5 text-zion-purple mr-2" />
+                <span className="text-zion-purple font-medium">Technology Marketplace</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Technology Solutions Marketplace
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-zion-cyan-light max-w-4xl mx-auto leading-relaxed mb-8">
+                Discover cutting-edge AI, quantum computing, cybersecurity, and cloud solutions 
+                from leading technology vendors. All solutions are vetted and enterprise-ready.
+              </p>
 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
-          >
-            AI-Powered Solutions
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Marketplace</span>
-          </motion.h1>
-          <motion.p 
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-}}
-            className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-          >
-            Discover cutting-edge AI, quantum computing, and emerging technology solutions 
-            designed to transform your business operations and drive innovation.
-          </motion.p>
-          <motion.div 
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-}}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <Zap className="w-5 h-5 text-cyan-400" />
-              <span className="text-white">45+ Solutions</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <Users className="w-5 h-5 text-blue-400" />
-              <span className="text-white">500+ Clients</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <Star className="w-5 h-5 text-yellow-400" />
-              <span className="text-white">4.8+ Rating</span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Search and Filters */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <div className="flex flex-col lg:flex-row gap-6">
-              {/* Search */}
-              <div className="flex-1">
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto mb-8">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan-light" />
                   <input
                     type="text"
-                    placeholder="Search solutions..."
+                    placeholder="Search solutions, vendors, or technologies..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
                   />
                 </div>
               </div>
+            </motion.div>
+          </div>
+        </section>
 
-              {/* Category Filter */}
-              <div className="flex-shrink-0">
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+        {/* Categories Filter */}
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-zion-purple text-white shadow-lg'
+                      : 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20'
+                  }`}
                 >
-                  {categories.map(category => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-              </div>
+                  <category.icon className="w-5 h-5" />
+                  <span>{category.name}</span>
+                  <span className="text-sm opacity-75">({category.count})</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              {/* Sort */}
-              <div className="flex-shrink-0">
+        {/* Sort Options */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="flex items-center space-x-4">
+                <span className="text-white font-medium">Sort by:</span>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
                 >
-                  <option value="popularity">Most Popular</option>
-                  <option value="rating">Highest Rated</option>
-                  <option value="reviews">Most Reviewed</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
+                  <option value="popularity">Popularity</option>
+                  <option value="rating">Rating</option>
+                  <option value="price">Price</option>
+                  <option value="reviews">Reviews</option>
+                  <option value="users">Users</option>
                 </select>
+              </div>
+              
+              <div className="text-zion-cyan-light">
+                {filteredSolutions.length} solutions found
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Solutions Grid */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedSolutions.map((solution, index) => (
+        {/* Solutions Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {filteredSolutions.length === 0 ? (
               <motion.div
-                key={solution.id}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-20"
               >
-                {/* Badge */}
-                {solution.badge && (
-                  <div className="inline-block px-3 py-1 text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
-                    {solution.badge}
-                  </div>
-                )}
-
-                {/* Image and Title */}
-                <div className="text-center mb-4">
-                  <div className="text-6xl mb-4">{solution.image}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {solution.name}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-                  {solution.description}
+                <Globe className="w-16 h-16 text-zion-cyan-light mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">No solutions found</h3>
+                <p className="text-zion-cyan-light">
+                  Try adjusting your search terms or category filter.
                 </p>
-
-                {/* Features */}
-                <div className="mb-4">
-                  <h4 className="text-white font-medium mb-2 text-sm">Key Features:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {solution.features.slice(0, 3).map((feature, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
-                        {feature}
-                      </span>
-                    ))}
-                    {solution.features.length > 3 && (
-                      <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
-                        +{solution.features.length - 3} more
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                {/* Stats */}
-                <div className="flex items-center justify-between mb-4 text-sm">
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="text-white">{solution.rating}</span>
-                    <span className="text-gray-400">({solution.reviews})</span>
-                  </div>
-                  <div className="flex items-center gap-1 text-gray-400">
-                    <Users className="w-4 h-4" />
-                    <span>{solution.users}</span>
-                  </div>
-                </div>
-
-                {/* Price and Actions */}
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-white">{solution.price}</div>
-                  <div className="flex gap-2">
-                    <button className="p-2 text-gray-400 hover:text-white transition-colors">
-                      <Heart className="w-5 h-5" />
-                    </button>
-                    <button className="p-2 text-gray-400 hover:text-white transition-colors">
-                      <Eye className="w-5 h-5" />
-                    </button>
-                    <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 group">
-                      <ShoppingCart className="w-4 h-4" />
-                      Get Quote
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
               </motion.div>
-            ))}
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {sortedSolutions.map((solution, index) => (
+                  <motion.div
+                    key={solution.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group"
+                  >
+                    <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20 hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
+                      <CardHeader>
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="text-4xl">{solution.image}</div>
+                          <div className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getBadgeColor(solution.badge)}`}>
+                            {solution.badge}
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center space-x-2 mb-3">
+                          <div className="inline-flex items-center px-3 py-1 rounded-full bg-zion-purple/20 border border-zion-purple/30">
+                            <span className="text-zion-purple text-sm font-medium">
+                              {getCategoryName(solution.category)}
+                            </span>
+                          </div>
+                        </div>
+                        
+                        <CardTitle className="text-xl font-bold text-white group-hover:text-zion-purple transition-colors duration-300">
+                          {solution.name}
+                        </CardTitle>
+                        
+                        <CardDescription className="text-zion-cyan-light leading-relaxed">
+                          {solution.description}
+                        </CardDescription>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="text-2xl font-bold text-zion-cyan">
+                            {solution.price}
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                            <span className="text-white font-medium">{solution.rating}</span>
+                            <span className="text-zion-cyan-light text-sm">({solution.reviews})</span>
+                          </div>
+                        </div>
+                      </CardHeader>
+                      
+                      <CardContent>
+                        <div className="mb-6">
+                          <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                          <div className="grid grid-cols-2 gap-2">
+                            {solution.features.map((feature, featureIndex) => (
+                              <div key={featureIndex} className="flex items-center space-x-2 text-sm">
+                                <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                                <span className="text-gray-300">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-3 mb-6 text-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="text-zion-cyan-light">Vendor:</span>
+                            <span className="text-white">{solution.vendor}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-zion-cyan-light">Deployment:</span>
+                            <span className="text-white">{solution.deployment}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-zion-cyan-light">Support:</span>
+                            <span className="text-white">{solution.support}</span>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="flex items-center space-x-4 text-sm text-zion-cyan-light">
+                            <div className="flex items-center space-x-1">
+                              <Users className="w-4 h-4" />
+                              <span>{solution.users} users</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex space-x-2">
+                          <Button className="flex-1 bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white">
+                            Learn More
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
+                          >
+                            <Heart className="w-4 h-4" />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            )}
           </div>
+        </section>
 
-          {/* No Results */}
-          {sortedSolutions.length === 0 && (
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-semibold text-white mb-2">No solutions found</h3>
-              <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories.</p>
-              <button;
-                onClick={() => {;
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-                }}
-                className = "bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
-              >
-                View All Solutions
-              </button>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Can't Find What You're Looking For?
+              </h2>
+              <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
+                Our technology experts can help you find the perfect solution or even 
+                develop a custom solution tailored to your specific needs.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white">
+                  <Search className="w-5 h-5 mr-2" />
+                  Get Custom Recommendation
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
+                >
+                  <Users className="w-5 h-5 mr-2" />
+                  Talk to Our Experts
+                </Button>
+              </div>
             </motion.div>
-          )}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Need a Custom Solution?
-            </h2>
-            <p className="text-gray-300 mb-8">
-              Can't find exactly what you're looking for? Our team of experts can create 
-              a custom AI-powered solution tailored to your specific business needs.
-            </p>
-            <button className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 mx-auto group">
-              Request Custom Solution
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
-=======
-const Marketplace: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">
-		<div className="max-w-3xl mx-auto px-4 text-white">
-			<h1 className="text-4xl font-bold mb-6">Marketplace</h1>
-			<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-				<Link to="/marketplace/products" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Products</Link>;
-				<Link to="/marketplace/talent" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Talent</Link>;
-				<Link to="/marketplace/equipment" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Equipment</Link>;
-				<Link to="/marketplace/services" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Services</Link>;
-			</div>;
-		</div>;
-	</div>;
-);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Marketplace;

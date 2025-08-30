@@ -1,5 +1,6 @@
-<<<<<<< HEAD
+import React from 'react';
 import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function SitemapPage() {
   const siteStructure = [
@@ -8,7 +9,7 @@ export default function SitemapPage() {
       icon: Home,
       links: [
         { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
-        { name: "About Us", path: "/about", description: "Learn about our comp and mission" },
+        { name: "About Us", path: "/about", description: "Learn about our company and mission" },
         { name: "Contact", path: "/contact", description: "Get in touch with our team" },
         { name: "Services Overview", path: "/services-overview", description: "Explore all our services" },
         { name: "Partners", path: "/partners", description: "Strategic partnerships and collaborations" },
@@ -94,334 +95,99 @@ export default function SitemapPage() {
         { name: "Accessibility", path: "/accessibility", description: "Accessibility statement" },
         { name: "Security", path: "/security", description: "Security practices" },
         { name: "Compliance", path: "/compliance", description: "Regulatory compliance" }
-      ];
-    };
-  ];
-
-  const quickLinks = [
-    { name: "Get Started", path: "/contact", description: "Start your project with us", icon: MessageCircle },
-    { name: "Request Quote", path: "/request-quote", description: "Get a custom quote", icon: DollarSign },
-    { name: "Services Overview", path: "/services-overview", description: "Explore all services", icon: Settings },
-    { name: "AI Solutions", path: "/ai-services", description: "Discover AI capabilities", icon: Brain },
-    { name: "Pricing Guide", path: "/pricing-guide", description: "View pricing options", icon: DollarSign },
-    { name: "Support Center", path: "/help", description: "Get help and support", icon: HelpCircle },
-    { name: "Documentation", path: "/docs", description: "Technical resources", icon: BookOpen },;
-    { name: "Contact Sales", path: "/contact", description: "Talk to our experts", icon: Phone };
+      ]
+    }
   ];
 
   const contactInfo = [
-    { icon: Phone, text: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: Mail, text: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },;
-    { icon: MapPin, text: "364 E Main St STE 1008, Middletown DE 19709", href: "#" };
+    {
+      icon: Phone,
+      text: "Phone Support",
+      href: "tel:+13024640950"
+    },
+    {
+      icon: Mail,
+      text: "Email Support",
+      href: "mailto:kleber@ziontechgroup.com"
+    },
+    {
+      icon: MapPin,
+      text: "Office Location",
+      href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+    },
+    {
+      icon: Globe,
+      text: "Website",
+      href: "https://ziontechgroup.com"
+    }
   ];
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  ShoppingCart,
-  Building,
-  Target,
-  DollarSign,
-  BarChart3,
-  Mail,
-  Video,
-  Heart,
-  Globe,
-  Star,
-  ArrowRight
-} from 'lucide-react';
-
-interface SitemapSection {
-  title: string;
-  icon: any;
-  description: string;
-  links: Array<{
-    name: string;
-    href: string;
-    description?: string;
-  }>;
-}
-
-const sitemapSections: SitemapSection[] = [
-  {
-    title: 'Main Pages',
-    icon: Globe,
-    description: 'Core website pages and information',
-    links: [
-      { name: 'Home', href: '/', description: 'Main landing page' },
-      { name: 'About', href: '/about', description: 'Company information and team' },
-      { name: 'Services', href: '/services', description: 'Overview of all services' },
-      { name: 'Contact', href: '/contact', description: 'Get in touch with us' },
-      { name: 'Blog', href: '/blog', description: 'Latest news and insights' },
-      { name: 'Careers', href: '/careers', description: 'Job opportunities' },
-      { name: 'Partners', href: '/partners', description: 'Partnership information' },
-      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-      { name: 'Help Center', href: '/help', description: 'Support and documentation' },
-      { name: 'News', href: '/news', description: 'Company updates' },
-      { name: 'Sitemap', href: '/sitemap', description: 'This page' }
-    ]
-  },
-  {
-    title: 'Data Analytics & AI',
-    icon: BarChart3,
-    description: 'Advanced analytics and AI solutions',
-    links: [
-      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence & insights' },
-      { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data analysis' },
-      { name: 'AI Financial Trading', href: '/services/ai-financial-trading', description: 'AI-powered trading' }
-    ]
-  },
-  {
-    title: 'Micro SaaS Solutions',
-    icon: ShoppingCart,
-    description: 'Scalable software solutions',
-    links: [
-      { name: 'Micro CRM', href: '/services/micro-crm', description: 'Customer relationship management' },
-      { name: 'Helpdesk Platform', href: '/services/helpdesk', description: 'Customer support system' },
-      { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance tracking & insights' },
-      { name: 'IT Helpdesk', href: '/services/it-helpdesk', description: 'IT support system' },
-      { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', description: 'Affiliate program management' },
-      { name: 'Mobile Survey', href: '/services/mobile-survey', description: 'Mobile survey platform' },
-      { name: 'Email Sequencer', href: '/services/email-sequencer', description: 'Email automation' },
-      { name: 'Podcast Transcription', href: '/services/podcast-transcription', description: 'Audio transcription service' },
-      { name: 'Returns Management', href: '/services/returns-management', description: 'Returns processing system' }
-    ]
-  },
-  {
-    title: 'Industry Solutions',
-    icon: Building,
-    description: 'Industry-specific solutions',
-    links: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Enterprise-grade solutions' },
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare', description: 'Healthcare industry solutions' }
-    ]
-  },
-  {
-    title: 'Specialized Services',
-    icon: Star,
-    description: 'Specialized AI and automation services',
-    links: [
-      { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', description: 'Legal document AI' },
-      { name: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite', description: 'Content creation AI' },
-      { name: 'AI HR Platform', href: '/services/ai-hr-platform', description: 'HR automation platform' },
-      { name: 'AI Content Creation', href: '/services/ai-content-creation', description: 'AI content generation' },
-      { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', description: 'AI security solutions' }
-    ]
-  },
-  {
-    title: 'Advanced Service Showcases',
-    icon: Target,
-    description: 'Advanced technology showcases',
-    links: [
-      { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', description: 'Revolutionary AI & Quantum Solutions' },
-      { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', description: 'Cutting-edge Innovation & Emerging Tech' },
-      { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', description: 'Future-ready Technology Solutions' },
-      { name: 'Comprehensive Services 2025', href: '/comprehensive-services-showcase-2025', description: 'Comprehensive service overview' },
-      { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Innovative service showcase' },
-      { name: 'Ultimate Innovative Services 2025', href: '/ultimate-innovative-services-showcase-2025', description: 'Ultimate innovative services' },
-      { name: 'New Services 2025', href: '/new-services-showcase-2025', description: 'New service offerings' }
-    ]
-  },
-  {
-    title: 'Pricing & Guides',
-    icon: DollarSign,
-    description: 'Pricing information and guides',
-    links: [
-      { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-2026', description: '2026 pricing guide' },
-      { name: 'Comprehensive Pricing 2028', href: '/comprehensive-pricing-2028', description: '2028 pricing guide' },
-      { name: 'Comprehensive Pricing Guide 2027', href: '/comprehensive-pricing-guide-2027', description: '2027 pricing guide' }
-    ]
-  }
-];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-<<<<<<< HEAD
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
-              <Sitemap className="h-10 w-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Complete Sitemap
-=======
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className="min-h-screen bg-slate-900">
       {/* Header */}
-      <div className="bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
+      <div className="bg-gradient-to-r from-slate-800 to-slate-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex items-center justify-center mb-6">
+            <Sitemap className="h-12 w-12 text-cyan-400 mr-4" />
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
               Site Map
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h1>
-            <p className="text-xl text-slate-300 mb-4 max-w-3xl mx-auto">
-              Navigate our website easily with this comprehensive overview of all pages and sections.
-            </p>
-            <p className="text-slate-400">
-              Last updated: December 2024
-            </p>
           </div>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Navigate through our comprehensive website structure to find the information and services you need
+          </p>
         </div>
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-        </div>
-      </section>
+      </div>
 
-<<<<<<< HEAD
-      {/* Quick Links Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Quick Actions</h2>
-            <p className="text-xl text-slate-300">Get started quickly with these popular actions</p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link, index)  => (
-              <Link
-                key={index}
-                to={link.path}
-                className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                    <link.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-                    {link.name}
-                  </h3>
-                  <p className="text-slate-400 text-sm">{link.description}</p>
-=======
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {sitemapSections.map((section, index) => (
-            <motion.div
-              key={section.title}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-              className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300"
-            >
-              {/* Section Header */}
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                  <section.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+      {/* Site Structure */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {siteStructure.map((section, sectionIndex) => (
+            <div key={sectionIndex} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                  <section.icon className="h-6 w-6 text-white" />
                 </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Main Sitemap Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Complete Site Structure</h2>
-            <p className="text-xl text-slate-300">Explore all pages and sections of our website</p>
-          </div>
-          <div className="space-y-12">
-            {siteStructure.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
-                    <section.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white ml-4">{section.title}</h3>
-                </div>
-                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-                  {section.links.map((link, linkIndex)  => (
+                <h2 className="text-xl font-bold text-white">{section.title}</h2>
+              </div>
+              
+              <div className="space-y-3">
+                {section.links.map((link, linkIndex) => (
+                  <div key={linkIndex} className="group">
                     <Link
-                      key={linkIndex}
                       to={link.path}
-                      className="group p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-all duration-200 border border-transparent hover:border-cyan-500/30"
+                      className="block p-3 rounded-lg hover:bg-slate-700/50 transition-colors"
                     >
-                      <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+                      <div className="font-medium text-cyan-400 group-hover:text-cyan-300 transition-colors">
                         {link.name}
-                      </h4>
-                      <p className="text-slate-400 text-sm">{link.description}</p>
-                      <div className="mt-3 text-cyan-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                        Visit page →
+                      </div>
+                      <div className="text-sm text-slate-400 mt-1">
+                        {link.description}
                       </div>
                     </Link>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
-<<<<<<< HEAD
-      {/* Contact Information Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
+      {/* Contact Information */}
+      <section className="bg-slate-800/50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Contact Information</h2>
-            <p className="text-xl text-slate-300">Get in touch with our team</p>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-slate-300">
+              Need help finding something? Contact our team directly
+            </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {contactInfo.map((contact, index)  => (
-              <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactInfo.map((contact, index) => (
+              <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
                   <contact.icon className="h-8 w-8 text-white" />
                 </div>
@@ -451,46 +217,6 @@ const sitemapSections: SitemapSection[] = [
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Our team is here to help you navigate and find the information you need.
-=======
-        {/* Quick Navigation */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition = {
-  { duration: 0.6,
-  delay: 0.8 
-
-
-
-
-
-
-}}
-          className="mt-16 text-center"
-        >
-          <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Quick Navigation</h3>
-            <p className="text-gray-300 mb-6">
-              Can't find what you're looking for? Use these quick links to get started.
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -505,19 +231,10 @@ const sitemapSections: SitemapSection[] = [
               >
                 Help Center
               </Link>
-<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
-  )};
-=======;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

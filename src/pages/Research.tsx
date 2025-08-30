@@ -9,29 +9,29 @@ export default function Research() {
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: <FlaskConical className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },;
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },;
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },;
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },;
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },;
-    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },;
-    { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 };
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
+    { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 }
   ];
 
-  const statuses = [;
-    { id: 'all', name: 'All Statuses', count: 0 },;
-    { id: 'active', name: 'Active', count: 0 },;
-    { id: 'completed', name: 'Completed', count: 0 },;
-    { id: 'planning', name: 'Planning', count: 0 },;
-    { id: 'published', name: 'Published', count: 0 };
+  const statuses = [
+    { id: 'all', name: 'All Statuses', count: 0 },
+    { id: 'active', name: 'Active', count: 0 },
+    { id: 'completed', name: 'Completed', count: 0 },
+    { id: 'planning', name: 'Planning', count: 0 },
+    { id: 'published', name: 'Published', count: 0 }
   ];
 
-  const types = [;
-    { id: 'all', name: 'All Types', count: 0 },;
-    { id: 'research', name: 'Research Papers', count: 0 },;
-    { id: 'patents', name: 'Patents', count: 0 },;
-    { id: 'prototypes', name: 'Prototypes', count: 0 },;
-    { id: 'collaborations', name: 'Collaborations', count: 0 };
+  const types = [
+    { id: 'all', name: 'All Types', count: 0 },
+    { id: 'research', name: 'Research Papers', count: 0 },
+    { id: 'patents', name: 'Patents', count: 0 },
+    { id: 'prototypes', name: 'Prototypes', count: 0 },
+    { id: 'collaborations', name: 'Collaborations', count: 0 }
   ];
 
   const researchProjects = [
