@@ -58,6 +58,138 @@ import {
   Users as UsersIcon,
   Workflow
 } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
+
+interface FooterLink {
+  name: string;
+  path: string;
+  icon: any;
+  external?: boolean;
+}
+
+interface FooterSection {
+  title: string;
+  icon: any;
+  links: FooterLink[];
+}
+
+const footerSections = [
+  {
+    title: 'Company',
+    icon: Globe,
+    links: [
+      { name: 'About Us', path: '/about', icon: Users },
+      { name: 'Partners', path: '/partners', icon: Users },
+      { name: 'Careers', path: '/careers', icon: Briefcase },
+      { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+      { name: 'Blog', path: '/blog', icon: Newspaper },
+      { name: 'Contact', path: '/contact', icon: Phone },
+      { name: 'News', path: '/news', icon: Newspaper },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Help Center', path: '/help', icon: HelpCircle }
+    ]
+  },
+  {
+    title: 'AI & Research Services',
+    icon: Brain,
+    links: [
+      { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
+      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+      { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
+      { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
+      { name: '2031 Cutting-Edge Services', path: '/zion-cutting-edge-services-2031', icon: Star }
+    ]
+  },
+  {
+    title: 'Advanced Technology',
+    icon: Cpu,
+    links: [
+      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
+      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+      { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
+      { name: 'Space Technology', path: '/space-tech', icon: Satellite },
+      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+      { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
+      { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock },
+      { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
+      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: TrendingUp }
+    ]
+  },
+  {
+    title: 'Cloud & Infrastructure',
+    icon: Cloud,
+    links: [
+      { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
+      { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+      { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
+      { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
+    ]
+  },
+  {
+    title: 'Micro SaaS Solutions',
+    icon: ShoppingCart,
+    links: [
+      { name: 'Micro SaaS Platform', path: '/micro-saas', icon: ShoppingCart },
+      { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
+      { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
+      { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
+      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
+      { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video },
+      { name: 'Returns Management', path: '/services/returns-management', icon: Truck }
+    ]
+  },
+  {
+    title: 'Support & Resources',
+    icon: HelpCircle,
+    links: [
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Blog', path: '/blog', icon: BookOpen },
+      { name: 'News', path: '/news', icon: Newspaper },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'Pricing', path: '/pricing', icon: DollarSign },
+      { name: 'Contact Support', path: '/contact', icon: MessageCircle },
+      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+      { name: 'Sitemap', path: '/sitemap', icon: FileText }
+    ]
+  },
+  {
+    title: 'Latest Innovations',
+    icon: Sparkles,
+    links: [
+      { name: '2031 Cutting-Edge Services', path: '/zion-cutting-edge-services-2031', icon: Star },
+      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', icon: Star },
+      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', icon: Star },
+      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', icon: Star },
+      { name: 'Innovative Services 2025', path: '/innovative-services-2025', icon: Star },
+      { name: 'Comprehensive Pricing 2026', path: '/comprehensive-pricing-2026', icon: DollarSign },
+      { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
+      { name: 'Comprehensive Pricing 2031', path: '/comprehensive-pricing-2031', icon: DollarSign }
+    ]
+  }
+];
+
+const socialLinks = [
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-500' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },
+  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },
+  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'hover:text-blue-600' },
+  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'hover:text-pink-500' },
+  { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' }
+];
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -369,6 +501,55 @@ export function Footer() {
             ))}
           </div>
 
+          {/* Divider */}
+          <div className="border-t border-slate-700 my-12" />
+
+          {/* Contact Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-xl p-6 mb-8"
+          >
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">Contact Zion Tech Group</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center justify-center gap-2 text-gray-300">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <a href="tel:+13024640950" className="hover:text-white transition-colors">+1 302 464 0950</a>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-gray-300">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">kleber@ziontechgroup.com</a>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-gray-300 md:col-span-2">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-gray-300 md:col-span-2">
+                  <Globe className="w-4 h-4 text-cyan-400" />
+                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ziontechgroup.com</a>
+                </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href="mailto:kleber@ziontechgroup.com?subject=Inquiry about Zion Tech Group Services"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-center"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-white/10 border border-cyan-400/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 text-center"
+                >
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </motion.div>
           {/* Bottom Section */}
           <div className="border-t border-gray-700 pt-8">
             <div className="flex flex-col lg:flex-row items-center justify-between">
