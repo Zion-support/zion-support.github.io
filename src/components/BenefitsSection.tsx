@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
+
 import { GradientHeading } from './ui/GradientHeading';
 
 interface Benefit {
@@ -46,7 +46,7 @@ const benefits: Benefit[] = [
   },
   {
     title: "24/7 Support",
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
+    description: "Our dedicated team is available around the clock to assist with  questions or issues you might encounter during your journey.",
     icon: <Clock className="w-8 h-8" />,
     color: "from-zion-blue to-zion-blue-dark",
     bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
@@ -76,7 +76,7 @@ const benefits: Benefit[] = [
 
 
 
-export function BenefitsSection(...args: any[]): any {
+export function BenefitsSection(...args: []):  {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
   const containerVariants = {
@@ -227,7 +227,7 @@ export function BenefitsSection(...args: any[]): any {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: any0.3 }}
+                        transition={{ duration: 0.3 }}
                       >
                         {benefit.features.map((feature, idx)  => (
                           <motion.div 

@@ -1,37 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Users, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
-  BookOpen,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket,
-  UserCheck,
-  FileText,
-  Briefcase,
-  GraduationCap,
-  Award,
-  Heart,
-  Building
-} from 'lucide-react';
+
 
 export default function AIHRPlatform() {
   const features = [
@@ -255,7 +224,7 @@ export default function AIHRPlatform() {
               Industry-Leading Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven solutions across diverse industries and company sizes
+              Proven solutions across diverse industries and comp sizes
             </p>
           </motion.div>
 
@@ -288,10 +257,9 @@ export default function AIHRPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Company
-            </h2>
+              Flexible Pricing for Every Comp </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Scale your HR platform as your company grows
+              Scale your HR platform as your comp grows
             </p>
           </motion.div>
 

@@ -1,32 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Lock, 
-  Cloud, 
-  Shield, 
-  Users, 
-  Database, 
-  Network,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Award,
-  Rocket,
-  Target,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Filter,
-  Search,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from '../data/innovativeServices2028';
 
 export default function InnovativeServices2028() {
@@ -61,7 +36,7 @@ export default function InnovativeServices2028() {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
     
-    const iconMap: { [key: string]: any } = {
+    const iconMap: { [key: string]:  } = {
       'Brain': Brain,
       'Zap': Zap,
       'Lock': Lock,

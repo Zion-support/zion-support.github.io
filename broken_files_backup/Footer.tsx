@@ -1,75 +1,31 @@
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
+
 =======
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
+
 =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users } from "lucide-react";
+
 =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin } from "lucide-react";
+
 =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe } from "lucide-react";
+
 =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+
 =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building } from "lucide-react";
+
 =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
+
 =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+
 import { Link } from "react-router-dom";
 =======
 import { Link } from 'react-router-dom';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
-  Youtube,
-  Zap,
-  Shield,
-  Cpu,
-  Brain,
-  Building,
-  FileText,
-  HelpCircle,
-  Code,
-  Target,
-  BookOpen,
-  Handshake,
-  Award,
-  TrendingUp,
-  Palette,
-  Monitor,
-  Server,
-  Cloud,
-  Key,
-  Eye,
-  ShieldCheck,
-  Bug,
-  Activity,
-  PieChart,
-  BarChart,
-  LineChart,
-  Map,
-  Calendar,
-  Clock,
-  Heart,
-  ThumbsUp,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ExternalLink
-} from 'lucide-react';
+
 
 export function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* Comp Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
@@ -100,7 +56,7 @@ export function Footer() {
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
+
 import { motion, Variants } from 'framer-motion';
 
 const Footer: React.FC = () => {
@@ -209,7 +165,7 @@ const Footer: React.FC = () => {
         viewport={{ once: true }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
-          {/* Company Info */}
+          {/* Comp Info */}
           <motion.div className="lg:col-span-2" variants={itemVariants}>
             <div className="flex items-center mb-8">
               <div className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-4 shadow-lg">

@@ -227,7 +227,7 @@
   Leaf,
   HardDrive,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface MainSidebarProps extends React.PropsWithChildren<{}> {
 
@@ -236,7 +236,7 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function MainSidebar(...args: any[]): any {
+export function MainSidebar(...args: []):  {
   const location = useLocation();
 
   const navigationItems = [
@@ -511,6 +511,6 @@ export function MainSidebar(...args: any[]): any {
           </div>
         </div>
       </div>
-    </>
+    </
   );
-}
+}>

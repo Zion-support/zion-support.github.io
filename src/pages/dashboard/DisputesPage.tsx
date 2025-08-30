@@ -14,8 +14,8 @@ function DisputesPage() {
         
         <DisputeDashboard />
         
-      </>
-    </ProtectedRoute>
+      </
+    ></ProtectedRoute>
   );
 }
 

@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Star, 
-  Quote, 
-  ChevronLeft, 
-  ChevronRight,
-  Globe,
-  Building,
-  Users,
-  Award
- } from 'lucide-react.ts';
+
 
 interface Testimonial {
 
@@ -88,7 +80,7 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-export default function EnhancedTestimonialsSection(...args: any[]): any {
+export default function EnhancedTestimonialsSection(...args: []):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -216,7 +208,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
                       <div>
                         <h4 className="text-xl font-bold text-white">{currentTestimonialData.name}</h4>
                         <p className="text-zion-cyan">{currentTestimonialData.position}</p>
-                        <p className="text-gray-300">{currentTestimonialData.company}</p>
+                        <p className="text-gray-300">{currentTestimonialData.comp}</p>
                         <div className="flex items-center space-x-2 mt-1">
                           <Building className="w-4 h-4 text-zion-cyan" />
                           <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>

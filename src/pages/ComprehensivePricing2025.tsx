@@ -1,25 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Download, 
-  Play, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Shield,
-  Brain,
-  Cloud,
-  Users,
-  Database,
-  Lock,
-  Globe,
-  Rocket
-} from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 const ComprehensivePricing2025: React.FC = () => {
@@ -476,8 +457,8 @@ const ComprehensivePricing2025: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default ComprehensivePricing2025;
+export default ComprehensivePricing2025;>

@@ -1,46 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Target, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Cpu,
-  Lock,
-  Globe,
-  Users,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Network,
-  Database,
-  Server,
-  Code,
-  TrendingUp,
-  Activity,
-  Fingerprint,
-  Search,
-  Monitor,
-  Truck,
-  Atom,
-  Cloud,
-  Eye,
-  MessageCircle,
-  ShoppingCart,
-  Heart,
-  Leaf,
-  Package,
-  Route,
-  Warehouse,
-  AlertTriangle,
-  GitFork
-} from 'lucide-react';
+
 
 const ComprehensiveServicesShowcase2029 = () => {
   const serviceCategories = [

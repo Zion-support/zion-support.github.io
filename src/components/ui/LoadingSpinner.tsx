@@ -50,7 +50,7 @@ export default function LoadingSpinner({
 }
 
 // Optimized skeleton loader
-export function SkeletonLoader(...args: any[]): any {
+export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: anylines }).map((_, index)  => (
@@ -67,7 +67,7 @@ export function SkeletonLoader(...args: any[]): any {
 }
 
 // Button loading state
-export function ButtonLoader(...args: any[]): any {
+export function ButtonLoader(...args: []):  {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -77,7 +77,7 @@ export function ButtonLoader(...args: any[]): any {
 }
 
 // Page loading overlay
-export function PageLoaderOverlay(...args: any[]): any {
+export function PageLoaderOverlay(...args: []):  {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -101,7 +101,7 @@ export function PageLoaderOverlay(...args: any[]): any {
 }
 
 // Content loading placeholder
-export function ContentPlaceholder(...args: any[]): any {
+export function ContentPlaceholder(...args: []):  {
   const variants = {
     default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',

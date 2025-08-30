@@ -1,30 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Code, 
-  Smartphone, 
-  Globe, 
-  Database, 
-  Zap, 
-  Shield, 
-  Users, 
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Lightbulb,
-  TrendingUp,
-  Settings,
-  Workflow,
-  FileText,
-  Monitor,
-  BarChart3,
-  Rocket,
-  Building2,
-  Cpu,
-  Network,
-  GitFork
-} from 'lucide-react';
+
 
 export default function CustomDevelopment() {
   const services = [

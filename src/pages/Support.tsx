@@ -1,35 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  HelpCircle, 
-  MessageCircle, 
-  Mail, 
-  Phone, 
-  Clock, 
-  Users, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Search, 
-  FileText, 
-  Video, 
-  BookOpen, 
-  HelpCircle, 
-  Star, 
-  MapPin, 
-  Globe, 
-  Calendar,
-  Send,
-  Ticket,
-  Headphones,
-  MessageSquare,
-  VideoCall,
-  Mailbox
-} from 'lucide-react';
+
 
 const Support = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');
@@ -222,8 +194,7 @@ const Support = () => {
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Headphones className="w-10 h-10 text-white" />
-              </div>
+                <Headphones className="w-10 h-10 text-white" /></div>
               
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
                 We're Here to Help
@@ -236,15 +207,12 @@ const Support = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <div className="flex items-center gap-2 text-sm text-slate-500">
                   <Clock className="w-4 h-4" />
-                  <span>24/7 Support Available</span>
-                </div>
+                  <span>24/7 Support Available</span></div>
                 <div className="flex items-center gap-2 text-sm text-slate-500">
                   <Users className="w-4 h-4" />
-                  <span>Expert Technical Team</span>
-                </div>
+                  <span>Expert Technical Team</span></div>
               </div>
-            </motion.div>
-          </div>
+            </motion.div></div>
         </section>
 
         {/* Support Methods */}
@@ -269,22 +237,19 @@ const Support = () => {
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <method.icon className="w-8 h-8 text-white" />
-                    </div>
+                      <method.icon className="w-8 h-8 text-white" /></div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-2">{method.name}</h3>
                     <p className="text-slate-600 text-sm mb-4">{method.description}</p>
                     <div className="text-xs text-slate-500 mb-4">
                       <p>Response: {method.responseTime}</p>
-                      <p>Available: {method.availability}</p>
-                    </div>
+                      <p>Available: {method.availability}</p></div>
                     <button className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
                       {method.action}
                     </button>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </motion.div></div>
         </section>
 
         {/* Quick Actions */}
@@ -309,8 +274,7 @@ const Support = () => {
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <action.icon className="w-8 h-8 text-white" />
-                    </div>
+                      <action.icon className="w-8 h-8 text-white" /></div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-2">{action.title}</h3>
                     <p className="text-slate-600 text-sm mb-4">{action.description}</p>
                     <button className="w-full py-2 px-4 border border-blue-200 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-sm font-medium">
@@ -319,8 +283,7 @@ const Support = () => {
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </motion.div></div>
         </section>
 
         {/* Support Categories */}
@@ -350,19 +313,16 @@ const Support = () => {
                     onClick={() => setSelectedCategory(category.id)}
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <category.icon className="w-8 h-8 text-blue-600" />
-                    </div>
+                      <category.icon className="w-8 h-8 text-blue-600" /></div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-2 text-center">{category.name}</h3>
                     <p className="text-slate-600 text-sm mb-4 text-center">{category.description}</p>
                     <div className="text-xs text-slate-500 text-center">
                       <p>Response: {category.responseTime}</p>
-                      <p>Available: {category.availability}</p>
-                    </div>
+                      <p>Available: {category.availability}</p></div>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </motion.div></div>
         </section>
 
         {/* Contact Form */}
@@ -387,8 +347,7 @@ const Support = () => {
                         required
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Your full name"
-                      />
-                    </div>
+                      /></div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Email *</label>
                       <input
@@ -396,8 +355,7 @@ const Support = () => {
                         required
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="your.email@company.com"
-                      />
-                    </div>
+                      /></div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -406,9 +364,8 @@ const Support = () => {
                       <input
                         type="text"
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Your company name"
-                      />
-                    </div>
+                        placeholder="Your comp name"
+                      /></div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Support Category *</label>
                       <select
@@ -422,8 +379,7 @@ const Support = () => {
                             {category.name}
                           </option>
                         ))}
-                      </select>
-                    </div>
+                      </select></div>
                   </div>
                   
                   <div>
@@ -433,8 +389,7 @@ const Support = () => {
                       required
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Brief description of your issue"
-                    />
-                  </div>
+                    /></div>
                   
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Message *</label>
@@ -443,8 +398,7 @@ const Support = () => {
                       rows={6}
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Please provide detailed information about your issue or question..."
-                    />
-                  </div>
+                    /></div>
                   
                   <div className="flex justify-center">
                     <button
@@ -453,12 +407,9 @@ const Support = () => {
                     >
                       <Send className="w-5 h-5" />
                       Send Message
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </motion.div>
-          </div>
+                    </button></div>
+                </form></div>
+            </motion.div></div>
         </section>
 
         {/* FAQ Section */}
@@ -487,13 +438,11 @@ const Support = () => {
                     <div className="mt-3">
                       <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">
                         {item.category}
-                      </span>
-                    </div>
+                      </span></div>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </motion.div></div>
         </section>
 
         {/* CTA Section */}
@@ -517,8 +466,7 @@ const Support = () => {
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
                   Schedule a Call
-                </button>
-              </div>
+                </button>              </div>
             </motion.div>
           </div>
         </section>

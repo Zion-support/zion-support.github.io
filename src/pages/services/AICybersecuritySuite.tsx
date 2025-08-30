@@ -1,29 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Brain, 
-  Eye, 
-  Lock, 
-  AlertTriangle, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  Globe, 
-  ExternalLink,
-  Zap,
-  Users,
-  BarChart3,
-  Target,
-  Cpu,
-  Network,
-  Database,
-  FileText,
-  Monitor,
-  Activity
-} from 'lucide-react';
+
 
 export default function AICybersecuritySuite() {
   const features = [

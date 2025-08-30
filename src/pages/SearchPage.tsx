@@ -1,76 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  X, 
-  ArrowRight, 
-  Clock, 
-  TrendingUp, 
-  Star, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Building, 
-  Globe, 
-  Server, 
-  Database, 
-  Network, 
-  Lock, 
-  Heart, 
-  ShoppingCart, 
-  MessageCircle, 
-  FileText, 
-  Video, 
-  TestTube, 
-  Code, 
-  BookOpen, 
-  Briefcase, 
-  Newspaper, 
-  Target, 
-  DollarSign, 
-  Settings, 
-  Bell, 
-  Download, 
-  Edit, 
-  Trash2, 
-  Plus, 
-  Calendar, 
-  Truck, 
-  BarChart3, 
-  Atom, 
-  Leaf, 
-  Satellite, 
-  Cpu, 
-  Rocket, 
-  TrendingUp as TrendingUpIcon, 
-  Award, 
-  Activity, 
-  CheckCircle, 
-  AlertCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink, 
-  HelpCircle, 
-  Lightbulb, 
-  Info, 
-  AlertTriangle, 
-  Tag,
-  Bookmark,
-  Share2,
-  Eye,
-  Calendar as CalendarIcon,
-  User,
-  Tag as TagIcon
-} from 'lucide-react';
+
 
 interface SearchResult {
   id: string;
-  type: 'service' | 'talent' | 'equipment' | 'company';
+  type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
   description: string;
   url: string;
@@ -264,7 +199,7 @@ export default function SearchPage() {
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 800));
     
-    let filtered = mockSearchResults.filter(result => {
+    const filtered = mockSearchResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -428,7 +363,7 @@ export default function SearchPage() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  onChange={(e) => setSortBy(e.target.value as )}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="relevance">Relevance</option>

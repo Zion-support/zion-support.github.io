@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen } from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 export default function EmployeeSchedulingSaaS() {
@@ -452,7 +452,8 @@ export default function EmployeeSchedulingSaaS() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 }
 
+>

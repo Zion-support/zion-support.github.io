@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { RefreshCw, X, CheckCircle } from 'lucide-react';
+
 
 export function PWAUpdater() {
   const [updateAvailable, setUpdateAvailable] = useState(false);
@@ -72,14 +72,14 @@ export function PWAUpdater() {
                   <>
                     <RefreshCw className="w-3 h-3 animate-spin" />
                     Updating...
-                  </>
+                  </
                 ) : (
-                  <>
+                  ><>
                     <CheckCircle className="w-3 h-3" />
                     Update Now
-                  </>
+                  </
                 )}
-              </button>
+              ></button>
               <button
                 onClick={dismissUpdate}
                 className="px-3 py-2 text-gray-400 text-xs font-medium hover:text-white transition-colors duration-200"

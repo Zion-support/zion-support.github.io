@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 export default function ServicesAdvertisingPage() {
   const contact = {

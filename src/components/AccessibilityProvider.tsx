@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react.ts';
+
 
 interface AccessibilityContextType {
 
@@ -10,8 +10,8 @@ interface AccessibilityContextType {
   toggleReducedMotion: ()  => void;
   fontSize: anynumber;
   increaseFontSize: ()  => void;
-  decreaseFontSize: any()  => void;
-  resetFontSize: any()  => void;
+  decreaseFontSize: ()  => void;
+  resetFontSize: ()  => void;
   showSkipLinks: anyboolean;
   setShowSkipLinks: (show: boolean)  => void;
   voiceNavigation: anyboolean;
@@ -295,5 +295,5 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isActive]);
 
-  return <>{children}</>;
-};
+  return <>{children}</;
+};>

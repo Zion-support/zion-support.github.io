@@ -1,21 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Activity, 
-  Shield, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Users,
-  TrendingUp,
-  Globe,
-  ArrowRight,
-  Target,
-  Heart,
-  Stethoscope,
-  Microscope
-} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 const AIHealthcareDiagnostics = () => {

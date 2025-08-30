@@ -1,40 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  User, 
-  Mail, 
-  Phone, 
-  Building, 
-  Globe, 
-  MapPin, 
-  Camera, 
-  Save, 
-  Edit, 
-  X,
-  Shield,
-  Bell,
-  Palette,
-  Key,
-  Trash2,
-  Download,
-  Upload,
-  Eye,
-  EyeOff,
-  CheckCircle,
-  AlertCircle,
-  Settings,
-  UserCheck,
-  CreditCard,
-  Activity,
-  BarChart3,
-  Calendar,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Rocket
-} from 'lucide-react';
+
 
 interface UserProfile {
   firstName: string;
@@ -242,7 +208,7 @@ const Profile: React.FC = () => {
               {profile.firstName} {profile.lastName}
             </h2>
             <p className="text-slate-300 text-lg mb-1">{profile.position}</p>
-            <p className="text-slate-400">{profile.company}</p>
+            <p className="text-slate-400">{profile.comp}</p>
           </div>
           <button
             onClick={() => setIsEditing(!isEditing)}
@@ -346,7 +312,7 @@ const Profile: React.FC = () => {
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
-                value={profile.company}
+                value={profile.comp}
                 onChange={(e) => setProfile(prev => ({ ...prev, company: e.target.value }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -435,14 +401,14 @@ const Profile: React.FC = () => {
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                   Saving...
-                </>
+                </
               ) : (
-                <>
+                ><>
                   <Save className="w-5 h-5" />
                   Save Changes
-                </>
+                </
               )}
-            </button>
+            ></button>
           </div>
         )}
       </div>
@@ -590,14 +556,14 @@ const Profile: React.FC = () => {
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                 Changing Password...
-              </>
+              </
             ) : (
-              <>
+              ><>
                 <Key className="w-5 h-5" />
                 Change Password
-              </>
+              </
             )}
-          </button>
+          ></button>
         </div>
       </div>
 
@@ -843,7 +809,7 @@ const Profile: React.FC = () => {
           ].map((tab) => (
             <button
               key={tab.key}
-              onClick={() => setActiveTab(tab.key as any)}
+              onClick={() => setActiveTab(tab.key as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 activeTab === tab.key
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'

@@ -1,19 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  Contrast, 
-  MousePointer,
-  Keyboard,
-  Monitor,
-  Settings,
-  X,
-  Check,
-  AlertTriangle
- } from 'lucide-react.ts';
+
 
 interface AccessibilitySettings {
 
@@ -190,7 +177,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, [settings.screenReader]);
 
   // Update settings
-  const updateSetting = useCallback((key: anykeyof AccessibilitySettings, value: any)  => {
+  const updateSetting = useCallback((key: anykeyof AccessibilitySettings, value: )  => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
@@ -523,6 +510,6 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
           onClick={togglePanel}
         />
       )}
-    </>
+    </
   );
-};
+};>

@@ -1,21 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Database, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Shield,
-  TrendingUp,
-  Globe,
-  ArrowRight,
-  Target,
-  PieChart,
-  Activity
-} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 const AIEnterpriseResourcePlanning = () => {

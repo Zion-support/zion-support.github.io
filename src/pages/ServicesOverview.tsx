@@ -1,31 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Server, 
-  Zap, 
-  Shield, 
-  Users, 
-  Truck, 
-  Workflow, 
-  MessageSquare, 
-  BarChart3, 
-  Cloud, 
-  Database, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Cpu,
-  Lock,
-  Monitor,
-  Activity,
-  Mail,
-  Phone,
-  ExternalLink
-} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 export default function ServicesOverview() {

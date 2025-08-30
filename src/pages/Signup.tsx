@@ -1,19 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Lock, 
-  Eye, 
-  EyeOff, 
-  User,
-  Building,
-  ArrowRight,
-  Shield,
-  Zap,
-  Users,
-  CheckCircle
-} from "lucide-react";
+
 export default function Signup() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -161,10 +149,10 @@ export default function Signup() {
                 />
               </div>
             </div>
-            {/* Company Field */}
+            {/* Comp Field */}
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Company Name
+                Comp Name
               </label>
               <div className="relative">
                 <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
@@ -172,10 +160,10 @@ export default function Signup() {
                   type="text"
                   id="company"
                   name="company"
-                  value={formData.company}
+                  value={formData.comp}
                   onChange={handleChange}
                   className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  placeholder="Company name (optional)"
+                  placeholder="Comp name (optional)"
                 />
               </div>
             </div>
@@ -262,14 +250,14 @@ export default function Signup() {
                 <>
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                   Creating Account...
-                </>
+                </
               ) : (
-                <>
+                ><>
                   Create Account
                   <ArrowRight className="h-5 w-5" />
-                </>
+                </
               )}
-            </button>
+            ></button>
             {/* Divider */}
             <div className="relative">
               <div className="absolute inset-0 flex items-center">

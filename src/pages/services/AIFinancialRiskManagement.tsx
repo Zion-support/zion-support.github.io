@@ -1,4 +1,4 @@
-import { Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, TrendingUp, AlertTriangle, Zap, Target, Clock, DollarSign, Globe } from 'lucide-react';
+
 
 export default function AIFinancialRiskManagement() {
   const features = [

@@ -1,21 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, 
-  Filter, 
-  X, 
-  ChevronDown, 
-  Check, 
-  Star,
-  Tag,
-  MapPin,
-  Calendar,
-  Users,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe
- } from 'lucide-react.ts';
+
 
 interface SearchResult {
 
@@ -267,7 +252,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           <div className="relative">
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
+              onChange={(e) => setSortBy(e.target.value as )}
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
             >
               <option value="relevance">Relevance</option>

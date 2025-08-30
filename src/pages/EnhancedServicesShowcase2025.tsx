@@ -1,57 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Clock, 
-  Users, 
-  Target, 
-  Rocket, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Atom, 
-  Heart, 
-  Satellite, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Sparkles,
-  Award,
-  Globe,
-  Code,
-  Lock,
-  BarChart3,
-  Workflow,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  PenTool,
-  Building,
-  Truck,
-  DollarSign,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  FileText,
-  Cpu,
-  TrendingDown,
-  Calendar,
-  UserCheck,
-  ShieldCheck,
-  Zap as ZapIcon,
-  ShoppingCart,
-  Gauge,
-  MessageCircle as MessageCircleIcon
-} from 'lucide-react';
+
 import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
 
 export default function EnhancedServicesShowcase2025() {
@@ -447,9 +397,9 @@ export default function EnhancedServicesShowcase2025() {
             <div className="mt-4 text-sm text-gray-400">
               Showing {filteredServices.length} of {enhancedServicesCatalog2025.length} services
               {selectedCategory !== 'all' && (
-                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></>
+                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></
               )}
-            </div>
+            ></div>
           </div>
         </div>
       </section>
@@ -462,9 +412,9 @@ export default function EnhancedServicesShowcase2025() {
             <p className="text-gray-400">
               Showing <span className="text-white font-semibold">{filteredServices.length}</span> services
               {selectedCategory !== 'all' && (
-                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></>
+                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></
               )}
-            </p>
+            ></p>
           </div>
 
           {/* Services Display */}

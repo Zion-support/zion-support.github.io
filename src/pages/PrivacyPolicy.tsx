@@ -1,24 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Database, 
-  Users, 
-  Globe, 
-  Mail, 
-  Phone,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  ArrowRight,
-  ExternalLink,
-  Download,
-  FileText
-} from 'lucide-react';
+
 
 const PrivacyPolicy = () => {
   const lastUpdated = '2025-01-15';
@@ -34,7 +17,7 @@ const PrivacyPolicy = () => {
       id: 'information-collection',
       title: 'Information We Collect',
       icon: Database,
-      content: `We collect information you provide directly to us, such as when you create an account, use our services, or contact us. This may include your name, email address, phone number, company information, and any other information you choose to provide.`
+      content: `We collect information you provide directly to us, such as when you create an account, use our services, or contact us. This may include your name, email address, phone number, comp information, and  other information you choose to provide.`
     },
     {
       id: 'usage-information',
@@ -88,20 +71,20 @@ const PrivacyPolicy = () => {
       id: 'changes',
       title: 'Changes to This Policy',
       icon: AlertTriangle,
-      content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
+      content: `We may update this Privacy Policy from time to time. We will notify you of  changes by posting the new policy on this page and updating the "Last Updated" date.`
     },
     {
       id: 'contact',
       title: 'Contact Us',
       icon: Mail,
-      content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`
+      content: `If you have  questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`
     }
   ];
 
   const dataCategories = [
     {
       category: 'Personal Information',
-      examples: ['Name, email address, phone number', 'Company and job title', 'Billing and payment information'],
+      examples: ['Name, email address, phone number', 'Comp and job title', 'Billing and payment information'],
       purpose: 'Account management, service delivery, billing',
       retention: 'As long as your account is active plus 7 years'
     },
@@ -357,7 +340,7 @@ const PrivacyPolicy = () => {
                 Questions About Privacy?
               </h2>
               <p className="text-xl text-green-100 mb-8">
-                Our privacy team is here to help. Contact us with any questions about your data or our privacy practices.
+                Our privacy team is here to help. Contact us with  questions about your data or our privacy practices.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -384,8 +367,8 @@ const PrivacyPolicy = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicy;>

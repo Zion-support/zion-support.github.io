@@ -92,8 +92,8 @@ export default function PricingPage() {
       answer: 'We accept all major credit cards, bank transfers, and can accommodate custom payment terms for enterprise clients.'
     },
     {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
+      question: 'Can I change my plan at  time?',
+      answer: 'Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.'
     },
     {
       question: 'Is there a setup fee?',
@@ -109,7 +109,7 @@ export default function PricingPage() {
     },
     {
       question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
+      answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
     }
   ];
   return (
@@ -278,6 +278,7 @@ export default function PricingPage() {
           </div>
         </section>
       </main>
-    </>
+    </
   );
 }
+>

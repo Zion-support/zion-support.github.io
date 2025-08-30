@@ -1,87 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Atom,
-  Blockchain,
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck,
-  Eye,
-  EyeOff,
-  ExternalLink,
-  Award,
-  Target,
-  Lightbulb,
-  Sparkles,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Dna,
-  Space,
-  Layers,
-  Monitor,
-  Smartphone,
-  Globe2,
-  Leaf,
-  BarChart3,
-  PieChart,
-  TrendingDown,
-  Activity,
-  Shield as ShieldIcon,
-  Lock as LockIcon,
-  Key,
-  Database as DatabaseIcon,
-  Server as ServerIcon,
-  Wifi,
-  Smartphone as SmartphoneIcon,
-  Monitor as MonitorIcon,
-  Globe as GlobeIcon2,
-  Cpu as CpuIcon,
-  Brain as BrainIcon2,
-  Atom as AtomIcon,
-  Rocket as RocketIcon,
-  Satellite as SatelliteIcon,
-  Dna as DnaIcon,
-  Layers as LayersIcon,
-  Monitor as MonitorIcon2,
-  Smartphone as SmartphoneIcon2,
-  Globe as GlobeIcon3,
-  Cpu as CpuIcon2,
-  Network as NetworkIcon,
-  Leaf as LeafIcon
-} from 'lucide-react';
+
 import { SEO } from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
@@ -408,14 +328,14 @@ export default function ComprehensiveServicesOverview2026() {
                       <>
                         <EyeOff className="w-4 h-4" />
                         Show Less
-                      </>
+                      </
                     ) : (
-                      <>
+                      ><>
                         <Eye className="w-4 h-4" />
                         View All Services
-                      </>
+                      </
                     )}
-                  </button>
+                  ></button>
 
                   {/* Expanded Services Details */}
                   <AnimatePresence>

@@ -1,68 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Lock, 
-  User, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  ArrowRight,
-  Github,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Globe,
-  Building,
-  Users,
-  Star,
-  CheckCircle,
-  AlertCircle,
-  HelpCircle,
-  MessageCircle,
-  Phone,
-  MapPin,
-  Mail as MailIcon,
-  Clock,
-  Shield as ShieldIcon,
-  Activity,
-  TrendingUp,
-  Award,
-  Rocket,
-  Atom,
-  Network,
-  Leaf,
-  Satellite,
-  Cpu,
-  Database,
-  Server,
-  Lock as LockIcon,
-  Heart,
-  ShoppingCart,
-  FileText,
-  Video,
-  TestTube,
-  Code,
-  BookOpen,
-  Briefcase,
-  Newspaper,
-  Target,
-  DollarSign,
-  Settings,
-  Bell,
-  Search,
-  Filter,
-  Download,
-  Edit,
-  Trash2,
-  Plus,
-  Calendar,
-  Truck,
-  BarChart3
-} from 'lucide-react';
+
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -297,7 +236,7 @@ export default function Login() {
         </motion.div>
       </div>
 
-      {/* Right Side - Company Info & Features */}
+      {/* Right Side - Comp Info & Features */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 p-12 text-white">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
@@ -305,7 +244,7 @@ export default function Login() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="w-full max-w-lg mx-auto"
         >
-          {/* Company Header */}
+          {/* Comp Header */}
           <div className="mb-12">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-3xl mb-6">
               <Zap className="h-10 w-10 text-white" />

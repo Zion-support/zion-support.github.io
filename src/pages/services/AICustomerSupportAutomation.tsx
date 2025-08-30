@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
-import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield } from 'lucide-react';
+
 
 export default function AICustomerSupportAutomation() {
   const features = [
@@ -160,7 +160,7 @@ export default function AICustomerSupportAutomation() {
                 <MessageCircle className="w-10 h-10 text-green-400" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Customer Inquiry</h3>
-              <p className="text-slate-300">Customer asks a question through any channel (chat, email, social media)</p>
+              <p className="text-slate-300">Customer asks a question through  channel (chat, email, social media)</p>
             </div>
             
             <div className="text-center">

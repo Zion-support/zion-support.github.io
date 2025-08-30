@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, useInView  } from 'framer-motion.ts';
 import { useRef  } from 'react.ts';
-import { TrendingUp, Award, Users, Clock  } from 'lucide-react.ts';
+
 
 interface Stat {
 

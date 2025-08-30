@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react.ts';
-import { Activity, Zap, Clock, TrendingUp, AlertTriangle } from 'lucide-react.ts';
+
 
 interface PerformanceMetrics {
   fcp: number | null; // First Contentful Paint
@@ -127,7 +127,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       // Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
-        list.getEntries().forEach((entry: any) => {
+        list.getEntries().forEach((entry: ) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }

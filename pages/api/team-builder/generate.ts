@@ -8,7 +8,7 @@ import { ProjectBrief, TeamRecommendation } from '@/types';
 /*
 export default async function handler(
   req: any, // Placeholder for actual request type in this environment
-  res: any  // Placeholder for actual response type in this environment
+  res:  // Placeholder for actual response type in this environment
 ) {
   if (req.method !== 'POST') {
     // res.setHeader('Allow', ['POST']); // Placeholder
@@ -38,7 +38,7 @@ export default async function handler(
 
     res.status(200).json(data as TeamRecommendation);
 
-  } catch (error: any) {
+  } catch (error: ) {
     console.error('Error in /api/team-builder/generate:', error);
     if (error.context && error.context.errorMessage) {
         return res.status(500).json({ error: `Failed to generate team recommendation: ${error.context.errorMessage}` });

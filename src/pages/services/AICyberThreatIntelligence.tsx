@@ -1,21 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Eye, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Globe,
-  TrendingUp,
-  ArrowRight,
-  Target,
-  AlertTriangle,
-  Activity,
-  BarChart3,
-  Lock
-} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 const AICyberThreatIntelligence = () => {
@@ -28,7 +13,7 @@ const AICyberThreatIntelligence = () => {
     {
       icon: Eye,
       title: "24/7 Monitoring",
-      description: "Continuous surveillance of your digital infrastructure with instant alerts for any suspicious activity"
+      description: "Continuous surveillance of your digital infrastructure with instant alerts for  suspicious activity"
     },
     {
       icon: Shield,

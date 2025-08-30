@@ -3,28 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from "../components/SEOHead";
 import { innovativeServices2027 } from '../data/innovativeServices2027';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  Code, 
-  Signal, 
-  Users, 
-  Truck,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  CheckCircle,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Cloud,
-  Rocket
-} from 'lucide-react';
+
 
 const AllServices2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -332,12 +311,12 @@ const AllServices2027: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </
   );
 };
 
 // Service Card Component
-const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
+const ServiceCard: React.FC><{ service:  }> = ({ service }) => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services':

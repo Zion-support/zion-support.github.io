@@ -4,21 +4,7 @@ import { Button  } from './ui/button';
 import { Badge  } from './ui/badge';
 import { Progress  } from './ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from './ui/tabs';
-import { User, 
-  Settings, 
-  Palette, 
-  Eye, 
-  MousePointer, 
-  Smartphone,
-  Monitor,
-  Zap,
-  Heart,
-  Star,
-  MessageCircle,
-  TrendingUp,
-  Accessibility,
-  Languages
- } from 'lucide-react.ts';
+
 
 interface UserPreference {
 
@@ -66,7 +52,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
   useEffect(() => {
     const initialPreferences: UserPreference[] = [
       {
-        id: any'1',
+        id: '1',
         name: 'Theme',
         value: 'light',
         type: 'select',
@@ -124,7 +110,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
   useEffect(()  => {
     const features: AccessibilityFeature[] = [
       {
-        id: any'1',
+        id: '1',
         name: 'Screen Reader Support',
         enabled: true,
         description: 'Full compatibility with screen readers and assistive technologies',

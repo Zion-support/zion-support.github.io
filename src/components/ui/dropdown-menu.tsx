@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react.ts';
 const DropdownMenuContext = createContext(undefined);
-export function DropdownMenu(...args: any[]): any {
+export function DropdownMenu(...args: []):  {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value={{ isOpen, setIsOpen }}>
       <div className="relative">
@@ -8,7 +8,7 @@ export function DropdownMenu(...args: any[]): any {
       </div>
     </DropdownMenuContext.Provider>);
 }
-export function DropdownMenuTrigger(...args: any[]): any {
+export function DropdownMenuTrigger(...args: []):  {
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
@@ -21,7 +21,7 @@ export function DropdownMenuTrigger(...args: any[]): any {
       {children}
     </div>);
 }
-export function DropdownMenuContent(...args: any[]): any {
+export function DropdownMenuContent(...args: []):  {
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
@@ -36,7 +36,7 @@ export function DropdownMenuContent(...args: any[]): any {
       {children}
     </div>);
 }
-export function DropdownMenuItem(...args: any[]): any {
+export function DropdownMenuItem(...args: []):  {
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuItem must be used within DropdownMenu');

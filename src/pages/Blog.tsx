@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Calendar, Clock, User, Tag, Search, Filter, 
-  ArrowRight, BookOpen, TrendingUp, Star, Eye
-} from 'lucide-react';
+
 
 function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -369,7 +366,7 @@ function Blog() {
             </div>
             
             <p className="text-sm text-slate-400 mt-4">
-              No spam, unsubscribe at any time. We respect your privacy.
+              No spam, unsubscribe at  time. We respect your privacy.
             </p>
           </motion.div>
         </div>

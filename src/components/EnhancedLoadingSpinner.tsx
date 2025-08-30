@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Loader2, Zap, Brain, Cloud, Atom } from 'lucide-react';
+
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -125,9 +125,9 @@ export function EnhancedLoadingSpinner({
             >
               <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-purple-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
             </motion.div>
-          </>
+          </
         )}
-      </div>
+      ></div>
 
       {/* Loading Text */}
       <motion.p

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock } from 'lucide-react'
+
 
 
 export default function Careers() {
@@ -219,6 +219,7 @@ export default function Careers() {
 					</div>
 				</div>
 			</section>
-		</>
+		</
 	)
 }
+>

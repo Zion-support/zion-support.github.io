@@ -1,45 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Users, 
-  Calendar, 
-  Clock, 
-  Target, 
-  TrendingUp, 
-  AlertCircle,
-  CheckCircle,
-  XCircle,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  BarChart3,
-  PieChart,
-  Activity,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Settings,
-  RefreshCw,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Star,
-  Award,
-  Briefcase,
-  Home,
-  Building,
-  Wifi,
-  Server,
-  Database,
-  Lock,
-  Unlock
- } from 'lucide-react.ts';
+
 
 interface Resource {
 
@@ -103,7 +64,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   useEffect(() => {
     const sampleResources: Resource[] = [
       {
-        id: any'1',
+        id: '1',
         name: 'AI Development Team',
         type: 'human',
         category: 'Development',
@@ -235,7 +196,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     totalCapacity: anyresources.reduce((sum, r)  => sum + r.capacity, 0),
     currentUtilization: anyresources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
     averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: any(()  => {
+    topDepartments: (()  => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
@@ -245,7 +206,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         .map(([name, count]) => ({
           name,
           count,
-          percentage: any(count / resources.length) * 100
+          percentage: (count / resources.length) * 100
         }))
         .sort((a, b)  => b.count - a.count)
         .slice(0, 5);
@@ -315,7 +276,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
         <div>
           <h1 className="text-4xl font-bold text-white mb-2">Resource Management</h1>
-          <p className="text-zinc-400 text-lg">Monitor and manage all company resources efficiently</p>
+          <p className="text-zinc-400 text-lg">Monitor and manage all comp resources efficiently</p>
         </div>
         
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
@@ -328,7 +289,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'

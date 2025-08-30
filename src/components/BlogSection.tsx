@@ -1,5 +1,5 @@
 
-export function BlogSection(...args: any[]): any {
+export function BlogSection(...args: []):  {
   const blogPosts = [
     {
       id: '1',

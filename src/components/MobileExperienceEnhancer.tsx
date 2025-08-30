@@ -1,51 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, 
-  Tablet, 
-  Monitor, 
-  RotateCw, 
-  Touch, 
-  Hand, 
-  Wifi, 
-  Battery, 
-  Settings, 
-  X, 
-  CheckCircle, 
-  AlertTriangle, 
-  Info,
-  Zap,
-  Shield,
-  Target,
-  Award,
-  BarChart3,
-  Palette,
-  RotateCcw,
-  Save,
-  Loader2,
-  Smartphone as PhoneIcon,
-  Wifi as WifiIcon,
-  Battery as BatteryIcon,
-  Signal,
-  Volume2,
-  VolumeX,
-  Sun,
-  Moon,
-  Eye,
-  EyeOff,
-  Fingerprint,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  ArrowDown,
-  Pinch,
-  RotateCw as Rotate,
-  Shake,
-  MousePointer,
-  Clock,
-  DoubleArrow,
-  Move
-} from 'lucide-react';
+
 
 interface MobileSettings {
   touchGestures: boolean;
@@ -239,7 +194,7 @@ export function MobileExperienceEnhancer({
         orientation: screen.width > screen.height ? 'landscape' : 'portrait',
         touchSupport: 'ontouchstart' in window,
         pwaSupport: 'serviceWorker' in navigator,
-        networkType: (navigator as any).connection?.effectiveType || 'unknown',
+        networkType: (navigator as ).connection?.effectiveType || 'unknown',
         batteryLevel: 0
       };
       
@@ -247,7 +202,7 @@ export function MobileExperienceEnhancer({
       
       // Get battery level if available
       if ('getBattery' in navigator) {
-        (navigator as any).getBattery().then((battery: any) => {
+        (navigator as ).getBattery().then((battery: ) => {
           setDeviceInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
         });
       }
@@ -800,7 +755,7 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.touchSensitivity}
-                            onChange={(e) => setSettings(prev => ({ ...prev, touchSensitivity: e.target.value as any }))}
+                            onChange={(e) => setSettings(prev => ({ ...prev, touchSensitivity: e.target.value as  }))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
                             <option value="low">Low</option>
@@ -815,7 +770,7 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.hapticIntensity}
-                            onChange={(e) => setSettings(prev => ({ ...prev, hapticIntensity: e.target.value as any }))}
+                            onChange={(e) => setSettings(prev => ({ ...prev, hapticIntensity: e.target.value as  }))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
                             <option value="light">Light</option>
@@ -830,7 +785,7 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.deviceOrientation}
-                            onChange={(e) => setSettings(prev => ({ ...prev, deviceOrientation: e.target.value as any }))}
+                            onChange={(e) => setSettings(prev => ({ ...prev, deviceOrientation: e.target.value as  }))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
                             <option value="auto">Auto</option>
@@ -915,6 +870,6 @@ export function MobileExperienceEnhancer({
           }
         }
       `}</style>
-    </>
+    </
   );
-}
+}>

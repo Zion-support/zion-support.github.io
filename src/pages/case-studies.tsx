@@ -1,22 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  CheckCircle,
-  TrendingUp,
-  Users,
-  DollarSign,
-  Clock,
-  Target,
-  ArrowRight,
-  Star,
-  Award,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Globe
-} from 'lucide-react';
+
 
 const caseStudies = [
   {
@@ -278,7 +263,7 @@ export default function CaseStudies() {
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <span className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
-                        {study.company}
+                        {study.comp}
                       </span>
                       <span className="flex items-center gap-1">
                         <Globe className="w-4 h-4" />

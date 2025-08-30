@@ -1,37 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Search, 
-  BookOpen, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  Workflow,
-  Lightbulb,
-  Zap,
-  Shield,
-  Eye,
-  Code,
-  GitFork,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 export default function AIAutonomousResearchAssistant() {
@@ -185,7 +154,7 @@ export default function AIAutonomousResearchAssistant() {
     },
     {
       title: "Citation Network Analysis",
-      description: "Map research influence and identify key papers in any field",
+      description: "Map research influence and identify key papers in  field",
       icon: GitFork
     },
     {

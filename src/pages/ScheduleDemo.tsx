@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 interface DemoFormData {
@@ -238,15 +238,15 @@ const ScheduleDemo: React.FC = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company *
+                        Comp *
                       </label>
                       <input
                         type="text"
                         required
-                        value={formData.company}
+                        value={formData.comp}
                         onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Enter company name"
+                        placeholder="Enter comp name"
                       />
                     </div>
                   </div>

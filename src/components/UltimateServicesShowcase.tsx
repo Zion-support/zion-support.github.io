@@ -1,25 +1,7 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Globe, 
-  Code, 
-  BarChart3, 
-  Users, 
-  ShoppingCart,
-  MessageSquare,
-  FileText,
-  Settings,
-  Zap,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
- } from 'lucide-react.ts';
+
 
 // Import the new services
 import { ultimateInnovativeServices2025  } from '../../data/2025-ultimate-innovative-services-expansion';
@@ -85,7 +67,7 @@ const categories = [
     name: 'AI & Autonomous Systems',
     description: 'Revolutionary AI solutions that transform business operations',
     icon: <Brain className="w-8 h-8" />,
-    color: any'from-purple-600 to-pink-700',
+    color: 'from-purple-600 to-pink-700',
     services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
   },
   {
@@ -120,7 +102,7 @@ const patentStatusColors = {
   'Open Source': 'from-purple-600 to-violet-700'
 };
 
-export function UltimateServicesShowcase(...args: any[]): any {
+export function UltimateServicesShowcase(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 

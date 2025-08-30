@@ -1,30 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Bot, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  ArrowRight, 
-  Cpu, 
-  Network,
-  Settings,
-  BarChart3,
-  Clock,
-  CheckCircle,
-  Play,
-  Download,
-  BookOpen,
-  MessageSquare,
-  Workflow,
-  Target,
-  Database,
-  Rocket,
-  Star
-} from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 const AutonomousBusinessOperationsPlatform: React.FC = () => {
@@ -393,8 +370,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default AutonomousBusinessOperationsPlatform;
+export default AutonomousBusinessOperationsPlatform;>

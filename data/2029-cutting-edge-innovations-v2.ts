@@ -98,7 +98,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     tagline: 'Real-time emotion analysis and response with human-like understanding',
     price: '$3,999',
     period: '/month',
-    description: 'Advanced AI platform that understands, analyzes, and responds to human emotions in real-time. Perfect for customer service, mental health, education, and any application requiring emotional intelligence.',
+    description: 'Advanced AI platform that understands, analyzes, and responds to human emotions in real-time. Perfect for customer service, mental health, education, and  application requiring emotional intelligence.',
     features: [
       'Real-time emotion detection',
       'Multi-modal emotion analysis',

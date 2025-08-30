@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react.ts';
+
 
 interface Testimonial {
 
@@ -136,7 +136,7 @@ const Testimonials: React.FC = (): JSX.Element => {
                   {testimonials[currentIndex].role}
                 </p>
                 <p className="text-zion-slate-light text-sm mb-2">
-                  {testimonials[currentIndex].company}
+                  {testimonials[currentIndex].comp}
                 </p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-xs font-medium">
                   {testimonials[currentIndex].industry}

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 
 export default function MicroSAASSolutions() {
@@ -406,6 +406,6 @@ export default function MicroSAASSolutions() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
-}
+}>

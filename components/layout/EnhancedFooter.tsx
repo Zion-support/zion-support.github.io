@@ -1,28 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp, 
-  Globe, 
-  Heart,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Users,
-  Building,
-  FileText,
-  HelpCircle,
-  Lock,
-  Award
-} from 'lucide-react';
+
 
 const footerNavigation = {
 	services: {
@@ -48,7 +26,7 @@ const footerNavigation = {
 		],
 	},
 	company: {
-		title: 'Company',
+		title: 'Comp',
 		items: [
 			{ name: 'About Us', href: '/about' },
 			{ name: 'Partners', href: '/partners' },
@@ -103,7 +81,7 @@ const EnhancedFooter: React.FC = () => {
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				{/* Main Footer Content */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-					{/* Company info */}
+					{/* Comp info */}
 					<div className="lg:col-span-2">
 						<div className="mb-6">
 							<div className="flex items-center gap-3 mb-4">

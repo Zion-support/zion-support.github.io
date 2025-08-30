@@ -66,7 +66,7 @@ export interface APISchema {
   properties?: Record<string, APISchema>;
   items?: APISchema;
   required?: string[];
-  enum?: any[];
+  enum?: [];
   example?: any;
   deprecated?: boolean;
   minimum?: number;
@@ -500,7 +500,7 @@ export class APIDocGeneratorService {
     }
     return examples;
   }
-  private generateExampleBody(requestBody: APIRequestBody): any {
+  private generateExampleBody(requestBody: APIRequestBody):  {
     // Generate example request body based on schema
     return {
       name: "Example Name",
@@ -508,7 +508,7 @@ export class APIDocGeneratorService {
       description: "This is an example description"
     };
   }
-  private generateExampleResponse(response: APIResponse): any {
+  private generateExampleResponse(response: APIResponse):  {
     // Generate example response based on schema
     if (response.content?.['application/json']?.schema) {
       return {

@@ -150,7 +150,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security: ['HIPAA Compliance', 'Data Encryption', 'Access Control']
     },
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs'],
-    caseStudies: ['Hospital achieved 90% success rate in rehabilitation', 'Gaming company increased user engagement by 300%']
+    caseStudies: ['Hospital achieved 90% success rate in rehabilitation', 'Gaming comp increased user engagement by 300%']
   },
   {
     id: 'space-mining-autonomous-system-2026',

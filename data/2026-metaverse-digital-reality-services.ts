@@ -1,4 +1,4 @@
-export const metaverseDigitalRealityServices2026 = [] as any[];
+export const metaverseDigitalRealityServices2026 = [] as [];
 export interface MetaverseDigitalRealityService2026 {
   id: string;
   name: string;

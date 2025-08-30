@@ -1,44 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Calculator, 
-  Send, 
-  CheckCircle, 
-  AlertCircle, 
-  Clock, 
-  DollarSign, 
-  Users, 
-  Calendar, 
-  FileText, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Building, 
-  Globe, 
-  Target, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  ChevronUp,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Network,
-  Server,
-  Rocket,
-  Users as Team,
-  Award,
-  TrendingUp,
-  Lightbulb,
-  CheckSquare,
-  Square,
-  Info,
-  HelpCircle
-} from 'lucide-react';
+
 
 interface QuoteForm {
-  // Company Information
+  // Comp Information
   companyName: string;
   industry: string;
   companySize: string;
@@ -290,7 +255,7 @@ export default function RequestQuote() {
 
   const getStepTitle = (step: number) => {
     switch (step) {
-      case 1: return 'Company & Contact';
+      case 1: return 'Comp & Contact';
       case 2: return 'Project Details';
       case 3: return 'Budget & Timeline';
       case 4: return 'Additional Info';
@@ -388,7 +353,7 @@ export default function RequestQuote() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8">
-            {/* Step 1: Company & Contact Information */}
+            {/* Step 1: Comp & Contact Information */}
             {currentStep === 1 && (
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -397,14 +362,14 @@ export default function RequestQuote() {
                 className="space-y-6"
               >
                 <div className="text-center mb-8">
-                  <h2 className="text-2xl font-bold text-white mb-2">Company & Contact Information</h2>
-                  <p className="text-zion-slate-light">Tell us about your company and how to reach you</p>
+                  <h2 className="text-2xl font-bold text-white mb-2">Comp & Contact Information</h2>
+                  <p className="text-zion-slate-light">Tell us about your comp and how to reach you</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="companyName" className="block text-white font-medium mb-2">
-                      Company Name *
+                      Comp Name *
                     </label>
                     <input
                       type="text"
@@ -414,7 +379,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       required
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your company name"
+                      placeholder="Enter your comp name"
                     />
                   </div>
 
@@ -441,7 +406,7 @@ export default function RequestQuote() {
 
                   <div>
                     <label htmlFor="companySize" className="block text-white font-medium mb-2">
-                      Company Size
+                      Comp Size
                     </label>
                     <select
                       id="companySize"
@@ -450,7 +415,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
                     >
-                      <option value="">Select company size</option>
+                      <option value="">Select comp size</option>
                       {companySizes.map(size => (
                         <option key={size} value={size} className="bg-zion-slate-dark text-white">
                           {size}
@@ -784,7 +749,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       rows={3}
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
-                      placeholder="Describe any third-party integrations or systems that need to be connected..."
+                      placeholder="Describe  third-party integrations or systems that need to be connected..."
                     />
                   </div>
 
@@ -856,14 +821,14 @@ export default function RequestQuote() {
                     <>
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                       Submitting...
-                    </>
+                    </
                   ) : (
-                    <>
+                    ><>
                       <Send className="h-4 w-4" />
                       Submit Quote Request
-                    </>
+                    </
                   )}
-                </button>
+                ></button>
               )}
             </div>
           </form>

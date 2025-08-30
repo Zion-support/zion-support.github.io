@@ -1,4 +1,4 @@
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from 'lucide-react';
+
 
 const IoTServices = () => {
   const iotServices = [

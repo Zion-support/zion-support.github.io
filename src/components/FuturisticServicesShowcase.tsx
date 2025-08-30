@@ -1,20 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Rocket, 
-	Brain, 
-	Zap, 
-	Shield, 
-	Globe, 
-	TrendingUp, 
-	Heart, 
-	DollarSign, 
-	Eye, 
-	Bot,
-	ArrowRight,
-	Star,
-	Play,
-	Pause
- } from 'lucide-react.ts';
+
 interface ServiceShowcase {
 
 	id: string;
@@ -89,7 +75,7 @@ const futuristicServices: ServiceShowcase[] = [
 		status: 'active'
 	}
 ];
-export default function FuturisticServicesShowcase(...args: any[]): any {
+export default function FuturisticServicesShowcase(...args: []):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {

@@ -525,7 +525,7 @@ const PricingComparison: React.FC = () => {
                 <div className="text-center">
                   <div className="text-4xl mb-4">🚀</div>
                   <h3 className="text-xl font-semibold text-white mb-3">14-Day Free Trial</h3>
-                  <p className="text-gray-300">Try any service risk-free with our comprehensive trial period</p>
+                  <p className="text-gray-300">Try  service risk-free with our comprehensive trial period</p>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl mb-4">💰</div>
@@ -604,8 +604,8 @@ const PricingComparison: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default PricingComparison;
+export default PricingComparison;>

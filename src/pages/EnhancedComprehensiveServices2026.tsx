@@ -1,62 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Server,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Atom,
-  Blockchain,
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck,
-  Eye,
-  Download,
-  ExternalLink,
-  Award,
-  Target,
-  Lightbulb,
-  BarChart3,
-  PieChart,
-  Activity,
-  Gauge,
-  ShieldCheck,
-  X,
-  Sparkles,
-  Crown,
-  Target as TargetIcon,
-  Zap as ZapIcon,
-  Grid,
-  List
-} from 'lucide-react';
+
 
 // Import our existing service data
 import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
@@ -168,7 +112,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
   }, [allServices]);
 
   const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
+    const filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -326,7 +270,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
             <div className="flex-shrink-0">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor } from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 export default function AffiliateMarketingTracker() {
@@ -319,7 +319,8 @@ export default function AffiliateMarketingTracker() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 }
 
+>

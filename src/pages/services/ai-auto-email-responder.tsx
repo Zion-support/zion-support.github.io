@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 
 export default function AIAutoEmailResponder() {
@@ -147,7 +147,7 @@ export default function AIAutoEmailResponder() {
                 },
                 {
                   title: "Internal Communication",
-                  description: "Team notifications, project updates, and company announcements.",
+                  description: "Team notifications, project updates, and comp announcements.",
                   icon: MessageCircle,
                   benefits: ["Team notifications", "Project updates", "Announcements"]
                 },
@@ -374,6 +374,6 @@ export default function AIAutoEmailResponder() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
-}
+}>

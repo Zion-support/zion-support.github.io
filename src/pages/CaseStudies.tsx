@@ -1,32 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Building, 
-  Users, 
-  TrendingUp, 
-  ArrowRight, 
-  Search, 
-  Filter, 
-  Calendar,
-  Star,
-  Eye,
-  Share2,
-  Bookmark,
-  Target,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Atom,
-  Network,
-  Heart,
-  DollarSign,
-  Clock,
-  MapPin,
-  Factory
-} from 'lucide-react';
+
 
 export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -276,7 +250,7 @@ export default function CaseStudies() {
                       </span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{cs.title}</h3>
-                    <p className="text-gray-600 mb-3 font-medium">{cs.company}</p>
+                    <p className="text-gray-600 mb-3 font-medium">{cs.comp}</p>
                     <p className="text-gray-600 mb-4">{cs.challenge}</p>
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <span className="flex items-center">
@@ -327,7 +301,7 @@ export default function CaseStudies() {
                       </span>
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{cs.title}</h3>
-                    <p className="text-gray-600 mb-2 font-medium">{cs.company}</p>
+                    <p className="text-gray-600 mb-2 font-medium">{cs.comp}</p>
                     <p className="text-gray-600 mb-3">{cs.challenge}</p>
                     <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
                       <span className="flex items-center">

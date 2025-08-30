@@ -1,21 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Link as LinkIcon, 
-  Shield, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Globe,
-  TrendingUp,
-  ArrowRight,
-  Target,
-  Database,
-  Activity,
-  BarChart3,
-  Network
-} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 const AIBlockchainSupplyChain = () => {

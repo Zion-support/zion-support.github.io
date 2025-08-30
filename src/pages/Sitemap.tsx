@@ -1,42 +1,5 @@
 import { Link } from 'react-router-dom';
-import { 
-  Home, 
-  Users, 
-  Building, 
-  BookOpen, 
-  MessageCircle, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  ShoppingCart, 
-  BarChart3, 
-  Code, 
-  Globe, 
-  ArrowRight, 
-  Star,
-  FileText,
-  Calendar,
-  HelpCircle,
-  Settings,
-  Target,
-  TrendingUp,
-  Heart,
-  Award,
-  Rocket,
-  Atom,
-  Lock,
-  Database,
-  Network,
-  Smartphone,
-  Wifi,
-  Leaf,
-  Factory,
-  City,
-  Car,
-  Building2,
-  DollarSign
-} from 'lucide-react';
+
 
 interface SitemapSection {
   title: string;
@@ -59,8 +22,8 @@ const Sitemap: React.FC = () => {
       icon: Home,
       color: 'from-blue-500 to-cyan-500',
       pages: [
-        { name: 'Home', href: '/', description: 'Main landing page with company overview and services', featured: true },
-        { name: 'About', href: '/about', description: 'Company information, mission, and team details', featured: true },
+        { name: 'Home', href: '/', description: 'Main landing page with comp overview and services', featured: true },
+        { name: 'About', href: '/about', description: 'Comp information, mission, and team details', featured: true },
         { name: 'Contact', href: '/contact', description: 'Contact information and inquiry forms', featured: true },
         { name: 'Pricing', href: '/pricing', description: 'Service pricing and package information', featured: true },
         { name: 'Careers', href: '/careers', description: 'Job opportunities and career information', featured: false },

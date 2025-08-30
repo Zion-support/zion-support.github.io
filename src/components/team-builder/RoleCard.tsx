@@ -2,7 +2,7 @@ import { RecommendedRole  } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { TalentCardPreview  } from './TalentCardPreview';
-import { Users, DollarSign, Clock, Briefcase  } from 'lucide-react.ts'; // Added Briefcase
+ // Added Briefcase
 
 interface RoleCardProps extends React.PropsWithChildren<{}> {
 
@@ -47,9 +47,9 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
                 />
               ))}
             </div>
-          </>
+          </
         ) : (
-          <p className="text-sm text-muted-foreground">No specific talent matches found for this role based on current criteria. You can still add this role to your team.</p>
+          ><p className="text-sm text-muted-foreground">No specific talent matches found for this role based on current criteria. You can still add this role to your team.</p>
         )}
       </CardContent>
     </Card>

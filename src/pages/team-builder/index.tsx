@@ -14,7 +14,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { useState } from 'react';
 import { ProjectBrief, TeamRecommendation } from '@/types'; // Import from barrel file
 import { toast } from 'sonner'; // Or use-toast if that's the project's standard
-import { Loader2 } from 'lucide-react';
+
 import { TeamRecommendationDisplay } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation
@@ -109,7 +109,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
@@ -150,7 +150,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }
@@ -221,10 +221,10 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
                       />
                       {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
                     </div>
-                  </>
+                  </
                 )}
                 {currentStep === 1 && (
-                  <>
+                  ><>
                     <div>
                       <Label htmlFor="timeline">Timeline</Label>
                       <Controller
@@ -331,10 +331,10 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
                          {errors.talentFilters?.regions && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}
                       </div>
                     </div>
-                  </>
+                  </
                 )}
                 {currentStep === 2 && (
-                  <div>
+                  ><div>
                     <h3 className="text-lg font-medium">Review Your Project Brief</h3>
                     <p>Review your project details below. If everything looks good, submit to get your team recommendation.</p>
                     {/* Add a summary of the entered data here later if needed */}

@@ -1,25 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Zap, 
-  Code, 
-  Database, 
-  Users, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  Star,
-  TrendingUp,
-  BarChart3,
-  Settings,
-  Lightbulb,
-  Briefcase,
-  Award,
-  Rocket,
-  Target,
-  Globe
-} from 'lucide-react';
+
 const MicroSAASPage = () => {
   const saasServices = [
     {

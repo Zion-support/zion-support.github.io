@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  ArrowLeft, 
-  CheckCircle, 
-  AlertCircle, 
-  Shield, 
-  Lock, 
-  Zap,
-  Brain,
-  Cloud,
-  Rocket,
-  ArrowRight,
-  RefreshCw
-} from 'lucide-react';
+
 
 const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -194,14 +181,14 @@ const ForgotPassword: React.FC = () => {
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
               Sending Code...
-            </>
+            </
           ) : (
-            <>
+            ><>
               Send Verification Code
               <ArrowRight className="w-5 h-5" />
-            </>
+            </
           )}
-        </button>
+        ></button>
       </form>
     </motion.div>
   );
@@ -261,14 +248,14 @@ const ForgotPassword: React.FC = () => {
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                 Verifying...
-              </>
+              </
             ) : (
-              <>
+              ><>
                 Verify Code
                 <ArrowRight className="w-5 h-5" />
-              </>
+              </
             )}
-          </button>
+          ></button>
         </div>
 
         <div className="text-center">
@@ -379,14 +366,14 @@ const ForgotPassword: React.FC = () => {
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
               Resetting Password...
-            </>
+            </
           ) : (
-            <>
+            ><>
               Reset Password
               <ArrowRight className="w-5 h-5" />
-            </>
+            </
           )}
-        </button>
+        ></button>
       </form>
     </motion.div>
   );

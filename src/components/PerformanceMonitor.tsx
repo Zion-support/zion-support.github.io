@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
+
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -152,7 +152,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += (entry as ).value;
           }
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));

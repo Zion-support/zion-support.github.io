@@ -1,18 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Database, 
-  Globe, 
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 export default function Privacy() {
@@ -35,14 +23,14 @@ export default function Privacy() {
     {
       icon: Users,
       title: 'User Control',
-      description: 'You have full control over your personal data and can manage it at any time.'
+      description: 'You have full control over your personal data and can manage it at  time.'
     }
   ];
 
   const dataCategories = [
     {
       title: 'Personal Information',
-      description: 'Name, email address, phone number, and company information',
+      description: 'Name, email address, phone number, and comp information',
       examples: ['Contact details', 'Account information', 'Business details']
     },
     {
@@ -419,7 +407,7 @@ export default function Privacy() {
               Questions About Privacy?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We're here to help. Contact our privacy team for any questions 
+              We're here to help. Contact our privacy team for  questions 
               about your data or this privacy policy.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

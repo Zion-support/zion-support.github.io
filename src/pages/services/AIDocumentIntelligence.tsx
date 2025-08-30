@@ -1,4 +1,4 @@
-import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 } from 'lucide-react';
+
 
 export default function AIDocumentIntelligence() {
   const features = [

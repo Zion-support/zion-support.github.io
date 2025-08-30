@@ -106,7 +106,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
             and cutting-edge technology services that transform industries and create unprecedented value.
           </motion.p>
 
-          {/* Company Highlights */}
+          {/* Comp Highlights */}
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" 
             initial={{ opacity: 0, y: 20 }} 

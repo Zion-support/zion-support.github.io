@@ -305,8 +305,8 @@ const AIServicesShowcase: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default AIServicesShowcase;
+export default AIServicesShowcase;>

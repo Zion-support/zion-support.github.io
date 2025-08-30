@@ -1,32 +1,5 @@
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  MessageCircle, 
-  BarChart3, 
-  Clock, 
-  Award, 
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Phone,
-  Mail,
-  Calendar,
-  CheckCircle,
-  Shield,
-  FileText,
-  ShoppingCart,
-  Home,
-  DollarSign,
-  Heart
-} from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 const AISalesCopilot = () => {

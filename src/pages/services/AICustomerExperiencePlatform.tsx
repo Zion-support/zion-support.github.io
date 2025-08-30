@@ -1,4 +1,4 @@
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, MessageCircle, Users, Zap, Star, Shield } from 'lucide-react';
+
 
 export default function AICustomerExperiencePlatform() {
   const features = [

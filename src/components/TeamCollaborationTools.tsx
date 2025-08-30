@@ -1,69 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Users, 
-  MessageCircle, 
-  FileText, 
-  Calendar, 
-  CheckCircle, 
-  Clock,
-  AlertCircle,
-  Plus,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Edit,
-  Trash2,
-  Eye,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Database,
-  Server,
-  Lock,
-  Unlock,
-  Wifi,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Video,
-  Phone,
-  Mail,
-  Send,
-  Paperclip,
-  Image,
-  File,
-  Folder,
-  Tag,
-  UserPlus,
-  Settings,
-  Bell,
-  Heart,
-  ThumbsUp,
-  ThumbsDown,
-  Reply,
-  Forward,
-  Archive,
-  Pin,
-  Bookmark,
-  Link,
-  Copy,
-  MoreHorizontal,
-  ChevronDown,
-  ChevronUp,
-  ArrowRight,
-  ArrowLeft,
-  RefreshCw,
-  TrendingUp,
-  Activity,
-  Target,
-  BarChart3,
-  PieChart
- } from 'lucide-react.ts';
+
 
 interface TeamMember {
 
@@ -467,7 +404,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           ].map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
+              onClick={() => setActiveTab(tab.id as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeTab === tab.id
                   ? 'bg-zion-cyan text-white'

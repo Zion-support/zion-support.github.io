@@ -11,11 +11,11 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
 
   filters: Filter[];
   onRemoveFilter: (key: string)  => void;
-  onClearAll: any()  => void;
+  onClearAll: ()  => void;
 
 }
 
-export function ActiveFiltersBar(...args: any[]): any {
+export function ActiveFiltersBar(...args: []):  {
   if (filters.length === 0) {
     return null;
   }

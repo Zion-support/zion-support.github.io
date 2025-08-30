@@ -1,22 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Zap, 
-  CheckCircle, 
-  BarChart3, 
-  Sparkles, 
-  ArrowRight, 
-  Brain,
-  Cpu,
-  Database,
-  Globe,
-  Rocket,
-  Target,
-  Shield,
-  TrendingUp,
-  Layers
-} from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 export default function QuantumComputingSolutions() {

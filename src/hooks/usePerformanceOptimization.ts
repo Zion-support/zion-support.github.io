@@ -93,7 +93,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
     const checkMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as ).memory;
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
         // Warn if memory usage is high
@@ -170,7 +170,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Debounced function utility
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
+  const debounce = useCallback(<T extends (...args: []) => any>(
     func: T,
     delay: number
   ): ((...args: Parameters<T>) => void) => {
@@ -183,7 +183,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Throttled function utility
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
+  const throttle = useCallback(<T extends (...args: []) => any>(
     func: T,
     delay: number
   ): ((...args: Parameters<T>) => void) => {
@@ -236,6 +236,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 // Type declaration for gtag
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: []) => void;
   }
 }

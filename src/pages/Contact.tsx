@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
           Contact Us
         </h1>
         <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
-          We'd love to hear about your project. Reach us via any of the channels below.
+          We'd love to hear about your project. Reach us via  of the channels below.
         </p>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 mb-8">

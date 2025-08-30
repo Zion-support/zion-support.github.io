@@ -1,16 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  CheckCircle, 
-  AlertCircle,
-  Clock,
-  MessageSquare,
-  Building,
-  Globe
- } from 'lucide-react.ts';
+
 
 interface ContactFormData {
 
@@ -29,7 +19,7 @@ interface ContactFormErrors {
 
 }
 
-export function EnhancedContact(...args: any[]): any {
+export function EnhancedContact(...args: []):  {
   const [formData, setFormData] = useState<any>({
     name: '',
     email: '',
@@ -239,7 +229,7 @@ export function EnhancedContact(...args: any[]): any {
               ))}
             </div>
 
-            {/* Company Stats */}
+            {/* Comp Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -342,7 +332,7 @@ export function EnhancedContact(...args: any[]): any {
                 </AnimatePresence>
               </div>
 
-              {/* Phone and Company */}
+              {/* Phone and Comp */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
@@ -359,15 +349,14 @@ export function EnhancedContact(...args: any[]): any {
                 </div>
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                    Company
-                  </label>
+                    Comp </label>
                   <input
                     type="text"
                     id="company"
-                    value={formData.company}
-                    onChange={(e) => handleInputChange('company', e.target.value)}
+                    value={formData.comp}
+                    onChange={(e) => handleInputChange('comp', e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
-                    placeholder="Enter your company name"
+                    placeholder="Enter your comp name"
                   />
                 </div>
               </div>
@@ -435,14 +424,14 @@ export function EnhancedContact(...args: any[]): any {
                   <>
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                     <span>Sending Message...</span>
-                  </>
+                  </
                 ) : (
-                  <>
+                  ><>
                     <Send className="w-5 h-5" />
                     <span>Send Message</span>
-                  </>
+                  </
                 )}
-              </motion.button>
+              ></motion.button>
             </form>
           </motion.div>
         </div>

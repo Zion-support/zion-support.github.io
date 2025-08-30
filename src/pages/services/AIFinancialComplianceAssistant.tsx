@@ -1,37 +1,5 @@
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart
-} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 export default function AIFinancialComplianceAssistant() {
@@ -516,7 +484,7 @@ export default function AIFinancialComplianceAssistant() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our compliance experts are here to help you get started and answer any questions
+              Our compliance experts are here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

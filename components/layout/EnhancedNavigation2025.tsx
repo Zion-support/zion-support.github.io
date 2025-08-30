@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight } from 'lucide-react';
+
 
 export default function EnhancedNavigation2025() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +36,7 @@ export default function EnhancedNavigation2025() {
 			]
 		},
 		{
-			name: 'Company',
+			name: 'Comp',
 			href: '/about',
 			children: [
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },

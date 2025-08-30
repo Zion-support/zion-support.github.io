@@ -1,63 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Building,
-  Users,
-  FileText,
-  Video,
-  TestTube,
-  TrendingUp,
-  CheckCircle,
-  Briefcase,
-  Newspaper,
-  Target,
-  Rocket,
-  Heart,
-  DollarSign,
-  HelpCircle,
-  Activity,
-  Cpu,
-  GraduationCap,
-  BarChart3,
-  Sparkles,
-  Award,
-  ArrowRight,
-  Star,
-  Lock,
-  Eye,
-  Atom,
-  Network,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  MessageCircle,
-  Server,
-  ShoppingCart,
-  Smartphone,
-  Database,
-  Clock,
-  Code,
-  BookOpen,
-  Truck,
-  ExternalLink,
-  ChevronDown,
-  Copyright
-} from 'lucide-react';
+
 import { AnimatePresence } from 'framer-motion';
 
 interface FooterLink {
@@ -75,7 +18,7 @@ interface FooterSection {
 
 const footerSections = [
   {
-    title: 'Company',
+    title: 'Comp',
     icon: Globe,
     links: [
       { name: 'About Us', path: '/about', icon: Users },
@@ -252,7 +195,7 @@ export function Footer() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8 mb-12">
-          {/* Company Section - Takes 2 columns on larger screens */}
+          {/* Comp Section - Takes 2 columns on larger screens */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">

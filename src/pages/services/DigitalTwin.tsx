@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Eye, ArrowRight, CheckCircle, Cloud, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor } from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 
@@ -474,6 +474,7 @@ export default function DigitalTwin() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 }
+>

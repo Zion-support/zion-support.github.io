@@ -1,18 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import {
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  AlertCircle,
-  Shield,
-  Brain,
-  Cloud,
-  Zap,
-  ArrowRight
-} from 'lucide-react'
+
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -356,6 +345,6 @@ export default function Login() {
           </div>
         </section>
       </main>
-    </>
+    </
   )
-}
+}>

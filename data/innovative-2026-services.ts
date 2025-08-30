@@ -203,7 +203,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     tagline: 'Quantum AI-powered algorithmic trading with 99.9% accuracy',
     price: '$999',
     period: '/month',
-    description: 'Advanced quantum AI trading platform that uses quantum computing and machine learning to execute trades with unprecedented speed and accuracy, generating consistent profits in any market condition.',
+    description: 'Advanced quantum AI trading platform that uses quantum computing and machine learning to execute trades with unprecedented speed and accuracy, generating consistent profits in  market condition.',
     features: [
       'Quantum AI trading algorithms',
       'Real-time market analysis',

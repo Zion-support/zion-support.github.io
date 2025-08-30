@@ -1,41 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Brain, 
-  Server, 
-  Globe, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ExternalLink,
-  DollarSign,
-  CreditCard,
-  Wallet,
-  Coins,
-  PiggyBank,
-  Calculator,
-  BarChart3,
-  Target,
-  Award,
-  Users,
-  Clock,
-  Calendar,
-  Check,
-  X,
-  Crown,
-  Rocket,
-  Cpu,
-  Lock,
-  Heart,
-  Sparkles
-} from 'lucide-react';
+
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
 import { SEO } from '@/components/SEO';
 

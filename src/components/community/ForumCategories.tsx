@@ -7,7 +7,7 @@ interface ForumCategoryInfo {
   postCount: number;
   adminOnly?: boolean;
   icon?: string;
-lastPost?: {;
+lastPost?: {
     title: string;
     author: string;
     date: string;
@@ -15,7 +15,7 @@ lastPost?: {;
 };
 }
 
-export default function ForumCategories(...args: any[]): any {
+export default function ForumCategories(...args: []):  {
   const categories: ForumCategoryInfo[] = [
     {
       id: '1',

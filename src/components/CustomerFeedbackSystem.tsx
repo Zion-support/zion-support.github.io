@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Star, 
-  MessageCircle, 
-  ThumbsUp, 
-  ThumbsDown, 
-  Send, 
-  Heart,
-  Award,
-  TrendingUp,
-  Users,
-  Clock,
-  Flag,
-  Share2,
-  Download,
-  Filter,
-  Search
- } from 'lucide-react.ts';
+
 
 interface Feedback {
 
@@ -78,7 +63,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   useEffect(()  => {
     const sampleFeedback: Feedback[] = [
       {
-        id: any'1',
+        id: '1',
         customerName: 'Sarah Johnson',
         rating: 5,
         comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',

@@ -1,26 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Zap, 
-  Award,
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Code,
-  Database,
-  Cloud,
-  BarChart3,
-  AlertTriangle,
-  Key,
-  Network,
-  Server,
-  Monitor,
-  CreditCard
-} from 'lucide-react';
+
 export default function CybersecurityServices() {
   const cyberServices = [
     {

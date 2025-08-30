@@ -5,22 +5,7 @@ import {
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
 } from '../src/data/innovativeServices2031';
-import { 
-  Brain, 
-  Cloud, 
-  CheckCircle, 
-  TrendingUp, 
-  Users, 
-  Phone,
-  Mail,
-  Globe,
-  MapPin,
-  ArrowRight,
-  Rocket,
-  Target,
-  Award,
-  Clock
-} from 'lucide-react';
+
 
 const InnovativeServicesShowcase2031: React.FC = () => {
   const scrollToContact = () => {
@@ -384,7 +369,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                      placeholder="Your company name"
+                      placeholder="Your comp name"
                     />
                   </div>
                   
@@ -447,8 +432,8 @@ const InnovativeServicesShowcase2031: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default InnovativeServicesShowcase2031;
+export default InnovativeServicesShowcase2031;>

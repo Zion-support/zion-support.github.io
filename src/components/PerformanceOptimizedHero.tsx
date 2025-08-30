@@ -1,20 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Play, 
-  Star, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Cloud,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Globe,
-  Rocket
-} from 'lucide-react';
+
 
 interface HeroProps {
   title?: string;

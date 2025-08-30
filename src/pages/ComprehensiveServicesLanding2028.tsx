@@ -1,55 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Globe,
-  Zap,
-  Users,
-  ShoppingCart,
-  MessageCircle,
-  BookOpen,
-  DollarSign,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Award,
-  Lightbulb,
-  Database,
-  Network,
-  Smartphone,
-  Server,
-  Scale,
-  Truck,
-  Target,
-  Building,
-  Home,
-  Wrench,
-  FileText,
-  Video,
-  Mic,
-  Camera,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Calendar,
-  Clock,
-  BarChart3,
-  Target as TargetIcon,
-  Check,
-  X,
-  Play,
-  ChevronRight,
-  ChevronLeft
-} from 'lucide-react';
+
 import { 
   revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
@@ -368,7 +320,7 @@ export default function ComprehensiveServicesLanding2028() {
                 <div className="text-left">
                   <div className="font-semibold text-white">{testimonials[currentTestimonial].name}</div>
                   <div className="text-zion-slate-light">{testimonials[currentTestimonial].role}</div>
-                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].company}</div>
+                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].comp}</div>
                 </div>
               </div>
             </motion.div>

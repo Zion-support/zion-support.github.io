@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  Activity, 
-  Users, 
-  DollarSign,
-  Calendar,
-  Target,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Eye,
-  Download,
-  Share2,
-  RefreshCw
- } from 'lucide-react.ts';
+
 
 interface ChartData {
 
@@ -116,7 +101,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update chart data with new random values
     setChartData(prev => ({
       ...prev,
-      datasets: any[{
+      datasets: [{
         ...prev.datasets[0],
         data: prev.datasets[0].data.map(()  => Math.floor(Math.random() * 100) + 20)
       }]
@@ -277,7 +262,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             ].map((chartType) => (
               <button
                 key={chartType.id}
-                onClick={() => setActiveChart(chartType.id as any)}
+                onClick={() => setActiveChart(chartType.id as )}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeChart === chartType.id
                     ? 'bg-zion-cyan text-white'

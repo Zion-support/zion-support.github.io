@@ -91,16 +91,15 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-              Company
-            </label>
+              Comp </label>
             <input
               type="text"
               id="company"
               name="company"
-              value={formData.company}
+              value={formData.comp}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-              placeholder="Enter your company name"
+              placeholder="Enter your comp name"
             />
           </div>
           

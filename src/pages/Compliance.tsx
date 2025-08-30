@@ -1,42 +1,5 @@
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  CheckCircle, 
-  Award, 
-  FileText, 
-  Globe, 
-  Building, 
-  Users, 
-  Lock, 
-  Eye, 
-  Database,
-  FileText,
-  Clock,
-  AlertTriangle,
-  Info,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Zap,
-  Brain,
-  Cloud,
-  Rocket,
-  Heart,
-  Cpu,
-  Network,
-  Server,
-  Key,
-  Fingerprint,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop,
-  ShieldCheck,
-  Gauge,
-  TrendingUp,
-  BarChart3
-} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 export default function Compliance() {
@@ -636,7 +599,7 @@ export default function Compliance() {
                 Compliance Questions or Support?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
-                Our compliance team is here to help you understand our compliance posture and address any questions you may have.
+                Our compliance team is here to help you understand our compliance posture and address  questions you may have.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -670,6 +633,6 @@ export default function Compliance() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
-}
+}>

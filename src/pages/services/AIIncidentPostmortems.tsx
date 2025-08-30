@@ -1,30 +1,5 @@
 import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, 
-  Clock, 
-  TrendingUp, 
-  Shield, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  FileText,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Server
-} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 export default function AIIncidentPostmortems() {
@@ -432,7 +407,7 @@ export default function AIIncidentPostmortems() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our team is here to help you get started and answer any questions
+              Our team is here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

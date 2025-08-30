@@ -1,26 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Rocket,
-  Building,
-  Heart,
-  Crown,
-  Sparkles,
-  ArrowRight,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 export default function Leadership() {
@@ -212,7 +192,7 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Company Values */}
+      {/* Comp Values */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -220,7 +200,7 @@ export default function Leadership() {
               Our Core Values
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our company culture.
+              The principles that guide everything we do and shape our comp culture.
             </p>
           </div>
 
@@ -262,7 +242,7 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Company Culture */}
+      {/* Comp Culture */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

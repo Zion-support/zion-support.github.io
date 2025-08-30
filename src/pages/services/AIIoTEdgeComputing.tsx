@@ -1,4 +1,4 @@
-import { Cpu, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Wifi, TrendingUp, Zap, Target, Clock, Shield, Globe } from 'lucide-react';
+
 
 export default function AIIoTEdgeComputing() {
   const features = [

@@ -7,6 +7,6 @@ export default function TalentRoutes() {
     <>
       <Route path="directory" element={<TalentDirectory />} />
       <Route path="list" element={<TalentsPage />} />
-    </>
+    </
   );
-}
+}>

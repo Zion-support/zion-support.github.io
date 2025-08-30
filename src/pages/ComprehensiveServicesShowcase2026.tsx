@@ -1,24 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Network,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 import { 
   revolutionaryMicroSaasServices2026,
@@ -343,7 +325,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
-export default ComprehensiveServicesShowcase2026;
+export default ComprehensiveServicesShowcase2026;>

@@ -2,7 +2,7 @@ import { TeamRecommendation, ProjectBrief  } from '@/types';
 import { RoleCard  } from './RoleCard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase  } from 'lucide-react.ts'; // Target changed to Bullseye
+ // Target changed to Bullseye
 import { BudgetStatusDisplay  } from './BudgetStatusDisplay'; // New import
 
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
@@ -10,8 +10,8 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
   recommendation: anyTeamRecommendation;
   projectBrief: ProjectBrief; // For budget comparison
   onInviteTalent: (talentId: string, roleTitle: string)  => void;
-  // onEditRole: any(roleId: string)  => void; // For future add/remove
-  // onRemoveRole: any(roleId: string)  => void; // For future add/remove
+  // onEditRole: (roleId: string)  => void; // For future add/remove
+  // onRemoveRole: (roleId: string)  => void; // For future add/remove
 
 }
 

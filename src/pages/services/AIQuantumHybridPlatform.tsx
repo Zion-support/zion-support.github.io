@@ -1,28 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  Workflow,
-  Phone
-} from 'lucide-react';
+
 import { SEO } from '../../components/SEO';
 
 export default function AIQuantumHybridPlatform() {

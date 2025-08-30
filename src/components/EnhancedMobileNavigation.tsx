@@ -1,39 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Info,
-  Settings,
-  HelpCircle,
-  FileText,
-  Globe,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Lock,
-  Code,
-  Rocket,
-  Star,
-  TrendingUp,
-  Award,
-  BookOpen,
-  MessageCircle,
-  Mail,
-  MapPin,
-  Clock
-} from 'lucide-react';
+
 
 interface NavigationItem {
   label: string;
@@ -54,7 +22,7 @@ const navigationItems: NavigationItem[] = [
     label: 'About',
     path: '/about',
     icon: Info,
-    description: 'Learn about our company and mission'
+    description: 'Learn about our comp and mission'
   },
   {
     label: 'Services',
@@ -392,6 +360,6 @@ export const EnhancedMobileNavigation: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </
   );
-};
+};>

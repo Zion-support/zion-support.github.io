@@ -438,8 +438,8 @@ const AIIoTEdgeComputingPlatform: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default AIIoTEdgeComputingPlatform;
+export default AIIoTEdgeComputingPlatform;>

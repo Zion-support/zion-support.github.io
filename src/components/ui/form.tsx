@@ -7,7 +7,7 @@ interface FormProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Form(...args: any[]): any {
+export function Form(...args: []):  {
   return <form onSubmit={onSubmit}>{children}</form>;
 }
 
@@ -17,7 +17,7 @@ interface FormControlProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function FormControl(...args: any[]): any {
+export function FormControl(...args: []):  {
   return <div>{children}</div>;
 }
 
@@ -27,7 +27,7 @@ interface FormItemProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function FormItem(...args: any[]): any {
+export function FormItem(...args: []):  {
   return <div className="space-y-2">{children}</div>;
 }
 
@@ -38,7 +38,7 @@ interface FormLabelProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function FormLabel(...args: any[]): any {
+export function FormLabel(...args: []):  {
   return <label className={`block text-sm font-medium ${className}`}>{children}</label>;
 }
 
@@ -46,12 +46,12 @@ interface FormFieldProps extends React.PropsWithChildren<{}> {
 
   control: anyany;
   name: string;
-  render: (props: any)  => React.ReactNode;
+  render: (props: )  => React.ReactNode;
 
 }
 
-export function FormField(...args: any[]): any {
-  return render({ field: any{ name, value: '', onChange: ()  => {} } });
+export function FormField(...args: []):  {
+  return render({ field: { name, value: '', onChange: ()  => {} } });
 }
 
 interface FormMessageProps extends React.PropsWithChildren<{}> {
@@ -61,7 +61,7 @@ interface FormMessageProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function FormMessage(...args: any[]): any {
+export function FormMessage(...args: []):  {
   if (!children) return null;
   return <p className={`text-sm ${className}`}>{children}</p>;
 }

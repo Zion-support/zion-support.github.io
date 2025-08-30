@@ -1,4 +1,4 @@
-import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 } from 'lucide-react';
+
 
 export default function AIRetail() {
   const features = [

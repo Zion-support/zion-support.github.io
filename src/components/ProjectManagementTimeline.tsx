@@ -1,29 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Calendar, 
-  Clock, 
-  CheckCircle, 
-  Circle, 
-  AlertCircle, 
-  Play,
-  Pause,
-  StopCircle,
-  Users,
-  Target,
-  TrendingUp,
-  FileText,
-  MessageSquare,
-  Link,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  Settings
- } from 'lucide-react.ts';
+
 
 interface Project {
 
@@ -81,7 +58,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   useEffect(() => {
     const sampleProjects: Project[] = [
       {
-        id: any'1',
+        id: '1',
         name: 'AI-Powered Customer Analytics Platform',
         description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
         status: 'active',
@@ -309,7 +286,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'

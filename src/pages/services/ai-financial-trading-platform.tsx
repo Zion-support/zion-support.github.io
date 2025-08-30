@@ -1,27 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  TrendingUp, 
-  Brain, 
-  DollarSign, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  Target,
-  Activity,
-  Globe,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Users,
-  Lock,
-  Eye,
-  PieChart
-} from 'lucide-react';
+
 
 export default function AIFinancialTradingPlatform() {
   const features = [
@@ -124,7 +103,7 @@ export default function AIFinancialTradingPlatform() {
     {
       icon: Target,
       title: 'Risk-Adjusted Returns',
-      description: 'AI optimizes for the best risk-reward ratio in any market condition'
+      description: 'AI optimizes for the best risk-reward ratio in  market condition'
     },
     {
       icon: BarChart3,

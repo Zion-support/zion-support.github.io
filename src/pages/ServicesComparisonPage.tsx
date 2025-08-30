@@ -26,6 +26,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </div>
-    </>
+    </
   );
-}
+}>

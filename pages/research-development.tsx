@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket } from 'lucide-react'
+
 
 
 export default function ResearchDevelopment() {
@@ -312,6 +312,6 @@ export default function ResearchDevelopment() {
 					</div>
 				</div>
 			</section>
-		</>
+		</
 	)
-}
+}>

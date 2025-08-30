@@ -1,4 +1,4 @@
-import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 } from 'lucide-react';
+
 
 export default function AIEducation() {
   const features = [

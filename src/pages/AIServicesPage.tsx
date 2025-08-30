@@ -1,29 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Play,
-  BarChart3,
-  Cpu,
-  Eye,
-  MessageSquare,
-  Database,
-  Network,
-  Rocket,
-  Target,
-  Award,
-  Clock,
-  Star,
-  Heart
-} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {
@@ -237,7 +215,7 @@ const AIServicesPage = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{study.comp}</h3>
                   <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
                   <div className="space-y-3">
                     <div>
@@ -288,8 +266,8 @@ const AIServicesPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </
   );
 };
 
-export default AIServicesPage;
+export default AIServicesPage;>

@@ -1,23 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  PenTool, 
-  FileText, 
-  Image, 
-  Video, 
-  Globe, 
-  Zap, 
-  Brain, 
-  Shield,
-  CheckCircle,
-  TrendingUp,
-  MessageSquare,
-  Search,
-  Target,
-  BarChart3,
-  Users,
-  Sparkles
-} from 'lucide-react';
+
 
 export default function AIContentGenerator() {
   const features = [
@@ -141,7 +124,7 @@ export default function AIContentGenerator() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence. 
-                Generate articles, images, videos, and more for any platform.
+                Generate articles, images, videos, and more for  platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
@@ -326,6 +309,6 @@ export default function AIContentGenerator() {
           </div>
         </section>
       </div>
-    </>
+    </
   );
-}
+}>

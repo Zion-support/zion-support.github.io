@@ -438,8 +438,8 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default AIDevOpsAutomationPlatform;
+export default AIDevOpsAutomationPlatform;>

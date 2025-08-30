@@ -1,7 +1,7 @@
 import { Progress  } from '@/components/ui/progress';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency
 import { Badge  } from '@/components/ui/badge'; // Badge not used, but kept for consistency
-import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info  } from 'lucide-react.ts';
+
 import { Card  } from '@/components/ui/card'; // Added missing import
 
 interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
@@ -128,10 +128,10 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
             <span>Your Max: ${userBudget.max.toLocaleString()}</span>
             <span>Est. Avg: ${estimatedAvgCost.toLocaleString()}</span>
           </div>
-        </>
+        </
       )}
        {userBudget.max === null && userBudget.min !== null && ( // Only min specified
-         <p className="text-xs text-muted-foreground mt-1">Your Min: ${userBudget.min.toLocaleString()} | Est. Avg: ${estimatedAvgCost.toLocaleString()}</p>
+         ><p className="text-xs text-muted-foreground mt-1">Your Min: ${userBudget.min.toLocaleString()} | Est. Avg: ${estimatedAvgCost.toLocaleString()}</p>
        )}
         {userBudget.min === null && userBudget.max === null && ( // Vague budget
          <p className="text-xs text-muted-foreground mt-1">Est. Avg: ${estimatedAvgCost.toLocaleString()}</p>

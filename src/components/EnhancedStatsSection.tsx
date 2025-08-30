@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, useAnimation  } from 'framer-motion.ts';
 import { useInView  } from 'react-intersection-observer.ts';
-import { Users, 
-  Globe, 
-  TrendingUp, 
-  Star, 
-  Zap, 
-  Shield,
-  Award,
-  Rocket
- } from 'lucide-react.ts';
+
 
 interface Stat {
 
@@ -80,7 +72,7 @@ const stats: Stat[] = [
   }
 ];
 
-export default function EnhancedStatsSection(...args: any[]): any {
+export default function EnhancedStatsSection(...args: []):  {
   const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
   const [ref, inView] = useInView({

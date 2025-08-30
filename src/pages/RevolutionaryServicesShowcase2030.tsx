@@ -1,50 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
-  Mail as MailIcon,
-  MapPin,
-  Phone,
-  Rocket,
-  Search,
-  Star,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Globe,
-  TrendingUp,
-  Award,
-  Users,
-  Clock,
-  DollarSign,
-  Target,
-  CheckCircle,
-  ArrowUpRight,
-  BookOpen,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  BarChart3,
-  Code,
-  Palette,
-  Smartphone,
-  Monitor,
-  Server,
-  Wifi,
-  Satellite,
-  Leaf,
-  Building,
-  FlaskConical,
-  SortAsc,
-  SortDesc,
-  X
-} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030 } from '../data/revolutionaryServices2030';
 
@@ -112,7 +68,7 @@ export default function RevolutionaryServicesShowcase2030() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleServiceSelect = (service: any) => {
+  const handleServiceSelect = (service: ) => {
     setSelectedService(service);
   };
 
@@ -759,6 +715,6 @@ export default function RevolutionaryServicesShowcase2030() {
           </motion.div>
         </div>
       )}
-    </>
+    </
   );
-}
+}>

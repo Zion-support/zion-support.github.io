@@ -1,21 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  DollarSign, 
-  TrendingUp, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Zap,
-  Shield,
-  Cpu,
-  Brain
-} from 'lucide-react';
+
 import { SEO } from '../components/SEO';
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
 
@@ -422,8 +407,8 @@ const ComprehensivePricingGuide2026: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default ComprehensivePricingGuide2026;
+export default ComprehensivePricingGuide2026;>

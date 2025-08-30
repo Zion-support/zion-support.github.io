@@ -1,90 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe,
-  Atom,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  CheckCircle,
-  Clock,
-  Users,
-  Target,
-  BarChart3,
-  Rocket,
-  Cpu,
-  Network,
-  Database,
-  Lock,
-  Leaf,
-  Scale,
-  Stethoscope,
-  Car,
-  Building2,
-  DollarSign,
-  Award,
-  Lightbulb,
-  ArrowRight,
-  ChevronRight,
-  ChevronLeft,
-  Play,
-  Eye,
-  X,
-  Flask,
-  Calculator,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlayCircle,
-  PauseCircle
-} from 'lucide-react';
+
 import { revolutionary2025AdvancedMicroSaasServices } from '../data/revolutionary-2025-advanced-micro-saas-v2';
 import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-2025-specialized-it-ai-services';
 // Combine all services
@@ -304,7 +220,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <Brain className="w-8 h-8 text-blue-400 mr-3" />
                 <h3 className="text-xl font-semibold text-white">Business Size</h3>
               </div>
-              <p className="text-gray-300 mb-4">Select your company size to get tailored recommendations</p>
+              <p className="text-gray-300 mb-4">Select your comp size to get tailored recommendations</p>
               <select className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500">
                 <option>Startup (1-10 employees)</option>
                 <option>Small Business (11-50 employees)</option>
@@ -1208,7 +1124,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             >
               <h3 className="text-xl font-semibold text-white mb-3">Europe & Asia</h3>
               <p className="text-gray-300 text-sm mb-4">Strategic partnerships and regional offices serving global enterprises</p>
-              <div className="text-orange-400 text-sm">UK • Germany • Japan • Singapore</div>
+              <div className="text-orange-400 text-sm">UK • Germ • Japan • Singapore</div>
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30"

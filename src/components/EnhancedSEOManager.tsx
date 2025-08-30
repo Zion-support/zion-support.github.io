@@ -140,8 +140,8 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <meta name="msapplication-TileColor" content="#000000" />
       </Helmet>
       {children}
-    </>
+    </
   );
 };
 
-export default EnhancedSEOManager;
+export default EnhancedSEOManager;>

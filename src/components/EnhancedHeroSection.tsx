@@ -1,20 +1,7 @@
 import React, { useState, useEffect, memo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { ArrowRight, 
-  Play, 
-  Star, 
-  CheckCircle, 
-  ChevronLeft, 
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  TrendingUp
-} from 'lucide-react';
+
 
 interface HeroSlide {
 
@@ -28,7 +15,7 @@ interface HeroSlide {
   gradient: string;
 }
 
-const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
+const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: []):  {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 

@@ -1,9 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
-  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
-} from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 export default function InnovativeServicesShowcase2025() {
@@ -385,6 +382,6 @@ export default function InnovativeServicesShowcase2025() {
       </section>
     </div>
   );
-};
+}
 
 export default InnovativeServicesShowcase2025;

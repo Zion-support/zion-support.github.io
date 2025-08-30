@@ -8,7 +8,7 @@ import { TeamInvite } from '@/types';
 /*
 export default async function handler(
   req: any, // Placeholder
-  res: any  // Placeholder
+  res:  // Placeholder
 ) {
   if (req.method !== 'POST') {
     // res.setHeader('Allow', ['POST']); // Placeholder
@@ -57,7 +57,7 @@ export default async function handler(
 
     res.status(201).json(data as TeamInvite);
 
-  } catch (error: any) {
+  } catch (error: ) {
     console.error('Error in /api/team-builder/invite:', error);
     return res.status(500).json({ error: `Failed to create team invite: ${error.message || 'Unknown error'}` });
   }

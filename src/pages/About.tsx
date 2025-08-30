@@ -8,7 +8,7 @@ const About: React.FC = () => {
           About Zion Tech Group
         </h1>
         <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
-          We are a forward-thinking technology company dedicated to transforming businesses through innovative AI, cloud, and cybersecurity solutions.
+          We are a forward-thinking technology comp dedicated to transforming businesses through innovative AI, cloud, and cybersecurity solutions.
         </p>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>

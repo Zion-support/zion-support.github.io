@@ -1,21 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Newspaper, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  Search, 
-  Filter, 
-  Clock,
-  TrendingUp,
-  Star,
-  Eye,
-  Share2,
-  Bookmark,
-  ExternalLink
-} from 'lucide-react';
+
 
 export default function News() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -27,7 +12,7 @@ export default function News() {
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 0 },
     { id: 'security', name: 'Security & Compliance', count: 0 },
     { id: 'quantum', name: 'Quantum Computing', count: 0 },
-    { id: 'company', name: 'Company Updates', count: 0 }
+    { id: 'comp', name: 'Comp Updates', count: 0 }
   ];
 
   const newsArticles = [
@@ -68,7 +53,7 @@ export default function News() {
       id: 4,
       title: 'Partnership with Microsoft Azure Expands Cloud Capabilities',
       excerpt: 'Strategic partnership announcement with Microsoft Azure to deliver enhanced cloud solutions and AI services to enterprise customers worldwide.',
-      category: 'company',
+      category: 'comp',
       author: 'Jennifer Lee',
       date: '2024-11-22',
       readTime: '4 min read',
@@ -132,7 +117,7 @@ export default function News() {
               </div>
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Latest News & Updates</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay informed about the latest developments in AI, quantum computing, cloud technology, and company updates from Zion Tech Group.
+                Stay informed about the latest developments in AI, quantum computing, cloud technology, and comp updates from Zion Tech Group.
               </p>
             </motion.div>
           </div>

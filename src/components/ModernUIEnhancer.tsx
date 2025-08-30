@@ -1,14 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react.ts';
 import { motion, AnimatePresence, useScroll, useTransform  } from 'framer-motion.ts';
-import { Sparkles, 
-  Zap, 
-  Star, 
-  Palette, 
-  Eye, 
-  Layers,
-  Settings,
-  X
- } from 'lucide-react.ts';
+
 
 interface UISettings {
 
@@ -646,6 +638,6 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
           />
         </div>
       )}
-    </>
+    </
   );
-};
+};>

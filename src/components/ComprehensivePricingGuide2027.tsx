@@ -1,27 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { DollarSign, 
-  TrendingUp, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Search,
-  Filter,
-  Download,
-  Phone,
-  Mail,
-  MapPin,
-  Calculator,
-  BarChart3,
-  Target,
-  Zap,
-  Shield,
-  Brain,
-  Rocket
- } from 'lucide-react.ts';
+
 import { servicesCatalog  } from '../data/servicesCatalog';
 import { innovativeServices2027  } from '../data/innovativeServices2027';
 
@@ -55,7 +34,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     ...servicesCatalog.flatMap(category => 
       category.items.map(item => ({
         ...item,
-        source: any'catalog',
+        source: 'catalog',
         category: category.name
       }))
     ),
@@ -367,7 +346,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               Need Custom Pricing or Have Questions?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to provide personalized quotes and answer any questions 
+              Our team of experts is ready to provide personalized quotes and answer  questions 
               about our services. Get in touch for a detailed consultation.
             </p>
             

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone } from 'lucide-react';
+
 
 export default function IoTEdge() {
   const features = [

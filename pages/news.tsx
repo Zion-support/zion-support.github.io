@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Calendar, Clock, ArrowRight, Tag, User } from 'lucide-react'
+
 
 
 export default function News() {
@@ -32,7 +32,7 @@ export default function News() {
 			author: 'Zion Team',
 			date: '2025-01-05',
 			readTime: '3 min read',
-			category: 'Company News',
+			category: 'Comp News',
 			image: '/api/placeholder/400/250'
 		},
 		{
@@ -67,7 +67,7 @@ export default function News() {
 		}
 	]
 
-	const categories = ['All', 'Product Launch', 'Company News', 'Industry Insights', 'Customer Success', 'Security']
+	const categories = ['All', 'Product Launch', 'Comp News', 'Industry Insights', 'Customer Success', 'Security']
 
 	return (
 		<>
@@ -255,6 +255,6 @@ export default function News() {
 					</div>
 				</div>
 			</section>
-		</>
+		</
 	)
-}
+}>

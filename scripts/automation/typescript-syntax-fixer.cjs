@@ -2,7 +2,8 @@
 
 /**
  * TypeScript Syntax Fixer - PM2 Automation
- * Automatically fixes common TypeScript and JSX syntax errors
+ * Automatically fixes common TypeScript syntax errors and malformed JSX
+ * Runs every 15 minutes to maintain TypeScript code quality
  */
 
 const fs = require('fs');
@@ -12,347 +13,237 @@ const { execSync } = require('child_process');
 class TypeScriptSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs', 'typescript-syntax-fixer.log');
-    this.fixesLog = path.join(this.projectRoot, 'logs', 'syntax-fixes.json');
-    this.ensureLogsDirectory();
+    this.reportFile = path.join(this.projectRoot, 'typescript-syntax-fixer-report.json');
+    this.fixesApplied = 0;
+    this.errorsFixed = [];
+    this.warnings = [];
+    this.startTime = Date.now();
   }
 
-  ensureLogsDirectory() {
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
-  }
-
-  log(message, level = 'INFO') {
+  log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
-  }
-
-  async runSyntaxFix() {
-    this.log('Starting TypeScript syntax fix automation...');
+    const colors = {
+      info: '\x1b[34m',
+      success: '\x1b[32m',
+      warning: '\x1b[33m',
+      error: '\x1b[31m',
+      reset: '\x1b[0m'
+    };
     
-    const fixes = [];
-    const errors = [];
-
-    try {
-      // 1. Scan for corrupted files
-      const corruptedFiles = await this.scanForCorruptedFiles();
-      
-      // 2. Fix each corrupted file
-      for (const file of corruptedFiles) {
-        try {
-          const fix = await this.fixFile(file);
-          if (fix) fixes.push(fix);
-        } catch (error) {
-          errors.push({
-            file: file,
-            error: error.message
-          });
-        }
-      }
-
-      // 3. Run type check to verify fixes
-      const typeCheckResult = await this.runTypeCheck();
-      
-      // 4. Generate report
-      await this.generateReport(fixes, errors, typeCheckResult);
-      
-      // 5. Commit fixes if successful
-      if (fixes.length > 0 && errors.length === 0) {
-        await this.commitFixes(fixes);
-      }
-
-    } catch (error) {
-      this.log(`Syntax fix automation failed: ${error.message}`, 'ERROR');
-    }
-
-    return { fixes, errors };
+    console.log(`${colors[type]}[${type.toUpperCase()}]${colors.reset} [${timestamp}] ${message}`);
   }
 
-  async scanForCorruptedFiles() {
-    const corrupted = [];
-    const srcPath = path.join(this.projectRoot, 'src');
+  async run() {
+    this.log('🚀 Starting TypeScript Syntax Fixer...', 'info');
     
-    if (!fs.existsSync(srcPath)) return corrupted;
-
     try {
-      const files = await this.getAllFiles(srcPath);
+      // Step 1: Fix malformed JSX syntax
+      await this.fixMalformedJSX();
       
-      for (const file of files) {
-        if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-          try {
-            const content = fs.readFileSync(file, 'utf8');
-            
-            // Check for corruption patterns
-            if (this.isCorrupted(content)) {
-              corrupted.push({
-                path: file,
-                content: content,
-                issues: this.detectIssues(content)
-              });
-            }
-          } catch (error) {
-            this.log(`Error reading file ${file}: ${error.message}`, 'WARN');
-          }
-        }
-      }
+      // Step 2: Fix malformed TypeScript interfaces
+      await this.fixMalformedInterfaces();
+      
+      // Step 3: Fix malformed function declarations
+      await this.fixMalformedFunctions();
+      
+      // Step 4: Fix malformed imports
+      await this.fixMalformedImports();
+      
+      // Step 5: Fix malformed component structures
+      await this.fixMalformedComponents();
+      
+      // Step 6: Generate report
+      await this.generateReport();
+      
+      this.log(`✅ TypeScript Syntax Fixer completed! Fixed ${this.fixesApplied} issues`, 'success');
+      
     } catch (error) {
-      this.log(`Error scanning files: ${error.message}`, 'ERROR');
+      this.log(`❌ Error in TypeScript Syntax Fixer: ${error.message}`, 'error');
+      this.warnings.push(`Runtime error: ${error.message}`);
     }
-
-    return corrupted;
   }
 
-  isCorrupted(content) {
-    const corruptionPatterns = [
-      /import:\s*{/,
-      /const:\s*[^,]+,\s*[^:]+:\s*\.FC/,
-      /from,\s*'[^']+'/,
-      /}, from,/,
-      /import:\s*React,\s*from,\s*'react':/,
-      /import:\s*{([^}]+)},\s*from,\s*'([^']+)':/
+  async fixMalformedJSX() {
+    this.log('🔧 Fixing malformed JSX syntax...', 'info');
+    
+    const jsxFixes = [
+      // Fix malformed JSX closing tags
+      { pattern: /<\/>([a-zA-Z][a-zA-Z0-9]*)/g, replacement: '</$1>' },
+      { pattern: /<\/>([a-zA-Z][a-zA-Z0-9]*)\s*>/g, replacement: '</$1>' },
+      { pattern: /<\/>([a-zA-Z][a-zA-Z0-9]*)\s*\)/g, replacement: '</$1>' },
+      
+      // Fix malformed JSX attributes
+      { pattern: /transition=\{\{\s*duration:\s*any(\d+\.?\d*)/g, replacement: 'transition={{ duration: $1' },
+      { pattern: /color:\s*any'([^']+)'/g, replacement: "color: '$1'" },
+      { pattern: /id:\s*any'([^']+)'/g, replacement: "id: '$1'" },
+      
+      // Fix malformed JSX expressions
+      { pattern: /\{\s*any([^}]+)\s*\}/g, replacement: '{$1}' },
+      { pattern: /\[\s*any([^\]]+)\s*\]/g, replacement: '[$1]' },
+      
+      // Fix malformed JSX fragments
+      { pattern: /<>\s*<\/>([^<]+)/g, replacement: '<>$1</>' },
+      { pattern: /<>\s*<\/>([a-zA-Z][a-zA-Z0-9]*)/g, replacement: '<>$1</>' }
     ];
 
-    return corruptionPatterns.some(pattern => pattern.test(content));
+    await this.applyFixes(jsxFixes, '.tsx');
   }
 
-  detectIssues(content) {
-    const issues = [];
+  async fixMalformedInterfaces() {
+    this.log('🔧 Fixing malformed TypeScript interfaces...', 'info');
     
-    // Check for malformed imports
-    if (content.includes('import: {')) {
-      issues.push('MALFORMED_IMPORT');
-    }
-    
-    // Check for malformed const declarations
-    if (content.includes('const: ')) {
-      issues.push('MALFORMED_CONST');
-    }
-    
-    // Check for malformed from statements
-    if (content.includes('from,')) {
-      issues.push('MALFORMED_FROM');
-    }
-    
-    // Check for unclosed JSX tags
-    const openTags = (content.match(/<([A-Z][a-zA-Z]*)/g) || []).length;
-    const closeTags = (content.match(/<\/[^>]*>/g) || []).length;
-    if (Math.abs(openTags - closeTags) > 5) {
-      issues.push('UNBALANCED_JSX');
-    }
+    const interfaceFixes = [
+      // Fix malformed interface properties
+      { pattern: /(\w+)\?:\s*\{;/g, replacement: '$1?: {' },
+      { pattern: /(\w+)\?:\s*any\(/g, replacement: '$1?: (' },
+      { pattern: /(\w+):\s*any\(/g, replacement: '$1: (' },
+      
+      // Fix malformed type annotations
+      { pattern: /:\s*any\(([^)]+)\)\s*=>/g, replacement: ': ($1) =>' },
+      { pattern: /:\s*any\(\)\s*=>/g, replacement: ': () =>' },
+      { pattern: /:\s*any\{/g, replacement: ': {' },
+      { pattern: /:\s*any\[/g, replacement: ': [' },
+      
+      // Fix malformed generic types
+      { pattern: /Array<([^>]+)>/g, replacement: 'Array<$1>' },
+      { pattern: /Partial<([^>]+)>/g, replacement: 'Partial<$1>' }
+    ];
 
-    return issues;
+    await this.applyFixes(interfaceFixes, '.ts');
+    await this.applyFixes(interfaceFixes, '.tsx');
   }
 
-  async getAllFiles(dir) {
+  async fixMalformedFunctions() {
+    this.log('🔧 Fixing malformed function declarations...', 'info');
+    
+    const functionFixes = [
+      // Fix malformed function parameters
+      { pattern: /\(\s*any([^)]+)\s*\)/g, replacement: '($1)' },
+      { pattern: /\(\s*any\s*\)/g, replacement: '()' },
+      
+      // Fix malformed function return types
+      { pattern: /:\s*any\(([^)]+)\)\s*=>/g, replacement: ': ($1) =>' },
+      { pattern: /:\s*any\(\)\s*=>/g, replacement: ': () =>' },
+      
+      // Fix malformed arrow functions
+      { pattern: /=>\s*any\{/g, replacement: '=> {' },
+      { pattern: /=>\s*any\[/g, replacement: '=> [' },
+      { pattern: /=>\s*any\(/g, replacement: '=> (' }
+    ];
+
+    await this.applyFixes(functionFixes, '.ts');
+    await this.applyFixes(functionFixes, '.tsx');
+  }
+
+  async fixMalformedImports() {
+    this.log('🔧 Fixing malformed imports...', 'info');
+    
+    const importFixes = [
+      // Fix malformed lucide-react imports
+      { pattern: /from 'lucide-react\.ts';/g, replacement: "from 'lucide-react';" },
+      { pattern: /from "lucide-react\.ts";/g, replacement: 'from "lucide-react";' },
+      
+      // Fix malformed import statements
+      { pattern: /}\s*from '([^']+)';/g, replacement: "} from '$1';" },
+      { pattern: /}\s*from "([^"]+)";/g, replacement: '} from "$1";' },
+      
+      // Fix malformed default imports
+      { pattern: /import\s+any\s+from/g, replacement: 'import from' },
+      { pattern: /import\s+any\s+\{/g, replacement: 'import {' }
+    ];
+
+    await this.applyFixes(importFixes, '.ts');
+    await this.applyFixes(importFixes, '.tsx');
+  }
+
+  async fixMalformedComponents() {
+    this.log('🔧 Fixing malformed component structures...', 'info');
+    
+    const componentFixes = [
+      // Fix malformed component declarations
+      { pattern: /const\s+(\w+):\s*any\s*React\.FC/g, replacement: 'const $1: React.FC' },
+      { pattern: /const\s+(\w+):\s*any\s*FC/g, replacement: 'const $1: FC' },
+      
+      // Fix malformed component props
+      { pattern: /interface\s+(\w+)Props\s*\{/g, replacement: 'interface $1Props {' },
+      { pattern: /type\s+(\w+)Props\s*=/g, replacement: 'type $1Props =' },
+      
+      // Fix malformed component returns
+      { pattern: /return\s*\(\s*any\{/g, replacement: 'return ({' },
+      { pattern: /return\s*\(\s*any\[/g, replacement: 'return ([' }
+    ];
+
+    await this.applyFixes(componentFixes, '.tsx');
+  }
+
+  async applyFixes(fixes, fileExtension) {
+    const files = this.findFiles(fileExtension);
+    
+    files.forEach(filePath => {
+      try {
+        let content = fs.readFileSync(filePath, 'utf8');
+        let originalContent = content;
+        let fileFixed = false;
+        
+        fixes.forEach(fix => {
+          const newContent = content.replace(fix.pattern, fix.replacement);
+          if (newContent !== content) {
+            content = newContent;
+            fileFixed = true;
+          }
+        });
+        
+        if (fileFixed) {
+          fs.writeFileSync(filePath, content, 'utf8');
+          this.errorsFixed.push(`Fixed syntax in ${path.relative(this.projectRoot, filePath)}`);
+          this.fixesApplied++;
+        }
+      } catch (error) {
+        this.warnings.push(`Could not process ${filePath}: ${error.message}`);
+      }
+    });
+  }
+
+  findFiles(extension) {
     const files = [];
     
-    try {
-      const items = fs.readdirSync(dir, { withFileTypes: true });
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item.name);
+    function walkDir(dir) {
+      const items = fs.readdirSync(dir);
+      items.forEach(item => {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
         
-        if (item.isDirectory() && !item.name.startsWith('.') && item.name !== 'node_modules') {
-          files.push(...await this.getAllFiles(fullPath));
-        } else if (item.isFile()) {
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (stat.isFile() && item.endsWith(extension)) {
           files.push(fullPath);
         }
-      }
-    } catch (error) {
-      // Skip inaccessible directories
+      });
     }
     
+    walkDir(this.projectRoot);
     return files;
   }
 
-  async fixFile(fileInfo) {
-    const { path: filePath, content, issues } = fileInfo;
-    
-    try {
-      this.log(`Fixing file: ${filePath}`);
-      
-      let fixedContent = content;
-      let fixesApplied = [];
-
-      // Fix malformed imports
-      if (issues.includes('MALFORMED_IMPORT')) {
-        fixedContent = this.fixMalformedImports(fixedContent);
-        fixesApplied.push('MALFORMED_IMPORT');
-      }
-
-      // Fix malformed const declarations
-      if (issues.includes('MALFORMED_CONST')) {
-        fixedContent = this.fixMalformedConst(fixedContent);
-        fixesApplied.push('MALFORMED_CONST');
-      }
-
-      // Fix malformed from statements
-      if (issues.includes('MALFORMED_FROM')) {
-        fixedContent = this.fixMalformedFrom(fixedContent);
-        fixesApplied.push('MALFORMED_FROM');
-      }
-
-      // Fix JSX balance
-      if (issues.includes('UNBALANCED_JSX')) {
-        fixedContent = this.fixJSXBalance(fixedContent);
-        fixesApplied.push('UNBALANCED_JSX');
-      }
-
-      // Write fixed content
-      if (fixedContent !== content) {
-        fs.writeFileSync(filePath, fixedContent);
-        
-        return {
-          file: filePath,
-          fixesApplied: fixesApplied,
-          timestamp: new Date().toISOString()
-        };
-      }
-
-    } catch (error) {
-      this.log(`Failed to fix file ${filePath}: ${error.message}`, 'ERROR');
-      throw error;
-    }
-
-    return null;
-  }
-
-  fixMalformedImports(content) {
-    // Fix: import: { Component } from 'react'
-    content = content.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g, "import { $1 } from '$2'");
-    
-    // Fix: import: React from 'react'
-    content = content.replace(/import:\s*([^,]+),\s*from,\s*'([^']+)'/g, "import $1 from '$2'");
-    
-    // Fix: import: { Component }, from, 'react'
-    content = content.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g, "import { $1 } from '$2'");
-    
-    return content;
-  }
-
-  fixMalformedConst(content) {
-    // Fix: const: Component, React: .FC
-    content = content.replace(/const:\s*([^,]+),\s*([^:]+):\s*\.FC/g, "const $1: React.FC");
-    
-    // Fix: const: Component: React.FC
-    content = content.replace(/const:\s*([^:]+):\s*React\.FC/g, "const $1: React.FC");
-    
-    return content;
-  }
-
-  fixMalformedFrom(content) {
-    // Fix: from, 'react'
-    content = content.replace(/from,\s*'([^']+)'/g, "from '$1'");
-    
-    // Fix: }, from, 'react'
-    content = content.replace(/},\s*from,\s*'([^']+)'/g, "} from '$1'");
-    
-    return content;
-  }
-
-  fixJSXBalance(content) {
-    // Count open and close tags
-    const openTags = content.match(/<([A-Z][a-zA-Z]*)/g) || [];
-    const closeTags = content.match(/<\/([^>]*)/g) || [];
-    
-    if (openTags.length > closeTags.length) {
-      const missingTags = openTags.length - closeTags.length;
-      
-      // Add missing closing tags at the end
-      for (let i = 0; i < missingTags; i++) {
-        content += '\n      </div>';
-      }
-    }
-    
-    return content;
-  }
-
-  async runTypeCheck() {
-    try {
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
-      
-      return { success: true, errors: 0 };
-    } catch (error) {
-      const output = error.stdout || error.stderr || '';
-      const errorCount = (output.match(/error TS/g) || []).length;
-      
-      return { success: false, errors: errorCount, output };
-    }
-  }
-
-  async generateReport(fixes, errors, typeCheckResult) {
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      summary: {
-        totalFixes: fixes.length,
-        totalErrors: errors.length,
-        typeCheckSuccess: typeCheckResult.success,
-        remainingErrors: typeCheckResult.errors || 0
-      },
-      fixes: fixes,
-      errors: errors,
-      typeCheckResult: typeCheckResult
+      duration: Date.now() - this.startTime,
+      fixesApplied: this.fixesApplied,
+      errorsFixed: this.errorsFixed,
+      warnings: this.warnings,
+      status: this.fixesApplied > 0 ? 'success' : 'no-fixes-needed'
     };
-
-    fs.writeFileSync(this.fixesLog, JSON.stringify(report, null, 2));
     
-    this.log(`Syntax fix report generated: ${fixes.length} fixes applied, ${errors.length} errors encountered`);
-    
-    return report;
-  }
-
-  async commitFixes(fixes) {
-    try {
-      this.log('Committing syntax fixes...');
-      
-      // Add fixed files
-      for (const fix of fixes) {
-        execSync(`git add "${fix.file}"`, { cwd: this.projectRoot, stdio: 'pipe' });
-      }
-      
-      // Commit
-      const commitMessage = `fix: Auto-fix TypeScript/JSX syntax issues (${fixes.length} files)`;
-      execSync(`git commit -m "${commitMessage}"`, { cwd: this.projectRoot, stdio: 'pipe' });
-      
-      this.log('Syntax fixes committed successfully');
-      
-    } catch (error) {
-      this.log(`Failed to commit fixes: ${error.message}`, 'WARN');
-    }
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`📊 Report generated: ${this.reportFile}`, 'info');
   }
 }
 
 // Main execution
-async function main() {
-  const fixer = new TypeScriptSyntaxFixer();
-  
-  try {
-    const result = await fixer.runSyntaxFix();
-    
-    if (result.errors.length === 0 && result.fixes.length > 0) {
-      process.exit(0); // Success
-    } else if (result.errors.length > 0) {
-      process.exit(1); // Errors occurred
-    } else {
-      process.exit(2); // No fixes needed
-    }
-    
-  } catch (error) {
-    fixer.log(`Fatal error: ${error.message}`, 'ERROR');
-    process.exit(1);
-  }
-}
-
 if (require.main === module) {
-  main();
+  const fixer = new TypeScriptSyntaxFixer();
+  fixer.run().catch(console.error);
 }
 
 module.exports = TypeScriptSyntaxFixer;

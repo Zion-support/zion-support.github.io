@@ -1,22 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import {
-  User,
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  CheckCircle,
-  AlertCircle,
-  Building,
-  Phone,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud
-} from 'lucide-react'
+
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -340,11 +325,11 @@ export default function Signup() {
                     )}
                   </div>
 
-                  {/* Company Information */}
+                  {/* Comp Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                        Company Name
+                        Comp Name
                       </label>
                       <div className="relative">
                         <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
@@ -352,10 +337,10 @@ export default function Signup() {
                           type="text"
                           id="company"
                           name="company"
-                          value={formData.company}
+                          value={formData.comp}
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                          placeholder="Enter company name"
+                          placeholder="Enter comp name"
                         />
                       </div>
                     </div>
@@ -551,6 +536,6 @@ export default function Signup() {
           </div>
         </section>
       </main>
-    </>
+    </
   )
-}
+}>

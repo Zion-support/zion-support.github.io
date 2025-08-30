@@ -1,26 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Briefcase, 
-  MapPin, 
-  Clock, 
-  DollarSign, 
-  Users, 
-  Heart, 
-  Zap, 
-  Brain,
-  Shield,
-  Cloud,
-  Code,
-  Rocket,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Award,
-  Lightbulb
-} from 'lucide-react';
+
 
 const Careers = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -217,13 +198,11 @@ const Careers = () => {
                 </button>
                 <button className="px-8 py-4 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
                   Learn About Culture
-                </button>
-              </div>
-            </motion.div>
-          </div>
+                </button></div>
+            </motion.div></div>
         </section>
 
-        {/* Company Values Section */}
+        {/* Comp Values Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -245,15 +224,13 @@ const Careers = () => {
                     className="text-center"
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <value.icon className="w-8 h-8 text-blue-600" />
-                    </div>
+                      <value.icon className="w-8 h-8 text-blue-600" /></div>
                     <h3 className="text-xl font-semibold text-slate-900 mb-2">{value.title}</h3>
                     <p className="text-slate-600">{value.description}</p>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </motion.div></div>
         </section>
 
         {/* Benefits Section */}
@@ -282,8 +259,7 @@ const Careers = () => {
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </motion.div></div>
         </section>
 
         {/* Job Listings Section */}
@@ -328,13 +304,11 @@ const Careers = () => {
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900 mb-2">{job.title}</h3>
-                        <p className="text-blue-600 font-medium">{job.department}</p>
-                      </div>
+                        <p className="text-blue-600 font-medium">{job.department}</p></div>
                       <div className="text-right">
                         <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
                           {job.type}
-                        </span>
-                      </div>
+                        </span></div>
                     </div>
                     
                     <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-slate-600">
@@ -353,8 +327,7 @@ const Careers = () => {
                       <div className="flex items-center gap-2">
                         <Users className="w-4 h-4" />
                         {job.department}
-                      </div>
-                    </div>
+                      </div></div>
                     
                     <p className="text-slate-600 mb-4">{job.description}</p>
                     
@@ -367,8 +340,7 @@ const Careers = () => {
                             {req}
                           </li>
                         ))}
-                      </ul>
-                    </div>
+                      </ul></div>
                     
                     <button className="w-full py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
                       Apply Now
@@ -377,8 +349,7 @@ const Careers = () => {
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </motion.div></div>
         </section>
 
         {/* CTA Section */}
@@ -402,8 +373,7 @@ const Careers = () => {
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
                   Contact Recruiting
-                </button>
-              </div>
+                </button>              </div>
             </motion.div>
           </div>
         </section>

@@ -1,25 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  Contrast, 
-  ZoomIn, 
-  ZoomOut, 
-  RotateCcw,
-  Accessibility,
-  Settings,
-  X,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Keyboard,
-  MousePointer,
-  Smartphone
-} from 'lucide-react';
+
 
 interface AccessibilitySettings {
 
@@ -461,6 +442,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           <div key={index}>{announcement}</div>
         ))}
       </div>
-    </>
+    </
   );
-};
+};>

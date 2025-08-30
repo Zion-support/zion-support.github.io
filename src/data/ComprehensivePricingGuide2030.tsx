@@ -10,7 +10,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {
-    let services: any[] = [];
+    let services: [] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -42,7 +42,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   };
 
   const getCategories = () => {
-    let services: any[] = [];
+    let services: [] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -61,7 +61,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   };
 
   const getPriceRange = () => {
-    let services: any[] = [];
+    let services: [] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -86,7 +86,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     }
   };
 
-  const renderPricingCard = (service: anyany)  => {
+  const renderPricingCard = (service: )  => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -620,8 +620,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </>
+    </
   );
 };
 
-export default ComprehensivePricingGuide2030;
+export default ComprehensivePricingGuide2030;>

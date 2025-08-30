@@ -1,45 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  FlaskConical,
-  Brain,
-  Shield,
-  Cloud,
-  TrendingUp,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  Award,
-  Clock,
-  DollarSign,
-  Search,
-  Filter,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Target,
-  BookOpen,
-  GraduationCap,
-  Lightbulb,
-  Microscope,
-  TestTube,
-  Atom,
-  Satellite,
-  Telescope
-} from 'lucide-react';
+
 
 const researchAreas = [
   {

@@ -100,6 +100,6 @@ export function FloatingCTA() {
           />
         )}
       </AnimatePresence>
-    </>
+    </
   );
-}
+}>

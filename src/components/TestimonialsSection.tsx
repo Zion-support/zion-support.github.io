@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe  } from 'lucide-react.ts';
+
 const testimonials = [
   {
     id: 1,
@@ -53,7 +53,7 @@ const testimonials = [
     project: "Cloud Migration & Optimization"
   }
 ];
-export function TestimonialsSection(...args: any[]): any {
+export function TestimonialsSection(...args: []):  {
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -93,7 +93,7 @@ export function TestimonialsSection(...args: any[]): any {
                 <div>
                   <div className="text-white font-semibold">{testimonial.name}</div>
                   <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
-                  <div className="text-zion-cyan text-sm">{testimonial.company}</div>
+                  <div className="text-zion-cyan text-sm">{testimonial.comp}</div>
                 </div>
               </div>
             </div>

@@ -1,28 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Calendar,
-  Clock,
-  MapPin,
-  Users,
-  Video,
-  ExternalLink,
-  Filter,
-  Search,
-  ArrowRight,
-  Star,
-  Award,
-  Globe,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  TrendingUp,
-  MessageCircle,
-  BookOpen,
-  CheckCircle
-} from 'lucide-react';
+
 
 const events = [
   {

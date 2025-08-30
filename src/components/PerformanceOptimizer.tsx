@@ -3,16 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Alert, AlertDescription } from './ui/alert';
-import { 
-  Activity, 
-  Zap, 
-  Gauge, 
-  TrendingUp, 
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  Cpu
-} from 'lucide-react';
+
 
 // Simple Progress component
 const Progress: React.FC<{ value: number; className?: string }> = ({ value, className = "" }) => (
@@ -124,7 +115,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
       const entries = list.getEntries();
-      entries.forEach((entry: anyany)  => {
+      entries.forEach((entry: )  => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
@@ -206,7 +197,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
   );
 
   // Debounce utility function
-  function debounce<T extends (...args: anyany[])  => any>(
+  function debounce<T extends (...args: [])  => any>(
     func: anyT,
     wait: number
   ): (...args: Parameters<T>)  => void {
@@ -222,7 +213,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        console.log('SW registered: any', registration);
+        console.log('SW registered: ', registration);
       } catch (registrationError) {
         console.log('SW registration failed: ', registrationError);
       }

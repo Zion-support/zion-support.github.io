@@ -2,13 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
-  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
-} from 'lucide-react';
+
 
 interface SidebarItem {
   name: string;
@@ -197,7 +191,7 @@ const sidebarSections = [
     ]
   },
   {
-    title: 'Company & Resources',
+    title: 'Comp & Resources',
     icon: Users,
     color: 'from-green-500 to-emerald-600',
     items: [
@@ -209,7 +203,7 @@ const sidebarSections = [
         subItems: [
           { name: 'Our Mission', href: '/mission' },
           { name: 'Leadership Team', href: '/leadership' },
-          { name: 'Company History', href: '/history' },
+          { name: 'Comp History', href: '/history' },
           { name: 'Careers', href: '/careers' }
         ]
       },
@@ -491,6 +485,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
           </div>
         </div>
       </motion.div>
-    </>
+    </
   );
-}
+}>

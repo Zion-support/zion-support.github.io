@@ -1,27 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Brain, 
-  Atom, 
-  Rocket, 
-  Shield, 
-  Dna, 
-  Microscope,
-  Cpu,
-  Zap,
-  Globe,
-  Lock,
-  Eye,
-  Network,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin
- } from 'lucide-react.ts';
+
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
 
 const categoryIcons: { [key: string]: React.ComponentTypeg<div> } = {

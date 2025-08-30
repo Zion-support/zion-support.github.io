@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 
 interface CookieCategory {
@@ -201,14 +201,14 @@ const Cookies: React.FC = () => {
                         <>
                           <Eye className="w-4 h-4 mr-2" />
                           Enabled
-                        </>
+                        </
                       ) : (
-                        <>
+                        ><>
                           <EyeOff className="w-4 h-4 mr-2" />
                           Disabled
-                        </>
+                        </
                       )}
-                    </button>
+                    ></button>
                   )}
                 </div>
               </div>
@@ -251,7 +251,7 @@ const Cookies: React.FC = () => {
           <div className="text-center">
             <p className="text-gray-300 mb-4">
               Your preferences will be saved and applied to this website. You can change these 
-              settings at any time by visiting this page again.
+              settings at  time by visiting this page again.
             </p>
             <p className="text-sm text-gray-400">
               Note: Some features of our website may not function properly if you disable certain cookies.
@@ -377,8 +377,9 @@ const Cookies: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </
   );
 };
 
 export default Cookies;
+>

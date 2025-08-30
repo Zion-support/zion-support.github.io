@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { ChevronDown  } from 'lucide-react.ts';
+
 
 interface AccordionProps extends React.PropsWithChildren<{}> {
 
@@ -10,7 +10,7 @@ interface AccordionProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Accordion(...args: any[]): any {
+export function Accordion(...args: []):  {
   const [openItems, setOpenItems] = useState<any>(
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
   );
@@ -52,7 +52,7 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function AccordionItem(...args: any[]): any {
+export function AccordionItem(...args: []):  {
   return (
     <div className={`border-b border-gray-200 ${className}`}>
       {React.Children.map(children, (child) => {
@@ -74,7 +74,7 @@ interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function AccordionTrigger(...args: any[]): any {
+export function AccordionTrigger(...args: []):  {
   return (
     <button
       className={`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
@@ -98,7 +98,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function AccordionContent(...args: any[]): any {
+export function AccordionContent(...args: []):  {
   if (!isOpen) return null;
 
   return (

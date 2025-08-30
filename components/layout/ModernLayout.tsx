@@ -96,8 +96,8 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         </main>
         <ModernFooter />
       </div>
-    </>
+    </
   );
 };
 
-export default ModernLayout;
+export default ModernLayout;>

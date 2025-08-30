@@ -97,7 +97,7 @@ export function CaseStudiesSection() {
                 </h3>
                 
                 <p className="text-blue-400 font-semibold mb-3">
-                  {study.company}
+                  {study.comp}
                 </p>
                 
                 <div className="mb-4">

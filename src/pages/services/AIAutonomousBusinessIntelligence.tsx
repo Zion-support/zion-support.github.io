@@ -1,42 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import {
-  Brain,
-  TrendingUp,
-  Target,
-  Zap,
-  BarChart3,
-  Clock,
-  Award,
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  CheckCircle,
-  Eye,
-  Users,
-  FileText,
-  Shield,
-  TrendingDown,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Lightbulb,
-  Rocket,
-  Gauge,
-  PieChart,
-  Activity,
-  Target,
-  ArrowUpRight,
-  Building,
-  ShoppingCart,
-  DollarSign,
-  Heart,
-  GraduationCap,
-  Home
-} from 'lucide-react';
+
 
 export default function AIAutonomousBusinessIntelligence() {
   const features = [

@@ -21,7 +21,7 @@ interface ServiceItem {
 	textColor?: string
 }
 function collectAllServices(): ServiceItem[] {
-	const arrays: any[] = [
+	const arrays: [] = [
 		innovativeRealMicroSaasServices2025,
 		advancedITServices,
 		innovativeAIServices,
@@ -92,6 +92,6 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
 					<Link href="/contact/" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">Contact us</Link>
 				</div>
 			</main>
-		</>
+		</
 	)
-}
+}>

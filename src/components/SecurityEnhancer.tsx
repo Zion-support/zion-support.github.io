@@ -4,19 +4,7 @@ import { Button  } from './ui/button';
 import { Badge  } from './ui/badge';
 import { Alert, AlertDescription  } from './ui/alert';
 import { Progress  } from './ui/progress';
-import { Shield, 
-  Lock, 
-  AlertTriangle, 
-  CheckCircle, 
-  Eye, 
-  EyeOff,
-  RefreshCw,
-  Zap,
-  ShieldCheck,
-  Bug,
-  Network,
-  Database
- } from 'lucide-react.ts';
+
 
 interface SecurityThreat {
 
@@ -71,7 +59,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   useEffect(() => {
     const sampleThreats: SecurityThreat[] = [
       {
-        id: any'1',
+        id: '1',
         type: 'xss',
         severity: 'high',
         description: 'Potential XSS vulnerability in user input field',
@@ -296,14 +284,14 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                   Scanning...
-                </>
+                </
               ) : (
-                <>
+                ><>
                   <Zap className="h-4 w-4 mr-2" />
                   Run Security Scan
-                </>
+                </
               )}
-            </Button>
+            ></Button>
             <div className="text-xs text-gray-500 mt-2 text-center">
               Last scan: {metrics.lastScan.toLocaleString()}
             </div>

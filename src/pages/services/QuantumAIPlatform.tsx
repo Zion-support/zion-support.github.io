@@ -1,26 +1,5 @@
 import { Link } from 'react-router-dom';
-import { 
-  Atom, 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart3, 
-  Cpu, 
-  CheckCircle,
-  Star,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Server,
-  Network,
-  Database,
-  Cloud,
-  Lock,
-  Globe,
-  TrendingUp,
-  Users,
-  Shield
-} from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 
 const QuantumAIPlatform = () => {
@@ -396,7 +375,7 @@ const QuantumAIPlatform = () => {
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
                 <div>
                   <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.comp}</p>
                 </div>
               </div>
             ))}

@@ -1,25 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  FileText, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  AlertTriangle, 
- 
-  CheckCircle, 
-  ArrowRight, 
-  Download, 
-  Calendar,
-  Mail,
-  Phone,
-  ExternalLink,
-  Scale,
-  Gavel,
-  BookOpen
-} from 'lucide-react';
+
 
 const TermsOfService = () => {
   const lastUpdated = '2025-01-15';
@@ -47,7 +29,7 @@ const TermsOfService = () => {
       id: 'acceptable-use',
       title: 'Acceptable Use Policy',
       icon: Shield,
-      content: `You agree to use our services only for lawful purposes and in accordance with these Terms. You may not use our services to transmit harmful code, violate intellectual property rights, or engage in any illegal activities.`
+      content: `You agree to use our services only for lawful purposes and in accordance with these Terms. You may not use our services to transmit harmful code, violate intellectual property rights, or engage in  illegal activities.`
     },
     {
       id: 'intellectual-property',
@@ -77,19 +59,19 @@ const TermsOfService = () => {
       id: 'limitation-liability',
       title: 'Limitation of Liability',
       icon: AlertTriangle,
-      content: `To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`
+      content: `To the maximum extent permitted by law, Zion Tech Group shall not be liable for  indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`
     },
     {
       id: 'indemnification',
       title: 'Indemnification',
       icon: Shield,
-      content: `You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from your use of our services or violation of these Terms.`
+      content: `You agree to indemnify and hold harmless Zion Tech Group from  claims, damages, or expenses arising from your use of our services or violation of these Terms.`
     },
     {
       id: 'termination',
       title: 'Termination and Suspension',
       icon: AlertTriangle,
-      content: `We may terminate or suspend your access to our services at any time for violation of these Terms or for any other reason. You may terminate your account at any time by contacting us.`
+      content: `We may terminate or suspend your access to our services at  time for violation of these Terms or for  other reason. You may terminate your account at  time by contacting us.`
     },
     {
       id: 'governing-law',
@@ -101,20 +83,20 @@ const TermsOfService = () => {
       id: 'changes',
       title: 'Changes to Terms',
       icon: AlertTriangle,
-      content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
+      content: `We reserve the right to modify these Terms at  time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
     },
     {
       id: 'contact',
       title: 'Contact Information',
       icon: Mail,
-      content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`
+      content: `If you have  questions about these Terms of Service, please contact us using the information provided below.`
     }
   ];
 
   const keyProvisions = [
     {
       title: 'Service Usage',
-      description: 'Services are provided "as is" without warranties of any kind',
+      description: 'Services are provided "as is" without warranties of  kind',
       icon: CheckCircle
     },
     {
@@ -349,7 +331,7 @@ const TermsOfService = () => {
                 Questions About These Terms?
               </h2>
               <p className="text-xl text-purple-100 mb-8">
-                Our legal team is here to help clarify any questions about our Terms of Service.
+                Our legal team is here to help clarify  questions about our Terms of Service.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -375,8 +357,8 @@ const TermsOfService = () => {
           </div>
         </section>
       </div>
-    </>
+    </
   );
 };
 
-export default TermsOfService;
+export default TermsOfService;>

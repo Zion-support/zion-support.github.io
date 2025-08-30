@@ -35,7 +35,7 @@ const allServiceArrays: ServiceRecord[][] = [
 ];
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
-		const hit = arr.find((s: any) => {
+		const hit = arr.find((s: ) => {
 			if (!s) return false;
 			if (s.id && s.id === slug) return true;
 			if (s.link && typeof s.link === 'string') {

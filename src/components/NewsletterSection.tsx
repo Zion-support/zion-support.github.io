@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react.ts';
+
 
 const NewsletterSection: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('');
@@ -109,7 +109,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
 
             <div className="flex items-center text-sm text-gray-400">
               <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span>No spam, unsubscribe at any time</span>
+              <span>No spam, unsubscribe at  time</span>
             </div>
           </motion.div>
 
@@ -158,9 +158,9 @@ const NewsletterSection: React.FC = (): JSX.Element => {
                     <>
                       Subscribe Now
                       <ArrowRight className="ml-2 w-5 h-5" />
-                    </>
+                    </
                   )}
-                </button>
+                ></button>
               </form>
 
               <div className="mt-6 text-center">

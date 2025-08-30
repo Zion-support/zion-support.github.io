@@ -21,13 +21,13 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
   onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: any()  => void;
+  onClearFilters: ()  => void;
   isOpen: anyboolean;
   onClose: ()  => void;
 
 }
 
-export function FilterSidebar(...args: any[]): any {
+export function FilterSidebar(...args: []):  {
   return (
     <>
       {/* Mobile overlay */}
@@ -103,6 +103,6 @@ export function FilterSidebar(...args: any[]): any {
           ))}
         </div>
       </div>
-    </>
+    </
   );
-}
+}>

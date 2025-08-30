@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react.ts';
+
 
 interface Service {
 

@@ -192,7 +192,7 @@ export function InteractiveTestimonials() {
                 <div>
                   <div className="text-white font-semibold text-lg">{currentTestimonial.name}</div>
                   <div className="text-gray-400 text-sm">{currentTestimonial.position}</div>
-                  <div className="text-blue-400 text-sm">{currentTestimonial.company}</div>
+                  <div className="text-blue-400 text-sm">{currentTestimonial.comp}</div>
                 </div>
               </motion.div>
             </AnimatePresence>
