@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export function GradientHeading({ children, variant = 'primary', size = '2xl', className = '', customGradient }) {
     const getGradientClasses = () => {
         const gradients = {

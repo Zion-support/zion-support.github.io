@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
@@ -495,7 +495,7 @@ export default function OnsiteSupport() {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Tool className="w-6 h-6 text-white" />
+// Fixed missing name:                   <Tool className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Hands-on Expertise</h3>

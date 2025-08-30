@@ -75,10 +75,10 @@ export default function RevolutionaryServicesShowcase2030() {
     let comparison = 0;
     switch (sortBy) {
       case 'aiScore':
-        comparison = b.aiScore - a.aiScore;
+        comparison = b??.aiScore - a.aiScore;
         break;
       case 'price':
-        comparison = a.price - b.price;
+        comparison = a??.price - b.price;
         break;
       case 'rating':
         comparison = b.rating - a.rating;
@@ -87,13 +87,13 @@ export default function RevolutionaryServicesShowcase2030() {
         comparison = b.reviewCount - a.reviewCount;
         break;
       case 'roi':
-        const roiA = typeof a.roi === 'string' ? parseInt(a.roi.match(/\d+/)?.[0] || '0') : 0;
-        const roiB = typeof b.roi === 'string' ? parseInt(b.roi.match(/\d+/)?.[0] || '0') : 0;
+        const roiA = typeof a??.roi === 'string' ? parseInt(a.roi.match(/\d+/)?.[0] || '0') : 0;
+        const roiB = typeof b??.roi === 'string' ? parseInt(b.roi.match(/\d+/)?.[0] || '0') : 0;
         comparison = roiB - roiA;
         break;
       case 'setupTime':
-        const timeA = typeof a.setupTime === 'string' ? parseInt(a.setupTime.match(/\d+/)?.[0] || '0') : 0;
-        const timeB = typeof b.setupTime === 'string' ? parseInt(b.setupTime.match(/\d+/)?.[0] || '0') : 0;
+        const timeA = typeof a??.setupTime === 'string' ? parseInt(a.setupTime.match(/\d+/)?.[0] || '0') : 0;
+        const timeB = typeof b??.setupTime === 'string' ? parseInt(b.setupTime.match(/\d+/)?.[0] || '0') : 0;
         comparison = timeA - timeB;
         break;
       default:
@@ -206,9 +206,9 @@ export default function RevolutionaryServicesShowcase2030() {
   };
 
   // Calculate statistics
-  const totalValue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.price, 0);
+  const totalValue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service?.price, 0);
   const averageROI = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => {
-    const roi = service.roi;
+    const roi = service?.roi;
     if (typeof roi === 'string') {
       const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
       return sum + roiNumber;
@@ -377,7 +377,7 @@ export default function RevolutionaryServicesShowcase2030() {
                   </div>
                   <div className="flex items-center space-x-4 text-sm">
                     <span className="text-gray-300">Total Value:</span>
-                    <span className="text-green-400 font-semibold">${filteredServices.reduce((sum, service) => sum + service.price, 0).toLocaleString()}</span>
+                    <span className="text-green-400 font-semibold">${filteredServices.reduce((sum, service) => sum + service?.price, 0).toLocaleString()}</span>
                   </div>
                 </div>
               </div>
@@ -398,8 +398,8 @@ export default function RevolutionaryServicesShowcase2030() {
                     <div className="flex items-center justify-between">
                       {getCategoryIcon(service.category)}
                       <div className="text-right">
-                        <div className="text-white font-bold text-2xl">${service.price.toLocaleString()}</div>
-                        <div className="text-white/80 text-sm">{service.marketPrice}</div>
+                        <div className="text-white font-bold text-2xl">${service?.price.toLocaleString()}</div>
+                        <div className="text-white/80 text-sm">{service?.marketPrice}</div>
                       </div>
                     </div>
                   </div>
@@ -415,18 +415,18 @@ export default function RevolutionaryServicesShowcase2030() {
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">
                         <span className="text-gray-400 text-sm">AI Score:</span>
-                        <span className="text-purple-400 font-semibold">{service.aiScore}/100</span>
+                        <span className="text-purple-400 font-semibold">{service?.aiScore}/100</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-gray-400 text-sm">ROI:</span>
-                        <span className={`font-semibold ${getROIColor(service.roi)}`}>
-                          {service.roi}
+                        <span className={`font-semibold ${getROIColor(service?.roi)}`}>
+                          {service?.roi}
                         </span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-gray-400 text-sm">Setup:</span>
-                        <span className={`font-semibold ${getSetupTimeColor(service.setupTime)}`}>
-                          {service.setupTime}
+                        <span className={`font-semibold ${getSetupTimeColor(service?.setupTime)}`}>
+                          {service?.setupTime}
                         </span>
                       </div>
                       <div className="flex items-center justify-between">
@@ -646,8 +646,8 @@ export default function RevolutionaryServicesShowcase2030() {
           >
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
-                <div className={`p-4 rounded-xl bg-gradient-to-r ${getCategoryColor(selectedService.category)}`}>
-                  {getCategoryIcon(selectedService.category)}
+                <div className={`p-4 rounded-xl bg-gradient-to-r ${getCategoryColor(selectedService?.category)}`}>
+                  {getCategoryIcon(selectedService?.category)}
                 </div>
                 <button
                   onClick={closeModal}
@@ -657,8 +657,8 @@ export default function RevolutionaryServicesShowcase2030() {
                 </button>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-4">{selectedService.title}</h2>
-              <p className="text-gray-300 text-lg mb-6">{selectedService.description}</p>
+              <h2 className="text-3xl font-bold text-white mb-4">{selectedService?.title}</h2>
+              <p className="text-gray-300 text-lg mb-6">{selectedService?.description}</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
@@ -666,31 +666,31 @@ export default function RevolutionaryServicesShowcase2030() {
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span className="text-gray-400">Category:</span>
-                      <span className="text-white">{selectedService.category}</span>
+                      <span className="text-white">{selectedService?.category}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-400">Subcategory:</span>
-                      <span className="text-white">{selectedService.subcategory}</span>
+                      <span className="text-white">{selectedService?.subcategory}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-400">Price:</span>
-                      <span className="text-white font-semibold">${selectedService.price.toLocaleString()}</span>
+                      <span className="text-white font-semibold">${selectedService?.price.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-400">Market Price:</span>
-                      <span className="text-green-400">{selectedService.marketPrice}</span>
+                      <span className="text-green-400">{selectedService?.marketPrice}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-400">Setup Time:</span>
-                      <span className="text-blue-400">{selectedService.setupTime}</span>
+                      <span className="text-blue-400">{selectedService?.setupTime}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-400">AI Score:</span>
-                      <span className="text-purple-400 font-semibold">{selectedService.aiScore}/100</span>
+                      <span className="text-purple-400 font-semibold">{selectedService?.aiScore}/100</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-400">Rating:</span>
-                      <span className="text-white">{selectedService.rating}/5 ({selectedService.reviewCount} reviews)</span>
+                      <span className="text-white">{selectedService?.rating}/5 ({selectedService?.reviewCount} reviews)</span>
                     </div>
                   </div>
                 </div>
@@ -698,7 +698,7 @@ export default function RevolutionaryServicesShowcase2030() {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
                   <div className="space-y-3">
-                    {selectedService.tags.slice(0, 5).map((tag, index) => (
+                    {selectedService?.tags.slice(0, 5).map((tag, index) => (
                       <div key={index} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         <span className="text-gray-300">{tag}</span>
@@ -708,7 +708,7 @@ export default function RevolutionaryServicesShowcase2030() {
 
                   <h3 className="text-xl font-semibold text-white mb-4 mt-6">ROI & Benefits</h3>
                   <div className="bg-white/5 rounded-lg p-4">
-                    <p className="text-green-400 font-semibold">{selectedService.roi}</p>
+                    <p className="text-green-400 font-semibold">{selectedService?.roi}</p>
                   </div>
                 </div>
               </div>
@@ -716,7 +716,7 @@ export default function RevolutionaryServicesShowcase2030() {
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Integrations</h3>
                 <div className="flex flex-wrap gap-2">
-                  {selectedService.integrations.map((integration, index) => (
+                  {selectedService?.integrations.map((integration, index) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-white/10 rounded-full text-sm text-white"
@@ -730,7 +730,7 @@ export default function RevolutionaryServicesShowcase2030() {
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Competitors</h3>
                 <div className="flex flex-wrap gap-2">
-                  {selectedService.competitors.map((competitor, index) => (
+                  {selectedService?.competitors.map((competitor, index) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-sm text-red-300"
@@ -743,13 +743,13 @@ export default function RevolutionaryServicesShowcase2030() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href={`mailto:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.title}`}
+                  href={`mailto:${selectedService?.contactInfo.email}?subject=Inquiry about ${selectedService?.title}`}
                   className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-6 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
                 >
                   Get Revolutionary Demo
                 </a>
                 <a
-                  href={`tel:${selectedService.contactInfo.phone}`}
+                  href={`tel:${selectedService?.contactInfo.phone}`}
                   className="flex-1 border-2 border-white/30 text-white py-4 px-6 rounded-lg font-semibold text-center hover:bg-white/10 transition-all duration-300"
                 >
                   Call Now

@@ -199,7 +199,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                         {filteredServices[currentSlide]?.price}
                       </div>
                       <div className="text-sm text-gray-400">
-                        per {filteredServices[currentSlide]?.billing}
+                        per {filteredServices[currentSlide]??.billing}
                       </div>
                     </div>
                     <motion.button
@@ -207,7 +207,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                       whileTap={{ scale: 0.95 }}
                       className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
                     >
-                      {filteredServices[currentSlide]?.ctaLabel}
+                      {filteredServices[currentSlide]??.ctaLabel}
                     </motion.button>
                   </div>
                   
@@ -227,7 +227,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Market Size</h4>
                       <div className="text-2xl font-bold text-green-400">
-                        {filteredServices[currentSlide]?.marketSize}
+                        {filteredServices[currentSlide]??.marketSize}
                       </div>
                     </div>
                   </div>
@@ -285,13 +285,13 @@ const EmergingTechShowcase2025: React.FC = () => {
                 
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-blue-400">{service.price}</div>
-                  <div className="text-sm text-gray-400">per {service.billing}</div>
+                  <div className="text-sm text-gray-400">per {service?.billing}</div>
                 </div>
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-sm text-gray-400">
                     <TrendingUp className="w-4 h-4" />
-                    <span>{service.marketSize}</span>
+                    <span>{service?.marketSize}</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-400">
                     <Users className="w-4 h-4" />
@@ -304,7 +304,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
                 >
-                  {service.ctaLabel}
+                  {service?.ctaLabel}
                 </motion.button>
               </motion.div>
             ))}
@@ -436,13 +436,13 @@ const EmergingTechShowcase2025: React.FC = () => {
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
                       <div className="bg-white/10 rounded-xl p-4">
                         <h4 className="font-semibold text-white mb-2">Market Size</h4>
-                        <p className="text-2xl font-bold text-green-400">{service.marketSize}</p>
+                        <p className="text-2xl font-bold text-green-400">{service?.marketSize}</p>
                       </div>
                       
                       <div className="bg-white/10 rounded-xl p-4">
                         <h4 className="font-semibold text-white mb-2">Pricing</h4>
                         <p className="text-2xl font-bold text-blue-400">{service.price}</p>
-                        <p className="text-sm text-gray-400">per {service.billing}</p>
+                        <p className="text-sm text-gray-400">per {service?.billing}</p>
                       </div>
                       
                       <div className="bg-white/10 rounded-xl p-4">
@@ -457,7 +457,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                         whileTap={{ scale: 0.95 }}
                         className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
                       >
-                        {service.ctaLabel}
+                        {service?.ctaLabel}
                       </motion.button>
                       <motion.button
                         whileHover={{ scale: 1.05 }}

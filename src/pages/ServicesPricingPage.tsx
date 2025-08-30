@@ -31,7 +31,7 @@ const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   if (!acc[service.category]) {
     acc[service.category] = [];
   }
-  acc[service.category].push(service);
+  acc[service?.category]?.push(service);
   return acc;
 }, {} as { [key: string]: typeof EXPANDED_SERVICES });
 // Pricing comparison features

@@ -212,16 +212,16 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <div className="flex-1 text-center md:text-left">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6">
-                      {React.createElement(heroSlides[currentSlide].icon, { className: "w-8 h-8 text-cyan-400" })}
+                      {React?.createElement(heroSlides[currentSlide]?.icon, { className: "w-8 h-8 text-cyan-400" })}
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                      {heroSlides[currentSlide].title}
+                      {heroSlides[currentSlide]?.title}
                     </h3>
                     <p className="text-gray-300 mb-6">
-                      {heroSlides[currentSlide].description}
+                      {heroSlides[currentSlide]?.description}
                     </p>
                     <div className="grid grid-cols-2 gap-3">
-                      {heroSlides[currentSlide].features.map((feature, index) => (
+                      {heroSlides[currentSlide]?.features?.map((feature, index) => (
                         <div key={index} className="flex items-center text-sm text-cyan-400">
                           <CheckCircle className="w-4 h-4 mr-2" />
                           {feature}

@@ -1,6 +1,6 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 import { 
   Home, 
   Briefcase, 
@@ -254,7 +254,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
         { name: 'Case Studies', href: '/case-studies', icon: FileText },
         { name: 'Research', href: '/research-development', icon: TestTube },
         { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
+// Fixed missing name:         { name: 'News', href: '/news', icon: Newspaper },
         { name: 'Contact', href: '/contact', icon: Mail },
         { name: 'Blog', href: '/blog', icon: FileText },
       ]
@@ -331,7 +331,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
         { name: 'AI Hiring Platform', href: '/zion-hire-ai', icon: Brain },
         { name: 'Community Forum', href: '/community', icon: MessageSquare },
         { name: 'Partnerships', href: '/partners', icon: Handshake },
-        { name: 'Training Programs', href: '/training', icon: GraduationCap },
+// Fixed missing name:         { name: 'Training Programs', href: '/training', icon: GraduationCap },
         { name: 'Certifications', href: '/certifications', icon: Award },
       ]
     },

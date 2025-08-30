@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -290,7 +290,7 @@ export default function Resources() {
                         </div>
                         <div className="text-right">
                           <span className="text-xs text-gray-400">
-                            {item.readTime || item.duration}
+                            {item?.readTime || item?.duration}
                           </span>
                           {item.featured && (
                             <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />
@@ -358,7 +358,7 @@ export default function Resources() {
                     <div key={idx} className="flex items-center justify-between text-sm">
                       <span className="text-gray-300">{item.title}</span>
                       <span className="text-gray-500 text-xs">
-                        {item.readTime || item.duration}
+                        {item?.readTime || item?.duration}
                       </span>
                     </div>
                   ))}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
     return (<>
       {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className={cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded", className)} animate={{

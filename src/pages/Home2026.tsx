@@ -134,8 +134,8 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaas
 const Home2026: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+// Removed unused:   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+// Removed unused:   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 6);
   

@@ -21,9 +21,9 @@ const EnhancedZionTechServices2025: React.FC = () => {
       case 'price':
         return a.price - b.price;
       case 'rating':
-        return b.rating - a.rating;
+        return b??.rating - a.rating;
       case 'aiScore':
-        return b.aiScore - a.aiScore;
+        return b??.aiScore - a.aiScore;
       default:
         return a.title.localeCompare(b.title);
     }
@@ -142,7 +142,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
                   </span>
                   <div className="flex items-center gap-2">
                     <span className="text-yellow-400">★</span>
-                    <span className="text-white">{service.rating}</span>
+                    <span className="text-white">{service?.rating}</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
@@ -153,12 +153,12 @@ const EnhancedZionTechServices2025: React.FC = () => {
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-gray-400">AI Intelligence Score</span>
-                  <span className="text-lg font-bold text-green-400">{service.aiScore}/100</span>
+                  <span className="text-lg font-bold text-green-400">{service?.aiScore}/100</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
                   <div 
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${service.aiScore}%` }}
+                    style={{ width: `${service?.aiScore}%` }}
                   ></div>
                 </div>
               </div>
@@ -167,7 +167,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                 <ul className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, index) => (
+                  {service?.features.slice(0, 3).map((feature, index) => (
                     <li key={index} className="text-xs text-gray-400 flex items-center">
                       <span className="text-green-400 mr-2">✓</span>
                       {feature}
@@ -180,7 +180,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
                 <ul className="space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                  {service?.benefits.slice(0, 2).map((benefit, index) => (
                     <li key={index} className="text-xs text-gray-400 flex items-center">
                       <span className="text-blue-400 mr-2">→</span>
                       {benefit}
@@ -194,9 +194,9 @@ const EnhancedZionTechServices2025: React.FC = () => {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white">${service.price}</div>
                   <div className="text-sm text-gray-400">per month</div>
-                  {service.pricing?.yearly && (
+                  {service?.pricing?.yearly && (
                     <div className="text-xs text-green-400 mt-1">
-                      ${service.pricing.yearly}/year (Save ${(service.price * 12 - service.pricing.yearly).toLocaleString()})
+                      ${service??.pricing.yearly}/year (Save ${(service.price * 12 - service.pricing.yearly).toLocaleString()})
                     </div>
                   )}
                 </div>
@@ -216,7 +216,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
               {/* Contact and Action */}
               <div className="space-y-3">
                 <a
-                  href={service.link}
+                  href={service?.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
@@ -225,7 +225,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
                 </a>
                 <div className="text-center">
                   <a
-                    href={`mailto:${service.contactInfo.email}`}
+                    href={`mailto:${service?.contactInfo.email}`}
                     className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     Contact Sales

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { 
@@ -39,7 +39,7 @@ export default function UltimateServicesShowcase2025() {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {
+// Removed unused:   const getCategoryIcon = (category: string) => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
@@ -270,7 +270,7 @@ export default function UltimateServicesShowcase2025() {
                     <p className="text-sm text-gray-400">{service.category}</p>
                   </div>
                 </div>
-                {service.featured && (
+                {service?.featured && (
                   <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full">
                     Featured
                   </span>
@@ -303,13 +303,13 @@ export default function UltimateServicesShowcase2025() {
                   <span className="text-gray-400">One-time</span>
                 </div>
                 <p className="text-sm text-gray-300 mb-2">
-                  <strong>Market Price:</strong> {service.marketPrice}
+                  <strong>Market Price:</strong> {service?.marketPrice}
                 </p>
                 <p className="text-sm text-gray-300 mb-2">
-                  <strong>ROI:</strong> {service.roi}
+                  <strong>ROI:</strong> {service?.roi}
                 </p>
                 <p className="text-xs text-gray-400">
-                  <strong>Setup Time:</strong> {service.setupTime}
+                  <strong>Setup Time:</strong> {service?.setupTime}
                 </p>
               </div>
 
@@ -317,7 +317,7 @@ export default function UltimateServicesShowcase2025() {
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Integrations</h4>
                 <div className="flex flex-wrap gap-2">
-                  {service.integrations.slice(0, 4).map((integration, index) => (
+                  {service?.integrations.slice(0, 4).map((integration, index) => (
                     <span
                       key={index}
                       className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30"
@@ -334,15 +334,15 @@ export default function UltimateServicesShowcase2025() {
                 <div className="space-y-2 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
                     <Phone className="w-4 h-4 text-blue-400" />
-                    <span>{service.contactInfo.phone}</span>
+                    <span>{service?.contactInfo.phone}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Mail className="w-4 h-4 text-blue-400" />
-                    <span>{service.contactInfo.email}</span>
+                    <span>{service?.contactInfo.email}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-4 h-4 text-blue-400" />
-                    <span className="text-xs">{service.contactInfo.address}</span>
+                    <span className="text-xs">{service?.contactInfo.address}</span>
                   </div>
                 </div>
               </div>
@@ -357,7 +357,7 @@ export default function UltimateServicesShowcase2025() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href={service.contactInfo.website}
+                  href={service?.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"

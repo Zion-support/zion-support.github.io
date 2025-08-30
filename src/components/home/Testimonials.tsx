@@ -112,32 +112,32 @@ const Testimonials: React.FC = () => {
               
               {/* Rating */}
               <div className="flex justify-center mb-6">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                {[?.?.?.Array(testimonials[currentIndex]?.rating)]?.map((_, i) => (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
               
               {/* Quote */}
               <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed italic">
-                "{testimonials[currentIndex].content}"
+                "{testimonials[currentIndex]?.content}"
               </blockquote>
               
               {/* Author */}
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4 text-white font-bold text-xl">
-                  {testimonials[currentIndex].name.charAt(0)}
+                  {testimonials[currentIndex]?.name?.charAt(0)}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-1">
-                  {testimonials[currentIndex].name}
+                  {testimonials[currentIndex]?.name}
                 </h3>
                 <p className="text-zion-cyan font-medium mb-1">
-                  {testimonials[currentIndex].role}
+                  {testimonials[currentIndex]?.role}
                 </p>
                 <p className="text-zion-slate-light text-sm mb-2">
-                  {testimonials[currentIndex].company}
+                  {testimonials[currentIndex]?.company}
                 </p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-xs font-medium">
-                  {testimonials[currentIndex].industry}
+                  {testimonials[currentIndex]?.industry}
                 </span>
               </div>
             </motion.div>

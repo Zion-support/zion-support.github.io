@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export const Steps = ({ children, className, currentStep = 0 }) => {
     return (<div className={cn("flex items-center space-x-2", className)}>
       {React.Children.map(children, (child, index) => {

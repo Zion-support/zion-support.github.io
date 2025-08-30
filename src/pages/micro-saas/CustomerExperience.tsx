@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap } from 'lucide-react';
 

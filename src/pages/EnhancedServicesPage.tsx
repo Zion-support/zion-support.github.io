@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -303,7 +303,7 @@ export default function EnhancedServicesPage() {
                         {getPriceRange(service.price)}
                       </Badge>
                     </div>
-                    {service.featured && (
+                    {service?.featured && (
                       <Badge variant="default" className="bg-zion-purple">
                         Featured
                       </Badge>
@@ -318,15 +318,15 @@ export default function EnhancedServicesPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                      <span className="text-sm font-medium">{service.rating}</span>
-                      <span className="text-sm text-zion-slate">({service.reviewCount} reviews)</span>
+                      <span className="text-sm font-medium">{service?.rating}</span>
+                      <span className="text-sm text-zion-slate">({service?.reviewCount} reviews)</span>
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-zion-blue">
                         {service.currency}{service.price?.toLocaleString()}
                       </div>
                       <div className="text-sm text-zion-slate">
-                        {service.availability}
+                        {service?.availability}
                       </div>
                     </div>
                   </div>
@@ -346,13 +346,13 @@ export default function EnhancedServicesPage() {
                     </div>
                     <div className="flex items-center gap-1">
                       <TrendingUp className="w-4 h-4" />
-                      AI Score: {service.aiScore}
+                      AI Score: {service?.aiScore}
                     </div>
                   </div>
 
                   <div className="pt-4 border-t border-zion-slate-light">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-zion-slate">By {service.author.name}</span>
+                      <span className="text-zion-slate">By {service?.author.name}</span>
                       <Button 
                         size="sm" 
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"

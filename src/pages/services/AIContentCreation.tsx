@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import {
@@ -84,7 +84,7 @@ export default function AIContentCreation() {
     {
       type: "Email Marketing",
       description: "Personalized email campaigns, newsletters, and automated sequences",
-      icon: Mail
+// Fixed missing name:       icon: Mail
     },
     {
       type: "Marketing Copy",

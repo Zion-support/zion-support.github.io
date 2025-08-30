@@ -13,7 +13,7 @@ import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3';
 import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
 import X from 'lucide-react/dist/esm/icons/x';
 import Info from 'lucide-react/dist/esm/icons/info';
-import { cn } from '@/lib/utils';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export function PerformanceDashboard({ className, showDetails = false, onClose }) {
     const { metrics, observers, performanceScore, logMetrics } = usePerformance();
     const [isExpanded, setIsExpanded] = useState(showDetails);

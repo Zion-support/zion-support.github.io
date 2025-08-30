@@ -1,6 +1,6 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+// Removed unused: import { Link } from 'react-router-dom';
 import { 
   Zap, 
   Target, 
@@ -215,7 +215,7 @@ export default function DigitalTransformation() {
       description: 'Migrate legacy systems to modern cloud platforms'
     },
     {
-      icon: Data,
+// Fixed missing name:       icon: Data,
       title: 'Data Analytics',
       description: 'Implement advanced analytics and business intelligence'
     }
@@ -239,12 +239,12 @@ export default function DigitalTransformation() {
       description: 'E-commerce and omnichannel retail transformation'
     }
   ];
-  const contactInfo = {
+// Removed unused:   const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008, Middletown DE 19709"
   };
-  const industries = [
+// Removed unused:   const industries = [
     'Healthcare',
     'Finance',
     'Manufacturing',

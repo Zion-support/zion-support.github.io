@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from 'lucide-react';
 
@@ -14,7 +14,7 @@ export default function AIMarketingAutomationPersonalization() {
     'Integration with major CRM, e-commerce, and advertising platforms',
   ];
 
-  const benefits = [
+// Removed unused:   const benefits = [
     'Increase conversion rates by 40-60% with personalization',
     'Reduce customer acquisition costs by 30-50%',
     'Improve email open rates by 25-40% with AI optimization',

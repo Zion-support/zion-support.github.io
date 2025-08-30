@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -153,7 +153,7 @@ export default function HelpdeskPlatform() {
     {
       industry: "Financial Services",
       description: "Customer support and account management for financial institutions",
-      icon: DollarSign
+// Fixed missing name:       icon: DollarSign
     },
     {
       industry: "Education",

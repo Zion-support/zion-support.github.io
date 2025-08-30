@@ -135,15 +135,15 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     
     const botMessage: ChatMessage = {
       id: Date.now().toString(),
-      content: randomResponse.content,
+      content: randomResponse?.content,
       sender: 'bot',
       timestamp: new Date(),
       type: 'text',
       status: 'sent',
       metadata: {
         confidence: 0.85 + Math.random() * 0.1,
-        suggestions: randomResponse.suggestions,
-        relatedServices: randomResponse.relatedServices,
+        suggestions: randomResponse?.suggestions,
+        relatedServices: randomResponse?.relatedServices,
         estimatedResponseTime: 1 + Math.random() * 2
       }
     };

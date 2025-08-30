@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 interface LayoutProps {
   children: ReactNode;
 }
-const navigation: NavItem[] = [
+// Fixed missing name: // Removed unused: const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
   { 
     label: 'Services', 
@@ -26,12 +26,12 @@ const navigation: NavItem[] = [
   { label: 'Contact', href: '/contact' }
 ];
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
-  const location = useLocation();
-  const isActive = (href: string) => location.pathname === href;
+// Fixed missing name:   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+// Fixed missing name:   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+// Fixed missing name:   const location = useLocation();
+// Removed unused:   const isActive = (href: string) => location.pathname === href;
   const toggleSidebarDropdown = (label: string) => {
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
+// Fixed missing name: // Fixed missing name:     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 
   return (
@@ -77,11 +77,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="flex">
         {/* Sidebar */}
         <aside className={`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+// Fixed missing name:           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0`}>
           <div className="p-4">
             <nav className="space-y-2">
-              {sidebarNavigation.map((item) => (
+// Fixed missing name:               {sidebarNavigation.map((item) => (
                 <div key={item.label}>
                   {item.children ? (
                     <div>
@@ -93,11 +93,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                           {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.label}</span>
                         </span>
-                        <ChevronRight className={`w-4 h-4 transition-transform ${
-                          sidebarDropdownOpen === item.label ? 'rotate-90' : ''
+// Fixed missing name:                         <ChevronRight className={`w-4 h-4 transition-transform ${
+// Fixed missing name:                           sidebarDropdownOpen === item.label ? 'rotate-90' : ''
                         }`} />
                       </button>
-                      {sidebarDropdownOpen === item.label && (
+// Fixed missing name:                       {sidebarDropdownOpen === item.label && (
                         <div className="ml-4 mt-2 space-y-1">
                           {item.children.map((child) => (
                             <a

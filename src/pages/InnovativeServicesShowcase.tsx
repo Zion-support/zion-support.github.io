@@ -46,23 +46,23 @@ const InnovativeServicesShowcase: React.FC = () => {
       if (priceRange === '3000+') {
         filtered = filtered.filter(service => service.price >= 3000);
       } else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max);
+        filtered = filtered??.filter(service => service??.price >= min && service??.price <= max);
       }
     }
 
     // Sort services
     switch (sortBy) {
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
+        filtered.sort((a, b) => b??.rating - a.rating);
         break;
       case 'aiScore':
-        filtered.sort((a, b) => b.aiScore - a.aiScore);
+        filtered.sort((a, b) => b??.aiScore - a.aiScore);
         break;
       case 'price':
         filtered.sort((a, b) => a.price - b.price);
         break;
       case 'launchDate':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
+        filtered.sort((a, b) => new Date(b??.launchDate).getTime() - new Date(a.launchDate).getTime());
         break;
     }
 
@@ -75,8 +75,8 @@ const InnovativeServicesShowcase: React.FC = () => {
         <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
         <div className="flex items-center space-x-2">
           <span className="text-yellow-500">★</span>
-          <span className="text-sm text-gray-600">{service.rating}</span>
-          <span className="text-xs text-gray-400">({service.reviews})</span>
+          <span className="text-sm text-gray-600">{service?.rating}</span>
+          <span className="text-xs text-gray-400">({service?.reviews})</span>
         </div>
       </div>
       
@@ -85,7 +85,7 @@ const InnovativeServicesShowcase: React.FC = () => {
       <div className="flex items-center justify-between mb-4">
         <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
         <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
-          AI Score: {service.aiScore}
+          AI Score: {service?.aiScore}
         </span>
       </div>
 
@@ -116,7 +116,7 @@ const InnovativeServicesShowcase: React.FC = () => {
       <div className="mb-4">
         <h4 className="font-semibold text-gray-900 mb-2">Technology Stack:</h4>
         <div className="flex flex-wrap gap-2">
-          {service.technology.map((tech, index) => (
+          {service?.technology.map((tech, index) => (
             <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
               {tech}
             </span>

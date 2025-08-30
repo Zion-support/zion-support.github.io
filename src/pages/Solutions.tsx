@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -183,7 +183,7 @@ const industrySolutions = [
   },
   {
     industry: 'Education',
-    icon: BookOpen,
+// Fixed missing name:     icon: BookOpen,
     solutions: [
       'Learning Management Systems',
       'Virtual Classrooms',

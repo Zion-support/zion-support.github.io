@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from 'node_modules/@babel/types/lib/utils';
 import React from "react";
 export function GradientHeading({ children, className, level = "h2", id }) {
     const Tag = level;

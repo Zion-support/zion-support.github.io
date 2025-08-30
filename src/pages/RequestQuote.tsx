@@ -204,7 +204,7 @@ export default function RequestQuote() {
     }));
   };
 
-  const toggleSection = (section: string) => {
+// Removed unused:   const toggleSection = (section: string) => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 

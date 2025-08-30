@@ -113,7 +113,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       ...prev,
       datasets: [{
         ...prev.datasets[0],
-        data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20)
+        data: prev?.datasets[0]?.data?.map(() => Math?.floor(Math?.random() * 100) + 20)
       }]
     }));
 
@@ -319,13 +319,13 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           <div className="relative">
                             <motion.div
                               initial={{ height: 0 }}
-                              animate={{ height: `${chartData.datasets[0].data[index]}%` }}
+                              animate={{ height: `${chartData?.datasets[0]?.data[index]}%` }}
                               transition={{ delay: index * 0.1, duration: 0.8 }}
                               className="w-12 bg-gradient-to-t from-zion-cyan to-zion-cyan/50 rounded-t-lg"
                               style={{ maxHeight: '200px' }}
                             />
                             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-zinc-300 bg-zinc-800 px-2 py-1 rounded">
-                              {chartData.datasets[0].data[index]}
+                              {chartData?.datasets[0]?.data[index]}
                             </div>
                           </div>
                         </div>
@@ -336,12 +336,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                   {activeChart === 'pie' && (
                     <div className="relative w-64 h-64">
                       <svg className="w-full h-full transform -rotate-90">
-                        {pieChartData.datasets[0].data.map((value, index) => {
-                          const percentage = value / pieChartData.datasets[0].data.reduce((a, b) => a + b, 0);
+                        {pieChartData?.datasets[0]?.data?.map((value, index) => {
+                          const percentage = value / pieChartData?.datasets[0]?.data?.reduce((a, b) => a + b, 0);
                           const angle = percentage * 360;
-                          const startAngle = pieChartData.datasets[0].data
+                          const startAngle = pieChartData?.datasets[0]?.data
                             .slice(0, index)
-                            .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0);
+                            ?.reduce((a, b) => a + (b / pieChartData?.datasets[0]?.data?.reduce((c, d) => c + d, 0)) * 360, 0);
                           
                           const x1 = 128 + 100 * Math.cos(startAngle * Math.PI / 180);
                           const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180);
@@ -354,8 +354,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             <path
                               key={index}
                               d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`}
-                              fill={pieChartData.datasets[0].backgroundColor[index]}
-                              stroke={pieChartData.datasets[0].borderColor[index]}
+                              fill={pieChartData?.datasets[0]?.backgroundColor[index]}
+                              stroke={pieChartData?.datasets[0]?.borderColor[index]}
                               strokeWidth="2"
                             />
                           );
@@ -368,11 +368,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           <div key={label} className="flex items-center gap-2">
                             <div 
                               className="w-3 h-3 rounded"
-                              style={{ backgroundColor: pieChartData.datasets[0].backgroundColor[index] }}
+                              style={{ backgroundColor: pieChartData?.datasets[0]?.backgroundColor[index] }}
                             />
                             <span className="text-sm text-zinc-300">{label}</span>
                             <span className="text-xs text-zinc-500">
-                              ({pieChartData.datasets[0].data[index]}%)
+                              ({pieChartData?.datasets[0]?.data[index]}%)
                             </span>
                           </div>
                         ))}
@@ -412,13 +412,13 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           fill="none"
                           stroke="rgba(34, 221, 210, 1)"
                           strokeWidth="3"
-                          points={lineChartData.datasets[0].data.map((value, index) => 
+                          points={lineChartData?.datasets[0]?.data?.map((value, index) => 
                             `${index * 85.7 + 42.85},${300 - (value / 100) * 300}`
                           ).join(' ')}
                         />
                         
                         {/* Data points */}
-                        {lineChartData.datasets[0].data.map((value, index) => (
+                        {lineChartData?.datasets[0]?.data?.map((value, index) => (
                           <circle
                             key={index}
                             cx={index * 85.7 + 42.85}

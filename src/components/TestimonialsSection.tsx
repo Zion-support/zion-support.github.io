@@ -88,11 +88,11 @@ export function TestimonialsSection() {
               {/* Author */}
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">
-                  {testimonial.avatar}
+                  {testimonial?.avatar}
                 </div>
                 <div>
                   <div className="text-white font-semibold">{testimonial.name}</div>
-                  <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
+                  <div className="text-zion-slate-light text-sm">{testimonial?.role}</div>
                   <div className="text-zion-cyan text-sm">{testimonial.company}</div>
                 </div>
               </div>

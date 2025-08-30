@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
@@ -152,7 +152,7 @@ export function InteractiveTestimonials() {
 
             <AnimatePresence mode="wait">
               <motion.div
-                key={currentTestimonial.id}
+                key={currentTestimonial?.id}
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
@@ -162,10 +162,10 @@ export function InteractiveTestimonials() {
                 {/* Avatar and Rating */}
                 <div className="mb-6">
                   <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">{currentTestimonial.avatar}</span>
+                    <span className="text-3xl">{currentTestimonial?.avatar}</span>
                   </div>
                   <div className="flex justify-center gap-1 mb-2">
-                    {[...Array(currentTestimonial.rating)].map((_, i) => (
+                    {[?.?.?.Array(currentTestimonial?.rating)]?.map((_, i) => (
                       <span key={i} className="text-yellow-400">⭐</span>
                     ))}
                   </div>
@@ -173,12 +173,12 @@ export function InteractiveTestimonials() {
 
                 {/* Testimonial Content */}
                 <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
-                  "{currentTestimonial.content}"
+                  "{currentTestimonial?.content}"
                 </blockquote>
 
                 {/* Results */}
                 <div className="flex flex-wrap justify-center gap-3 mb-6">
-                  {currentTestimonial.results.map((result, index) => (
+                  {currentTestimonial?.results?.map((result, index) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm"
@@ -190,9 +190,9 @@ export function InteractiveTestimonials() {
 
                 {/* Author Info */}
                 <div>
-                  <div className="text-white font-semibold text-lg">{currentTestimonial.name}</div>
-                  <div className="text-gray-400 text-sm">{currentTestimonial.position}</div>
-                  <div className="text-blue-400 text-sm">{currentTestimonial.company}</div>
+                  <div className="text-white font-semibold text-lg">{currentTestimonial?.name}</div>
+                  <div className="text-gray-400 text-sm">{currentTestimonial?.position}</div>
+                  <div className="text-blue-400 text-sm">{currentTestimonial?.company}</div>
                 </div>
               </motion.div>
             </AnimatePresence>

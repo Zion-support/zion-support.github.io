@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Filter, SortAsc, Star, ShoppingCart } from 'lucide-react';
-import { Footer } from '@/components/Footer';
+import { Footer } from 'node_modules/react-day-picker/src/components/Footer';
 
 const EquipmentPage = () => {
   const [equipment, setEquipment] = useState([]);

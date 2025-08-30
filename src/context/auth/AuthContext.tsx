@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+// Removed unused: import React, { createContext, useContext } from 'react';
 
 interface User {
   id: string;

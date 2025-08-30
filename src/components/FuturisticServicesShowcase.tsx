@@ -179,25 +179,25 @@ export default function FuturisticServicesShowcase() {
 								{/* Left Side - Service Info */}
 								<div>
 									<div className="flex items-center gap-4 mb-6">
-										<div className={`p-4 rounded-2xl bg-gradient-to-r ${futuristicServices[currentService].color}`}>
-											{React.createElement(futuristicServices[currentService].icon, { className: "w-8 h-8 text-white" })}
+										<div className={`p-4 rounded-2xl bg-gradient-to-r ${futuristicServices[currentService]?.color}`}>
+											{React?.createElement(futuristicServices[currentService]?.icon, { className: "w-8 h-8 text-white" })}
 										</div>
-										<span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(futuristicServices[currentService].status)}`}>
-											{getStatusText(futuristicServices[currentService].status)}
+										<span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(futuristicServices[currentService]?.status)}`}>
+											{getStatusText(futuristicServices[currentService]?.status)}
 										</span>
 									</div>
 									<h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-										{futuristicServices[currentService].title}
+										{futuristicServices[currentService]?.title}
 									</h3>
 									<p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
-										{futuristicServices[currentService].description}
+										{futuristicServices[currentService]?.description}
 									</p>
 									<div className="mb-8">
 										<div className="text-3xl font-bold text-zion-cyan mb-4">
-											{futuristicServices[currentService].price}
+											{futuristicServices[currentService]?.price}
 										</div>
 										<ul className="space-y-3">
-											{futuristicServices[currentService].features.map((feature, index) => (
+											{futuristicServices[currentService]?.features?.map((feature, index) => (
 												<motion.li
 													key={index}
 													initial={{ opacity: 0, x: -20 }}
@@ -223,10 +223,10 @@ export default function FuturisticServicesShowcase() {
 								</div>
 								{/* Right Side - Visual Element */}
 								<div className="relative">
-									<div className={`w-full h-80 rounded-2xl bg-gradient-to-br ${futuristicServices[currentService].color} relative overflow-hidden`}>
+									<div className={`w-full h-80 rounded-2xl bg-gradient-to-br ${futuristicServices[currentService]?.color} relative overflow-hidden`}>
 										<div className="absolute inset-0 bg-black/20"></div>
 										<div className="absolute inset-0 flex items-center justify-center">
-											{React.createElement(futuristicServices[currentService].icon, { className: "w-32 h-32 text-white/80" })}
+											{React?.createElement(futuristicServices[currentService]?.icon, { className: "w-32 h-32 text-white/80" })}
 										</div>
 										{/* Animated particles */}
 										<motion.div

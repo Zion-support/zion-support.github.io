@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -31,8 +31,8 @@ import {
   Activity
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+// Removed unused: import { Button } from '@/components/ui/button';
+// Removed unused: import { Badge } from '@/components/ui/badge';
 
 export default function AICybersecuritySuite() {
   const features = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap } from 'lucide-react';
 export function MainSidebar() {
     const location = useLocation();

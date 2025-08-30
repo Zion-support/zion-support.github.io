@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -103,7 +103,7 @@ const ZeroTrustNetworkAccess = () => {
       description: 'Multi-factor authentication, biometric verification, and behavioral analytics'
     },
     {
-      icon: Device,
+// Fixed missing name:       icon: Device,
       title: 'Device Security',
       description: 'Device health checks, compliance validation, and security posture assessment'
     },

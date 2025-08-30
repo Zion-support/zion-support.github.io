@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter } from 'lucide-react';
 
 export default function Documentation() {

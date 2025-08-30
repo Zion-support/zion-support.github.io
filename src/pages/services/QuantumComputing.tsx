@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Atom, 
@@ -88,7 +88,7 @@ import {
   Server2
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+// Removed unused: import { Link } from 'react-router-dom';
 
 const QuantumComputing = () => {
   const features = [

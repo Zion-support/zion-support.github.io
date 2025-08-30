@@ -142,7 +142,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const entries = list.getEntries();
         const fidEntry = entries[entries.length - 1];
         if (fidEntry) {
-          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+          setMetrics(prev => ({ ...prev, fid: fidEntry?.processingStart - fidEntry.startTime }));
         }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -151,7 +151,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
+          if (!entry?.hadRecentInput) {
             clsValue += (entry as any).value;
           }
         }

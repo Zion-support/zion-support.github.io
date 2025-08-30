@@ -38,7 +38,7 @@ export default function ComprehensiveServicesLanding2030() {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
-    const matchesAiScore = service.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
+    const matchesAiScore = service??.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
     return matchesCategory && matchesSearch && matchesPrice && matchesAiScore;
   });
 
@@ -46,11 +46,11 @@ export default function ComprehensiveServicesLanding2030() {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
-        return b.rating - a.rating;
+        return b??.rating - a.rating;
       case 'price':
         return a.price - b.price;
       case 'aiScore':
-        return b.aiScore - a.aiScore;
+        return b??.aiScore - a.aiScore;
       default:
         return 0;
     }
@@ -368,7 +368,7 @@ export default function ComprehensiveServicesLanding2030() {
                     </div>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-white text-sm">{service.rating}</span>
+                      <span className="text-white text-sm">{service?.rating}</span>
                     </div>
                   </div>
 
@@ -396,11 +396,11 @@ export default function ComprehensiveServicesLanding2030() {
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-400">Setup:</span>
-                      <span className="text-white">{service.setupTime}</span>
+                      <span className="text-white">{service?.setupTime}</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-400">AI Score:</span>
-                      <span className="text-white font-semibold">{service.aiScore}/100</span>
+                      <span className="text-white font-semibold">{service?.aiScore}/100</span>
                     </div>
                   </div>
 
@@ -450,7 +450,7 @@ export default function ComprehensiveServicesLanding2030() {
                   </div>
                   
                   <div className="space-y-4 mb-6">
-                    {service.pricingTiers[0].features.map((feature, idx) => (
+                    {service?.pricingTiers[0]?.features?.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full" />
                         <span className="text-gray-300">{feature}</span>

@@ -1,5 +1,5 @@
-import { ProductListing } from "@/types/listings";
-import { COMPREHENSIVE_SERVICES_INDEX_2030 } from "./comprehensiveServicesIndex2030";
+// Removed unused: import { ProductListing } from "@/types/listings";
+// Removed unused: import { COMPREHENSIVE_SERVICES_INDEX_2030 } from "./comprehensiveServicesIndex2030";
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
@@ -343,7 +343,7 @@ export const PRICING_ANALYSIS_2030 = {
     if (!acc[service.category]) {
       acc[service.category] = [];
     }
-    acc[service.category].push(service.basePrice);
+    acc[service?.category]?.push(service?.basePrice);
     return acc;
   }, {} as Record<string, number[]>),
   roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({

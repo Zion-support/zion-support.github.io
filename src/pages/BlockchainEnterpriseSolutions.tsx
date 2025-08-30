@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -304,7 +304,7 @@ const blockchainSolutions = [
     id: 3,
     title: "Financial Blockchain Solutions",
     description: "Blockchain-based financial services and payment solutions.",
-    icon: DollarSign,
+// Fixed missing name:     icon: DollarSign,
     features: [
       "Digital payments",
       "Cross-border transfers",

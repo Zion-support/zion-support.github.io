@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -192,7 +192,7 @@ const Support = () => {
     }
   ];
 
-  const contactForm = {
+// Removed unused:   const contactForm = {
     name: '',
     email: '',
     company: '',

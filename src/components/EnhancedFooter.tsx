@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -88,7 +88,7 @@ export function EnhancedFooter() {
         { name: 'Our Mission', href: '/mission', icon: Target },
         { name: 'Leadership Team', href: '/leadership', icon: Award },
         { name: 'Careers', href: '/careers', icon: Workflow },
-        { name: 'Partners', href: '/partners', icon: Handshake },
+// Fixed missing name:         { name: 'Partners', href: '/partners', icon: Handshake },
         { name: 'News & Updates', href: '/news', icon: FileText },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
         { name: 'Blog', href: '/blog', icon: PenTool }

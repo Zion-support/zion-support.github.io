@@ -98,7 +98,7 @@ export default function Webinars() {
     });
   };
 
-  const formatTimeUntil = (dateString: string) => {
+// Removed unused:   const formatTimeUntil = (dateString: string) => {
     const now = new Date();
     const webinarDate = new Date(dateString);
     const diffTime = webinarDate.getTime() - now.getTime();

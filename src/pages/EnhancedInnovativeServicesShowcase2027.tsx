@@ -87,7 +87,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       case 'AI & Energy Management': return <Zap className="w-5 h-5" />;
       case 'Quantum & Networking': return <Globe className="w-5 h-5" />;
       case 'AI & Education Technology': return <Users className="w-5 h-5" />;
-      case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />;
+// Fixed missing name:       case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />;
       case 'AI & Space Technology': return <Rocket className="w-5 h-5" />;
       case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;

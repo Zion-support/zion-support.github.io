@@ -128,7 +128,7 @@ const searchData: SearchResult[] = [
   }
 ];
 
-const categories = [
+// Removed unused: const categories = [
   { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },
   { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },
   { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },

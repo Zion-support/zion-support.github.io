@@ -50,7 +50,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       try {
         const parsed = JSON.parse(savedSettings);
         setSettings(prev => ({ ...prev, ...parsed }));
-        applySettings({ ...prev, ...parsed });
+// Fixed missing name:         applySettings({ ...prev, ...parsed });
       } catch (error) {
         console.error('Failed to parse accessibility settings:', error);
       }

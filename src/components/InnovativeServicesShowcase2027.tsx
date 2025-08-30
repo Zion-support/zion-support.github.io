@@ -40,7 +40,7 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Neural Technology': Eye
 };
 
-const categoryColors: { [key: string]: string } = {
+// Removed unused: const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500',
   'Quantum AI': 'from-blue-500 to-cyan-500',
   'Autonomous AI': 'from-green-500 to-emerald-500',
@@ -63,7 +63,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setIsVisible(true);
         }
       },
@@ -186,7 +186,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
-                      {service.title}
+                      {service?.title}
                     </h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
                       {service.description}
@@ -214,11 +214,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                 {/* Key Metrics */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-zion-cyan font-bold text-lg">{service.marketSize}</div>
+                    <div className="text-zion-cyan font-bold text-lg">{service?.marketSize}</div>
                     <div className="text-gray-400 text-xs">Market Size</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-zion-purple font-bold text-lg">{service.roi}</div>
+                    <div className="text-zion-purple font-bold text-lg">{service?.roi}</div>
                     <div className="text-gray-400 text-xs">ROI</div>
                   </div>
                 </div>
@@ -280,20 +280,20 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                           </div>
                           <div>
                             <div className="text-zion-purple font-semibold text-sm">Support</div>
-                            <div className="text-gray-300 text-xs">{service.supportLevel}</div>
+                            <div className="text-gray-300 text-xs">{service?.supportLevel}</div>
                           </div>
                         </div>
 
                         {/* Primary CTA */}
                         <a
-                          href={service.href}
-                          target={service.external ? "_blank" : "_self"}
-                          rel={service.external ? "noopener noreferrer" : ""}
+                          href={service?.href}
+                          target={service?.external ? "_blank" : "_self"}
+                          rel={service?.external ? "noopener noreferrer" : ""}
                           className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
                         >
-                          {service.ctaLabel}
+                          {service?.ctaLabel}
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                          {service.external && <ExternalLink className="w-4 h-4" />}
+                          {service?.external && <ExternalLink className="w-4 h-4" />}
                         </a>
                       </div>
                     </motion.div>

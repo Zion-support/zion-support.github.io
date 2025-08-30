@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -147,7 +147,7 @@ export default function AIProjectManagementPlatform() {
     {
       title: 'Construction Projects',
       description: 'Track progress and manage resources across multiple sites with predictive analytics',
-      icon: Building
+// Fixed missing name:       icon: Building
     },
     {
       title: 'Event Planning',

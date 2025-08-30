@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// Removed unused: import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, 
@@ -172,7 +172,7 @@ export default function EnhancedTestimonialsSection() {
                 <div className="relative z-10">
                   {/* Rating */}
                   <div className="flex items-center mb-6">
-                    {[...Array(currentTestimonialData.rating)].map((_, index) => (
+                    {[?.?.?.Array(currentTestimonialData?.rating)]?.map((_, index) => (
                       <motion.div
                         key={index}
                         initial={{ scale: 0 }}
@@ -186,12 +186,12 @@ export default function EnhancedTestimonialsSection() {
 
                   {/* Content */}
                   <blockquote className="text-2xl lg:text-3xl text-white leading-relaxed mb-8 font-medium">
-                    "{currentTestimonialData.content}"
+                    "{currentTestimonialData?.content}"
                   </blockquote>
 
                   {/* Results */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    {currentTestimonialData.results.map((result, index) => (
+                    {currentTestimonialData?.results?.map((result, index) => (
                       <motion.div
                         key={result}
                         initial={{ opacity: 0, y: 20 }}
@@ -209,16 +209,16 @@ export default function EnhancedTestimonialsSection() {
                     <div className="flex items-center space-x-4">
                       <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
                         <span className="text-white font-bold text-xl">
-                          {currentTestimonialData.name.split(' ').map(n => n[0]).join('')}
+                          {currentTestimonialData?.name?.split(' ')?.map(n => n[0])?.join('')}
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold text-white">{currentTestimonialData.name}</h4>
-                        <p className="text-zion-cyan">{currentTestimonialData.position}</p>
-                        <p className="text-gray-300">{currentTestimonialData.company}</p>
+                        <h4 className="text-xl font-bold text-white">{currentTestimonialData?.name}</h4>
+                        <p className="text-zion-cyan">{currentTestimonialData?.position}</p>
+                        <p className="text-gray-300">{currentTestimonialData?.company}</p>
                         <div className="flex items-center space-x-2 mt-1">
                           <Building className="w-4 h-4 text-zion-cyan" />
-                          <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>
+                          <span className="text-sm text-gray-400">{currentTestimonialData?.industry}</span>
                         </div>
                       </div>
                     </div>

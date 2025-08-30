@@ -260,7 +260,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'unavailable':
         return { color: 'text-red-400 bg-red-400/20', icon: <XCircle className="w-4 h-4" /> };
       default:
-        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
+// Fixed missing name:         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
     }
   };
 

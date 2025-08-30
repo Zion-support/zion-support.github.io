@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// Removed unused: import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -36,7 +36,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
 import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
-import { REVOLUTIONARY_PRICING_GUIDE_2030 } from "@/data/revolutionaryPricingGuide2030";
+// Removed unused: import { REVOLUTIONARY_PRICING_GUIDE_2030 } from "@/data/revolutionaryPricingGuide2030";
 
 export default function RevolutionaryServices2030() {
   const [selectedCategory, setSelectedCategory] = useState('all');

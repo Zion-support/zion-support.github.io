@@ -95,19 +95,19 @@ export default function AICustomerSuccessPrediction() {
     {
       industry: 'E-commerce & Retail',
       description: 'Forecast customer purchasing behavior, optimize retention campaigns, and increase repeat purchases',
-      icon: ShoppingCart,
+// Fixed missing name:       icon: ShoppingCart,
       metrics: ['Repeat Purchase Rate', 'Customer Retention', 'Average Order Value', 'Loyalty Score']
     },
     {
       industry: 'Financial Services',
       description: 'Predict loan defaults, identify high-value customers, and optimize product recommendations',
-      icon: DollarSign,
+// Fixed missing name:       icon: DollarSign,
       metrics: ['Default Risk Score', 'Customer Value', 'Product Adoption', 'Risk Mitigation']
     },
     {
       industry: 'Healthcare',
       description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',
-      icon: Heart,
+// Fixed missing name:       icon: Heart,
       metrics: ['Patient Outcomes', 'Treatment Adherence', 'Care Plan Success', 'Resource Optimization']
     }
   ];
@@ -119,7 +119,7 @@ export default function AICustomerSuccessPrediction() {
       description: 'Reduce churn by up to 40% through proactive intervention and personalized engagement strategies.'
     },
     {
-      icon: DollarSign,
+// Fixed missing name:       icon: DollarSign,
       title: 'Boost Revenue Growth',
       description: 'Identify and capitalize on upsell opportunities, increasing average customer value by 25-35%.'
     },

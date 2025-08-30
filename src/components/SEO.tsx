@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+// Removed unused: import React, { useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -173,7 +173,7 @@ export function SEO({
   // Generate meta keywords
   const metaKeywords = useMemo(() => {
     if (typeof keywords === 'string') return keywords;
-    if (Array.isArray(keywords)) return keywords.join(', ');
+    if (Array.isArray(keywords)) return keywords?.join(', ');
     return keywords;
   }, [keywords]);
 

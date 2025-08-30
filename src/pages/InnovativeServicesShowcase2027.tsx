@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// Removed unused: import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -117,8 +117,8 @@ export default function InnovativeServicesShowcase2027() {
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s) => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s?.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s) => acc + s?.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
               { label: 'Categories', value: categories.length - 1, icon: Grid, color: 'from-green-500 to-teal-600' }
             ].map((stat, index) => (
               <div key={index} className="text-center group">
@@ -229,12 +229,12 @@ export default function InnovativeServicesShowcase2027() {
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
-                        onClick={() => window.open(service.website, '_blank')}
+                        onClick={() => window.open(service?.website, '_blank')}
                       >
                         {/* Service Image */}
                         <div className="relative mb-6 overflow-hidden rounded-lg">
                           <img 
-                            src={service.images[0]} 
+                            src={service?.images[0]} 
                             alt={service.title}
                             className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                           />
@@ -272,11 +272,11 @@ export default function InnovativeServicesShowcase2027() {
                             <div className="flex items-center gap-4">
                               <div className="flex items-center gap-1">
                                 <Brain className="w-4 h-4 text-zion-cyan" />
-                                <span className="text-sm text-gray-300">{service.aiScore}%</span>
+                                <span className="text-sm text-gray-300">{service?.aiScore}%</span>
                               </div>
                               <div className="flex items-center gap-1">
                                 <Star className="w-4 h-4 text-yellow-500" />
-                                <span className="text-sm text-gray-300">{service.rating}</span>
+                                <span className="text-sm text-gray-300">{service?.rating}</span>
                               </div>
                             </div>
                             <div className="text-right">
@@ -296,7 +296,7 @@ export default function InnovativeServicesShowcase2027() {
                         {/* Service Image */}
                         <div className="relative w-48 h-32 overflow-hidden rounded-lg flex-shrink-0">
                           <img 
-                            src={service.images[0]} 
+                            src={service?.images[0]} 
                             alt={service.title}
                             className="w-full h-full object-cover"
                           />
@@ -317,15 +317,15 @@ export default function InnovativeServicesShowcase2027() {
                           <div className="flex items-center gap-4 text-sm text-gray-400">
                             <div className="flex items-center gap-1">
                               <Brain className="w-4 h-4 text-zion-cyan" />
-                              AI Score: {service.aiScore}%
+                              AI Score: {service?.aiScore}%
                             </div>
                             <div className="flex items-center gap-1">
                               <Star className="w-4 h-4 text-yellow-500" />
-                              Rating: {service.rating}
+                              Rating: {service?.rating}
                             </div>
                             <div className="flex items-center gap-1">
                               <CheckCircle className="w-4 h-4 text-green-500" />
-                              {service.availability}
+                              {service?.availability}
                             </div>
                           </div>
                           <div className="flex items-center justify-between">
@@ -340,7 +340,7 @@ export default function InnovativeServicesShowcase2027() {
                               ))}
                             </div>
                             <button 
-                              onClick={() => window.open(service.website, '_blank')}
+                              onClick={() => window.open(service?.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
                             >
                               View Details

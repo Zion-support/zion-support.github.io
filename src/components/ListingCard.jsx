@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from 'node_modules/@babel/types/lib/utils';
 import { Badge } from "@/components/ui/badge";
 import { Link } from 'react-router-dom';
 export function ListingCard({ id, title, description, images, category, tags, author, className, profileType = 'service' }) {

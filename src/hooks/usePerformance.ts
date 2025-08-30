@@ -36,7 +36,7 @@ export function usePerformance() {
   });
   const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const observerRef = useRef<PerformanceObserver | null>(null);
+// Removed unused:   const observerRef = useRef<PerformanceObserver | null>(null);
   useEffect(() => {
     // Check if PerformanceObserver is supported
     if (!('PerformanceObserver' in window)) {
@@ -135,11 +135,11 @@ export function usePerformance() {
     return result;
   };
   // Log performance metrics
-  const logMetrics = () => {
-    const metricsWithRatings = getMetricsWithRatings();
+// Removed unused:   const logMetrics = () => {
+// Removed unused:     const metricsWithRatings = getMetricsWithRatings();
     console.group('🚀 Performance Metrics');
     // Measure basic timing
-    measureNavigationTiming();
+// Fixed missing name:     measureNavigationTiming();
     console.groupEnd();
   };
   // Get performance score (0-100)
@@ -183,7 +183,7 @@ export function usePerformance() {
     observers,
     isMonitoring,
     performanceScore: getPerformanceScore(),
-    insights: getPerformanceInsights(),
+// Fixed missing name:     insights: getPerformanceInsights(),
     startMonitoring,
     stopMonitoring,
     resetMetrics,

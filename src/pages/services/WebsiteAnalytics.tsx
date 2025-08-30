@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   BarChart3, 
@@ -178,7 +178,7 @@ const WebsiteAnalytics = () => {
       description: 'User location and regional performance data'
     },
     {
-      icon: Device,
+// Fixed missing name:       icon: Device,
       title: 'Device Analytics',
       description: 'Cross-device performance and user experience insights'
     }

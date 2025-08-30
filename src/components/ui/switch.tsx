@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { cn } from '../../utils/cn';
 
 interface SwitchProps {

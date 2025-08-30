@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { Filter, X } from 'lucide-react';
 
 interface FilterOption {

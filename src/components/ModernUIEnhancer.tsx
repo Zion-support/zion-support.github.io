@@ -35,9 +35,9 @@ export const ModernUIEnhancer: React.FC = () => {
   
   const [activeTheme, setActiveTheme] = useState('default');
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; vx: number; vy: number }>>([]);
-  const containerRef = useRef<HTMLDivElement>(null);
+// Removed unused:   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, -200]);
+// Removed unused:   const y = useTransform(scrollY, [0, 1000], [0, -200]);
 
   useEffect(() => {
     // Initialize UI enhancements

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+// Removed unused: import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, 
@@ -203,7 +203,7 @@ export function MobileExperienceEnhancer({
 
   const mobileRef = useRef<HTMLDivElement>(null);
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
-  const gestureTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+// Removed unused:   const gestureTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Detect device information
   useEffect(() => {
@@ -271,8 +271,8 @@ export function MobileExperienceEnhancer({
       if (e.touches.length === 1) {
         const touch = e.touches[0];
         touchStartRef.current = {
-          x: touch.clientX,
-          y: touch.clientY,
+          x: touch?.clientX,
+          y: touch?.clientY,
           time: Date.now()
         };
       }
@@ -283,8 +283,8 @@ export function MobileExperienceEnhancer({
       
       const touch = e.changedTouches[0];
       const start = touchStartRef.current;
-      const deltaX = touch.clientX - start.x;
-      const deltaY = touch.clientY - start.y;
+      const deltaX = touch?.clientX - start?.x;
+      const deltaY = touch?.clientY - start?.y;
       const deltaTime = Date.now() - start.time;
       
       // Detect gesture type
@@ -307,7 +307,7 @@ export function MobileExperienceEnhancer({
         type: gestureType,
         direction,
         timestamp: Date.now(),
-        coordinates: { x: touch.clientX, y: touch.clientY },
+        coordinates: { x: touch??.clientX, y: touch??.clientY },
         intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY)
       };
       

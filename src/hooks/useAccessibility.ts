@@ -133,7 +133,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     const focusableElements = getFocusableElements(container);
     
     if (focusableElements.length > 0) {
-      focusableElements[0].focus();
+      focusableElements[0]?.focus();
     }
 
     // Store focusable elements

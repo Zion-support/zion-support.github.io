@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -94,7 +94,7 @@ export default function HelpCenter() {
     {
       id: 'integrations',
       name: 'Integrations',
-      icon: Network,
+// Fixed missing name:       icon: Network,
       description: 'Third-party integrations and API documentation',
       color: 'from-indigo-500 to-purple-500',
       articles: [
@@ -107,7 +107,7 @@ export default function HelpCenter() {
     {
       id: 'troubleshooting',
       name: 'Troubleshooting',
-      icon: HelpCircle,
+// Fixed missing name:       icon: HelpCircle,
       description: 'Common issues and solutions',
       color: 'from-yellow-500 to-orange-500',
       articles: [
@@ -189,7 +189,7 @@ export default function HelpCenter() {
     ? helpCategories 
     : helpCategories.filter(cat => cat.id === selectedCategory);
 
-  const filteredArticles = filteredCategories.flatMap(cat => cat.articles);
+// Removed unused:   const filteredArticles = filteredCategories.flatMap(cat => cat.articles);
 
   return (
     <>
@@ -210,7 +210,7 @@ export default function HelpCenter() {
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <HelpCircle className="w-10 h-10 text-white" />
+// Fixed missing name:                 <HelpCircle className="w-10 h-10 text-white" />
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">

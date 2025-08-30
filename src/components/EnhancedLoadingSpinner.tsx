@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Loader2, Zap, Brain, Cloud, Atom } from 'lucide-react';
 

@@ -31,7 +31,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
     } else {
       switch (activeTab) {
         case 'featured':
-          services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
+          services = INNOVATIVE_SERVICES_2025.filter(service => service?.rating >= 4.5).slice(0, 3);
           break;
         case 'ai':
           services = getServicesByCategory('AI Services');
@@ -62,7 +62,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
         <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
         <div className="flex items-center space-x-1">
           <span className="text-yellow-500 text-sm">★</span>
-          <span className="text-sm text-gray-600">{service.rating}</span>
+          <span className="text-sm text-gray-600">{service?.rating}</span>
         </div>
       </div>
       
@@ -71,7 +71,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
       <div className="flex items-center justify-between mb-3">
         <span className="text-lg font-bold text-blue-600">{service.marketPrice}</span>
         <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">
-          AI Score: {service.aiScore}
+          AI Score: {service?.aiScore}
         </span>
       </div>
 
@@ -107,7 +107,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 
   const totalServices = INNOVATIVE_SERVICES_2025.length;
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices;
+  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service?.rating, 0) / totalServices;
 
   return (
     <div className="bg-gray-50 py-16">

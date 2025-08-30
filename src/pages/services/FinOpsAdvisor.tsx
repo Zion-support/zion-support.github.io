@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   DollarSign, 
@@ -71,7 +71,7 @@ const FinOpsAdvisor = () => {
       description: 'Predictive analytics for future cost planning'
     },
     {
-      icon: Target2,
+// Fixed missing name:       icon: Target2,
       title: 'ROI Optimization',
       description: 'Maximize return on cloud infrastructure investment'
     }

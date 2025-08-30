@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// Removed unused: import { Link } from 'react-router-dom';
 import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
 
 const Tutorials = () => {
-  const tutorialCategories = [
+// Removed unused:   const tutorialCategories = [
     {
       title: "Beginner",
       description: "Perfect for those new to AI and technology",
@@ -73,7 +73,7 @@ const Tutorials = () => {
     }
   ];
 
-  const recentTutorials = [
+// Removed unused:   const recentTutorials = [
     {
       title: "Data Pipeline Automation",
       category: "Intermediate",

@@ -206,7 +206,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                         /{'pricingModel' in service ? service.pricingModel : 'hour'}
                       </span>
                     </div>
-                    <p className="text-sm text-zinc-400">{'marketPrice' in service ? service.marketPrice : `$${service.projectRate?.toLocaleString()}/project`}</p>
+                    <p className="text-sm text-zinc-400">{'marketPrice' in service ? service.marketPrice : `$${service?.projectRate?.toLocaleString()}/project`}</p>
                   </div>
                   {/* Key Features */}
                   <div className="mb-4">

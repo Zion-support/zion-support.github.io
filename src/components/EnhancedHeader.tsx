@@ -51,7 +51,7 @@ import {
   FileText,
   Sparkles as SparklesIcon
 } from 'lucide-react';
-import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
+// Removed unused: import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
 export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -501,7 +501,7 @@ export function EnhancedHeader() {
                   <div>
                     <h3 className="text-lg font-semibold text-cyan-400 mb-4">Popular Services</h3>
                     <div className="space-y-3">
-                      {services.filter(s => s.popular).slice(0, 4).map((service) => (
+                      {services.filter(s => s?.popular).slice(0, 4).map((service) => (
                         <Link
                           key={service.name}
                           to={service.href}

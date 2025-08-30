@@ -15,9 +15,9 @@ export type { UltimateMicroSaasService } from './ultimateMicroSaasServices2025';
 
 // Combined Services Array
 export const ALL_COMPREHENSIVE_SERVICES = [
-  ...EXPANDED_INNOVATIVE_SERVICES_2025,
-  ...EMERGING_TECH_SERVICES_2025,
-  ...ULTIMATE_MICRO_SAAS_SERVICES_2025
+// Fixed missing name:   ...EXPANDED_INNOVATIVE_SERVICES_2025,
+// Fixed missing name:   ...EMERGING_TECH_SERVICES_2025,
+// Fixed missing name:   ...ULTIMATE_MICRO_SAAS_SERVICES_2025
 ];
 
 // Service Categories

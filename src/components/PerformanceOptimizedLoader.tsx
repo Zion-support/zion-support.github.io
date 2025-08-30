@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+// Removed unused: import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 
 interface LoaderProps {

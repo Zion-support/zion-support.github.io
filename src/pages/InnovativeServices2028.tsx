@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+// Removed unused: import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Zap, 

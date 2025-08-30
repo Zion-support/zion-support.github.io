@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 export function LoadingSpinner({ size = 'md', variant = 'default', className = '', text }) {
     const sizeClasses = {
         sm: 'w-4 h-4',

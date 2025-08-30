@@ -71,34 +71,34 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         const particle = particles[i];
         
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life += 1;
+        particle??.x += particle??.vx;
+        particle??.y += particle??.vy;
+        particle?.life += 1;
 
         // Remove dead particles
-        if (particle.life > particle.maxLife) {
+        if (particle??.life > particle??.maxLife) {
           particles.splice(i, 1);
           continue;
         }
 
         // Draw particle with glow effect
-        const alpha = 1 - (particle.life / particle.maxLife);
-        const size = particle.size * (1 - alpha * 0.5);
+        const alpha = 1 - (particle??.life / particle??.maxLife);
+        const size = particle?.size * (1 - alpha * 0?.5);
 
         // Outer glow
-        ctx.shadowColor = particle.color;
+        ctx?.shadowColor = particle?.color;
         ctx.shadowBlur = 20;
-        ctx.fillStyle = particle.color;
+        ctx?.fillStyle = particle?.color;
         ctx.globalAlpha = alpha * 0.3;
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, size * 3, 0, Math.PI * 2);
+        ctx??.arc(particle??.x, particle??.y, size * 3, 0, Math??.PI * 2);
         ctx.fill();
 
         // Inner particle
         ctx.shadowBlur = 10;
         ctx.globalAlpha = alpha;
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
+        ctx??.arc(particle??.x, particle??.y, size, 0, Math??.PI * 2);
         ctx.fill();
       }
 

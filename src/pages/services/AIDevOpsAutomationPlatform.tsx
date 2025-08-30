@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, GitFork, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRight, Cpu, Database, Server } from 'lucide-react';
 
@@ -14,7 +14,7 @@ export default function AIDevOpsAutomationPlatform() {
     'Real-time collaboration and approval workflows for deployments',
   ];
 
-  const benefits = [
+// Removed unused:   const benefits = [
     'Reduce deployment time by 80% with intelligent automation',
     'Cut infrastructure costs by 40% through AI optimization',
     'Achieve 99.9% deployment success rate with predictive analytics',
@@ -99,7 +99,7 @@ export default function AIDevOpsAutomationPlatform() {
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
             <div className="flex items-center mb-4">
               <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">
-                <Workflow className="h-8 w-8 text-white" />
+// Fixed missing name:                 <Workflow className="h-8 w-8 text-white" />
               </div>
               <h3 className="ml-3 text-xl font-semibold text-white">Automation Capabilities</h3>
             </div>

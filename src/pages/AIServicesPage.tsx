@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -27,7 +27,7 @@ import {
 import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {
-  const aiServices = [
+// Removed unused:   const aiServices = [
     {
       id: 'ai-consciousness-simulator',
       name: 'AI Consciousness Simulator',

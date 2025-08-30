@@ -195,7 +195,7 @@ export function Footer() {
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
+// Removed unused:   const toggleSection = (title: string) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {

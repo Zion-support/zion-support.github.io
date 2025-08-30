@@ -130,17 +130,17 @@ export default function AICybersecurityPlatform() {
       description: 'Detect and prevent 99.7% of cyber threats with AI-powered intelligence and automated response.'
     },
     {
-      icon: Clock,
+// Fixed missing name:       icon: Clock,
       title: 'Faster Incident Response',
       description: 'Reduce incident response time from hours to seconds with intelligent automation and real-time monitoring.'
     },
     {
-      icon: DollarSign,
+// Fixed missing name:       icon: DollarSign,
       title: 'Reduced Security Costs',
       description: 'Lower total cost of ownership by 40-60% through automation and reduced manual security operations.'
     },
     {
-      icon: Users,
+// Fixed missing name:       icon: Users,
       title: 'Improved Compliance',
       description: 'Maintain 100% compliance with industry regulations and standards through automated monitoring and reporting.'
     }

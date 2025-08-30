@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
+// Removed unused: import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+// Removed unused: import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
@@ -385,14 +385,14 @@ export default function UltimateInnovativeServicesShowcase2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={`tel:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.phone}`}
+                href={`tel:${ULTIMATE_INNOVATIVE_SERVICES_2025[0]?.contactInfo?.phone}`}
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
               <a
-                href={`mailto:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.email}`}
+                href={`mailto:${ULTIMATE_INNOVATIVE_SERVICES_2025[0]?.contactInfo?.email}`}
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
               >
                 <Mail className="w-5 h-5" />

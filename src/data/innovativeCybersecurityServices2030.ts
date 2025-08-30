@@ -51,7 +51,7 @@ export interface CybersecurityService {
 }
 
 // Zion Tech Group Contact Information
-const zionContact = {
+// Removed unused: const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",

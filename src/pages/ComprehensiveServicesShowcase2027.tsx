@@ -98,25 +98,25 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
       services.push({
         id: service.id,
-        name: service.name,
+        name: service?.name,
         category: service.category,
         description: service.description,
         features: service.features,
         benefits: service.benefits,
         pricing: {
-          starter: service.pricing.starter,
-          professional: service.pricing.professional,
-          enterprise: service.pricing.enterprise,
-          currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle
+          starter: service?.pricing.starter,
+          professional: service?.pricing.professional,
+          enterprise: service?.pricing.enterprise,
+          currency: service?.pricing.currency,
+          billingCycle: service?.pricing.billingCycle
         },
-        rating: service.rating,
-        reviewCount: service.reviewCount,
-        launchDate: service.launchDate,
-        status: service.status,
+        rating: service?.rating,
+        reviewCount: service?.reviewCount,
+        launchDate: service?.launchDate,
+        status: service?.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
+        website: service?.website,
         contactInfo: service.contactInfo
       });
     });
@@ -129,22 +129,22 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         category: service.category,
         description: service.description,
         features: service.features,
-        benefits: service.benefits,
+        benefits: service?.benefits,
         pricing: {
-          starter: service.pricing.starter,
-          professional: service.pricing.professional,
-          enterprise: service.pricing.enterprise,
-          currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle
+          starter: service?.pricing.starter,
+          professional: service?.pricing.professional,
+          enterprise: service?.pricing.enterprise,
+          currency: service?.pricing.currency,
+          billingCycle: service?.pricing.billingCycle
         },
-        rating: service.rating,
-        reviewCount: service.reviewCount,
-        launchDate: service.launchDate,
-        status: service.status,
-        marketPrice: service.marketPrice,
-        estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
-        contactInfo: service.contactInfo
+        rating: service?.rating,
+        reviewCount: service?.reviewCount,
+        launchDate: service?.launchDate,
+        status: service?.status,
+        marketPrice: service?.marketPrice,
+        estimatedDelivery: service?.estimatedDelivery,
+        website: service?.website,
+        contactInfo: service?.contactInfo
       });
     });
 
@@ -195,7 +195,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'Synthetic Biology':
         return <Heart className="w-6 h-6" />;
       case 'Blockchain':
-        return <Blockchain className="w-6 h-6" />;
+// Fixed missing name:         return <Blockchain className="w-6 h-6" />;
       case 'Cybersecurity':
         return <Shield className="w-6 h-6" />;
       case 'Internet of Things':

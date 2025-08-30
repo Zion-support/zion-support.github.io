@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 
 export function BlogSection() {

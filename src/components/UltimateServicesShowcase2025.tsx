@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { 
@@ -134,7 +134,7 @@ export default function UltimateServicesShowcase2025() {
                   </div>
                   <div className="text-right">
                     <div className="text-cyan-400 font-bold text-lg">${service.price}</div>
-                    <div className="text-gray-400 text-sm">{service.pricingModel}</div>
+                    <div className="text-gray-400 text-sm">{service?.pricingModel}</div>
                   </div>
                 </div>
                 
@@ -149,7 +149,7 @@ export default function UltimateServicesShowcase2025() {
                 <div className="mb-4">
                   <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                   <div className="flex flex-wrap gap-2">
-                    {service.features.slice(0, 3).map((feature, index) => (
+                    {service?.features.slice(0, 3).map((feature, index) => (
                       <span
                         key={index}
                         className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full"
@@ -162,7 +162,7 @@ export default function UltimateServicesShowcase2025() {
                 
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">
-                    <span className="text-cyan-400 font-semibold">ROI:</span> {service.roi}
+                    <span className="text-cyan-400 font-semibold">ROI:</span> {service?.roi}
                   </div>
                   <Link
                     to={`/services/${service.id}`}

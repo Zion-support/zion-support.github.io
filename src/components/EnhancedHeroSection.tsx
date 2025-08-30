@@ -187,30 +187,30 @@ export default function EnhancedHeroSection() {
                   className="flex items-center justify-center lg:justify-start mb-6"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30`}>
-                    <currentSlideData.icon className="w-8 h-8 text-white" />
+                  <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData?.gradient} bg-opacity-20 border border-zion-cyan/30`}>
+                    <currentSlideData?.icon className="w-8 h-8 text-white" />
                   </div>
                   <span className="ml-3 text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">Featured Service</span>
                 </motion.div>
 
                 {/* Title */}
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  {currentSlideData.title}
+                  {currentSlideData?.title}
                 </h1>
 
                 {/* Subtitle */}
                 <p className="text-xl sm:text-2xl text-zion-cyan font-semibold mb-4">
-                  {currentSlideData.subtitle}
+                  {currentSlideData?.subtitle}
                 </p>
 
                 {/* Description */}
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  {currentSlideData.description}
+                  {currentSlideData?.description}
                 </p>
 
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
-                  {currentSlideData.features.map((feature, index) => (
+                  {currentSlideData?.features?.map((feature, index) => (
                     <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}
@@ -231,10 +231,10 @@ export default function EnhancedHeroSection() {
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 >
                   <Link
-                    to={currentSlideData.path}
+                    to={currentSlideData?.path}
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 border border-zion-cyan/30"
                   >
-                    {currentSlideData.cta}
+                    {currentSlideData?.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                   <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300 backdrop-blur-sm">
@@ -256,7 +256,7 @@ export default function EnhancedHeroSection() {
             {/* Main image */}
             <div className="relative">
               <motion.div 
-                className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
+                className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData?.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
@@ -268,7 +268,7 @@ export default function EnhancedHeroSection() {
                       animate={{ rotate: [0, 360] }}
                       transition={{ duration: 20, repeat: Infinity }}
                     >
-                      <currentSlideData.icon className="w-12 h-12 text-zion-cyan" />
+                      <currentSlideData?.icon className="w-12 h-12 text-zion-cyan" />
                     </motion.div>
                     <p className="text-lg font-medium">Visual Representation</p>
                   </div>
@@ -278,7 +278,7 @@ export default function EnhancedHeroSection() {
 
             {/* Enhanced floating stats cards */}
             <div className="absolute -bottom-6 -left-6 space-y-4">
-              {currentSlideData.stats.map((stat, index) => (
+              {currentSlideData?.stats?.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}

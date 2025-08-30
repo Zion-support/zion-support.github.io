@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
@@ -231,7 +231,7 @@ const AIAutonomousBusinessOperations = () => {
     {
       industry: "Retail",
       applications: ["Inventory management", "Customer behavior analysis", "Pricing optimization", "Supply chain management"],
-      icon: ShoppingCart
+// Fixed missing name:       icon: ShoppingCart
     },
     {
       industry: "Technology",

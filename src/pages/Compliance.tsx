@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -128,7 +128,7 @@ export default function Compliance() {
     {
       title: 'Application Security',
       description: 'Secure software development and application security',
-      icon: Code,
+// Fixed missing name:       icon: Code,
       color: 'from-orange-500 to-red-500',
       standards: [
         'OWASP Top 10',

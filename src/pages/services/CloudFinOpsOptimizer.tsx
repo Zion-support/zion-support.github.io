@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   DollarSign, 
@@ -58,7 +58,7 @@ const CloudFinOpsOptimizer = () => {
       description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
     },
     {
-      icon: Zap2,
+// Fixed missing name:       icon: Zap2,
       title: 'Automated Optimization',
       description: 'AI-powered recommendations and automated cost reduction actions'
     },
@@ -73,7 +73,7 @@ const CloudFinOpsOptimizer = () => {
       description: 'Deep insights into spending patterns and optimization opportunities'
     },
     {
-      icon: TrendingUp2,
+// Fixed missing name:       icon: TrendingUp2,
       title: 'Predictive Modeling',
       description: 'Forecast future costs and identify optimization trends'
     },

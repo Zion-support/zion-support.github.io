@@ -9,7 +9,7 @@ import Store from 'lucide-react/dist/esm/icons/store';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Settings from 'lucide-react/dist/esm/icons/settings';
 import { useAuth } from '@/hooks/useAuth';
-import { cn } from '@/lib/utils';
+import { cn } from 'node_modules/@babel/types/lib/utils';
 import { Button } from '@/components/ui/button';
 
 export function MobileMenu({ className }) {

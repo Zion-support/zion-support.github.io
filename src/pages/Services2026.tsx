@@ -62,7 +62,7 @@ const Services2026: React.FC = () => {
         s.title.toLowerCase().includes(q) ||
         s.description.toLowerCase().includes(q) ||
         s.category.toLowerCase().includes(q) ||
-        s.tags?.some(t => t.toLowerCase().includes(q))
+        s?.tags?.some(t => t.toLowerCase().includes(q))
       );
     }
     
@@ -78,12 +78,12 @@ const Services2026: React.FC = () => {
       case 'innovation':
         return filtered.sort((a, b) => {
           const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 };
-          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0);
+          return (innovationLevels[b??.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0);
         });
       case 'roi':
         return filtered.sort((a, b) => {
-          const aROI = parseInt(a.roi.split('-')[0]);
-          const bROI = parseInt(b.roi.split('-')[0]);
+          const aROI = parseInt(a?.roi.split('-')[0]);
+          const bROI = parseInt(b?.roi.split('-')[0]);
           return bROI - aROI;
         });
       default:
@@ -91,7 +91,7 @@ const Services2026: React.FC = () => {
     }
   }, [query, selectedCategory, sortBy, allServices]);
 
-  const featuredServices = allServices.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);
+  const featuredServices = allServices.filter(s => s?.innovationLevel === 'Revolutionary').slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -240,11 +240,11 @@ const Services2026: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-slate-400">ROI:</span>
-                      <span className="text-green-400 font-semibold">{service.roi}</span>
+                      <span className="text-green-400 font-semibold">{service?.roi}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-slate-400">Delivery:</span>
-                      <span className="text-blue-300 font-semibold">{service.estimatedDelivery}</span>
+                      <span className="text-blue-300 font-semibold">{service?.estimatedDelivery}</span>
                     </div>
                   </div>
                   
@@ -294,13 +294,13 @@ const Services2026: React.FC = () => {
                     {service.category}
                   </div>
                   <div className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    service.innovationLevel === 'Revolutionary' 
+                    service?.innovationLevel === 'Revolutionary' 
                       ? 'bg-red-500/20 text-red-300 border border-red-500/30'
-                      : service.innovationLevel === 'Cutting-Edge'
+                      : service?.innovationLevel === 'Cutting-Edge'
                       ? 'bg-orange-500/20 text-orange-300 border border-orange-500/30'
                       : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
                   }`}>
-                    {service.innovationLevel}
+                    {service?.innovationLevel}
                   </div>
                 </div>
                 
@@ -319,7 +319,7 @@ const Services2026: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-400">ROI:</span>
-                    <span className="text-green-400 font-semibold">{service.roi}</span>
+                    <span className="text-green-400 font-semibold">{service?.roi}</span>
                   </div>
                 </div>
                 

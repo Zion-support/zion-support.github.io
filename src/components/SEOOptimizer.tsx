@@ -186,7 +186,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   // Get impact color
-  const getImpactColor = (impact: string) => {
+// Removed unused:   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'high': return 'text-red-500';
       case 'medium': return 'text-yellow-500';

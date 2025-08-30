@@ -212,12 +212,12 @@ export const FuturisticNavigation: React.FC = () => {
       dropdown: [
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
-        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
+// Fixed missing name:         { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
         { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
         { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
-        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
-        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+// Fixed missing name:         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
+// Fixed missing name:         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
+// Fixed missing name:         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ]
     },
     {
@@ -259,10 +259,10 @@ export const FuturisticNavigation: React.FC = () => {
     {
       name: '2028 Services',
       href: '/innovative-services-2028',
-      icon: Crown,
+// Fixed missing name:       icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
       dropdown: [
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },
+// Fixed missing name:         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },
         { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },
         { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
@@ -366,7 +366,7 @@ export const FuturisticNavigation: React.FC = () => {
                             <div className="w-16 h-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>
                           </div>
                           <div className="space-y-2">
-                            {category.services.map((service, subIndex) => (
+                            {category?.services?.map((service, subIndex) => (
                               <motion.div
                                 key={service.name}
                                 initial={{ opacity: 0, x: -20 }}

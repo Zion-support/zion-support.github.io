@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -190,7 +190,7 @@ export default function AIComplianceAssistant() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+// Fixed missing name:                 <Play className="w-5 h-5 mr-2" />
                 Start Free Trial
               </button>
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">

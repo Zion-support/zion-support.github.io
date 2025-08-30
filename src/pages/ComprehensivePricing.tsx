@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// Removed unused: import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -98,7 +98,7 @@ export default function ComprehensivePricing() {
     return matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (range: string) => {
+// Removed unused:   const getPriceRangeLabel = (range: string) => {
     switch (range) {
       case 'under-1000': return 'Under $1,000';
       case '1000-3000': return '$1,000 - $3,000';
