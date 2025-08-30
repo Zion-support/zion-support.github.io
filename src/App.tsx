@@ -88,6 +88,7 @@ const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICu
 const AIEnterpriseResourcePlanning = React.lazy(() => import('./pages/services/AIEnterpriseResourcePlanning'));
 const AIQuantumFinancialTrading = React.lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
 const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
+const AIBlockchainSupplyChain = React.lazy(() => import('./pages/services/AIBlockchainSupplyChain'));
 
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
@@ -214,6 +215,7 @@ function App() {
               <Route path="/services/ai-enterprise-resource-planning" element={<AIEnterpriseResourcePlanning />} />
               <Route path="/services/ai-quantum-financial-trading" element={<AIQuantumFinancialTrading />} />
               <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+              <Route path="/services/ai-blockchain-supply-chain" element={<AIBlockchainSupplyChain />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
