@@ -24,28 +24,7 @@ export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD
   const docCategories = [
-=======
-  const categories = [
-    { id: 'all', name: 'All Documentation', icon: <BookOpen className="w-5 h-5" />, count: 0 },;
-    { id: 'getting-started', name: 'Getting Started', icon: <BookOpen className="w-5 h-5" />, count: 12 },;
-    { id: 'api', name: 'API Reference', icon: <Code className="w-5 h-5" />, count: 28 },;
-    { id: 'guides', name: 'User Guides', icon: <FileText className="w-5 h-5" />, count: 45 },;
-    { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-5 h-5" />, count: 23 },;
-    { id: 'examples', name: 'Code Examples', icon: <Code className="w-5 h-5" />, count: 67 },;
-    { id: 'reference', name: 'Reference', icon: <FileText className="w-5 h-5" />, count: 34 };
-  ];
-
-  const sortOptions = [;
-    { value: 'popular', label: 'Most Popular' },;
-    { value: 'newest', label: 'Newest First' },;
-    { value: 'alphabetical', label: 'Alphabetical' },;
-    { value: 'recently-updated', label: 'Recently Updated' };
-  ];
-
-  const documentationItems = [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     {
       id: 'getting-started',
       name: 'Getting Started',
@@ -156,15 +135,14 @@ export default function Documentation() {
       title: 'Performance Optimization Guide',
       category: 'Cloud & DevOps',
       readTime: '35 min',
-<<<<<<< HEAD
       difficulty: 'Intermediate',
       views: '6.7k',
-      rating: 4.7;
-    };
-  };
+      rating: 4.7
+    }
+  ];
 
-  const getTypeIcon = (type: string) => {;
-    switch (type) {;
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'api': return <Api className="w-4 h-4" />;
       case 'guide': return <BookOpen className="w-4 h-4" />;
       case 'tutorial': return <Code className="w-4 h-4" />;
@@ -173,80 +151,25 @@ export default function Documentation() {
     }
   };
 
-  const filteredCategories = selectedCategory === 'all' ;
-    ? docCategories: docCategories.filter(category  => category.id === selectedCategory);
+  const filteredCategories = selectedCategory === 'all' 
+    ? docCategories : docCategories.filter(category => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
         category.articles.filter(article => 
           article.title.toLowerCase().includes(searchQuery.toLowerCase())
-        ).map(article => ({ ...category, article }));
-      );
+        ).map(article => ({ ...category, article }))
+      )
     : [];
 
   return (
-    <div className = "min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-slate-900">
       <SEO 
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation, API guides, and resources for Zion Tech Group services. Get started with our detailed guides and tutorials."
         keywords="documentation, API docs, user guides, tutorials, Zion Tech Group"
         canonical="https://ziontechgroup.com/documentation"
       />
-=======
-      lastUpdated: '2025-01-10',
-      views: 7890,
-      rating: 4.6,
-      featured: false,
-      tags: ['micro-saas', 'platform', 'setup']
-    },
-    {
-      id: 6,
-      title: 'Python SDK Examples',
-      description: 'Code examples and best practices for using our Python SDK',
-      category: 'examples',
-      type: 'examples',
-      difficulty: 'intermediate',
-      readTime: '30 min',;
-      lastUpdated: '2025-01-08',;
-      views: 5670,;
-      rating: 4.5,;
-      featured: false,;
-      tags: ['python', 'sdk', 'examples'];
-    };
-  ];
-
-  const featuredResources = [
-    {
-      title: 'Zion Tech Group Developer Portal',
-      description: 'Access our comprehensive developer resources and tools',
-      type: 'portal',
-      link: 'https://developers.ziontechgroup.com',
-      featured: true
-    },
-    {
-      title: 'API Playground',
-      description: 'Interactive API testing and exploration environment',
-      type: 'tool',
-      link: '/api-playground',
-      featured: true
-    },
-    {;
-      title: 'Community Forum',;
-      description: 'Connect with other developers and get help',;
-      type: 'community',;
-      link: '/community',;
-      featured: false;
-    };
-  ];
-
-  const getDifficultyColor = (difficulty: string) => {;
-    switch (difficulty) {;
-      case 'beginner': return 'bg-green-500';
-      case 'intermediate': return 'bg-yellow-500';
-      case 'advanced': return 'bg-red-500';
-      default: return 'bg-gray-500';
-    }
-  };
 
   const getDifficultyText = (difficulty: string) => {;
     switch (difficulty) {;
@@ -294,7 +217,6 @@ export default function Documentation() {
           </p>
         </div>
       </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
@@ -304,53 +226,46 @@ export default function Documentation() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div 
             className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-8"
-            initial = {
-  { opacity: 0,
-  scale: 0.5 
-
-}}
-            animate = {
-  { opacity: 1,
-  scale: 1 
-
-}}
+            initial={{
+              opacity: 0,
+              scale: 0.5
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1
+            }}
             transition={{ duration: 0.8 }}
           >
             <BookOpen className="w-12 h-12 text-white" />
           </motion.div>
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
             transition={{ duration: 0.8 }}
           >
             Documentation
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-}}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2
+            }}
           >
             Everything you need to get started with our services
           </motion.p>
@@ -358,21 +273,18 @@ export default function Documentation() {
           {/* Search Bar */}
           <motion.div 
             className="max-w-2xl mx-auto"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-}}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.4
+            }}
           >
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
@@ -394,16 +306,14 @@ export default function Documentation() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-8"
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
+              initial={{
+                opacity: 0,
+                y: 20
+              }}
+              animate={{
+                opacity: 1,
+                y: 0
+              }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-2xl font-bold text-white mb-2">
@@ -419,21 +329,18 @@ export default function Documentation() {
                 {searchResults.map((result, index) => (
                   <motion.div
                     key={`${result.id}-${index}`}
-                    initial = {
-  { opacity: 0,
-  x: -20 
-
-}}
-                    animate = {
-  { opacity: 1,
-  x: 0 
-
-}}
-                    transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
+                    initial={{
+                      opacity: 0,
+                      x: -20
+                    }}
+                    animate={{
+                      opacity: 1,
+                      x: 0
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      delay: index * 0.1
+                    }}
                     className="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
                   >
                     <div className="flex items-center justify-between">
@@ -646,7 +553,6 @@ export default function Documentation() {
                     </button>
                   </div>
                 </div>
-<<<<<<< HEAD
               </motion.div>
             ))}
           </div>
@@ -658,16 +564,14 @@ export default function Documentation() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -684,22 +588,19 @@ export default function Documentation() {
               {popularGuides.map((guide, index)  => (
                 <motion.div
                   key={index}
-                  initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+                  initial={{
+                    opacity: 0,
+                    y: 30
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }}
                   viewport={{ once: true }}
-                  transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.1
+                  }}
                   className="group"
                 >
                   <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
@@ -764,7 +665,7 @@ export default function Documentation() {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: 'Video Tutorials',
@@ -787,25 +688,22 @@ export default function Documentation() {
                 count: '25+ downloads',
                 href: '/downloads'
               }
-            ].map((resource, index)  => (
+            ].map((resource, index) => (
               <motion.div
                 key={resource.title}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+                initial={{
+                  opacity: 0,
+                  y: 30
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0
+                }}
                 viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.1
+                }}
                 className="group"
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 text-center h-full">
@@ -836,15 +734,14 @@ export default function Documentation() {
         <div className="container mx-auto px-4 text-center">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -853,43 +750,37 @@ export default function Documentation() {
           </motion.h2>
           <motion.p 
             className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
             viewport={{ once: true }}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-}}
+            transition={{
+              duration: 0.8,
+              delay: 0.2
+            }}
           >
             Can't find what you're looking for? Our support team is here to help
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0
+            }}
             viewport={{ once: true }}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-}}
+            transition={{
+              duration: 0.8,
+              delay: 0.4
+            }}
           >
             <a 
               href="/help" 
@@ -907,48 +798,4 @@ export default function Documentation() {
         </div>
       </section>
     </div>
-  )}
-=======
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <BookOpen className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No documentation found</h3>
-              <p className="text-zion-slate-light">
-                Try adjusting your search terms or browse all categories
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Need More Help?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Can't find what you're looking for? Our support team is here to help you succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/support"
-              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-            >
-              Contact Support
-            </a>
-            <a 
-              href="/help"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-            >;
-              Help Center;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

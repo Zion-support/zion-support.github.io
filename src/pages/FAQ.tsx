@@ -22,11 +22,11 @@ export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openItems, setOpenItems] = useState<any>([]);
 
-  const toggleItem = (index: number) => {;
-    setOpenItems(prev => ;
-      prev.includes(index) ;
-        ? prev.filter(i => i !== index);
-        : [...prev, index];
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
     );
   };
 

@@ -28,24 +28,16 @@ export default function Login() {
       // Clear token from URL to prevent re-processing and clean up history
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
-<<<<<<< HEAD
-      router(location.pathname, { replace: true })}
-=======
-      router(location.pathname, { replace: true });
+      navigate(location.pathname, { replace: true });
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
       const next = location.state?.from?.pathname || '/dashboard';
-<<<<<<< HEAD
-      router(next, { replace: true })}
-=======
-      router(next, { replace: true });
+      navigate(next, { replace: true });
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
 
   // Render LoginContent if not authenticated and auth is not loading
@@ -54,7 +46,8 @@ export default function Login() {
       <ErrorBoundary fallback={<div>Something went wrong. Please try again.</div>}>
         <LoginContent />
       </ErrorBoundary>
-    )}
+    );
+  }
 
   // Optional: Render a loading indicator while isLoading is true
   if (isLoading) {
@@ -63,4 +56,5 @@ export default function Login() {
 
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
-  return null}
+  return null;
+}

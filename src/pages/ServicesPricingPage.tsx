@@ -26,30 +26,29 @@ import { Check,
  } from 'lucide-react';
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
 // Group services by category for better organization
-<<<<<<< HEAD
-const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
-  if (!acc[service.category]) {;
+const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
+  if (!acc[service.category]) {
     acc[service.category] = [];
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   acc[service.category].push(service);
-  return acc}, {} as { [key: string]: typeof EXPANDED_SERVICES });
+  return acc;
+}, {} as { [key: string]: typeof EXPANDED_SERVICES });
 // Pricing comparison features
 const pricingFeatures = [
   "AI-Powered Solutions",
-  "24/7 Support",;
-  "Global Coverage",;
-  "Custom Integration",;
-  "Training & Documentation",;
-  "Regular Updates",;
-  "Security Compliance",;
-  "Scalable Architecture";
+  "24/7 Support",
+  "Global Coverage",
+  "Custom Integration",
+  "Training & Documentation",
+  "Regular Updates",
+  "Security Compliance",
+  "Scalable Architecture"
 ];
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
-  const filteredServices = selectedCategory === 'all' ;
-    ? EXPANDED_SERVICES ;
+  const filteredServices = selectedCategory === 'all' 
+    ? EXPANDED_SERVICES 
     : servicesByCategory[selectedCategory] || [];
   const getCategoryIcon = (category: string)  => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
@@ -66,17 +65,17 @@ export default function ServicesPricingPage() {
       'Digital Transformation': <Building className="h-5 w-5" />,
       'Edge Computing': <Globe className="h-5 w-5" />,
       'API Management': <Zap className="h-5 w-5" />,
-      'Blockchain & Web3': <Zap className="h-5 w-5" />,;
-      'Mobile Development': <Smartphone className="h-5 w-5" />,;
-      'E-commerce': <ShoppingCart className="h-5 w-5" />,;
-      'Healthcare Technology': <Heart className="h-5 w-5" />,;
-      'FinTech': <TrendingUp className="h-5 w-5" />,;
-      'Education Technology': <GraduationCap className="h-5 w-5" />,;
-      'Supply Chain': <Truck className="h-5 w-5" />;
+      'Blockchain & Web3': <Zap className="h-5 w-5" />,
+      'Mobile Development': <Smartphone className="h-5 w-5" />,
+      'E-commerce': <ShoppingCart className="h-5 w-5" />,
+      'Healthcare Technology': <Heart className="h-5 w-5" />,
+      'FinTech': <TrendingUp className="h-5 w-5" />,
+      'Education Technology': <GraduationCap className="h-5 w-5" />,
+      'Supply Chain': <Truck className="h-5 w-5" />
     };
-    return categoryIcons[category] || <Zap className="h-5 w-5" />};
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+    return categoryIcons[category] || <Zap className="h-5 w-5" />;
+      return (
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

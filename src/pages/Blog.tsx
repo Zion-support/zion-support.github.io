@@ -21,20 +21,12 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-<<<<<<< HEAD
     { id: 'all', name: 'All Posts', icon: TrendingUp, count: 24 },
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 8 },
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 6 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
     { id: 'innovation', name: 'Innovation', icon: Lightbulb, count: 3 },
-    { id: 'transformation', name: 'Digital Transformation', icon: Rocket, count: 2 };
-=======;
-    { id: 'all', name: 'All Posts', count: 45 },;
-    { id: 'ai', name: 'AI & Machine Learning', count: 18 },;
-    { id: 'quantum', name: 'Quantum Computing', count: 12 },;
-    { id: 'cloud', name: 'Cloud & Infrastructure', count: 8 },;
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 7 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    { id: 'transformation', name: 'Digital Transformation', icon: Rocket, count: 2 }
   ];
 
   const featuredPosts = [
@@ -68,10 +60,9 @@ export default function Blog() {
       author: 'Jennifer Kim',
       date: 'December 10, 2024',
       readTime: '10 min read',
-<<<<<<< HEAD
       image: '/images/blog/cloud-native-dev.jpg',
-      featured: true;
-    };
+      featured: true
+    }
   ];
 
   const recentPosts = [

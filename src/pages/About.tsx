@@ -26,8 +26,8 @@ export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
-    { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },;
-    { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' };
+    { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },
+    { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' }
   ];
 
   const values = [
@@ -53,8 +53,8 @@ export default function About() {
       icon: Security,
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
-      color: 'from-red-500 to-orange-500';
-    };
+      color: 'from-red-500 to-orange-500'
+    }
   ];
 
   const teamMembers = [
@@ -84,8 +84,8 @@ export default function About() {
       role: 'Cybersecurity Director',
       bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
       expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],
-      image: '/images/team/emily-watson.jpg';
-    };
+      image: '/images/team/emily-watson.jpg'
+    }
   ];
 
   const milestones = [
@@ -112,8 +112,8 @@ export default function About() {
     {
       year: '2025',
       title: 'AI Ethics Leadership',
-      description: 'Recognized as industry leader in responsible AI development.';
-    };
+      description: 'Recognized as industry leader in responsible AI development.'
+    }
   ];
 
 const About: React.FC = () => {
@@ -246,20 +246,17 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
             </motion.div>
             
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: 30 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
+              initial={{
+                opacity: 0,
+                x: 30
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0
+              }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="relative"
@@ -313,7 +310,7 @@ const About: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index)  => (
               <motion.div 
                 key={index}
@@ -539,23 +536,9 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  )}
-=======
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
-                https://ziontechgroup.com;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+}
 
 export default About;
