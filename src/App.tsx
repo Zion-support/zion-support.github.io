@@ -103,6 +103,12 @@ const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkf
 const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
+const AIEnterpriseResourcePlanning = React.lazy(() => import('./pages/services/AIEnterpriseResourcePlanning'));
+const AIQuantumFinancialTrading = React.lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
+const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
+const AIBlockchainSupplyChain = React.lazy(() => import('./pages/services/AIBlockchainSupplyChain'));
+const AICyberThreatIntelligence = React.lazy(() => import('./pages/services/AICyberThreatIntelligence'));
+const AIQuantumComputingPlatform = React.lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
 
 // New AI-Powered Micro SAAS Services
 const AICodeReviewSecurity = React.lazy(() => import('./pages/services/ai-code-review-security'));
@@ -262,7 +268,6 @@ function App() {
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
               <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
-
               {/* New AI-Powered Micro SAAS Service Routes */}
               <Route path="/services/ai-code-review-security" element={<AICodeReviewSecurity />} />
               <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
@@ -271,6 +276,14 @@ function App() {
 
               {/* AI Services Showcase Route */}
               <Route path="/ai-services-showcase" element={<AIServicesShowcase />} />
+
+              {/* Additional AI Services Routes */}
+              <Route path="/services/ai-enterprise-resource-planning" element={<AIEnterpriseResourcePlanning />} />
+              <Route path="/services/ai-quantum-financial-trading" element={<AIQuantumFinancialTrading />} />
+              <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+              <Route path="/services/ai-blockchain-supply-chain" element={<AIBlockchainSupplyChain />} />
+              <Route path="/services/ai-cyber-threat-intelligence" element={<AICyberThreatIntelligence />} />
+              <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
               
               {/* Comprehensive Services Landing Route */}
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding />} />
