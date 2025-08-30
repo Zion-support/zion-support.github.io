@@ -307,7 +307,7 @@ export default function Contact() {
                     target={method.action.startsWith('http') ? '_blank' : null}
                     rel={method.action.startsWith('http') ? 'noopener noreferrer' : null}
                     className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300"
-
+                  >
                     <span className="text-sm font-medium">Contact</span>
                     <Send className="w-4 h-4" />
                   </a>
@@ -345,7 +345,7 @@ export default function Contact() {
 
 }}
               transition={{ duration: 0.8 }}
-
+            >
               <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
               <p className="text-zion-slate-light mb-8 leading-relaxed">
                 Fill out the form below and we'll get back to you within 24 hours.
@@ -375,7 +375,7 @@ export default function Contact() {
 
 }}
                   className="bg-green-500/20 border border-green-500/40 rounded-2xl p-8 text-center"
-
+                >
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
                   <p className="text-green-200">
