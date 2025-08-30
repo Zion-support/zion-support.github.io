@@ -1,55 +1,55 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, PenTool, Sparkles, CheckCircle, ArrowRight, Brain, Zap, Globe, Server, Target, PieChart, FileText } from 'lucide-react';
+import { Users, MessageCircle, BarChart3, CheckCircle, ArrowRight, Brain, Zap, Globe, Server, Target, PieChart, Smartphone } from 'lucide-react';
 
-export default function LLMContentStudio() {
+export default function MobileFeedbackSurveys() {
   const features = [
     {
-      icon: BookOpen,
-      title: 'AI Content Generation',
-      description: 'Generate high-quality, engaging content using advanced language models and AI technology.'
+      icon: Users,
+      title: 'Customer Feedback Collection',
+      description: 'Gather real-time feedback from customers through mobile-optimized surveys and forms.'
     },
     {
-      icon: PenTool,
-      title: 'Creative Writing Assistant',
-      description: 'AI-powered writing tools that help create compelling copy, articles, and marketing materials.'
+      icon: MessageCircle,
+      title: 'NPS & CSAT Surveys',
+      description: 'Measure customer satisfaction and loyalty with industry-standard survey methodologies.'
     },
     {
-      icon: Sparkles,
-      title: 'Content Optimization',
-      description: 'Optimize existing content for SEO, readability, and engagement with intelligent suggestions.'
+      icon: BarChart3,
+      title: 'AI-Powered Insights',
+      description: 'Advanced analytics provide actionable insights from customer feedback data.'
     },
     {
-      icon: Target,
-      title: 'Brand Voice Consistency',
-      description: 'Maintain consistent brand voice and tone across all content with AI-powered style guides.'
+      icon: Smartphone,
+      title: 'Mobile-First Design',
+      description: 'Optimized for mobile devices with responsive design and touch-friendly interfaces.'
     },
     {
       icon: PieChart,
-      title: 'Performance Analytics',
-      description: 'Track content performance and engagement metrics with detailed analytics and insights.'
+      title: 'Real-time Analytics',
+      description: 'Monitor survey responses and customer sentiment in real-time with live dashboards.'
     },
     {
-      icon: FileText,
-      title: 'Multi-Format Support',
-      description: 'Create content for blogs, social media, emails, and more with versatile AI tools.'
+      icon: Target,
+      title: 'Custom Survey Builder',
+      description: 'Create tailored surveys with drag-and-drop functionality and advanced question types.'
     }
   ];
 
   const benefits = [
-    'Increase content production by 300%',
-    'Improve content quality and engagement',
-    'Maintain consistent brand voice',
-    'Reduce content creation time',
-    'SEO-optimized content generation',
-    'Multi-platform content creation'
+    'Increase response rates by 50%',
+    'Improve customer satisfaction scores',
+    'Real-time feedback collection',
+    'AI-powered sentiment analysis',
+    'Mobile-optimized experience',
+    'Automated reporting and insights'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-orange-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-rose-500/10"></div>
         <div className="relative container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -57,21 +57,21 @@ export default function LLMContentStudio() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center space-x-2 bg-yellow-500/10 border border-yellow-500/20 rounded-full px-4 py-2 mb-6">
-              <BookOpen className="w-5 h-5 text-yellow-400" />
-              <span className="text-yellow-400 text-sm font-medium">Content Creation</span>
+            <div className="inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6">
+              <Users className="w-5 h-5 text-pink-400" />
+              <span className="text-pink-400 text-sm font-medium">Customer Feedback</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              LLM Content Studio
+              Mobile Feedback Surveys
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your content creation with AI-powered writing tools, intelligent optimization, and brand-consistent messaging.
+              Capture customer insights with mobile-optimized surveys, AI-powered analytics, and real-time feedback collection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300">
+              <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-pink-400 hover:text-pink-400 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -89,10 +89,10 @@ export default function LLMContentStudio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI-Powered Content Creation
+              Intelligent Feedback Collection
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our LLM content studio provides intelligent writing assistance, content optimization, and brand voice consistency.
+              Our mobile survey platform provides comprehensive feedback collection with AI-powered insights and analytics.
             </p>
           </motion.div>
 
@@ -103,9 +103,9 @@ export default function LLMContentStudio() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-yellow-400/50 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-pink-400/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -126,15 +126,15 @@ export default function LLMContentStudio() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose LLM Content Studio?
+                Why Choose Mobile Feedback Surveys?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
-                Transform your content creation process with AI-powered tools that increase productivity and maintain quality.
+                Transform customer feedback collection with mobile-optimized surveys and AI-powered insights.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
                     <span className="text-slate-300">{benefit}</span>
                   </div>
                 ))}
@@ -147,23 +147,23 @@ export default function LLMContentStudio() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30">
+              <div className="bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-2xl p-8 border border-pink-500/30">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-yellow-400 mb-2">300%</div>
-                    <div className="text-slate-300 text-sm">Production Increase</div>
+                    <div className="text-3xl font-bold text-pink-400 mb-2">50%</div>
+                    <div className="text-slate-300 text-sm">Response Increase</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-400 mb-2">AI-Powered</div>
-                    <div className="text-slate-300 text-sm">Writing</div>
+                    <div className="text-3xl font-bold text-rose-400 mb-2">Real-time</div>
+                    <div className="text-slate-300 text-sm">Feedback</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-yellow-400 mb-2">Brand</div>
-                    <div className="text-slate-300 text-sm">Consistency</div>
+                    <div className="text-3xl font-bold text-pink-400 mb-2">AI-Powered</div>
+                    <div className="text-slate-300 text-sm">Analytics</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-400 mb-2">Multi-Format</div>
-                    <div className="text-slate-300 text-sm">Support</div>
+                    <div className="text-3xl font-bold text-rose-400 mb-2">Mobile</div>
+                    <div className="text-slate-300 text-sm">Optimized</div>
                   </div>
                 </div>
               </div>
@@ -182,17 +182,17 @@ export default function LLMContentStudio() {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Content Creation?
+              Ready to Collect Better Feedback?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join leading content teams that use AI to increase productivity, maintain quality, and scale their content operations.
+              Join leading companies that use mobile-optimized surveys to improve customer satisfaction and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+              <button className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300">
+              <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-pink-400 hover:text-pink-400 transition-all duration-300">
                 Contact Sales
               </button>
             </div>

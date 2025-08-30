@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo } from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { useLocation  } from 'react-router-dom.ts';
+import React, { useEffect, useMemo } from 'react';
+import { Helmet  } from 'react-helmet-async';
+import { useLocation  } from 'react-router-dom';
 
 interface SEOProps extends React.PropsWithChildren<{}> {
 
@@ -9,7 +9,7 @@ interface SEOProps extends React.PropsWithChildren<{}> {
   keywords?: string;
   ogImage?: string;
   canonicalUrl?: string;
-  structuredData?: ;
+  structuredData?: object;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   ogType?: 'website' | 'article' | 'book' | 'profile' | 'music.song' | 'music.album' | 'music.playlist' | 'music.radio_station' | 'video.movie' | 'video.episode' | 'video.tv_show' | 'video.other' | 'business.business' | 'website';
   author?: string;
@@ -23,16 +23,17 @@ interface SEOProps extends React.PropsWithChildren<{}> {
   ogLocale?: string;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   twitterCreator?: string;
-  twitterSite?: string}
+  twitterSite?: string;
+}
 
 interface PageMetadata {
-
   title: string;
   description: string;
   keywords: string[];
   image: string;
   type: string;
-  section: string}
+  section: string;
+}
 
 export const SEO: React.FC<SEOProps> = ({
   title,
@@ -63,7 +64,7 @@ export const SEO: React.FC<SEOProps> = ({
     '/': {
       title: 'Zion Tech Group - Innovative Technology Solutions & AI Services',
       description: 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation. Expert consulting, development, and innovation services.',
-      keywords['technology solutions', 'AI services', 'digital transformation', 'consulting', 'development', 'innovation'],
+      keywords: ['technology solutions', 'AI services', 'digital transformation', 'consulting', 'development', 'innovation'],
       image: '/images/homepage-og.jpg',
       type: 'website',
       section: 'Technology',
@@ -71,7 +72,7 @@ export const SEO: React.FC<SEOProps> = ({
     '/services': {
       title: 'Our Services - Zion Tech Group',
       description: 'Comprehensive technology services including AI, cloud computing, cybersecurity, digital transformation, and custom software development.',
-      keywords['AI services', 'cloud computing', 'cybersecurity', 'digital transformation', 'software development'],
+      keywords: ['AI services', 'cloud computing', 'cybersecurity', 'digital transformation', 'software development'],
       image: '/images/services-og.jpg',
       type: 'website',
       section: 'Services',
@@ -79,7 +80,7 @@ export const SEO: React.FC<SEOProps> = ({
     '/about': {
       title: 'About Us - Zion Tech Group',
       description: 'Learn about Zion Tech Group\'s mission, team, and commitment to delivering innovative technology solutions that drive business success.',
-      keywords['about us', 'mission', 'team', 'technology comp', 'innovation'],
+      keywords: ['about us', 'mission', 'team', 'technology company', 'innovation'],
       image: '/images/about-og.jpg',
       type: 'website',
       section: 'Comp',
@@ -87,7 +88,7 @@ export const SEO: React.FC<SEOProps> = ({
     '/contact': {
       title: 'Contact Us - Zion Tech Group',
       description: 'Get in touch with Zion Tech Group for technology consulting, project inquiries, or partnership opportunities.',
-      keywords['contact', 'consulting', 'inquiry', 'partnership', 'support'],
+      keywords: ['contact', 'consulting', 'inquiry', 'partnership', 'support'],
       image: '/images/contact-og.jpg',
       type: 'website',
       section: 'Contact',
@@ -101,7 +102,7 @@ export const SEO: React.FC<SEOProps> = ({
   const finalMetadata = useMemo(() => ({
     title: title || routeMetadata.title,
     description: description || routeMetadata.description,
-    keywords[...new Set([...keywords, ...routeMetadata.keywords])],
+    keywords: [...new Set([...keywords, ...routeMetadata.keywords])],
     image: currentImage,
     type,
     section: section || routeMetadata.section,
@@ -125,7 +126,7 @@ export const SEO: React.FC<SEOProps> = ({
         contactType: 'customer service',
         email: 'info@ziontechgroup.com',
       },
-      sameAs[
+      sameAs: [
         'https://www.linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup',
         'https://www.facebook.com/ziontechgroup',
@@ -293,7 +294,8 @@ export const SEO: React.FC<SEOProps> = ({
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink)}
+      document.head.appendChild(canonicalLink);
+    }
     canonicalLink.setAttribute('href', canonical || currentUrl);
 
     // Update Open Graph tags
@@ -302,8 +304,9 @@ export const SEO: React.FC<SEOProps> = ({
       if (!ogTag) {
         ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
-        document.head.appendChild(ogTag)}
-      ogTag.setAttribute('content', content)};
+        document.head.appendChild(ogTag);
+      }
+      ogTag.setAttribute('content', content);
 
     updateOGTag('og:title', finalMetadata.title);
     updateOGTag('og:description', finalMetadata.description);
@@ -317,8 +320,9 @@ export const SEO: React.FC<SEOProps> = ({
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
-        document.head.appendChild(twitterTag)}
-      twitterTag.setAttribute('content', content)};
+        document.head.appendChild(twitterTag);
+      }
+      twitterTag.setAttribute('content', content);
 
     updateTwitterTag('twitter:title', finalMetadata.title);
     updateTwitterTag('twitter:description', finalMetadata.description);
@@ -327,7 +331,8 @@ export const SEO: React.FC<SEOProps> = ({
     // Add structured data
     const existingStructuredData = document.querySelector('script[type="application/ld+json"]');
     if (existingStructuredData) {
-      existingStructuredData.remove()}
+      existingStructuredData.remove();
+    }
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -335,11 +340,12 @@ export const SEO: React.FC<SEOProps> = ({
     document.head.appendChild(script);
 
     // Track page view for analytics
-    if (typeof window !== 'undefined' && (window as ).gtag) {
-      (window as ).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: finalMetadata.title,
         page_location: currentUrl,
-      })}
+      });
+    }
 
   }, [finalMetadata, currentUrl, canonical, structuredData, type, publishedTime, modifiedTime, author, tags]);
 
@@ -381,7 +387,8 @@ export const SEO: React.FC<SEOProps> = ({
         {JSON.stringify(structuredData || generateStructuredData())}
       </script>
     </Helmet>
-  )};
+  );
+}
 
 // Export default component
 export default SEO;

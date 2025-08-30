@@ -1,5 +1,5 @@
 
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect, useMemo } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 
@@ -19,6 +19,32 @@ const FuturisticBackground = React.memo(() => {
       duration: 5 + i * 0.3
     })), []
   );
+
+  return (
+    <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
+          style={{
+            left: particle.left,
+            top: particle.top,
+          }}
+          animate={{
+            y: [-20, 20, -20],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: particle.duration,
+            delay: particle.delay,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      ))}
+    </div>
+  );
+});
 
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string })  => (
@@ -281,7 +307,6 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
                 whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Link to={category.href} className="block h-full">
                   <div className="bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 h-full flex flex-col justify-between">
@@ -513,4 +538,5 @@ export default function Home() {
         <FloatingCTA />
       </Suspense>
     </div>
-  )}
+  );
+}
