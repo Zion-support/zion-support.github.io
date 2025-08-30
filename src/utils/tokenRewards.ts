@@ -7,7 +7,8 @@ export async function earnTokensForAction(
 ): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({ userId, action, amount })
+    body: JSON.stringify({ userId, action, amount }),
+    headers: {}
   });
 }
 
@@ -18,7 +19,8 @@ export async function earnTokensForPurchase(
 ): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({ userId, action: 'purchase', amount: purchaseAmount, purchaseType })
+    body: JSON.stringify({ userId, action: 'purchase', amount: purchaseAmount, purchaseType }),
+    headers: {}
   });
 }
 
@@ -28,6 +30,7 @@ export async function earnTokensForReferral(
 ): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })
+    body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 }),
+    headers: {}
   });
 }
