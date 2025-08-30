@@ -92,13 +92,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'AI Solutions',
       icon: Brain,
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3, description: 'AI-powered analytics' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Target, description: 'Sales automation' },
-        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation', icon: FileText, description: 'Content generation' },
-        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', icon: TrendingUp, description: 'Supply chain optimization' },
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users, description: 'Human resources automation' },
-        { name: 'AI Legal Research', href: '/services/ai-legal-research-platform', icon: Scale, description: 'Legal document analysis' },
-        { name: 'AI Education Platform', href: '/services/ai-education-platform', icon: GraduationCap, description: 'Educational technology' }
+        { name: 'AI Business Intelligence', href: '/ai-services', icon: BarChart3, description: 'AI-powered analytics' },
+        { name: 'AI Sales Copilot', href: '/ai-services', icon: Target, description: 'Sales automation' },
+        { name: 'AI Content Marketing', href: '/ai-services', icon: FileText, description: 'Content generation' },
+        { name: 'AI Supply Chain', href: '/ai-services', icon: TrendingUp, description: 'Supply chain optimization' },
+        { name: 'AI HR Platform', href: '/ai-services', icon: Users, description: 'Human resources automation' },
+        { name: 'AI Legal Research', href: '/ai-services', icon: Scale, description: 'Legal document analysis' },
+        { name: 'AI Education Platform', href: '/ai-services', icon: GraduationCap, description: 'Educational technology' }
       ]
     },
     {
@@ -106,13 +106,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Enterprise Services',
       icon: Building,
       links: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot', icon: Shield, description: 'Security solutions' },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Digital simulation' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge', icon: Cpu, description: 'Internet of Things' },
-        { name: 'Data Analytics', href: '/services/data-analytics', icon: Database, description: 'Data processing' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Settings, description: 'Infrastructure management' },
-        { name: 'Zero Trust Security', href: '/services/zero-trust-network-architecture', icon: Lock, description: 'Network security' }
+        { name: 'Cloud DevOps', href: '/it-services', icon: Cloud, description: 'Cloud infrastructure' },
+        { name: 'Cybersecurity Suite', href: '/it-services', icon: Shield, description: 'Security solutions' },
+        { name: 'Digital Twin', href: '/it-services', icon: Rocket, description: 'Digital simulation' },
+        { name: 'IoT Edge Computing', href: '/it-services', icon: Cpu, description: 'Internet of Things' },
+        { name: 'Data Analytics', href: '/it-services', icon: Database, description: 'Data processing' },
+        { name: 'IT Infrastructure', href: '/it-services', icon: Settings, description: 'Infrastructure management' },
+        { name: 'Zero Trust Security', href: '/it-services', icon: Lock, description: 'Network security' }
       ]
     },
     {
@@ -120,12 +120,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Specialized Services',
       icon: Star,
       links: [
-        { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'Medical technology' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'Blockchain technology' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Quantum solutions' },
-        { name: 'Space Technology', href: '/services/space-tech', icon: Rocket, description: 'Aerospace solutions' },
-        { name: 'Sustainability Tech', href: '/services/sustainability', icon: Globe, description: 'Green technology' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: TrendingUp, description: 'Business modernization' }
+        { name: 'Healthcare Tech', href: '/solutions', icon: Heart, description: 'Medical technology' },
+        { name: 'Blockchain Solutions', href: '/it-services', icon: Lock, description: 'Blockchain technology' },
+        { name: 'Quantum Computing', href: '/it-services', icon: Zap, description: 'Quantum solutions' },
+        { name: 'Space Technology', href: '/it-services', icon: Rocket, description: 'Aerospace solutions' },
+        { name: 'Sustainability Tech', href: '/solutions', icon: Globe, description: 'Green technology' },
+        { name: 'Digital Transformation', href: '/it-services', icon: TrendingUp, description: 'Business modernization' }
       ]
     },
     {
@@ -133,13 +133,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Micro SaaS Products',
       icon: ShoppingCart,
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'All SaaS products' },
-        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: Target, description: 'Lead qualification' },
-        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: 'Customer support' },
-        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', icon: Search, description: 'SEO automation' },
-        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor', icon: TrendingUp, description: 'Customer retention' },
-        { name: 'API Monitoring', href: '/services/api-monitoring', icon: Smartphone, description: 'API health tracking' },
-        { name: 'Returns Management', href: '/services/returns-management', icon: Package, description: 'E-commerce returns' }
+        { name: 'Micro SaaS Solutions', href: '/micro-saas', icon: ShoppingCart, description: 'All SaaS products' },
+        { name: 'AI Lead Scoring', href: '/micro-saas', icon: Target, description: 'Lead qualification' },
+        { name: 'Website AI Chatbot', href: '/micro-saas', icon: MessageCircle, description: 'Customer support' },
+        { name: 'AI SEO Optimizer', href: '/micro-saas', icon: Search, description: 'SEO automation' },
+        { name: 'SaaS Churn Predictor', href: '/micro-saas', icon: TrendingUp, description: 'Customer retention' },
+        { name: 'API Monitoring', href: '/micro-saas', icon: Smartphone, description: 'API health tracking' },
+        { name: 'Returns Management', href: '/micro-saas', icon: Package, description: 'E-commerce returns' }
       ]
     },
     {
@@ -147,10 +147,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Innovation Hub',
       icon: Star,
       links: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest innovations' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future technologies' },
-        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', icon: BarChart3, description: 'Complete portfolio' },
-        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Zap, description: 'Emerging technologies' }
+        { name: 'Innovative Services 2025', href: '/services-overview', icon: Star, description: 'Latest innovations' },
+        { name: 'Revolutionary Services 2030', href: '/services-overview', icon: Rocket, description: 'Future technologies' },
+        { name: 'Comprehensive Services 2028', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio' },
+        { name: 'Emerging Tech 2030', href: '/services-overview', icon: Zap, description: 'Emerging technologies' }
       ]
     },
     {
@@ -158,10 +158,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Pricing & Plans',
       icon: DollarSign,
       links: [
-        { name: 'Pricing Overview', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: FileText, description: 'Detailed pricing info' },
-        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026', icon: BarChart3, description: 'Future pricing' },
-        { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', icon: TrendingUp, description: 'Current pricing' }
+        { name: 'Pricing Overview', href: '/help', icon: DollarSign, description: 'Service pricing' },
+        { name: 'Pricing Guide', href: '/help', icon: FileText, description: 'Detailed pricing info' },
+        { name: 'Comprehensive Pricing 2026', href: '/help', icon: BarChart3, description: 'Future pricing' },
+        { name: 'Pricing Guide 2025', href: '/help', icon: TrendingUp, description: 'Current pricing' }
       ]
     },
     {
@@ -170,13 +170,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       icon: BookOpen,
       links: [
         { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Get support' },
-        { name: 'Documentation', href: '/documentation', icon: FileText, description: 'Technical docs' },
-        { name: 'Training', href: '/training', icon: GraduationCap, description: 'Learning resources' },
-        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
-        { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Educational events' },
-        { name: 'Case Studies', href: '/case-studies', icon: Award, description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research papers' },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Common questions' }
+        { name: 'Documentation', href: '/help', icon: FileText, description: 'Technical docs' },
+        { name: 'Training', href: '/help', icon: GraduationCap, description: 'Learning resources' },
+        { name: 'Blog', href: '/help', icon: BookOpen, description: 'Latest insights' },
+        { name: 'Webinars', href: '/help', icon: Calendar, description: 'Educational events' },
+        { name: 'Case Studies', href: '/help', icon: Award, description: 'Success stories' },
+        { name: 'White Papers', href: '/help', icon: FileText, description: 'Research papers' },
+        { name: 'FAQ', href: '/help', icon: HelpCircle, description: 'Common questions' }
       ]
     },
     {
@@ -184,13 +184,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Company',
       icon: Building,
       links: [
-        { name: 'Our Team', href: '/team', icon: Users, description: 'Meet our experts' },
-        { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-        { name: 'Partners', href: '/partners', icon: Building, description: 'Strategic partnerships' },
-        { name: 'News & Press', href: '/news', icon: FileText, description: 'Latest news' },
-        { name: 'Events', href: '/events', icon: Calendar, description: 'Upcoming events' },
-        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
-        { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, description: 'Service marketplace' }
+        { name: 'Our Team', href: '/about', icon: Users, description: 'Meet our experts' },
+        { name: 'Careers', href: '/about', icon: Briefcase, description: 'Join our team' },
+        { name: 'Partners', href: '/about', icon: Building, description: 'Strategic partnerships' },
+        { name: 'News & Press', href: '/about', icon: FileText, description: 'Latest news' },
+        { name: 'Events', href: '/about', icon: Calendar, description: 'Upcoming events' },
+        { name: 'Blog', href: '/help', icon: BookOpen, description: 'Latest insights' },
+        { name: 'Marketplace', href: '/solutions', icon: ShoppingCart, description: 'Service marketplace' }
       ]
     },
     {
@@ -198,11 +198,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Platform',
       icon: Settings,
       links: [
-        { name: 'Dashboard', href: '/dashboard', icon: BarChart3, description: 'User dashboard' },
-        { name: 'Support Center', href: '/support', icon: HelpCircle, description: 'Technical support' },
-        { name: 'Community', href: '/community', icon: Users, description: 'User community' },
-                 { name: 'Login', href: '/login', icon: User, description: 'Sign in' },
-        { name: 'Sign Up', href: '/signup', icon: Plus, description: 'Create account' }
+        { name: 'Dashboard', href: '/help', icon: BarChart3, description: 'User dashboard' },
+        { name: 'Support Center', href: '/help', icon: HelpCircle, description: 'Technical support' },
+        { name: 'Community', href: '/solutions', icon: Users, description: 'User community' },
+                 { name: 'Login', href: '/help', icon: User, description: 'Sign in' },
+        { name: 'Sign Up', href: '/help', icon: Plus, description: 'Create account' }
       ]
     },
     {
@@ -210,12 +210,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Legal & Policies',
       icon: FileText,
       links: [
-        { name: 'Privacy Policy', href: '/privacy', icon: Lock, description: 'Privacy information' },
-        { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Terms and conditions' },
-        { name: 'Cookie Policy', href: '/cookies', icon: Shield, description: 'Cookie usage' },
-        { name: 'Security', href: '/security', icon: Shield, description: 'Security measures' },
-        { name: 'Compliance', href: '/compliance', icon: Award, description: 'Regulatory compliance' },
-        { name: 'Accessibility', href: '/accessibility', icon: Heart, description: 'Accessibility features' }
+        { name: 'Privacy Policy', href: '/help', icon: Lock, description: 'Privacy information' },
+        { name: 'Terms of Service', href: '/help', icon: FileText, description: 'Terms and conditions' },
+        { name: 'Cookie Policy', href: '/help', icon: Shield, description: 'Cookie usage' },
+        { name: 'Security', href: '/help', icon: Shield, description: 'Security measures' },
+        { name: 'Compliance', href: '/help', icon: Award, description: 'Regulatory compliance' },
+        { name: 'Accessibility', href: '/help', icon: Heart, description: 'Accessibility features' }
       ]
     }
   ];

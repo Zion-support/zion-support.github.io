@@ -29,6 +29,9 @@ const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
 const Services = createLazyComponent(() => import('./pages/Services'));
+const ServicesOverview = createLazyComponent(() => import('./pages/ServicesOverview'));
+const ServicesCatalog = createLazyComponent(() => import('./pages/ServicesCatalog'));
+const ServicesComparison = createLazyComponent(() => import('./pages/ServicesComparison'));
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
@@ -161,6 +164,9 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/services-overview" element={<ServicesOverview />} />
+                    <Route path="/services-catalog" element={<ServicesCatalog />} />
+                    <Route path="/services-comparison" element={<ServicesComparison />} />
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/it-services" element={<ITServices />} />

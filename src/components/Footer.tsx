@@ -115,11 +115,11 @@ export function Footer() {
               <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
               <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
-              <li><Link to="/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
-              <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
-              <li><Link to="/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
-              <li><Link to="/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
+              <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
+              <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
+              <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
             </ul>
           </div>
 
@@ -130,14 +130,14 @@ export function Footer() {
               Solutions
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enterprise Solutions</Link></li>
-              <li><Link to="/healthcare" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare Tech</Link></li>
-              <li><Link to="/financial" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Solutions</Link></li>
-              <li><Link to="/manufacturing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
-              <li><Link to="/retail" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Retail Solutions</Link></li>
-              <li><Link to="/government" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Government</Link></li>
-              <li><Link to="/education" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Education</Link></li>
-              <li><Link to="/startup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Startup Solutions</Link></li>
+              <li><Link to="/solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enterprise Solutions</Link></li>
+              <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare Tech</Link></li>
+              <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Solutions</Link></li>
+              <li><Link to="/solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
+              <li><Link to="/solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Retail Solutions</Link></li>
+              <li><Link to="/solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Government</Link></li>
+              <li><Link to="/solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Education</Link></li>
+              <li><Link to="/startup-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Startup Solutions</Link></li>
             </ul>
           </div>
 
@@ -201,9 +201,9 @@ export function Footer() {
               <h4 className="text-zion-cyan font-medium mb-3">Resources</h4>
               <ul className="space-y-2 text-zion-slate-light">
                 <li><Link to="/blog" className="hover:text-zion-cyan transition-colors">Blog</Link></li>
-                <li><Link to="/docs" className="hover:text-zion-cyan transition-colors">Documentation</Link></li>
-                <li><Link to="/white-papers" className="hover:text-zion-cyan transition-colors">White Papers</Link></li>
-                <li><Link to="/webinars" className="hover:text-zion-cyan transition-colors">Webinars</Link></li>
+                              <li><Link to="/help" className="hover:text-zion-cyan transition-colors">Documentation</Link></li>
+              <li><Link to="/white-papers" className="hover:text-zion-cyan transition-colors">White Papers</Link></li>
+              <li><Link to="/webinars" className="hover:text-zion-cyan transition-colors">Webinars</Link></li>
               </ul>
             </div>
             
@@ -230,10 +230,10 @@ export function Footer() {
             <div>
               <h4 className="text-zion-cyan font-medium mb-3">Connect</h4>
               <ul className="space-y-2 text-zion-slate-light">
-                <li><Link to="/marketplace" className="hover:text-zion-cyan transition-colors">Marketplace</Link></li>
-                <li><Link to="/talent" className="hover:text-zion-cyan transition-colors">Talent Network</Link></li>
-                <li><Link to="/community" className="hover:text-zion-cyan transition-colors">Community</Link></li>
-                <li><Link to="/research-development" className="hover:text-zion-cyan transition-colors">R&D</Link></li>
+                              <li><Link to="/solutions" className="hover:text-zion-cyan transition-colors">Marketplace</Link></li>
+              <li><Link to="/talent" className="hover:text-zion-cyan transition-colors">Talent Network</Link></li>
+              <li><Link to="/solutions" className="hover:text-zion-cyan transition-colors">Community</Link></li>
+              <li><Link to="/ai-services" className="hover:text-zion-cyan transition-colors">R&D</Link></li>
               </ul>
             </div>
           </div>
@@ -251,9 +251,9 @@ export function Footer() {
             </div>
             
             <div className="flex items-center space-x-6 text-sm">
-              <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link>
-              <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Accessibility</Link>
-              <Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors">System Status</Link>
+              <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link>
+              <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Accessibility</Link>
+              <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">System Status</Link>
             </div>
           </div>
         </div>
