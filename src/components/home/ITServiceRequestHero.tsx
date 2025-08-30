@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { GradientHeading  } from '@/components/GradientHeading';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';

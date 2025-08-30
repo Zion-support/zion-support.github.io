@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { CheckCircle, 
   AlertTriangle, 

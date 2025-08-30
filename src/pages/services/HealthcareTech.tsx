@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain  } from 'lucide-react';

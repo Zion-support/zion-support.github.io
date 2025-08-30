@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain  } from 'lucide-react';

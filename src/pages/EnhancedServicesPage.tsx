@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO  } from '@/data/enhancedServices';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';

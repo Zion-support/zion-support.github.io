@@ -1,5 +1,5 @@
 
-import React from 'react.ts';
+import React from 'react';
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
   Globe, 

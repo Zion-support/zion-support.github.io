@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { TrendingUp, 

@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { Link  } from 'react-router-dom.ts';
 import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink, Image as ImageIcon, FileText, Workflow, Globe, Video  } from 'lucide-react';
 

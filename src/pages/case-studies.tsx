@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { motion  } from 'framer-motion.ts';
 import Link from 'next/link.ts';
 import { CheckCircle,

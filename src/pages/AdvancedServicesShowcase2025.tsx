@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { SEO  } from '../components/SEO';
 import { ADVANCED_MICRO_SAAS_SERVICES_2025  } from '../data/advancedMicroSaasServices2025';
 import { SPECIALIZED_IT_SERVICES_2025  } from '../data/specializedITServices2025';

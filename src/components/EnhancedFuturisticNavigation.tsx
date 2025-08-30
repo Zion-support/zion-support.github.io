@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation  } from 'react-router-dom.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Menu, 

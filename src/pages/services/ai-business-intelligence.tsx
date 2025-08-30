@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Brain, BarChart3, TrendingUp, Database, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Zap, Target, PieChart  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';

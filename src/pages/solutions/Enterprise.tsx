@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Building, Users, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react';

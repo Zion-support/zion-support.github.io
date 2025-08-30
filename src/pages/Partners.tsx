@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { Handshake, 
@@ -97,6 +97,57 @@ export default function Partners() {
     { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },
     { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },
     { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' }
+  ];
+
+  const partnershipProcess = [
+    {
+      step: '1',
+      title: 'Initial Consultation',
+      description: 'Schedule a meeting to discuss partnership opportunities and alignment',
+      duration: '1-2 weeks'
+    },
+    {
+      step: '2',
+      title: 'Partnership Agreement',
+      description: 'Review and sign partnership terms and conditions',
+      duration: '2-3 weeks'
+    },
+    {
+      step: '3',
+      title: 'Onboarding & Training',
+      description: 'Complete partner onboarding and receive comprehensive training',
+      duration: '1-2 weeks'
+    },
+    {
+      step: '4',
+      title: 'Go-to-Market',
+      description: 'Launch partnership and start generating revenue together',
+      duration: 'Ongoing'
+    }
+  ];
+
+  const existingPartners = [
+    {
+      name: 'Microsoft',
+      logo: 'M',
+      category: 'Technology',
+      description: 'Leading cloud and AI partner',
+      year: '2020'
+    },
+    {
+      name: 'AWS',
+      logo: 'AWS',
+      category: 'Cloud',
+      description: 'Cloud infrastructure partner',
+      year: '2021'
+    },
+    {
+      name: 'Accenture',
+      logo: 'A',
+      category: 'Consulting',
+      description: 'Global system integrator',
+      year: '2022'
+    }
   ];
 
   return (
@@ -205,7 +256,7 @@ export default function Partners() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Partner Benefits */}
       <section className="py-20 bg-slate-900">
@@ -225,7 +276,7 @@ export default function Partners() {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {partnerBenefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
@@ -242,23 +293,25 @@ export default function Partners() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h2 className="text-2xl font-bold mb-4">Ready to Partner With Us?</h2>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+      {/* CTA Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-2xl font-bold mb-4 text-white">Ready to Partner With Us?</h2>
+            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
               Join our partner ecosystem and help organizations leverage the power of AI, cloud, and emerging technologies.
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {existingPartners.map((partner, index)  => (
               <motion.div
                 key={partner.name}
@@ -277,7 +330,7 @@ export default function Partners() {
                   </div>
                   
                   <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
-                  <p className="text-slate-300 text-sm mb-4">{partner.description}</p>
+                  <p className="text-slate-400 text-sm mb-4">{partner.description}</p>
                   
                   <div className="flex items-center justify-between">
                     <span className="text-slate-400 text-sm">Partner since {partner.year}</span>
@@ -309,7 +362,7 @@ export default function Partners() {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partnershipProcess.map((step, index)  => (
                 <motion.div
                   key={step.step}
@@ -330,13 +383,14 @@ export default function Partners() {
                   </div>
                   
                   <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
-                  <p className="text-slate-300 mb-4 leading-relaxed">{step.description}</p>
+                  <p className="text-slate-400 mb-4 leading-relaxed">{step.description}</p>
                   <div className="text-cyan-400 text-sm font-medium">{step.duration}</div>
                 </motion.div>
               ))}
             </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
     </div>
-  )}
+  );
+}

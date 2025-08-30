@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { Link  } from 'react-router-dom.ts';
 import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight  } from 'lucide-react';
 

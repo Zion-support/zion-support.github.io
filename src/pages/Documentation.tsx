@@ -72,6 +72,30 @@ export default function Documentation() {
         { title: 'Compliance Requirements', readTime: '20 min', difficulty: 'Intermediate' },
         { title: 'Incident Response Guide', readTime: '30 min', difficulty: 'Advanced' }
       ]
+    },
+    {
+      id: 'iot-edge',
+      name: 'IoT & Edge Computing',
+      icon: Zap,
+      description: 'IoT and edge computing documentation',
+      articles: [
+        { title: 'IoT Device Setup', readTime: '20 min', difficulty: 'Intermediate' },
+        { title: 'Edge Computing Deployment', readTime: '30 min', difficulty: 'Advanced' },
+        { title: 'Data Processing at Edge', readTime: '25 min', difficulty: 'Advanced' },
+        { title: 'IoT Security Best Practices', readTime: '15 min', difficulty: 'Intermediate' }
+      ]
+    },
+    {
+      id: 'blockchain',
+      name: 'Blockchain Solutions',
+      icon: Rocket,
+      description: 'Blockchain and distributed ledger technology',
+      articles: [
+        { title: 'Smart Contract Development', readTime: '40 min', difficulty: 'Advanced' },
+        { title: 'Blockchain Integration', readTime: '30 min', difficulty: 'Intermediate' },
+        { title: 'DeFi Protocol Setup', readTime: '35 min', difficulty: 'Advanced' },
+        { title: 'Blockchain Security', readTime: '25 min', difficulty: 'Intermediate' }
+      ]
     }
   ];
 
@@ -139,7 +163,7 @@ export default function Documentation() {
       views: '6.7k',
       rating: 4.7
     }
-  };
+  ];
 
   const getTypeIcon = (type: string) => {
     switch (type) {

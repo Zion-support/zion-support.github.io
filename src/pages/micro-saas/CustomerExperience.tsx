@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { motion  } from 'framer-motion.ts';
 import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react';
 

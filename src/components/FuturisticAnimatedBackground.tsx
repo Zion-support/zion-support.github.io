@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">

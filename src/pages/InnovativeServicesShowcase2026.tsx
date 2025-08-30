@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
   Shield, 

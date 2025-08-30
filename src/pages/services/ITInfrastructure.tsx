@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Server, Network, Shield, Database, Cloud, Cpu, Users, CheckCircle, ArrowRight, Settings, Monitor, HardDrive, Wifi, Lock, TrendingUp, BarChart3, Zap  } from 'lucide-react';

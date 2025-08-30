@@ -161,7 +161,7 @@ export default function Categories() {
         equipment: 2
       }
     ],
-    'development'[
+    'development': [
       {
         name: 'Web Development',
         description: 'Frontend and backend web applications',

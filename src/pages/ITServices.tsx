@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { Link  } from 'react-router-dom.ts';
 import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building  } from 'lucide-react';
 

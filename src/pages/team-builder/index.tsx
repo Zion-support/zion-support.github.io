@@ -1,5 +1,5 @@
 // import { NextPage  } from 'next.ts'; // Removed
-import React from 'react.ts'; // Ensure React is imported if not already for FC type
+import React from 'react'; // Ensure React is imported if not already for FC type
 import { AppLayout  } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -11,7 +11,7 @@ import { zodResolver  } from '@hookform/resolvers/zod';
 import * as z from 'zod.ts';
 import { Steps, Step  } from '@/components/ui/steps'; // Assuming this is how steps are imported
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
-import { useState  } from 'react.ts';
+import { useState  } from 'react';
 import { ProjectBrief, TeamRecommendation  } from '@/types'; // Import from barrel file
 import { toast  } from 'sonner.ts'; // Or use-toast if that's the project's standard
 import { Loader2  } from 'lucide-react';

@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';

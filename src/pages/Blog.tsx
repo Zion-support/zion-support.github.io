@@ -241,7 +241,7 @@ export default function Blog() {
               </p>
             </motion.div>
             
-            <div className="grid lg: grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8">
               {featuredPosts.map((post, index)  => (
                 <motion.article
                   key={post.id}
@@ -269,7 +269,7 @@ export default function Blog() {
                         {post.title}
                       </h3>
                       
-                      <p className="text-slate-300 mb-4 line-clamp-3">
+                      <p className="text-slate-400 mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
                       
@@ -287,8 +287,9 @@ export default function Blog() {
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
-                  </motion.article>
-                ))}
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </div>
         </section>

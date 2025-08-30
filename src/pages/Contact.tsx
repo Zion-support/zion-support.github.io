@@ -1,9 +1,9 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { SEO  } from '../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 
-const Contact: React.FC = (): JSX.Element => {
+export default function Contact() {
   const [activeTab, setActiveTab] = useState('general');
   const [formData, setFormData] = useState({
     name: '',
@@ -20,7 +20,8 @@ const Contact: React.FC = (): JSX.Element => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })};
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent)  => {
     e.preventDefault();
@@ -36,7 +37,8 @@ const Contact: React.FC = (): JSX.Element => {
       message: '',
       budget: '',
       timeline: ''
-    })};
+    });
+  };
 
   const contactMethods = [
     {
@@ -116,7 +118,6 @@ const Contact: React.FC = (): JSX.Element => {
     { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' }
   ];
 
-const Contact: React.FC = () => {
   return (
     <>
       <SEO
@@ -504,6 +505,5 @@ const Contact: React.FC = () => {
         </section>
       </div>
     </>
-  )};
-
-export default Contact;
+  );
+}
