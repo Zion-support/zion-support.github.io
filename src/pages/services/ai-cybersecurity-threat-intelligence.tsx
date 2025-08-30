@@ -1,175 +1,151 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Activity, 
-  Heart, 
-  Brain, 
-  TrendingUp, 
   Shield, 
-  Users, 
-  Database, 
-  Globe,
+  Eye, 
+  AlertTriangle, 
+  Zap, 
+  Lock, 
+  Globe, 
+  BarChart3, 
+  Users,
   CheckCircle,
-  Star,
+  TrendingUp,
   Clock,
   Target,
-  Microscope,
-  Stethoscope,
-  Pill,
-  Monitor
+  Brain,
+  Database,
+  Network
 } from 'lucide-react';
 
-const AIHealthcarePredictiveAnalytics: React.FC = () => {
+const AICybersecurityThreatIntelligence: React.FC = () => {
   const features = [
-    "AI-powered disease prediction with 94% accuracy",
-    "Real-time patient monitoring and early warning systems",
-    "Predictive analytics for treatment outcomes",
-    "Automated medical image analysis and diagnosis",
-    "Patient risk stratification and personalized care plans",
-    "Drug interaction prediction and safety monitoring",
-    "Population health analytics and trend identification",
-    "Clinical decision support and treatment recommendations",
-    "Healthcare fraud detection and prevention",
-    "Automated medical coding and billing optimization",
-    "Predictive maintenance for medical equipment",
-    "Real-time outbreak detection and epidemiology modeling"
+    "Real-time threat detection with 99.9% accuracy using AI/ML",
+    "Advanced behavioral analysis and anomaly detection",
+    "Zero-day threat identification and mitigation",
+    "Global threat intelligence sharing network",
+    "Automated incident response and containment",
+    "Threat hunting and proactive security measures",
+    "Compliance monitoring (SOC2, ISO27001, GDPR)",
+    "Dark web monitoring and threat actor tracking",
+    "Vulnerability assessment and risk scoring",
+    "Security awareness training and phishing simulation",
+    "24/7 Security Operations Center (SOC) monitoring",
+    "Custom threat intelligence feeds and reporting"
   ];
 
   const benefits = [
-    "Reduce hospital readmissions by 30-45% through predictive insights",
-    "Improve diagnostic accuracy by 25-40% with AI assistance",
-    "Decrease treatment costs by 20-35% through optimized care plans",
-    "Reduce medical errors by 60-80% with automated safety checks",
-    "Improve patient outcomes by 35-50% with personalized medicine",
-    "Streamline clinical workflows and reduce administrative burden",
-    "Enable proactive healthcare instead of reactive treatment",
-    "Support evidence-based medicine and clinical research"
+    "Reduce security incidents by 85-95% through AI detection",
+    "Decrease incident response time from hours to minutes",
+    "Achieve 99.9% threat detection accuracy",
+    "Comply with industry security standards automatically",
+    "Reduce false positives by 90% compared to traditional solutions",
+    "Proactive threat hunting prevents attacks before they happen",
+    "Scalable security that grows with your organization",
+    "Cost-effective alternative to building in-house SOC"
   ];
 
-  const healthcareModules = [
+  const threatTypes = [
     {
-      category: "Clinical Analytics",
-      description: "Advanced patient data analysis and clinical insights",
-      icon: Stethoscope,
-      color: "text-blue-600"
-    },
-    {
-      category: "Imaging AI",
-      description: "Radiology, pathology, and medical image analysis",
-      icon: Microscope,
-      color: "text-green-600"
-    },
-    {
-      category: "Predictive Modeling",
-      description: "Disease progression and outcome prediction",
-      icon: Brain,
-      color: "text-purple-600"
-    },
-    {
-      category: "Population Health",
-      description: "Community health trends and risk assessment",
-      icon: Users,
-      color: "text-orange-600"
-    },
-    {
-      category: "Drug Safety",
-      description: "Adverse event prediction and medication monitoring",
-      icon: Pill,
+      category: "Malware & Ransomware",
+      description: "Advanced detection of sophisticated malware variants",
+      icon: Shield,
       color: "text-red-600"
     },
     {
-      category: "Operational Analytics",
-      description: "Hospital efficiency and resource optimization",
-      icon: Monitor,
+      category: "Phishing & Social Engineering",
+      description: "AI-powered email and message analysis",
+      icon: Eye,
+      color: "text-orange-600"
+    },
+    {
+      category: "Network Attacks",
+      description: "Real-time DDoS and intrusion detection",
+      icon: Network,
+      color: "text-blue-600"
+    },
+    {
+      category: "Insider Threats",
+      description: "Behavioral analysis and user activity monitoring",
+      icon: Users,
+      color: "text-purple-600"
+    },
+    {
+      category: "API Security",
+      description: "Comprehensive API threat detection and protection",
+      icon: Lock,
+      color: "text-green-600"
+    },
+    {
+      category: "Cloud Security",
+      description: "Multi-cloud security monitoring and compliance",
+      icon: Globe,
       color: "text-indigo-600"
     }
   ];
 
   const pricingTiers = [
     {
-      name: "Clinical",
-      price: 399,
+      name: "Essential",
+      price: 199,
       period: "month",
       features: [
-        "Up to 100 patient beds",
-        "Basic predictive analytics",
-        "Clinical decision support",
+        "Up to 100 endpoints",
+        "Basic threat detection",
+        "Email security",
+        "24/7 monitoring",
         "Standard reporting",
-        "Email support",
-        "HIPAA compliance"
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Hospital",
-      price: 999,
+      name: "Professional",
+      price: 499,
       period: "month",
       features: [
-        "Up to 500 patient beds",
-        "Advanced AI algorithms",
-        "Full predictive modeling",
-        "Real-time monitoring",
+        "Up to 500 endpoints",
+        "Advanced AI detection",
+        "Full threat intelligence",
+        "Incident response",
+        "Compliance monitoring",
         "Priority support",
-        "Custom dashboards",
-        "API integrations"
+        "Custom dashboards"
       ],
       popular: true
     },
     {
-      name: "Health System",
-      price: 2499,
+      name: "Enterprise",
+      price: 1299,
       period: "month",
       features: [
-        "Unlimited patient capacity",
+        "Unlimited endpoints",
         "Custom AI models",
-        "Multi-site management",
+        "Dedicated SOC team",
         "White-label solution",
-        "Dedicated support team",
         "Full customization",
-        "On-premise option"
+        "On-premise option",
+        "Custom integrations"
       ],
       popular: false
     }
   ];
 
   const complianceStandards = [
-    "HIPAA",
-    "HITECH",
     "SOC 2 Type II",
     "ISO 27001",
-    "FDA 21 CFR Part 11",
-    "GxP",
-    "CCPA",
-    "GDPR"
-  ];
-
-  const useCases = [
-    {
-      title: "Early Disease Detection",
-      description: "Identify high-risk patients before symptoms appear",
-      impact: "30-50% earlier detection"
-    },
-    {
-      title: "Treatment Optimization",
-      description: "Personalize treatment plans based on patient data",
-      impact: "25-40% better outcomes"
-    },
-    {
-      title: "Resource Planning",
-      description: "Predict patient volume and optimize staffing",
-      impact: "20-35% cost reduction"
-    },
-    {
-      title: "Medication Safety",
-      description: "Prevent adverse drug interactions and reactions",
-      impact: "60-80% fewer errors"
-    }
+    "GDPR",
+    "HIPAA",
+    "PCI DSS",
+    "NIST Cybersecurity Framework",
+    "CIS Controls",
+    "MITRE ATT&CK Framework"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-purple-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
@@ -180,29 +156,29 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <Heart className="w-12 h-12 text-white" />
+                <Shield className="w-12 h-12 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI-Powered Healthcare Predictive Analytics
+              AI-Powered Cybersecurity Threat Intelligence
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-green-100">
-              Transform healthcare delivery with intelligent predictive analytics, 
-              early disease detection, and personalized treatment optimization powered by AI.
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-red-100">
+              Stay ahead of cyber threats with our advanced AI-powered security platform 
+              that provides real-time threat detection, intelligence, and automated response.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              <button className="px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-red-50 transition-colors">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                Schedule Demo
+                <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
+                Schedule Security Audit
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Healthcare Modules Section */}
+      {/* Threat Types Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -212,16 +188,16 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Healthcare AI Solutions
+              Comprehensive Threat Protection
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI platform covers all aspects of healthcare analytics, 
-              from clinical decision support to operational optimization.
+              Our AI platform protects against all types of cyber threats, 
+              from sophisticated malware to social engineering attacks.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {healthcareModules.map((module, index) => (
+            {threatTypes.map((threat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -230,17 +206,17 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center mb-4">
-                  <module.icon className={`w-8 h-8 ${module.color} mr-3`} />
-                  <h3 className="text-lg font-semibold text-gray-900">{module.category}</h3>
+                  <threat.icon className={`w-8 h-8 ${threat.color} mr-3`} />
+                  <h3 className="text-lg font-semibold text-gray-900">{threat.category}</h3>
                 </div>
-                <p className="text-gray-600">{module.description}</p>
+                <p className="text-gray-600">{threat.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -250,49 +226,11 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Real-World Healthcare Impact
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how our AI-powered analytics are transforming healthcare delivery 
-              and improving patient outcomes across the industry.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{useCase.title}</h3>
-                <p className="text-gray-600 mb-4">{useCase.description}</p>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <p className="text-green-800 font-semibold">Impact: {useCase.impact}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Advanced AI Healthcare Features
+              Advanced AI Security Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Leverage cutting-edge artificial intelligence and machine learning 
-              to revolutionize healthcare delivery and patient care.
+              to detect and respond to threats faster than ever before.
             </p>
           </motion.div>
 
@@ -316,7 +254,7 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
       </section>
 
       {/* Compliance Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -325,11 +263,11 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Healthcare Compliance & Security
+              Industry Compliance & Standards
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet and exceed healthcare industry standards with automated compliance 
-              monitoring and enterprise-grade security.
+              Meet and exceed industry security standards with automated compliance 
+              monitoring and reporting.
             </p>
           </motion.div>
 
@@ -340,9 +278,9 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-4 rounded-lg text-center shadow-lg"
+                className="bg-gray-50 p-4 rounded-lg text-center"
               >
-                <Shield className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                <Lock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <p className="text-sm font-medium text-gray-700">{standard}</p>
               </motion.div>
             ))}
@@ -351,7 +289,7 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -360,11 +298,11 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Measurable Healthcare Improvements
+              Measurable Security Improvements
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See real results with our AI-powered healthcare analytics platform that delivers 
-              measurable improvements in patient outcomes and operational efficiency.
+              See real results with our AI-powered cybersecurity platform that delivers 
+              measurable improvements in threat detection and response.
             </p>
           </motion.div>
 
@@ -388,7 +326,7 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -397,11 +335,11 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Transparent Healthcare Pricing
+              Transparent Security Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the healthcare analytics plan that fits your organization's needs. 
-              All plans include our core AI capabilities and HIPAA compliance.
+              Choose the security plan that fits your organization's needs. 
+              All plans include our core AI threat detection capabilities.
             </p>
           </motion.div>
 
@@ -414,13 +352,13 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-white p-8 rounded-2xl shadow-lg border-2 ${
                   tier.popular 
-                    ? 'border-green-500 scale-105' 
+                    ? 'border-red-500 scale-105' 
                     : 'border-gray-200'
                 }`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -445,7 +383,7 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   tier.popular
-                    ? 'bg-green-600 text-white hover:bg-green-700'
+                    ? 'bg-red-600 text-white hover:bg-red-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   Get Started
@@ -457,7 +395,7 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-green-600 text-white">
+      <section className="py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -465,22 +403,22 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-6">
-              Ready to Transform Healthcare?
+              Ready to Secure Your Organization?
             </h2>
-            <p className="text-xl mb-8 text-green-100">
-              Join leading healthcare organizations already using our AI-powered 
-              analytics platform to improve patient care and outcomes.
+            <p className="text-xl mb-8 text-red-100">
+              Join thousands of organizations already using our AI-powered 
+              cybersecurity platform to protect their digital assets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              <button className="px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-red-50 transition-colors">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                Contact Healthcare Team
+              <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
+                Contact Security Team
               </button>
             </div>
-            <div className="mt-8 text-green-100">
-              <p>Healthcare questions? Call us at <strong>+1 302 464 0950</strong></p>
+            <div className="mt-8 text-red-100">
+              <p>Security questions? Call us at <strong>+1 302 464 0950</strong></p>
               <p>Or email <strong>kleber@ziontechgroup.com</strong></p>
             </div>
           </motion.div>
@@ -490,4 +428,4 @@ const AIHealthcarePredictiveAnalytics: React.FC = () => {
   );
 };
 
-export default AIHealthcarePredictiveAnalytics;
+export default AICybersecurityThreatIntelligence;
