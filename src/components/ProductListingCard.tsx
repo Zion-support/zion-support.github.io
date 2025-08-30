@@ -203,6 +203,6 @@ export function ProductListingCard({
       </div>
     </div>
   );
-};
+}
 
 export default React.memo(ProductListingCard);
