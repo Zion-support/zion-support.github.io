@@ -276,7 +276,7 @@ export default function InnovativeServices2027() {
                           <span
                             key={idx}
                             className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-full"
-
+                          >
                             {tag}
                           </span>
                         ))}
@@ -289,7 +289,7 @@ export default function InnovativeServices2027() {
                       whileTap={{ scale: 0.95 }}
                       className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg"
                       onClick={() => window.location.href = '/contact'}
-
+                    >
                       Get Started - Contact Us
                     </motion.button>
 
@@ -323,7 +323,7 @@ export default function InnovativeServices2027() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-16"
-
+            >
               <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
               <button
                 onClick={() => {
@@ -331,7 +331,7 @@ export default function InnovativeServices2027() {
                   setSearchQuery('');
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-
+              >
                 View All Services
               </button>
             </motion.div>
@@ -347,7 +347,7 @@ export default function InnovativeServices2027() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Lead the Future?
             </h2>

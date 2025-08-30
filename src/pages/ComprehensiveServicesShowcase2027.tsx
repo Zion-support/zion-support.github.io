@@ -80,6 +80,7 @@ interface Service {
     email: string;
     address: string;
   };
+}
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

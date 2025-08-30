@@ -448,7 +448,7 @@ const Home2026: React.FC = () => {
                   className={`group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20 ${
                     index === currentServiceIndex ? 'ring-2 ring-cyan-400/50' : ''
                   }`}
-
+                >
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-xs uppercase tracking-wide text-cyan-300/80 font-semibold">
                       {service.category}
@@ -556,7 +556,7 @@ const Home2026: React.FC = () => {
                 title: "Continuous Growth",
                 description: "We never stop innovating. Our R&D team is constantly pushing the boundaries of what's possible.",
                 color: "from-red-500 to-pink-600"
-
+              }
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -564,7 +564,7 @@ const Home2026: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
-
+              >
                 <div className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                   <feature.icon className="w-10 h-10 text-white" />
                 </div>
@@ -590,7 +590,7 @@ const Home2026: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
-
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -602,7 +602,7 @@ const Home2026: React.FC = () => {
               <Link
                 to="/services2026"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30"
-
+              >
                 Explore All Services
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -610,7 +610,7 @@ const Home2026: React.FC = () => {
               <Link
                 to="/contact"
                 className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400/40 text-cyan-300 font-bold text-lg rounded-2xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105"
-
+              >
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -657,4 +657,4 @@ const Home2026: React.FC = () => {
   );
 };
 
-export default Home2026;}}}</motion.div>}
+export default Home2026;

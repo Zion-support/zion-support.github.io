@@ -88,7 +88,7 @@ const Services2026: React.FC = () => {
         });
       default:
         return filtered;
-
+    }
   }, [query, selectedCategory, sortBy, allServices]);
 
   const featuredServices = allServices.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);

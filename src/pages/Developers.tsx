@@ -240,7 +240,7 @@ export default function Developers() {
                 <Link
                   to={step.href}
                   className="inline-flex items-center px-4 py-2 bg-cyan-400/10 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/20 transition-all duration-200"
-
+                >
                   {step.action}
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -295,14 +295,14 @@ export default function Developers() {
                   <Link
                     to={api.documentation}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
-
+                  >
                     <BookOpen className="w-4 h-4 mr-2" />
                     Documentation
                   </Link>
                   <Link
                     to="/api-playground"
                     className="inline-flex items-center px-4 py-2 bg-cyan-400/10 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/20 transition-all duration-200"
-
+                  >
                     Try API
                     <Play className="w-4 h-4 ml-2" />
                   </Link>
@@ -343,14 +343,14 @@ export default function Developers() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-full px-4 py-2 bg-slate-700/50 text-white text-sm font-medium rounded-lg hover:bg-slate-600/50 transition-all duration-200"
-
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     View on GitHub
                   </a>
                   <Link
                     to={sdk.documentation}
                     className="flex items-center justify-center w-full px-4 py-2 bg-cyan-400/10 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/20 transition-all duration-200"
-
+                  >
                     <BookOpen className="w-4 h-4 mr-2" />
                     Documentation
                   </Link>
@@ -379,7 +379,7 @@ export default function Developers() {
                 key={index}
                 to={tool.href}
                 className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105 hover:bg-slate-700/50"
-
+              >
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
                     <tool.icon className="w-8 h-8 text-cyan-400" />
@@ -415,14 +415,14 @@ export default function Developers() {
               <Link
                 to="/signup"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-
+              >
                 Get API Keys
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/docs"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-
+              >
                 View Documentation
               </Link>
             </div>

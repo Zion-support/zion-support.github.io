@@ -212,7 +212,7 @@ export default function Press() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-
+          >
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
                 <Newspaper className="w-12 h-12 text-white" />
@@ -246,7 +246,7 @@ export default function Press() {
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/50 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40 hover:text-white'
                 }`}
-
+              >
                 {category.name} ({category.count})
               </button>
             ))}
@@ -263,7 +263,7 @@ export default function Press() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Latest News & Updates
             </h2>
@@ -278,14 +278,14 @@ export default function Press() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-
+          >
             {filteredContent.filter(item => item.featured).map((item) => (
               <motion.article
                 key={item.id}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
                 whileHover={{ y: -5, scale: 1.02 }}
-
+              >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
@@ -338,7 +338,7 @@ export default function Press() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All Press & Media
             </h2>
@@ -353,14 +353,14 @@ export default function Press() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-
+          >
             {filteredContent.filter(item => !item.featured).map((item) => (
               <motion.article
                 key={item.id}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
                 whileHover={{ y: -5, scale: 1.02 }}
-
+              >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
@@ -403,7 +403,7 @@ export default function Press() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Media Resources
             </h2>
@@ -418,12 +418,12 @@ export default function Press() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-
+          >
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
-
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Download className="w-8 h-8 text-white" />
               </div>
@@ -438,7 +438,7 @@ export default function Press() {
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
-
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-8 h-8 text-white" />
               </div>
@@ -453,7 +453,7 @@ export default function Press() {
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
-
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-8 h-8 text-white" />
               </div>
@@ -468,7 +468,7 @@ export default function Press() {
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
-
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-8 h-8 text-white" />
               </div>
@@ -490,7 +490,7 @@ export default function Press() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Contact Our Media Team
             </h2>
@@ -529,7 +529,7 @@ export default function Press() {
               className="mt-8 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-
+            >
               Contact Media Team
             </motion.button>
           </motion.div>
@@ -537,4 +537,4 @@ export default function Press() {
       </section>
     </div>
   );
-}}}}}}}}
+}
