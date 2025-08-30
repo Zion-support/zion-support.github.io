@@ -298,6 +298,11 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Real-time disease detection and classification',
 					'Predictive health analytics',
 					'Automated radiology reporting',
+					'Treatment recommendation engine',
+					'Patient risk assessment',
+					'Clinical decision support',
+					'Regulatory compliance'
+				]
 			},
 			{
 				id: 'ai-legal-contract-analyzer-2025',
@@ -398,16 +403,6 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Get Started',
 				href: '/services/ai-customer-experience-analytics'
-			},
-					'Treatment recommendation engine',
-					'Patient risk assessment',
-					'Clinical decision support',
-					'HIPAA-compliant data handling',
-					'FDA-approved algorithms',
-					'Multi-modality imaging support'
-				],
-				ctaLabel: 'Healthcare Integration',
-				href: 'https://ziontechgroup.com/contact'
 			},
 			{
 				id: 'quantum-creative-ai-studio-2026',
