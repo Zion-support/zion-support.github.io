@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { EnhancedSEO } from '../components/EnhancedSEO';
 import { 
   Brain, 
   Shield, 
@@ -184,9 +185,21 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+    <>
+      <EnhancedSEO 
+        title="Zion Tech Group - AI-Powered Enterprise Solutions & Innovation"
+        description="Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity platforms, quantum computing, and enterprise technology services. Leading innovation since 2010."
+        keywords="AI, artificial intelligence, cybersecurity, quantum computing, enterprise solutions, technology consulting, digital transformation, machine learning, blockchain, IoT"
+        type="website"
+      />
+      <div className="min-h-screen bg-futuristic">
+        {/* Skip Link for Accessibility */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        
+                {/* Hero Section */}
+        <section id="main-content" className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
@@ -456,6 +469,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
