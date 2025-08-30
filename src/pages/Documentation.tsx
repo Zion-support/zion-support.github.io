@@ -18,9 +18,9 @@ import { Search,
   Cloud,
   Shield,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Documentation(...args[]):  {
+export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -30,7 +30,7 @@ export default function Documentation(...args[]):  {
       name: 'Getting Started',
       icon: Rocket,
       description: 'Quick start guides and basic setup',
-      articles[
+      articles: [
         { title: 'Welcome to Zion Tech Group', readTime: '5 min', difficulty: 'Beginner' },
         { title: 'Account Setup Guide', readTime: '10 min', difficulty: 'Beginner' },
         { title: 'First Project Setup', readTime: '15 min', difficulty: 'Beginner' },
@@ -42,7 +42,7 @@ export default function Documentation(...args[]):  {
       name: 'AI Services',
       icon: Brain,
       description: 'AI and machine learning documentation',
-      articles[
+      articles: [
         { title: 'AI Business Intelligence Setup', readTime: '20 min', difficulty: 'Intermediate' },
         { title: 'Machine Learning Model Training', readTime: '30 min', difficulty: 'Advanced' },
         { title: 'AI Compliance Assistant', readTime: '15 min', difficulty: 'Intermediate' },
@@ -54,7 +54,7 @@ export default function Documentation(...args[]):  {
       name: 'Cloud & DevOps',
       icon: Cloud,
       description: 'Cloud infrastructure and DevOps guides',
-      articles[
+      articles: [
         { title: 'Cloud Migration Guide', readTime: '45 min', difficulty: 'Advanced' },
         { title: 'DevOps Pipeline Setup', readTime: '30 min', difficulty: 'Intermediate' },
         { title: 'Container Orchestration', readTime: '25 min', difficulty: 'Advanced' },
@@ -66,7 +66,7 @@ export default function Documentation(...args[]):  {
       name: 'Security & Compliance',
       icon: Shield,
       description: 'Security best practices and compliance',
-      articles[
+      articles: [
         { title: 'Zero Trust Implementation', readTime: '35 min', difficulty: 'Advanced' },
         { title: 'Security Audit Process', readTime: '25 min', difficulty: 'Intermediate' },
         { title: 'Compliance Requirements', readTime: '20 min', difficulty: 'Intermediate' },

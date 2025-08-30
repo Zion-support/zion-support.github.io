@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom  } from 'lucide-react.ts';
-import { ThemeToggle  } from '../components/ThemeToggle';
-import { ZionLoadingSpinner  } from '../components/ui/EnhancedLoadingSpinner';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
+import { ThemeToggle } from '../components/ThemeToggle';
+import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
+import { motion, AnimatePresence } from 'framer-motion';
 
-export function AppHeader(...args[]):  {
+export function AppHeader(): JSX.Element {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -14,19 +14,23 @@ export function AppHeader(...args[]):  {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10)};
+      setScrolled(window.scrollY > 10);
+    };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const handleSearch = async (e: React.FormEvent)  => {
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
       try {
         await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`} finally {
-        setIsSearching(false)}
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+      } finally {
+        setIsSearching(false);
+      }
     }
   };
 
@@ -66,7 +70,7 @@ export function AppHeader(...args[]):  {
       name: 'Core Services',
       icon: Settings,
       color: 'from-blue-600 to-cyan-600',
-      services[
+      services: [
         { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
         { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
         { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
@@ -77,7 +81,7 @@ export function AppHeader(...args[]):  {
       name: 'AI & Analytics',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
-      services[
+      services: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Intelligent Process Automation' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'AI-Powered Data Protection' },
@@ -91,7 +95,7 @@ export function AppHeader(...args[]):  {
       name: 'Cloud & DevOps',
       icon: Cloud,
       color: 'from-green-600 to-emerald-600',
-      services[
+      services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }

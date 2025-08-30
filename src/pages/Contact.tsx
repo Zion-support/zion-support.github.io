@@ -76,16 +76,16 @@ const Contact: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
       name: 'AI-Powered Micro SAAS',
-      services[
-        'AI Code Review & Security',
-        'AI Customer Experience Analytics',
-        'AI DevOps Automation Platform',
-        'AI IoT Edge Computing Platform'
-      ]
+              services: [
+          'AI Code Review & Security',
+          'AI Customer Experience Analytics',
+          'AI DevOps Automation Platform',
+          'AI IoT Edge Computing Platform'
+        ]
     },
     {
       name: 'Cloud & Infrastructure',
-      services[
+      services: [
         'Cloud DevOps',
         'IT Infrastructure',
         'Digital Twin'
@@ -93,7 +93,7 @@ const Contact: React.FC = (): JSX.Element => {
     },
     {
       name: 'Data & Analytics',
-      services[
+      services: [
         'Data Analytics',
         'AI Business Intelligence',
         'IoT Edge Computing'
@@ -101,7 +101,7 @@ const Contact: React.FC = (): JSX.Element => {
     },
     {
       name: 'Security & Compliance',
-      services[
+      services: [
         'Zero Trust Network Architecture',
         'AI Cybersecurity Suite',
         'AI Compliance Assistant'

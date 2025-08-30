@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react.ts';
-import { Routes, Route  } from 'react-router-dom.ts';
+import React, { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { AppHeader  } from './layout/AppHeader';
 import { EnhancedFuturisticFooter  } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant  } from './components/ChatAssistant';

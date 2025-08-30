@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Phone, 
   Mail, 
   MapPin, 
@@ -58,7 +58,7 @@ import { Phone,
   Users,
   TrendingUp,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
@@ -68,14 +68,14 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       title: 'AI & Analytics Services',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
-      links[
+      links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-compliance-copilot' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
       ]
@@ -84,7 +84,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       title: 'Cloud & DevOps',
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
-      links[
+      links: [
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
@@ -97,7 +97,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       title: 'Edge & IoT Services',
       icon: Server,
       color: 'from-blue-600 to-cyan-600',
-      links[
+      links: [
         { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
@@ -113,11 +113,11 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       title: 'Quantum & Emerging Tech',
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
-      links[
+      links: [
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
+        { name: 'Sustainability', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'Cloud DevOps', href: '/services/cloud-devops' }
       ]
