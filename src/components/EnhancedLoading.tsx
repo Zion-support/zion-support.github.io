@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Loader2, 
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Loader2, 
   CheckCircle, 
   AlertCircle, 
   Zap, 
@@ -11,19 +10,17 @@ import {
   Database,
   Network,
   Shield
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface LoadingSpinnerProps {
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean;
+
 }
 
-export function LoadingSpinner({ 
-  size = 'md', 
-  text = 'Loading...', 
-  fullScreen = false 
-}: LoadingSpinnerProps) {
+export function LoadingSpinner(...args: any[]): any {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-16 h-16',
@@ -104,11 +101,13 @@ export function LoadingSpinner({
   );
 }
 
-interface PageLoaderProps {
+interface PageLoaderProps extends React.PropsWithChildren<{}> {
+
   pageName?: string;
+
 }
 
-export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
+export function PageLoader(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
       <div className="text-center">
@@ -184,15 +183,17 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   );
 }
 
-interface SkeletonLoaderProps {
+interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {
+
   lines?: number;
   className?: string;
+
 }
 
-export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
+export function SkeletonLoader(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: anylines }).map((_, index)  => (
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"

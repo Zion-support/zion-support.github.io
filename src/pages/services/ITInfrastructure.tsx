@@ -1,122 +1,165 @@
-import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Server, Network, Shield, Database, Cloud, Cpu, Users, CheckCircle, ArrowRight, Settings, Monitor, HardDrive, Wifi, Lock, TrendingUp, BarChart3, Zap } from 'lucide-react';
+import { 
+  Server, 
+  Network, 
+  CheckCircle, 
+  Users, 
+  Clock, 
+  ArrowRight,
+  Play,
+  Settings,
+  Target,
+  Cpu,
+  Activity,
+  Sparkles,
+  Search,
+  Zap,
+  Globe,
+  Building,
+  DollarSign,
+  BarChart3,
+  TrendingUp,
+  Key,
+  Fingerprint,
+  Monitor,
+  AlertTriangle,
+  ShieldCheck,
+  Globe2,
+  Database,
+  Smartphone,
+  Code,
+  FileText,
+  AlertCircle,
+  CheckSquare,
+  HardDrive,
+  Wifi,
+  Lock,
+  Shield,
+  Cloud,
+  Database2,
+  Router
+} from 'lucide-react';
 
-export default function ITInfrastructure() {
+const ITInfrastructure = () => {
   const features = [
     {
       icon: Server,
-      title: 'Enterprise Servers',
-      description: 'High-performance server solutions with 99.9% uptime guarantee',
-      color: 'from-blue-500 to-cyan-500'
+      title: 'Server Management',
+      description: 'Comprehensive server provisioning, monitoring, and maintenance'
     },
     {
       icon: Network,
       title: 'Network Infrastructure',
-      description: 'Robust networking solutions with advanced security and monitoring',
-      color: 'from-green-500 to-emerald-500'
+      description: 'Design and implementation of enterprise-grade network solutions'
     },
     {
       icon: Database,
-      title: 'Data Management',
-      description: 'Scalable storage solutions with automated backup and recovery',
-      color: 'from-purple-500 to-pink-500'
+      title: 'Database Systems',
+      description: 'High-performance database design, optimization, and management'
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'Enterprise-grade security with compliance frameworks',
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Hybrid Cloud',
-      description: 'Seamless integration between on-premises and cloud infrastructure',
-      color: 'from-indigo-500 to-purple-500'
+      description: 'Enterprise security frameworks and compliance automation'
     },
     {
       icon: Monitor,
-      title: '24/7 Monitoring',
-      description: 'Proactive monitoring and maintenance with real-time alerts',
-      color: 'from-yellow-500 to-orange-500'
-    }
-  ];
-
-  const services = [
-    {
-      title: 'Infrastructure Assessment',
-      description: 'Comprehensive evaluation of current IT infrastructure',
-      price: 'From $5,000',
-      features: ['Network audit', 'Security assessment', 'Performance analysis', 'Recommendations report']
+      title: 'Monitoring & Alerting',
+      description: '24/7 infrastructure monitoring with proactive alerting'
     },
     {
-      title: 'Infrastructure Design',
-      description: 'Custom infrastructure architecture and planning',
-      price: 'From $15,000',
-      features: ['Architecture design', 'Technology selection', 'Scalability planning', 'Implementation roadmap']
-    },
-    {
-      title: 'Infrastructure Implementation',
-      description: 'Complete infrastructure deployment and configuration',
-      price: 'From $25,000',
-      features: ['Hardware setup', 'Software configuration', 'Testing & validation', 'Documentation']
-    },
-    {
-      title: 'Managed Infrastructure',
-      description: 'Ongoing infrastructure management and support',
-      price: 'From $3,000/month',
-      features: ['24/7 monitoring', 'Proactive maintenance', 'Performance optimization', 'Security updates']
+      icon: Cloud,
+      title: 'Hybrid Cloud Solutions',
+      description: 'Seamless integration of on-premise and cloud infrastructure'
     }
   ];
 
   const benefits = [
-    { icon: TrendingUp, title: 'Improved Performance', description: 'Optimized infrastructure for maximum efficiency' },
-    { icon: Shield, title: 'Enhanced Security', description: 'Multi-layered security protection' },
-    { icon: BarChart3, title: 'Cost Optimization', description: 'Reduced operational costs and better ROI' },
-    { icon: Users, title: 'Expert Support', description: '24/7 support from certified professionals' },
-    { icon: Zap, title: 'High Availability', description: '99.9% uptime with redundant systems' },
-    { icon: Lock, title: 'Compliance Ready', description: 'Industry compliance and certification support' }
+    'Achieve 99.9% infrastructure uptime',
+    'Reduce operational costs by 35%',
+    'Improve system performance by 60%',
+    'Ensure enterprise-grade security',
+    'Streamline IT operations',
+    'Enable business scalability'
+  ];
+
+  const services = [
+    {
+      icon: HardDrive,
+      title: 'Storage Solutions',
+      description: 'High-performance storage arrays, backup systems, and disaster recovery'
+    },
+    {
+      icon: Wifi,
+      title: 'Wireless Networks',
+      description: 'Enterprise WiFi, mobile device management, and network security'
+    },
+    {
+      icon: Router,
+      title: 'Network Security',
+      description: 'Firewalls, VPNs, intrusion detection, and threat prevention'
+    },
+    {
+      icon: Database2,
+      title: 'Data Center Operations',
+      description: 'Facility management, power systems, and environmental controls'
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: 'Enterprise',
+      description: 'Scalable infrastructure for large organizations'
+    },
+    {
+      industry: 'Healthcare',
+      description: 'HIPAA-compliant infrastructure for medical facilities'
+    },
+    {
+      industry: 'Financial Services',
+      description: 'Secure, high-availability infrastructure for banking'
+    },
+    {
+      industry: 'Education',
+      description: 'Cost-effective infrastructure for educational institutions'
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="IT Infrastructure Services - Zion Tech Group"
-        description="Enterprise IT infrastructure solutions including servers, networking, storage, and security. 24/7 monitoring and managed services."
-      />
-      
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center">
-                <Server className="w-10 h-10 text-white" />
-              </div>
+            <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-6">
+              <Server className="w-4 h-4 mr-2" />
+              Enterprise Infrastructure
             </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              IT Infrastructure
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Solutions
-              </span>
+              IT
+              <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> Infrastructure</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Build a robust, scalable, and secure IT infrastructure that powers your business growth 
-              and digital transformation initiatives.
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Build robust, scalable IT infrastructure that powers your business 
+              operations with enterprise-grade reliability, security, and performance.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-                Get Infrastructure Assessment
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300">
-                Learn More
+              <button className="px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2" />
+                Schedule Demo
               </button>
             </div>
           </motion.div>
@@ -125,13 +168,21 @@ export default function ITInfrastructure() {
 
       {/* Features Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Infrastructure Capabilities</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive IT infrastructure solutions designed to meet the demands of modern businesses
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Infrastructure Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform provides all the tools you need to build and manage 
+              enterprise-grade IT infrastructure solutions.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -139,15 +190,14 @@ export default function ITInfrastructure() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-200"
               >
-                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -156,13 +206,21 @@ export default function ITInfrastructure() {
 
       {/* Services Section */}
       <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              End-to-end IT infrastructure services from assessment to ongoing management
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Infrastructure Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From hardware to software, we provide end-to-end infrastructure 
+              solutions that keep your business running smoothly.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -170,21 +228,18 @@ export default function ITInfrastructure() {
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/70 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-200"
               >
-                <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-slate-300 mb-4">{service.description}</p>
-                <div className="text-2xl font-bold text-blue-400 mb-6">{service.price}</div>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <p className="text-gray-300">{service.description}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -193,29 +248,86 @@ export default function ITInfrastructure() {
 
       {/* Benefits Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Infrastructure Services</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Experience the benefits of modern, well-designed IT infrastructure
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your IT Operations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience measurable improvements in reliability, performance, and operational efficiency.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {benefits.slice(3).map((benefit, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our infrastructure solutions adapt to various industries, providing 
+              tailored solutions for your specific business needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-indigo-500/30 transition-all duration-200"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-slate-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -223,27 +335,27 @@ export default function ITInfrastructure() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-r from-indigo-500/10 to-purple-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 text-center border border-slate-700"
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Modernize Your Infrastructure?</h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our IT infrastructure solutions can transform your business operations 
-              and prepare you for future growth.
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Build Your Infrastructure Today
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join organizations worldwide that use our infrastructure solutions to 
+              power their business operations and achieve growth.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-                Schedule Consultation
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300">
-                Download Brochure
+              <button className="px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
+                Contact Sales
               </button>
             </div>
           </motion.div>
@@ -251,4 +363,6 @@ export default function ITInfrastructure() {
       </section>
     </div>
   );
-}
+};
+
+export default ITInfrastructure;

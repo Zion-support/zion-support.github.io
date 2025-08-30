@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Zap, 
@@ -91,9 +90,9 @@ import {
   MicOff,
   Volume2,
   VolumeX
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const QuickAccess: React.FC = () => {
+const QuickAccess: React.FC = (): JSX.Element => {
   const quickLinks = [
     {
       title: "AI Services",
@@ -177,15 +176,16 @@ const QuickAccess: React.FC = () => {
         </div>
 
         {/* Quick Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {quickLinks.map((link, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {quickLinks.map((link, index)  => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="group"
+              key={link.title}
+              variants={hoverVariants}
+              whileHover="hover"
+              onHoverStart={() => setHoveredCategory(link.title)}
+              onHoverEnd={() => setHoveredCategory(null)}
+              onClick={() => setSelectedCategory(selectedCategory === link.title ? null : link.title)}
+              className={`group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25`}
             >
               <Link to={link.link} className="block">
                 <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-xl p-6 h-full border border-slate-500 hover:border-cyan-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
@@ -228,8 +228,8 @@ const QuickAccess: React.FC = () => {
             <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {categories.map((category, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-4">
+            {categories.map((category, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

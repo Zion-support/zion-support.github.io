@@ -1,119 +1,271 @@
-import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Building, Users, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { 
+  Building, 
+  Target, 
+  CheckCircle, 
+  ArrowRight,
+  Play,
+  Settings,
+  Activity,
+  BarChart3,
+  TrendingUp,
+  Shield,
+  Database,
+  Smartphone,
+  Code,
+  FileText,
+  AlertCircle,
+  CheckSquare,
+  Calculator,
+  PieChart,
+  LineChart,
+  Target2,
+  Wallet,
+  PiggyBank,
+  CreditCard,
+  Receipt,
+  Cloud,
+  Zap2,
+  Gauge,
+  BarChart4,
+  TrendingUp2,
+  Lightbulb,
+  Briefcase,
+  Strategy,
+  Brain,
+  Compass,
+  RefreshCw,
+  TrendingUp3,
+  Layers,
+  Workflow,
+  Scale,
+  Award,
+  Lock,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Sensor,
+  Chip,
+  Circuit,
+  Orbit,
+  Planet,
+  Star,
+  Telescope,
+  Antenna,
+  Signal,
+  Navigation,
+  Earth,
+  Moon,
+  Sun,
+  Binary,
+  Network,
+  Database2,
+  Lock2,
+  Key2,
+  Fingerprint2,
+  Eye,
+  Brain2,
+  Cpu2,
+  Memory,
+  HardDrive,
+  Server2,
+  Phone,
+  Mail,
+  Calendar,
+  MessageSquare,
+  UserPlus,
+  UserCheck,
+  UserX,
+  UserMinus,
+  UserEdit,
+  UserSearch,
+  UserList,
+  UserSettings,
+  UserCog,
+  UserShield,
+  UserStar,
+  UserHeart,
+  UserCheck2,
+  UserX2,
+  UserMinus2,
+  UserPlus2,
+  UserEdit2,
+  UserSearch2,
+  UserList2,
+  UserSettings2,
+  UserCog2,
+  UserShield2,
+  UserStar2,
+  UserHeart,
+  Monitor,
+  Eye,
+  Users,
+  MousePointer,
+  Clock,
+  MapPin,
+  Device,
+  Globe,
+  Smartphone,
+  Tablet,
+  Laptop,
+  Desktop,
+  Server,
+  Database,
+  HardDrive,
+  Cpu,
+  Network,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Signal,
+  Antenna,
+  Satellite,
+  Orbit,
+  Star,
+  Navigation,
+  Moon,
+  Sun,
+  Binary,
+  Lock,
+  Key,
+  Fingerprint,
+  Brain,
+  Rocket,
+  DollarSign,
+  Search,
+  Sparkles,
+  Zap
+} from 'lucide-react';
 
-export default function EnterpriseSolutions() {
-  const solutions = [
+const Enterprise = () => {
+  const features = [
     {
       icon: Building,
-      title: 'Enterprise Infrastructure',
-      description: 'Scalable, secure infrastructure solutions designed for large organizations',
-      features: ['Cloud Migration', 'Data Center Modernization', 'Network Security', 'Disaster Recovery'],
-      href: '/services/it-infrastructure'
-    },
-    {
-      icon: Users,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services for enterprise modernization',
-      features: ['Process Automation', 'Legacy System Migration', 'Change Management', 'Training & Adoption'],
-      href: '/services/digital-transformation'
+      title: 'Scalable Architecture',
+      description: 'Enterprise-grade scalable and resilient architecture design'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Comprehensive security solutions for enterprise-level protection',
-      features: ['Zero Trust Architecture', 'Compliance Management', 'Threat Detection', 'Incident Response'],
-      href: '/services/zero-trust-network-architecture'
+      description: 'Advanced security features and compliance frameworks'
     },
     {
-      icon: Zap,
-      title: 'AI & Analytics',
-      description: 'Enterprise-grade AI and analytics solutions for data-driven insights',
-      features: ['Business Intelligence', 'Predictive Analytics', 'Machine Learning', 'Data Governance'],
-      href: '/services/ai-business-intelligence'
+      icon: Database,
+      title: 'Data Management',
+      description: 'Comprehensive data governance and management solutions'
     },
     {
-      icon: Globe,
-      title: 'Global Operations',
-      description: 'Solutions for enterprises operating across multiple regions and markets',
-      features: ['Multi-cloud Strategy', 'Global Network', 'Compliance & Localization', '24/7 Support'],
-      href: '/services/cloud-devops'
+      icon: Users,
+      title: 'User Management',
+      description: 'Advanced user roles, permissions, and access control'
     },
     {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimize enterprise systems for maximum performance and efficiency',
-      features: ['Performance Monitoring', 'Capacity Planning', 'Cost Optimization', 'Scalability'],
-      href: '/services/cloud-finops-optimizer'
+      icon: Cloud,
+      title: 'Cloud Integration',
+      description: 'Multi-cloud and hybrid cloud deployment options'
+    },
+    {
+      icon: Monitor,
+      title: 'Enterprise Monitoring',
+      description: 'Advanced monitoring, alerting, and reporting capabilities'
     }
   ];
 
   const benefits = [
-    'Reduced operational costs by 30-50%',
-    'Improved system reliability and uptime',
-    'Enhanced security and compliance',
-    'Increased operational efficiency',
-    'Better scalability and flexibility',
-    '24/7 enterprise-grade support'
+    'Scale to support thousands of users and systems',
+    'Ensure enterprise-grade security and compliance',
+    'Optimize performance for large-scale operations',
+    'Reduce total cost of ownership',
+    'Enable rapid deployment and scaling',
+    'Provide 24/7 enterprise support'
   ];
 
-  const industries = [
-    'Financial Services',
-    'Healthcare',
-    'Manufacturing',
-    'Retail',
-    'Technology',
-    'Energy',
-    'Transportation',
-    'Government'
+  const services = [
+    {
+      icon: Strategy,
+      title: 'Enterprise Strategy',
+      description: 'Comprehensive enterprise technology strategy development'
+    },
+    {
+      icon: Workflow,
+      title: 'Process Automation',
+      description: 'Enterprise-wide process automation and optimization'
+    },
+    {
+      icon: Brain,
+      title: 'AI & Analytics',
+      description: 'Advanced AI and analytics for enterprise insights'
+    },
+    {
+      icon: Scale,
+      title: 'Scalability Planning',
+      description: 'Plan for enterprise growth and technology scaling'
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: 'Fortune 500',
+      description: 'Large-scale enterprise transformation and optimization'
+    },
+    {
+      industry: 'Government',
+      description: 'Secure, compliant government technology solutions'
+    },
+    {
+      industry: 'Healthcare',
+      description: 'HIPAA-compliant enterprise healthcare systems'
+    },
+    {
+      industry: 'Financial Services',
+      description: 'Secure, compliant financial enterprise solutions'
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Enterprise Solutions - Zion Tech Group"
-        description="Transform your enterprise with scalable, secure, and innovative technology solutions. From infrastructure to AI, we deliver enterprise-grade results."
-      />
-      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
+              <Building className="w-4 h-4 mr-2" />
+              Enterprise Solutions
+            </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Enterprise Solutions for
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                {' '}Modern Business
-              </span>
+              Enterprise
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your enterprise with scalable, secure, and innovative technology solutions. 
-              From infrastructure modernization to AI adoption, we deliver enterprise-grade results.
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Enterprise-grade solutions designed for large organizations with 
+              complex requirements, scalability needs, and compliance demands.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/request-quote"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                Get Enterprise Quote
-              </a>
-              <a
-                href="/contact"
-                className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:border-gray-500 transition-all duration-300"
-              >
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Start Enterprise Project
+              </button>
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2" />
                 Schedule Consultation
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Solutions Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -121,48 +273,70 @@ export default function EnterpriseSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Enterprise Solutions
+              Enterprise-Grade Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enterprise solutions are designed to address the complex challenges 
-              of large organizations while driving innovation and growth.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform provides enterprise-level capabilities designed for 
+              large organizations with complex requirements.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
+            {features.map((feature, index) => (
               <motion.div
-                key={solution.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
               >
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg">
-                    <solution.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Enterprise Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From strategy to implementation, we provide 
+              comprehensive enterprise solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <p className="text-gray-300">{service.description}</p>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {solution.title}
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  {solution.description}
-                </p>
-                <ul className="space-y-2 mb-4">
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-gray-400 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={solution.href}
-                  className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center"
-                >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
               </motion.div>
             ))}
           </div>
@@ -170,8 +344,8 @@ export default function EnterpriseSolutions() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -181,9 +355,8 @@ export default function EnterpriseSolutions() {
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience measurable improvements in efficiency, security, and performance 
-              with our enterprise-grade solutions.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience measurable improvements in scalability, security, and operational efficiency.
             </p>
           </motion.div>
 
@@ -197,8 +370,8 @@ export default function EnterpriseSolutions() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
             </div>
@@ -211,8 +384,8 @@ export default function EnterpriseSolutions() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
             </div>
@@ -220,9 +393,9 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -230,24 +403,28 @@ export default function EnterpriseSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industries We Serve
+              Industry Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enterprise solutions are tailored to meet the unique challenges 
-              and requirements of various industries.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our enterprise solutions adapt to various industries, providing 
+              tailored solutions for large-scale operations.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
               <motion.div
-                key={industry}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
               >
-                <h3 className="text-lg font-semibold text-white">{industry}</h3>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -255,37 +432,35 @@ export default function EnterpriseSolutions() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Start Your Enterprise Project Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our enterprise solutions can drive innovation, 
-              efficiency, and growth for your organization.
+              Join large organizations worldwide that use our enterprise solutions to 
+              scale operations and drive business success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/request-quote"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                Get Enterprise Quote
-              </a>
-              <a
-                href="/contact"
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-gray-500 transition-all duration-300"
-              >
-                Schedule Consultation
-              </a>
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
+                Contact Sales
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Enterprise;
+

@@ -1,7 +1,8 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext } from 'react.ts';
 
 interface User {
-  id: string;
+
+  id: anystring;
   email: string;
   displayName?: string;
   avatar?: string;
@@ -9,28 +10,22 @@ interface User {
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string;
+
 }
 
 interface AuthTokens {
+
   accessToken: string | null;
   refreshToken: string | null;
+
 }
 
 interface AuthContextType {
+
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;
   tokens: AuthTokens;
-  login: (email: string, password: string) => Promise<{ error: string | null }>;
-  register: (name: string, email: string, password: string) => Promise<{ error: string | null }>;
-  signup: (email: string, password: string, userData: any) => Promiseg<div>;
-  logout: () => Promise<void>;
-  resetPassword: (email: string) => Promise<void>;
-  updateProfile: (updates: Partial<User>) => Promise<void>;
-  loginWithGoogle: () => Promise<void>;
-  loginWithFacebook: () => Promise<void>;
-  loginWithTwitter: () => Promise<void>;
-  loginWithWeb3: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);

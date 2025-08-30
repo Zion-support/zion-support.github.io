@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 import { 
   innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
@@ -29,12 +29,12 @@ const InnovativeServicesShowcase2031: React.FC = () => {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>Innovative Services 2031 - Zion Tech Group | Cutting-Edge Micro SAAS, IT & AI Solutions</title>
         <meta name="description" content="Discover Zion Tech Group's revolutionary 2031 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions." />
         <meta name="keywords" content="innovative services 2031, quantum computing, AI services, IT infrastructure, micro SAAS, Zion Tech Group, cutting-edge technology, digital transformation" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase-2031" />
-      </Head>
+      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

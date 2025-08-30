@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react.ts';
 const DropdownMenuContext = createContext(undefined);
-export function DropdownMenu({ children }) {
+export function DropdownMenu(...args: any[]): any {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value={{ isOpen, setIsOpen }}>
       <div className="relative">
@@ -8,7 +8,7 @@ export function DropdownMenu({ children }) {
       </div>
     </DropdownMenuContext.Provider>);
 }
-export function DropdownMenuTrigger({ children, asChild = false }) {
+export function DropdownMenuTrigger(...args: any[]): any {
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
@@ -21,7 +21,7 @@ export function DropdownMenuTrigger({ children, asChild = false }) {
       {children}
     </div>);
 }
-export function DropdownMenuContent({ children, align = 'start', className = '' }) {
+export function DropdownMenuContent(...args: any[]): any {
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
@@ -36,7 +36,7 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
       {children}
     </div>);
 }
-export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {
+export function DropdownMenuItem(...args: any[]): any {
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuItem must be used within DropdownMenu');

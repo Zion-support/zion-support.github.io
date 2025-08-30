@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { cn } from '../../utils/cn';
 
-interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'white' | 'gray';
   className?: string;
@@ -51,18 +50,10 @@ export default function LoadingSpinner({
 }
 
 // Optimized skeleton loader
-export function SkeletonLoader({ 
-  className = '', 
-  lines = 3, 
-  height = 'h-4' 
-}: { 
-  className?: string; 
-  lines?: number; 
-  height?: string; 
-}) {
+export function SkeletonLoader(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: anylines }).map((_, index)  => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -76,13 +67,7 @@ export function SkeletonLoader({
 }
 
 // Button loading state
-export function ButtonLoader({
-  size = 'sm',
-  className
-}: {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}) {
+export function ButtonLoader(...args: any[]): any {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -92,13 +77,7 @@ export function ButtonLoader({
 }
 
 // Page loading overlay
-export function PageLoaderOverlay({ 
-  text = 'Loading page...',
-  showSpinner = true 
-}: { 
-  text?: string; 
-  showSpinner?: boolean; 
-}) {
+export function PageLoaderOverlay(...args: any[]): any {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -122,13 +101,7 @@ export function PageLoaderOverlay({
 }
 
 // Content loading placeholder
-export function ContentPlaceholder({ 
-  className = '',
-  variant = 'default'
-}: { 
-  className?: string; 
-  variant?: 'default' | 'card' | 'list' | 'grid'; 
-}) {
+export function ContentPlaceholder(...args: any[]): any {
   const variants = {
     default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
@@ -140,7 +113,7 @@ export function ContentPlaceholder({
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: 6 }).map((_, index) => (
+        Array.from({ length: any6 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -155,7 +128,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 5 }).map((_, index) => (
+        Array.from({ length: any5 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -169,7 +142,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: any8 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -183,16 +156,96 @@ export function ContentPlaceholder({
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: 4 }).map((_, index) => (
+        Array.from({ length: any4 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="h-4 bg-white/10 rounded animate-pulse"
-          />
+            className="h-4 bg-white/10 rounded animate-pulse" />
         ))
       )}
+    </div>
+  );
+}
+
+// Enhanced app loading spinner for main app loading
+export function AppLoadingSpinner() {
+  const icons = ['🤖', '☁️', '🔒', '💡'];
+  
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="relative">
+        {/* Main spinning ring */}
+        <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
+          <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
+          <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
+        </div>
+        
+        {/* Floating icons */}
+        {icons.map((icon, index) => (
+          <motion.div
+            key={index}
+            className="absolute text-2xl"
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+            animate={{
+              rotate: [0, 360],
+              scale: [0.8, 1.2, 0.8],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: index * 0.5,
+              ease: "easeInOut"
+            }}
+          >
+            <span 
+              style={{
+                position: 'absolute',
+                top: `${Math.cos(index * Math.PI / 2) * 60}px`,
+                left: `${Math.sin(index * Math.PI / 2) * 60}px`,
+              }}
+            >
+              {icon}
+            </span>
+          </motion.div>
+        ))}
+      </div>
+      
+      {/* Loading text */}
+      <motion.div
+        className="mt-8 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
+        <p className="text-gray-400">Preparing your futuristic experience...</p>
+      </motion.div>
+      
+      {/* Progress dots */}
+      <div className="flex gap-2 mt-6">
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={i}
+            className="w-2 h-2 bg-cyan-400 rounded-full"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              delay: i * 0.2,
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -18,13 +17,15 @@ import {
   Target,
   Award,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
+icon: React.ComponentType<{ className?: string;
+}>;
   category: string;
   features: string[];
   pricing: string;
@@ -156,9 +157,9 @@ const categories = [
   'Healthcare AI'
 ];
 
-export const EnhancedServiceShowcase: React.FC = () => {
+export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [hoveredService, setHoveredService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -180,11 +181,10 @@ export const EnhancedServiceShowcase: React.FC = () => {
   }, []);
 
   const filteredServices = selectedCategory === 'All Services' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
+    ? services: anyservices.filter(service  => service.category === selectedCategory);
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: anynumber)  => {
+    return Array.from({ length: any5 }, (_, i)  => (
       <Star
         key={i}
         className={`w-4 h-4 ${

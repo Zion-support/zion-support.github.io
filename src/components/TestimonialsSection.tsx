@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe  } from 'lucide-react.ts';
 const testimonials = [
   {
     id: 1,
@@ -53,7 +53,7 @@ const testimonials = [
     project: "Cloud Migration & Optimization"
   }
 ];
-export function TestimonialsSection() {
+export function TestimonialsSection(...args: any[]): any {
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -65,8 +65,8 @@ export function TestimonialsSection() {
             Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index)  => (
             <div 
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"

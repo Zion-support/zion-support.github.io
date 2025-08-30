@@ -139,7 +139,7 @@ export default function SupportRequests() {
   };
   
   return (
-    
+    <>
       <SEO 
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
@@ -346,6 +346,6 @@ export default function SupportRequests() {
           </TabsContent>
         </Tabs>
       </div>
-    
+    </>
   );
 }

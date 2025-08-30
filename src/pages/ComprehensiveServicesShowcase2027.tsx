@@ -30,7 +30,7 @@ import {
   MapPin,
   Globe as GlobeIcon,
   Atom,
-  Link,
+  // Blockchain icon removed - not available in lucide-react
   Heart,
   Scale,
   Factory,
@@ -54,7 +54,7 @@ import {
 
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
-import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices2026';
+import { comprehensiveServices } from '../data/comprehensiveServices';
 
 interface Service {
   id: string;
@@ -121,8 +121,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       });
     });
 
-    // Add services from ALL_REVOLUTIONARY_SERVICES_2026
-    ALL_REVOLUTIONARY_SERVICES_2026.forEach(service => {
+    // Add services from comprehensiveServices
+    comprehensiveServices.forEach(service => {
       services.push({
         id: service.id,
         name: service.name,

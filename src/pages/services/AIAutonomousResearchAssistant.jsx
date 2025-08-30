@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MagnifyingGlassIcon, LightBulbIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from 'lucide-react';
 const AIAutonomousResearchAssistant = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
@@ -9,7 +9,7 @@ const AIAutonomousResearchAssistant = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-blue-600/20 rounded-full">
-                <MagnifyingGlassIcon className="h-12 w-12 text-blue-400"/>
+                <Search className="h-12 w-12 text-blue-400"/>
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -66,25 +66,25 @@ const AIAutonomousResearchAssistant = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                      <AcademicCapIcon className="h-5 w-5 text-white"/>
+                      <GraduationCap className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Academic Research</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <ChartBarIcon className="h-5 w-5 text-white"/>
+                      <BarChart3 className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Market Analysis</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                      <LightBulbIcon className="h-5 w-5 text-white"/>
+                      <Lightbulb className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Innovation Discovery</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                      <GlobeAltIcon className="h-5 w-5 text-white"/>
+                      <Globe className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Global Trends</span>
                   </div>
@@ -104,7 +104,7 @@ const AIAutonomousResearchAssistant = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
-                <MagnifyingGlassIcon className="h-8 w-8 text-blue-400"/>
+                <Search className="h-8 w-8 text-blue-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Intelligent Search & Discovery</h3>
               <p className="text-gray-300">
@@ -115,7 +115,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
-                <LightBulbIcon className="h-8 w-8 text-green-400"/>
+                <Lightbulb className="h-8 w-8 text-green-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Pattern Recognition</h3>
               <p className="text-gray-300">
@@ -126,7 +126,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                <ChartBarIcon className="h-8 w-8 text-purple-400"/>
+                <BarChart3 className="h-8 w-8 text-purple-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Data Analysis & Visualization</h3>
               <p className="text-gray-300">
@@ -136,7 +136,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
-                <AcademicCapIcon className="h-8 w-8 text-orange-400"/>
+                <GraduationCap className="h-8 w-8 text-orange-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Multi-Domain Expertise</h3>
               <p className="text-gray-300">
@@ -147,7 +147,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
-                <RocketLaunchIcon className="h-8 w-8 text-cyan-400"/>
+                <Rocket className="h-8 w-8 text-cyan-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">
@@ -158,7 +158,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
-                <GlobeAltIcon className="h-8 w-8 text-pink-400"/>
+                <Globe className="h-8 w-8 text-pink-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Global Knowledge Access</h3>
               <p className="text-gray-300">

@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, Zap, Brain, Rocket, Globe } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Loader2, Zap, Brain, Rocket, Globe  } from 'lucide-react.ts';
 
-interface EnhancedLoadingSpinnerProps {
+interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   message?: string;
   showProgress?: boolean;
   progress?: number;
   variant?: 'default' | 'ai' | 'tech' | 'global';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
+
 }
 
 export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
@@ -126,11 +128,13 @@ export const TechLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'var
   <EnhancedLoadingSpinner {...props} variant="tech" />
 );
 
-interface LoadingOverlayProps {
+interface LoadingOverlayProps extends React.PropsWithChildren<{}> {
+
   isOpen: boolean;
   message?: string;
   progress?: number;
   variant?: 'default' | 'ai' | 'tech' | 'global';
+
 }
 
 export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain, 
   Atom, 
   Rocket, 
   Shield, 
@@ -22,8 +21,8 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
+ } from 'lucide-react.ts';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
 
 const categoryIcons: { [key: string]: React.ComponentTypeg<div> } = {
   'AI & Consciousness': Brain,
@@ -55,9 +54,9 @@ const categoryColors: { [key: string]: string } = {
   'Neural Technology': 'from-violet-500 to-purple-500'
 };
 
-export const InnovativeServicesShowcase2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [expandedService, setExpandedService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -82,7 +81,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
     ? innovativeServices2027 
     : getServicesByCategory(selectedCategory);
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: anystring)  => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -141,12 +140,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
+                  : 'bg-zion-slate-light/50 text-gray-300 hover: anybg-zion-slate-light/70 hover:text-white'
               }`}
             >
               All Categories
             </button>
-            {serviceCategories2027.map((category) => {
+            {serviceCategories2027.map((category)  => {
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -171,9 +170,9 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

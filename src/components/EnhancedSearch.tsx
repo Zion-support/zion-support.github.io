@@ -1,24 +1,40 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield } from 'lucide-react';
+import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight, Globe, Building, Code, Shield } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '@/hooks/useDebounce';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
   url: string;
-  type: 'service' | 'page' | 'blog' | 'case-study';
+  type: 'service' | 'page' | 'blog' | 'case-study' | 'article' | 'ai-suggestion';
   category: string;
   tags: string[];
   relevance: number;
+  icon?: React.ComponentType<any>;
 }
 
 interface SearchFilter {
+
   type: string[];
   category: string[];
   tags: string[];
+
+}
+
+interface SearchSuggestion {
+  text: string;
+  type: 'recent' | 'trending' | 'ai';
+}
+
+interface EnhancedSearchProps {
+  className?: string;
+  placeholder?: string;
+  onSearch?: (query: string) => void;
+  variant?: 'default' | 'futuristic' | 'minimal';
 }
 
 const searchData: SearchResult[] = [
@@ -31,7 +47,8 @@ const searchData: SearchResult[] = [
     type: 'service',
     category: 'AI Solutions',
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
-    relevance: 95
+    relevance: 95,
+    icon: Brain
   },
   {
     id: 'cloud-devops',
@@ -41,7 +58,8 @@ const searchData: SearchResult[] = [
     type: 'service',
     category: 'Cloud & DevOps',
     tags: ['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
-    relevance: 90
+    relevance: 90,
+    icon: Globe
   },
   {
     id: 'cybersecurity',
@@ -51,7 +69,30 @@ const searchData: SearchResult[] = [
     type: 'service',
     category: 'Cybersecurity',
     tags: ['Security', 'AI', 'Cybersecurity', 'Enterprise'],
-    relevance: 88
+    relevance: 88,
+    icon: Shield
+  },
+  {
+    id: 'quantum-computing',
+    title: 'Quantum Computing Solutions',
+    description: 'Next-generation computational power for complex problem solving',
+    url: '/services/quantum-computing',
+    type: 'service',
+    category: 'Quantum Computing',
+    tags: ['Quantum', 'Computing', 'AI', 'Machine Learning'],
+    relevance: 92,
+    icon: Zap
+  },
+  {
+    id: 'micro-saas',
+    title: 'Micro SaaS Platform',
+    description: 'Scalable software solutions tailored to your specific needs',
+    url: '/services/micro-saas',
+    type: 'service',
+    category: 'Micro SaaS',
+    tags: ['SaaS', 'Software', 'Scalable', 'Custom'],
+    relevance: 88,
+    icon: TrendingUp
   },
   // Pages
   {
@@ -62,7 +103,8 @@ const searchData: SearchResult[] = [
     type: 'page',
     category: 'Company',
     tags: ['About', 'Company', 'Mission', 'Values'],
-    relevance: 85
+    relevance: 85,
+    icon: Building
   },
   {
     id: 'contact',
@@ -72,7 +114,8 @@ const searchData: SearchResult[] = [
     type: 'page',
     category: 'Support',
     tags: ['Contact', 'Support', 'Consultation', 'Help'],
-    relevance: 80
+    relevance: 80,
+    icon: Code
   },
   // Blog posts (example)
   {
@@ -83,7 +126,8 @@ const searchData: SearchResult[] = [
     type: 'blog',
     category: 'AI Insights',
     tags: ['AI', 'Trends', '2025', 'Business'],
-    relevance: 75
+    relevance: 75,
+    icon: TrendingUp
   }
 ];
 
@@ -95,64 +139,43 @@ const categories = [
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' }
 ];
 
-export const EnhancedSearch: React.FC = () => {
+// Mock suggestions
+const mockSuggestions: SearchSuggestion[] = [
+  { text: 'AI compliance assistant', type: 'recent' },
+  { text: 'Quantum machine learning', type: 'trending' },
+  { text: 'Digital transformation consulting', type: 'ai' },
+  { text: 'Cloud DevOps automation', type: 'trending' }
+];
+
+export function EnhancedSearch({ 
+  className = '',
+  placeholder = 'Search for AI services, quantum solutions...',
+  onSearch,
+  variant = 'default'
+}: EnhancedSearchProps) {
+  const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const [filters, setFilters] = useState<SearchFilter>({
     type: [],
     category: [],
     tags: []
   });
-  const [showFilters, setShowFilters] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const [popularSearches] = useState([
-    'AI Solutions', 'Cloud Services', 'Cybersecurity', 'Digital Transformation'
-  ]);
-
-  const debouncedQuery = useDebounce(query, 300);
+  
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
-
-  // Load recent searches from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem('zion-recent-searches');
-    if (saved) {
-      setRecentSearches(JSON.parse(saved));
-    }
-  }, []);
-
-  // Search functionality
-  useEffect(() => {
-    if (debouncedQuery.trim().length < 2) {
-      setResults([]);
-      return;
-    }
-
-    const searchResults = searchData
-      .filter(item => {
-        const matchesQuery = item.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-                           item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
-                           item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
-        
-        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&
-                              filters.category.length === 0 || filters.category.includes(item.category) &&
-                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
-        
-        return matchesQuery && matchesFilters;
-      })
-      .sort((a, b) => b.relevance - a.relevance)
-      .slice(0, 10);
-
-    setResults(searchResults);
-  }, [debouncedQuery, filters]);
+  const debouncedQuery = useDebounce(query, 300);
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: anyMouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
+        setSelectedIndex(-1);
       }
     };
 
@@ -162,279 +185,256 @@ export const EnhancedSearch: React.FC = () => {
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
       if (event.key === 'Escape') {
         setIsOpen(false);
-      } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        setSelectedIndex(-1);
+      } else if (event.key === 'ArrowDown') {
         event.preventDefault();
-        setIsOpen(true);
-        inputRef.current?.focus();
+        setSelectedIndex(prev => 
+          prev < results.length - 1 ? prev + 1 : prev
+        );
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+      } else if (event.key === 'Enter' && selectedIndex >= 0) {
+        event.preventDefault();
+        if (results[selectedIndex]) {
+          handleResultClick(results[selectedIndex]);
+        }
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  const handleSearch = useCallback((searchQuery: string) => {
-    if (searchQuery.trim()) {
-      // Add to recent searches
-      const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
-      setRecentSearches(updated);
-      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-      
-      // Navigate to search results or close search
-      setIsOpen(false);
-      setQuery('');
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
     }
-  }, [recentSearches]);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, results, selectedIndex]);
+
+  // Search functionality
+  useEffect(() => {
+    if (!debouncedQuery.trim()) {
+      setResults([]);
+      setSuggestions(mockSuggestions);
+      return;
+    }
+
+    setIsLoading(true);
+    
+    // Simulate API call delay
+    const timeout = setTimeout(() => {
+      const searchResults = searchData
+        .filter(item => {
+          const matchesQuery = 
+            item.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
+            item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
+            item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
+          
+          const matchesFilters = 
+            (filters.type.length === 0 || filters.type.includes(item.type)) &&
+            (filters.category.length === 0 || filters.category.includes(item.category)) &&
+            (filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag)));
+          
+          return matchesQuery && matchesFilters;
+        })
+        .sort((a, b) => b.relevance - a.relevance)
+        .slice(0, 10);
+
+      setResults(searchResults);
+      setSuggestions(mockSuggestions.filter(s => 
+        s.text.toLowerCase().includes(debouncedQuery.toLowerCase())
+      ));
+      setIsLoading(false);
+    }, 200);
+
+    return () => clearTimeout(timeout);
+  }, [debouncedQuery, filters]);
 
   const handleResultClick = (result: SearchResult) => {
-    handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
     setQuery('');
+    onSearch?.(result.title);
   };
 
-  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
-    setFilters(prev => ({
-      ...prev,
-      [filterType]: prev[filterType].includes(value)
-        ? prev[filterType].filter(v => v !== value)
-        : [...prev[filterType], value]
-    }));
+  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+    setQuery(suggestion.text);
+    onSearch?.(suggestion.text);
   };
 
-  const clearFilters = () => {
-    setFilters({ type: [], category: [], tags: [] });
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setQuery(value);
+    if (value.trim()) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
   };
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'service': return <Code className="h-4 w-4" />;
-      case 'page': return <Globe className="h-4 w-4" />;
-      case 'blog': return <TrendingUp className="h-4 w-4" />;
-      case 'case-study': return <Building className="h-4 w-4" />;
-      default: return <Search className="h-4 w-4" />;
+  const handleInputFocus = () => {
+    if (query.trim() || suggestions.length > 0) {
+      setIsOpen(true);
+    }
+  };
+
+  const clearSearch = () => {
+    setQuery('');
+    setResults([]);
+    setIsOpen(false);
+    setSelectedIndex(-1);
+  };
+
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'futuristic':
+        return 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-sm';
+      case 'minimal':
+        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
+      default:
+        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg';
     }
   };
 
   return (
-    <div className="relative" ref={searchRef}>
-      {/* Search Trigger */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 text-sm text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200"
-      >
-        <Search className="h-4 w-4" />
-        <span className="hidden sm:inline">Search...</span>
-        <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-700 rounded">
-          ⌘K
-        </kbd>
-      </button>
+    <div ref={searchRef} className={`relative ${className}`}>
+      <div className={`relative rounded-xl ${getVariantStyles()}`}>
+        <div className="flex items-center px-4 py-3">
+          <Search className="w-5 h-5 text-gray-400 mr-3" />
+          <input
+            ref={inputRef}
+            type="text"
+            value={query}
+            onChange={handleInputChange}
+            onFocus={handleInputFocus}
+            placeholder={placeholder}
+            className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none"
+          />
+          {query && (
+            <button
+              onClick={clearSearch}
+              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            >
+              <X className="w-4 h-4 text-gray-400" />
+            </button>
+          )}
+        </div>
+      </div>
 
-      {/* Search Modal */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 max-h-96 overflow-y-auto z-50"
           >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ type: "spring", bounce: 0.2, duration: 0.3 }}
-              className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-2xl mx-4"
-            >
-              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700">
-                {/* Search Input */}
-                <div className="relative p-4 border-b border-slate-200 dark:border-slate-700">
-                  <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
-                  <input
-                    ref={inputRef}
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search for services, solutions, or insights..."
-                    className="w-full pl-12 pr-20 py-3 text-lg bg-transparent border-none outline-none text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
-                  />
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="absolute right-6 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
-                  >
-                    <X className="h-5 w-5" />
-                  </button>
-                </div>
-
-                {/* Filters Toggle */}
-                <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
-                  <button
-                    onClick={() => setShowFilters(!showFilters)}
-                    className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
-                  >
-                    <Filter className="h-4 w-4" />
-                    Filters
-                  </button>
-                  {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (
-                    <button
-                      onClick={clearFilters}
-                      className="text-sm text-red-500 hover:text-red-600 transition-colors"
-                    >
-                      Clear all
-                    </button>
-                  )}
-                </div>
-
-                {/* Filters Panel */}
-                <AnimatePresence>
-                  {showFilters && (
+            {/* Search Results */}
+            {results.length > 0 && (
+              <div className="p-4">
+                <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 flex items-center">
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  Search Results
+                </h3>
+                <div className="space-y-2">
+                  {results.map((result, index) => (
                     <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="border-b border-slate-200 dark:border-slate-700 overflow-hidden"
+                      key={result.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
+                        selectedIndex === index
+                          ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700'
+                          : 'hover:bg-gray-50 dark:hover:bg-gray-700'
+                      }`}
+                      onClick={() => handleResultClick(result)}
                     >
-                      <div className="p-4 space-y-4">
-                        {/* Type Filters */}
-                        <div>
-                          <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2">Type</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {['service', 'page', 'blog', 'case-study'].map(type => (
-                              <button
-                                key={type}
-                                onClick={() => toggleFilter('type', type)}
-                                className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                                  filters.type.includes(type)
-                                    ? 'bg-blue-500 text-white'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
-                                }`}
+                      <div className="flex items-start space-x-3">
+                        {result.icon && (
+                          <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                            <result.icon className="w-4 h-4 text-cyan-500" />
+                          </div>
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-sm font-medium text-gray-900 dark:text-white truncate">
+                            {result.title}
+                          </h4>
+                          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">
+                            {result.description}
+                          </p>
+                          <div className="flex flex-wrap gap-1 mt-2">
+                            {result.tags.slice(0, 3).map(tag => (
+                              <span
+                                key={tag}
+                                className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full"
                               >
-                                {type.charAt(0).toUpperCase() + type.slice(1)}
-                              </button>
+                                {tag}
+                              </span>
                             ))}
                           </div>
                         </div>
-
-                        {/* Category Filters */}
-                        <div>
-                          <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2">Category</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {categories.map(category => (
-                              <button
-                                key={category.id}
-                                onClick={() => toggleFilter('category', category.name)}
-                                className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                                  filters.category.includes(category.name)
-                                    ? 'bg-blue-500 text-white'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
-                                }`}
-                              >
-                                {category.name}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0" />
                       </div>
                     </motion.div>
-                  )}
-                </AnimatePresence>
-
-                {/* Search Results */}
-                <div className="max-h-96 overflow-y-auto">
-                  {query.trim().length < 2 ? (
-                    <div className="p-4 space-y-4">
-                      {/* Recent Searches */}
-                      {recentSearches.length > 0 && (
-                        <div>
-                          <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                            <Clock className="h-4 w-4" />
-                            Recent Searches
-                          </h4>
-                          <div className="space-y-2">
-                            {recentSearches.map((search, index) => (
-                              <button
-                                key={index}
-                                onClick={() => handleSearch(search)}
-                                className="w-full text-left p-2 text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
-                              >
-                                {search}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Popular Searches */}
-                      <div>
-                        <h4 className="text-sm font-medium text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                          <TrendingUp className="h-4 w-4" />
-                          Popular Searches
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {popularSearches.map((search, index) => (
-                            <button
-                              key={index}
-                              onClick={() => handleSearch(search)}
-                              className="px-3 py-1 text-sm bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                            >
-                              {search}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ) : results.length > 0 ? (
-                    <div className="p-4 space-y-2">
-                      {results.map((result) => (
-                        <button
-                          key={result.id}
-                          onClick={() => handleResultClick(result)}
-                          className="w-full text-left p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors group"
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="flex-shrink-0 mt-1">
-                              {getTypeIcon(result.type)}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-medium text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                {result.title}
-                              </h4>
-                              <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 line-clamp-2">
-                                {result.description}
-                              </p>
-                              <div className="flex items-center gap-2 mt-2">
-                                <span className="text-xs text-slate-500 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">
-                                  {result.category}
-                                </span>
-                                <span className="text-xs text-slate-500 dark:text-slate-500">
-                                  {result.type}
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="p-8 text-center">
-                      <Search className="h-12 w-12 text-slate-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">
-                        No results found
-                      </h3>
-                      <p className="text-slate-600 dark:text-slate-400">
-                        Try adjusting your search terms or filters
-                      </p>
-                    </div>
-                  )}
+                  ))}
                 </div>
               </div>
-            </motion.div>
+            )}
+
+            {/* Search Suggestions */}
+            {suggestions.length > 0 && (
+              <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+                <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 flex items-center">
+                  <Brain className="w-4 h-4 mr-2" />
+                  AI Suggestions
+                </h3>
+                <div className="space-y-2">
+                  {suggestions.map((suggestion, index) => (
+                    <motion.button
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: (index + results.length) * 0.1 }}
+                      onClick={() => handleSuggestionClick(suggestion)}
+                      className="w-full text-left p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center space-x-2"
+                    >
+                      {suggestion.type === 'ai' && <Sparkles className="w-3 h-3 text-cyan-500" />}
+                      {suggestion.type === 'trending' && <TrendingUp className="w-3 h-3 text-green-500" />}
+                      {suggestion.type === 'recent' && <Clock className="w-3 h-3 text-gray-500" />}
+                      <span className="text-sm text-gray-700 dark:text-gray-300">
+                        {suggestion.text}
+                      </span>
+                    </motion.button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* No Results */}
+            {results.length === 0 && query && !isLoading && (
+              <div className="p-8 text-center">
+                <Brain className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+                  No results found
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Try adjusting your search terms or browse our services
+                </p>
+              </div>
+            )}
+
+            {/* Loading State */}
+            {isLoading && (
+              <div className="p-8 text-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+                <p className="text-gray-500 dark:text-gray-400">Searching...</p>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
   );
-};
+}

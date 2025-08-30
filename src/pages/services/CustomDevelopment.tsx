@@ -18,12 +18,12 @@ import {
   Workflow,
   FileText,
   Monitor,
-  Smartphone,
   BarChart3,
   Rocket,
   Building2,
   Cpu,
-  Network
+  Network,
+  GitFork
 } from 'lucide-react';
 
 export default function CustomDevelopment() {
@@ -49,7 +49,7 @@ export default function CustomDevelopment() {
     {
       title: 'System Integration',
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
-      icon: Workflow,
+              icon: GitFork,
       features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
     }
   ];

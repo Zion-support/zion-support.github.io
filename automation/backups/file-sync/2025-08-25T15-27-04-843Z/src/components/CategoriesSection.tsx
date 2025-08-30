@@ -1,5 +1,5 @@
 import { GradientHeading } from "./GradientHeading";
-import Link from "next/link";
+import { Link } from 'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
 const categories = [
   {

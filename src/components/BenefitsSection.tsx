@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle } from 'lucide-react';
-import { GradientHeading } from './GradientHeading';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
+import { GradientHeading } from './ui/GradientHeading';
 
 interface Benefit {
+
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -11,6 +12,7 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
+
 }
 
 const benefits: Benefit[] = [
@@ -72,15 +74,10 @@ const benefits: Benefit[] = [
   }
 ];
 
-const initialStats = [
-  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
-  { icon: <CheckCircle className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
-  { icon: <TrendingDown className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
-  { icon: <Globe className="w-6 h-6" />, value: "150+", label: "Countries Served" }
-];
 
-export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+export function BenefitsSection(...args: any[]): any {
+  const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,11 +91,21 @@ export function BenefitsSection() {
   ];
 
   const stats = [
-    { value: "500+", label: "Projects Delivered", icon: <Clock className="w-6 h-6" /> },
-    { value: "50+", label: "Expert Team Members", icon: <Globe className="w-6 h-6" /> },
-    { value: "99.9%", label: "Client Satisfaction", icon: <CheckCircle className="w-6 h-6" /> },
-    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
+    { value: "500+", label: "Projects Delivered", icon: Rocket },
+    { value: "50+", label: "Expert Team Members", icon: Users },
+    { value: "99.9%", label: "Client Satisfaction", icon: Star },
+    { value: "24/7", label: "Support Availability", icon: Clock }
   ];
+
+  const statsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
@@ -137,7 +144,7 @@ export function BenefitsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <GradientHeading className="mb-4">
+          <GradientHeading className="mb-4" customGradient="">
             Why Choose Zion?
           </GradientHeading>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
@@ -151,16 +158,16 @@ export function BenefitsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: anytrue }}
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat, index)  => (
             <motion.div 
               key={index} 
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
             >
               <div className="text-zion-cyan mb-2 flex justify-center">
-                {stat.icon}
+                {React.createElement(stat.icon, { className: "w-6 h-6" })}
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
@@ -181,8 +188,8 @@ export function BenefitsSection() {
           </div>
 
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 max-w-5xl mx-auto">
+            {benefits.map((benefit, index)  => (
               <motion.div 
                 key={index} 
                 variants={itemVariants}
@@ -220,9 +227,9 @@ export function BenefitsSection() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: any0.3 }}
                       >
-                        {benefit.features.map((feature, idx) => (
+                        {benefit.features.map((feature, idx)  => (
                           <motion.div 
                             key={idx} 
                             className="flex items-center gap-2 text-zion-slate-light/80 text-sm"
@@ -260,8 +267,8 @@ export function BenefitsSection() {
             <p className="text-gray-300 text-lg">Real results that speak for themselves</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -270,7 +277,7 @@ export function BenefitsSection() {
                 className="text-center group"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-10 h-10 text-white" />
+                  {React.createElement(stat.icon, { className: "w-10 h-10 text-white" })}
                 </div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>
@@ -304,6 +311,6 @@ export function BenefitsSection() {
       </div>
     </section>
   );
-};
+}
 
-export default BenefitsSection;
+export default BenefitsSection

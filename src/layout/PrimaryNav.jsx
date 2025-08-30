@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -24,7 +24,7 @@ export function PrimaryNav() {
     const isLoggedIn = !!user;
     const isMobile = useIsMobile();
     const { t } = useTranslation();
-    const router = useRouter();
+    const router = useNavigate();
     const [query, setQuery] = useState('');
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
@@ -40,7 +40,7 @@ export function PrimaryNav() {
         e.preventDefault();
         if (query.trim()) {
             console.log('PrimaryNav search submit:', query);
-            router.push(`/search/${slugify(query)}`);
+            navigate(`/search/${slugify(query)}`);
             setQuery('');
         }
     };
@@ -63,19 +63,19 @@ export function PrimaryNav() {
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
-                router.push(`/marketplace/listing/${sugg.id}`);
+                navigate(`/marketplace/listing/${sugg.id}`);
             }
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
-                router.push(sugg.slug);
+                navigate(sugg.slug);
             }
             else if (sugg.type === 'blog' && sugg.slug) {
                 // Blog posts navigate to blog detail page
-                router.push(`/blog/${sugg.slug}`);
+                navigate(`/blog/${sugg.slug}`);
             }
             else {
                 // Default: search results page with slug
-                router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
+                navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
             }
             setQuery('');
             // Track analytics event
@@ -123,19 +123,8 @@ export function PrimaryNav() {
                     {t('auth.signup')}
                   </Link>
                 </>)}
-            </Link>
-            <LanguageSelector />
-            <ModeToggle />
-            {!isLoggedIn && (<>
-                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
-                  {t('login', 'Login')}
-                </Link>
-                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
-                  {t('signup', 'Sign up')}
-                </Link>
-              </>)}
-            {isLoggedIn && <UserMenu />}
-          </div>
+              {isLoggedIn && <UserMenu />}
+            </div>
           
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>

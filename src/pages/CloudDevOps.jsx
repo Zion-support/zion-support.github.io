@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { 
   Cloud, 
   Server, 
-  GitBranch, 
+  GitFork, 
   Zap, 
   Shield, 
   CheckCircle, 
@@ -46,7 +46,7 @@ const cloudDevOpsSolutions = [
     id: 2,
     title: "CI/CD Pipeline Development",
     description: "Automated continuous integration and deployment pipelines for rapid software delivery.",
-    icon: GitBranch,
+    icon: GitFork,
     features: [
       "Automated testing",
       "Build automation",
@@ -146,7 +146,7 @@ const cloudPlatforms = [
   {
     name: "Kubernetes",
     description: "Open-source container orchestration platform",
-    icon: GitBranch,
+          icon: GitFork,
     features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
   }
 ];
@@ -264,7 +264,7 @@ export default function CloudDevOps() {
                 <span>Cloud Native</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <GitBranch className="w-4 h-4" />
+                <GitFork className="w-4 h-4" />
                 <span>DevOps Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">

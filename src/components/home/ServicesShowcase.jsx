@@ -81,8 +81,8 @@ export function ServicesShowcase() {
                       <ArrowRight className="w-4 h-4 ml-1"/>
                     </Button>
                   </Link>
-                </Button>
-              </div>
+                </div>
+              </CardContent>
             </FuturisticCard>))}
         </div>
 

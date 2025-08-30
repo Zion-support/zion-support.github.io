@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-	Rocket, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Rocket, 
 	Brain, 
 	Zap, 
 	Shield, 
@@ -15,8 +14,9 @@ import {
 	Star,
 	Play,
 	Pause
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 interface ServiceShowcase {
+
 	id: string;
 	title: string;
 	description: string;
@@ -25,6 +25,7 @@ interface ServiceShowcase {
 	features: string[];
 	price: string;
 	status: 'active' | 'beta' | 'new';
+
 }
 const futuristicServices: ServiceShowcase[] = [
 	{
@@ -88,7 +89,7 @@ const futuristicServices: ServiceShowcase[] = [
 		status: 'active'
 	}
 ];
-export default function FuturisticServicesShowcase() {
+export default function FuturisticServicesShowcase(...args: any[]): any {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
@@ -98,7 +99,7 @@ export default function FuturisticServicesShowcase() {
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: string) => {
+	const getStatusColor = (status: anystring)  => {
 		switch (status) {
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
@@ -106,7 +107,7 @@ export default function FuturisticServicesShowcase() {
 			default: return 'bg-gray-500';
 		}
 	};
-	const getStatusText = (status: string) => {
+	const getStatusText = (status: anystring)  => {
 		switch (status) {
 			case 'new': return 'NEW';
 			case 'beta': return 'BETA';
@@ -180,7 +181,7 @@ export default function FuturisticServicesShowcase() {
 								<div>
 									<div className="flex items-center gap-4 mb-6">
 										<div className={`p-4 rounded-2xl bg-gradient-to-r ${futuristicServices[currentService].color}`}>
-											<futuristicServices[currentService].icon className="w-8 h-8 text-white" />
+											{React.createElement(futuristicServices[currentService].icon, { className: "w-8 h-8 text-white" })}
 										</div>
 										<span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(futuristicServices[currentService].status)}`}>
 											{getStatusText(futuristicServices[currentService].status)}
@@ -226,7 +227,7 @@ export default function FuturisticServicesShowcase() {
 									<div className={`w-full h-80 rounded-2xl bg-gradient-to-br ${futuristicServices[currentService].color} relative overflow-hidden`}>
 										<div className="absolute inset-0 bg-black/20"></div>
 										<div className="absolute inset-0 flex items-center justify-center">
-											<futuristicServices[currentService].icon className="w-32 h-32 text-white/80" />
+											{React.createElement(futuristicServices[currentService].icon, { className: "w-32 h-32 text-white/80" })}
 										</div>
 										{/* Animated particles */}
 										<motion.div
@@ -256,8 +257,8 @@ export default function FuturisticServicesShowcase() {
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
 						Explore All Services
 					</h3>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						{futuristicServices.map((service, index) => (
+					<div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+						{futuristicServices.map((service, index)  => (
 							<motion.div
 								key={service.id}
 								initial={{ opacity: 0, y: 20 }}
@@ -268,7 +269,7 @@ export default function FuturisticServicesShowcase() {
 							>
 								<div className="flex items-center justify-between mb-4">
 									<div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
-										<service.icon className="w-6 h-6 text-white" />
+										{React.createElement(service.icon, { className: "w-6 h-6 text-white" })}
 									</div>
 									<span className={`px-2 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(service.status)}`}>
 										{getStatusText(service.status)}

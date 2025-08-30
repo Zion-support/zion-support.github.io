@@ -1,33 +1,30 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react.ts';
+import { useNavigate, Link  } from 'react-router-dom.ts';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { ProductListing  } from '@/types/listings';
+import { DollarSign  } from 'lucide-react.ts';
+import { RatingStars  } from '@/components/RatingStars';
+import { FavoriteButton  } from '@/components/FavoriteButton';
+import { useDispatch  } from 'react-redux.ts';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
-import Image from 'next/image'; // Import next/image
+// Regular img tag will be used instead of next/image
 
-interface ProductListingCardProps {
-  listing: ProductListing;
+interface ProductListingCardProps extends React.PropsWithChildren<{}> {
+
+  listing: anyProductListing;
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  onRequestQuote?: (id: string)  => void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string;
+
 }
 
-export function ProductListingCard({
-  listing,
-  view = 'grid',
-  onRequestQuote,
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) {
+export function ProductListingCard(...args: any[]): any {
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -54,7 +51,7 @@ export function ProductListingCard({
     navigate(`${detailBasePath}/${listing.id}`);
   };
   
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote = (e: anyReact.MouseEvent)  => {
     e.preventDefault();
     e.stopPropagation();
     
@@ -95,14 +92,11 @@ export function ProductListingCard({
         }}
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image
+          <img
             src={imageSrc}
             alt={listing.title}
-            layout="fill"
-            objectFit="cover"
+            className="w-full h-full object-cover"
             onError={handleImageError}
-            priority={false} // Assuming these are not LCP images
-            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
           {listing.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">

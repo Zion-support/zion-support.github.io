@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { EMERGING_TECH_SERVICES_2027 } from '../data/emergingTechServices2027';
 
@@ -64,13 +64,13 @@ const EmergingTechServices: NextPage = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      <Head>
+      <Helmet>
         <title>Emerging Tech Services 2027 - Zion Tech Group | Revolutionary Technology Solutions</title>
         <meta name="description" content="Discover the future of technology with Zion Tech Group's revolutionary emerging tech services. From quantum computing to biocomputing, we're pioneering the next generation of innovation." />
         <meta name="keywords" content="emerging technology, quantum computing, space technology, biocomputing, neuromorphic computing, fusion energy, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/emerging-tech-services" />
-      </Head>
+      </Helmet>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Hero Section */}
