@@ -1,14 +1,13 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Sidebar } from './components/Sidebar';
-import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ChatAssistant } from './components/ChatAssistant';
+import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
+import { Sidebar } from './components/Sidebar';
 import LoadingSpinner from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
+import { AppHeader } from './layout/AppHeader';
 // import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -128,7 +127,7 @@ const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
 const Team = lazy(() => import('./pages/Team'));
 const News = lazy(() => import('./pages/News'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const AiSolutions = lazy(() => import('./pages/AiSolutions'));
+const AiSolutions = lazy(() => import('./pages/AISolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 const AISalesCopilot = lazy(() => import('./pages/services/AISalesCopilot'));
