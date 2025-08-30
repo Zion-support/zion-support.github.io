@@ -216,18 +216,22 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 
 function App() {
   return (
-    <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => { /* empty */ }} />}>
-        <Router>
-          <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-            {/* SEO Component */}
-            <SEO
-              title="Zion Tech Group - Leading AI & Technology Solutions"
-              description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
-              keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
-              ogImage="/og-image.jpg"
-              canonicalUrl="https://ziontechgroup.com"
-            />
+    <EnhancedErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          {/* Skip Link for Accessibility */}
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
+          {header}
+          
+          <main id="main-content" className="flex-1">
+            <Suspense fallback={<EnhancedLoadingSpinner />}>
+              <Routes>
+                {routeElements}
+              </Routes>
+            </Suspense>
+          </main>
 
             {/* Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
