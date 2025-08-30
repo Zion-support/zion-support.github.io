@@ -98,7 +98,7 @@ export const PerformanceOptimizer: React.FC = () => {
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
       const entries = list.getEntries();
-      entries.forEach((entry: ) => {
+      entries.forEach((entry: any) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }

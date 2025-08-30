@@ -25,7 +25,7 @@ const MOCK_SUPPORT_REQUESTS = [
   },
   {
     id: "SR-1002",
-    user: "sarah.smith@company.co",
+    user: "sarah.smith@comp.co",
     userId: "user-456",
     issue: "Payment failed but funds were deducted",
     status: "in-progress",
@@ -69,7 +69,7 @@ const MOCK_SUPPORT_REQUESTS = [
   },
   {
     id: "SR-1006",
-    user: "alex.wong@datacompany.com",
+    user: "alex.wong@datacomp.com",
     userId: "user-890",
     issue: "Profile verification pending for over 7 days",
     status: "resolved",
@@ -209,7 +209,7 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: any) => setSearchQuery(e.target.value)}
+                  onChange={(e: ) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
