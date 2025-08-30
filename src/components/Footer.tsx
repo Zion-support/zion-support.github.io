@@ -83,6 +83,23 @@ export function Footer() {
               Leading provider of innovative AI, IT, and Micro SAAS solutions. 
               Transforming businesses through cutting-edge technology and expert consulting.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-2 text-sm text-zion-slate-light">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-zion-cyan" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-zion-cyan" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-zion-cyan" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 <Linkedin className="w-5 h-5" />

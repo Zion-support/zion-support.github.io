@@ -93,11 +93,102 @@ export function MainNavigation({ className }: MainNavigationProps) {
           <div 
             onMouseEnter={() => setIsServicesOpen(true)} 
             onMouseLeave={() => setIsServicesOpen(false)} 
-            className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
+            className="absolute top-full left-0 mt-2 w-[800px] bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
-            <div className="p-4">
-              <div className="grid grid-cols-3 gap-4">
+            <div className="p-6">
+              <div className="grid grid-cols-4 gap-6">
+                {/* AI Services */}
                 <div>
+                  <h3 className="text-sm font-semibold text-zion-cyan mb-3 flex items-center">
+                    <Brain className="w-4 h-4 mr-2" />
+                    AI Services
+                  </h3>
+                  <div className="space-y-2">
+                    <Link to="/services/ai-edge-computing-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      AI Edge Computing Platform
+                    </Link>
+                    <Link to="/services/ai-quantum-financial-trading-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      AI Quantum Trading Platform
+                    </Link>
+                    <Link to="/services/ai-healthcare-predictive-analytics-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      AI Healthcare Analytics
+                    </Link>
+                    <Link to="/services/ai-cybersecurity-threat-intelligence-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      AI Cybersecurity Platform
+                    </Link>
+                  </div>
+                </div>
+                
+                {/* IT Services */}
+                <div>
+                  <h3 className="text-sm font-semibold text-zion-cyan mb-3 flex items-center">
+                    <Server className="w-4 h-4 mr-2" />
+                    IT Services
+                  </h3>
+                  <div className="space-y-2">
+                    <Link to="/it-services" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      IT Consulting
+                    </Link>
+                    <Link to="/services/cloud-devops" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      Cloud & DevOps
+                    </Link>
+                    <Link to="/services/digital-transformation" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      Digital Transformation
+                    </Link>
+                    <Link to="/services/blockchain-enterprise-solutions" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      Blockchain Solutions
+                    </Link>
+                  </div>
+                </div>
+                
+                {/* Micro SAAS */}
+                <div>
+                  <h3 className="text-sm font-semibold text-zion-cyan mb-3 flex items-center">
+                    <Building2 className="w-4 h-4 mr-2" />
+                    Micro SAAS
+                  </h3>
+                  <div className="space-y-2">
+                    <Link to="/micro-saas" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      Micro SAAS Solutions
+                    </Link>
+                    <Link to="/services/ai-micro-saas-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      AI Micro SAAS Platform
+                    </Link>
+                    <Link to="/services/micro-crm" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      Micro CRM
+                    </Link>
+                    <Link to="/services/ai-project-management-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      AI Project Management
+                    </Link>
+                  </div>
+                </div>
+                
+                {/* Specialized Solutions */}
+                <div>
+                  <h3 className="text-sm font-semibold text-zion-cyan mb-3 flex items-center">
+                    <Rocket className="w-4 h-4 mr-2" />
+                    Specialized
+                  </h3>
+                  <div className="space-y-2">
+                    <Link to="/services/quantum-computing-solutions" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      Quantum Computing
+                    </Link>
+                    <Link to="/services/space-tech" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      Space Technology
+                    </Link>
+                    <Link to="/services/sustainability" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      Sustainability Tech
+                    </Link>
+                    <Link to="/services/ai-iot-edge-computing-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                      IoT Edge Computing
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Zap className="w-4 h-4 mr-2"/>
                     Micro SAAS

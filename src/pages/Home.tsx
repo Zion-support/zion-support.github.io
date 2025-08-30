@@ -51,36 +51,36 @@ export default function Home() {
 
   const featuredServices = [
     {
-      name: 'AI Enterprise Orchestrator',
-      description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
-      icon: Brain,
-      href: '/services/ai-enterprise-orchestrator',
+      name: 'AI Edge Computing Platform',
+      description: 'Revolutionary AI-powered edge computing for real-time processing and IoT optimization',
+      icon: Cpu,
+      href: '/services/ai-edge-computing-platform',
       color: 'from-purple-600 to-pink-600',
-      features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration']
+      features: ['Real-time AI processing', 'IoT optimization', '5G network enhancement']
     },
     {
-      name: 'AI Cybersecurity Suite',
-      description: 'AI-powered threat detection and response for comprehensive security',
-      icon: Shield,
-      href: '/services/ai-cybersecurity-suite',
-      color: 'from-red-600 to-orange-600',
-      features: ['Threat detection', 'Real-time response', 'Compliance automation']
-    },
-    {
-      name: 'Quantum AI Platform',
-      description: 'Next-generation quantum computing solutions for complex problem solving',
+      name: 'AI Quantum Financial Trading',
+      description: 'Next-generation AI-powered quantum computing for financial markets',
       icon: Atom,
-      href: '/services/quantum-ai-platform',
+      href: '/services/ai-quantum-financial-trading-platform',
       color: 'from-blue-600 to-cyan-600',
-      features: ['Quantum algorithms', 'Optimization', 'Research support']
+      features: ['Quantum AI algorithms', 'Real-time analysis', 'Risk management']
     },
     {
-      name: 'AI Healthcare Analytics',
-      description: 'Predictive diagnostics and care optimization powered by AI',
+      name: 'AI Healthcare Predictive Analytics',
+      description: 'Transform healthcare with AI-powered predictive analytics and early detection',
       icon: Heart,
-      href: '/services/ai-healthcare-analytics',
+      href: '/services/ai-healthcare-predictive-analytics-platform',
       color: 'from-green-600 to-emerald-600',
-      features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
+      features: ['Predictive diagnostics', 'Risk assessment', 'Treatment optimization']
+    },
+    {
+      name: 'AI Cybersecurity Threat Intelligence',
+      description: 'Advanced AI-powered cybersecurity with real-time threat detection and response',
+      icon: Shield,
+      href: '/services/ai-cybersecurity-threat-intelligence-platform',
+      color: 'from-red-600 to-orange-600',
+      features: ['AI threat detection', 'Behavioral analytics', 'Incident response']
     }
   ];
 
@@ -454,6 +454,76 @@ export default function Home() {
               </Link>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Ready to discuss your project? Contact our team of experts today.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-zion-blue/30 backdrop-blur-sm rounded-xl p-8 border border-zion-purple/30 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Call Us</h3>
+              <p className="text-zion-slate-light mb-4">Speak with our experts directly</p>
+              <a href="tel:+13024640950" className="text-zion-cyan font-semibold text-lg">
+                +1 302 464 0950
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-zion-blue/30 backdrop-blur-sm rounded-xl p-8 border border-zion-purple/30 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Email Us</h3>
+              <p className="text-zion-slate-light mb-4">Send us a detailed message</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan font-semibold text-lg">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-zion-blue/30 backdrop-blur-sm rounded-xl p-8 border border-zion-purple/30 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Visit Us</h3>
+              <p className="text-zion-slate-light mb-4">Our headquarters location</p>
+              <p className="text-zion-cyan font-semibold text-sm">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
