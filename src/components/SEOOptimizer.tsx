@@ -183,7 +183,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     },
     lastUpdated: new Date()
 =======
-      coreWebVitals: {;
+      coreWebVitals: {
         lcp: 2.8,;
         fid: 45,;
         cls: 0.08;

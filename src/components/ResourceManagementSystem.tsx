@@ -225,7 +225,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     setFilteredResources(sampleResources)}, []);
 
   // Filter resources
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = resources;
 
     if (selectedType !== 'all') {
@@ -279,7 +279,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     totalCapacity: resources.reduce((sum, r)  => sum + r.capacity, 0),
     currentUtilization: resources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
     averageCost: resources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: (()  => {
+    topDepartments: (() => {
       const deptCounts = resources.reduce((acc,;
   r) => {;
         acc[r.department] = (acc[r.department] || 0) + 1;

@@ -92,7 +92,7 @@ export class ContentOptimizer {
         if (images.length > 0 && imagesWithAlt.length === 0)
             score -= 10;
         // Check for internal links
-        const internalLinks = content.match(/href="\/[^"]*"/g) || [];
+        const internalLinks = content.match(/href="/[^"]*"/g) || [];
         if (internalLinks.length < 2)
             score -= 10;
         return Math.max(0, score);

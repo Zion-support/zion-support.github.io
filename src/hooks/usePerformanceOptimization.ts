@@ -74,7 +74,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // FPS monitoring
-  useEffect(()  => {
+  useEffect(() => {
     if (!enableFPSMonitoring) return;
 
     let animationFrameId: number;
@@ -321,7 +321,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }), [getMetrics]);
 
   // Cleanup on unmount
-  useEffect(()  => {
+  useEffect(() => {
     return cleanup}, [cleanup]);
 
   return {

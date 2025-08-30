@@ -230,7 +230,7 @@ export const seoOptimizer = new SEOOptimizer();
       const newRecommendations = [];
       
       // Check title length
-      const titleMatch = content.match(/<title>(.*?)<\/title>/i);
+      const titleMatch = content.match(/<title>(.*?)</title>/i);
       if (titleMatch) {
         const titleLength = titleMatch[1].length;
         if (titleLength >= 30 && titleLength <= 60) {
@@ -280,7 +280,7 @@ export const seoOptimizer = new SEOOptimizer();
       }
       
       // Check internal links
-      const internalLinks = content.match(/href="\/[^"]*"/g) || [];
+      const internalLinks = content.match(/href="/[^"]*"/g) || [];
       if (internalLinks.length >= 2) {
         score += 20;
       } else if (internalLinks.length > 0) {
