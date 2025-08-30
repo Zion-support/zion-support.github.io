@@ -29,493 +29,693 @@ import {
   Phone,
   Mail,
   MapPin,
-  DollarSign,
-  Award,
-  TrendingDown,
-  Clock,
-  Shield as SecurityIcon,
-  Zap as LightningIcon,
-  Globe as WebIcon,
-  Smartphone,
-  Watch,
-  Headphones,
-  Printer,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Telescope,
-  Microscope,
-  Flask,
-  Pill,
-  Stethoscope,
-  Calculator,
-  BookOpen,
-  GraduationCap,
-  CreditCard,
-  ShoppingCart,
-  Truck,
-  Warehouse,
-  Factory,
-  Building2,
-  Home,
-  Store,
-  Bank,
-  Insurance,
-  Law,
-  Gavel,
   FileText,
-  Calendar,
-  Timer,
-  Stopwatch,
-  Thermometer,
-  Gauge,
-  Compass,
-  Map,
-  Navigation,
-  Search,
-  Filter,
-  Sort,
-  Download,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Plus,
-  Minus,
-  X,
-  Check,
-  AlertTriangle,
-  Info,
-  HelpCircle,
-  Settings,
-  User,
-  LogOut,
-  LogIn,
-  UserPlus,
-  UserMinus,
-  Key,
-  Unlock,
-  Lock as LockIcon,
-  EyeOff,
-  Eye as EyeIcon,
-  RefreshCw,
-  RotateCcw,
-  Power,
-  PowerOff,
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Volume,
-  VolumeX,
-  Volume1,
-  Volume2,
-  Mic,
-  MicOff,
-  Video as VideoIcon,
-  VideoOff,
-  Image,
-  File,
-  Folder,
-  HardDrive,
-  MemoryStick,
-  Usb,
-  Cable,
-  Wifi as WifiIcon,
-  WifiOff,
-  Signal,
-  SignalHigh,
-  SignalMedium,
-  SignalLow,
-  Battery,
-  BatteryCharging,
-  BatteryFull,
-  BatteryLow,
-  Plug,
-  Charging,
-  Flash,
-  Thunder,
-  Rain,
-  Snow,
-  Cloud as CloudIcon,
-  CloudRain,
-  CloudLightning,
-  CloudSnow,
-  Moon,
-  Sunrise,
-  Sunset,
+  Link as LinkIcon,
+  TestTube,
+  DollarSign,
+  GraduationCap,
+  Truck,
+  Sun,
+  Building2,
+  Video,
   Star as StarIcon,
-  Planet,
-  Galaxy,
-  Universe,
-  Infinity,
-  Pi,
-  Sigma,
-  Alpha,
-  Beta,
-  Gamma,
-  Delta,
-  Omega,
-  Theta,
-  Lambda,
-  Mu,
-  Nu,
-  Xi,
-  Omicron,
-  Rho,
-  Tau,
-  Upsilon,
-  Phi,
-  Chi,
-  Psi,
-  Omega as OmegaIcon
+  Award,
+  Clock,
+  TrendingDown,
+  Shield as SecurityIcon,
+  Zap as LightningIcon
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 export function NewServicesShowcase2025() {
-  const getIconComponent = (category: string) => {
-    const iconMap: { [key: string]: any } = {
-      'AI & Content Creation': Brain,
-      'AI & Customer Service': Users,
-      'AI & Sales': TrendingUp,
-      'AI & Finance': DollarSign,
-      'AI & Healthcare': Heart,
-      'AI & Supply Chain': Truck,
-      'AI & Cybersecurity': Shield,
-      'AI & Human Resources': Users,
-      'AI & Marketing': TrendingUp,
-      'AI & Project Management': Target,
-      'AI & Analytics': BarChart3,
-      'AI & Optimization': Zap,
-      'AI & Automation': Cpu,
-      'AI & Intelligence': Brain,
-      'AI & Innovation': Rocket,
-      'AI & Transformation': Globe,
-      'AI & Solutions': Code,
-      'AI & Platforms': Server,
-      'AI & Services': Briefcase,
-      'AI & Technology': Atom
-    };
-    return iconMap[category] || Brain;
+  const newServices = [
+    {
+      id: 'ai-legal-tech-solutions',
+      title: 'AI Legal Tech Solutions',
+      description: 'Revolutionize legal practice with AI-powered contract analysis, legal research, and compliance automation',
+      icon: FileText,
+      color: 'from-indigo-600 to-blue-700',
+      price: '$1,500 - $8,000/month',
+      marketPrice: '$3,000 - $15,000/month',
+      savings: 'Save up to 50%',
+      features: [
+        'Contract Analysis & Review',
+        'Legal Research Automation',
+        'Compliance Monitoring',
+        'Document Generation',
+        'Risk Assessment',
+        'Case Law Analysis',
+        'Legal Chatbot Support',
+        'Regulatory Updates'
+      ],
+      benefits: [
+        'Reduce legal review time by 70%',
+        'Improve contract accuracy',
+        'Automated compliance monitoring',
+        'Cost-effective legal services',
+        '24/7 legal support',
+        'Enhanced risk management'
+      ],
+      useCases: [
+        'Contract Management',
+        'Legal Research',
+        'Compliance Monitoring',
+        'Document Review',
+        'Risk Assessment',
+        'Legal Operations',
+        'Regulatory Compliance',
+        'Litigation Support'
+      ],
+      industries: ['Legal Services', 'Corporate', 'Healthcare', 'Finance', 'Real Estate', 'Technology']
+    },
+    {
+      id: 'blockchain-web3-development',
+      title: 'Blockchain & Web3 Development',
+      description: 'Build decentralized applications, smart contracts, and Web3 infrastructure for the future of the internet',
+      icon: LinkIcon,
+      color: 'from-orange-600 to-red-700',
+      price: '$3,000 - $20,000/month',
+      marketPrice: '$8,000 - $40,000/month',
+      savings: 'Save up to 50%',
+      features: [
+        'Smart Contract Development',
+        'DeFi Platform Building',
+        'NFT Marketplace Creation',
+        'Blockchain Infrastructure',
+        'Web3 Integration',
+        'Cryptocurrency Solutions',
+        'Decentralized Apps (dApps)',
+        'Blockchain Consulting'
+      ],
+      benefits: [
+        'Future-proof technology investment',
+        'Decentralized and secure solutions',
+        'Transparent and immutable systems',
+        'Reduced intermediary costs',
+        'Global accessibility',
+        'Innovation leadership'
+      ],
+      useCases: [
+        'DeFi Applications',
+        'NFT Marketplaces',
+        'Supply Chain Tracking',
+        'Voting Systems',
+        'Digital Identity',
+        'Asset Tokenization',
+        'Gaming Platforms',
+        'Financial Services'
+      ],
+      industries: ['Finance', 'Gaming', 'Supply Chain', 'Healthcare', 'Real Estate', 'Entertainment']
+    },
+    {
+      id: 'advanced-robotics-automation',
+      title: 'Advanced Robotics & Automation',
+      description: 'Transform manufacturing and operations with intelligent robotics, automation, and Industry 4.0 solutions',
+      icon: Cpu,
+      color: 'from-gray-600 to-slate-700',
+      price: '$5,000 - $30,000/month',
+      marketPrice: '$12,000 - $60,000/month',
+      savings: 'Save up to 50%',
+      features: [
+        'Industrial Robotics',
+        'Collaborative Robots (Cobots)',
+        'Process Automation',
+        'Quality Control Systems',
+        'Predictive Maintenance',
+        'Safety Monitoring',
+        'Integration Services',
+        'Training & Support'
+      ],
+      benefits: [
+        'Increase productivity by 40-60%',
+        'Reduce operational costs',
+        'Improve product quality',
+        'Enhanced workplace safety',
+        '24/7 operation capability',
+        'Scalable automation'
+      ],
+      useCases: [
+        'Manufacturing Automation',
+        'Warehouse Operations',
+        'Quality Inspection',
+        'Material Handling',
+        'Assembly Lines',
+        'Packaging Systems',
+        'Testing & Validation',
+        'Maintenance Operations'
+      ],
+      industries: ['Manufacturing', 'Logistics', 'Automotive', 'Aerospace', 'Electronics', 'Food & Beverage']
+    },
+    {
+      id: 'biotechnology-bioinformatics',
+      title: 'Biotechnology & Bioinformatics',
+      description: 'Accelerate scientific discovery with AI-powered bioinformatics, drug discovery, and genetic analysis',
+      icon: TestTube,
+      color: 'from-green-600 to-emerald-700',
+      price: '$4,000 - $25,000/month',
+      marketPrice: '$10,000 - $50,000/month',
+      savings: 'Save up to 50%',
+      features: [
+        'Genomic Data Analysis',
+        'Drug Discovery AI',
+        'Protein Structure Prediction',
+        'Clinical Trial Optimization',
+        'Biomarker Discovery',
+        'Genetic Risk Assessment',
+        'Bioinformatics Pipelines',
+        'Research Collaboration Tools'
+      ],
+      benefits: [
+        'Accelerate research timelines',
+        'Reduce development costs',
+        'Improve drug efficacy',
+        'Personalized medicine',
+        'Enhanced data analysis',
+        'Collaborative research'
+      ],
+      useCases: [
+        'Drug Development',
+        'Genetic Research',
+        'Clinical Trials',
+        'Disease Diagnosis',
+        'Precision Medicine',
+        'Agricultural Biotech',
+        'Environmental Biology',
+        'Pharmaceutical Research'
+      ],
+      industries: ['Pharmaceuticals', 'Healthcare', 'Agriculture', 'Research', 'Biotech', 'Environmental']
+    },
+    {
+      id: 'fintech-solutions',
+      title: 'Financial Technology Solutions',
+      description: 'Modernize financial services with AI-powered banking, payment systems, and financial analytics',
+      icon: DollarSign,
+      color: 'from-green-600 to-emerald-700',
+      price: '$2,500 - $15,000/month',
+      marketPrice: '$6,000 - $30,000/month',
+      savings: 'Save up to 50%',
+      features: [
+        'Digital Banking Platforms',
+        'Payment Processing Systems',
+        'Fraud Detection AI',
+        'Risk Management',
+        'Financial Analytics',
+        'Regulatory Compliance',
+        'API Integration',
+        'Mobile Banking Apps'
+      ],
+      benefits: [
+        'Enhanced customer experience',
+        'Reduced operational costs',
+        'Improved security',
+        'Regulatory compliance',
+        'Real-time processing',
+        'Scalable solutions'
+      ],
+      useCases: [
+        'Digital Banking',
+        'Payment Systems',
+        'Investment Platforms',
+        'Insurance Tech',
+        'Lending Solutions',
+        'Wealth Management',
+        'RegTech Solutions',
+        'Cryptocurrency Services'
+      ],
+      industries: ['Banking', 'Insurance', 'Investment', 'Lending', 'Payment Processing', 'Wealth Management']
+    },
+    {
+      id: 'edtech-learning-platforms',
+      title: 'Educational Technology Platforms',
+      description: 'Transform education with AI-powered learning management, personalized education, and virtual classrooms',
+      icon: GraduationCap,
+      color: 'from-blue-600 to-indigo-700',
+      price: '$800 - $5,000/month',
+      marketPrice: '$2,000 - $12,000/month',
+      savings: 'Save up to 60%',
+      features: [
+        'Learning Management Systems',
+        'Personalized Learning Paths',
+        'Virtual Classrooms',
+        'Assessment & Analytics',
+        'Content Creation Tools',
+        'Student Progress Tracking',
+        'Collaborative Learning',
+        'Mobile Learning Apps'
+      ],
+      benefits: [
+        'Personalized learning experience',
+        'Improved student engagement',
+        'Better learning outcomes',
+        'Reduced administrative burden',
+        'Scalable education delivery',
+        'Data-driven insights'
+      ],
+      useCases: [
+        'K-12 Education',
+        'Higher Education',
+        'Corporate Training',
+        'Online Learning',
+        'Skills Development',
+        'Language Learning',
+        'Professional Certification',
+        'Special Education'
+      ],
+      industries: ['Education', 'Corporate Training', 'Online Learning', 'Skills Development', 'Language Learning', 'Professional Development']
+    },
+    {
+      id: 'supply-chain-logistics-ai',
+      title: 'Supply Chain & Logistics AI',
+      description: 'Optimize supply chains with AI-powered forecasting, route optimization, and inventory management',
+      icon: Truck,
+      color: 'from-purple-600 to-violet-700',
+      price: '$2,000 - $12,000/month',
+      marketPrice: '$5,000 - $25,000/month',
+      savings: 'Save up to 52%',
+      features: [
+        'Demand Forecasting',
+        'Route Optimization',
+        'Inventory Management',
+        'Supplier Risk Assessment',
+        'Real-time Tracking',
+        'Cost Optimization',
+        'Sustainability Analytics',
+        'Supply Chain Visibility'
+      ],
+      benefits: [
+        'Reduce logistics costs by 20-30%',
+        'Improve delivery times',
+        'Optimize inventory levels',
+        'Enhanced risk management',
+        'Real-time visibility',
+        'Sustainability improvements'
+      ],
+      useCases: [
+        'Retail Supply Chains',
+        'Manufacturing Logistics',
+        'E-commerce Fulfillment',
+        'Cold Chain Management',
+        'International Shipping',
+        'Last-mile Delivery',
+        'Warehouse Operations',
+        'Procurement Optimization'
+      ],
+      industries: ['Retail', 'Manufacturing', 'E-commerce', 'Logistics', 'Transportation', 'Warehousing']
+    },
+    {
+      id: 'energy-sustainability-tech',
+      title: 'Energy & Sustainability Technology',
+      description: 'Drive the energy transition with smart grid solutions, renewable energy optimization, and sustainability analytics',
+      icon: Sun,
+      color: 'from-yellow-600 to-orange-700',
+      price: '$3,000 - $18,000/month',
+      marketPrice: '$7,000 - $35,000/month',
+      savings: 'Save up to 49%',
+      features: [
+        'Smart Grid Management',
+        'Renewable Energy Optimization',
+        'Energy Storage Solutions',
+        'Carbon Footprint Tracking',
+        'Sustainability Reporting',
+        'Energy Efficiency Analytics',
+        'Grid Integration',
+        'Predictive Maintenance'
+      ],
+      benefits: [
+        'Reduce energy costs',
+        'Improve sustainability',
+        'Enhanced grid reliability',
+        'Regulatory compliance',
+        'Real-time monitoring',
+        'Predictive insights'
+      ],
+      useCases: [
+        'Utility Companies',
+        'Renewable Energy',
+        'Commercial Buildings',
+        'Industrial Facilities',
+        'Smart Cities',
+        'Energy Trading',
+        'Carbon Management',
+        'Grid Infrastructure'
+      ],
+      industries: ['Utilities', 'Renewable Energy', 'Commercial Real Estate', 'Industrial', 'Smart Cities', 'Energy Trading']
+    },
+    {
+      id: 'real-estate-technology',
+      title: 'Real Estate Technology',
+      description: 'Modernize real estate with AI-powered property management, market analysis, and virtual tours',
+      icon: Building2,
+      color: 'from-teal-600 to-cyan-700',
+      price: '$1,200 - $8,000/month',
+      marketPrice: '$3,000 - $18,000/month',
+      savings: 'Save up to 56%',
+      features: [
+        'Property Management Systems',
+        'Market Analysis AI',
+        'Virtual Tours & AR',
+        'Tenant Portal Solutions',
+        'Maintenance Management',
+        'Financial Analytics',
+        'Document Management',
+        'Mobile Applications'
+      ],
+      benefits: [
+        'Improved property management',
+        'Enhanced tenant experience',
+        'Better market insights',
+        'Reduced operational costs',
+        'Increased property value',
+        'Streamlined processes'
+      ],
+      useCases: [
+        'Property Management',
+        'Real Estate Investment',
+        'Commercial Real Estate',
+        'Residential Management',
+        'Facility Management',
+        'Property Development',
+        'Real Estate Marketing',
+        'Portfolio Management'
+      ],
+      industries: ['Real Estate', 'Property Management', 'Commercial Real Estate', 'Residential', 'Facility Management', 'Property Development']
+    },
+    {
+      id: 'entertainment-media-ai',
+      title: 'Entertainment & Media AI',
+      description: 'Transform entertainment with AI-powered content creation, recommendation systems, and audience analytics',
+      icon: Video,
+      color: 'from-pink-600 to-rose-700',
+      price: '$1,500 - $10,000/month',
+      marketPrice: '$4,000 - $20,000/month',
+      savings: 'Save up to 50%',
+      features: [
+        'Content Generation AI',
+        'Recommendation Engines',
+        'Audience Analytics',
+        'Content Optimization',
+        'Automated Editing',
+        'Personalization Engines',
+        'Trend Analysis',
+        'Content Distribution'
+      ],
+      benefits: [
+        'Increased audience engagement',
+        'Personalized content delivery',
+        'Improved content performance',
+        'Reduced production costs',
+        'Data-driven insights',
+        'Scalable content creation'
+      ],
+      useCases: [
+        'Streaming Platforms',
+        'Social Media',
+        'Gaming Industry',
+        'News & Publishing',
+        'Music & Audio',
+        'Video Production',
+        'Advertising',
+        'Content Marketing'
+      ],
+      industries: ['Entertainment', 'Media', 'Gaming', 'Publishing', 'Music', 'Advertising']
+    }
+  ];
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
   };
 
-  const getGradientColor = (index: number) => {
-    const gradients = [
-      'from-purple-500 to-pink-600',
-      'from-blue-500 to-cyan-600',
-      'from-green-500 to-emerald-600',
-      'from-orange-500 to-red-600',
-      'from-indigo-500 to-purple-600',
-      'from-pink-500 to-rose-600',
-      'from-cyan-500 to-blue-600',
-      'from-emerald-500 to-green-600',
-      'from-violet-500 to-purple-600',
-      'from-yellow-500 to-orange-600'
-    ];
-    return gradients[index % gradients.length];
-  };
+  const stats = [
+    { number: '25+', label: 'New Services Added', icon: StarIcon },
+    { number: '50%+', label: 'Cost Savings', icon: TrendingDown },
+    { number: '75+', label: 'Industries Served', icon: Building2 },
+    { number: '24/7', label: 'Expert Support', icon: Clock }
+  ];
 
   return (
-    <div className="min-h-screen py-8 bg-gray-900">
+    <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Page Header */}
+        {/* Hero Section */}
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white text-sm font-medium mb-6">
-              <Star className="w-4 h-4" />
-              <span>NEW FOR 2025</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium mb-6">
+              <StarIcon className="w-4 h-4 mr-2" />
+              New for 2025
             </div>
             <h1 className="text-5xl font-bold text-white mb-6">
-              Revolutionary Micro SAAS Services
+              Revolutionary New Services
             </h1>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our cutting-edge AI-powered micro SAAS solutions designed to transform your business. 
-              Each service delivers proven ROI, market-leading capabilities, and enterprise-grade security.
+              Discover our cutting-edge micro SAAS solutions that are transforming industries worldwide. 
+              Get enterprise-grade technology at startup-friendly prices with Zion Tech Group.
             </p>
-            
-            {/* Key Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-              <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Proven ROI</h3>
-                <p className="text-gray-400 text-sm">Average 400-800% return on investment across all services</p>
-              </div>
-              <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Enterprise Security</h3>
-                <p className="text-gray-400 text-sm">SOC 2, ISO 27001, and industry-specific compliance</p>
-              </div>
-              <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Rocket className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Rapid Deployment</h3>
-                <p className="text-gray-400 text-sm">2-12 weeks implementation with expert support</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {INNOVATIVE_MICRO_SAAS_SERVICES_2025.map((service, index) => {
-            const IconComponent = getIconComponent(service.category);
-            const gradientColor = getGradientColor(index);
-            
-            return (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 border border-gray-700 hover:border-cyan-500/30 group"
-              >
-                {/* Service Header */}
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${gradientColor} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    <div className="inline-flex items-center space-x-2 px-2 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg mt-2">
-                      <DollarSign className="w-3 h-3 text-cyan-400" />
-                      <span className="text-cyan-400 font-semibold text-xs">{service.pricingModel}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Description */}
-                <p className="text-gray-400 mb-4 leading-relaxed text-sm">{service.description}</p>
-                
-                {/* Pricing */}
-                <div className="mb-4">
-                  <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-lg">
-                    <DollarSign className="w-4 h-4 text-green-400" />
-                    <span className="text-green-400 font-semibold text-sm">{service.currency}{service.price.toLocaleString()}/{service.pricingModel}</span>
-                  </div>
-                </div>
-
-                {/* ROI Badge */}
-                <div className="mb-4">
-                  <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-lg">
-                    <TrendingUp className="w-4 h-4 text-yellow-400" />
-                    <span className="text-yellow-400 font-semibold text-sm">ROI: {service.roi}</span>
-                  </div>
-                </div>
-                
-                {/* Key Features Preview */}
-                <div className="space-y-2 mb-6">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                  {service.features.length > 3 && (
-                    <div className="text-sm text-gray-500">
-                      +{service.features.length - 3} more features
-                    </div>
-                  )}
-                </div>
-
-                {/* Innovation Level */}
-                <div className="mb-6">
-                  <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-lg">
-                    <Award className="w-4 h-4 text-purple-400" />
-                    <span className="text-purple-400 font-semibold text-sm">{service.innovationLevel}</span>
-                  </div>
-                </div>
-
-                {/* CTA Buttons */}
-                <div className="space-y-3">
-                  <Link
-                    to={`/services/${service.id}`}
-                    className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
-                  >
-                    Learn More
-                  </Link>
-                  <Link
-                    to="/contact"
-                    className="block w-full text-center bg-transparent text-cyan-400 px-4 py-3 rounded-lg font-semibold border border-cyan-400 hover:bg-cyan-400/10 transition-colors"
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        {/* Market Trends Section */}
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Market Trends & Opportunities 2025
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">AI Market Growth</h3>
-                <p className="text-purple-100">40% annual growth rate in AI-powered solutions</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Market Size</h3>
-                <p className="text-purple-100">$500B+ AI market by 2025</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Adoption Rate</h3>
-                <p className="text-purple-100">75% of enterprises adopting AI by 2025</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Rocket className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">ROI Potential</h3>
-                <p className="text-purple-100">400-1000% average ROI on AI investments</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Success Stories */}
-        <div className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Success Stories & Case Studies
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Real results from businesses using our AI-powered solutions
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4 text-center">E-commerce Success</h3>
-              <p className="text-gray-400 mb-4 text-center">
-                "Our AI-powered content generation increased organic traffic by 300% in 6 months"
-              </p>
-              <div className="text-center">
-                <div className="inline-flex items-center space-x-2 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-lg">
-                  <span className="text-green-400 font-semibold">300% Traffic Increase</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4 text-center">Customer Service</h3>
-              <p className="text-gray-400 mb-4 text-center">
-                "AI automation reduced support costs by 60% while improving satisfaction scores"
-              </p>
-              <div className="text-center">
-                <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded-lg">
-                  <span className="text-blue-400 font-semibold">60% Cost Reduction</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <DollarSign className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4 text-center">Sales Intelligence</h3>
-              <p className="text-gray-400 mb-4 text-center">
-                "AI-powered sales insights increased conversion rates by 40% and revenue by 60%"
-              </p>
-              <div className="text-center">
-                <div className="inline-flex items-center space-x-2 px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-lg">
-                  <span className="text-purple-400 font-semibold">60% Revenue Growth</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already leveraging our AI-powered solutions to drive growth, 
-              reduce costs, and gain competitive advantages.
-            </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
+                Get Started Today
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link
-                to="/request-quote"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
+                to="/pricing"
+                className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-medium rounded-lg hover:border-gray-500 transition-all duration-200"
               >
-                <span>Request Custom Quote</span>
+                View Pricing
               </Link>
-            </div>
-
-            {/* Contact Information */}
-            <div className="mt-8 pt-8 border-t border-cyan-500/30">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-cyan-100">
-                <div className="flex items-center justify-center space-x-3">
-                  <Phone className="w-5 h-5" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <Mail className="w-5 h-5" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <MapPin className="w-5 h-5" />
-                  <span>364 E Main St STE 1008 Middletown DE 19709</span>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-gray-400">{stat.label}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* New Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {newServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-200"
+            >
+              <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center mb-4`}>
+                <service.icon className="w-8 h-8 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+              <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+              
+              {/* Pricing Section */}
+              <div className="mb-4 p-4 bg-gray-700 rounded-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                  <span className="text-sm text-gray-400 line-through">{service.marketPrice}</span>
+                </div>
+                <div className="text-sm text-green-400 font-medium">{service.savings}</div>
+              </div>
+
+              {/* Features */}
+              <div className="mb-4">
+                <h4 className="text-white font-medium mb-2">Key Features:</h4>
+                <ul className="space-y-1">
+                  {service.features.slice(0, 4).map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Industries */}
+              <div className="mb-4">
+                <h4 className="text-white font-medium mb-2">Industries:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.industries.slice(0, 3).map((industry, idx) => (
+                    <span key={idx} className="px-2 py-1 bg-gray-700 text-xs text-gray-300 rounded">
+                      {industry}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <Link
+                to={`/services/${service.id}`}
+                className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Contact Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Join hundreds of companies already leveraging our cutting-edge solutions. 
+              Get started today with a free consultation and see how we can help you achieve your goals.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">Call Us</h3>
+              <p className="text-cyan-400 font-medium">{contactInfo.phone}</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">Email Us</h3>
+              <p className="text-cyan-400 font-medium">{contactInfo.email}</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">Visit Us</h3>
+              <p className="text-cyan-400 font-medium text-sm">{contactInfo.address}</p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+              <a
+                href={contactInfo.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-medium rounded-lg hover:border-gray-500 transition-all duration-200"
+              >
+                Visit Website
+                <Globe className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+            <p className="text-gray-400 text-sm">
+              All services include 24/7 support, comprehensive documentation, and ongoing updates
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Why Choose Zion Tech Group */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mt-16"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-gray-400 max-w-3xl mx-auto">
+              We're not just another technology company. We're your strategic partner in digital transformation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">Proven Track Record</h3>
+              <p className="text-gray-400 text-sm">
+                Successfully deployed 800+ solutions across 75+ industries with 99.9% success rate
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <LightningIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">Cutting-Edge Technology</h3>
+              <p className="text-gray-400 text-sm">
+                Latest AI, quantum computing, and emerging technologies to keep you ahead of the competition
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">Expert Team</h3>
+              <p className="text-gray-400 text-sm">
+                World-class engineers, data scientists, and industry experts dedicated to your success
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <SecurityIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">Enterprise Security</h3>
+              <p className="text-gray-400 text-sm">
+                Bank-level security, compliance, and data protection for your peace of mind
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">Scalable Solutions</h3>
+              <p className="text-gray-400 text-sm">
+                Solutions that grow with your business, from startup to enterprise scale
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-white font-medium mb-2">24/7 Support</h3>
+              <p className="text-gray-400 text-sm">
+                Round-the-clock support and maintenance to ensure your systems run smoothly
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

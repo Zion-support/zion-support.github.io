@@ -27,7 +27,16 @@ import {
   Globe,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  FileText,
+  Link as LinkIcon,
+  TestTube,
+  DollarSign,
+  GraduationCap,
+  Truck,
+  Sun,
+  Building2,
+  Video
 } from 'lucide-react';
 
 export function SolutionsPage() {
@@ -160,12 +169,72 @@ export function SolutionsPage() {
       icon: Building,
       description: 'Digital services, security, and citizen engagement',
       solutions: ['Cybersecurity', 'Data Analytics', 'Cloud Infrastructure', 'AI Services']
+    },
+    {
+      name: 'Legal Services',
+      icon: FileText,
+      description: 'AI-powered legal research, contract analysis, and compliance automation',
+      solutions: ['AI Legal Tech', 'Document Management', 'Compliance Monitoring', 'Risk Assessment']
+    },
+    {
+      name: 'Blockchain & Web3',
+      icon: LinkIcon,
+      description: 'Decentralized applications, smart contracts, and Web3 infrastructure',
+      solutions: ['Blockchain Development', 'DeFi Platforms', 'NFT Solutions', 'Smart Contracts']
+    },
+    {
+      name: 'Manufacturing & Robotics',
+      icon: Cpu,
+      description: 'Industrial automation, robotics, and Industry 4.0 solutions',
+      solutions: ['Advanced Robotics', 'Process Automation', 'Quality Control', 'Predictive Maintenance']
+    },
+    {
+      name: 'Biotechnology',
+      icon: TestTube,
+      description: 'AI-powered drug discovery, genetic analysis, and bioinformatics',
+      solutions: ['Bioinformatics', 'Drug Discovery', 'Genetic Research', 'Clinical Trials']
+    },
+    {
+      name: 'Financial Services',
+      icon: DollarSign,
+      description: 'Digital banking, payment systems, and financial technology',
+      solutions: ['FinTech Solutions', 'Digital Banking', 'Payment Processing', 'Risk Management']
+    },
+    {
+      name: 'Education',
+      icon: GraduationCap,
+      description: 'AI-powered learning platforms and educational technology',
+      solutions: ['EdTech Platforms', 'Learning Management', 'Personalized Education', 'Virtual Classrooms']
+    },
+    {
+      name: 'Supply Chain & Logistics',
+      icon: Truck,
+      description: 'AI-powered supply chain optimization and logistics management',
+      solutions: ['Supply Chain AI', 'Route Optimization', 'Inventory Management', 'Logistics Analytics']
+    },
+    {
+      name: 'Energy & Utilities',
+      icon: Sun,
+      description: 'Smart grid solutions, renewable energy, and sustainability technology',
+      solutions: ['Energy Tech', 'Smart Grid', 'Renewable Energy', 'Sustainability Analytics']
+    },
+    {
+      name: 'Real Estate',
+      icon: Building2,
+      description: 'Property management, market analysis, and real estate technology',
+      solutions: ['Real Estate Tech', 'Property Management', 'Market Analysis', 'Virtual Tours']
+    },
+    {
+      name: 'Entertainment & Media',
+      icon: Video,
+      description: 'AI-powered content creation, recommendation systems, and audience analytics',
+      solutions: ['Entertainment AI', 'Content Generation', 'Recommendation Engines', 'Audience Analytics']
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Solutions Deployed', icon: Target },
-    { number: '50+', label: 'Industries Served', icon: Building },
+    { number: '800+', label: 'Solutions Deployed', icon: Target },
+    { number: '75+', label: 'Industries Served', icon: Building },
     { number: '99.9%', label: 'Success Rate', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Users }
   ];

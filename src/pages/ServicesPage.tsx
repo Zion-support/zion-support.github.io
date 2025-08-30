@@ -52,7 +52,7 @@ import {
   Satellite,
   Telescope,
   Microscope,
-  Flask,
+  TestTube,
   Pill,
   Stethoscope,
   Calculator,
@@ -899,230 +899,374 @@ export function ServicesPage() {
         'Enhanced collaboration'
       ],
       useCases: [
-        'Financial Planning',
-        'Sales Forecasting',
-        'Customer Analytics',
-        'Operational Intelligence',
-        'Risk Management',
-        'Performance Tracking',
-        'Market Analysis',
-        'Strategic Planning'
+        'Business Performance Monitoring',
+        'Customer Behavior Analysis',
+        'Predictive Analytics',
+        'Risk Assessment',
+        'Market Research',
+        'Operational Optimization',
+        'Financial Analytics',
+        'Supply Chain Analytics'
       ]
     },
     {
-      id: 'blockchain-enterprise-solutions',
-      title: 'Blockchain Enterprise Solutions',
-      description: 'Leverage blockchain technology for secure, transparent, and efficient business operations',
+      id: 'ai-legal-tech-solutions',
+      title: 'AI Legal Tech Solutions',
+      description: 'Revolutionize legal practice with AI-powered contract analysis, legal research, and compliance automation',
+      icon: FileText,
+      color: 'from-indigo-600 to-blue-700',
+      price: '$1,500 - $8,000/month',
+      features: [
+        'Contract Analysis & Review',
+        'Legal Research Automation',
+        'Compliance Monitoring',
+        'Document Generation',
+        'Risk Assessment',
+        'Case Law Analysis',
+        'Legal Chatbot Support',
+        'Regulatory Updates'
+      ],
+      benefits: [
+        'Reduce legal review time by 70%',
+        'Improve contract accuracy',
+        'Automated compliance monitoring',
+        'Cost-effective legal services',
+        '24/7 legal support',
+        'Enhanced risk management'
+      ],
+      useCases: [
+        'Contract Management',
+        'Legal Research',
+        'Compliance Monitoring',
+        'Document Review',
+        'Risk Assessment',
+        'Legal Operations',
+        'Regulatory Compliance',
+        'Litigation Support'
+      ]
+    },
+    {
+      id: 'blockchain-web3-development',
+      title: 'Blockchain & Web3 Development',
+      description: 'Build decentralized applications, smart contracts, and Web3 infrastructure for the future of the internet',
       icon: Link,
-      color: 'from-emerald-600 to-teal-700',
+      color: 'from-orange-600 to-red-700',
       price: '$3,000 - $20,000/month',
       features: [
         'Smart Contract Development',
-        'DeFi Protocol Integration',
-        'Cross-chain Interoperability',
-        'Digital Asset Management',
-        'Supply Chain Tracking',
-        'Identity Verification',
-        'Token Economics',
-        'Regulatory Compliance'
+        'DeFi Platform Building',
+        'NFT Marketplace Creation',
+        'Blockchain Infrastructure',
+        'Web3 Integration',
+        'Cryptocurrency Solutions',
+        'Decentralized Apps (dApps)',
+        'Blockchain Consulting'
       ],
       benefits: [
-        'Enhanced security and transparency',
-        'Reduced operational costs',
-        'Automated trust mechanisms',
+        'Future-proof technology investment',
+        'Decentralized and secure solutions',
+        'Transparent and immutable systems',
+        'Reduced intermediary costs',
         'Global accessibility',
-        'Immutable audit trails',
-        'Innovative business models'
+        'Innovation leadership'
       ],
       useCases: [
-        'Supply Chain Management',
-        'Financial Services',
-        'Healthcare Records',
-        'Real Estate',
+        'DeFi Applications',
+        'NFT Marketplaces',
+        'Supply Chain Tracking',
         'Voting Systems',
-        'Intellectual Property',
-        'Cross-border Payments',
-        'Digital Identity'
+        'Digital Identity',
+        'Asset Tokenization',
+        'Gaming Platforms',
+        'Financial Services'
       ]
     },
     {
-      id: 'quantum-machine-learning',
-      title: 'Quantum Machine Learning',
-      description: 'Harness quantum computing power for revolutionary machine learning capabilities',
-      icon: Atom,
-      color: 'from-indigo-600 to-blue-700',
-      price: '$8,000 - $50,000/month',
+      id: 'advanced-robotics-automation',
+      title: 'Advanced Robotics & Automation',
+      description: 'Transform manufacturing and operations with intelligent robotics, automation, and Industry 4.0 solutions',
+      icon: Cpu,
+      color: 'from-gray-600 to-slate-700',
+      price: '$5,000 - $30,000/month',
       features: [
-        'Quantum Neural Networks',
-        'Quantum Feature Selection',
-        'Quantum Optimization',
-        'Hybrid Classical-Quantum',
-        'Quantum Error Correction',
-        'Quantum Simulation',
-        'Quantum Cryptography',
-        'Performance Analytics'
+        'Industrial Robotics',
+        'Collaborative Robots (Cobots)',
+        'Process Automation',
+        'Quality Control Systems',
+        'Predictive Maintenance',
+        'Safety Monitoring',
+        'Integration Services',
+        'Training & Support'
       ],
       benefits: [
-        'Exponential computational speed',
-        'Revolutionary ML capabilities',
-        'Enhanced optimization',
-        'Future-proof technology',
-        'Competitive advantage',
-        'Scientific breakthroughs'
+        'Increase productivity by 40-60%',
+        'Reduce operational costs',
+        'Improve product quality',
+        'Enhanced workplace safety',
+        '24/7 operation capability',
+        'Scalable automation'
       ],
       useCases: [
-        'Drug Discovery',
-        'Financial Modeling',
-        'Climate Prediction',
-        'Material Science',
-        'Logistics Optimization',
-        'Cryptography',
-        'AI Research',
-        'Scientific Computing'
+        'Manufacturing Automation',
+        'Warehouse Operations',
+        'Quality Inspection',
+        'Material Handling',
+        'Assembly Lines',
+        'Packaging Systems',
+        'Testing & Validation',
+        'Maintenance Operations'
       ]
     },
     {
-      id: 'edge-ai-computing',
-      title: 'Edge AI Computing',
-      description: 'Deploy AI models at the edge for real-time processing and reduced latency',
-      icon: Cpu,
-      color: 'from-orange-600 to-red-700',
+      id: 'biotechnology-bioinformatics',
+      title: 'Biotechnology & Bioinformatics',
+      description: 'Accelerate scientific discovery with AI-powered bioinformatics, drug discovery, and genetic analysis',
+      icon: TestTube,
+      color: 'from-green-600 to-emerald-700',
+      price: '$4,000 - $25,000/month',
+      features: [
+        'Genomic Data Analysis',
+        'Drug Discovery AI',
+        'Protein Structure Prediction',
+        'Clinical Trial Optimization',
+        'Biomarker Discovery',
+        'Genetic Risk Assessment',
+        'Bioinformatics Pipelines',
+        'Research Collaboration Tools'
+      ],
+      benefits: [
+        'Accelerate research timelines',
+        'Reduce development costs',
+        'Improve drug efficacy',
+        'Personalized medicine',
+        'Enhanced data analysis',
+        'Collaborative research'
+      ],
+      useCases: [
+        'Drug Development',
+        'Genetic Research',
+        'Clinical Trials',
+        'Disease Diagnosis',
+        'Precision Medicine',
+        'Agricultural Biotech',
+        'Environmental Biology',
+        'Pharmaceutical Research'
+      ]
+    },
+    {
+      id: 'fintech-solutions',
+      title: 'Financial Technology Solutions',
+      description: 'Modernize financial services with AI-powered banking, payment systems, and financial analytics',
+      icon: DollarSign,
+      color: 'from-green-600 to-emerald-700',
+      price: '$2,500 - $15,000/month',
+      features: [
+        'Digital Banking Platforms',
+        'Payment Processing Systems',
+        'Fraud Detection AI',
+        'Risk Management',
+        'Financial Analytics',
+        'Regulatory Compliance',
+        'API Integration',
+        'Mobile Banking Apps'
+      ],
+      benefits: [
+        'Enhanced customer experience',
+        'Reduced operational costs',
+        'Improved security',
+        'Regulatory compliance',
+        'Real-time processing',
+        'Scalable solutions'
+      ],
+      useCases: [
+        'Digital Banking',
+        'Payment Systems',
+        'Investment Platforms',
+        'Insurance Tech',
+        'Lending Solutions',
+        'Wealth Management',
+        'RegTech Solutions',
+        'Cryptocurrency Services'
+      ]
+    },
+    {
+      id: 'edtech-learning-platforms',
+      title: 'Educational Technology Platforms',
+      description: 'Transform education with AI-powered learning management, personalized education, and virtual classrooms',
+      icon: GraduationCap,
+      color: 'from-blue-600 to-indigo-700',
+      price: '$800 - $5,000/month',
+      features: [
+        'Learning Management Systems',
+        'Personalized Learning Paths',
+        'Virtual Classrooms',
+        'Assessment & Analytics',
+        'Content Creation Tools',
+        'Student Progress Tracking',
+        'Collaborative Learning',
+        'Mobile Learning Apps'
+      ],
+      benefits: [
+        'Personalized learning experience',
+        'Improved student engagement',
+        'Better learning outcomes',
+        'Reduced administrative burden',
+        'Scalable education delivery',
+        'Data-driven insights'
+      ],
+      useCases: [
+        'K-12 Education',
+        'Higher Education',
+        'Corporate Training',
+        'Online Learning',
+        'Skills Development',
+        'Language Learning',
+        'Professional Certification',
+        'Special Education'
+      ]
+    },
+    {
+      id: 'supply-chain-logistics-ai',
+      title: 'Supply Chain & Logistics AI',
+      description: 'Optimize supply chains with AI-powered forecasting, route optimization, and inventory management',
+      icon: Truck,
+      color: 'from-purple-600 to-violet-700',
+      price: '$2,000 - $12,000/month',
+      features: [
+        'Demand Forecasting',
+        'Route Optimization',
+        'Inventory Management',
+        'Supplier Risk Assessment',
+        'Real-time Tracking',
+        'Cost Optimization',
+        'Sustainability Analytics',
+        'Supply Chain Visibility'
+      ],
+      benefits: [
+        'Reduce logistics costs by 20-30%',
+        'Improve delivery times',
+        'Optimize inventory levels',
+        'Enhanced risk management',
+        'Real-time visibility',
+        'Sustainability improvements'
+      ],
+      useCases: [
+        'Retail Supply Chains',
+        'Manufacturing Logistics',
+        'E-commerce Fulfillment',
+        'Cold Chain Management',
+        'International Shipping',
+        'Last-mile Delivery',
+        'Warehouse Operations',
+        'Procurement Optimization'
+      ]
+    },
+    {
+      id: 'energy-sustainability-tech',
+      title: 'Energy & Sustainability Technology',
+      description: 'Drive the energy transition with smart grid solutions, renewable energy optimization, and sustainability analytics',
+      icon: Sun,
+      color: 'from-yellow-600 to-orange-700',
+      price: '$3,000 - $18,000/month',
+      features: [
+        'Smart Grid Management',
+        'Renewable Energy Optimization',
+        'Energy Storage Solutions',
+        'Carbon Footprint Tracking',
+        'Sustainability Reporting',
+        'Energy Efficiency Analytics',
+        'Grid Integration',
+        'Predictive Maintenance'
+      ],
+      benefits: [
+        'Reduce energy costs',
+        'Improve sustainability',
+        'Enhanced grid reliability',
+        'Regulatory compliance',
+        'Real-time monitoring',
+        'Predictive insights'
+      ],
+      useCases: [
+        'Utility Companies',
+        'Renewable Energy',
+        'Commercial Buildings',
+        'Industrial Facilities',
+        'Smart Cities',
+        'Energy Trading',
+        'Carbon Management',
+        'Grid Infrastructure'
+      ]
+    },
+    {
+      id: 'real-estate-technology',
+      title: 'Real Estate Technology',
+      description: 'Modernize real estate with AI-powered property management, market analysis, and virtual tours',
+      icon: Building2,
+      color: 'from-teal-600 to-cyan-700',
+      price: '$1,200 - $8,000/month',
+      features: [
+        'Property Management Systems',
+        'Market Analysis AI',
+        'Virtual Tours & AR',
+        'Tenant Portal Solutions',
+        'Maintenance Management',
+        'Financial Analytics',
+        'Document Management',
+        'Mobile Applications'
+      ],
+      benefits: [
+        'Improved property management',
+        'Enhanced tenant experience',
+        'Better market insights',
+        'Reduced operational costs',
+        'Increased property value',
+        'Streamlined processes'
+      ],
+      useCases: [
+        'Property Management',
+        'Real Estate Investment',
+        'Commercial Real Estate',
+        'Residential Management',
+        'Facility Management',
+        'Property Development',
+        'Real Estate Marketing',
+        'Portfolio Management'
+      ]
+    },
+    {
+      id: 'entertainment-media-ai',
+      title: 'Entertainment & Media AI',
+      description: 'Transform entertainment with AI-powered content creation, recommendation systems, and audience analytics',
+      icon: Video,
+      color: 'from-pink-600 to-rose-700',
       price: '$1,500 - $10,000/month',
       features: [
-        'Edge Model Deployment',
-        'Real-time Inference',
-        'Offline Processing',
-        'Model Optimization',
-        'Edge Device Management',
-        'Data Synchronization',
-        'Security & Privacy',
-        'Performance Monitoring'
+        'Content Generation AI',
+        'Recommendation Engines',
+        'Audience Analytics',
+        'Content Optimization',
+        'Automated Editing',
+        'Personalization Engines',
+        'Trend Analysis',
+        'Content Distribution'
       ],
       benefits: [
-        'Reduced latency',
-        'Lower bandwidth costs',
-        'Enhanced privacy',
-        'Offline capabilities',
-        'Scalable deployment',
-        'Real-time responsiveness'
+        'Increased audience engagement',
+        'Personalized content delivery',
+        'Improved content performance',
+        'Reduced production costs',
+        'Data-driven insights',
+        'Scalable content creation'
       ],
       useCases: [
-        'Autonomous Vehicles',
-        'Smart Manufacturing',
-        'IoT Devices',
-        'Mobile Applications',
-        'Healthcare Monitoring',
-        'Retail Analytics',
-        'Security Systems',
-        'Smart Cities'
-      ]
-    },
-    {
-      id: 'ai-ethics-governance',
-      title: 'AI Ethics & Governance',
-      description: 'Ensure responsible AI development with comprehensive ethics and governance frameworks',
-      icon: Shield,
-      color: 'from-pink-600 to-rose-700',
-      price: '$2,500 - $15,000/month',
-      features: [
-        'AI Ethics Framework',
-        'Bias Detection & Mitigation',
-        'Explainable AI',
-        'Fairness Assessment',
-        'Privacy Protection',
-        'Compliance Monitoring',
-        'Stakeholder Engagement',
-        'Audit & Reporting'
-      ],
-      benefits: [
-        'Responsible AI development',
-        'Regulatory compliance',
-        'Reduced bias and discrimination',
-        'Enhanced transparency',
-        'Stakeholder trust',
-        'Risk mitigation'
-      ],
-      useCases: [
-        'AI Development Teams',
-        'Regulatory Compliance',
-        'Risk Management',
-        'Corporate Governance',
-        'Public Policy',
-        'Research Institutions',
-        'Healthcare AI',
-        'Financial AI'
-      ]
-    },
-    {
-      id: 'neuromorphic-computing',
-      title: 'Neuromorphic Computing',
-      description: 'Revolutionary brain-inspired computing for next-generation AI applications',
-      icon: Brain,
-      color: 'from-cyan-600 to-blue-700',
-      price: '$10,000 - $60,000/month',
-      features: [
-        'Brain-inspired Architecture',
-        'Spiking Neural Networks',
-        'Low-power Computing',
-        'Real-time Learning',
-        'Adaptive Processing',
-        'Neuromorphic Chips',
-        'Cognitive Computing',
-        'Bio-inspired Algorithms'
-      ],
-      benefits: [
-        'Ultra-low power consumption',
-        'Real-time learning capabilities',
-        'Brain-like processing',
-        'Adaptive intelligence',
-        'Revolutionary performance',
-        'Future computing paradigm'
-      ],
-      useCases: [
-        'Autonomous Systems',
-        'Cognitive Computing',
-        'Brain-computer Interfaces',
-        'Robotics',
-        'Sensor Networks',
-        'Medical Devices',
-        'IoT Applications',
-        'Scientific Research'
-      ]
-    },
-    {
-      id: 'ai-powered-cybersecurity',
-      title: 'AI-Powered Cybersecurity',
-      description: 'Advanced threat detection and response using artificial intelligence and machine learning',
-      icon: Shield,
-      color: 'from-red-600 to-pink-700',
-      price: '$2,500 - $15,000/month',
-      features: [
-        'AI Threat Detection',
-        'Behavioral Analysis',
-        'Automated Response',
-        'Threat Intelligence',
-        'Vulnerability Assessment',
-        'Incident Management',
-        'Security Analytics',
-        'Compliance Monitoring'
-      ],
-      benefits: [
-        'Real-time threat detection',
-        'Reduced false positives',
-        'Automated incident response',
-        '24/7 security monitoring',
-        'Proactive threat prevention',
-        'Enhanced security posture'
-      ],
-      useCases: [
-        'Enterprise Security',
-        'Cloud Security',
-        'Network Protection',
-        'Endpoint Security',
-        'Application Security',
-        'Data Protection',
-        'Identity Management',
-        'Security Operations'
+        'Streaming Platforms',
+        'Social Media',
+        'Gaming Industry',
+        'News & Publishing',
+        'Music & Audio',
+        'Video Production',
+        'Advertising',
+        'Content Marketing'
       ]
     }
   ];
