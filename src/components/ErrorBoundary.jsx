@@ -152,39 +152,9 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
                     </p>
                 </div>
             </div>
-<<<<<<< HEAD
-          </details>)}
-
-        <div className="space-y-3">
-          <Button onClick={resetError} className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
-            <RefreshCw className="w-4 h-4 mr-2"/>
-            Try Again
-          </Button>
-
-          <Button variant="outline" onClick={() => navigate(-1)} className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
-            <ArrowLeft className="w-4 h-4 mr-2"/>
-            Go Back
-          </Button>
-
-          <Link to="/" className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors">
-            <Home className="w-4 h-4 inline mr-2"/>
-            Go Home
-          </Link>
-        </div>
-
-        <div className="mt-6 text-xs text-zion-slate-light">
-          <p>If this problem persists, please contact our support team.</p>
-          <p className="mt-1">
-            Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
-          </p>
-        </div>
-      </div>
-    </div>);
-=======
         </div>
     );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);
@@ -200,13 +170,8 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-                // // // console.error('ErrorBoundary caught an error:', event.error);
-
-=======
-                // // // // // // // console.error('ErrorBoundary caught an error:', event.error);
+                // console.error('ErrorBoundary caught an error:', event.error);
             }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         };
 
         const handleUnhandledRejection = (event) => {
@@ -217,13 +182,8 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-                // // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
-
-=======
-                // // // // // // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+                // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
             }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         };
 
         window.addEventListener('error', handleError);
@@ -244,12 +204,6 @@ export function ErrorBoundary({ children, fallback, onError }) {
     if (hasError) {
         if (fallback) {
             return fallback;
-<<<<<<< HEAD
-
-        return (<ErrorFallback error={error || undefined} resetError={resetError}/>);
-
-    return <>{children}</>;
-=======
         }
         return (
             <ErrorFallback 
@@ -262,7 +216,6 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
     return <>{children}</>;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Hook for functional components to handle errors
 export function useErrorHandler() {
@@ -270,33 +223,14 @@ export function useErrorHandler() {
 
     const handleError = (error) => {
         setError(error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.error('Error caught by useErrorHandler:', error);
-=======
-        // // // // // // // console.error('Error caught by useErrorHandler:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-    }, []);
-    const clearError = React.useCallback(() => {
-=======
         console.error('useErrorHandler caught an error:', error);
     };
 
     const clearError = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setError(null);
     };
 
     return { error, handleError, clearError };
-<<<<<<< HEAD
-
-// Higher-order component for wrapping components with error handling
-export function withErrorBoundary(Component, errorBoundaryProps) {
-    return function WithErrorBoundary(props) {
-        return (<ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props}/>
-      </ErrorBoundary>);
-=======
 }
 
 // Higher-order component for error handling
@@ -307,6 +241,5 @@ export function withErrorBoundary(Component, fallback = null) {
                 <Component {...props} />
             </ErrorBoundary>
         );
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
-}}}}}}}}}}}
+}
