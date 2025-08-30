@@ -82,6 +82,7 @@ export function Footer() {
             <p className="text-zion-slate-light text-sm leading-relaxed">
               Leading provider of innovative AI, IT, and Micro SAAS solutions. 
               Transforming businesses through cutting-edge technology and expert consulting.
+              From quantum computing to healthcare genomics, we deliver the future of technology.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
@@ -112,14 +113,12 @@ export function Footer() {
               Services
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
-              <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
-              <li><Link to="/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
-              <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
-              <li><Link to="/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
-              <li><Link to="/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/services/ai-quantum-financial-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Financial Platform</Link></li>
+              <li><Link to="/services/ai-space-technology-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Space Technology Platform</Link></li>
+              <li><Link to="/services/ai-healthcare-genomics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare Genomics Platform</Link></li>
+              <li><Link to="/services/ai-enterprise-orchestrator" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Enterprise Orchestrator</Link></li>
+              <li><Link to="/services/ai-cybersecurity-suite" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity Suite</Link></li>
+              <li><Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium">View All Services →</Link></li>
             </ul>
           </div>
 
