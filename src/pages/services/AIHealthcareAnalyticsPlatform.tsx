@@ -1,7 +1,7 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp  } from 'lucide-react.ts';
+import React from 'react';
+import { SEO   } from '@/components/SEO';
+import { motion   } from 'framer-motion';
+import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp   } from 'lucide-react';
 
 const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
   const features = [
@@ -203,8 +203,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -235,8 +235,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -267,8 +267,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -334,8 +334,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid md: anyanygrid-cols-3 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -371,8 +371,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)  => (
+          <div className="grid grid-cols-2 md: anyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

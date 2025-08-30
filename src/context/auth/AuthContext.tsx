@@ -3,7 +3,8 @@ import React, { createContext, useContext } from 'react';
 interface User {
 
 
-  id: string;
+
+  id: anystring;
   email: string;
   displayName?: string;
   avatar?: string;
@@ -13,13 +14,16 @@ interface User {
   updatedAt?: string;
 
 
+
 }
 
 interface AuthTokens {
 
 
+
   accessToken: string | null;
   refreshToken: string | null;
+
 
 
 }
@@ -27,20 +31,22 @@ interface AuthTokens {
 interface AuthContextType {
 
 
+
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;
   tokens: AuthTokens;
-login: (email: string, password: string)   => Promise<any>;
-  register: (name: string, email: string, password: string)   => Promise<any>;
-  signup: (email: string, password: string, userData: any)   => Promise<any>;
-  logout: ()   => Promise<any>;
-  resetPassword: (email: string)   => Promise<any>;
-  updateProfile: (updates: Partial<User>)   => Promise<any>;
-  loginWithGoogle: ()   => Promise<any>;
-  loginWithFacebook: ()   => Promise<any>;
-  loginWithTwitter: ()   => Promise<any>;
-  loginWithWeb3: ()   => Promise<any>;
+login: (email: string, password: string)    => Promise<any>;
+  register: any(name: string, email: string, password: string)    => Promise<any>;
+  signup: any(email: string, password: string, userData: any)    => Promise<any>;
+  logout: any()    => Promise<any>;
+  resetPassword: any(email: string)    => Promise<any>;
+  updateProfile: any(updates: Partial<User>)    => Promise<any>;
+  loginWithGoogle: any()    => Promise<any>;
+  loginWithFacebook: any()    => Promise<any>;
+  loginWithTwitter: any()    => Promise<any>;
+  loginWithWeb3: any()    => Promise<any>;
+
 
 }
 

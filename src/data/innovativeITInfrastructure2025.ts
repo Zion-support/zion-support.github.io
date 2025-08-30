@@ -1,5 +1,6 @@
 export interface InnovativeITInfrastructureService {
 
+
   id: string;
   title: string;
   description: string;
@@ -23,6 +24,7 @@ contactInfo: {;
     email: string;
     website: string;
   
+
 };
   technicalSpecs?: {
     technology: string[];

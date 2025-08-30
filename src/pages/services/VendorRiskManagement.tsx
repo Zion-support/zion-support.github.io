@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO  } from '@/components/SEO';
 
-const VendorRiskManagement: React.FC = () => (
+const VendorRiskManagement: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="Vendor Risk Management (VRM) SaaS - Zion Tech Group" description="Continuously assess, score, and monitor third-party risk with automated evidence collection and remediation workflows." />
 

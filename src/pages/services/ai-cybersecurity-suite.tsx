@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Helmet  } from 'react-helmet-async';
+import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
-export default function AICybersecuritySuite() {
+export default function AICybersecuritySuite(...args: any[]): any {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function AICybersecuritySuite() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -95,7 +95,7 @@ export default function AICybersecuritySuite() {
                   title: "Data Encryption",
                   description: "End-to-end encryption with AI-powered key management and access control."
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +120,7 @@ export default function AICybersecuritySuite() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   layer: "01",
@@ -142,7 +142,7 @@ export default function AICybersecuritySuite() {
                   title: "Data Security",
                   description: "Encryption, access control, and data loss prevention."
                 }
-              ].map((layer, index) => (
+              ].map((layer, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{layer.layer}</span>
@@ -190,11 +190,11 @@ export default function AICybersecuritySuite() {
                 <h3 className="text-2xl font-semibold text-white mb-4">Threat Categories</h3>
                 <div className="space-y-4">
                   {[
-                    { type: "Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
+                    { type: any"Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
                     { type: "Phishing", icon: Eye, color: "from-orange-500 to-red-500", count: "5M+" },
                     { type: "Ransomware", icon: Lock, color: "from-purple-500 to-red-500", count: "2M+" },
                     { type: "DDoS", icon: Activity, color: "from-blue-500 to-cyan-500", count: "1M+" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex justify-between items-center">
                       <div className="flex items-center space-x-3">
                         <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
@@ -223,7 +223,7 @@ export default function AICybersecuritySuite() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "SOC 2 Type II",
@@ -261,7 +261,7 @@ export default function AICybersecuritySuite() {
                   icon: Activity,
                   features: ["Framework mapping", "Gap analysis", "Implementation guidance"]
                 }
-              ].map((compliance, index) => (
+              ].map((compliance, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <compliance.icon className="w-6 h-6 text-white" />

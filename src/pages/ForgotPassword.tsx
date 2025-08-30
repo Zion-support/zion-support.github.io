@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { Link   } from 'react-router-dom';
+import { motion   } from 'framer-motion';
 import { Mail, 
   ArrowLeft, 
   CheckCircle, 
@@ -13,7 +13,7 @@ import { Mail,
   Rocket,
   ArrowRight,
   RefreshCw
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const ForgotPassword: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('');
@@ -27,7 +27,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const handleEmailSubmit = async (e: React.FormEvent)  => {
+  const handleEmailSubmit = async (e: anyReact.FormEvent)   => {
     e.preventDefault();
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       setError('Please enter a valid email address');
@@ -50,7 +50,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleVerificationSubmit = async (e: React.FormEvent)  => {
+  const handleVerificationSubmit = async (e: anyReact.FormEvent)   => {
     e.preventDefault();
     if (!verificationCode || verificationCode.length !== 6) {
       setError('Please enter the 6-digit verification code');
@@ -73,7 +73,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {
     }
   };
 
-  const handlePasswordReset = async (e: React.FormEvent)  => {
+  const handlePasswordReset = async (e: anyReact.FormEvent)   => {
     e.preventDefault();
     if (!newPassword || newPassword.length < 8) {
       setError('Password must be at least 8 characters long');
@@ -102,7 +102,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {
     }
   };
 
-  const getPasswordStrength = (password: string)  => {
+  const getPasswordStrength = (password: anystring)   => {
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };

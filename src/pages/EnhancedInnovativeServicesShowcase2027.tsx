@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion   } from 'framer-motion';
 import { Brain, 
   Globe, 
   Zap, 
@@ -32,8 +32,8 @@ import { Brain,
   Search,
   Grid3X3,
   List
- } from 'lucide-react.ts';
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from '../data/enhancedInnovativeServices2027';
+  } from 'lucide-react';
+import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories   } from '../data/enhancedInnovativeServices2027';
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Web3 Solutions': Globe,
   'Metaverse Solutions': Eye,
@@ -191,12 +191,12 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): 
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === 'All'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anybg-zion-slate-dark/70'
+                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anyanybg-zion-slate-dark/70'
                 }`}
               >
                 All Categories
               </button>
-              {enhancedInnovativeServices2027Categories.map((category)  => (
+              {enhancedInnovativeServices2027Categories.map((category)   => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -250,9 +250,9 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): 
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {sortedServices.map((service)  => (
+            {sortedServices.map((service)   => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}

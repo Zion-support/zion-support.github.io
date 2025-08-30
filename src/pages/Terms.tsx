@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
 import { Shield, 
   FileText, 
   CheckCircle, 
@@ -12,7 +12,7 @@ import { Shield,
   Mail,
   Phone,
   MapPin
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function Terms(...args: any[]): any {
   const lastUpdated = 'December 15, 2024';
@@ -128,8 +128,8 @@ export default function Terms(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {termsSections.map((section, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {termsSections.map((section, index)   => (
               <motion.div
                 key={section.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -170,8 +170,8 @@ export default function Terms(...args: any[]): any {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid md: anygrid-cols-2 gap-6">
-              {prohibitedActivities.map((activity, index)  => (
+            <div className="grid md: anyanygrid-cols-2 gap-6">
+              {prohibitedActivities.map((activity, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -208,8 +208,8 @@ export default function Terms(...args: any[]): any {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid md: anygrid-cols-2 gap-6">
-              {terminationConditions.map((condition, index)  => (
+            <div className="grid md: anyanygrid-cols-2 gap-6">
+              {terminationConditions.map((condition, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}

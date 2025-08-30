@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom';
+import { motion   } from 'framer-motion';
 import { Mail, 
   Lock, 
   Eye, 
@@ -9,7 +9,7 @@ import { Mail,
   Shield,
   Zap,
   Users
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function Login(...args: any[]): any {
   const [formData, setFormData] = useState({
@@ -19,14 +19,14 @@ export default function Login(...args: any[]): any {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
+  const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement>)   => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent)  => {
+  const handleSubmit = async (e: anyReact.FormEvent)   => {
     e.preventDefault();
     setIsLoading(true);
     

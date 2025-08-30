@@ -3,6 +3,7 @@
 
 export interface CloudDevOpsService {
 
+
   id: string;
   title: string;
   description: string;
@@ -16,6 +17,7 @@ pricing: {;
     pricingModel: string;
     marketPrice: string;
   
+
 };
   features: string[];
   benefits: string[];

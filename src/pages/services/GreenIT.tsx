@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu  } from 'lucide-react.ts';
+import React from 'react';
+import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu   } from 'lucide-react';
 
 const GreenIT = () => {
   const greenServices = [
@@ -99,8 +99,8 @@ const GreenIT = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {greenServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {greenServices.map((service, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -135,8 +135,8 @@ const GreenIT = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {greenTechnologies.map((tech, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8">
+            {greenTechnologies.map((tech, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>

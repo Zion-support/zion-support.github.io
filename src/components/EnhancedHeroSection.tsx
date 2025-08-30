@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
 import { ArrowRight, 
   Play, 
   Star, 
@@ -14,9 +14,10 @@ import { ArrowRight,
   Rocket,
   Target,
   TrendingUp
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 
 interface HeroSlide {
+
 
 
   title: string;
@@ -30,6 +31,7 @@ interface HeroSlide {
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 
+
 }[];
 }
 
@@ -39,7 +41,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
 
   const heroSlides: HeroSlide[] = [
     {
-      title: any"AI-Powered Business Solutions",
+      title: anyany"AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
@@ -88,7 +90,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
     }
   ];
 
-  useEffect(()   => {
+  useEffect(()    => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -108,7 +110,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: number)   => {
+  const goToSlide = (index: anynumber)    => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
@@ -142,11 +144,11 @@ export default function EnhancedHeroSection(...args: any[]): any {
             rotate: [0, 360],
             scale: [1, 1.1, 1]
           }}
-          transition={{ duration: any20, repeat: Infinity }}
+          transition={{ duration: anyany20, repeat: Infinity }}
         ></motion.div>
         
         {/* Floating particles */}
-        {[...Array(6)].map((_, i)   => (
+        {[...Array(6)].map((_, i)    => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
@@ -212,8 +214,8 @@ export default function EnhancedHeroSection(...args: any[]): any {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anymx-0">
-                  {currentSlideData.features.map((feature, index)   => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anyanymx-0">
+                  {currentSlideData.features.map((feature, index)    => (
                     <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}

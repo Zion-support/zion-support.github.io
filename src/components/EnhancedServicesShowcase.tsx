@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
+import { motion    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -14,9 +14,10 @@ import { Brain,
   Clock,
   CheckCircle,
   Search
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 
 interface Service {
+
 
 
   id: string;
@@ -30,6 +31,7 @@ interface Service {
   marketSize: string;
   path: string;
   category: string;
+
 
 
 }
@@ -298,8 +300,8 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
         {/* Services Grid */}
         <div className="max-w-7xl mx-auto">
           {filteredServices.length > 0 ? (
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index)   => (
+            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)    => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </div>

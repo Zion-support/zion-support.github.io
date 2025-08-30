@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import { motion   } from 'framer-motion';
+import Link from 'next/link';
 import { CheckCircle,
   TrendingUp,
   Users,
@@ -15,7 +15,7 @@ import { CheckCircle,
   Cloud,
   Brain,
   Globe
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const caseStudies = [
   {
@@ -233,9 +233,9 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {industries.map(industry  => (
+                  {industries.map(industry   => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -246,9 +246,9 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {technologies.map(tech  => (
+                  {technologies.map(tech   => (
                     <option key={tech} value={tech}>{tech}</option>
                   ))}
                 </select>
@@ -261,8 +261,8 @@ export default function CaseStudies(...args: any[]): any {
       {/* Case Studies Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index)  => (
+          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+            {filteredCaseStudies.map((study, index)   => (
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}

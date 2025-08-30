@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactNode   } from 'react';
+import { ReactNode    } from 'react';
 interface LayoutProps extends React.PropsWithChildren<{}> {
 
   children: ReactNode;
@@ -31,8 +31,8 @@ export default function Layout(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
-  const isActive = (href: string)   => location.pathname === href;
-  const toggleSidebarDropdown = (label: string)   => {
+  const isActive = (href: anystring)    => location.pathname === href;
+  const toggleSidebarDropdown = (label: anystring)    => {
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 

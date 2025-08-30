@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
 import { Brain, 
   Database, 
   BarChart3, 
@@ -15,8 +15,8 @@ import { Brain,
   Target,
   PieChart,
   Activity
- } from 'lucide-react.ts';
-import { SEO  } from '../../components/SEO';
+  } from 'lucide-react';
+import { SEO   } from '../../components/SEO';
 
 const AIEnterpriseResourcePlanning = () => {
   const features = [
@@ -188,8 +188,8 @@ const AIEnterpriseResourcePlanning = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -227,8 +227,8 @@ const AIEnterpriseResourcePlanning = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -301,8 +301,8 @@ const AIEnterpriseResourcePlanning = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -348,8 +348,8 @@ const AIEnterpriseResourcePlanning = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index)  => (
+          <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

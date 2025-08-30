@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Building, 
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { Building, 
   Shield, 
   Cloud, 
   Brain, 
@@ -15,10 +14,10 @@ import {
   CheckCircle,
   ArrowRight,
   Play
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-const Solutions: React.FC = () => {
+const Solutions: React.FC = (): JSX.Element => {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
   const industries = [
@@ -160,8 +159,7 @@ const Solutions: React.FC = () => {
   ];
 
   const filteredSolutions = selectedIndustry === 'all' 
-    ? solutions 
-    : solutions.filter(solution => solution.industry === selectedIndustry);
+    ? solutions: anysolutions.filter(solution  => solution.industry === selectedIndustry);
 
   return (
     <>
@@ -219,8 +217,8 @@ const Solutions: React.FC = () => {
         {/* Solutions Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredSolutions.map((solution, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredSolutions.map((solution, index)  => (
                 <motion.div
                   key={solution.id}
                   initial={{ opacity: 0, y: 20 }}

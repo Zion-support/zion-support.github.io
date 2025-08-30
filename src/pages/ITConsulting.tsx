@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion';
 import { Lightbulb, 
   Target, 
   TrendingUp, 
@@ -14,7 +14,7 @@ import { Lightbulb,
   Clock,
   Award,
   MessageSquare
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function ITConsulting(...args: any[]): any {
   const consultingServices = [
@@ -172,9 +172,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
-            {consultingServices.map((service, index)  => (
+            {consultingServices.map((service, index)   => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -226,9 +226,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
-            {benefits.map((benefit, index)  => (
+            {benefits.map((benefit, index)   => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -269,9 +269,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
-            {industries.map((industry, index)  => (
+            {industries.map((industry, index)   => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"

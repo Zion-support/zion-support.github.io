@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { useSearchParams, Link  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams, Link   } from 'react-router-dom';
+import { motion, AnimatePresence   } from 'framer-motion';
 import { Search, 
   Filter, 
   Grid, 
@@ -26,9 +26,10 @@ import { Search,
   CheckCircle,
   X,
   SlidersHorizontal
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 interface SearchResult {
+
 
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'company';
@@ -43,6 +44,7 @@ interface SearchResult {
   image?: string;
   path: string;
   featured?: boolean;
+
 
 }
 
@@ -152,14 +154,14 @@ export default function SearchPage(...args: any[]): any {
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showFilters, setShowFilters] = useState(false);
   const [activeFilters, setActiveFilters] = useState({
-    type: any[] as string[],
+    type: anyany[] as string[],
     category: [] as string[],
     location: [] as string[],
     priceRange: [] as string[],
     rating: [] as string[]
   });
 
-  useEffect(()  => {
+  useEffect(()   => {
     if (query) {
       performSearch(query);
     }
@@ -169,7 +171,7 @@ export default function SearchPage(...args: any[]): any {
     applyFilters();
   }, [activeFilters, results]);
 
-  const performSearch = async (searchQuery: string)  => {
+  const performSearch = async (searchQuery: anystring)   => {
     setLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -213,7 +215,7 @@ export default function SearchPage(...args: any[]): any {
     setFilteredResults(filtered);
   };
 
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string)  => {
+  const toggleFilter = (filterType: anykeyof typeof activeFilters, value: string)   => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -232,14 +234,14 @@ export default function SearchPage(...args: any[]): any {
     });
   };
 
-  const handleSearch = (e: React.FormEvent)  => {
+  const handleSearch = (e: anyReact.FormEvent)   => {
     e.preventDefault();
     if (query.trim()) {
       setSearchParams({ q: query.trim() });
     }
   };
 
-  const getTypeIcon = (type: string)  => {
+  const getTypeIcon = (type: anystring)   => {
     switch (type) {
       case 'service': return Code;
       case 'talent': return Users;
@@ -249,7 +251,7 @@ export default function SearchPage(...args: any[]): any {
     }
   };
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anystring)   => {
     switch (category) {
       case 'AI & Analytics': return Brain;
       case 'Cybersecurity': return Shield;
@@ -478,9 +480,9 @@ export default function SearchPage(...args: any[]): any {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid md: anygrid-cols-2 xl:grid-cols-3 gap-6"
+                    className="grid md: anyanygrid-cols-2 xl:grid-cols-3 gap-6"
                   >
-                    {filteredResults.map((result, index)  => (
+                    {filteredResults.map((result, index)   => (
                       <motion.div
                         key={result.id}
                         initial={{ opacity: 0, y: 20 }}

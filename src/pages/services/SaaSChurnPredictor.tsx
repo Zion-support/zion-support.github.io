@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO  } from '@/components/SEO';
 
-const SaaSChurnPredictor: React.FC = () => (
+const SaaSChurnPredictor: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="SaaS Churn Predictor - Zion Tech Group" description="Predict churn risk, explain drivers, and trigger retention plays across your lifecycle stack." />
     <section className="container mx-auto px-4 py-12">

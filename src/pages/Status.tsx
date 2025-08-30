@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { CheckCircle, 
   AlertTriangle, 
   XCircle, 
@@ -9,7 +9,7 @@ import { CheckCircle,
   Zap,
   Shield,
   Activity
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const Status: React.FC = (): JSX.Element => {
   const systemStatus = {
@@ -88,7 +88,7 @@ const Status: React.FC = (): JSX.Element => {
     }
   ];
 
-  const getStatusIcon = (status: string)  => {
+  const getStatusIcon = (status: anystring)   => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -101,7 +101,7 @@ const Status: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: string)  => {
+  const getStatusColor = (status: anystring)   => {
     switch (status) {
       case 'operational':
         return 'text-green-500';
@@ -168,8 +168,8 @@ const Status: React.FC = (): JSX.Element => {
           {/* Services Status */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Service Status</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service, index)  => (
+            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index)   => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-semibold text-white">{service.name}</h3>

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { motion   } from 'framer-motion.ts';
+import { motion    } from 'framer-motion';
 import { Brain, 
   Cpu, 
   Cloud, 
@@ -25,11 +25,12 @@ import { Brain,
   Mail,
   ExternalLink,
   Search
-  } from 'lucide-react.ts';
-import { Link   } from 'react-router-dom.ts';
-import { EXPANDED_INNOVATIVE_SERVICES_2025   } from '../data/expandedInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025   } from '../data/emergingTechServices2025';
+   } from 'lucide-react';
+import { Link    } from 'react-router-dom';
+import { EXPANDED_INNOVATIVE_SERVICES_2025    } from '../data/expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025    } from '../data/emergingTechServices2025';
 interface Service {
+
 
 
   id: string;
@@ -55,6 +56,7 @@ contactInfo: {;
     email: string;
     website: string;
   
+
 
 };
   technicalSpecs?: {
@@ -95,7 +97,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
       return matchesCategory && matchesInnovationLevel && matchesSearch;
     });
   }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string)   => {
+  const getCategoryIcon = (category: anystring)    => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Customer Experience':
@@ -136,7 +138,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
         return <Star className="h-6 w-6" />;
     }
   };
-  const getInnovationLevelColor = (level: string)   => {
+  const getInnovationLevelColor = (level: anystring)    => {
     switch (level) {
       case 'Cutting-edge':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
@@ -232,9 +234,9 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {categories.map(category   => (
+                {categories.map(category    => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -247,9 +249,9 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {innovationLevels.map(level   => (
+                {innovationLevels.map(level    => (
                   <option key={level} value={level}>
                     {level === 'all' ? 'All Levels' : level}
                   </option>
@@ -262,8 +264,8 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)   => (
+          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)    => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

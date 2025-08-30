@@ -1,14 +1,14 @@
 
-import { useState  } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components/ui/table';
-import { Badge  } from '@/components/ui/badge';
-import { Search, Filter  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
+import { useState   } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components/ui/card';
+import { Input   } from '@/components/ui/input';
+import { Button   } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from '@/components/ui/tabs';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from '@/components/ui/select';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow   } from '@/components/ui/table';
+import { Badge   } from '@/components/ui/badge';
+import { Search, Filter   } from 'lucide-react';
+import { SEO   } from '@/components/SEO';
 
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
@@ -209,12 +209,12 @@ export default function SupportRequests(...args: any[]): any {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: any)  => setSearchQuery(e.target.value)}
+                  onChange={(e: anyany)   => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
               
-              <Select value={statusFilter || ""} onValueChange={(value: string)  => setStatusFilter(value || null)}>
+              <Select value={statusFilter || ""} onValueChange={(value: anystring)   => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -226,7 +226,7 @@ export default function SupportRequests(...args: any[]): any {
                 </SelectContent>
               </Select>
               
-              <Select value={priorityFilter || ""} onValueChange={(value: string)  => setPriorityFilter(value || null)}>
+              <Select value={priorityFilter || ""} onValueChange={(value: anystring)   => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -238,7 +238,7 @@ export default function SupportRequests(...args: any[]): any {
                 </SelectContent>
               </Select>
               
-              <Select value={categoryFilter || ""} onValueChange={(value: string)  => setCategoryFilter(value || null)}>
+              <Select value={categoryFilter || ""} onValueChange={(value: anystring)   => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>

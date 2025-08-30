@@ -1,26 +1,26 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import { Link, useLocation  } from 'react-router-dom';
+import { Logo  } from '@/components/header/Logo';
+import { PointsBadge  } from '@/components/loyalty/PointsBadge';
+import { UserMenu  } from '@/components/header/UserMenu';
+import { LanguageSelector  } from '@/components/header/LanguageSelector';
+import { ModeToggle  } from '@/components/ModeToggle';
+import { useAuth  } from '@/hooks/useAuth';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { useMessaging  } from '@/context/MessagingContext';
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions  } from '@/data/marketplaceData';
+import { slugify  } from '@/lib/slugify';
+import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+import { Menu, X, ShoppingCart  } from 'lucide-react';
+import { HoverCard, HoverCardContent, HoverCardTrigger  } from '@/components/ui/hover-card';
+import { useTranslation  } from 'react-i18next';
+import { useSelector  } from 'react-redux';
 import type { RootState } from '@/store';
 
-export function PrimaryNav() {
+export function PrimaryNav(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
   const isLoggedIn = !!user;
@@ -38,11 +38,11 @@ export function PrimaryNav() {
     // context not available
   }
 
-  const cartCount = useSelector((s: RootState) =>
+  const cartCount = useSelector((s: anyRootState)  =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
   );
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
       console.log('PrimaryNav search submit:', query);

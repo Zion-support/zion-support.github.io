@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { SEO   } from '../../components/SEO';
+import { motion   } from 'framer-motion';
 import { Users, 
   Brain, 
   MessageSquare, 
@@ -26,7 +26,7 @@ import { Users,
   MessageCircle,
   Bot,
   Headphones
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function AICustomerExperiencePlatform(...args: any[]): any {
   const features = [
@@ -215,8 +215,8 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -252,8 +252,8 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
-            {services.map((service, index)  => (
+          <div className="grid md: anyanygrid-cols-2 gap-8">
+            {services.map((service, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -295,8 +295,8 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid md: anyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -337,8 +337,8 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid md: anyanygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -374,8 +374,8 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

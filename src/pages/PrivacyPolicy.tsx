@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion';
 import { Shield, 
   Lock, 
   Eye, 
@@ -14,7 +14,7 @@ import { Shield,
   AlertTriangle,
   Info,
   Share
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const PrivacyPolicy: React.FC = (): JSX.Element => {
   const lastUpdated = 'January 15, 2024';

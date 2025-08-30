@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react.ts';
 
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation2025(...args: any[]): any {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+	const [activeDropdown, setActiveDropdown] = useState<any>(null);
 
 	useEffect(() => {
 		const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -49,7 +49,7 @@ export default function EnhancedNavigation2025() {
 		{ name: 'Pricing', href: '/pricing' },
 	];
 
-	const toggleDropdown = (name: string) => {
+	const toggleDropdown = (name: anystring)  => {
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
 
@@ -102,8 +102,8 @@ export default function EnhancedNavigation2025() {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<div className="hidden lg:flex lg:items-center lg:space-x-8">
-						{navigation.map((item) => (
+					<div className="hidden lg: anyflex lg:items-center lg:space-x-8">
+						{navigation.map((item)  => (
 							<div key={item.name} className="relative group">
 								{item.children ? (
 									<button

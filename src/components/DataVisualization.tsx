@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { motion, AnimatePresence    } from 'framer-motion';
 import { BarChart3, 
   PieChart, 
   TrendingUp, 
@@ -15,9 +15,10 @@ import { BarChart3,
   Download,
   Share2,
   RefreshCw
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 
 interface ChartData {
+
 
 
   labels: string[];
@@ -29,10 +30,12 @@ datasets: {;
     borderWidth: number;
   
 
+
 }[];
 }
 
 interface MetricCard {
+
 
 
   title: string;
@@ -41,6 +44,7 @@ interface MetricCard {
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
   color: string;
+
 
 
 }
@@ -120,9 +124,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update chart data with new random values
     setChartData(prev => ({
       ...prev,
-      datasets: any[{
+      datasets: anyany[{
         ...prev.datasets[0],
-        data: prev.datasets[0].data.map(()   => Math.floor(Math.random() * 100) + 20)
+        data: prev.datasets[0].data.map(()    => Math.floor(Math.random() * 100) + 20)
       }]
     }));
 
@@ -140,7 +144,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   // Get change icon and color
-  const getChangeDisplay = (change: number, changeType: string)   => {
+  const getChangeDisplay = (change: anynumber, changeType: string)    => {
     const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :
                  changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :
                  <Minus className="w-4 h-4" />;
@@ -240,8 +244,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
       {/* Metrics Cards */}
       {showMetrics && (
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {metrics.map((metric, index)   => {
+        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {metrics.map((metric, index)    => {
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div

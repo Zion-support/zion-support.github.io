@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion';
 import { Flask, 
   Brain, 
   Atom, 
@@ -16,7 +16,7 @@ import { Flask,
   Users,
   Award,
   ArrowRight
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const ResearchDevelopment: React.FC = (): JSX.Element => {
   const [selectedArea, setSelectedArea] = useState('all');
@@ -237,8 +237,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             <p className="text-lg text-zion-slate-light">Exploring the frontiers of technology and innovation</p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
-            {filteredProjects.map((project, index)  => (
+          <div className="grid md: anyanygrid-cols-2 gap-8">
+            {filteredProjects.map((project, index)   => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -361,8 +361,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             <p className="text-lg text-zion-slate-light">Collaborating with leading institutions worldwide</p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
-            {partnerships.map((partner, index)  => (
+          <div className="grid md: anyanygrid-cols-2 gap-8">
+            {partnerships.map((partner, index)   => (
               <motion.div
                 key={partner.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -404,7 +404,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             <p className="text-lg text-zion-slate-light">Where ideas become reality</p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: anyanygrid-cols-3 gap-8">
             {[
               {
                 icon: Flask,
@@ -421,7 +421,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
                 title: 'Data Analytics',
                 description: 'High-performance computing for big data research'
               }
-            ].map((lab, index)  => (
+            ].map((lab, index)   => (
               <motion.div
                 key={lab.title}
                 initial={{ opacity: 0, y: 20 }}

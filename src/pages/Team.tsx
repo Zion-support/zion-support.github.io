@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../components/SEO';
+import { motion   } from 'framer-motion';
+import { SEO   } from '../components/SEO';
 import { Users, 
   Brain, 
   Shield, 
@@ -17,7 +17,7 @@ import { Users,
   Zap,
   Crown,
   Star
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function Team(...args: any[]): any {
   const teamMembers = [
@@ -208,8 +208,8 @@ export default function Team(...args: any[]): any {
             Leadership Team
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index)   => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -280,8 +280,8 @@ export default function Team(...args: any[]): any {
             Areas of Expertise
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {expertiseAreas.map((area, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {expertiseAreas.map((area, index)   => (
               <motion.div
                 key={area.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -312,8 +312,8 @@ export default function Team(...args: any[]): any {
             Our Values
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)   => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}

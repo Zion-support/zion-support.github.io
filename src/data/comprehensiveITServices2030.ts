@@ -2,13 +2,16 @@
 // Enterprise-grade IT infrastructure, consulting, and managed services
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
   address: string;
+
 }
 
 export interface ITService {
+
   id: number;
   name: string;
   category: string;
@@ -33,6 +36,7 @@ export interface ITService {
   useCases: string[];
   roi: string;
   setupTime: string;
+
 }
 
 // Zion Tech Group Contact Information

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -29,9 +29,9 @@ import { Brain,
   Mail,
   MapPin,
   Globe as GlobeIcon
- } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+  } from 'lucide-react';
+import { SEO   } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES   } from '@/data/innovativeMicroSaasServices2025';
 
 export default function ServicesPage(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -100,12 +100,12 @@ export default function ServicesPage(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anystring)   => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (category: anystring)   => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
@@ -201,9 +201,9 @@ export default function ServicesPage(...args: any[]): any {
             className="flex flex-wrap gap-3 mb-8 justify-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: any0.6 }}
+            transition={{ duration: anyany0.6 }}
           >
-            {categories.map((category)  => (
+            {categories.map((category)   => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -233,9 +233,9 @@ export default function ServicesPage(...args: any[]): any {
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus: anyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {priceRanges.map((range)  => (
+                  {priceRanges.map((range)   => (
                     <option key={range.id} value={range.id}>{range.name}</option>
                   ))}
                 </select>
@@ -247,9 +247,9 @@ export default function ServicesPage(...args: any[]): any {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus: anyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {sortOptions.map((option)  => (
+                  {sortOptions.map((option)   => (
                     <option key={option.id} value={option.id}>{option.name}</option>
                   ))}
                 </select>
@@ -273,9 +273,9 @@ export default function ServicesPage(...args: any[]): any {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: any0.5 }}
+                transition={{ duration: anyany0.5 }}
               >
-                {sortedServices.map((service, index)  => (
+                {sortedServices.map((service, index)   => (
                   <motion.div
                     key={service.id}
                     className="card-futuristic group"
@@ -416,8 +416,8 @@ export default function ServicesPage(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {SPECIALIZED_SERVICES.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {SPECIALIZED_SERVICES.map((service, index)   => (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"

@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star   } from 'lucide-react.ts';
+import { motion    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
+import { ArrowRight, Rocket, MessageCircle, Calendar, Star    } from 'lucide-react';
 
 const CTASection: React.FC = (): JSX.Element => {
   const features = [
@@ -79,9 +79,9 @@ const CTASection: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: anytrue }}
+          viewport={{ once: anyanytrue }}
         >
-          {features.map((feature, index)   => (
+          {features.map((feature, index)    => (
             <motion.div
               key={feature.title}
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { motion, AnimatePresence    } from 'framer-motion';
 import { Users, 
   MessageCircle, 
   FileText, 
@@ -63,9 +63,10 @@ import { Users,
   Target,
   BarChart3,
   PieChart
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 
 interface TeamMember {
+
 
 
   id: string;
@@ -80,9 +81,11 @@ interface TeamMember {
   availability: 'available' | 'busy' | 'unavailable';
 
 
+
 }
 
 interface Project {
+
 
 
   id: string;
@@ -100,9 +103,11 @@ interface Project {
   tags: string[];
 
 
+
 }
 
 interface Task {
+
 
 
   id: string;
@@ -119,9 +124,11 @@ interface Task {
   comments: Comment[];
 
 
+
 }
 
 interface Comment {
+
 
 
   id: string;
@@ -132,9 +139,11 @@ interface Comment {
   replies: Comment[];
 
 
+
 }
 
 interface Message {
+
 
 
   id: string;
@@ -145,11 +154,13 @@ interface Message {
   attachments?: string[];
   reactions: { type: string; count: number 
 
+
 }[];
   isRead: boolean;
 }
 
 interface FileItem {
+
 
 
   id: string;
@@ -163,6 +174,7 @@ interface FileItem {
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
   version: string;
+
 
 
 }
@@ -388,7 +400,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   }, []);
 
   // Get status color and icon
-  const getStatusDisplay = (status: string)   => {
+  const getStatusDisplay = (status: anystring)    => {
     switch (status) {
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
       case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
@@ -399,7 +411,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get project status color
-  const getProjectStatusColor = (status: string)   => {
+  const getProjectStatusColor = (status: anystring)    => {
     switch (status) {
       case 'planning': return 'text-blue-400 bg-blue-400/20';
       case 'active': return 'text-green-400 bg-green-400/20';
@@ -411,7 +423,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: string)   => {
+  const getPriorityColor = (priority: anystring)    => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -422,7 +434,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get file type icon
-  const getFileTypeIcon = (type: string)   => {
+  const getFileTypeIcon = (type: anystring)    => {
     switch (type) {
       case 'document': return <FileText className="w-5 h-5" />;
       case 'image': return <Image className="w-5 h-5" />;
@@ -434,19 +446,19 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Format file size
-  const formatFileSize = (size: number)   => {
+  const formatFileSize = (size: anynumber)    => {
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
     return `${(size / 1024).toFixed(1)} GB`;
   };
 
   // Handle project selection
-  const handleProjectSelect = (project: anyProject)   => {
+  const handleProjectSelect = (project: anyanyProject)    => {
     setSelectedProject(project);
   };
 
   // Handle message reactions
-  const handleMessageReaction = (messageId: string, reactionType: string)   => {
+  const handleMessageReaction = (messageId: anystring, reactionType: string)    => {
     setMessages(prev => prev.map(msg => {
       if (msg.id === messageId) {
         const existingReaction = msg.reactions.find(r => r.type === reactionType);
@@ -549,8 +561,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member, index)   => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.map((member, index)    => (
               <motion.div
                 key={member.id}
                 initial={{ opacity: 0, y: 20 }}

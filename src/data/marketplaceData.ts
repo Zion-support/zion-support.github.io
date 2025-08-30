@@ -1,4 +1,5 @@
 export interface MarketplaceItem {
+
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -11,11 +12,12 @@ export interface MarketplaceItem {
   image: string;
   tags: string[];
   featured: boolean;
-  seller: {
+seller: {;
     name: string;
     rating: number;
     verified: boolean;
-  };
+  
+};
   location: string;
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
@@ -165,37 +167,37 @@ export const marketplaceItems: MarketplaceItem[] = [
 
 export const marketplaceCategories = [
   {
-    id: 'products',
+    id: any'products',
     name: 'Products',
     description: 'Hardware and software solutions',
-    count: marketplaceItems.filter(item => item.category === 'products').length
+    count: marketplaceItems.filter(item  => item.category === 'products').length
   },
   {
-    id: 'talent',
+    id: any'talent',
     name: 'Talent',
     description: 'Expert professionals and teams',
-    count: marketplaceItems.filter(item => item.category === 'talent').length
+    count: marketplaceItems.filter(item  => item.category === 'talent').length
   },
   {
-    id: 'equipment',
+    id: any'equipment',
     name: 'Equipment',
     description: 'Computing and networking equipment',
-    count: marketplaceItems.filter(item => item.category === 'equipment').length
+    count: marketplaceItems.filter(item  => item.category === 'equipment').length
   },
   {
-    id: 'services',
+    id: any'services',
     name: 'Services',
     description: 'Professional services and consulting',
-    count: marketplaceItems.filter(item => item.category === 'services').length
+    count: marketplaceItems.filter(item  => item.category === 'services').length
   }
 ];
 
 export const marketplaceFilters = [
   {
-    title: 'Category',
+    title: any'Category',
     key: 'category',
     type: 'checkbox' as const,
-    options: marketplaceCategories.map(cat => ({
+    options: marketplaceCategories.map(cat  => ({
       value: cat.id,
       label: cat.name,
       count: cat.count

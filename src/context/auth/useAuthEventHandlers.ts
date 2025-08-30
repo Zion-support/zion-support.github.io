@@ -1,6 +1,7 @@
-import { useCallback   } from 'react.ts';
+import { useCallback    } from 'react.ts';
 
 interface User {
+
 
 
   id: string;
@@ -13,13 +14,14 @@ interface User {
   updatedAt?: string;
 
 
+
 }
 
 export const useAuthEventHandlers = (
-  setUser: (user: User | null)   => void,
-  setOnboardingStep: (step: number)   => void
+  setUser: any(user: User | null)    => void,
+  setOnboardingStep: any(step: number)    => void
 ) => {
-  const handleSignedIn = useCallback((user: anyUser)   => {
+  const handleSignedIn = useCallback((user: anyanyUser)    => {
     setUser(user);
     setOnboardingStep(1); // Start onboarding process
   }, [setUser, setOnboardingStep]);

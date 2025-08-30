@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion   } from 'framer-motion';
 import { Shield, 
   Lock, 
   Eye, 
@@ -28,8 +28,8 @@ import { Shield,
   Search,
   Phone,
   Mail
- } from 'lucide-react.ts';
-import { SEO  } from '../components/SEO';
+  } from 'lucide-react';
+import { SEO   } from '../components/SEO';
 
 export default function Security(...args: any[]): any {
   const securityFeatures = [
@@ -294,8 +294,8 @@ export default function Security(...args: any[]): any {
               <p className="text-xl text-slate-300">Multi-layered security approach protecting every aspect of your infrastructure</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {securityFeatures.map((category, index)  => (
+            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+              {securityFeatures.map((category, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -332,8 +332,8 @@ export default function Security(...args: any[]): any {
               <p className="text-xl text-slate-300">Meeting and exceeding international security standards</p>
             </div>
             
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-              {certifications.map((cert, index)  => (
+            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {certifications.map((cert, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -367,8 +367,8 @@ export default function Security(...args: any[]): any {
               <p className="text-xl text-slate-300">Proactive security measures and continuous improvement</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {securityPractices.map((practice, index)  => (
+            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+              {securityPractices.map((practice, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -412,8 +412,8 @@ export default function Security(...args: any[]): any {
               <p className="text-xl text-slate-300">Rapid response and recovery procedures for security incidents</p>
             </div>
             
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-              {incidentResponse.map((phase, index)  => (
+            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {incidentResponse.map((phase, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -450,8 +450,8 @@ export default function Security(...args: any[]): any {
               <p className="text-xl text-slate-300">Industry-leading security tools and platforms</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {securityTechnologies.map((tech, index)  => (
+            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+              {securityTechnologies.map((tech, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

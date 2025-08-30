@@ -1,15 +1,17 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { useLocation   } from 'react-router-dom.ts';
+import { useLocation    } from 'react-router-dom';
 
 interface AccessibilitySettings {
 
 
-  highContrast: boolean;
+
+  highContrast: anyboolean;
   largeText: boolean;
   reducedMotion: boolean;
   focusIndicator: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
+
 
 
 }
@@ -19,7 +21,7 @@ interface AccessibilityEnhancerProps extends React.PropsWithChildren<{}> {
   enabled?: boolean;
   showControls?: boolean;
   autoDetect?: boolean;
-  onSettingsChange?: (settings: AccessibilitySettings)   => void;
+  onSettingsChange?: (settings: AccessibilitySettings)    => void;
 
 }
 
@@ -56,7 +58,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
     const updateSettings = () => {
       setSettings(prev => ({
         ...prev,
-        reducedMotion: anymediaQueries.prefersReducedMotion.matches,
+        reducedMotion: anyanymediaQueries.prefersReducedMotion.matches,
         highContrast: mediaQueries.prefersHighContrast.matches,
         largeText: mediaQueries.prefersLargeText.matches,
       }));
@@ -70,7 +72,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
     mediaQueries.prefersHighContrast.addEventListener('change', updateSettings);
     mediaQueries.prefersLargeText.addEventListener('change', updateSettings);
 
-    return ()   => {
+    return ()    => {
       mediaQueries.prefersReducedMotion.removeEventListener('change', updateSettings);
       mediaQueries.prefersHighContrast.removeEventListener('change', updateSettings);
       mediaQueries.prefersLargeText.removeEventListener('change', updateSettings);
@@ -134,7 +136,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
   useEffect(() => {
     if (!enabled || !settings.keyboardNavigation) return;
 
-    const handleKeyDown = (event: anyKeyboardEvent)   => {
+    const handleKeyDown = (event: anyanyKeyboardEvent)    => {
       const target = event.target as HTMLElement;
       
       // Skip to main content
@@ -186,7 +188,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
       }
     };
 
-    const handleFocus = (event: anyFocusEvent)   => {
+    const handleFocus = (event: anyanyFocusEvent)    => {
       const target = event.target as HTMLElement;
       setCurrentFocus(target);
       
@@ -214,7 +216,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
   }, [enabled, settings.keyboardNavigation, settings.screenReader]);
 
   // Handle arrow key navigation
-  const handleArrowNavigation = useCallback((key: string, currentElement: HTMLElement, parent: HTMLElement)   => {
+  const handleArrowNavigation = useCallback((key: anystring, currentElement: HTMLElement, parent: HTMLElement)    => {
     const focusableChildren = Array.from(parent.querySelectorAll('[tabindex]:not([tabindex="-1"])'));
     const currentIndex = focusableChildren.indexOf(currentElement);
     
@@ -235,7 +237,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
   }, []);
 
   // Announce focus changes for screen readers
-  const announceFocusChange = useCallback((element: anyHTMLElement)   => {
+  const announceFocusChange = useCallback((element: anyanyHTMLElement)    => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -246,10 +248,10 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
                  element.textContent || 
                  element.tagName.toLowerCase();
     
-    announcement.textContent = `Focused: any${text}`;
+    announcement.textContent = `Focused: anyany${text}`;
     document.body.appendChild(announcement);
     
-    setTimeout(()   => {
+    setTimeout(()    => {
       document.body.removeChild(announcement);
     }, 1000);
   }, []);
@@ -307,7 +309,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
   }, [enabled, location.pathname]);
 
   // Toggle accessibility settings
-  const toggleSetting = useCallback((key: keyof AccessibilitySettings)   => {
+  const toggleSetting = useCallback((key: anykeyof AccessibilitySettings)    => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key],

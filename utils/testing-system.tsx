@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react.ts';
 import '@testing - library / jest - dom';
 export class TestingSystem {
   static async testUserInteraction(element: HTMLElementaction: 'click' | 'type' | 'hover') {

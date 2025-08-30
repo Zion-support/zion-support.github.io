@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion   } from 'framer-motion';
 import { Brain, 
   Shield, 
   Zap, 
@@ -28,8 +28,8 @@ import { Brain,
   Mail,
   MapPin,
   ExternalLink
- } from 'lucide-react.ts';
-import { INNOVATIVE_SERVICES  } from '../data/servicesData';
+  } from 'lucide-react';
+import { INNOVATIVE_SERVICES   } from '../data/servicesData';
 export default function InnovativeServicesShowcase2026(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -163,9 +163,9 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: anyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {categories.map(category  => (
+                  {categories.map(category   => (
                     <option key={category.id} value={category.id}>{category.name}</option>
                   ))}
                 </select>
@@ -194,8 +194,8 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
         animate="visible"
       >
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}

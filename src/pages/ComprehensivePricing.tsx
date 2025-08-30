@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { cuttingEdgeComprehensiveServices2027  } from '../../data/2027-cutting-edge-comprehensive-services';
+import { specializedInnovativeServices2027  } from '../../data/2027-specialized-innovative-services';
+import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -62,9 +62,9 @@ const pricingTiers = [
   }
 ];
 
-export default function ComprehensivePricing() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+export default function ComprehensivePricing(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
 
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
@@ -98,7 +98,7 @@ export default function ComprehensivePricing() {
     return matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (range: string) => {
+  const getPriceRangeLabel = (range: anystring)  => {
     switch (range) {
       case 'under-1000': return 'Under $1,000';
       case '1000-3000': return '$1,000 - $3,000';
@@ -148,8 +148,8 @@ export default function ComprehensivePricing() {
       <div className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Choose Your Plan</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)  => (
               <Card key={index} className={`relative ${tier.popular ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -217,8 +217,8 @@ export default function ComprehensivePricing() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredServices.map((service) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredServices.map((service)  => (
               <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
@@ -248,8 +248,8 @@ export default function ComprehensivePricing() {
                   
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features:</h4>
-                    {service.features.slice(0, 3).map((feature, index) => (
+                    <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: any</h4>
+                    {service.features.slice(0, 3).map((feature, index)  => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-dark">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"/>
                         {feature}

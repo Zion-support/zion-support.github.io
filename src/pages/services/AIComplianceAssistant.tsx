@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Shield, FileText, CheckCircle, Scale, BookOpen, ArrowRight  } from 'lucide-react.ts';
+import React from 'react';
+import { Link   } from 'react-router-dom';
+import { Shield, FileText, CheckCircle, Scale, BookOpen, ArrowRight   } from 'lucide-react';
 
 export default function AIComplianceAssistant(...args: any[]): any {
   const frameworks = [
@@ -97,7 +97,7 @@ export default function AIComplianceAssistant(...args: any[]): any {
               {pricing.map((p) => (<li key={p}>{p}</li>))}
             </ul>
             <div className="mt-6 text-sm text-slate-400">
-              References: any{links.map((l, i)  => (
+              References: anyany{links.map((l, i)   => (
                 <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ? ',' : ''}</a>
               ))}
             </div>

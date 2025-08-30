@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion';
 import { Calculator, 
   Send, 
   CheckCircle, 
@@ -34,9 +34,10 @@ import { Calculator,
   Square,
   Info,
   HelpCircle
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 interface QuoteForm {
+
 
   // Company Information
   companyName: string;
@@ -71,6 +72,7 @@ interface QuoteForm {
   existingPartners: string;
   successMetrics: string;
   additionalNotes: string;
+
 
 }
 
@@ -188,7 +190,7 @@ export default function RequestQuote(...args: any[]): any {
 
   const totalSteps = 4;
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)   => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -196,16 +198,16 @@ export default function RequestQuote(...args: any[]): any {
     }));
   };
 
-  const handleServiceToggle = (service: string)  => {
+  const handleServiceToggle = (service: anystring)   => {
     setFormData(prev => ({
       ...prev,
-      services: anyprev.services.includes(service)
-        ? prev.services.filter(s  => s !== service)
+      services: anyanyprev.services.includes(service)
+        ? prev.services.filter(s   => s !== service)
         : [...prev.services, service]
     }));
   };
 
-  const toggleSection = (section: string)  => {
+  const toggleSection = (section: anystring)   => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
@@ -221,7 +223,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent)  => {
+  const handleSubmit = async (e: anyReact.FormEvent)   => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -264,7 +266,7 @@ export default function RequestQuote(...args: any[]): any {
     }, 2000);
   };
 
-  const isStepValid = (step: number)  => {
+  const isStepValid = (step: anynumber)   => {
     switch (step) {
       case 1:
         return formData.companyName && formData.industry && formData.firstName && formData.lastName && formData.email;
@@ -279,7 +281,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const getStepIcon = (step: number)  => {
+  const getStepIcon = (step: anynumber)   => {
     switch (step) {
       case 1: return <Building className="h-5 w-5" />;
       case 2: return <Target className="h-5 w-5" />;
@@ -289,7 +291,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const getStepTitle = (step: number)  => {
+  const getStepTitle = (step: anynumber)   => {
     switch (step) {
       case 1: return 'Company & Contact';
       case 2: return 'Project Details';
@@ -326,7 +328,7 @@ export default function RequestQuote(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="flex items-center justify-between max-w-4xl mx-auto">
-            {Array.from({ length: anytotalSteps }, (_, index)  => (
+            {Array.from({ length: anyanytotalSteps }, (_, index)   => (
               <div key={index + 1} className="flex items-center">
                 <div className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
                   currentStep > index + 1

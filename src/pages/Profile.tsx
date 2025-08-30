@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion   } from 'framer-motion';
 import { User, 
   Mail, 
   Phone, 
@@ -33,9 +33,10 @@ import { User,
   Brain,
   Cloud,
   Rocket
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 interface UserProfile {
+
 
   firstName: string;
   lastName: string;
@@ -49,9 +50,11 @@ interface UserProfile {
   bio: string;
   avatar: string;
 
+
 }
 
 interface NotificationSettings {
+
 
   emailNotifications: boolean;
   pushNotifications: boolean;
@@ -60,15 +63,18 @@ interface NotificationSettings {
   projectUpdates: boolean;
   weeklyReports: boolean;
 
+
 }
 
 interface SecuritySettings {
+
 
   twoFactorEnabled: boolean;
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
 loginHistory: Array<any>;
+
 }
 
 const Profile: React.FC = (): JSX.Element => {
@@ -186,14 +192,14 @@ const Profile: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleNotificationToggle = (key: keyof NotificationSettings)  => {
+  const handleNotificationToggle = (key: anykeyof NotificationSettings)   => {
     setNotifications(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
   };
 
-  const getPasswordStrength = (password: string)  => {
+  const getPasswordStrength = (password: anystring)   => {
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -253,8 +259,8 @@ const Profile: React.FC = (): JSX.Element => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
-          {stats.map((stat, index)  => (
+        <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-4">
+          {stats.map((stat, index)   => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -374,9 +380,9 @@ const Profile: React.FC = (): JSX.Element => {
                 value={profile.industry}
                 onChange={(e) => setProfile(prev => ({ ...prev, industry: e.target.value }))}
                 disabled={!isEditing}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {industries.map((industry)  => (
+                {industries.map((industry)   => (
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
               </select>
@@ -449,8 +455,8 @@ const Profile: React.FC = (): JSX.Element => {
       {/* Achievements */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
-          {achievements.map((achievement, index)  => (
+        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-4">
+          {achievements.map((achievement, index)   => (
             <motion.div
               key={achievement.title}
               initial={{ opacity: 0, y: 20 }}

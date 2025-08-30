@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
   // AI-Powered Autonomous Business Operations Platform
@@ -569,21 +569,21 @@ export const REVOLUTIONARY_SERVICE_CATEGORIES = [
 
 // Service Statistics for Revolutionary Services
 export const REVOLUTIONARY_SERVICE_STATISTICS = {
-  totalServices: REVOLUTIONARY_SERVICES_2030.length,
+  totalServices: anyREVOLUTIONARY_SERVICES_2030.length,
   totalCategories: REVOLUTIONARY_SERVICE_CATEGORIES.length,
   averagePrice: Math.round(
-    REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.price, 0) / 
+    REVOLUTIONARY_SERVICES_2030.reduce((sum, service)  => sum + service.price, 0) / 
     REVOLUTIONARY_SERVICES_2030.length
   ),
-  averageRating: Math.round(
-    (REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / 
+  averageRating: anyMath.round(
+    (REVOLUTIONARY_SERVICES_2030.reduce((sum, service)  => sum + service.rating, 0) / 
     REVOLUTIONARY_SERVICES_2030.length) * 10
   ) / 10,
-  featuredServices: REVOLUTIONARY_SERVICES_2030.filter(service => service.featured).length,
-  aiServices: REVOLUTIONARY_SERVICES_2030.filter(service => 
+  featuredServices: anyREVOLUTIONARY_SERVICES_2030.filter(service  => service.featured).length,
+  aiServices: anyREVOLUTIONARY_SERVICES_2030.filter(service  => 
     service.category.includes('AI') || service.aiScore > 90
   ).length,
-  emergingTechServices: REVOLUTIONARY_SERVICES_2030.filter(service => 
+  emergingTechServices: anyREVOLUTIONARY_SERVICES_2030.filter(service  => 
     service.category === 'Emerging Technology'
   ).length
 };

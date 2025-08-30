@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom';
+import { motion   } from 'framer-motion';
 import { HelpCircle, 
   MessageCircle, 
   Phone, 
@@ -21,8 +21,8 @@ import { HelpCircle,
   Lock,
   Cpu,
   Star
- } from 'lucide-react.ts';
-import { SEO  } from '../components/SEO';
+  } from 'lucide-react';
+import { SEO   } from '../components/SEO';
 
 export default function Support(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -146,7 +146,7 @@ export default function Support(...args: any[]): any {
   ];
 
   const filteredIssues = selectedCategory === 'all' 
-    ? commonIssues: anycommonIssues.filter(issue  => issue.category === selectedCategory);
+    ? commonIssues: anyanycommonIssues.filter(issue   => issue.category === selectedCategory);
 
   const filteredSearchIssues = searchQuery 
     ? filteredIssues.filter(issue => 
@@ -219,8 +219,8 @@ export default function Support(...args: any[]): any {
               <p className="text-xl text-slate-300">Choose the support channel that works best for your needs</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-              {supportChannels.map((channel, index)  => (
+            <div className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8">
+              {supportChannels.map((channel, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -291,8 +291,8 @@ export default function Support(...args: any[]): any {
             </div>
             
             {/* Issues Grid */}
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-6">
-              {filteredSearchIssues.map((issue, index)  => (
+            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-6">
+              {filteredSearchIssues.map((issue, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -334,8 +334,8 @@ export default function Support(...args: any[]): any {
               <p className="text-xl text-slate-300">Access our comprehensive knowledge base and learning materials</p>
             </div>
             
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource, index)  => (
+            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {resources.map((resource, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion';
 import { FileText, 
   Shield, 
   Users, 
@@ -14,7 +14,7 @@ import { FileText,
   Lock,
   Eye,
   Database
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const TermsOfService: React.FC = (): JSX.Element => {
   const lastUpdated = 'January 15, 2024';

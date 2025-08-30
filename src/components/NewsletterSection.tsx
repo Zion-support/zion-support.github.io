@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { motion   } from 'framer-motion.ts';
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap   } from 'lucide-react.ts';
+import { motion    } from 'framer-motion';
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap    } from 'lucide-react';
 
 const NewsletterSection: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent)   => {
+  const handleSubmit = async (e: anyReact.FormEvent)    => {
     e.preventDefault();
     if (!email) return;
 

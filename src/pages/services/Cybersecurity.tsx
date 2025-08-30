@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Link   } from 'react-router-dom';
 import { Shield, 
   Lock, 
   Eye, 
@@ -19,7 +19,7 @@ import { Shield,
   Server,
   Monitor,
   CreditCard
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 export default function CybersecurityServices(...args: any[]): any {
   const cyberServices = [
     {
@@ -170,8 +170,8 @@ export default function CybersecurityServices(...args: any[]): any {
               Comprehensive security solutions designed to protect your business from evolving threats
             </p>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {cyberServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-8">
+            {cyberServices.map((service, index)   => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -221,8 +221,8 @@ export default function CybersecurityServices(...args: any[]): any {
               We leverage cutting-edge security tools and technologies to protect your infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
-            {securityTechnologies.map((tech, index)  => (
+          <div className="grid grid-cols-2 md: anyanygrid-cols-3 lg:grid-cols-6 gap-8">
+            {securityTechnologies.map((tech, index)   => (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -248,8 +248,8 @@ export default function CybersecurityServices(...args: any[]): any {
               Meet industry standards and regulatory requirements with our compliance solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index)   => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"

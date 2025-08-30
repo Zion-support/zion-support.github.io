@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Eye, EyeOff, Volume2, VolumeX, Type, Palette, MousePointer, Keyboard   } from 'lucide-react.ts';
+import { Eye, EyeOff, Volume2, VolumeX, Type, Palette, MousePointer, Keyboard    } from 'lucide-react';
 
 interface AccessibilitySettings {
+
 
 
   highContrast: boolean;
@@ -10,6 +11,7 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
+
 
 
 }
@@ -31,7 +33,7 @@ export const AccessibilityEnhancer: React.FC = (): JSX.Element => {
   }, [isVisible]);
 
   // Apply accessibility settings
-  const applySettings = useCallback((newSettings: anyPartial<AccessibilitySettings>)   => {
+  const applySettings = useCallback((newSettings: anyanyPartial<AccessibilitySettings>)    => {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     
@@ -83,7 +85,7 @@ export const AccessibilityEnhancer: React.FC = (): JSX.Element => {
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)   => {
+    const handleKeyDown = (event: anyanyKeyboardEvent)    => {
       // Skip if not in keyboard navigation mode
       if (!settings.keyboardNavigation) return;
 
@@ -130,7 +132,7 @@ export const AccessibilityEnhancer: React.FC = (): JSX.Element => {
   }, [settings.keyboardNavigation]);
 
   // Arrow key navigation helper
-  const navigateWithArrows = (container: anyElement, direction: string)   => {
+  const navigateWithArrows = (container: anyanyElement, direction: string)    => {
     const focusableElements = Array.from(container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )).filter(el => !(el as HTMLElement).hidden);
@@ -153,7 +155,7 @@ export const AccessibilityEnhancer: React.FC = (): JSX.Element => {
   };
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string)   => {
+  const announceToScreenReader = useCallback((message: anystring)    => {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -202,7 +204,7 @@ export const AccessibilityEnhancer: React.FC = (): JSX.Element => {
     style.textContent = `
       /* High contrast mode */
       .high-contrast {
-        --text-primary: any#ffffff !important;
+        --text-primary: anyany#ffffff !important;
         --text-secondary: #e5e7eb !important;
         --bg-primary: #000000 !important;
         --bg-secondary: #1f2937 !important;
@@ -277,7 +279,7 @@ export const AccessibilityEnhancer: React.FC = (): JSX.Element => {
     `;
     document.head.appendChild(style);
 
-    return ()   => {
+    return ()    => {
       document.head.removeChild(style);
     };
   }, []);

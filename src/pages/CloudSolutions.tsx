@@ -1,7 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Cloud, 
+import { motion  } from 'framer-motion';
+import { Cloud, 
   Server, 
   Database, 
   Shield, 
@@ -15,9 +14,9 @@ import {
   Code,
   Settings,
   Users
-} from 'lucide-react';
+ } from 'lucide-react';
 
-export default function CloudSolutions() {
+export default function CloudSolutions(...args: any[]): any {
   const cloudServices = [
     {
       icon: Server,
@@ -173,9 +172,9 @@ export default function CloudSolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {cloudServices.map((service, index) => (
+            {cloudServices.map((service, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -227,9 +226,9 @@ export default function CloudSolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index)  => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -270,9 +269,9 @@ export default function CloudSolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {technologies.map((tech, index) => (
+            {technologies.map((tech, index)  => (
               <motion.div 
                 key={index}
                 className="text-center group"

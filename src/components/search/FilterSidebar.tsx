@@ -1,17 +1,20 @@
 import React from 'react';
-import { Filter, X   } from 'lucide-react.ts';
+import { Filter, X    } from 'lucide-react';
 
 interface FilterOption {
 
 
-  value: string;
+
+  value: anystring;
   label: string;
   count?: number;
+
 
 
 }
 
 interface FilterGroup {
+
 
 
   title: string;
@@ -20,16 +23,17 @@ interface FilterGroup {
   type: 'checkbox' | 'radio' | 'range';
 
 
+
 }
 
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)   => void;
-  onClearFilters: () => void;
-  isOpen: boolean;
-  onClose: ()   => void;
+  onFilterChange: (key: string, value: string, checked: boolean)    => void;
+  onClearFilters: any()  => void;
+  isOpen: anyboolean;
+  onClose: ()    => void;
 
 }
 
@@ -68,14 +72,14 @@ export function FilterSidebar(...args: any[]): any {
             <span className="text-sm text-zion-slate-light">Active filters</span>
             <button
               onClick={onClearFilters}
-              className="text-sm text-zion-cyan hover: anytext-zion-cyan-light transition-colors underline"
+              className="text-sm text-zion-cyan hover: anyanytext-zion-cyan-light transition-colors underline"
             >
               Clear all
             </button>
           </div>
           
           {/* Filter groups */}
-          {filters.map((group)   => (
+          {filters.map((group)    => (
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
               

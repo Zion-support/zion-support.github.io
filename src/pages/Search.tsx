@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight  } from 'lucide-react.ts';
-import { useSearchParams  } from 'react-router-dom.ts';
+import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight   } from 'lucide-react';
+import { useSearchParams   } from 'react-router-dom';
 
 export default function Search(...args: any[]): any {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -29,7 +29,7 @@ export default function Search(...args: any[]): any {
   // Mock search results - in a real app, this would come from an API
   const mockResults = [
     {
-      id: any1,
+      id: anyany1,
       type: 'service',
       title: 'AI-Powered Business Intelligence Platform',
       description: 'Advanced analytics platform with machine learning capabilities for business insights',
@@ -86,7 +86,7 @@ export default function Search(...args: any[]): any {
     }
   ];
 
-  useEffect(()  => {
+  useEffect(()   => {
     if (searchQuery) {
       performSearch();
     }
@@ -128,14 +128,14 @@ export default function Search(...args: any[]): any {
     setLoading(false);
   };
 
-  const handleSearch = (e: React.FormEvent)  => {
+  const handleSearch = (e: anyReact.FormEvent)   => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
     }
   };
 
-  const getTypeIcon = (type: string)  => {
+  const getTypeIcon = (type: anystring)   => {
     switch (type) {
       case 'service':
         return <Server className="w-5 h-5 text-zion-cyan" />;
@@ -148,7 +148,7 @@ export default function Search(...args: any[]): any {
     }
   };
 
-  const getTypeLabel = (type: string)  => {
+  const getTypeLabel = (type: anystring)   => {
     switch (type) {
       case 'service':
         return 'Service';
@@ -212,7 +212,7 @@ export default function Search(...args: any[]): any {
                   {category.icon}
                   {category.name}
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                    {category.id === 'all' ? results.length: anyresults.filter(r  => r.type === category.id).length}
+                    {category.id === 'all' ? results.length: anyanyresults.filter(r   => r.type === category.id).length}
                   </span>
                 </button>
               ))}
@@ -224,9 +224,9 @@ export default function Search(...args: any[]): any {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
               >
-                {sortOptions.map((option)  => (
+                {sortOptions.map((option)   => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>

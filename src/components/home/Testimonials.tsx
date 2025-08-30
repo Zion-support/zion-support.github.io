@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
-import { ChevronLeft, ChevronRight, Star, Quote   } from 'lucide-react.ts';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { ChevronLeft, ChevronRight, Star, Quote    } from 'lucide-react';
 
 interface Testimonial {
+
 
 
   id: number;
@@ -13,6 +14,7 @@ interface Testimonial {
   rating: number;
   avatar: string;
   industry: string;
+
 
 
 }
@@ -71,7 +73,7 @@ const Testimonials: React.FC = (): JSX.Element => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number)   => {
+  const goToTestimonial = (index: anynumber)    => {
     setCurrentIndex(index);
   };
 

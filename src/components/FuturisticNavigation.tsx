@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation   } from 'react-router-dom.ts';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
-import { MobileSidebarToggle   } from './MobileSidebarToggle';
+import { Link, useLocation    } from 'react-router-dom';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { MobileSidebarToggle    } from './MobileSidebarToggle';
 import { Menu, 
   X, 
   Search, 
@@ -177,7 +177,7 @@ import { Menu,
   Shuffle2Dodecagon,
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 export const FuturisticNavigation: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
@@ -193,13 +193,13 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
   useEffect(() => {
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch = (e: React.FormEvent)   => {
+  const handleSearch = (e: anyReact.FormEvent)    => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
-  const toggleDropdown = (dropdown: string)   => {
+  const toggleDropdown = (dropdown: anystring)    => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
   // Enhanced service categories with better organization

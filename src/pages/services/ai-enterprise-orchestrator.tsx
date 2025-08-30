@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Helmet  } from 'react-helmet-async';
+import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
-export default function AIEnterpriseOrchestrator() {
+export default function AIEnterpriseOrchestrator(...args: any[]): any {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function AIEnterpriseOrchestrator() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -95,7 +95,7 @@ export default function AIEnterpriseOrchestrator() {
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -121,7 +121,7 @@ export default function AIEnterpriseOrchestrator() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -143,7 +143,7 @@ export default function AIEnterpriseOrchestrator() {
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."
                 }
-              ].map((step, index) => (
+              ].map((step, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -191,11 +191,11 @@ export default function AIEnterpriseOrchestrator() {
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "40%", label: "Cost Reduction" },
+                    { metric: any"40%", label: "Cost Reduction" },
                     { metric: "60%", label: "Efficiency Improvement" },
                     { metric: "24/7", label: "Operation Availability" },
                     { metric: "99.9%", label: "Uptime Reliability" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-cyan-400">{item.metric}</span>

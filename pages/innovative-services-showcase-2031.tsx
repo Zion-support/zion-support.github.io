@@ -1,12 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import { 
-  innovativeMicroSaasServices2031, 
+import React from 'react.ts';
+import Head from 'next/head.ts';
+import { innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
-} from '../src/data/innovativeServices2031';
-import { 
-  Brain, 
+ } from '../src/data/innovativeServices2031';
+import { Brain, 
   Cloud, 
   CheckCircle, 
   TrendingUp, 
@@ -20,9 +18,9 @@ import {
   Target,
   Award,
   Clock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const InnovativeServicesShowcase2031: React.FC = () => {
+const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
   const scrollToContact = () => {
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };

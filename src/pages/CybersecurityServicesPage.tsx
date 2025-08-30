@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
+import { Shield, 
   Lock, 
   Eye, 
   AlertTriangle, 
@@ -25,10 +24,10 @@ import {
   Bot,
   Sparkles,
   Clock
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-const CybersecurityServicesPage: React.FC = () => {
+const CybersecurityServicesPage: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const securityServices = [
@@ -79,8 +78,7 @@ const CybersecurityServicesPage: React.FC = () => {
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? securityServices 
-    : securityServices.filter(service => service.category === selectedCategory);
+    ? securityServices: anysecurityServices.filter(service  => service.category === selectedCategory);
 
   return (
     <>
@@ -150,8 +148,8 @@ const CybersecurityServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-2 gap-8">
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

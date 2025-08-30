@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock  } from 'lucide-react.ts';
 
-const ModernHeader: React.FC = () => {
+const ModernHeader: React.FC = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
 
   useEffect(() => {
     const handleScroll = () => {

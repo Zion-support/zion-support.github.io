@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation   } from 'react-router-dom.ts';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { Link, useLocation    } from 'react-router-dom';
+import { motion, AnimatePresence    } from 'framer-motion';
 import { Menu, 
   X, 
   Search, 
@@ -217,7 +217,7 @@ import { Menu,
   Chi,
   Psi,
   Omega
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 
 export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -239,14 +239,14 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
     setActiveDropdown(null);
   }, [location.pathname]);
 
-  const handleSearch = (e: React.FormEvent)   => {
+  const handleSearch = (e: anyReact.FormEvent)    => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
 
-  const toggleDropdown = (dropdown: string)   => {
+  const toggleDropdown = (dropdown: anystring)    => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 

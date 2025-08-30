@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO  } from '@/components/SEO';
 
-export default function Demo() {
+export default function Demo(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">
       <SEO title="Request a Demo - Zion Tech Group" description="Book a personalized demo of our AI and IT solutions." />

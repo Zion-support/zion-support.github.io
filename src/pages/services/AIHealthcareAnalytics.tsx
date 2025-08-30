@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Link   } from 'react-router-dom';
 import { Heart, 
   Brain, 
   BarChart3, 
@@ -22,8 +22,8 @@ import { Heart,
   Target,
   Eye,
   AlertTriangle
- } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
+  } from 'lucide-react';
+import { SEO   } from '@/components/SEO';
 
 const AIHealthcareAnalytics = () => {
   const features = [
@@ -283,8 +283,8 @@ const AIHealthcareAnalytics = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced AI Healthcare Features</h2>
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-12">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-12">
+            {features.map((feature, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-8 hover:border-green-500/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white"/>
@@ -309,8 +309,8 @@ const AIHealthcareAnalytics = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Comprehensive Healthcare Solutions</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {healthcareModules.map((module, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {healthcareModules.map((module, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <module.icon className="w-6 h-6 text-white"/>
@@ -335,8 +335,8 @@ const AIHealthcareAnalytics = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Healthcare Use Cases</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase.category}</h3>
                 <ul className="space-y-3">
@@ -358,8 +358,8 @@ const AIHealthcareAnalytics = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Healthcare Compliance & Security</h2>
           <div className="bg-slate-800/50 border border-white/10 rounded-xl p-8">
-            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
-              {complianceFeatures.map((feature, index)  => (
+            <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-6">
+              {complianceFeatures.map((feature, index)   => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Shield className="w-8 h-8 text-white"/>
@@ -382,8 +382,8 @@ const AIHealthcareAnalytics = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Healthcare Analytics Pricing</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricingTiers.map((tier, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)   => (
               <div key={index} className={`bg-slate-800/50 border rounded-xl p-8 relative ${
                 tier.popular 
                   ? 'border-green-500/50 bg-slate-800/70' 
@@ -432,8 +432,8 @@ const AIHealthcareAnalytics = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">What Healthcare Leaders Say</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {testimonials.map((testimonial, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8">
+            {testimonials.map((testimonial, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (

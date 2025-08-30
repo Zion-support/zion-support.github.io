@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { SEO   } from '@/components/SEO';
+import { motion   } from 'framer-motion';
 import { Shield, 
   Brain, 
   BarChart3, 
@@ -16,7 +16,7 @@ import { Shield,
   TrendingUp,
   Eye,
   Cpu
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
   const features = [
@@ -156,8 +156,8 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid md: anyanygrid-cols-2 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -195,8 +195,8 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
@@ -233,8 +233,8 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-6">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-2 md: anyanygrid-cols-3 gap-6">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={useCase}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -271,8 +271,8 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index)  => (
+          <div className="grid grid-cols-2 md: anyanygrid-cols-3 lg:grid-cols-5 gap-6">
+            {integrations.map((integration, index)   => (
               <motion.div
                 key={integration}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -306,8 +306,8 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)  => (
+          <div className="grid md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)   => (
               <motion.div
                 key={plan.plan}
                 initial={{ opacity: 0, y: 30 }}

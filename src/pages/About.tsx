@@ -1,7 +1,7 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { SEO  } from '@/components/SEO';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
+import { SEO   } from '@/components/SEO';
 import { Users, 
   Target, 
   Award, 
@@ -20,7 +20,7 @@ import { Users,
   Cloud,
   Lock,
   Database
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function About(...args: any[]): any {
   const stats = [
@@ -255,8 +255,8 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)   => (
               <motion.div 
                 key={index}
                 className="text-center group"
@@ -295,8 +295,8 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)   => (
               <motion.div
                 key={index}
                 className="text-center group"
@@ -334,8 +334,8 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index)   => (
               <motion.div
                 key={index}
                 className="group"

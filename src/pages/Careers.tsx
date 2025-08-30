@@ -1,8 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Briefcase, 
+import { motion  } from 'framer-motion';
+import { SEO  } from '@/components/SEO';
+import { Briefcase, 
   Users, 
   Globe, 
   Zap, 
@@ -12,9 +11,9 @@ import {
   MapPin,
   Clock,
   DollarSign
-} from 'lucide-react';
+ } from 'lucide-react';
 
-const Careers: React.FC = () => {
+const Careers: React.FC = (): JSX.Element => {
   const openPositions = [
     {
       title: "Senior AI Engineer",
@@ -153,8 +152,8 @@ const Careers: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6">
+            {values.map((value, index)  => (
               <motion.div
                 key={value}
                 initial={{ opacity: 0, y: 20 }}
@@ -186,8 +185,8 @@ const Careers: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

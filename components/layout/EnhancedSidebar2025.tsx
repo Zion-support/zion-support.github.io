@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { useRouter  } from 'next/router.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
   Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
   Award, Clock, Heart, Lightbulb, Users, FileText, 
   HelpCircle, BookOpen, Target, TrendingUp, Star
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface SidebarItem {
+
   name: string;
   href: string;
   icon: React.ReactNode;
@@ -22,11 +22,12 @@ interface SidebarItem {
   isHot?: boolean;
   isPremium?: boolean;
   category?: string;
+
 }
 
 const sidebarSections = [
   {
-    title: 'Revolutionary Services',
+    title: any'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
     items: [
@@ -243,16 +244,18 @@ const sidebarSections = [
   }
 ];
 
-interface EnhancedSidebar2025Props {
+interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
+
   isOpen: boolean;
-  onClose: () => void;
+  onClose: ()  => void;
+
 }
 
-export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
+export default function EnhancedSidebar2025(...args: any[]): any {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-  const toggleSection = (sectionTitle: string) => {
+  const toggleSection = (sectionTitle: anystring)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
       newExpanded.delete(sectionTitle);
@@ -271,7 +274,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     )
   );
 
-  const toggleItem = (itemName: string) => {
+  const toggleItem = (itemName: anystring)  => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
       newExpanded.delete(itemName);
@@ -293,7 +296,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     };
   }, [isOpen]);
 
-  const isActive = (href: string) => router.pathname === href;
+  const isActive = (href: anystring)  => router.pathname === href;
 
   return (
     <>

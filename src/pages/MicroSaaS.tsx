@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages  } from 'lucide-react.ts';
+import React from 'react';
+import { Link   } from 'react-router-dom';
+import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages   } from 'lucide-react';
 
 const MicroSaaS: React.FC = (): JSX.Element => {
   const products = [
@@ -111,8 +111,8 @@ const MicroSaaS: React.FC = (): JSX.Element => {
         <h1 className="text-4xl font-bold sm:text-5xl">Micro SaaS products you can launch this week</h1>
         <p className="mt-4 max-w-2xl text-slate-300">Pick a ready-to-run tool or have us tailor it for your workflow. Secure, scalable, and priced for fast ROI.</p>
 
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
-          {products.map((p)  => (
+        <div className="mt-10 grid gap-6 sm: anyanygrid-cols-2 lg:grid-cols-3">
+          {products.map((p)   => (
             <div key={p.name} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
               <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-purple-500/15 text-purple-300">
                 <p.icon className="h-5 w-5" />

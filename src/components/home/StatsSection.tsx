@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useInView   } from 'framer-motion.ts';
-import { useRef   } from 'react';
-import { TrendingUp, Award, Users, Clock   } from 'lucide-react.ts';
+import { motion, useInView    } from 'framer-motion';
+import { useRef    } from 'react';
+import { TrendingUp, Award, Users, Clock    } from 'lucide-react';
 
 interface Stat {
+
 
 
   number: string;
@@ -11,6 +12,7 @@ interface Stat {
   description: string;
   avatar: string;
 icon: React.ComponentType<{ className?: string;
+
 
 }>;
   color: string;
@@ -74,8 +76,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           </p>
         </motion.div>
 
-        <div ref={ref} className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index)   => (
+        <div ref={ref} className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index)    => (
             <motion.div
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"

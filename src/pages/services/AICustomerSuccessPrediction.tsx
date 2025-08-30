@@ -1,7 +1,7 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react.ts';
+import React from 'react';
+import { SEO   } from '@/components/SEO';
+import { motion   } from 'framer-motion';
+import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink   } from 'lucide-react';
 
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
@@ -234,8 +234,8 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -266,8 +266,8 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -333,8 +333,8 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid md: anyanygrid-cols-3 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -370,8 +370,8 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)  => (
+          <div className="grid grid-cols-2 md: anyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

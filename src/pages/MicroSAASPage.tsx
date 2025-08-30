@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom';
+import { motion   } from 'framer-motion';
 import { Zap, 
   Code, 
   Database, 
@@ -19,7 +19,7 @@ import { Zap,
   Rocket,
   Target,
   Globe
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 const MicroSAASPage = () => {
   const saasServices = [
     {
@@ -124,9 +124,9 @@ const MicroSAASPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 mb-16"
+          className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8 mb-16"
         >
-          {saasServices.map((service, index)  => (
+          {saasServices.map((service, index)   => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -200,8 +200,8 @@ const MicroSAASPage = () => {
               and how they can transform your business.
             </p>
           </div>
-          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index)  => (
+          <div className="grid grid-cols-2 md: anyanygrid-cols-3 gap-4">
+            {saasBenefits.map((benefit, index)   => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, scale: 0.8 }}

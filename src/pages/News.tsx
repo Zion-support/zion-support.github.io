@@ -1,5 +1,5 @@
-import { Link  } from 'react-router-dom.ts';
-import { Calendar, Clock, User, ArrowRight, ExternalLink  } from 'lucide-react.ts';
+import { Link   } from 'react-router-dom';
+import { Calendar, Clock, User, ArrowRight, ExternalLink   } from 'lucide-react';
 
 export default function News(...args: any[]): any {
   const newsArticles = [
@@ -93,7 +93,7 @@ export default function News(...args: any[]): any {
     'Sustainability'
   ];
 
-  const formatDate = (dateString: string)  => {
+  const formatDate = (dateString: anystring)   => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -229,8 +229,8 @@ export default function News(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {newsArticles.filter(article  => !article.featured).map((article) => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {newsArticles.filter(article   => !article.featured).map((article) => (
               <article key={article.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                 <div className="relative">
                   <img

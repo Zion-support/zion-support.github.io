@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Monitor   } from 'lucide-react.ts';
+import { Sun, Moon, Monitor    } from 'lucide-react';
 
 type Theme = 'dark' | 'light' | 'system';
 
@@ -30,7 +30,7 @@ export function ThemeToggle(...args: any[]): any {
     localStorage.setItem('zion-theme', theme);
   }, [theme, mounted]);
 
-  const toggleTheme = (newTheme: anyTheme)   => {
+  const toggleTheme = (newTheme: anyanyTheme)    => {
     setTheme(newTheme);
   };
 

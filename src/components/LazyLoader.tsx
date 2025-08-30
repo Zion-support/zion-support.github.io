@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react'
-import { LoadingSpinner   } from './ui/LoadingSpinner'
+import { LoadingSpinner    } from './ui/LoadingSpinner'
 
 interface LazyLoaderProps extends React.PropsWithChildren<{}> {
 

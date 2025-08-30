@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { motion, AnimatePresence   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
 import { Brain, 
   Zap, 
   Shield, 
@@ -147,7 +147,7 @@ import { Brain,
   Space,
   Handshake,
   Calendar
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const microSAASServices2028 = [
   // AI-Powered Content Creation
@@ -628,8 +628,8 @@ const MicroSAASServices2028: React.FC = (): JSX.Element => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}

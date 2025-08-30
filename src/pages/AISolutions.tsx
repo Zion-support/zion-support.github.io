@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import { motion  } from 'framer-motion';
+import { Brain, 
   Cpu, 
   Database, 
   Eye, 
@@ -21,9 +20,9 @@ import {
   Globe,
   Smartphone,
   Monitor
-} from 'lucide-react';
+ } from 'lucide-react';
 
-export default function AISolutions() {
+export default function AISolutions(...args: any[]): any {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
@@ -192,8 +191,7 @@ export default function AISolutions() {
   };
 
   const filteredSolutions = selectedIndustry === 'all' 
-    ? aiSolutions 
-    : aiSolutions.filter(solution => solution.industry === selectedIndustry);
+    ? aiSolutions: anyaiSolutions.filter(solution  => solution.industry === selectedIndustry);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -267,9 +265,9 @@ export default function AISolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -321,9 +319,9 @@ export default function AISolutions() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {industries.map((industry) => {
+            {industries.map((industry)  => {
               const Icon = industry.icon;
               return (
                 <button
@@ -348,9 +346,9 @@ export default function AISolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {filteredSolutions.map((solution, index) => (
+            {filteredSolutions.map((solution, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -407,9 +405,9 @@ export default function AISolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {aiTechnologies.map((tech, index) => (
+            {aiTechnologies.map((tech, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -464,9 +462,9 @@ export default function AISolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {successMetrics.map((metric, index) => (
+            {successMetrics.map((metric, index)  => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -506,7 +504,7 @@ export default function AISolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
             {[
               {
@@ -533,7 +531,7 @@ export default function AISolutions() {
                 description: "Launch AI solutions and continuously improve",
                 icon: Rocket
               }
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div 
                 key={index}
                 className="relative"

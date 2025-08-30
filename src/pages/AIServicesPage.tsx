@@ -1,8 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { Brain, 
   Zap, 
   Shield, 
   TrendingUp, 
@@ -23,7 +22,7 @@ import {
   Clock,
   Star,
   Heart
-} from 'lucide-react';
+ } from 'lucide-react';
 const aiServices = [
   {
     id: 'ai-consciousness-simulator',
@@ -271,7 +270,7 @@ const aiServices = [
     reviews: 89,
     customers: 156
   }
-import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
+import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search  } from 'lucide-react';
 const AIServices = [
     {
         title: "AI Strategy Consulting",
@@ -386,7 +385,7 @@ const AIServices = [
     }
 ];
 const categories = [
-const AIServicesPage: React.FC = () => {
+const AIServicesPage: React.FC = (): JSX.Element => {
   const aiServices = [
     {
       id: 1,

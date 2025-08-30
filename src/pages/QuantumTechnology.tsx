@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion.ts';
+import { motion   } from 'framer-motion';
 import { Atom, 
   Cpu, 
   Zap, 
@@ -23,7 +23,7 @@ import { Atom,
   Cloud,
   Lock,
   Eye
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function QuantumTechnology(...args: any[]): any {
   const [selectedApplication, setSelectedApplication] = useState('all');
@@ -194,7 +194,7 @@ export default function QuantumTechnology(...args: any[]): any {
   };
 
   const filteredApplications = selectedApplication === 'all' 
-    ? quantumApplications: anyquantumApplications.filter(app  => app.category === selectedApplication);
+    ? quantumApplications: anyanyquantumApplications.filter(app   => app.category === selectedApplication);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -268,9 +268,9 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
-            {quantumServices.map((service, index)  => (
+            {quantumServices.map((service, index)   => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -323,9 +323,9 @@ export default function QuantumTechnology(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
-            {applications.map((app)  => {
+            {applications.map((app)   => {
               const Icon = app.icon;
               return (
                 <button
@@ -350,9 +350,9 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
-            {filteredApplications.map((app, index)  => (
+            {filteredApplications.map((app, index)   => (
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -409,9 +409,9 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
-            {quantumTechnologies.map((tech, index)  => (
+            {quantumTechnologies.map((tech, index)   => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -466,9 +466,9 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
-            {quantumAdvantages.map((advantage, index)  => (
+            {quantumAdvantages.map((advantage, index)   => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -509,7 +509,7 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanytrue }}
           >
             {[
               {
@@ -536,7 +536,7 @@ export default function QuantumTechnology(...args: any[]): any {
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
               }
-            ].map((phase, index)  => (
+            ].map((phase, index)   => (
               <motion.div 
                 key={index}
                 className="relative"

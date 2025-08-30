@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
 import { Cpu, 
   Zap, 
   Globe, 
@@ -61,7 +61,7 @@ import { Cpu,
   Droplets,
   Umbrella,
   MapPin
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const EdgeComputingPlatform: React.FC = (): JSX.Element => {
   const features = [
@@ -301,8 +301,8 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -335,8 +335,8 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -368,8 +368,8 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -407,8 +407,8 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {edgeLocations.map((location, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {edgeLocations.map((location, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -447,8 +447,8 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

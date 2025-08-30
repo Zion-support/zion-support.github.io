@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link   } from 'react-router-dom.ts';
+import { Link    } from 'react-router-dom';
 
 export function Header(...args: any[]): any {
 	return (

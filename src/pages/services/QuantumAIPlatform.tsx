@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Atom, 
+import { Link  } from 'react-router-dom';
+import { Atom, 
   Brain, 
   Zap, 
   Target, 
@@ -21,8 +20,8 @@ import {
   TrendingUp,
   Users,
   Shield
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
 const QuantumAIPlatform = () => {
   const features = [
@@ -259,8 +258,8 @@ const QuantumAIPlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Revolutionary Quantum Features</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-12">
+            {features.map((feature, index)  => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-8 hover:border-purple-500/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white"/>
@@ -285,8 +284,8 @@ const QuantumAIPlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Transformative Use Cases</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-white"/>
@@ -312,8 +311,8 @@ const QuantumAIPlatform = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Quantum Computing Advantages</h2>
           <div className="bg-slate-800/50 border border-white/10 rounded-xl p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {quantumAdvantages.map((advantage, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {quantumAdvantages.map((advantage, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Atom className="w-8 h-8 text-white"/>
@@ -336,8 +335,8 @@ const QuantumAIPlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Quantum Access Pricing</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
               <div key={index} className={`bg-slate-800/50 border rounded-xl p-8 relative ${
                 tier.popular 
                   ? 'border-purple-500/50 bg-slate-800/70' 
@@ -386,8 +385,8 @@ const QuantumAIPlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">What Quantum Researchers Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {testimonials.map((testimonial, index)  => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (

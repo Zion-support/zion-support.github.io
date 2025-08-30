@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO  } from '@/components/SEO';
 
-const RagSearch: React.FC = () => (
+const RagSearch: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="RAG Search - Zion Tech Group" description="AI search over your documents and data with citations and guardrails." />
     <section className="container mx-auto px-4 py-12">

@@ -1,9 +1,9 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Globe, Sparkles, Shield, Cpu, Cloud, Database, Workflow, Rocket, DollarSign, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom';
+import { ArrowRight, CheckCircle2, Globe, Sparkles, Shield, Cpu, Cloud, Database, Workflow, Rocket, DollarSign, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 
-const ComprehensiveServices: React.FC = () => {
+const ComprehensiveServices: React.FC = (): JSX.Element => {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -204,8 +204,8 @@ const ComprehensiveServices: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
           </div>
           <p className="text-white/80 mb-6">{description}</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((svc) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {items.map((svc)  => (
               <div key={svc.title} className="bg-black/30 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold mb-2">{svc.title}</h3>
                 <p className="text-white/80 mb-4">{svc.desc}</p>

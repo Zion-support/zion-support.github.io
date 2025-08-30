@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../components/SEO';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '../components/SEO';
 import { Newspaper, 
   Download, 
   Mail, 
@@ -16,7 +16,7 @@ import { Newspaper,
   TrendingUp,
   Globe,
   Star
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function Press(...args: any[]): any {
   const pressReleases = [
@@ -166,9 +166,9 @@ export default function Press(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: anyanygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
           >
-            {companyStats.map((stat, index)  => (
+            {companyStats.map((stat, index)   => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-white" />
@@ -193,8 +193,8 @@ export default function Press(...args: any[]): any {
             Latest Press Releases
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {pressReleases.map((release, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {pressReleases.map((release, index)   => (
               <motion.article
                 key={release.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -256,8 +256,8 @@ export default function Press(...args: any[]): any {
             Media Resources
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {mediaResources.map((resource, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {mediaResources.map((resource, index)   => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, y: 20 }}

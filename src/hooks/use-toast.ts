@@ -1,15 +1,17 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback  } from 'react.ts';
 
 interface Toast {
+
   id: string;
   title?: string;
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
   duration?: number;
+
 }
 
-export function useToast() {
-  const [toasts, setToasts] = useState<Toast[]>([]);
+export function useToast(...args: any[]): any {
+  const [toasts, setToasts] = useState<any>([]);
 
   const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
@@ -26,7 +28,7 @@ export function useToast() {
     return id;
   }, []);
 
-  const dismiss = useCallback((id: string) => {
+  const dismiss = useCallback((id: anystring)  => {
     setToasts(prev => prev.filter(toast => toast.id !== id));
   }, []);
 

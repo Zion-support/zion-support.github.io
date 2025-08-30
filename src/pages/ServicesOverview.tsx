@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
 import { Brain, 
   Server, 
   Zap, 
@@ -25,8 +25,8 @@ import { Brain,
   Mail,
   Phone,
   ExternalLink
- } from 'lucide-react.ts';
-import { SEO  } from '../components/SEO';
+  } from 'lucide-react';
+import { SEO   } from '../components/SEO';
 
 export default function ServicesOverview(...args: any[]): any {
   const serviceCategories = [
@@ -289,8 +289,8 @@ export default function ServicesOverview(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {category.services.map((service, serviceIndex)  => (
+            <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {category.services.map((service, serviceIndex)   => (
                 <motion.div
                   key={serviceIndex}
                   initial={{ opacity: 0, y: 20 }}
@@ -349,8 +349,8 @@ export default function ServicesOverview(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {emergingTechnologies.map((tech, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {emergingTechnologies.map((tech, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -393,7 +393,7 @@ export default function ServicesOverview(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Star,
@@ -415,7 +415,7 @@ export default function ServicesOverview(...args: any[]): any {
                 title: 'Quality Assurance',
                 description: 'Rigorous testing and quality control for reliable solutions'
               }
-            ].map((feature, index)  => (
+            ].map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

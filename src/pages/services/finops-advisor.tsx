@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Helmet  } from 'react-helmet-async';
+import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
-export default function FinOpsAdvisor() {
+export default function FinOpsAdvisor(...args: any[]): any {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function FinOpsAdvisor() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Calculator,
@@ -95,7 +95,7 @@ export default function FinOpsAdvisor() {
                   title: "Multi-cloud Support",
                   description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +120,7 @@ export default function FinOpsAdvisor() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Compute Resources",
@@ -158,7 +158,7 @@ export default function FinOpsAdvisor() {
                   icon: Shield,
                   benefits: ["Support plans", "Licensing", "Service agreements"]
                 }
-              ].map((area, index) => (
+              ].map((area, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -191,7 +191,7 @@ export default function FinOpsAdvisor() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   step: "01",
@@ -208,7 +208,7 @@ export default function FinOpsAdvisor() {
                   title: "Operate",
                   description: "Establish ongoing cost management processes and governance."
                 }
-              ].map((step, index) => (
+              ].map((step, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -256,11 +256,11 @@ export default function FinOpsAdvisor() {
                 <h3 className="text-2xl font-semibold text-white mb-4">Cost Savings Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "30-40%", label: "Cost Reduction", description: "Average savings" },
+                    { metric: any"30-40%", label: "Cost Reduction", description: "Average savings" },
                     { metric: "50-60%", label: "Resource Utilization", description: "Improvement" },
                     { metric: "70%", label: "Faster Decisions", description: "Optimization speed" },
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-emerald-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -285,7 +285,7 @@ export default function FinOpsAdvisor() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Cost Management Tools",
@@ -323,7 +323,7 @@ export default function FinOpsAdvisor() {
                   icon: Settings,
                   features: ["REST APIs", "Custom integrations", "Automated workflows"]
                 }
-              ].map((tool, index) => (
+              ].map((tool, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <tool.icon className="w-6 h-6 text-white" />
@@ -356,7 +356,7 @@ export default function FinOpsAdvisor() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -378,7 +378,7 @@ export default function FinOpsAdvisor() {
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve cost management."
                 }
-              ].map((step, index) => (
+              ].map((step, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

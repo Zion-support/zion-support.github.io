@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { motion, AnimatePresence    } from 'framer-motion';
 import { Volume2, 
   VolumeX, 
   Eye, 
@@ -9,9 +9,10 @@ import { Volume2,
   Accessibility,
   Settings,
   X
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 
 interface AccessibilitySettings {
+
 
 
   highContrast: boolean;
@@ -21,19 +22,20 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
 
 
+
 }
 
 export const EnhancedAccessibility: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<any>({
-    highContrast: anyfalse,
+    highContrast: anyanyfalse,
     reducedMotion: false,
     largeText: false,
     screenReader: false,
     keyboardNavigation: false
   });
 
-  useEffect(()   => {
+  useEffect(()    => {
     // Apply accessibility settings to document
     if (settings.highContrast) {
       document.documentElement.classList.add('high-contrast');
@@ -65,14 +67,14 @@ export const EnhancedAccessibility: React.FC = (): JSX.Element => {
     }
   }, []);
 
-  const toggleSetting = (key: keyof AccessibilitySettings)   => {
+  const toggleSetting = (key: anykeyof AccessibilitySettings)    => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent)   => {
+  const handleKeyDown = (e: anyReact.KeyboardEvent)    => {
     if (e.key === 'Escape') {
       setIsOpen(false);
     }

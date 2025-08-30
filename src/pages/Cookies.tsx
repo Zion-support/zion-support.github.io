@@ -1,7 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Cookie, 
+import { motion  } from 'framer-motion';
+import { Cookie, 
   Shield, 
   Settings, 
   BarChart3, 
@@ -9,10 +8,10 @@ import {
   CheckCircle,
   XCircle,
   Info
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-const Cookies: React.FC = () => {
+const Cookies: React.FC = (): JSX.Element => {
   const cookieTypes = [
     {
       type: 'Essential Cookies',
@@ -155,8 +154,8 @@ const Cookies: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
               Types of Cookies We Use
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {cookieTypes.map((cookieType, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {cookieTypes.map((cookieType, index)  => (
                 <motion.div
                   key={cookieType.type}
                   initial={{ opacity: 0, y: 20 }}

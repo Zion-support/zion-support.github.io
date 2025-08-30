@@ -1,9 +1,8 @@
 
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
+import { useParams, Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
+import { Calendar, 
   User, 
   Clock, 
   ArrowLeft,
@@ -14,9 +13,9 @@ import {
   Heart,
   Eye,
   ArrowRight
-} from "lucide-react";
+ } from 'lucide-react';
 
-function BlogPost() {
+function BlogPost(...args: any[]): any {
   const { id } = useParams();
   
   // Mock blog post data - in a real app, this would come from an API
@@ -73,7 +72,7 @@ function BlogPost() {
     ]
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -227,8 +226,8 @@ function BlogPost() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {blogPost.relatedPosts.map((post, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {blogPost.relatedPosts.map((post, index)  => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}

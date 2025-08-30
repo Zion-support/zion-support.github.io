@@ -5,9 +5,11 @@ type Theme = 'light' | 'dark' | 'system';
 interface ThemeContextType {
 
 
-  theme: anyTheme;
-  setTheme: (theme: Theme)   => void;
+
+  theme: anyanyTheme;
+  setTheme: (theme: Theme)    => void;
   isDark: boolean;
+
 
 
 }
@@ -67,9 +69,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     updateTheme();
     
     if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanydark)');
       mediaQuery.addEventListener('change', updateTheme);
-      return ()   => mediaQuery.removeEventListener('change', updateTheme);
+      return ()    => mediaQuery.removeEventListener('change', updateTheme);
     }
   }, [theme]);
 

@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
 
-export default function ProductsIndex() {
+export default function ProductsIndex(...args: any[]): any {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -43,7 +43,7 @@ export default function ProductsIndex() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm: anygrid-cols-2 lg:grid-cols-3">
             {[
               { title: 'SEO Guard', desc: 'Continuous audits + on-page fixes' },
               { title: 'Perf Shield', desc: 'CWV budgets + asset optimization' },
@@ -51,7 +51,7 @@ export default function ProductsIndex() {
               { title: 'Content Curator', desc: 'Keeps the homepage fresh' },
               { title: 'Design Refiner', desc: 'Iterates layouts with guardrails' },
               { title: 'Security Scanner', desc: 'Finds and patches risky deps' },
-            ].map((p) => (
+            ].map((p)  => (
               <div key={p.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{p.title}</h3>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion   } from 'framer-motion';
 import { Code, 
   BookOpen, 
   Zap, 
@@ -30,7 +30,7 @@ import { Code,
   Target,
   Award,
   Lightbulb
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 const DeveloperPortal: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -239,8 +239,8 @@ print(data)`,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {quickStartSteps.map((step, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {quickStartSteps.map((step, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -285,8 +285,8 @@ print(data)`,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {apiFeatures.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {apiFeatures.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -330,8 +330,8 @@ print(data)`,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {codeExamples.map((example, index)  => (
+          <div className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {codeExamples.map((example, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -373,8 +373,8 @@ print(data)`,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {resources.map((resource, index)  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {resources.map((resource, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

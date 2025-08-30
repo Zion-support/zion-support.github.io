@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import React, { useState } from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
 import { Search, 
   HelpCircle, 
   MessageCircle, 
@@ -21,7 +21,7 @@ import { Search,
   Video,
   Download,
   ExternalLink
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function Help(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -152,7 +152,7 @@ export default function Help(...args: any[]): any {
     : [];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? helpCategories: anyhelpCategories.filter(category  => category.id === selectedCategory);
+    ? helpCategories: anyanyhelpCategories.filter(category   => category.id === selectedCategory);
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -228,8 +228,8 @@ export default function Help(...args: any[]): any {
             <p className="text-slate-300">Get help immediately with these options</p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {quickActions.map((action, index)  => (
+          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {quickActions.map((action, index)   => (
               <motion.div
                 key={action.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -351,8 +351,8 @@ export default function Help(...args: any[]): any {
               </p>
             </motion.div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredCategories.map((category, index)  => (
+            <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredCategories.map((category, index)   => (
                 <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -535,7 +535,7 @@ export default function Help(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: anyanygrid-cols-3 gap-8">
             {[
               {
                 title: 'Documentation',
@@ -558,7 +558,7 @@ export default function Help(...args: any[]): any {
                 href: '/community',
                 features: ['User discussions', 'Expert answers', 'Tips & tricks', 'Showcase projects']
               }
-            ].map((resource, index)  => (
+            ].map((resource, index)   => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, y: 30 }}

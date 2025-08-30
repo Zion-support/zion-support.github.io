@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart   } from 'lucide-react.ts';
+import { Heart    } from 'lucide-react';
 
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 
@@ -12,7 +12,7 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 export function FavoriteButton(...args: any[]): any {
   const [isFavorited, setIsFavorited] = useState(false);
 
-  const handleToggleFavorite = (e: React.MouseEvent)   => {
+  const handleToggleFavorite = (e: anyReact.MouseEvent)    => {
     e.stopPropagation();
     setIsFavorited(!isFavorited);
     

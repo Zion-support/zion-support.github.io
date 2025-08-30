@@ -1,20 +1,20 @@
 
 import React, { useState } from 'react';
-import { useAdminQuotes  } from '@/hooks/useAdminQuotes';
-import { useAuth  } from '@/hooks/useAuth';
+import { useAdminQuotes   } from '@/hooks/useAdminQuotes';
+import { useAuth   } from '@/hooks/useAuth';
 import { Card,
   CardContent
- } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { Navigate  } from 'react-router-dom.ts';
+  } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from '@/components/ui/tabs';
+import { Navigate   } from 'react-router-dom';
 import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { QuoteDetails  } from '@/components/quotes/QuoteDetails';
-import { ExportToCSV  } from '@/components/quotes/ExportToCSV';
+import { ProtectedRoute   } from '@/components/ProtectedRoute';
+import { QuoteDetails   } from '@/components/quotes/QuoteDetails';
+import { ExportToCSV   } from '@/components/quotes/ExportToCSV';
 import { QuoteStatusCards,
   QuotesFilter,
   QuotesTable
- } from '@/components/admin/quotes';
+  } from '@/components/admin/quotes';
 
 export default function QuoteManager(...args: any[]): any {
   const { user } = useAuth();
@@ -42,14 +42,14 @@ export default function QuoteManager(...args: any[]): any {
 
   // Count quotes by status
   const statusCounts = {
-    new: anyquotes.filter((q: QuoteRequest)  => q.status === 'new').length,
-    in_review: anyquotes.filter((q: QuoteRequest)  => q.status === 'in_review').length,
-    accepted: anyquotes.filter((q: QuoteRequest)  => q.status === 'accepted').length,
-    responded: anyquotes.filter((q: QuoteRequest)  => q.status === 'responded').length,
-    closed: anyquotes.filter((q: QuoteRequest)  => q.status === 'closed').length
+    new: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'new').length,
+    in_review: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'in_review').length,
+    accepted: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'accepted').length,
+    responded: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'responded').length,
+    closed: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'closed').length
   };
 
-  const handleViewDetails = (quote: anyQuoteRequest)  => {
+  const handleViewDetails = (quote: anyanyQuoteRequest)   => {
     setSelectedQuote(quote);
     setShowDetails(true);
   };
@@ -106,7 +106,7 @@ export default function QuoteManager(...args: any[]): any {
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: anyQuoteRequest)  => !quote.is_archived)}
+                    quotes={quotes.filter((quote: anyanyQuoteRequest)   => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -119,7 +119,7 @@ export default function QuoteManager(...args: any[]): any {
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: anyQuoteRequest)  => quote.is_archived)}
+                    quotes={quotes.filter((quote: anyanyQuoteRequest)   => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
                     updateStatus={updateStatus}

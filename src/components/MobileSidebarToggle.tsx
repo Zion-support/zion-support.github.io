@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown   } from 'lucide-react.ts';
-import { Link, useLocation   } from 'react-router-dom.ts';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown    } from 'lucide-react';
+import { Link, useLocation    } from 'react-router-dom';
 
 export const MobileSidebarToggle: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: string)   => {
+  const toggleSection = (section: anystring)    => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
@@ -18,7 +18,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     setExpandedSections(newExpanded);
   };
 
-  const isActive = (path: string)   => location.pathname === path;
+  const isActive = (path: anystring)    => location.pathname === path;
 
   const navigationSections = [
     {

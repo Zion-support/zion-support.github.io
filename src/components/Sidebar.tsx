@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
-import { Link, useLocation   } from 'react-router-dom.ts';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Link, useLocation    } from 'react-router-dom';
 import { X, 
   Home, 
   Briefcase, 
@@ -64,13 +64,13 @@ import { X,
   GraduationCap,
   Activity,
   DollarSign as DollarSignIcon
-  } from 'lucide-react.ts';
-import { cn   } from '@/lib/utils';
+   } from 'lucide-react';
+import { cn    } from '@/lib/utils';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: boolean;
-  onClose: ()   => void;
+  isOpen: anyboolean;
+  onClose: ()    => void;
   className?: string;
 
 }
@@ -84,7 +84,7 @@ export function Sidebar(...args: any[]): any {
     onClose();
   }, [location.pathname, onClose]);
 
-  const toggleSection = (sectionTitle: string)   => {
+  const toggleSection = (sectionTitle: anystring)    => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)

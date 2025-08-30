@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components/ui/card';
+import { Badge   } from '@/components/ui/badge';
+import { Button   } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from '@/components/ui/tabs';
 import { Check, 
   X, 
   Star, 
@@ -23,8 +23,8 @@ import { Check,
   ExternalLink,
   DollarSign,
   Clock
- } from 'lucide-react.ts';
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
+  } from 'lucide-react';
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS   } from '@/data/expandedServices';
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   if (!acc[service.category]) {
@@ -50,7 +50,7 @@ export default function ServicesPricingPage(...args: any[]): any {
   const filteredServices = selectedCategory === 'all' 
     ? EXPANDED_SERVICES 
     : servicesByCategory[selectedCategory] || [];
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anystring)   => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
       'Customer Intelligence': <Users className="h-5 w-5" />,
@@ -125,8 +125,8 @@ export default function ServicesPricingPage(...args: any[]): any {
         {/* Pricing Tiers Overview */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Tiers Overview</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier])  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier])   => (
               <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                 <CardHeader className="text-center">
                   <CardTitle className="text-zion-cyan text-xl">{key.charAt(0).toUpperCase() + key.slice(1)}</CardTitle>
@@ -168,8 +168,8 @@ export default function ServicesPricingPage(...args: any[]): any {
               ))}
             </TabsList>
             <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service)  => (
+              <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredServices.map((service)   => (
                   <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-start justify-between mb-3">
@@ -263,8 +263,8 @@ export default function ServicesPricingPage(...args: any[]): any {
         {/* Service Benefits Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose ZionTech Group?</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_BENEFITS).map(([key, benefit])  => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(SERVICE_BENEFITS).map(([key, benefit])   => (
               <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/10 transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">

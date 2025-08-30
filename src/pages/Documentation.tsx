@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
 import { Search, 
   BookOpen, 
   Code, 
@@ -18,7 +18,7 @@ import { Search,
   Cloud,
   Shield,
   Rocket
- } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 export default function Documentation(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -142,7 +142,7 @@ export default function Documentation(...args: any[]): any {
   ];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories: anydocCategories.filter(category  => category.id === selectedCategory);
+    ? docCategories: anyanydocCategories.filter(category   => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
@@ -296,8 +296,8 @@ export default function Documentation(...args: any[]): any {
               </p>
             </motion.div>
             
-            <div className="grid md: anygrid-cols-2 gap-8">
-              {filteredCategories.map((category, index)  => (
+            <div className="grid md: anyanygrid-cols-2 gap-8">
+              {filteredCategories.map((category, index)   => (
                 <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -364,8 +364,8 @@ export default function Documentation(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
-            {apiDocs.map((api, index)  => (
+          <div className="grid md: anyanygrid-cols-2 gap-8">
+            {apiDocs.map((api, index)   => (
               <motion.div
                 key={api.name}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -428,8 +428,8 @@ export default function Documentation(...args: any[]): any {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md: anygrid-cols-2 gap-8">
-              {popularGuides.map((guide, index)  => (
+            <div className="grid md: anyanygrid-cols-2 gap-8">
+              {popularGuides.map((guide, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -492,7 +492,7 @@ export default function Documentation(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: anyanygrid-cols-3 gap-8">
             {[
               {
                 title: 'Video Tutorials',
@@ -515,7 +515,7 @@ export default function Documentation(...args: any[]): any {
                 count: '25+ downloads',
                 href: '/downloads'
               }
-            ].map((resource, index)  => (
+            ].map((resource, index)   => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, y: 30 }}

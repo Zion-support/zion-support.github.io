@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, useLocation   } from 'react-router-dom.ts';
-import { cn   } from '@/lib/utils';
+import { Link, useLocation    } from 'react-router-dom';
+import { cn    } from '@/lib/utils';
 import { Home, 
   Briefcase, 
   Users, 
@@ -231,12 +231,12 @@ import { Home,
   Leaf,
   HardDrive,
   RefreshCw
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 
 interface MainSidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: boolean;
-  onClose: ()   => void;
+  isOpen: anyboolean;
+  onClose: ()    => void;
 
 }
 

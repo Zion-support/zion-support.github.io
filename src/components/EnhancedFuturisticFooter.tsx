@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link   } from 'react-router-dom.ts';
-import { motion   } from 'framer-motion.ts';
+import { Link    } from 'react-router-dom';
+import { motion    } from 'framer-motion';
 import { Phone, 
   Mail, 
   MapPin, 
@@ -58,7 +58,7 @@ import { Phone,
   Users,
   TrendingUp,
   CheckCircle
-  } from 'lucide-react.ts';
+   } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
@@ -164,7 +164,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: string, href: string)   => {
+  const createMissingPage = (name: anystring, href: string)    => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -194,8 +194,8 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             >
               Our Services
             </motion.h3>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
-              {footerSections.slice(0, 2).map((section, index)   => (
+            <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-6">
+              {footerSections.slice(0, 2).map((section, index)    => (
                 <motion.div
                   key={section.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -235,8 +235,8 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             >
               Quick Access
             </motion.h3>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
-              {quickLinks.map((link, index)   => (
+            <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-4">
+              {quickLinks.map((link, index)    => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -275,8 +275,8 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
           >
             Complete Service Portfolio
           </motion.h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {footerSections.map((section, index)   => (
+          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {footerSections.map((section, index)    => (
               <motion.div
                 key={section.title}
                 initial={{ opacity: 0, y: 20 }}
