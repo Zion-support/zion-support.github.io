@@ -1,7 +1,7 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight  } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
 
 const categories = [
   {
@@ -32,16 +32,6 @@ const categories = [
     link: "/equipment",
     color: "from-amber-500 to-orange-600",
   },
-<<<<<<< HEAD
-=======
-  {;
-    title: "Digital Transformation",;
-    description: "Business modernization and digital strategy",;
-    icon: "📈",;
-    link: "/all-services",;
-    color: "from-emerald-500 to-green-600",;
-  },;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 const specialServices = [
@@ -54,7 +44,6 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
-<<<<<<< HEAD
     title: "AI Development",
     link: "/ai-development"
   },
@@ -66,23 +55,13 @@ const specialServices = [
     title: "Cybersecurity",
     link: "/cybersecurity"
   }
-=======
-    title: "Comprehensive Services",;
-    link: "/comprehensive-services";
-  },;
-  {;
-    title: "Services Comparison",;
-    link: "/services-comparison";
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
+  showTitle?: boolean;
+}
 
-<<<<<<< HEAD
-  showTitle?: boolean}
-
-export function CategoriesSection(...args[]):  {
+export function CategoriesSection({ showTitle }: CategoriesSectionProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -90,120 +69,55 @@ export function CategoriesSection(...args[]):  {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      };
-    };
+      }
+    }
   };
 
   const itemVariants = {
-  hidden: { y: 30,
-  opacity: 0 
-
-},
+    hidden: { 
+      y: 30,
+      opacity: 0 
+    },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      };
-    };
+      }
+    }
   };
 
   const cardVariants = {
-  hidden: { scale: 0.95,
-  opacity: 0 
-
-},
+    hidden: { 
+      scale: 0.95,
+      opacity: 0 
+    },
     visible: {
       scale: 1,
       opacity: 1,
       transition: {
         duration: 0.4,
         ease: "easeOut"
-      };
-    };
+      }
+    }
   };
-=======
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {;
-    opacity: 1,;
-    transition: {;
-      staggerChildren: 0.1,;
-      delayChildren: 0.2;
-    };
-  };
-};
-
-const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
-  visible: {
-    y: 0,;
-    opacity: 1,;
-    transition: {;
-      duration: 0.5,;
-      ease: "easeOut";
-    };
-  };
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
-<<<<<<< HEAD
         <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
-=======
-        <div className="absolute inset-0" style = {
-  {
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
-  backgroundSize: '50px 50px'
-        
-
-
-
-
-
-
-}}></div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
           <motion.div
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -224,16 +138,12 @@ const itemVariants = {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {categories.map((category, index)  => (
+          {categories.map((category, index) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              transition = {
-  { type: "spring",
-  stiffness: 300 
-
-}}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               <Link to={category.link} className="group block h-full">
                 <motion.div
@@ -274,45 +184,7 @@ const itemVariants = {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.3 
-
-}}
-=======
-          className="mt-12"
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          viewport={{ once: true }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.4 
-
-
-
-
-
-
-}}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
           <h3 className="text-center text-2xl font-bold text-white mb-8">Premium Services</h3>
           <div className="flex flex-wrap justify-center gap-6">
@@ -334,65 +206,17 @@ const itemVariants = {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.5 
-
-}}
-=======
-          className="mt-12 flex justify-center"
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          viewport={{ once: true }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.6 
-
-
-
-
-
-
-}}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
           <Link
             to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
           >
-<<<<<<< HEAD
             View All Services
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
       </div>
     </section>
-  )}
-=======;
-            View All Categories;
-            <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

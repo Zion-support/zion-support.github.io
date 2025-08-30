@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { cn  } from "../../utils/cn";
-
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
+import { cn } from "../../lib/utils";
 
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: string;
   text?: string;
@@ -56,24 +51,11 @@ export function LoadingSpinner({
           transition={{ delay: 0.2 }}
         >
           <span className="text-slate-300 font-medium">{text}</span>
-        </motion.div>
+        </motion.p>
       )}
       
       <span className="sr-only">Loading...</span>
     </div>
-  )}
-
-// Optimized skeleton loader
-export function SkeletonLoader(...args[]):  {
-  return (
-    <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index)  => (;
-=======;
-        >;
-          {text};
-        </motion.p>;
-      )};
-    </div>;
   );
 }
 
@@ -145,7 +127,7 @@ export function LoadingSkeleton({
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, i) => (
+      {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}
           className="h-4 bg-gray-300 rounded animate-pulse"
@@ -158,38 +140,39 @@ export function LoadingSkeleton({
         />
       ))}
     </div>
-  )}
+  );
+}
 
 // Button loading state
-export function ButtonLoader(...args[]):  {
+export function ButtonLoader({ 
+  size = 'md',
+  className = '' 
+}: { 
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  className?: string;
+}) {
   return (
-    <div className = {
-  cn('inline-flex items-center',
-  className)
-
-}>
+    <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
     </div>
-  )}
+  );
+}
 
 // Page loading overlay
-export function PageLoaderOverlay(...args[]):  {
-=======
-          transition = {
-  { delay: index * 0.1,
-  duration: 0.3 
-
-
-
-;
-;
-
-}};
-          className={`${height} bg-white/10 rounded-lg animate-pulse`};
-        />;
-      ))};
-    </div>;
+export function PageLoaderOverlay({ 
+  text = "Loading...",
+  className = '' 
+}: { 
+  text?: string;
+  className?: string;
+}) {
+  return (
+    <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>
+      <div className="bg-white rounded-lg p-6 shadow-xl">
+        <LoadingSpinner size="lg" text={text} />
+      </div>
+    </div>
   );
 }
 
@@ -230,74 +213,34 @@ export function FullPageLoader({
           Preparing your digital transformation journey...
         </motion.p>
       </div>
-    </motion.div>
-  )}
-
-// Content loading placeholder
-export function ContentPlaceholder(...args[]):  {;
-=======;
-        >;
-          {text};
-        </motion.p>;
-      </div>;
-    </motion.div>;
+    </div>
   );
 }
 
 // Content loading placeholder
 export function ContentPlaceholder({ 
-  className = '',;
-  variant = 'default';
-}: { ;
+  className = '',
+  variant = 'default'
+}: { 
   className?: string; 
   variant?: 'default' | 'card' | 'list' | 'grid'; 
 }) {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const variants = {
-  default: 'space-y-4',
+    default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
-    list: 'space-y-3',;
-  ;
-  ;
-  ;
-  ;
-  grid: 'grid grid-cols-2 md:grid-cols-4 gap-4';
-  ;
-
-
-
-
-
-
-};
+    list: 'space-y-3',
+    grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
+  };
 
   return (
-    <div className = {`${variants[variant]} ${className}`}>
+    <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: 6 }).map((_, index)  => (
+        Array.from({ length: 6 }).map((_, index) => (
           <motion.div
             key={index}
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-6 border border-white/10"
           >
@@ -308,29 +251,11 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 5 }).map((_, index)  => (
+        Array.from({ length: 5 }).map((_, index) => (
           <motion.div
             key={index}
-            initial = {
-  { opacity: 0,
-  x: -20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
             className="flex items-center space-x-3"
           >
@@ -340,29 +265,11 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: 8 }).map((_, index)  => (
+        Array.from({ length: 8 }).map((_, index) => (
           <motion.div
             key={index}
-            initial = {
-  { opacity: 0,
-  scale: 0.9 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-4 border border-white/10"
           >
@@ -372,52 +279,17 @@ export function ContentPlaceholder({
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: 4 }).map((_, index)  => (
+        Array.from({ length: 4 }).map((_, index) => (
           <motion.div
             key={index}
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 10 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="h-4 bg-white/10 rounded animate-pulse" />
+            className="h-4 bg-white/10 rounded animate-pulse"
+          />
         ))
       )}
     </div>
-  )}
-=======
-            initial = {
-  { opacity: 0,
-  y: 10 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-;
-}};
-            transition={{ delay: index * 0.1 }};
-            className="h-4 bg-white/10 rounded animate-pulse" />;
-        ));
-      )};
-    </div>;
   );
 }
 
@@ -426,21 +298,12 @@ export function AppLoadingSpinner() {
   const icons = ['🤖', '☁️', '🔒', '💡'];
   
   return (
-    <div className = "flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="relative">
         {/* Main spinning ring */}
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
-          <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style = {
-  { animationDirection: 'reverse',
-  animationDuration: '1.5s' 
-
-
-
-
-
-
-}}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
           <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
         </div>
         
@@ -449,49 +312,27 @@ export function AppLoadingSpinner() {
           <motion.div
             key={index}
             className="absolute text-2xl"
-            style = {
-  {
+            style={{
               top: '50%',
               left: '50%',
-              transform: 'translate(-50%, -50%)',
-  
-
-}}
-            animate = {
-  {
+              transform: 'translate(-50%, -50%)'
+            }}
+            animate={{
               rotate: [0, 360],
-              scale: [0.8, 1.2, 0.8],
-  
-
-}}
-            transition = {
-  {
+              scale: [0.8, 1.2, 0.8]
+            }}
+            transition={{
               duration: 3,
               repeat: Infinity,
               delay: index * 0.5,
-  ease: "easeInOut"
-            
-
-
-
-
-
-
-}}
+              ease: "easeInOut"
+            }}
           >
             <span 
-              style = {
-  {
+              style={{
                 position: 'absolute',
-  top: `${Math.cos(index * Math.PI / 2) * 60
-
-
-
-
-
-
-}px`,
-                left: `${Math.sin(index * Math.PI / 2) * 60}px`,
+                top: `${Math.cos(index * Math.PI / 2) * 60}px`,
+                left: `${Math.sin(index * Math.PI / 2) * 60}px`
               }}
             >
               {icon}
@@ -503,26 +344,8 @@ export function AppLoadingSpinner() {
       {/* Loading text */}
       <motion.div
         className="mt-8 text-center"
-        initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-        animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
         <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
@@ -535,24 +358,18 @@ export function AppLoadingSpinner() {
           <motion.div
             key={i}
             className="w-2 h-2 bg-cyan-400 rounded-full"
-            animate = {
-  {
+            animate={{
               scale: [1, 1.5, 1],
-              opacity: [0.5, 1, 0.5],
-  
-
-}}
-            transition = {
-  {
+              opacity: [0.5, 1, 0.5]
+            }}
+            transition={{
               duration: 1.5,
               repeat: Infinity,
-              delay: i * 0.2,;
-  ;
-
-}};
-          />;
-        ))};
-      </div>;
-    </div>;
+              delay: i * 0.2
+            }}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
