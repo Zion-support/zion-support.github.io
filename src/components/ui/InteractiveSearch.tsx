@@ -7,13 +7,13 @@ interface InteractiveSearchProps {
 }
 
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
-  placeholder = "Search...", 
-  onSearch, 
-  className = "" 
-}) => {
+  placeholder = "Search...", ;
+  onSearch, ;
+  className = "" ;
+}) => {;
   const [query, setQuery] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());
@@ -21,7 +21,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} className={`w-full ${className}`}>
+    <form onSubmit = {handleSubmit} className={`w-full ${className}`}>
       <div className="relative">
         <input
           type="text"
@@ -36,13 +36,13 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
           </svg>
         </div>
         <button
-          type="submit"
-          className="absolute inset-y-0 right-0 px-4 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors"
-        >
-          Search
-        </button>
-      </div>
-    </form>
+          type="submit";
+          className="absolute inset-y-0 right-0 px-4 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors";
+        >;
+          Search;
+        </button>;
+      </div>;
+    </form>;
   );
 };
 

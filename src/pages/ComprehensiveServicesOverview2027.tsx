@@ -2,75 +2,93 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  TrendingUp, 
-  Zap, 
-  Globe, 
-  Users, 
-  BarChart3, 
-  Lock, 
-  Eye, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Clock, 
-  DollarSign, 
-  Target, 
-  Lightbulb, 
-  Award, 
-  ShieldCheck, 
-  Server, 
-  Smartphone, 
-  Monitor, 
-  Wifi, 
-  Beaker, 
-  Syringe, 
-  Stethoscope, 
-  Heart, 
-  Ear, 
-  Hand, 
-  Footprints, 
-  Bone, 
-  Tooth, 
-  Pill, 
-  Thermometer, 
-  Scale, 
-  Calculator, 
-  PieChart, 
-  TrendingDown, 
-  Minus, 
-  Plus, 
-  Equal, 
-  Divide, 
-  Percent, 
-  Euro, 
-  Bitcoin, 
-  CreditCard, 
-  Wallet, 
-  Banknote, 
-  Coins, 
-  PiggyBank, 
-  Key, 
-  Fingerprint, 
-  QrCode, 
-  Barcode, 
-  Scan, 
-  Camera, 
-  VideoOff, 
-  Mic, 
-  MicOff, 
-  Volume2, 
-  VolumeX, 
-  Play, 
-  Pause, 
-  Rewind, 
-  FastForward, 
-  Shuffle, 
-  Repeat, 
-  Repeat1, 
-  PlayCircle, 
+import {
+  Brain,
+  Shield,
+  TrendingUp,
+  Zap,
+  Globe,
+  Users,
+  BarChart3,
+  Lock,
+  Eye,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign,
+  Target,
+  Lightbulb,
+  Award,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayCircle,
   PauseCircle,
   Mail,
   Phone,
@@ -81,14 +99,30 @@ import {
   Grid,
   List,
   ChevronDown,
+<<<<<<< HEAD
+  ChevronUp
+ } from 'lucide-react';
+import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Badge  } from '@/components/ui/badge';
+const categories = [
+  { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
+  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },
+  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'IT Services').length },
+  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'Business Solutions').length }
+=======
   ShoppingCart,
   MessageCircle,
   HelpCircle,
   FileText,
   Video,
-  Truck,
-  Briefcase
+  Truck,;
+  Briefcase;
 } from 'lucide-react';
+import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -138,56 +172,62 @@ const MICRO_SAAS_SERVICES = [
     price: 19,
     rating: 4.9,
     reviewCount: 234,
-    aiScore: 98,
-    featured: true,
-    createdAt: '2024-01-10',
-    href: '/services/website-analytics',
-    tags: ['Analytics', 'Web', 'Performance'],
-    images: ['/images/analytics.jpg']
-  }
+    aiScore: 98,;
+    featured: true,;
+    createdAt: '2024-01-10',;
+    href: '/services/website-analytics',;
+    tags: ['Analytics', 'Web', 'Performance'],;
+    images: ['/images/analytics.jpg'];
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
-const categories = [
-  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
-  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
+const categories = [;
+  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
+  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
+  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
 
-const pricingModels = [
-  { id: 'all', name: 'All Pricing' },
-  { id: 'monthly', name: 'Monthly' },
-  { id: 'yearly', name: 'Yearly' },
-  { id: 'one-time', name: 'One-time' },
-  { id: 'usage-based', name: 'Usage-based' }
+const pricingModels = [;
+  { id: 'all', name: 'All Pricing' },;
+  { id: 'monthly', name: 'Monthly' },;
+  { id: 'yearly', name: 'Yearly' },;
+  { id: 'one-time', name: 'One-time' },;
+  { id: 'usage-based', name: 'Usage-based' };
 ];
-
-export default function ComprehensiveServicesOverview2027() {
+export default function ComprehensiveServicesOverview2027(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
-  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-
+  const [sortBy, setSortBy] = useState<any>('rating');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing);
-    }
-    if (searchQuery.trim()) {
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing)};
+    if (searchQuery.trim()) {;
       const query = searchQuery.toLowerCase();
+<<<<<<< HEAD
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(query) ||
         service.description.toLowerCase().includes(query) ||
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||
         service.subcategory?.toLowerCase().includes(query)
+      )};
+=======;
+      filtered = filtered.filter(service =>;
+        service.title.toLowerCase().includes(query) ||;
+        service.description.toLowerCase().includes(query) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(query)) ||;
+        service.subcategory?.toLowerCase().includes(query);
       );
     }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
@@ -199,16 +239,31 @@ export default function ComprehensiveServicesOverview2027() {
         case 'newest':
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
         default:
-          return 0;
-      }
+          return 0}
     });
-    setFilteredServices(filtered);
-  }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-
-  const ServiceCard = ({ service }: { service: any }) => (
+    setFilteredServices(filtered)}, [selectedCategory, selectedPricing, searchQuery, sortBy]);
+  const ServiceCard = ({ service }: { service})  => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
       transition={{ duration: 0.5 }}
       className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20"
     >
@@ -218,8 +273,8 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
       )}
       <div className="relative mb-6 overflow-hidden rounded-xl">
-        <img 
-          src={service.images[0]} 
+        <img
+          src={service.images[0]}
           alt={service.title}
           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
         />
@@ -262,30 +317,93 @@ export default function ComprehensiveServicesOverview2027() {
             <span className="text-white font-semibold">{service.pricingModel}</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-zion-slate-light text-sm">Created:</span>
-            <span className="text-white text-sm">{new Date(service.createdAt).toLocaleDateString()}</span>
+            <span className="text-zion-slate-light text-sm">Market Price:</span>
+            <span className="text-zion-purple font-semibold">{service.marketPrice}</span>
+          </div>
+        </div>
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-zion-slate-light text-sm">Key Benefits:</span>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+              className="text-zion-cyan hover:text-zion-cyan-light"
+            >
+              {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </Button>
+          </div>
+          {expandedService === service.id && (
+            <motion.div
+              initial = {
+  { opacity: 0,
+  height: 0 
+
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+
+}}
+              className="space-y-2"
+            >
+              {service.benefits.map((benefit: string, index: number)  => (
+                <div key={index} className="flex items-start space-x-2">
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                  <span className="text-zion-slate-light text-sm">{benefit}</span>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </div>
+        <div className="pt-4 border-t border-zion-blue-light/20">
+          <div className="flex items-center justify-between">
+            <Link
+              to={service.website}
+              className="inline-flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
+            >
+              <span className="text-sm font-medium">Learn More</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+            <Link
+              to={`mailto:${service.contactEmail}`}
+              className="inline-flex items-center space-x-2 text-zion-purple hover:text-zion-purple-light transition-colors"
+            >
+              <span className="text-sm font-medium">Contact</span>
+              <Mail className="w-4 h-4" />
+            </Link>
           </div>
         </div>
         <Button 
           asChild 
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light"
         >
-          <Link to={service.href}>
-            Learn More
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
-        </Button>
-      </div>
-    </motion.div>
+          <Link to={service.href}>;
+            Learn More;
+            <ArrowRight className="ml-2 w-4 h-4" />;
+          </Link>;
+        </Button>;
+      </div>;
+    </motion.div>;
   );
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO
+        title="Comprehensive Services Overview 2027 - Zion Tech Group"
+        description="Explore our comprehensive portfolio of innovative AI, IT, and business solutions. From AI-powered chatbots to quantum computing services, discover cutting-edge technology solutions."
+        keywords="AI services, IT solutions, business automation, cybersecurity, blockchain, quantum computing, Zion Tech Group"
+      />
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -296,9 +414,36 @@ export default function ComprehensiveServicesOverview2027() {
             </span>
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
             className="text-xl text-zion-slate-light max-w-3xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
@@ -339,7 +484,7 @@ export default function ComprehensiveServicesOverview2027() {
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
               >
                 <option value="rating">Sort by Rating</option>
@@ -349,29 +494,103 @@ export default function ComprehensiveServicesOverview2027() {
               </select>
             </div>
           </div>
-          <div className="flex flex-wrap gap-4">
-            {categories.map((category) => (
-              <Button
-                key={category.id}
-                variant={selectedCategory === category.id ? 'default' : 'outline'}
-                onClick={() => setSelectedCategory(category.id)}
-                className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
-              >
-                {category.icon}
-                <span className="ml-2">{category.name}</span>
-                <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
-                  {category.count}
-                </Badge>
-              </Button>
+        </div>
+      </section>
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Filters and Search */}
+          <div className="mb-8 space-y-6">
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex-1 max-w-md">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                  <Input
+                    placeholder="Search services..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/20 text-white placeholder-zion-slate-light"
+                  />
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <Button
+                    variant={viewMode === 'grid' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setViewMode('grid')}
+                    className="bg-zion-cyan hover:bg-zion-cyan-light"
+                  >
+                    <Grid className="w-4 h-4" />
+                  </Button>
+                  <Button
+                    variant={viewMode === 'list' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setViewMode('list')}
+                    className="bg-zion-cyan hover:bg-zion-cyan-light"
+                  >
+                    <List className="w-4 h-4" />
+                  </Button>
+                </div>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
+                >
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="aiScore">Sort by AI Score</option>
+                  <option value="newest">Sort by Newest</option>
+                </select>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  variant={selectedCategory === category.id ? 'default' : 'outline'}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
+                >
+                  {category.icon}
+                  <span className="ml-2">{category.name}</span>
+                  <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
+                    {category.count}
+                  </Badge>
+                </Button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {pricingModels.map((pricing) => (
+                <Button
+                  key={pricing.id}
+                  variant={selectedPricing === pricing.id ? 'default' : 'outline'}
+                  onClick={() => setSelectedPricing(pricing.id)}
+                  className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
+                >
+                  {pricing.name}
+                </Button>
+              ))}
+            </div>
+          </div>
+          {/* Services Grid */}
+          <div className={`grid gap-8 ${
+            viewMode === 'grid'
+              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+              : 'grid-cols-1'
+          }`}>
+            {filteredServices.map((service) => (
+              <ServiceCard key={service.id} service={service} />
             ))}
           </div>
           <div className="flex flex-wrap gap-4">
             {pricingModels.map((pricing) => (
-              <Button
-                key={pricing.id}
-                variant={selectedPricing === pricing.id ? 'default' : 'outline'}
-                onClick={() => setSelectedPricing(pricing.id)}
-                className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
+              <Button;
+                onClick={() => {;
+                  setSelectedCategory('all');
+                  setSelectedPricing('all');
+                  setSearchQuery('')}}
+                className = "bg-zion-cyan hover:bg-zion-cyan-light"
               >
                 {pricing.name}
               </Button>
@@ -386,18 +605,18 @@ export default function ComprehensiveServicesOverview2027() {
         }`}>
           {filteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
-          ))}
-        </div>
-        {filteredServices.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
-            <Button
-              onClick={() => {
+          ))};
+        </div>;
+        {filteredServices.length === 0 && (;
+          <div className="text-center py-16">;
+            <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>;
+            <Button;
+              onClick={() => {;
                 setSelectedCategory('all');
                 setSelectedPricing('all');
                 setSearchQuery('');
               }}
-              className="bg-zion-cyan hover:bg-zion-cyan-light"
+              className = "bg-zion-cyan hover:bg-zion-cyan-light"
             >
               Clear Filters
             </Button>
@@ -411,7 +630,7 @@ export default function ComprehensiveServicesOverview2027() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8">
-            Our team of experts is ready to help you implement the perfect solution for your needs. 
+            Our team of experts is ready to help you implement the perfect solution for your needs.
             Get in touch today for a personalized consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -425,10 +644,19 @@ export default function ComprehensiveServicesOverview2027() {
               <a href="tel:+13024640950">
                 Call Now: +1 302 464 0950
               </a>
+<<<<<<< HEAD
             </Button>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

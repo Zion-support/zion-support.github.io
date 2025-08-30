@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 const Pricing = () => {
   const pricingTiers = [
@@ -8,7 +8,7 @@ const Pricing = () => {
       price: "$19",
       period: "/month",
       description: "Perfect for individuals and small teams getting started with AI tools",
-      features: [
+      features[
         "AI Content Generation (100 credits/month)",
         "Basic AI Image Editing",
         "AI Meeting Assistant (5 hours/month)",
@@ -25,7 +25,7 @@ const Pricing = () => {
       price: "$49",
       period: "/month",
       description: "Ideal for growing businesses and professional teams",
-      features: [
+      features[
         "Everything in Starter",
         "AI Content Generation (500 credits/month)",
         "Advanced AI Image & Video Editing",
@@ -46,7 +46,7 @@ const Pricing = () => {
       price: "$99",
       period: "/month",
       description: "Comprehensive solution for established businesses",
-      features: [
+      features[
         "Everything in Professional",
         "AI Content Generation (2000 credits/month)",
         "AI Code Assistant (Advanced)",
@@ -71,7 +71,7 @@ const Pricing = () => {
       price: "Custom",
       period: "",
       description: "Tailored solutions for large organizations with specific requirements",
-      features: [
+      features[
         "Everything in Business",
         "Unlimited AI Content Generation",
         "Custom AI Model Training",
@@ -196,7 +196,6 @@ const Pricing = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Pricing;

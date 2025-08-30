@@ -44,58 +44,34 @@ export default function DSRPortal() {
       description: "AI-powered processing of data subject requests with intelligent routing."
     },
     {
-      icon: Eye,
+      icon: Target,
       title: "Data Discovery & Mapping",
-      description: "Automated discovery and mapping of personal data across all systems and databases."
+      description: "Automated discovery and mapping of personal data across systems."
+    },
+    {
+      icon: Zap,
+      title: "Compliance Workflows",
+      description: "Streamlined workflows for handling privacy requests and compliance tasks."
     },
     {
       icon: BarChart3,
-      title: "Compliance Monitoring",
-      description: "Real-time monitoring of compliance status and request fulfillment metrics."
+      title: "Compliance Analytics",
+      description: "Real-time insights into privacy compliance and request processing metrics."
     },
     {
-      icon: Clock,
-      title: "Workflow Automation",
-      description: "Automated workflows for request validation, processing, and response generation."
-    },
-    {
-      icon: CheckCircle,
-      title: "Audit Trails",
-      description: "Complete audit trails for all data subject rights activities and compliance."
+      icon: Lock,
+      title: "Secure Data Handling",
+      description: "Enterprise-grade security for sensitive personal data processing."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
-      title: "Regulatory Compliance",
-      description: "Ensure full compliance with GDPR, CCPA, and other privacy regulations."
-    },
-    {
-      icon: Shield,
-      title: "Data Protection",
-      description: "Protect personal data and maintain customer trust through proper rights management."
-    },
-    {
-      icon: Clock,
-      title: "Efficient Processing",
-      description: "Reduce response times and improve efficiency in handling data subject requests."
-    },
-    {
-      icon: BarChart3,
-      title: "Transparency",
-      description: "Provide clear visibility into data processing activities and compliance status."
-    },
-    {
-      icon: Users,
-      title: "Customer Trust",
-      description: "Build and maintain customer trust through transparent data rights management."
-    },
-    {
-      icon: Award,
-      title: "Risk Mitigation",
-      description: "Minimize legal and reputational risks associated with data privacy violations."
-    }
+    "Ensure 100% GDPR and CCPA compliance with automated workflows",
+    "Reduce response time to data subject requests by 80-90%",
+    "Minimize compliance risks and potential fines by 95%",
+    "Streamline data discovery and mapping processes by 70%",
+    "Improve audit trail and compliance reporting efficiency",
+    "Enhance customer trust through transparent data handling"
   ];
 
   const dataRights = [
@@ -122,13 +98,13 @@ export default function DSRPortal() {
     {
       right: "Right to Restriction",
       description: "Individuals can request limitation of data processing",
-      icon: Lock
-    },
-    {
-      right: "Right to Object",
-      description: "Individuals can object to processing of their personal data",
-      icon: AlertTriangle
-    }
+      icon: Lock;
+    },;
+    {;
+      right: "Right to Object",;
+      description: "Individuals can object to processing of their personal data",;
+      icon: AlertTriangle;
+    };
   ];
 
   const useCases = [
@@ -154,19 +130,13 @@ export default function DSRPortal() {
     },
     {
       industry: "Education",
-      description: "Manage student data rights and educational privacy compliance",
-      icon: GraduationCap
-    },
-    {
-      industry: "Real Estate",
-      description: "Handle client data rights and real estate privacy compliance",
-      icon: Home
+      description: "Student data, academic records, and educational service information"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO 
         title="DSR Portal - Zion Tech Group"
         description="Streamline data subject rights management with our AI-powered DSR portal. Ensure GDPR and CCPA compliance with automated request processing."
       />
@@ -177,8 +147,26 @@ export default function DSRPortal() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-indigo-600/20 text-indigo-400 rounded-full text-sm font-medium mb-6">
@@ -213,8 +201,26 @@ export default function DSRPortal() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -232,9 +238,36 @@ export default function DSRPortal() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50"
               >
@@ -267,8 +300,26 @@ export default function DSRPortal() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -286,9 +337,36 @@ export default function DSRPortal() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50"
               >
@@ -321,8 +399,26 @@ export default function DSRPortal() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -340,9 +436,36 @@ export default function DSRPortal() {
             {dataRights.map((right, index) => (
               <motion.div
                 key={right.right}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50"
               >
@@ -375,8 +498,26 @@ export default function DSRPortal() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -394,9 +535,36 @@ export default function DSRPortal() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50"
               >
@@ -429,8 +597,26 @@ export default function DSRPortal() {
       <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -448,12 +634,12 @@ export default function DSRPortal() {
               </button>
               <button className="border border-indigo-500 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -43,8 +43,6 @@ import {
   Box,
   Ship,
   Train,
-  Plane,
-  Car,
   Truck,
   Cloud,
   Settings,
@@ -52,24 +50,6 @@ import {
   Smartphone,
   Tablet,
   Monitor,
-  Smartphone,
-  Globe,
-  Shield,
-  Zap,
-  Users,
-  Settings,
-  Palette,
-  Database,
-  Server,
-  Network,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
   Wifi,
   Bluetooth,
   Battery,
@@ -179,7 +159,6 @@ import {
   Colocation,
   Edge,
   Fog,
-  Cloud,
   Hybrid,
   Multi,
   Public,
@@ -243,7 +222,6 @@ import {
   Application,
   Data,
   Security,
-  Network,
   Storage,
   Compute,
   Memory,
@@ -256,8 +234,6 @@ import {
   NearRealTime,
   Offline,
   Online,
-  Hybrid,
-  Multi,
   Single,
   Distributed,
   Centralized,
@@ -266,7 +242,6 @@ import {
   Hierarchical,
   Flat,
   Mesh,
-  Star,
   Ring,
   Bus,
   Tree,
@@ -278,12 +253,9 @@ import {
   Array,
   List,
   Stack,
-  Queue,
   Deque,
   PriorityQueue,
   Heap,
-  Tree,
-  Graph,
   HashTable,
   BloomFilter,
   SkipList,
@@ -292,299 +264,17 @@ import {
   RedBlackTree,
   AVLTree,
   SplayTree,
-  Treap,
-  SplayTree,
-  RedBlackTree,
-  AVLTree,
-  BTree,
-  Trie,
-  SkipList,
-  BloomFilter,
-  HashTable,
-  Graph,
-  Tree,
-  Heap,
-  PriorityQueue,
-  Deque,
-  Queue,
-  Stack,
-  List,
-  Array,
-  Tensor,
-  Scalar,
-  Vector,
-  Matrix,
-  Graph,
-  Tree,
-  Ring,
-  Star,
-  Mesh,
-  Flat,
-  Hierarchical,
-  Federated,
-  Decentralized,
-  Centralized,
-  Distributed,
-  Single,
-  Multi,
-  Hybrid,
-  Online,
-  Offline,
-  NearRealTime,
-  RealTime,
-  Batch,
-  Stream,
-  Queue,
-  Buffer,
-  Cache,
-  Memory,
-  Compute,
-  Storage,
-  Network,
-  Security,
-  Data,
-  Application,
-  Infrastructure,
-  Platform,
-  SRE,
-  NoOps,
-  AIOps,
-  MLOps,
-  DataOps,
-  SecOps,
-  GitOps,
-  DevOps,
-  CD,
-  CI,
-  DeploymentTech,
-  ReleaseTech,
-  ChangeTech,
-  IncidentTech,
-  AlertingTech,
-  MetricsTech,
-  TracingTech,
-  LoggingTech,
-  ObservabilityTech,
-  MonitoringTech,
-  AuditTech,
-  RiskTech,
-  GovernanceTech,
-  ComplianceTech,
-  PrivacyTech,
-  SecurityTech,
-  SupportTech,
-  SalesTech,
-  HRTech,
-  MarTech,
-  Adtech,
-  Regtech,
-  Legaltech,
-  Proptech,
-  Edtech,
-  Healthtech,
-  Insurtech,
-  Fintech,
-  Ecommerce,
-  Social,
-  Gaming,
-  Entertainment,
-  Media,
-  Telecommunications,
-  Utilities,
-  Energy,
-  Transportation,
-  Manufacturing,
-  Retail,
-  Education,
-  Healthcare,
-  Financial,
-  Government,
-  Community,
-  Private,
-  Public,
-  Multi,
-  Hybrid,
-  Cloud,
-  Fog,
-  Edge,
-  Colocation,
-  Datacenter,
-  Cabinet,
-  Rack,
-  Chassis,
-  Backplane,
-  Motherboard,
-  PCB,
-  SiP,
-  SoC,
-  ASIC,
-  FPGA,
-  TPU,
-  GPU,
-  CISC,
-  RISC,
-  x86,
-  ARM,
-  TDX,
-  SEV,
-  SGX,
-  TrustZone,
-  SecureEnclave,
-  TPM,
-  HSM,
-  OCSP,
-  CRL,
-  CSR,
-  Certificate,
-  Token,
-  ServiceAccount,
-  ClusterRoleBinding,
-  ClusterRole,
-  RoleBinding,
-  Role,
-  PodSecurityPolicy,
-  NetworkPolicy,
-  VerticalPodAutoscaler,
-  HorizontalPodAutoscaler,
-  CronJob,
-  Job,
-  DaemonSet,
-  StatefulSet,
-  StorageClass,
-  PersistentVolume,
-  Secret,
-  ConfigMap,
-  Namespace,
-  Node,
-  Cluster,
-  Egress,
-  Ingress,
-  Service,
-  Pod,
-  Container,
-  VNF,
-  NFV,
-  SDN,
-  MPLS,
-  IPSec,
-  GRE,
-  VXLAN,
-  VLAN,
-  RIP,
-  EIGRP,
-  OSPF,
-  BGP,
-  IPFIX,
-  sFlow,
-  NetFlow,
-  SNMP,
-  Syslog,
-  Tacacs,
-  Radius,
-  OpenID,
-  SAML,
-  JWT,
-  OAuth,
-  Kerberos,
-  LDAP,
-  IMAP,
-  POP3,
-  SMTP,
-  NTP,
-  DHCP,
-  DNS,
-  HTTPS,
-  HTTP,
-  FTP,
-  SSH,
-  TLS,
-  SSL,
-  VPN,
-  Proxy,
-  Gateway,
-  LoadBalancer,
-  Firewall,
-  Modem,
-  Hub,
-  Switch,
-  Router,
-  MemoryStick,
-  HardDrive,
-  Signal,
-  Battery,
-  Bluetooth,
-  Wifi,
-  Network,
-  Server,
-  Database,
-  Palette,
-  Settings,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Smartphone,
-  Palette,
-  Settings,
-  Cloud,
-  Truck,
-  Car,
-  Plane,
-  Train,
-  Ship,
-  Box,
-  Navigation,
-  Route,
-  Warehouse,
-  Package,
-  AlertTriangle,
-  RefreshCw,
-  Layers,
-  MapPin,
-  TrendingUp,
-  BarChart3,
-  Cog,
-  Factory,
-  Plane,
-  Car,
-  Building,
-  Server,
-  Network,
-  Gauge,
-  Lightbulb,
-  Rocket,
-  Target,
-  Brain,
-  Cpu,
-  Wrench,
-  FileText,
-  Code,
-  Database,
-  Eye,
-  Clock,
-  Activity,
-  Lock,
-  Globe,
-  Award,
-  Users,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Shield,
-  Zap,
-  Server
+  Treap
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const infrastructureSolutions = [
   {
     id: 1,
     title: "Data Center Infrastructure",
     description: "Enterprise-grade data center design and implementation with high availability and scalability.",
     icon: Server,
-    features: [
+    features[
       "Server infrastructure",
       "Storage systems",
       "Network architecture",
@@ -593,14 +283,14 @@ const infrastructureSolutions = [
     price: "From $500,000",
     timeline: "24-48 weeks",
     category: "Data Center",
-    technologies: ["Enterprise Servers", "SAN/NAS Storage", "Network Switches", "UPS Systems"]
+    technologies["Enterprise Servers", "SAN/NAS Storage", "Network Switches", "UPS Systems"]
   },
   {
     id: 2,
     title: "Cloud Infrastructure",
     description: "Multi-cloud and hybrid cloud infrastructure design and management.",
     icon: Cloud,
-    features: [
+    features[
       "Cloud architecture",
       "Multi-cloud strategy",
       "Hybrid cloud setup",
@@ -609,14 +299,14 @@ const infrastructureSolutions = [
     price: "From $200,000",
     timeline: "16-32 weeks",
     category: "Cloud",
-    technologies: ["AWS", "Azure", "GCP", "Kubernetes"]
+    technologies["AWS", "Azure", "GCP", "Kubernetes"]
   },
   {
     id: 3,
     title: "Network Infrastructure",
     description: "Enterprise networking solutions with security and performance optimization.",
     icon: Network,
-    features: [
+    features[
       "Network design",
       "Security implementation",
       "Performance optimization",
@@ -625,14 +315,14 @@ const infrastructureSolutions = [
     price: "From $150,000",
     timeline: "12-24 weeks",
     category: "Networking",
-    technologies: ["Cisco", "Juniper", "Fortinet", "Network Monitoring"]
+    technologies["Cisco", "Juniper", "Fortinet", "Network Monitoring"]
   },
   {
     id: 4,
     title: "Security Infrastructure",
     description: "Comprehensive security infrastructure with threat detection and prevention.",
     icon: Shield,
-    features: [
+    features[
       "Firewall systems",
       "Intrusion detection",
       "Access control",
@@ -641,14 +331,14 @@ const infrastructureSolutions = [
     price: "From $300,000",
     timeline: "20-36 weeks",
     category: "Security",
-    technologies: ["Next-Gen Firewalls", "SIEM", "EDR", "Zero Trust"]
+    technologies["Next-Gen Firewalls", "SIEM", "EDR", "Zero Trust"]
   },
   {
     id: 5,
     title: "Storage Infrastructure",
     description: "High-performance storage solutions with data protection and backup.",
     icon: HardDrive,
-    features: [
+    features[
       "Storage architecture",
       "Data protection",
       "Backup systems",
@@ -657,14 +347,14 @@ const infrastructureSolutions = [
     price: "From $250,000",
     timeline: "16-28 weeks",
     category: "Storage",
-    technologies: ["SAN", "NAS", "Backup Software", "DR Systems"]
+    technologies["SAN", "NAS", "Backup Software", "DR Systems"]
   },
   {
     id: 6,
     title: "Monitoring & Observability",
     description: "Comprehensive monitoring and observability platform for infrastructure management.",
     icon: Activity,
-    features: [
+    features[
       "Infrastructure monitoring",
       "Application performance",
       "Log management",
@@ -673,10 +363,12 @@ const infrastructureSolutions = [
     price: "From $100,000",
     timeline: "12-20 weeks",
     category: "Monitoring",
-    technologies: ["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
+    technologies["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
   }
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const infrastructureTechnologies = [
   {
     name: "Server Technologies",
@@ -711,7 +403,7 @@ const infrastructureTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Financial Institution",
+    comp: "Global Financial Institution",
     industry: "Finance",
     challenge: "Needed enterprise-grade infrastructure for 50,000+ users across 30 countries",
     solution: "Built comprehensive infrastructure with data centers, cloud integration, and security",
@@ -720,7 +412,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Network",
+    comp: "Healthcare Network",
     industry: "Healthcare",
     challenge: "Required HIPAA-compliant infrastructure for patient data management",
     solution: "Implemented secure infrastructure with encryption, access controls, and monitoring",
@@ -729,7 +421,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Manufacturing Corporation",
+    comp: "Manufacturing Corporation",
     industry: "Manufacturing",
     challenge: "Needed IoT-ready infrastructure for smart manufacturing operations",
     solution: "Built edge computing infrastructure with IoT integration and real-time monitoring",
@@ -774,25 +466,25 @@ const infrastructureBenefits = [
     title: "High Availability",
     description: "99.99% uptime with redundant systems and failover capabilities",
     icon: Shield,
-    examples: ["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"]
+    examples["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"]
   },
   {
     title: "Scalability",
     description: "Infrastructure that grows with your business needs",
     icon: TrendingUp,
-    examples: ["Horizontal scaling", "Vertical scaling", "Auto-scaling", "Resource optimization"]
+    examples["Horizontal scaling", "Vertical scaling", "Auto-scaling", "Resource optimization"]
   },
   {
     title: "Security",
     description: "Enterprise-grade security with compliance and monitoring",
     icon: Lock,
-    examples: ["Multi-layer security", "Compliance frameworks", "Threat detection", "Access controls"]
+    examples["Multi-layer security", "Compliance frameworks", "Threat detection", "Access controls"]
   },
   {
     title: "Performance",
     description: "Optimized infrastructure for maximum performance and efficiency",
     icon: Zap,
-    examples: ["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"]
+    examples["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"]
   }
 ];
 
@@ -818,15 +510,60 @@ export default function Infrastructure() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Server className="w-10 h-10 text-white" />
@@ -864,8 +601,26 @@ export default function Infrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -879,9 +634,36 @@ export default function Infrastructure() {
             {infrastructureBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -910,8 +692,26 @@ export default function Infrastructure() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -925,9 +725,36 @@ export default function Infrastructure() {
             {infrastructureTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -957,8 +784,26 @@ export default function Infrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -972,9 +817,36 @@ export default function Infrastructure() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -1001,8 +873,26 @@ export default function Infrastructure() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1033,9 +923,36 @@ export default function Infrastructure() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -1090,8 +1007,26 @@ export default function Infrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1105,9 +1040,36 @@ export default function Infrastructure() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -1115,7 +1077,7 @@ export default function Infrastructure() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1151,8 +1113,26 @@ export default function Infrastructure() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -1180,5 +1160,4 @@ export default function Infrastructure() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

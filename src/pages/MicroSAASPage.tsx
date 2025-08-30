@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Zap, 
-  Code, 
-  Database, 
-  Users, 
-  Shield, 
-  CheckCircle, 
+import {
+  Zap,
+  Code,
+  Database,
+  Users,
+  Shield,
+  CheckCircle,
   ArrowRight,
   Clock,
   Star,
@@ -20,7 +20,7 @@ import {
   Rocket,
   Target,
   Globe
-} from 'lucide-react';
+ } from 'lucide-react';
 const MicroSAASPage = () => {
   const saasServices = [
     {
@@ -28,8 +28,8 @@ const MicroSAASPage = () => {
       title: 'Custom Applications',
       description: 'Tailored software solutions designed for your specific business needs',
       icon: <Code className="w-8 h-8" />,
-      features: ['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
-      useCases: ['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
+      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
+      useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
       pricing: 'Starting from $2,500/month'
     },
     {
@@ -37,8 +37,8 @@ const MicroSAASPage = () => {
       title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',
       icon: <Database className="w-8 h-8" />,
-      features: ['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
-      useCases: ['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
+      features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
+      useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
       pricing: 'Starting from $1,800/month'
     },
     {
@@ -46,49 +46,83 @@ const MicroSAASPage = () => {
       title: 'Scalable Architecture',
       description: 'Cloud-native architectures that grow with your business',
       icon: <Globe className="w-8 h-8" />,
-      features: ['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
-      useCases: ['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
+      features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
+      useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
       pricing: 'Starting from $3,200/month'
     },
     {
       id: 'user-management',
       title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems',
+<<<<<<< HEAD
       icon: <Users className="w-8 h-8" />,
-      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
-      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
+      features['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
+      useCases['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
       pricing: 'Starting from $1,500/month'
-    }
+    };
+=======;
+      icon: <Users className="w-8 h-8" />,;
+      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],;
+      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],;
+      pricing: 'Starting from $1,500/month';
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-  const saasBenefits = [
-    'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration'
+  const saasBenefits = [;
+    'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration';
   ];
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
+  hidden: { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+},
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0.5;
+      };
+    };
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -101,7 +135,7 @@ const MicroSAASPage = () => {
             </span> Solutions
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Build and scale your software-as-a-service business with our micro SAAS solutions. 
+            Build and scale your software-as-a-service business with our micro SAAS solutions.
             From custom applications to scalable architectures, we help you create successful SAAS products.
           </p>
           {/* Quick Stats */}
@@ -125,9 +159,9 @@ const MicroSAASPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
+          className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16"
         >
-          {saasServices.map((service, index) => (
+          {saasServices.map((service, index)  => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -187,9 +221,36 @@ const MicroSAASPage = () => {
         </motion.div>
         {/* SAAS Benefits */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.3 
+
+
+
+
+
+
+}}
           className="mb-16"
         >
           <div className="text-center mb-8">
@@ -197,17 +258,44 @@ const MicroSAASPage = () => {
               Benefits of Micro SAAS
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Discover why micro SAAS solutions are the future of software delivery 
+              Discover why micro SAAS solutions are the future of software delivery
               and how they can transform your business.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-3 gap-4">
+            {saasBenefits.map((benefit, index)  => (
               <motion.div
                 key={benefit}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="text-zion-cyan font-medium">{benefit}</div>
@@ -217,9 +305,36 @@ const MicroSAASPage = () => {
         </motion.div>
         {/* Why Choose Our SAAS */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
           className="mb-16"
         >
           <div className="text-center mb-8">
@@ -259,16 +374,43 @@ const MicroSAASPage = () => {
         </motion.div>
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.5 
+
+
+
+
+
+
+}}
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Build Your SAAS?
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our SAAS experts help you create a successful software product 
+            Let our SAAS experts help you create a successful software product
             that scales with your business and delights your customers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -283,11 +425,20 @@ const MicroSAASPage = () => {
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
               View SAAS Pricing
+<<<<<<< HEAD
             </Link>
           </div>
         </motion.div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            </Link>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default MicroSAASPage;

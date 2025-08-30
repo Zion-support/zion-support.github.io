@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
-import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
-import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
-import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
-import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";
+import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";
+import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";
+import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";
+import { enterpriseITInnovationServices2025 } from "../../data/2025-enterprise-it-innovations";
 const InnovativeServicesOverview = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -34,7 +34,22 @@ const InnovativeServicesOverview = () => {
             if (!category)
                 return true;
             const categoryMappings = {
-                'ai-services': ['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
+  <<<<<<< HEAD
+                'ai-services'['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
+                'quantum-computing'['Quantum'],
+                'blockchain'['Blockchain', 'Web3'],
+                'enterprise-it'['Enterprise'],
+                'emerging-tech'['Space', 'Robotics', 'Metaverse', 'Virtual Reality', 'Autonomous'],
+                'cybersecurity'['Security', 'Cybersecurity'],
+                'healthcare'['Healthcare', 'Biology', 'Biotechnology', 'Neuroscience'],
+                'finance'['Finance', 'Trading'],
+                'sustainability'['Energy', 'Climate', 'Sustainability',
+  'Green Tech']
+            
+
+};
+=======
+  'ai-services': ['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
                 'quantum-computing': ['Quantum'],
                 'blockchain': ['Blockchain', 'Web3'],
                 'enterprise-it': ['Enterprise'],
@@ -42,20 +57,52 @@ const InnovativeServicesOverview = () => {
                 'cybersecurity': ['Security', 'Cybersecurity'],
                 'healthcare': ['Healthcare', 'Biology', 'Biotechnology', 'Neuroscience'],
                 'finance': ['Finance', 'Trading'],
-                'sustainability': ['Energy', 'Climate', 'Sustainability', 'Green Tech']
-            };
+                'sustainability': ['Energy', 'Climate', 'Sustainability',
+  'Green Tech']
+            
+
+
+
+
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
-            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()));
-        });
+            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()))});
     const fadeInUp = {
-        initial: { opacity: 0, y: 60 },
+  initial: { opacity: 0,
+  y: 60 
+
+
+
+
+
+
+},
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <motion.div className="max-w-7xl mx-auto text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+        <motion.div className="max-w-7xl mx-auto text-center" initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }}>
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
             Zion Tech Group
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
@@ -124,7 +171,34 @@ const InnovativeServicesOverview = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular ? 'border-cyan-400/50 shadow-cyan-400/20' : 'border-white/20'}`} onClick={() => setSelectedService(service)}>
+            {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular ? 'border-cyan-400/50 shadow-cyan-400/20' : 'border-white/20'}`} onClick={() => setSelectedService(service)}>
                 {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-400 text-black text-xs font-bold px-3 py-1 rounded-full">
                       POPULAR
@@ -174,7 +248,34 @@ const InnovativeServicesOverview = () => {
 
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <motion.div initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}} className="bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="flex justify-between items-start mb-6">
               <div className="flex items-center gap-4">
                 <div className={`text-4xl ${selectedService.textColor}`}>{selectedService.icon}</div>
@@ -291,6 +392,5 @@ const InnovativeServicesOverview = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default InnovativeServicesOverview;

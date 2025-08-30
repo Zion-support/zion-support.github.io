@@ -1,4 +1,4 @@
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";
@@ -17,8 +17,7 @@ function ReviewsModerationContent() {
             // For now, let's simulate a delay and return empty data
             await new Promise(resolve => setTimeout(resolve, 1000));
             setReviews([]);
-            setIsLoading(false);
-        }
+            setIsLoading(false)}
         catch (error) {
             console.error("Error fetching reviews:", error);
             toast({
@@ -26,15 +25,12 @@ function ReviewsModerationContent() {
                 description: "Failed to load reviews. Please try again later.",
                 variant: "destructive",
             });
-            setIsLoading(false);
-        }
+            setIsLoading(false)}
     };
     useEffect(() => {
-        fetchReviews();
-    }, [activeTab]);
+        fetchReviews()}, [activeTab]);
     const handleRefresh = () => {
-        fetchReviews();
-    };
+        fetchReviews()};
     return (<>
       <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>
       
@@ -81,10 +77,8 @@ function ReviewsModerationContent() {
         </Card>
       </main>
       
-    </>);
-}
+    </>)}
 export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

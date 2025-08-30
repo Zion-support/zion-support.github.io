@@ -1,5 +1,5 @@
-import React from 'react';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from 'lucide-react';
+import React from 'react.ts';
+import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe  } from 'lucide-react';
 
 const IoTServices = () => {
   const iotServices = [
@@ -17,13 +17,13 @@ const IoTServices = () => {
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
       icon: Wifi
     },
-    {
-      title: "IoT Data Management",
-      description: "Comprehensive data collection, processing, and analytics for IoT devices.",
-      price: "From $6,500/month",
-      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],
-      icon: Database
-    }
+    {;
+      title: "IoT Data Management",;
+      description: "Comprehensive data collection, processing, and analytics for IoT devices.",;
+      price: "From $6,500/month",;
+      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
+      icon: Database;
+    };
   ];
 
   const iotTechnologies = [
@@ -38,26 +38,26 @@ const IoTServices = () => {
       description: "AI-powered IoT intelligence and automation",
       icon: BarChart3,
       features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
-    },
-    {
-      name: "Security & Privacy",
-      description: "Enterprise-grade IoT security solutions",
-      icon: Shield,
-      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]
-    }
+    },;
+    {;
+      name: "Security & Privacy",;
+      description: "Enterprise-grade IoT security solutions",;
+      icon: Shield,;
+      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"];
+    };
   ];
 
-  const benefits = [
-    "Real-time monitoring and control capabilities",
-    "Improved operational efficiency and automation",
-    "Enhanced data collection and insights",
-    "Reduced operational costs and manual work",
-    "Scalable and flexible IoT infrastructure",
-    "Better decision-making with real-time data"
+  const benefits = [;
+    "Real-time monitoring and control capabilities",;
+    "Improved operational efficiency and automation",;
+    "Enhanced data collection and insights",;
+    "Reduced operational costs and manual work",;
+    "Scalable and flexible IoT infrastructure",;
+    "Better decision-making with real-time data";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -71,7 +71,7 @@ const IoTServices = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Connect, monitor, and control your world with cutting-edge IoT solutions 
+              Connect, monitor, and control your world with cutting-edge IoT solutions
               that drive innovation and operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -94,11 +94,11 @@ const IoTServices = () => {
               Our IoT Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              End-to-end IoT solutions designed to transform your business 
+              End-to-end IoT solutions designed to transform your business
               operations and unlock new possibilities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {iotServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -130,11 +130,11 @@ const IoTServices = () => {
               IoT Technologies We Use
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge technologies and platforms to build robust, 
+              Cutting-edge technologies and platforms to build robust,
               scalable IoT solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {iotTechnologies.map((tech, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
@@ -165,7 +165,7 @@ const IoTServices = () => {
                 Why Choose IoT Solutions?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                IoT technology provides unprecedented opportunities to monitor, 
+                IoT technology provides unprecedented opportunities to monitor,
                 control, and optimize your business operations.
               </p>
               <ul className="space-y-3">
@@ -182,7 +182,7 @@ const IoTServices = () => {
                 <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">IoT Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has extensive experience building and deploying 
+                  Our team has extensive experience building and deploying
                   IoT solutions across various industries.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -203,20 +203,20 @@ const IoTServices = () => {
             Ready to Connect Your World?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how IoT solutions can transform your business 
+            Let's discuss how IoT solutions can transform your business
             operations and unlock new opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Services;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

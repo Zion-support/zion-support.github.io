@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin } from 'lucide-react';
+import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin } from 'lucide-react';
 const CloudDevOpsServices = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
     // Cloud & DevOps Services data
+<<<<<<< HEAD
     const cloudDevOpsServices = [
         {
             id: 1,
@@ -15,10 +16,10 @@ const CloudDevOpsServices = () => {
             price: 8500,
             pricingModel: "monthly",
             userLimit: "Unlimited users",
-            features: ["Multi-cloud orchestration", "Cost optimization", "Unified monitoring", "Auto-scaling", "Disaster recovery", "Security compliance"],
-            benefits: ["Reduced cloud costs", "Improved reliability", "Better performance", "Enhanced security", "Simplified management"],
-            targetAudience: ["Large enterprises", "Multi-cloud organizations", "Financial services", "Healthcare systems"],
-            tags: ["Multi-Cloud", "AWS", "Azure", "GCP", "Infrastructure", "Cost Optimization"],
+            features["Multi-cloud orchestration", "Cost optimization", "Unified monitoring", "Auto-scaling", "Disaster recovery", "Security compliance"],
+            benefits["Reduced cloud costs", "Improved reliability", "Better performance", "Enhanced security", "Simplified management"],
+            targetAudience["Large enterprises", "Multi-cloud organizations", "Financial services", "Healthcare systems"],
+            tags["Multi-Cloud", "AWS", "Azure", "GCP", "Infrastructure", "Cost Optimization"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -36,10 +37,10 @@ const CloudDevOpsServices = () => {
             price: 4200,
             pricingModel: "monthly",
             userLimit: "Up to 50 clusters",
-            features: ["Cluster automation", "Auto-scaling", "Security hardening", "Monitoring & alerting", "Backup & recovery", "Multi-region support"],
-            benefits: ["Improved scalability", "Enhanced security", "Reduced operational overhead", "Better resource utilization"],
-            targetAudience: ["DevOps teams", "Software companies", "Digital agencies", "E-commerce platforms"],
-            tags: ["Kubernetes", "Container Orchestration", "DevOps", "Automation", "Scaling"],
+            features["Cluster automation", "Auto-scaling", "Security hardening", "Monitoring & alerting", "Backup & recovery", "Multi-region support"],
+            benefits["Improved scalability", "Enhanced security", "Reduced operational overhead", "Better resource utilization"],
+            targetAudience["DevOps teams", "Software companies", "Digital agencies", "E-commerce platforms"],
+            tags["Kubernetes", "Container Orchestration", "DevOps", "Automation", "Scaling"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -57,10 +58,10 @@ const CloudDevOpsServices = () => {
             price: 3800,
             pricingModel: "monthly",
             userLimit: "Up to 100 developers",
-            features: ["Automated testing", "Deployment automation", "Rollback mechanisms", "Security scanning", "Performance testing", "Multi-environment support"],
-            benefits: ["Faster deployments", "Reduced errors", "Improved quality", "Better collaboration", "Cost savings"],
-            targetAudience: ["Development teams", "Software companies", "IT departments", "Digital agencies"],
-            tags: ["CI/CD", "Automation", "DevOps", "Testing", "Deployment"],
+            features["Automated testing", "Deployment automation", "Rollback mechanisms", "Security scanning", "Performance testing", "Multi-environment support"],
+            benefits["Faster deployments", "Reduced errors", "Improved quality", "Better collaboration", "Cost savings"],
+            targetAudience["Development teams", "Software companies", "IT departments", "Digital agencies"],
+            tags["CI/CD", "Automation", "DevOps", "Testing", "Deployment"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -78,10 +79,10 @@ const CloudDevOpsServices = () => {
             price: 6500,
             pricingModel: "monthly",
             userLimit: "Unlimited users",
-            features: ["Architecture design", "Function optimization", "Event-driven design", "Cost optimization", "Monitoring setup", "Security implementation"],
-            benefits: ["Reduced infrastructure costs", "Automatic scaling", "Pay-per-use pricing", "Reduced operational overhead"],
-            targetAudience: ["Startups", "SaaS companies", "E-commerce platforms", "API providers"],
-            tags: ["Serverless", "AWS Lambda", "Azure Functions", "Event-Driven", "Scalability"],
+            features["Architecture design", "Function optimization", "Event-driven design", "Cost optimization", "Monitoring setup", "Security implementation"],
+            benefits["Reduced infrastructure costs", "Automatic scaling", "Pay-per-use pricing", "Reduced operational overhead"],
+            targetAudience["Startups", "SaaS companies", "E-commerce platforms", "API providers"],
+            tags["Serverless", "AWS Lambda", "Azure Functions", "Event-Driven", "Scalability"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -99,10 +100,10 @@ const CloudDevOpsServices = () => {
             price: 3200,
             pricingModel: "monthly",
             userLimit: "Up to 25 environments",
-            features: ["Terraform automation", "CloudFormation templates", "Ansible playbooks", "Version control", "Testing automation", "Documentation"],
-            benefits: ["Consistent deployments", "Reduced errors", "Faster provisioning", "Better collaboration", "Cost control"],
-            targetAudience: ["DevOps teams", "Infrastructure teams", "Cloud architects", "System administrators"],
-            tags: ["Infrastructure as Code", "Terraform", "CloudFormation", "Ansible", "Automation"],
+            features["Terraform automation", "CloudFormation templates", "Ansible playbooks", "Version control", "Testing automation", "Documentation"],
+            benefits["Consistent deployments", "Reduced errors", "Faster provisioning", "Better collaboration", "Cost control"],
+            targetAudience["DevOps teams", "Infrastructure teams", "Cloud architects", "System administrators"],
+            tags["Infrastructure as Code", "Terraform", "CloudFormation", "Ansible", "Automation"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -120,10 +121,10 @@ const CloudDevOpsServices = () => {
             price: 7200,
             pricingModel: "monthly",
             userLimit: "Unlimited users",
-            features: ["Security assessment", "Compliance monitoring", "Threat detection", "Access control", "Data encryption", "Audit logging"],
-            benefits: ["Enhanced security", "Regulatory compliance", "Risk mitigation", "Customer trust", "Insurance benefits"],
-            targetAudience: ["Financial services", "Healthcare organizations", "E-commerce businesses", "Government agencies"],
-            tags: ["Cloud Security", "Compliance", "SOC2", "HIPAA", "PCI-DSS", "Threat Detection"],
+            features["Security assessment", "Compliance monitoring", "Threat detection", "Access control", "Data encryption", "Audit logging"],
+            benefits["Enhanced security", "Regulatory compliance", "Risk mitigation", "Customer trust", "Insurance benefits"],
+            targetAudience["Financial services", "Healthcare organizations", "E-commerce businesses", "Government agencies"],
+            tags["Cloud Security", "Compliance", "SOC2", "HIPAA", "PCI-DSS", "Threat Detection"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -133,34 +134,29 @@ const CloudDevOpsServices = () => {
             support: "24/7 security support"
         }
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
     const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
     const filteredServices = cloudDevOpsServices.filter(service => {
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
         const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-        return matchesSearch && matchesCategory && matchesPricing;
-    });
+        return matchesSearch && matchesCategory && matchesPricing});
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'Cloud Management': return <Cloud className="w-6 h-6"/>;
             case 'Container Orchestration': return <Server className="w-6 h-6"/>;
-            case 'DevOps Automation': return <GitFork className="w-6 h-6"/>;
+            case 'DevOps Automation': return <GitBranch className="w-6 h-6"/>;
             case 'Serverless': return <Zap className="w-6 h-6"/>;
             case 'Infrastructure': return <Server className="w-6 h-6"/>;
             case 'Security': return <Shield className="w-6 h-6"/>;
-            default: return <Code className="w-6 h-6"/>;
-        }
+            default: return <Code className="w-6 h-6"/>}
     };
     const getPricingColor = (pricing) => {
         switch (pricing) {
             case 'Enterprise': return 'text-purple-400';
             case 'Professional': return 'text-blue-400';
             case 'Standard': return 'text-green-400';
-            default: return 'text-gray-400';
-        }
+            default: return 'text-gray-400'}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -283,6 +279,5 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default CloudDevOpsServices;

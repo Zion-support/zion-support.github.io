@@ -14,8 +14,10 @@ import { newOperationalServices2025 } from '../data/new-operational-services-202
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import { professionalServices } from '../data/professional-services';
+import { real2029Q2Additions } from '../data/real-2029-q2-additions';
 export type ServiceRecord = any;
 const allServiceArrays: ServiceRecord[][] = [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices,
 	additionalEnhancedServices,
@@ -32,14 +34,17 @@ const allServiceArrays: ServiceRecord[][] = [
 	innovative2025Services,
 	emergingTech2025Services,
 	professionalServices
+	,real2029Q2Additions
 ];
-export function findServiceBySlug(slug: string): ServiceRecord | undefined {
+export function findServiceBySlug(slug: string): ServiceRecord | null {
 	for (const arr of allServiceArrays) {
-		const hit = arr.find((s: any) => {
+<<<<<<< HEAD
+		const hit = arr.find((s: any) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			if (!s) return false;
 			if (s.id && s.id === slug) return true;
-			if (s.link && typeof s.link === 'string') {
-				try {
+			if (s.link && typeof s.link = == 'string') {;
+				try {;
 					const url = new URL(s.link);
 					return url.pathname.replace(/^\/+|\/+$/g, '') === slug;
 				} catch {
@@ -50,13 +55,13 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 		});
 		if (hit) return hit;
 	}
-	return undefined;
+	return null;
 }
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
 	const results: ServiceRecord[] = [];
 	for (const arr of allServiceArrays) {
 		for (const s of arr) {
-			if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
+			if (s && typeof s.category = == 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {;
 				results.push(s);
 			}
 		}

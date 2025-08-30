@@ -3,7 +3,7 @@ import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
@@ -18,17 +18,15 @@ function ClientDashboardContent() {
     const [selectedJobId, setSelectedJobId] = useState(null);
     const [selectedJobTitle, setSelectedJobTitle] = useState("");
     const isMobile = useIsMobile();
-    // Set the first job as selected when jobs are loaded (if any)
+    // Set the first job as selected when jobs are loaded (if )
     useEffect(() => {
         if (jobs.length > 0 && !selectedJobId) {
             setSelectedJobId(jobs[0].id);
-            setSelectedJobTitle(jobs[0].title);
-        }
+            setSelectedJobTitle(jobs[0].title)}
     }, [jobs, selectedJobId]);
     const handleJobSelect = (jobId, jobTitle) => {
         setSelectedJobId(jobId);
-        setSelectedJobTitle(jobTitle);
-    };
+        setSelectedJobTitle(jobTitle)};
     return (<>
       <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
       
@@ -112,10 +110,8 @@ function ClientDashboardContent() {
         </div>
       </main>
       
-    </>);
-}
+    </>)}
 export default function ClientDashboard() {
     return (<ProtectedRoute>
       <ClientDashboardContent />
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

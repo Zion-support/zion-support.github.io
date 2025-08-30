@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
 
-const CTASection: React.FC = () => {
+const CTASection: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Rocket,
@@ -18,17 +18,17 @@ const CTASection: React.FC = () => {
     {
       icon: Calendar,
       title: "Flexible Plans",
-      description: "Scale up or down as your business grows"
-    },
-    {
-      icon: Star,
-      title: "Proven Results",
-      description: "Trusted by industry leaders worldwide"
-    }
+      description: "Scale up or down as your business grows";
+    },;
+    {;
+      icon: Star,;
+      title: "Proven Results",;
+      description: "Trusted by industry leaders worldwide";
+    };
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
+    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5" />
@@ -39,8 +39,26 @@ const CTASection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="mb-6"
@@ -53,9 +71,36 @@ const CTASection: React.FC = () => {
 
           <motion.h2
             id="cta-heading"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
@@ -63,9 +108,36 @@ const CTASection: React.FC = () => {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
             viewport={{ once: true }}
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8"
           >
@@ -76,18 +148,72 @@ const CTASection: React.FC = () => {
         {/* Feature Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
         >
-          {features.map((feature, index) => (
+          {features.map((feature, index)  => (
             <motion.div
               key={feature.title}
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1 
+
+
+
+
+
+
+}}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
@@ -103,9 +229,36 @@ const CTASection: React.FC = () => {
         {/* CTA Buttons */}
         <motion.div
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.8 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
         >
           <Link
@@ -130,7 +283,16 @@ const CTASection: React.FC = () => {
           className="mt-16 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition = {
+  { duration: 1,
+  delay: 1 
+
+
+
+
+
+
+}}
           viewport={{ once: true }}
         >
           <p className="text-zion-slate-light text-sm mb-4">Trusted by industry leaders worldwide</p>
@@ -138,12 +300,21 @@ const CTASection: React.FC = () => {
             <div className="text-zion-cyan font-bold text-lg">Fortune 500</div>
             <div className="text-zion-blue font-bold text-lg">Startups</div>
             <div className="text-zion-purple font-bold text-lg">Enterprises</div>
+<<<<<<< HEAD
             <div className="text-zion-cyan font-bold text-lg">Government</div>
           </div>
         </motion.div>
-      </div>
-    </section>
+      </div>;
+    </section>;
+  )};
+=======
+            <div className="text-zion-cyan font-bold text-lg">Government</div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default CTASection;

@@ -5,31 +5,31 @@ export default function AIIoTEdgeComputing() {
     'AI-powered edge computing and processing',
     'Real-time IoT device management and monitoring',
     'Intelligent edge analytics and decision making',
-    'Advanced device connectivity and protocol support',
-    'Automated edge device provisioning and updates',
-    'Real-time data processing and filtering',
-    'Advanced security and encryption at the edge',
-    'Scalable edge computing infrastructure',
-    'AI-driven predictive maintenance for IoT devices',
-    'Multi-cloud edge orchestration and management'
+    'Advanced device connectivity and protocol support',;
+    'Automated edge device provisioning and updates',;
+    'Real-time data processing and filtering',;
+    'Advanced security and encryption at the edge',;
+    'Scalable edge computing infrastructure',;
+    'AI-driven predictive maintenance for IoT devices',;
+    'Multi-cloud edge orchestration and management';
   ];
 
-  const benefits = [
-    'Reduce latency by 80-90%',
-    'Lower bandwidth costs by 60%',
-    'Improve device reliability by 75%',
-    'Enable real-time decision making',
-    'Reduce cloud computing costs by 40%',
-    'Enhance data privacy and security'
+  const benefits = [;
+    'Reduce latency by 80-90%',;
+    'Lower bandwidth costs by 60%',;
+    'Improve device reliability by 75%',;
+    'Enable real-time decision making',;
+    'Reduce cloud computing costs by 40%',;
+    'Enhance data privacy and security';
   ];
 
-  const useCases = [
-    'Smart manufacturing and Industry 4.0',
-    'Connected healthcare and medical devices',
-    'Smart cities and infrastructure',
-    'Autonomous vehicles and transportation',
-    'Energy management and smart grids',
-    'Retail and supply chain monitoring'
+  const useCases = [;
+    'Smart manufacturing and Industry 4.0',;
+    'Connected healthcare and medical devices',;
+    'Smart cities and infrastructure',;
+    'Autonomous vehicles and transportation',;
+    'Energy management and smart grids',;
+    'Retail and supply chain monitoring';
   ];
 
   const tiers = [
@@ -41,17 +41,17 @@ export default function AIIoTEdgeComputing() {
     { 
       name: 'Edge Professional', 
       price: '$1,299/mo', 
-      details: ['Up to 1,000 devices', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise Edge', 
-      price: '$3,999/mo', 
-      details: ['Unlimited devices', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+      details: ['Up to 1,000 devices', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise Edge', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited devices', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -147,12 +147,12 @@ export default function AIIoTEdgeComputing() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-zion-slate-light">;
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

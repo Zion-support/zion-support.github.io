@@ -14,8 +14,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         observerRef.current = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setIsInView(true);
-                observerRef.current?.disconnect();
-            }
+                observerRef.current?.disconnect()}
         }, {
             rootMargin: '50px',
             threshold: 0.1
@@ -23,30 +22,24 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         observerRef.current.observe(imgRef.current);
         return () => {
             if (observerRef.current) {
-                observerRef.current.disconnect();
-            }
-        };
-    }, [priority]);
+                observerRef.current.disconnect()}
+        }}, [priority]);
     const handleLoad = () => {
         setIsLoaded(true);
-        onLoad?.();
-    };
+        onLoad?.()};
     const handleError = () => {
         setHasError(true);
-        onError?.();
-    };
+        onError?.()};
     const getAspectRatioClass = () => {
         if (typeof aspectRatio === 'number') {
-            return `aspect-[${aspectRatio}]`;
-        }
+            return `aspect-[${aspectRatio}]`}
         switch (aspectRatio) {
             case 'square':
                 return 'aspect-square';
             case 'video':
                 return 'aspect-video';
             default:
-                return '';
-        }
+                return ''}
     };
     const getObjectFitClass = () => {
         switch (objectFit) {
@@ -61,8 +54,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             case 'scale-down':
                 return 'object-scale-down';
             default:
-                return 'object-cover';
-        }
+                return 'object-cover'}
     };
     // Generate responsive image sources
     const generateSrcSet = (imageSrc) => {
@@ -76,14 +68,21 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             .map(w => {
             params.set('w', w.toString());
             params.set('q', quality.toString());
-            return `${baseUrl}?${params.toString()} ${w}w`;
-        })
+            return `${baseUrl}?${params.toString()} ${w}w`})
             .join(', ');
-        return srcSet;
-    };
+        return srcSet};
     const currentSrc = hasError ? fallback : (isInView ? src : placeholder);
     const srcSet = generateSrcSet(currentSrc);
-    return (<div className={cn('relative overflow-hidden', getAspectRatioClass(), className)} style={{
+    return (<div className = {
+  cn('relative overflow-hidden', getAspectRatioClass(),
+  className)
+
+
+
+
+
+
+} style={{
             width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'
         }}>
@@ -91,7 +90,16 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         {!isLoaded && (<motion.div key="placeholder" className="absolute inset-0 bg-zion-slate-light/20 animate-pulse" initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}/>)}
       </AnimatePresence>
 
-      <img ref={imgRef} src={currentSrc} alt={alt} width={width} height={height} className={cn('w-full h-full transition-opacity duration-300', getObjectFitClass(), isLoaded ? 'opacity-100' : 'opacity-0')} loading={loading} sizes={sizes} srcSet={srcSet} onLoad={handleLoad} onError={handleError} style={{
+      <img ref={imgRef} src={currentSrc} alt={alt} width={width} height={height} className = {
+  cn('w-full h-full transition-opacity duration-300', getObjectFitClass(),
+  isLoaded ? 'opacity-100' : 'opacity-0')
+
+
+
+
+
+
+} loading={loading} sizes={sizes} srcSet={srcSet} onLoad={handleLoad} onError={handleError} style={{
             filter: blur && !isLoaded ? 'blur(10px)' : 'none'
         }}/>
 
@@ -109,19 +117,60 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             <p className="text-sm">Image failed to load</p>
           </div>
         </div>)}
-    </div>);
-}
+    </div>)}
 // Avatar image component
 export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
     const sizeClasses = {
-        sm: 'w-8 h-8',
+  sm: 'w-8 h-8',
         md: 'w-10 h-10',
         lg: 'w-12 h-12',
+  <<<<<<< HEAD
         xl: 'w-16 h-16'
-    };
-    return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className={cn(sizeClasses[size], 'rounded-full', className)} {...props}/>);
+    
+
+};
+    return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className = {
+  cn(sizeClasses[size], 'rounded-full',
+  className)
+
+} {...props}/>)}
+// Hero image component
+export function HeroImage({ src, alt, className, ...props }) {
+    return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className = {
+  cn('w-full',
+  className)
+
+} priority {...props}/>)}
+=======
+  xl: 'w-16 h-16'
+    
+
+
+
+
+};
+    return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className = {
+  cn(sizeClasses[size], 'rounded-full',
+  className)
+
+
+
+
+
+
+} {...props}/>);
 }
 // Hero image component
 export function HeroImage({ src, alt, className, ...props }) {
-    return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className={cn('w-full', className)} priority {...props}/>);
+    return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className = {
+  cn('w-full',
+  className)
+
+
+
+
+
+
+} priority {...props}/>);
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

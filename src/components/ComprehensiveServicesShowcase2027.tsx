@@ -1,36 +1,22 @@
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { cuttingEdgeComprehensiveServices2027  } from "../../data/2027-cutting-edge-comprehensive-services";
+import { specializedInnovativeServices2027  } from "../../data/2027-specialized-innovative-services";
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+=======
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
+import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
+import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Autonomous Systems': Brain,
-  'Quantum Computing & AI': Cpu,
-  'Blockchain & Web3': Database,
-  'Cybersecurity & Privacy': Shield,
-  'Healthcare & Biotech': Heart,
-  'Financial Technology': DollarSign,
-  'IoT & Automation': Cloud,
-  'Cloud & Infrastructure': Cloud,
-  'Data Analytics & BI': BarChart3,
-  'Digital Marketing & Automation': Users,
-  'E-commerce & Retail': ShoppingCart,
-  'Education & Learning Technology': GraduationCap,
-  'Space Technology & Earth Observation': Rocket,
-  'AR/VR & Immersive Technology': Users,
-  'Robotics & Automation': Factory,
-  'Green Technology & Sustainability': Leaf,
-  'Supply Chain & Logistics': Truck,
-  'Human Resources & Talent Management': Users,
-  'Legal Technology & Compliance': Gavel,
-  'Real Estate & Property Technology': Home,
-  'Sports Technology & Analytics': Trophy,
-  'Entertainment & Media Technology': Film
-};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',
@@ -63,13 +49,13 @@ const features = [
   "Multi-cloud Support",
   "API-First Architecture",
   "Scalable Infrastructure",
-  "Custom Integrations",
-  "White-label Solutions",
-  "Comprehensive Documentation",
-  "24/7 Technical Support",
-  "99.9% Uptime Guarantee",
-  "SOC 2 Type II Compliant",
-  "30-Day Money Back Guarantee"
+  "Custom Integrations",;
+  "White-label Solutions",;
+  "Comprehensive Documentation",;
+  "24/7 Technical Support",;
+  "99.9% Uptime Guarantee",;
+  "SOC 2 Type II Compliant",;
+  "30-Day Money Back Guarantee";
 ];
 
 const benefits = [
@@ -86,46 +72,56 @@ const benefits = [
   {
     icon: <TrendingUp className="h-6 w-6"/>,
     title: "Proven ROI",
-    description: "Average 300% ROI within 6 months of implementation"
-  },
-  {
-    icon: <CheckCircle className="h-6 w-6"/>,
-    title: "Quality Guaranteed",
-    description: "30-day money-back guarantee with free migration support"
-  }
+    description: "Average 300% ROI within 6 months of implementation";
+  },;
+  {;
+    icon: <CheckCircle className="h-6 w-6"/>,;
+    title: "Quality Guaranteed",;
+    description: "30-day money-back guarantee with free migration support";
+  };
 ];
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 
-export function ComprehensiveServicesShowcase2027() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState<string>('');
+export function ComprehensiveServicesShowcase2027(...args[]):  {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
 
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
-  
+
   // Get unique categories
   const categories = Array.from(new Set(allServices.map(service => service.category)));
-  
+
   // Filter services based on selection and search
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = searchQuery === '' || 
+    const matchesSearch = searchQuery === '' ||
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
 
   return (
-    <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+    <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -133,7 +129,7 @@ export function ComprehensiveServicesShowcase2027() {
             Revolutionary 2027 Micro SAAS Solutions
           </h2>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Transform your business with our cutting-edge micro SAAS services. 
+            Transform your business with our cutting-edge micro SAAS services.
             From AI automation to quantum computing, we provide innovative solutions that drive growth and innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -199,8 +195,8 @@ export function ComprehensiveServicesShowcase2027() {
         {/* Featured Services */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((service) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service)  => (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center mb-4 text-2xl`}>
@@ -257,8 +253,8 @@ export function ComprehensiveServicesShowcase2027() {
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
             All Services ({filteredServices.length})
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredServices.map((service) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredServices.map((service)  => (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
@@ -285,11 +281,11 @@ export function ComprehensiveServicesShowcase2027() {
                   <p className="text-sm text-zion-slate-light mb-4 line-clamp-3">
                     {service.description}
                   </p>
-                  
+
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-white text-sm">Key Features:</h4>
-                    {service.features.slice(0, 3).map((feature, index) => (
+                    <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
+                    {service.features.slice(0, 3).map((feature, index)  => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
                         {feature}
@@ -349,8 +345,8 @@ export function ComprehensiveServicesShowcase2027() {
         {/* Benefits Section */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index)  => (
               <div key={index} className="text-center">
                 <div className="mx-auto w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4">
                   {benefit.icon}
@@ -369,7 +365,7 @@ export function ComprehensiveServicesShowcase2027() {
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our innovative solutions to drive growth, 
+              Join thousands of businesses already using our innovative solutions to drive growth,
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -390,12 +386,28 @@ export function ComprehensiveServicesShowcase2027() {
               <p>📞 Call us: {contactInfo.mobile}</p>
               <p>📧 Email: {contactInfo.email}</p>
               <p>📍 Address: {contactInfo.address}</p>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </div>
     </div>
+  )};
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;

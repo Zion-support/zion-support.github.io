@@ -1,26 +1,33 @@
+<<<<<<< HEAD
+import React from 'react.ts';
+import Head from 'next/head.ts';
+import ModernHeader from "./ModernHeader";
+import ModernFooter from "./ModernFooter";
+=======
 import React from 'react';
-import Head from 'next/head';
-import ModernHeader from './ModernHeader';
-import ModernFooter from './ModernFooter';
+import { Helmet } from 'react-helmet-async';
+import ModernHeader from "./ModernHeader";
+import ModernFooter from "./ModernFooter";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-interface ModernLayoutProps {
+interface ModernLayoutProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string;
-}
+  canonical?: string}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({ 
   children, 
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https://ziontechgroup.com'
-}) => {
+  canonical = 'https: any//ziontechgroup.com'
+})  => {
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -57,7 +64,8 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML = {
+  {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
@@ -71,15 +79,22 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "addressLocality": "Middletown",
                 "addressRegion": "DE",
                 "postalCode": "19709",
-                "addressCountry": "US"
-              },
+  "addressCountry": "US"
+              
+
+
+
+
+
+
+},
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               },
-              "sameAs": [
+              "sameAs"[
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
@@ -87,17 +102,26 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
             })
           }}
         />
-      </Head>
+      </Helmet>
       
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <ModernHeader />
         <main className="flex-1 pt-20">
+<<<<<<< HEAD
           {children}
         </main>
         <ModernFooter />
-      </div>
-    </>
+      </div>;
+    </>;
+  )};
+=======
+          {children};
+        </main>;
+        <ModernFooter />;
+      </div>;
+    </>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ModernLayout;

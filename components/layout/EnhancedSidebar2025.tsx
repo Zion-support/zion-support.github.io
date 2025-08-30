@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { useRouter  } from 'next/router.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
   Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
   Award, Clock, Heart, Lightbulb, Users, FileText, 
   HelpCircle, BookOpen, Target, TrendingUp, Star
-} from 'lucide-react';
+ } from 'lucide-react';
 
 interface SidebarItem {
+
   name: string;
   href: string;
   icon: React.ReactNode;
@@ -21,21 +21,20 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-  category?: string;
-}
+  category?: string}
 
 const sidebarSections = [
   {
     title: 'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
-    items: [
+    items[
       {
         name: 'AI & Consciousness',
         href: '/ai-services',
         icon: Brain,
         description: 'Advanced AI consciousness and evolution platforms',
-        subItems: [
+        subItems[
           { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
           { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
           { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
@@ -53,7 +52,7 @@ const sidebarSections = [
         href: '/quantum-services',
         icon: Atom,
         description: 'Next-generation quantum computing solutions',
-        subItems: [
+        subItems[
           { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
           { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
           { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
@@ -69,7 +68,7 @@ const sidebarSections = [
         href: '/enterprise-it',
         icon: Shield,
         description: 'Enterprise-grade IT infrastructure and security',
-        subItems: [
+        subItems[
           { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration' },
           { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture' },
           { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform' },
@@ -85,7 +84,7 @@ const sidebarSections = [
         href: '/micro-saas',
         icon: Rocket,
         description: 'AI-powered micro SAAS solutions',
-        subItems: [
+        subItems[
           { name: 'AI Content Factory Platform', href: '/ai-content-factory' },
           { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation' },
           { name: 'AI Decision Engine Platform', href: '/ai-decision-engine' },
@@ -102,7 +101,7 @@ const sidebarSections = [
         href: '/space-tech',
         icon: Globe,
         description: 'Cutting-edge space exploration and mining',
-        subItems: [
+        subItems[
           { name: 'Space Mining Platform', href: '/space-mining-platform' },
           { name: 'Satellite Technology', href: '/satellite-technology' },
           { name: 'Space Resource Management', href: '/space-resource-management' },
@@ -114,7 +113,7 @@ const sidebarSections = [
         href: '/emerging-tech',
         icon: Sparkles,
         description: 'Future technologies and innovations',
-        subItems: [
+        subItems[
           { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
           { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' },
           { name: 'Advanced Robotics', href: '/advanced-robotics' },
@@ -127,13 +126,13 @@ const sidebarSections = [
     title: 'Industry Solutions',
     icon: Target,
     color: 'from-purple-500 to-pink-600',
-    items: [
+    items[
       {
         name: 'Healthcare',
         href: '/healthcare-solutions',
         icon: Heart,
         description: 'AI-powered healthcare diagnostics and solutions',
-        subItems: [
+        subItems[
           { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
           { name: 'Medical Imaging AI', href: '/medical-imaging-ai' },
           { name: 'Drug Discovery Platform', href: '/drug-discovery-platform' }
@@ -144,7 +143,7 @@ const sidebarSections = [
         href: '/financial-solutions',
         icon: BarChart3,
         description: 'Advanced financial intelligence and analytics',
-        subItems: [
+        subItems[
           { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
           { name: 'Quantum Trading Platform', href: '/quantum-financial-trading' },
           { name: 'Risk Assessment AI', href: '/risk-assessment-ai' }
@@ -155,7 +154,7 @@ const sidebarSections = [
         href: '/manufacturing-solutions',
         icon: Settings,
         description: 'Industry 4.0 and smart manufacturing',
-        subItems: [
+        subItems[
           { name: 'Smart Factory Platform', href: '/smart-factory-platform' },
           { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' },
           { name: 'Quality Control AI', href: '/quality-control-ai' }
@@ -166,7 +165,7 @@ const sidebarSections = [
         href: '/retail-solutions',
         icon: Eye,
         description: 'E-commerce optimization and retail intelligence',
-        subItems: [
+        subItems[
           { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform' },
           { name: 'Customer Behavior AI', href: '/customer-behavior-ai' },
           { name: 'Inventory Management AI', href: '/inventory-management-ai' }
@@ -177,7 +176,7 @@ const sidebarSections = [
         href: '/government-solutions',
         icon: Shield,
         description: 'Secure government and defense solutions',
-        subItems: [
+        subItems[
           { name: 'Cybersecurity Platform', href: '/quantum-cybersecurity-platform' },
           { name: 'Data Protection AI', href: '/data-protection-ai' },
           { name: 'Threat Detection AI', href: '/threat-detection-ai' }
@@ -188,7 +187,7 @@ const sidebarSections = [
         href: '/education-solutions',
         icon: Award,
         description: 'AI-powered education and learning platforms',
-        subItems: [
+        subItems[
           { name: 'AI Education Platform', href: '/ai-education-platform' },
           { name: 'Personalized Learning AI', href: '/personalized-learning-ai' },
           { name: 'Student Performance AI', href: '/student-performance-ai' }
@@ -197,19 +196,19 @@ const sidebarSections = [
     ]
   },
   {
-    title: 'Company & Resources',
+    title: 'Comp & Resources',
     icon: Users,
     color: 'from-green-500 to-emerald-600',
-    items: [
+    items[
       {
         name: 'About Us',
         href: '/about',
         icon: Users,
         description: 'Learn about Zion Tech Group',
-        subItems: [
+        subItems[
           { name: 'Our Mission', href: '/mission' },
           { name: 'Leadership Team', href: '/leadership' },
-          { name: 'Company History', href: '/history' },
+          { name: 'Comp History', href: '/history' },
           { name: 'Careers', href: '/careers' }
         ]
       },
@@ -218,7 +217,7 @@ const sidebarSections = [
         href: '/resources',
         icon: BookOpen,
         description: 'Educational content and documentation',
-        subItems: [
+        subItems[
           { name: 'Documentation', href: '/docs' },
           { name: 'API Reference', href: '/api-docs' },
           { name: 'Blog & News', href: '/blog' },
@@ -232,68 +231,62 @@ const sidebarSections = [
         href: '/support',
         icon: HelpCircle,
         description: 'Get help and support',
-        subItems: [
+        subItems[
           { name: 'Contact Support', href: '/contact-support' },
-          { name: 'Training Programs', href: '/training' },
-          { name: 'Community Forum', href: '/community' },
-          { name: 'Knowledge Base', href: '/knowledge-base' }
-        ]
-      }
-    ]
-  }
+          { name: 'Training Programs', href: '/training' },;
+          { name: 'Community Forum', href: '/community' },;
+          { name: 'Knowledge Base', href: '/knowledge-base' };
+        ];
+      };
+    ];
+  };
 ];
 
-interface EnhancedSidebar2025Props {
-  isOpen: boolean;
-  onClose: () => void;
-}
+interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
-export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
+  isOpen: boolean;
+  onClose: ()  => void}
+
+export default function EnhancedSidebar2025(...args[]):  {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-  const toggleSection = (sectionTitle: string) => {
+<<<<<<< HEAD
+  const toggleSection = (sectionTitle: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
-      newExpanded.delete(sectionTitle);
-    } else {
-      newExpanded.add(sectionTitle);
-    }
-    setExpandedSections(newExpanded);
-  };
+      newExpanded.delete(sectionTitle)} else {
+      newExpanded.add(sectionTitle)}
+    setExpandedSections(newExpanded)};
 
-  const filteredServices = sidebarSections.flatMap(section =>
-    section.items.flatMap(item =>
-      item.subItems?.filter(child =>
-        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase())
-      ) || []
-    )
+  const filteredServices = sidebarSections.flatMap(section =>;
+    section.items.flatMap(item =>;
+      item.subItems?.filter(child =>;
+        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        child.description?.toLowerCase().includes(searchQuery.toLowerCase());
+      ) || [];
+    );
   );
 
-  const toggleItem = (itemName: string) => {
+<<<<<<< HEAD
+  const toggleItem = (itemName: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
-      newExpanded.delete(itemName);
-    } else {
-      newExpanded.add(itemName);
-    }
-    setExpandedItems(newExpanded);
-  };
+      newExpanded.delete(itemName)} else {
+      newExpanded.add(itemName)}
+    setExpandedItems(newExpanded)};
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+      document.body.style.overflow = 'hidden'} else {
+      document.body.style.overflow = 'unset'}
+;
+    return () => {;
+      document.body.style.overflow = 'unset'}}, [isOpen]);
 
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  const isActive = (href: string) => router.pathname === href;
+  const isActive = (href: string)  => router.pathname === href;
 
   return (
     <>
@@ -301,7 +294,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial = {{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
@@ -315,7 +308,16 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       <motion.div
         initial={{ x: '-100%' }}
         animate={{ x: isOpen ? 0 : '-100%' }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        transition = {
+  { type: 'spring', damping: 25,
+  stiffness: 200 
+
+
+
+
+
+
+}}
         className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}
       >
         {/* Header */}
@@ -391,9 +393,36 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                     transition={{ duration: 0.3 }}
                     className="space-y-2 ml-6"
                   >
@@ -426,9 +455,36 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                           <AnimatePresence>
                             {expandedItems.has(item.name) && (
                               <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
+                                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                                 transition={{ duration: 0.3 }}
                                 className="space-y-1 ml-6"
                               >
@@ -487,10 +543,19 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </motion.div>
     </>
+  )};
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
+    </>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

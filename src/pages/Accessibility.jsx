@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from 'lucide-react';
+import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from 'lucide-react';
 
 export default function Accessibility() {
   const accessibilityFeatures = [
@@ -83,29 +83,6 @@ export default function Accessibility() {
     }
   ];
 
-  const assistiveTechnologies = [
-    {
-      name: 'Screen Readers',
-      description: 'NVDA, JAWS, VoiceOver, TalkBack, and other screen reading software',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Voice Control',
-      description: 'Dragon NaturallySpeaking, Voice Control, and other voice recognition software',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Switch Devices',
-      description: 'Single switch, multiple switch, and scanning software support',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Magnification',
-      description: 'ZoomText, Windows Magnifier, and other magnification software',
-      compatibility: 'Full'
-    }
-  ];
-
   const accessibilityTools = [
     {
       title: 'Accessibility Checker',
@@ -140,7 +117,7 @@ export default function Accessibility() {
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <Accessibility className="w-16 h-16 text-zion-cyan" />
+              <AccessibilityIcon className="w-16 h-16 text-zion-cyan" />
             </div>
           </div>
           <h1 className="text-5xl font-bold text-white mb-6">

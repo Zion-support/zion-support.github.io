@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { servicesCatalog } from '../../src/data/servicesCatalog';
 
-export default function ServicesIndex() {
+export default function ServicesIndex(...args[]):  {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      <Helmet>
         <title>Services — Zion</title>
         <meta name="description" content="Futuristic, autonomous services to accelerate your roadmap." />
-      </Head>
+      </Helmet>
 
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
@@ -42,8 +43,42 @@ export default function ServicesIndex() {
           <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Choose from specialized agents and blueprints to ship value faster.</p>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 pb-16">
+        {/* Expanded catalog pulled from data with prices and links */}
+        <section className="mx-auto max-w-7xl px-6 pb-20">
+          <h2 className="mb-6 text-2xl font-bold">More Services</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {servicesCatalog
+              .flatMap((c) => c.items.map((item) => ({...item, categoryName: c.name})))
+              .slice(0, 18)
+              .map((item) => (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noreferrer' : undefined}
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30"
+                >
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="flex items-start justify-between">
+                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <span className="rounded-full border border-white/15 px-2 py-0.5 text-xs text-white/70">{item.categoryName}</span>
+                  </div>
+                  <p className="mt-1 text-sm text-white/75">{item.description}</p>
+                  <div className="mt-4 text-sm text-white/80">Starting at <span className="font-semibold">{item.price}</span>/{item.billing}</div>
+                  <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-white/70">
+                    {item.features.slice(0,4).map((f, i) => (
+                      <li key={i}>{f}</li>
+                    ))}
+                  </ul>
+                  <div className="mt-4">
+                    <span className="inline-block rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-white">{item.ctaLabel}</span>
+                  </div>
+                </a>
+            ))}
+          </div>
+        </section>
+        <section className="mx-auto max-w-7xl px-6 pb-16">
+          <div className="grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">
             {[
               { href: '/services/ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate on-site SEO audits and fixes.' },
               { href: '/services/customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Deflect tickets with high-quality automated replies.' },
@@ -53,7 +88,7 @@ export default function ServicesIndex() {
               { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
               { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
               { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
-            ].map((s) => (
+            ].map((s)  => (
               <Link key={s.href} href={s.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -72,10 +107,19 @@ export default function ServicesIndex() {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
       </main>
     </div>
+  )};
+=======;
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

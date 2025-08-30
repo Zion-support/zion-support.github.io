@@ -1,20 +1,19 @@
-import React from 'react';
+import React from 'react.ts';
 
 interface ForumCategoryInfo {
+
   id: string;
   name: string;
   description: string;
   postCount: number;
   adminOnly?: boolean;
   icon?: string;
-  lastPost?: {
+lastPost?: {
     title: string;
     author: string;
-    date: string;
-  };
-}
+    date: string}}
 
-export default function ForumCategories() {
+export default function ForumCategories(...args[]):  {
   const categories: ForumCategoryInfo[] = [
     {
       id: '1',
@@ -97,7 +96,7 @@ export default function ForumCategories() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
+    <section className = "py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
@@ -118,8 +117,8 @@ export default function ForumCategories() {
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category) => (
-            <div 
-              key={category.id} 
+            <div
+              key={category.id}
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 group cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4">
@@ -132,22 +131,22 @@ export default function ForumCategories() {
                   </span>
                 )}
               </div>
-              
+
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                 {category.name}
               </h3>
-              
+
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {category.description}
               </p>
-              
+
               <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
                   {category.postCount} posts
                 </span>
               </div>
-              
+
               {category.lastPost && (
                 <div className="pt-4 border-t border-white/10">
                   <p className="text-xs text-zion-slate-light mb-1">Latest Post:</p>
@@ -174,10 +173,19 @@ export default function ForumCategories() {
             </p>
             <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
               Start a Discussion
+<<<<<<< HEAD
             </button>
           </div>
         </div>
       </div>
     </section>
+  )};
+=======;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

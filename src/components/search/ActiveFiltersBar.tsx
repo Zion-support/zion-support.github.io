@@ -1,27 +1,28 @@
-import React from 'react';
-import { X } from 'lucide-react';
+import React from 'react.ts';
+import { X  } from 'lucide-react';
 
 interface Filter {
+
   key: string;
   value: string;
-  label: string;
-}
+  label: string}
 
-interface ActiveFiltersBarProps {
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+
   filters: Filter[];
-  onRemoveFilter: (key: string) => void;
-  onClearAll: () => void;
-}
+  onRemoveFilter: (key: string)  => void;
+  onClearAll: ()  => void}
 
-export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {
-  if (filters.length === 0) {
+<<<<<<< HEAD
+export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {;
+  if (filters.length = == 0) {;
     return null;
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
+    <div className = "flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
       <span className="text-sm text-zion-slate-light mr-2">Active filters:</span>
-      
+
       {filters.map((filter) => (
         <div
           key={filter.key}
@@ -36,13 +37,22 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
           </button>
         </div>
       ))}
-      
+
       <button
         onClick={onClearAll}
+<<<<<<< HEAD
         className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline"
       >
         Clear all
       </button>
     </div>
+  )};
+=======;
+        className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

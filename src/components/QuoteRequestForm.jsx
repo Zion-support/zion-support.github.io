@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/Button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Checkbox } from './ui/checkbox';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/Button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Checkbox } from "./ui/checkbox";
 import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const QuoteRequestForm = () => {
@@ -13,7 +13,7 @@ export const QuoteRequestForm = () => {
     lastName: '',
     email: '',
     phone: '',
-    company: '',
+    comp: '',
     serviceType: '',
     projectDescription: '',
     timeline: '',
@@ -75,8 +75,7 @@ export const QuoteRequestForm = () => {
       setErrors(prev => ({
         ...prev,
         [field]: ''
-      }));
-    }
+      }))}
   };
 
   const validateForm = () => {
@@ -85,25 +84,21 @@ export const QuoteRequestForm = () => {
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
-    if (!formData.company.trim()) newErrors.company = 'Company name is required';
+      newErrors.email = 'Email is required'} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'}
+    if (!formData.company.trim()) newErrors.comp = 'Comp name is required';
     if (!formData.serviceType) newErrors.serviceType = 'Please select a service type';
     if (!formData.projectDescription.trim()) newErrors.projectDescription = 'Project description is required';
     if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateForm()) {
-      return;
-    }
+      return}
 
     setIsSubmitting(true);
     
@@ -120,7 +115,7 @@ export const QuoteRequestForm = () => {
         lastName: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         serviceType: '',
         projectDescription: '',
         timeline: '',
@@ -129,13 +124,10 @@ export const QuoteRequestForm = () => {
         contactMethod: 'email',
         agreeToTerms: false,
         agreeToMarketing: false
-      });
-    } catch (error) {
+      })} catch (error) {
       console.error('Error submitting quote request:', error);
-      setErrors({ submit: 'Failed to submit request. Please try again.' });
-    } finally {
-      setIsSubmitting(false);
-    }
+      setErrors({ submit: 'Failed to submit request. Please try again.' })} finally {
+      setIsSubmitting(false)}
   };
 
   if (isSubmitted) {
@@ -159,8 +151,7 @@ export const QuoteRequestForm = () => {
           </div>
         </CardContent>
       </Card>
-    );
-  }
+    )}
 
   return (
     <Card className="max-w-4xl mx-auto">
@@ -184,7 +175,16 @@ export const QuoteRequestForm = () => {
               <Input
                 type="text"
                 value={formData.firstName}
-                onChange={(e) => handleChange('firstName', e.target.value)}
+                onChange = {
+  (e) => handleChange('firstName',
+  e.target.value)
+
+
+
+
+
+
+}
                 className={errors.firstName ? 'border-red-500' : ''}
                 placeholder="Enter your first name"
               />
@@ -200,7 +200,16 @@ export const QuoteRequestForm = () => {
               <Input
                 type="text"
                 value={formData.lastName}
-                onChange={(e) => handleChange('lastName', e.target.value)}
+                onChange = {
+  (e) => handleChange('lastName',
+  e.target.value)
+
+
+
+
+
+
+}
                 className={errors.lastName ? 'border-red-500' : ''}
                 placeholder="Enter your last name"
               />
@@ -219,7 +228,16 @@ export const QuoteRequestForm = () => {
               <Input
                 type="email"
                 value={formData.email}
-                onChange={(e) => handleChange('email', e.target.value)}
+                onChange = {
+  (e) => handleChange('email',
+  e.target.value)
+
+
+
+
+
+
+}
                 className={errors.email ? 'border-red-500' : ''}
                 placeholder="your.email@company.com"
               />
@@ -235,26 +253,55 @@ export const QuoteRequestForm = () => {
               <Input
                 type="tel"
                 value={formData.phone}
-                onChange={(e) => handleChange('phone', e.target.value)}
+                onChange = {
+  (e) => handleChange('phone',
+  e.target.value)
+
+
+
+
+
+
+}
                 placeholder="+1 (555) 123-4567"
               />
             </div>
           </div>
 
-          {/* Company Information */}
+          {/* Comp Information */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Company Name *
+              Comp Name *
             </label>
             <Input
               type="text"
+<<<<<<< HEAD
+              value={formData.comp}
+              onChange = {
+  (e) => handleChange('comp',
+  e.target.value)
+
+}
+              className={errors.comp ? 'border-red-500' : ''}
+              placeholder="Your Comp Inc."
+=======
               value={formData.company}
-              onChange={(e) => handleChange('company', e.target.value)}
+              onChange = {
+  (e) => handleChange('company',
+  e.target.value)
+
+
+
+
+
+
+}
               className={errors.company ? 'border-red-500' : ''}
               placeholder="Your Company Inc."
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             />
-            {errors.company && (
-              <p className="text-red-500 text-sm mt-1">{errors.company}</p>
+            {errors.comp && (
+              <p className="text-red-500 text-sm mt-1">{errors.comp}</p>
             )}
           </div>
 
@@ -265,7 +312,16 @@ export const QuoteRequestForm = () => {
             </label>
             <Select
               value={formData.serviceType}
-              onValueChange={(value) => handleChange('serviceType', value)}
+              onValueChange = {
+  (value) => handleChange('serviceType',
+  value)
+
+
+
+
+
+
+}
             >
               <SelectTrigger className={errors.serviceType ? 'border-red-500' : ''}>
                 <SelectValue placeholder="Select a service type" />
@@ -290,9 +346,18 @@ export const QuoteRequestForm = () => {
             </label>
             <Textarea
               value={formData.projectDescription}
-              onChange={(e) => handleChange('projectDescription', e.target.value)}
+              onChange = {
+  (e) => handleChange('projectDescription',
+  e.target.value)
+
+
+
+
+
+
+}
               className={errors.projectDescription ? 'border-red-500' : ''}
-              placeholder="Please describe your project requirements, goals, and any specific needs..."
+              placeholder="Please describe your project requirements, goals, and  specific needs..."
               rows={4}
             />
             {errors.projectDescription && (
@@ -308,7 +373,16 @@ export const QuoteRequestForm = () => {
               </label>
               <Select
                 value={formData.timeline}
-                onValueChange={(value) => handleChange('timeline', value)}
+                onValueChange = {
+  (value) => handleChange('timeline',
+  value)
+
+
+
+
+
+
+}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select timeline" />
@@ -329,7 +403,16 @@ export const QuoteRequestForm = () => {
               </label>
               <Select
                 value={formData.budget}
-                onValueChange={(value) => handleChange('budget', value)}
+                onValueChange = {
+  (value) => handleChange('budget',
+  value)
+
+
+
+
+
+
+}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select budget range" />
@@ -353,7 +436,16 @@ export const QuoteRequestForm = () => {
               </label>
               <Select
                 value={formData.urgency}
-                onValueChange={(value) => handleChange('urgency', value)}
+                onValueChange = {
+  (value) => handleChange('urgency',
+  value)
+
+
+
+
+
+
+}
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -374,7 +466,16 @@ export const QuoteRequestForm = () => {
               </label>
               <Select
                 value={formData.contactMethod}
-                onValueChange={(value) => handleChange('contactMethod', value)}
+                onValueChange = {
+  (value) => handleChange('contactMethod',
+  value)
+
+
+
+
+
+
+}
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -394,7 +495,16 @@ export const QuoteRequestForm = () => {
               <Checkbox
                 id="terms"
                 checked={formData.agreeToTerms}
-                onCheckedChange={(checked) => handleChange('agreeToTerms', checked)}
+                onCheckedChange = {
+  (checked) => handleChange('agreeToTerms',
+  checked)
+
+
+
+
+
+
+}
                 className="mt-1"
               />
               <label htmlFor="terms" className="text-sm text-gray-700">
@@ -414,7 +524,16 @@ export const QuoteRequestForm = () => {
               <Checkbox
                 id="marketing"
                 checked={formData.agreeToMarketing}
-                onCheckedChange={(checked) => handleChange('agreeToMarketing', checked)}
+                onCheckedChange = {
+  (checked) => handleChange('agreeToMarketing',
+  checked)
+
+
+
+
+
+
+}
                 className="mt-1"
               />
               <label htmlFor="marketing" className="text-sm text-gray-700">
@@ -460,5 +579,4 @@ export const QuoteRequestForm = () => {
         </form>
       </CardContent>
     </Card>
-  );
-};
+  )};

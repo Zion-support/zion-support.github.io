@@ -1,45 +1,45 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info } from 'lucide-react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info  } from 'lucide-react';
 
 interface PerformanceMetrics {
+
   fps: number;
   memory: number;
   loadTime: number;
   networkLatency: number;
   cpuUsage: number;
-  timestamp: number;
-}
+  timestamp: number}
 
 interface PerformanceAlert {
+
   id: string;
   type: 'warning' | 'error' | 'info' | 'success';
   message: string;
   metric: string;
   value: number;
-  timestamp: number;
-}
+  timestamp: number}
 
-export const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fps: 0,
-    memory: 0,
-    loadTime: 0,
-    networkLatency: 0,
-    cpuUsage: 0,
-    timestamp: Date.now()
+export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
+  const [metrics, setMetrics] = useState<any>({;
+    fps: 0,;
+    memory: 0,;
+    loadTime: 0,;
+    networkLatency: 0,;
+    cpuUsage: 0,;
+    timestamp: Date.now();
   });
 
-  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
+  const [alerts, setAlerts] = useState<any>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
   // FPS monitoring
-  const measureFPS = useCallback(() => {
+  const measureFPS = useCallback(() => {;
     let frameCount = 0;
     let lastTime = performance.now();
 
-    const countFrames = () => {
+    const countFrames = () => {;
       frameCount++;
       const currentTime = performance.now();
       
@@ -47,55 +47,51 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
         setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() }));
         frameCount = 0;
-        lastTime = currentTime;
-      }
-      
-      requestAnimationFrame(countFrames);
-    };
+        lastTime = currentTime};
+      ;
+      requestAnimationFrame(countFrames)};
 
-    requestAnimationFrame(countFrames);
-  }, []);
+    requestAnimationFrame(countFrames)}, []);
 
   // Memory monitoring
-  const measureMemory = useCallback(() => {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+<<<<<<< HEAD
+  const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      setMetrics(prev = > ({ ...prev, memory: memoryUsage }))};
+=======;
+  const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
       setMetrics(prev => ({ ...prev, memory: memoryUsage }));
     }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   }, []);
 
   // Load time monitoring
-  const measureLoadTime = useCallback(() => {
-    if (typeof window !== 'undefined') {
+  const measureLoadTime = useCallback(() => {;
+    if (typeof window !== 'null') {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        setMetrics(prev => ({ ...prev, loadTime }));
-      }
-    }
+        setMetrics(prev = > ({ ...prev, loadTime }))};
+    };
   }, []);
 
   // Network latency monitoring
-  const measureNetworkLatency = useCallback(async () => {
-    try {
+  const measureNetworkLatency = useCallback(async () => {;
+    try {;
       const start = performance.now();
       await fetch('/api/health', { method: 'HEAD' });
       const end = performance.now();
       const latency = end - start;
-      setMetrics(prev => ({ ...prev, networkLatency: latency }));
-    } catch (error) {
-      // If health check fails, use a default value
-      setMetrics(prev => ({ ...prev, networkLatency: 0 }));
-    }
+      setMetrics(prev = > ({ ...prev, networkLatency: latency }))} catch (error) {
+      // If health check fails, use a default value;
+      setMetrics(prev  => ({ ...prev, networkLatency: 0 }))};
   }, []);
 
   // CPU usage estimation
-  const estimateCPUUsage = useCallback(() => {
+  const estimateCPUUsage = useCallback(() => {;
     let lastTime = performance.now();
     let frameCount = 0;
     
-    const measureFrame = () => {
+    const measureFrame = () => {;
       frameCount++;
       const currentTime = performance.now();
       
@@ -103,17 +99,16 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         const cpuUsage = Math.min(100, (frameCount / 60) * 100);
         setMetrics(prev => ({ ...prev, cpuUsage }));
         frameCount = 0;
-        lastTime = currentTime;
-      }
-      
-      requestAnimationFrame(measureFrame);
-    };
+        lastTime = currentTime};
+      ;
+      requestAnimationFrame(measureFrame)};
     
-    requestAnimationFrame(measureFrame);
-  }, []);
+    requestAnimationFrame(measureFrame)}, []);
 
   // Performance alerts
-  const checkPerformanceAlerts = useCallback((metrics: PerformanceMetrics) => {
+<<<<<<< HEAD
+  const checkPerformanceAlerts = useCallback((metrics: PerformanceMetrics) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newAlerts: PerformanceAlert[] = [];
 
     if (metrics.fps < 30) {
@@ -124,8 +119,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         metric: 'fps',
         value: metrics.fps,
         timestamp: Date.now()
-      });
-    } else if (metrics.fps < 50) {
+      })} else if (metrics.fps < 50) {
       newAlerts.push({
         id: `fps-${Date.now()}`,
         type: 'warning',
@@ -133,8 +127,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         metric: 'fps',
         value: metrics.fps,
         timestamp: Date.now()
-      });
-    }
+      })}
 
     if (metrics.memory > 100) {
       newAlerts.push({
@@ -144,8 +137,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         metric: 'memory',
         value: metrics.memory,
         timestamp: Date.now()
-      });
-    }
+      })}
 
     if (metrics.loadTime > 3000) {
       newAlerts.push({
@@ -155,8 +147,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         metric: 'loadTime',
         value: metrics.loadTime,
         timestamp: Date.now()
-      });
-    }
+      })}
 
     if (metrics.networkLatency > 1000) {
       newAlerts.push({
@@ -166,22 +157,24 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         metric: 'networkLatency',
         value: metrics.networkLatency,
         timestamp: Date.now()
-      });
-    }
+      })}
 
     if (newAlerts.length > 0) {
-      setAlerts(prev => [...prev, ...newAlerts]);
-    }
+      setAlerts(prev = > [...prev, ...newAlerts])};
   }, []);
 
   // Auto-hide alerts after 5 seconds
   useEffect(() => {
-    const timer = setTimeout(() => {
+<<<<<<< HEAD
+    const timer = setTimeout(() => {;
+      setAlerts(prev => prev.filter(alert => Date.now() - alert.timestamp < 5000))}, 5000);
+=======
+    const timer = setTimeout(() => {;
       setAlerts(prev => prev.filter(alert => Date.now() - alert.timestamp < 5000));
     }, 5000);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-    return () => clearTimeout(timer);
-  }, [alerts]);
+    return () => clearTimeout(timer)}, [alerts]);
 
   // Initialize monitoring
   useEffect(() => {
@@ -191,17 +184,15 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     measureNetworkLatency();
     estimateCPUUsage();
 
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {;
       measureMemory();
       measureLoadTime();
       measureNetworkLatency();
-      checkPerformanceAlerts(metrics);
-    }, 2000);
+      checkPerformanceAlerts(metrics)}, 2000);
 
-    return () => clearInterval(interval);
-  }, [measureFPS, measureMemory, measureLoadTime, measureNetworkLatency, estimateCPUUsage, checkPerformanceAlerts, metrics]);
+    return () => clearInterval(interval)}, [measureFPS, measureMemory, measureLoadTime, measureNetworkLatency, estimateCPUUsage, checkPerformanceAlerts, metrics]);
 
-  const getPerformanceScore = useMemo(() => {
+  const getPerformanceScore = useMemo(() => {;
     let score = 100;
     
     if (metrics.fps < 30) score -= 30;
@@ -216,40 +207,77 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     if (metrics.networkLatency > 1000) score -= 15;
     else if (metrics.networkLatency > 500) score -= 5;
     
-    return Math.max(0, score);
-  }, [metrics]);
+    return Math.max(0, score)}, [metrics]);
 
-  const getScoreColor = (score: number) => {
+<<<<<<< HEAD
+  const getScoreColor = (score: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 80) return 'text-green-400';
     if (score >= 60) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'};
 
-  const getScoreIcon = (score: number) => {
+<<<<<<< HEAD
+  const getScoreIcon = (score: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 80) return <CheckCircle className="w-4 h-4" />;
     if (score >= 60) return <AlertTriangle className="w-4 h-4" />;
-    return <XCircle className="w-4 h-4" />;
-  };
+    return <XCircle className="w-4 h-4" />};
 
   if (!isVisible) {
     return (
       <motion.button
-        onClick={() => setIsVisible(true)}
+        onClick = {() => setIsVisible(true)}
         className="fixed bottom-4 right-4 z-50 p-3 bg-slate-800 hover:bg-slate-700 rounded-full shadow-lg transition-all duration-300"
+<<<<<<< HEAD
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
         <Activity className="w-5 h-5 text-cyan-400" />
       </motion.button>
+    )};
+=======;
+        whileHover={{ scale: 1.1 }};
+        whileTap={{ scale: 0.9 }};
+      >;
+        <Activity className="w-5 h-5 text-cyan-400" />;
+      </motion.button>;
     );
   }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+        exit = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
         className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-slate-700 rounded-lg shadow-2xl"
       >
         {/* Header */}
@@ -314,9 +342,36 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
               {alerts.slice(-3).map((alert) => (
                 <motion.div
                   key={alert.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                  exit = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
                   className={`flex items-center space-x-2 p-2 rounded text-xs ${
                     alert.type === 'error' ? 'bg-red-900/20 text-red-400' :
                     alert.type === 'warning' ? 'bg-yellow-900/20 text-yellow-400' :
@@ -331,10 +386,19 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
                   <span>{alert.message}</span>
                 </motion.div>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         )}
-      </motion.div>
-    </AnimatePresence>
+      </motion.div>;
+    </AnimatePresence>;
+  )};
+=======
+            </div>;
+          </div>;
+        )};
+      </motion.div>;
+    </AnimatePresence>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

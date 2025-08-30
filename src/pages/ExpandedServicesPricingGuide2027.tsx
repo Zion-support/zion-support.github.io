@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Grid3X3, 
-  List, 
-  ChevronDown, 
+import {
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
   ChevronUp,
   Star,
   Users,
@@ -62,37 +62,50 @@ import {
   Zap
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { 
+import {
   ALL_EXPANDED_SERVICES_PRICING,
-  type ExpandedServicePricing 
+  type ExpandedServicePricing
 } from '@/data/expandedServicesPricing2027';
 
-const ExpandedServicesPricingGuide2027: React.FC = () => {
+<<<<<<< HEAD
+const ExpandedServicesPricingGuide2027: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING);
+  const [expandedService, setExpandedService] = useState<any>(null);
+  const [filteredPricing, setFilteredPricing] = useState<any>(ALL_EXPANDED_SERVICES_PRICING);
 
   const categories = ['All', 'Cybersecurity', 'Data Analytics', 'Cloud & DevOps', 'IoT & Edge Computing', 'Financial Technology', 'Healthcare Technology'];
 
   useEffect(() => {
     let pricing = ALL_EXPANDED_SERVICES_PRICING;
     if (selectedCategory !== 'All') {
-      pricing = pricing.filter(p => p.category === selectedCategory);
-    }
+      pricing = pricing.filter(p => p.category === selectedCategory)}
     if (searchQuery) {
-      pricing = pricing.filter(p => 
+      pricing = pricing.filter(p =>
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
+        p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
+      )};
+    setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
+
+  const getCategoryIcon = (category: string)  => {
+    switch (category) {
+      case 'Cybersecurity':;
+=======;
+      pricing = pricing.filter(p => ;
+        p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
       );
     }
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return Shield;
       case 'Data Analytics':
         return BarChart3;
@@ -105,13 +118,14 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'Healthcare Technology':
         return Healthcare;
       default:
-        return Rocket;
-    }
+        return Rocket}
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+<<<<<<< HEAD
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'from-red-500 to-pink-600';
       case 'Data Analytics':
         return 'from-blue-500 to-cyan-600';
@@ -124,13 +138,14 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'Healthcare Technology':
         return 'from-teal-500 to-blue-600';
       default:
-        return 'from-gray-500 to-slate-600';
-    }
+        return 'from-gray-500 to-slate-600'}
   };
 
-  const getMarketPositionColor = (position: string) => {
-    switch (position) {
-      case 'leader':
+<<<<<<< HEAD
+  const getMarketPositionColor = (position: string) => {;
+    switch (position) {;
+      case 'leader':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'bg-green-100 text-green-800';
       case 'challenger':
         return 'bg-blue-100 text-blue-800';
@@ -139,19 +154,38 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
       case 'emerging':
         return 'bg-yellow-100 text-yellow-800';
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800'}
   };
 
-  const renderPricingCard = (pricing: ExpandedServicePricing) => {
+<<<<<<< HEAD
+  const renderPricingCard = (pricing: ExpandedServicePricing) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(pricing.category);
     const categoryColor = getCategoryColor(pricing.category);
 
     return (
       <motion.div
-        key={pricing.serviceId}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        key = {pricing.serviceId}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
       >
@@ -205,13 +239,40 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-starter' && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                       className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600"
                     >
                       <div className="space-y-2">
@@ -258,13 +319,40 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-professional' && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                       className="mt-3 pt-3 border-t border-blue-200 dark:border-blue-700"
                     >
                       <div className="space-y-2">
@@ -308,13 +396,40 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-enterprise' && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                       className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600"
                     >
                       <div className="space-y-2">
@@ -368,8 +483,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3">
                 <h6 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">ROI Category</h6>
                 <p className="text-sm text-purple-600 dark:text-purple-300">
-                  {parseInt(pricing.roiAnalysis.annualROI) >= 500 ? 'Exceptional' : 
-                   parseInt(pricing.roiAnalysis.annualROI) >= 300 ? 'Excellent' : 
+                  {parseInt(pricing.roiAnalysis.annualROI) >= 500 ? 'Exceptional' :
+                   parseInt(pricing.roiAnalysis.annualROI) >= 300 ? 'Excellent' :
                    parseInt(pricing.roiAnalysis.annualROI) >= 200 ? 'Good' : 'Standard'}
                 </p>
               </div>
@@ -413,7 +528,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 <span>{pricing.contactInfo.phone}</span>
               </div>
             </div>
-            
+
             <div className="flex space-x-2">
               <a
                 href={`mailto:${pricing.contactInfo.email}`}
@@ -430,17 +545,26 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
+<<<<<<< HEAD
               </a>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </div>;
+      </motion.div>;
+    )};
+=======
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
     );
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      <SEO 
+      <SEO
         title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
         description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
@@ -451,8 +575,26 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
@@ -462,20 +604,74 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               </span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services. 
+              Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services.
               Find the perfect pricing tier for your business needs.
             </motion.p>
-            
+
             {/* Contact Info */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -531,9 +727,9 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {categories.map((category) => (
+                {categories.map((category)  => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -552,8 +748,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
 
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredPricing.map((pricing) => renderPricingCard(pricing))}
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">
@@ -575,7 +771,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our pricing is designed to provide maximum value at competitive rates. 
+            Our pricing is designed to provide maximum value at competitive rates.
             Contact us today to discuss your specific needs and get a customized quote.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -592,12 +788,21 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
             >
               <Phone className="w-5 h-5" />
               <span>Call Sales Team</span>
+<<<<<<< HEAD
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ExpandedServicesPricingGuide2027;

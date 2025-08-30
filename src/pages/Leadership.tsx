@@ -21,7 +21,7 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 export default function Leadership() {
   const leadershipTeam = [
@@ -58,13 +58,13 @@ export default function Leadership() {
     {
       name: 'Dr. Emily Watson',
       title: 'Head of AI Research',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
-      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',
-      expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],
-      linkedin: 'https://linkedin.com/in/emilywatson',
-      email: 'emily@ziontechgroup.com',
-      phone: '+1 302 464 0953'
-    }
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',;
+      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',;
+      expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],;
+      linkedin: 'https://linkedin.com/in/emilywatson',;
+      email: 'emily@ziontechgroup.com',;
+      phone: '+1 302 464 0953';
+    };
   ];
 
   const values = [
@@ -81,13 +81,13 @@ export default function Leadership() {
     {
       icon: Shield,
       title: 'Trust & Security',
-      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'We believe technology should make the world better for everyone, everywhere.'
-    }
+      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.';
+    },;
+    {;
+      icon: Globe,;
+      title: 'Global Impact',;
+      description: 'We believe technology should make the world better for everyone, everywhere.';
+    };
   ];
 
   const achievements = [
@@ -104,17 +104,17 @@ export default function Leadership() {
     {
       metric: '95%',
       label: 'Client Satisfaction',
-      description: 'Consistently high satisfaction ratings from our clients'
-    },
-    {
-      metric: '25+',
-      label: 'Industry Awards',
-      description: 'Recognition for innovation and excellence in technology'
-    }
+      description: 'Consistently high satisfaction ratings from our clients';
+    },;
+    {;
+      metric: '25+',;
+      label: 'Industry Awards',;
+      description: 'Recognition for innovation and excellence in technology';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Leadership - Zion Tech Group"
         description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
@@ -212,7 +212,7 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Company Values */}
+      {/* Comp Values */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -220,7 +220,7 @@ export default function Leadership() {
               Our Core Values
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our company culture.
+              The principles that guide everything we do and shape our comp culture.
             </p>
           </div>
 
@@ -262,7 +262,7 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Company Culture */}
+      {/* Comp Culture */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -334,12 +334,12 @@ export default function Leadership() {
                 <p className="text-slate-300 text-sm">
                   kleber@ziontechgroup.com<br />
                   We'll respond within 24 hours
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

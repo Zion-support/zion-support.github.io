@@ -11,9 +11,7 @@ export interface InnovativeMicroSaasV3 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
   {
     id: "ai-customer-support",
@@ -21,7 +19,7 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
     tagline: "24/7 intelligent customer support automation",
     price: "$59/month",
     description: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.",
-    features: [
+    features[
       "AI chatbot integration",
       "Multi-language support",
       "Ticket management",

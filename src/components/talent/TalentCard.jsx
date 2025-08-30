@@ -10,18 +10,20 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
         e.preventDefault();
         e.stopPropagation();
         if (onMessage) {
-            onMessage(talent);
-        }
+            onMessage(talent)}
         else {
-            navigate(`/messages?talentId=${talent.id}`);
+<<<<<<< HEAD
+            router(`/messages?talentId=${talent.id}`)}
+=======
+            router(`/messages?talentId=${talent.id}`);
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     };
     const handleBook = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onBook) {
-            onBook(talent);
-        }
+            onBook(talent)}
     };
     // Extract skills - limit to 5 for display
     const skills = talent.skills?.slice(0, 5) || [];
@@ -93,7 +95,6 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
           </div>
         </div>
       </div>
-    </Card>);
-};
+    </Card>)};
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';

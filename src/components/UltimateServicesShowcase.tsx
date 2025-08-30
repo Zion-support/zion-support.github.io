@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Globe, 
-  Code, 
-  BarChart3, 
-  Users, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Code,
+  BarChart3,
+  Users,
   ShoppingCart,
   MessageSquare,
   FileText,
@@ -20,14 +20,21 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
+ } from 'lucide-react';
 
 // Import the new services
-import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';
-import { enterpriseITInfrastructureServices2025 } from '../../data/2025-enterprise-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../../data/2025-innovative-micro-saas-solutions';
+<<<<<<< HEAD
+import { ultimateInnovativeServices2025  } from "../../data/2025-ultimate-innovative-services-expansion";
+import { enterpriseITInfrastructureServices2025  } from "../../data/2025-enterprise-it-infrastructure-services";
+import { innovativeMicroSaasSolutions2025  } from "../../data/2025-innovative-micro-saas-solutions";
+=======
+import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion";
+import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
+import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
+
   id: string;
   name: string;
   tagline: string;
@@ -53,12 +60,11 @@ interface Service {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {
+contactInfo: {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -68,14 +74,24 @@ interface Service {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
-  marketDisruption: string;
-}
+  marketDisruption: string}
 
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+;
+
+
+
+
+
+
 };
 
 const categories = [
@@ -85,7 +101,7 @@ const categories = [
     description: 'Revolutionary AI solutions that transform business operations',
     icon: <Brain className="w-8 h-8" />,
     color: 'from-purple-600 to-pink-700',
-    services: ultimateInnovativeServices2025.filter(s => s.category.includes('AI'))
+    services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
   },
   {
     id: 'it-infrastructure',
@@ -96,74 +112,123 @@ const categories = [
     services: enterpriseITInfrastructureServices2025
   },
   {
-    id: 'micro-saas',
-    name: 'Micro SAAS Solutions',
-    description: 'Innovative software solutions for small businesses',
-    icon: <Code className="w-8 h-8" />,
-    color: 'from-green-600 to-emerald-700',
-    services: innovativeMicroSaasSolutions2025
-  }
+    id: 'micro-saas',;
+    name: 'Micro SAAS Solutions',;
+    description: 'Innovative software solutions for small businesses',;
+    icon: <Code className="w-8 h-8" />,;
+    color: 'from-green-600 to-emerald-700',;
+    services: innovativeMicroSaasSolutions2025;
+  };
 ];
 
 const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700',
   'Breakthrough': 'from-purple-600 to-violet-700',
-  'Advanced': 'from-blue-600 to-cyan-700',
-  'Emerging': 'from-green-600 to-emerald-700'
+  'Advanced': 'from-blue-600 to-cyan-700',;
+  ;
+  ;
+  ;
+  ;
+  'Emerging': 'from-green-600 to-emerald-700';
+;
+
+
+
+
+
+
 };
 
 const patentStatusColors = {
   'Patented': 'from-green-600 to-emerald-700',
   'Patent Pending': 'from-yellow-600 to-orange-700',
-  'Trade Secret': 'from-blue-600 to-indigo-700',
-  'Open Source': 'from-purple-600 to-violet-700'
+  'Trade Secret': 'from-blue-600 to-indigo-700',;
+  ;
+  ;
+  ;
+  ;
+  'Open Source': 'from-purple-600 to-violet-700';
+;
+
+
+
+
+
+
 };
 
-export function UltimateServicesShowcase() {
+export function UltimateServicesShowcase(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [selectedService, setSelectedService] = useState<any>(null);
 
-  const allServices = [
-    ...ultimateInnovativeServices2025,
-    ...enterpriseITInfrastructureServices2025,
-    ...innovativeMicroSaasSolutions2025
+  const allServices = [;
+    ...ultimateInnovativeServices2025,;
+    ...enterpriseITInfrastructureServices2025,;
+    ...innovativeMicroSaasSolutions2025;
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? allServices 
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1,;
+        delayChildren: 0.2;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+},
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0.6,;
+        ease: "easeOut";
+      };
+    };
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -174,10 +239,10 @@ export function UltimateServicesShowcase() {
             <span className="text-white">Services Showcase</span>
           </h1>
           <p className="text-xl text-zion-gray-light max-w-4xl mx-auto leading-relaxed">
-            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide. 
+            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.
             Each service is backed by cutting-edge technology and proven results.
           </p>
-          
+
           {/* Contact Information */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-zion-gray-light">
             <div className="flex items-center gap-2">
@@ -196,23 +261,50 @@ export function UltimateServicesShowcase() {
         </motion.div>
 
         {/* Category Navigation */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
         >
           <button
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
-                : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'
+                : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'
             }`}
           >
             All Services ({allServices.length})
           </button>
-          {categories.map((category) => (
+          {categories.map((category)  => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
@@ -228,7 +320,7 @@ export function UltimateServicesShowcase() {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -342,11 +434,38 @@ export function UltimateServicesShowcase() {
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div 
+        <motion.div
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -490,12 +609,28 @@ export function UltimateServicesShowcase() {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       )}
     </section>
+  )};
+=======;
+            </div>;
+          </div>;
+        </div>;
+      )};
+    </section>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

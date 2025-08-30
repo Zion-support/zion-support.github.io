@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight } from 'lucide-react';
 
 export default function Categories() {
@@ -162,7 +161,7 @@ export default function Categories() {
         equipment: 2
       }
     ],
-    'development': [
+    'development'[
       {
         name: 'Web Development',
         description: 'Frontend and backend web applications',
@@ -181,13 +180,13 @@ export default function Categories() {
       },
       {
         name: 'API Development',
-        description: 'RESTful APIs and microservices',
-        icon: <Network className="w-6 h-6" />,
-        services: 13,
-        talent: 8,
-        equipment: 1
-      }
-    ]
+        description: 'RESTful APIs and microservices',;
+        icon: <Network className="w-6 h-6" />,;
+        services: 13,;
+        talent: 8,;
+        equipment: 1;
+      };
+    ];
   };
 
   const featuredItems = [
@@ -208,33 +207,37 @@ export default function Categories() {
       featured: true
     },
     {
-      type: 'equipment',
-      title: 'High-Performance GPU Cluster',
-      category: 'AI & Machine Learning',
-      rating: 4.7,
-      price: '$15,000/month',
-      featured: true
-    }
+      type: 'equipment',;
+      title: 'High-Performance GPU Cluster',;
+      category: 'AI & Machine Learning',;
+      rating: 4.7,;
+      price: '$15,000/month',;
+      featured: true;
+    };
   ];
 
   const getCategoryCount = (categoryId: string) => {
     if (categoryId === 'all') {
-      return Object.values(subCategories).flat().reduce((total, sub) => 
+      return Object.values(subCategories).flat().reduce((total, sub) =>
         total + sub.services + sub.talent + sub.equipment, 0
       );
     }
-    return subCategories[categoryId]?.reduce((total, sub) => 
+    return subCategories[categoryId]?.reduce((total, sub) =>
       total + sub.services + sub.talent + sub.equipment, 0
-    ) || 0;
-  };
+    ) || 0};
 
   // Update counts
-  mainCategories.forEach(cat => {
+<<<<<<< HEAD
+  mainCategories.forEach(cat = > {;
+    cat.count = getCategoryCount(cat.id)});
+=======
+  mainCategories.forEach(cat = > {;
     cat.count = getCategoryCount(cat.id);
   });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -253,8 +256,8 @@ export default function Categories() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Main Categories
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {mainCategories.map((category) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {mainCategories.map((category)  => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
@@ -288,8 +291,8 @@ export default function Categories() {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               {mainCategories.find(c => c.id === activeCategory)?.name} - Sub Categories
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {subCategories[activeCategory].map((subCategory, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              {subCategories[activeCategory].map((subCategory, index)  => (
                 <div
                   key={index}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -297,7 +300,7 @@ export default function Categories() {
                   <div className="text-zion-cyan mb-4">{subCategory.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{subCategory.name}</h3>
                   <p className="text-zion-slate-light text-sm mb-4">{subCategory.description}</p>
-                  
+
                   <div className="grid grid-cols-3 gap-3 text-center">
                     <div className="bg-zion-slate-light/20 rounded-lg p-3">
                       <div className="text-zion-cyan font-bold text-lg">{subCategory.services}</div>
@@ -325,8 +328,8 @@ export default function Categories() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Featured Items
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredItems.map((item, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
+            {featuredItems.map((item, index)  => (
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -338,7 +341,7 @@ export default function Categories() {
                 )}
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{item.category}</p>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -346,7 +349,7 @@ export default function Categories() {
                   </div>
                   <span className="text-zion-cyan font-semibold">{item.price}</span>
                 </div>
-                
+
                 <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-medium hover:bg-zion-cyan-light transition-colors">
                   View Details
                 </button>
@@ -366,21 +369,30 @@ export default function Categories() {
             Use our advanced search to find specific services, talent, or equipment, or contact us for custom solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="/search"
               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
             >
               Advanced Search
             </a>
-            <a 
+            <a
               href="/contact"
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
             >
               Contact Us
+<<<<<<< HEAD
             </a>
           </div>
         </div>
       </div>
     </div>
+  )};
+=======;
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

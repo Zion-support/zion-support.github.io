@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
-// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
+<<<<<<< HEAD
+import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";
+import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";
+import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
+=======
+// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";
+// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";
+// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const UltimateServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -26,8 +32,7 @@ const UltimateServicesShowcase2025 = () => {
         const searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return categoryMatch && priceMatch && searchMatch;
-    })
+        return categoryMatch && priceMatch && searchMatch})
         .sort((a, b) => {
         switch (sortBy) {
             case 'price':
@@ -37,15 +42,12 @@ const UltimateServicesShowcase2025 = () => {
             case 'category':
                 return a.category.localeCompare(b.category);
             default:
-                return 0;
-        }
+                return 0}
     });
     const formatPrice = (price) => {
         if (price >= 1000) {
-            return `$${(price / 1000).toFixed(1)}K`;
-        }
-        return `$${price}`;
-    };
+            return `$${(price / 1000).toFixed(1)}K`}
+        return `$${price}`};
     const getSupportLevelColor = (level) => {
         switch (level) {
             case 'enterprise':
@@ -53,8 +55,7 @@ const UltimateServicesShowcase2025 = () => {
             case 'premium':
                 return 'bg-blue-600';
             default:
-                return 'bg-green-600';
-        }
+                return 'bg-green-600'}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header */}
@@ -268,6 +269,5 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default UltimateServicesShowcase2025;

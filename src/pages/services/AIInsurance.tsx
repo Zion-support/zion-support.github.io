@@ -3,13 +3,13 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 export default function AIInsurance() {
   const features = [
     'AI-powered risk assessment and underwriting automation',
-    'Intelligent claims processing and fraud detection',
-    'Automated policy management and customer service',
-    'Predictive analytics for risk modeling and pricing',
-    'Real-time customer behavior analysis and risk scoring',
-    'Smart document processing and compliance monitoring',
-    'Integration with major insurance management systems',
-    'Custom AI models for insurance-specific insights'
+    'Intelligent claims processing and fraud detection',;
+    'Automated policy management and customer service',;
+    'Predictive analytics for risk modeling and pricing',;
+    'Real-time customer behavior analysis and risk scoring',;
+    'Smart document processing and compliance monitoring',;
+    'Integration with major insurance management systems',;
+    'Custom AI models for insurance-specific insights';
   ];
 
   const tiers = [
@@ -21,44 +21,44 @@ export default function AIInsurance() {
     { 
       name: 'Medium Insurer', 
       price: '$1,299/mo', 
-      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'] 
-    },
-    { 
-      name: 'Large Insurer', 
-      price: '$3,999/mo', 
-      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
-    },
+      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Large Insurer', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    },;
   ];
 
-  const useCases = [
-    'Automated underwriting and risk assessment',
-    'Claims processing and fraud detection',
-    'Customer service and policy management',
-    'Risk modeling and pricing optimization',
-    'Compliance monitoring and reporting',
-    'Customer retention and cross-selling'
+  const useCases = [;
+    'Automated underwriting and risk assessment',;
+    'Claims processing and fraud detection',;
+    'Customer service and policy management',;
+    'Risk modeling and pricing optimization',;
+    'Compliance monitoring and reporting',;
+    'Customer retention and cross-selling';
   ];
 
-  const benefits = [
-    'Reduce claims processing time by 60-80%',
-    'Improve fraud detection accuracy by 40-60%',
-    'Cut operational costs by 25-40%',
-    'Optimize pricing for maximum profitability',
-    'Enhance customer experience and satisfaction',
-    'Scale insurance operations efficiently'
+  const benefits = [;
+    'Reduce claims processing time by 60-80%',;
+    'Improve fraud detection accuracy by 40-60%',;
+    'Cut operational costs by 25-40%',;
+    'Optimize pricing for maximum profitability',;
+    'Enhance customer experience and satisfaction',;
+    'Scale insurance operations efficiently';
   ];
 
-  const industries = [
-    'Property & Casualty Insurance',
-    'Life & Health Insurance',
-    'Auto Insurance',
-    'Commercial Insurance',
-    'Reinsurance',
-    'Insurance Brokers'
+  const industries = [;
+    'Property & Casualty Insurance',;
+    'Life & Health Insurance',;
+    'Auto Insurance',;
+    'Commercial Insurance',;
+    'Reinsurance',;
+    'Insurance Brokers';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +163,12 @@ export default function AIInsurance() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

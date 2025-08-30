@@ -2,580 +2,21 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Wrench, 
-  Zap, 
+  Clock, 
   Shield, 
+  Users, 
   CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Code,
-  FileText,
-  Cpu,
-  Brain,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Building,
-  Car,
-  Plane,
-  Factory,
-  Cog,
-  BarChart3,
-  TrendingUp,
-  MapPin,
-  Layers,
-  RefreshCw,
   AlertTriangle,
-  Package,
-  Warehouse,
-  Route,
-  Navigation,
-  Box,
-  Ship,
-  Train,
-  Plane,
-  Car,
-  Truck,
-  Cloud,
-  Settings,
-  Palette,
-  Smartphone,
-  Tablet,
-  Monitor,
-  Smartphone,
-  Globe,
-  Shield,
-  Zap,
-  Users,
-  Settings,
-  Palette,
-  Database,
-  Server,
-  Network,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  HardDrive,
-  MemoryStick,
-  Router,
-  Switch,
-  Hub,
-  Modem,
-  Firewall,
-  LoadBalancer,
-  Gateway,
-  Proxy,
-  VPN,
-  SSL,
-  TLS,
-  SSH,
-  FTP,
-  HTTP,
-  HTTPS,
-  DNS,
-  DHCP,
-  NTP,
-  SMTP,
-  POP3,
-  IMAP,
-  LDAP,
-  Kerberos,
-  OAuth,
-  JWT,
-  SAML,
-  OpenID,
-  Radius,
-  Tacacs,
-  Syslog,
-  SNMP,
-  NetFlow,
-  sFlow,
-  IPFIX,
-  BGP,
-  OSPF,
-  EIGRP,
-  RIP,
-  VLAN,
-  VXLAN,
-  GRE,
-  IPSec,
-  MPLS,
-  SDN,
-  NFV,
-  VNF,
-  Container,
-  Pod,
-  Service,
-  Ingress,
-  Egress,
-  Cluster,
-  Node,
-  Namespace,
-  ConfigMap,
-  Secret,
-  PersistentVolume,
-  StorageClass,
-  StatefulSet,
-  DaemonSet,
-  Job,
-  CronJob,
-  HorizontalPodAutoscaler,
-  VerticalPodAutoscaler,
-  NetworkPolicy,
-  PodSecurityPolicy,
-  Role,
-  RoleBinding,
-  ClusterRole,
-  ClusterRoleBinding,
-  ServiceAccount,
-  Token,
-  Certificate,
-  CSR,
-  CRL,
-  OCSP,
-  HSM,
-  TPM,
-  SecureEnclave,
-  TrustZone,
-  SGX,
-  SEV,
-  TDX,
-  ARM,
-  x86,
-  RISC,
-  CISC,
-  GPU,
-  TPU,
-  FPGA,
-  ASIC,
-  SoC,
-  SiP,
-  PCB,
-  Motherboard,
-  Backplane,
-  Chassis,
-  Rack,
-  Cabinet,
-  Datacenter,
-  Colocation,
-  Edge,
-  Fog,
-  Cloud,
-  Hybrid,
-  Multi,
-  Public,
-  Private,
-  Community,
-  Government,
-  Financial,
-  Healthcare,
-  Education,
-  Retail,
-  Manufacturing,
-  Transportation,
-  Energy,
-  Utilities,
-  Telecommunications,
-  Media,
-  Entertainment,
-  Gaming,
-  Social,
-  Ecommerce,
-  Fintech,
-  Insurtech,
-  Healthtech,
-  Edtech,
-  Proptech,
-  Legaltech,
-  Regtech,
-  Adtech,
-  MarTech,
-  HRTech,
-  SalesTech,
-  SupportTech,
-  SecurityTech,
-  PrivacyTech,
-  ComplianceTech,
-  GovernanceTech,
-  RiskTech,
-  AuditTech,
-  MonitoringTech,
-  ObservabilityTech,
-  LoggingTech,
-  TracingTech,
-  MetricsTech,
-  AlertingTech,
-  IncidentTech,
-  ChangeTech,
-  ReleaseTech,
-  DeploymentTech,
-  CI,
-  CD,
-  DevOps,
-  GitOps,
-  SecOps,
-  DataOps,
-  MLOps,
-  AIOps,
-  NoOps,
-  SRE,
-  Platform,
-  Infrastructure,
-  Application,
-  Data,
-  Security,
-  Network,
-  Storage,
-  Compute,
-  Memory,
-  Cache,
-  Buffer,
-  Queue,
-  Stream,
-  Batch,
-  RealTime,
-  NearRealTime,
-  Offline,
-  Online,
-  Hybrid,
-  Multi,
-  Single,
-  Distributed,
-  Centralized,
-  Decentralized,
-  Federated,
-  Hierarchical,
-  Flat,
-  Mesh,
-  Star,
-  Ring,
-  Bus,
-  Tree,
-  Graph,
-  Matrix,
-  Vector,
-  Scalar,
-  Tensor,
-  Array,
-  List,
-  Stack,
-  Queue,
-  Deque,
-  PriorityQueue,
-  Heap,
-  Tree,
-  Graph,
-  HashTable,
-  BloomFilter,
-  SkipList,
-  Trie,
-  BTree,
-  RedBlackTree,
-  AVLTree,
-  SplayTree,
-  Treap,
-  SplayTree,
-  RedBlackTree,
-  AVLTree,
-  BTree,
-  Trie,
-  SkipList,
-  BloomFilter,
-  HashTable,
-  Graph,
-  Tree,
-  Heap,
-  PriorityQueue,
-  Deque,
-  Queue,
-  Stack,
-  List,
-  Array,
-  Tensor,
-  Scalar,
-  Vector,
-  Matrix,
-  Graph,
-  Tree,
-  Ring,
-  Star,
-  Mesh,
-  Flat,
-  Hierarchical,
-  Federated,
-  Decentralized,
-  Centralized,
-  Distributed,
-  Single,
-  Multi,
-  Hybrid,
-  Online,
-  Offline,
-  NearRealTime,
-  RealTime,
-  Batch,
-  Stream,
-  Queue,
-  Buffer,
-  Cache,
-  Memory,
-  Compute,
-  Storage,
-  Network,
-  Security,
-  Data,
-  Application,
-  Infrastructure,
-  Platform,
-  SRE,
-  NoOps,
-  AIOps,
-  MLOps,
-  DataOps,
-  SecOps,
-  GitOps,
-  DevOps,
-  CD,
-  CI,
-  DeploymentTech,
-  ReleaseTech,
-  ChangeTech,
-  IncidentTech,
-  AlertingTech,
-  MetricsTech,
-  TracingTech,
-  LoggingTech,
-  ObservabilityTech,
-  MonitoringTech,
-  AuditTech,
-  RiskTech,
-  GovernanceTech,
-  ComplianceTech,
-  PrivacyTech,
-  SecurityTech,
-  SupportTech,
-  SalesTech,
-  HRTech,
-  MarTech,
-  Adtech,
-  Regtech,
-  Legaltech,
-  Proptech,
-  Edtech,
-  Healthtech,
-  Insurtech,
-  Fintech,
-  Ecommerce,
-  Social,
-  Gaming,
-  Entertainment,
-  Media,
-  Telecommunications,
-  Utilities,
-  Energy,
-  Transportation,
-  Manufacturing,
-  Retail,
-  Education,
-  Healthcare,
-  Financial,
-  Government,
-  Community,
-  Private,
-  Public,
-  Multi,
-  Hybrid,
-  Cloud,
-  Fog,
-  Edge,
-  Colocation,
-  Datacenter,
-  Cabinet,
-  Rack,
-  Chassis,
-  Backplane,
-  Motherboard,
-  PCB,
-  SiP,
-  SoC,
-  ASIC,
-  FPGA,
-  TPU,
-  GPU,
-  CISC,
-  RISC,
-  x86,
-  ARM,
-  TDX,
-  SEV,
-  SGX,
-  TrustZone,
-  SecureEnclave,
-  TPM,
-  HSM,
-  OCSP,
-  CRL,
-  CSR,
-  Certificate,
-  Token,
-  ServiceAccount,
-  ClusterRoleBinding,
-  ClusterRole,
-  RoleBinding,
-  Role,
-  PodSecurityPolicy,
-  NetworkPolicy,
-  VerticalPodAutoscaler,
-  HorizontalPodAutoscaler,
-  CronJob,
-  Job,
-  DaemonSet,
-  StatefulSet,
-  StorageClass,
-  PersistentVolume,
-  Secret,
-  ConfigMap,
-  Namespace,
-  Node,
-  Cluster,
-  Egress,
-  Ingress,
-  Service,
-  Pod,
-  Container,
-  VNF,
-  NFV,
-  SDN,
-  MPLS,
-  IPSec,
-  GRE,
-  VXLAN,
-  VLAN,
-  RIP,
-  EIGRP,
-  OSPF,
-  BGP,
-  IPFIX,
-  sFlow,
-  NetFlow,
-  SNMP,
-  Syslog,
-  Tacacs,
-  Radius,
-  OpenID,
-  SAML,
-  JWT,
-  OAuth,
-  Kerberos,
-  LDAP,
-  IMAP,
-  POP3,
-  SMTP,
-  NTP,
-  DHCP,
-  DNS,
-  HTTPS,
-  HTTP,
-  FTP,
-  SSH,
-  TLS,
-  SSL,
-  VPN,
-  Proxy,
-  Gateway,
-  LoadBalancer,
-  Firewall,
-  Modem,
-  Hub,
-  Switch,
-  Router,
-  MemoryStick,
-  HardDrive,
-  Signal,
-  Battery,
-  Bluetooth,
-  Wifi,
-  Network,
-  Server,
-  Database,
-  Palette,
-  Settings,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Smartphone,
-  Palette,
-  Settings,
-  Cloud,
-  Truck,
-  Car,
-  Plane,
-  Train,
-  Ship,
-  Box,
-  Navigation,
-  Route,
-  Warehouse,
-  Package,
-  AlertTriangle,
-  RefreshCw,
-  Layers,
+  Phone,
+  Mail,
   MapPin,
-  TrendingUp,
-  BarChart3,
-  Cog,
-  Factory,
-  Plane,
-  Car,
-  Building,
+  Zap,
   Server,
   Network,
-  Gauge,
-  Lightbulb,
-  Rocket,
-  Target,
-  Brain,
-  Cpu,
-  Wrench,
-  FileText,
-  Code,
   Database,
-  Eye,
-  Clock,
-  Activity,
-  Lock,
-  Globe,
-  Award,
-  Users,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Shield,
-  Zap,
-  Wrench
+  Monitor,
+  HardDrive,
+  Router
 } from 'lucide-react';
 
 const onsiteSupportSolutions = [
@@ -584,7 +25,7 @@ const onsiteSupportSolutions = [
     title: "Hardware Support & Maintenance",
     description: "Comprehensive hardware support including installation, repair, and preventive maintenance.",
     icon: Cpu,
-    features: [
+    features[
       "Hardware installation",
       "Repair services",
       "Preventive maintenance",
@@ -593,14 +34,14 @@ const onsiteSupportSolutions = [
     price: "From $150/hour",
     timeline: "Same day - 24 hours",
     category: "Hardware",
-    technologies: ["Desktop PCs", "Laptops", "Servers", "Network Equipment"]
+    technologies["Desktop PCs", "Laptops", "Servers", "Network Equipment"]
   },
   {
     id: 2,
     title: "Network Infrastructure Support",
     description: "Onsite network troubleshooting, installation, and optimization services.",
     icon: Network,
-    features: [
+    features[
       "Network troubleshooting",
       "Cable installation",
       "WiFi optimization",
@@ -609,14 +50,14 @@ const onsiteSupportSolutions = [
     price: "From $200/hour",
     timeline: "Same day - 48 hours",
     category: "Networking",
-    technologies: ["Cisco", "Juniper", "WiFi", "Cabling"]
+    technologies["Cisco", "Juniper", "WiFi", "Cabling"]
   },
   {
     id: 3,
     title: "Software Installation & Support",
     description: "Software installation, configuration, and troubleshooting services.",
     icon: Code,
-    features: [
+    features[
       "Software installation",
       "Configuration setup",
       "Troubleshooting",
@@ -625,14 +66,14 @@ const onsiteSupportSolutions = [
     price: "From $125/hour",
     timeline: "Same day - 24 hours",
     category: "Software",
-    technologies: ["Windows", "Linux", "Business Apps", "Security Software"]
+    technologies["Windows", "Linux", "Business Apps", "Security Software"]
   },
   {
     id: 4,
     title: "Data Recovery & Backup",
     description: "Onsite data recovery services and backup system implementation.",
     icon: HardDrive,
-    features: [
+    features[
       "Data recovery",
       "Backup systems",
       "Data migration",
@@ -641,14 +82,14 @@ const onsiteSupportSolutions = [
     price: "From $300/hour",
     timeline: "24-72 hours",
     category: "Data",
-    technologies: ["Recovery Tools", "Backup Software", "Storage Systems", "Cloud Backup"]
+    technologies["Recovery Tools", "Backup Software", "Storage Systems", "Cloud Backup"]
   },
   {
     id: 5,
     title: "Security Assessment & Implementation",
     description: "Onsite security audits and security system implementation.",
     icon: Shield,
-    features: [
+    features[
       "Security audits",
       "System hardening",
       "Access control",
@@ -657,14 +98,14 @@ const onsiteSupportSolutions = [
     price: "From $250/hour",
     timeline: "24-48 hours",
     category: "Security",
-    technologies: ["Firewalls", "Antivirus", "Access Control", "Monitoring"]
+    technologies["Firewalls", "Antivirus", "Access Control", "Monitoring"]
   },
   {
     id: 6,
     title: "Emergency Response Support",
     description: "24/7 emergency onsite support for critical system failures.",
     icon: AlertTriangle,
-    features: [
+    features[
       "24/7 availability",
       "Emergency response",
       "Critical system repair",
@@ -673,45 +114,14 @@ const onsiteSupportSolutions = [
     price: "From $400/hour",
     timeline: "2-8 hours",
     category: "Emergency",
-    technologies: ["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
-  }
-];
-
-const supportTechnologies = [
-  {
-    name: "Hardware Support",
-    description: "Comprehensive hardware troubleshooting and repair",
-    icon: Cpu,
-    useCase: "Hardware Issues",
-    reliability: "Critical"
-  },
-  {
-    name: "Network Support",
-    description: "Network infrastructure and connectivity solutions",
-    icon: Network,
-    useCase: "Network Issues",
-    reliability: "Critical"
-  },
-  {
-    name: "Software Support",
-    description: "Software installation and configuration support",
-    icon: Code,
-    useCase: "Software Issues",
-    reliability: "High"
-  },
-  {
-    name: "Security Support",
-    description: "Security system implementation and maintenance",
-    icon: Shield,
-    useCase: "Security Issues",
-    reliability: "Critical"
+    technologies["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
   }
 ];
 
 const successStories = [
   {
     id: 1,
-    company: "Manufacturing Plant",
+    comp: "Manufacturing Plant",
     industry: "Manufacturing",
     challenge: "Critical production system failure during peak hours",
     solution: "Emergency onsite support team arrived within 2 hours and restored system in 4 hours",
@@ -720,7 +130,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Clinic",
+    comp: "Healthcare Clinic",
     industry: "Healthcare",
     challenge: "Network outage affecting patient management systems",
     solution: "Onsite network support resolved connectivity issues and implemented redundancy",
@@ -729,7 +139,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Financial Services Firm",
+    comp: "Financial Services Firm",
     industry: "Finance",
     challenge: "Server hardware failure during trading hours",
     solution: "Emergency hardware support with immediate replacement and data recovery",
@@ -774,25 +184,25 @@ const supportBenefits = [
     title: "Rapid Response",
     description: "Quick onsite response minimizes downtime and business impact",
     icon: Zap,
-    examples: ["Same-day service", "Emergency response", "Minimal downtime", "Business continuity"]
+    examples["Same-day service", "Emergency response", "Minimal downtime", "Business continuity"]
   },
   {
     title: "Expert Technicians",
     description: "Certified technicians with specialized knowledge and tools",
     icon: Users,
-    examples: ["Certified professionals", "Specialized tools", "Experience", "Training"]
+    examples["Certified professionals", "Specialized tools", "Experience", "Training"]
   },
   {
     title: "Comprehensive Support",
     description: "Full-spectrum support from hardware to software and networking",
     icon: Wrench,
-    examples: ["Hardware support", "Software support", "Network support", "Security support"]
+    examples["Hardware support", "Software support", "Network support", "Security support"]
   },
   {
     title: "Preventive Maintenance",
     description: "Proactive maintenance prevents future issues and improves reliability",
     icon: Shield,
-    examples: ["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
+    examples["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
   }
 ];
 
@@ -818,15 +228,60 @@ export default function OnsiteSupport() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Wrench className="w-10 h-10 text-white" />
@@ -864,8 +319,26 @@ export default function OnsiteSupport() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -879,9 +352,36 @@ export default function OnsiteSupport() {
             {supportBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -910,8 +410,26 @@ export default function OnsiteSupport() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -925,9 +443,36 @@ export default function OnsiteSupport() {
             {supportTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -957,8 +502,26 @@ export default function OnsiteSupport() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -972,9 +535,36 @@ export default function OnsiteSupport() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -1001,8 +591,26 @@ export default function OnsiteSupport() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1033,9 +641,36 @@ export default function OnsiteSupport() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -1090,8 +725,26 @@ export default function OnsiteSupport() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1105,9 +758,36 @@ export default function OnsiteSupport() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -1115,7 +795,7 @@ export default function OnsiteSupport() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1151,8 +831,26 @@ export default function OnsiteSupport() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -1180,5 +878,4 @@ export default function OnsiteSupport() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

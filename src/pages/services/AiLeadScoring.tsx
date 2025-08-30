@@ -1,10 +1,10 @@
 // removed duplicate old section
 
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database, PlugZap } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { TrendingUp, CheckCircle, Database, PlugZap  } from 'lucide-react';
 
-const AiLeadScoring: React.FC = () => {
+const AiLeadScoring: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -75,13 +75,22 @@ const AiLeadScoring: React.FC = () => {
             <p className="text-slate-300">Mobile: <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></p>
             <p className="text-slate-300">E-mail: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
             <p className="text-slate-300">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+<<<<<<< HEAD
           </div>
         </div>
         <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+          </div>;
+        </div>;
+        <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AiLeadScoring;
 

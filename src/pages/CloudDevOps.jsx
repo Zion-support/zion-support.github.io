@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { 
   Cloud, 
   Server, 
-  GitFork, 
+  GitBranch, 
   Zap, 
   Shield, 
   CheckCircle, 
@@ -25,13 +25,14 @@ import {
   Wrench
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const cloudDevOpsSolutions = [
   {
     id: 1,
     title: "Cloud Infrastructure Setup",
     description: "Complete cloud infrastructure design and implementation for scalable applications.",
     icon: Cloud,
-    features: [
+    features[
       "Multi-cloud strategy",
       "Auto-scaling setup",
       "Load balancing",
@@ -40,14 +41,14 @@ const cloudDevOpsSolutions = [
     price: "From $15,000",
     timeline: "8-16 weeks",
     category: "Cloud Infrastructure",
-    platforms: ["AWS", "Azure", "Google Cloud", "Kubernetes"]
+    platforms["AWS", "Azure", "Google Cloud", "Kubernetes"]
   },
   {
     id: 2,
     title: "CI/CD Pipeline Development",
     description: "Automated continuous integration and deployment pipelines for rapid software delivery.",
-    icon: GitFork,
-    features: [
+    icon: GitBranch,
+    features[
       "Automated testing",
       "Build automation",
       "Deployment automation",
@@ -56,14 +57,14 @@ const cloudDevOpsSolutions = [
     price: "From $12,000",
     timeline: "6-12 weeks",
     category: "DevOps",
-    platforms: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
+    platforms["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
   },
   {
     id: 3,
     title: "Container Orchestration",
     description: "Kubernetes and Docker implementation for scalable containerized applications.",
     icon: Server,
-    features: [
+    features[
       "Container orchestration",
       "Service mesh setup",
       "Auto-scaling",
@@ -72,14 +73,14 @@ const cloudDevOpsSolutions = [
     price: "From $20,000",
     timeline: "10-18 weeks",
     category: "Containerization",
-    platforms: ["Kubernetes", "Docker", "Helm", "Istio"]
+    platforms["Kubernetes", "Docker", "Helm", "Istio"]
   },
   {
     id: 4,
     title: "Infrastructure as Code",
     description: "Automated infrastructure provisioning and management using code.",
     icon: Code,
-    features: [
+    features[
       "Terraform implementation",
       "Ansible automation",
       "Version control",
@@ -88,14 +89,14 @@ const cloudDevOpsSolutions = [
     price: "From $18,000",
     timeline: "8-14 weeks",
     category: "IaC",
-    platforms: ["Terraform", "Ansible", "CloudFormation", "ARM Templates"]
+    platforms["Terraform", "Ansible", "CloudFormation", "ARM Templates"]
   },
   {
     id: 5,
     title: "Monitoring & Observability",
     description: "Comprehensive monitoring and logging solutions for cloud applications.",
     icon: Activity,
-    features: [
+    features[
       "Real-time monitoring",
       "Alert systems",
       "Log aggregation",
@@ -104,14 +105,14 @@ const cloudDevOpsSolutions = [
     price: "From $10,000",
     timeline: "6-10 weeks",
     category: "Monitoring",
-    platforms: ["Prometheus", "Grafana", "ELK Stack", "Datadog"]
+    platforms["Prometheus", "Grafana", "ELK Stack", "Datadog"]
   },
   {
     id: 6,
     title: "Security & Compliance",
     description: "Cloud security implementation and compliance management for enterprise applications.",
     icon: Shield,
-    features: [
+    features[
       "Identity management",
       "Access controls",
       "Security scanning",
@@ -120,41 +121,43 @@ const cloudDevOpsSolutions = [
     price: "From $25,000",
     timeline: "12-20 weeks",
     category: "Security",
-    platforms: ["IAM", "VPC", "Security Groups", "WAF"]
+    platforms["IAM", "VPC", "Security Groups", "WAF"]
   }
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const cloudPlatforms = [
   {
     name: "Amazon Web Services",
     description: "Leading cloud platform with comprehensive services",
     icon: Cloud,
-    features: ["EC2", "S3", "Lambda", "RDS", "ECS"]
+    features["EC2", "S3", "Lambda", "RDS", "ECS"]
   },
   {
     name: "Microsoft Azure",
     description: "Enterprise cloud platform with strong integration",
     icon: Server,
-    features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"]
+    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"]
   },
   {
     name: "Google Cloud Platform",
     description: "Innovative cloud platform with AI/ML focus",
     icon: Globe,
-    features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"]
+    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"]
   },
   {
     name: "Kubernetes",
     description: "Open-source container orchestration platform",
-          icon: GitFork,
-    features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
+    icon: GitBranch,
+    features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
   }
 ];
 
 const successStories = [
   {
     id: 1,
-    company: "Tech Startup",
+    comp: "Tech Startup",
     industry: "SaaS",
     challenge: "Needed scalable cloud infrastructure for rapid growth",
     solution: "Built auto-scaling cloud platform with CI/CD pipelines",
@@ -163,7 +166,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "E-commerce Platform",
+    comp: "E-commerce Platform",
     industry: "Retail",
     challenge: "Required containerized microservices architecture",
     solution: "Implemented Kubernetes with automated CI/CD",
@@ -172,7 +175,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Financial Services",
+    comp: "Financial Services",
     industry: "Finance",
     challenge: "Needed secure, compliant cloud infrastructure",
     solution: "Built secure cloud platform with automated compliance",
@@ -234,15 +237,60 @@ export default function CloudDevOps() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Cloud className="w-10 h-10 text-white" />
@@ -264,7 +312,7 @@ export default function CloudDevOps() {
                 <span>Cloud Native</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <GitFork className="w-4 h-4" />
+                <GitBranch className="w-4 h-4" />
                 <span>DevOps Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
@@ -280,8 +328,26 @@ export default function CloudDevOps() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -295,9 +361,36 @@ export default function CloudDevOps() {
             {cloudPlatforms.map((platform, index) => (
               <motion.div
                 key={platform.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -325,8 +418,26 @@ export default function CloudDevOps() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -340,9 +451,36 @@ export default function CloudDevOps() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -369,8 +507,26 @@ export default function CloudDevOps() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -401,9 +557,36 @@ export default function CloudDevOps() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -458,8 +641,26 @@ export default function CloudDevOps() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -473,9 +674,36 @@ export default function CloudDevOps() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -483,7 +711,7 @@ export default function CloudDevOps() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -519,8 +747,26 @@ export default function CloudDevOps() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -548,5 +794,4 @@ export default function CloudDevOps() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -17,7 +17,7 @@ export default function EquipmentDetail() {
     const [quantity, setQuantity] = useState(1);
     const [isAdding, setIsAdding] = useState(false);
     // In a real app, this would fetch from an API
-    const equipment = equipmentId ? EQUIPMENT_DETAILS[equipmentId] : undefined;
+    const equipment = equipmentId ? EQUIPMENT_DETAILS[equipmentId] : null;
     if (!equipment) {
         return (<>
         <Header />
@@ -30,8 +30,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
         <Footer />
-      </>);
-    }
+      </>)}
     const handleAddToCart = () => {
         setIsAdding(true);
         // Simulate API call
@@ -40,14 +39,17 @@ export default function EquipmentDetail() {
             toast({
                 title: "Added to cart",
                 description: `${quantity}x ${equipment.name} added to your cart.`,
-            });
-        }, 800);
-    };
+            })}, 800)};
     const handleBuyNow = async () => {
         if (!isAuthenticated) {
-            navigate(`/login?next=/equipment/${equipmentId}`);
+<<<<<<< HEAD
+            router(`/login?next=/equipment/${equipmentId}`);
+            return}
+=======
+            router(`/login?next=/equipment/${equipmentId}`);
             return;
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         setIsAdding(true);
         try {
             const response = await fetch('/checkout/create-session', {
@@ -57,15 +59,12 @@ export default function EquipmentDetail() {
             });
             const { url } = await response.json();
             if (url) {
-                window.location.href = url;
-            }
+                window.location.href = url}
         }
         catch (err) {
-            toast({ title: 'Payment error', description: 'Could not start checkout.' });
-        }
+            toast({ title: 'Payment error', description: 'Could not start checkout.' })}
         finally {
-            setIsAdding(false);
-        }
+            setIsAdding(false)}
     };
     return (<>
       <Header />
@@ -179,7 +178,16 @@ export default function EquipmentDetail() {
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
-                    <button className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50" onClick={() => setQuantity(prev => Math.max(1, prev - 1))} disabled={quantity <= 1 || !equipment.inStock}>
+                    <button className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50" onClick = {
+  () => setQuantity(prev => Math.max(1,
+  prev - 1))
+
+
+
+
+
+
+} disabled={quantity <= 1 || !equipment.inStock}>
                       -
                     </button>
                     <input type="number" className="w-full text-center bg-transparent border-0 text-white focus:ring-0" value={quantity} readOnly/>
@@ -231,5 +239,4 @@ export default function EquipmentDetail() {
         </div>
       </div>
       <Footer />
-    </>);
-}
+    </>)}

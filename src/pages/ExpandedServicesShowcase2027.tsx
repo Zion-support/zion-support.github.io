@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Grid3X3, 
-  List, 
-  ChevronDown, 
+import {
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
   ChevronUp,
   Star,
   Users,
@@ -58,32 +58,34 @@ import {
   Cpu as FinTech
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { 
-  ALL_EXPANDED_SERVICES_2027, 
+import {
+  ALL_EXPANDED_SERVICES_2027,
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
-  type ExpandedService2027 
+  type ExpandedService2027
 } from '@/data/expandedInnovativeServices2027';
 
-const ExpandedServicesShowcase2027: React.FC = () => {
+<<<<<<< HEAD
+const ExpandedServicesShowcase2027: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
+  const [filteredServices, setFilteredServices] = useState<any>(ALL_EXPANDED_SERVICES_2027);
 
   useEffect(() => {
     let services = getExpandedServicesByCategory(selectedCategory);
     if (searchQuery) {
-      services = searchExpandedServices(searchQuery);
-    }
-    setFilteredServices(services);
-  }, [selectedCategory, searchQuery]);
+      services = searchExpandedServices(searchQuery)};
+    setFilteredServices(services)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return Shield;
       case 'Data Analytics':
         return BarChart3;
@@ -96,13 +98,14 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       case 'Healthcare Technology':
         return Healthcare;
       default:
-        return Rocket;
-    }
+        return Rocket}
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+<<<<<<< HEAD
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'from-red-500 to-pink-600';
       case 'Data Analytics':
         return 'from-blue-500 to-cyan-600';
@@ -115,26 +118,52 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       case 'Healthcare Technology':
         return 'from-teal-500 to-blue-600';
       default:
-        return 'from-gray-500 to-slate-600';
-    }
+        return 'from-gray-500 to-slate-600'}
   };
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {
-    if (pricing.model === 'Transaction Fees + Governance') {
+<<<<<<< HEAD
+  const formatPrice = (pricing: ExpandedService2027['pricing'])  => {
+    if (pricing.model === 'Transaction Fees + Governance') {;
+      return 'Free + Transaction Fees'};
+    return `$${pricing.basePrice.toLocaleString()}/month`};
+
+  const renderServiceCard = (service: ExpandedService2027)  => {;
+=======;
+  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+    if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
     }
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: ExpandedService2027) => {
+  const renderServiceCard = (service: ExpandedService2027) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
     return (
       <motion.div
-        key={service.id}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        key = {service.id}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
       >
@@ -206,9 +235,36 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           <AnimatePresence>
             {expandedService === service.id && (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                 className="mb-4"
               >
                 <div className="space-y-1">
@@ -280,7 +336,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 {service.status.toUpperCase()}
               </span>
             </div>
-            
+
             <div className="flex space-x-2">
               <a
                 href={`mailto:${service.contactInfo.email}`}
@@ -297,23 +353,52 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
+<<<<<<< HEAD
               </a>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </div>;
+      </motion.div>;
+    )};
+
+  const renderServiceList = (service: ExpandedService2027)  => {;
+=======;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
     );
   };
 
-  const renderServiceList = (service: ExpandedService2027) => {
+  const renderServiceList = (service: ExpandedService2027) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
     return (
       <motion.div
-        key={service.id}
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
+        key = {service.id}
+        initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 p-6"
       >
@@ -384,17 +469,26 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
+<<<<<<< HEAD
               </a>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </div>;
+      </motion.div>;
+    )};
+=======
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
     );
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      <SEO 
+      <SEO
         title="Expanded Innovative Services 2027 - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions."
         keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology"
@@ -405,8 +499,26 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
@@ -416,20 +528,74 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               </span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. 
+              Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services.
               From quantum cybersecurity to healthcare AI, explore cutting-edge solutions that drive innovation and growth.
             </motion.p>
-            
+
             {/* Contact Info */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -485,9 +651,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {EXPANDED_SERVICE_CATEGORIES.map((category) => (
+                {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -499,8 +665,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors duration-200 ${
-                    viewMode === 'grid' 
-                      ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm' 
+                    viewMode === 'grid'
+                      ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                   }`}
                 >
@@ -509,8 +675,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors duration-200 ${
-                    viewMode === 'list' 
-                      ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm' 
+                    viewMode === 'list'
+                      ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                   }`}
                 >
@@ -531,7 +697,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service) => 
+            {filteredServices.map((service) =>
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>
@@ -555,7 +721,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our innovative services are designed to drive growth, efficiency, and competitive advantage. 
+            Our innovative services are designed to drive growth, efficiency, and competitive advantage.
             Contact us today to discuss how we can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -572,12 +738,21 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             >
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
+<<<<<<< HEAD
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
+  )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ExpandedServicesShowcase2027;

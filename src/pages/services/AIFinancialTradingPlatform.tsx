@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   TrendingUp, 
   Target, 
   Users, 
@@ -34,41 +33,41 @@ import {
   Lock,
   Eye,
   AlertTriangle
-} from 'lucide-react';
+ } from 'lucide-react';
 
-export default function AIFinancialTradingPlatform() {
+export default function AIFinancialTradingPlatform(...args[]):  {
   const features = [
     "AI-powered market analysis and prediction",
     "Real-time algorithmic trading execution",
     "Risk management and portfolio optimization",
     "Multi-asset class trading (stocks, forex, crypto)",
     "Advanced technical and fundamental analysis",
-    "Automated trading strategies and backtesting",
-    "Real-time market data and news feeds",
-    "Portfolio performance tracking and analytics",
-    "Compliance and regulatory monitoring",
-    "Custom trading algorithm development",
-    "High-frequency trading capabilities",
-    "Secure and encrypted trading infrastructure"
+    "Automated trading strategies and backtesting",;
+    "Real-time market data and news feeds",;
+    "Portfolio performance tracking and analytics",;
+    "Compliance and regulatory monitoring",;
+    "Custom trading algorithm development",;
+    "High-frequency trading capabilities",;
+    "Secure and encrypted trading infrastructure";
   ];
 
-  const benefits = [
-    "Increase trading returns by 25-40%",
-    "Reduce trading risks by 30-50%",
-    "24/7 automated trading operations",
-    "Eliminate emotional trading decisions",
-    "Access to institutional-grade tools"
+  const benefits = [;
+    "Increase trading returns by 25-40%",;
+    "Reduce trading risks by 30-50%",;
+    "24/7 automated trading operations",;
+    "Eliminate emotional trading decisions",;
+    "Access to institutional-grade tools";
   ];
 
   const useCases = [
     "Individual retail traders",
-    "Professional day traders",
-    "Hedge funds and asset managers",
-    "Institutional investors",
-    "Cryptocurrency traders",
-    "Forex trading professionals",
-    "Options and derivatives traders",
-    "Quantitative trading firms"
+    "Professional day traders",;
+    "Hedge funds and asset managers",;
+    "Institutional investors",;
+    "Cryptocurrency traders",;
+    "Forex trading professionals",;
+    "Options and derivatives traders",;
+    "Quantitative trading firms";
   ];
 
   const pricing = [
@@ -77,7 +76,7 @@ export default function AIFinancialTradingPlatform() {
       price: "$199",
       period: "/month",
       description: "Perfect for individual traders and beginners",
-      features: [
+      features[
         "AI market analysis (5 strategies)",
         "Basic algorithmic trading",
         "Real-time market data",
@@ -93,7 +92,7 @@ export default function AIFinancialTradingPlatform() {
       price: "$599",
       period: "/month",
       description: "Ideal for active traders and professionals",
-      features: [
+      features[
         "AI market analysis (unlimited strategies)",
         "Advanced algorithmic trading",
         "Multi-asset class trading",
@@ -110,22 +109,22 @@ export default function AIFinancialTradingPlatform() {
       price: "$1,999",
       period: "/month",
       description: "For institutional investors and hedge funds",
-      features: [
+      features[
         "Custom AI model development",
         "High-frequency trading",
         "White-label solutions",
         "Dedicated infrastructure",
-        "Custom integrations",
-        "Dedicated account manager",
-        "24/7 phone support"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
+        "Custom integrations",;
+        "Dedicated account manager",;
+        "24/7 phone support";
+      ],;
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
@@ -135,8 +134,26 @@ export default function AIFinancialTradingPlatform() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm font-medium mb-6">
@@ -177,8 +194,26 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -190,13 +225,40 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
@@ -213,8 +275,26 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -226,13 +306,40 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -249,8 +356,26 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -262,13 +387,40 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -285,8 +437,26 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -298,13 +468,40 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
                     ? 'border-green-500 ring-2 ring-green-500/20' 
@@ -358,8 +555,26 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -385,7 +600,7 @@ export default function AIFinancialTradingPlatform() {
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -400,10 +615,19 @@ export default function AIFinancialTradingPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
             <span>🌐 https://ziontechgroup.com</span>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

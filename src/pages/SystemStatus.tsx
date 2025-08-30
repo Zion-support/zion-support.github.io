@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
+=======
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink, TrendingUp } from 'lucide-react';
+import { SEO } from "../components/SEO";
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
 interface ServiceStatus {
   id: string;
@@ -74,7 +79,7 @@ const services: ServiceStatus[] = [
     responseTime: 320,
     lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Machine learning models and AI processing',
-    icon: Zap
+    icon: Brain
   },
   {
     id: 'analytics',
@@ -121,7 +126,7 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
     case 'operational':
       return CheckCircle;
     case 'degraded':
-      return AlertCircle;
+      return AlertTriangle;
     case 'outage':
       return XCircle;
     case 'maintenance':
@@ -148,14 +153,7 @@ const getSeverityColor = (severity: Incident['severity']) => {
 
 export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLastUpdated(new Date());
-    }, 30000); // Update every 30 seconds
-
-    return () => clearInterval(interval);
-  }, []);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const overallStatus = services.every(s => s.status === 'operational') 
     ? 'operational' 
@@ -164,6 +162,19 @@ export default function SystemStatus() {
     : 'degraded';
 
   const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
+
+  const refreshStatus = async () => {
+    setIsRefreshing(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setLastUpdated(new Date());
+    setIsRefreshing(false);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(refreshStatus, 30000); // Auto-refresh every 30 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -206,6 +217,30 @@ export default function SystemStatus() {
       </div>
 
       {/* Overall Status */}
+<<<<<<< HEAD
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-zion-slate border border-zion-slate-light rounded-2xl p-8 text-center">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                {getStatusIcon(systemStatus.overall)}
+                <h2 className="text-3xl font-bold text-white">All Systems Operational</h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">{systemStatus.uptime}</div>
+                  <div className="text-zion-slate-light">Uptime (30 days)</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-500 mb-2">{services.length}</div>
+                  <div className="text-zion-slate-light">Services</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-blue-500 mb-2">0</div>
+                  <div className="text-zion-slate-light">Active Incidents</div>
+                </div>
+=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -219,6 +254,7 @@ export default function SystemStatus() {
               <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-4 ${getStatusColor(overallStatus)}`}>
                 {React.createElement(getStatusIcon(overallStatus), { className: "w-4 h-4 mr-2" })}
                 {overallStatus.charAt(0).toUpperCase() + overallStatus.slice(1)}
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Overall Status</h3>
               <p className="text-gray-400">All systems operational</p>
@@ -264,9 +300,18 @@ export default function SystemStatus() {
                   <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
                     <service.icon className="w-5 h-5 text-cyan-400" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                    <p className="text-sm text-gray-400">{service.description}</p>
+
+                  <h3 className="text-lg font-semibold text-white mb-3">{service.name}</h3>
+
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-zion-slate-light">Uptime:</span>
+                      <span className="text-green-500 font-medium">{service.uptime}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-zion-slate-light">Response:</span>
+                      <span className="text-zion-cyan font-medium">{service.responseTime}</span>
+                    </div>
                   </div>
                 </div>
                 <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>

@@ -584,7 +584,7 @@ const autonomousVehicleSolutions = [
     title: "AI Vehicle Perception System",
     description: "Advanced computer vision and sensor fusion for autonomous vehicle perception.",
     icon: Eye,
-    features: [
+    features[
       "Computer vision",
       "Sensor fusion",
       "Object detection",
@@ -593,14 +593,14 @@ const autonomousVehicleSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Perception",
-    technologies: ["Computer Vision", "AI", "Sensor Fusion", "Machine Learning"]
+    technologies["Computer Vision", "AI", "Sensor Fusion", "Machine Learning"]
   },
   {
     id: 2,
     title: "Autonomous Navigation System",
     description: "AI-powered navigation and path planning for autonomous vehicles.",
     icon: Navigation,
-    features: [
+    features[
       "Path planning",
       "Route optimization",
       "Traffic analysis",
@@ -609,14 +609,14 @@ const autonomousVehicleSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Navigation",
-    technologies: ["AI Navigation", "Path Planning", "Traffic Analysis", "Machine Learning"]
+    technologies["AI Navigation", "Path Planning", "Traffic Analysis", "Machine Learning"]
   },
   {
     id: 3,
     title: "Vehicle Control System",
     description: "Intelligent control systems for autonomous vehicle operation.",
     icon: Cog,
-    features: [
+    features[
       "Vehicle control",
       "Safety systems",
       "Performance optimization",
@@ -625,14 +625,14 @@ const autonomousVehicleSolutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Control",
-    technologies: ["AI Control", "Vehicle Systems", "Safety", "Real-time Processing"]
+    technologies["AI Control", "Vehicle Systems", "Safety", "Real-time Processing"]
   },
   {
     id: 4,
     title: "Predictive Maintenance System",
     description: "AI-driven predictive maintenance for autonomous vehicle fleets.",
     icon: Wrench,
-    features: [
+    features[
       "Predictive maintenance",
       "Health monitoring",
       "Performance tracking",
@@ -641,14 +641,14 @@ const autonomousVehicleSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Maintenance",
-    technologies: ["Predictive Analytics", "IoT", "Machine Learning", "Fleet Management"]
+    technologies["Predictive Analytics", "IoT", "Machine Learning", "Fleet Management"]
   },
   {
     id: 5,
     title: "Safety & Security System",
     description: "Comprehensive safety and security systems for autonomous vehicles.",
     icon: Shield,
-    features: [
+    features[
       "Safety monitoring",
       "Security protocols",
       "Emergency systems",
@@ -657,14 +657,14 @@ const autonomousVehicleSolutions = [
     price: "From $300,000",
     timeline: "32-44 weeks",
     category: "Safety",
-    technologies: ["AI Safety", "Security", "Compliance", "Emergency Systems"]
+    technologies["AI Safety", "Security", "Compliance", "Emergency Systems"]
   },
   {
     id: 6,
     title: "Fleet Management Platform",
     description: "AI-powered platform for managing autonomous vehicle fleets.",
     icon: Users,
-    features: [
+    features[
       "Fleet optimization",
       "Route planning",
       "Performance analytics",
@@ -673,7 +673,7 @@ const autonomousVehicleSolutions = [
     price: "From $220,000",
     timeline: "26-38 weeks",
     category: "Fleet Management",
-    technologies: ["AI Platform", "Fleet Management", "Analytics", "Optimization"]
+    technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"]
   }
 ];
 
@@ -711,7 +711,7 @@ const vehicleTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Autonomous Transport Corp",
+    comp: "Autonomous Transport Corp",
     industry: "Transportation",
     challenge: "Needed AI-powered autonomous vehicle system for logistics fleet",
     solution: "Built comprehensive AI autonomous vehicle system with perception, navigation, and control",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Smart City Solutions",
+    comp: "Smart City Solutions",
     industry: "Government",
     challenge: "Required autonomous vehicle system for public transportation",
     solution: "Implemented AI-driven autonomous public transport system",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Industrial Automation Ltd",
+    comp: "Industrial Automation Ltd",
     industry: "Manufacturing",
     challenge: "Needed autonomous vehicle system for warehouse operations",
     solution: "Built AI-powered autonomous warehouse vehicle system",
@@ -774,25 +774,25 @@ const vehicleBenefits = [
     title: "Enhanced Safety",
     description: "AI-powered systems provide superior safety and accident prevention",
     icon: Shield,
-    examples: ["Accident prevention", "Safety monitoring", "Emergency response", "Risk assessment"]
+    examples["Accident prevention", "Safety monitoring", "Emergency response", "Risk assessment"]
   },
   {
     title: "Improved Efficiency",
     description: "Autonomous systems optimize vehicle performance and operations",
     icon: Zap,
-    examples: ["Route optimization", "Fuel efficiency", "Performance optimization", "Operational efficiency"]
+    examples["Route optimization", "Fuel efficiency", "Performance optimization", "Operational efficiency"]
   },
   {
     title: "Cost Reduction",
     description: "AI systems reduce operational costs and improve resource utilization",
     icon: TrendingUp,
-    examples: ["Fuel savings", "Maintenance optimization", "Labor reduction", "Better ROI"]
+    examples["Fuel savings", "Maintenance optimization", "Labor reduction", "Better ROI"]
   },
   {
     title: "24/7 Operation",
     description: "Autonomous vehicles enable continuous operation without human limitations",
     icon: Clock,
-    examples: ["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"]
+    examples["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"]
   }
 ];
 
@@ -818,15 +818,60 @@ export default function AIAutonomousVehicle() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Car className="w-10 h-10 text-white" />
@@ -864,8 +909,26 @@ export default function AIAutonomousVehicle() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -879,9 +942,36 @@ export default function AIAutonomousVehicle() {
             {vehicleBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -910,8 +1000,26 @@ export default function AIAutonomousVehicle() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -925,9 +1033,36 @@ export default function AIAutonomousVehicle() {
             {vehicleTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -957,8 +1092,26 @@ export default function AIAutonomousVehicle() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -972,9 +1125,36 @@ export default function AIAutonomousVehicle() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -1001,8 +1181,26 @@ export default function AIAutonomousVehicle() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1033,9 +1231,36 @@ export default function AIAutonomousVehicle() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -1090,8 +1315,26 @@ export default function AIAutonomousVehicle() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1105,9 +1348,36 @@ export default function AIAutonomousVehicle() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -1115,7 +1385,7 @@ export default function AIAutonomousVehicle() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1151,8 +1421,26 @@ export default function AIAutonomousVehicle() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -1180,5 +1468,4 @@ export default function AIAutonomousVehicle() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

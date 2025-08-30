@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon  } from 'lucide-react';
 
-const ReturnsManagementSaaS: React.FC = () => {
+const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -74,13 +74,13 @@ const ReturnsManagementSaaS: React.FC = () => {
         </div>
 
         <div className="mt-8">
-          <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">
-            Book a demo
-            <LinkIcon className="w-4 h-4" />
-          </a>
-        </div>
-      </section>
-    </div>
+          <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">;
+            Book a demo;
+            <LinkIcon className="w-4 h-4" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

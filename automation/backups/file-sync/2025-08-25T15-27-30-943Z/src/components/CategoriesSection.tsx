@@ -9,7 +9,7 @@ const categories = [
     icon: <Briefcase className="w-10 h-10" />,
     link: "/services",
     color: "from-purple-500 to-indigo-600",
-    features: ["24/7 Support", "Global Coverage", "Certified Experts"],
+    features["24/7 Support", "Global Coverage", "Certified Experts"],
     stats: "500+ Services"
   },
   {
@@ -26,7 +26,7 @@ const categories = [
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
     color: "from-cyan-500 to-blue-600",
-    features: ["AI Matching", "Verified Profiles", "Skill Validation"],
+    features["AI Matching", "Verified Profiles", "Skill Validation"],
     stats: "10,000+ Talents"
   },
   {
@@ -35,7 +35,7 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600",
-    features: ["Flexible Rental", "Buy Options", "Maintenance Included"],
+    features["Flexible Rental", "Buy Options", "Maintenance Included"],
     stats: "1,000+ Items"
   },
   {
@@ -44,17 +44,17 @@ const categories = [
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/category/innovation",
     color: "from-emerald-500 to-green-600",
-    features: ["Latest Tech", "Research Labs", "Startup Solutions"],
+    features["Latest Tech", "Research Labs", "Startup Solutions"],
     stats: "100+ Innovations"
   },
   {
-    title: "AI Hiring Platform",
-    description: "AI-powered recruitment and talent acquisition tools",
-    icon: <ZapIcon className="w-10 h-10" />,
-    link: "/zion-hire-ai",
-    color: "from-zion-purple to-zion-purple-dark",
-    featured: true
-  }
+    title: "AI Hiring Platform",;
+    description: "AI-powered recruitment and talent acquisition tools",;
+    icon: <ZapIcon className="w-10 h-10" />,;
+    link: "/zion-hire-ai",;
+    color: "from-zion-purple to-zion-purple-dark",;
+    featured: true;
+  };
 ];
 const specialServices = [
   {
@@ -74,37 +74,44 @@ const specialServices = [
     link: "/cloud-solutions",
     icon: <Globe className="w-5 h-5" />,
     description: "Scalable cloud infrastructure"
-  },
-  {
-    title: "Security Services",
-    link: "/security-services",
-    icon: <Shield className="w-5 h-5" />,
-    description: "Cybersecurity & compliance"
-  }
+  },;
+  {;
+    title: "Security Services",;
+    link: "/security-services",;
+    icon: <Shield className="w-5 h-5" />,;
+    description: "Cybersecurity & compliance";
+  };
 ];
 interface CategoriesSectionProps {
-  showTitle?: boolean;
-}
+  showTitle?: boolean}
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
+  hidden: { opacity: 0,
+  y: 30 
+
+
+
+
+
+;
+},;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0.6, ease: "easeOut" };
+    };
   };
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
+    <section className = "py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:30px_30px]"></div>
@@ -114,8 +121,26 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         {showTitle && (
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <GradientHeading>Explore Categories</GradientHeading>
@@ -182,18 +207,72 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
         >
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Services</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {specialServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.5 + index * 0.1 
+
+
+
+
+
+
+}}
               >
                 <Link 
                   to={service.link}
@@ -216,19 +295,55 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+
+}}
         >
           <Link 
             to="/categories" 
             className="inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group"
           >
             Explore All Categories
+<<<<<<< HEAD
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
       </div>
     </section>
+  )};
+=======;
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+          </Link>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

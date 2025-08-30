@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 const Dashboard = () => {
   return (
@@ -135,7 +135,6 @@ const Dashboard = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Dashboard;

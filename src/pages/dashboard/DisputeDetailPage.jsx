@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { DisputeDetail } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 function DisputeDetailPage() {
@@ -10,6 +10,13 @@ function DisputeDetailPage() {
         <DisputeDetail />
         
       </>
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}
+export default DisputeDetailPage;
+
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
 export default DisputeDetailPage;

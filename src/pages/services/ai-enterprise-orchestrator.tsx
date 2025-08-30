@@ -1,14 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
 
-export default function AIEnterpriseOrchestrator() {
+export default function AIEnterpriseOrchestrator(...args: []):  {
   return (
     <>
       <Helmet>
         <title>AI Enterprise Orchestrator - Zion Tech Group</title>
-        <meta name="description" content="Transform your enterprise with AI-powered workflow orchestration, multi-agent coordination, and intelligent process automation." />
+        <meta name = "description" content="Transform your enterprise with AI-powered workflow orchestration, multi-agent coordination, and intelligent process automation." />
         <meta name="keywords" content="AI enterprise orchestrator, workflow automation, multi-agent AI, business process automation, enterprise AI" />
       </Helmet>
 
@@ -63,7 +63,7 @@ export default function AIEnterpriseOrchestrator() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -95,7 +95,7 @@ export default function AIEnterpriseOrchestrator() {
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -121,7 +121,7 @@ export default function AIEnterpriseOrchestrator() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -143,7 +143,7 @@ export default function AIEnterpriseOrchestrator() {
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."
                 }
-              ].map((step, index) => (
+              ].map((step, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -195,7 +195,7 @@ export default function AIEnterpriseOrchestrator() {
                     { metric: "60%", label: "Efficiency Improvement" },
                     { metric: "24/7", label: "Operation Availability" },
                     { metric: "99.9%", label: "Uptime Reliability" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-cyan-400">{item.metric}</span>
@@ -228,12 +228,12 @@ export default function AIEnterpriseOrchestrator() {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

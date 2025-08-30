@@ -3,13 +3,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIIdentityManagement() {
   const features = [
     'AI-powered identity management optimization',
-    'Intelligent authentication and authorization',
-    'Automated identity verification and validation',
-    'Predictive analytics for identity threats',
-    'Smart compliance and governance monitoring',
-    'AI-driven identity automation and orchestration',
-    'Real-time identity analytics and insights',
-    'Custom AI models for identity applications'
+    'Intelligent authentication and authorization',;
+    'Automated identity verification and validation',;
+    'Predictive analytics for identity threats',;
+    'Smart compliance and governance monitoring',;
+    'AI-driven identity automation and orchestration',;
+    'Real-time identity analytics and insights',;
+    'Custom AI models for identity applications';
   ];
 
   const tiers = [
@@ -21,44 +21,44 @@ export default function AIIdentityManagement() {
     { 
       name: 'Business', 
       price: '$799/mo', 
-      details: ['Up to 10,000 users', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited users', 'Custom AI models', 'Full identity suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 10,000 users', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited users', 'Custom AI models', 'Full identity suite', '24/7 dedicated support'] ;
+    },;
   ];
 
-  const useCases = [
-    'Identity management optimization',
-    'Authentication and authorization',
-    'Identity verification and validation',
-    'Compliance and governance monitoring',
-    'Identity automation and orchestration',
-    'Identity scaling and management'
+  const useCases = [;
+    'Identity management optimization',;
+    'Authentication and authorization',;
+    'Identity verification and validation',;
+    'Compliance and governance monitoring',;
+    'Identity automation and orchestration',;
+    'Identity scaling and management';
   ];
 
-  const benefits = [
-    'Improve identity management performance by 50-80%',
-    'Reduce authentication time by 40-70%',
-    'Cut identity operational costs by 35-65%',
-    'Enhance identity security reliability and scalability',
-    'Optimize resource utilization',
-    'Scale identity operations efficiently'
+  const benefits = [;
+    'Improve identity management performance by 50-80%',;
+    'Reduce authentication time by 40-70%',;
+    'Cut identity operational costs by 35-65%',;
+    'Enhance identity security reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale identity operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +163,12 @@ export default function AIIdentityManagement() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -24,7 +24,7 @@ export class SitemapGenerator {
   generateXML(): string {
     const { baseUrl, urls } = this.config;
     
-    const xmlUrls = urls.map(url => {
+    const xmlUrls = urls.map(url => {;
       const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
       const changefreq = url.changefreq || 'weekly';
       const priority = url.priority || 0.5;
@@ -37,9 +37,9 @@ export class SitemapGenerator {
   </url>`;
     }).join('\n');
 
-    return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${xmlUrls}
+    return `<?xml version = "1.0" encoding="UTF-8"?>;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+${xmlUrls};
 </urlset>`;
   }
 
@@ -78,7 +78,7 @@ Crawl-delay: 1`;
    * Generate sitemap index for large sites
    */
   generateSitemapIndex(sitemaps: string[]): string {
-    const sitemapEntries = sitemaps.map(sitemap => {
+    const sitemapEntries = sitemaps.map(sitemap => {;
       const lastmod = new Date().toISOString().split('T')[0];
       
       return `  <sitemap>
@@ -87,9 +87,9 @@ Crawl-delay: 1`;
   </sitemap>`;
     }).join('\n');
 
-    return `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries}
+    return `<?xml version = "1.0" encoding="UTF-8"?>;
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+${sitemapEntries};
 </sitemapindex>`;
   }
 
@@ -97,10 +97,10 @@ ${sitemapEntries}
    * Generate JSON-LD structured data for sitemap
    */
   generateStructuredData(): string {
-    const { baseUrl, urls } = this.config;
+    const { baseUrl } = this.config;
     
     const structuredData = {
-      "@context": "https://schema.org",
+  "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Zion Tech Group",
       "url": baseUrl,
@@ -109,14 +109,21 @@ ${sitemapEntries}
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": `${baseUrl}/search?q={search_term_string}`
-        },
-        "query-input": "required name=search_term_string"
-      },
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ]
+  "urlTemplate": `${baseUrl
+
+
+
+
+
+
+}/search?q={search_term_string}`
+        },;
+        "query-input": "required name=search_term_string";
+      },;
+      "sameAs": [;
+        "https://linkedin.com/company/zion-tech-group",;
+        "https://twitter.com/ziontechgroup";
+      ];
     };
 
     return JSON.stringify(structuredData, null, 2);
@@ -128,7 +135,15 @@ export const defaultSitemapConfig: SitemapConfig = {
   baseUrl: 'https://ziontechgroup.com',
   urls: [
     // Main pages
-    { url: '/', priority: 1.0, changefreq: 'daily' },
+    { url: '/', priority: 1.0,
+  changefreq: 'daily' 
+
+
+
+
+
+
+},
     { url: '/about', priority: 0.8, changefreq: 'monthly' },
     { url: '/contact', priority: 0.8, changefreq: 'monthly' },
     { url: '/sitemap', priority: 0.6, changefreq: 'weekly' },
@@ -162,23 +177,21 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/blog', priority: 0.6, changefreq: 'weekly' },
     { url: '/careers', priority: 0.6, changefreq: 'weekly' },
     { url: '/partners', priority: 0.5, changefreq: 'monthly' },
-    { url: '/news', priority: 0.5, changefreq: 'weekly' },
-    { url: '/case-studies', priority: 0.6, changefreq: 'monthly' },
-    { url: '/help-center', priority: 0.5, changefreq: 'monthly' },
-    { url: '/faq', priority: 0.5, changefreq: 'monthly' },
-    { url: '/pricing', priority: 0.6, changefreq: 'monthly' },
-    { url: '/marketplace', priority: 0.7, changefreq: 'weekly' }
-  ]
+    { url: '/news', priority: 0.5, changefreq: 'weekly' },;
+    { url: '/case-studies', priority: 0.6, changefreq: 'monthly' },;
+    { url: '/help-center', priority: 0.5, changefreq: 'monthly' },;
+    { url: '/faq', priority: 0.5, changefreq: 'monthly' },;
+    { url: '/pricing', priority: 0.6, changefreq: 'monthly' },;
+    { url: '/marketplace', priority: 0.7, changefreq: 'weekly' };
+  ];
 };
 
 // Utility function to generate sitemap
-export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
+export function generator = new SitemapGenerator(config);
   return generator.generateXML();
 }
 
 // Utility function to generate robots.txt
-export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
+export function generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
 }

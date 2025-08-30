@@ -48,13 +48,14 @@ import {
   Tower
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const fiveGSolutions = [
   {
     id: 1,
     title: "5G Network Infrastructure",
     description: "Complete 5G network deployment including core network, radio access network, and edge computing.",
     icon: Tower,
-    features: [
+    features[
       "Core network deployment",
       "Radio access network",
       "Edge computing nodes",
@@ -63,14 +64,14 @@ const fiveGSolutions = [
     price: "From $500,000",
     timeline: "48-72 weeks",
     category: "Infrastructure",
-    technologies: ["5G Core", "RAN", "Edge Computing", "Network Slicing"]
+    technologies["5G Core", "RAN", "Edge Computing", "Network Slicing"]
   },
   {
     id: 2,
     title: "5G Enterprise Solutions",
     description: "Private 5G networks and enterprise-grade connectivity solutions for businesses.",
     icon: Building,
-    features: [
+    features[
       "Private 5G networks",
       "Enterprise connectivity",
       "Network management",
@@ -79,14 +80,14 @@ const fiveGSolutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Enterprise",
-    technologies: ["Private 5G", "Network Management", "Security", "IoT Integration"]
+    technologies["Private 5G", "Network Management", "Security", "IoT Integration"]
   },
   {
     id: 3,
     title: "5G IoT Applications",
     description: "Internet of Things solutions leveraging 5G's high-speed, low-latency capabilities.",
     icon: Signal,
-    features: [
+    features[
       "IoT device connectivity",
       "Real-time data processing",
       "Edge analytics",
@@ -95,14 +96,14 @@ const fiveGSolutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "IoT",
-    technologies: ["5G IoT", "Edge Computing", "Real-time Analytics", "Device Management"]
+    technologies["5G IoT", "Edge Computing", "Real-time Analytics", "Device Management"]
   },
   {
     id: 4,
     title: "5G Smart City Solutions",
     description: "Urban infrastructure and services powered by 5G technology for smart city applications.",
     icon: Globe,
-    features: [
+    features[
       "Smart traffic management",
       "Public safety systems",
       "Environmental monitoring",
@@ -111,14 +112,14 @@ const fiveGSolutions = [
     price: "From $300,000",
     timeline: "36-52 weeks",
     category: "Smart Cities",
-    technologies: ["5G Networks", "IoT Sensors", "AI Analytics", "Smart Infrastructure"]
+    technologies["5G Networks", "IoT Sensors", "AI Analytics", "Smart Infrastructure"]
   },
   {
     id: 5,
     title: "5G Healthcare Solutions",
     description: "Telemedicine, remote monitoring, and healthcare applications enabled by 5G technology.",
     icon: Users,
-    features: [
+    features[
       "Telemedicine platforms",
       "Remote patient monitoring",
       "Medical IoT devices",
@@ -127,14 +128,14 @@ const fiveGSolutions = [
     price: "From $180,000",
     timeline: "24-36 weeks",
     category: "Healthcare",
-    technologies: ["5G Networks", "Telemedicine", "IoT Devices", "Healthcare Analytics"]
+    technologies["5G Networks", "Telemedicine", "IoT Devices", "Healthcare Analytics"]
   },
   {
     id: 6,
     title: "5G Manufacturing Solutions",
     description: "Industry 4.0 and smart manufacturing solutions powered by 5G connectivity.",
     icon: Factory,
-    features: [
+    features[
       "Industrial IoT",
       "Predictive maintenance",
       "Quality control",
@@ -143,10 +144,12 @@ const fiveGSolutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Manufacturing",
-    technologies: ["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]
+    technologies["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]
   }
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const fiveGTechnologies = [
   {
     name: "5G Core Network",
@@ -181,7 +184,7 @@ const fiveGTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Metropolitan City",
+    comp: "Metropolitan City",
     industry: "Municipal",
     challenge: "Needed high-speed connectivity for smart city infrastructure across 100+ locations",
     solution: "Deployed comprehensive 5G network with edge computing and IoT integration",
@@ -190,7 +193,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Advanced Manufacturing Corp",
+    comp: "Advanced Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Required real-time monitoring and control of 500+ production machines",
     solution: "Built private 5G network with industrial IoT and edge computing",
@@ -199,7 +202,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Regional Hospital Network",
+    comp: "Regional Hospital Network",
     industry: "Healthcare",
     challenge: "Needed high-bandwidth connectivity for telemedicine and remote monitoring",
     solution: "Implemented 5G healthcare network with telemedicine platforms and IoT devices",
@@ -244,25 +247,25 @@ const fiveGBenefits = [
     title: "Ultra-High Speed",
     description: "10-100x faster than 4G for lightning-fast data transmission",
     icon: Zap,
-    examples: ["Gigabit speeds", "Instant downloads", "Real-time streaming"]
+    examples["Gigabit speeds", "Instant downloads", "Real-time streaming"]
   },
   {
     title: "Low Latency",
     description: "Ultra-low latency for real-time applications and services",
     icon: Clock,
-    examples: ["Real-time gaming", "Autonomous vehicles", "Remote surgery"]
+    examples["Real-time gaming", "Autonomous vehicles", "Remote surgery"]
   },
   {
     title: "Massive Connectivity",
     description: "Support for millions of IoT devices per square kilometer",
     icon: Network,
-    examples: ["Smart cities", "Industrial IoT", "Connected devices"]
+    examples["Smart cities", "Industrial IoT", "Connected devices"]
   },
   {
     title: "Network Slicing",
     description: "Virtual network segmentation for different service requirements",
     icon: Layers,
-    examples: ["Customized services", "Service isolation", "Quality guarantees"]
+    examples["Customized services", "Service isolation", "Quality guarantees"]
   }
 ];
 
@@ -288,15 +291,60 @@ export default function FiveGSolutions() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Signal className="w-10 h-10 text-white" />
@@ -334,8 +382,26 @@ export default function FiveGSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -349,9 +415,36 @@ export default function FiveGSolutions() {
             {fiveGBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -380,8 +473,26 @@ export default function FiveGSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -395,9 +506,36 @@ export default function FiveGSolutions() {
             {fiveGTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -427,8 +565,26 @@ export default function FiveGSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -442,9 +598,36 @@ export default function FiveGSolutions() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -471,8 +654,26 @@ export default function FiveGSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -503,9 +704,36 @@ export default function FiveGSolutions() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -560,8 +788,26 @@ export default function FiveGSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -575,9 +821,36 @@ export default function FiveGSolutions() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -585,7 +858,7 @@ export default function FiveGSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -621,8 +894,26 @@ export default function FiveGSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -650,5 +941,4 @@ export default function FiveGSolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

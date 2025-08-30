@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react';
 
 export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,21 +11,21 @@ export default function ApiPlayground() {
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('playground');
 
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: <Code className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
-    { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 }
+  const categories = [;
+    { id: 'all', name: 'All Categories', icon: <Code className="w-5 h-5" />, count: 0 },;
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
+    { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 };
   ];
 
-  const methods = [
-    { id: 'all', name: 'All Methods', count: 0 },
-    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },
-    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },
-    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },
-    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' }
+  const methods = [;
+    { id: 'all', name: 'All Methods', count: 0 },;
+    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },;
+    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },;
+    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },;
+    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' };
   ];
 
   const apis = [
@@ -203,77 +203,96 @@ export default function ApiPlayground() {
             status: "active",
             last_reading: 22.5
           }
-        ],
-        total: 1
-      },
-      documentation: 'https://docs.ziontechgroup.com/api/iot-devices',
-      sdk: 'https://github.com/ziontechgroup/iot-sdk',
-      featured: false
-    }
+        ],;
+        total: 1;
+      },;
+      documentation: 'https://docs.ziontechgroup.com/api/iot-devices',;
+      sdk: 'https://github.com/ziontechgroup/iot-sdk',;
+      featured: false;
+    };
   ];
 
   // Update counts
-  categories.forEach(cat => {
+<<<<<<< HEAD
+  categories.forEach(cat = > {;
+    cat.count = apis.filter(api => api.category === cat.id).length});
+
+  methods.forEach(method = > {;
+    method.count = apis.filter(api => api.method === method.id).length});
+=======
+  categories.forEach(cat = > {;
     cat.count = apis.filter(api => api.category === cat.id).length;
   });
 
-  methods.forEach(method => {
+  methods.forEach(method = > {;
     method.count = apis.filter(api => api.method === method.id).length;
   });
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredApis = apis.filter(api => {
-    const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredApis = apis.filter(api => {;
+    const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          api.description.toLowerCase().includes(searchQuery.toLowerCase());
-    
+
     const matchesCategory = activeCategory === 'all' || api.category === category.id;
     const matchesMethod = activeMethod === 'all' || api.method === method.id;
-    
+
     return matchesSearch && matchesCategory && matchesMethod;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+<<<<<<< HEAD
+  const getCategoryIcon = (categoryId: string)  => {;
+    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />};
+
+  const getMethodColor = (method: string)  => {;
+    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'};
+
+  const getCategoryIcon = (categoryId: string) => {;
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
   };
 
-  const getMethodColor = (method: string) => {
+  const getMethodColor = (method: string) => {;
     return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
+  const getStatusColor = (status: string) => {;
+    switch (status) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400';
       case 'alpha': return 'text-red-400';
-      default: return 'text-zion-slate-light';
-    }
+      default: return 'text-zion-slate-light'}
   };
 
-  const handleApiSelect = (api: any) => {
+<<<<<<< HEAD
+  const handleApiSelect = (api: any) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
-    setActiveTab('playground');
-  };
+    setActiveTab('playground')};
 
-  const handleTestApi = async () => {
+  const handleTestApi = async () => {;
     if (!selectedApi) return;
-    
+
     setIsLoading(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
-      setIsLoading(false);
-    }, 1500);
-  };
+      setIsLoading(false)}, 1500)};
 
-  const copyToClipboard = (text: string) => {
+<<<<<<< HEAD
+  const copyToClipboard = (text: string)  => {;
+    navigator.clipboard.writeText(text)};
+=======
+  const copyToClipboard = (text: string) => {;
     navigator.clipboard.writeText(text);
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const downloadResponse = () => {
+  const downloadResponse = () => {;
     if (!responseData) return;
-    
+
     const blob = new Blob([responseData], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -282,11 +301,10 @@ export default function ApiPlayground() {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
+    URL.revokeObjectURL(url)};
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -642,10 +660,19 @@ export default function ApiPlayground() {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               View Documentation
+<<<<<<< HEAD
             </button>
           </div>
         </div>
       </div>
     </div>
+  )};
+=======;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

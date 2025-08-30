@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
@@ -42,7 +42,7 @@ export default function Enterprise() {
             price: "$999",
             period: "/month",
             description: "Perfect for growing teams",
-            features: [
+            features[
                 "Up to 25 team members",
                 "Basic analytics",
                 "Email support",
@@ -54,7 +54,7 @@ export default function Enterprise() {
             price: "$2,499",
             period: "/month",
             description: "Ideal for established companies",
-            features: [
+            features[
                 "Up to 100 team members",
                 "Advanced analytics",
                 "Priority support",
@@ -67,7 +67,7 @@ export default function Enterprise() {
             price: "Custom",
             period: "",
             description: "For large organizations",
-            features: [
+            features[
                 "Unlimited team members",
                 "Custom analytics",
                 "Dedicated support",
@@ -193,5 +193,4 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

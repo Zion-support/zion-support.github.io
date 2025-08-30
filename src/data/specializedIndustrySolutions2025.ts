@@ -1,4 +1,5 @@
 export interface IndustrySolution {
+
   id: string;
   title: string;
   description: string;
@@ -9,12 +10,11 @@ export interface IndustrySolution {
   features: string[];
   benefits: string[];
   useCases: string[];
-  pricing: {
+pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string;
-  };
+    custom: string};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -23,8 +23,7 @@ export interface IndustrySolution {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   compliance: string[];
-  certifications: string[];
-}
+  certifications: string[]}
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
   {
     id: 'healthcare-ai-platform',
@@ -34,7 +33,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'Heart',
     color: 'from-red-500 to-pink-600',
     industry: 'healthcare',
-    features: [
+    features[
       'Medical image analysis',
       'Diagnostic assistance',
       'Patient monitoring',
@@ -42,13 +41,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Personalized medicine',
       'Clinical decision support'
     ],
-    benefits: [
+    benefits[
       'Improved diagnostic accuracy',
       'Reduced medical errors',
       'Better patient outcomes',
       'Cost-effective healthcare'
     ],
-    useCases: [
+    useCases[
       'Hospitals',
       'Clinics',
       'Medical imaging centers',
@@ -61,13 +60,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '8-16 weeks',
-    technologies: ['TensorFlow', 'PyTorch', 'DICOM', 'HL7', 'FHIR', 'Medical AI'],
+    technologies['TensorFlow', 'PyTorch', 'DICOM', 'HL7', 'FHIR', 'Medical AI'],
     industryScore: 97,
     marketPrice: '$2,999-$19,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['HIPAA', 'FDA', 'CE Mark', 'GDPR'],
-    certifications: ['ISO 13485', 'ISO 27001', 'SOC 2 Type II']
+    compliance['HIPAA', 'FDA', 'CE Mark', 'GDPR'],
+    certifications['ISO 13485', 'ISO 27001', 'SOC 2 Type II']
   },
   {
     id: 'fintech-solutions',
@@ -77,7 +76,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'TrendingUp',
     color: 'from-emerald-500 to-green-600',
     industry: 'finance',
-    features: [
+    features[
       'Fraud detection',
       'Risk assessment',
       'Automated trading',
@@ -85,13 +84,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Portfolio optimization',
       'Customer analytics'
     ],
-    benefits: [
+    benefits[
       '99.9% fraud detection',
       'Reduced risk exposure',
       'Automated compliance',
       'Improved customer experience'
     ],
-    useCases: [
+    useCases[
       'Banks',
       'Credit unions',
       'Investment firms',
@@ -104,13 +103,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '10-20 weeks',
-    technologies: ['Python', 'TensorFlow', 'Blockchain', 'APIs', 'Cloud Computing', 'AI/ML'],
+    technologies['Python', 'TensorFlow', 'Blockchain', 'APIs', 'Cloud Computing', 'AI/ML'],
     industryScore: 98,
     marketPrice: '$3,999-$24,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['PCI DSS', 'SOX', 'GLBA', 'GDPR', 'CCPA'],
-    certifications: ['ISO 27001', 'SOC 2 Type II', 'PCI DSS Level 1']
+    compliance['PCI DSS', 'SOX', 'GLBA', 'GDPR', 'CCPA'],
+    certifications['ISO 27001', 'SOC 2 Type II', 'PCI DSS Level 1']
   },
   {
     id: 'smart-manufacturing',
@@ -120,7 +119,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'Factory',
     color: 'from-blue-500 to-indigo-600',
     industry: 'manufacturing',
-    features: [
+    features[
       'Predictive maintenance',
       'Quality control',
       'Supply chain optimization',
@@ -128,13 +127,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Energy optimization',
       'Automation integration'
     ],
-    benefits: [
+    benefits[
       '30% reduction in downtime',
       'Improved product quality',
       'Reduced operational costs',
       'Increased efficiency'
     ],
-    useCases: [
+    useCases[
       'Automotive manufacturing',
       'Electronics production',
       'Food processing',
@@ -147,13 +146,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '12-24 weeks',
-    technologies: ['IoT', 'AI/ML', 'Edge Computing', 'Cloud Computing', '5G', 'Robotics'],
+    technologies['IoT', 'AI/ML', 'Edge Computing', 'Cloud Computing', '5G', 'Robotics'],
     industryScore: 96,
     marketPrice: '$4,999-$29,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['ISO 9001', 'ISO 14001', 'OSHA', 'FDA'],
-    certifications: ['ISO 9001', 'ISO 14001', 'ISO 45001']
+    compliance['ISO 9001', 'ISO 14001', 'OSHA', 'FDA'],
+    certifications['ISO 9001', 'ISO 14001', 'ISO 45001']
   },
   {
     id: 'retail-ai-platform',
@@ -163,7 +162,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'ShoppingCart',
     color: 'from-purple-500 to-pink-600',
     industry: 'retail',
-    features: [
+    features[
       'Customer analytics',
       'Inventory optimization',
       'Personalized marketing',
@@ -171,13 +170,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Demand forecasting',
       'Customer service automation'
     ],
-    benefits: [
+    benefits[
       'Increased sales',
       'Improved customer satisfaction',
       'Reduced inventory costs',
       'Better fraud prevention'
     ],
-    useCases: [
+    useCases[
       'E-commerce platforms',
       'Brick-and-mortar stores',
       'Retail chains',
@@ -190,13 +189,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-12 weeks',
-    technologies: ['AI/ML', 'Big Data', 'Cloud Computing', 'APIs', 'Analytics', 'E-commerce'],
+    technologies['AI/ML', 'Big Data', 'Cloud Computing', 'APIs', 'Analytics', 'E-commerce'],
     industryScore: 95,
     marketPrice: '$1,999-$12,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['PCI DSS', 'GDPR', 'CCPA', 'SOX'],
-    certifications: ['PCI DSS Level 1', 'ISO 27001', 'SOC 2 Type II']
+    compliance['PCI DSS', 'GDPR', 'CCPA', 'SOX'],
+    certifications['PCI DSS Level 1', 'ISO 27001', 'SOC 2 Type II']
   },
   {
     id: 'education-technology',
@@ -206,7 +205,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'BookOpen',
     color: 'from-indigo-500 to-blue-600',
     industry: 'education',
-    features: [
+    features[
       'Personalized learning',
       'Student analytics',
       'Content management',
@@ -214,13 +213,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Assessment tools',
       'Learning management'
     ],
-    benefits: [
+    benefits[
       'Improved learning outcomes',
       'Personalized education',
       'Reduced administrative workload',
       'Better student engagement'
     ],
-    useCases: [
+    useCases[
       'K-12 schools',
       'Universities',
       'Corporate training',
@@ -233,13 +232,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '4-12 weeks',
-    technologies: ['AI/ML', 'Cloud Computing', 'Mobile Apps', 'Web Technologies', 'Analytics', 'LMS'],
+    technologies['AI/ML', 'Cloud Computing', 'Mobile Apps', 'Web Technologies', 'Analytics', 'LMS'],
     industryScore: 94,
     marketPrice: '$999-$7,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['FERPA', 'COPPA', 'GDPR', 'CCPA'],
-    certifications: ['ISO 27001', 'SOC 2 Type II', 'EdTech Certification']
+    compliance['FERPA', 'COPPA', 'GDPR', 'CCPA'],
+    certifications['ISO 27001', 'SOC 2 Type II', 'EdTech Certification']
   },
   {
     id: 'government-solutions',
@@ -249,7 +248,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'Building',
     color: 'from-slate-500 to-gray-600',
     industry: 'government',
-    features: [
+    features[
       'Citizen services',
       'Data analytics',
       'Cybersecurity',
@@ -257,13 +256,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Compliance management',
       'Digital transformation'
     ],
-    benefits: [
+    benefits[
       'Improved citizen services',
       'Enhanced security',
       'Operational efficiency',
       'Cost savings'
     ],
-    useCases: [
+    useCases[
       'Federal agencies',
       'State governments',
       'Local municipalities',
@@ -276,13 +275,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '16-32 weeks',
-    technologies: ['Cloud Computing', 'AI/ML', 'Cybersecurity', 'Blockchain', 'APIs', 'Analytics'],
+    technologies['Cloud Computing', 'AI/ML', 'Cybersecurity', 'Blockchain', 'APIs', 'Analytics'],
     industryScore: 99,
     marketPrice: '$5,999-$39,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['FedRAMP', 'FISMA', 'NIST', 'CJIS', 'HIPAA'],
-    certifications: ['FedRAMP High', 'FISMA High', 'ISO 27001', 'SOC 2 Type II']
+    compliance['FedRAMP', 'FISMA', 'NIST', 'CJIS', 'HIPAA'],
+    certifications['FedRAMP High', 'FISMA High', 'ISO 27001', 'SOC 2 Type II']
   },
   {
     id: 'energy-optimization',
@@ -292,7 +291,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'Zap',
     color: 'from-yellow-500 to-orange-600',
     industry: 'energy',
-    features: [
+    features[
       'Smart grid management',
       'Renewable energy integration',
       'Demand forecasting',
@@ -300,13 +299,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Grid optimization',
       'Sustainability monitoring'
     ],
-    benefits: [
+    benefits[
       'Reduced energy costs',
       'Improved efficiency',
       'Sustainability goals',
       'Grid reliability'
     ],
-    useCases: [
+    useCases[
       'Utility companies',
       'Energy providers',
       'Industrial facilities',
@@ -319,13 +318,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '10-20 weeks',
-    technologies: ['IoT', 'AI/ML', 'Big Data', 'Cloud Computing', 'Smart Grid', 'Renewable Energy'],
+    technologies['IoT', 'AI/ML', 'Big Data', 'Cloud Computing', 'Smart Grid', 'Renewable Energy'],
     industryScore: 95,
     marketPrice: '$3,999-$24,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['NERC', 'FERC', 'ISO', 'Grid Standards'],
-    certifications: ['ISO 27001', 'SOC 2 Type II', 'Energy Management']
+    compliance['NERC', 'FERC', 'ISO', 'Grid Standards'],
+    certifications['ISO 27001', 'SOC 2 Type II', 'Energy Management']
   },
   {
     id: 'transportation-logistics',
@@ -335,7 +334,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'Truck',
     color: 'from-teal-500 to-cyan-600',
     industry: 'transportation',
-    features: [
+    features[
       'Route optimization',
       'Fleet management',
       'Supply chain visibility',
@@ -343,13 +342,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Real-time tracking',
       'Performance monitoring'
     ],
-    benefits: [
+    benefits[
       'Reduced transportation costs',
       'Improved delivery times',
       'Better fleet utilization',
       'Enhanced customer satisfaction'
     ],
-    useCases: [
+    useCases[
       'Logistics companies',
       'Transportation providers',
       'E-commerce delivery',
@@ -362,13 +361,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '8-16 weeks',
-    technologies: ['AI/ML', 'IoT', 'GPS', 'Cloud Computing', 'Mobile Apps', 'Analytics'],
+    technologies['AI/ML', 'IoT', 'GPS', 'Cloud Computing', 'Mobile Apps', 'Analytics'],
     industryScore: 94,
     marketPrice: '$2,999-$19,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['DOT', 'FMCSA', 'OSHA', 'ISO'],
-    certifications: ['ISO 27001', 'SOC 2 Type II', 'Transportation Safety']
+    compliance['DOT', 'FMCSA', 'OSHA', 'ISO'],
+    certifications['ISO 27001', 'SOC 2 Type II', 'Transportation Safety']
   },
   {
     id: 'real-estate-tech',
@@ -378,7 +377,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'Home',
     color: 'from-amber-500 to-yellow-600',
     industry: 'real-estate',
-    features: [
+    features[
       'Property management',
       'Market analytics',
       'Virtual tours',
@@ -386,13 +385,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Customer relationship management',
       'Financial analytics'
     ],
-    benefits: [
+    benefits[
       'Improved property management',
       'Better market insights',
       'Enhanced customer experience',
       'Increased sales efficiency'
     ],
-    useCases: [
+    useCases[
       'Real estate agencies',
       'Property management companies',
       'Real estate investors',
@@ -405,13 +404,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-12 weeks',
-    technologies: ['AI/ML', 'VR/AR', 'Cloud Computing', 'Mobile Apps', 'Analytics', 'CRM'],
+    technologies['AI/ML', 'VR/AR', 'Cloud Computing', 'Mobile Apps', 'Analytics', 'CRM'],
     industryScore: 93,
     marketPrice: '$1,499-$9,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['Real Estate Laws', 'Data Privacy', 'Financial Regulations', 'Local Compliance'],
-    certifications: ['ISO 27001', 'SOC 2 Type II', 'Real Estate Technology']
+    compliance['Real Estate Laws', 'Data Privacy', 'Financial Regulations', 'Local Compliance'],
+    certifications['ISO 27001', 'SOC 2 Type II', 'Real Estate Technology']
   },
   {
     id: 'media-entertainment',
@@ -421,7 +420,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     icon: 'Video',
     color: 'from-pink-500 to-rose-600',
     industry: 'media',
-    features: [
+    features[
       'Content creation',
       'Audience analytics',
       'Recommendation engines',
@@ -429,13 +428,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Streaming optimization',
       'Performance analytics'
     ],
-    benefits: [
+    benefits[
       'Increased audience engagement',
       'Better content performance',
       'Improved monetization',
       'Enhanced user experience'
     ],
-    useCases: [
+    useCases[
       'Streaming platforms',
       'Content creators',
       'Media companies',
@@ -448,21 +447,30 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-12 weeks',
-    technologies: ['AI/ML', 'Big Data', 'Cloud Computing', 'Streaming', 'Analytics', 'Content Management'],
+    technologies['AI/ML', 'Big Data', 'Cloud Computing', 'Streaming', 'Analytics', 'Content Management'],
     industryScore: 94,
     marketPrice: '$1,999-$12,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
-    compliance: ['Copyright Laws', 'Data Privacy', 'Content Regulations', 'Streaming Standards'],
-    certifications: ['ISO 27001', 'SOC 2 Type II', 'Content Management']
+    compliance['Copyright Laws', 'Data Privacy', 'Content Regulations', 'Streaming Standards'],
+    certifications['ISO 27001', 'SOC 2 Type II', 'Content Management']
   }
 ];
-export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[] => {
-  if (industry === 'All') {
+<<<<<<< HEAD
+export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[]  => {
+  if (industry === 'All') {;
+    return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};
+export const getAllIndustrySolutions = (): IndustrySolution[] => {;
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
+=======
+export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[] => {;
+  if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
   }
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry);
 };
-export const getAllIndustrySolutions = (): IndustrySolution[] => {
+export const getAllIndustrySolutions = (): IndustrySolution[] => {;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

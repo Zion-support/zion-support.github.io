@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
@@ -10,16 +10,22 @@ import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus
 export default function AIPoweredContent() {
     useFeatureUsage('ZionGPT');
     const schema = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "AI Content Generation",
         "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
-        "url": "https://app.ziontechgroup.com/features/ai-content-generation"
-    };
+  "url": "https://app.ziontechgroup.com/features/ai-content-generation"
+    
+
+
+
+
+
+
+};
     const { markAiExplored } = useAdvancedOnboardingStatus();
     useEffect(() => {
-        markAiExplored();
-    }, [markAiExplored]);
+        markAiExplored()}, [markAiExplored]);
     return (<>
       <SEO title="AI Content Generation" description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT." keywords="AI content generation, ZionGPT, SEO tools" canonical="https://app.ziontechgroup.com/features/ai-content-generation"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -57,5 +63,4 @@ export default function AIPoweredContent() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>)}

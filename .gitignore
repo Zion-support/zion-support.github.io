@@ -77,4 +77,4 @@ temp/
 *.tsbuildinfo
 # Vite
 .vite/
-tsconfig.tsbuildinfo
+core

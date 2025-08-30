@@ -6,7 +6,7 @@ export const real2036InnovativeServices = [
     description: 'Advanced AI-powered business process automation that learns, adapts, and optimizes workflows autonomously. Features intelligent decision-making, predictive analytics, and continuous improvement algorithms.',
     price: '$2,499',
     period: 'month',
-    features: [
+    features[
       'Autonomous workflow optimization',
       'Predictive process analytics',
       'Self-healing automation',
@@ -18,13 +18,13 @@ export const real2036InnovativeServices = [
     category: 'AI & Automation',
     icon: '🤖',
     marketPrice: '$3,000-5,000/month',
-    benefits: [
+    benefits[
       'Reduce manual work by 85%',
       'Improve process efficiency by 60%',
       '24/7 autonomous operation',
       'Scalable across all departments'
     ],
-    useCases: [
+    useCases[
       'Customer service automation',
       'Supply chain optimization',
       'Financial process automation',
@@ -38,7 +38,7 @@ export const real2036InnovativeServices = [
     description: 'Revolutionary platform combining quantum computing with artificial intelligence for unprecedented computational power. Enables complex simulations, optimization problems, and AI training at quantum speeds.',
     price: '$4,999',
     period: 'month',
-    features: [
+    features[
       'Quantum-AI hybrid algorithms',
       'Quantum machine learning',
       'Complex optimization solving',
@@ -50,13 +50,13 @@ export const real2036InnovativeServices = [
     category: 'Quantum & AI',
     icon: '⚛️🧠',
     marketPrice: '$6,000-10,000/month',
-    benefits: [
+    benefits[
       '1000x faster computation for complex problems',
       'Unprecedented AI model training speed',
       'Breakthrough optimization capabilities',
       'Future-proof quantum advantage'
     ],
-    useCases: [
+    useCases[
       'Drug discovery and molecular modeling',
       'Financial portfolio optimization',
       'Climate change modeling',
@@ -70,7 +70,7 @@ export const real2036InnovativeServices = [
     description: 'Cutting-edge platform for automated space mining operations, asteroid resource extraction, and lunar mining automation. Features AI-powered navigation, resource detection, and autonomous mining operations.',
     price: '$8,999',
     period: 'month',
-    features: [
+    features[
       'Autonomous space navigation',
       'AI-powered resource detection',
       'Robotic mining operations',
@@ -82,13 +82,13 @@ export const real2036InnovativeServices = [
     category: 'Space Technology',
     icon: '🚀⛏️',
     marketPrice: '$10,000-20,000/month',
-    benefits: [
+    benefits[
       'Access to unlimited space resources',
       'Revolutionary resource extraction',
       'Space exploration advancement',
       'Sustainable resource acquisition'
     ],
-    useCases: [
+    useCases[
       'Asteroid mining operations',
       'Lunar resource extraction',
       'Space station resource management',
@@ -102,7 +102,7 @@ export const real2036InnovativeServices = [
     description: 'Comprehensive metaverse development platform with AI-powered content generation, virtual world creation, and immersive experience development. Includes advanced 3D modeling, AI NPCs, and virtual economy management.',
     price: '$3,999',
     period: 'month',
-    features: [
+    features[
       'AI-powered 3D content generation',
       'Virtual world creation tools',
       'Intelligent NPC development',
@@ -114,13 +114,13 @@ export const real2036InnovativeServices = [
     category: 'Metaverse & AI',
     icon: '🌐🎮',
     marketPrice: '$5,000-8,000/month',
-    benefits: [
+    benefits[
       '10x faster metaverse development',
       'AI-generated immersive content',
       'Scalable virtual world creation',
       'Professional-grade tools'
     ],
-    useCases: [
+    useCases[
       'Virtual event platforms',
       'Educational metaverses',
       'Virtual retail experiences',
@@ -134,7 +134,7 @@ export const real2036InnovativeServices = [
     description: 'Advanced brain-computer interface platform enabling direct neural communication with computers. Features non-invasive sensors, AI-powered signal processing, and applications for accessibility, gaming, and medical research.',
     price: '$6,999',
     period: 'month',
-    features: [
+    features[
       'Non-invasive neural sensors',
       'AI signal processing',
       'Real-time brain-computer communication',
@@ -146,13 +146,13 @@ export const real2036InnovativeServices = [
     category: 'Neural Technology',
     icon: '🧠💻',
     marketPrice: '$8,000-15,000/month',
-    benefits: [
+    benefits[
       'Revolutionary human-computer interaction',
       'Accessibility breakthrough',
       'Medical research advancement',
       'Future of computing interface'
     ],
-    useCases: [
+    useCases[
       'Assistive technology',
       'Gaming and entertainment',
       'Medical research',
@@ -166,7 +166,7 @@ export const real2036InnovativeServices = [
     description: 'Innovative platform combining quantum computing with biological systems for advanced bioinformatics, drug discovery, and genetic research. Features quantum algorithms optimized for biological data processing.',
     price: '$5,999',
     period: 'month',
-    features: [
+    features[
       'Quantum bioinformatics algorithms',
       'Genetic data processing',
       'Drug discovery optimization',
@@ -178,13 +178,13 @@ export const real2036InnovativeServices = [
     category: 'Quantum & Biology',
     icon: '🧬⚛️',
     marketPrice: '$7,000-12,000/month',
-    benefits: [
+    benefits[
       '100x faster genetic analysis',
       'Revolutionary drug discovery',
       'Advanced bioinformatics',
       'Quantum advantage in biology'
     ],
-    useCases: [
+    useCases[
       'Pharmaceutical research',
       'Genetic medicine',
       'Biological research',
@@ -198,7 +198,7 @@ export const real2036InnovativeServices = [
     description: 'Cutting-edge platform for developing and evolving AI consciousness, ethical AI frameworks, and artificial general intelligence. Features consciousness simulation, ethical decision-making, and AI evolution tracking.',
     price: '$7,999',
     period: 'month',
-    features: [
+    features[
       'Consciousness simulation engine',
       'Ethical AI frameworks',
       'Consciousness evolution tracking',
@@ -210,13 +210,13 @@ export const real2036InnovativeServices = [
     category: 'AI Consciousness',
     icon: '🌟🤖',
     marketPrice: '$10,000-20,000/month',
-    benefits: [
+    benefits[
       'Pioneering AI consciousness research',
       'Ethical AI development',
       'Breakthrough in AGI',
       'Future of artificial intelligence'
     ],
-    useCases: [
+    useCases[
       'AI research and development',
       'Ethical AI training',
       'Consciousness studies',
@@ -230,7 +230,7 @@ export const real2036InnovativeServices = [
     description: 'Revolutionary quantum internet security platform providing unbreakable encryption, quantum key distribution, and secure quantum communication networks. Features quantum-resistant cryptography and quantum network security.',
     price: '$4,499',
     period: 'month',
-    features: [
+    features[
       'Quantum key distribution',
       'Quantum-resistant cryptography',
       'Quantum network security',
@@ -242,13 +242,13 @@ export const real2036InnovativeServices = [
     category: 'Quantum Security',
     icon: '🔐⚛️',
     marketPrice: '$6,000-10,000/month',
-    benefits: [
+    benefits[
       'Unbreakable security',
       'Future-proof cryptography',
       'Quantum network protection',
       'Military-grade security'
     ],
-    useCases: [
+    useCases[
       'Government communications',
       'Financial institutions',
       'Healthcare data protection',
@@ -262,7 +262,7 @@ export const real2036InnovativeServices = [
     description: 'Advanced autonomous robotics platform with AI-powered learning, decision-making, and task execution. Features computer vision, natural language processing, and autonomous navigation for industrial and service robots.',
     price: '$3,499',
     period: 'month',
-    features: [
+    features[
       'AI-powered learning algorithms',
       'Computer vision integration',
       'Natural language processing',
@@ -274,13 +274,13 @@ export const real2036InnovativeServices = [
     category: 'AI & Robotics',
     icon: '🤖🦾',
     marketPrice: '$4,500-8,000/month',
-    benefits: [
+    benefits[
       'Fully autonomous operation',
       'Continuous learning and improvement',
       'Scalable robotic workforce',
       '24/7 operational capability'
     ],
-    useCases: [
+    useCases[
       'Manufacturing automation',
       'Warehouse operations',
       'Service robotics',
@@ -294,7 +294,7 @@ export const real2036InnovativeServices = [
     description: 'Revolutionary quantum computing platform for financial trading, portfolio optimization, and risk management. Features quantum algorithms for market analysis, risk assessment, and optimal trading strategies.',
     price: '$9,999',
     period: 'month',
-    features: [
+    features[
       'Quantum market analysis',
       'Portfolio optimization',
       'Risk assessment algorithms',
@@ -306,17 +306,17 @@ export const real2036InnovativeServices = [
     category: 'Quantum Finance',
     icon: '💰⚛️',
     marketPrice: '$12,000-25,000/month',
-    benefits: [
+    benefits[
       'Quantum advantage in trading',
       'Optimal portfolio performance',
       'Advanced risk management',
       'Competitive trading edge'
     ],
-    useCases: [
-      'Hedge fund operations',
-      'Investment banking',
-      'Portfolio management',
-      'Risk assessment'
-    ]
-  }
+    useCases[;
+      'Hedge fund operations',;
+      'Investment banking',;
+      'Portfolio management',;
+      'Risk assessment';
+    ];
+  };
 ];

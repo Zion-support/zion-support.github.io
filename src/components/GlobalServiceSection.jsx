@@ -7,37 +7,37 @@ export const GlobalServiceSection = () => {
       icon: Globe,
       title: "Global Coverage",
       description: "24/7 support across multiple time zones and regions worldwide",
-      features: ["Multi-language support", "Local compliance expertise", "Regional data centers"]
+      features["Multi-language support", "Local compliance expertise", "Regional data centers"]
     },
     {
       icon: Clock,
       title: "24/7 Availability",
       description: "Round-the-clock monitoring and support for critical systems",
-      features: ["Always-on monitoring", "Instant alert response", "Continuous maintenance"]
+      features["Always-on monitoring", "Instant alert response", "Continuous maintenance"]
     },
     {
       icon: Users,
       title: "Expert Teams",
       description: "Certified professionals with deep industry knowledge",
-      features: ["Certified technicians", "Industry specialists", "Continuous training"]
+      features["Certified technicians", "Industry specialists", "Continuous training"]
     },
     {
       icon: Shield,
       title: "Security First",
       description: "Enterprise-grade security protocols and compliance standards",
-      features: ["SOC 2 compliance", "Data encryption", "Access controls"]
+      features["SOC 2 compliance", "Data encryption", "Access controls"]
     },
     {
       icon: Zap,
       title: "Rapid Response",
       description: "Quick deployment and resolution of critical issues",
-      features: ["Emergency response", "Remote diagnostics", "On-site dispatch"]
+      features["Emergency response", "Remote diagnostics", "On-site dispatch"]
     },
     {
       icon: CheckCircle,
       title: "Quality Assurance",
       description: "Rigorous testing and validation of all services",
-      features: ["Performance testing", "Security audits", "Compliance verification"]
+      features["Performance testing", "Security audits", "Compliance verification"]
     }
   ];
 
@@ -93,5 +93,4 @@ export const GlobalServiceSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

@@ -1,4 +1,4 @@
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ApplicationsTracker } from "@/components/jobs/applications";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Inbox } from "lucide-react";
@@ -30,12 +30,10 @@ function ApplicationStatusTrackerContent() {
           </Card>
         </div>
       </div>
-    </>);
-}
+    </>)}
 export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>
       
         <ApplicationStatusTrackerContent />
       
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

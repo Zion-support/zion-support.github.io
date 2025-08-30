@@ -47,58 +47,34 @@ export default function HelpdeskPlatform() {
       description: "Unified support across email, chat, phone, and social media channels."
     },
     {
-      icon: Ticket,
-      title: "Ticket Management",
-      description: "Comprehensive ticket creation, tracking, and resolution workflow management."
+      icon: Target,
+      title: "Smart Ticket Routing",
+      description: "AI-driven ticket classification and automatic assignment to best agents."
     },
     {
-      icon: Users,
-      title: "Agent Management",
-      description: "Efficient agent assignment, workload balancing, and performance tracking."
+      icon: Zap,
+      title: "Automated Workflows",
+      description: "Intelligent automation for common support scenarios and escalations."
     },
     {
       icon: BarChart3,
-      title: "Analytics & Reporting",
-      description: "Real-time insights into support performance and customer satisfaction metrics."
+      title: "Performance Analytics",
+      description: "Comprehensive insights into support metrics and customer satisfaction."
     },
     {
-      icon: Clock,
-      title: "SLA Management",
-      description: "Automated service level agreement monitoring and escalation workflows."
+      icon: Shield,
+      title: "Knowledge Management",
+      description: "Centralized knowledge base with AI-powered search and suggestions."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
-      title: "Improved Response Times",
-      description: "Reduce customer wait times with AI-powered automation and intelligent routing."
-    },
-    {
-      icon: Users,
-      title: "Enhanced Customer Experience",
-      description: "Provide consistent, high-quality support across all channels and touchpoints."
-    },
-    {
-      icon: BarChart3,
-      title: "Better Performance Insights",
-      description: "Track key metrics and identify areas for improvement with detailed analytics."
-    },
-    {
-      icon: Clock,
-      title: "Increased Efficiency",
-      description: "Automate repetitive tasks and focus agents on complex customer issues."
-    },
-    {
-      icon: Star,
-      title: "Higher Customer Satisfaction",
-      description: "Improve CSAT scores through faster resolution and personalized support."
-    },
-    {
-      icon: Award,
-      title: "Cost Optimization",
-      description: "Reduce support costs while maintaining or improving service quality."
-    }
+    "Reduce support response time by 60-80% with AI automation",
+    "Improve customer satisfaction scores by 40-60%",
+    "Reduce support costs by 30-50% through automation",
+    "Increase agent productivity by 50-70%",
+    "Provide 24/7 customer support availability",
+    "Enhance first-call resolution rates by 35-55%"
   ];
 
   const supportChannels = [
@@ -125,13 +101,13 @@ export default function HelpdeskPlatform() {
     {
       channel: "Self-Service Portal",
       description: "Knowledge base and FAQ management for customer self-help",
-      icon: Search
-    },
-    {
-      channel: "Mobile App",
-      description: "Mobile-optimized support interface for on-the-go customers",
-      icon: Smartphone
-    }
+      icon: Search;
+    },;
+    {;
+      channel: "Mobile App",;
+      description: "Mobile-optimized support interface for on-the-go customers",;
+      icon: Smartphone;
+    };
   ];
 
   const useCases = [
@@ -157,19 +133,13 @@ export default function HelpdeskPlatform() {
     },
     {
       industry: "Education",
-      description: "Student and faculty support for educational institutions",
-      icon: GraduationCap
-    },
-    {
-      industry: "Manufacturing",
-      description: "Product support and technical assistance for manufacturing companies",
-      icon: Settings
+      description: "Student support, course assistance, and technical help"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO 
         title="Helpdesk Platform - Zion Tech Group"
         description="Transform customer support with our AI-powered helpdesk platform. Streamline ticket management, improve response times, and enhance customer satisfaction."
       />
@@ -180,8 +150,26 @@ export default function HelpdeskPlatform() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">
@@ -216,8 +204,26 @@ export default function HelpdeskPlatform() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -235,9 +241,36 @@ export default function HelpdeskPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -270,8 +303,26 @@ export default function HelpdeskPlatform() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -289,9 +340,36 @@ export default function HelpdeskPlatform() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -324,8 +402,26 @@ export default function HelpdeskPlatform() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -343,9 +439,36 @@ export default function HelpdeskPlatform() {
             {supportChannels.map((channel, index) => (
               <motion.div
                 key={channel.channel}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -378,8 +501,26 @@ export default function HelpdeskPlatform() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -397,9 +538,36 @@ export default function HelpdeskPlatform() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -432,8 +600,26 @@ export default function HelpdeskPlatform() {
       <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -451,12 +637,12 @@ export default function HelpdeskPlatform() {
               </button>
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

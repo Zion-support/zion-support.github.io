@@ -8,14 +8,26 @@ interface WishlistState {
 
 const initialState: WishlistState = {
   items: [],
-  itemCount: 0,
+  itemCount: 0,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+
+
+
+
+
+
 };
 
-const wishlistSlice = createSlice({
-  name: 'wishlist',
-  initialState,
-  reducers: {
-    addToWishlist: (state, action: PayloadAction<WishlistItem>) => {
+const wishlistSlice = createSlice({;
+  name: 'wishlist',;
+  initialState,;
+  reducers: {;
+    addToWishlist: (state, action: PayloadAction<WishlistItem>) => {;
       const existingItem = state.items.find(item => item.listingId === action.payload.listingId);
       if (!existingItem) {
         state.items.push(action.payload);

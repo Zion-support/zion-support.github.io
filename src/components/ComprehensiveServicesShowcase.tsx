@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Cpu, 
-  Cloud, 
-  Shield, 
-  Rocket, 
+import {
+  Brain,
+  Cpu,
+  Cloud,
+  Shield,
+  Rocket,
   Zap,
   ArrowRight,
   CheckCircle,
@@ -26,11 +26,19 @@ import {
   Mail,
   ExternalLink,
   Search
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+import { EXPANDED_INNOVATIVE_SERVICES_2025  } from "../data/expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025  } from "../data/emergingTechServices2025";
+=======
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from '../data/expandedInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -49,58 +57,64 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
+<<<<<<< HEAD
+    security: string[]}}
+const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+=======
     security: string[];
   };
 }
-const ComprehensiveServicesShowcase: React.FC = () => {
+const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   // Combine all services
   const allServices: Service[] = [
     ...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ];
   // Get unique categories
-  const categories = useMemo(() => {
-    const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+<<<<<<< HEAD
+  const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    return cats}, [allServices]);
+=======
+  const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     return cats;
   }, [allServices]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   // Get unique innovation levels
-  const innovationLevels = useMemo(() => {
+  const innovationLevels = useMemo(() => {;
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
-    return levels;
-  }, [allServices]);
+    return levels}, [allServices]);
   // Filter services
-  const filteredServices = useMemo(() => {
-    return allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = useMemo(() => {;
+    return allServices.filter(service => {;
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesInnovationLevel && matchesSearch;
-    });
-  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string) => {
+      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
-      case 'AI & Analytics':
-      case 'AI & Customer Experience':
-      case 'AI & Supply Chain':
-      case 'AI & Legal Tech':
-      case 'AI & Healthcare':
-      case 'AI & Financial Services':
-      case 'AI & Content Marketing':
+      case 'AI & Analytics':;
+      case 'AI & Customer Experience':;
+      case 'AI & Supply Chain':;
+      case 'AI & Legal Tech':;
+      case 'AI & Healthcare':;
+      case 'AI & Financial Services':;
+      case 'AI & Content Marketing':;
         return <Brain className="h-6 w-6" />;
       case 'Cybersecurity & AI':
       case 'Cybersecurity & Quantum':
@@ -130,23 +144,23 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       case 'Autonomous Vehicles & Fleet Management':
         return <Rocket className="h-6 w-6" />;
       default:
-        return <Star className="h-6 w-6" />;
-    }
+        return <Star className = "h-6 w-6" />};
   };
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
-      case 'Cutting-edge':
+<<<<<<< HEAD
+  const getInnovationLevelColor = (level: string) => {;
+    switch (level) {;
+      case 'Cutting-edge':;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
         return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Professional':
         return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default:
-        return 'bg-gradient-to-r from-gray-600 to-slate-600';
-    }
+        return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -155,19 +169,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               Innovative Technology Solutions
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Discover our comprehensive portfolio of cutting-edge micro SAAS services, 
+              Discover our comprehensive portfolio of cutting-edge micro SAAS services,
               AI solutions, and emerging technology platforms designed to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link 
-                to="/request-quote" 
+              <Link
+                to="/request-quote"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
               >
                 Request Quote
@@ -190,9 +204,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-5 w-5 text-zion-cyan" />
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-zion-blue hover:text-zion-cyan transition-colors"
               >
@@ -229,9 +243,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -244,9 +258,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               <select
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {innovationLevels.map(level => (
+                {innovationLevels.map(level  => (
                   <option key={level} value={level}>
                     {level === 'all' ? 'All Levels' : level}
                   </option>
@@ -259,13 +273,40 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
@@ -378,18 +419,23 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-            ))}
-          </div>
-          {filteredServices.length === 0 && (
-            <div className="text-center py-16">
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
+            ))};
+          </div>;
+          {filteredServices.length === 0 && (;
+            <div className="text-center py-16">;
+              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
+<<<<<<< HEAD
+                  setSearchTerm('')}}
+                className = "text-zion-cyan hover:text-zion-cyan-light font-medium";
+=======;
                   setSearchTerm('');
                 }}
-                className="text-zion-cyan hover:text-zion-cyan-light font-medium"
+                className = "text-zion-cyan hover:text-zion-cyan-light font-medium"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 Clear all filters
               </button>
@@ -404,7 +450,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Our innovative technology solutions are designed to give you a competitive edge. 
+            Our innovative technology solutions are designed to give you a competitive edge.
             Contact us today to discuss how we can help you achieve your goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -421,11 +467,20 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             >
               <Phone className="mr-2 h-5 w-5" />
               Call Now
+<<<<<<< HEAD
             </a>
           </div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default ComprehensiveServicesShowcase;

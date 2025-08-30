@@ -54,7 +54,7 @@ import {
   Mail as MailIcon,
   MapPin as MapPinIcon
 } from 'lucide-react';
-import EnhancedSEOManager from '../components/EnhancedSEOManager';
+import EnhancedSEOManager from "../components/EnhancedSEOManager";
 
 export default function ComprehensiveImprovements2025() {
   const improvements = [
@@ -127,13 +127,13 @@ export default function ComprehensiveImprovements2025() {
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
       title: 'Next-Gen Innovation',
-      items: [
-        'Quantum Computing - Next-gen computational power',
-        'IoT Edge Computing - Smart device networks',
-        'Space Tech - Space technology solutions',
-        'Green IT - Sustainable technology solutions'
-      ]
-    }
+      items: [;
+        'Quantum Computing - Next-gen computational power',;
+        'IoT Edge Computing - Smart device networks',;
+        'Space Tech - Space technology solutions',;
+        'Green IT - Sustainable technology solutions';
+      ];
+    };
   ];
 
   const features = [
@@ -166,13 +166,13 @@ export default function ComprehensiveImprovements2025() {
       description: 'Advanced SEO with structured data and performance metrics',
       icon: Search,
       color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      title: 'Analytics Driven',
-      description: 'Comprehensive analytics and performance monitoring',
-      icon: BarChart3,
-      color: 'from-blue-500 to-cyan-500'
-    }
+    },;
+    {;
+      title: 'Analytics Driven',;
+      description: 'Comprehensive analytics and performance monitoring',;
+      icon: BarChart3,;
+      color: 'from-blue-500 to-cyan-500';
+    };
   ];
 
   const benefits = [
@@ -205,21 +205,30 @@ export default function ComprehensiveImprovements2025() {
       description: 'Optimized for search engines and improved discoverability',
       icon: Search,
       color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      title: 'Security Enhanced',
-      description: 'Advanced security measures and privacy protection',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    }
+    },;
+    {;
+      title: 'Security Enhanced',;
+      description: 'Advanced security measures and privacy protection',;
+      icon: Shield,;
+      color: 'from-red-500 to-orange-500';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <EnhancedSEOManager 
         title="Comprehensive Improvements 2025 - Zion Tech Group"
         description="Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today."
-        keywords={['platform improvements', 'AI services', 'technology enhancements', 'digital transformation', 'Zion Tech Group']}
+        keywords = {
+  ['platform improvements', 'AI services', 'technology enhancements', 'digital transformation',
+  'Zion Tech Group']
+
+
+
+
+
+
+}
       />
       
       {/* Hero Section */}
@@ -228,8 +237,26 @@ export default function ComprehensiveImprovements2025() {
         
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
@@ -272,8 +299,26 @@ export default function ComprehensiveImprovements2025() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -291,9 +336,36 @@ export default function ComprehensiveImprovements2025() {
             {improvements.map((improvement, index) => (
               <motion.div
                 key={improvement.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -334,8 +406,26 @@ export default function ComprehensiveImprovements2025() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -353,9 +443,36 @@ export default function ComprehensiveImprovements2025() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -388,8 +505,26 @@ export default function ComprehensiveImprovements2025() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -407,9 +542,36 @@ export default function ComprehensiveImprovements2025() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -442,8 +604,26 @@ export default function ComprehensiveImprovements2025() {
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -467,12 +647,12 @@ export default function ComprehensiveImprovements2025() {
                 className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
               >
                 <ArrowRight className="w-5 h-5 mr-2 inline" />
-                Explore Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                Explore Services;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

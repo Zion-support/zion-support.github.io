@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
@@ -13,10 +13,10 @@ import {
   Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
   Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
-} from 'lucide-react';
+ } from 'lucide-react';
 
 const pricingData2028 = {
-  aiServices: [
+  aiServices[
     {
       name: 'Quantum Consciousness AI',
       price: '$25,999',
@@ -27,9 +27,24 @@ const pricingData2028 = {
       roi: '800%',
       setupTime: '4-6 weeks',
       trialDays: 30,
+<<<<<<< HEAD
+      features['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
+      targetAudience: 'AI research institutions, Government agencies,
+  Ethics committees'
+    
+
+},
+=======
       features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
-      targetAudience: 'AI research institutions, Government agencies, Ethics committees'
-    },
+      targetAudience: 'AI research institutions, Government agencies,
+  Ethics committees'
+    
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     {
       name: 'Quantum Financial Trading AI',
       price: '$35,999',
@@ -40,7 +55,7 @@ const pricingData2028 = {
       roi: '600%',
       setupTime: '2-3 weeks',
       trialDays: 14,
-      features: ['Quantum market analysis', 'Predictive trading', 'Risk management'],
+      features['Quantum market analysis', 'Predictive trading', 'Risk management'],
       targetAudience: 'Hedge funds, Investment banks, Trading firms'
     },
     {
@@ -53,11 +68,11 @@ const pricingData2028 = {
       roi: '450%',
       setupTime: '3-4 weeks',
       trialDays: 21,
-      features: ['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],
+      features['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],
       targetAudience: 'Hospitals, Medical centers, Pharmaceutical companies'
     }
   ],
-  microSAAS: [
+  microSAAS[
     {
       name: 'AI Content Creator Pro',
       price: '$299',
@@ -68,7 +83,7 @@ const pricingData2028 = {
       roi: '300%',
       setupTime: '1-2 days',
       trialDays: 14,
-      features: ['AI article generation', 'Content optimization', 'Multi-language support'],
+      features['AI article generation', 'Content optimization', 'Multi-language support'],
       targetAudience: 'Content marketers, Digital agencies, Small businesses'
     },
     {
@@ -81,7 +96,7 @@ const pricingData2028 = {
       roi: '400%',
       setupTime: '1 day',
       trialDays: 7,
-      features: ['High-resolution generation', 'Brand customization', 'Commercial rights'],
+      features['High-resolution generation', 'Brand customization', 'Commercial rights'],
       targetAudience: 'Designers, Marketing agencies, E-commerce businesses'
     },
     {
@@ -94,11 +109,11 @@ const pricingData2028 = {
       roi: '500%',
       setupTime: '2-3 days',
       trialDays: 21,
-      features: ['Multi-language support', 'Bug detection', 'Code optimization'],
+      features['Multi-language support', 'Bug detection', 'Code optimization'],
       targetAudience: 'Software developers, Development teams, Tech companies'
     }
   ],
-  itServices: [
+  itServices[
     {
       name: 'Quantum Cloud Infrastructure',
       price: '$45,999',
@@ -109,7 +124,7 @@ const pricingData2028 = {
       roi: '700%',
       setupTime: '6-8 weeks',
       trialDays: 30,
-      features: ['Quantum-ready nodes', 'Zero-latency networking', 'Auto-scaling'],
+      features['Quantum-ready nodes', 'Zero-latency networking', 'Auto-scaling'],
       targetAudience: 'Enterprises, Cloud providers, Data centers'
     },
     {
@@ -122,7 +137,7 @@ const pricingData2028 = {
       roi: '500%',
       setupTime: '2-3 weeks',
       trialDays: 14,
-      features: ['AI threat detection', 'Zero-trust architecture', 'Automated response'],
+      features['AI threat detection', 'Zero-trust architecture', 'Automated response'],
       targetAudience: 'Enterprises, Government agencies, Financial institutions'
     },
     {
@@ -134,65 +149,90 @@ const pricingData2028 = {
       growthRate: '300%',
       roi: '600%',
       setupTime: '4-5 weeks',
+<<<<<<< HEAD
       trialDays: 21,
-      features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
+      features['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
       targetAudience: 'Development teams, DevOps engineers, Technology companies'
-    }
-  ]
+    };
+  ];
 };
 
-const ComprehensivePricingGuide2028: React.FC = () => {
+const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
+=======;
+      trialDays: 21,;
+      features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],;
+      targetAudience: 'Development teams, DevOps engineers, Technology companies';
+    };
+  ];
+};
+
+const ComprehensivePricingGuide2028: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },
-    { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' }
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;
+    { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },;
+    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },;
+    { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' };
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $500', range: 'Under $500' },
-    { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },
-    { id: 'high', name: 'Over $10K', range: 'Over $10K' }
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'low', name: 'Under $500', range: 'Under $500' },;
+    { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },;
+    { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
+<<<<<<< HEAD
   const getAllServices = () => {
     return [
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),
-      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),
-      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }))
+      ...pricingData2028.microSAAS.map(service  => ({ ...service, type: 'Micro SAAS' })),;
+      ...pricingData2028.itServices.map(service  => ({ ...service, type: 'IT Services' }));
+    ]};
+=======
+  const getAllServices = () => {;
+    return [;
+      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
+      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;
+      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
     ];
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const filteredServices = getAllServices().filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
       service.type.toLowerCase().includes(selectedCategory.replace('-', ' '));
-    
+
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = price < 500;
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
     else if (priceRange === 'high') matchesPrice = price > 10000;
-    
+
     return matchesCategory && matchesPrice;
   });
 
-  const calculateROI = (roi: string) => {
+<<<<<<< HEAD
+  const calculateROI = (roi: string)  => {;
+    return parseInt(roi.replace('%', ''))};
+=======
+  const calculateROI = (roi: string) => {;
     return parseInt(roi.replace('%', ''));
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -200,7 +240,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
           >
             Comprehensive Pricing Guide 2028
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -208,7 +248,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
           >
             Complete pricing analysis, ROI calculations, and market positioning for all our innovative services
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -230,7 +270,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       {/* Market Overview */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -239,7 +279,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             Market Overview & Growth Potential
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -252,7 +292,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
               <p className="text-4xl font-bold text-zion-cyan mb-2">$89.2B</p>
               <p className="text-zion-slate-light">Combined market value across all service categories</p>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -265,7 +305,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
               <p className="text-4xl font-bold text-zion-purple mb-2">320%</p>
               <p className="text-zion-slate-light">Annual growth rate across all service categories</p>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -331,13 +371,40 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {sortedServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={`${service.type}-${service.name}`}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
               >
                 {/* Service Type Badge */}
@@ -418,7 +485,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       {/* ROI Calculator */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -441,16 +508,16 @@ const ComprehensivePricingGuide2028: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-zion-slate-light mb-2">Current Monthly Cost</label>
-                    <input 
-                      type="number" 
+                    <input
+                      type="number"
                       placeholder="$0"
                       className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
                     />
                   </div>
                   <div>
                     <label className="block text-zion-slate-light mb-2">Expected Efficiency Gain (%)</label>
-                    <input 
-                      type="number" 
+                    <input
+                      type="number"
                       placeholder="25"
                       className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
                     />
@@ -486,7 +553,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -494,7 +561,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
           >
             Ready to Maximize Your ROI?
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -502,7 +569,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
           >
             Contact our team to discuss how our innovative services can deliver exceptional returns on your investment
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -521,12 +588,21 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             >
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
+<<<<<<< HEAD
             </a>
           </motion.div>
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
+  )};
+=======
+            </a>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ComprehensivePricingGuide2028;

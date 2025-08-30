@@ -41,7 +41,7 @@ export default function Support() {
             },
             {
                 question: 'Can I change my plan mid-contract?',
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll prorate any billing adjustments and ensure a smooth transition between plans.'
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll prorate your billing adjustments and ensure a smooth transition between plans.'
             }
         ],
         compliance: [
@@ -124,5 +124,4 @@ export default function Support() {
             icon: '👥',
             link: '/community'
         }
-    ];
-}
+    ]}

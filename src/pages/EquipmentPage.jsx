@@ -23,67 +23,7 @@ const EquipmentPage = () => {
   useEffect(() => {
     // Simulate loading
     setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  const EquipmentFilterControls = () => (
-    <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg">
-      <div className="flex items-center gap-2">
-        <Filter className="h-4 w-4 text-muted-foreground"/>
-        <select 
-          value={filterCategory} 
-          onChange={(e) => setFilterCategory(e.target.value)} 
-          className="bg-background border border-border px-3 py-2 rounded"
-        >
-          <option value="">All Categories</option>
-          {categories.map((cat) => (
-            <option key={cat} value={cat}>{cat}</option>
-          ))}
-        </select>
-      </div>
-      
-      <div className="flex items-center gap-2">
-        <SortAsc className="h-4 w-4 text-muted-foreground"/>
-        <select 
-          value={sortBy} 
-          onChange={(e) => setSortBy(e.target.value)} 
-          className="bg-background border border-border px-3 py-2 rounded"
-        >
-          <option value="newest">Newest First</option>
-          <option value="price-low">Price: Low to High</option>
-          <option value="price-high">Price: High to Low</option>
-          <option value="rating">Highest Rated</option>
-        </select>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <span className="text-sm">$</span>
-        <input 
-          type="number" 
-          value={priceRange[0]} 
-          onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])} 
-          className="w-20 bg-background border border-border px-2 py-1 rounded"
-        />
-        <span>-</span>
-        <input 
-          type="number" 
-          value={priceRange[1]} 
-          onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])} 
-          className="w-20 bg-background border border-border px-2 py-1 rounded"
-        />
-      </div>
-
-      <Button 
-        variant={showRecommended ? "default" : "outline"} 
-        size="sm" 
-        onClick={() => setShowRecommended(!showRecommended)}
-      >
-        <Star className="h-4 w-4 mr-1"/>
-        {showRecommended ? "All Equipment" : "Recommended"}
-      </Button>
-    </div>
-  );
+      setLoading(false)}, 1000)}, []);
 
   const EquipmentCard = ({ equipment }) => (
     <Card className="h-full hover:shadow-lg transition-shadow">
@@ -194,7 +134,6 @@ const EquipmentPage = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default EquipmentPage;

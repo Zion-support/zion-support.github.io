@@ -3,32 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { RocketLaunchIcon, PhoneIcon, EnvelopeIcon, CalendarIcon } from '@heroicons/react/24/outline';
 export function CTASection() {
-    const ctaOptions = [
-        {
-            icon: PhoneIcon,
-            title: "Call Us",
-            description: "Speak directly with our experts",
-            action: "+1 302 464 0950",
-            href: "tel:+13024640950",
-            color: "from-zion-cyan to-zion-blue"
-        },
-        {
-            icon: EnvelopeIcon,
-            title: "Email Us",
-            description: "Send us a detailed message",
-            action: "kleber@ziontechgroup.com",
-            href: "mailto:kleber@ziontechgroup.com",
-            color: "from-zion-purple to-zion-cyan"
-        },
-        {
-            icon: CalendarIcon,
-            title: "Schedule a Call",
-            description: "Book a consultation meeting",
-            action: "Book Now",
-            href: "/contact",
-            color: "from-zion-blue to-zion-purple"
-        }
-    ];
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -39,7 +13,15 @@ export function CTASection() {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -56,7 +38,25 @@ export function CTASection() {
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main CTA */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6">
             <RocketLaunchIcon className="w-4 h-4"/>
             Ready to Get Started?
@@ -114,7 +114,34 @@ export function CTASection() {
         </motion.div>
 
         {/* Additional Info */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center mt-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.8,
+  delay: 0.5 
+
+
+
+
+
+
+}} className="text-center mt-16">
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
             <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
             <span className="text-zion-slate-light text-sm">
@@ -123,5 +150,4 @@ export function CTASection() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

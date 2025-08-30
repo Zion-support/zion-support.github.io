@@ -1,16 +1,17 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
 export default function ServicesOverview() {
+<<<<<<< HEAD
     const serviceCategories = [
         {
             name: "AI & Machine Learning",
             description: "Cutting-edge artificial intelligence solutions for business transformation",
             icon: Brain,
             color: "from-purple-600 to-blue-600",
-            services: [
+            services[
                 {
                     name: "AI Strategy & Consulting",
                     description: "Strategic guidance on implementing AI solutions",
@@ -36,7 +37,7 @@ export default function ServicesOverview() {
             description: "Transform raw data into actionable business intelligence",
             icon: Database,
             color: "from-blue-600 to-indigo-600",
-            services: [
+            services[
                 {
                     name: "Business Intelligence & Reporting",
                     description: "Interactive dashboards and automated reporting",
@@ -62,7 +63,7 @@ export default function ServicesOverview() {
             description: "Connected ecosystems and real-time edge processing",
             icon: Wifi,
             color: "from-green-600 to-emerald-600",
-            services: [
+            services[
                 {
                     name: "IoT Device Management Platform",
                     description: "Comprehensive IoT device management",
@@ -88,7 +89,7 @@ export default function ServicesOverview() {
             description: "Decentralized applications and blockchain solutions",
             icon: LinkIcon,
             color: "from-purple-600 to-indigo-600",
-            services: [
+            services[
                 {
                     name: "Smart Contract Development",
                     description: "Secure, audited smart contracts",
@@ -114,7 +115,7 @@ export default function ServicesOverview() {
             description: "Modern software delivery and cloud infrastructure",
             icon: Cloud,
             color: "from-orange-600 to-red-600",
-            services: [
+            services[
                 {
                     name: "Cloud Migration & Strategy",
                     description: "Multi-cloud strategy and migration",
@@ -140,7 +141,7 @@ export default function ServicesOverview() {
             description: "Advanced security solutions and threat protection",
             icon: Shield,
             color: "from-red-600 to-pink-600",
-            services: [
+            services[
                 {
                     name: "Security Assessment & Auditing",
                     description: "Comprehensive security evaluations",
@@ -162,6 +163,8 @@ export default function ServicesOverview() {
             ]
         }
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const stats = [
         { label: "Services Offered", value: "50+", icon: Target },
         { label: "Industries Served", value: "15+", icon: Users },
@@ -178,7 +181,15 @@ export default function ServicesOverview() {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -334,5 +345,4 @@ export default function ServicesOverview() {
           </motion.div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,21 +12,28 @@ import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 // Mock user data
 const mockUser = {
-    id: "user1",
+  id: "user1",
     name: "Alex Johnson",
     avatar: "https://i.pravatar.cc/150?img=3",
     role: "Verified Talent",
     reputation: 325,
     postCount: 14,
     replyCount: 47,
-    badges: [
+    badges[
         {
             id: "badge1",
             name: "Answer Hero",
             description: "Provided 10 accepted answers",
             icon: "Award",
-            color: "#10B981"
-        },
+  color: "#10B981"
+        
+
+
+
+
+
+
+},
         {
             id: "badge2",
             name: "Top Contributor",
@@ -56,7 +63,7 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "ai-tools",
-        tags: ["machine-learning", "fine-tuning", "gpt"],
+        tags["machine-learning", "fine-tuning", "gpt"],
         createdAt: "2025-04-01T12:00:00Z",
         updatedAt: "2025-04-01T12:00:00Z",
         upvotes: 48,
@@ -74,7 +81,7 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "ai-tools",
-        tags: ["prompts", "techniques", "optimization"],
+        tags["prompts", "techniques", "optimization"],
         createdAt: "2025-03-20T14:25:00Z",
         updatedAt: "2025-03-20T14:25:00Z",
         upvotes: 36,
@@ -90,7 +97,7 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "project-help",
-        tags: ["monitoring", "production", "devops"],
+        tags["monitoring", "production", "devops"],
         createdAt: "2025-03-12T09:30:00Z",
         updatedAt: "2025-03-12T09:30:00Z",
         upvotes: 24,
@@ -108,24 +115,40 @@ export default function CommunityProfilePage() {
         // For now, we'll just use the mock data
         setUser(mockUser);
         setPosts(userPosts);
-        setIsLoading(false);
-    }, [userId]);
+        setIsLoading(false)}, [userId]);
     if (isLoading) {
         return (<div className="container py-8">
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
-        </div>);
-    }
+        </div>)}
     if (!user) {
         return (<div className="container py-8">
           <h1>User not found</h1>
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
+<<<<<<< HEAD
+        </div>)}
+    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
+  `community, forum, profile, user profile,
+  ${user.name
+
+}`}/>
+=======
         </div>);
     }
-    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
+    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
+  `community, forum, profile, user profile,
+  ${user.name
+
+
+
+
+
+
+}`}/>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         ,
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -209,7 +232,7 @@ export default function CommunityProfilePage() {
                     {posts.map((post) => (<PostCard key={post.id} post={post}/>))}
                   </div>) : (<Card>
                     <CardContent className="p-6 text-center">
-                      <p className="text-muted-foreground">This user hasn't created any posts yet.</p>
+                      <p className="text-muted-foreground">This user hasn't created  posts yet.</p>
                     </CardContent>
                   </Card>)}
               </TabsContent>
@@ -267,5 +290,4 @@ export default function CommunityProfilePage() {
             </Tabs>
           </div>
         </div>
-      </div>);
-}
+      </div>)}

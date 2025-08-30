@@ -1,76 +1,79 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 export default function AIBusinessSolutions() {
+<<<<<<< HEAD
     const businessSolutions = [
         {
             category: 'Marketing & Sales',
-            solutions: [
+            solutions[
                 {
                     name: 'AI Marketing Automation',
                     description: 'Automate marketing campaigns with intelligent targeting and optimization',
-                    features: ['Customer segmentation', 'Predictive analytics', 'Campaign optimization', 'ROI tracking'],
+                    features['Customer segmentation', 'Predictive analytics', 'Campaign optimization', 'ROI tracking'],
                     icon: '📈'
                 },
                 {
                     name: 'AI Sales Intelligence',
                     description: 'Enhance sales performance with AI-powered insights and automation',
-                    features: ['Lead scoring', 'Sales forecasting', 'Pipeline optimization', 'Customer insights'],
+                    features['Lead scoring', 'Sales forecasting', 'Pipeline optimization', 'Customer insights'],
                     icon: '💼'
                 }
             ]
         },
         {
             category: 'Operations & Supply Chain',
-            solutions: [
+            solutions[
                 {
                     name: 'AI Supply Chain Optimization',
                     description: 'Optimize supply chain operations with predictive analytics',
-                    features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Risk management'],
+                    features['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Risk management'],
                     icon: '🚚'
                 },
                 {
                     name: 'AI Process Automation',
                     description: 'Streamline business processes with intelligent automation',
-                    features: ['Workflow automation', 'Document processing', 'Quality control', 'Performance monitoring'],
+                    features['Workflow automation', 'Document processing', 'Quality control', 'Performance monitoring'],
                     icon: '⚙️'
                 }
             ]
         },
         {
             category: 'Finance & Risk',
-            solutions: [
+            solutions[
                 {
                     name: 'AI Financial Analytics',
                     description: 'Advanced financial analysis and risk assessment',
-                    features: ['Risk modeling', 'Fraud detection', 'Investment analysis', 'Regulatory compliance'],
+                    features['Risk modeling', 'Fraud detection', 'Investment analysis', 'Regulatory compliance'],
                     icon: '💰'
                 },
                 {
                     name: 'AI Credit Scoring',
                     description: 'Intelligent credit assessment and lending decisions',
-                    features: ['Credit risk analysis', 'Alternative data', 'Real-time scoring', 'Portfolio management'],
+                    features['Credit risk analysis', 'Alternative data', 'Real-time scoring', 'Portfolio management'],
                     icon: '🏦'
                 }
             ]
         },
         {
             category: 'Customer Experience',
-            solutions: [
+            solutions[
                 {
                     name: 'AI Customer Service',
                     description: '24/7 intelligent customer support and engagement',
-                    features: ['Chatbots', 'Voice assistants', 'Sentiment analysis', 'Personalized support'],
+                    features['Chatbots', 'Voice assistants', 'Sentiment analysis', 'Personalized support'],
                     icon: '🤖'
                 },
                 {
                     name: 'AI Personalization',
                     description: 'Deliver personalized experiences across all touchpoints',
-                    features: ['Recommendation engines', 'Dynamic pricing', 'Content personalization', 'Behavioral analysis'],
+                    features['Recommendation engines', 'Dynamic pricing', 'Content personalization', 'Behavioral analysis'],
                     icon: '🎯'
                 }
             ]
         }
     ];
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const benefits = [
         {
             title: 'Increased Efficiency',
@@ -100,27 +103,27 @@ export default function AIBusinessSolutions() {
     const industries = [
         {
             name: 'Healthcare',
-            applications: ['Patient diagnosis', 'Drug discovery', 'Medical imaging', 'Predictive healthcare']
+            applications['Patient diagnosis', 'Drug discovery', 'Medical imaging', 'Predictive healthcare']
         },
         {
             name: 'Manufacturing',
-            applications: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning']
+            applications['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning']
         },
         {
             name: 'Retail',
-            applications: ['Inventory management', 'Customer segmentation', 'Price optimization', 'Demand forecasting']
+            applications['Inventory management', 'Customer segmentation', 'Price optimization', 'Demand forecasting']
         },
         {
             name: 'Financial Services',
-            applications: ['Risk assessment', 'Fraud detection', 'Portfolio management', 'Customer service']
+            applications['Risk assessment', 'Fraud detection', 'Portfolio management', 'Customer service']
         },
         {
             name: 'Transportation',
-            applications: ['Route optimization', 'Fleet management', 'Predictive maintenance', 'Demand forecasting']
+            applications['Route optimization', 'Fleet management', 'Predictive maintenance', 'Demand forecasting']
         },
         {
             name: 'Energy',
-            applications: ['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis']
+            applications['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis']
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
@@ -252,5 +255,4 @@ export default function AIBusinessSolutions() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

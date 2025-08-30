@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -27,15 +27,13 @@ export default function ProjectRoom() {
         });
         // Switch to video tab if not already there
         if (activeTab !== 'video') {
-            setActiveTab('video');
-        }
+            setActiveTab('video')}
     };
     const endVideoCall = () => {
         setIsInCall(false);
         toast.info("Video call ended", {
             description: "Call duration and participants will be logged"
-        });
-    };
+        })};
     const simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
@@ -46,8 +44,7 @@ export default function ProjectRoom() {
         const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!callParticipants.find(p => p.id === randomUser.id)) {
             setCallParticipants(prev => [...prev, randomUser]);
-            toast(`${randomUser.name} joined the call`);
-        }
+            toast(`${randomUser.name} joined the call`)}
     };
     return (<>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
@@ -201,5 +198,4 @@ export default function ProjectRoom() {
         </Tabs>
       </main>
       
-    </>);
-}
+    </>)}

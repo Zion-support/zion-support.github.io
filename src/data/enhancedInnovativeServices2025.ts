@@ -1,10 +1,11 @@
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
-  address: string;
-}
+  address: string}
 export interface MicroSaasService {
+
   id: number;
   name: string;
   category: string;
@@ -24,9 +25,9 @@ export interface MicroSaasService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-  trialPeriod: string;
-}
+  trialPeriod: string}
 export interface ITService {
+
   id: number;
   name: string;
   category: string;
@@ -43,9 +44,9 @@ export interface ITService {
   sla: string;
   certifications: string[];
   deliveryTime: string;
-  support: string;
-}
+  support: string}
 export interface AIService {
+
   id: number;
   name: string;
   category: string;
@@ -64,8 +65,7 @@ export interface AIService {
   trainingData: string;
   compliance: string[];
   aiScore: number;
-  useCases: string[];
-}
+  useCases: string[]}
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
@@ -77,7 +77,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 2999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Quantum-inspired neural networks",
       "Hybrid classical-quantum algorithms",
       "1000x faster ML training",
@@ -87,18 +87,18 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Quantum-safe cryptography",
       "Enterprise-grade security"
     ],
-    benefits: [
+    benefits[
       "Revolutionary speed improvements in ML",
       "Quantum advantage for complex problems",
       "Future-proof quantum-ready architecture",
       "Competitive edge in AI development",
       "Reduced computational costs"
     ],
-    targetAudience: ["AI research labs", "Pharmaceutical companies", "Financial institutions", "Government agencies"],
+    targetAudience["AI research labs", "Pharmaceutical companies", "Financial institutions", "Government agencies"],
     marketPrice: "$2,999-5,999/month",
     website: "https://ziontechgroup.com/quantum-ai-processor",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Quantum AI", "Machine Learning", "Quantum Computing", "AI Acceleration"],
+    tags["Quantum AI", "Machine Learning", "Quantum Computing", "AI Acceleration"],
     aiScore: 98,
     rating: 4.9,
     reviewCount: 89,
@@ -108,16 +108,16 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-15T10:00:00.000Z",
-    technologyStack: ["Quantum Algorithms", "TensorFlow", "PyTorch", "Qiskit", "Cirq"],
-    compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
-    integrations: ["AWS Quantum", "Azure Quantum", "Google Quantum", "IBM Quantum"],
-    useCases: ["Drug discovery", "Financial modeling", "Climate prediction", "Logistics optimization"],
-    roiMetrics: ["1000x faster ML training", "90% cost reduction", "3x faster time-to-market"]
+    technologyStack["Quantum Algorithms", "TensorFlow", "PyTorch", "Qiskit", "Cirq"],
+    compliance["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
+    integrations["AWS Quantum", "Azure Quantum", "Google Quantum", "IBM Quantum"],
+    useCases["Drug discovery", "Financial modeling", "Climate prediction", "Logistics optimization"],
+    roiMetrics["1000x faster ML training", "90% cost reduction", "3x faster time-to-market"]
   },
   // Blockchain & Web3 Solutions
   {
@@ -129,7 +129,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 199,
     pricingModel: "monthly",
     userLimit: "Up to 100 users",
-    features: [
+    features[
       "Self-sovereign identity management",
       "Zero-knowledge proof verification",
       "Multi-chain support (Ethereum, Polygon, Solana)",
@@ -139,18 +139,18 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Privacy-preserving authentication",
       "Regulatory compliance tools"
     ],
-    benefits: [
+    benefits[
       "Eliminate password-based attacks",
       "Reduce identity fraud by 99%",
       "Comply with privacy regulations",
       "User-controlled data ownership",
       "Interoperable across platforms"
     ],
-    targetAudience: ["Financial institutions", "Healthcare providers", "Government agencies", "E-commerce platforms"],
+    targetAudience["Financial institutions", "Healthcare providers", "Government agencies", "E-commerce platforms"],
     marketPrice: "$199-499/month",
     website: "https://ziontechgroup.com/decentralized-identity",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Blockchain", "Web3", "Digital Identity", "Zero-Knowledge Proofs"],
+    tags["Blockchain", "Web3", "Digital Identity", "Zero-Knowledge Proofs"],
     aiScore: 92,
     rating: 4.8,
     reviewCount: 234,
@@ -163,13 +163,13 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-15T10:00:00.000Z",
-    technologyStack: ["Ethereum", "Polygon", "Solana", "IPFS", "Zero-Knowledge Proofs"],
-    compliance: ["GDPR", "CCPA", "eIDAS", "W3C DID Standard"],
-    integrations: ["MetaMask", "WalletConnect", "Ledger", "Trezor"],
-    useCases: ["KYC/AML compliance", "Healthcare records", "Academic credentials", "Professional certifications"],
-    roiMetrics: ["99% fraud reduction", "80% compliance cost savings", "60% faster onboarding"]
+    technologyStack["Ethereum", "Polygon", "Solana", "IPFS", "Zero-Knowledge Proofs"],
+    compliance["GDPR", "CCPA", "eIDAS", "W3C DID Standard"],
+    integrations["MetaMask", "WalletConnect", "Ledger", "Trezor"],
+    useCases["KYC/AML compliance", "Healthcare records", "Academic credentials", "Professional certifications"],
+    roiMetrics["99% fraud reduction", "80% compliance cost savings", "60% faster onboarding"]
   },
   // IoT & Edge Computing Services
   {
@@ -181,7 +181,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Real-time IoT sensor monitoring",
       "Edge computing processing",
       "Predictive maintenance algorithms",
@@ -191,18 +191,18 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Waste management optimization",
       "Emergency response automation"
     ],
-    benefits: [
+    benefits[
       "Reduce urban infrastructure costs by 30%",
       "Improve citizen quality of life",
       "Optimize resource utilization",
       "Enhance public safety",
       "Sustainable city development"
     ],
-    targetAudience: ["City governments", "Urban planners", "Infrastructure companies", "Utility providers"],
+    targetAudience["City governments", "Urban planners", "Infrastructure companies", "Utility providers"],
     marketPrice: "$899-2,499/month",
     website: "https://ziontechgroup.com/smart-city-iot",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["IoT", "Edge Computing", "Smart Cities", "Urban Planning"],
+    tags["IoT", "Edge Computing", "Smart Cities", "Urban Planning"],
     aiScore: 94,
     rating: 4.7,
     reviewCount: 156,
@@ -215,13 +215,13 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-15T10:00:00.000Z",
-    technologyStack: ["MQTT", "CoAP", "LoRaWAN", "5G", "Edge Computing"],
-    compliance: ["ISO 27001", "NIST Cybersecurity Framework", "GDPR"],
-    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
-    useCases: ["Traffic management", "Energy optimization", "Public safety", "Environmental monitoring"],
-    roiMetrics: ["30% infrastructure cost reduction", "25% energy savings", "40% faster emergency response"]
+    technologyStack["MQTT", "CoAP", "LoRaWAN", "5G", "Edge Computing"],
+    compliance["ISO 27001", "NIST Cybersecurity Framework", "GDPR"],
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
+    useCases["Traffic management", "Energy optimization", "Public safety", "Environmental monitoring"],
+    roiMetrics["30% infrastructure cost reduction", "25% energy savings", "40% faster emergency response"]
   },
   // Advanced Cybersecurity Solutions
   {
@@ -233,7 +233,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 599,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered threat hunting",
       "Behavioral analysis engine",
       "Automated incident response",
@@ -243,18 +243,18 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Compliance reporting",
       "24/7 SOC monitoring"
     ],
-    benefits: [
+    benefits[
       "Detect threats 10x faster than traditional methods",
       "Reduce false positives by 80%",
       "Automated response reduces manual effort",
       "Proactive threat prevention",
       "Comprehensive compliance coverage"
     ],
-    targetAudience: ["Enterprise organizations", "Financial institutions", "Healthcare providers", "Government agencies"],
+    targetAudience["Enterprise organizations", "Financial institutions", "Healthcare providers", "Government agencies"],
     marketPrice: "$599-1,499/month",
     website: "https://ziontechgroup.com/ai-threat-hunting",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Cybersecurity", "AI", "Threat Detection", "Incident Response"],
+    tags["Cybersecurity", "AI", "Threat Detection", "Incident Response"],
     aiScore: 96,
     rating: 4.9,
     reviewCount: 312,
@@ -267,13 +267,13 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-15T10:00:00.000Z",
-    technologyStack: ["Machine Learning", "Deep Learning", "NLP", "Graph Analytics", "SIEM"],
-    compliance: ["ISO 27001", "SOC 2", "NIST", "GDPR", "HIPAA"],
-    integrations: ["Splunk", "QRadar", "ELK Stack", "CrowdStrike", "SentinelOne"],
-    useCases: ["Enterprise security", "Financial fraud detection", "Healthcare data protection", "Government security"],
-    roiMetrics: ["10x faster threat detection", "80% false positive reduction", "60% incident response time improvement"]
+    technologyStack["Machine Learning", "Deep Learning", "NLP", "Graph Analytics", "SIEM"],
+    compliance["ISO 27001", "SOC 2", "NIST", "GDPR", "HIPAA"],
+    integrations["Splunk", "QRadar", "ELK Stack", "CrowdStrike", "SentinelOne"],
+    useCases["Enterprise security", "Financial fraud detection", "Healthcare data protection", "Government security"],
+    roiMetrics["10x faster threat detection", "80% false positive reduction", "60% incident response time improvement"]
   },
   // Green Tech & Sustainability Services
   {
@@ -285,7 +285,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 149,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Real-time carbon footprint tracking",
       "AI-powered reduction recommendations",
       "Sustainability reporting dashboard",
@@ -295,18 +295,18 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Employee engagement features",
       "ROI impact analysis"
     ],
-    benefits: [
+    benefits[
       "Reduce carbon footprint by 25-40%",
       "Comply with environmental regulations",
       "Improve brand reputation",
       "Reduce operational costs",
       "Attract environmentally conscious customers"
     ],
-    targetAudience: ["Manufacturing companies", "Retail chains", "Logistics companies", "Corporate offices"],
+    targetAudience["Manufacturing companies", "Retail chains", "Logistics companies", "Corporate offices"],
     marketPrice: "$149-399/month",
     website: "https://ziontechgroup.com/carbon-footprint-tracker",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Sustainability", "Carbon Management", "Green Tech", "Environmental Compliance"],
+    tags["Sustainability", "Carbon Management", "Green Tech", "Environmental Compliance"],
     aiScore: 89,
     rating: 4.6,
     reviewCount: 178,
@@ -319,13 +319,13 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-15T10:00:00.000Z",
-    technologyStack: ["IoT Sensors", "Machine Learning", "Blockchain", "Cloud Computing", "Analytics"],
-    compliance: ["ISO 14001", "GHG Protocol", "CDP", "GRI Standards"],
-    integrations: ["ERP Systems", "Supply Chain Platforms", "Energy Management Systems"],
-    useCases: ["Manufacturing sustainability", "Retail carbon reduction", "Logistics optimization", "Office sustainability"],
-    roiMetrics: ["25-40% carbon footprint reduction", "15% operational cost savings", "20% brand value increase"]
+    technologyStack["IoT Sensors", "Machine Learning", "Blockchain", "Cloud Computing", "Analytics"],
+    compliance["ISO 14001", "GHG Protocol", "CDP", "GRI Standards"],
+    integrations["ERP Systems", "Supply Chain Platforms", "Energy Management Systems"],
+    useCases["Manufacturing sustainability", "Retail carbon reduction", "Logistics optimization", "Office sustainability"],
+    roiMetrics["25-40% carbon footprint reduction", "15% operational cost savings", "20% brand value increase"]
   },
   // Healthcare Tech Solutions
   {
@@ -337,7 +337,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 799,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered disease detection",
       "Medical imaging analysis (X-ray, MRI, CT)",
       "Early cancer detection algorithms",
@@ -347,18 +347,18 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "HIPAA-compliant platform",
       "Integration with EMR systems"
     ],
-    benefits: [
+    benefits[
       "Improve diagnostic accuracy by 30%",
       "Reduce diagnostic time by 50%",
       "Early detection saves lives",
       "Reduce healthcare costs",
       "Support healthcare professionals"
     ],
-    targetAudience: ["Hospitals", "Medical clinics", "Radiology centers", "Research institutions"],
+    targetAudience["Hospitals", "Medical clinics", "Radiology centers", "Research institutions"],
     marketPrice: "$799-1,999/month",
     website: "https://ziontechgroup.com/ai-medical-diagnosis",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Healthcare AI", "Medical Diagnostics", "Medical Imaging", "Clinical Decision Support"],
+    tags["Healthcare AI", "Medical Diagnostics", "Medical Imaging", "Clinical Decision Support"],
     aiScore: 97,
     rating: 4.9,
     reviewCount: 267,
@@ -371,13 +371,13 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-15T10:00:00.000Z",
-    technologyStack: ["Deep Learning", "Computer Vision", "NLP", "TensorFlow", "PyTorch"],
-    compliance: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "GDPR"],
-    integrations: ["Epic", "Cerner", "Allscripts", "PACS Systems"],
-    useCases: ["Radiology diagnostics", "Pathology analysis", "Cardiology screening", "Oncology detection"],
-    roiMetrics: ["30% diagnostic accuracy improvement", "50% faster diagnosis", "25% healthcare cost reduction"]
+    technologyStack["Deep Learning", "Computer Vision", "NLP", "TensorFlow", "PyTorch"],
+    compliance["HIPAA", "FDA", "CE Mark", "ISO 13485", "GDPR"],
+    integrations["Epic", "Cerner", "Allscripts", "PACS Systems"],
+    useCases["Radiology diagnostics", "Pathology analysis", "Cardiology screening", "Oncology detection"],
+    roiMetrics["30% diagnostic accuracy improvement", "50% faster diagnosis", "25% healthcare cost reduction"]
   },
   // FinTech & RegTech Services
   {
@@ -389,7 +389,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 449,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Real-time transaction monitoring",
       "AI-powered fraud detection",
       "Behavioral analysis engine",
@@ -399,18 +399,18 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Automated alert system",
       "Fraud analytics dashboard"
     ],
-    benefits: [
+    benefits[
       "Reduce fraud losses by 90%",
       "Real-time fraud prevention",
       "Comply with financial regulations",
       "Improve customer trust",
       "Reduce operational costs"
     ],
-    targetAudience: ["Banks", "Credit card companies", "Payment processors", "E-commerce platforms"],
+    targetAudience["Banks", "Credit card companies", "Payment processors", "E-commerce platforms"],
     marketPrice: "$449-1,199/month",
     website: "https://ziontechgroup.com/ai-fraud-detection",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["FinTech", "Fraud Detection", "AI", "Regulatory Compliance"],
+    tags["FinTech", "Fraud Detection", "AI", "Regulatory Compliance"],
     aiScore: 95,
     rating: 4.8,
     reviewCount: 423,
@@ -423,13 +423,13 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-15T10:00:00.000Z",
-    technologyStack: ["Machine Learning", "Deep Learning", "Graph Analytics", "Real-time Processing", "Cloud Computing"],
-    compliance: ["PCI DSS", "SOX", "GLBA", "GDPR", "CCPA"],
-    integrations: ["Stripe", "PayPal", "Square", "Banking APIs", "Payment Gateways"],
-    useCases: ["Credit card fraud", "Banking fraud", "E-commerce fraud", "Insurance fraud"],
-    roiMetrics: ["90% fraud loss reduction", "99.9% fraud detection accuracy", "60% compliance cost savings"]
+    technologyStack["Machine Learning", "Deep Learning", "Graph Analytics", "Real-time Processing", "Cloud Computing"],
+    compliance["PCI DSS", "SOX", "GLBA", "GDPR", "CCPA"],
+    integrations["Stripe", "PayPal", "Square", "Banking APIs", "Payment Gateways"],
+    useCases["Credit card fraud", "Banking fraud", "E-commerce fraud", "Insurance fraud"],
+    roiMetrics["90% fraud loss reduction", "99.9% fraud detection accuracy", "60% compliance cost savings"]
   },
   // AR/VR & Metaverse Solutions
   {
@@ -441,7 +441,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 399,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AR content creation tools",
       "3D model integration",
       "Real-time collaboration",
@@ -451,18 +451,18 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Multi-device support",
       "Enterprise security features"
     ],
-    benefits: [
+    benefits[
       "Reduce training costs by 40%",
       "Improve maintenance efficiency by 30%",
       "Enable remote collaboration",
       "Enhance customer engagement",
       "Increase productivity"
     ],
-    targetAudience: ["Manufacturing companies", "Training organizations", "Design firms", "Service companies"],
+    targetAudience["Manufacturing companies", "Training organizations", "Design firms", "Service companies"],
     marketPrice: "$399-999/month",
     website: "https://ziontechgroup.com/enterprise-ar-platform",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Augmented Reality", "Enterprise", "Training", "Collaboration"],
+    tags["Augmented Reality", "Enterprise", "Training", "Collaboration"],
     aiScore: 91,
     rating: 4.7,
     reviewCount: 189,
@@ -475,13 +475,13 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-01-15T10:00:00.000Z",
-    technologyStack: ["Unity", "Unreal Engine", "ARKit", "ARCore", "WebXR"],
-    compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
-    integrations: ["Microsoft HoloLens", "Magic Leap", "Oculus", "HTC Vive"],
-    useCases: ["Employee training", "Equipment maintenance", "Design collaboration", "Remote assistance"],
-    roiMetrics: ["40% training cost reduction", "30% maintenance efficiency improvement", "50% collaboration enhancement"]
+    technologyStack["Unity", "Unreal Engine", "ARKit", "ARCore", "WebXR"],
+    compliance["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
+    integrations["Microsoft HoloLens", "Magic Leap", "Oculus", "HTC Vive"],
+    useCases["Employee training", "Equipment maintenance", "Design collaboration", "Remote assistance"],
+    roiMetrics["40% training cost reduction", "30% maintenance efficiency improvement", "50% collaboration enhancement"]
   },
   // Advanced Analytics & Business Intelligence
   {
@@ -493,7 +493,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 299,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Machine learning algorithms",
       "Predictive modeling tools",
       "Real-time data processing",
@@ -504,7 +504,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Advanced reporting",
       "Mobile optimization"
     ],
-    benefits: [
+    benefits[
       "50% faster decision making",
       "Predictive insights",
       "Real-time monitoring",
@@ -512,8 +512,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Competitive advantage",
       "Scalable analytics"
     ],
-    targetAudience: ["Enterprise", "Data analysts", "Business leaders", "Consultants"],
-    tags: ["Analytics", "Business Intelligence", "Quantum", "AI", "Predictive"],
+    targetAudience["Enterprise", "Data analysts", "Business leaders", "Consultants"],
+    tags["Analytics", "Business Intelligence", "Quantum", "AI", "Predictive"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -521,10 +521,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$199-599/month",
-    competitors: ["Tableau", "Power BI", "Looker"],
+    competitors["Tableau", "Power BI", "Looker"],
     roi: "400% within 8 months",
     setupTime: "2 hours",
-    integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure"],
+    integrations["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure"],
     freeTier: false,
     trialPeriod: "30 days"
   },
@@ -537,7 +537,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 299,
     pricingModel: "monthly",
     userLimit: "Unlimited users",
-    features: [
+    features[
       "AI threat detection",
       "Automated incident response",
       "Vulnerability scanning",
@@ -547,7 +547,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Penetration testing",
       "Security training"
     ],
-    benefits: [
+    benefits[
       "99.9% threat detection",
       "24/7 protection",
       "Compliance assurance",
@@ -555,8 +555,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Risk mitigation",
       "Peace of mind"
     ],
-    targetAudience: ["Enterprises", "Financial institutions", "Healthcare", "Government"],
-    tags: ["Cybersecurity", "AI", "Threat Detection", "Compliance", "Automation"],
+    targetAudience["Enterprises", "Financial institutions", "Healthcare", "Government"],
+    tags["Cybersecurity", "AI", "Threat Detection", "Compliance", "Automation"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -564,10 +564,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$299-899/month",
-    competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"],
+    competitors["CrowdStrike", "SentinelOne", "Carbon Black"],
     roi: "500% within 6 months",
     setupTime: "4 hours",
-    integrations: ["SIEM systems", "Firewalls", "EDR", "Cloud platforms"],
+    integrations["SIEM systems", "Firewalls", "EDR", "Cloud platforms"],
     freeTier: false,
     trialPeriod: "14 days"
   },
@@ -580,7 +580,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 149,
     pricingModel: "monthly",
     userLimit: "Up to 50 users",
-    features: [
+    features[
       "Multi-cloud management",
       "Cost optimization",
       "Automated scaling",
@@ -590,7 +590,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Disaster recovery",
       "Resource optimization"
     ],
-    benefits: [
+    benefits[
       "30% cost reduction",
       "Improved performance",
       "Automated operations",
@@ -598,8 +598,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Scalability",
       "Efficiency gains"
     ],
-    targetAudience: ["DevOps teams", "Cloud architects", "IT managers", "Startups"],
-    tags: ["Cloud", "DevOps", "Automation", "Cost Management", "Monitoring"],
+    targetAudience["DevOps teams", "Cloud architects", "IT managers", "Startups"],
+    tags["Cloud", "DevOps", "Automation", "Cost Management", "Monitoring"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -607,10 +607,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$149-449/month",
-    competitors: ["Terraform", "Ansible", "Chef"],
+    competitors["Terraform", "Ansible", "Chef"],
     roi: "350% within 5 months",
     setupTime: "3 hours",
-    integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
+    integrations["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
     freeTier: true,
     trialPeriod: "21 days"
   },
@@ -623,7 +623,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 399,
     pricingModel: "monthly",
     userLimit: "Unlimited users",
-    features: [
+    features[
       "Data governance",
       "AI-powered analytics",
       "Compliance automation",
@@ -633,7 +633,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Privacy protection",
       "Real-time processing"
     ],
-    benefits: [
+    benefits[
       "Improved data quality",
       "Compliance assurance",
       "Better insights",
@@ -641,8 +641,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Operational efficiency",
       "Strategic advantage"
     ],
-    targetAudience: ["Data scientists", "Compliance officers", "IT leaders", "Analysts"],
-    tags: ["Data Management", "Governance", "Compliance", "AI", "Analytics"],
+    targetAudience["Data scientists", "Compliance officers", "IT leaders", "Analysts"],
+    tags["Data Management", "Governance", "Compliance", "AI", "Analytics"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -650,10 +650,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$399-999/month",
-    competitors: ["Informatica", "Talend", "Alteryx"],
+    competitors["Informatica", "Talend", "Alteryx"],
     roi: "450% within 7 months",
     setupTime: "6 hours",
-    integrations: ["Databases", "Cloud platforms", "BI tools", "ETL systems"],
+    integrations["Databases", "Cloud platforms", "BI tools", "ETL systems"],
     freeTier: false,
     trialPeriod: "30 days"
   },
@@ -666,7 +666,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 79,
     pricingModel: "monthly",
     userLimit: "Up to 20 users",
-    features: [
+    features[
       "Drag-and-drop AI builder",
       "Pre-built models",
       "Custom training",
@@ -676,7 +676,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Auto-scaling",
       "Integration tools"
     ],
-    benefits: [
+    benefits[
       "Faster AI development",
       "No coding required",
       "Cost-effective",
@@ -684,8 +684,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Quick deployment",
       "Custom solutions"
     ],
-    targetAudience: ["Business users", "Data scientists", "Developers", "Consultants"],
-    tags: ["AI", "No-code", "Machine Learning", "Development", "Automation"],
+    targetAudience["Business users", "Data scientists", "Developers", "Consultants"],
+    tags["AI", "No-code", "Machine Learning", "Development", "Automation"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -693,10 +693,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$79-299/month",
-    competitors: ["DataRobot", "H2O.ai", "RapidMiner"],
+    competitors["DataRobot", "H2O.ai", "RapidMiner"],
     roi: "300% within 4 months",
     setupTime: "1 hour",
-    integrations: ["Cloud platforms", "Databases", "APIs", "Webhooks"],
+    integrations["Cloud platforms", "Databases", "APIs", "Webhooks"],
     freeTier: true,
     trialPeriod: "14 days"
   },
@@ -709,7 +709,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 89,
     pricingModel: "monthly",
     userLimit: "Up to 200 users",
-    features: [
+    features[
       "Real-time carbon tracking",
       "AI-powered sustainability insights",
       "ESG reporting automation",
@@ -719,7 +719,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Sustainability scoring",
       "Green certification support"
     ],
-    benefits: [
+    benefits[
       "Meet ESG compliance requirements",
       "Reduce carbon footprint",
       "Improve brand reputation",
@@ -727,8 +727,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Stakeholder transparency",
       "Competitive advantage"
     ],
-    targetAudience: ["Corporations", "Manufacturing", "Retail", "Government", "NGOs"],
-    tags: ["Sustainability", "ESG", "Carbon Tracking", "AI", "Compliance"],
+    targetAudience["Corporations", "Manufacturing", "Retail", "Government", "NGOs"],
+    tags["Sustainability", "ESG", "Carbon Tracking", "AI", "Compliance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -736,10 +736,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$89-299/month",
-    competitors: ["Watershed", "Normative", "Persefoni"],
+    competitors["Watershed", "Normative", "Persefoni"],
     roi: "300% within 6 months",
     setupTime: "2 hours",
-    integrations: ["ERP systems", "IoT sensors", "Cloud platforms", "Sustainability databases"],
+    integrations["ERP systems", "IoT sensors", "Cloud platforms", "Sustainability databases"],
     freeTier: true,
     trialPeriod: "30 days"
   },
@@ -752,7 +752,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 129,
     pricingModel: "monthly",
     userLimit: "Up to 100 devices",
-    features: [
+    features[
       "Edge AI processing",
       "Real-time analytics",
       "IoT device management",
@@ -762,7 +762,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Data synchronization",
       "Custom AI models"
     ],
-    benefits: [
+    benefits[
       "Reduced latency",
       "Lower bandwidth costs",
       "Real-time insights",
@@ -770,8 +770,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Scalable IoT deployment",
       "Cost optimization"
     ],
-    targetAudience: ["Manufacturing", "Smart cities", "Energy companies", "Transportation", "Healthcare"],
-    tags: ["IoT", "Edge Computing", "AI", "Real-time Analytics", "Predictive Maintenance"],
+    targetAudience["Manufacturing", "Smart cities", "Energy companies", "Transportation", "Healthcare"],
+    tags["IoT", "Edge Computing", "AI", "Real-time Analytics", "Predictive Maintenance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -779,10 +779,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$129-399/month",
-    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+    competitors["AWS IoT", "Azure IoT", "Google Cloud IoT"],
     roi: "400% within 8 months",
     setupTime: "4 hours",
-    integrations: ["MQTT", "CoAP", "HTTP", "Cloud platforms", "Database systems"],
+    integrations["MQTT", "CoAP", "HTTP", "Cloud platforms", "Database systems"],
     freeTier: true,
     trialPeriod: "21 days"
   },
@@ -795,7 +795,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 0.01,
     pricingModel: "per-transaction",
     userLimit: "Unlimited transactions",
-    features: [
+    features[
       "Blockchain verification",
       "Supply chain mapping",
       "Product authentication",
@@ -805,7 +805,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Audit trails",
       "API integration"
     ],
-    benefits: [
+    benefits[
       "Enhanced transparency",
       "Reduced fraud",
       "Improved compliance",
@@ -813,8 +813,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Cost reduction",
       "Operational efficiency"
     ],
-    targetAudience: ["Manufacturing", "Retail", "Food & Beverage", "Pharmaceuticals", "Luxury goods"],
-    tags: ["Blockchain", "Supply Chain", "Transparency", "Smart Contracts", "Traceability"],
+    targetAudience["Manufacturing", "Retail", "Food & Beverage", "Pharmaceuticals", "Luxury goods"],
+    tags["Blockchain", "Supply Chain", "Transparency", "Smart Contracts", "Traceability"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -822,10 +822,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$0.01-0.05 per transaction",
-    competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
+    competitors["IBM Food Trust", "VeChain", "OriginTrail"],
     roi: "500% within 12 months",
     setupTime: "8 hours",
-    integrations: ["ERP systems", "WMS", "Logistics platforms", "E-commerce", "Mobile apps"],
+    integrations["ERP systems", "WMS", "Logistics platforms", "E-commerce", "Mobile apps"],
     freeTier: false,
     trialPeriod: "1000 transactions"
   },
@@ -838,7 +838,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 199,
     pricingModel: "monthly",
     userLimit: "Up to 500 users",
-    features: [
+    features[
       "3D training environments",
       "Interactive simulations",
       "Progress tracking",
@@ -848,7 +848,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Mobile & VR support",
       "LMS integration"
     ],
-    benefits: [
+    benefits[
       "Improved learning retention",
       "Reduced training costs",
       "Safe skill practice",
@@ -856,8 +856,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Real-time feedback",
       "Engaging experience"
     ],
-    targetAudience: ["Corporate training", "Healthcare", "Manufacturing", "Education", "Military"],
-    tags: ["AR/VR", "Training", "Simulation", "Immersive Learning", "3D"],
+    targetAudience["Corporate training", "Healthcare", "Manufacturing", "Education", "Military"],
+    tags["AR/VR", "Training", "Simulation", "Immersive Learning", "3D"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -865,10 +865,10 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$199-599/month",
-    competitors: ["Strivr", "Talespin", "Pixvana"],
+    competitors["Strivr", "Talespin", "Pixvana"],
     roi: "350% within 9 months",
     setupTime: "6 hours",
-    integrations: ["LMS platforms", "HR systems", "Analytics tools", "VR devices", "Mobile apps"],
+    integrations["LMS platforms", "HR systems", "Analytics tools", "VR devices", "Mobile apps"],
     freeTier: true,
     trialPeriod: "14 days"
   },
@@ -881,7 +881,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     price: 2999,
     pricingModel: "monthly",
     userLimit: "Unlimited users",
-    features: [
+    features[
       "Quantum-resistant algorithms",
       "Post-quantum cryptography",
       "Secure key distribution",
@@ -891,7 +891,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Audit logging",
       "API security"
     ],
-    benefits: [
+    benefits[
       "Future-proof security",
       "Quantum-resistant encryption",
       "Regulatory compliance",
@@ -899,8 +899,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       "Competitive advantage",
       "Risk mitigation"
     ],
-    targetAudience: ["Financial services", "Government", "Healthcare", "Defense", "Critical infrastructure"],
-    tags: ["Quantum Security", "Cryptography", "Post-Quantum", "Encryption", "Compliance"],
+    targetAudience["Financial services", "Government", "Healthcare", "Defense", "Critical infrastructure"],
+    tags["Quantum Security", "Cryptography", "Post-Quantum", "Encryption", "Compliance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -908,12 +908,20 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$2,999-8,999/month",
-    competitors: ["ISARA", "PQShield", "Cryptosense"],
+    competitors["ISARA", "PQShield", "Cryptosense"],
     roi: "600% within 18 months",
+<<<<<<< HEAD
     setupTime: "24 hours",
-    integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
+    integrations["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
     freeTier: false,
     trialPeriod: "7 days"
-  }
+  };
+=======;
+    setupTime: "24 hours",;
+    integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],;
+    freeTier: false,;
+    trialPeriod: "7 days";
+  };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 export default ENHANCED_INNOVATIVE_SERVICES_2025;

@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-export default function AffiliateMarketingTracker() {
+export default function AffiliateMarketingTracker(...args[]):  {
   const features = [
     {
       icon: Target,
@@ -29,13 +29,13 @@ export default function AffiliateMarketingTracker() {
     {
       icon: Shield,
       title: "Fraud Detection",
-      description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity."
-    },
-    {
-      icon: Globe,
-      title: "Multi-channel Support",
-      description: "Track performance across social media, email, influencer partnerships, and more."
-    }
+      description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity.";
+    },;
+    {;
+      icon: Globe,;
+      title: "Multi-channel Support",;
+      description: "Track performance across social media, email, influencer partnerships, and more.";
+    };
   ];
 
   const pricingPlans = [
@@ -44,7 +44,7 @@ export default function AffiliateMarketingTracker() {
       price: "$99",
       period: "/month",
       description: "Perfect for small businesses starting with affiliate marketing",
-      features: [
+      features[
         "Up to 100 affiliates",
         "Basic tracking & analytics",
         "Email support",
@@ -58,7 +58,7 @@ export default function AffiliateMarketingTracker() {
       price: "$299",
       period: "/month",
       description: "Ideal for growing businesses with active affiliate programs",
-      features: [
+      features[
         "Up to 500 affiliates",
         "Advanced analytics & AI insights",
         "Priority support",
@@ -73,16 +73,16 @@ export default function AffiliateMarketingTracker() {
       price: "$799",
       period: "/month",
       description: "For large-scale affiliate operations with custom requirements",
-      features: [
+      features[
         "Unlimited affiliates",
         "Custom integrations",
-        "Dedicated account manager",
-        "White-label options",
-        "Advanced fraud protection",
-        "Custom commission structures"
-      ],
-      popular: false
-    }
+        "Dedicated account manager",;
+        "White-label options",;
+        "Advanced fraud protection",;
+        "Custom commission structures";
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -99,19 +99,19 @@ export default function AffiliateMarketingTracker() {
     {
       title: "Reduce Fraud",
       description: "AI-powered detection prevents click fraud and ensures campaign integrity.",
-      icon: Shield
-    },
-    {
-      title: "Scale Efficiently",
-      description: "Manage thousands of affiliates with automated systems and smart workflows.",
-      icon: Users
-    }
+      icon: Shield;
+    },;
+    {;
+      title: "Scale Efficiently",;
+      description: "Manage thousands of affiliates with automated systems and smart workflows.",;
+      icon: Users;
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="Affiliate Marketing Tracker - Zion Tech Group"
+        title = "Affiliate Marketing Tracker - Zion Tech Group"
         description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI."
         canonical="/services/affiliate-marketing-tracker"
       />
@@ -123,8 +123,26 @@ export default function AffiliateMarketingTracker() {
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -167,13 +185,40 @@ export default function AffiliateMarketingTracker() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -199,13 +244,40 @@ export default function AffiliateMarketingTracker() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md: grid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -233,13 +305,40 @@ export default function AffiliateMarketingTracker() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular 
                       ? 'border-blue-500 ring-2 ring-blue-500/20' 
@@ -292,8 +391,26 @@ export default function AffiliateMarketingTracker() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -316,11 +433,20 @@ export default function AffiliateMarketingTracker() {
                   Contact Sales
                 </Link>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
       </div>
     </>
+  )};
+=======;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

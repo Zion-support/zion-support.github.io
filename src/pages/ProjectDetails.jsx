@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
@@ -39,20 +39,25 @@ function ProjectDetailsContent() {
             if (projectData) {
                 setProject(projectData);
                 // Now fetch notes
-                fetchProjectNotes(projectId);
-            }
+                fetchProjectNotes(projectId)}
             else {
                 toast({
                     title: "Project not found",
                     description: "The requested project could not be found.",
                     variant: "destructive",
                 });
-                router.push("/dashboard");
+<<<<<<< HEAD
+                router.push("/dashboard")}
+            setIsLoading(false)}
+        loadProject()}, [projectId]);
+=======
+                router("/dashboard");
             }
             setIsLoading(false);
         }
         loadProject();
     }, [projectId]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const fetchProjectNotes = async (projectId) => {
         try {
             const { data, error } = await supabase
@@ -65,11 +70,9 @@ function ProjectDetailsContent() {
                 .order("created_at", { ascending: false });
             if (error)
                 throw error;
-            setNotes(data || []);
-        }
+            setNotes(data || [])}
         catch (err) {
-            console.error("Error fetching project notes:", err);
-        }
+            console.error("Error fetching project notes:", err)}
     };
     const handleSubmitNote = async () => {
         if (!newNote.trim() || !project || !user)
@@ -92,19 +95,16 @@ function ProjectDetailsContent() {
             toast({
                 title: "Note added",
                 description: "Your note has been added to the project.",
-            });
-        }
+            })}
         catch (err) {
             console.error("Error adding note:", err);
             toast({
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",
                 variant: "destructive",
-            });
-        }
+            })}
         finally {
-            setIsSubmittingNote(false);
-        }
+            setIsSubmittingNote(false)}
     };
     const handleStatusChange = async (newStatus) => {
         if (!project)
@@ -120,8 +120,7 @@ function ProjectDetailsContent() {
                 toast({
                     title: "Offer Accepted! 🎉",
                     description: "The project is now in progress. Congratulations!",
-                });
-            }
+                })}
         }
     };
     const getStatusBadge = (status) => {
@@ -139,8 +138,7 @@ function ProjectDetailsContent() {
             case "canceled":
                 return <Badge variant="destructive">Canceled</Badge>;
             default:
-                return <Badge variant="outline">{status}</Badge>;
-        }
+                return <Badge variant="outline">{status}</Badge>}
     };
     if (isLoading) {
         return (<div className="container mx-auto py-8">
@@ -150,8 +148,7 @@ function ProjectDetailsContent() {
             <p>Loading project details...</p>
           </div>
         </div>
-      </div>);
-    }
+      </div>)}
     if (!project) {
         return (<div className="container mx-auto py-8">
         <Card>
@@ -161,22 +158,28 @@ function ProjectDetailsContent() {
             <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
+<<<<<<< HEAD
             <Button onClick={() => router.push("/dashboard")}>
+=======
+            <Button onClick={() => router("/dashboard")}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               Return to Dashboard
             </Button>
           </CardContent>
         </Card>
-      </div>);
-    }
+      </div>)}
     // Check if user is either the client or the talent
-    const isClient = user?.id === project.client_id;
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
+<<<<<<< HEAD
         router.push("/unauthorized");
+        return null}
+    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+=======
+        router("/unauthorized");
         return null;
     }
-    const isOfferPending = project.status === "offer_sent";
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
@@ -260,7 +263,11 @@ function ProjectDetailsContent() {
                   </Link>
                 </Button>)}
               
+<<<<<<< HEAD
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
+=======
+              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   <MessageSquare className="mr-2 h-4 w-4"/> Message
                 </Button>)}
             </div>
@@ -447,7 +454,11 @@ function ProjectDetailsContent() {
                       <p className="text-sm text-muted-foreground">
                         {project.talent_profile?.professional_title || "Professional"}
                       </p>
+<<<<<<< HEAD
                       {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}>
+=======
+                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?talentId=${project.talent_id}`)}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -462,7 +473,11 @@ function ProjectDetailsContent() {
                         {project.talent_profile?.full_name || "Client"}
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
+<<<<<<< HEAD
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
+=======
+                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?clientId=${project.client_id}`)}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -504,7 +519,11 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
                   </p>
+<<<<<<< HEAD
                   <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">
+=======
+                  <Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}`)} className="w-full">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
                   </Button>
                 </CardFooter>)}
@@ -531,10 +550,8 @@ function ProjectDetailsContent() {
         </div>
       </main>
       
-    </>);
-}
+    </>)}
 export default function ProjectDetails() {
     return (<ProtectedRoute>
       <ProjectDetailsContent />
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

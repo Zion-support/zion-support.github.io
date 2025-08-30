@@ -10,7 +10,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 49,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Automated code analysis",
       "Security vulnerability detection",
       "Performance optimization suggestions",
@@ -22,28 +22,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Pull request automation",
       "Multi-language support"
     ],
-    benefits: [
+    benefits[
       "Reduce code review time by 70%",
       "Improve code quality by 40%",
       "Early security vulnerability detection",
       "Consistent coding standards",
       "Faster development cycles"
     ],
-    useCases: [
+    useCases[
       "Software development teams",
       "Code quality assurance",
       "Security compliance",
       "Performance optimization",
       "Team onboarding"
     ],
-    targetAudience: [
+    targetAudience[
       "Software developers",
       "DevOps engineers",
       "Team leads",
       "Quality assurance teams",
       "Open source projects"
     ],
-    tags: ["AI", "Code Review", "Security", "Quality Assurance", "DevOps"],
+    tags["AI", "Code Review", "Security", "Quality Assurance", "DevOps"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$49 - $199/month",
@@ -55,13 +55,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],
-      integrations: ["GitHub", "GitLab", "Bitbucket", "Slack", "Jira"],
+      technology["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],
+      integrations["GitHub", "GitLab", "Bitbucket", "Slack", "Jira"],
       apiEndpoints: 75,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "End-to-end encryption", "OAuth 2.0"]
+      security["SOC 2", "GDPR", "End-to-end encryption", "OAuth 2.0"]
     },
-    competitors: ["SonarQube", "CodeClimate", "DeepCode", "Snyk"],
+    competitors["SonarQube", "CodeClimate", "DeepCode", "Snyk"],
     marketSize: "$2.1 billion by 2025"
   },
   // AI-Powered Marketing & Sales Services
@@ -74,7 +74,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 199,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered campaign optimization",
       "Personalized content generation",
       "Multi-channel automation",
@@ -86,28 +86,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Lead scoring and nurturing",
       "ROI tracking and reporting"
     ],
-    benefits: [
+    benefits[
       "Increase conversion rates by 45%",
       "Reduce marketing costs by 30%",
       "Personalized customer experiences",
       "Automated campaign optimization",
       "Data-driven decision making"
     ],
-    useCases: [
+    useCases[
       "E-commerce businesses",
       "B2B marketing",
       "Lead generation",
       "Customer retention",
       "Brand awareness campaigns"
     ],
-    targetAudience: [
+    targetAudience[
       "Marketing managers",
       "Digital marketers",
       "E-commerce businesses",
       "Agencies",
       "Startups"
     ],
-    tags: ["AI", "Marketing Automation", "Personalization", "Analytics", "ROI"],
+    tags["AI", "Marketing Automation", "Personalization", "Analytics", "ROI"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$199 - $799/month",
@@ -119,13 +119,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
-      integrations: ["Shopify", "WooCommerce", "Mailchimp", "HubSpot", "Salesforce"],
+      technology["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations["Shopify", "WooCommerce", "Mailchimp", "HubSpot", "Salesforce"],
       apiEndpoints: 200,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "CCPA", "End-to-end encryption"]
+      security["SOC 2", "GDPR", "CCPA", "End-to-end encryption"]
     },
-    competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
+    competitors["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
     marketSize: "$8.2 billion by 2025"
   },
   // AI-Powered Customer Service
@@ -138,7 +138,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 79,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Natural language processing",
       "Multi-language support",
       "Integration with CRM systems",
@@ -150,28 +150,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Custom branding",
       "API integration"
     ],
-    benefits: [
+    benefits[
       "Reduce support costs by 60%",
       "Improve response time by 80%",
       "24/7 customer support",
       "Consistent service quality",
       "Scalable support operations"
     ],
-    useCases: [
+    useCases[
       "E-commerce customer support",
       "SaaS product support",
       "Banking and finance",
       "Healthcare information",
       "Travel and hospitality"
     ],
-    targetAudience: [
+    targetAudience[
       "Customer service managers",
       "E-commerce businesses",
       "SaaS companies",
       "Financial institutions",
       "Healthcare providers"
     ],
-    tags: ["AI", "Chatbot", "Customer Service", "Automation", "NLP"],
+    tags["AI", "Chatbot", "Customer Service", "Automation", "NLP"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$79 - $299/month",
@@ -183,13 +183,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "OpenAI GPT-4", "React", "Node.js", "Redis"],
-      integrations: ["Zendesk", "Intercom", "Salesforce", "Shopify", "Slack"],
+      technology["Python", "OpenAI GPT-4", "React", "Node.js", "Redis"],
+      integrations["Zendesk", "Intercom", "Salesforce", "Shopify", "Slack"],
       apiEndpoints: 100,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "End-to-end encryption", "Data anonymization"]
+      security["SOC 2", "GDPR", "End-to-end encryption", "Data anonymization"]
     },
-    competitors: ["Intercom", "Zendesk", "Drift", "MobileMonkey"],
+    competitors["Intercom", "Zendesk", "Drift", "MobileMonkey"],
     marketSize: "$1.8 billion by 2025"
   },
   // AI-Powered Financial Services
@@ -202,7 +202,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 299,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered market prediction",
       "Portfolio optimization",
       "Risk assessment",
@@ -214,28 +214,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "API integration",
       "Multi-currency support"
     ],
-    benefits: [
+    benefits[
       "Improve investment returns by 25%",
       "Reduce risk exposure by 40%",
       "Data-driven investment decisions",
       "Automated portfolio rebalancing",
       "Real-time market insights"
     ],
-    useCases: [
+    useCases[
       "Investment management",
       "Financial planning",
       "Risk management",
       "Portfolio optimization",
       "Market analysis"
     ],
-    targetAudience: [
+    targetAudience[
       "Financial advisors",
       "Investment managers",
       "Individual investors",
       "Financial institutions",
       "Wealth management firms"
     ],
-    tags: ["AI", "Financial Planning", "Investment", "Risk Management", "Analytics"],
+    tags["AI", "Financial Planning", "Investment", "Risk Management", "Analytics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$299 - $999/month",
@@ -247,13 +247,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Bloomberg", "Yahoo Finance", "Alpha Vantage", "Plaid", "Stripe"],
+      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations["Bloomberg", "Yahoo Finance", "Alpha Vantage", "Plaid", "Stripe"],
       apiEndpoints: 150,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "FINRA", "End-to-end encryption"]
+      security["SOC 2", "GDPR", "FINRA", "End-to-end encryption"]
     },
-    competitors: ["Bloomberg Terminal", "Morningstar", "YCharts", "FactSet"],
+    competitors["Bloomberg Terminal", "Morningstar", "YCharts", "FactSet"],
     marketSize: "$4.7 billion by 2025"
   },
   // AI-Powered Healthcare Services
@@ -266,7 +266,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 399,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Symptom analysis",
       "Medical image analysis",
       "Treatment recommendations",
@@ -278,28 +278,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Mobile app access",
       "API for healthcare apps"
     ],
-    benefits: [
+    benefits[
       "Improve diagnostic accuracy by 35%",
       "Reduce diagnostic time by 50%",
       "Better patient outcomes",
       "Reduced medical errors",
       "Cost-effective healthcare delivery"
     ],
-    useCases: [
+    useCases[
       "Primary care clinics",
       "Emergency departments",
       "Specialist consultations",
       "Telemedicine platforms",
       "Medical research"
     ],
-    targetAudience: [
+    targetAudience[
       "Healthcare providers",
       "Hospitals and clinics",
       "Telemedicine companies",
       "Medical device manufacturers",
       "Healthcare IT companies"
     ],
-    tags: ["AI", "Healthcare", "Diagnostics", "Medical Imaging", "HIPAA"],
+    tags["AI", "Healthcare", "Diagnostics", "Medical Imaging", "HIPAA"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$399 - $1,299/month",
@@ -311,13 +311,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js"],
-      integrations: ["Epic", "Cerner", "Allscripts", "DICOM", "HL7"],
+      technology["Python", "TensorFlow", "PyTorch", "React", "Node.js"],
+      integrations["Epic", "Cerner", "Allscripts", "DICOM", "HL7"],
       apiEndpoints: 100,
       uptime: "99.9%",
-      security: ["HIPAA", "SOC 2", "GDPR", "End-to-end encryption"]
+      security["HIPAA", "SOC 2", "GDPR", "End-to-end encryption"]
     },
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Health"],
+    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Health"],
     marketSize: "$6.7 billion by 2025"
   },
   // AI-Powered Legal Services
@@ -330,7 +330,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 249,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Contract analysis and review",
       "Risk identification",
       "Legal compliance checking",
@@ -342,28 +342,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Mobile app access",
       "API for legal platforms"
     ],
-    benefits: [
+    benefits[
       "Reduce legal review time by 70%",
       "Improve risk identification by 50%",
       "Lower legal costs",
       "Faster contract processing",
       "Better compliance management"
     ],
-    useCases: [
+    useCases[
       "Contract review",
       "Legal research",
       "Compliance checking",
       "Due diligence",
       "Legal document management"
     ],
-    targetAudience: [
+    targetAudience[
       "Law firms",
       "Corporate legal departments",
       "Legal consultants",
       "Compliance officers",
       "Contract managers"
     ],
-    tags: ["AI", "Legal Tech", "Document Analysis", "Compliance", "Risk Management"],
+    tags["AI", "Legal Tech", "Document Analysis", "Compliance", "Risk Management"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$249 - $899/month",
@@ -375,13 +375,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Clio", "MyCase", "PracticePanther", "DocuSign", "Adobe Sign"],
+      technology["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],
+      integrations["Clio", "MyCase", "PracticePanther", "DocuSign", "Adobe Sign"],
       apiEndpoints: 125,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "End-to-end encryption", "Audit logging"]
+      security["SOC 2", "GDPR", "End-to-end encryption", "Audit logging"]
     },
-    competitors: ["Kira Systems", "Evisort", "ContractPodAi", "Luminance"],
+    competitors["Kira Systems", "Evisort", "ContractPodAi", "Luminance"],
     marketSize: "$3.2 billion by 2025"
   },
   // AI-Powered Education Services
@@ -394,7 +394,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 89,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Adaptive learning algorithms",
       "Personalized content delivery",
       "Progress tracking",
@@ -406,28 +406,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Parent and teacher portals",
       "API for educational apps"
     ],
-    benefits: [
+    benefits[
       "Improve learning outcomes by 40%",
       "Reduce learning time by 30%",
       "Personalized learning paths",
       "Better student engagement",
       "Data-driven instruction"
     ],
-    useCases: [
+    useCases[
       "K-12 education",
       "Higher education",
       "Corporate training",
       "Language learning",
       "Skill development"
     ],
-    targetAudience: [
+    targetAudience[
       "Educational institutions",
       "Corporate training departments",
       "Online learning platforms",
       "Tutoring services",
       "Educational publishers"
     ],
-    tags: ["AI", "Education", "Personalized Learning", "Adaptive Learning", "Analytics"],
+    tags["AI", "Education", "Personalized Learning", "Adaptive Learning", "Analytics"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$89 - $299/month",
@@ -439,13 +439,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
-      integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
+      technology["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
       apiEndpoints: 100,
       uptime: "99.9%",
-      security: ["FERPA", "COPPA", "GDPR", "End-to-end encryption"]
+      security["FERPA", "COPPA", "GDPR", "End-to-end encryption"]
     },
-    competitors: ["Kira Systems", "Evisort", "ContractPodAi", "Luminance"],
+    competitors["Kira Systems", "Evisort", "ContractPodAi", "Luminance"],
     marketSize: "$5.3 billion by 2025"
   },
   // AI-Powered Supply Chain Services
@@ -458,7 +458,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 349,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Demand forecasting",
       "Inventory optimization",
       "Route optimization",
@@ -470,28 +470,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Mobile app access",
       "API for logistics platforms"
     ],
-    benefits: [
+    benefits[
       "Reduce inventory costs by 25%",
       "Improve delivery times by 35%",
       "Better demand prediction",
       "Optimized logistics routes",
       "Reduced supply chain risks"
     ],
-    useCases: [
+    useCases[
       "Manufacturing",
       "Retail",
       "E-commerce",
       "Logistics",
       "Distribution"
     ],
-    targetAudience: [
+    targetAudience[
       "Supply chain managers",
       "Logistics companies",
       "Manufacturers",
       "Retailers",
       "E-commerce businesses"
     ],
-    tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+    tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$349 - $1,199/month",
@@ -503,13 +503,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
-      integrations: ["SAP", "Oracle", "NetSuite", "Shopify", "WMS systems"],
+      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations["SAP", "Oracle", "NetSuite", "Shopify", "WMS systems"],
       apiEndpoints: 200,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "End-to-end encryption", "API security"]
+      security["SOC 2", "GDPR", "End-to-end encryption", "API security"]
     },
-    competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
+    competitors["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
     marketSize: "$7.8 billion by 2025"
   },
   // AI-Powered Cybersecurity Services
@@ -522,7 +522,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 199,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Real-time threat detection",
       "Behavioral analysis",
       "Automated incident response",
@@ -534,28 +534,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Cloud security monitoring",
       "API for security tools"
     ],
-    benefits: [
+    benefits[
       "Reduce threat response time by 80%",
       "Improve threat detection by 60%",
       "Automated security responses",
       "Better compliance management",
       "Reduced security incidents"
     ],
-    useCases: [
+    useCases[
       "Enterprise security",
       "Cloud security",
       "Endpoint protection",
       "Network security",
       "Compliance management"
     ],
-    targetAudience: [
+    targetAudience[
       "CISOs",
       "Security teams",
       "IT managers",
       "Compliance officers",
       "Managed security providers"
     ],
-    tags: ["AI", "Cybersecurity", "Threat Detection", "Incident Response", "Compliance"],
+    tags["AI", "Cybersecurity", "Threat Detection", "Incident Response", "Compliance"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$199 - $799/month",
@@ -567,13 +567,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "Elasticsearch"],
-      integrations: ["Splunk", "QRadar", "LogRhythm", "CrowdStrike", "SentinelOne"],
+      technology["Python", "TensorFlow", "React", "Node.js", "Elasticsearch"],
+      integrations["Splunk", "QRadar", "LogRhythm", "CrowdStrike", "SentinelOne"],
       apiEndpoints: 150,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+      security["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
     },
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
     marketSize: "$9.8 billion by 2025"
   },
   // AI-Powered Real Estate Services
@@ -586,7 +586,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     price: 149,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Market trend analysis",
       "Property valuation",
       "Investment analysis",
@@ -598,28 +598,28 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       "Mobile app access",
       "API for real estate platforms"
     ],
-    benefits: [
+    benefits[
       "Improve investment decisions by 45%",
       "Reduce research time by 60%",
       "Better market insights",
       "Accurate property valuations",
       "Data-driven investment strategies"
     ],
-    useCases: [
+    useCases[
       "Real estate investment",
       "Property management",
       "Market research",
       "Portfolio analysis",
       "Development planning"
     ],
-    targetAudience: [
+    targetAudience[
       "Real estate investors",
       "Property managers",
       "Real estate agents",
       "Developers",
       "Financial institutions"
     ],
-    tags: ["AI", "Real Estate", "Analytics", "Investment", "Market Research"],
+    tags["AI", "Real Estate", "Analytics", "Investment", "Market Research"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$149 - $499/month",
@@ -631,13 +631,13 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
-      integrations: ["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
+      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
       apiEndpoints: 100,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "End-to-end encryption", "Data privacy"]
+      security["SOC 2", "GDPR", "End-to-end encryption", "Data privacy"]
     },
-    competitors: ["Zillow", "Redfin", "Realtor.com", "CoreLogic"],
+    competitors["Zillow", "Redfin", "Realtor.com", "CoreLogic"],
     marketSize: "$4.2 billion by 2025"
   }
 ];
@@ -645,17 +645,30 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
 export const SERVICE_PRICING_TIERS = {
   basic: {
     name: "Basic",
+<<<<<<< HEAD
+    features["Core functionality", "Basic support", "Standard integrations", "Community forum"],
+  priceRange: "$19 - $99/month"
+  
+
+},
+=======
     features: ["Core functionality", "Basic support", "Standard integrations", "Community forum"],
-    priceRange: "$19 - $99/month"
-  },
+  priceRange: "$19 - $99/month"
+  
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   professional: {
     name: "Professional",
-    features: ["Advanced features", "Priority support", "Custom integrations", "API access", "Analytics dashboard"],
+    features["Advanced features", "Priority support", "Custom integrations", "API access", "Analytics dashboard"],
     priceRange: "$99 - $399/month"
   },
   enterprise: {
     name: "Enterprise",
-    features: ["Full feature set", "24/7 dedicated support", "Custom development", "White-label options", "SLA guarantees", "On-premise deployment"],
+    features["Full feature set", "24/7 dedicated support", "Custom development", "White-label options", "SLA guarantees", "On-premise deployment"],
     priceRange: "$399 - $1,999/month"
   }
 };
@@ -677,5 +690,13 @@ export const ZION_TECH_GROUP_CONTACT = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008, Middletown DE 19709"
+  address: "364 E Main St STE 1008,
+  Middletown DE 19709"
+
+
+
+
+
+
+
 };

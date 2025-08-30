@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface EmergingTechBreakthrough2025 {
   id: string;
   name: string;
@@ -30,15 +30,13 @@ export interface EmergingTechBreakthrough2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {
@@ -48,7 +46,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     price: '$25,000',
     period: '/month',
     description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.',
-    features: [
+    features[
       'Non-invasive neural signal processing',
       'Real-time brain activity monitoring',
       'Thought-to-text conversion',
@@ -71,11 +69,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     setupTime: '12-16 weeks',
     category: 'Neural Technology',
     realService: true,
-    technology: ['Neural Signal Processing, Machine Learning, EEG Analysis, Python, C++, Neural Networks'],
-    integrations: ['Medical devices, Gaming platforms, Research tools, Healthcare systems, Accessibility software'],
-    useCases: ['Medical rehabilitation, Gaming control, Productivity tools, Accessibility solutions, Research applications'],
+    technology['Neural Signal Processing, Machine Learning, EEG Analysis, Python, C++, Neural Networks'],
+    integrations['Medical devices, Gaming platforms, Research tools, Healthcare systems, Accessibility software'],
+    useCases['Medical rehabilitation, Gaming control, Productivity tools, Accessibility solutions, Research applications'],
     roi: 'Medical applications show 800%+ ROI through improved patient outcomes and treatment efficiency.',
-    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'],
+    competitors['Neuralink, CTRL-labs, Kernel, OpenBCI'],
     marketSize: '$3B+ BCI market',
     growthRate: '600%+ annual growth',
     variant: 'neural-revolutionary',
@@ -100,7 +98,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     price: '$18,000',
     period: '/month',
     description: 'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication protocols for the quantum internet era.',
-    features: [
+    features[
       'Quantum key distribution networks',
       'Post-quantum cryptography',
       'Quantum-resistant algorithms',
@@ -123,11 +121,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     setupTime: '10-14 weeks',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Quantum Computing, Quantum Cryptography, Quantum Networks, Python, C++, Quantum Algorithms'],
-    integrations: ['Internet infrastructure, Government networks, Financial systems, Defense networks, Enterprise networks'],
-    useCases: ['Internet security, Government communications, Financial transactions, Defense communications, Corporate security'],
+    technology['Quantum Computing, Quantum Cryptography, Quantum Networks, Python, C++, Quantum Algorithms'],
+    integrations['Internet infrastructure, Government networks, Financial systems, Defense networks, Enterprise networks'],
+    useCases['Internet security, Government communications, Financial transactions, Defense communications, Corporate security'],
     roi: 'Critical infrastructure protection with 1200%+ ROI through security breach prevention.',
-    competitors: ['ID Quantique, Toshiba Quantum, Quantum Xchange, Qrypt'],
+    competitors['ID Quantique, Toshiba Quantum, Quantum Xchange, Qrypt'],
     marketSize: '$12B+ quantum security market',
     growthRate: '500%+ annual growth',
     variant: 'quantum-security',
@@ -152,7 +150,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     price: '$50,000',
     period: '/month',
     description: 'Revolutionary space mining operations platform that enables automated asteroid mining, resource extraction, and space resource management for commercial space operations.',
-    features: [
+    features[
       'Asteroid identification and mapping',
       'Automated mining operations',
       'Resource extraction systems',
@@ -175,11 +173,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     setupTime: '16-20 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['Space Robotics, AI/ML, Satellite Technology, Python, C++, Space Systems'],
-    integrations: ['Satellite networks, Space stations, Mining equipment, Transportation systems, Resource markets'],
-    useCases: ['Asteroid mining, Resource extraction, Space logistics, Infrastructure management, Resource trading'],
+    technology['Space Robotics, AI/ML, Satellite Technology, Python, C++, Space Systems'],
+    integrations['Satellite networks, Space stations, Mining equipment, Transportation systems, Resource markets'],
+    useCases['Asteroid mining, Resource extraction, Space logistics, Infrastructure management, Resource trading'],
     roi: 'Space resource extraction shows 2000%+ ROI through valuable rare earth elements and precious metals.',
-    competitors: ['Planetary Resources, Deep Space Industries, Asteroid Mining Corporation'],
+    competitors['Planetary Resources, Deep Space Industries, Asteroid Mining Corporation'],
     marketSize: '$2B+ space mining market',
     growthRate: '800%+ annual growth',
     variant: 'space-futuristic',
@@ -204,7 +202,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     price: '$22,000',
     period: '/month',
     description: 'Advanced quantum robotics platform that leverages quantum computing for enhanced robot intelligence, decision-making, and autonomous operations in complex environments.',
-    features: [
+    features[
       'Quantum-enhanced AI algorithms',
       'Quantum sensor integration',
       'Advanced autonomous navigation',
@@ -227,11 +225,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     setupTime: '12-16 weeks',
     category: 'Quantum Robotics',
     realService: true,
-    technology: ['Quantum Computing, Robotics, AI/ML, Computer Vision, Python, C++, ROS'],
-    integrations: ['Manufacturing systems, Logistics networks, Healthcare equipment, Research tools, Defense systems'],
-    useCases: ['Manufacturing automation, Logistics optimization, Healthcare assistance, Research automation, Defense applications'],
+    technology['Quantum Computing, Robotics, AI/ML, Computer Vision, Python, C++, ROS'],
+    integrations['Manufacturing systems, Logistics networks, Healthcare equipment, Research tools, Defense systems'],
+    useCases['Manufacturing automation, Logistics optimization, Healthcare assistance, Research automation, Defense applications'],
     roi: 'Manufacturing automation shows 600%+ ROI through improved efficiency and reduced operational costs.',
-    competitors: ['Boston Dynamics, ABB Robotics, FANUC, KUKA'],
+    competitors['Boston Dynamics, ABB Robotics, FANUC, KUKA'],
     marketSize: '$28B+ robotics market',
     growthRate: '350%+ annual growth',
     variant: 'quantum-iot-revolutionary',
@@ -256,7 +254,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     price: '$35,000',
     period: '/month',
     description: 'Revolutionary autonomous vehicle AI platform that enables fully self-driving vehicles with advanced perception, decision-making, and safety systems powered by AI and quantum computing.',
-    features: [
+    features[
       'Advanced computer vision systems',
       'Real-time decision making',
       'Predictive safety algorithms',
@@ -279,11 +277,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     setupTime: '16-20 weeks',
     category: 'Autonomous Vehicles',
     realService: true,
-    technology: ['Computer Vision, AI/ML, Quantum Computing, Sensor Fusion, Python, C++, ROS'],
-    integrations: ['Vehicle systems, Fleet management, Traffic systems, Safety networks, Regulatory platforms'],
-    useCases: ['Self-driving cars, Autonomous trucks, Fleet management, Transportation optimization, Safety systems'],
+    technology['Computer Vision, AI/ML, Quantum Computing, Sensor Fusion, Python, C++, ROS'],
+    integrations['Vehicle systems, Fleet management, Traffic systems, Safety networks, Regulatory platforms'],
+    useCases['Self-driving cars, Autonomous trucks, Fleet management, Transportation optimization, Safety systems'],
     roi: 'Autonomous transportation shows 800%+ ROI through reduced accidents and improved efficiency.',
-    competitors: ['Waymo, Tesla, Cruise, Aurora, Argo AI'],
+    competitors['Waymo, Tesla, Cruise, Aurora, Argo AI'],
     marketSize: '$65B+ autonomous vehicle market',
     growthRate: '400%+ annual growth',
     variant: 'autonomous-futuristic',
@@ -308,7 +306,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     price: '$28,000',
     period: '/month',
     description: 'Advanced quantum materials discovery platform that accelerates the development of new materials, drugs, and chemicals using quantum computing and AI-powered simulations.',
-    features: [
+    features[
       'Quantum molecular simulations',
       'AI-powered material design',
       'Drug discovery algorithms',
@@ -331,11 +329,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     setupTime: '14-18 weeks',
     category: 'Quantum Materials',
     realService: true,
-    technology: ['Quantum Computing, Quantum Chemistry, AI/ML, Molecular Dynamics, Python, C++, Quantum Algorithms'],
-    integrations: ['Research platforms, Laboratory systems, Chemical databases, Property databases, Collaboration tools'],
-    useCases: ['Drug discovery, Material development, Chemical optimization, Property prediction, Research acceleration'],
+    technology['Quantum Computing, Quantum Chemistry, AI/ML, Molecular Dynamics, Python, C++, Quantum Algorithms'],
+    integrations['Research platforms, Laboratory systems, Chemical databases, Property databases, Collaboration tools'],
+    useCases['Drug discovery, Material development, Chemical optimization, Property prediction, Research acceleration'],
     roi: 'Materials discovery shows 1000%+ ROI through accelerated development and improved properties.',
-    competitors: ['IBM Quantum, Google Quantum, Microsoft Quantum, D-Wave'],
+    competitors['IBM Quantum, Google Quantum, Microsoft Quantum, D-Wave'],
     marketSize: '$15B+ quantum computing market',
     growthRate: '600%+ annual growth',
     variant: 'quantum-ai-revolutionary',
@@ -360,7 +358,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     price: '$8,500',
     period: '/month',
     description: 'Comprehensive metaverse AI development platform that enables the creation of intelligent virtual worlds, AI-powered NPCs, and dynamic environments with advanced AI capabilities.',
-    features: [
+    features[
       'AI-powered NPC generation',
       'Dynamic world creation',
       'Intelligent environment adaptation',
@@ -383,11 +381,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     setupTime: '4-6 weeks',
     category: 'Metaverse AI',
     realService: true,
-    technology: ['AI/ML, 3D Graphics, Virtual Reality, Game Development, Python, Unity, Unreal Engine'],
-    integrations: ['VR platforms, Gaming engines, Social platforms, Payment systems, Analytics tools'],
-    useCases: ['Virtual worlds, Gaming environments, Social spaces, Educational simulations, Entertainment experiences'],
+    technology['AI/ML, 3D Graphics, Virtual Reality, Game Development, Python, Unity, Unreal Engine'],
+    integrations['VR platforms, Gaming engines, Social platforms, Payment systems, Analytics tools'],
+    useCases['Virtual worlds, Gaming environments, Social spaces, Educational simulations, Entertainment experiences'],
     roi: 'Metaverse development shows 400%+ ROI through virtual experiences and digital asset monetization.',
-    competitors: ['Roblox, Decentraland, The Sandbox, Meta, Unity'],
+    competitors['Roblox, Decentraland, The Sandbox, Meta, Unity'],
     marketSize: '$18B+ metaverse market',
     growthRate: '350%+ annual growth',
     variant: 'metaverse-futuristic',

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  Code, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  Code,
   Database,
   Rocket,
   TrendingUp,
@@ -18,13 +18,14 @@ import {
   Target,
   Award,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
+icon: React.ComponentType<{ className?: string}>;
   category: string;
   features: string[];
   pricing: string;
@@ -32,8 +33,7 @@ interface Service {
   reviews: number;
   color: string;
   popular?: boolean;
-  link: string;
-}
+  link: string}
 
 const services: Service[] = [
   {
@@ -42,7 +42,7 @@ const services: Service[] = [
     description: 'Advanced analytics with AI-powered insights and predictive modeling',
     icon: Brain,
     category: 'AI & Machine Learning',
-    features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
+    features['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
     pricing: '$2,999/month',
     rating: 4.9,
     reviews: 156,
@@ -56,7 +56,7 @@ const services: Service[] = [
     description: 'Next-generation quantum computing solutions for complex problem solving',
     icon: Rocket,
     category: 'Emerging Tech',
-    features: ['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],
+    features['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],
     pricing: '$5,000/month',
     rating: 4.8,
     reviews: 89,
@@ -69,7 +69,7 @@ const services: Service[] = [
     description: 'Intelligent threat detection and response with zero-trust architecture',
     icon: Shield,
     category: 'Cybersecurity',
-    features: ['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],
+    features['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],
     pricing: '$2,500/month',
     rating: 4.9,
     reviews: 234,
@@ -83,7 +83,7 @@ const services: Service[] = [
     description: 'Scalable cloud infrastructure with intelligent automation',
     icon: Cloud,
     category: 'Cloud & DevOps',
-    features: ['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],
+    features['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],
     pricing: '$1,500/month',
     rating: 4.7,
     reviews: 189,
@@ -96,7 +96,7 @@ const services: Service[] = [
     description: 'Decentralized finance solutions with advanced blockchain technology',
     icon: Globe,
     category: 'Blockchain & Web3',
-    features: ['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],
+    features['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],
     pricing: '$1,800/month',
     rating: 4.6,
     reviews: 123,
@@ -109,7 +109,7 @@ const services: Service[] = [
     description: 'End-to-end business transformation with cutting-edge technology',
     icon: TrendingUp,
     category: 'Digital Transformation',
-    features: ['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],
+    features['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],
     pricing: '$3,500/month',
     rating: 4.8,
     reviews: 167,
@@ -122,7 +122,7 @@ const services: Service[] = [
     description: 'Rapid development and deployment of SaaS applications',
     icon: Code,
     category: 'Micro SAAS',
-    features: ['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],
+    features['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],
     pricing: '$899/month',
     rating: 4.7,
     reviews: 98,
@@ -135,7 +135,7 @@ const services: Service[] = [
     description: 'AI-powered diagnostic and patient care optimization',
     icon: Users,
     category: 'Healthcare AI',
-    features: ['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],
+    features['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],
     pricing: '$4,500/month',
     rating: 4.9,
     reviews: 78,
@@ -147,62 +147,91 @@ const services: Service[] = [
 const categories = [
   'All Services',
   'AI & Machine Learning',
-  'Emerging Tech',
-  'Cybersecurity',
-  'Cloud & DevOps',
-  'Blockchain & Web3',
-  'Digital Transformation',
-  'Micro SAAS',
-  'Healthcare AI'
+  'Emerging Tech',;
+  'Cybersecurity',;
+  'Cloud & DevOps',;
+  'Blockchain & Web3',;
+  'Digital Transformation',;
+  'Micro SAAS',;
+  'Healthcare AI';
 ];
 
-export const EnhancedServiceShowcase: React.FC = () => {
+<<<<<<< HEAD
+export const EnhancedServiceShowcase: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [hoveredService, setHoveredService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+<<<<<<< HEAD
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry.isIntersecting) {;
           setIsVisible(true);
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       },
       { threshold: 0.1 }
     );
 
     const element = document.getElementById('service-showcase');
     if (element) {
-      observer.observe(element);
-    }
+      observer.observe(element)}
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()}, []);
 
-  const filteredServices = selectedCategory === 'All Services' 
-    ? services 
+  const filteredServices = selectedCategory === 'All Services'
+    ? services
     : services.filter(service => service.category === selectedCategory);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: number)  => {
+    return Array.from({ length: 5 }, (_, i)  => (
       <Star
         key={i}
         className={`w-4 h-4 ${
-          i < Math.floor(rating) 
-            ? 'text-yellow-400 fill-current' 
+          i < Math.floor(rating)
+            ? 'text-yellow-400 fill-current'
             : 'text-gray-400'
-        }`}
-      />
+        }`};
+      />;
+    ))};
+=======
+          i < Math.floor(rating) ;
+            ? 'text-yellow-400 fill-current' ;
+            : 'text-gray-400';
+        }`};
+      />;
     ));
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <section id="service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -212,16 +241,43 @@ export const EnhancedServiceShowcase: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive technology solutions designed to drive your business forward with 
+            Comprehensive technology solutions designed to drive your business forward with
             cutting-edge AI, cybersecurity, and innovative digital transformation services.
           </p>
         </motion.div>
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category, index) => (
@@ -243,7 +299,16 @@ export const EnhancedServiceShowcase: React.FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
@@ -253,12 +318,19 @@ export const EnhancedServiceShowcase: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{
+                  duration: 0.6,
                   delay: index * 0.1,
                   type: "spring",
-                  stiffness: 100
-                }}
+  stiffness: 100
+                
+
+
+
+
+
+
+}}
                 whileHover={{ y: -10 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
@@ -283,7 +355,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
                       <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
                         {service.title}
                       </h3>
-                      
+
                       <p className="text-gray-400 leading-relaxed">
                         {service.description}
                       </p>
@@ -333,9 +405,36 @@ export const EnhancedServiceShowcase: React.FC = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
@@ -343,7 +442,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let our expert team help you implement cutting-edge technology solutions 
+              Let our expert team help you implement cutting-edge technology solutions
               that drive real business results and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -361,10 +460,19 @@ export const EnhancedServiceShowcase: React.FC = () => {
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
-      </div>
-    </section>
+      </div>;
+    </section>;
+  )};
+=======
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

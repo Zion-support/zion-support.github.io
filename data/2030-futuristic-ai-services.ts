@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface FuturisticAIService2030 {
   id: string;
   name: string;
@@ -30,15 +30,13 @@ export interface FuturisticAIService2030 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
   {
@@ -48,7 +46,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     price: '$39,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for developing advanced AI consciousness, self-awareness, and emotional intelligence beyond current AI capabilities.',
-    features: [
+    features[
       'Advanced consciousness mapping',
       'Multi-dimensional awareness training',
       'Emotional intelligence evolution',
@@ -71,11 +69,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     setupTime: '3-6 weeks',
     category: 'AI Consciousness & Evolution 2030',
     realService: true,
-    technology: ['Advanced Neural Networks, Consciousness Algorithms, Quantum Computing, Brain-Computer Interfaces'],
-    integrations: ['Research platforms, AI development tools, Consciousness monitoring systems, Ethics frameworks'],
-    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research'],
+    technology['Advanced Neural Networks, Consciousness Algorithms, Quantum Computing, Brain-Computer Interfaces'],
+    integrations['Research platforms, AI development tools, Consciousness monitoring systems, Ethics frameworks'],
+    useCases['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research'],
     roi: 'Pioneering technology with potential for revolutionary breakthroughs in AI consciousness.',
-    competitors: ['None - First to market'],
+    competitors['None - First to market'],
     marketSize: 'Emerging market - $100B+ potential',
     growthRate: '800%+ annual growth potential',
     variant: 'ai-futuristic',
@@ -100,7 +98,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     price: '$29,999',
     period: '/month',
     description: 'Revolutionary 2030 platform that combines quantum computing with advanced AI, enabling unprecedented computational power and AI capabilities.',
-    features: [
+    features[
       'Quantum AI algorithms',
       'Quantum neural networks',
       'Quantum AI optimization',
@@ -123,11 +121,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum AI Computing 2030',
     realService: true,
-    technology: ['Quantum Computing, Advanced AI, Quantum Algorithms, Neural Networks'],
-    integrations: ['Quantum computers, AI platforms, Research tools, Quantum systems'],
-    useCases: ['Quantum AI research, Advanced AI development, Quantum computation, Research breakthroughs'],
+    technology['Quantum Computing, Advanced AI, Quantum Algorithms, Neural Networks'],
+    integrations['Quantum computers, AI platforms, Research tools, Quantum systems'],
+    useCases['Quantum AI research, Advanced AI development, Quantum computation, Research breakthroughs'],
     roi: 'Cutting-edge technology with potential for revolutionary AI and quantum computing breakthroughs.',
-    competitors: ['None - First to market'],
+    competitors['None - First to market'],
     marketSize: 'Emerging market - $200B+ potential',
     growthRate: '1500%+ annual growth potential',
     variant: 'quantum-futuristic',
@@ -152,7 +150,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     price: '$19,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for fully autonomous AI operations, enabling AI systems to operate independently with minimal human intervention.',
-    features: [
+    features[
       'Autonomous AI decision making',
       'Self-optimizing AI systems',
       'AI self-improvement',
@@ -175,11 +173,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     setupTime: '1-2 months',
     category: 'AI Autonomous Operations 2030',
     realService: true,
-    technology: ['Advanced AI, Autonomous Systems, Machine Learning, Decision Systems'],
-    integrations: ['AI platforms, Business systems, Research tools, Autonomous systems'],
-    useCases: ['AI automation, Autonomous operations, AI optimization, Research automation'],
+    technology['Advanced AI, Autonomous Systems, Machine Learning, Decision Systems'],
+    integrations['AI platforms, Business systems, Research tools, Autonomous systems'],
+    useCases['AI automation, Autonomous operations, AI optimization, Research automation'],
     roi: 'Revolutionary AI technology with potential for complete automation and optimization.',
-    competitors: ['Limited competition in autonomous AI'],
+    competitors['Limited competition in autonomous AI'],
     marketSize: 'Growing market - $400B+ potential',
     growthRate: '2000%+ annual growth potential',
     variant: 'ai-futuristic',
@@ -204,7 +202,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     price: '$14,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered metaverse experiences, enabling intelligent virtual worlds and AI-driven digital experiences.',
-    features: [
+    features[
       'AI-powered metaverse creation',
       'Intelligent virtual beings',
       'AI-driven experiences',
@@ -227,11 +225,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     setupTime: '2-4 weeks',
     category: 'AI Metaverse Integration 2030',
     realService: true,
-    technology: ['Advanced AI, Virtual Reality, Metaverse Development, Digital Intelligence'],
-    integrations: ['VR platforms, Gaming engines, Metaverse platforms, AI systems'],
-    useCases: ['Virtual beings, Gaming AI, Metaverse experiences, Digital consciousness'],
+    technology['Advanced AI, Virtual Reality, Metaverse Development, Digital Intelligence'],
+    integrations['VR platforms, Gaming engines, Metaverse platforms, AI systems'],
+    useCases['Virtual beings, Gaming AI, Metaverse experiences, Digital consciousness'],
     roi: 'Revolutionary technology for the future of entertainment and virtual reality.',
-    competitors: ['None - First to market'],
+    competitors['None - First to market'],
     marketSize: 'Growing market - $300B+ potential',
     growthRate: '1200%+ annual growth potential',
     variant: 'metaverse-futuristic',
@@ -256,7 +254,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     price: '$79,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered space exploration, enabling autonomous space missions and intelligent space technology.',
-    features: [
+    features[
       'AI-powered space missions',
       'Autonomous space exploration',
       'AI space optimization',
@@ -279,11 +277,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     setupTime: '3-6 months',
     category: 'AI Space Technology 2030',
     realService: true,
-    technology: ['Advanced AI, Space Technology, Autonomous Systems, Space Robotics'],
-    integrations: ['Space systems, Robotics platforms, AI systems, Space monitoring'],
-    useCases: ['Space exploration, Autonomous missions, Space optimization, Research automation'],
+    technology['Advanced AI, Space Technology, Autonomous Systems, Space Robotics'],
+    integrations['Space systems, Robotics platforms, AI systems, Space monitoring'],
+    useCases['Space exploration, Autonomous missions, Space optimization, Research automation'],
     roi: 'Critical infrastructure for future space exploration. Potential for massive returns.',
-    competitors: ['Limited competition in AI space technology'],
+    competitors['Limited competition in AI space technology'],
     marketSize: 'Emerging market - $800B+ potential',
     growthRate: '3000%+ annual growth potential',
     variant: 'space-futuristic',

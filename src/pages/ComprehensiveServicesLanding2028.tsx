@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Rocket, 
@@ -49,31 +48,32 @@ import {
   Play,
   ChevronRight,
   ChevronLeft
-} from 'lucide-react';
-import { 
-  revolutionaryMicroSaasServices2028, 
+ } from 'lucide-react';
+import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
-} from '@/data/innovativeMicroSaasServices2028';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+ } from '@/data/innovativeMicroSaasServices2028';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
 
-export default function ComprehensiveServicesLanding2028() {
+export default function ComprehensiveServicesLanding2028(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
 
-  const allServices = [
-    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
-    ...revolutionaryITInfrastructureServices2028.map(s => ({ ...s, type: 'IT Infrastructure' })),
-    ...revolutionaryAIServices2028.map(s => ({ ...s, type: 'AI Services' }))
+<<<<<<< HEAD
+  const allServices = [;
+    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),;
+    ...revolutionaryITInfrastructureServices2028.map(s => ({ ...s, type: 'IT Infrastructure' })),;
+    ...revolutionaryAIServices2028.map(s => ({ ...s, type: 'AI Services' }));
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const testimonials = [
     {
       name: "Sarah Johnson",
       role: "CTO, TechFlow Solutions",
-      company: "TechFlow Solutions",
+      comp: "TechFlow Solutions",
       content: "Zion Tech Group's AI-powered legal document analyzer has revolutionized our contract review process. We've reduced review time by 80% and identified potential risks we would have missed.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
@@ -81,7 +81,7 @@ export default function ComprehensiveServicesLanding2028() {
     {
       name: "Michael Chen",
       role: "Operations Director, Global Logistics Inc",
-      company: "Global Logistics Inc",
+      comp: "Global Logistics Inc",
       content: "The quantum-enhanced supply chain optimizer has transformed our logistics operations. We've reduced costs by 35% and improved delivery accuracy to 98%.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
@@ -89,22 +89,32 @@ export default function ComprehensiveServicesLanding2028() {
     {
       name: "Dr. Emily Rodriguez",
       role: "Research Director, BioTech Innovations",
-      company: "BioTech Innovations",
+<<<<<<< HEAD
+      comp: "BioTech Innovations",
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    }
+    };
+=======;
+      company: "BioTech Innovations",;
+      content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",;
+      rating: 5,;
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face";
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const stats = [
-    { number: "500+", label: "Successful Projects", icon: CheckCircle },
-    { number: "15+", label: "Years of Innovation", icon: Award },
-    { number: "99.9%", label: "Client Satisfaction", icon: Star },
-    { number: "24/7", label: "Support Available", icon: Clock }
+  const stats = [;
+    { number: "500+", label: "Successful Projects", icon: CheckCircle },;
+    { number: "15+", label: "Years of Innovation", icon: Award },;
+    { number: "99.9%", label: "Client Satisfaction", icon: Star },;
+    { number: "24/7", label: "Support Available", icon: Clock };
   ];
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+<<<<<<< HEAD
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
       case 'Marketing Tech': return TargetIcon;
@@ -116,34 +126,40 @@ export default function ComprehensiveServicesLanding2028() {
       case 'Cloud Computing': return Cloud;
       case 'Content Creation': return FileText;
       case 'Healthcare AI': return Heart;
-      default: return Rocket;
-    }
+      default: return Rocket}
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colors = [
       'from-blue-600 to-cyan-600',
-      'from-purple-600 to-pink-600',
-      'from-green-600 to-emerald-600',
-      'from-red-600 to-orange-600',
-      'from-indigo-600 to-purple-600',
-      'from-yellow-600 to-orange-600',
-      'from-teal-600 to-blue-600',
-      'from-pink-600 to-red-600'
+      'from-purple-600 to-pink-600',;
+      'from-green-600 to-emerald-600',;
+      'from-red-600 to-orange-600',;
+      'from-indigo-600 to-purple-600',;
+      'from-yellow-600 to-orange-600',;
+      'from-teal-600 to-blue-600',;
+      'from-pink-600 to-red-600';
     ];
-    return colors[Math.abs(category.length) % colors.length];
-  };
+    return colors[Math.abs(category.length) % colors.length]};
 
-  const nextTestimonial = () => {
+<<<<<<< HEAD
+  const nextTestimonial = () => {;
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)};
+
+  const prevTestimonial = () => {;
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
+=======
+  const nextTestimonial = () => {;
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
+  const prevTestimonial = () => {;
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
         title="Comprehensive Services Landing 2028 - Zion Tech Group"
         description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting-edge technology solutions."
@@ -156,8 +172,26 @@ export default function ComprehensiveServicesLanding2028() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
@@ -167,18 +201,72 @@ export default function ComprehensiveServicesLanding2028() {
             </span>
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
             className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"
           >
             Experience the future of technology with our comprehensive suite of micro SAAS, IT infrastructure, 
             and AI services. Each solution is designed for maximum impact with proven ROI and real market pricing.
           </motion.p>
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
             className="flex flex-wrap justify-center gap-4"
           >
             <Button 
@@ -203,13 +291,40 @@ export default function ComprehensiveServicesLanding2028() {
       {/* Stats Section */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="bg-zion-cyan/20 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -227,8 +342,26 @@ export default function ComprehensiveServicesLanding2028() {
       <section id="services-section" className="py-20">
         <div className="container mx-auto px-4">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -238,13 +371,40 @@ export default function ComprehensiveServicesLanding2028() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.slice(0, 6).map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {allServices.slice(0, 6).map((service, index)  => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 group"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -309,9 +469,36 @@ export default function ComprehensiveServicesLanding2028() {
           </div>
 
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
             className="text-center mt-12"
           >
             <Button 
@@ -330,8 +517,26 @@ export default function ComprehensiveServicesLanding2028() {
       <section className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -344,8 +549,26 @@ export default function ComprehensiveServicesLanding2028() {
           <div className="max-w-4xl mx-auto">
             <motion.div
               key={currentTestimonial}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.5 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center"
             >
@@ -368,7 +591,7 @@ export default function ComprehensiveServicesLanding2028() {
                 <div className="text-left">
                   <div className="font-semibold text-white">{testimonials[currentTestimonial].name}</div>
                   <div className="text-zion-slate-light">{testimonials[currentTestimonial].role}</div>
-                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].company}</div>
+                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].comp}</div>
                 </div>
               </div>
             </motion.div>
@@ -412,8 +635,26 @@ export default function ComprehensiveServicesLanding2028() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -425,9 +666,36 @@ export default function ComprehensiveServicesLanding2028() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
@@ -440,9 +708,36 @@ export default function ComprehensiveServicesLanding2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
@@ -455,9 +750,36 @@ export default function ComprehensiveServicesLanding2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
@@ -470,9 +792,36 @@ export default function ComprehensiveServicesLanding2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
@@ -485,9 +834,36 @@ export default function ComprehensiveServicesLanding2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
@@ -500,9 +876,36 @@ export default function ComprehensiveServicesLanding2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
@@ -521,9 +924,36 @@ export default function ComprehensiveServicesLanding2028() {
       {selectedService && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
             className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
           >
             <div className="p-6">
@@ -653,8 +1083,26 @@ export default function ComprehensiveServicesLanding2028() {
       <section id="contact-section" className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -666,9 +1114,36 @@ export default function ComprehensiveServicesLanding2028() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">
@@ -685,9 +1160,36 @@ export default function ComprehensiveServicesLanding2028() {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">
@@ -704,9 +1206,36 @@ export default function ComprehensiveServicesLanding2028() {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+
+}}
               className="text-center"
             >
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">
@@ -722,9 +1251,36 @@ export default function ComprehensiveServicesLanding2028() {
           </div>
 
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
             className="text-center mt-12"
           >
             <Button 
@@ -733,10 +1289,19 @@ export default function ComprehensiveServicesLanding2028() {
               onClick={() => window.location.href = '/contact'}
             >
               Schedule a Consultation
+<<<<<<< HEAD
             </Button>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </Button>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

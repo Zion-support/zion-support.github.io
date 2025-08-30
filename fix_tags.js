@@ -10,7 +10,6 @@ const serviceRegex = /(\s+technology: \[[^\]]+\],\s+integrations: \[[^\]]+\],\s+
 
 content = content.replace(serviceRegex, (match, p1, p2) => {
   // Extract category from the service to create relevant tags
-  const categoryMatch = content.substring(0, content.indexOf(match)).match(/category: '([^']+)'/);
   const category = categoryMatch ? categoryMatch[1] : 'Technology';
   
   // Create tags based on category

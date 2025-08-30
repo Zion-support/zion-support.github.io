@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
 const notificationStyles = {
-    success: {
+  success: {
         icon: CheckCircle,
         bgColor: 'bg-zion-emerald/10',
         borderColor: 'border-zion-emerald/20',
         textColor: 'text-zion-emerald',
-        iconColor: 'text-zion-emerald'
-    },
+  iconColor: 'text-zion-emerald'
+    
+
+
+
+
+
+
+},
     error: {
         icon: XCircle,
         bgColor: 'bg-red-500/10',
@@ -37,15 +44,12 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
     useEffect(() => {
         if (duration > 0) {
             const timer = setTimeout(() => {
-                handleClose();
-            }, duration);
-            return () => clearTimeout(timer);
-        }
+                handleClose()}, duration);
+            return () => clearTimeout(timer)}
     }, [duration]);
     const handleClose = () => {
         setIsVisible(false);
-        setTimeout(() => onClose(id), 300);
-    };
+        setTimeout(() => onClose(id), 300)};
     if (!isVisible)
         return null;
     return (<div className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`} role="alert" aria-live="assertive">
@@ -59,10 +63,8 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
           <X className="w-4 h-4"/>
         </button>
       </div>
-    </div>);
-}
+    </div>)}
 export function NotificationContainer({ notifications, onClose }) {
     return (<div className="fixed top-20 right-4 z-50 space-y-2">
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}
-    </div>);
-}
+    </div>)}

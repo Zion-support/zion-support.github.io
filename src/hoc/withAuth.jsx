@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+;
 import { useSelector } from 'react-redux';
 function withAuth(Component) {
     const Wrapped = (props) => {
@@ -7,14 +7,23 @@ function withAuth(Component) {
         const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
         useEffect(() => {
             if (!isLoggedIn) {
-                router.push('/login?next=/community/new');
+<<<<<<< HEAD
+                router.push('/login?next=/community/new')}
+=======
+                router('/login?next=/community/new');
             }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {
-            return null;
-        }
-        return <Component {...props}/>;
-    };
-    return Wrapped;
-}
+            return null}
+        return <Component {...props}/>};
+    return Wrapped}
+export default withAuth;
+
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
 export default withAuth;

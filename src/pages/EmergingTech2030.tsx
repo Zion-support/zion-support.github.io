@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Rocket, 
   Zap, 
   Shield, 
@@ -28,46 +27,71 @@ import {
   Eye,
   Heart,
   Zap as Lightning
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO  } from "../components/SEO";
+import { emergingTechServices2030  } from "../data/emergingTechServices2030";
+=======
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { emergingTechServices2030 } from '../data/emergingTechServices2030';
+import { SEO } from "../components/SEO";
+import { emergingTechServices2030 } from "../data/emergingTechServices2030";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default function EmergingTech2030() {
+export default function EmergingTech2030(...args[]):  {
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0.5;
+      };
+    };
   };
 
   const serviceIcons = {
-    'Quantum Computing': Brain,
+  'Quantum Computing': Brain,
     'Artificial Intelligence': Cpu,
     'Neuromorphic Computing': Brain,
     'Synthetic Biology': Heart,
     'Space Technology': Rocket,
-    'Brain-Computer Interface': Brain,
-    'Fusion Energy': Zap
-  };
+    'Brain-Computer Interface': Brain,;
+  ;
+  ;
+  ;
+  ;
+  'Fusion Energy': Zap;
+  ;
+
+
+
+
+
+
+};
 
   return (
     <>
       <SEO 
-        title="Emerging Technology Services 2030 - Zion Tech Group"
+        title = "Emerging Technology Services 2030 - Zion Tech Group"
         description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses."
         canonical="/emerging-tech-2030"
         url="https://ziontechgroup.com/emerging-tech-2030"
@@ -148,16 +172,24 @@ export default function EmergingTech2030() {
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Our emerging technology services represent the cutting edge of innovation, designed to give your business a competitive advantage in the future
+<<<<<<< HEAD
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {emergingTechServices2030.map((service, index) => {
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {emergingTechServices2030.map((service, index)  => {;
+=======;
+              </p>;
+            </motion.div>;
+;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {emergingTechServices2030.map((service, index) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
                 
                 return (
                   <motion.div
-                    key={service.id}
+                    key = {service.id}
                     variants={itemVariants}
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
@@ -202,21 +234,39 @@ export default function EmergingTech2030() {
                     </div>
 
                     <Link
-                      to={`/services/${service.id.replace(/-/g, '-')}`}
+                      to = {
+  `/services/${service.id.replace(/-/g,
+  '-')
+
+
+
+
+
+
+}`}
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
+<<<<<<< HEAD
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </motion.div>
+                )})};
+=======;
+                    >;
+                      Learn More;
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />;
+                    </Link>;
+                  </motion.div>;
                 );
               })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </motion.div>
         </section>
 
         {/* Why Choose Zion Tech Group */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-900/50 to-slate-800/50">
+        <section className = "py-20 px-4 bg-gradient-to-r from-slate-900/50 to-slate-800/50">
           <motion.div 
             className="container mx-auto max-w-6xl"
             variants={containerVariants}
@@ -233,7 +283,7 @@ export default function EmergingTech2030() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Award,
@@ -271,7 +321,7 @@ export default function EmergingTech2030() {
                   description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.',
                   color: 'from-red-500 to-pink-600'
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
@@ -334,10 +384,19 @@ export default function EmergingTech2030() {
               >
                 Get Custom Quote
               </Link>
+<<<<<<< HEAD
             </motion.div>
           </motion.div>
         </section>
       </div>
     </>
+  )};
+=======;
+            </motion.div>;
+          </motion.div>;
+        </section>;
+      </div>;
+    </>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

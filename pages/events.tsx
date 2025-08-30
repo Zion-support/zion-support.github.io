@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award } from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award  } from 'lucide-react'
 
 
-export default function Events() {
+export default function Events(...args[]):  {
 	const upcomingEvents = [
 		{
 			id: 1,
@@ -199,8 +199,8 @@ export default function Events() {
 							Missed an event? Watch recordings and access materials
 						</p>
 					</div>
-					<div className="grid gap-6 lg:grid-cols-2">
-						{pastEvents.map((event) => (
+					<div className="grid gap-6 lg: grid-cols-2">
+						{pastEvents.map((event)  => (
 							<div key={event.id} className="bg-white border border-gray-200 rounded-lg p-6">
 								<div className="flex items-start justify-between">
 									<div>
@@ -258,10 +258,10 @@ export default function Events() {
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 						>
 							View Services <span aria-hidden="true">→</span>
-						</Link>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
+						</Link>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+};

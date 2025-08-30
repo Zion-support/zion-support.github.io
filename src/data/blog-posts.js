@@ -9,7 +9,7 @@ export const blogPosts = [
     publishDate: "2024-01-15",
     readTime: "5 min read",
     category: "Technology Trends",
-    tags: ["AI", "Asset Management", "Digital Transformation"],
+    tags["AI", "Asset Management", "Digital Transformation"],
     featured: true,
     imageUrl: "/images/blog/ai-asset-management.jpg",
     slug: "future-of-it-asset-management-ai-powered-solutions"
@@ -24,7 +24,7 @@ export const blogPosts = [
     publishDate: "2024-01-10",
     readTime: "7 min read",
     category: "Best Practices",
-    tags: ["Enterprise", "Asset Tracking", "Compliance"],
+    tags["Enterprise", "Asset Tracking", "Compliance"],
     featured: false,
     imageUrl: "/images/blog/enterprise-tracking.jpg",
     slug: "best-practices-enterprise-it-asset-tracking"
@@ -39,7 +39,7 @@ export const blogPosts = [
     publishDate: "2024-01-05",
     readTime: "6 min read",
     category: "Mobile Solutions",
-    tags: ["Mobile", "Field Service", "Real-time"],
+    tags["Mobile", "Field Service", "Real-time"],
     featured: true,
     imageUrl: "/images/blog/mobile-asset-management.jpg",
     slug: "mobile-first-approach-it-asset-management"
@@ -54,7 +54,7 @@ export const blogPosts = [
     publishDate: "2023-12-28",
     readTime: "8 min read",
     category: "Cost Management",
-    tags: ["Cost Optimization", "Lifecycle Management", "ROI"],
+    tags["Cost Optimization", "Lifecycle Management", "ROI"],
     featured: false,
     imageUrl: "/images/blog/cost-optimization.jpg",
     slug: "cost-optimization-intelligent-asset-lifecycle-management"
@@ -69,7 +69,7 @@ export const blogPosts = [
     publishDate: "2023-12-20",
     readTime: "9 min read",
     category: "Security",
-    tags: ["Security", "Compliance", "Data Protection"],
+    tags["Security", "Compliance", "Data Protection"],
     featured: true,
     imageUrl: "/images/blog/security-considerations.jpg",
     slug: "security-considerations-it-asset-management"
@@ -84,48 +84,33 @@ export const blogPosts = [
     publishDate: "2023-12-15",
     readTime: "6 min read",
     category: "Integration",
-    tags: ["Integration", "Enterprise Systems", "Workflow"],
+    tags["Integration", "Enterprise Systems", "Workflow"],
     featured: false,
     imageUrl: "/images/blog/integration-strategies.jpg",
     slug: "integration-strategies-it-asset-management-systems"
   }
 ];
 
-export const getBlogPostBySlug = (slug) => {
-  return blogPosts.find(post => post.slug === slug);
-};
-
-export const getBlogPostsByCategory = (category) => {
-  return blogPosts.filter(post => post.category === category);
-};
-
-export const getFeaturedBlogPosts = () => {
-  return blogPosts.filter(post => post.featured);
-};
-
 export const getRecentBlogPosts = (limit = 3) => {
   return blogPosts
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
-    .slice(0, limit);
-};
+    .slice(0, limit)};
 
 export const searchBlogPosts = (query) => {
   const searchTerm = query.toLowerCase();
-  return blogPosts.filter(post => 
+  return blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchTerm) ||
     post.excerpt.toLowerCase().includes(searchTerm) ||
     post.content.toLowerCase().includes(searchTerm) ||
     post.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-  );
-};
+  )};
 
 export const getBlogCategories = () => {
   const categories = [...new Set(blogPosts.map(post => post.category))];
   return categories.map(category => ({
     name: category,
     count: blogPosts.filter(post => post.category === category).length
-  }));
-};
+  }))};
 
 export const getBlogTags = () => {
   const allTags = blogPosts.flatMap(post => post.tags);
@@ -133,7 +118,6 @@ export const getBlogTags = () => {
   return uniqueTags.map(tag => ({
     name: tag,
     count: allTags.filter(t => t === tag).length
-  }));
-};
+  }))};
 
 export const BLOG_POSTS = blogPosts;

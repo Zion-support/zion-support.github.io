@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Target, 
-  Users, 
-  Shield, 
-  TrendingUp, 
+import {
+  Brain,
+  Cpu,
+  Zap,
+  Target,
+  Users,
+  Shield,
+  TrendingUp,
   CheckCircle,
   ArrowRight,
   Play,
@@ -22,15 +22,15 @@ import {
   DollarSign,
   Factory,
   ShoppingCart
-} from 'lucide-react';
+ } from 'lucide-react';
 
-export default function AIServices() {
+export default function AIServices(...args[]):  {
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
       description: "Strategic guidance on implementing AI solutions across your organization",
       icon: Target,
-      features: [
+      features[
         "AI readiness assessment",
         "Technology roadmap planning",
         "ROI analysis and business case development",
@@ -43,7 +43,7 @@ export default function AIServices() {
       name: "Machine Learning Development",
       description: "Custom ML models and algorithms tailored to your specific business needs",
       icon: Brain,
-      features: [
+      features[
         "Custom model development",
         "Data preprocessing and feature engineering",
         "Model training and optimization",
@@ -56,7 +56,7 @@ export default function AIServices() {
       name: "AI-Powered Applications",
       description: "Intelligent automation and insights through custom AI applications",
       icon: Zap,
-      features: [
+      features[
         "Chatbot and virtual assistant development",
         "Predictive analytics applications",
         "Computer vision solutions",
@@ -69,51 +69,59 @@ export default function AIServices() {
       name: "AI Infrastructure & MLOps",
       description: "Scalable AI infrastructure and machine learning operations",
       icon: Cloud,
-      features: [
+      features[
         "ML pipeline automation",
-        "Model versioning and deployment",
-        "Scalable training infrastructure",
-        "Monitoring and alerting systems"
-      ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
-    }
+        "Model versioning and deployment",;
+        "Scalable training infrastructure",;
+        "Monitoring and alerting systems";
+      ],;
+      price: "From $6,000",;
+      duration: "4-10 weeks";
+    };
   ];
 
-  const aiTechnologies = [
-    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },
-    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },
-    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },
-    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },
-    { name: "NLP", description: "Natural language processing", icon: MessageSquare },
-    { name: "AutoML", description: "Automated machine learning", icon: Zap }
+  const aiTechnologies = [;
+    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },;
+    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;
+    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },;
+    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },;
+    { name: "NLP", description: "Natural language processing", icon: MessageSquare },;
+    { name: "AutoML", description: "Automated machine learning", icon: Zap };
   ];
 
   const useCases = [
     {
       industry: "Healthcare",
-      applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],
+      applications["Medical image analysis", "Drug discovery", "Patient risk prediction"],
       icon: Heart
     },
     {
       industry: "Finance",
-      applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],
+      applications["Fraud detection", "Credit scoring", "Algorithmic trading"],
       icon: DollarSign
     },
     {
       industry: "Manufacturing",
-      applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
+      applications["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
+<<<<<<< HEAD
     {
       industry: "Retail",
-      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
+      applications["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
       icon: ShoppingCart
-    }
+    };
+=======;
+    {;
+      industry: "Retail",;
+      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
+      icon: ShoppingCart;
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -125,7 +133,7 @@ export default function AIServices() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence. From strategy to implementation, 
+              Transform your business with cutting-edge artificial intelligence. From strategy to implementation,
               we deliver AI solutions that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -143,7 +151,7 @@ export default function AIServices() {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
@@ -163,7 +171,7 @@ export default function AIServices() {
               Comprehensive AI solutions designed to accelerate your digital transformation journey
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {aiServices.map((service, index) => (
               <div
@@ -179,7 +187,7 @@ export default function AIServices() {
                     <p className="text-slate-400">{service.description}</p>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
@@ -188,7 +196,7 @@ export default function AIServices() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
@@ -218,7 +226,7 @@ export default function AIServices() {
               We leverage the latest AI frameworks and tools to deliver exceptional results
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {aiTechnologies.map((tech, index) => (
               <div
@@ -247,7 +255,7 @@ export default function AIServices() {
               Discover how AI is transforming various sectors and creating new opportunities
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div
@@ -296,10 +304,19 @@ export default function AIServices() {
               >
                 Explore All Services
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

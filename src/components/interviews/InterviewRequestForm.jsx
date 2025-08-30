@@ -47,8 +47,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 description: "Please log in to schedule an interview",
                 variant: "destructive",
             });
-            return;
-        }
+            return}
         setIsSubmitting(true);
         try {
             // Combine date and time
@@ -71,19 +70,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 title: "Interview requested",
                 description: `Your interview request with ${talent.full_name} has been sent.`,
             });
-            onClose();
-        }
+            onClose()}
         catch (error) {
             console.error("Failed to schedule interview:", error);
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",
                 variant: "destructive",
-            });
-        }
+            })}
         finally {
-            setIsSubmitting(false);
-        }
+            setIsSubmitting(false)}
     }
     const timeSlots = [
         "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
@@ -117,14 +113,32 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
-                      <Button variant="outline" className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}>
+                      <Button variant="outline" className = {
+  cn("w-full pl-3 text-left font-normal",
+  !field.value && "text-muted-foreground")
+
+
+
+
+
+
+}>
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < new Date() || date > addDays(new Date(), 90)} initialFocus className="p-3 pointer-events-auto"/>
+                    <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled = {
+  (date) => date < new Date() || date > addDays(new Date(),
+  90)
+
+
+
+
+
+
+} initialFocus className="p-3 pointer-events-auto"/>
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
@@ -211,5 +225,4 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
           </Button>
         </div>
       </form>
-    </Form>);
-}
+    </Form>)}

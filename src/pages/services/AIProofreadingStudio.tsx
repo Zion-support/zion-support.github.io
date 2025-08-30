@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-const AIProofreadingStudio: React.FC = () => (
+const AIProofreadingStudio: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="AI Proofreading Studio - Zion Tech Group" description="AI-powered proofreading, tone, and localization for marketing and technical content." />
     <section className="container mx-auto px-4 py-12">
@@ -32,13 +32,13 @@ const AIProofreadingStudio: React.FC = () => (
           <li>Creator: $29/mo per seat</li>
           <li>Team: $149/mo up to 10 seats</li>
           <li>Enterprise: custom, SSO + DLP</li>
-        </ul>
-      </div>
-    </section>
-    <section className="container mx-auto px-4 pb-16">
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Start free trial</a>
-    </section>
-  </div>
+        </ul>;
+      </div>;
+    </section>;
+    <section className="container mx-auto px-4 pb-16">;
+      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Start free trial</a>;
+    </section>;
+  </div>;
 );
 
 export default AIProofreadingStudio;

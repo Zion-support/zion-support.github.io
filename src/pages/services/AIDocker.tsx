@@ -3,13 +3,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIDocker() {
   const features = [
     'AI-powered Docker optimization',
-    'Intelligent Docker management',
-    'Automated Docker monitoring and alerting',
-    'Predictive analytics for Docker scaling',
-    'Smart Docker security and compliance',
-    'AI-driven Docker automation and orchestration',
-    'Real-time Docker analytics and insights',
-    'Custom AI models for Docker applications'
+    'Intelligent Docker management',;
+    'Automated Docker monitoring and alerting',;
+    'Predictive analytics for Docker scaling',;
+    'Smart Docker security and compliance',;
+    'AI-driven Docker automation and orchestration',;
+    'Real-time Docker analytics and insights',;
+    'Custom AI models for Docker applications';
   ];
 
   const tiers = [
@@ -21,44 +21,44 @@ export default function AIDocker() {
     { 
       name: 'Business', 
       price: '$799/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full Docker suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full Docker suite', '24/7 dedicated support'] ;
+    },;
   ];
 
-  const useCases = [
-    'Docker optimization',
-    'Docker management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Docker scaling and management'
+  const useCases = [;
+    'Docker optimization',;
+    'Docker management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Docker scaling and management';
   ];
 
-  const benefits = [
-    'Improve Docker performance by 50-80%',
-    'Reduce Docker build time by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance Docker reliability and scalability',
-    'Optimize resource utilization',
-    'Scale Docker operations efficiently'
+  const benefits = [;
+    'Improve Docker performance by 50-80%',;
+    'Reduce Docker build time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Docker reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale Docker operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +163,12 @@ export default function AIDocker() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-cyan-600 text-cyan-600 rounded-lg hover:bg-cyan-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

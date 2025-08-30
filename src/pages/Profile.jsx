@@ -10,8 +10,12 @@ export default function Profile() {
     useEffect(() => {
         if (!isLoading && !user) {
             toast.error("Please log in to view your profile");
-            navigate("/login?redirect=/profile");
+<<<<<<< HEAD
+            router("/login?redirect=/profile")}
+=======
+            router("/login?redirect=/profile");
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }, [user, isLoading, navigate]);
     if (isLoading) {
         return (<>
@@ -20,8 +24,7 @@ export default function Profile() {
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
         
-      </>);
-    }
+      </>)}
     if (!user) {
         return (<>
         
@@ -29,14 +32,13 @@ export default function Profile() {
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
             <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
-            <Button onClick={() => navigate("/login?redirect=/profile")} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+            <Button onClick={() => router("/login?redirect=/profile")} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
               Go to Login
             </Button>
           </div>
         </div>
         
-      </>);
-    }
+      </>)}
     return (<>
       
       <div className="min-h-screen bg-zion-blue">
@@ -54,8 +56,12 @@ export default function Profile() {
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button onClick={() => {
             logout();
-            navigate("/");
+<<<<<<< HEAD
+            router("/")}} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
+=======
+            router("/");
         }} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   Logout
                 </Button>
               </div>
@@ -64,7 +70,6 @@ export default function Profile() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}
 ;
 export default Profile;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
 function ContractBuilderPage() {
@@ -14,6 +14,13 @@ function ContractBuilderPage() {
         
         
       </>
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}
+export default ContractBuilderPage;
+
+export default ContractBuilderPage;
+export default ContractBuilderPage;
+export default ContractBuilderPage;
+export default ContractBuilderPage;
+export default ContractBuilderPage;
+export default ContractBuilderPage;
 export default ContractBuilderPage;

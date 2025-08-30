@@ -5,22 +5,22 @@ export default function AIEdgeComputingPlatform() {
     'AI-powered edge device management and optimization',
     'Real-time data processing at the edge',
     'Distributed AI model deployment and inference',
-    'Edge-to-cloud synchronization and analytics',
-    'Automatic load balancing and failover',
-    'Edge security and threat detection',
-    'IoT device integration and management',
-    'Custom edge computing workflows',
-    'Edge analytics and reporting tools',
-    'Scalable edge infrastructure management'
+    'Edge-to-cloud synchronization and analytics',;
+    'Automatic load balancing and failover',;
+    'Edge security and threat detection',;
+    'IoT device integration and management',;
+    'Custom edge computing workflows',;
+    'Edge analytics and reporting tools',;
+    'Scalable edge infrastructure management';
   ];
 
-  const benefits = [
-    'Reduce latency by 80-90%',
-    'Cut bandwidth costs by 60-70%',
-    'Improve data privacy and security',
-    'Real-time edge processing',
-    'Enhanced offline capabilities',
-    'Scalable edge infrastructure'
+  const benefits = [;
+    'Reduce latency by 80-90%',;
+    'Cut bandwidth costs by 60-70%',;
+    'Improve data privacy and security',;
+    'Real-time edge processing',;
+    'Enhanced offline capabilities',;
+    'Scalable edge infrastructure';
   ];
 
   const pricing = [
@@ -35,35 +35,35 @@ export default function AIEdgeComputingPlatform() {
       price: '$1,199/mo', 
       features: ['Up to 200 edge devices', 'Advanced AI analytics', 'Real-time processing', 'Priority support', 'Custom workflows', 'API access'],
       popular: true
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$3,499/mo', 
-      features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
-      popular: false
-    }
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,499/mo', ;
+      features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
+      popular: false;
+    };
   ];
 
-  const useCases = [
-    'Smart city infrastructure',
-    'Industrial IoT monitoring',
-    'Autonomous vehicle systems',
-    'Healthcare edge computing',
-    'Retail edge analytics',
-    'Energy grid optimization'
+  const useCases = [;
+    'Smart city infrastructure',;
+    'Industrial IoT monitoring',;
+    'Autonomous vehicle systems',;
+    'Healthcare edge computing',;
+    'Retail edge analytics',;
+    'Energy grid optimization';
   ];
 
-  const industries = [
-    'Smart Cities & Infrastructure',
-    'Manufacturing & Industry 4.0',
-    'Transportation & Logistics',
-    'Healthcare & Medical Devices',
-    'Retail & E-commerce',
-    'Energy & Utilities'
+  const industries = [;
+    'Smart Cities & Infrastructure',;
+    'Manufacturing & Industry 4.0',;
+    'Transportation & Logistics',;
+    'Healthcare & Medical Devices',;
+    'Retail & E-commerce',;
+    'Energy & Utilities';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -287,12 +287,12 @@ export default function AIEdgeComputingPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
-          >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
-        </div>
-      </section>
-    </div>
+            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold";
+          >;
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

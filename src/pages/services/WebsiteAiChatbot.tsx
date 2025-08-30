@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-const WebsiteAiChatbot: React.FC = () => (
+const WebsiteAiChatbot: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="Website AI Chatbot - Zion Tech Group" description="24/7 on-site AI assistant that answers, qualifies, and books meetings." />
     <section className="container mx-auto px-4 py-12">
@@ -32,13 +32,13 @@ const WebsiteAiChatbot: React.FC = () => (
           <li>Starter: $299/mo up to 1k chats</li>
           <li>Growth: $899/mo up to 10k chats</li>
           <li>Enterprise: custom, SSO + analytics</li>
-        </ul>
-      </div>
-    </section>
-    <section className="container mx-auto px-4 pb-16">
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Get started</a>
-    </section>
-  </div>
+        </ul>;
+      </div>;
+    </section>;
+    <section className="container mx-auto px-4 pb-16">;
+      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Get started</a>;
+    </section>;
+  </div>;
 );
 
 export default WebsiteAiChatbot;

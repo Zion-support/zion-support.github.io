@@ -3,13 +3,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityAuditing() {
   const features = [
     'AI-powered security auditing optimization',
-    'Intelligent auditing strategy management and execution',
-    'Automated security compliance verification and reporting',
-    'Predictive analytics for auditing needs',
-    'Smart auditing framework management',
-    'AI-driven auditing automation and orchestration',
-    'Real-time auditing performance tracking',
-    'Custom AI models for auditing applications'
+    'Intelligent auditing strategy management and execution',;
+    'Automated security compliance verification and reporting',;
+    'Predictive analytics for auditing needs',;
+    'Smart auditing framework management',;
+    'AI-driven auditing automation and orchestration',;
+    'Real-time auditing performance tracking',;
+    'Custom AI models for auditing applications';
   ];
 
   const tiers = [
@@ -21,44 +21,44 @@ export default function AISecurityAuditing() {
     { 
       name: 'Business', 
       price: '$1,499/mo', 
-      details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited audits', 'Custom AI models', 'Full auditing suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited audits', 'Custom AI models', 'Full auditing suite', '24/7 dedicated support'] ;
+    },;
   ];
 
-  const useCases = [
-    'Security auditing optimization',
-    'Auditing strategy management and execution',
-    'Security compliance verification and reporting',
-    'Auditing framework management and automation',
-    'Auditing automation and orchestration',
-    'Auditing scaling and management'
+  const useCases = [;
+    'Security auditing optimization',;
+    'Auditing strategy management and execution',;
+    'Security compliance verification and reporting',;
+    'Auditing framework management and automation',;
+    'Auditing automation and orchestration',;
+    'Auditing scaling and management';
   ];
 
-  const benefits = [
-    'Improve security auditing performance by 50-80%',
-    'Reduce auditing completion time by 40-70%',
-    'Cut security auditing costs by 35-65%',
-    'Enhance security auditing reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security auditing operations efficiently'
+  const benefits = [;
+    'Improve security auditing performance by 50-80%',;
+    'Reduce auditing completion time by 40-70%',;
+    'Cut security auditing costs by 35-65%',;
+    'Enhance security auditing reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security auditing operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +163,12 @@ export default function AISecurityAuditing() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

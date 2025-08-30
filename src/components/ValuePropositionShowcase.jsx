@@ -78,24 +78,24 @@ const competitiveAdvantages = [
 const marketComparison = [
   {
     category: "AI Business Intelligence",
-    competitors: ["Tableau", "Power BI", "Looker"],
-    competitorPricing: ["$70/user/month", "$9.99/user/month", "$30/user/month"],
+    competitors["Tableau", "Power BI", "Looker"],
+    competitorPricing["$70/user/month", "$9.99/user/month", "$30/user/month"],
     ourPricing: "$299/month",
     savings: "Up to 80%",
     advantage: "AI-powered insights, natural language queries, predictive analytics"
   },
   {
     category: "Customer Success Platform",
-    competitors: ["Gainsight", "Totango", "ChurnZero"],
-    competitorPricing: ["$500/user/month", "$500/user/month", "$500/user/month"],
+    competitors["Gainsight", "Totango", "ChurnZero"],
+    competitorPricing["$500/user/month", "$500/user/month", "$500/user/month"],
     ourPricing: "$349/month",
     savings: "Up to 90%",
     advantage: "AI-powered predictions, affordable pricing, easy setup"
   },
   {
     category: "Zero-Trust Security",
-    competitors: ["Palo Alto Networks", "CrowdStrike", "Zscaler"],
-    competitorPricing: ["$50,000/year", "$100,000/year", "$50,000/year"],
+    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],
+    competitorPricing["$50,000/year", "$100,000/year", "$50,000/year"],
     ourPricing: "$599/month",
     savings: "Up to 85%",
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
@@ -104,7 +104,7 @@ const marketComparison = [
 
 const successStories = [
   {
-    company: "TechCorp Solutions",
+    comp: "TechCorp Solutions",
     industry: "SaaS",
     challenge: "Manual customer onboarding taking 3+ weeks",
     solution: "AI Customer Success Hub",
@@ -112,7 +112,7 @@ const successStories = [
     roi: "280% in 8 months"
   },
   {
-    company: "Global Manufacturing Inc",
+    comp: "Global Manufacturing Inc",
     industry: "Manufacturing",
     challenge: "Inefficient supply chain causing 15% cost overruns",
     solution: "AI Supply Chain Optimizer",
@@ -120,7 +120,7 @@ const successStories = [
     roi: "320% in 12 months"
   },
   {
-    company: "FinTech Innovations",
+    comp: "FinTech Innovations",
     industry: "Financial Services",
     challenge: "Manual financial reporting taking 40+ hours weekly",
     solution: "AI Financial Analyst Pro",
@@ -142,7 +142,15 @@ export function ValuePropositionShowcase() {
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+
+
+
+
+},
     visible: {
       y: 0,
       opacity: 1,
@@ -154,7 +162,15 @@ export function ValuePropositionShowcase() {
   };
 
   const cardVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
+  hidden: { scale: 0.95,
+  opacity: 0 
+
+
+
+
+
+
+},
     visible: {
       scale: 1,
       opacity: 1,
@@ -171,8 +187,26 @@ export function ValuePropositionShowcase() {
         {/* Header Section */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -214,9 +248,36 @@ export function ValuePropositionShowcase() {
         {/* Competitive Advantages */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose Zion Tech Group?
@@ -227,7 +288,16 @@ export function ValuePropositionShowcase() {
                 key={index}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
-                whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)" }}
+                whileHover = {
+  { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,
+  0.3)" 
+
+
+
+
+
+
+}}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${advantage.color} rounded-xl flex items-center justify-center mb-4 text-white`}>
                   {advantage.icon}
@@ -242,9 +312,36 @@ export function ValuePropositionShowcase() {
         {/* Market Comparison */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Competitive Pricing Analysis
@@ -299,9 +396,36 @@ export function ValuePropositionShowcase() {
         {/* Success Stories */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.7 
+
+
+
+
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Real Success Stories
@@ -315,7 +439,7 @@ export function ValuePropositionShowcase() {
                 whileHover={{ y: -5 }}
               >
                 <div className="mb-4">
-                  <h4 className="text-lg font-bold text-white mb-1">{story.company}</h4>
+                  <h4 className="text-lg font-bold text-white mb-1">{story.comp}</h4>
                   <span className="text-zion-cyan text-sm">{story.industry}</span>
                 </div>
                 
@@ -344,9 +468,36 @@ export function ValuePropositionShowcase() {
         {/* Call to Action */}
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.9 
+
+
+
+
+
+
+}}
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -378,5 +529,4 @@ export function ValuePropositionShowcase() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

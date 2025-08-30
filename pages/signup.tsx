@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import {
-  User,
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion.ts'
+import { useState  } from 'react.ts'
+import { User,
   Mail,
   Lock,
   Eye,
@@ -16,16 +15,16 @@ import {
   Zap,
   Brain,
   Cloud
-} from 'lucide-react'
+ } from 'lucide-react'
 
-export default function Signup() {
+export default function Signup(...args[]):  {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     password: '',
     confirmPassword: '',
-    company: '',
+    comp: '',
     phone: '',
     website: '',
     industry: '',
@@ -35,7 +34,7 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [errors, setErrors] = useState<Record<string, any>>({})
 
   const industries = [
     'Technology',
@@ -61,35 +60,9 @@ export default function Signup() {
     'Other'
   ]
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }))
-    }
-  }
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {}
-
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required'
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required'
-    if (!formData.email.trim()) newErrors.email = 'Email is required'
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-    
-    if (!formData.password) newErrors.password = 'Password is required'
-    else if (formData.password.length < 8) newErrors.password = 'Password must be at least 8 characters'
-    
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match'
-    }
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
-
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault()
     
     if (!validateForm()) return
@@ -101,10 +74,10 @@ export default function Signup() {
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       // Success - redirect or show success message
-      console.log('Signup successful:', formData)
+      // // // // console.log('Signup successful:', formData)
       
     } catch (error) {
-      console.error('Signup error:', error)
+      // // // // console.error('Signup error:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -115,7 +88,7 @@ export default function Signup() {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -131,7 +104,7 @@ export default function Signup() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-      </Head>
+      </Helmet>
 
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
         {/* Hero Section */}
@@ -144,8 +117,26 @@ export default function Signup() {
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -179,9 +170,36 @@ export default function Signup() {
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="max-w-2xl mx-auto"
             >
               <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
@@ -340,22 +358,22 @@ export default function Signup() {
                     )}
                   </div>
 
-                  {/* Company Information */}
+                  {/* Comp Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                        Company Name
+                      <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Comp Name
                       </label>
                       <div className="relative">
                         <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
                         <input
                           type="text"
-                          id="company"
-                          name="company"
-                          value={formData.company}
+                          id="comp"
+                          name="comp"
+                          value={formData.comp}
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                          placeholder="Enter company name"
+                          placeholder="Enter comp name"
                         />
                       </div>
                     </div>
@@ -394,7 +412,7 @@ export default function Signup() {
                           value={formData.website}
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                          placeholder="https://yourcompany.com"
+                          placeholder="https://yourcomp.com"
                         />
                       </div>
                     </div>
@@ -489,9 +507,36 @@ export default function Signup() {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -504,9 +549,36 @@ export default function Signup() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
@@ -519,9 +591,36 @@ export default function Signup() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -534,9 +633,36 @@ export default function Signup() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+
+
+
+
+}}
                 className="text-center p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
@@ -547,10 +673,10 @@ export default function Signup() {
                   Scalable cloud infrastructure and DevOps solutions for modern applications
                 </p>
               </motion.div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  )
-}
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
+  );
+};

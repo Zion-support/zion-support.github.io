@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
+import {
+  Menu,
+  X,
+  Search,
+  User,
+  Bell,
   ChevronDown,
   Brain,
   Shield,
@@ -218,38 +218,49 @@ import {
   Chi,
   Psi,
   Omega
-} from 'lucide-react';
+ } from 'lucide-react';
 
-export const EnhancedFuturisticNavigation: React.FC = () => {
+<<<<<<< HEAD
+export const EnhancedFuturisticNavigation: React.FC = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+<<<<<<< HEAD
+    const handleScroll = () => {;
+      setScrolled(window.scrollY > 20)};
+=======
+    const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
+    setActiveDropdown(null)}, [location.pathname]);
 
-  const handleSearch = (e: React.FormEvent) => {
+<<<<<<< HEAD
+  const handleSearch = (e: React.FormEvent) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-    }
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   };
 
-  const toggleDropdown = (dropdown: string) => {
+<<<<<<< HEAD
+  const toggleDropdown = (dropdown: string)  => {;
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
+=======
+  const toggleDropdown = (dropdown: string) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const navigationItems = [
     {
@@ -264,7 +275,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/ai-services',
       icon: Brain,
       color: 'from-zion-purple to-zion-pink',
-      dropdown: [
+      dropdown[
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
@@ -278,7 +289,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/micro-saas',
       icon: Code,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
+      dropdown[
         { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' },
         { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
         { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
@@ -294,7 +305,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/it-services',
       icon: Network,
       color: 'from-zion-blue to-zion-purple',
-      dropdown: [
+      dropdown[
         { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
         { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
         { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },
@@ -308,7 +319,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/emerging-tech',
       icon: Rocket,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown: [
+      dropdown[
         { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
         { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' },
         { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' },
@@ -322,7 +333,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/marketplace',
       icon: ShoppingCart,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
+      dropdown[
         { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' },
         { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' },
         { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' },
@@ -336,7 +347,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       href: '/services-overview',
       icon: BarChart3,
       color: 'from-zion-green to-zion-emerald',
-      dropdown: [
+      dropdown[
         { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
         { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
         { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
@@ -350,21 +361,21 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       color: 'from-zion-blue to-zion-cyan',
       isMain: true
     },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: Phone,
-      color: 'from-zion-cyan to-zion-purple',
-      isMain: true
-    }
+    {;
+      name: 'Contact',;
+      href: '/contact',;
+      icon: Phone,;
+      color: 'from-zion-cyan to-zion-purple',;
+      isMain: true;
+    };
   ];
 
   return (
     <>
       {/* Desktop Navigation */}
       <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+        scrolled
+          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-6">
@@ -423,9 +434,36 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          initial = {
+  { opacity: 0, y: 10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
+                          animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+
+}}
+                          exit = {
+  { opacity: 0, y: 10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
                         >
@@ -491,8 +529,8 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       {/* Mobile Navigation */}
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">
         <div className={`transition-all duration-500 ${
-          scrolled 
-            ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+          scrolled
+            ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
             : 'bg-transparent'
         }`}>
           <div className="max-w-7xl mx-auto px-6">
@@ -525,9 +563,36 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.3 }}
               className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden"
             >
@@ -566,14 +631,41 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                               activeDropdown === item.name ? 'rotate-180' : ''
                             }`} />
                           </button>
-                          
+
                           {/* Mobile Dropdown */}
                           <AnimatePresence>
                             {activeDropdown === item.name && (
                               <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
+                                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                                 transition={{ duration: 0.3 }}
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
                               >
@@ -625,10 +717,19 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
+<<<<<<< HEAD
       </nav>
 
       {/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
-    </>
+      <div className="h-20"></div>;
+    </>;
+  )};
+=======
+      </nav>;
+;
+      {/* Spacer for fixed navigation */};
+      <div className="h-20"></div>;
+    </>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

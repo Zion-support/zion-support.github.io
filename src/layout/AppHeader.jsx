@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Database, 
-  Users, 
-  Code, 
-  Lock, 
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Globe,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Database,
+  Users,
+  Code,
+  Lock,
   Rocket,
   Sun,
   Moon
@@ -29,17 +29,14 @@ export function AppHeader() {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+      setScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
+    setActiveDropdown(null)}, [location.pathname]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -48,9 +45,9 @@ export function AppHeader() {
 
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
-    { 
-      name: 'Services', 
-      path: '/services', 
+    {
+      name: 'Services',
+      path: '/services',
       icon: null,
       dropdown: [
         { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -63,22 +60,25 @@ export function AppHeader() {
         { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
       ]
     },
+    { name: 'Pricing', path: '/pricing', icon: null },
+    { name: 'Marketplace', path: '/marketplace', icon: null },
+    { name: 'Blog', path: '/blog', icon: null },
+    { name: 'Careers', path: '/careers', icon: null },
+    { name: 'Request Quote', path: '/request-quote', icon: null },
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
 
   const isActiveRoute = (path) => {
     if (path === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(path);
-  };
+      return location.pathname === '/'}
+    return location.pathname.startsWith(path)};
 
   return (
-    <motion.header 
+    <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10' 
+        scrolled
+          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10'
           : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
       }`}
       initial={{ y: -100 }}
@@ -89,10 +89,19 @@ export function AppHeader() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <motion.div 
+            <motion.div
               className="relative"
               whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              transition = {
+  { type: "spring", stiffness: 400,
+  damping: 10 
+
+
+
+
+
+
+}}
             >
               <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
                 <Rocket className="w-6 h-6 text-white" />
@@ -122,15 +131,42 @@ export function AppHeader() {
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4" />
                     </button>
-                    
+
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
                           className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 p-4"
-                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                          initial = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
+                          animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+
+}}
+                          exit = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+
+
+
+
+}}
                           transition={{ duration: 0.2 }}
                           onMouseEnter={() => setActiveDropdown(item.name)}
                           onMouseLeave={() => setActiveDropdown(null)}
@@ -207,9 +243,36 @@ export function AppHeader() {
         {mobileMenuOpen && (
           <motion.div
             className="lg:hidden bg-zinc-900/95 backdrop-blur-xl border-t border-zinc-700/50"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.3 }}
           >
             <div className="container mx-auto px-4 py-4">
@@ -261,5 +324,4 @@ export function AppHeader() {
         )}
       </AnimatePresence>
     </motion.header>
-  );
-}
+  )}

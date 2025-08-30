@@ -11,9 +11,7 @@ export interface ExtraService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const extraServices: ExtraService[] = [
   {
     id: "cloud-migration-expert",
@@ -21,7 +19,7 @@ export const extraServices: ExtraService[] = [
     tagline: "Seamless cloud migration and optimization",
     price: "$99/hour",
     description: "Professional cloud migration services for businesses looking to modernize their infrastructure.",
-    features: [
+    features[
       "AWS/Azure/GCP migration",
       "Performance optimization",
       "Cost analysis",
@@ -43,7 +41,7 @@ export const extraServices: ExtraService[] = [
     tagline: "Comprehensive security assessment and protection",
     price: "$199/hour",
     description: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.",
-    features: [
+    features[
       "Vulnerability assessment",
       "Penetration testing",
       "Security policy review",

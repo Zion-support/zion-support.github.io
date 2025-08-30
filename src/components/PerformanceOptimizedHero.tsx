@@ -35,55 +35,81 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   description = "Transform your business with cutting-edge AI, quantum computing, and next-generation technology solutions. Experience the future of digital transformation.",
   ctaText = "Explore Our Services",
   ctaLink = "/services",
-  features = [
-    { icon: Brain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },
-    { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },
-    { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },
-    { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" }
-  ]
-}) => {
+  features = [;
+    { icon: Brain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },;
+    { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },;
+    { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },;
+    { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" };
+  ];
+}) => {;
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {;
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
 
     return () => clearInterval(interval);
   }, [features.length]);
 
-  const handleCTAClick = useCallback(() => {
-    // Analytics tracking could be added here
+  const handleCTAClick = useCallback(() => {;
+    // Analytics tracking could be added here;
     console.log('Hero CTA clicked');
   }, []);
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0,
+  y: 50 
+
+
+
+
+
+
+},
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0.8,;
+        staggerChildren: 0.2;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
+  hidden: { opacity: 0,;
+  ;
+  y: 30 ;
+;
+;
+
+
+
+
+},;
+    visible: { opacity: 1, y: 0 };
   };
 
   const featureVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 }
+  hidden: { opacity: 0,;
+  ;
+  scale: 0.8 ;
+;
+;
+
+
+
+
+},;
+    visible: { opacity: 1, scale: 1 };
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" />
@@ -193,31 +219,53 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
       <AnimatePresence>
         <motion.div
           className="absolute top-1/4 right-10 w-2 h-2 bg-cyan-400 rounded-full"
-          animate={{
+          animate = {
+  {
             y: [0, -20, 0],
             opacity: [0.5, 1, 0.5],
-          }}
-          transition={{
+  
+
+}}
+          transition = {
+  {
             duration: 2,
             repeat: Infinity,
-            ease: "easeInOut"
-          }}
+  ease: "easeInOut"
+          
+
+
+
+
+
+
+}}
         />
         <motion.div
           className="absolute bottom-1/4 left-10 w-3 h-3 bg-blue-400 rounded-full"
-          animate={{
+          animate = {
+  {
             y: [0, 20, 0],
             opacity: [0.5, 1, 0.5],
-          }}
-          transition={{
+  
+
+}}
+          transition = {
+  {
             duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 1
-          }}
-        />
-      </AnimatePresence>
-    </section>
+  delay: 1
+          
+
+;
+;
+;
+
+
+}};
+        />;
+      </AnimatePresence>;
+    </section>;
   );
 };
 

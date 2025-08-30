@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { 
-  Home, 
+import React, { useState } from 'react.ts';
+import Link from 'next/link.ts';
+import { useRouter  } from 'next/router.ts';
+import { Home, 
   Briefcase, 
   Users, 
   Phone, 
@@ -65,30 +64,53 @@ import {
   Leaf,
   Sun,
   Wind
-} from 'lucide-react';
+ } from 'lucide-react';
 
-interface SidebarProps {
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: ()  => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: string) => {
+<<<<<<< HEAD
+  const toggleSection = (section: string)  => {
     setExpandedSections(prev => 
       prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
+        ? prev.filter(s => s !== section);
+        [...prev, section];
+    )};
+=======
+  const toggleSection = (section: string) => {;
+    setExpandedSections(prev => ;
+      prev.includes(section) ;
+        ? prev.filter(s => s !== section);
+        : [...prev, section];
     );
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: string)  => router.pathname === path;
 
   const navigation = {
-    main: [
-      { name: 'Home', href: '/', icon: Home },
+  <<<<<<< HEAD
+    main[
+      { name: 'Home', href: '/',
+  icon: Home 
+
+},
+=======
+  main: [
+      { name: 'Home', href: '/',
+  icon: Home 
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       { name: 'About', href: '/about', icon: Building },
       { name: 'Services', href: '/services', icon: Briefcase },
       { name: 'Solutions', href: '/solutions', icon: Target },
@@ -97,7 +119,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Blog', href: '/blog', icon: Newspaper },
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
-    services: [
+    services[
       { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' },
       { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Infrastructure & automation' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' },
@@ -105,7 +127,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' },
       { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' },
     ],
-    solutions: [
+    solutions[
       { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' },
       { name: 'SMB', href: '/solutions/smb', icon: Store, description: 'Small business focused' },
       { name: 'Startup', href: '/solutions/startup', icon: Rocket, description: 'Growth acceleration' },
@@ -113,7 +135,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Health tech solutions' },
       { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' },
     ],
-    resources: [
+    resources[
       { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' },
       { name: 'API Reference', href: '/api', icon: Code, description: 'Developer resources' },
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
@@ -121,36 +143,44 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' },
       { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
     ],
-    company: [
+    comp[
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
+<<<<<<< HEAD
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
+      { name: 'News', href: '/news', icon: Newspaper, description: 'Comp updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
-    ]
+    ];
+=======;
+      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },;
+      { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },;
+      { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },;
+      { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },;
+    ];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
-  const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
-    { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },
-    { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },
-    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' },
+  const quickActions = [;
+    { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },;
+    { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },;
+    { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },;
+    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' },;
   ];
 
-  const contactInfo = [
-    { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },
+  const contactInfo = [;
+    { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },;
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },;
+    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },;
   ];
 
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },
-    { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
+  const socialLinks = [;
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },;
+    { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },;
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },;
   ];
 
-  const renderNavSection = (title: string, items: any[], sectionKey: string) => (
+  const renderNavSection = (title: string, items[], sectionKey: string)  => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
@@ -182,13 +212,13 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <div className="font-medium">{item.name}</div>
                 {item.description && (
                   <div className="text-xs text-gray-500 truncate">{item.description}</div>
-                )}
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
+                )};
+              </div>;
+            </Link>;
+          ))};
+        </div>;
+      )};
+    </div>;
   );
 
   return (
@@ -196,7 +226,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Backdrop */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className = "fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
@@ -281,8 +311,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* Resources Section */}
           {renderNavSection('Resources', navigation.resources, 'resources')}
 
-          {/* Company Section */}
-          {renderNavSection('Company', navigation.company, 'company')}
+          {/* Comp Section */}
+          {renderNavSection('Comp', navigation.comp, 'comp')}
         </div>
 
         {/* Footer */}
@@ -321,12 +351,21 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           {/* Copyright */}
           <div className="text-xs text-zion-slate-light text-center">
+<<<<<<< HEAD
             © {new Date().getFullYear()} Zion Tech Group
           </div>
         </div>
-      </div>
-    </>
+      </div>;
+    </>;
+  )};
+=======
+            © {new Date().getFullYear()} Zion Tech Group;
+          </div>;
+        </div>;
+      </div>;
+    </>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default MainSidebar;

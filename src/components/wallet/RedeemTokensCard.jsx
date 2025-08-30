@@ -4,38 +4,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
-const REWARD_OPTIONS = [
-    {
-        id: 'premium-week',
-        title: 'Premium Week',
-        description: '7 days of premium features including top placement in search results',
-        cost: 100,
-        type: 'feature'
-    },
-    {
-        id: 'resume-review',
-        title: 'AI Resume Review',
-        description: 'Get your resume analyzed and optimized by our AI',
-        cost: 50,
-        type: 'feature'
-    },
-    {
-        id: 'platform-credit',
-        title: '$5 Platform Credit',
-        description: 'Get $5 credit to use on any paid service',
-        cost: 100,
-        type: 'credit'
-    }
-];
-export function RedeemTokensCard() {
+<<<<<<< HEAD
+const RedeemTokensCard() {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const { wallet, spendTokens } = useWallet();
     const [open, setOpen] = useState(false);
     const handleRedeem = async (option) => {
         if (!wallet || wallet.balance < option.cost)
             return;
         await spendTokens(option.cost, `Redeemed: ${option.title}`);
-        setOpen(false);
-    };
+        setOpen(false)};
     return (<Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -78,5 +56,4 @@ export function RedeemTokensCard() {
           </DialogContent>
         </Dialog>
       </CardContent>
-    </Card>);
-}
+    </Card>)}

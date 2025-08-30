@@ -6,7 +6,7 @@ export function TestimonialsSection() {
         {
             name: "Sarah Johnson",
             role: "CTO",
-            company: "TechFlow Solutions",
+            comp: "TechFlow Solutions",
             content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs significantly.",
             rating: 5,
             avatar: "SJ"
@@ -14,7 +14,7 @@ export function TestimonialsSection() {
         {
             name: "Michael Chen",
             role: "VP of Engineering",
-            company: "InnovateCorp",
+            comp: "InnovateCorp",
             content: "The team's expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.",
             rating: 5,
             avatar: "MC"
@@ -22,7 +22,7 @@ export function TestimonialsSection() {
         {
             name: "Emily Rodriguez",
             role: "Director of IT",
-            company: "Global Manufacturing Inc.",
+            comp: "Global Manufacturing Inc.",
             content: "Their cybersecurity solutions gave us peace of mind. We're now SOC 2 compliant and have a robust security posture.",
             rating: 5,
             avatar: "ER"
@@ -30,7 +30,7 @@ export function TestimonialsSection() {
         {
             name: "David Thompson",
             role: "CEO",
-            company: "StartupXYZ",
+            comp: "StartupXYZ",
             content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
             rating: 5,
             avatar: "DT"
@@ -46,7 +46,15 @@ export function TestimonialsSection() {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -63,7 +71,25 @@ export function TestimonialsSection() {
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our Clients Say
           </h2>
@@ -94,7 +120,7 @@ export function TestimonialsSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-zion-slate-light">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-zion-slate-light">{testimonial.role}, {testimonial.comp}</div>
                   </div>
                 </div>
               </div>
@@ -102,7 +128,34 @@ export function TestimonialsSection() {
         </motion.div>
 
         {/* Stats */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 text-center">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.8,
+  delay: 0.5 
+
+
+
+
+
+
+}} className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>
@@ -119,5 +172,4 @@ export function TestimonialsSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

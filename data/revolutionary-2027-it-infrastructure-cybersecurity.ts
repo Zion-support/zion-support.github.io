@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2027ITInfrastructureCybersecurityService {
   id: string;
   name: string;
@@ -30,15 +30,13 @@ export interface Revolutionary2027ITInfrastructureCybersecurityService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutionary2027ITInfrastructureCybersecurityService[] = [
   // Zero-Trust Security Platform
   {
@@ -48,7 +46,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     price: '$599',
     period: '/month',
     description: 'Advanced zero-trust security platform that provides comprehensive protection for modern IT environments. Features continuous authentication, micro-segmentation, AI-powered threat detection, and automated incident response.',
-    features: [
+    features[
       'Continuous authentication',
       'Micro-segmentation',
       'AI-powered threat detection',
@@ -71,11 +69,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '2 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Machine Learning', 'AI Security', 'Zero-Trust Architecture', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Active Directory', 'Okta', 'Azure AD', 'AWS IAM', 'Google Workspace', 'Slack', 'Microsoft Teams'],
-    useCases: ['Enterprise security', 'Government compliance', 'Financial security', 'Healthcare compliance', 'Cloud security', 'Remote work security'],
+    technology['Machine Learning', 'AI Security', 'Zero-Trust Architecture', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['Active Directory', 'Okta', 'Azure AD', 'AWS IAM', 'Google Workspace', 'Slack', 'Microsoft Teams'],
+    useCases['Enterprise security', 'Government compliance', 'Financial security', 'Healthcare compliance', 'Cloud security', 'Remote work security'],
     roi: 'Organizations report 450% ROI through reduced security incidents and improved compliance.',
-    competitors: ['Palo Alto Networks', 'CrowdStrike', 'Zscaler', 'Cisco', 'Fortinet'],
+    competitors['Palo Alto Networks', 'CrowdStrike', 'Zscaler', 'Cisco', 'Fortinet'],
     marketSize: '$45.2B market',
     growthRate: '235% annual growth',
     variant: 'cybersecurity',
@@ -100,7 +98,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     price: '$799',
     period: '/month',
     description: 'Advanced quantum-resistant cryptography platform that protects sensitive data against future quantum computing threats. Features post-quantum algorithms, hybrid encryption, key management, and compliance with NIST standards.',
-    features: [
+    features[
       'Post-quantum algorithms',
       'Hybrid encryption systems',
       'Quantum key distribution',
@@ -123,11 +121,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '1 month',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Hybrid Encryption', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['PKI systems', 'Hardware security modules', 'Cloud platforms', 'Enterprise systems', 'IoT devices', 'Blockchain networks'],
-    useCases: ['Financial transactions', 'Government communications', 'Healthcare data', 'IoT security', 'Blockchain security', 'Cloud security'],
+    technology['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Hybrid Encryption', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['PKI systems', 'Hardware security modules', 'Cloud platforms', 'Enterprise systems', 'IoT devices', 'Blockchain networks'],
+    useCases['Financial transactions', 'Government communications', 'Healthcare data', 'IoT security', 'Blockchain security', 'Cloud security'],
     roi: 'Organizations report 380% ROI through future-proofed security and reduced compliance risks.',
-    competitors: ['ID Quantique', 'Qrypt', 'Quantum Xchange', 'Post-Quantum', 'ISARA'],
+    competitors['ID Quantique', 'Qrypt', 'Quantum Xchange', 'Post-Quantum', 'ISARA'],
     marketSize: '$8.7B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -152,7 +150,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     price: '$899',
     period: '/month',
     description: 'Intelligent network operations center that provides 24/7 monitoring, automated incident response, and predictive maintenance. Features AI-powered anomaly detection, automated troubleshooting, and comprehensive network analytics.',
-    features: [
+    features[
       '24/7 network monitoring',
       'AI-powered anomaly detection',
       'Automated incident response',
@@ -175,11 +173,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '1 week',
     category: 'Network Operations',
     realService: true,
-    technology: ['Machine Learning', 'AI Automation', 'Network Monitoring', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Cisco', 'Juniper', 'Aruba', 'VMware', 'AWS', 'Azure', 'Google Cloud', 'Slack', 'Microsoft Teams'],
-    useCases: ['Network monitoring', 'Incident response', 'Performance optimization', 'Capacity planning', 'Compliance monitoring', 'Predictive maintenance'],
+    technology['Machine Learning', 'AI Automation', 'Network Monitoring', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['Cisco', 'Juniper', 'Aruba', 'VMware', 'AWS', 'Azure', 'Google Cloud', 'Slack', 'Microsoft Teams'],
+    useCases['Network monitoring', 'Incident response', 'Performance optimization', 'Capacity planning', 'Compliance monitoring', 'Predictive maintenance'],
     roi: 'Companies report 420% ROI through reduced downtime and improved network performance.',
-    competitors: ['SolarWinds', 'Datadog', 'New Relic', 'Splunk', 'LogicMonitor'],
+    competitors['SolarWinds', 'Datadog', 'New Relic', 'Splunk', 'LogicMonitor'],
     marketSize: '$28.5B market',
     growthRate: '195% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +202,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     price: '$699',
     period: '/month',
     description: 'Comprehensive edge computing platform that enables deployment and management of distributed computing infrastructure. Features intelligent workload orchestration, edge analytics, and seamless cloud integration.',
-    features: [
+    features[
       'Edge workload orchestration',
       'Distributed computing management',
       'Edge analytics processing',
@@ -227,11 +225,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '2 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Edge Computing', 'Kubernetes', 'Docker', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'IoT platforms', 'Edge devices'],
-    useCases: ['IoT applications', 'Manufacturing automation', 'Retail analytics', 'Healthcare monitoring', 'Real-time processing', 'Edge AI'],
+    technology['Edge Computing', 'Kubernetes', 'Docker', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'IoT platforms', 'Edge devices'],
+    useCases['IoT applications', 'Manufacturing automation', 'Retail analytics', 'Healthcare monitoring', 'Real-time processing', 'Edge AI'],
     roi: 'Organizations report 380% ROI through improved performance and reduced latency.',
-    competitors: ['AWS Outposts', 'Azure Stack', 'Google Anthos', 'VMware', 'Red Hat'],
+    competitors['AWS Outposts', 'Azure Stack', 'Google Anthos', 'VMware', 'Red Hat'],
     marketSize: '$18.9B market',
     growthRate: '225% annual growth',
     variant: 'edge-futuristic',
@@ -256,7 +254,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     price: '$499',
     period: '/month',
     description: 'Intelligent DevOps automation platform that streamlines software development and deployment processes. Features AI-powered code review, automated testing, intelligent deployment strategies, and comprehensive monitoring.',
-    features: [
+    features[
       'AI-powered code review',
       'Automated testing',
       'Intelligent deployment',
@@ -279,11 +277,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '1 week',
     category: 'DevOps Automation',
     realService: true,
-    technology: ['Machine Learning', 'AI Automation', 'DevOps Tools', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Slack'],
-    useCases: ['Code review automation', 'Testing automation', 'Deployment automation', 'Performance monitoring', 'Security scanning', 'Team collaboration'],
+    technology['Machine Learning', 'AI Automation', 'DevOps Tools', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['GitHub', 'GitLab', 'Bitbucket', 'AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Slack'],
+    useCases['Code review automation', 'Testing automation', 'Deployment automation', 'Performance monitoring', 'Security scanning', 'Team collaboration'],
     roi: 'Teams report 350% ROI through improved development velocity and reduced deployment issues.',
-    competitors: ['GitLab', 'Jenkins', 'CircleCI', 'Travis CI', 'GitHub Actions'],
+    competitors['GitLab', 'Jenkins', 'CircleCI', 'Travis CI', 'GitHub Actions'],
     marketSize: '$25.3B market',
     growthRate: '185% annual growth',
     variant: 'ai-futuristic',

@@ -37,63 +37,47 @@ export const EnhancedSearchInput = () => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setIsOpen(false);
-        setActiveIndex(-1);
-      }
+        setActiveIndex(-1)}
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   useEffect(() => {
     if (searchQuery.trim()) {
       const filtered = allSuggestions.filter(suggestion =>
         suggestion.text.toLowerCase().includes(searchQuery.toLowerCase())
       );
-      setSuggestions(filtered);
-    } else {
-      setSuggestions([]);
-    }
-    setActiveIndex(-1);
-  }, [searchQuery]);
+      setSuggestions(filtered)} else {
+      setSuggestions([])}
+    setActiveIndex(-1)}, [searchQuery]);
 
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
-    setIsOpen(true);
-  };
-
-  const handleInputFocus = () => {
-    setIsOpen(true);
-  };
+    setIsOpen(true)};
 
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       setActiveIndex(prev => 
         prev < suggestions.length - 1 ? prev + 1 : prev
-      );
-    } else if (e.key === 'ArrowUp') {
+      )} else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      setActiveIndex(prev => prev > 0 ? prev - 1 : -1);
-    } else if (e.key === 'Enter') {
+      setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter') {
       e.preventDefault();
       if (activeIndex >= 0 && suggestions[activeIndex]) {
-        handleSuggestionClick(suggestions[activeIndex]);
-      } else if (searchQuery.trim()) {
-        handleSearch(searchQuery);
-      }
+        handleSuggestionClick(suggestions[activeIndex])} else if (searchQuery.trim()) {
+        handleSearch(searchQuery)}
     } else if (e.key === 'Escape') {
       setIsOpen(false);
-      setActiveIndex(-1);
-    }
+      setActiveIndex(-1)}
   };
 
   const handleSuggestionClick = (suggestion) => {
     setSearchQuery(suggestion.text);
     setIsOpen(false);
     setActiveIndex(-1);
-    handleSearch(suggestion.text);
-  };
+    handleSearch(suggestion.text)};
 
   const handleSearch = (query) => {
     if (query.trim()) {
@@ -109,31 +93,26 @@ export const EnhancedSearchInput = () => {
       
       // Close search
       setIsOpen(false);
-      setActiveIndex(-1);
-    }
+      setActiveIndex(-1)}
   };
 
   const handleRecentSearchClick = (search) => {
     setSearchQuery(search);
-    handleSearch(search);
-  };
+    handleSearch(search)};
 
   const handleTrendingSearchClick = (search) => {
     setSearchQuery(search);
-    handleSearch(search);
-  };
+    handleSearch(search)};
 
   const clearSearch = () => {
     setSearchQuery('');
-    inputRef.current?.focus();
-  };
+    inputRef.current?.focus()};
 
   const removeRecentSearch = (searchToRemove, e) => {
     e.stopPropagation();
     const newRecent = recentSearches.filter(s => s !== searchToRemove);
     setRecentSearches(newRecent);
-    localStorage.setItem('recentSearches', JSON.stringify(newRecent));
-  };
+    localStorage.setItem('recentSearches', JSON.stringify(newRecent))};
 
   return (
     <div className="relative flex-1 max-w-2xl" ref={searchRef}>
@@ -205,7 +184,16 @@ export const EnhancedSearchInput = () => {
                   >
                     <span className="text-sm text-gray-700">{search}</span>
                     <button
-                      onClick={(e) => removeRecentSearch(search, e)}
+                      onClick = {
+  (e) => removeRecentSearch(search,
+  e)
+
+
+
+
+
+
+}
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
                     >
                       <X className="w-3 h-3 text-gray-400" />
@@ -248,5 +236,4 @@ export const EnhancedSearchInput = () => {
         </div>
       )}
     </div>
-  );
-};
+  )};

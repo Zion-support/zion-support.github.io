@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   FileText, 
   TrendingUp, 
   Users, 
@@ -32,16 +31,32 @@ import {
   Award,
   Gauge,
   PieChart
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO  } from "../../components/SEO";
+=======
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default function AIFinancialComplianceAssistant() {
+export default function AIFinancialComplianceAssistant(...args[]):  {
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+
+
+
+
+};
 
   const features = [
     {
@@ -67,22 +82,22 @@ export default function AIFinancialComplianceAssistant() {
     {
       icon: Database,
       title: 'Centralized Compliance Hub',
-      description: 'Single source of truth for all compliance-related data, policies, and procedures'
-    },
-    {
-      icon: BarChart3,
-      title: 'Advanced Analytics & Reporting',
-      description: 'Comprehensive dashboards and automated reporting for regulatory submissions'
-    }
+      description: 'Single source of truth for all compliance-related data, policies, and procedures';
+    },;
+    {;
+      icon: BarChart3,;
+      title: 'Advanced Analytics & Reporting',;
+      description: 'Comprehensive dashboards and automated reporting for regulatory submissions';
+    };
   ];
 
-  const benefits = [
-    'Reduce compliance violations by 85%',
-    'Cut compliance costs by 60%',
-    'Improve audit efficiency by 70%',
-    'Ensure 99.9% regulatory accuracy',
-    'Streamline reporting processes',
-    'Enhance risk management capabilities'
+  const benefits = [;
+    'Reduce compliance violations by 85%',;
+    'Cut compliance costs by 60%',;
+    'Improve audit efficiency by 70%',;
+    'Ensure 99.9% regulatory accuracy',;
+    'Streamline reporting processes',;
+    'Enhance risk management capabilities';
   ];
 
   const pricingPlans = [
@@ -91,7 +106,7 @@ export default function AIFinancialComplianceAssistant() {
       price: '$499',
       period: '/month',
       description: 'Perfect for small financial institutions',
-      features: [
+      features[
         'Up to 1,000 transactions/month',
         'Basic compliance monitoring',
         'Standard regulatory updates',
@@ -108,7 +123,7 @@ export default function AIFinancialComplianceAssistant() {
       price: '$999',
       period: '/month',
       description: 'Ideal for growing financial organizations',
-      features: [
+      features[
         'Up to 10,000 transactions/month',
         'Advanced AI compliance monitoring',
         'Real-time regulatory updates',
@@ -128,7 +143,7 @@ export default function AIFinancialComplianceAssistant() {
       price: '$2,499',
       period: '/month',
       description: 'For large financial institutions with complex needs',
-      features: [
+      features[
         'Unlimited transactions',
         'Premium AI compliance monitoring',
         '24/7 dedicated support',
@@ -138,13 +153,13 @@ export default function AIFinancialComplianceAssistant() {
         'Enterprise integrations',
         'Advanced AI models',
         'On-premise deployment option',
-        'Dedicated compliance consultant',
-        'Custom training programs',
-        'White-label solutions'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+        'Dedicated compliance consultant',;
+        'Custom training programs',;
+        'White-label solutions';
+      ],;
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   const complianceFrameworks = [
@@ -171,13 +186,13 @@ export default function AIFinancialComplianceAssistant() {
     {
       title: 'Basel III',
       description: 'Banking regulation compliance with automated risk calculations',
-      icon: Scale
-    },
-    {
-      title: 'IFRS/GAAP',
-      description: 'Accounting standards compliance with automated financial reporting',
-      icon: BookOpen
-    }
+      icon: Scale;
+    },;
+    {;
+      title: 'IFRS/GAAP',;
+      description: 'Accounting standards compliance with automated financial reporting',;
+      icon: BookOpen;
+    };
   ];
 
   const useCases = [
@@ -194,17 +209,17 @@ export default function AIFinancialComplianceAssistant() {
     {
       title: 'Insurance Companies',
       description: 'State and federal insurance regulation compliance',
-      icon: Shield
-    },
-    {
-      title: 'Fintech Startups',
-      description: 'Rapid compliance scaling for growing financial technology companies',
-      icon: Zap
-    }
+      icon: Shield;
+    },;
+    {;
+      title: 'Fintech Startups',;
+      description: 'Rapid compliance scaling for growing financial technology companies',;
+      icon: Zap;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO 
         title="AI Financial Compliance Assistant | Zion Tech Group"
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
@@ -215,8 +230,26 @@ export default function AIFinancialComplianceAssistant() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/10 border border-blue-200/20 text-blue-200 text-sm font-medium mb-6">
@@ -252,8 +285,26 @@ export default function AIFinancialComplianceAssistant() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -266,13 +317,40 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >
@@ -291,8 +369,26 @@ export default function AIFinancialComplianceAssistant() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -305,13 +401,40 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >
@@ -330,8 +453,26 @@ export default function AIFinancialComplianceAssistant() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -344,13 +485,40 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
               >
@@ -366,8 +534,26 @@ export default function AIFinancialComplianceAssistant() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -380,13 +566,40 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -405,8 +618,26 @@ export default function AIFinancialComplianceAssistant() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -419,13 +650,40 @@ export default function AIFinancialComplianceAssistant() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
@@ -476,8 +734,26 @@ export default function AIFinancialComplianceAssistant() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -498,7 +774,7 @@ export default function AIFinancialComplianceAssistant() {
             </div>
             
             <p className="text-slate-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -508,8 +784,26 @@ export default function AIFinancialComplianceAssistant() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -517,7 +811,7 @@ export default function AIFinancialComplianceAssistant() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our compliance experts are here to help you get started and answer any questions
+              Our compliance experts are here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -544,10 +838,19 @@ export default function AIFinancialComplianceAssistant() {
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
             </a>
           </motion.div>
         </div>
       </section>
     </div>
+  )};
+=======;
+            </a>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

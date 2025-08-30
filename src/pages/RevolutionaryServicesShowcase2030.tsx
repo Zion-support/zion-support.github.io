@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { ArrowRight,
   ChevronLeft,
   ChevronRight,
   Mail as MailIcon,
@@ -44,11 +43,17 @@ import {
   SortAsc,
   SortDesc,
   X
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO  } from "../components/SEO";
+import { REVOLUTIONARY_SERVICES_2030  } from "../data/revolutionaryServices2030";
+=======
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { REVOLUTIONARY_SERVICES_2030 } from '../data/revolutionaryServices2030';
+import { SEO } from "../components/SEO";
+import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default function RevolutionaryServicesShowcase2030() {
+export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('aiScore');
@@ -62,16 +67,14 @@ export default function RevolutionaryServicesShowcase2030() {
   const categories = ['all', ...Array.from(new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.category)))];
 
   // Filter and sort services
-  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((a, b) => {;
     let comparison = 0;
     switch (sortBy) {
       case 'aiScore':
@@ -87,40 +90,45 @@ export default function RevolutionaryServicesShowcase2030() {
         comparison = b.reviewCount - a.reviewCount;
         break;
       case 'roi':
-        const roiA = typeof a.roi === 'string' ? parseInt(a.roi.match(/\d+/)?.[0] || '0') : 0;
         const roiB = typeof b.roi === 'string' ? parseInt(b.roi.match(/\d+/)?.[0] || '0') : 0;
         comparison = roiB - roiA;
         break;
       case 'setupTime':
-        const timeA = typeof a.setupTime === 'string' ? parseInt(a.setupTime.match(/\d+/)?.[0] || '0') : 0;
         const timeB = typeof b.setupTime === 'string' ? parseInt(b.setupTime.match(/\d+/)?.[0] || '0') : 0;
         comparison = timeA - timeB;
         break;
       default:
-        comparison = 0;
-    }
-    return sortOrder === 'asc' ? comparison : -comparison;
-  });
+        comparison = 0};
+    return sortOrder === 'asc' ? comparison : -comparison});
 
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handlePageChange = (page: number) => {
+<<<<<<< HEAD
+  const handlePageChange = (page: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
-  const handleServiceSelect = (service: any) => {
+<<<<<<< HEAD
+  const handleServiceSelect = (service)  => {;
+    setSelectedService(service)};
+
+  const closeModal = () => {;
+    setSelectedService(null)};
+=======
+  const handleServiceSelect = (service: any) => {;
     setSelectedService(service);
   };
 
-  const closeModal = () => {
+  const closeModal = () => {;
     setSelectedService(null);
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -144,18 +152,17 @@ export default function RevolutionaryServicesShowcase2030() {
       'Cybersecurity': <Shield className="w-6 h-6" />,
       'Cloud & DevOps': <Cloud className="w-6 h-6" />,
       'Quantum Computing': <Zap className="w-6 h-6" />,
-      'IoT & Edge Computing': <Wifi className="w-6 h-6" />,
-      'Blockchain & Web3': <Network className="w-6 h-6" />,
-      'Digital Twin': <Eye className="w-6 h-6" />,
-      'Space Technology': <Satellite className="w-6 h-6" />,
-      'Sustainable Technology': <Leaf className="w-6 h-6" />,
-      'IT Infrastructure': <Server className="w-6 h-6" />,
-      'Emerging Technology': <Lightbulb className="w-6 h-6" />
+      'IoT & Edge Computing': <Wifi className="w-6 h-6" />,;
+      'Blockchain & Web3': <Network className="w-6 h-6" />,;
+      'Digital Twin': <Eye className="w-6 h-6" />,;
+      'Space Technology': <Satellite className="w-6 h-6" />,;
+      'Sustainable Technology': <Leaf className="w-6 h-6" />,;
+      'IT Infrastructure': <Server className="w-6 h-6" />,;
+      'Emerging Technology': <Lightbulb className="w-6 h-6" />;
     };
-    return iconMap[category] || <Rocket className="w-6 h-6" />;
-  };
+    return iconMap[category] || <Rocket className="w-6 h-6" />};
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
@@ -179,47 +186,46 @@ export default function RevolutionaryServicesShowcase2030() {
       'Cybersecurity': 'from-red-500 to-orange-500',
       'Cloud & DevOps': 'from-blue-500 to-cyan-500',
       'Quantum Computing': 'from-indigo-500 to-purple-500',
-      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
-      'Blockchain & Web3': 'from-yellow-500 to-orange-500',
-      'Digital Twin': 'from-blue-500 to-indigo-500',
-      'Space Technology': 'from-purple-500 to-pink-500',
-      'Sustainable Technology': 'from-green-500 to-teal-500',
-      'IT Infrastructure': 'from-slate-500 to-gray-500',
-      'Emerging Technology': 'from-violet-500 to-purple-500'
+      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',;
+      'Blockchain & Web3': 'from-yellow-500 to-orange-500',;
+      'Digital Twin': 'from-blue-500 to-indigo-500',;
+      'Space Technology': 'from-purple-500 to-pink-500',;
+      'Sustainable Technology': 'from-green-500 to-teal-500',;
+      'IT Infrastructure': 'from-slate-500 to-gray-500',;
+      'Emerging Technology': 'from-violet-500 to-purple-500';
     };
-    return colorMap[category] || 'from-gray-500 to-slate-500';
-  };
+    return colorMap[category] || 'from-gray-500 to-slate-500'};
 
-  const getROIColor = (roi: string) => {
+<<<<<<< HEAD
+  const getROIColor = (roi: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     if (roiNumber >= 800) return 'text-green-400';
     if (roiNumber >= 500) return 'text-blue-400';
     if (roiNumber >= 300) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'};
 
-  const getSetupTimeColor = (setupTime: string) => {
+<<<<<<< HEAD
+  const getSetupTimeColor = (setupTime: string) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     if (weeks <= 8) return 'text-green-400';
     if (weeks <= 16) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400'};
 
   // Calculate statistics
   const totalValue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.price, 0);
-  const averageROI = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => {
+  const averageROI = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => {;
     const roi = service.roi;
-    if (typeof roi === 'string') {
+    if (typeof roi = == 'string') {;
       const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-      return sum + roiNumber;
-    }
-    return sum;
-  }, 0) / REVOLUTIONARY_SERVICES_2030.length;
+      return sum + roiNumber}
+    return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
 
   return (
     <>
       <SEO
-        title="Revolutionary Services Showcase 2030 - Zion Tech Group"
+        title = "Revolutionary Services Showcase 2030 - Zion Tech Group"
         description="Explore Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Discover cutting-edge solutions that will transform your business."
         keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, business transformation, Zion Tech Group"
         image="https://ziontechgroup.com/images/revolutionary-services-showcase-2030.jpg"
@@ -232,8 +238,26 @@ export default function RevolutionaryServicesShowcase2030() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -384,13 +408,40 @@ export default function RevolutionaryServicesShowcase2030() {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {currentServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.05 
+
+
+
+
+
+
+}}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer group"
                   onClick={() => handleServiceSelect(service)}
                 >
@@ -473,7 +524,7 @@ export default function RevolutionaryServicesShowcase2030() {
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}
@@ -504,8 +555,26 @@ export default function RevolutionaryServicesShowcase2030() {
         <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -521,8 +590,26 @@ export default function RevolutionaryServicesShowcase2030() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.8 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
               >
@@ -572,8 +659,26 @@ export default function RevolutionaryServicesShowcase2030() {
 
               {/* Contact Information */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
               >
@@ -639,9 +744,36 @@ export default function RevolutionaryServicesShowcase2030() {
       {selectedService && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+            exit = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+
+
+
+
+}}
             className="bg-slate-900 border border-white/20 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
           >
             <div className="p-8">
@@ -755,10 +887,19 @@ export default function RevolutionaryServicesShowcase2030() {
                   Call Now
                 </a>
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
       )}
     </>
+  )};
+=======;
+            </div>;
+          </motion.div>;
+        </div>;
+      )};
+    </>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -5,7 +5,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
     const fullTitle = `${title} | ${siteName}`;
     // Default structured data for organization
     const defaultStructuredData = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Zion Tech Group",
         "url": "https://ziontechgroup.com",
@@ -17,15 +17,22 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "addressLocality": "Middletown",
             "addressRegion": "DE",
             "postalCode": "19709",
-            "addressCountry": "US"
-        },
+  "addressCountry": "US"
+        
+
+
+
+
+
+
+},
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
         },
-        "sameAs": [
+        "sameAs"[
             "https://linkedin.com/company/ziontechgroup",
             "https://twitter.com/ziontechgroup",
             "https://github.com/ziontechgroup"
@@ -36,7 +43,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Technology Services",
-            "itemListElement": [
+            "itemListElement"[
                 {
                     "@type": "Offer",
                     "itemOffered": {
@@ -126,6 +133,5 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
       {/* Performance Meta Tags */}
       <meta name="renderer" content="webkit"/>
       <meta name="force-rendering" content="webkit"/>
-    </Helmet>);
-};
+    </Helmet>)};
 export default SEOMeta;

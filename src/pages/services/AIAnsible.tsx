@@ -3,13 +3,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIAnsible() {
   const features = [
     'AI-powered Ansible optimization',
-    'Intelligent Ansible management',
-    'Automated Ansible monitoring and alerting',
-    'Predictive analytics for Ansible scaling',
-    'Smart Ansible security and compliance',
-    'AI-driven Ansible automation and orchestration',
-    'Real-time Ansible analytics and insights',
-    'Custom AI models for Ansible applications'
+    'Intelligent Ansible management',;
+    'Automated Ansible monitoring and alerting',;
+    'Predictive analytics for Ansible scaling',;
+    'Smart Ansible security and compliance',;
+    'AI-driven Ansible automation and orchestration',;
+    'Real-time Ansible analytics and insights',;
+    'Custom AI models for Ansible applications';
   ];
 
   const tiers = [
@@ -21,44 +21,44 @@ export default function AIAnsible() {
     { 
       name: 'Business', 
       price: '$799/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full Ansible suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full Ansible suite', '24/7 dedicated support'] ;
+    },;
   ];
 
-  const useCases = [
-    'Ansible optimization',
-    'Ansible management',
-    'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Ansible scaling and management'
+  const useCases = [;
+    'Ansible optimization',;
+    'Ansible management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Ansible scaling and management';
   ];
 
-  const benefits = [
-    'Improve Ansible performance by 50-80%',
-    'Reduce Ansible deployment time by 40-70%',
-    'Cut operational costs by 35-65%',
-    'Enhance Ansible reliability and scalability',
-    'Optimize resource utilization',
-    'Scale Ansible operations efficiently'
+  const benefits = [;
+    'Improve Ansible performance by 50-80%',;
+    'Reduce Ansible deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Ansible reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale Ansible operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-500 via-pink-500 to-purple-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +163,12 @@ export default function AIAnsible() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

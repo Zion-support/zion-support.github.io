@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Atom, 
-  Rocket, 
-  Shield, 
-  Dna, 
+import {
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Dna,
   Microscope,
   Cpu,
   Zap,
@@ -22,8 +22,9 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from "../data/innovativeServices2027";
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Consciousness': Brain,
@@ -39,6 +40,10 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Nanotechnology': Microscope,
   'Neural Technology': Eye
 };
+=======
+} from 'lucide-react';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500',
@@ -55,45 +60,72 @@ const categoryColors: { [key: string]: string } = {
   'Neural Technology': 'from-violet-500 to-purple-500'
 };
 
-export const InnovativeServicesShowcase2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+<<<<<<< HEAD
+export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [expandedService, setExpandedService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setIsVisible(true)};
+=======;
+export const InnovativeServicesShowcase2027: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry.isIntersecting) {;
           setIsVisible(true);
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       },
       { threshold: 0.1 }
     );
 
     const element = document.getElementById('innovative-services-2027');
     if (element) {
-      observer.observe(element);
-    }
+      observer.observe(element)}
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()}, []);
 
-  const filteredServices = selectedCategory === 'All' 
-    ? innovativeServices2027 
+  const filteredServices = selectedCategory === 'All'
+    ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
 
-  const toggleServiceExpansion = (serviceId: string) => {
+<<<<<<< HEAD
+  const toggleServiceExpansion = (serviceId: string)  => {;
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
+=======
+  const toggleServiceExpansion = (serviceId: string) => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
+  ;
+  ;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
+
+
+
+
+
+
+};
 
   return (
-    <section id="innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
+    <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse"></div>
@@ -104,8 +136,26 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+} : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -113,7 +163,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
             <Star className="w-5 h-5 text-zion-cyan mr-2" />
             <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Revolutionary
@@ -121,18 +171,45 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
             <br />
             <span className="text-white">Technology Services</span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with our cutting-edge 2027 services. 
+            Experience the future of technology with our cutting-edge 2027 services.
             From quantum computing to AI consciousness, we're pushing the boundaries of what's possible.
           </p>
         </motion.div>
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-3">
@@ -141,44 +218,135 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
+<<<<<<< HEAD
+                  : 'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
               }`}
             >
               All Categories
             </button>
-            {serviceCategories2027.map((category) => {
+            {serviceCategories2027.map((category)  => {
+=======;
+                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';
+              }`};
+            >;
+              All Categories;
+            </button>;
+            {serviceCategories2027.map((category) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const Icon = categoryIcons[category];
               return (
                 <button
-                  key={category}
+                  key = {category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                       : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
+<<<<<<< HEAD
                   }`}
                 >
                   {Icon && <Icon className="w-4 h-4" />}
                   {category}
                 </button>
+              )})};
+=======;
+                  }`};
+                >;
+                  {Icon && <Icon className="w-4 h-4" />};
+                  {category};
+                </button>;
               );
             })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </motion.div>
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+} : { opacity: 0, y: 30 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+}}
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+=======
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+} : { opacity: 0, y: 30 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+} : { opacity: 0, y: 20 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
               className="group relative"
             >
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
@@ -239,9 +407,36 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                 <AnimatePresence>
                   {expandedService === service.id && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
@@ -306,9 +501,36 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
 
         {/* Contact Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+} : { opacity: 0, y: 30 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+
+}}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
@@ -316,10 +538,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our expert team is ready to help you implement these cutting-edge solutions. 
+              Our expert team is ready to help you implement these cutting-edge solutions.
               Get in touch to discuss your specific needs and discover how we can drive innovation in your organization.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
                 <Phone className="w-5 h-5" />
@@ -352,10 +574,19 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
-      </div>
-    </section>
+      </div>;
+    </section>;
+  )};
+=======
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

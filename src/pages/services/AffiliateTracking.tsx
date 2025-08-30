@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from 'lucide-react';
@@ -65,17 +65,17 @@ export default function AffiliateTracking() {
       price: 599,
       unit: 'month',
       bestFor: 'Global programs, agencies and marketplaces',
-      bullets: [
-        'Unlimited partners and campaigns',
-        'SAML SSO and audit trails',
-        'Custom data retention + warehouse sync',
-        'Dedicated CSM and 99.9% SLA'
-      ]
-    }
+      bullets: [;
+        'Unlimited partners and campaigns',;
+        'SAML SSO and audit trails',;
+        'Custom data retention + warehouse sync',;
+        'Dedicated CSM and 99.9% SLA';
+      ];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
         title="Affiliate Tracking Platform - Zion Tech Group"
         description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM."
@@ -87,8 +87,26 @@ export default function AffiliateTracking() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
         <div className="relative max-w-7xl mx-auto">
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
@@ -121,8 +139,26 @@ export default function AffiliateTracking() {
             {features.map((f) => (
               <motion.div
                 key={f.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
                 className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50"
@@ -170,10 +206,37 @@ export default function AffiliateTracking() {
             {plans.map((plan, i) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
+                transition = {
+  { duration: 0.5,
+  delay: i * 0.05 
+
+
+
+
+
+
+}}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
               >
                 {i === 1 && (
@@ -243,13 +306,13 @@ export default function AffiliateTracking() {
             </li>
             <li>
               <a className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">
-                <Link2 className="w-4 h-4" /> Post Affiliate Pro pricing <ExternalLink className="w-4 h-4" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
+                <Link2 className="w-4 h-4" /> Post Affiliate Pro pricing <ExternalLink className="w-4 h-4" />;
+              </a>;
+            </li>;
+          </ul>;
+        </div>;
+      </section>;
+    </div>;
   );
 }
 

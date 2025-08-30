@@ -1,9 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices';
+import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices";
 const ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState(false);
-    return (<motion.div initial={{ opacity: 0, y: 50, scale: 0.9 }} animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : {}} transition={{ duration: 0.6, delay: index * 0.1 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
+    return (<motion.div initial = {
+  { opacity: 0, y: 50,
+  scale: 0.9 
+
+
+
+
+
+
+}} animate = {
+  isVisible ? { opacity: 1, y: 0,
+  scale: 1 
+
+
+
+
+
+
+} : {}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
       
@@ -14,15 +41,36 @@ const ServiceCard = ({ service, index, isVisible }) => {
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">
           {/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(8)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate={{
+<<<<<<< HEAD
+            {[...Array(8)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {
+  {
+                x[0, Math.random() * 100 - 50],
+                y[0, Math.random() * 100 - 50],
+                opacity[0.6, 0.2, 0.6],
+  
+
+}} transition = {
+  {
+=======
+            {[...Array(8)].map((_,
+  i) => (<motion.div key={i
+
+} className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {
+  {
                 x: [0, Math.random() * 100 - 50],
                 y: [0, Math.random() * 100 - 50],
                 opacity: [0.6, 0.2, 0.6],
-            }} transition={{
+  
+
+}} transition = {
+  {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
-            }} style={{
+  
+
+}} style={{
                 left: `${20 + Math.random() * 60}%`,
                 top: `${20 + Math.random() * 60}%`,
             }}/>))}
@@ -129,25 +177,21 @@ const ServiceCard = ({ service, index, isVisible }) => {
           <motion.div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={false}/>
         </div>
       </div>
-    </motion.div>);
-};
+    </motion.div>)};
 export const FuturisticServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [visibleServices, setVisibleServices] = useState(new Set());
     const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))];
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX
     useEffect(() => {
         const allIndices = new Set(filteredServices.map((_, index) => index));
-        setVisibleServices(allIndices);
-    }, [filteredServices]);
+        setVisibleServices(allIndices)}, [filteredServices]);
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -162,7 +206,25 @@ export const FuturisticServicesShowcase = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: -50 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Advanced Micro SAAS
@@ -201,7 +263,34 @@ export const FuturisticServicesShowcase = () => {
         </div>
 
         {/* Call to Action */}
-        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center mt-20">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 50 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.5 
+
+
+
+
+
+
+}} className="text-center mt-20">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -220,5 +309,4 @@ export const FuturisticServicesShowcase = () => {
           </div>
         </motion.div>
       </div>
-    </div>);
-};
+    </div>)};

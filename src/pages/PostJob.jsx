@@ -1,6 +1,6 @@
 import { JobPostingForm } from "@/components/jobs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
@@ -9,8 +9,7 @@ export default function PostJob() {
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
-      </div>);
-    }
+      </div>)}
     return (<>
       <SEO title="Post a Job | Zion AI Marketplace" description="Post a job to find the perfect AI talent for your project."/>
       
@@ -30,5 +29,4 @@ export default function PostJob() {
       
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
       {isMobile && <div className="h-16"></div>}
-    </>);
-}
+    </>)}

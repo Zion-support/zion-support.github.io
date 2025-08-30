@@ -9,8 +9,8 @@ export function HomepagePromotion() {
             description: "Generate high-quality, SEO-optimized content in minutes, not hours",
             price: "$399/month",
             category: "AI & Content Marketing",
-            features: ["Multi-format content", "SEO optimization", "Brand voice customization", "Plagiarism detection"],
-            benefits: ["80% faster content creation", "45% better SEO rankings", "60% higher engagement"],
+            features["Multi-format content", "SEO optimization", "Brand voice customization", "Plagiarism detection"],
+            benefits["80% faster content creation", "45% better SEO rankings", "60% higher engagement"],
             link: "/comprehensive-services-showcase"
         },
         {
@@ -19,8 +19,8 @@ export function HomepagePromotion() {
             description: "Process data closer to devices for ultra-low latency and real-time insights",
             price: "$799/month",
             category: "IT Infrastructure",
-            features: ["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"],
-            benefits: ["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"],
+            features["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"],
+            benefits["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"],
             link: "/comprehensive-services-showcase"
         },
         {
@@ -29,8 +29,8 @@ export function HomepagePromotion() {
             description: "Solve previously intractable problems with quantum advantage",
             price: "$3,999/month",
             category: "Emerging Technology",
-            features: ["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"],
-            benefits: ["Exponential speedup", "Future-proof technology", "Competitive advantage"],
+            features["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"],
+            benefits["Exponential speedup", "Future-proof technology", "Competitive advantage"],
             link: "/comprehensive-services-showcase"
         },
         {
@@ -39,8 +39,8 @@ export function HomepagePromotion() {
             description: "Continuous verification and least-privilege access across all resources",
             price: "$1,499/month",
             category: "IT Infrastructure",
-            features: ["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"],
-            benefits: ["90% fewer security breaches", "Enhanced compliance", "Simplified security management"],
+            features["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"],
+            benefits["90% fewer security breaches", "Enhanced compliance", "Simplified security management"],
             link: "/comprehensive-services-showcase"
         }
     ];
@@ -54,7 +54,15 @@ export function HomepagePromotion() {
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -74,7 +82,25 @@ export function HomepagePromotion() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Transform Your Business with
             <span className="block bg-holographic-gradient bg-clip-text text-transparent">
@@ -152,7 +178,25 @@ export function HomepagePromotion() {
         </motion.div>
 
         {/* Call to Action Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-sm">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Accelerate Your Digital Transformation?
@@ -178,5 +222,4 @@ export function HomepagePromotion() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

@@ -3,13 +3,13 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
 export default function AIEducation() {
   const features = [
     'AI-powered personalized learning paths and recommendations',
-    'Intelligent assessment and adaptive testing',
-    'Automated content generation and curriculum optimization',
-    'Predictive analytics for student performance',
-    'Smart tutoring and homework assistance',
-    'Learning analytics and progress tracking',
-    'Integration with major LMS and educational platforms',
-    'Custom AI models for subject-specific learning'
+    'Intelligent assessment and adaptive testing',;
+    'Automated content generation and curriculum optimization',;
+    'Predictive analytics for student performance',;
+    'Smart tutoring and homework assistance',;
+    'Learning analytics and progress tracking',;
+    'Integration with major LMS and educational platforms',;
+    'Custom AI models for subject-specific learning';
   ];
 
   const tiers = [
@@ -21,44 +21,44 @@ export default function AIEducation() {
     { 
       name: 'School District', 
       price: '$399/mo', 
-      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] 
-    },
-    { 
-      name: 'University', 
-      price: '$999/mo', 
-      details: ['Unlimited students', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
-    },
+      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] ;
+    },;
+    { ;
+      name: 'University', ;
+      price: '$999/mo', ;
+      details: ['Unlimited students', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
   ];
 
-  const useCases = [
-    'K-12 personalized learning and tutoring',
-    'Higher education course optimization',
-    'Corporate training and skill development',
-    'Language learning and proficiency testing',
-    'Special education and accessibility',
-    'Professional certification and licensing'
+  const useCases = [;
+    'K-12 personalized learning and tutoring',;
+    'Higher education course optimization',;
+    'Corporate training and skill development',;
+    'Language learning and proficiency testing',;
+    'Special education and accessibility',;
+    'Professional certification and licensing';
   ];
 
-  const benefits = [
-    'Improve student performance by 25-40%',
-    'Reduce learning time by 30-50%',
-    'Increase engagement and retention by 40-60%',
-    'Optimize curriculum and teaching methods',
-    'Provide personalized learning experiences',
-    'Scale educational programs without additional staff'
+  const benefits = [;
+    'Improve student performance by 25-40%',;
+    'Reduce learning time by 30-50%',;
+    'Increase engagement and retention by 40-60%',;
+    'Optimize curriculum and teaching methods',;
+    'Provide personalized learning experiences',;
+    'Scale educational programs without additional staff';
   ];
 
-  const industries = [
-    'K-12 Education',
-    'Higher Education',
-    'Corporate Training',
-    'Online Learning',
-    'Special Education',
-    'Professional Development'
+  const industries = [;
+    'K-12 Education',;
+    'Higher Education',;
+    'Corporate Training',;
+    'Online Learning',;
+    'Special Education',;
+    'Professional Development';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +163,12 @@ export default function AIEducation() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

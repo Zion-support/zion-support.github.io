@@ -1,381 +1,577 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import { 
   Code, 
+  CheckCircle, 
   Shield, 
   Zap, 
-  TrendingUp, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Star,
   ArrowRight,
+  Play,
+  Settings,
+  Target,
+  Cpu,
+  Activity,
+  Sparkles,
+  Search,
+  GitBranch,
+  Terminal,
+  Workflow,
+  Rocket,
+  RefreshCw,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Clock,
+  Users,
+  BarChart3,
+  TrendingUp,
+  Globe,
+  Building,
+  DollarSign,
+  Network,
+  Key,
+  Fingerprint,
+  Monitor,
+  Server,
+  Database,
+  Smartphone,
+  Box,
+  Layers,
+  GitBranch,
   Github,
   Gitlab,
-  Slack,
-  MessageSquare,
-  BarChart3,
-  Settings,
-  Lock,
-  Globe,
-  Smartphone,
-  Database
+  Bitbucket
 } from 'lucide-react';
 
-const AIAutonomousCodeReviewer: React.FC = () => {
+const AIAutonomousCodeReviewer = () => {
   const features = [
     {
       icon: Code,
-      title: "Automated Code Review",
-      description: "AI-powered analysis of code quality, security vulnerabilities, and performance issues across multiple programming languages.",
-      benefits: ["Reduce review time by 70%", "Consistent code standards", "24/7 availability"]
+      title: 'AI-Powered Code Analysis',
+      description: 'Advanced machine learning algorithms that understand code patterns, detect bugs, and suggest improvements'
     },
     {
       icon: Shield,
-      title: "Security Analysis",
-      description: "Advanced security scanning to detect vulnerabilities, security anti-patterns, and compliance issues in real-time.",
-      benefits: ["Early vulnerability detection", "Security best practices", "Compliance checking"]
+      title: 'Security Vulnerability Detection',
+      description: 'Automated scanning for security flaws, SQL injection, XSS, and other critical vulnerabilities'
     },
     {
       icon: Zap,
-      title: "Performance Optimization",
-      description: "Intelligent suggestions for code optimization, memory management, and performance improvements.",
-      benefits: ["Performance insights", "Memory leak detection", "Optimization recommendations"]
+      title: 'Performance Optimization',
+      description: 'Identify performance bottlenecks, memory leaks, and inefficient algorithms in your codebase'
     },
     {
-      icon: TrendingUp,
-      title: "Quality Metrics",
-      description: "Comprehensive code quality metrics, technical debt analysis, and improvement recommendations.",
-      benefits: ["Quality scoring", "Technical debt tracking", "Improvement roadmaps"]
+      icon: GitBranch,
+      title: 'Git Integration',
+      description: 'Seamless integration with GitHub, GitLab, Bitbucket, and other version control systems'
+    },
+    {
+      icon: Monitor,
+      title: 'Real-time Monitoring',
+      description: 'Continuous code quality monitoring with instant notifications and detailed reports'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Built-in code review workflows, comments, and approval systems for development teams'
     }
   ];
 
-  const supportedLanguages = [
-    "Python", "JavaScript", "TypeScript", "Java", "C#", "C++", "Go", "Rust", "PHP", "Ruby", "Swift", "Kotlin"
+  const benefits = [
+    'Reduce code review time by 70%',
+    'Catch 90% of bugs before production',
+    'Improve code quality by 40%',
+    'Accelerate development cycles',
+    'Reduce technical debt',
+    'Ensure consistent coding standards'
   ];
 
-  const integrations = [
-    { name: "GitHub", icon: Github, description: "Seamless integration with GitHub repositories and pull requests" },
-    { name: "GitLab", icon: Gitlab, description: "Full support for GitLab CI/CD pipelines and merge requests" },
-    { name: "Slack", icon: Slack, description: "Real-time notifications and alerts in Slack channels" },
-    { name: "Jira", icon: MessageSquare, description: "Connect code reviews with Jira tickets and workflows" }
-  ];
-
-  const pricingPlans = [
+  const services = [
     {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small development teams",
-      features: [
-        "Up to 10 developers",
-        "Basic code analysis",
-        "Security scanning",
-        "GitHub integration",
-        "Email support"
-      ],
-      cta: "Get Started",
-      popular: false
+      icon: Server,
+      title: 'Static Code Analysis',
+      description: 'Comprehensive static analysis for multiple programming languages including Python, JavaScript, Java, C++, Go, and Rust'
     },
     {
-      name: "Professional",
-      price: "$399",
-      period: "/month",
-      description: "Ideal for growing development teams",
-      features: [
-        "Up to 50 developers",
-        "Advanced AI analysis",
-        "Performance optimization",
-        "Multi-repository support",
-        "Priority support",
-        "Custom rules"
-      ],
-      cta: "Start Free Trial",
-      popular: true
+      icon: Workflow,
+      title: 'Automated Review Workflows',
+      description: 'Customizable review processes, automated approvals, and integration with CI/CD pipelines'
     },
     {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "For large organizations and enterprises",
-      features: [
-        "Unlimited developers",
-        "Custom AI models",
-        "Advanced security features",
-        "API access",
-        "Dedicated support",
-        "Custom integrations",
-        "SLA guarantee"
-      ],
-      cta: "Contact Sales",
-      popular: false
+      icon: Box,
+      title: 'Container Security Scanning',
+      description: 'Docker and container security analysis, vulnerability scanning, and compliance checking'
+    },
+    {
+      icon: Database,
+      title: 'Database Code Review',
+      description: 'SQL query optimization, database schema analysis, and performance tuning recommendations'
     }
   ];
 
   const useCases = [
     {
-      title: "Software Development Teams",
-      description: "Automate code reviews and maintain consistent quality standards across development teams.",
-      icon: Users
+      industry: 'Software Development',
+      description: 'Automated code reviews for development teams, ensuring quality and consistency across projects'
     },
     {
-      title: "Code Quality Assurance",
-      description: "Ensure high code quality and reduce technical debt through automated analysis.",
-      icon: CheckCircle
+      industry: 'DevOps & CI/CD',
+      description: 'Integration with automated pipelines for continuous code quality monitoring and deployment gates'
     },
     {
-      title: "Security Compliance",
-      description: "Meet security requirements and compliance standards with automated security scanning.",
-      icon: Shield
+      industry: 'Security Teams',
+      description: 'Proactive security scanning and vulnerability detection in application code'
     },
     {
-      title: "Performance Optimization",
-      description: "Identify and fix performance bottlenecks through intelligent code analysis.",
-      icon: Zap
+      industry: 'Code Quality Management',
+      description: 'Maintaining high coding standards and reducing technical debt in large codebases'
+    }
+  ];
+
+  const pricing = [
+    {
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      description: 'Perfect for small development teams',
+      features: [
+        'Up to 5 developers',
+        'Basic code analysis',
+        'Security vulnerability scanning',
+        'GitHub integration',
+        'Email support',
+        'Basic reporting'
+      ],
+      cta: 'Start Free Trial',
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
+      description: 'Ideal for growing development teams',
+      features: [
+        'Up to 25 developers',
+        'Advanced AI analysis',
+        'Multi-language support',
+        'CI/CD integration',
+        'Priority support',
+        'Advanced analytics',
+        'Custom rules engine',
+        'Team collaboration tools'
+      ],
+      cta: 'Start Free Trial',
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,999',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+      features: [
+        'Unlimited developers',
+        'Custom AI models',
+        'On-premise deployment',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced security features',
+        'Compliance reporting',
+        'SLA guarantees'
+      ],
+      cta: 'Contact Sales',
+      popular: false
     }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>AI Autonomous Code Reviewer — Zion Tech Group | Automated Code Quality & Security</title>
-        <meta name="description" content="Revolutionize your code review process with AI-powered automated analysis. Detect security vulnerabilities, optimize performance, and maintain code quality across multiple programming languages."/>
-        <meta property="og:title" content="AI Autonomous Code Reviewer — Zion Tech Group"/>
-        <meta property="og:description" content="AI-powered automated code review with security analysis, performance optimization, and quality metrics for development teams."/>
-        <meta property="og:url" content="https://ziontechgroup.com/services/ai-autonomous-code-reviewer"/>
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-code-reviewer"/>
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-xl mr-4">
-                <Code className="w-8 h-8 text-white" />
-              </div>
-              <span className="text-blue-400 text-lg font-medium">AI-Powered Development</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+              <Code className="w-4 h-4 mr-2" />
+              AI-Powered Code Review
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Code Reviewer
-              </span>
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> Code Reviewer</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your development workflow with AI-powered automated code review. 
-              Detect security vulnerabilities, optimize performance, and maintain code quality 
-              across multiple programming languages with 70% faster review times.
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Revolutionize your code review process with AI-powered analysis that catches bugs, 
+              improves security, and maintains code quality automatically.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link to="/services" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                View All Services
-              </Link>
+              </button>
+              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </button>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Key Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose AI Code Review?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Leverage artificial intelligence to revolutionize your code review process
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/40 transition-all duration-300">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Intelligent Code Review Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI-powered platform provides comprehensive code analysis, security scanning, 
+              and quality improvement recommendations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Code Review Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From static analysis to security scanning, we provide end-to-end code review 
+              solutions for modern development teams.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Supported Languages */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Multi-Language Support
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive code analysis across the most popular programming languages
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {supportedLanguages.map((language, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-blue-400/40 transition-all duration-300">
-                  <Code className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <span className="text-white font-medium">{language}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Integrations */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Seamless Integrations
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Works with your existing development tools and workflows
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {integrations.map((integration, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/40 transition-all duration-300">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <integration.icon className="w-6 h-6 text-white" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <p className="text-gray-300">{service.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{integration.name}</h3>
-                  <p className="text-gray-300">{integration.description}</p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Development Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience measurable improvements in code quality, security, and development efficiency.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {benefits.slice(3).map((benefit, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Ideal solutions for various development scenarios
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <useCase.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      {/* Pricing Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your team size and development needs. 
+              All plans include a 14-day free trial.
+            </p>
+          </motion.div>
 
-        {/* Pricing */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that fits your team size and needs
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`relative bg-slate-800/50 border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-blue-400 bg-gradient-to-br from-blue-600/20 to-cyan-600/20' 
-                    : 'border-white/20 hover:border-blue-400/40'
-                }`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
+                    ? 'border-blue-500/50 bg-blue-500/5' 
+                    : 'border-slate-700/50'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
                   </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link 
-                    to={plan.cta === "Contact Sales" ? "/contact" : "/contact"}
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
-                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                    }`}
-                  >
-                    {plan.cta}
-                  </Link>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-400 mb-4">{plan.description}</p>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400">{plan.period}</span>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Code Review Process?
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
+                    : 'bg-slate-700 text-white hover:bg-slate-600'
+                }`}>
+                  {plan.cta}
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI code review solutions adapt to various industries, providing tailored 
+              analysis and recommendations for your specific development needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Market Information Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Market Insights & ROI
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Understand the market landscape and potential return on investment for AI-powered code review solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
+            >
+              <BarChart3 className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">$2.8B</h3>
+              <p className="text-gray-300">Global Market Size 2024</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
+            >
+              <TrendingUp className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">24.3%</h3>
+              <p className="text-gray-300">Annual Growth Rate</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
+            >
+              <DollarSign className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">300%</h3>
+              <p className="text-gray-300">Average ROI</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
+            >
+              <Clock className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">70%</h3>
+              <p className="text-gray-300">Time Savings</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Start Your AI Code Review Journey Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of developers who have already improved their code quality and security with AI-powered automation.
+              Join thousands of development teams worldwide that use our AI-powered 
+              code review platform to improve code quality and accelerate development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Call +1 302 464 0950
-              </a>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
+                Contact Sales
+              </button>
             </div>
-            <p className="text-sm text-gray-400 mt-6">
-              Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
-            </p>
-          </div>
-        </section>
-      </div>
-    </>
+            
+            <div className="mt-8 text-center">
+              <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">
+                <div className="flex items-center justify-center space-x-2">
+                  <span>📱</span>
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <span>✉️</span>
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <span>🌐</span>
+                  <span>https://ziontechgroup.com</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 

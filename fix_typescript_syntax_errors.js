@@ -24,8 +24,7 @@ async function fixTypeScriptSyntaxErrors() {
               "Chat" + oldName.charAt(0).toUpperCase() + oldName.slice(1);
             lines[i] = line.replace(oldName, newName);
             modified = true;
-            console.log(`  Fixed variable name: ${oldName} -> ${newName}`);
-          }
+            console.log(`  Fixed variable name: ${oldName} -> ${newName}`)}
         }
         // Fix function names that start with numbers
         if (line.includes("function ") && /function\s+[0-9]/.test(line)) {
@@ -36,18 +35,14 @@ async function fixTypeScriptSyntaxErrors() {
               "Chat" + oldName.charAt(0).toUpperCase() + oldName.slice(1);
             lines[i] = line.replace(oldName, newName);
             modified = true;
-            console.log(`  Fixed function name: ${oldName} -> ${newName}`);
-          }
+            console.log(`  Fixed variable name: ${oldName} -> ${newName}`)}
         }
       }
       if (modified) {
         await fs.writeFile(file, lines.join("\n"));
-        console.log(`✅ Fixed syntax errors in: ${file}`);
-      }
+        console.log(`✅ Fixed syntax errors in: ${file}`)}
     } catch (error) {
-      console.error(`❌ Error processing ${file}:`, error.message);
-    }
+      console.error(`❌ Error processing ${file}:`, error.message)}
   }
-  console.log("✅ TypeScript syntax error fixing completed");
-}
+  console.log("✅ TypeScript syntax error fixing completed")}
 fixTypeScriptSyntaxErrors().catch(console.error);

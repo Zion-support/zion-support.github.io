@@ -20,9 +20,6 @@ import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Services from "@/pages/Services";
 import ComprehensiveServices from "@/pages/ComprehensiveServices";
-import AIServices from "@/pages/AIServices";
-import ITServices from "@/pages/ITServices";
-import MicroSaaS from "@/pages/MicroSaaS";
 const ContentRoutes = () => {
     return (<Routes>
       {/* Content Routes */}
@@ -32,27 +29,21 @@ const ContentRoutes = () => {
       <Route path="/contact" element={<Contact />}/>
       <Route path="/services" element={<Services />}/>
       <Route path="/comprehensive-services" element={<ComprehensiveServices />}/>
-      {/* Dedicated Services Pages */}
-      <Route path="/ai-services" element={<AIServices />}/>
-      <Route path="/it-services" element={<ITServices />}/>
-      <Route path="/micro-saas" element={<MicroSaaS />}/>
-      {/* Back-compat for CTA link */}
-      <Route path="/services/micro-saas-solutions" element={<MicroSaaS />}/>
       <Route path="/privacy" element={<Privacy />}/>
       <Route path="/cookies" element={<Cookies />}/>
-      
+
       {/* Help Center Routes */}
       <Route path="/help" element={<HelpCenterPage />}/>
       <Route path="/support" element={<HelpCenterPage />}/>
       <Route path="/faq" element={<FAQ />}/>
-      
+
       {/* Blog Routes */}
       <Route path="/blog" element={<Blog />}/>
       <Route path="/blog/:slug" element={<BlogPost />}/>
       {/* Legacy paths for older links */}
       <Route path="/content/blog" element={<Blog />}/>
       <Route path="/content/blog/:slug" element={<BlogPost />}/>
-      
+
       {/* Green IT Route */}
       <Route path="/green-it" element={<GreenIT />}/>
 
@@ -67,19 +58,19 @@ const ContentRoutes = () => {
 
       {/* Account Settings */}
       <Route path="/settings/account" element={<AccountSettings />}/>
-      
+
       {/* Project Room */}
       <Route path="/project-room/:projectId" element={<ProjectRoom />}/>
-      
+
       {/* Video Call */}
       <Route path="/video-call/:roomId" element={<VideoCall />}/>
 
       {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />}/>
-      
+
       {/* API Documentation Redirect */}
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace/>}/>
-      
+
       {/* Sitemap Pages */}
       <Route path="/sitemap" element={<Sitemap />}/>
       <Route path="/sitemap-page" element={<SitemapPage />}/>

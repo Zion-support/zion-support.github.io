@@ -197,7 +197,7 @@
         "url": "https://ziontechgroup.com/services",
         "source": "offline.html",
         "type": "html",
-        "status": 301,
+        "status": 200,
         "working": true,
         "headers": {
           "age": "6476",

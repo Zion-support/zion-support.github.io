@@ -1,19 +1,20 @@
-import { ProductListing } from "@/types/listings";
-import { COMPREHENSIVE_SERVICES_INDEX_2030 } from "./comprehensiveServicesIndex2030";
+import { ProductListing  } from '@/types/listings';
+import { COMPREHENSIVE_SERVICES_INDEX_2030  } from "./comprehensiveServicesIndex2030";
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
 
 export interface PricingTier {
+
   name: string;
   price: number;
   features: string[];
   bestFor: string;
   setupTime: string;
-  support: string;
-}
+  support: string}
 
 export interface ServicePricing {
+
   serviceId: string;
   serviceName: string;
   category: string;
@@ -25,8 +26,7 @@ export interface ServicePricing {
   setupTime: string;
   paymentOptions: string[];
   volumeDiscounts: string[];
-  enterpriseFeatures: string[];
-}
+  enterpriseFeatures: string[]}
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   // AI-Powered Autonomous Research Assistant
@@ -35,11 +35,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
     serviceName: "AI Autonomous Research Assistant",
     category: "AI & Research",
     basePrice: 8999,
-    pricingTiers: [
+    pricingTiers[
       {
         name: "Starter",
         price: 8999,
-        features: [
+        features[
           "Basic research automation",
           "Data analysis tools",
           "Report generation",
@@ -53,7 +53,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Professional",
         price: 15999,
-        features: [
+        features[
           "Advanced research automation",
           "AI-powered insights",
           "Custom report templates",
@@ -68,7 +68,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Enterprise",
         price: 29999,
-        features: [
+        features[
           "Full research automation",
           "Custom AI models",
           "White-label solutions",
@@ -82,12 +82,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       }
     ],
     marketPrice: "$7,000-15,000",
-    competitors: ["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
+    competitors["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
     roi: "800% within 12 months",
     setupTime: "6-8 weeks",
-    paymentOptions: ["One-time payment", "Annual subscription", "Monthly payment"],
-    volumeDiscounts: ["10% off for 3+ licenses", "20% off for 10+ licenses", "Custom pricing for enterprise"],
-    enterpriseFeatures: ["Custom AI models", "On-premise deployment", "Dedicated support", "White-label solutions"]
+    paymentOptions["One-time payment", "Annual subscription", "Monthly payment"],
+    volumeDiscounts["10% off for 3+ licenses", "20% off for 10+ licenses", "Custom pricing for enterprise"],
+    enterpriseFeatures["Custom AI models", "On-premise deployment", "Dedicated support", "White-label solutions"]
   },
 
   // AI-Powered Metaverse Development Platform
@@ -96,11 +96,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
     serviceName: "AI Metaverse Development Platform",
     category: "AI & Metaverse",
     basePrice: 12999,
-    pricingTiers: [
+    pricingTiers[
       {
         name: "Creator",
         price: 12999,
-        features: [
+        features[
           "Basic metaverse creation tools",
           "3D environment builder",
           "Asset library",
@@ -114,7 +114,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Studio",
         price: 24999,
-        features: [
+        features[
           "Advanced metaverse tools",
           "AI-powered content generation",
           "Multi-user environments",
@@ -128,7 +128,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Enterprise",
         price: 49999,
-        features: [
+        features[
           "Full metaverse platform",
           "Custom AI models",
           "Scalable infrastructure",
@@ -141,12 +141,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       }
     ],
     marketPrice: "$10,000-25,000",
-    competitors: ["Unity", "Unreal Engine", "Roblox Studio"],
+    competitors["Unity", "Unreal Engine", "Roblox Studio"],
     roi: "1000% within 18 months",
     setupTime: "8-10 weeks",
-    paymentOptions: ["One-time payment", "Annual subscription", "Revenue sharing"],
-    volumeDiscounts: ["15% off for 5+ licenses", "25% off for 20+ licenses", "Custom enterprise pricing"],
-    enterpriseFeatures: ["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]
+    paymentOptions["One-time payment", "Annual subscription", "Revenue sharing"],
+    volumeDiscounts["15% off for 5+ licenses", "25% off for 20+ licenses", "Custom enterprise pricing"],
+    enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]
   },
 
   // Zero-Trust Network Access Platform
@@ -155,11 +155,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
     serviceName: "Zero-Trust Network Access Platform",
     category: "IT Infrastructure",
     basePrice: 12999,
-    pricingTiers: [
+    pricingTiers[
       {
         name: "Basic",
         price: 12999,
-        features: [
+        features[
           "Basic zero-trust access",
           "Identity verification",
           "Access control",
@@ -173,7 +173,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Professional",
         price: 21999,
-        features: [
+        features[
           "Advanced zero-trust",
           "Multi-factor authentication",
           "Advanced monitoring",
@@ -187,7 +187,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Enterprise",
         price: 39999,
-        features: [
+        features[
           "Full zero-trust platform",
           "Custom integrations",
           "Advanced analytics",
@@ -200,12 +200,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       }
     ],
     marketPrice: "$10,000-25,000",
-    competitors: ["Okta", "Palo Alto Networks", "Cisco"],
+    competitors["Okta", "Palo Alto Networks", "Cisco"],
     roi: "800% within 12 months",
     setupTime: "6-8 weeks",
-    paymentOptions: ["One-time payment", "Annual subscription", "Per-user pricing"],
-    volumeDiscounts: ["20% off for 100+ users", "30% off for 500+ users", "Custom enterprise pricing"],
-    enterpriseFeatures: ["Custom integrations", "White-label solutions", "Enterprise support", "Custom compliance"]
+    paymentOptions["One-time payment", "Annual subscription", "Per-user pricing"],
+    volumeDiscounts["20% off for 100+ users", "30% off for 500+ users", "Custom enterprise pricing"],
+    enterpriseFeatures["Custom integrations", "White-label solutions", "Enterprise support", "Custom compliance"]
   },
 
   // AI-Powered Medical Imaging Analysis
@@ -214,11 +214,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
     serviceName: "AI Medical Imaging Analysis Platform",
     category: "AI & Healthcare",
     basePrice: 24999,
-    pricingTiers: [
+    pricingTiers[
       {
         name: "Clinic",
         price: 24999,
-        features: [
+        features[
           "Basic image analysis",
           "Common diagnostic tools",
           "Basic reporting",
@@ -232,7 +232,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Hospital",
         price: 44999,
-        features: [
+        features[
           "Advanced image analysis",
           "Full diagnostic suite",
           "Advanced reporting",
@@ -247,7 +247,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Medical Center",
         price: 79999,
-        features: [
+        features[
           "Full medical imaging platform",
           "Custom AI models",
           "White-label solutions",
@@ -260,12 +260,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       }
     ],
     marketPrice: "$20,000-50,000",
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
+    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
     roi: "1000% within 20 months",
     setupTime: "10-12 weeks",
-    paymentOptions: ["One-time payment", "Annual subscription", "Per-image pricing"],
-    volumeDiscounts: ["25% off for 5+ licenses", "40% off for 20+ licenses", "Custom enterprise pricing"],
-    enterpriseFeatures: ["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]
+    paymentOptions["One-time payment", "Annual subscription", "Per-image pricing"],
+    volumeDiscounts["25% off for 5+ licenses", "40% off for 20+ licenses", "Custom enterprise pricing"],
+    enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]
   },
 
   // AI-Powered Risk Assessment Platform
@@ -274,11 +274,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
     serviceName: "AI Risk Assessment Platform",
     category: "AI & FinTech",
     basePrice: 18999,
-    pricingTiers: [
+    pricingTiers[
       {
         name: "Basic",
         price: 18999,
-        features: [
+        features[
           "Basic risk assessment",
           "Portfolio analysis",
           "Basic reporting",
@@ -292,7 +292,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Professional",
         price: 32999,
-        features: [
+        features[
           "Advanced risk assessment",
           "Real-time monitoring",
           "Advanced analytics",
@@ -307,7 +307,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       {
         name: "Enterprise",
         price: 59999,
-        features: [
+        features[
           "Full risk management platform",
           "Custom risk models",
           "White-label solutions",
@@ -320,58 +320,92 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       }
     ],
     marketPrice: "$15,000-40,000",
-    competitors: ["Bloomberg Risk", "Reuters Risk", "S&P Global"],
+    competitors["Bloomberg Risk", "Reuters Risk", "S&P Global"],
     roi: "900% within 18 months",
     setupTime: "8-10 weeks",
-    paymentOptions: ["One-time payment", "Annual subscription", "Per-portfolio pricing"],
-    volumeDiscounts: ["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],
-    enterpriseFeatures: ["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]
+    paymentOptions["One-time payment", "Annual subscription", "Per-portfolio pricing"],
+    volumeDiscounts["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],
+    enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]
   }
 ];
 
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
   averagePrice: Math.round(
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => sum + service.basePrice, 0) / 
+    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-    max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  },
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {
-    if (!acc[service.category]) {
-      acc[service.category] = [];
-    }
+<<<<<<< HEAD
+    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice)),
+  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice))
+  
+
+},
+  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)  => {
+    if (!acc[service.category]) {;
+      acc[service.category] = []};
     acc[service.category].push(service.basePrice);
-    return acc;
-  }, {} as Record<string, number[]>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
+    return acc}, {} as Record<string, any>),
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({
     serviceName: service.serviceName,
     roi: service.roi,
     setupTime: service.setupTime,
     price: service.basePrice
   }))
+=======
+    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
+  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
+  ;
+;
+;
+;
+
+},;
+  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {;
+    if (!acc[service.category]) {;
+      acc[service.category] = [];
+    }
+    acc[service.category].push(service.basePrice);
+    return acc;
+  }, {} as Record<string, number[]>),
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({;
+    serviceName: service.serviceName,;
+    roi: service.roi,;
+    setupTime: service.setupTime,;
+    price: service.basePrice;
+  }));
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 };
 
 // Payment and Discount Information
 export const PAYMENT_OPTIONS_2030 = {
-  paymentMethods: ["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],
-  installmentPlans: ["3-month plan", "6-month plan", "12-month plan"],
-  volumeDiscounts: [
+  paymentMethods["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],
+  installmentPlans["3-month plan", "6-month plan", "12-month plan"],
+  volumeDiscounts[
     "5-10 licenses: 15% discount",
     "11-25 licenses: 25% discount",
     "26-50 licenses: 35% discount",
     "51+ licenses: Custom pricing"
   ],
-  enterpriseFeatures: [
+  enterpriseFeatures[
     "Custom development",
     "White-label solutions",
     "Dedicated support",
     "On-premise deployment",
-    "Custom integrations",
-    "SLA guarantees"
-  ]
+    "Custom integrations",;
+  ;
+  ;
+  ;
+  "SLA guarantees";
+  ];
+;
+
+
+
+
+
+
 };
 
 // Contact Information for Pricing Inquiries
@@ -380,6 +414,17 @@ export const PRICING_CONTACT_2030 = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
-  responseTime: "Within 24 hours for pricing inquiries"
+  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
+  ;
+  ;
+  ;
+  ;
+  responseTime: "Within 24 hours for pricing inquiries";
+;
+
+
+
+
+
+
 };

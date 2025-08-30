@@ -1,4 +1,4 @@
-export type Real2036SpecializedService = {
+export type Real2036SpecializedService = {;
   id: string;
   name: string;
   tagline: string;
@@ -15,8 +15,7 @@ export type Real2036SpecializedService = {
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
-  technology?: string[];
-};
+  technology?: string[]};
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {
@@ -27,7 +26,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Emerging Technology',
     price: '$3,999',
     period: '/month',
-    features: [
+    features[
       'Brain-inspired neural architecture',
       'Ultra-low power consumption',
       'Real-time learning capabilities',
@@ -43,9 +42,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$1.8B',
     targetAudience: 'Research institutions, AI companies, Semiconductor firms',
     competitiveAdvantage: 'Brain-inspired architecture, Ultra-efficiency, Real-time learning',
-    integration: ['AI frameworks', 'Edge devices', 'IoT platforms', 'Cloud services'],
-    useCases: ['Edge AI processing', 'Autonomous systems', 'Cognitive computing', 'Energy-efficient AI'],
-    technology: ['Neuromorphic chips', 'Spiking neural networks', 'Analog computing', 'Bio-inspired algorithms']
+    integration['AI frameworks', 'Edge devices', 'IoT platforms', 'Cloud services'],
+    useCases['Edge AI processing', 'Autonomous systems', 'Cognitive computing', 'Energy-efficient AI'],
+    technology['Neuromorphic chips', 'Spiking neural networks', 'Analog computing', 'Bio-inspired algorithms']
   },
   // Synthetic Biology Platform
   {
@@ -56,7 +55,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Biotechnology',
     price: '$5,999',
     period: '/month',
-    features: [
+    features[
       'AI-powered DNA design',
       'Biological system simulation',
       'Automated lab protocols',
@@ -72,9 +71,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$3.2B',
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions',
     competitiveAdvantage: 'AI integration, Automated protocols, Safety focus',
-    integration: ['Lab automation systems', 'DNA synthesis platforms', 'Sequencing services', 'Cloud platforms'],
-    useCases: ['Drug discovery', 'Biofuel production', 'Environmental remediation', 'Agricultural optimization'],
-    technology: ['CRISPR', 'Gene editing', 'DNA synthesis', 'Bioinformatics']
+    integration['Lab automation systems', 'DNA synthesis platforms', 'Sequencing services', 'Cloud platforms'],
+    useCases['Drug discovery', 'Biofuel production', 'Environmental remediation', 'Agricultural optimization'],
+    technology['CRISPR', 'Gene editing', 'DNA synthesis', 'Bioinformatics']
   },
   // Quantum Internet Protocol Suite
   {
@@ -85,7 +84,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Quantum Technology',
     price: '$2,999',
     period: '/month',
-    features: [
+    features[
       'Quantum network protocols',
       'Interoperability standards',
       'Security frameworks',
@@ -101,9 +100,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$2.1B',
     targetAudience: 'Internet service providers, Government agencies, Research institutions',
     competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus',
-    integration: ['Quantum networks', 'Internet infrastructure', 'Security systems', 'Cloud platforms'],
-    useCases: ['Quantum networks', 'Secure communications', 'Internet infrastructure', 'Government networks'],
-    technology: ['Quantum protocols', 'Network standards', 'Security frameworks', 'Interoperability']
+    integration['Quantum networks', 'Internet infrastructure', 'Security systems', 'Cloud platforms'],
+    useCases['Quantum networks', 'Secure communications', 'Internet infrastructure', 'Government networks'],
+    technology['Quantum protocols', 'Network standards', 'Security frameworks', 'Interoperability']
   },
   // Brain-Computer Interface Platform
   {
@@ -114,7 +113,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Human-Computer Interaction',
     price: '$4,999',
     period: '/month',
-    features: [
+    features[
       'Neural signal processing',
       'Real-time brain monitoring',
       'Custom interface design',
@@ -130,9 +129,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$2.8B',
     targetAudience: 'Healthcare providers, Research institutions, Accessibility companies',
     competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus',
-    integration: ['Medical devices', 'Accessibility tools', 'Gaming platforms', 'Research systems'],
-    useCases: ['Assistive technology', 'Medical research', 'Gaming and entertainment', 'Human augmentation'],
-    technology: ['EEG', 'Neural implants', 'Signal processing', 'Machine learning']
+    integration['Medical devices', 'Accessibility tools', 'Gaming platforms', 'Research systems'],
+    useCases['Assistive technology', 'Medical research', 'Gaming and entertainment', 'Human augmentation'],
+    technology['EEG', 'Neural implants', 'Signal processing', 'Machine learning']
   },
   // Metaverse Development Studio Pro
   {
@@ -143,7 +142,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Metaverse',
     price: '$1,999',
     period: '/month',
-    features: [
+    features[
       '3D world building tools',
       'AI-powered NPCs',
       'Blockchain integration',
@@ -159,9 +158,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$8.9B',
     targetAudience: 'Gaming companies, Real estate firms, Educational institutions',
     competitiveAdvantage: '3D tools, AI integration, Blockchain support',
-    integration: ['VR headsets', 'AR devices', 'Blockchain platforms', '3D engines'],
-    useCases: ['Virtual worlds', 'Digital real estate', 'Educational experiences', 'Social platforms'],
-    technology: ['3D graphics', 'Virtual reality', 'Augmented reality', 'Blockchain']
+    integration['VR headsets', 'AR devices', 'Blockchain platforms', '3D engines'],
+    useCases['Virtual worlds', 'Digital real estate', 'Educational experiences', 'Social platforms'],
+    technology['3D graphics', 'Virtual reality', 'Augmented reality', 'Blockchain']
   },
   // Autonomous Vehicle AI Platform
   {
@@ -172,7 +171,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Autonomous Systems',
     price: '$3,999',
     period: '/month',
-    features: [
+    features[
       'Computer vision systems',
       'Sensor fusion algorithms',
       'Path planning and navigation',
@@ -188,9 +187,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$12.4B',
     targetAudience: 'Automotive companies, Transportation firms, Logistics providers',
     competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing',
-    integration: ['Vehicle systems', 'Sensor arrays', 'Navigation systems', 'Cloud platforms'],
-    useCases: ['Self-driving cars', 'Autonomous trucks', 'Delivery robots', 'Public transportation'],
-    technology: ['Computer vision', 'Machine learning', 'Sensor fusion', 'Control systems']
+    integration['Vehicle systems', 'Sensor arrays', 'Navigation systems', 'Cloud platforms'],
+    useCases['Self-driving cars', 'Autonomous trucks', 'Delivery robots', 'Public transportation'],
+    technology['Computer vision', 'Machine learning', 'Sensor fusion', 'Control systems']
   },
   // Quantum Materials Discovery Platform
   {
@@ -201,7 +200,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Quantum Technology',
     price: '$4,999',
     period: '/month',
-    features: [
+    features[
       'Quantum material simulation',
       'AI-powered discovery',
       'Property prediction',
@@ -217,9 +216,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$1.6B',
     targetAudience: 'Materials companies, Research institutions, Manufacturing firms',
     competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design',
-    integration: ['Quantum computers', 'AI platforms', 'Lab systems', 'Research databases'],
-    useCases: ['New materials', 'Energy storage', 'Electronics', 'Manufacturing'],
-    technology: ['Quantum computing', 'Machine learning', 'Materials science', 'Simulation']
+    integration['Quantum computers', 'AI platforms', 'Lab systems', 'Research databases'],
+    useCases['New materials', 'Energy storage', 'Electronics', 'Manufacturing'],
+    technology['Quantum computing', 'Machine learning', 'Materials science', 'Simulation']
   },
   // AI-Powered Climate Modeling Platform
   {
@@ -230,7 +229,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Climate Technology',
     price: '$2,499',
     period: '/month',
-    features: [
+    features[
       'AI climate models',
       'Real-time data analysis',
       'Predictive modeling',
@@ -246,9 +245,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$3.8B',
     targetAudience: 'Government agencies, Research institutions, Environmental organizations',
     competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities',
-    integration: ['Climate sensors', 'Satellite data', 'Weather services', 'Research databases'],
-    useCases: ['Climate prediction', 'Policy planning', 'Environmental research', 'Risk assessment'],
-    technology: ['Machine learning', 'Climate models', 'Data analysis', 'Simulation']
+    integration['Climate sensors', 'Satellite data', 'Weather services', 'Research databases'],
+    useCases['Climate prediction', 'Policy planning', 'Environmental research', 'Risk assessment'],
+    technology['Machine learning', 'Climate models', 'Data analysis', 'Simulation']
   },
   // Quantum Neural Network Platform
   {
@@ -259,7 +258,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Quantum Technology',
     price: '$3,499',
     period: '/month',
-    features: [
+    features[
       'Quantum neural networks',
       'Hybrid quantum-classical AI',
       'Advanced optimization',
@@ -275,9 +274,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$2.2B',
     targetAudience: 'AI companies, Research institutions, Technology firms',
     competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization',
-    integration: ['Quantum computers', 'AI frameworks', 'Cloud platforms', 'Research tools'],
-    useCases: ['Advanced AI', 'Research applications', 'Commercial AI', 'Scientific computing'],
-    technology: ['Quantum computing', 'Neural networks', 'Machine learning', 'Optimization']
+    integration['Quantum computers', 'AI frameworks', 'Cloud platforms', 'Research tools'],
+    useCases['Advanced AI', 'Research applications', 'Commercial AI', 'Scientific computing'],
+    technology['Quantum computing', 'Neural networks', 'Machine learning', 'Optimization']
   },
   // Space Tourism Platform
   {
@@ -288,7 +287,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     category: 'Space Technology',
     price: '$6,999',
     period: '/month',
-    features: [
+    features[
       'Tourism management system',
       'Safety protocols',
       'Training programs',
@@ -304,8 +303,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$1.2B',
     targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies',
     competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management',
-    integration: ['Spacecraft systems', 'Training facilities', 'Booking systems', 'Safety systems'],
-    useCases: ['Space tourism', 'Training programs', 'Safety management', 'Customer experience'],
-    technology: ['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
+    integration['Spacecraft systems', 'Training facilities', 'Booking systems', 'Safety systems'],
+    useCases['Space tourism', 'Training programs', 'Safety management', 'Customer experience'],
+    technology['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
   }
 ];

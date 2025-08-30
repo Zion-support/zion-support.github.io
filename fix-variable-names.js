@@ -4,18 +4,30 @@ function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
       const numberWords = {
-        '5': 'Five',
+  '5': 'Five',
         '4': 'Four',
         '3': 'Three',
         '2': 'Two',
         '1': 'One',
+  <<<<<<< HEAD
         '0': 'Zero'
-      };
+      
+
+};
+      return numberWords[match] || match})
+=======
+  '0': 'Zero'
+      
+
+
+
+
+};
       return numberWords[match] || match;
     })
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())
-    .replace(/^(.)/, (match) => match.toUpperCase());
-}
+    .replace(/^(.)/, (match) => match.toUpperCase())}
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -57,35 +69,34 @@ function fixFile(filePath) {
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
-function findAndFixFiles(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
+function fixedCount = 0;
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
+  for (const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      fixedCount += findAndFixFiles(filePath);
-    } else if (file.endsWith('.tsx') && file.includes('-')) {
+      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {
       if (fixFile(filePath)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
   }
   
-  return fixedCount;
-}
+  return fixedCount}
 // Start fixing files
 console.log('Fixing invalid variable names in TypeScript files...');
 const fixedCount = findAndFixFiles('./pages');
 console.log(`Fixed ${fixedCount} files.`);
+
+export default toCamelCase;
+export default toCamelCase;
+export default toCamelCase;
+export default toCamelCase;
+export default toCamelCase;
+export default toCamelCase;
+export default toCamelCase;

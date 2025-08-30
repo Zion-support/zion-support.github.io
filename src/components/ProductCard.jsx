@@ -26,8 +26,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         <p className="text-destructive text-sm">Product information unavailable.</p>
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
-      </div>);
-    }
+      </div>)}
     const active = isWishlisted(product.id);
     const dispatch = useDispatch();
     // Title is now guaranteed to be a non-empty string by the check above.
@@ -37,10 +36,15 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             id: product.id,
             title: productTitle,
             price: product.price ?? 0,
-            image: imageUrl || undefined,
+<<<<<<< HEAD
+            image: imageUrl || null,
+        }))};
+    const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
+=======
+            image: imageUrl || null,
         }));
     };
-    const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const imageAltText = productTitle;
     const handleImageError = (error) => {
         if (!imageError) {
@@ -48,11 +52,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             captureException(error, {
                 product: product.id,
                 imageUrl,
-            });
-        }
+            })}
     };
-    const isMobile = useMediaQuery('(max-width: 768px)');
-    const isTablet = useMediaQuery('(max-width: 1200px)');
     const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
     return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button className="absolute top-2 right-2 p-1 rounded-full bg-background/70" onClick={() => toggle(product.id)} aria-label={active ? 'Remove from favorites' : 'Add to favorites'}>
@@ -83,8 +84,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
               <TooltipTrigger asChild>
                 <Button onClick={(e) => {
                 e.stopPropagation();
-                onBuy();
-            }} size="sm" variant="outline" className="flex-1" data-testid="buy-now-button" disabled={!isAuthenticated || buyDisabled}>
+                onBuy()}} size="sm" variant="outline" className="flex-1" data-testid="buy-now-button" disabled={!isAuthenticated || buyDisabled}>
                   Buy Now
                 </Button>
               </TooltipTrigger>
@@ -92,5 +92,4 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             </Tooltip>
           </TooltipProvider>)}
       </div>
-    </div>);
-}
+    </div>)}

@@ -22,23 +22,29 @@ export default function Onboarding() {
             case "client":
                 return "employer";
             default:
-                return "buyer";
-        }
+                return "buyer"}
     };
     const handleUserTypeSelect = (type) => {
         setUserType(type);
         // Direct to specific registration page based on user type
         if (type === "serviceProvider") {
-            navigate('/service-onboarding');
+<<<<<<< HEAD
+            router('/service-onboarding');
+            return}
+        else if (type === "talent") {
+            router('/talent-onboarding');
+            return}
+=======
+            router('/service-onboarding');
             return;
         }
         else if (type === "talent") {
-            navigate('/talent-onboarding');
+            router('/talent-onboarding');
             return;
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         // Continue with the onboarding flow for clients
-        setCurrentStep(1);
-    };
+        setCurrentStep(1)};
     const handleProfileComplete = async (data) => {
         if (!user || !userType) {
             toast({
@@ -46,9 +52,14 @@ export default function Onboarding() {
                 description: "Your session may have expired. Please log in again.",
                 variant: "destructive",
             });
-            navigate('/login');
+<<<<<<< HEAD
+            router('/login');
+            return}
+=======
+            router('/login');
             return;
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         const dbUserType = mapUserTypeToDatabase(userType);
         try {
             await updateProfile({
@@ -74,25 +85,33 @@ export default function Onboarding() {
                 ? "/client-dashboard"
                 : "/talent-dashboard";
             // Redirect to dashboard
-            navigate(dashboardRoute);
+<<<<<<< HEAD
+            router(dashboardRoute)}
+=======
+            router(dashboardRoute);
         }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (error) {
             console.error('Error updating profile:', error);
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',
                 variant: 'destructive',
-            });
-        }
+            })}
     };
     const steps = [
         { label: "Select Role", description: "Choose how you'll use the platform" },
         { label: "Create Profile", description: "Tell us about yourself" },
     ];
     if (!user) {
-        navigate('/login');
+<<<<<<< HEAD
+        router('/login');
+        return null}
+=======
+        router('/login');
         return null;
     }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<>
       
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -128,5 +147,4 @@ export default function Onboarding() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}

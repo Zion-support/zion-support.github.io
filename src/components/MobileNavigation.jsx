@@ -9,29 +9,24 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
     const menuRef = useRef(null);
     // Close menu when route changes
     useEffect(() => {
-        onToggle();
-    }, [location.pathname]);
+        onToggle()}, [location.pathname]);
     // Close menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
-                onToggle();
-            }
+                onToggle()}
         };
         if (isOpen) {
             document.addEventListener('mousedown', handleClickOutside);
-            document.body.style.overflow = 'hidden';
-        }
+            document.body.style.overflow = 'hidden'}
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
-            document.body.style.overflow = 'unset';
-        };
-    }, [isOpen, onToggle]);
+            document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
     const navigationItems = [
         {
             label: 'Services',
             href: '/services',
-            children: [
+            children[
                 { label: 'AI & Machine Learning', href: '/services/ai' },
                 { label: 'Quantum Computing', href: '/services/quantum' },
                 { label: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -43,7 +38,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         {
             label: 'Solutions',
             href: '/solutions',
-            children: [
+            children[
                 { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
                 { label: 'Startup Solutions', href: '/solutions/startup' },
                 { label: 'Government Solutions', href: '/solutions/government' },
@@ -53,7 +48,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         {
             label: 'Industries',
             href: '/industries',
-            children: [
+            children[
                 { label: 'Technology', href: '/industries/technology' },
                 { label: 'Healthcare', href: '/industries/healthcare' },
                 { label: 'Finance', href: '/industries/finance' },
@@ -62,9 +57,9 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             ]
         },
         {
-            label: 'Company',
+            label: 'Comp',
             href: '/about',
-            children: [
+            children[
                 { label: 'About Us', href: '/about' },
                 { label: 'Careers', href: '/careers' },
                 { label: 'News', href: '/news' },
@@ -74,21 +69,26 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         }
     ];
     const toggleDropdown = (label) => {
-        setActiveDropdown(activeDropdown === label ? null : label);
-    };
+        setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (e) => {
         e.preventDefault();
         // Implement search functionality
-        console.log('Search query:', searchQuery);
-    };
+        console.log('Search query:', searchQuery)};
     const menuVariants = {
-        closed: {
+  closed: {
             x: '100%',
             opacity: 0,
             transition: {
                 duration: 0.3,
-                ease: 'easeInOut'
-            }
+  ease: 'easeInOut'
+            
+
+
+
+
+
+
+}
         },
         open: {
             x: 0,
@@ -100,13 +100,20 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         }
     };
     const dropdownVariants = {
-        closed: {
+  closed: {
             height: 0,
             opacity: 0,
             transition: {
                 duration: 0.2,
-                ease: 'easeInOut'
-            }
+  ease: 'easeInOut'
+            
+
+
+
+
+
+
+}
         },
         open: {
             height: 'auto',
@@ -211,6 +218,5 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             </div>
           </motion.div>
         </>)}
-    </AnimatePresence>);
-};
+    </AnimatePresence>)};
 export default MobileNavigation;

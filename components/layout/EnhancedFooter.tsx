@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { 
-  Twitter, 
+import React from 'react.ts';
+import Link from 'next/link.ts';
+import { Twitter, 
   Linkedin, 
   Facebook, 
   Instagram, 
@@ -22,13 +21,27 @@ import {
   HelpCircle,
   Lock,
   Award
-} from 'lucide-react';
+ } from 'lucide-react';
 
 const footerNavigation = {
-	services: {
+  services: {
 		title: 'Services',
+<<<<<<< HEAD
+		items[
+			{ name: 'AI Solutions',
+  href: '/services/ai-solutions' 
+
+},
+=======
 		items: [
-			{ name: 'AI Solutions', href: '/services/ai-solutions' },
+			{ name: 'AI Solutions',
+  href: '/services/ai-solutions' 
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			{ name: 'Cloud & DevOps', href: '/services/cloud' },
 			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
 			{ name: 'Data & Analytics', href: '/services/data' },
@@ -38,7 +51,7 @@ const footerNavigation = {
 	},
 	solutions: {
 		title: 'Solutions',
-		items: [
+		items[
 			{ name: 'Enterprise', href: '/solutions/enterprise' },
 			{ name: 'SMB', href: '/solutions/smb' },
 			{ name: 'Startup', href: '/solutions/startup' },
@@ -47,9 +60,9 @@ const footerNavigation = {
 			{ name: 'Financial Services', href: '/solutions/financial' },
 		],
 	},
-	company: {
-		title: 'Company',
-		items: [
+	comp: {
+		title: 'Comp',
+		items[
 			{ name: 'About Us', href: '/about' },
 			{ name: 'Partners', href: '/partners' },
 			{ name: 'Careers', href: '/careers' },
@@ -60,39 +73,45 @@ const footerNavigation = {
 	},
 	support: {
 		title: 'Support & Resources',
-		items: [
+		items[
 			{ name: 'Help Center', href: '/help' },
-			{ name: 'Contact Support', href: '/contact' },
-			{ name: 'Documentation', href: '/docs' },
-			{ name: 'API Reference', href: '/api' },
-			{ name: 'Terms of Service', href: '/terms' },
-			{ name: 'Privacy Policy', href: '/privacy' },
-		],
-	},
+			{ name: 'Contact Support', href: '/contact' },;
+			{ name: 'Documentation', href: '/docs' },;
+			{ name: 'API Reference', href: '/api' },;
+			{ name: 'Terms of Service', href: '/terms' },;
+			{ name: 'Privacy Policy', href: '/privacy' },;
+		],;
+	},;
 };
 
-const socialLinks = [
-	{ name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter },
-	{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin },
-	{ name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
-	{ name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+const socialLinks = [;
+	{ name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter },;
+	{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin },;
+	{ name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },;
+	{ name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },;
+	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },;
 ];
 
-const quickLinks = [
-	{ name: 'Request Quote', href: '/request-quote', icon: Zap },
-	{ name: 'Security', href: '/security', icon: Shield },
-	{ name: 'Compliance', href: '/compliance', icon: Award },
-	{ name: 'Status', href: '/status', icon: Cloud },
+const quickLinks = [;
+	{ name: 'Request Quote', href: '/request-quote', icon: Zap },;
+	{ name: 'Security', href: '/security', icon: Shield },;
+	{ name: 'Compliance', href: '/compliance', icon: Award },;
+	{ name: 'Status', href: '/status', icon: Cloud },;
 ];
 
-const EnhancedFooter: React.FC = () => {
-	const scrollToTop = () => {
+<<<<<<< HEAD
+const EnhancedFooter: React.FC = (): JSX.Element => {;
+	const scrollToTop = () => {;
+		window.scrollTo({ top: 0, behavior: 'smooth' })};
+=======
+const EnhancedFooter: React.FC = () => {;
+	const scrollToTop = () => {;
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 	return (
-		<footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
+		<footer className = "bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
 			{/* Background decorative elements */}
 			<div className="absolute inset-0 opacity-5">
 				<div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
@@ -103,7 +122,7 @@ const EnhancedFooter: React.FC = () => {
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				{/* Main Footer Content */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-					{/* Company info */}
+					{/* Comp info */}
 					<div className="lg:col-span-2">
 						<div className="mb-6">
 							<div className="flex items-center gap-3 mb-4">
@@ -141,7 +160,7 @@ const EnhancedFooter: React.FC = () => {
 
 						{/* Social media */}
 						<div className="flex space-x-4">
-							{socialLinks.map(({ name, href, icon: Icon }) => (
+							{socialLinks.map(({ name, href, icon: Icon })  => (
 								<a
 									key={name}
 									href={href}
@@ -179,8 +198,8 @@ const EnhancedFooter: React.FC = () => {
 
 				{/* Quick Links Section */}
 				<div className="py-8 border-t border-zion-blue-light mb-8">
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-						{quickLinks.map((link) => (
+					<div className="grid grid-cols-2 md: grid-cols-4 gap-6">
+						{quickLinks.map((link)  => (
 							<Link
 								key={link.name}
 								href={link.href}
@@ -197,16 +216,16 @@ const EnhancedFooter: React.FC = () => {
 							</Link>
 						))}
 					</div>
-				</div>
-
-				{/* Bottom section */}
-				<div className="pt-8 border-t border-zion-blue-light">
-					<div className="flex flex-col md:flex-row justify-between items-center">
-						<div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
-							<p className="text-zion-slate-light text-sm">
+				</div>;
+;
+				{/* Bottom section */};
+				<div className="pt-8 border-t border-zion-blue-light">;
+					<div className="flex flex-col md:flex-row justify-between items-center">;
+						<div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">;
+							<p className="text-zion-slate-light text-sm">;
 								&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
 							</p>
-							<div className="flex items-center gap-2 text-zion-slate-light/60">
+							<div className = "flex items-center gap-2 text-zion-slate-light/60">
 								<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 								<span className="text-xs">Live</span>
 							</div>
@@ -262,12 +281,21 @@ const EnhancedFooter: React.FC = () => {
 			<button
 				onClick={scrollToTop}
 				className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40 hover:scale-110"
+<<<<<<< HEAD
 				aria-label="Scroll to top"
 			>
 				<ArrowUp className="w-5 h-5" />
-			</button>
-		</footer>
+			</button>;
+		</footer>;
+	)};
+=======
+				aria-label="Scroll to top";
+			>;
+				<ArrowUp className="w-5 h-5" />;
+			</button>;
+		</footer>;
 	);
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EnhancedFooter;

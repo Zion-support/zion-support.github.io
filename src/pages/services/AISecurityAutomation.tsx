@@ -3,13 +3,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityAutomation() {
   const features = [
     'AI-powered security automation optimization',
-    'Intelligent workflow automation and orchestration',
-    'Automated security response and remediation',
-    'Predictive analytics for automation opportunities',
-    'Smart security process optimization',
-    'AI-driven security task automation',
-    'Real-time automation performance monitoring',
-    'Custom AI models for automation applications'
+    'Intelligent workflow automation and orchestration',;
+    'Automated security response and remediation',;
+    'Predictive analytics for automation opportunities',;
+    'Smart security process optimization',;
+    'AI-driven security task automation',;
+    'Real-time automation performance monitoring',;
+    'Custom AI models for automation applications';
   ];
 
   const tiers = [
@@ -21,44 +21,44 @@ export default function AISecurityAutomation() {
     { 
       name: 'Business', 
       price: '$1,499/mo', 
-      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited workflows', 'Custom AI models', 'Full automation suite', '24/7 dedicated support'] 
-    },
+      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited workflows', 'Custom AI models', 'Full automation suite', '24/7 dedicated support'] ;
+    },;
   ];
 
-  const useCases = [
-    'Security automation optimization',
-    'Workflow automation and orchestration',
-    'Security response and remediation',
-    'Process optimization and automation',
-    'Task automation and management',
-    'Automation scaling and management'
+  const useCases = [;
+    'Security automation optimization',;
+    'Workflow automation and orchestration',;
+    'Security response and remediation',;
+    'Process optimization and automation',;
+    'Task automation and management',;
+    'Automation scaling and management';
   ];
 
-  const benefits = [
-    'Improve security automation performance by 50-80%',
-    'Reduce manual task time by 40-70%',
-    'Cut security operational costs by 35-65%',
-    'Enhance security automation reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security automation operations efficiently'
+  const benefits = [;
+    'Improve security automation performance by 50-80%',;
+    'Reduce manual task time by 40-70%',;
+    'Cut security operational costs by 35-65%',;
+    'Enhance security automation reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security automation operations efficiently';
   ];
 
-  const industries = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -163,12 +163,12 @@ export default function AISecurityAutomation() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-rose-600 text-rose-600 rounded-lg hover:bg-rose-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-gray-500">;
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
@@ -20,10 +20,10 @@ const featuredPosts = [
         authorId: "user1",
         category: "ai-tools",
         categoryId: "ai-tools",
-        tags: ["machine-learning", "fine-tuning", "gpt"],
+        tags["machine-learning", "fine-tuning", "gpt"],
         createdAt: "2025-04-01T12:00:00Z",
         updatedAt: "2025-04-01T12:00:00Z",
-        replies: [],
+        replies[],
         likes: 48,
         views: 120,
         upvotes: 48,
@@ -49,10 +49,10 @@ const featuredPosts = [
         authorId: "user2",
         category: "getting-hired",
         categoryId: "getting-hired",
-        tags: ["profile", "tips", "hiring"],
+        tags["profile", "tips", "hiring"],
         createdAt: "2025-04-03T09:15:00Z",
         updatedAt: "2025-04-03T09:15:00Z",
-        replies: [],
+        replies[],
         likes: 32,
         views: 89,
         upvotes: 32,
@@ -81,10 +81,10 @@ const recentPosts = [
         authorId: "user3",
         category: "project-help",
         categoryId: "project-help",
-        tags: ["testing", "automation", "ci-cd"],
+        tags["testing", "automation", "ci-cd"],
         createdAt: "2025-04-10T14:30:00Z",
         updatedAt: "2025-04-10T14:30:00Z",
-        replies: [],
+        replies[],
         likes: 5,
         views: 45,
         upvotes: 5,
@@ -110,10 +110,10 @@ const recentPosts = [
         authorId: "user4",
         category: "feedback",
         categoryId: "feedback",
-        tags: ["feature-request", "teams", "collaboration"],
+        tags["feature-request", "teams", "collaboration"],
         createdAt: "2025-04-09T18:45:00Z",
         updatedAt: "2025-04-09T18:45:00Z",
-        replies: [],
+        replies[],
         likes: 12,
         views: 67,
         upvotes: 12,
@@ -139,10 +139,10 @@ const recentPosts = [
         authorId: "user5",
         category: "project-help",
         categoryId: "project-help",
-        tags: ["client-management", "scope", "projects"],
+        tags["client-management", "scope", "projects"],
         createdAt: "2025-04-08T10:20:00Z",
         updatedAt: "2025-04-08T10:20:00Z",
-        replies: [],
+        replies[],
         likes: 24,
         views: 89,
         upvotes: 24,
@@ -198,5 +198,4 @@ export default function CommunityPage() {
           </TabsContent>
         </Tabs>
       </div>
-    </>);
-}
+    </>)}

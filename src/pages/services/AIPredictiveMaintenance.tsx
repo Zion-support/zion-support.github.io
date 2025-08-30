@@ -5,31 +5,31 @@ export default function AIPredictiveMaintenance() {
     'AI-powered equipment health monitoring and analysis',
     'Real-time predictive maintenance scheduling',
     'Intelligent failure prediction and prevention',
-    'Advanced sensor data analysis and processing',
-    'Automated maintenance workflow optimization',
-    'Real-time equipment performance tracking',
-    'Advanced anomaly detection and alerting',
-    'Predictive parts inventory management',
-    'AI-driven maintenance cost optimization',
-    'Comprehensive maintenance history and analytics'
+    'Advanced sensor data analysis and processing',;
+    'Automated maintenance workflow optimization',;
+    'Real-time equipment performance tracking',;
+    'Advanced anomaly detection and alerting',;
+    'Predictive parts inventory management',;
+    'AI-driven maintenance cost optimization',;
+    'Comprehensive maintenance history and analytics';
   ];
 
-  const benefits = [
-    'Reduce unplanned downtime by 70-90%',
-    'Lower maintenance costs by 25-40%',
-    'Extend equipment lifespan by 20-30%',
-    'Improve operational efficiency by 35%',
-    'Reduce spare parts inventory by 30%',
-    'Enable proactive maintenance planning'
+  const benefits = [;
+    'Reduce unplanned downtime by 70-90%',;
+    'Lower maintenance costs by 25-40%',;
+    'Extend equipment lifespan by 20-30%',;
+    'Improve operational efficiency by 35%',;
+    'Reduce spare parts inventory by 30%',;
+    'Enable proactive maintenance planning';
   ];
 
-  const useCases = [
-    'Manufacturing and industrial equipment',
-    'HVAC and building management systems',
-    'Transportation and fleet management',
-    'Energy and utility infrastructure',
-    'Healthcare and medical equipment',
-    'Data center and IT infrastructure'
+  const useCases = [;
+    'Manufacturing and industrial equipment',;
+    'HVAC and building management systems',;
+    'Transportation and fleet management',;
+    'Energy and utility infrastructure',;
+    'Healthcare and medical equipment',;
+    'Data center and IT infrastructure';
   ];
 
   const tiers = [
@@ -41,17 +41,17 @@ export default function AIPredictiveMaintenance() {
     { 
       name: 'Maintenance Professional', 
       price: '$999/mo', 
-      details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
-    },
-    { 
-      name: 'Enterprise Maintenance', 
-      price: '$2,999/mo', 
-      details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+      details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
+    },;
+    { ;
+      name: 'Enterprise Maintenance', ;
+      price: '$2,999/mo', ;
+      details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -147,12 +147,12 @@ export default function AIPredictiveMaintenance() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
-          <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
-        </div>
-      </section>
-    </div>
+          </div>;
+          <div className="mt-4 text-sm text-zion-slate-light">;
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

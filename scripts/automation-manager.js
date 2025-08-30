@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('🔧 PM2 Automation Manager');
@@ -24,8 +23,7 @@ class AutomationManager {
       'link-integrity',
       'front-maximizer',
       'sitemap-runner'
-    ];
-  }
+    ]}
 
   async showHelp() {
     console.log(`
@@ -55,8 +53,7 @@ class AutomationManager {
   node scripts/automation-manager.js logs console-error-fixer
   node scripts/automation-manager.js restart security-audit
   node scripts/automation-manager.js health
-    `);
-  }
+    `)}
 
   async getStatus() {
     try {
@@ -84,8 +81,7 @@ class AutomationManager {
           `${proc.monit.cpu}%`.padEnd(8) +
           uptime.padEnd(15) +
           proc.pm2_env.restart_time
-        );
-      });
+        )});
       
       const onlineCount = automationProcesses.filter(p => p.pm2_env.status === 'online').length;
       const totalCount = automationProcesses.length;
@@ -94,22 +90,18 @@ class AutomationManager {
       console.log(`📈 Summary: ${onlineCount}/${totalCount} processes online`);
       
       if (onlineCount < totalCount) {
-        console.log('⚠️  Some processes are not running. Use "check" to see details.');
-      }
+        console.log('⚠️  Some processes are not running. Use "check" to see details.')}
       
     } catch (error) {
-      console.error('❌ Failed to get status:', error.message);
-    }
+      console.error('❌ Failed to get status:', error.message)}
   }
 
   async startAll() {
     console.log('🚀 Starting all automation processes...');
     try {
       execSync('pm2 start ecosystem.config.cjs --only automation', { stdio: 'inherit' });
-      console.log('✅ All automation processes started');
-    } catch (error) {
-      console.error('❌ Failed to start processes:', error.message);
-    }
+      console.log('✅ All automation processes started')} catch (error) {
+      console.error('❌ Failed to start processes:', error.message)}
   }
 
   async stopAll() {
@@ -117,41 +109,33 @@ class AutomationManager {
     try {
       this.automationProcesses.forEach(processName => {
         try {
-          execSync(`pm2 stop ${processName}`, { stdio: 'pipe' });
-        } catch (error) {
+          execSync(`pm2 stop ${processName}`, { stdio: 'pipe' })} catch (error) {
           // Process might not be running
         }
       });
-      console.log('✅ All automation processes stopped');
-    } catch (error) {
-      console.error('❌ Failed to stop processes:', error.message);
-    }
+      console.log('✅ All automation processes stopped')} catch (error) {
+      console.error('❌ Failed to stop processes:', error.message)}
   }
 
   async restartAll() {
     console.log('🔄 Restarting all automation processes...');
     try {
       execSync('pm2 restart ecosystem.config.cjs --only automation', { stdio: 'inherit' });
-      console.log('✅ All automation processes restarted');
-    } catch (error) {
-      console.error('❌ Failed to restart processes:', error.message);
-    }
+      console.log('✅ All automation processes restarted')} catch (error) {
+      console.error('❌ Failed to restart processes:', error.message)}
   }
 
   async restartProcess(processName) {
     if (!this.automationProcesses.includes(processName)) {
       console.error(`❌ Invalid process name: ${processName}`);
       console.log('Valid processes:', this.automationProcesses.join(', '));
-      return;
-    }
+      return}
     
     console.log(`🔄 Restarting ${processName}...`);
     try {
       execSync(`pm2 restart ${processName}`, { stdio: 'inherit' });
-      console.log(`✅ ${processName} restarted`);
-    } catch (error) {
-      console.error(`❌ Failed to restart ${processName}:`, error.message);
-    }
+      console.log(`✅ ${processName} restarted`)} catch (error) {
+      console.error(`❌ Failed to restart ${processName}:`, error.message)}
   }
 
   async deleteAll() {
@@ -159,39 +143,31 @@ class AutomationManager {
     try {
       this.automationProcesses.forEach(processName => {
         try {
-          execSync(`pm2 delete ${processName}`, { stdio: 'pipe' });
-        } catch (error) {
+          execSync(`pm2 delete ${processName}`, { stdio: 'pipe' })} catch (error) {
           // Process might not exist
         }
       });
-      console.log('✅ All automation processes deleted');
-    } catch (error) {
-      console.error('❌ Failed to delete processes:', error.message);
-    }
+      console.log('✅ All automation processes deleted')} catch (error) {
+      console.error('❌ Failed to delete processes:', error.message)}
   }
 
   async showLogs(processName) {
     if (!this.automationProcesses.includes(processName)) {
       console.error(`❌ Invalid process name: ${processName}`);
       console.log('Valid processes:', this.automationProcesses.join(', '));
-      return;
-    }
+      return}
     
     console.log(`📝 Showing logs for ${processName}...`);
     try {
-      execSync(`pm2 logs ${processName} --lines 50`, { stdio: 'inherit' });
-    } catch (error) {
-      console.error(`❌ Failed to show logs for ${processName}:`, error.message);
-    }
+      execSync(`pm2 logs ${processName} --lines 50`, { stdio: 'inherit' })} catch (error) {
+      console.error(`❌ Failed to show logs for ${processName}:`, error.message)}
   }
 
   async openMonit() {
     console.log('📊 Opening PM2 monitoring interface...');
     try {
-      execSync('pm2 monit', { stdio: 'inherit' });
-    } catch (error) {
-      console.error('❌ Failed to open monitoring interface:', error.message);
-    }
+      execSync('pm2 monit', { stdio: 'inherit' })} catch (error) {
+      console.error('❌ Failed to open monitoring interface:', error.message)}
   }
 
   async checkHealth() {
@@ -211,19 +187,14 @@ class AutomationManager {
       
       if (failedProcesses.length === 0) {
         console.log('✅ All automation processes are healthy');
-        return;
-      }
+        return}
       
       console.log(`⚠️  Found ${failedProcesses.length} failed processes:`);
       failedProcesses.forEach(proc => {
-        console.log(`  🔴 ${proc.name}: ${proc.pm2_env.status} (restarts: ${proc.pm2_env.restart_time})`);
-      });
+        console.log(`  🔴 ${proc.name}: ${proc.pm2_env.status} (restarts: ${proc.pm2_env.restart_time})`)});
       
-      console.log('\n💡 Use "fix" command to automatically restart failed processes');
-      
-    } catch (error) {
-      console.error('❌ Failed to check health:', error.message);
-    }
+      console.log('\n💡 Use "fix" command to automatically restart failed processes')} catch (error) {
+      console.error('❌ Failed to check health:', error.message)}
   }
 
   async autoFix() {
@@ -240,25 +211,19 @@ class AutomationManager {
       
       if (failedProcesses.length === 0) {
         console.log('✅ No failed processes to fix');
-        return;
-      }
+        return}
       
       console.log(`🔄 Restarting ${failedProcesses.length} failed processes...`);
       
       failedProcesses.forEach(proc => {
         try {
           execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe' });
-          console.log(`✅ Restarted ${proc.name}`);
-        } catch (error) {
-          console.error(`❌ Failed to restart ${proc.name}:`, error.message);
-        }
+          console.log(`✅ Restarted ${proc.name}`)} catch (error) {
+          console.error(`❌ Failed to restart ${proc.name}:`, error.message)}
       });
       
-      console.log('✅ Auto-fix completed');
-      
-    } catch (error) {
-      console.error('❌ Failed to auto-fix:', error.message);
-    }
+      console.log('✅ Auto-fix completed')} catch (error) {
+      console.error('❌ Failed to auto-fix:', error.message)}
   }
 
   formatUptime(uptime) {
@@ -266,20 +231,17 @@ class AutomationManager {
     const seconds = Math.floor((Date.now() - uptime) / 1000);
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
-    return `${hours}h ${minutes}m`;
-  }
+    return `${hours}h ${minutes}m`}
 }
 
 // Main execution
-async function main() {
-  const manager = new AutomationManager();
+async function manager = new AutomationManager();
   const command = process.argv[2];
   const processName = process.argv[3];
   
   if (!command || command === 'help') {
     await manager.showHelp();
-    return;
-  }
+    return}
   
   switch (command) {
     case 'status':
@@ -296,10 +258,8 @@ async function main() {
       
     case 'restart':
       if (processName) {
-        await manager.restartProcess(processName);
-      } else {
-        await manager.restartAll();
-      }
+        await manager.restartProcess(processName)} else {
+        await manager.restartAll()}
       break;
       
     case 'delete':
@@ -310,8 +270,7 @@ async function main() {
       if (!processName) {
         console.error('❌ Please specify a process name');
         console.log('Example: node scripts/automation-manager.js logs console-error-fixer');
-        return;
-      }
+        return}
       await manager.showLogs(processName);
       break;
       
@@ -330,8 +289,7 @@ async function main() {
     default:
       console.error(`❌ Unknown command: ${command}`);
       await manager.showHelp();
-      break;
-  }
+      break}
 }
 
 // Start the manager

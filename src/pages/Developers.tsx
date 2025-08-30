@@ -39,7 +39,7 @@ import {
   Play,
   ExternalLink
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 export default function Developers() {
   const apis = [
@@ -68,13 +68,13 @@ export default function Developers() {
       status: 'Beta'
     },
     {
-      name: 'AI Security API',
-      description: 'Integrate AI-powered security and compliance features',
-      category: 'Security',
-      endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],
-      documentation: '/docs/api/security',
-      status: 'Production'
-    }
+      name: 'AI Security API',;
+      description: 'Integrate AI-powered security and compliance features',;
+      category: 'Security',;
+      endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],;
+      documentation: '/docs/api/security',;
+      status: 'Production';
+    };
   ];
 
   const sdks = [
@@ -103,13 +103,13 @@ export default function Developers() {
       documentation: '/docs/sdk/java'
     },
     {
-      name: 'Go',
-      description: 'Go SDK for high-performance applications',
-      version: 'v1.2.0',
-      downloads: '8K+',
-      repository: 'https://github.com/ziontechgroup/go-sdk',
-      documentation: '/docs/sdk/go'
-    }
+      name: 'Go',;
+      description: 'Go SDK for high-performance applications',;
+      version: 'v1.2.0',;
+      downloads: '8K+',;
+      repository: 'https://github.com/ziontechgroup/go-sdk',;
+      documentation: '/docs/sdk/go';
+    };
   ];
 
   const tools = [
@@ -134,13 +134,13 @@ export default function Developers() {
       href: '/docs',
       category: 'Reference'
     },
-    {
-      name: 'Code Examples',
-      description: 'Ready-to-use code samples and tutorials',
-      icon: Terminal,
-      href: '/examples',
-      category: 'Learning'
-    }
+    {;
+      name: 'Code Examples',;
+      description: 'Ready-to-use code samples and tutorials',;
+      icon: Terminal,;
+      href: '/examples',;
+      category: 'Learning';
+    };
   ];
 
   const quickStartSteps = [
@@ -165,17 +165,17 @@ export default function Developers() {
       action: 'Get Started',
       href: '/docs/quickstart'
     },
-    {
-      step: 4,
-      title: 'Make First Call',
-      description: 'Test your integration with our sample endpoints',
-      action: 'Try API',
-      href: '/api-playground'
-    }
+    {;
+      step: 4,;
+      title: 'Make First Call',;
+      description: 'Test your integration with our sample endpoints',;
+      action: 'Try API',;
+      href: '/api-playground';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Developer Portal - Zion Tech Group"
         description="Access our APIs, SDKs, and developer resources. Build powerful applications with Zion Tech Group's AI and technology platforms."
@@ -486,12 +486,12 @@ export default function Developers() {
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
               >
                 Contact Support
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+                <ArrowRight className="ml-2 w-4 h-4" />;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
 }

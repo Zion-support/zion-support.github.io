@@ -7,24 +7,35 @@ import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 const categoryIcons = {
-    'AI Business Solutions': Brain,
+  'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
     'AI Development': Code,
     'FinTech': DollarSign,
     'HealthTech': Heart,
     'E-commerce': ShoppingCart,
-    'EdTech': GraduationCap
+  'EdTech': GraduationCap
+
+
+
+
+
+
+
 };
 const pricingFeatures = {
-    basic: [
+  <<<<<<< HEAD
+    basic[
+=======
+  basic: [
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         "Core service functionality",
         "Standard support (8/5)",
         "Basic integrations",
         "Community documentation",
         "Email support"
     ],
-    professional: [
+    professional[
         "All Basic features",
         "Advanced analytics",
         "Priority support (12/7)",
@@ -33,7 +44,7 @@ const pricingFeatures = {
         "Dedicated account manager",
         "Training sessions"
     ],
-    enterprise: [
+    enterprise[
         "All Professional features",
         "Custom development",
         "24/7 dedicated support",
@@ -41,8 +52,15 @@ const pricingFeatures = {
         "SLA guarantees",
         "On-site training",
         "Custom contracts",
-        "Dedicated infrastructure"
+  "Dedicated infrastructure"
     ]
+
+
+
+
+
+
+
 };
 const comparisonFeatures = [
     "AI-Powered Automation",
@@ -65,8 +83,7 @@ export default function PricingPage() {
         ? MICRO_SAAS_SERVICES
         : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     const getDiscountedPrice = (price) => {
-        return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price;
-    };
+        return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price};
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
@@ -159,8 +176,7 @@ export default function PricingPage() {
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
                     {category.label.split(' ')[0]}
-                  </TabsTrigger>);
-        })}
+                  </TabsTrigger>)})}
             </TabsList>
             
             <TabsContent value={selectedCategory} className="mt-8">
@@ -396,5 +412,4 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

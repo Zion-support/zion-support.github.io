@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react';
 
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation2025(...args[]):  {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+	const [activeDropdown, setActiveDropdown] = useState<any>(null);
 
 	useEffect(() => {
 		const handleScroll = () => setIsScrolled(window.scrollY > 20);
 		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+		return () => window.removeEventListener('scroll', handleScroll)}, []);
 
 	const navigation = [
 		{
 			name: 'Services',
 			href: '/services',
-			children: [
+			children[
 				{ name: 'AI Solutions', href: '/services/ai-solutions', description: 'Autonomous AI systems and workflows' },
 				{ name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure and automation' },
 				{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Zero-trust security frameworks' },
@@ -28,7 +27,7 @@ export default function EnhancedNavigation2025() {
 		{
 			name: 'Solutions',
 			href: '/solutions',
-			children: [
+			children[
 				{ name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale implementations' },
 				{ name: 'SMB', href: '/solutions/smb', description: 'Small business focused' },
 				{ name: 'Startup', href: '/solutions/startup', description: 'Growth acceleration' },
@@ -36,30 +35,34 @@ export default function EnhancedNavigation2025() {
 			]
 		},
 		{
-			name: 'Company',
+			name: 'Comp',
 			href: '/about',
-			children: [
+			children[
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
-				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
-				{ name: 'Careers', href: '/careers', description: 'Join our team' },
-				{ name: 'Contact', href: '/contact', description: 'Get in touch' },
-			]
-		},
-		{ name: 'Blog', href: '/blog' },
-		{ name: 'Pricing', href: '/pricing' },
+				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },;
+				{ name: 'Careers', href: '/careers', description: 'Join our team' },;
+				{ name: 'Contact', href: '/contact', description: 'Get in touch' },;
+			];
+		},;
+		{ name: 'Blog', href: '/blog' },;
+		{ name: 'Pricing', href: '/pricing' },;
 	];
 
-	const toggleDropdown = (name: string) => {
+<<<<<<< HEAD
+	const toggleDropdown = (name: string)  => {;
+		setActiveDropdown(activeDropdown === name ? null : name)};
+=======
+	const toggleDropdown = (name: string) => {;
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-	const closeMobileMenu = () => {
+	const closeMobileMenu = () => {;
 		setIsOpen(false);
-		setActiveDropdown(null);
-	};
+		setActiveDropdown(null)};
 
 	return (
-		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+		<nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
 		}`}>
 			{/* Top Contact Bar */}
@@ -102,8 +105,8 @@ export default function EnhancedNavigation2025() {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<div className="hidden lg:flex lg:items-center lg:space-x-8">
-						{navigation.map((item) => (
+					<div className="hidden lg: flex lg:items-center lg:space-x-8">
+						{navigation.map((item)  => (
 							<div key={item.name} className="relative group">
 								{item.children ? (
 									<button
@@ -229,10 +232,19 @@ export default function EnhancedNavigation2025() {
 									Request a quote
 								</button>
 							</Link>
+<<<<<<< HEAD
 						</div>
 					</div>
 				</div>
 			)}
 		</nav>
+	)};
+=======;
+						</div>;
+					</div>;
+				</div>;
+			)};
+		</nav>;
 	);
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

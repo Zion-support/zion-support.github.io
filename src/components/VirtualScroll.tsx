@@ -16,15 +16,15 @@ export function VirtualScroll<T>({
   height,
   itemHeight,
   renderItem,
-  overscan = 5,
-  className = '',
-  onScroll
-}: VirtualScrollProps<T>) {
+  overscan = 5,;
+  className = '',;
+  onScroll;
+}: VirtualScrollProps<T>) {;
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Calculate visible range
-  const visibleRange = useMemo(() => {
+  const visibleRange = useMemo(() => {;
     const start = Math.floor(scrollTop / itemHeight);
     const visibleCount = Math.ceil(height / itemHeight);
     const end = start + visibleCount + overscan;
@@ -36,26 +36,23 @@ export function VirtualScroll<T>({
   }, [scrollTop, itemHeight, height, overscan, items.length]);
 
   // Calculate total height and transform
-  const totalHeight = items.length * itemHeight;
   const transform = `translateY(${visibleRange.start * itemHeight}px)`;
 
   // Handle scroll
-  const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {
+  const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {;
     const newScrollTop = event.currentTarget.scrollTop;
     setScrollTop(newScrollTop);
     onScroll?.(newScrollTop);
   }, [onScroll]);
 
   // Scroll to specific item
-  const scrollToItem = useCallback((index: number) => {
-    if (containerRef.current) {
-      const scrollTop = index * itemHeight;
+  const scrollTop = index * itemHeight;
       containerRef.current.scrollTop = scrollTop;
     }
   }, [itemHeight]);
 
   // Scroll to top
-  const scrollToTop = useCallback(() => {
+  const scrollToTop = useCallback(() => {;
     scrollToItem(0);
   }, [scrollToItem]);
 
@@ -68,13 +65,40 @@ export function VirtualScroll<T>({
   }, [items.length]);
 
   return (
-    <div className={`relative ${className}`}>
+    <div className = {`relative ${className}`}>
       {/* Scroll to top button */}
       {scrollTop > 200 && (
         <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
+          initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+          exit = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
           aria-label="Scroll to top"
@@ -92,15 +116,51 @@ export function VirtualScroll<T>({
         style={{ height }}
         onScroll={handleScroll}
       >
-        <div style={{ height: totalHeight, position: 'relative' }}>
+        <div style = {
+  { height: totalHeight,
+  position: 'relative' 
+
+
+
+
+
+
+}}>
           <div style={{ transform }}>
             <AnimatePresence>
               {items.slice(visibleRange.start, visibleRange.end).map((item, index) => (
                 <motion.div
                   key={visibleRange.start + index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
                   transition={{ duration: 0.2 }}
                   style={{ height: itemHeight }}
                 >
@@ -110,13 +170,13 @@ export function VirtualScroll<T>({
             </AnimatePresence>
           </div>
         </div>
-      </div>
-
-      {/* Scroll position indicator */}
-      <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
-        {Math.round((scrollTop / (totalHeight - height)) * 100)}%
-      </div>
-    </div>
+      </div>;
+;
+      {/* Scroll position indicator */};
+      <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
+        {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
+      </div>;
+    </div>;
   );
 }
 
@@ -163,23 +223,23 @@ export function ServiceVirtualScroll({
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               {service.description}
             </p>
-            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
-              {service.category}
-            </span>
-          </div>
-        </div>
-      </motion.div>
-    </div>
+            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;
+              {service.category};
+            </span>;
+          </div>;
+        </div>;
+      </motion.div>;
+    </div>;
   ), [onServiceClick]);
 
   return (
     <VirtualScroll
-      items={services}
-      height={height}
-      itemHeight={120}
-      renderItem={renderServiceCard}
-      overscan={3}
-      className={className}
-    />
+      items = {services};
+      height={height};
+      itemHeight={120};
+      renderItem={renderServiceCard};
+      overscan={3};
+      className={className};
+    />;
   );
 }

@@ -1,339 +1,699 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  MessageCircle, 
+  Bot, 
+  Brain, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Users, 
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Play,
+  Phone,
+  Mail,
+  MapPin,
+  Headphones,
+  Smartphone,
+  Monitor,
+  TrendingUp,
+  BarChart3,
+  Target,
+  Settings,
+  Database,
+  Cloud,
+  AlertCircle,
+  FileText,
+  Calendar,
+  UserCheck
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
 
-export default function AICustomerSupportAutomation() {
+const AICustomerSupportAutomation = () => {
   const features = [
-    '24/7 AI chatbot with human-like conversations',
-    'Multi-language support (50+ languages)',
-    'Intelligent ticket routing and prioritization',
-    'Sentiment analysis and emotion detection',
-    'Automated response generation with brand voice',
-    'Seamless human-AI handoff system',
-    'Integration with CRM, helpdesk, and messaging platforms',
-    'Advanced analytics and performance insights'
-  ];
-
-  const benefits = [
-    'Reduce support costs by 60-80%',
-    'Improve customer satisfaction by 40%',
-    'Handle 10x more support requests',
-    '24/7 availability without human limitations',
-    'Consistent quality across all interactions'
-  ];
-
-  const pricingTiers = [
     {
-      name: 'Starter',
-      price: '$79',
-      period: '/mo',
-      conversations: 'Up to 1,000 conversations/month',
-      features: ['Basic AI chatbot', '5 integrations', 'Email support', 'Standard analytics']
+      icon: Bot,
+      title: "AI-Powered Chatbots",
+      description: "Intelligent chatbots that understand context, handle complex queries, and provide accurate responses 24/7 with 95%+ accuracy"
     },
     {
-      name: 'Professional',
-      price: '$199',
-      period: '/mo',
-      conversations: 'Up to 10,000 conversations/month',
-      features: ['Advanced AI with sentiment analysis', 'Unlimited integrations', 'Priority support', 'Custom branding', 'Advanced analytics']
+      icon: Brain,
+      title: "Natural Language Processing",
+      description: "Advanced NLP that understands customer intent, sentiment, and provides personalized responses in multiple languages"
     },
     {
-      name: 'Enterprise',
-      price: '$499',
-      period: '/mo',
-      conversations: 'Unlimited conversations',
-      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom AI training', 'API access']
+      icon: Clock,
+      title: "24/7 Availability",
+      description: "Round-the-clock customer support with instant responses, reducing wait times from hours to seconds"
+    },
+    {
+      icon: BarChart3,
+      title: "Smart Ticket Routing",
+      description: "AI-powered ticket classification and routing to the right agents based on complexity, urgency, and expertise"
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Comprehensive insights into support metrics, customer satisfaction, and agent performance with actionable recommendations"
+    },
+    {
+      icon: Shield,
+      title: "Enterprise Security",
+      description: "Bank-grade security with data encryption, GDPR compliance, and role-based access control for sensitive customer information"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$199",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: [
+        "Up to 1,000 conversations/month",
+        "Basic AI chatbot",
+        "5 agent licenses",
+        "Email support",
+        "Basic integrations",
+        "Standard templates",
+        "Basic analytics"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$599",
+      period: "/month",
+      description: "Ideal for growing businesses and teams",
+      features: [
+        "Up to 10,000 conversations/month",
+        "Advanced AI with NLP",
+        "25 agent licenses",
+        "Priority support",
+        "API access",
+        "Custom integrations",
+        "Advanced analytics",
+        "Multi-language support",
+        "White-label options"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$1,999",
+      period: "/month",
+      description: "For large organizations with high support volumes",
+      features: [
+        "Unlimited conversations",
+        "Custom AI models",
+        "Unlimited agents",
+        "Dedicated support",
+        "Custom development",
+        "Advanced security",
+        "On-premise options",
+        "SLA guarantees",
+        "Custom training"
+      ],
+      popular: false
     }
   ];
 
   const useCases = [
-    'E-commerce businesses',
-    'SaaS companies',
-    'Financial services',
-    'Healthcare providers',
-    'Travel agencies',
-    'Educational institutions'
+    {
+      title: "E-commerce Support",
+      description: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents",
+      icon: ShoppingCart
+    },
+    {
+      title: "SaaS Customer Success",
+      description: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption",
+      icon: Monitor
+    },
+    {
+      title: "Financial Services",
+      description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance",
+      icon: DollarSign
+    },
+    {
+      title: "Healthcare Support",
+      description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance",
+      icon: Heart
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Clock,
+      title: "Faster Response",
+      value: "90%",
+      description: "Reduce response times from hours to seconds"
+    },
+    {
+      icon: DollarSign,
+      title: "Cost Reduction",
+      value: "60-80%",
+      description: "Lower support costs while improving quality"
+    },
+    {
+      icon: Users,
+      title: "Customer Satisfaction",
+      value: "40%",
+      description: "Improve CSAT scores with instant support"
+    },
+    {
+      icon: TrendingUp,
+      title: "Efficiency Gain",
+      value: "3x",
+      description: "Handle more support requests with fewer agents"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Jennifer Adams",
+      role: "Customer Success Director",
+      company: "TechFlow Solutions",
+      content: "Our AI support automation has transformed customer experience. Response times dropped from 4 hours to under 2 minutes.",
+      rating: 5
+    },
+    {
+      name: "Marcus Chen",
+      role: "Operations Manager",
+      company: "E-commerce Plus",
+      content: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues.",
+      rating: 5
+    },
+    {
+      name: "Sarah Williams",
+      role: "VP of Support",
+      company: "CloudTech Inc",
+      content: "Customer satisfaction increased by 35% while reducing support costs by 65%. Game-changing technology.",
+      rating: 5
+    }
   ];
 
   const integrations = [
-    'Slack', 'Discord', 'WhatsApp', 'Facebook Messenger', 'Telegram',
-    'Zendesk', 'Intercom', 'Freshdesk', 'Help Scout', 'Zoho Desk',
-    'Salesforce', 'HubSpot', 'Pipedrive', 'Monday.com', 'Notion'
+    { name: "Slack", icon: MessageCircle, description: "Seamless team communication" },
+    { name: "Zendesk", icon: Headphones, description: "Ticket management integration" },
+    { name: "Salesforce", icon: Users, description: "CRM synchronization" },
+    { name: "Intercom", icon: Bot, description: "Live chat integration" },
+    { name: "HubSpot", icon: BarChart3, description: "Marketing automation" },
+    { name: "Microsoft Teams", icon: Monitor, description: "Team collaboration" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <>
       <SEO 
         title="AI-Powered Customer Support Automation - Zion Tech Group"
-        description="Revolutionary AI customer support platform that provides 24/7 automated assistance, intelligent routing, and seamless human handoffs."
+        description="Transform customer support with AI automation. 24/7 availability, instant responses, and 60-80% cost reduction. Start from $199/month."
       />
-
+      
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
-        <div className="relative container mx-auto px-6 text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-300 mb-6">
-            <Bot className="w-4 h-4 mr-2" /> AI Customer Support Automation
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            AI Customer Support
-          </h1>
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
-            Transform your customer support with AI that works 24/7, understands emotions, and provides instant, 
-            accurate responses while seamlessly connecting to human agents when needed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://ziontechgroup.com/contact" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
-            >
-              Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-            <a 
-              href="tel:+13024640950" 
-              className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" /> Call Now
-            </a>
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center relative z-10"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
+              <Bot className="w-4 h-4 mr-2 text-cyan-400" />
+              AI-Powered Support Automation
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Customer Support
+              </span>
+              <br />
+              <span className="text-white">Automation</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Transform your customer support with AI automation that provides 24/7 availability, 
+              instant responses, and reduces support costs by 60-80% while improving customer satisfaction.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
+              >
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="#demo"
+                className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo
+              </a>
+            </div>
+          </motion.div>
+        </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Proven Results
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See the measurable impact AI automation can have on your customer support
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group text-center"
+              >
+                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{benefit.value}</div>
+                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose AI Customer Support?</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform revolutionizes customer support by providing instant, intelligent responses 
-              while maintaining the human touch when needed.
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Powerful Features
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Everything you need to automate and optimize your customer support
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <Bot className="w-6 h-6 text-green-400" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{feature}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Measurable Impact</h2>
-            <p className="text-xl text-slate-300">See how AI transforms your customer support operations</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-10 h-10 text-white" />
-                </div>
-                <p className="text-lg text-slate-300">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">How It Works</h2>
-            <p className="text-xl text-slate-300">Simple, intelligent, and effective customer support automation</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-10 h-10 text-green-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Customer Inquiry</h3>
-              <p className="text-slate-300">Customer asks a question through any channel (chat, email, social media)</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Bot className="w-10 h-10 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">AI Processing</h3>
-              <p className="text-slate-300">AI analyzes the request, understands context, and generates appropriate response</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Headphones className="w-10 h-10 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Resolution or Handoff</h3>
-              <p className="text-slate-300">AI resolves simple issues or seamlessly hands off to human agents for complex cases</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-slate-300">Choose the plan that fits your support volume and needs</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div 
-                key={index} 
-                className={`bg-slate-800/50 border rounded-xl p-8 ${
-                  tier.name === 'Professional' 
-                    ? 'border-green-500/50 bg-green-500/5' 
-                    : 'border-slate-700/50'
-                }`}
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
               >
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
-                  <div className="text-4xl font-bold text-green-400 mb-2">
-                    {tier.price}<span className="text-lg text-slate-400">{tier.period}</span>
+                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-slate-400">{tier.conversations}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-slate-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a 
-                  href="https://ziontechgroup.com/contact" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
-                    tier.name === 'Professional'
-                      ? 'bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700'
-                      : 'bg-slate-700 hover:bg-slate-600 border border-slate-600'
-                  }`}
-                >
-                  Get Started
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integrations Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Seamless Integrations</h2>
-            <p className="text-xl text-slate-300">Works with your existing tools and platforms</p>
-          </div>
-
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
-            {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-green-500/50 transition-all duration-300">
-                <p className="text-sm font-medium text-slate-300">{integration}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Perfect For</h2>
-            <p className="text-xl text-slate-300">Businesses that want to scale their customer support intelligently</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Use Cases
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how different industries are transforming customer support with AI automation
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center">
-                <Users className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold">{useCase}</h3>
-              </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {useCase.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integrations Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Seamless Integrations
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Connect with your existing tools and workflows for maximum efficiency
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <integration.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                    {integration.name}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {integration.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Pricing Plans
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your support volume and business needs. All plans include a 14-day free trial.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                
+                <div className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
+                  plan.popular 
+                    ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
+                    : 'border-white/20 hover:border-cyan-400/40'
+                }`}>
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300 mt-2">{plan.description}</p>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a
+                    href="https://ziontechgroup.com/contact"
+                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400'
+                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
+                    }`}
+                  >
+                    Start Free Trial
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                What Our Clients Say
+              </span>
+            </h2>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-current text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-cyan-400">{testimonial.role}</div>
+                    <div className="text-sm text-gray-400">{testimonial.company}</div>
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Customer Support?</h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already using AI to provide exceptional customer support 24/7.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a 
-              href="https://ziontechgroup.com/contact" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
-            >
-              Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
-              className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center"
-            >
-              <Mail className="w-5 h-5 mr-2" /> Schedule Demo
-            </a>
-          </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Customer Support?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join leading companies that are already reducing costs and improving customer satisfaction with AI-powered support automation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
+              >
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call +1 302 464 0950
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
-            <div className="grid md:grid-cols-2 gap-6 text-left">
-              <div>
-                <h4 className="font-semibold text-green-400 mb-2">Phone</h4>
-                <a href="tel:+13024640950" className="text-slate-300 hover:text-green-400">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div>
-                <h4 className="font-semibold text-green-400 mb-2">Email</h4>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-green-400">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div>
-                <h4 className="font-semibold text-green-400 mb-2">Address</h4>
-                <p className="text-slate-300">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-green-400 mb-2">Website</h4>
-                <a 
-                  href="https://ziontechgroup.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-green-400 inline-flex items-center"
-                >
-                  ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
-                </a>
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center">
+              <Phone className="w-8 h-8 text-cyan-400 mb-4" />
+              <div className="text-white font-semibold">Phone</div>
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                +1 302 464 0950
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <Mail className="w-8 h-8 text-cyan-400 mb-4" />
+              <div className="text-white font-semibold">Email</div>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
+              <div className="text-white font-semibold">Address</div>
+              <div className="text-gray-300 text-sm">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="container mx-auto max-w-4xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Customer Support?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of businesses already using AI to provide exceptional customer experiences
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+                >
+                  Contact Sales
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}
+};
+
+// Add missing icon components
+const ShoppingCart = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+  </svg>
+);
+
+const DollarSign = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+  </svg>
+);
+
+const Heart = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+  </svg>
+);
+
+export default AICustomerSupportAutomation;

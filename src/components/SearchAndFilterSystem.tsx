@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  X, 
-  ChevronDown, 
-  Check, 
+import {
+  Search,
+  Filter,
+  X,
+  ChevronDown,
+  Check,
   Star,
   Tag,
   MapPin,
@@ -16,9 +16,10 @@ import {
   Cloud,
   Shield,
   Globe
-} from 'lucide-react';
+ } from 'lucide-react';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -27,22 +28,21 @@ interface SearchResult {
   location?: string;
   date?: string;
   rating?: number;
-  type: 'service' | 'article' | 'team' | 'technology';
-}
+  type: 'service' | 'article' | 'team' | 'technology'}
 
 interface FilterOption {
+
   id: string;
   label: string;
   value: string;
-  count: number;
-}
+  count: number}
 
-interface SearchAndFilterSystemProps {
+interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
+
   data: SearchResult[];
-  onResultsChange?: (results: SearchResult[]) => void;
+  onResultsChange?: (results: SearchResult[])  => void;
   placeholder?: string;
-  showFilters?: boolean;
-}
+  showFilters?: boolean}
 
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data,
@@ -54,23 +54,23 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
   const [showFilterPanel, setShowFilterPanel] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('relevance');
 
   // Filter options
   const filterOptions = useMemo(() => {
     const categories = data.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);
+    }, {} as Record<string, any>);
 
     const types = data.reduce((acc, item) => {
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);
+    }, {} as Record<string, any>);
 
     return {
-      categories: Object.entries(categories).map(([key, count]) => ({
+      categories: Object.entries(categories).map(([key, count])  => ({
         id: key,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
@@ -89,7 +89,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   const filteredResults = useMemo(() => {
     let results = data.filter(item => {
       // Search query filter
-      const matchesSearch = searchQuery === '' || 
+      const matchesSearch = searchQuery === '' ||
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -98,9 +98,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
 
       // Active filters
-      const matchesFilters = activeFilters.size === 0 || 
-        Array.from(activeFilters).some(filter => 
-          item.tags.includes(filter) || 
+      const matchesFilters = activeFilters.size === 0 ||
+        Array.from(activeFilters).some(filter =>
+          item.tags.includes(filter) ||
           item.type === filter ||
           item.category === filter
         );
@@ -262,7 +262,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           <div className="relative">
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
+              onChange={(e) => setSortBy(e.target.value)}
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
             >
               <option value="relevance">Relevance</option>
@@ -307,15 +307,51 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       <AnimatePresence>
         {showFilterPanel && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            initial = {
+  { height: 0,
+  opacity: 0 
+
+
+
+
+
+
+}}
+            animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+
+
+
+
+}}
+            exit = {
+  { height: 0,
+  opacity: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.3,
+  ease: 'easeOut' 
+
+
+
+
+
+
+}}
             className="mb-6 overflow-hidden"
           >
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {/* Type Filters */}
                 <div>
@@ -390,15 +426,33 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         {filteredResults.map((result) => (
           <motion.div
             key={result.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer group"
           >
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hover:bg-zion-cyan/20 transition-colors">
                 {getTypeIcon(result.type)}
               </div>
-              
+
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
@@ -416,9 +470,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                     </span>
                   </div>
                 </div>
-                
+
                 <p className="text-zinc-300 mb-3 line-clamp-2">{result.description}</p>
-                
+
                 <div className="flex items-center gap-4 text-sm text-zinc-400">
                   {result.location && (
                     <div className="flex items-center gap-1">
@@ -466,4 +520,4 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       )}
     </div>
   );
-};
+}

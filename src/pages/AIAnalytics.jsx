@@ -25,13 +25,14 @@ import {
   LineChart
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const aiAnalyticsSolutions = [
   {
     id: 1,
     title: "Predictive Analytics Platform",
     description: "AI-powered platform that predicts future trends and outcomes based on historical data.",
     icon: TrendingUp,
-    features: [
+    features[
       "Machine learning algorithms",
       "Real-time predictions",
       "Custom forecasting models",
@@ -40,14 +41,14 @@ const aiAnalyticsSolutions = [
     price: "From $25,000",
     timeline: "12-20 weeks",
     category: "Predictive Analytics",
-    integrations: ["Python", "TensorFlow", "PyTorch", "Cloud Platforms"]
+    integrations["Python", "TensorFlow", "PyTorch", "Cloud Platforms"]
   },
   {
     id: 2,
     title: "Business Intelligence Dashboard",
     description: "Intelligent dashboards that provide actionable insights from complex data sets.",
     icon: BarChart3,
-    features: [
+    features[
       "Interactive visualizations",
       "Real-time data updates",
       "Custom reporting",
@@ -56,14 +57,14 @@ const aiAnalyticsSolutions = [
     price: "From $20,000",
     timeline: "10-16 weeks",
     category: "Business Intelligence",
-    integrations: ["Tableau", "Power BI", "D3.js", "React"]
+    integrations["Tableau", "Power BI", "D3.js", "React"]
   },
   {
     id: 3,
     title: "Customer Behavior Analytics",
     description: "AI-driven analysis of customer behavior patterns and preferences.",
     icon: Users,
-    features: [
+    features[
       "Behavioral segmentation",
       "Predictive modeling",
       "Personalization engines",
@@ -72,14 +73,14 @@ const aiAnalyticsSolutions = [
     price: "From $30,000",
     timeline: "14-22 weeks",
     category: "Customer Analytics",
-    integrations: ["Google Analytics", "Facebook Pixel", "CRM Systems", "Marketing Tools"]
+    integrations["Google Analytics", "Facebook Pixel", "CRM Systems", "Marketing Tools"]
   },
   {
     id: 4,
     title: "Real-Time Data Processing",
     description: "Streaming analytics platform for processing and analyzing data in real-time.",
     icon: Activity,
-    features: [
+    features[
       "Stream processing",
       "Real-time alerts",
       "Scalable architecture",
@@ -88,14 +89,14 @@ const aiAnalyticsSolutions = [
     price: "From $35,000",
     timeline: "16-24 weeks",
     category: "Real-Time Analytics",
-    integrations: ["Apache Kafka", "Apache Spark", "Redis", "Elasticsearch"]
+    integrations["Apache Kafka", "Apache Spark", "Redis", "Elasticsearch"]
   },
   {
     id: 5,
     title: "Natural Language Processing",
     description: "AI-powered text and speech analysis for extracting insights from unstructured data.",
     icon: Brain,
-    features: [
+    features[
       "Text analysis",
       "Sentiment analysis",
       "Entity extraction",
@@ -104,14 +105,14 @@ const aiAnalyticsSolutions = [
     price: "From $40,000",
     timeline: "18-26 weeks",
     category: "NLP Analytics",
-    integrations: ["OpenAI", "Hugging Face", "SpaCy", "NLTK"]
+    integrations["OpenAI", "Hugging Face", "SpaCy", "NLTK"]
   },
   {
     id: 6,
     title: "Anomaly Detection System",
     description: "Intelligent system that identifies unusual patterns and potential issues in data.",
     icon: Target,
-    features: [
+    features[
       "Pattern recognition",
       "Alert systems",
       "False positive reduction",
@@ -120,10 +121,12 @@ const aiAnalyticsSolutions = [
     price: "From $28,000",
     timeline: "12-18 weeks",
     category: "Anomaly Detection",
-    integrations: ["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
+    integrations["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
   }
 ];
 
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const aiCapabilities = [
   {
     title: "Machine Learning",
@@ -154,7 +157,7 @@ const aiCapabilities = [
 const successStories = [
   {
     id: 1,
-    company: "E-commerce Giant",
+    comp: "E-commerce Giant",
     industry: "Retail",
     challenge: "Needed predictive analytics for inventory management",
     solution: "Built AI-powered forecasting system with 95% accuracy",
@@ -163,7 +166,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Corp",
+    comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Required real-time fraud detection system",
     solution: "Implemented AI-powered anomaly detection with machine learning",
@@ -172,7 +175,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Healthcare Network",
+    comp: "Healthcare Network",
     industry: "Healthcare",
     challenge: "Needed patient behavior analytics for better care",
     solution: "Developed AI-driven patient insights platform",
@@ -234,15 +237,60 @@ export default function AIAnalytics() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Brain className="w-10 h-10 text-white" />
@@ -280,8 +328,26 @@ export default function AIAnalytics() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -295,9 +361,36 @@ export default function AIAnalytics() {
             {aiCapabilities.map((capability, index) => (
               <motion.div
                 key={capability.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -326,8 +419,26 @@ export default function AIAnalytics() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -341,9 +452,36 @@ export default function AIAnalytics() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -370,8 +508,26 @@ export default function AIAnalytics() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -402,9 +558,36 @@ export default function AIAnalytics() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -459,8 +642,26 @@ export default function AIAnalytics() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -474,9 +675,36 @@ export default function AIAnalytics() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -484,7 +712,7 @@ export default function AIAnalytics() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -520,8 +748,26 @@ export default function AIAnalytics() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -549,5 +795,4 @@ export default function AIAnalytics() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

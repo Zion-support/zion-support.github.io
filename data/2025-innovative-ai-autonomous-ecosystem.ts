@@ -13,7 +13,7 @@ export const innovative2025AIAutonomousEcosystem = [
       enterprise: '$1,999/month',
       custom: 'Contact for pricing'
     },
-    features: [
+    features[
       'Fully autonomous content generation',
       'Multi-format content creation (blog, social, video scripts)',
       'Advanced SEO optimization',
@@ -27,7 +27,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'API integration',
       'White-label solution'
     ],
-    benefits: [
+    benefits[
       'Zero human intervention required',
       '24/7 content production',
       'Improved SEO rankings',
@@ -39,7 +39,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'Faster time to market',
       'Improved audience engagement'
     ],
-    useCases: [
+    useCases[
       'Digital marketing agencies',
       'E-commerce businesses',
       'Content marketing teams',
@@ -76,7 +76,7 @@ export const innovative2025AIAutonomousEcosystem = [
       enterprise: '$2,499/month',
       custom: 'Contact for pricing'
     },
-    features: [
+    features[
       'Fully autonomous customer support',
       'Multi-channel integration (chat, email, phone, social)',
       'Emotional intelligence analysis',
@@ -90,7 +90,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'Multi-language support',
       'Integration APIs'
     ],
-    benefits: [
+    benefits[
       '24/7 customer support availability',
       'Instant response times',
       'Reduced support costs',
@@ -102,7 +102,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'Multi-language support',
       'Seamless human handoff'
     ],
-    useCases: [
+    useCases[
       'E-commerce businesses',
       'SaaS companies',
       'Financial services',
@@ -139,7 +139,7 @@ export const innovative2025AIAutonomousEcosystem = [
       enterprise: '$3,499/month',
       custom: 'Contact for pricing'
     },
-    features: [
+    features[
       'Fully autonomous lead generation',
       'Predictive lead scoring',
       'Behavioral analysis',
@@ -153,7 +153,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'CRM integration',
       'API ecosystem'
     ],
-    benefits: [
+    benefits[
       'Automated lead generation',
       'Improved conversion rates',
       'Reduced sales cycle time',
@@ -165,7 +165,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'ROI optimization',
       'Sales team productivity'
     ],
-    useCases: [
+    useCases[
       'Sales teams',
       'Marketing agencies',
       'B2B companies',
@@ -202,7 +202,7 @@ export const innovative2025AIAutonomousEcosystem = [
       enterprise: '$4,999/month',
       custom: 'Contact for pricing'
     },
-    features: [
+    features[
       'Fully autonomous financial analysis',
       'Real-time market data processing',
       'Predictive financial modeling',
@@ -216,7 +216,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'Multi-asset support',
       'Regulatory compliance'
     ],
-    benefits: [
+    benefits[
       'Automated financial analysis',
       'Real-time market insights',
       'Improved investment decisions',
@@ -228,7 +228,7 @@ export const innovative2025AIAutonomousEcosystem = [
       '24/7 monitoring',
       'Regulatory compliance'
     ],
-    useCases: [
+    useCases[
       'Investment firms',
       'Banks and credit unions',
       'Insurance companies',
@@ -265,7 +265,7 @@ export const innovative2025AIAutonomousEcosystem = [
       enterprise: '$5,999/month',
       custom: 'Contact for pricing'
     },
-    features: [
+    features[
       'Fully autonomous medical image analysis',
       'Multi-modality imaging support',
       'Diagnostic accuracy validation',
@@ -279,7 +279,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'HIPAA compliance',
       'Integration APIs'
     ],
-    benefits: [
+    benefits[
       'Improved diagnostic accuracy',
       'Faster diagnosis times',
       'Reduced healthcare costs',
@@ -291,7 +291,7 @@ export const innovative2025AIAutonomousEcosystem = [
       'Regulatory compliance',
       'Integration capabilities'
     ],
-    useCases: [
+    useCases[
       'Hospitals and clinics',
       'Radiology departments',
       'Medical imaging centers',
@@ -307,11 +307,11 @@ export const innovative2025AIAutonomousEcosystem = [
     targetAudience: 'Healthcare providers, radiologists, medical imaging professionals, healthcare administrators',
     competitiveAdvantage: 'First autonomous healthcare diagnostics platform with AI-powered medical imaging analysis',
     contact: 'kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-    slug: '/ai-autonomous-healthcare-diagnostics-2025',
-    demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics',
-    documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics'
-  }
+    mobile: '+1 302 464 0950',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',;
+    slug: '/ai-autonomous-healthcare-diagnostics-2025',;
+    demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics',;
+    documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics';
+  };
 ];

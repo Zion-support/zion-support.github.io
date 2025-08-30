@@ -1,6 +1,7 @@
+console.log("main.tsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App.tsx';
+import App from "./App.tsx";
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -10,16 +11,21 @@ import './utils/consoleErrorToast';
 // Import i18n configuration
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+import { LanguageDetectionPopup } from "./components/LanguageDetectionPopup";
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 // Import auth and notification providers
-import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context/notifications/NotificationContext';
+import { AuthProvider } from "./context/auth/AuthProvider";
+import { NotificationProvider } from "./context/notifications/NotificationContext";
 // Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
+<<<<<<< HEAD
+import { AnalyticsProvider } from "./context/AnalyticsContext";
+import { ViewModeProvider } from "./context/ViewModeContext";
+=======
+import { AnalyticsProvider } from "./context/AnalyticsContext";
+import { ViewModeProvider } from "./context/ViewModeContext";
 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -29,10 +35,39 @@ const queryClient = new QueryClient({
         },
     },
 });
+<<<<<<< HEAD
+const renderApp() {
+    const app = (<React.StrictMode>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <WhitelabelProvider>
+            <Router>
+              <AuthProvider>
+                <NotificationProvider>
+                  <AnalyticsProvider>
+                    <LanguageProvider authState = {
+  { isAuthenticated: false,
+  user: null 
 
-const rootElement = document.getElementById('root');
+}}>
+                      <ViewModeProvider>
+                        <AppLayout>
+                          <App />
+                        </AppLayout>
+                      </ViewModeProvider>
+                      <LanguageDetectionPopup />
+                    </LanguageProvider>
+                  </AnalyticsProvider>
+                </NotificationProvider>
+              </AuthProvider>
+            </Router>
+          </WhitelabelProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </React.StrictMode>);
+=======
 
-function renderApp() {
+const renderApp() {
     const app = (
         <React.StrictMode>
             <HelmetProvider>
@@ -42,7 +77,16 @@ function renderApp() {
                             <AuthProvider>
                                 <NotificationProvider>
                                     <AnalyticsProvider>
-                                        <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                                        <LanguageProvider authState = {
+  { isAuthenticated: false,
+  user: null 
+
+
+
+
+
+
+}}>
                                             <ViewModeProvider>
                                                 <AppLayout>
                                                     <App />
@@ -60,31 +104,53 @@ function renderApp() {
         </React.StrictMode>
     );
     
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (rootElement?.hasChildNodes()) {
-        hydrateRoot(rootElement, app);
-    } else if (rootElement) {
-        createRoot(rootElement).render(app);
-    }
+        hydrateRoot(rootElement, app)}
+    else if (rootElement) {
+        createRoot(rootElement).render(app)}
 }
 
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
-            <div style="padding:20px;text-align:center;font-family:sans-serif;">
-                <h1>Application Error</h1>
-                <p>${message}</p>
-            </div>`;
-    }
+      <div style="padding:20px;text-align:center;font-family:sans-serif;">
+        <h1>Application Error</h1>
+        <p>${message}</p>
+      </div>`}
 }
-
 try {
-    renderApp();
-} catch (error) {
-    console.error('Global error caught in main.jsx:', error);
-    displayFatalError(error.message);
-}
-
+    renderApp()}
+catch (error) {
+    console.error('Global error caught in main.tsx:', error);
+    displayFatalError(error.message)}
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
-    displayFatalError(e.message);
-});
+    displayFatalError(e.message)});
+// Render the app with proper provider structure
+ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <WhitelabelProvider>
+          <Router>
+            <AuthProvider>
+              <NotificationProvider>
+                <AnalyticsProvider>
+                  <LanguageProvider authState = {
+  { isAuthenticated: false,
+  user: null 
+
+}}>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
+                    <LanguageDetectionPopup />
+                  </LanguageProvider>
+                </AnalyticsProvider>
+              </NotificationProvider>
+            </AuthProvider>
+          </Router>
+        </WhitelabelProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </React.StrictMode>);

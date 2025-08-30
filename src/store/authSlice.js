@@ -8,26 +8,22 @@ export const loginUser = createAsyncThunk(
       // Simulate API call
       const response = await new Promise((resolve) => {
         setTimeout(() => {
-          if (credentials.email && credentials.password) {
-            resolve({
-              user: {
-                id: 1,
-                email: credentials.email,
-                name: 'John Doe',
-                role: 'user'
-              },
-              token: 'mock-jwt-token'
-            });
-          } else {
-            reject(new Error('Invalid credentials'));
-          }
+          resolve({
+            user: {
+              id: 1,
+              email: credentials.email,
+              name: 'John Doe',
+              role: 'user'
+            },
+            token: 'mock-jwt-token'
+          });
         }, 1000);
       });
-      
+
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-      
+
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -54,15 +50,15 @@ export const signupUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-            reject(new Error('Invalid user data'));
+            throw new Error('Invalid user data');
           }
         }, 1000);
       });
-      
+
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-      
+
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -75,9 +71,11 @@ export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
-      // Clear localStorage
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
+      // Simulate API call
+      await new Promise((resolve) => {
+        setTimeout(resolve, 500);
+      });
+      
       return null;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -92,7 +90,7 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
-      
+
       if (token && user) {
         return {
           user: JSON.parse(user),
@@ -109,10 +107,17 @@ export const checkAuthStatus = createAsyncThunk(
 
 const initialState = {
   user: null,
-  token: localStorage.getItem('token'),
+  token: null,
   isAuthenticated: false,
   isLoading: false,
   error: null
+
+
+
+
+
+
+
 };
 
 const authSlice = createSlice({
@@ -139,16 +144,16 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.isAuthenticated = true;
         state.user = action.payload.user;
         state.token = action.payload.token;
+        state.isAuthenticated = true;
         state.error = null;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
-    
+
     // Signup
     builder
       .addCase(signupUser.pending, (state) => {
@@ -166,7 +171,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-    
+
     // Logout
     builder
       .addCase(logoutUser.pending, (state) => {
@@ -174,16 +179,16 @@ const authSlice = createSlice({
       })
       .addCase(logoutUser.fulfilled, (state) => {
         state.isLoading = false;
-        state.isAuthenticated = false;
         state.user = null;
         state.token = null;
+        state.isAuthenticated = false;
         state.error = null;
       })
       .addCase(logoutUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
-    
+
     // Check auth status
     builder
       .addCase(checkAuthStatus.pending, (state) => {
@@ -208,10 +213,6 @@ const authSlice = createSlice({
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
 
 // Selectors
-export const selectUser = (state) => state.auth.user;
-export const selectToken = (state) => state.auth.token;
-export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
-export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;
 
 export default authSlice.reducer;

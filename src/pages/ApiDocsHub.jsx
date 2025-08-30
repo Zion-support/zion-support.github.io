@@ -72,6 +72,13 @@ export function ApiDocsHub() {
           </Link>
         </div>
       </div>
-    </ApiDocsLayout>);
-}
+    </ApiDocsLayout>)}
+export default ApiDocsHub;
+
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
+export default ApiDocsHub;
 export default ApiDocsHub;

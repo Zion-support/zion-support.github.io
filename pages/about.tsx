@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield } from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield  } from 'lucide-react'
 
 
-export default function About() {
+export default function About(...args[]):  {
 	return (
 		<>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+			<section className = "bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -168,9 +168,10 @@ export default function About() {
 								Explore Our Services <span aria-hidden="true">→</span>
 							</Link>
 						</div>
-					</div>
-				</div>
-		</section>
-		</>
-	)
-}
+					</div>;
+				</div>;
+		</section>;
+		</>;
+	);
+};
+;

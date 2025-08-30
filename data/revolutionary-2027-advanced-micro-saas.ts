@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2027AdvancedMicroSaasService {
   id: string;
   name: string;
@@ -30,15 +30,13 @@ export interface Revolutionary2027AdvancedMicroSaasService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027AdvancedMicroSaasService[] = [
   // AI-Powered Content Creation & Marketing
   {
@@ -48,7 +46,7 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     price: '$199',
     period: '/month',
     description: 'Comprehensive AI-powered content creation platform that generates high-quality blog posts, social media content, email campaigns, and marketing materials. Features advanced SEO optimization, content scheduling, and performance analytics.',
-    features: [
+    features[
       'AI-powered content generation',
       'SEO optimization tools',
       'Multi-platform publishing',
@@ -71,11 +69,11 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     setupTime: '30 minutes',
     category: 'AI Content & Marketing',
     realService: true,
-    technology: ['OpenAI GPT-4', 'Claude 3.5', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['WordPress', 'Shopify', 'Mailchimp', 'Buffer', 'Hootsuite', 'Google Analytics', 'SEMrush'],
-    useCases: ['Blog content creation', 'Social media posts', 'Email marketing', 'Product descriptions', 'SEO content', 'Brand messaging'],
+    technology['OpenAI GPT-4', 'Claude 3.5', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['WordPress', 'Shopify', 'Mailchimp', 'Buffer', 'Hootsuite', 'Google Analytics', 'SEMrush'],
+    useCases['Blog content creation', 'Social media posts', 'Email marketing', 'Product descriptions', 'SEO content', 'Brand messaging'],
     roi: 'Average customer sees 280% ROI through increased content output and improved SEO rankings.',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot', 'Peppertype'],
+    competitors['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot', 'Peppertype'],
     marketSize: '$15.8B market',
     growthRate: '165% annual growth',
     variant: 'ai-futuristic',
@@ -100,7 +98,7 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     price: '$349',
     period: '/month',
     description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer support. Features predictive analytics, automated workflows, and comprehensive customer health scoring.',
-    features: [
+    features[
       'Predictive churn analysis',
       'Customer health scoring',
       'Automated onboarding flows',
@@ -123,11 +121,11 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     setupTime: '2 hours',
     category: 'AI Customer Success',
     realService: true,
-    technology: ['Machine Learning', 'Predictive Analytics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams'],
-    useCases: ['Churn prevention', 'Customer onboarding', 'Upsell identification', 'Success metric tracking', 'Customer health monitoring'],
+    technology['Machine Learning', 'Predictive Analytics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['Salesforce', 'HubSpot', 'Pipedrive', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams'],
+    useCases['Churn prevention', 'Customer onboarding', 'Upsell identification', 'Success metric tracking', 'Customer health monitoring'],
     roi: 'Companies report 320% ROI through reduced churn and increased customer lifetime value.',
-    competitors: ['Gainsight', 'Totango', 'ChurnZero', 'ClientSuccess', 'Planhat'],
+    competitors['Gainsight', 'Totango', 'ChurnZero', 'ClientSuccess', 'Planhat'],
     marketSize: '$8.2B market',
     growthRate: '145% annual growth',
     variant: 'ai-futuristic',
@@ -152,7 +150,7 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     price: '$299',
     period: '/month',
     description: 'Advanced financial planning and analysis platform that uses AI to automate financial reporting, forecasting, and budgeting. Features real-time financial dashboards, automated variance analysis, and predictive financial modeling.',
-    features: [
+    features[
       'AI-powered financial forecasting',
       'Automated variance analysis',
       'Real-time financial dashboards',
@@ -175,11 +173,11 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     setupTime: '1 week',
     category: 'AI Financial Analytics',
     realService: true,
-    technology: ['Machine Learning', 'Predictive Analytics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['QuickBooks', 'Xero', 'Sage', 'NetSuite', 'Microsoft Dynamics', 'Excel', 'Google Sheets'],
-    useCases: ['Financial forecasting', 'Budget planning', 'Variance analysis', 'Cash flow management', 'Financial reporting', 'Scenario modeling'],
+    technology['Machine Learning', 'Predictive Analytics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['QuickBooks', 'Xero', 'Sage', 'NetSuite', 'Microsoft Dynamics', 'Excel', 'Google Sheets'],
+    useCases['Financial forecasting', 'Budget planning', 'Variance analysis', 'Cash flow management', 'Financial reporting', 'Scenario modeling'],
     roi: 'Businesses report 400% ROI through improved financial planning and reduced manual work.',
-    competitors: ['Adaptive Insights', 'Anaplan', 'Planful', 'Vena', 'Host Analytics'],
+    competitors['Adaptive Insights', 'Anaplan', 'Planful', 'Vena', 'Host Analytics'],
     marketSize: '$12.5B market',
     growthRate: '185% annual growth',
     variant: 'ai-futuristic',
@@ -204,7 +202,7 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     price: '$249',
     period: '/month',
     description: 'Comprehensive HR and talent management platform that uses AI to automate recruitment, employee onboarding, performance management, and workforce analytics. Features intelligent candidate matching, automated screening, and predictive retention analysis.',
-    features: [
+    features[
       'AI-powered candidate matching',
       'Automated resume screening',
       'Interview scheduling automation',
@@ -227,11 +225,11 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     setupTime: '1 week',
     category: 'AI HR & Talent',
     realService: true,
-    technology: ['Machine Learning', 'Natural Language Processing', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['LinkedIn', 'Indeed', 'Glassdoor', 'Slack', 'Microsoft Teams', 'Google Workspace', 'Microsoft 365'],
-    useCases: ['Recruitment automation', 'Employee onboarding', 'Performance management', 'Workforce analytics', 'Compliance tracking'],
+    technology['Machine Learning', 'Natural Language Processing', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['LinkedIn', 'Indeed', 'Glassdoor', 'Slack', 'Microsoft Teams', 'Google Workspace', 'Microsoft 365'],
+    useCases['Recruitment automation', 'Employee onboarding', 'Performance management', 'Workforce analytics', 'Compliance tracking'],
     roi: 'Companies report 280% ROI through reduced hiring time and improved employee retention.',
-    competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever', 'SmartRecruiters'],
+    competitors['Workday', 'BambooHR', 'Greenhouse', 'Lever', 'SmartRecruiters'],
     marketSize: '$18.7B market',
     growthRate: '195% annual growth',
     variant: 'ai-futuristic',
@@ -256,7 +254,7 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     price: '$399',
     period: '/month',
     description: 'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory levels, and streamline logistics operations. Features demand forecasting, inventory optimization, route optimization, and supplier management.',
-    features: [
+    features[
       'AI-powered demand forecasting',
       'Inventory optimization',
       'Route optimization',
@@ -279,11 +277,11 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     setupTime: '2 weeks',
     category: 'AI Supply Chain',
     realService: true,
-    technology: ['Machine Learning', 'Optimization Algorithms', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['SAP', 'Oracle', 'NetSuite', 'Shopify', 'WooCommerce', 'FedEx', 'UPS', 'DHL'],
-    useCases: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Cost optimization'],
+    technology['Machine Learning', 'Optimization Algorithms', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
+    integrations['SAP', 'Oracle', 'NetSuite', 'Shopify', 'WooCommerce', 'FedEx', 'UPS', 'DHL'],
+    useCases['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Cost optimization'],
     roi: 'Companies report 350% ROI through reduced inventory costs and improved operational efficiency.',
-    competitors: ['SAP SCM', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
+    competitors['SAP SCM', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
     marketSize: '$22.3B market',
     growthRate: '210% annual growth',
     variant: 'ai-futuristic',

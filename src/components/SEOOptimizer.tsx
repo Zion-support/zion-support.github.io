@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  CheckCircle, 
+import {
+  Search,
+  TrendingUp,
+  Target,
+  Zap,
+  CheckCircle,
   AlertTriangle,
   Info,
   Settings,
@@ -18,71 +18,78 @@ import {
   Star,
   ArrowUpRight,
   RefreshCw
-} from 'lucide-react';
+ } from 'lucide-react';
 
 interface SEOAnalysis {
+
   score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
-  lastUpdated: Date;
-}
+  lastUpdated: Date}
 
 interface SEOIssue {
+
   id: string;
   type: 'error' | 'warning' | 'info';
   title: string;
   description: string;
   impact: 'high' | 'medium' | 'low';
   fixable: boolean;
-  category: 'content' | 'technical' | 'performance' | 'accessibility';
-}
+  category: 'content' | 'technical' | 'performance' | 'accessibility'}
 
 interface SEOSuggestion {
+
   id: string;
   title: string;
   description: string;
   priority: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
-  estimatedImpact: number;
-}
+  estimatedImpact: number}
 
 interface SEOMetrics {
+
   pageSpeed: number;
   mobileFriendliness: number;
   accessibility: number;
   bestPractices: number;
   seoScore: number;
-  coreWebVitals: {
+coreWebVitals: {
     lcp: number;
     fid: number;
-    cls: number;
-  };
-}
+    cls: number}}
 
-interface SEOOptimizerProps {
+interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
+
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
-  onAnalysisComplete?: (analysis: SEOAnalysis) => void;
-}
+  onAnalysisComplete?: (analysis: SEOAnalysis)  => void}
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
+<<<<<<< HEAD
   autoAnalyze = true,
   showDetails = false,
-  onAnalysisComplete
-}) => {
+  onAnalysisComplete;
+}) => {;
+  const [analysis, setAnalysis] = useState<any>(null);
+=======
+  autoAnalyze = true,;
+  showDetails = false,;
+  onAnalysisComplete;
+}) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   // Mock SEO analysis data (in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysis = useMemo(() => ({
     score: 87,
-    issues: [
+    issues[
       {
         id: '1',
         type: 'warning',
@@ -111,7 +118,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         category: 'accessibility'
       }
     ],
-    suggestions: [
+    suggestions[
       {
         id: '1',
         title: 'Optimize Images',
@@ -143,99 +150,132 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       accessibility: 85,
       bestPractices: 88,
       seoScore: 87,
-      coreWebVitals: {
-        lcp: 2.8,
-        fid: 45,
-        cls: 0.08
-      }
-    },
-    lastUpdated: new Date()
+      coreWebVitals: {;
+        lcp: 2.8,;
+        fid: 45,;
+        cls: 0.08;
+      };
+    },;
+    lastUpdated: new Date();
   }), []);
 
   // Analyze SEO
-  const analyzeSEO = useCallback(async () => {
+  const analyzeSEO = useCallback(async () => {;
     setIsAnalyzing(true);
-    
+
     // Simulate analysis delay
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setAnalysis(mockAnalysis);
     setIsAnalyzing(false);
-    onAnalysisComplete?.(mockAnalysis);
-  }, [mockAnalysis, onAnalysisComplete]);
+    onAnalysisComplete?.(mockAnalysis)}, [mockAnalysis, onAnalysisComplete]);
 
   // Auto-analyze on mount
   useEffect(() => {
     if (autoAnalyze) {
-      analyzeSEO();
-    }
+      analyzeSEO()}
   }, [autoAnalyze, analyzeSEO]);
 
   // Get score color
-  const getScoreColor = (score: number) => {
+<<<<<<< HEAD
+  const getScoreColor = (score: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
-  };
+    return 'text-red-500'};
 
   // Get score background
-  const getScoreBackground = (score: number) => {
+<<<<<<< HEAD
+  const getScoreBackground = (score: number) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100';
-  };
+    return 'bg-red-100'};
 
   // Get impact color
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
+<<<<<<< HEAD
+  const getImpactColor = (impact: string) => {;
+    switch (impact) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'high': return 'text-red-500';
       case 'medium': return 'text-yellow-500';
       case 'low': return 'text-blue-500';
-      default: return 'text-zion-slate';
-    }
+      default: return 'text-zion-slate'}
   };
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
+<<<<<<< HEAD
+  const getPriorityColor = (priority: string) => {;
+    switch (priority) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
       case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
-      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200';
-    }
+      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'}
   };
 
   // Filter issues by category
-  const filteredIssues = useMemo(() => {
+  const filteredIssues = useMemo(() => {;
     if (selectedCategory === 'all') return analysis?.issues || [];
-    return analysis?.issues.filter(issue => issue.category === selectedCategory) || [];
-  }, [analysis, selectedCategory]);
+    return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]);
 
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
+<<<<<<< HEAD
+      const priorityOrder = {
+  high: 3, medium: 2,;
+  low: 1 ;
+
+};
+      return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]);
+=======
+      const priorityOrder = {
+  high: 3, medium: 2,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  low: 1 ;
+
+
+
+
+
+
+};
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     }) || [];
   }, [analysis]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   if (!analysis && !isAnalyzing) {
     return (
-      <div className="text-center py-8">
+      <div className = "text-center py-8">
         <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4" />
         <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}
+<<<<<<< HEAD
           className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors"
         >
           Analyze SEO
         </button>
       </div>
+    )};
+=======;
+          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
+        >;
+          Analyze SEO;
+        </button>;
+      </div>;
     );
   }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
+    <div className = "bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
@@ -247,7 +287,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             <p className="text-sm text-zion-slate/60">Performance & optimization insights</p>
           </div>
         </div>
-        
+
         <div className="flex items-center space-x-2">
           <button
             onClick={() => setShowAdvanced(!showAdvanced)}
@@ -256,7 +296,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           >
             <Settings className="w-5 h-5 text-zion-slate" />
           </button>
-          
+
           <button
             onClick={analyzeSEO}
             disabled={isAnalyzing}
@@ -292,21 +332,21 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 Last updated: {analysis.lastUpdated.toLocaleTimeString()}
               </span>
             </div>
-            
+
             <div className="flex items-center space-x-6">
               <div className={`w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center`}>
                 <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>
                   {analysis.score}
                 </span>
               </div>
-              
+
               <div className="flex-1">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-3 bg-zion-slate/5 rounded-lg">
                     <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.pageSpeed}</div>
                     <div className="text-xs text-zion-slate/60">Page Speed</div>
                   </div>
-                  
+
                   <div className="text-center p-3 bg-zion-slate/5 rounded-lg">
                     <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.mobileFriendliness}</div>
                     <div className="text-xs text-zion-slate/60">Mobile</div>
@@ -333,7 +373,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   </div>
                 </div>
               </div>
-              
+
               <div className={`p-4 rounded-lg border ${
                 analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
               }`}>
@@ -347,7 +387,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   </div>
                 </div>
               </div>
-              
+
               <div className={`p-4 rounded-lg border ${
                 analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
               }`}>
@@ -368,7 +408,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
-              
+
               <div className="flex space-x-1">
                 {['all', 'content', 'technical', 'performance', 'accessibility'].map((category) => (
                   <button
@@ -385,15 +425,42 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 ))}
               </div>
             </div>
-            
+
             <div className="space-y-3">
               <AnimatePresence>
                 {filteredIssues.map((issue) => (
                   <motion.div
                     key={issue.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  y: -20 
+
+
+
+
+
+
+}}
                     className={`p-4 rounded-lg border-l-4 ${
                       issue.type === 'error' ? 'border-red-500 bg-red-50' :
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :
@@ -408,7 +475,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                       ) : (
                         <Info className="w-5 h-5 text-blue-500 mt-0.5" />
                       )}
-                      
+
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
                           <h5 className="font-medium text-zion-slate-dark">{issue.title}</h5>
@@ -437,8 +504,26 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
               {filteredSuggestions.slice(0, 3).map((suggestion) => (
                 <motion.div
                   key={suggestion.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial = {
+  { opacity: 0,
+  x: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
                 >
                   <div className="flex items-start justify-between">
@@ -451,7 +536,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                         <span>Impact: +{suggestion.estimatedImpact} points</span>
                       </div>
                     </div>
-                    
+
                     <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">
                       <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
                     </button>
@@ -465,9 +550,36 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           <AnimatePresence>
             {showAdvanced && (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
                 className="border-t border-zion-slate/20 pt-6"
               >
                 <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Advanced Settings</h4>
@@ -480,7 +592,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                       <option>Monthly</option>
                     </select>
                   </div>
-                  
+
                   <div className="p-4 bg-zion-slate/5 rounded-lg">
                     <h5 className="font-medium text-zion-slate-dark mb-2">Notification Level</h5>
                     <select className="w-full p-2 border border-zion-slate/20 rounded-lg text-sm">
@@ -491,29 +603,40 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
             )}
           </AnimatePresence>
         </>
-      ) : null}
-    </div>
+      ) : null};
+    </div>;
+  )};
+
+// Hook for using SEO optimization
+export const useSEOOptimization[, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [analysis, setAnalysis] = useState<any>(null);
+=======
+            )};
+          </AnimatePresence>;
+        </>;
+      ) : null};
+    </div>;
   );
 };
 
 // Hook for using SEO optimization
-export const useSEOOptimization = () => {
+export const useSEOOptimization = () => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isOptimizing, setIsOptimizing] = useState(false);
 
-  const optimizePage = useCallback(async () => {
+  const optimizePage = useCallback(async () => {;
     setIsOptimizing(true);
     // Implement actual optimization logic here
     await new Promise(resolve => setTimeout(resolve, 3000));
-    setIsOptimizing(false);
-  }, []);
+    setIsOptimizing(false)}, []);
 
   return {
     analysis,
     isOptimizing,
     optimizePage
-  };
-};
+  }};

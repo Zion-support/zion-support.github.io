@@ -1,44 +1,72 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react.ts';
+import Head from 'next/head.ts';
 
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-import Link from 'next/link';
-export default function ServicesAdvertisingPage() {
+import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';
+import Link from 'next/link.ts';
+export default function ServicesAdvertisingPage(...args[]):  {
   const contact = {
-    mobile: '+1 302 464 0950',
+  mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+  ;
+  ;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+
+
+
+
+};
   const benefits = [
     '1000% ROI target with measurable KPIs',
+<<<<<<< HEAD
     'Transparent pricing with market references',
     'Fast onboarding with templates and playbooks',
     'Enterprise-grade security and compliance',
-    '24/7 support with SLAs',
-    'Proven architectures and reference implementations',
-    'No long-term lock-in; cancel anytime',
+    '24/7 support with SLAs',;
+    'Proven architectures and reference implementations',;
+    'No long-term lock-in; cancel time',
     'SOC 2-aligned processes and data handling',
     'Flexible deployment: SaaS or self-hosted options'
   ];
   const newHighlights = [
-    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
-    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
-    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
-    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' }
+    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
+    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
+    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
+    { title: 'Status & Incident Hub', price: 'From $59/mo', refs['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
+=======;
+    'Transparent pricing with market references',;
+    'Fast onboarding with templates and playbooks',;
+    'Enterprise-grade security and compliance',;
+    '24/7 support with SLAs',;
+    'Proven architectures and reference implementations',;
+    'No long-term lock-in; cancel anytime',
+    'SOC 2-aligned processes and data handling',
+    'Flexible deployment: SaaS or self-hosted options'
   ];
-  const anchors = [
-    { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },
-    { title: 'Security', href: '#ai-guardrails-safety' },
-    { title: 'Observability', href: '#status-page-slo-monitor' },
-    { title: 'Compliance', href: '#k8s-soc2-control-pack' },
-    { title: 'Edge & Cron', href: '#edge-cron-orchestrator' },
-    { title: 'Commerce', href: '#checkout-performance-optimizer' }
+  const newHighlights = [;
+    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },;
+    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },;
+    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },;
+    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  ];
+  const anchors = [;
+    { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },;
+    { title: 'Security', href: '#ai-guardrails-safety' },;
+    { title: 'Observability', href: '#status-page-slo-monitor' },;
+    { title: 'Compliance', href: '#k8s-soc2-control-pack' },;
+    { title: 'Edge & Cron', href: '#edge-cron-orchestrator' },;
+    { title: 'Commerce', href: '#checkout-performance-optimizer' };
   ];
   const pricingRefs = [
     {
       title: 'AI Platforms',
-      links: [
+      links[
         { name: 'OpenAI', href: 'https://openai.com/api/pricing' },
         { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },
         { name: 'Google Vertex AI', href: 'https://cloud.google.com/vertex-ai/pricing' },
@@ -53,7 +81,7 @@ export default function ServicesAdvertisingPage() {
     },
     {
       title: 'Security & Compliance',
-      links: [
+      links[
         { name: 'Wiz', href: 'https://www.wiz.io/pricing' },
         { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' },
         { name: 'HashiCorp Vault', href: 'https://www.hashicorp.com/products/vault/pricing' },
@@ -65,7 +93,7 @@ export default function ServicesAdvertisingPage() {
     },
     {
       title: 'Vector & Search',
-      links: [
+      links[
         { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' },
         { name: 'Weaviate', href: 'https://weaviate.io/pricing' },
         { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' },
@@ -76,7 +104,7 @@ export default function ServicesAdvertisingPage() {
     },
     {
       title: 'Cloud & Edge',
-      links: [
+      links[
         { name: 'AWS Calculator', href: 'https://calculator.aws' },
         { name: 'Azure', href: 'https://azure.microsoft.com/pricing' },
         { name: 'Google Cloud', href: 'https://cloud.google.com/pricing' },
@@ -88,7 +116,7 @@ export default function ServicesAdvertisingPage() {
     },
     {
       title: 'Product Analytics',
-      links: [
+      links[
         { name: 'Mixpanel', href: 'https://mixpanel.com/pricing/' },
         { name: 'Amplitude', href: 'https://amplitude.com/pricing' },
         { name: 'PostHog', href: 'https://posthog.com/pricing' }
@@ -97,7 +125,7 @@ export default function ServicesAdvertisingPage() {
     },
     {
       title: 'Incident & On‑Call',
-      links: [
+      links[
         { name: 'PagerDuty', href: 'https://www.pagerduty.com/pricing/' },
         { name: 'Opsgenie', href: 'https://www.atlassian.com/software/opsgenie/pricing' },
         { name: 'Better Stack', href: 'https://betterstack.com/status/pricing' }
@@ -106,7 +134,7 @@ export default function ServicesAdvertisingPage() {
     },
     {
       title: 'Email & Deliverability',
-      links: [
+      links[
         { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },
         { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },
         { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
@@ -115,43 +143,70 @@ export default function ServicesAdvertisingPage() {
     },
     {
       title: 'Observability & APM',
-      links: [
-        { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
-        { name: 'New Relic', href: 'https://newrelic.com/pricing' },
-        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
-      ],
-      note: 'SMB budgets: $50–$2,000/mo.'
-    }
+      links[;
+        { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },;
+        { name: 'New Relic', href: 'https://newrelic.com/pricing' },;
+        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' };
+      ],;
+      note: 'SMB budgets: $50–$2,000/mo.';
+    };
   ];
   const external = {
-    privacy: [
-      { name: 'OneTrust', href: 'https://www.onetrust.com/pricing/' },
+  <<<<<<< HEAD
+    privacy[
+      { name: 'OneTrust',
+  href: 'https://www.onetrust.com/pricing/' 
+
+},
+=======
+  privacy: [
+      { name: 'OneTrust',
+  href: 'https://www.onetrust.com/pricing/' 
+
+
+
+
+},
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       { name: 'Transcend', href: 'https://transcend.io/pricing/' }
     ],
-    finops: [
+    finops[
       { name: 'CloudZero', href: 'https://www.cloudzero.com/pricing' },
       { name: 'Vantage', href: 'https://www.vantage.sh/pricing' }
     ],
-    devex: [
+    devex[
       { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
+<<<<<<< HEAD
     ],
-    seo: [
+    seo[
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
-    ]
+    ];
+=======;
+    ],;
+    seo: [;
+      { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },;
+      { name: 'Little Warden', href: 'https://littlewarden.com/pricing' };
+    ];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   } as const;
-  function ext(url: string) {
+  function ext(...args[]):  {
     return (
-      <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
+<<<<<<< HEAD
+      <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
+    )};
+=======;
+      <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>;
     );
   }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   return (
-    <div className="min-h-screen bg-black">
-      <Head>
+    <div className = "min-h-screen bg-black">
+      <Helmet>
         <title>AI, IT and Micro SaaS Services Advertising | Zion Tech Group</title>
         <meta name="description" content="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options." />
         <link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
-      </Head>
+      </Helmet>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
@@ -170,8 +225,8 @@ export default function ServicesAdvertisingPage() {
           </header>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {benefits.map((b) => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
+              {benefits.map((b)  => (
                 <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
@@ -244,7 +299,7 @@ export default function ServicesAdvertisingPage() {
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { name: 'AI Sales Playbook Generator', price: '$99/mo', href: '/services/ai-sales-playbook-generator' },
                 { name: 'Customer Journey Analytics Starter', price: '$79/mo', href: '/services/customer-journey-analytics-starter' },
@@ -256,7 +311,7 @@ export default function ServicesAdvertisingPage() {
                 { name: 'SaaS Billing Anomaly Guard', price: '$119/mo', href: '/services/saas-billing-anomaly-guard' },
                 { name: 'ML Feature Store Starter', price: '$149/mo', href: '/services/ml-feature-store-starter' },
                 { name: 'Edge Cron Orchestrator', price: '$59/mo', href: '/services/edge-cron-orchestrator' },
-                { name: 'GDPR DSAR Portal', price: '$99/mo', href: '/services/gdpr-dsar-portal' },
+                { name: 'GDPR DSAR Portal', price: '$129/mo', href: '/services/gdpr-dsar-portal' },
                 { name: 'SOC 2 Evidence Collector', price: '$149/mo', href: '/services/soc2-evidence-collector' },
                 { name: 'SEO Change Monitor', price: '$69/mo', href: '/services/seo-change-monitor' },
                 { name: 'CI/CD Flaky Test Detector', price: '$59/mo', href: '/services/cicd-flaky-test-detector' },
@@ -264,7 +319,11 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Data Pipeline SLA Tracker', price: '$89/mo', href: '/services/data-pipeline-sla-tracker' },
                 { name: 'Edge Image Optimizer', price: '$39/mo', href: '/services/edge-image-optimizer' },
                 { name: 'Managed Kubernetes SRE', price: '$2,500/mo', href: '/services/managed-kubernetes-sre' },
-                { name: 'Zero Trust Rollout Coaching', price: '$4,000/engagement', href: '/services/zero-trust-rollout-coaching' }
+                { name: 'Zero Trust Rollout Coaching', price: '$4,000/engagement', href: '/services/zero-trust-rollout-coaching' },
+                { name: 'PDF Render API', price: '$29/mo', href: '/services/pdf-render-api' },
+                { name: 'Email Deliverability Monitor', price: '$39/mo', href: '/services/email-deliverability-monitor' },
+                { name: 'Synthetic Data Generator', price: '$119/mo', href: '/services/synthetic-data-generator' },
+                { name: 'AI Meeting Notes Agent', price: '$69/mo', href: '/services/ai-meeting-notes-agent' }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
@@ -535,10 +594,19 @@ export default function ServicesAdvertisingPage() {
             <div className="flex flex-wrap gap-3 pt-2">
               <a href="/contact" className="px-6 py-3 bg-cyan-600 text-white rounded-lg inline-flex">Contact Sales</a>
               <a href="/services" className="px-6 py-3 border border-gray-600 text-gray-200 rounded-lg inline-flex">Browse Services</a>
+<<<<<<< HEAD
             </div>
           </section>
         </div>
       </div>
     </div>
+  )};
+=======;
+            </div>;
+          </section>;
+        </div>;
+      </div>;
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

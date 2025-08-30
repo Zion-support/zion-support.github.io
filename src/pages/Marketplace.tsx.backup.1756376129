@@ -1,0 +1,973 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  ShoppingCart, 
+  Star, 
+  Zap, 
+  Shield, 
+  Target, 
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  Lock,
+  Activity,
+  BarChart3,
+  Settings,
+  Bell,
+  Download,
+  Upload,
+  RefreshCw,
+  Monitor,
+  Smartphone,
+  Server,
+  Chip,
+  Wifi,
+  Satellite,
+  Radar,
+  Camera,
+  Video,
+  FileText,
+  Calendar,
+  Tag,
+  TrendingUp,
+  PieChart,
+  LineChart,
+  Scatter,
+  Layers,
+  Cube,
+  Box,
+  Package,
+  Truck,
+  Building,
+  Factory,
+  Warehouse,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Database,
+  Cloud,
+  Eye,
+  Brain,
+  Network,
+  Rocket,
+  Search,
+  Filter,
+  Grid,
+  List
+} from 'lucide-react';
+
+export default function Marketplace() {
+  const categories = [
+    {
+      name: "AI Services",
+      icon: Brain,
+      count: 25,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      name: "IT Solutions",
+      icon: Cpu,
+      count: 18,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Cloud Services",
+      icon: Cloud,
+      count: 12,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      name: "Security Tools",
+      icon: Shield,
+      count: 15,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      name: "Analytics",
+      icon: BarChart3,
+      count: 20,
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      name: "IoT Solutions",
+      icon: Wifi,
+      count: 14,
+      color: "from-indigo-500 to-blue-500"
+    }
+  ];
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Search, 
+  Filter, 
+  Grid, 
+  List, 
+  Star, 
+  ShoppingCart, 
+  Heart, 
+  Eye,
+  Download,
+  Code,
+  Brain,
+  Cloud,
+  Shield,
+  ShoppingBag,
+  Users,
+  Clock,
+  Tag,
+  ArrowRight,
+  ExternalLink,
+  CheckCircle,
+  TrendingUp,
+  Award,
+  Zap,
+  Rocket,
+  Crown,
+  Target,
+  BarChart3,
+  Globe,
+  Lock,
+  Database,
+  Smartphone,
+  Server,
+  Network,
+  Cpu,
+  Atom,
+  Leaf,
+  Satellite,
+  Truck,
+  Building,
+  GraduationCap,
+  BookOpen,
+  Video,
+  Image,
+  FileText,
+  Link
+} from 'lucide-react';
+
+interface MarketplaceItem {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  price: string;
+  pricingType: 'one-time' | 'subscription' | 'custom' | 'free';
+  rating: number;
+  reviews: number;
+  downloads: number;
+  featured: boolean;
+  new: boolean;
+  popular: boolean;
+  tags: string[];
+  image: string;
+  demoUrl?: string;
+  documentationUrl?: string;
+  supportLevel: 'basic' | 'standard' | 'premium';
+  compatibility: string[];
+  lastUpdated: string;
+  author: string;
+  icon: any;
+  color: string;
+}
+
+const marketplaceItems: MarketplaceItem[] = [
+  {
+    id: 'ai-project-manager',
+    name: 'AI Project Manager Pro',
+    description: 'Intelligent project management with AI-powered task prioritization and risk assessment',
+    category: 'AI & Machine Learning',
+    subcategory: 'Project Management',
+    price: '$299',
+    pricingType: 'subscription',
+    rating: 4.8,
+    reviews: 1247,
+    downloads: 15420,
+    featured: true,
+    new: false,
+    popular: true,
+    tags: ['AI', 'Project Management', 'Task Automation', 'Risk Assessment'],
+    image: '/images/ai-project-manager.jpg',
+    demoUrl: '/demo/ai-project-manager',
+    documentationUrl: '/docs/ai-project-manager',
+    supportLevel: 'premium',
+    compatibility: ['Web', 'Mobile', 'Desktop'],
+    lastUpdated: '2024-01-15',
+    author: 'Zion Tech Group',
+    icon: Target,
+    color: 'from-blue-500 to-indigo-500'
+  },
+  {
+    id: 'ai-content-generator',
+    name: 'AI Content Generator Suite',
+    description: 'Create engaging content 10x faster with AI-powered writing and image generation',
+    category: 'AI & Machine Learning',
+    subcategory: 'Content Creation',
+    price: '$199',
+    pricingType: 'subscription',
+    rating: 4.9,
+    reviews: 2156,
+    downloads: 28940,
+    featured: true,
+    new: false,
+    popular: true,
+    tags: ['AI', 'Content Creation', 'Writing', 'Image Generation'],
+    image: '/images/ai-content-generator.jpg',
+    demoUrl: '/demo/ai-content-generator',
+    documentationUrl: '/docs/ai-content-generator',
+    supportLevel: 'premium',
+    compatibility: ['Web', 'API'],
+    lastUpdated: '2024-01-10',
+    author: 'Zion Tech Group',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    id: 'cloud-migration-toolkit',
+    name: 'Cloud Migration Toolkit',
+    description: 'Complete toolkit for seamless cloud migration with automated assessment and planning',
+    category: 'Cloud & Infrastructure',
+    subcategory: 'Migration Tools',
+    price: '$1500',
+    pricingType: 'one-time',
+    rating: 4.7,
+    reviews: 892,
+    downloads: 5670,
+    featured: false,
+    new: true,
+    popular: false,
+    tags: ['Cloud', 'Migration', 'Automation', 'Assessment'],
+    image: '/images/cloud-migration.jpg',
+    demoUrl: '/demo/cloud-migration',
+    documentationUrl: '/docs/cloud-migration',
+    supportLevel: 'standard',
+    compatibility: ['AWS', 'Azure', 'GCP'],
+    lastUpdated: '2024-01-20',
+    author: 'Zion Tech Group',
+    icon: Cloud,
+    color: 'from-cyan-500 to-blue-500'
+  },
+  {
+    id: 'cybersecurity-audit-suite',
+    name: 'Cybersecurity Audit Suite',
+    description: 'Comprehensive security auditing and compliance checking for enterprise environments',
+    category: 'Cybersecurity',
+    subcategory: 'Audit Tools',
+    price: '$2500',
+    pricingType: 'one-time',
+    rating: 4.6,
+    reviews: 634,
+    downloads: 4230,
+    featured: false,
+    new: false,
+    popular: false,
+    tags: ['Security', 'Audit', 'Compliance', 'Enterprise'],
+    image: '/images/cybersecurity-audit.jpg',
+    demoUrl: '/demo/cybersecurity-audit',
+    documentationUrl: '/docs/cybersecurity-audit',
+    supportLevel: 'premium',
+    compatibility: ['Windows', 'Linux', 'macOS'],
+    lastUpdated: '2024-01-05',
+    author: 'Zion Tech Group',
+    icon: Shield,
+    color: 'from-red-500 to-orange-500'
+  },
+  {
+    id: 'micro-saas-template',
+    name: 'Micro SaaS Starter Template',
+    description: 'Ready-to-deploy SaaS template with user management, billing, and analytics',
+    category: 'Micro SaaS Solutions',
+    subcategory: 'Templates',
+    price: '$99',
+    pricingType: 'one-time',
+    rating: 4.9,
+    reviews: 1876,
+    downloads: 23450,
+    featured: true,
+    new: false,
+    popular: true,
+    tags: ['SaaS', 'Template', 'User Management', 'Billing'],
+    image: '/images/micro-saas-template.jpg',
+    demoUrl: '/demo/micro-saas-template',
+    documentationUrl: '/docs/micro-saas-template',
+    supportLevel: 'standard',
+    compatibility: ['React', 'Node.js', 'PostgreSQL'],
+    lastUpdated: '2024-01-12',
+    author: 'Zion Tech Group',
+    icon: ShoppingBag,
+    color: 'from-green-500 to-emerald-500'
+  },
+  {
+    id: 'data-analytics-dashboard',
+    name: 'Advanced Data Analytics Dashboard',
+    description: 'Real-time data visualization and analytics dashboard with AI-powered insights',
+    category: 'Data & Analytics',
+    subcategory: 'Dashboards',
+    price: '$799',
+    pricingType: 'subscription',
+    rating: 4.8,
+    reviews: 1456,
+    downloads: 18920,
+    featured: false,
+    new: false,
+    popular: true,
+    tags: ['Analytics', 'Dashboard', 'Data Visualization', 'AI Insights'],
+    image: '/images/data-analytics-dashboard.jpg',
+    demoUrl: '/demo/data-analytics-dashboard',
+    documentationUrl: '/docs/data-analytics-dashboard',
+    supportLevel: 'premium',
+    compatibility: ['Web', 'Mobile'],
+    lastUpdated: '2024-01-08',
+    author: 'Zion Tech Group',
+    icon: BarChart3,
+    color: 'from-orange-500 to-red-500'
+  }
+];
+
+const categories = [
+  { name: 'AI & Machine Learning', icon: Brain, count: 45 },
+  { name: 'Cloud & Infrastructure', icon: Cloud, count: 32 },
+  { name: 'Cybersecurity', icon: Shield, count: 28 },
+  { name: 'Micro SaaS Solutions', icon: ShoppingBag, count: 67 },
+  { name: 'Data & Analytics', icon: BarChart3, count: 38 },
+  { name: 'Digital Transformation', icon: Rocket, count: 23 },
+  { name: 'Emerging Technologies', icon: Atom, count: 19 },
+  { name: 'Industry Solutions', icon: Building, count: 41 }
+];
+
+export function Marketplace() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popular' | 'newest' | 'rating' | 'price'>('popular');
+
+  const filteredItems = marketplaceItems.filter(item => {
+    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const sortedItems = [...filteredItems].sort((a, b) => {
+    switch (sortBy) {
+      case 'popular':
+        return b.downloads - a.downloads;
+      case 'newest':
+        return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
+      case 'rating':
+        return b.rating - a.rating;
+      case 'price':
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+      default:
+        return 0;
+    }
+  });
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Header */}
+      <div className="bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Zion Tech Marketplace
+            </h1>
+            <p className="text-xl text-cyan-300 max-w-3xl mx-auto">
+              Discover cutting-edge technology solutions, tools, and services to accelerate your digital transformation
+            </p>
+          </motion.div>
+
+          {/* Search and Filters */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-8"
+          >
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="relative flex-1 max-w-2xl">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search products, services, and solutions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50"
+                />
+              </div>
+              
+              <div className="flex gap-4">
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="px-4 py-3 bg-zion-slate-dark/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+                >
+                  <option value="popular">Most Popular</option>
+                  <option value="newest">Newest</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="price">Price: Low to High</option>
+                </select>
+                
+                <div className="flex bg-zion-slate-dark/50 rounded-lg border border-cyan-400/20 p-1">
+                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`p-2 rounded-md transition-all duration-300 ${
+                      viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    <Grid className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`p-2 rounded-md transition-all duration-300 ${
+                      viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    <List className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Categories */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="flex flex-wrap gap-4 justify-center">
+            <button
+              onClick={() => setSelectedCategory('All')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                selectedCategory === 'All'
+                  ? 'bg-cyan-500 text-white shadow-lg'
+                  : 'bg-zion-slate-dark/50 text-gray-300 hover:text-white hover:bg-zion-slate-dark/70 border border-cyan-400/20'
+              }`}
+            >
+              All Categories
+            </button>
+            {categories.map((category) => (
+              <button
+                key={category.name}
+                onClick={() => setSelectedCategory(category.name)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === category.name
+                    ? 'bg-cyan-500 text-white shadow-lg'
+                    : 'bg-zion-slate-dark/50 text-gray-300 hover:text-white hover:bg-zion-slate-dark/70 border border-cyan-400/20'
+                }`}
+              >
+                <div className="flex items-center space-x-2">
+                  <category.icon className="w-5 h-5" />
+                  <span>{category.name}</span>
+                  <span className="text-xs bg-gray-600 text-gray-300 px-2 py-1 rounded-full">
+                    {category.count}
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Marketplace Items */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {viewMode === 'grid' ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden hover:border-cyan-400/40 transition-all duration-300"
+              >
+                <div className="relative">
+                  <div className={`w-full h-48 bg-gradient-to-r ${item.color} flex items-center justify-center`}>
+                    <item.icon className="w-20 h-20 text-white" />
+                  </div>
+                  {item.featured && (
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full">
+                        Featured
+                      </span>
+                    </div>
+                  )}
+                  {item.new && (
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-medium rounded-full">
+                        New
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-xl font-bold text-white">{item.name}</h3>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-sm text-gray-300">{item.rating}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">{item.description}</p>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-2xl font-bold text-cyan-400">{item.price}</span>
+                    <span className="text-sm text-gray-400 capitalize">{item.pricingType}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
+                    <span>{item.downloads.toLocaleString()} downloads</span>
+                    <span>{item.reviews} reviews</span>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.slice(0, 3).map((tag) => (
+                      <span key={tag} className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-2">
+                    <a
+                      href={item.demoUrl || '#'}
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-lg text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                    >
+                      Try Demo
+                    </a>
+                    <a
+                      href={item.documentationUrl || '#'}
+                      className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg text-sm font-medium hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-6">
+            {sortedItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300"
+              >
+                <div className="flex items-start space-x-6">
+                  <div className={`w-24 h-24 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                    <item.icon className="w-12 h-12 text-white" />
+                  </div>
+                  
+                  <div className="flex-1">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
+                        <p className="text-gray-300 text-sm mb-3">{item.description}</p>
+                        <div className="flex items-center space-x-4 text-sm text-gray-400">
+                          <span>Category: {item.category}</span>
+                          <span>Support: {item.supportLevel}</span>
+                          <span>Updated: {item.lastUpdated}</span>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-cyan-400 mb-2">{item.price}</div>
+                        <div className="flex items-center space-x-1 mb-2">
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="text-sm text-gray-300">{item.rating} ({item.reviews})</span>
+                        </div>
+                        <span className="text-sm text-gray-400 capitalize">{item.pricingType}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {item.tags.map((tag) => (
+                        <span key={tag} className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        <span>{item.downloads.toLocaleString()} downloads</span>
+                        <span>Compatible with: {item.compatibility.join(', ')}</span>
+                      </div>
+                      <div className="flex gap-2">
+                        <a
+                          href={item.demoUrl || '#'}
+                          className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                        >
+                          Try Demo
+                        </a>
+                        <a
+                          href={item.documentationUrl || '#'}
+                          className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg text-sm font-medium hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                        >
+                          Documentation
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* CTA Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      >
+        <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-xl p-8 text-center">
+          <h3 className="text-3xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            We offer custom development and consulting services. Let's discuss your specific requirements and create a tailored solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-semibold text-lg"
+            >
+              <Code className="w-5 h-5 mr-2" />
+              Request Custom Solution
+            </a>
+            <a
+              href="/services"
+              className="inline-flex items-center border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Explore All Services
+            </a>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-15b2
+
+  const featuredProducts = [
+    {
+      name: "AI Sales Copilot",
+      description: "Intelligent sales automation and lead management",
+      price: "$299",
+      period: "/month",
+      rating: 4.8,
+      reviews: 156,
+      category: "AI Services",
+      image: "🎯",
+      features: ["Lead scoring", "Email automation", "CRM integration", "Analytics dashboard"]
+    },
+    {
+      name: "Quantum Security Suite",
+      description: "Next-generation cybersecurity with quantum encryption",
+      price: "$599",
+      period: "/month",
+      rating: 4.9,
+      reviews: 89,
+      category: "Security Tools",
+      image: "🔒",
+      features: ["Quantum encryption", "Threat detection", "Compliance reporting", "24/7 monitoring"]
+    },
+    {
+      name: "Edge Computing Platform",
+      description: "Distributed computing for IoT and edge devices",
+      price: "$199",
+      period: "/month",
+      rating: 4.7,
+      reviews: 203,
+      category: "IoT Solutions",
+      image: "🌐",
+      features: ["Edge processing", "Real-time analytics", "Device management", "Scalable infrastructure"]
+    },
+    {
+      name: "Data Analytics Pro",
+      description: "Advanced business intelligence and predictive analytics",
+      price: "$399",
+      period: "/month",
+      rating: 4.6,
+      reviews: 178,
+      category: "Analytics",
+      image: "📊",
+      features: ["Predictive modeling", "Custom dashboards", "Data visualization", "API access"]
+    }
+  ];
+
+  const filters = [
+    "All Categories",
+    "AI Services",
+    "IT Solutions", 
+    "Cloud Services",
+    "Security Tools",
+    "Analytics",
+    "IoT Solutions"
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Zion Tech Marketplace
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover and deploy cutting-edge technology solutions from our curated marketplace. 
+              Find the perfect tools to accelerate your digital transformation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center space-x-2"
+              >
+                <span>Browse Solutions</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-green-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-green-400/50 flex items-center space-x-2"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search and Filters Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search Bar */}
+            <div className="relative flex-1 max-w-2xl">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for solutions, services, or tools..."
+                className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-gray-400/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-green-400/50 focus:bg-white/20 transition-all duration-300"
+              />
+            </div>
+
+            {/* View Toggle */}
+            <div className="flex items-center gap-2">
+              <button className="p-2 bg-white/10 backdrop-blur-sm border border-gray-400/20 rounded-lg text-white hover:bg-white/20 hover:border-gray-400/40 transition-all duration-300">
+                <Grid className="w-5 h-5" />
+              </button>
+              <button className="p-2 bg-white/10 backdrop-blur-sm border border-gray-400/20 rounded-lg text-white hover:bg-white/20 hover:border-gray-400/40 transition-all duration-300">
+                <List className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-3 mt-6">
+            {filters.map((filter, index) => (
+              <button
+                key={index}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  index === 0
+                    ? 'bg-green-500 text-white'
+                    : 'bg-white/10 backdrop-blur-sm border border-gray-400/20 text-gray-300 hover:bg-white/20 hover:border-gray-400/40'
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Categories Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Browse by Category
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive collection of technology solutions organized by category.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {categories.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-gray-400/40 transition-all duration-300 cursor-pointer group"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
+                <p className="text-gray-400 text-sm">{category.count} solutions</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Featured Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our most popular and highly-rated technology solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredProducts.map((product, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-gray-400/40 transition-all duration-300 group"
+              >
+                <div className="text-center mb-6">
+                  <div className="text-4xl mb-4">{product.image}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{product.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{product.description}</p>
+                  
+                  {/* Rating */}
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`w-4 h-4 ${
+                            i < Math.floor(product.rating)
+                              ? 'text-yellow-400 fill-current'
+                              : 'text-gray-400'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-gray-400 text-sm">
+                      {product.rating} ({product.reviews})
+                    </span>
+                  </div>
+
+                  {/* Price */}
+                  <div className="flex items-baseline justify-center mb-4">
+                    <span className="text-2xl font-bold text-white">{product.price}</span>
+                    <span className="text-gray-400 ml-1">{product.period}</span>
+                  </div>
+
+                  {/* Category */}
+                  <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-gray-300 mb-4">
+                    {product.category}
+                  </span>
+                </div>
+
+                {/* Features */}
+                <ul className="space-y-2 mb-6">
+                  {product.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/contact"
+                  className="w-full py-3 px-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold rounded-xl text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Our team of experts can help you find the perfect solution or create a custom 
+              solution tailored to your specific needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center space-x-2"
+              >
+                <span>Contact Us</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-green-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-green-400/50 flex items-center space-x-2"
+              >
+                <span>Custom Solutions</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,4 +1,5 @@
 export interface InnovativeMicroSaasService {
+
   id: string;
   title: string;
   description: string;
@@ -17,21 +18,18 @@ export interface InnovativeMicroSaasService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence Platform
   {
@@ -43,7 +41,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     price: 2999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered data analysis",
       "Automated insight generation",
       "Natural language queries",
@@ -55,28 +53,28 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       "Automated reporting",
       "Mobile app access"
     ],
-    benefits: [
+    benefits[
       "Reduce analysis time by 80%",
       "Improve decision accuracy by 60%",
       "Automated insight discovery",
       "Real-time business monitoring",
       "Scalable analytics infrastructure"
     ],
-    useCases: [
+    useCases[
       "Sales performance analysis",
       "Customer behavior insights",
       "Financial reporting automation",
       "Operational efficiency tracking",
       "Market trend analysis"
     ],
-    targetAudience: [
+    targetAudience[
       "Business analysts",
       "Data scientists",
       "Executives",
       "Marketing teams",
       "Sales teams"
     ],
-    tags: ["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
+    tags["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,999 - $8,999/month",
@@ -88,13 +86,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
+      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
       apiEndpoints: 150,
       uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]
+      security["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]
     },
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
+    competitors["Tableau", "Power BI", "Looker", "Qlik"],
     marketSize: "$29.9 billion by 2025"
   },
   // AI-Powered Autonomous DevOps Platform
@@ -107,7 +105,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     price: 3499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "AI-powered incident detection",
       "Automated root cause analysis",
       "Self-healing infrastructure",
@@ -119,28 +117,28 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       "Multi-cloud management",
       "Real-time monitoring"
     ],
-    benefits: [
+    benefits[
       "Reduce downtime by 90%",
       "Cut operational costs by 40%",
       "Improve deployment success rate to 99.9%",
       "Automated security compliance",
       "24/7 infrastructure monitoring"
     ],
-    useCases: [
+    useCases[
       "Enterprise DevOps automation",
       "Cloud infrastructure management",
       "Microservices orchestration",
       "Security operations automation",
       "Performance monitoring"
     ],
-    targetAudience: [
+    targetAudience[
       "DevOps engineers",
       "Site reliability engineers",
       "Cloud architects",
       "IT operations teams",
       "Startups and enterprises"
     ],
-    tags: ["AI", "DevOps", "Automation", "Infrastructure", "Monitoring"],
+    tags["AI", "DevOps", "Automation", "Infrastructure", "Monitoring"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $9,999/month",
@@ -152,13 +150,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],
-      integrations: ["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Slack"],
+      technology["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],
+      integrations["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Slack"],
       apiEndpoints: 200,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "Zero-trust architecture", "Encryption at rest"]
+      security["SOC 2", "ISO 27001", "Zero-trust architecture", "Encryption at rest"]
     },
-    competitors: ["DataDog", "New Relic", "Splunk", "PagerDuty"],
+    competitors["DataDog", "New Relic", "Splunk", "PagerDuty"],
     marketSize: "$8.2 billion by 2025"
   },
   // Quantum-Safe Cybersecurity Suite
@@ -171,7 +169,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     price: 5999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Post-quantum cryptography",
       "Quantum-resistant algorithms",
       "Hybrid encryption systems",
@@ -183,28 +181,28 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       "Incident response",
       "Security training"
     ],
-    benefits: [
+    benefits[
       "Future-proof against quantum threats",
       "Maintain data security for decades",
       "Meet regulatory requirements",
       "Reduce security risks",
       "Competitive advantage"
     ],
-    useCases: [
+    useCases[
       "Government agencies",
       "Financial institutions",
       "Healthcare organizations",
       "Critical infrastructure",
       "Long-term data storage"
     ],
-    targetAudience: [
+    targetAudience[
       "CISOs and security teams",
       "Government agencies",
       "Financial institutions",
       "Healthcare organizations",
       "Defense contractors"
     ],
-    tags: ["Cybersecurity", "Quantum Computing", "Post-Quantum", "Encryption", "Compliance"],
+    tags["Cybersecurity", "Quantum Computing", "Post-Quantum", "Encryption", "Compliance"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,999 - $15,999/month",
@@ -216,13 +214,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],
-      integrations: ["PKI systems", "Identity management", "SIEM platforms", "Compliance tools"],
+      technology["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],
+      integrations["PKI systems", "Identity management", "SIEM platforms", "Compliance tools"],
       apiEndpoints: 200,
       uptime: "99.99%",
-      security: ["Quantum-resistant", "SOC 2", "ISO 27001", "FIPS 140-2", "Zero-trust"]
+      security["Quantum-resistant", "SOC 2", "ISO 27001", "FIPS 140-2", "Zero-trust"]
     },
-    competitors: ["ISARA", "PQShield", "Crypta Labs", "Quantum Xchange"],
+    competitors["ISARA", "PQShield", "Crypta Labs", "Quantum Xchange"],
     marketSize: "$2.8 billion by 2025"
   },
   // AI-Powered Healthcare Diagnostics Platform
@@ -235,7 +233,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     price: 4499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Medical image analysis",
       "Lab result interpretation",
       "Patient data analytics",
@@ -247,28 +245,28 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       "Mobile app access",
       "Compliance reporting"
     ],
-    benefits: [
+    benefits[
       "Improve diagnostic accuracy by 25%",
       "Reduce diagnosis time by 60%",
       "Early disease detection",
       "Better patient outcomes",
       "Cost-effective healthcare"
     ],
-    useCases: [
+    useCases[
       "Radiology departments",
       "Pathology labs",
       "Primary care clinics",
       "Specialist practices",
       "Research institutions"
     ],
-    targetAudience: [
+    targetAudience[
       "Healthcare providers",
       "Hospitals and clinics",
       "Medical researchers",
       "Health insurance companies",
       "Pharmaceutical companies"
     ],
-    tags: ["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Machine Learning"],
+    tags["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Machine Learning"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,499 - $12,999/month",
@@ -280,13 +278,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
-      integrations: ["PACS systems", "EHR platforms", "Lab systems", "Telemedicine platforms"],
+      technology["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
+      integrations["PACS systems", "EHR platforms", "Lab systems", "Telemedicine platforms"],
       apiEndpoints: 300,
       uptime: "99.9%",
-      security: ["HIPAA", "SOC 2", "GDPR", "Data encryption", "Audit logging"]
+      security["HIPAA", "SOC 2", "GDPR", "Data encryption", "Audit logging"]
     },
-    competitors: ["Butterfly Network", "Zebra Medical", "Aidoc", "Enlitic"],
+    competitors["Butterfly Network", "Zebra Medical", "Aidoc", "Enlitic"],
     marketSize: "$45.2 billion by 2025"
   },
   // Edge AI Computing Platform
@@ -299,7 +297,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     price: 3799,
     currency: "$",
     pricingModel: "monthly",
-    features: [
+    features[
       "Edge AI model deployment",
       "Real-time inference",
       "Distributed training",
@@ -311,28 +309,28 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       "Security features",
       "Monitoring dashboard"
     ],
-    benefits: [
+    benefits[
       "Reduce latency by 90%",
       "Lower bandwidth costs by 70%",
       "Improve privacy and security",
       "Real-time decision making",
       "Scalable AI deployment"
     ],
-    useCases: [
+    useCases[
       "Autonomous vehicles",
       "Smart cities",
       "Industrial IoT",
       "Retail analytics",
       "Healthcare monitoring"
     ],
-    targetAudience: [
+    targetAudience[
       "IoT device manufacturers",
       "Smart city planners",
       "Industrial companies",
       "Retail chains",
       "Healthcare providers"
     ],
-    tags: ["AI", "Edge Computing", "IoT", "Machine Learning", "Real-time"],
+    tags["AI", "Edge Computing", "IoT", "Machine Learning", "Real-time"],
     estimatedDelivery: "14-18 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,799 - $11,999/month",
@@ -344,13 +342,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],
-      integrations: ["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],
+      technology["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],
+      integrations["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],
       apiEndpoints: 400,
       uptime: "99.9%",
-      security: ["Edge security", "Data encryption", "Secure boot", "Device authentication"]
+      security["Edge security", "Data encryption", "Secure boot", "Device authentication"]
     },
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
+    competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
     marketSize: "$12.3 billion by 2025"
   }
 ];

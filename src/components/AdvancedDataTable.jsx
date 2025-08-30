@@ -1,8 +1,8 @@
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
-import { useVirtualScroll } from '../hooks/useVirtualScroll';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useVirtualScroll } from "../hooks/useVirtualScroll";
+import { useAnalytics } from "../hooks/useAnalytics";
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -22,9 +22,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         if (searchQuery.trim()) {
             result = result.filter(item => columns.some(col => {
                 const value = String(item[col.key]).toLowerCase();
-                return value.includes(searchQuery.toLowerCase());
-            }));
-        }
+                return value.includes(searchQuery.toLowerCase())}))}
         // Apply filters
         filters.forEach(filter => {
             result = result.filter(item => {
@@ -41,16 +39,12 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         return value.endsWith(filterValue);
                     case 'regex':
                         try {
-                            return new RegExp(filterValue, 'i').test(value);
-                        }
+                            return new RegExp(filterValue, 'i').test(value)}
                         catch {
-                            return false;
-                        }
+                            return false}
                     default:
-                        return true;
-                }
-            });
-        });
+                        return true}
+            })});
         // Apply sorting
         if (sortConfig) {
             result.sort((a, b) => {
@@ -60,11 +54,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     return sortConfig.direction === 'asc' ? -1 : 1;
                 if (aVal > bVal)
                     return sortConfig.direction === 'asc' ? 1 : -1;
-                return 0;
-            });
-        }
-        return result;
-    }, [data, searchQuery, filters, sortConfig, columns]);
+                return 0})}
+        return result}, [data, searchQuery, filters, sortConfig, columns]);
     // Pagination
     const totalPages = Math.ceil(processedData.length / pageSize);
     const paginatedData = enablePagination
@@ -84,69 +75,62 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             if (prev?.key === key) {
                 return prev.direction === 'asc'
                     ? { key, direction: 'desc' }
-                    : null;
-            }
-            return { key, direction: 'asc' };
-        });
-        trackEvent('table', 'column_sorted', String(key));
-    }, [enableSorting, trackEvent]);
+                    : null}
+            return { key, direction: 'asc' }});
+        trackEvent('table', 'column_sorted', String(key))}, [enableSorting, trackEvent]);
     // Handle filter change
     const handleFilterChange = useCallback((key, value, operator) => {
         setFilters(prev => {
             const newFilters = prev.filter(f => f.key !== key);
             if (value.trim()) {
+<<<<<<< HEAD
+                newFilters.push({ key, value, operator })}
+            return newFilters});
+        trackEvent('table', 'filter_applied', String(key), null, { operator, value })}, [trackEvent]);
+=======
                 newFilters.push({ key, value, operator });
             }
             return newFilters;
         });
-        trackEvent('table', 'filter_applied', String(key), undefined, { operator, value });
+        trackEvent('table', 'filter_applied', String(key), null, { operator, value });
     }, [trackEvent]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Handle selection
     const handleSelectionChange = useCallback((item, checked) => {
         const itemKey = String(item.id || JSON.stringify(item));
         const newSelection = new Set(selectedItems);
         if (checked) {
-            newSelection.add(itemKey);
-        }
+            newSelection.add(itemKey)}
         else {
-            newSelection.delete(itemKey);
-        }
+            newSelection.delete(itemKey)}
         setSelectedItems(newSelection);
-        onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)));
-    }, [selectedItems, onSelectionChange, data]);
+        onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data]);
     // Handle select all
     const handleSelectAll = useCallback((checked) => {
         if (checked) {
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
             setSelectedItems(allKeys);
-            onSelectionChange?.(paginatedData);
-        }
+            onSelectionChange?.(paginatedData)}
         else {
             setSelectedItems(new Set());
-            onSelectionChange?.([]);
-        }
+            onSelectionChange?.([])}
     }, [paginatedData, onSelectionChange]);
     // Export data
     const handleExport = useCallback(() => {
         if (onExport) {
-            onExport(processedData);
-        }
+            onExport(processedData)}
         else {
             // Default CSV export
             const csvContent = generateCSV(processedData, columns);
-            downloadCSV(csvContent, 'table-export.csv');
-        }
-        trackEvent('table', 'data_exported', 'export_completed', processedData.length);
-    }, [processedData, columns, onExport, trackEvent]);
+            downloadCSV(csvContent, 'table-export.csv')}
+        trackEvent('table', 'data_exported', 'export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]);
     // Generate CSV content
     const generateCSV = (data, columns) => {
         const headers = columns.map(col => col.header).join(',');
         const rows = data.map(item => columns.map(col => {
             const value = item[col.key];
-            return typeof value === 'string' && value.includes(',') ? `"${value}"` : value;
-        }).join(','));
-        return [headers, ...rows].join('\n');
-    };
+            return typeof value === 'string' && value.includes(',') ? `"${value}"` : value}).join(','));
+        return [headers, ...rows].join('\n')};
     // Download CSV
     const downloadCSV = (content, filename) => {
         const blob = new Blob([content], { type: 'text/csv' });
@@ -155,27 +139,22 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         a.href = url;
         a.download = filename;
         a.click();
-        window.URL.revokeObjectURL(url);
-    };
+        window.URL.revokeObjectURL(url)};
     // Get sort icon
     const getSortIcon = (key) => {
         if (!enableSorting || sortConfig?.key !== key) {
-            return <ArrowUpDown className="w-4 h-4 text-gray-400"/>;
-        }
+            return <ArrowUpDown className="w-4 h-4 text-gray-400"/>}
         return sortConfig.direction === 'asc'
             ? <ChevronUp className="w-4 h-4 text-blue-500"/>
-            : <ChevronDown className="w-4 h-4 text-blue-500"/>;
-    };
+            : <ChevronDown className="w-4 h-4 text-blue-500"/>};
     // Render cell content
     const renderCell = (column, item, index) => {
         const value = item[column.key];
         if (column.render) {
-            return column.render(value, item, index);
-        }
+            return column.render(value, item, index)}
         return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>
         {value}
-      </span>);
-    };
+      </span>)};
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header Controls */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">
@@ -207,14 +186,50 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
         {/* Filters Panel */}
         <AnimatePresence>
-          {showFilters && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
+          {showFilters && (<motion.div initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}} exit = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}} className="mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
               <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {columns.filter(col => col.filterable !== false).map(column => (<div key={String(column.key)} className="space-y-2">
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                       {column.header}
                     </label>
-                    <select onChange={(e) => handleFilterChange(column.key, e.target.value, 'contains')} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                    <select onChange = {
+  (e) => handleFilterChange(column.key, e.target.value,
+  'contains')
+
+
+
+
+
+
+} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                       <option value="">No filter</option>
                       <option value="contains">Contains</option>
                       <option value="equals">Equals</option>
@@ -254,9 +269,45 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         {/* Table Body with Virtual Scrolling */}
         <div {...containerProps} className="relative">
           <div {...listProps}>
-            {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => onRowClick?.(item, index)}>
+            {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick = {
+  () => onRowClick?.(item,
+  index)
+
+
+
+
+
+
+}>
                 {enableSelection && (<div className="w-8 mr-2">
-                    <input type="checkbox" checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange={(e) => handleSelectionChange(item, e.target.checked)} onClick={(e) => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+                    <input type="checkbox" checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange = {
+  (e) => handleSelectionChange(item,
+  e.target.checked)
+
+
+
+
+
+
+} onClick={(e) => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
                   </div>)}
                 
                 {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>
@@ -287,7 +338,16 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             </div>
             
             <div className="flex items-center gap-2">
-              <button onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))} disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+              <button onClick = {
+  () => setCurrentPage(prev => Math.max(1,
+  prev - 1))
+
+
+
+
+
+
+} disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Previous
               </button>
               
@@ -297,14 +357,21 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         ? 'bg-blue-500 text-white'
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
                     {page}
-                  </button>);
-            })}
+                  </button>)})}
               
-              <button onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+              <button onClick = {
+  () => setCurrentPage(prev => Math.min(totalPages,
+  prev + 1))
+
+
+
+
+
+
+} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Next
               </button>
             </div>
           </div>
         </div>)}
-    </div>);
-};
+    </div>)};

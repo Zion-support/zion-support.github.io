@@ -1,329 +1,239 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronRight, 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Server, 
-  BarChart3, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  Settings, 
-  Star,
-  Atom,
-  Network,
-  Eye,
-  PenTool,
-  Globe,
-  Cpu,
-  Lock,
-  TrendingUp,
-  Rocket,
-  Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  Sun,
-  Moon,
-  Infinity,
-  ArrowRight,
-  DollarSign,
-  GitFork,
-  Briefcase,
-  Newspaper,
-  FileText,
-  Leaf,
-  Building,
-  Truck,
-  Mail,
-  Video,
-  Satellite,
-  TestTube,
-  Code,
+import {
+  Home,
+  Zap,
   Target,
+  Users,
+  FileText,
+  Phone,
+  ChevronRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  BarChart3,
+  Activity,
+  Globe,
+  Building,
+  Eye,
+  Cpu,
+  Cloud,
+  Network,
+  Server,
   GraduationCap,
-  Smartphone
+  HelpCircle,
+  Settings,
+  Menu,
+  X
 } from 'lucide-react';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+export function Sidebar() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>(['Main Navigation']);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
-
-  const navigationSections = [
+  const navigation = [
     {
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Users },
-        { name: 'Services', href: '/services', icon: Zap },
-        { name: 'Contact', href: '/contact', icon: MessageCircle },
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'Careers', href: '/careers', icon: Briefcase },
-        { name: 'Partners', href: '/partners', icon: Users },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle },
-        { name: 'Help Center', href: '/help', icon: HelpCircle }
-      ]
+      name: 'Home',
+      href: '/',
+      icon: Home,
+      description: 'Main dashboard and overview'
     },
     {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      items: [
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: GitFork },
-        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield },
-        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain },
-        { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: TrendingUp },
-        { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: FileText },
-        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle },
-        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
-        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
-        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield },
-        { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code },
-        { name: 'AI DevOps Automation Platform', href: '/services/ai-devops-automation-platform', icon: GitFork },
-        { name: 'AI Customer Experience Support', href: '/services/ai-customer-experience-support', icon: MessageCircle },
-        { name: 'AI Marketing Automation Personalization', href: '/services/ai-marketing-automation-personalization', icon: Target },
-        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
-        { name: 'AI Quantum Financial Trading', href: '/services/ai-quantum-financial-trading', icon: BarChart3 },
-        { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain', icon: Truck },
-        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield }
-      ]
-    },
-    {
-      title: 'Cloud & DevOps',
-      icon: Cloud,
-      items: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Server },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Building },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3 },
-        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart }
-      ]
-    },
-    {
-      title: 'Cybersecurity & Privacy',
-      icon: Shield,
-      items: [
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Lock },
-        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield },
-        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Eye },
-        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield }
-      ]
-    },
-    {
-      title: 'Digital Transformation',
+      name: 'Services',
+      href: '/services',
       icon: Zap,
-      items: [
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
-        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }
-      ]
-    },
-    {
-      title: 'Emerging Technologies',
-      icon: Atom,
-      items: [
+      description: 'Our technology services',
+      subItems: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
-        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Brain },
-        { name: 'Space Technology', href: '/space-tech', icon: Satellite }
-      ]
-    },
-    {
-      title: 'Data & Analytics',
-      icon: BarChart3,
-      items: [
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
-        { name: 'Business Intelligence', href: '/services/ai-business-intelligence-analytics', icon: TrendingUp }
+        { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }
       ]
     },
     {
-      title: 'Micro SaaS Solutions',
-      icon: ShoppingCart,
-      items: [
-        { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart },
-        { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle },
-        { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
-        { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle },
-        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
-        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle },
-        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail },
-        { name: 'Returns Management', href: '/services/returns-management', icon: Truck },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText }
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      description: 'Industry-specific solutions',
+      subItems: [
+        { name: 'Enterprise', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin', href: '/solutions/digital-twin', icon: Eye },
+        { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield }
       ]
     },
     {
-      title: 'Featured Services',
-      icon: Star,
-      items: [
-        { name: '2025 New Innovative Services', href: '/new-innovative-services-2025', icon: Star },
-        { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star },
-        { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star },
-        { name: '2029 Comprehensive Services Showcase', href: '/comprehensive-services-showcase-2029', icon: Star }
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      description: 'Company information',
+      subItems: [
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Users },
+        { name: 'Partners', href: '/partners', icon: Network },
+        { name: 'Press', href: '/press', icon: FileText }
       ]
     },
     {
-      title: 'Support & Resources',
-      icon: HelpCircle,
-      items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle },
-        { name: 'Documentation', href: '/documentation', icon: BookOpen },
-        { name: 'API Documentation', href: '/api-docs', icon: Code },
-        { name: 'Developer Portal', href: '/developer', icon: Cpu },
+      name: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      description: 'Documentation and support',
+      subItems: [
+        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Support', href: '/support', icon: HelpCircle },
         { name: 'Training', href: '/training', icon: GraduationCap },
-        { name: 'Webinars', href: '/webinars', icon: Video },
-        { name: 'White Papers', href: '/white-papers', icon: FileText }
+        { name: 'Helpdesk', href: '/help', icon: HelpCircle }
       ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone,
+      description: 'Get in touch with us'
     }
   ];
 
-  const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(href);
+  const isActive = (href: string) => location.pathname === href;
+
+  const toggleSection = (sectionName: string) => {
+    setActiveSection(activeSection === sectionName ? null : sectionName);
   };
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-          />
+    <motion.aside
+      className={`fixed left-0 top-16 h-full bg-gray-900/95 backdrop-blur-md border-r border-gray-700 transition-all duration-300 z-40 ${
+        isCollapsed ? 'w-16' : 'w-64'
+      }`}
+      initial={{ x: -256 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Toggle Button */}
+      <button
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className="absolute -right-3 top-6 bg-gray-800 border border-gray-600 rounded-full p-1 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+        aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+      >
+        {isCollapsed ? (
+          <ChevronRight className="w-4 h-4" />
+        ) : (
+          <ChevronRight className="w-4 h-4 rotate-180" />
+        )}
+      </button>
 
-          {/* Sidebar */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-cyan-400/20 shadow-2xl z-50 overflow-y-auto"
-          >
-            {/* Header */}
-            <div className="p-6 border-b border-cyan-400/20">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Zion Tech
-                  </span>
-                </div>
-                <button
-                  onClick={onClose}
-                  className="p-2 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-200"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Navigation Content */}
-            <div className="p-4 space-y-6">
-              {navigationSections.map((section) => (
-                <div key={section.title} className="space-y-3">
-                  {/* Section Header */}
+      {/* Navigation */}
+      <nav className="h-full overflow-y-auto py-6 px-4">
+        <div className="space-y-2">
+          {navigation.map((item) => (
+            <div key={item.name}>
+              {item.subItems ? (
+                <div>
                   <button
-                    onClick={() => toggleSection(section.title)}
-                    className="flex items-center justify-between w-full text-left group"
+                    onClick={() => toggleSection(item.name)}
+                    className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset ${
+                      isActive(item.href) || activeSection === item.name
+                        ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                    }`}
+                    aria-expanded={activeSection === item.name}
+                    title={!isCollapsed ? item.description : item.name}
                   >
-                    <div className="flex items-center space-x-2">
-                      <section.icon className="w-5 h-5 text-cyan-400" />
-                      <span className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
-                        {section.title}
-                      </span>
+                    <div className="flex items-center space-x-3">
+                      <item.icon className="w-5 h-5 flex-shrink-0" />
+                      {!isCollapsed && <span className="font-medium">{item.name}</span>}
                     </div>
-                    <ChevronRight 
-                      className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                        expandedSections.includes(section.title) ? 'rotate-90' : ''
-                      }`} 
-                    />
+                    {!isCollapsed && (
+                      <ChevronRight 
+                        className={`w-4 h-4 transition-transform ${activeSection === item.name ? 'rotate-90' : ''}`} 
+                      />
+                    )}
                   </button>
-
-                  {/* Section Items */}
+                  
                   <AnimatePresence>
-                    {expandedSections.includes(section.title) && (
+                    {activeSection === item.name && !isCollapsed && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="ml-6 space-y-1"
+                        className="ml-6 mt-2 space-y-1"
                       >
-                        {section.items.map((item) => (
+                        {item.subItems.map((subItem) => (
                           <Link
-                            key={item.name}
-                            to={item.href}
-                            onClick={onClose}
-                            className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
-                              isActive(item.href)
-                                ? 'bg-cyan-400/20 text-cyan-400 border border-cyan-400/30'
-                                : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10'
+                            key={subItem.name}
+                            to={subItem.href}
+                            className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset ${
+                              isActive(subItem.href)
+                                ? 'bg-cyan-500/10 text-cyan-400'
+                                : 'text-gray-400 hover:text-white hover:bg-gray-800/30'
                             }`}
+                            title={subItem.name}
                           >
-                            <item.icon className={`w-4 h-4 ${
-                              isActive(item.href) ? 'text-cyan-400' : 'text-gray-500 group-hover:text-cyan-400'
-                            }`} />
-                            <span className="text-sm font-medium">{item.name}</span>
-                            {isActive(item.href) && (
-                              <div className="ml-auto w-2 h-2 bg-cyan-400 rounded-full"></div>
-                            )}
+                            <subItem.icon className="w-4 h-4 flex-shrink-0" />
+                            <span className="truncate">{subItem.name}</span>
                           </Link>
                         ))}
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
-              ))}
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset ${
+                    isActive(item.href)
+                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                  }`}
+                  title={!isCollapsed ? item.description : item.name}
+                >
+                  <item.icon className="w-5 h-5 flex-shrink-0" />
+                  {!isCollapsed && <span className="font-medium">{item.name}</span>}
+                </Link>
+              )}
             </div>
+          ))}
+        </div>
 
-            {/* Footer */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-cyan-400/20 bg-zion-slate-dark/50 backdrop-blur-sm">
-              <div className="text-center text-sm text-gray-400">
-                <p>© 2024 Zion Tech Group</p>
-                <p className="text-xs mt-1">Innovation Hub</p>
-              </div>
+        {/* Quick Actions */}
+        {!isCollapsed && (
+          <div className="mt-8 pt-6 border-t border-gray-700">
+            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">
+              Quick Actions
+            </h3>
+            <div className="space-y-2">
+              <Link
+                to="/contact"
+                className="flex items-center space-x-3 px-3 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="font-medium">Get Started</span>
+              </Link>
+              <Link
+                to="/support"
+                className="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset"
+              >
+                <HelpCircle className="w-4 h-4" />
+                <span className="font-medium">Support</span>
+              </Link>
             </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+          </div>
+        )}
+      </nav>
+    </motion.aside>
   );
-};
+}

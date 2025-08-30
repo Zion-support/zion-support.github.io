@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  Cpu, 
-  Database, 
-  Network, 
-  Lock, 
-  TrendingUp, 
+import {
+  Rocket,
+  Brain,
+  Zap,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  TrendingUp,
   Users,
   ArrowRight,
   Star,
@@ -32,9 +32,9 @@ import {
   BarChart3,
   Globe2,
   ShieldCheck
-} from 'lucide-react';
+ } from 'lucide-react';
 
-const InnovativeServicesHub: React.FC = () => {
+const InnovativeServicesHub: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
       id: 'ultimate-2025',
@@ -43,7 +43,7 @@ const InnovativeServicesHub: React.FC = () => {
       icon: Rocket,
       color: 'from-blue-600 to-purple-600',
       route: '/ultimate-services-2025',
-      features: ['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],
+      features['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],
       stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
     },
     {
@@ -53,7 +53,7 @@ const InnovativeServicesHub: React.FC = () => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       route: '/advanced-services-2026',
-      features: ['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],
+      features['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],
       stats: { services: 10, avgROI: '1000%', innovation: 'Futuristic' }
     },
     {
@@ -63,7 +63,7 @@ const InnovativeServicesHub: React.FC = () => {
       icon: Server,
       color: 'from-green-600 to-teal-600',
       route: '/services',
-      features: ['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],
+      features['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],
       stats: { services: 15, avgROI: '300%', innovation: 'Enterprise' }
     },
     {
@@ -71,11 +71,19 @@ const InnovativeServicesHub: React.FC = () => {
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco-friendly technology solutions for a better future',
       icon: Globe,
+<<<<<<< HEAD
       color: 'from-emerald-600 to-green-600',
       route: '/green-it',
-      features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
+      features['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
       stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }
-    }
+    };
+=======;
+      color: 'from-emerald-600 to-green-600',;
+      route: '/green-it',;
+      features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],;
+      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' };
+    };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const featuredServices = [
@@ -96,40 +104,48 @@ const InnovativeServicesHub: React.FC = () => {
       delivery: '12 months'
     },
     {
-      title: 'Autonomous Space Mining System',
-      description: 'AI-powered space exploration and resource extraction',
-      category: 'Space Tech',
-      price: '$500,000',
-      roi: '2000%',
-      delivery: '18 months'
-    }
+      title: 'Autonomous Space Mining System',;
+      description: 'AI-powered space exploration and resource extraction',;
+      category: 'Space Tech',;
+      price: '$500,000',;
+      roi: '2000%',;
+      delivery: '18 months';
+    };
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
+  hidden: { y: 20,
+  opacity: 0 
+
+
+
+
+
+
+},
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0.5;
+      };
+    };
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <motion.div 
+      <motion.div
         className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -137,27 +153,108 @@ const InnovativeServicesHub: React.FC = () => {
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl font-bold text-white mb-6"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { y: -50,
+  opacity: 0 
+
+
+
+
+
+
+}}
+            animate = {
+  { y: 0,
+  opacity: 1 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+
+
+
+
+}}
           >
             Innovative Services Hub
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { y: 50,
+  opacity: 0 
+
+
+
+
+
+
+}}
+            animate = {
+  { y: 0,
+  opacity: 1 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+
+
+
+
+}}
           >
             Discover the future of technology with our comprehensive portfolio of innovative services
           </motion.p>
-          <motion.div 
+          <motion.div
             className="flex flex-wrap justify-center gap-4 text-sm"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial = {
+  { scale: 0.8,
+  opacity: 0 
+
+
+
+
+
+
+}}
+            animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+
+}}
           >
             <span className="px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-200">
               🚀 40+ Services
@@ -176,11 +273,38 @@ const InnovativeServicesHub: React.FC = () => {
       </motion.div>
 
       {/* Statistics Section */}
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 py-16"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+        transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+
+}}
       >
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
@@ -203,7 +327,7 @@ const InnovativeServicesHub: React.FC = () => {
       </motion.div>
 
       {/* Service Categories */}
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 py-16"
         variants={containerVariants}
         initial="hidden"
@@ -215,18 +339,35 @@ const InnovativeServicesHub: React.FC = () => {
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             From revolutionary AI to sustainable green technology, discover the perfect solution for your business
+<<<<<<< HEAD
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {serviceCategories.map((category) => {
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+          {serviceCategories.map((category)  => {;
+=======;
+          </p>;
+        </div>;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+          {serviceCategories.map((category) => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const IconComponent = category.icon;
             return (
               <motion.div
-                key={category.id}
+                key = {category.id}
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
@@ -274,18 +415,27 @@ const InnovativeServicesHub: React.FC = () => {
                 <a
                   href={category.route}
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
+<<<<<<< HEAD
                 >
                   Explore {category.title}
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </motion.div>
+            )})};
+=======;
+                >;
+                  Explore {category.title};
+                  <ArrowRight className="w-5 h-5" />;
+                </a>;
+              </motion.div>;
             );
           })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
       </motion.div>
 
       {/* Featured Services */}
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 py-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -300,24 +450,60 @@ const InnovativeServicesHub: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {featuredServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
+          {featuredServices.map((service, index)  => (
             <motion.div
               key={index}
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.4 + index * 0.1 
+
+
+
+
+
+
+}}
+              whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
             >
               <div className="flex items-center gap-2 mb-3">
                 <Star className="w-5 h-5 text-yellow-400 fill-current" />
                 <span className="text-sm text-yellow-400 font-medium">Featured</span>
               </div>
-              
+
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
               <p className="text-slate-300 text-sm mb-4">{service.description}</p>
-              
+
               <div className="space-y-2 mb-4">
                 <div className="flex justify-between text-sm">
                   <span className="text-slate-400">Category:</span>
@@ -346,11 +532,38 @@ const InnovativeServicesHub: React.FC = () => {
       </motion.div>
 
       {/* Contact Section */}
-      <motion.div 
+      <motion.div
         className="bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20 border-t border-slate-700/50"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.6 }}
+        initial = {
+  { opacity: 0,
+  y: 50 
+
+
+
+
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+        transition = {
+  { duration: 0.8,
+  delay: 1.6 
+
+
+
+
+
+
+}}
       >
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
@@ -358,7 +571,7 @@ const InnovativeServicesHub: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our team of innovation experts is ready to help you implement these cutting-edge solutions. 
+              Our team of innovation experts is ready to help you implement these cutting-edge solutions.
               Get in touch today to start your journey into the future of technology.
             </p>
           </div>
@@ -402,12 +615,21 @@ const InnovativeServicesHub: React.FC = () => {
             >
               Visit Our Website
               <ExternalLink className="w-5 h-5" />
+<<<<<<< HEAD
             </a>
           </div>
         </div>
-      </motion.div>
-    </div>
+      </motion.div>;
+    </div>;
+  )};
+=======
+            </a>;
+          </div>;
+        </div>;
+      </motion.div>;
+    </div>;
   );
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InnovativeServicesHub;

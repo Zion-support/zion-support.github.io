@@ -3,7 +3,15 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
     const cardVariants = {
-        hidden: { opacity: 0, y: 20, scale: 0.95 },
+  hidden: { opacity: 0, y: 20,
+  scale: 0.95 
+
+
+
+
+
+
+},
         visible: {
             opacity: 1,
             y: 0,
@@ -23,7 +31,15 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         }
     };
     const iconVariants = {
-        hidden: { scale: 0.8, opacity: 0 },
+  hidden: { scale: 0.8,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             scale: 1,
             opacity: 1,
@@ -34,7 +50,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         },
         hover: {
             scale: 1.2,
-            rotate: [0, -10, 10, 0],
+            rotate[0, -10, 10, 0],
             transition: {
                 duration: 0.6,
                 ease: "easeInOut"
@@ -42,16 +58,31 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         }
     };
     const featureVariants = {
-        hover: {
+  hover: {
             x: 5,
             transition: {
                 duration: 0.3,
-                ease: "easeOut"
-            }
+  ease: "easeOut"
+            
+
+
+
+
+
+
+}
         }
     };
     const badgeVariants = {
-        hidden: { scale: 0, opacity: 0 },
+  hidden: { scale: 0,
+  opacity: 0 
+
+
+
+
+
+
+},
         visible: {
             scale: 1,
             opacity: 1,
@@ -63,14 +94,50 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     };
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">
       {/* Enhanced Popular Badge */}
-      {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2, type: "spring", stiffness: 300 }}>
+      {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
+  { delay: 0.2, type: "spring",
+  stiffness: 300 
+
+
+
+
+
+
+}}>
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
             ⭐ Most Popular
           </div>
         </motion.div>)}
 
       {/* Enhanced New Badge */}
-      {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial={{ scale: 0, rotate: -180 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 0.3, type: "spring", stiffness: 300 }}>
+      {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial = {
+  { scale: 0,
+  rotate: -180 
+
+
+
+
+
+
+}} animate = {
+  { scale: 1,
+  rotate: 0 
+
+
+
+
+
+
+}} transition = {
+  { delay: 0.3, type: "spring",
+  stiffness: 300 
+
+
+
+
+
+
+}}>
           <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">
             🆕 New
           </div>
@@ -81,7 +148,37 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(34,221,210,0.05)_25%,rgba(34,221,210,0.05)_50%,transparent_50%,transparent_75%,rgba(34,221,210,0.05)_75%)] bg-[size:20px_20px] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse"/>
         
         {/* Enhanced Icon with Floating Animation */}
-        <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
+<<<<<<< HEAD
+        <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
+  { y[0, -5,
+  0] 
+
+}} transition = {
+  { duration: 3, repeat: Infinity,
+  ease: "easeInOut" 
+
+}}>
+=======
+        <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
+  { y: [0, -5,
+  0] 
+
+
+
+
+
+
+}} transition = {
+  { duration: 3, repeat: Infinity,
+  ease: "easeInOut" 
+
+
+
+
+
+
+}}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           {icon}
         </motion.div>
 
@@ -126,7 +223,37 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
           <div className="text-center">
             <Link to={href} className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 via-zion-blue/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 rounded-xl text-sm font-medium hover:from-zion-cyan/30 hover:via-zion-blue/30 hover:to-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-zion-glow hover:scale-105">
               <span>Learn More</span>
-              <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate={{ x: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+<<<<<<< HEAD
+              <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
+  { x[0, 5,
+  0] 
+
+}} transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+}}>
+=======
+              <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
+  { x: [0, 5,
+  0] 
+
+
+
+
+
+
+}} transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+
+
+
+
+
+}}>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 →
               </motion.span>
             </Link>
@@ -149,6 +276,5 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-200"/>
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>
       </div>
-    </motion.div>);
-};
+    </motion.div>)};
 export default ServiceCard;

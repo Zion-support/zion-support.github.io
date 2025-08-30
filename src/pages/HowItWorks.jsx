@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -88,7 +88,7 @@ export default function HowItWorks() {
         {
             title: "For Clients",
             icon: Users,
-            benefits: [
+            benefits[
                 "Access to verified, skilled professionals",
                 "AI-powered matching for better results",
                 "Secure payment protection",
@@ -99,7 +99,7 @@ export default function HowItWorks() {
         {
             title: "For Talent",
             icon: Briefcase,
-            benefits: [
+            benefits[
                 "Global client opportunities",
                 "Flexible work arrangements",
                 "Secure payment processing",
@@ -248,5 +248,4 @@ export default function HowItWorks() {
           </div>
         </div>
       </main>
-    </>);
-}
+    </>)}

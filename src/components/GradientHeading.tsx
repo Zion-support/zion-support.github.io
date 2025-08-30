@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '@/lib/utils';
 
 interface GradientHeadingProps {
   children: React.ReactNode;
@@ -6,16 +7,23 @@ interface GradientHeadingProps {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
-export const GradientHeading: React.FC<GradientHeadingProps> = ({ 
-  children, 
-  className = '', 
-  as: Component = 'h2' 
-}) => {
-  return (
-    <Component 
-      className={`bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent ${className}`}
-    >
-      {children}
-    </Component>
-  );
-};
+const GradientHeading = React.forwardRef<HTMLHeadingElement, GradientHeadingProps>(
+  ({ children, className, as: Component = 'h2', ...props }, ref) => {
+    return (
+      <Component
+        ref={ref}
+        className={cn(
+          'font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent',
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </Component>
+    );
+  }
+);
+
+GradientHeading.displayName = 'GradientHeading';
+
+export { GradientHeading };

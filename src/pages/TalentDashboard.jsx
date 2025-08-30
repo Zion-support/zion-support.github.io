@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
@@ -164,7 +164,7 @@ function TalentDashboardContent() {
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
-                      You haven't saved any jobs yet.
+                      You haven't saved  jobs yet.
                     </p>
                     <Button className="mt-4" asChild>
                       <Link href="/jobs">Browse Jobs</Link>
@@ -177,10 +177,8 @@ function TalentDashboardContent() {
         </div>
       </main>
       
-    </>);
-}
+    </>)}
 export default function TalentDashboard() {
     return (<ProtectedRoute>
       <TalentDashboardContent />
-    </ProtectedRoute>);
-}
+    </ProtectedRoute>)}

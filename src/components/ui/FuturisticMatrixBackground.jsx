@@ -11,8 +11,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         // Set canvas size
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
+            canvas.height = window.innerHeight};
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Matrix characters
@@ -23,8 +22,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         const drops = [];
         // Initialize drops
         for (let i = 0; i < columns; i++) {
-            drops[i] = 1;
-        }
+            drops[i] = 1}
         // Animation variables
         let animationId;
         let frameCount = 0;
@@ -49,18 +47,14 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
                 ctx.shadowBlur = 0;
                 // Reset drop to top when it reaches bottom
                 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
+                    drops[i] = 0}
                 // Move drop down
-                drops[i]++;
-            }
+                drops[i]++}
             // Add floating particles for high intensity
             if (intensity === 'high') {
-                drawFloatingParticles(ctx, frameCount);
-            }
+                drawFloatingParticles(ctx, frameCount)}
             frameCount++;
-            animationId = requestAnimationFrame(draw);
-        };
+            animationId = requestAnimationFrame(draw)};
         const drawFloatingParticles = (ctx, frame) => {
             const particleCount = 20;
             for (let i = 0; i < particleCount; i++) {
@@ -70,19 +64,38 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
                 ctx.beginPath();
                 ctx.arc(x, y, size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(0, 255, 136, ${0.3 + Math.sin(frame * 0.01 + i) * 0.2})`;
-                ctx.fill();
-            }
+                ctx.fill()}
         };
         // Start animation
         draw();
         // Cleanup
         return () => {
             window.removeEventListener('resize', resizeCanvas);
+<<<<<<< HEAD
+            cancelAnimationFrame(animationId)}}, [intensity, color, speed]);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%)'
+        
+
+}}/>)};
+=======
             cancelAnimationFrame(animationId);
         };
     }, [intensity, color, speed]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-        }}/>);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%)'
+        
+
+
+
+
+
+
+}}/>);
 };
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default FuturisticMatrixBackground;

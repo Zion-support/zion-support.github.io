@@ -1,27 +1,29 @@
-import React from 'react';
+import React from 'react.ts';
 
-interface AlertProps {
+interface AlertProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
-export function Alert({ children, className = '' }: AlertProps) {
-  return (
-    <div className={`relative w-full rounded-lg border p-4 ${className}`}>
-      {children}
-    </div>
+<<<<<<< HEAD
+export function Alert({ children, className = '' }: AlertProps) {;
+  return (;
+    <div className={`relative w-full rounded-lg border p-4 ${className}`}>;
+      {children};
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-interface AlertDescriptionProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
-export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
-  return (
-    <div className={`text-sm ${className}`}>
-      {children}
-    </div>
+<<<<<<< HEAD
+export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {;
+  return (;
+    <div className={`text-sm ${className}`}>;
+      {children};
+    </div>;
   );
 }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

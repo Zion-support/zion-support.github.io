@@ -11,9 +11,7 @@ export interface FuturisticAiService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const futuristicAIServices2029: FuturisticAiService2029[] = [
   {
     id: "2029-futuristic-ai",
@@ -21,7 +19,7 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [
     tagline: "Futuristic AI for 2029",
     price: "$499/month",
     description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
-    features: [
+    features[
       "Futuristic AI",
       "Advanced capabilities",
       "Breakthrough algorithms",
