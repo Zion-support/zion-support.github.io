@@ -58,6 +58,7 @@ export function Header() {
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
         { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
         { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'Innovative Services 2025', href: '/innovative-services-2025', icon: Sparkles },
         { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]
     },
@@ -309,13 +310,25 @@ export function Header() {
               ))}
               
               {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-700">
+              <div className="pt-4 border-t border-gray-700 space-y-4">
                 <Link
                   to="/contact"
                   className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 >
                   Get Started
                 </Link>
+                
+                {/* Mobile Contact Info */}
+                <div className="text-center space-y-2">
+                  <div className="flex items-center justify-center space-x-2 text-gray-400 text-sm">
+                    <Phone className="w-4 h-4" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2 text-gray-400 text-sm">
+                    <Mail className="w-4 h-4" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

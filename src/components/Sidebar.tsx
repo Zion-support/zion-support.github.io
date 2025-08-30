@@ -54,7 +54,9 @@ export function Sidebar() {
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Innovative Services 2025', href: '/innovative-services-2025', icon: Sparkles },
+        { name: 'Pricing Guide', href: '/pricing', icon: DollarSign }
       ]
     },
     {

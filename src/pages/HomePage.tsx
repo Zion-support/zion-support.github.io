@@ -70,34 +70,34 @@ export function HomePage() {
 
   const services = [
     {
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
+      title: 'AI Business Intelligence',
+      description: 'Transform your data into actionable insights with AI-powered analytics',
       icon: Brain,
-      href: '/services/ai-solutions',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      href: '/innovative-services-2025',
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'AI-powered Insights', 'Automated Reporting'],
       color: 'from-cyan-500 to-blue-600'
     },
     {
-      title: 'Quantum Computing',
-      description: 'Harness the power of quantum mechanics for unprecedented computational capabilities',
+      title: 'Quantum AI Trading',
+      description: 'Revolutionary trading platform combining quantum computing with AI',
       icon: Atom,
-      href: '/services/quantum-computing',
-      features: ['Quantum Algorithms', 'Quantum AI Hybrid', 'Quantum Security', 'Quantum Optimization'],
+      href: '/innovative-services-2025',
+      features: ['Quantum Algorithms', 'AI Market Prediction', 'Risk Management', 'Portfolio Optimization'],
       color: 'from-purple-500 to-pink-600'
     },
     {
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with AI-powered security solutions',
+      title: 'AI Cybersecurity Suite',
+      description: 'Comprehensive AI-powered security with threat detection and response',
       icon: Shield,
-      href: '/services/cybersecurity',
-      features: ['Zero Trust Security', 'AI Threat Detection', 'Security Headers', 'Compliance Management'],
+      href: '/innovative-services-2025',
+      features: ['AI Threat Detection', 'Zero-day Prevention', 'Incident Response', 'Compliance Management'],
       color: 'from-green-500 to-emerald-600'
     },
     {
-      title: 'Digital Transformation',
-      description: 'Modernize your infrastructure and processes for the digital age',
-      icon: Rocket,
-      href: '/services/digital-transformation',
+      title: 'Digital Twin Platform',
+      description: 'Create virtual replicas for real-time monitoring and optimization',
+      icon: Eye,
+      href: '/innovative-services-2025',
       features: ['Cloud Migration', 'DevOps Automation', 'API Development', 'Data Analytics'],
       color: 'from-orange-500 to-red-600'
     }
@@ -275,6 +275,61 @@ export function HomePage() {
             >
               <span>Get Early Access</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* New Services CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Discover Our Latest Innovative Services
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                Explore our cutting-edge micro SaaS solutions that combine AI, quantum computing, and emerging technologies 
+                to transform your business operations and drive innovation.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <div className="flex items-center space-x-2 text-cyan-400">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>AI-Powered Solutions</span>
+                </div>
+                <div className="flex items-center space-x-2 text-purple-400">
+                  <Atom className="w-5 h-5" />
+                  <span>Quantum Computing</span>
+                </div>
+                <div className="flex items-center space-x-2 text-green-400">
+                  <Shield className="w-5 h-5" />
+                  <span>Advanced Security</span>
+                </div>
+                <div className="flex items-center space-x-2 text-blue-400">
+                  <Rocket className="w-5 h-5" />
+                  <span>Space Technology</span>
+                </div>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  to="/innovative-services-2025"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 text-lg"
+                >
+                  Explore All Services
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </Link>
+                <Link
+                  to="/pricing"
+                  className="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+                >
+                  View Pricing
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -43,7 +43,7 @@ import {
   Hammer,
   Screwdriver
 } from 'lucide-react';
-import { COMPREHENSIVE_PRICING_GUIDE_2025, SPECIAL_PRICING_PACKAGES, CONTACT_INFORMATION } from '../data/comprehensivePricingGuide2025';
+import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
 export function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
