@@ -271,6 +271,40 @@ module.exports = {
       log_file: './logs/smart-testing-automation.log',
       error_file: './logs/smart-testing-automation-error.log',
       out_file: './logs/smart-testing-automation-out.log'
+    },
+
+    // NEW: Unified Automation Dashboard
+    {
+      name: 'unified-automation-dashboard',
+      script: './scripts/automation/unified-automation-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development'
+      },
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      log_file: './logs/unified-automation-dashboard.log',
+      error_file: './logs/unified-automation-dashboard-error.log',
+      out_file: './logs/unified-automation-dashboard-out.log'
+    },
+
+    // NEW: Intelligent Conflict Resolver
+    {
+      name: 'intelligent-conflict-resolver',
+      script: './scripts/automation/intelligent-conflict-resolver.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development'
+      },
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      log_file: './logs/intelligent-conflict-resolver.log',
+      error_file: './logs/intelligent-conflict-resolver-error.log',
+      out_file: './logs/intelligent-conflict-resolver-out.log'
     }
   ],
 
