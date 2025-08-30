@@ -619,3 +619,377 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     marketSize: "$86.1 billion by 2027"
   }
 ];
+
+// New Innovative IT Services for 2025
+export const newInnovativeITServices2025: InnovativeITService[] = [
+  {
+    id: 'cloud-native-application-development',
+    title: 'Cloud-Native Application Development',
+    description: 'End-to-end cloud-native application development services using modern technologies like Kubernetes, Docker, and serverless architectures.',
+    category: 'Cloud & DevOps',
+    subcategory: 'Application Development',
+    price: 8500,
+    currency: '$',
+    pricingModel: 'project',
+    features: [
+      'Microservices architecture design',
+      'Container orchestration with Kubernetes',
+      'Serverless function development',
+      'CI/CD pipeline automation',
+      'Cloud infrastructure as code',
+      'Performance optimization',
+      'Security best practices',
+      'Monitoring and observability'
+    ],
+    benefits: [
+      'Faster time to market',
+      'Scalable and resilient applications',
+      'Reduced infrastructure costs',
+      'Better resource utilization',
+      'Easier maintenance and updates'
+    ],
+    useCases: [
+      'Software development',
+      'Web application deployment',
+      'Mobile app development',
+      'Microservices architecture',
+      'Cloud-native applications'
+    ],
+    targetAudience: [
+      'Startups',
+      'Enterprise',
+      'SaaS Companies',
+      'Digital Agencies',
+      'Tech Companies'
+    ],
+    tags: ['Cloud Native', 'DevOps', 'Microservices', 'Kubernetes', 'Docker'],
+    estimatedDelivery: '12-20 weeks',
+    supportLevel: 'professional',
+    marketPrice: '$8,500 - $15,000/project',
+    roi: '200-400%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/cloud-native-application-development'
+    },
+    technicalSpecs: {
+      technology: ['Kubernetes', 'Docker', 'Serverless', 'CI/CD', 'Cloud Infrastructure as Code'],
+      integrations: ['Cloud platforms', 'Container orchestration', 'CI/CD tools', 'Monitoring systems'],
+      apiEndpoints: 100,
+      uptime: '99.9%',
+      security: ['SOC 2', 'ISO 27001', 'Zero-trust architecture', 'API security']
+    },
+    competitors: ['Thoughtworks', 'Slalom', 'Accenture'],
+    marketSize: '$22B cloud development market',
+    growthRate: '38% CAGR',
+    implementationTime: '12-20 weeks',
+    trialDays: 0,
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/cloud-native-application-development'
+    },
+    link: 'https://ziontechgroup.com/services/cloud-native-application-development',
+    icon: '☁️',
+    color: 'from-blue-600 to-indigo-700',
+    popular: true,
+    featured: true
+  },
+  {
+    id: 'cybersecurity-compliance-automation',
+    title: 'Cybersecurity Compliance Automation',
+    description: 'Comprehensive cybersecurity platform that automates compliance monitoring, risk assessment, and security controls for various regulatory frameworks.',
+    category: 'Cybersecurity',
+    subcategory: 'Compliance Automation',
+    price: 4800,
+    currency: '$',
+    pricingModel: 'month',
+    features: [
+      'Automated compliance monitoring',
+      'Risk assessment automation',
+      'Security control validation',
+      'Incident response automation',
+      'Vulnerability management',
+      'Compliance reporting',
+      'Audit trail management',
+      'Real-time threat detection'
+    ],
+    benefits: [
+      'Reduce compliance costs by 50%',
+      'Automate security controls',
+      'Real-time risk monitoring',
+      'Simplified audit processes',
+      'Proactive threat prevention'
+    ],
+    useCases: [
+      'Financial Services',
+      'Healthcare',
+      'Government',
+      'Manufacturing',
+      'Technology'
+    ],
+    targetAudience: [
+      'Manufacturing companies',
+      'Healthcare providers',
+      'Government agencies',
+      'Financial institutions',
+      'Technology companies'
+    ],
+    tags: ['Cybersecurity', 'Compliance', 'Risk Management', 'Vulnerability Management', 'Incident Response'],
+    estimatedDelivery: '8-12 weeks',
+    supportLevel: 'professional',
+    marketPrice: '$4,800 - $10,000/month',
+    roi: '200-400%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/cybersecurity-compliance-automation'
+    },
+    technicalSpecs: {
+      technology: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Zero-trust architecture', 'Security Information and Event Management (SIEM)'],
+      integrations: ['Identity providers', 'SIEM systems', 'Cloud platforms', 'Network devices', 'Vulnerability scanners'],
+      apiEndpoints: 150,
+      uptime: '99.9%',
+      security: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Zero-trust architecture']
+    },
+    competitors: ['Qualys', 'Rapid7', 'Tenable'],
+    marketSize: '$28B cybersecurity market',
+    growthRate: '42% CAGR',
+    implementationTime: '8-12 weeks',
+    trialDays: 30,
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/cybersecurity-compliance-automation'
+    },
+    link: 'https://ziontechgroup.com/services/cybersecurity-compliance-automation',
+    icon: '🔒',
+    color: 'from-red-600 to-pink-700',
+    popular: true,
+    new: true
+  },
+  {
+    id: 'data-engineering-platform',
+    title: 'Data Engineering Platform',
+    description: 'Comprehensive data engineering platform that handles data ingestion, processing, storage, and analytics with modern data stack technologies.',
+    category: 'Data & Analytics',
+    subcategory: 'Data Engineering',
+    price: 6200,
+    currency: '$',
+    pricingModel: 'month',
+    features: [
+      'Data pipeline automation',
+      'Real-time data processing',
+      'Data warehouse optimization',
+      'ETL/ELT automation',
+      'Data quality monitoring',
+      'Advanced analytics integration',
+      'Machine learning pipeline support',
+      'Data governance and security'
+    ],
+    benefits: [
+      'Faster data insights delivery',
+      'Improved data quality',
+      'Reduced data processing costs',
+      'Scalable data infrastructure',
+      'Better decision making'
+    ],
+    useCases: [
+      'Enterprise',
+      'E-commerce',
+      'Financial Services',
+      'Healthcare',
+      'Manufacturing'
+    ],
+    targetAudience: [
+      'Manufacturing companies',
+      'Healthcare providers',
+      'Financial institutions',
+      'E-commerce companies',
+      'Technology companies'
+    ],
+    tags: ['Data Engineering', 'Data Pipeline', 'ETL/ELT', 'Data Warehouse', 'Machine Learning'],
+    estimatedDelivery: '10-16 weeks',
+    supportLevel: 'professional',
+    marketPrice: '$6,200 - $12,000/month',
+    roi: '200-400%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/data-engineering-platform'
+    },
+    technicalSpecs: {
+      technology: ['Kubernetes', 'Docker', 'Spark', 'Hadoop', 'PostgreSQL', 'Redis'],
+      integrations: ['Cloud platforms', 'Storage systems', 'Analytics tools', 'Security systems'],
+      apiEndpoints: 200,
+      uptime: '99.9%',
+      security: ['SOC 2', 'ISO 27001', 'Encryption', 'Access control']
+    },
+    competitors: ['Databricks', 'Snowflake', 'Fivetran'],
+    marketSize: '$32B data engineering market',
+    growthRate: '45% CAGR',
+    implementationTime: '10-16 weeks',
+    trialDays: 30,
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/data-engineering-platform'
+    },
+    link: 'https://ziontechgroup.com/services/data-engineering-platform',
+    icon: '📊',
+    color: 'from-green-600 to-emerald-700',
+    popular: true,
+    featured: true
+  },
+  {
+    id: 'edge-computing-solutions',
+    title: 'Edge Computing Solutions',
+    description: 'Advanced edge computing solutions that bring computation closer to data sources for faster processing and reduced latency in IoT applications.',
+    category: 'Emerging Tech',
+    subcategory: 'Edge Computing',
+    price: 7500,
+    currency: '$',
+    pricingModel: 'month',
+    features: [
+      'Edge device management',
+      'Real-time data processing',
+      'IoT integration capabilities',
+      'Edge AI deployment',
+      'Low-latency applications',
+      'Distributed computing',
+      'Edge security',
+      'Performance monitoring'
+    ],
+    benefits: [
+      'Reduced latency by 80%',
+      'Lower bandwidth costs',
+      'Improved reliability',
+      'Real-time decision making',
+      'Scalable IoT solutions'
+    ],
+    useCases: [
+      'Manufacturing',
+      'Healthcare',
+      'Transportation',
+      'Smart Cities',
+      'Retail'
+    ],
+    targetAudience: [
+      'Manufacturing companies',
+      'Healthcare providers',
+      'Transportation companies',
+      'Smart city operators',
+      'Retail businesses'
+    ],
+    tags: ['Edge Computing', 'IoT', 'Real-time', 'AI', 'Distributed Computing'],
+    estimatedDelivery: '12-18 weeks',
+    supportLevel: 'professional',
+    marketPrice: '$7,500 - $15,000/month',
+    roi: '200-400%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/edge-computing-solutions'
+    },
+    technicalSpecs: {
+      technology: ['Kubernetes', 'Docker', 'Python', 'React', 'Node.js'],
+      integrations: ['IoT protocols', 'Cloud platforms', 'Analytics tools', 'Security systems'],
+      apiEndpoints: 100,
+      uptime: '99.9%',
+      security: ['SOC 2', 'ISO 27001', 'Edge security', 'Device authentication']
+    },
+    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT'],
+    marketSize: '$18B edge computing market',
+    growthRate: '35% CAGR',
+    implementationTime: '12-18 weeks',
+    trialDays: 30,
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/edge-computing-solutions'
+    },
+    link: 'https://ziontechgroup.com/services/edge-computing-solutions',
+    icon: '🌐',
+    color: 'from-purple-600 to-violet-700',
+    popular: true,
+    new: true
+  },
+  {
+    id: 'quantum-computing-services',
+    title: 'Quantum Computing Services',
+    description: 'Advanced quantum computing services that leverage quantum algorithms to solve complex optimization, cryptography, and scientific research problems.',
+    category: 'Emerging Tech',
+    subcategory: 'Quantum Computing',
+    price: 12000,
+    currency: '$',
+    pricingModel: 'month',
+    features: [
+      'Quantum algorithm development',
+      'Quantum software optimization',
+      'Hybrid quantum-classical computing',
+      'Quantum cryptography',
+      'Scientific research support',
+      'Financial modeling',
+      'Drug discovery optimization',
+      'Climate modeling'
+    ],
+    benefits: [
+      'Exponential speedup for complex problems',
+      'Revolutionary scientific breakthroughs',
+      'Unbreakable encryption',
+      'Competitive advantage',
+      'Future-proof technology'
+    ],
+    useCases: [
+      'Research Institutions',
+      'Financial Services',
+      'Pharmaceutical',
+      'Government',
+      'Technology'
+    ],
+    targetAudience: [
+      'Research Institutions',
+      'Financial Services',
+      'Pharmaceutical companies',
+      'Government agencies',
+      'Technology companies'
+    ],
+    tags: ['Quantum Computing', 'Quantum Algorithms', 'Cryptography', 'Scientific Research', 'Financial Modeling'],
+    estimatedDelivery: '16-24 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$12,000 - $20,000/month',
+    roi: '300-500%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/quantum-computing-services'
+    },
+    technicalSpecs: {
+      technology: ['Unity3D', 'Unreal Engine', 'Python', 'React', 'Node.js'],
+      integrations: ['IoT platforms', 'CAD software', 'PLM systems', 'Analytics tools'],
+      apiEndpoints: 100,
+      uptime: '99.9%',
+      security: ['SOC 2', 'ISO 27001', 'Data encryption', 'Access control']
+    },
+    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum'],
+    marketSize: '$8B quantum computing market',
+    growthRate: '50% CAGR',
+    implementationTime: '16-24 weeks',
+    trialDays: 30,
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/quantum-computing-services'
+    },
+    link: 'https://ziontechgroup.com/services/quantum-computing-services',
+    icon: '⚛️',
+    color: 'from-indigo-600 to-purple-700',
+    popular: true,
+    featured: true
+  }
+];

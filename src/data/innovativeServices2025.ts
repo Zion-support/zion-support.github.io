@@ -765,3 +765,222 @@ export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
   "Updates": "Regular feature updates and security patches included",
   "Training": "Comprehensive onboarding and training included"
 };
+
+// New Innovative AI Services for 2025
+export const newInnovativeAIServices2025: InnovativeAIService[] = [
+  {
+    id: 'ai-enterprise-workflow-automation',
+    name: 'AI Enterprise Workflow Automation',
+    tagline: 'Intelligent workflow orchestration for enterprise operations',
+    description: 'Advanced AI-powered platform that automates complex enterprise workflows, integrates with existing systems, and provides intelligent decision-making capabilities.',
+    category: 'AI & Machine Learning',
+    price: '$3,500',
+    billing: 'month',
+    features: [
+      'Multi-system integration capabilities',
+      'Intelligent workflow routing',
+      'Predictive process optimization',
+      'Real-time performance monitoring',
+      'Custom automation rules engine',
+      'API-first architecture',
+      'Advanced analytics dashboard',
+      'Compliance and audit trails'
+    ],
+    benefits: [
+      'Reduce manual processes by 70%',
+      'Improve operational efficiency by 45%',
+      '24/7 automated operations',
+      'Scalable enterprise solution',
+      'ROI within 3 months'
+    ],
+    targetAudience: ['Enterprise', 'Large Corporations', 'Manufacturing', 'Healthcare', 'Financial Services'],
+    marketPosition: 'Leading enterprise workflow automation platform with AI intelligence',
+    competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism'],
+    marketSize: '$15B workflow automation market',
+    growthRate: '30% CAGR',
+    implementationTime: '6-8 weeks',
+    trialDays: 30,
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    link: 'https://ziontechgroup.com/services/ai-enterprise-workflow-automation',
+    icon: '⚡',
+    color: 'from-blue-600 to-cyan-700',
+    popular: true,
+    featured: true
+  },
+  {
+    id: 'ai-customer-experience-platform',
+    name: 'AI Customer Experience Platform',
+    tagline: '360-degree customer experience optimization with AI',
+    description: 'Comprehensive AI platform that analyzes customer behavior, predicts needs, and delivers personalized experiences across all touchpoints.',
+    category: 'AI & Machine Learning',
+    price: '$2,800',
+    billing: 'month',
+    features: [
+      'Customer behavior analytics',
+      'Predictive customer insights',
+      'Personalized recommendations',
+      'Multi-channel integration',
+      'Sentiment analysis',
+      'Customer journey mapping',
+      'A/B testing automation',
+      'Real-time personalization'
+    ],
+    benefits: [
+      'Increase customer satisfaction by 35%',
+      'Boost conversion rates by 25%',
+      'Reduce customer churn by 40%',
+      'Improve customer lifetime value',
+      'Data-driven decision making'
+    ],
+    targetAudience: ['E-commerce', 'Retail', 'SaaS Companies', 'Financial Services', 'Healthcare'],
+    marketPosition: 'Advanced customer experience platform with AI-powered insights',
+    competitors: ['Segment', 'Mixpanel', 'Amplitude'],
+    marketSize: '$12B customer experience market',
+    growthRate: '28% CAGR',
+    implementationTime: '4-6 weeks',
+    trialDays: 30,
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    link: 'https://ziontechgroup.com/services/ai-customer-experience-platform',
+    icon: '🎯',
+    color: 'from-green-600 to-emerald-700',
+    popular: true,
+    new: true
+  },
+  {
+    id: 'ai-supply-chain-optimization',
+    name: 'AI Supply Chain Optimization',
+    tagline: 'Intelligent supply chain management and optimization',
+    description: 'AI-powered platform that optimizes supply chain operations, predicts demand, manages inventory, and reduces costs through intelligent automation.',
+    category: 'AI & Machine Learning',
+    price: '$4,200',
+    billing: 'month',
+    features: [
+      'Demand forecasting algorithms',
+      'Inventory optimization',
+      'Route optimization',
+      'Supplier performance analytics',
+      'Risk assessment and mitigation',
+      'Real-time tracking and monitoring',
+      'Cost optimization analysis',
+      'Sustainability metrics'
+    ],
+    benefits: [
+      'Reduce inventory costs by 30%',
+      'Improve delivery times by 25%',
+      'Optimize supplier relationships',
+      'Reduce supply chain risks',
+      'Increase operational efficiency'
+    ],
+    targetAudience: ['Manufacturing', 'Retail', 'Logistics', 'E-commerce', 'Distribution'],
+    marketPosition: 'Comprehensive supply chain optimization with AI intelligence',
+    competitors: ['SAP', 'Oracle', 'Manhattan Associates'],
+    marketSize: '$18B supply chain management market',
+    growthRate: '32% CAGR',
+    implementationTime: '8-10 weeks',
+    trialDays: 30,
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization',
+    icon: '🚚',
+    color: 'from-orange-600 to-red-700',
+    popular: true,
+    featured: true
+  },
+  {
+    id: 'ai-financial-risk-management',
+    name: 'AI Financial Risk Management',
+    tagline: 'Intelligent financial risk assessment and mitigation',
+    description: 'Advanced AI platform that analyzes financial data, identifies risks, and provides predictive insights for better financial decision-making.',
+    category: 'AI & Machine Learning',
+    price: '$5,500',
+    billing: 'month',
+    features: [
+      'Real-time risk assessment',
+      'Predictive risk modeling',
+      'Portfolio optimization',
+      'Fraud detection algorithms',
+      'Regulatory compliance monitoring',
+      'Stress testing scenarios',
+      'Market trend analysis',
+      'Risk reporting dashboard'
+    ],
+    benefits: [
+      'Reduce financial risks by 40%',
+      'Improve investment returns by 20%',
+      'Compliance automation',
+      'Real-time risk monitoring',
+      'Data-driven decisions'
+    ],
+    targetAudience: ['Banks', 'Investment Firms', 'Insurance Companies', 'Hedge Funds', 'Financial Advisors'],
+    marketPosition: 'Advanced financial risk management with AI-powered analytics',
+    competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet'],
+    marketSize: '$25B financial risk management market',
+    growthRate: '35% CAGR',
+    implementationTime: '10-12 weeks',
+    trialDays: 30,
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    link: 'https://ziontechgroup.com/services/ai-financial-risk-management',
+    icon: '💰',
+    color: 'from-yellow-600 to-amber-700',
+    popular: true,
+    new: true
+  },
+  {
+    id: 'ai-healthcare-diagnostics',
+    name: 'AI Healthcare Diagnostics Platform',
+    tagline: 'Advanced medical diagnostics powered by artificial intelligence',
+    description: 'AI-powered healthcare platform that assists medical professionals in diagnosis, treatment planning, and patient care optimization.',
+    category: 'AI & Machine Learning',
+    price: '$6,800',
+    billing: 'month',
+    features: [
+      'Medical image analysis',
+      'Diagnostic assistance',
+      'Treatment recommendations',
+      'Patient data analytics',
+      'Drug interaction checking',
+      'Clinical decision support',
+      'Remote monitoring capabilities',
+      'HIPAA compliance'
+    ],
+    benefits: [
+      'Improve diagnostic accuracy by 30%',
+      'Reduce diagnosis time by 50%',
+      'Better patient outcomes',
+      'Cost-effective healthcare',
+      '24/7 diagnostic support'
+    ],
+    targetAudience: ['Hospitals', 'Clinics', 'Medical Centers', 'Radiology Labs', 'Healthcare Providers'],
+    marketPosition: 'Leading AI healthcare diagnostics platform with FDA compliance',
+    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],
+    marketSize: '$35B AI healthcare market',
+    growthRate: '40% CAGR',
+    implementationTime: '12-16 weeks',
+    trialDays: 30,
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics',
+    icon: '🏥',
+    color: 'from-red-600 to-pink-700',
+    popular: true,
+    featured: true
+  }
+];
