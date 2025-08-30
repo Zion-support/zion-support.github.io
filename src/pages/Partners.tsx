@@ -205,7 +205,7 @@ export default function Partners() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Partner Benefits */}
       <section className="py-20 bg-slate-900">
@@ -242,7 +242,7 @@ export default function Partners() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
         <motion.div
@@ -256,7 +256,7 @@ export default function Partners() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join our partner ecosystem and help organizations leverage the power of AI, cloud, and emerging technologies.
             </p>
-          </motion.div>
+          </div>
           
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {existingPartners.map((partner, index)  => (
@@ -287,7 +287,7 @@ export default function Partners() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Partnership Process */}
@@ -336,7 +336,8 @@ export default function Partners() {
               ))}
             </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
     </div>
-  )}
+  );
+}

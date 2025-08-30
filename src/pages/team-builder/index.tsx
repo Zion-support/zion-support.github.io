@@ -109,7 +109,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
-    } catch (error: ) {
+    } catch (error: any) {
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
@@ -150,7 +150,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
-    } catch (error: ) {
+    } catch (error: any) {
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }

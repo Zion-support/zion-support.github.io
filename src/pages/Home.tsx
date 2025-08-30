@@ -1,12 +1,23 @@
 
-import React, { Suspense, useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
+import React, { Suspense, useState, useEffect, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  Rocket, 
+  TrendingUp, 
+  Star, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Award, 
+  Globe, 
+  Heart 
+} from 'lucide-react';
 
-
-import { SEO  } from '@/components/SEO';
-import { HeroSection  } from '@/components/HeroSection';
-import { LoadingSpinner  } from '@/components/ui/LoadingSpinner';
+import { SEO } from '@/components/SEO';
+import { HeroSection } from '@/components/HeroSection';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -19,6 +30,28 @@ const FuturisticBackground = React.memo(() => {
       duration: 5 + i * 0.3
     })), []
   );
+  
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+          style={{ left: particle.left, top: particle.top }}
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: particle.duration,
+            repeat: Infinity,
+            delay: particle.delay,
+          }}
+        />
+      ))}
+    </div>
+  );
+});
 
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string })  => (
@@ -281,7 +314,6 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
                 whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Link to={category.href} className="block h-full">
                   <div className="bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 h-full flex flex-col justify-between">

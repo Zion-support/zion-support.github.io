@@ -1,9 +1,9 @@
-import React, { useState } from 'react.ts';
-import { SEO  } from '../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-const Contact: React.FC = (): JSX.Element => {
+function Contact(): JSX.Element {
   const [activeTab, setActiveTab] = useState('general');
   const [formData, setFormData] = useState({
     name: '',
@@ -16,13 +16,14 @@ const Contact: React.FC = (): JSX.Element => {
     timeline: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })};
+    });
+  };
 
-  const handleSubmit = (e: React.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
@@ -36,7 +37,8 @@ const Contact: React.FC = (): JSX.Element => {
       message: '',
       budget: '',
       timeline: ''
-    })};
+    });
+  };
 
   const contactMethods = [
     {
@@ -116,7 +118,6 @@ const Contact: React.FC = (): JSX.Element => {
     { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' }
   ];
 
-const Contact: React.FC = () => {
   return (
     <>
       <SEO
@@ -504,6 +505,7 @@ const Contact: React.FC = () => {
         </section>
       </div>
     </>
-  )};
+  );
+}
 
 export default Contact;

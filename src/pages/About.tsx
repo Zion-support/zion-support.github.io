@@ -116,7 +116,6 @@ export default function About() {
     }
   ];
 
-const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
@@ -410,8 +409,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  )}
-
-export default About;
+  );
+}
