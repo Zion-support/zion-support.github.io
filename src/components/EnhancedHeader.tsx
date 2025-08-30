@@ -340,18 +340,9 @@ export function EnhancedHeader() {
             <Link to="/" className="flex items-center space-x-3 group">
               <motion.div
                 className="relative"
-                whileHover = {
-  { scale: 1.05,
-  rotate: 5 
-
-
-
-
-
-
-}}
+                whileHover={{ scale: 1.05, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
-
+              >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
                   <Zap className="w-7 h-7 text-white" />
                 </div>
@@ -378,7 +369,7 @@ export function EnhancedHeader() {
                       ? 'text-cyan-400 border-b-2 border-cyan-400'
                       : 'text-gray-300 hover:text-cyan-400'
                   }`}
-
+                >
                   {item.name}
                 </Link>
               ))}
@@ -389,7 +380,7 @@ export function EnhancedHeader() {
                   className="nav-link flex items-center space-x-2 font-medium text-gray-300 hover:text-cyan-400 transition-all duration-300"
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
-
+                >
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
                 </button>
@@ -398,36 +389,9 @@ export function EnhancedHeader() {
                   {servicesDropdownOpen && (
                     <motion.div
                       className="absolute top-full left-0 mt-4 w-[800px] bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20"
-                      initial = {
-  { opacity: 0, y: -20,
-  scale: 0.95 
-
-
-
-
-
-
-}}
-                      animate = {
-  { opacity: 1, y: 0,
-  scale: 1 
-
-
-
-
-
-
-}}
-                      exit = {
-  { opacity: 0, y: -20,
-  scale: 0.95 
-
-
-
-
-
-
-}}
+                      initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -20, scale: 0.95 }}
                       transition={{ duration: 0.3 }}
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
@@ -441,7 +405,7 @@ export function EnhancedHeader() {
                               key={service.name}
                               to={service.href}
                               className="group p-4 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
-
+                            >
                               <div className="flex items-center space-x-3 mb-2">
                                 <service.icon className="w-5 h-5 text-cyan-400" />
                                 <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
@@ -482,7 +446,7 @@ export function EnhancedHeader() {
                                     key={service.name}
                                     to={service.href}
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800/50 transition-colors group"
-
+                                  >
                                     <service.icon className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                                     <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
                                       {service.name}
@@ -499,7 +463,7 @@ export function EnhancedHeader() {
                         <Link
                           to="/services"
                           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group"
-
+                        >
                           View All Services
                           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
@@ -551,13 +515,13 @@ export function EnhancedHeader() {
                 <Link
                   to="/contact"
                   className="btn-neon-cyan text-sm"
-
+                >
                   Get Started
                 </Link>
                 <Link
                   to="/login"
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
-
+                >
                   <User className="w-5 h-5" />
                 </Link>
               </div>
@@ -567,7 +531,7 @@ export function EnhancedHeader() {
             <button
               className="xl:hidden p-2 text-gray-300 hover:text-cyan-400 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-
+            >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -578,38 +542,11 @@ export function EnhancedHeader() {
           {mobileMenuOpen && (
             <motion.div
               className="xl:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/30"
-              initial = {
-  { opacity: 0,
-  height: 0 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  height: 'auto' 
-
-
-
-
-
-
-}}
-              exit = {
-  { opacity: 0,
-  height: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-
+            >
               <div className="container mx-auto px-4 py-6">
                 <div className="grid grid-cols-1 gap-6">
                   {/* Mobile Search */}

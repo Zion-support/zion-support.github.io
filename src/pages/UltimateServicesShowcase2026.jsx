@@ -38,17 +38,18 @@ const UltimateServicesShowcase2026 = () => {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
         .sort((a, b) => {
-        switch (sortBy) {
-            case 'price':
-                return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-            case 'category':
-                return a.category.localeCompare(b.category);
-            case 'rating':
-                return b.rating - a.rating;
-            case 'name':
-            default:
-                return a.name.localeCompare(b.name);
-    });
+            switch (sortBy) {
+                case 'price':
+                    return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+                case 'category':
+                    return a.category.localeCompare(b.category);
+                case 'rating':
+                    return b.rating - a.rating;
+                case 'name':
+                default:
+                    return a.name.localeCompare(b.name);
+            }
+        });
     const getCategoryIcon = (category) => {
         const icons = {
   'Business Intelligence': '📊',
@@ -375,6 +376,8 @@ const UltimateServicesShowcase2026 = () => {
           </div>
         </div>
       </section>
-    </div>)};
+    </div>
+  );
+};
+
 export default UltimateServicesShowcase2026;
-}}}}}

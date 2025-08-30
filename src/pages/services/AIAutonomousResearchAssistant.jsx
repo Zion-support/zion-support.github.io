@@ -105,7 +105,7 @@ const AIAutonomousResearchAssistant = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
-                <MagnifyingGlassIcon className="h-8 w-8 text-blue-400"/>
+                <Search className="h-8 w-8 text-blue-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Intelligent Search & Discovery</h3>
               <p className="text-gray-300">
@@ -116,7 +116,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
-                <LightBulbIcon className="h-8 w-8 text-green-400"/>
+                <Lightbulb className="h-8 w-8 text-green-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Pattern Recognition</h3>
               <p className="text-gray-300">
@@ -127,7 +127,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                <ChartBarIcon className="h-8 w-8 text-purple-400"/>
+                <BarChart3 className="h-8 w-8 text-purple-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Data Analysis & Visualization</h3>
               <p className="text-gray-300">
@@ -137,7 +137,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
-                <AcademicCapIcon className="h-8 w-8 text-orange-400"/>
+                <GraduationCap className="h-8 w-8 text-orange-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Multi-Domain Expertise</h3>
               <p className="text-gray-300">
@@ -148,7 +148,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
-                <RocketLaunchIcon className="h-8 w-8 text-cyan-400"/>
+                <Rocket className="h-8 w-8 text-cyan-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">
@@ -159,7 +159,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
-                <GlobeAltIcon className="h-8 w-8 text-pink-400"/>
+                <Globe className="h-8 w-8 text-pink-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Global Knowledge Access</h3>
               <p className="text-gray-300">
@@ -407,6 +407,8 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
-    </div>)};
+    </div>
+  );
+};
+
 export default AIAutonomousResearchAssistant;
-}

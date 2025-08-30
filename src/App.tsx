@@ -29,12 +29,12 @@ import { EnhancedFooter } from './components/EnhancedFooter';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+// import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+// import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
@@ -229,7 +229,7 @@ function App() {
             <PerformanceOptimizer enabled={true} />
 
             {/* Enhanced Accessibility */}
-            <EnhancedAccessibilityEnhancer enabled={true} />
+            {/* <EnhancedAccessibilityEnhancer enabled={true} /> */}
 
             {/* Mobile Experience Enhancer */}
             <MobileExperienceEnhancer enabled={true} />
@@ -459,7 +459,7 @@ function App() {
             <FloatingActionButton enabled={true} />
 
             {/* Smart Notification System */}
-            <SmartNotificationSystem enabled={true} />
+            {/* <SmartNotificationSystem enabled={true} /> */}
 
             {/* Chat Assistant */}
             <ChatAssistant

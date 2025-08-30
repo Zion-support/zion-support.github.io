@@ -74,7 +74,7 @@ const AIBusinessIntelligence = () => {
                 "Employee retention prediction",
                 "Training effectiveness analysis"
             ]
-
+        }
     ];
     const technologies = [
         {
@@ -106,7 +106,7 @@ const AIBusinessIntelligence = () => {
             name: "24/7 Monitoring",
             description: "Continuous monitoring and alerting",
             icon: Clock
-
+        }
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -114,26 +114,21 @@ const AIBusinessIntelligence = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-
-
+            }
+        }
     };
     const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
+        hidden: { 
+            y: 20,
+            opacity: 0 
+        },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.5
-
-
+            }
+        }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -141,25 +136,12 @@ const AIBusinessIntelligence = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">
               <TrendingUp className="w-10 h-10 text-white"/>
             </div>
@@ -401,11 +383,8 @@ const AIBusinessIntelligence = () => {
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
-    </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    </div>
+  );
+};
+
 export default AIBusinessIntelligence;
-}}}}}}}}
