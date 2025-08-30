@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
+interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -37,8 +38,6 @@ import { Helmet } from 'react-helmet-async';
     crossorigin?: boolean;
   }>;
   prefetch?: string[];
-  dnsPrefetch?: string[];
-  preconnect?: string[];
 }
 
 export function SEO({

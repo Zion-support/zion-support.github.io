@@ -5,7 +5,7 @@ import {
   Globe, 
   Star, 
   ArrowRight, 
-  Handshake, 
+  HandshakeIcon, 
   Award, 
   TrendingUp,
   Shield,

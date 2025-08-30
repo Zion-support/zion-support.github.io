@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, BookOpen, Code, Database, Api, Download, ExternalLink, ChevronRight, FileText, Users, Globe, Shield, Zap, Brain, Cloud, Lock } from 'lucide-react';
+import { Search, BookOpen, Code, Database, Download, ExternalLink, ChevronRight, FileText, Users, Globe, Shield, Zap, Brain, Cloud, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface DocSection {
@@ -480,7 +480,7 @@ const Documentation: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Contact Support Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
