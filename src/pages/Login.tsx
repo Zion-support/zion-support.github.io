@@ -19,14 +19,14 @@ export default function Login(...args: any[]): any {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement>)   => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)   => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)   => {
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     setIsLoading(true);
     
@@ -34,7 +34,7 @@ export default function Login(...args: any[]): any {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     // Here you would typically make an API call to authenticate
-    console.log('Login attempt:', formData);
+    // // // console.log('Login attempt:', formData);
     
     setIsLoading(false);
   };

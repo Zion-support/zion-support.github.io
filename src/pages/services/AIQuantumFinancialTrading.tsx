@@ -188,7 +188,7 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)   => (
               <motion.div
                 key={index}
@@ -227,7 +227,7 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index)   => (
               <motion.div
                 key={index}
@@ -301,7 +301,7 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
@@ -348,7 +348,7 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto">
             {technologies.map((tech, index)   => (
               <motion.div
                 key={index}

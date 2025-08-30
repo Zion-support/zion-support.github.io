@@ -15,7 +15,7 @@ export function Accordion(...args: any[]): any {
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
   );
 
-  const handleToggle = (value: anystring)    => {
+  const handleToggle = (value: string)    => {
     if (type === 'single') {
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
@@ -32,7 +32,7 @@ export function Accordion(...args: any[]): any {
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { 
-            isOpen: anyanyopenItems.includes(child.props.value),
+            isOpen: anyopenItems.includes(child.props.value),
             onToggle: ()    => handleToggle(child.props.value)
           });
         }
@@ -44,7 +44,7 @@ export function Accordion(...args: any[]): any {
 
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
@@ -67,7 +67,7 @@ export function AccordionItem(...args: any[]): any {
 
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   className?: string;
   isOpen?: boolean;
   onToggle?: ()    => void;

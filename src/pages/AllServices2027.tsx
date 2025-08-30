@@ -41,7 +41,7 @@ const AllServices2027: React.FC = (): JSX.Element => {
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getCategoryStats = (categoryId: anystring)  => {
+  const getCategoryStats = (categoryId: string)  => {
     if (categoryId === 'All') {
       return {
               count: anyinnovativeServices2027.length,
@@ -407,7 +407,7 @@ const AllServices2027: React.FC = (): JSX.Element => {
 
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI Services':
         return <Brain className="w-5 h-5" />;
@@ -458,7 +458,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         {/* Features Preview */}
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
-            {service.features.slice(0, 2).map((feature: anystring, index: number)  => (
+            {service.features.slice(0, 2).map((feature: string, index: number)  => (
               <span
                 key={index}
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"

@@ -65,7 +65,7 @@ export function TestimonialsSection(...args: any[]): any {
             Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
         </div>
-        <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index)    => (
             <div 
               key={index}

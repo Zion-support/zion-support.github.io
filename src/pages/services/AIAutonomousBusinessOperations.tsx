@@ -388,7 +388,7 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Clock,
@@ -518,7 +518,7 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index)   => (
               <motion.div
                 key={useCase.industry}
@@ -566,7 +566,7 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {pricingTiers.map((tier, index)   => (
               <motion.div
                 key={tier.name}

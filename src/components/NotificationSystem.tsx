@@ -21,14 +21,14 @@ export interface Notification {
 
 
 
-  id: anystring;
+  id: string;
   type: NotificationType;
   title: string;
   message: string;
   duration?: number;
   timestamp: Date;
   read: boolean;
-action?: {;
+action?: {
     label: string;
     onClick: ()    => void;
   
@@ -129,7 +129,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           // Ignore autoplay restrictions
         });
       } catch (error) {
-        console.warn('Could not play notification sound:', error);
+        // // // console.warn('Could not play notification sound:', error);
       }
     }
   }, [settings.sound]);
@@ -140,16 +140,16 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       try {
         navigator.vibrate(200);
       } catch (error) {
-        console.warn('Could not trigger vibration:', error);
+        // // // console.warn('Could not trigger vibration:', error);
       }
     }
   }, [settings.vibration]);
 
   // Add notification
-  const addNotification = useCallback((notification: anyanyOmit<Notification, 'id' | 'timestamp' | 'read'>)    => {
+  const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)    => {
     const newNotification: Notification = {
       ...notification,
-      id: anyany`notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      id: any`notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date(),
       read: false,
       duration: notification.duration ?? settings.defaultDuration
@@ -166,12 +166,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]);
 
   // Dismiss notification
-  const dismissNotification = useCallback((id: anystring)    => {
+  const dismissNotification = useCallback((id: string)    => {
     setNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
 
   // Mark notification as read
-  const markAsRead = useCallback((id: anystring)    => {
+  const markAsRead = useCallback((id: string)    => {
     setNotifications(prev => 
       prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
@@ -188,7 +188,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, []);
 
   // Get notification icon
-  const getNotificationIcon = (type: anyanyNotificationType, priority: string)    => {
+  const getNotificationIcon = (type: anyNotificationType, priority: string)    => {
     const iconProps = { className: "w-5 h-5" };
     
     switch (type) {
@@ -208,7 +208,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
   // Get notification styles
-  const getNotificationStyles = (type: anyanyNotificationType, priority: string)    => {
+  const getNotificationStyles = (type: anyNotificationType, priority: string)    => {
     const baseStyles = "border-l-4 ";
     
     switch (type) {
@@ -244,7 +244,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
   // Update settings
-  const updateSettings = useCallback((newSettings: anyanyPartial<NotificationSettings>)    => {
+  const updateSettings = useCallback((newSettings: anyPartial<NotificationSettings>)    => {
     setSettings(prev => ({ ...prev, ...newSettings }));
   }, []);
 
@@ -474,7 +474,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 // Hook for using notifications in components
 export const useNotifications = () => {
-  const addNotification = useCallback((notification: anyanyOmit<Notification, 'id' | 'timestamp' | 'read'>)    => {
+  const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)    => {
     if ((window as any).addNotification) {
       (window as any).addNotification(notification);
     }
@@ -485,10 +485,10 @@ export const useNotifications = () => {
 
 // Utility functions for common notification types
 export const notificationUtils = {
-  success: anyany(title: string, message: string, options?: Partial<Notification>)    => {
+  success: any(title: string, message: string, options?: Partial<Notification>)    => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: anyany'success',
+        type: any'success',
         title,
         message,
         priority: 'medium',
@@ -500,7 +500,7 @@ export const notificationUtils = {
   warning: (title: string, message: string, options?: Partial<Notification>)    => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: anyany'warning',
+        type: any'warning',
         title,
         message,
         priority: 'medium',
@@ -512,7 +512,7 @@ export const notificationUtils = {
   error: (title: string, message: string, options?: Partial<Notification>)    => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: anyany'error',
+        type: any'error',
         title,
         message,
         priority: 'high',
@@ -524,7 +524,7 @@ export const notificationUtils = {
   info: (title: string, message: string, options?: Partial<Notification>)    => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: anyany'info',
+        type: any'info',
         title,
         message,
         priority: 'low',

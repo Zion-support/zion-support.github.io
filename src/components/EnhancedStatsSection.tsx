@@ -88,7 +88,7 @@ export default function EnhancedStatsSection(...args: any[]): any {
   const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: anyany0.3,
+    threshold: any0.3,
     triggerOnce: true
   });
 
@@ -165,7 +165,7 @@ export default function EnhancedStatsSection(...args: any[]): any {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index)    => (
             <motion.div
               key={stat.id}

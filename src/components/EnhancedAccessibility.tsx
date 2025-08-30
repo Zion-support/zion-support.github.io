@@ -28,7 +28,7 @@ interface AccessibilitySettings {
 export const EnhancedAccessibility: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<any>({
-    highContrast: anyanyfalse,
+    highContrast: anyfalse,
     reducedMotion: false,
     largeText: false,
     screenReader: false,
@@ -74,7 +74,7 @@ export const EnhancedAccessibility: React.FC = (): JSX.Element => {
     }));
   };
 
-  const handleKeyDown = (e: anyReact.KeyboardEvent)    => {
+  const handleKeyDown = (e: React.KeyboardEvent)    => {
     if (e.key === 'Escape') {
       setIsOpen(false);
     }

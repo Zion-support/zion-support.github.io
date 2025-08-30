@@ -15,7 +15,7 @@ export interface ComprehensivePricingGuide {
   useCases: string[];
   targetAudience: string[];
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
     website: string;

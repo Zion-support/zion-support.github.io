@@ -20,7 +20,7 @@ import { ChevronDown,
 
 interface NavigationLink {
 
-  key: anystring;
+  key: string;
   href: string;
   name: string;
   matches: (path: string)  => boolean;

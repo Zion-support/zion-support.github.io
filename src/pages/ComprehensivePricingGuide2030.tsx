@@ -70,7 +70,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     return filtered;
   }, [services, selectedCategory, selectedPricingModel]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
@@ -91,7 +91,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':

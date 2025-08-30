@@ -285,7 +285,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"15-25%", label: "Cost Reduction", description: "Supply chain costs" },
+                    { metric: "15-25%", label: "Cost Reduction", description: "Supply chain costs" },
                     { metric: "30-40%", label: "Delivery Performance", description: "Improvement" },
                     { metric: "20-30%", label: "Inventory Costs", description: "Reduction" },
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }

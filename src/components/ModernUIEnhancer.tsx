@@ -406,7 +406,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     setSettings(prev => ({ ...prev, [setting]: !prev[setting] }));
   };
 
-  const changeTheme = (theme: anystring)    => {
+  const changeTheme = (theme: string)    => {
     setActiveTheme(theme);
   };
 

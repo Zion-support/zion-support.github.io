@@ -45,7 +45,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setMessage(''); // Clear message
         }
         catch (err) {
-            console.error('Failed to send message:', err);
+            // // // console.error('Failed to send message:', err);
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed
             // setError('Failed to send message. Please try again.');

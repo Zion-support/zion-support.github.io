@@ -63,7 +63,7 @@ interface Service {
   description: string;
   features: string[];
   benefits: string[];
-pricing: {;
+pricing: {
     starter: number;
     professional: number;
     enterprise: number;
@@ -185,7 +185,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Artificial Intelligence':
         return <Brain className="w-6 h-6" />;
@@ -212,7 +212,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string)  => {
     switch (status.toLowerCase()) {
       case 'live':
         return 'bg-green-100 text-green-800';

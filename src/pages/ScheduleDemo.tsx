@@ -53,16 +53,16 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' }
   ];
 
-  const handleServiceToggle = (serviceId: anystring)   => {
+  const handleServiceToggle = (serviceId: string)   => {
     setFormData(prev => ({
       ...prev,
-      services: anyanyprev.services.includes(serviceId)
+      services: anyprev.services.includes(serviceId)
         ? prev.services.filter(id   => id !== serviceId)
         : [...prev.services, serviceId]
     }));
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)   => {
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -71,7 +71,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubmitted(true);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -322,7 +322,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Services of Interest
                     </label>
-                    <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-3">
                       {availableServices.map((service)   => (
                         <label key={service.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-colors">
                           <input

@@ -217,7 +217,7 @@ export default function Categories(...args: any[]): any {
     }
   ];
 
-  const getCategoryCount = (categoryId: anystring)  => {
+  const getCategoryCount = (categoryId: string)  => {
     if (categoryId === 'all') {
       return Object.values(subCategories).flat().reduce((total, sub) => 
         total + sub.services + sub.talent + sub.equipment, 0

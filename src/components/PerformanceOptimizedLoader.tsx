@@ -63,7 +63,7 @@ PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 export function SkeletonLoader(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anyanylines }).map((_, index)    => (
+      {Array.from({ length: anylines }).map((_, index)    => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -103,7 +103,7 @@ export function CardSkeleton(...args: any[]): any {
 // Grid skeleton loader
 export function GridSkeleton(...args: any[]): any {
   return (
-    <div className={`grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
+    <div className={`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: columns * rows }).map((_, index)    => (
         <CardSkeleton key={index} />
       ))}

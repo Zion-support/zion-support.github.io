@@ -43,7 +43,7 @@ export default function CartPage() {
                 });
             }
             catch (err) {
-                console.error('Failed to update cart', err);
+                // // // console.error('Failed to update cart', err);
             }
         }
         setCartLoading(false);

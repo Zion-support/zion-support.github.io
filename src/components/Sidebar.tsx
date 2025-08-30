@@ -84,7 +84,7 @@ export function Sidebar(...args: any[]): any {
     onClose();
   }, [location.pathname, onClose]);
 
-  const toggleSection = (sectionTitle: anystring)    => {
+  const toggleSection = (sectionTitle: string)    => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)

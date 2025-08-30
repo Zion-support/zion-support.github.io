@@ -172,7 +172,7 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanytrue }}
+            viewport={{ once: anytrue }}
           >
             {consultingServices.map((service, index)   => (
               <motion.div 
@@ -226,7 +226,7 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanytrue }}
+            viewport={{ once: anytrue }}
           >
             {benefits.map((benefit, index)   => (
               <motion.div 
@@ -269,7 +269,7 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanytrue }}
+            viewport={{ once: anytrue }}
           >
             {industries.map((industry, index)   => (
               <motion.div 

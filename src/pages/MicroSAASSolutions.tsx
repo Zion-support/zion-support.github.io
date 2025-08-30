@@ -205,7 +205,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index)   => (
                 <div
                   key={service.title}
@@ -242,7 +242,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
               {benefits.map((benefit, index)   => (
                 <div
                   key={benefit.title}
@@ -270,7 +270,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index)   => (
                 <div
                   key={industry.name}
@@ -298,7 +298,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index)   => (
                 <div key={step.step} className="text-center">
                   <div className="relative mb-6">

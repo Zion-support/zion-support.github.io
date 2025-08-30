@@ -187,7 +187,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
             {stats.map((stat, index)   => (
               <motion.div
                 key={stat.label}
@@ -225,7 +225,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {innovations.map((innovation, index)   => (
               <motion.div
                 key={innovation.id}

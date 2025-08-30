@@ -179,7 +179,7 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
     return matchesCategory && matchesPrice;
   });
 
-  const calculateROI = (roi: anystring)  => {
+  const calculateROI = (roi: string)  => {
     return parseInt(roi.replace('%', ''));
   };
 

@@ -427,7 +427,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
                         </p>
                       </div>
 
-                      <div className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8">
+                      <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
                         {service.plans.map((plan, planIndex)   => {
                           const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
                           return (

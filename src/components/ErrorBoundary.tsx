@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home, Mail    } from 'lucide-react';
 
 interface Props extends React.PropsWithChildren<{}> {
 
-  children: anyReactNode;
+  children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo)    => void;
 
@@ -49,7 +49,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      // // // console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Log error to external service in production
@@ -63,11 +63,11 @@ export class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  private logErrorToService = (error: anyanyError, errorInfo: ErrorInfo)    => {
+  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)    => {
     try {
       // Send error to your error tracking service (e.g., Sentry, LogRocket, etc.)
       const errorData = {
-        errorId: anyanythis.state.errorId,
+        errorId: anythis.state.errorId,
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
@@ -221,11 +221,11 @@ export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] =
   const [error, setError] = React.useState<any>(null);
 
   React.useEffect(() => {
-    const handleError = (event: anyanyErrorEvent)    => {
+    const handleError = (event: anyErrorEvent)    => {
       setError(event.error);
     };
 
-    const handleUnhandledRejection = (event: anyanyPromiseRejectionEvent)    => {
+    const handleUnhandledRejection = (event: anyPromiseRejectionEvent)    => {
       setError(new Error(event.reason));
     };
 
@@ -243,10 +243,10 @@ export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] =
 
 // Higher-order component for error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: anyReact.ComponentType<P>,
+  Component: React.ComponentType<P>,
   errorBoundaryProps?: Partial<Props>
 )    => {
-  const WrappedComponent = (props: anyanyP)    => (
+  const WrappedComponent = (props: anyP)    => (
     <ErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </ErrorBoundary>

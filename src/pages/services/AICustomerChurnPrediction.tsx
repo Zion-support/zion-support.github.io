@@ -144,7 +144,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 gap-8">
+          <div className="grid md: anygrid-cols-2 gap-8">
             {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
@@ -183,7 +183,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)   => (
               <motion.div
                 key={benefit}
@@ -221,7 +221,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anyanygrid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-5 gap-6">
             {integrations.map((integration, index)   => (
               <motion.div
                 key={integration}
@@ -256,7 +256,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index)   => (
               <motion.div
                 key={plan.plan}

@@ -93,7 +93,7 @@ export default function News(...args: any[]): any {
     'Sustainability'
   ];
 
-  const formatDate = (dateString: anystring)   => {
+  const formatDate = (dateString: string)   => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -229,7 +229,7 @@ export default function News(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {newsArticles.filter(article   => !article.featured).map((article) => (
               <article key={article.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                 <div className="relative">

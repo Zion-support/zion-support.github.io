@@ -261,7 +261,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Features</h3>
                 <div className="space-y-4">
                   {[
-                    { feature: any"Responsive Design", icon: Globe, color: "from-blue-500 to-cyan-500" },
+                    { feature: "Responsive Design", icon: Globe, color: "from-blue-500 to-cyan-500" },
                     { feature: "API Integration", icon: Settings, color: "from-purple-500 to-pink-500" },
                     { feature: "Real-time Updates", icon: Zap, color: "from-green-500 to-emerald-500" },
                     { feature: "Mobile Apps", icon: Rocket, color: "from-orange-500 to-red-500" }

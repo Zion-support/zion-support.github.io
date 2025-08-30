@@ -149,7 +149,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
@@ -187,7 +187,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanygrid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
             {useCases.map((useCase, index)   => (
               <motion.div
                 key={useCase.name}
@@ -225,7 +225,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index)   => (
               <motion.div
                 key={service.title}

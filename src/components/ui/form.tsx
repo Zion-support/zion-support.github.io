@@ -2,7 +2,7 @@ import React from 'react';
 
 interface FormProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   onSubmit?: (e: React.FormEvent)    => void;
 
 }
@@ -44,13 +44,13 @@ export function FormLabel(...args: any[]): any {
 
 interface FormFieldProps extends React.PropsWithChildren<{}> {
 
-  control: anyany;
+  control: any;
   name: string;
   render: (props: any)    => React.ReactNode;
 
 }
 
-export function FormField(...args: anyany[]): any {
+export function FormField(...args: any[]): any {
   return render({ field: any{ name, value: '', onChange: ()    => {} } });
 }
 

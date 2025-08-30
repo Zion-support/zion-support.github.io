@@ -208,7 +208,7 @@ export default function Team(...args: any[]): any {
             Leadership Team
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index)   => (
               <motion.div
                 key={member.name}
@@ -280,7 +280,7 @@ export default function Team(...args: any[]): any {
             Areas of Expertise
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {expertiseAreas.map((area, index)   => (
               <motion.div
                 key={area.title}
@@ -312,7 +312,7 @@ export default function Team(...args: any[]): any {
             Our Values
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)   => (
               <motion.div
                 key={value.title}

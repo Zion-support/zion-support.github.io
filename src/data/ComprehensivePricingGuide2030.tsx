@@ -86,7 +86,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     }
   };
 
-  const renderPricingCard = (service: anyany)    => {
+  const renderPricingCard = (service: any)    => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -109,7 +109,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)    => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)    => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -193,7 +193,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)    => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)    => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -277,7 +277,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)    => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)    => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                     {benefit}

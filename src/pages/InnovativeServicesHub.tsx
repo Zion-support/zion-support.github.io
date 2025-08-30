@@ -217,7 +217,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
           {serviceCategories.map((category)   => {
             const IconComponent = category.icon;
             return (
@@ -299,7 +299,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
           {featuredServices.map((service, index)   => (
             <motion.div
               key={index}

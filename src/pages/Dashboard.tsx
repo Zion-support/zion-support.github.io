@@ -135,7 +135,7 @@ export default function Dashboard(...args: any[]): any {
     }
   ];
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case "Completed":
         return "bg-green-100 text-green-800";
@@ -148,7 +148,7 @@ export default function Dashboard(...args: any[]): any {
     }
   };
 
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string)  => {
     switch (priority) {
       case "High":
         return "bg-red-100 text-red-800";

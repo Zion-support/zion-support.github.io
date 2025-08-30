@@ -284,7 +284,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)   => (
               <motion.div
                 key={index}
@@ -332,7 +332,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
@@ -349,7 +349,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-3">
-                  <h4 className="text-white font-semibold">Key Results: anyany</h4>
+                  <h4 className="text-white font-semibold">Key Results: any</h4>
                   {useCase.metrics.map((metric, idx)   => (
                     <div key={idx} className="flex items-center space-x-2 text-sm">
                       <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
@@ -383,7 +383,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
@@ -424,7 +424,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanygrid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-4 gap-4">
             {technologies.map((tech, index)   => (
               <motion.div
                 key={index}
@@ -460,7 +460,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index)   => (
               <motion.div
                 key={index}

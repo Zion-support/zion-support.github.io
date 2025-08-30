@@ -107,7 +107,7 @@ export default function Blockchain(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
@@ -146,7 +146,7 @@ export default function Blockchain(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
             {services.map((service, index)   => (
               <motion.div
                 key={service.title}

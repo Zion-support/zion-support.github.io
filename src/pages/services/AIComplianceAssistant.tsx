@@ -97,7 +97,7 @@ export default function AIComplianceAssistant(...args: any[]): any {
               {pricing.map((p) => (<li key={p}>{p}</li>))}
             </ul>
             <div className="mt-6 text-sm text-slate-400">
-              References: anyany{links.map((l, i)   => (
+              References: any{links.map((l, i)   => (
                 <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ? ',' : ''}</a>
               ))}
             </div>

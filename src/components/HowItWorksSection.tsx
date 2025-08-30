@@ -166,7 +166,7 @@ export function HowItWorksSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: anyanytrue }}
+          viewport={{ once: anytrue }}
         >
           {stats.map((stat, index)    => (
             <motion.div 
@@ -196,7 +196,7 @@ export function HowItWorksSection(...args: any[]): any {
           </div>
 
           {/* Steps grid */}
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-5 gap-8 relative">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-8 relative">
             {steps.map((step, index)    => (
               <motion.div
                 key={index}

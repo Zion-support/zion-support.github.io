@@ -21,7 +21,7 @@ export function AppHeader(...args: any[]): any {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: anyReact.FormEvent)  => {
+  const handleSearch = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);

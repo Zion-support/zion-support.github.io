@@ -214,7 +214,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)   => (
               <motion.div
                 key={index}
@@ -251,7 +251,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanygrid-cols-2 gap-8">
+          <div className="grid md: anygrid-cols-2 gap-8">
             {services.map((service, index)   => (
               <motion.div
                 key={index}
@@ -294,7 +294,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanygrid-cols-2 gap-8">
+          <div className="grid md: anygrid-cols-2 gap-8">
             {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
@@ -336,7 +336,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanygrid-cols-2 gap-8">
+          <div className="grid md: anygrid-cols-2 gap-8">
             {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
@@ -373,7 +373,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index)   => (
               <motion.div
                 key={index}

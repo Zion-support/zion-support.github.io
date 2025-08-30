@@ -40,7 +40,7 @@ export function ContactSection(...args: any[]): any {
             Ready to transform your business? Contact us today to discuss your technology needs
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 mb-12">
           {contactInfo.map((contact, index)    => (
             <motion.div
               key={index}

@@ -38,14 +38,14 @@ export function PrimaryNav(...args: any[]): any {
     // context not available
   }
 
-  const cartCount = useSelector((s: anyRootState)  =>
+  const cartCount = useSelector((s: RootState)  =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
   );
 
-  const handleSubmit = (e: anyReact.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
-      console.log('PrimaryNav search submit:', query);
+      // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('');
     }
@@ -75,7 +75,7 @@ export function PrimaryNav(...args: any[]): any {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  console.log('PrimaryNav search suggestion selected:', sugg);
+                  // // // console.log('PrimaryNav search suggestion selected:', sugg);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page

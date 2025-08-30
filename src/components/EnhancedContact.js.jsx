@@ -203,11 +203,11 @@ export const EnhancedContact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <motion.div variants={itemVariants}>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="comp" className="block text-sm font-medium text-gray-300 mb-2">
                   Company
                 </label>
                 <Input type="text" placeholder="Enter your company name" value={formData.company} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan"/>
-                <input type="hidden" name="company" value={formData.company}/>
+                <input type="hidden" name="comp" value={formData.company}/>
               </motion.div>
 
               <motion.div variants={itemVariants}>

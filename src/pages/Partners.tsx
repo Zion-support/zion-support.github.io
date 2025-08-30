@@ -238,7 +238,7 @@ export default function Partners(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 gap-8">
+          <div className="grid md: anygrid-cols-2 gap-8">
             {partnershipTypes.map((type, index)   => (
               <motion.div
                 key={type.name}
@@ -296,7 +296,7 @@ export default function Partners(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {partnerBenefits.map((benefit, index)   => (
               <motion.div
                 key={benefit.title}
@@ -335,7 +335,7 @@ export default function Partners(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {existingPartners.map((partner, index)   => (
               <motion.div
                 key={partner.name}
@@ -386,7 +386,7 @@ export default function Partners(...args: any[]): any {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {partnershipProcess.map((step, index)   => (
                 <motion.div
                   key={step.step}

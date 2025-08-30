@@ -31,7 +31,7 @@ export default function RequestsPanel(...args: any[]): any {
     toggleArchive
   } = useTalentQuotes();
 
-  const handleViewDetails = (quote: anyanyQuoteRequest)   => {
+  const handleViewDetails = (quote: anyQuoteRequest)   => {
     setSelectedQuote(quote);
     setShowDetails(true);
     
@@ -42,8 +42,8 @@ export default function RequestsPanel(...args: any[]): any {
   };
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter((q: anyanyQuoteRequest)   => !q.is_archived);
-  const archivedQuotes = quotes.filter((q: anyanyQuoteRequest)   => q.is_archived);
+  const activeQuotes = quotes.filter((q: anyQuoteRequest)   => !q.is_archived);
+  const archivedQuotes = quotes.filter((q: anyQuoteRequest)   => q.is_archived);
 
   return (
     <ProtectedRoute>

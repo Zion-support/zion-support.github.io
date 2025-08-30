@@ -12,7 +12,7 @@ export interface MarketplaceItem {
   image: string;
   tags: string[];
   featured: boolean;
-seller: {;
+seller: {
     name: string;
     rating: number;
     verified: boolean;

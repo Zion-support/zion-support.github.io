@@ -195,7 +195,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
                   </blockquote>
 
                   {/* Results */}
-                  <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-4 mb-8">
+                  <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
                     {currentTestimonialData.results.map((result, index)    => (
                       <motion.div
                         key={result}
@@ -282,7 +282,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
-            <div className="grid grid-cols-1 md: anyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' },
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },

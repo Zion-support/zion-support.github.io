@@ -56,7 +56,7 @@ export default function InnovativeServices2028(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (categoryName: anystring)   => {
+  const getCategoryIcon = (categoryName: string)   => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
     
@@ -74,7 +74,7 @@ export default function InnovativeServices2028(...args: any[]): any {
     return iconMap[category.icon] || Brain;
   };
 
-  const getCategoryColor = (categoryName: anystring)   => {
+  const getCategoryColor = (categoryName: string)   => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     return category?.color || 'from-purple-500 to-pink-500';
   };
@@ -187,7 +187,7 @@ export default function InnovativeServices2028(...args: any[]): any {
       {/* Services Grid */}
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
             {sortedServices.map((service, index)   => (
               <motion.div
                 key={service.id}
@@ -347,7 +347,7 @@ export default function InnovativeServices2028(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index)   => (
               <motion.div
                 key={tier.name}

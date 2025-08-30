@@ -44,7 +44,7 @@ export const clearCart = (): CartItem[] => {
   return [];
 };
 
-export const getCartKey = (userId: anystring): string  => {
+export const getCartKey = (userId: string): string  => {
   return `cart_${userId}`;
 };
 

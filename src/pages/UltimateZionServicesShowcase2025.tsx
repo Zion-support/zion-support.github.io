@@ -97,7 +97,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {ultimateMicroSaasServices2025.map((service)   => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
@@ -173,7 +173,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
               {ultimateITInfrastructureServices2025.map((service)   => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
@@ -241,7 +241,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
               {ultimateAIServices2025.map((service)   => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-between mb-4">

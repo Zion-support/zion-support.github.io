@@ -143,7 +143,7 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}
@@ -305,7 +305,7 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Award,

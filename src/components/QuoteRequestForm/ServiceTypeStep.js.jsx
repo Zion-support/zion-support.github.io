@@ -48,7 +48,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                 catch (err) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
-                            console.error('Failed to load services:', err);
+                            // // // console.error('Failed to load services:', err);
                         }
                         else {
                             captureException(err);

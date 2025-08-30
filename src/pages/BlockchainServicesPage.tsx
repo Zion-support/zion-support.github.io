@@ -152,13 +152,13 @@ const BlockchainServicesPage: [any, React.Dispatch<React.SetStateAction<any>>] =
   ];
 
   const categories = [
-    { id: any'all', name: 'All Services', count: blockchainServices.length },
+    { id: 'all', name: 'All Services', count: blockchainServices.length },
     { id: 'Development', name: 'Development', count: blockchainServices.filter(s  => s.category === 'Development').length },
-    { id: any'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
-    { id: any'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
-    { id: any'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
-    { id: any'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },
-    { id: any'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length }
+    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
+    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
+    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
+    { id: 'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },
+    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length }
   ];
 
   const filteredServices = selectedCategory === 'all' 

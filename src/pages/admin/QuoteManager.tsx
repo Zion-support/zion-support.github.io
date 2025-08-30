@@ -42,14 +42,14 @@ export default function QuoteManager(...args: any[]): any {
 
   // Count quotes by status
   const statusCounts = {
-    new: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'new').length,
-    in_review: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'in_review').length,
-    accepted: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'accepted').length,
-    responded: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'responded').length,
-    closed: anyanyquotes.filter((q: QuoteRequest)   => q.status === 'closed').length
+    new: anyquotes.filter((q: QuoteRequest)   => q.status === 'new').length,
+    in_review: anyquotes.filter((q: QuoteRequest)   => q.status === 'in_review').length,
+    accepted: anyquotes.filter((q: QuoteRequest)   => q.status === 'accepted').length,
+    responded: anyquotes.filter((q: QuoteRequest)   => q.status === 'responded').length,
+    closed: anyquotes.filter((q: QuoteRequest)   => q.status === 'closed').length
   };
 
-  const handleViewDetails = (quote: anyanyQuoteRequest)   => {
+  const handleViewDetails = (quote: anyQuoteRequest)   => {
     setSelectedQuote(quote);
     setShowDetails(true);
   };
@@ -106,7 +106,7 @@ export default function QuoteManager(...args: any[]): any {
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: anyanyQuoteRequest)   => !quote.is_archived)}
+                    quotes={quotes.filter((quote: anyQuoteRequest)   => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -119,7 +119,7 @@ export default function QuoteManager(...args: any[]): any {
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: anyanyQuoteRequest)   => quote.is_archived)}
+                    quotes={quotes.filter((quote: anyQuoteRequest)   => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
                     updateStatus={updateStatus}

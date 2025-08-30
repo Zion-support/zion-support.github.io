@@ -204,7 +204,7 @@ const Resources: React.FC = (): JSX.Element => {
   const featuredResources = resources.filter(resource => resource.featured);
   const regularResources = filteredResources.filter(resource => !resource.featured);
 
-  const formatDate = (dateString: anystring)   => {
+  const formatDate = (dateString: string)   => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -213,7 +213,7 @@ const Resources: React.FC = (): JSX.Element => {
     });
   };
 
-  const getResourceIcon = (type: anystring)   => {
+  const getResourceIcon = (type: string)   => {
     switch (type) {
       case 'White Paper':
       case 'Research Paper':
@@ -317,7 +317,7 @@ const Resources: React.FC = (): JSX.Element => {
               <p className="text-zion-slate-light">Our most popular and valuable resources</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {featuredResources.map((resource, index)   => {
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
@@ -412,7 +412,7 @@ const Resources: React.FC = (): JSX.Element => {
             <p className="text-zion-slate-light">Browse our complete library of knowledge resources</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {regularResources.map((resource, index)   => {
               const ResourceIcon = getResourceIcon(resource.type);
               return (

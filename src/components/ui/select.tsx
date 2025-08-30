@@ -2,7 +2,7 @@ import React from 'react';
 
 interface SelectProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   className?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>)    => void;

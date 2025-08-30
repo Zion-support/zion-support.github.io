@@ -293,7 +293,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Manufacturing Company",
+    company: "Manufacturing Comp",
     industry: "Manufacturing",
     challenge: "Needed performance management system for 2000+ production workers",
     solution: "Built performance tracking platform with goal setting and development planning",

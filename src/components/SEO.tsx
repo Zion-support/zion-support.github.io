@@ -232,7 +232,7 @@ export const SEO: React.FC<SEOProps> = ({
     // Add article-specific meta tags
     if (type === 'article' && publishedTime) {
       metaTags.push(
-        { property: anyany'article:published_time', content: publishedTime },
+        { property: any'article:published_time', content: publishedTime },
         { property: 'article:modified_time', content: modifiedTime || publishedTime },
         { property: 'article:author', content: author || 'Zion Tech Group' },
         { property: 'article:section', content: finalMetadata.section }
@@ -251,7 +251,7 @@ export const SEO: React.FC<SEOProps> = ({
   const generateLinkTags = () => {
     const linkTags = [
       // Canonical URL
-      { rel: anyany'canonical', href: canonical || currentUrl },
+      { rel: any'canonical', href: canonical || currentUrl },
       
       // Alternate languages (if you have multiple language versions)
       { rel: 'alternate', hreflang: 'en', href: currentUrl },
@@ -313,7 +313,7 @@ export const SEO: React.FC<SEOProps> = ({
     canonicalLink.setAttribute('href', canonical || currentUrl);
 
     // Update Open Graph tags
-    const updateOGTag = (property: anystring, content: string)    => {
+    const updateOGTag = (property: string, content: string)    => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -330,7 +330,7 @@ export const SEO: React.FC<SEOProps> = ({
     updateOGTag('og:type', finalMetadata.type);
 
     // Update Twitter tags
-    const updateTwitterTag = (name: anystring, content: string)    => {
+    const updateTwitterTag = (name: string, content: string)    => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');

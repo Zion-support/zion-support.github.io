@@ -98,7 +98,7 @@ export default function ComprehensivePricing(...args: any[]): any {
     return matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (range: anystring)  => {
+  const getPriceRangeLabel = (range: string)  => {
     switch (range) {
       case 'under-1000': return 'Under $1,000';
       case '1000-3000': return '$1,000 - $3,000';

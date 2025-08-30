@@ -22,7 +22,7 @@ export interface ComprehensiveService2025 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
     website: string;
@@ -143,7 +143,7 @@ export const calculateServiceStats = () => {
 };
 
 // Get services by category
-export const getServicesByCategory = (category: anystring)  => {
+export const getServicesByCategory = (category: string)  => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase().replace('-', ' '))
   );
@@ -157,21 +157,21 @@ export const getServicesByPriceRange = (minPrice: anynumber, maxPrice: number)  
 };
 
 // Get services by innovation level
-export const getServicesByInnovationLevel = (level: anystring)  => {
+export const getServicesByInnovationLevel = (level: string)  => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.innovationLevel.toLowerCase() === level.toLowerCase()
   );
 };
 
 // Get services by support level
-export const getServicesBySupportLevel = (level: anystring)  => {
+export const getServicesBySupportLevel = (level: string)  => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.supportLevel.toLowerCase() === level.toLowerCase()
   );
 };
 
 // Search services
-export const searchServices = (query: anystring)  => {
+export const searchServices = (query: string)  => {
   const searchTerm = query.toLowerCase();
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.title.toLowerCase().includes(searchTerm) ||
@@ -202,7 +202,7 @@ export const getTrendingServices = (limit: number = 10) => {
 };
 
 // Get services by industry
-export const getServicesByIndustry = (industry: anystring)  => {
+export const getServicesByIndustry = (industry: string)  => {
   const industryMap: { [key: string]: string[] } = {
     'healthcare': ['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],
     'finance': ['AI & FinTech', 'Quantum Finance', 'Financial Planning'],

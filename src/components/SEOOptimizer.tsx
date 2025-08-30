@@ -73,7 +73,7 @@ interface SEOMetrics {
   accessibility: number;
   bestPractices: number;
   seoScore: number;
-coreWebVitals: {;
+coreWebVitals: {
     lcp: number;
     fid: number;
     cls: number;
@@ -211,7 +211,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   // Get impact color
-  const getImpactColor = (impact: anystring)    => {
+  const getImpactColor = (impact: string)    => {
     switch (impact) {
       case 'high': return 'text-red-500';
       case 'medium': return 'text-yellow-500';
@@ -221,7 +221,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)    => {
+  const getPriorityColor = (priority: string)    => {
     switch (priority) {
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
       case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';

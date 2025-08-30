@@ -111,7 +111,7 @@ export const generateCSPHeader = (): string => {
 };
 
 // Security middleware for Express/Node.js
-export const securityMiddleware = (req: anyany, res: any, next: any)  => {
+export const securityMiddleware = (req: any, res: any, next: any)  => {
   // Set security headers
   Object.entries(securityConfig.headers).forEach(([key, value]) => {
     res.setHeader(key, value);
@@ -124,7 +124,7 @@ export const securityMiddleware = (req: anyany, res: any, next: any)  => {
 };
 
 // Input sanitization
-export const sanitizeInput = (input: anystring): string  => {
+export const sanitizeInput = (input: string): string  => {
   return input
     .replace(/[<>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
@@ -133,7 +133,7 @@ export const sanitizeInput = (input: anystring): string  => {
 };
 
 // XSS Protection
-export const escapeHtml = (text: anystring): string  => {
+export const escapeHtml = (text: string): string  => {
   const map: { [key: string]: string } = {
     '&': '&amp;',
     '<': '&lt;',
@@ -150,6 +150,6 @@ export const generateCSRFToken = (): string => {
 };
 
 // Validate CSRF Token
-export const validateCSRFToken = (token: anystring, storedToken: string): boolean  => {
+export const validateCSRFToken = (token: string, storedToken: string): boolean  => {
   return token === storedToken && token.length > 0;
 };

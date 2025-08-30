@@ -35,7 +35,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
     return filtered;
   }, [selectedService]);
 
-  const getServiceIcon = (serviceName: anystring)  => {
+  const getServiceIcon = (serviceName: string)  => {
     switch (serviceName) {
       case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
       case 'NeuroSync AI': return <Brain className="w-6 h-6" />;
@@ -44,7 +44,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
     }
   };
 
-  const getTierColor = (tierName: anystring)  => {
+  const getTierColor = (tierName: string)  => {
     switch (tierName) {
       case 'Starter': return 'from-green-500 to-emerald-500';
       case 'Professional': return 'from-blue-500 to-cyan-500';

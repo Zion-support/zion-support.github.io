@@ -193,7 +193,7 @@ interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {
 export function SkeletonLoader(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anyanylines }).map((_, index)    => (
+      {Array.from({ length: anylines }).map((_, index)    => (
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"

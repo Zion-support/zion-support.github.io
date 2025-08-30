@@ -23,7 +23,7 @@ export interface ServicePricing {
   serviceName: string;
   category: string;
   pricingTiers: PricingTier[];
-marketAnalysis: {;
+marketAnalysis: {
     averagePrice: string;
     priceRange: string;
     competitors: string[];

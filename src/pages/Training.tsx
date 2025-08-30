@@ -36,7 +36,7 @@ export default function Training(...args: any[]): any {
 
   const trainingPrograms = [
     {
-      id: anyany1,
+      id: any1,
       title: 'AI Fundamentals for Business Leaders',
       description: 'Essential AI concepts and strategies for business leaders to drive digital transformation and innovation.',
       category: 'ai-ml',
@@ -224,11 +224,11 @@ export default function Training(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
   });
 
-  const getCategoryIcon = (categoryId: anystring)   => {
+  const getCategoryIcon = (categoryId: string)   => {
     return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
   };
 
-  const getLevelColor = (level: anystring)   => {
+  const getLevelColor = (level: string)   => {
     switch (level) {
       case 'beginner': return 'text-green-400';
       case 'intermediate': return 'text-yellow-400';
@@ -238,7 +238,7 @@ export default function Training(...args: any[]): any {
     }
   };
 
-  const getFormatIcon = (format: anystring)   => {
+  const getFormatIcon = (format: string)   => {
     switch (format) {
       case 'online': return <Globe className="w-4 h-4" />;
       case 'in-person': return <MapPin className="w-4 h-4" />;
@@ -248,7 +248,7 @@ export default function Training(...args: any[]): any {
     }
   };
 
-  const formatDate = (dateString: anystring)   => {
+  const formatDate = (dateString: string)   => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -345,7 +345,7 @@ export default function Training(...args: any[]): any {
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeFormat === format.id
                           ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: anyanybg-zion-slate-light hover:text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover: anybg-zion-slate-light hover:text-white'
                       }`}
                     >
                       {format.name} ({format.count})
@@ -365,7 +365,7 @@ export default function Training(...args: any[]): any {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Training Programs
             </h2>
-            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
               {trainingPrograms.filter(p   => p.featured).map((program) => (
                 <div
                   key={program.id}
@@ -442,7 +442,7 @@ export default function Training(...args: any[]): any {
           </h2>
           
           {filteredPrograms.length > 0 ? (
-            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredPrograms.map((program)   => (
                 <div
                   key={program.id}

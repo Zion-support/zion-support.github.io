@@ -149,7 +149,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
           <p className="text-gray-300 text-lg">See measurable improvements in your business operations</p>
         </div>
         
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index)   => (
             <div key={index} className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">{benefit.metric}</div>
@@ -166,7 +166,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
           <p className="text-gray-300 text-lg">Everything you need for comprehensive business intelligence</p>
         </div>
         
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index)   => (
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
               <CardHeader>
@@ -190,7 +190,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
           <p className="text-gray-300 text-lg">Choose the plan that fits your business needs</p>
         </div>
         
-        <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
           {pricingTiers.map((tier, index)   => (
             <Card key={index} className={`relative ${tier.popular ? 'border-zion-cyan ring-2 ring-zion-cyan' : 'border-slate-700'} bg-slate-800/50`}>
               {tier.popular && (

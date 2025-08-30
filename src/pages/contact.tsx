@@ -16,17 +16,17 @@ const Contact: React.FC = (): JSX.Element => {
     timeline: ''
   });
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)   => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)   => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: anyReact.FormEvent)   => {
+  const handleSubmit = (e: React.FormEvent)   => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
+    // // // console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you within 24 hours.');
     setFormData({
       name: '',
@@ -182,7 +182,7 @@ const Contact: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {contactMethods.map((method, index)   => (
                 <motion.div
                   key={method.title}
@@ -293,7 +293,7 @@ const Contact: React.FC = (): JSX.Element => {
                       <label className="block text-white font-medium mb-2">Company</label>
                       <input
                         type="text"
-                        name="company"
+                        name="comp"
                         value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"

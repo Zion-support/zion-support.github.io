@@ -75,7 +75,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Log low FPS for debugging
         if (fps < 30) {
-          console.warn(`Low FPS detected: ${fps}`);
+          // // // console.warn(`Low FPS detected: ${fps}`);
         }
       }
 
@@ -102,7 +102,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
+          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
       }
     };
@@ -149,7 +149,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, [enableLazyLoading, createIntersectionObserver]);
 
   // Performance monitoring
-  const measureRenderTime = useCallback((componentName: anystring)  => {
+  const measureRenderTime = useCallback((componentName: string)  => {
     const startTime = performance.now();
     
     return () => {
@@ -159,7 +159,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
       // Log slow renders
       if (renderTime > 16) { // 60fps threshold
-        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
+        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
 
       // Report to analytics if available
@@ -174,7 +174,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Debounced function utility
-  const debounce = useCallback(<T extends (...args: anyany[])  => any>(
+  const debounce = useCallback(<T extends (...args: any[])  => any>(
     func: anyT,
     delay: number
   ): ((...args: Parameters<T>)  => void) => {
@@ -187,7 +187,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Throttled function utility
-  const throttle = useCallback(<T extends (...args: anyany[])  => any>(
+  const throttle = useCallback(<T extends (...args: any[])  => any>(
     func: anyT,
     delay: number
   ): ((...args: Parameters<T>)  => void) => {
@@ -241,7 +241,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 declare global {
   interface Window {
 
-    gtag?: (...args: anyany[])  => void;
+    gtag?: (...args: any[])  => void;
   
 }
 }

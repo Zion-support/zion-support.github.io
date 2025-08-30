@@ -46,7 +46,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: anystring)  => {
+  const updateTitle = useCallback((title: string)  => {
     if (typeof document !== 'undefined') {
       document.title = title;
     }
@@ -236,7 +236,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     // Core Web Vitals
     if ('web-vital' in window) {
       // This would require the web-vitals library
-      console.log('Web Vitals available');
+      // // // console.log('Web Vitals available');
     }
 
     // Navigation Timing API
@@ -333,7 +333,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 declare global {
   interface Window {
 
-    gtag?: (...args: anyany[])  => void;
+    gtag?: (...args: any[])  => void;
     dataLayer?: any[];
   
 }

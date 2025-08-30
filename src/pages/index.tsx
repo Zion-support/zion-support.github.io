@@ -101,7 +101,7 @@ export default function Index(...args: any[]): any {
             </p>
           </div>
           
-          <div className={`grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
+          <div className={`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index)   => (
               <Link 
                 key={index} 

@@ -193,7 +193,7 @@ export default function Pricing(...args: any[]): any {
       {/* Pricing Tiers */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
-          <div className="grid lg: anyanygrid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid lg: anygrid-cols-3 gap-8 max-w-7xl mx-auto">
             {pricingTiers.map((tier, index)   => (
               <motion.div
                 key={tier.name}
@@ -271,7 +271,7 @@ export default function Pricing(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
             {addOnServices.map((service, index)   => (
               <motion.div
                 key={service.name}
@@ -327,7 +327,7 @@ export default function Pricing(...args: any[]): any {
           <div className="max-w-4xl mx-auto space-y-6">
             {[
               {
-                question: anyany"Can I change my plan at any time?",
+                question: "Can I change my plan at any time?",
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
               },
               {

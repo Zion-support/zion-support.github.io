@@ -23,7 +23,7 @@ export interface FinancialAIService {
   regulatoryApproval: string[];
   useCases: string[];
   technologies: string[];
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
     website: string;

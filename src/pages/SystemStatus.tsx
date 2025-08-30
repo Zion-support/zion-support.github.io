@@ -130,7 +130,7 @@ export default function SystemStatus(...args: any[]): any {
     }
   ];
 
-  const getStatusColor = (status: anystring)   => {
+  const getStatusColor = (status: string)   => {
     switch (status) {
       case 'operational':
         return 'text-green-500';
@@ -145,7 +145,7 @@ export default function SystemStatus(...args: any[]): any {
     }
   };
 
-  const getStatusIcon = (status: anystring)   => {
+  const getStatusIcon = (status: string)   => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -160,7 +160,7 @@ export default function SystemStatus(...args: any[]): any {
     }
   };
 
-  const getSeverityColor = (severity: anystring)   => {
+  const getSeverityColor = (severity: string)   => {
     switch (severity) {
       case 'critical':
         return 'bg-red-500';
@@ -175,7 +175,7 @@ export default function SystemStatus(...args: any[]): any {
     }
   };
 
-  const formatDate = (dateString: anystring)   => {
+  const formatDate = (dateString: string)   => {
     return new Date(dateString).toLocaleString('en-US', {
       year: 'numeric',
       month: 'short',
@@ -266,7 +266,7 @@ export default function SystemStatus(...args: any[]): any {
             Service Status
           </h2>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, index)   => (
                 <div
                   key={index}

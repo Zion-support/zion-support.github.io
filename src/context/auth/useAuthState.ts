@@ -33,7 +33,7 @@ export const useAuthState: [any, React.Dispatch<React.SetStateAction<any>>] = ()
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<any>({
-    accessToken: anyanynull,
+    accessToken: null,
     refreshToken: null
   });
 
@@ -55,7 +55,7 @@ export const useAuthState: [any, React.Dispatch<React.SetStateAction<any>>] = ()
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error);
+        // // // console.error('Error checking auth state:', error);
       } finally {
         setIsLoading(false);
       }

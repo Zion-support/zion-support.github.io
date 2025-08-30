@@ -171,7 +171,7 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {
                 </p>
               </blockquote>
 
-              <div className="grid md: anyanygrid-cols-3 gap-6">
+              <div className="grid md: anygrid-cols-3 gap-6">
                 {Object.entries(currentTestimonial.metrics).map(([key, value])    => (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">

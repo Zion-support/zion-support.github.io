@@ -214,7 +214,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Blockchain Types</h3>
                 <div className="space-y-4">
                   {[
-                    { type: any"Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },
+                    { type: "Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },
                     { type: "Private", icon: Lock, color: "from-purple-500 to-pink-500", description: "Controlled, permissioned networks" },
                     { type: "Consortium", icon: Users, color: "from-green-500 to-emerald-500", description: "Multi-organization networks" },
                     { type: "Hybrid", icon: LinkIcon, color: "from-orange-500 to-red-500", description: "Combination of public and private" }

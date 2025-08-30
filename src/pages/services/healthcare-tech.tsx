@@ -215,7 +215,7 @@ export default function HealthcareTech(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Healthcare Benefits</h3>
                 <div className="space-y-4">
                   {[
-                    { benefit: any"Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
+                    { benefit: "Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
                     { benefit: "Faster Results", metric: "60%", description: "Reduced wait time" },
                     { benefit: "Cost Savings", metric: "30%", description: "Operational costs" },
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }

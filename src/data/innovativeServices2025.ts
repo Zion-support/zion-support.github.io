@@ -18,7 +18,7 @@ export interface InnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
     website: string;
@@ -607,7 +607,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
 ];
 
 // Helper functions
-export const getServicesByCategory = (category: anystring): InnovativeService[]  => {
+export const getServicesByCategory = (category: string): InnovativeService[]  => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
 };
 

@@ -28,7 +28,7 @@ export default function ITOnsiteServicesPage() {
         }
     }, [success]);
     // Popular countries for the featured cards
-    const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+    const popularCountries = ["United States", "United Kingdom", "Canada", "Germ", "Japan", "Singapore"];
     // Filter countries based on search query
     const filteredCountries = onsiteServicePricing
         .filter(country => country.country.toLowerCase().includes(searchQuery.toLowerCase()))

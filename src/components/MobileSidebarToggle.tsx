@@ -8,7 +8,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: anystring)    => {
+  const toggleSection = (section: string)    => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
@@ -18,7 +18,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     setExpandedSections(newExpanded);
   };
 
-  const isActive = (path: anystring)    => location.pathname === path;
+  const isActive = (path: string)    => location.pathname === path;
 
   const navigationSections = [
     {

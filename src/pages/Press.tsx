@@ -166,7 +166,7 @@ export default function Press(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md: anyanygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
           >
             {companyStats.map((stat, index)   => (
               <div key={stat.label} className="text-center">
@@ -193,7 +193,7 @@ export default function Press(...args: any[]): any {
             Latest Press Releases
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {pressReleases.map((release, index)   => (
               <motion.article
                 key={release.title}
@@ -256,7 +256,7 @@ export default function Press(...args: any[]): any {
             Media Resources
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {mediaResources.map((resource, index)   => (
               <motion.div
                 key={resource.title}

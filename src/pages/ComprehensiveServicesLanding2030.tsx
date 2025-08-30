@@ -55,7 +55,7 @@ export default function ComprehensiveServicesLanding2030(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const icons: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'AI & Healthcare': <Heart className="w-6 h-6" />,
@@ -80,7 +80,7 @@ export default function ComprehensiveServicesLanding2030(...args: any[]): any {
     return icons[category] || <Rocket className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const colors: { [key: string]: string } = {
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
       'AI & Healthcare': 'from-pink-500 to-red-500',
@@ -113,7 +113,7 @@ export default function ComprehensiveServicesLanding2030(...args: any[]): any {
     setAiScoreRange([80, 100]);
   };
 
-  const openServiceModal = (service: anyany)  => {
+  const openServiceModal = (service: any)  => {
     setSelectedService(service);
     setShowModal(true);
   };
@@ -565,7 +565,7 @@ export default function ComprehensiveServicesLanding2030(...args: any[]): any {
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
                     <div className="flex flex-wrap gap-2">
-                      {selectedService.tags.map((tag: anystring)  => (
+                      {selectedService.tags.map((tag: string)  => (
                         <span
                           key={tag}
                           className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30"

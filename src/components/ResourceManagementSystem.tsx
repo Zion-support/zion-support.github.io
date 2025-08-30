@@ -111,7 +111,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   useEffect(() => {
     const sampleResources: Resource[] = [
       {
-        id: anyany'1',
+        id: any'1',
         name: 'AI Development Team',
         type: 'human',
         category: 'Development',
@@ -236,14 +236,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Calculate resource stats
   const resourceStats = {
-    totalResources: anyanyresources.length,
+    totalResources: anyresources.length,
     availableResources: resources.filter(r    => r.status === 'available').length,
-    allocatedResources: anyanyresources.filter(r    => r.status === 'allocated').length,
-    maintenanceResources: anyanyresources.filter(r    => r.status === 'maintenance').length,
-    totalCapacity: anyanyresources.reduce((sum, r)    => sum + r.capacity, 0),
-    currentUtilization: anyanyresources.reduce((sum, r)    => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: anyanyresources.reduce((sum, r)    => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: anyany(()    => {
+    allocatedResources: anyresources.filter(r    => r.status === 'allocated').length,
+    maintenanceResources: anyresources.filter(r    => r.status === 'maintenance').length,
+    totalCapacity: anyresources.reduce((sum, r)    => sum + r.capacity, 0),
+    currentUtilization: anyresources.reduce((sum, r)    => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: anyresources.reduce((sum, r)    => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: any(()    => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
@@ -253,7 +253,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         .map(([name, count]) => ({
           name,
           count,
-          percentage: anyany(count / resources.length) * 100
+          percentage: any(count / resources.length) * 100
         }))
         .sort((a, b)    => b.count - a.count)
         .slice(0, 5);
@@ -261,7 +261,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anystring)    => {
+  const getStatusDisplay = (status: string)    => {
     switch (status) {
       case 'available':
         return { color: 'text-green-400 bg-green-400/20', icon: <CheckCircle className="w-4 h-4" /> };
@@ -277,7 +277,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get type icon
-  const getTypeIcon = (type: anystring)    => {
+  const getTypeIcon = (type: string)    => {
     switch (type) {
       case 'human': return <Users className="w-5 h-5" />;
       case 'infrastructure': return <Server className="w-5 h-5" />;
@@ -289,7 +289,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)    => {
+  const getPriorityColor = (priority: string)    => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -446,7 +446,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Departments by Resources</h3>
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
             {resourceStats.topDepartments.map((dept, index)    => (
               <motion.div
                 key={dept.name}

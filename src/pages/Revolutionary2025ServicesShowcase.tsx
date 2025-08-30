@@ -146,7 +146,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
     setServices(filtered);
   }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-  const handleServiceSelect = (serviceId: anystring)   => {
+  const handleServiceSelect = (serviceId: string)   => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
@@ -562,7 +562,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </p>
           </div>
           {viewMode === 'grid' && (
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index)   => (
                 <motion.div
                   key={service.id}

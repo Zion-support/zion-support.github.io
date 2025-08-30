@@ -181,7 +181,7 @@ export default function Privacy(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {privacyPrinciples.map((principle, index)   => (
               <motion.div
                 key={principle.title}
@@ -220,7 +220,7 @@ export default function Privacy(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid lg: anyanygrid-cols-3 gap-8">
+          <div className="grid lg: anygrid-cols-3 gap-8">
             {dataCategories.map((category, index)   => (
               <motion.div
                 key={category.title}
@@ -382,7 +382,7 @@ export default function Privacy(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {userRights.map((right, index)   => (
               <motion.div
                 key={right.right}

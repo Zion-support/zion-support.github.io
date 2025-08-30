@@ -21,7 +21,7 @@ export interface EmergingTechService2027 {
   featured: boolean;
   location: string;
   availability: string;
-author: {;
+author: {
     name: string;
     id: string;
     avatarUrl?: string;

@@ -191,7 +191,7 @@ export default function AIEnterpriseOrchestrator(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"40%", label: "Cost Reduction" },
+                    { metric: "40%", label: "Cost Reduction" },
                     { metric: "60%", label: "Efficiency Improvement" },
                     { metric: "24/7", label: "Operation Availability" },
                     { metric: "99.9%", label: "Uptime Reliability" }

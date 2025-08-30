@@ -73,7 +73,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
           performanceDataRef.current.fcp = entry.startTime;
-          console.log('FCP:', entry.startTime);
+          // // // console.log('FCP:', entry.startTime);
         }
       });
     });
@@ -85,7 +85,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
         performanceDataRef.current.lcp = lastEntry.startTime;
-        console.log('LCP:', lastEntry.startTime);
+        // // // console.log('LCP:', lastEntry.startTime);
       }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -95,7 +95,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         performanceDataRef.current.fid = entry.processingStart - entry.startTime;
-        console.log('FID:', entry.processingStart - entry.startTime);
+        // // // console.log('FID:', entry.processingStart - entry.startTime);
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -104,13 +104,13 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
       const entries = list.getEntries();
-      entries.forEach((entry: anyany)    => {
+      entries.forEach((entry: any)    => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
       performanceDataRef.current.cls = clsValue;
-      console.log('CLS:', clsValue);
+      // // // console.log('CLS:', clsValue);
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -118,7 +118,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       performanceDataRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      console.log('TTFB:', navigationEntry.responseStart - navigationEntry.requestStart);
+      // // // console.log('TTFB:', navigationEntry.responseStart - navigationEntry.requestStart);
     }
   }, []);
 
@@ -126,7 +126,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
   const optimizeResourceHints = useCallback(() => {
     // Preconnect to external domains
     const domains = [
-      'https: anyany//fonts.googleapis.com',
+      'https: any//fonts.googleapis.com',
       'https://fonts.gstatic.com',
       'https://cdn.gpteng.co'
     ];
@@ -186,11 +186,11 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
   );
 
   // Debounce utility function
-  function debounce<T extends (...args: anyany[])    => any>(
-    func: anyanyT,
+  function debounce<T extends (...args: any[])    => any>(
+    func: anyT,
     wait: number
   ): (...args: Parameters<T>)    => void {
-    let timeout: anyanyNodeJS.Timeout;
+    let timeout: anyNodeJS.Timeout;
     return (...args: Parameters<T>)    => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);
@@ -202,9 +202,9 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        console.log('SW registered: anyany', registration);
+        // // // console.log('SW registered: any', registration);
       } catch (registrationError) {
-        console.log('SW registration failed: ', registrationError);
+        // // // console.log('SW registration failed: ', registrationError);
       }
     }
   }, []);
@@ -218,7 +218,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     registerServiceWorker();
 
     // Add scroll event listener
-    window.addEventListener('scroll', debouncedScrollHandler, { passive: anyanytrue });
+    window.addEventListener('scroll', debouncedScrollHandler, { passive: anytrue });
 
     // Cleanup
     return ()    => {
@@ -234,7 +234,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     const style = document.createElement('style');
     style.textContent = `
       .lazy {
-        opacity: anyany0;
+        opacity: any0;
         transition: opacity 0.3s;
       }
       

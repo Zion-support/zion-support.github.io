@@ -243,7 +243,7 @@ export default function PricingGuide(...args: any[]): any {
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>
           
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)   => (
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                 plan.popular 
@@ -287,7 +287,7 @@ export default function PricingGuide(...args: any[]): any {
                 </div>
                 
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: anyany</h4>
+                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
                   {plan.features.map((feature, featureIndex)   => (
                     <div key={featureIndex} className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -297,7 +297,7 @@ export default function PricingGuide(...args: any[]): any {
                   
                   {plan.notIncluded.length > 0 && (
                     <>
-                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: anyany</h4>
+                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
                       {plan.notIncluded.map((feature, featureIndex)   => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
@@ -321,7 +321,7 @@ export default function PricingGuide(...args: any[]): any {
             <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
           </div>
           
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {servicePricing.map((category, index)   => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-6">

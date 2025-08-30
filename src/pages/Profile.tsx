@@ -199,7 +199,7 @@ const Profile: React.FC = (): JSX.Element => {
     }));
   };
 
-  const getPasswordStrength = (password: anystring)   => {
+  const getPasswordStrength = (password: string)   => {
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -259,7 +259,7 @@ const Profile: React.FC = (): JSX.Element => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
           {stats.map((stat, index)   => (
             <motion.div
               key={stat.label}
@@ -380,7 +380,7 @@ const Profile: React.FC = (): JSX.Element => {
                 value={profile.industry}
                 onChange={(e) => setProfile(prev => ({ ...prev, industry: e.target.value }))}
                 disabled={!isEditing}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {industries.map((industry)   => (
                   <option key={industry} value={industry}>{industry}</option>
@@ -455,7 +455,7 @@ const Profile: React.FC = (): JSX.Element => {
       {/* Achievements */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
           {achievements.map((achievement, index)   => (
             <motion.div
               key={achievement.title}

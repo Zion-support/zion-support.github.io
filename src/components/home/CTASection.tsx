@@ -79,7 +79,7 @@ const CTASection: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: anyanytrue }}
+          viewport={{ once: anytrue }}
         >
           {features.map((feature, index)    => (
             <motion.div

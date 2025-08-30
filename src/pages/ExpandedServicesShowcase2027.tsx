@@ -79,7 +79,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
     setFilteredServices(services);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: anystring)   => {
+  const getCategoryIcon = (category: string)   => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
@@ -98,7 +98,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryColor = (category: anystring)   => {
+  const getCategoryColor = (category: string)   => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
@@ -117,14 +117,14 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const formatPrice = (pricing: anyanyExpandedService2027['pricing'])   => {
+  const formatPrice = (pricing: anyExpandedService2027['pricing'])   => {
     if (pricing.model === 'Transaction Fees + Governance') {
       return 'Free + Transaction Fees';
     }
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: anyanyExpandedService2027)   => {
+  const renderServiceCard = (service: anyExpandedService2027)   => {
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -303,7 +303,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
     );
   };
 
-  const renderServiceList = (service: anyanyExpandedService2027)   => {
+  const renderServiceList = (service: anyExpandedService2027)   => {
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -483,7 +483,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark: anyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
                 {EXPANDED_SERVICE_CATEGORIES.map((category)   => (
                   <option key={category} value={category}>
@@ -528,7 +528,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
 
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
             {filteredServices.map((service)   => 
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}

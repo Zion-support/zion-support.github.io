@@ -214,7 +214,7 @@ export default function DigitalTwin(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Core Components</h3>
                 <div className="space-y-4">
                   {[
-                    { component: any"Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
+                    { component: "Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
                     { component: "Processing Engine", icon: Cpu, color: "from-purple-500 to-pink-500" },
                     { component: "Visualization", icon: Eye, color: "from-emerald-500 to-teal-500" },
                     { component: "Analytics", icon: BarChart3, color: "from-orange-500 to-red-500" }

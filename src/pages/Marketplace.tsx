@@ -209,7 +209,7 @@ const Marketplace: React.FC = (): JSX.Element => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   {categories.map(category   => (
                     <option key={category.id} value={category.id}>
@@ -241,7 +241,7 @@ const Marketplace: React.FC = (): JSX.Element => {
       {/* Solutions Grid */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {sortedSolutions.map((solution, index)   => (
               <motion.div
                 key={solution.id}

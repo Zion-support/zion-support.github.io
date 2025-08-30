@@ -214,7 +214,7 @@ export default function IoTEdge(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"90%", label: "Reduced Latency" },
+                    { metric: "90%", label: "Reduced Latency" },
                     { metric: "60%", label: "Bandwidth Savings" },
                     { metric: "99.9%", label: "Uptime Reliability" },
                     { metric: "24/7", label: "Local Processing" }

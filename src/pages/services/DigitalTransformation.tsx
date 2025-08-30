@@ -140,7 +140,7 @@ export default function DigitalTransformation(...args: any[]): any {
               and position you for future success.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {services.map((service, index)   => (
               <motion.div 
                 key={index}
@@ -190,7 +190,7 @@ export default function DigitalTransformation(...args: any[]): any {
               Digital transformation delivers measurable benefits that impact every aspect of your business.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {benefits.map((benefit, index)   => (
               <motion.div 
                 key={index}
@@ -226,7 +226,7 @@ export default function DigitalTransformation(...args: any[]): any {
               each with unique challenges and opportunities.
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
             {industries.map((industry, index)   => (
               <motion.div 
                 key={index}
@@ -257,7 +257,7 @@ export default function DigitalTransformation(...args: any[]): any {
               A proven methodology that ensures successful digital transformation outcomes.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: anyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
             {[
               { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' },
               { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' },

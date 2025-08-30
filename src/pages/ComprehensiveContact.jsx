@@ -18,7 +18,7 @@ export default function ComprehensiveContact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
-        console.log('Form submitted:', formData);
+        // // // console.log('Form submitted:', formData);
     };
     const handleChange = (e) => {
         setFormData({
@@ -70,8 +70,8 @@ export default function ComprehensiveContact() {
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="company" className="text-white">Company</Label>
-                      <Input id="company" name="company" value={formData.company} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter company name"/>
+                      <Label htmlFor="comp" className="text-white">Company</Label>
+                      <Input id="comp" name="comp" value={formData.company} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter company name"/>
                     </div>
                     <div>
                       <Label htmlFor="phone" className="text-white">Phone Number</Label>

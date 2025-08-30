@@ -285,7 +285,7 @@ export default function CloudDevOps(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">DevOps Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"50-80%", label: "Deployment Speed", description: "Faster delivery" },
+                    { metric: "50-80%", label: "Deployment Speed", description: "Faster delivery" },
                     { metric: "60-90%", label: "Lead Time", description: "Reduction" },
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
                     { metric: "99.9%+", label: "Uptime", description: "Availability" }

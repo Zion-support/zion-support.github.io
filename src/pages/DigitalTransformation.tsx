@@ -198,7 +198,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
       {/* Stats Section */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index)   => (
               <motion.div
                 key={index}
@@ -228,7 +228,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {transformationServices.map((service, index)   => (
               <motion.div
                 key={index}
@@ -272,7 +272,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
               {transformationPhases.map((phase, index)   => (
                 <motion.div
                   key={index}
@@ -308,7 +308,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
                         transition={{ duration: 0.3 }}
                         className="space-y-2"
                       >
-                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: anyany</div>
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
                         {phase.activities.map((activity, activityIndex)   => (
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />
@@ -337,7 +337,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index)   => (
               <motion.div
                 key={index}

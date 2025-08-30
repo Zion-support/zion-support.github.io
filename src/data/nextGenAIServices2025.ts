@@ -10,7 +10,7 @@ export interface NextGenAIService {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {;
+pricing: {
     starter: string;
     professional: string;
     enterprise: string;
@@ -373,7 +373,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ethicalCompliance: ['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
   }
 ];
-export const getNextGenAIServicesByCategory = (category: anystring): NextGenAIService[]  => {
+export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[]  => {
   if (category === 'All') {
     return NEXT_GEN_AI_SERVICES_2025;
   }

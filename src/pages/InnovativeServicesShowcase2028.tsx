@@ -61,8 +61,8 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
   const [selectedService, setSelectedService] = useState(null);
 
   const allServices = [
-    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: anyany'Micro SaaS' })),
-    ...revolutionaryITInfrastructureServices2028.map(s   => ({ ...s, type: anyany'IT Infrastructure' })),
+    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: any'Micro SaaS' })),
+    ...revolutionaryITInfrastructureServices2028.map(s   => ({ ...s, type: any'IT Infrastructure' })),
     ...revolutionaryAIServices2028.map(s   => ({ ...s, type: 'AI Services' }))
   ];
 
@@ -74,9 +74,9 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices: anyanyallServices.filter(s   => s.type === selectedCategory);
+    ? allServices: anyallServices.filter(s   => s.type === selectedCategory);
 
-  const getCategoryIcon = (category: anystring)   => {
+  const getCategoryIcon = (category: string)   => {
     switch (category) {
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
@@ -93,7 +93,7 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
     }
   };
 
-  const getCategoryColor = (category: anystring)   => {
+  const getCategoryColor = (category: string)   => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',
@@ -219,7 +219,7 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}

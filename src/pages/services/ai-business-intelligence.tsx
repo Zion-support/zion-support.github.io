@@ -143,7 +143,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Analytics Types</h3>
                 <div className="space-y-4">
                   {[
-                    { type: any"Descriptive", icon: BarChart3, color: "from-blue-500 to-cyan-500" },
+                    { type: "Descriptive", icon: BarChart3, color: "from-blue-500 to-cyan-500" },
                     { type: "Diagnostic", icon: Target, color: "from-purple-500 to-pink-500" },
                     { type: "Predictive", icon: TrendingUp, color: "from-green-500 to-emerald-500" },
                     { type: "Prescriptive", icon: Zap, color: "from-orange-500 to-red-500" }

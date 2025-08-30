@@ -385,17 +385,17 @@ export default function ResearchDevelopment(...args: any[]): any {
     return matchesArea && matchesStatus && matchesSearch;
   });
 
-  const getAreaIcon = (areaName: anystring)   => {
+  const getAreaIcon = (areaName: string)   => {
     const area = researchAreas.find(a => a.name === areaName);
     return area ? area.icon : FlaskConical;
   };
 
-  const getAreaColor = (areaName: anystring)   => {
+  const getAreaColor = (areaName: string)   => {
     const area = researchAreas.find(a => a.name === areaName);
     return area ? area.color : 'from-gray-500 to-slate-600';
   };
 
-  const getStatusBadge = (status: anystring)   => {
+  const getStatusBadge = (status: string)   => {
     if (status === 'Active') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
     } else if (status === 'Completed') {
@@ -455,7 +455,7 @@ export default function ResearchDevelopment(...args: any[]): any {
                 <select
                   value={selectedArea}
                   onChange={(e) => setSelectedArea(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {areas.map(area   => (
                     <option key={area} value={area}>{area}</option>
@@ -468,7 +468,7 @@ export default function ResearchDevelopment(...args: any[]): any {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status   => (
                     <option key={status} value={status}>{status}</option>
@@ -494,7 +494,7 @@ export default function ResearchDevelopment(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {researchAreas.map((area, index)   => {
               const IconComponent = area.icon;
               return (
@@ -559,7 +559,7 @@ export default function ResearchDevelopment(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {filteredProjects.map((project, index)   => {
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
@@ -735,7 +735,7 @@ export default function ResearchDevelopment(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Our innovative technologies protected by intellectual property rights</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {patents.map((patent, index)   => (
               <motion.div
                 key={patent.id}

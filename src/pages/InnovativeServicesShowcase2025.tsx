@@ -54,7 +54,7 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
     website: string;
@@ -114,7 +114,7 @@ const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
       case 'delivery':
         filtered.sort((a, b) => parseInt(a.estimatedDelivery.split('-')[0]) - parseInt(b.estimatedDelivery.split('-')[0]));
         break;
-      default: anyanyfiltered.sort((a, b)   => a.title.localeCompare(b.title));
+      default: anyfiltered.sort((a, b)   => a.title.localeCompare(b.title));
     }
 
     return filtered;
@@ -123,7 +123,7 @@ const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(allServices.map(s => s.innovationLevel)))];
 
-  const getCategoryIcon = (category: anystring)   => {
+  const getCategoryIcon = (category: string)   => {
     switch (category) {
       case 'AI Security': return <Shield className="w-5 h-5" />;
       case 'AI Finance': return <DollarSign className="w-5 h-5" />;
@@ -140,7 +140,7 @@ const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
     }
   };
 
-  const getInnovationLevelColor = (level: anystring)   => {
+  const getInnovationLevelColor = (level: string)   => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Cutting-edge': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -217,7 +217,7 @@ const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyoutline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
             >
               {categories.map(category   => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
@@ -230,7 +230,7 @@ const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
             <select
               value={selectedInnovationLevel}
               onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyoutline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
             >
               {innovationLevels.map(level   => (
                 <option key={level} value={level} className="bg-slate-800 text-white">
@@ -257,7 +257,7 @@ const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="grid grid-cols-1 lg: anyanygrid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map((service, index)   => (
             <motion.div
               key={service.id}

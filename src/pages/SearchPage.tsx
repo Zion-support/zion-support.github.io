@@ -154,7 +154,7 @@ export default function SearchPage(...args: any[]): any {
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showFilters, setShowFilters] = useState(false);
   const [activeFilters, setActiveFilters] = useState({
-    type: anyany[] as string[],
+    type: any[] as string[],
     category: [] as string[],
     location: [] as string[],
     priceRange: [] as string[],
@@ -171,7 +171,7 @@ export default function SearchPage(...args: any[]): any {
     applyFilters();
   }, [activeFilters, results]);
 
-  const performSearch = async (searchQuery: anystring)   => {
+  const performSearch = async (searchQuery: string)   => {
     setLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -234,14 +234,14 @@ export default function SearchPage(...args: any[]): any {
     });
   };
 
-  const handleSearch = (e: anyReact.FormEvent)   => {
+  const handleSearch = (e: React.FormEvent)   => {
     e.preventDefault();
     if (query.trim()) {
       setSearchParams({ q: query.trim() });
     }
   };
 
-  const getTypeIcon = (type: anystring)   => {
+  const getTypeIcon = (type: string)   => {
     switch (type) {
       case 'service': return Code;
       case 'talent': return Users;
@@ -251,7 +251,7 @@ export default function SearchPage(...args: any[]): any {
     }
   };
 
-  const getCategoryIcon = (category: anystring)   => {
+  const getCategoryIcon = (category: string)   => {
     switch (category) {
       case 'AI & Analytics': return Brain;
       case 'Cybersecurity': return Shield;
@@ -480,7 +480,7 @@ export default function SearchPage(...args: any[]): any {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid md: anyanygrid-cols-2 xl:grid-cols-3 gap-6"
+                    className="grid md: anygrid-cols-2 xl:grid-cols-3 gap-6"
                   >
                     {filteredResults.map((result, index)   => (
                       <motion.div

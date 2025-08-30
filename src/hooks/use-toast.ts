@@ -28,7 +28,7 @@ export function useToast(...args: any[]): any {
     return id;
   }, []);
 
-  const dismiss = useCallback((id: anystring)  => {
+  const dismiss = useCallback((id: string)  => {
     setToasts(prev => prev.filter(toast => toast.id !== id));
   }, []);
 
@@ -47,5 +47,5 @@ export function useToast(...args: any[]): any {
 // Export a default toast function for backward compatibility
 export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
   // In a real implementation, this would dispatch to a global toast system
-  console.log('Toast:', { title, description, variant, duration });
+  // // // console.log('Toast:', { title, description, variant, duration });
 };

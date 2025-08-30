@@ -57,13 +57,13 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...prev, ...parsed });
       } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
+        // // // console.error('Failed to parse accessibility settings:', error);
       }
     }
   }, []);
 
   // Apply accessibility settings to the document
-  const applySettings = useCallback((newSettings: anyanyAccessibilitySettings)    => {
+  const applySettings = useCallback((newSettings: anyAccessibilitySettings)    => {
     const root = document.documentElement;
     
     // High contrast mode
@@ -135,7 +135,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, []);
 
   // Handle keyboard navigation
-  const handleKeyboardNavigation = useCallback((event: anyanyKeyboardEvent)    => {
+  const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)    => {
     const focusableElements = document.querySelectorAll(
       'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
     );
@@ -170,7 +170,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, []);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: anystring)    => {
+  const announceToScreenReader = useCallback((message: string)    => {
     if (!settings.screenReader) return;
 
     const announcement = document.createElement('div');
@@ -240,7 +240,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
 
   // Handle escape key
   useEffect(() => {
-    const handleEscape = (event: anyanyKeyboardEvent)    => {
+    const handleEscape = (event: anyKeyboardEvent)    => {
       if (event.key === 'Escape' && isOpen) {
         setIsOpen(false);
         announceToScreenReader('Accessibility panel closed');

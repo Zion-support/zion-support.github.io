@@ -29,7 +29,7 @@ interface ChatMessage {
   content: string;
   timestamp: Date;
   isTyping?: boolean;
-metadata?: {;
+metadata?: {
     confidence?: number;
     sources?: string[];
     suggestions?: string[];
@@ -88,7 +88,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: anyanyMediaQueryListEvent)    => {
+      const handleChange = (e: anyMediaQueryListEvent)    => {
         setCurrentTheme(e.matches ? 'dark' : 'light');
       };
       
@@ -108,14 +108,14 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: anyany)    => {
+      recognitionRef.current.onresult = (event: any)    => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: anyany)    => {
-        console.error('Speech recognition error: anyany', event.error);
+      recognitionRef.current.onerror = (event: any)    => {
+        // // // console.error('Speech recognition error: any', event.error);
         setIsListening(false);
       };
     }
@@ -156,11 +156,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, [isListening]);
 
   // Send message
-  const sendMessage = useCallback(async (content: anystring)    => {
+  const sendMessage = useCallback(async (content: string)    => {
     if (!content.trim()) return;
 
     const userMessage: ChatMessage = {
-      id: anyanyDate.now().toString(),
+      id: anyDate.now().toString(),
       type: 'user',
       content: content.trim(),
       timestamp: new Date(),
@@ -188,7 +188,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
       setMessages(prev    => [...prev, aiResponse]);
     } catch (error) {
-      console.error('Error sending message:', error);
+      // // // console.error('Error sending message:', error);
       
       const errorMessage: ChatMessage = {
         id: any(Date.now() + 1).toString(),
@@ -205,7 +205,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, []);
 
   // Generate AI response (replace with actual AI integration)
-  const generateAIResponse = (userInput: anystring): string    => {
+  const generateAIResponse = (userInput: string): string    => {
     const responses = [
       'I understand you\'re asking about that. Let me help you with some information.',
       'That\'s a great question! Here\'s what I can tell you about that topic.',
@@ -218,7 +218,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   // Generate suggestions based on user input
-  const generateSuggestions = (userInput: anystring): string[]    => {
+  const generateSuggestions = (userInput: string): string[]    => {
     const suggestions = [
       'Tell me more',
       'Can you explain that differently?',
@@ -231,11 +231,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   // Handle file upload
-  const handleFileUpload = useCallback((event: anyReact.ChangeEvent<HTMLInputElement>)    => {
+  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>)    => {
     const file = event.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessage = {
-        id: anyanyDate.now().toString(),
+        id: anyDate.now().toString(),
         type: 'user',
         content: `Uploaded file: ${file.name}`,
         timestamp: new Date(),
@@ -248,12 +248,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, []);
 
   // Handle suggestion click
-  const handleSuggestionClick = useCallback((suggestion: anystring)    => {
+  const handleSuggestionClick = useCallback((suggestion: string)    => {
     sendMessage(suggestion);
   }, [sendMessage]);
 
   // Handle enter key
-  const handleKeyPress = useCallback((e: anyReact.KeyboardEvent)    => {
+  const handleKeyPress = useCallback((e: React.KeyboardEvent)    => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       sendMessage(inputValue);

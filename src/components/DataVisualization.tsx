@@ -22,7 +22,7 @@ interface ChartData {
 
 
   labels: string[];
-datasets: {;
+datasets: {
     label: string;
     data: number[];
     backgroundColor: string[];
@@ -124,7 +124,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update chart data with new random values
     setChartData(prev => ({
       ...prev,
-      datasets: anyany[{
+      datasets: any[{
         ...prev.datasets[0],
         data: prev.datasets[0].data.map(()    => Math.floor(Math.random() * 100) + 20)
       }]
@@ -244,7 +244,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
       {/* Metrics Cards */}
       {showMetrics && (
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {metrics.map((metric, index)    => {
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (

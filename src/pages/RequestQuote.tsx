@@ -190,7 +190,7 @@ export default function RequestQuote(...args: any[]): any {
 
   const totalSteps = 4;
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)   => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)   => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -198,16 +198,16 @@ export default function RequestQuote(...args: any[]): any {
     }));
   };
 
-  const handleServiceToggle = (service: anystring)   => {
+  const handleServiceToggle = (service: string)   => {
     setFormData(prev => ({
       ...prev,
-      services: anyanyprev.services.includes(service)
+      services: anyprev.services.includes(service)
         ? prev.services.filter(s   => s !== service)
         : [...prev.services, service]
     }));
   };
 
-  const toggleSection = (section: anystring)   => {
+  const toggleSection = (section: string)   => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
@@ -223,7 +223,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)   => {
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -328,7 +328,7 @@ export default function RequestQuote(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="flex items-center justify-between max-w-4xl mx-auto">
-            {Array.from({ length: anyanytotalSteps }, (_, index)   => (
+            {Array.from({ length: anytotalSteps }, (_, index)   => (
               <div key={index + 1} className="flex items-center">
                 <div className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
                   currentStep > index + 1

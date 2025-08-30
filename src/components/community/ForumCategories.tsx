@@ -10,7 +10,7 @@ interface ForumCategoryInfo {
   postCount: number;
   adminOnly?: boolean;
   icon?: string;
-lastPost?: {;
+lastPost?: {
     title: string;
     author: string;
     date: string;
@@ -122,7 +122,7 @@ export default function ForumCategories(...args: any[]): any {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category)    => (
             <div 
               key={category.id} 

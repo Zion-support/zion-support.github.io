@@ -95,7 +95,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       await fetch('/api/health', { method: 'HEAD' });
       const end = performance.now();
       const latency = end - start;
-      setMetrics(prev => ({ ...prev, networkLatency: anyanylatency }));
+      setMetrics(prev => ({ ...prev, networkLatency: anylatency }));
     } catch (error) {
       // If health check fails, use a default value
       setMetrics(prev    => ({ ...prev, networkLatency: 0 }));
@@ -125,12 +125,12 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   }, []);
 
   // Performance alerts
-  const checkPerformanceAlerts = useCallback((metrics: anyanyPerformanceMetrics)    => {
+  const checkPerformanceAlerts = useCallback((metrics: anyPerformanceMetrics)    => {
     const newAlerts: PerformanceAlert[] = [];
 
     if (metrics.fps < 30) {
       newAlerts.push({
-        id: anyany`fps-${Date.now()}`,
+        id: any`fps-${Date.now()}`,
         type: 'error',
         message: `Low FPS detected: ${metrics.fps}`,
         metric: 'fps',

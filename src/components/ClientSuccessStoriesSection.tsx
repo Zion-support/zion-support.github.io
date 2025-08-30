@@ -80,7 +80,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anyanygrid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16"
         >
           {successMetrics.map((metric, index)    => {
             const IconComponent = metric.icon;
@@ -101,7 +101,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md: anyanygrid-cols-2 gap-8 mb-12">
+        <div className="grid md: anygrid-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index)    => (
             <motion.div
               key={testimonial.name}

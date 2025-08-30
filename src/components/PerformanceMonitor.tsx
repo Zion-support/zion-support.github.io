@@ -117,7 +117,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
           }
         }
       });
-      observer.observe({ entryTypes: anyany['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      observer.observe({ entryTypes: any['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
       return ()    => observer.disconnect();
     }
     // Update metrics periodically
@@ -130,7 +130,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
     if (unit === 's') return `${(value / 1000).toFixed(2)}s`;
     return value.toFixed(3);
   };
-  const getMetricColor = (score: anyanyPerformanceScore): string    => {
+  const getMetricColor = (score: anyPerformanceScore): string    => {
     return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700');
   };
   return (

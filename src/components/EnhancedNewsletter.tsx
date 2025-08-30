@@ -62,7 +62,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)    => {
+  const handleSubmit = async (e: React.FormEvent)    => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -76,7 +76,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Here you would typically send the data to your newsletter service
-      console.log('Newsletter subscription: anyany', formData);
+      // // // console.log('Newsletter subscription: any', formData);
       
       setStatus('success');
       
@@ -93,14 +93,14 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
       
     } catch (error) {
       setStatus('error');
-      console.error('Newsletter subscription error:', error);
+      // // // console.error('Newsletter subscription error:', error);
     }
   };
 
-  const handleInterestToggle = (interestId: anystring)    => {
+  const handleInterestToggle = (interestId: string)    => {
     setFormData(prev => ({
       ...prev,
-      interests: anyanyprev.interests.includes(interestId)
+      interests: anyprev.interests.includes(interestId)
         ? prev.interests.filter(id    => id !== interestId)
         : [...prev.interests, interestId]
     }));
@@ -236,7 +236,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Areas of Interest * (Select all that apply)
           </label>
-          <div className="grid grid-cols-2 md: anyanygrid-cols-3 gap-3">
+          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-3">
             {interests.map((interest)    => {
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
@@ -273,7 +273,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Update Frequency
           </label>
-          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-3">
             {frequencies.map((freq)    => (
               <label
                 key={freq.value}

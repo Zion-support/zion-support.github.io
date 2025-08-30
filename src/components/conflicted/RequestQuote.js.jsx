@@ -153,7 +153,7 @@ export default function RequestQuote() {
 
                   <div>
                     <label className="block text-white font-medium mb-2">Company</label>
-                    <input type="text" name="company" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your company name"/>
+                    <input type="text" name="comp" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your company name"/>
                   </div>
 
                   {/* Project Type */}

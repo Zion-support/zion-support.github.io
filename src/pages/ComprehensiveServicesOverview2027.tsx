@@ -158,7 +158,7 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
     });
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-  const ServiceCard = ({ service }: { service: anyany })  => (
+  const ServiceCard = ({ service }: { service: any })  => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
               exit={{ opacity: 0, height: 0 }}
               className="space-y-2"
             >
-              {service.benefits.map((benefit: anystring, index: number)  => (
+              {service.benefits.map((benefit: string, index: number)  => (
                 <div key={index} className="flex items-start space-x-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <span className="text-zion-slate-light text-sm">{benefit}</span>

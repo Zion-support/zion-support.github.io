@@ -19,7 +19,7 @@ export interface InnovativeBlockchainWeb3Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
     website: string;

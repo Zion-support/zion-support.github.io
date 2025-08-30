@@ -4,7 +4,7 @@ interface SupabaseUser {
 
   id: string;
   email?: string;
-user_metadata?: {;
+user_metadata?: {
     full_name?: string;
     avatar_url?: string;
   
@@ -48,7 +48,7 @@ interface MappedUser {
 
 }
 
-export const mapProfileToUser = (supabaseUser: anyanySupabaseUser, profile: Profile): MappedUser    => {
+export const mapProfileToUser = (supabaseUser: anySupabaseUser, profile: Profile): MappedUser    => {
   return {
     id: supabaseUser.id,
     email: supabaseUser.email || '',

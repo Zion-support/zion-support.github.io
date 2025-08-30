@@ -18,7 +18,7 @@ export interface AdvancedInnovativeService2026 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
     phone: string;
     email: string;
     website: string;

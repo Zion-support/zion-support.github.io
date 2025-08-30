@@ -36,7 +36,7 @@ export default function Research(...args: any[]): any {
 
   const researchProjects = [
     {
-      id: anyany1,
+      id: any1,
       title: 'Quantum Machine Learning for Financial Modeling',
       description: 'Exploring the application of quantum computing algorithms to enhance financial risk assessment and portfolio optimization.',
       category: 'quantum',
@@ -241,11 +241,11 @@ export default function Research(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
 
-  const getCategoryIcon = (categoryId: anystring)   => {
+  const getCategoryIcon = (categoryId: string)   => {
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
   };
 
-  const getStatusColor = (status: anystring)   => {
+  const getStatusColor = (status: string)   => {
     switch (status) {
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400';
@@ -255,7 +255,7 @@ export default function Research(...args: any[]): any {
     }
   };
 
-  const getImpactColor = (impact: anystring)   => {
+  const getImpactColor = (impact: string)   => {
     switch (impact) {
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400';
@@ -265,7 +265,7 @@ export default function Research(...args: any[]): any {
     }
   };
 
-  const formatDate = (dateString: anystring)   => {
+  const formatDate = (dateString: string)   => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short'
@@ -370,7 +370,7 @@ export default function Research(...args: any[]): any {
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeType === type.id
                           ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: anyanybg-zion-slate-light hover:text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover: anybg-zion-slate-light hover:text-white'
                       }`}
                     >
                       {type.name} ({type.count})
@@ -390,7 +390,7 @@ export default function Research(...args: any[]): any {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Research Projects
             </h2>
-            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
               {researchProjects.filter(p   => p.featured).map((project) => (
                 <div
                   key={project.id}
@@ -468,7 +468,7 @@ export default function Research(...args: any[]): any {
           </h2>
           
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredProjects.map((project)   => (
                 <div
                   key={project.id}

@@ -151,7 +151,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
   }, [location]);
 
   useEffect(() => {
-    const handleClickOutside = (event: anyanyMouseEvent)    => {
+    const handleClickOutside = (event: anyMouseEvent)    => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -168,7 +168,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
     };
   }, [isOpen]);
 
-  const toggleExpanded = (label: anystring)    => {
+  const toggleExpanded = (label: string)    => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);
       if (newSet.has(label)) {
@@ -180,12 +180,12 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
     });
   };
 
-  const handleNavigation = (path: anystring)    => {
+  const handleNavigation = (path: string)    => {
     setIsOpen(false);
     setExpandedItems(new Set());
   };
 
-  const isActive = (path: anystring)    => {
+  const isActive = (path: string)    => {
     if (path === '/') {
       return activePath === '/';
     }

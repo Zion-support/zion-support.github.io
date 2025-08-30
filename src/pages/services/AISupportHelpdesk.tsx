@@ -236,7 +236,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)   => (
                 <motion.div
                   key={index}
@@ -268,7 +268,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index)   => (
                 <motion.div
                   key={index}
@@ -300,7 +300,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {supportChannels.map((channel, index)   => (
                 <motion.div
                   key={index}
@@ -332,7 +332,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anyanygrid-cols-2 gap-8">
+            <div className="grid md: anygrid-cols-2 gap-8">
               {benefits.map((benefit, index)   => (
                 <motion.div
                   key={index}
@@ -366,7 +366,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anyanygrid-cols-3 gap-8">
+            <div className="grid md: anygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)   => (
                 <motion.div
                   key={index}

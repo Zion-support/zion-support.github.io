@@ -167,7 +167,7 @@ export default function FAQ(...args: any[]): any {
 
   const filteredCategories = faqCategories.map(category => ({
     ...category,
-    questions: anyanycategory.questions.filter(q   =>
+    questions: anycategory.questions.filter(q   =>
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -349,7 +349,7 @@ export default function FAQ(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((contact, index)   => (
               <motion.div
                 key={contact.title}

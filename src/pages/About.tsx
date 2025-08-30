@@ -255,7 +255,7 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
             {stats.map((stat, index)   => (
               <motion.div 
                 key={index}
@@ -295,7 +295,7 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)   => (
               <motion.div
                 key={index}
@@ -334,7 +334,7 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index)   => (
               <motion.div
                 key={index}

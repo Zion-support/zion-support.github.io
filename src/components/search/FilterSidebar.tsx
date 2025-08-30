@@ -5,7 +5,7 @@ interface FilterOption {
 
 
 
-  value: anystring;
+  value: string;
   label: string;
   count?: number;
 
@@ -72,7 +72,7 @@ export function FilterSidebar(...args: any[]): any {
             <span className="text-sm text-zion-slate-light">Active filters</span>
             <button
               onClick={onClearFilters}
-              className="text-sm text-zion-cyan hover: anyanytext-zion-cyan-light transition-colors underline"
+              className="text-sm text-zion-cyan hover: anytext-zion-cyan-light transition-colors underline"
             >
               Clear all
             </button>

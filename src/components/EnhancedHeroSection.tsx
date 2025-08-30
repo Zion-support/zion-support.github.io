@@ -41,7 +41,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
 
   const heroSlides: HeroSlide[] = [
     {
-      title: anyany"AI-Powered Business Solutions",
+      title: "AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
@@ -144,7 +144,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
             rotate: [0, 360],
             scale: [1, 1.1, 1]
           }}
-          transition={{ duration: anyany20, repeat: Infinity }}
+          transition={{ duration: any20, repeat: Infinity }}
         ></motion.div>
         
         {/* Floating particles */}
@@ -214,7 +214,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anyanymx-0">
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anymx-0">
                   {currentSlideData.features.map((feature, index)    => (
                     <motion.div
                       key={feature}

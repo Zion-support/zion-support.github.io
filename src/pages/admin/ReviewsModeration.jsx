@@ -20,7 +20,7 @@ function ReviewsModerationContent() {
             setIsLoading(false);
         }
         catch (error) {
-            console.error("Error fetching reviews:", error);
+            // // // console.error("Error fetching reviews:", error);
             toast({
                 title: "Error",
                 description: "Failed to load reviews. Please try again later.",

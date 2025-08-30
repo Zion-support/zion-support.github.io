@@ -9,7 +9,7 @@ export interface CloudDevOpsService {
   description: string;
   category: string;
   subcategory: string;
-pricing: {;
+pricing: {
     monthly: number;
     yearly: number;
     custom: string;

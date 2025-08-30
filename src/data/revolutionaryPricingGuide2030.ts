@@ -25,7 +25,7 @@ export interface RevolutionaryPricingGuide2030 {
   marketSize: string;
   competitors: string[];
   pricingTiers: RevolutionaryPricingTier2030[];
-enterprisePricing: {;
+enterprisePricing: {
     custom: string;
     features: string[];
     support: string[];
@@ -535,11 +535,11 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
 ];
 
 // Utility functions for pricing guide management
-export const getPricingGuideByServiceId = (serviceId: anystring): RevolutionaryPricingGuide2030 | undefined  => {
+export const getPricingGuideByServiceId = (serviceId: string): RevolutionaryPricingGuide2030 | undefined  => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.find(guide => guide.serviceId === serviceId);
 };
 
-export const getPricingGuideByCategory = (category: anystring): RevolutionaryPricingGuide2030[]  => {
+export const getPricingGuideByCategory = (category: string): RevolutionaryPricingGuide2030[]  => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => guide.category === category);
 };
 

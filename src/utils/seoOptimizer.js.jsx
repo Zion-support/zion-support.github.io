@@ -160,6 +160,9 @@ export class SEOOptimizer {
         }
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
+          </h3>
+          </h2>
+          </h1>
             issues.push({
                 page,
                 issue: 'no-headings',

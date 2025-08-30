@@ -102,7 +102,7 @@ export function Footer() {
       ]
     },
     {
-      title: "Company",
+      title: "Comp",
       links: [
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },

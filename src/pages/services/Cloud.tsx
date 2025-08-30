@@ -99,7 +99,7 @@ const CloudServices = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {cloudServices.map((service, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -135,7 +135,7 @@ const CloudServices = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {cloudPlatforms.map((platform, index)   => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">

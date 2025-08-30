@@ -2,7 +2,7 @@ import React from 'react';
 
 interface PostCardProps extends React.PropsWithChildren<{}> {
 
-post: {;
+post: {
     id: string;
     title: string;
     content: string;
@@ -11,7 +11,7 @@ post: {;
     likes: number;
     replies: number;
     views: number;
-author: {;
+author: {
       name: string;
       avatar: string;
     

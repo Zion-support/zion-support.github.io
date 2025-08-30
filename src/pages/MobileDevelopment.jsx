@@ -197,7 +197,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Logistics Company",
+    company: "Logistics Comp",
     industry: "Transportation",
     challenge: "Needed enterprise mobile solution for fleet management and driver tracking",
     solution: "Built enterprise mobile app with real-time tracking, route optimization, and driver management",

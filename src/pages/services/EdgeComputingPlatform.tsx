@@ -301,7 +301,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)   => (
               <motion.div
                 key={index}
@@ -335,7 +335,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
@@ -368,7 +368,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
             {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
@@ -407,7 +407,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {edgeLocations.map((location, index)   => (
               <motion.div
                 key={index}
@@ -447,7 +447,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)   => (
               <motion.div
                 key={index}

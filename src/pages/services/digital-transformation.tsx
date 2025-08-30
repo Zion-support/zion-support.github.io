@@ -285,7 +285,7 @@ export default function DigitalTransformation(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"25-40%", label: "Efficiency", description: "Operational improvement" },
+                    { metric: "25-40%", label: "Efficiency", description: "Operational improvement" },
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }

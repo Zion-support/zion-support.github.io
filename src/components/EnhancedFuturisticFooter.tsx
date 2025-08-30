@@ -164,7 +164,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: anystring, href: string)    => {
+  const createMissingPage = (name: string, href: string)    => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -194,7 +194,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             >
               Our Services
             </motion.h3>
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
               {footerSections.slice(0, 2).map((section, index)    => (
                 <motion.div
                   key={section.title}
@@ -235,7 +235,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             >
               Quick Access
             </motion.h3>
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
               {quickLinks.map((link, index)    => (
                 <motion.div
                   key={link.name}
@@ -275,7 +275,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
           >
             Complete Service Portfolio
           </motion.h3>
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {footerSections.map((section, index)    => (
               <motion.div
                 key={section.title}

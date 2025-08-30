@@ -5,8 +5,8 @@ export interface ComprehensivePricingItem2027 {
   description: string;
   category: string;
   subcategory: string;
-pricing: {;
-starter: {;
+pricing: {
+starter: {
       price: string;
       billing: string;
       features: string[];
@@ -867,9 +867,9 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
   }
 ];
 export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = (category: anystring)  => 
+export const getComprehensivePricingGuide2027ByCategory = (category: string)  => 
   comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = (id: anystring)  => 
+export const getComprehensivePricingGuide2027ById = (id: string)  => 
   comprehensivePricingGuide2027.find(item => item.id === id);
 export const pricingCategories2027 = [
   'Metaverse Solutions',

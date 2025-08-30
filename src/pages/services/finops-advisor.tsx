@@ -256,7 +256,7 @@ export default function FinOpsAdvisor(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Cost Savings Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"30-40%", label: "Cost Reduction", description: "Average savings" },
+                    { metric: "30-40%", label: "Cost Reduction", description: "Average savings" },
                     { metric: "50-60%", label: "Resource Utilization", description: "Improvement" },
                     { metric: "70%", label: "Faster Decisions", description: "Optimization speed" },
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }

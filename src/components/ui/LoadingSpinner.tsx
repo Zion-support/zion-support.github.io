@@ -57,7 +57,7 @@ export default function LoadingSpinner({
 export function SkeletonLoader(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anyanylines }).map((_, index)    => (
+      {Array.from({ length: anylines }).map((_, index)    => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -131,7 +131,7 @@ export function ContentPlaceholder(...args: any[]): any {
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: anyany6 }).map((_, index)    => (
+        Array.from({ length: any6 }).map((_, index)    => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: anyany5 }).map((_, index)    => (
+        Array.from({ length: any5 }).map((_, index)    => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -160,7 +160,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: anyany8 }).map((_, index)    => (
+        Array.from({ length: any8 }).map((_, index)    => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -174,7 +174,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: anyany4 }).map((_, index)    => (
+        Array.from({ length: any4 }).map((_, index)    => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}

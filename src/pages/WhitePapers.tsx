@@ -41,7 +41,7 @@ export default function WhitePapers(...args: any[]): any {
 
   const whitePapers = [
     {
-      id: anyany1,
+      id: any1,
       title: 'The Future of AI-Powered Business Intelligence: A Comprehensive Guide',
       category: 'ai-ml',
       author: 'Dr. Sarah Chen, Chief AI Scientist',
@@ -166,7 +166,7 @@ export default function WhitePapers(...args: any[]): any {
   React.useEffect(()   => {
     const categoryCounts = categories.map(cat => ({
       ...cat,
-      count: cat.id === 'all' ? whitePapers.length: anyanywhitePapers.filter(wp   => wp.category === cat.id).length
+      count: cat.id === 'all' ? whitePapers.length: anywhitePapers.filter(wp   => wp.category === cat.id).length
     }));
   }, []);
 
@@ -228,7 +228,7 @@ export default function WhitePapers(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md: anyanygrid-cols-4 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {stats.map((stat, index)   => (
               <div key={stat.label} className="text-center">
@@ -288,7 +288,7 @@ export default function WhitePapers(...args: any[]): any {
       {/* White Papers Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {filteredWhitePapers.map((paper, index)   => (
               <motion.article
                 key={paper.id}
@@ -404,7 +404,7 @@ export default function WhitePapers(...args: any[]): any {
             Featured Research Areas
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {categories.slice(1).map((category, index)   => (
               <motion.div
                 key={category.id}

@@ -132,7 +132,7 @@ export function CategoriesSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: anyanytrue }}
+          viewport={{ once: anytrue }}
         >
           {categories.map((category, index)    => (
             <motion.div

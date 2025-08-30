@@ -300,7 +300,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
         {/* Services Grid */}
         <div className="max-w-7xl mx-auto">
           {filteredServices.length > 0 ? (
-            <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index)    => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}

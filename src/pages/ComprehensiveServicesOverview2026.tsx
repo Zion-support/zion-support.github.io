@@ -215,7 +215,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
   const filteredCategories = selectedCategory === 'all' 
     ? serviceCategories: anyserviceCategories.filter(cat  => cat.id === selectedCategory);
 
-  const toggleCategoryExpansion = (categoryId: anystring)  => {
+  const toggleCategoryExpansion = (categoryId: string)  => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 

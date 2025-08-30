@@ -191,7 +191,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): 
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === 'All'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anyanybg-zion-slate-dark/70'
+                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anybg-zion-slate-dark/70'
                 }`}
               >
                 All Categories
@@ -250,7 +250,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): 
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
           >
             {sortedServices.map((service)   => (
               <motion.div

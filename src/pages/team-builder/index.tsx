@@ -110,14 +110,14 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
     } catch (error: any) {
-      console.error('Error submitting project brief:', error);
+      // // // console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleInviteTalent = async (talentId: anystring, roleTitle: string)  => {
+  const handleInviteTalent = async (talentId: string, roleTitle: string)  => {
     if (!projectBriefSubmitted) {
       toast.error("Cannot send invite without a project context.");
       return;
@@ -151,7 +151,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
     } catch (error: any) {
-      console.error('Error sending invite:', error);
+      // // // console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }
   };

@@ -11,7 +11,7 @@ export function ITServiceRequestHero(...args: any[]): any {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: anyReact.FormEvent)    => {
+  const handleSubmit = async (e: React.FormEvent)    => {
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);

@@ -190,7 +190,7 @@ export default function AICybersecuritySuite(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Threat Categories</h3>
                 <div className="space-y-4">
                   {[
-                    { type: any"Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
+                    { type: "Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
                     { type: "Phishing", icon: Eye, color: "from-orange-500 to-red-500", count: "5M+" },
                     { type: "Ransomware", icon: Lock, color: "from-purple-500 to-red-500", count: "2M+" },
                     { type: "DDoS", icon: Activity, color: "from-blue-500 to-cyan-500", count: "1M+" }
