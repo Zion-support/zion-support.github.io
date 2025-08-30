@@ -12,6 +12,11 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean;
   author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  structuredData?: object;
 }
 
 export function SEO({
@@ -24,13 +29,46 @@ export function SEO({
   twitterCard = 'summary_large_image',
   noindex = false,
   nofollow = false,
-  author
+  author,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags,
+  structuredData
 }: SEOProps) {
   // Generate meta robots content
   const robotsContent = [
     noindex ? 'noindex' : 'index',
     nofollow ? 'nofollow' : 'follow'
   ].join(',');
+
+  // Default structured data for organization
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Leading AI & Technology Solutions provider specializing in artificial intelligence, quantum computing, and innovative micro SAAS services.",
+    "foundingDate": "2020",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "info@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+    ]
+  };
+
+  // Merge custom structured data with default
+  const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
     <Helmet>
@@ -54,6 +92,13 @@ export function SEO({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
+      {author && <meta property="og:author" content={author} />}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags && tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
@@ -99,14 +144,20 @@ export function SEO({
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 
-      {/* Performance optimizations */}
-      <link rel="preload" href="/fonts/orbitron-v19-latin-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/fonts/rajdhani-v15-latin-500.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
 
-      {/* Social Media Verification */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" />
+      {/* Additional performance optimizations */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/fonts/roboto-mono-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      
+      {/* Critical CSS preload */}
+      <link rel="preload" href="/css/critical.css" as="style" />
+      
+      {/* Service Worker */}
+      <link rel="serviceworker" href="/sw.js" />
     </Helmet>
   );
 }
