@@ -1,9 +1,9 @@
-import React, { Suspense, lazy } from 'react.ts';
-import { Routes, Route  } from 'react-router-dom.ts';
-import { Header  } from './components/Header';
-import { Footer  } from './components/Footer';
-import { Sidebar  } from './components/Sidebar';
-import { ErrorBoundary  } from 'react-error-boundary.ts';
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Sidebar } from './components/Sidebar';
+import { ErrorBoundary } from 'react-error-boundary';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
@@ -24,25 +24,25 @@ const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/Comprehensi
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
 // Enhanced Layout Components
-import { EnhancedHeader  } from './components/EnhancedHeader';
-import { EnhancedFooter  } from './components/EnhancedFooter';
+import { EnhancedHeader } from './components/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
 
 // Enhanced Components
-import { PerformanceOptimizer  } from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer';
-import { SEO  } from './components/SEO';
-import { FloatingActionButton  } from './components/FloatingActionButton';
-import { AdvancedAnalytics  } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem  } from './components/SmartNotificationSystem';
-import { ChatAssistant  } from './components/ChatAssistant';
-import { ErrorBoundary  } from './components/ErrorBoundary';
-import { LoadingSpinner  } from './components/ui/loading-spinner';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { SEO } from './components/SEO';
+import { FloatingActionButton } from './components/FloatingActionButton';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { ChatAssistant } from './components/ChatAssistant';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 
 // Enhanced lazy loading with preloading hints
-const createLazyComponent = (importFn: any()  => Promise<any>, fallback?: React.ReactNode) => {
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
-  return (props: any)  => (
+  return (props: any) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
@@ -182,7 +182,7 @@ const UltimateInnovativeServicesShowcase2025 = createLazyComponent(() => import(
 
 
 // Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: anyError; resetErrorBoundary: ()  => void }) => (
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
     <div className="text-center max-w-md">
       <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -210,7 +210,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: anyError; resetEr
   </div>
 );
 
-function App(...args: any[]): any {
+function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => { /* empty */ }} />}>
