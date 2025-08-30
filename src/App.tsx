@@ -21,11 +21,12 @@ const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
 // const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
 const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025').then(module => ({ default: module.ComprehensiveServicesShowcase2025 })));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025').then(module => ({ default: module.ComprehensivePricingGuide2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
 // Enhanced Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader';
-// import { EnhancedFooter } from './components/EnhancedFooter';
+import { EnhancedFooter } from './components/EnhancedFooter';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -329,7 +330,8 @@ function App() {
                     } />
 
                     {/* Comprehensive Services Routes */}
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     {/* <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} /> */}
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
@@ -457,7 +459,7 @@ function App() {
             </main>
 
             {/* Footer */}
-            {/* <EnhancedFooter /> */}
+            <EnhancedFooter />
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />

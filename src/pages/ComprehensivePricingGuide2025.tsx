@@ -42,17 +42,33 @@ import {
   Smartphone as MobileIcon,
   Globe as WebIcon,
   Shield as SecurityIcon,
-  Zap as PerformanceIcon
+  Zap as PerformanceIcon,
+  Brain as AIIcon,
+  Cloud as CloudIcon,
+  Rocket as InnovationIcon,
+  ChevronDown,
+  ChevronUp,
+  Info,
+  AlertCircle,
+  Clock as TimeIcon,
+  Users as TeamIcon,
+  Globe as WorldIcon,
+  Shield as SecurityIcon2,
+  Zap as SpeedIcon,
+  Brain as IntelligenceIcon,
+  Cloud as CloudIcon2,
+  Rocket as LaunchIcon
 } from 'lucide-react';
 import { comprehensiveServices2025Enhanced, serviceCategories } from '../data/comprehensive-services-2025-enhanced';
 
-export function ComprehensiveServicesShowcase2025() {
+export function ComprehensivePricingGuide2025() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [sortBy, setSortBy] = useState('price');
   const [viewMode, setViewMode] = useState('grid');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
+  const [expandedServices, setExpandedServices] = useState<Set<string>>(new Set());
 
   const filteredServices = comprehensiveServices2025Enhanced.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -66,14 +82,28 @@ export function ComprehensiveServicesShowcase2025() {
     switch (sortBy) {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+      case 'price-high':
+        return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', ''));
       case 'category':
         return a.category.localeCompare(b.category);
       case 'popularity':
         return (b.badges.includes('Popular') ? 1 : 0) - (a.badges.includes('Popular') ? 1 : 0);
+      case 'roi':
+        return parseFloat(b.roi.split('%')[0]) - parseFloat(a.roi.split('%')[0]);
       default:
         return a.title.localeCompare(b.title);
     }
   });
+
+  const toggleServiceExpansion = (serviceId: string) => {
+    const newExpanded = new Set(expandedServices);
+    if (newExpanded.has(serviceId)) {
+      newExpanded.delete(serviceId);
+    } else {
+      newExpanded.add(serviceId);
+    }
+    setExpandedServices(newExpanded);
+  };
 
   const openServiceModal = (service: any) => {
     setSelectedService(service);
@@ -107,6 +137,36 @@ export function ComprehensiveServicesShowcase2025() {
     }
   };
 
+  const getPriceRange = (price: string) => {
+    const numPrice = parseFloat(price.replace('$', '').replace(',', ''));
+    if (numPrice < 500) return 'Budget';
+    if (numPrice < 2000) return 'Mid-Range';
+    if (numPrice < 5000) return 'Premium';
+    return 'Enterprise';
+  };
+
+  const getPriceRangeColor = (range: string) => {
+    switch (range) {
+      case 'Budget': return 'bg-green-500/20 text-green-400 border-green-500/30';
+      case 'Mid-Range': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+      case 'Premium': return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
+      case 'Enterprise': return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
+      default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
+    }
+  };
+
+  const pricingStats = {
+    totalServices: comprehensiveServices2025Enhanced.length,
+    averagePrice: comprehensiveServices2025Enhanced.reduce((acc, service) => 
+      acc + parseFloat(service.price.replace('$', '').replace(',', '')), 0) / comprehensiveServices2025Enhanced.length,
+    priceRanges: {
+      Budget: comprehensiveServices2025Enhanced.filter(s => parseFloat(s.price.replace('$', '').replace(',', '')) < 500).length,
+      'Mid-Range': comprehensiveServices2025Enhanced.filter(s => parseFloat(s.price.replace('$', '').replace(',', '')) >= 500 && parseFloat(s.price.replace('$', '').replace(',', '')) < 2000).length,
+      Premium: comprehensiveServices2025Enhanced.filter(s => parseFloat(s.price.replace('$', '').replace(',', '')) >= 2000 && parseFloat(s.price.replace('$', '').replace(',', '')) < 5000).length,
+      Enterprise: comprehensiveServices2025Enhanced.filter(s => parseFloat(s.price.replace('$', '').replace(',', '')) >= 5000).length
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -119,7 +179,7 @@ export function ComprehensiveServicesShowcase2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Zion Tech Group
+            Comprehensive Pricing Guide 2025
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-cyan-200 mb-8 max-w-4xl mx-auto"
@@ -127,7 +187,7 @@ export function ComprehensiveServicesShowcase2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Revolutionary AI, Micro SaaS, and IT Solutions for the Future
+            Transparent pricing for all our revolutionary AI, Micro SaaS, and IT solutions
           </motion.p>
           <motion.div 
             className="flex flex-wrap justify-center gap-4 text-sm"
@@ -136,16 +196,13 @@ export function ComprehensiveServicesShowcase2025() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full border border-cyan-500/30">
-              AI-Powered Solutions
+              {pricingStats.totalServices} Services Available
             </span>
             <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full border border-purple-500/30">
-              Micro SaaS Platform
+              Starting from ${Math.min(...comprehensiveServices2025Enhanced.map(s => parseFloat(s.price.replace('$', '').replace(',', '')))).toLocaleString()}
             </span>
             <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full border border-green-500/30">
-              Enterprise IT Services
-            </span>
-            <span className="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full border border-orange-500/30">
-              Emerging Technologies
+              Average ROI: 400%+
             </span>
           </motion.div>
         </div>
@@ -173,6 +230,27 @@ export function ComprehensiveServicesShowcase2025() {
         </div>
       </section>
 
+      {/* Pricing Statistics */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {Object.entries(pricingStats.priceRanges).map(([range, count], index) => (
+              <motion.div
+                key={range}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-6 text-center"
+              >
+                <div className="text-3xl font-bold text-white mb-2">{count}</div>
+                <div className="text-cyan-300 font-medium">{range}</div>
+                <div className="text-gray-400 text-sm">Services</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Search and Filters */}
       <section className="py-8 px-4">
         <div className="container mx-auto">
@@ -182,7 +260,7 @@ export function ComprehensiveServicesShowcase2025() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search services, features, or capabilities..."
+                placeholder="Search services, features, or pricing..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-xl border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -209,10 +287,12 @@ export function ComprehensiveServicesShowcase2025() {
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-3 bg-white/10 backdrop-blur-xl border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
               >
-                <option value="name">Sort by Name</option>
-                <option value="price">Sort by Price</option>
+                <option value="price">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
                 <option value="category">Sort by Category</option>
                 <option value="popularity">Sort by Popularity</option>
+                <option value="roi">Sort by ROI</option>
+                <option value="name">Sort by Name</option>
               </select>
 
               {/* View Mode */}
@@ -276,6 +356,9 @@ export function ComprehensiveServicesShowcase2025() {
                       <div className="flex flex-col items-end">
                         <span className="text-2xl font-bold text-white">{service.price}</span>
                         <span className="text-sm text-gray-400">per {service.billing}</span>
+                        <span className={`px-2 py-1 text-xs rounded-full border mt-1 ${getPriceRangeColor(getPriceRange(service.price))}`}>
+                          {getPriceRange(service.price)}
+                        </span>
                       </div>
                     </div>
 
@@ -319,6 +402,78 @@ export function ComprehensiveServicesShowcase2025() {
                         ))}
                       </div>
                     </div>
+
+                    {/* Expandable Details */}
+                    <div className="mb-4">
+                      <button
+                        onClick={() => toggleServiceExpansion(service.id)}
+                        className="flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors duration-300"
+                      >
+                        {expandedServices.has(service.id) ? (
+                          <>
+                            <ChevronUp className="w-4 h-4 mr-1" />
+                            Show Less
+                          </>
+                        ) : (
+                          <>
+                            <ChevronDown className="w-4 h-4 mr-1" />
+                            Show More Details
+                          </>
+                        )}
+                      </button>
+                    </div>
+
+                    {/* Expanded Details */}
+                    <AnimatePresence>
+                      {expandedServices.has(service.id) && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="space-y-4 pt-4 border-t border-cyan-500/20">
+                            {/* Capabilities */}
+                            <div>
+                              <h5 className="text-sm font-semibold text-cyan-400 mb-2">Capabilities</h5>
+                              <ul className="space-y-1">
+                                {service.capabilities.slice(0, 3).map((capability, capIndex) => (
+                                  <li key={capIndex} className="flex items-center text-sm text-gray-300">
+                                    <Zap className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                                    {capability}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            {/* Use Cases */}
+                            <div>
+                              <h5 className="text-sm font-semibold text-cyan-400 mb-2">Use Cases</h5>
+                              <div className="flex flex-wrap gap-2">
+                                {service.useCases.slice(0, 4).map((useCase, useCaseIndex) => (
+                                  <span key={useCaseIndex} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded border border-purple-500/30">
+                                    {useCase}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+
+                            {/* Technology Stack */}
+                            <div>
+                              <h5 className="text-sm font-semibold text-cyan-400 mb-2">Technology Stack</h5>
+                              <div className="flex flex-wrap gap-2">
+                                {service.technologyStack.slice(0, 4).map((tech, techIndex) => (
+                                  <span key={techIndex} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">
+                                    {tech}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
 
                   {/* Service Actions */}
@@ -328,7 +483,7 @@ export function ComprehensiveServicesShowcase2025() {
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <Eye className="w-5 h-5" />
-                      <span>View Details</span>
+                      <span>View Full Details</span>
                     </button>
                     
                     <a
@@ -630,10 +785,10 @@ export function ComprehensiveServicesShowcase2025() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Get Started?
             </h2>
             <p className="text-xl text-cyan-200 mb-8">
-              Join hundreds of companies already leveraging Zion Tech Group's cutting-edge solutions
+              Contact us today to discuss your specific needs and get a customized quote
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -642,7 +797,7 @@ export function ComprehensiveServicesShowcase2025() {
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-lg"
               >
-                <span>Get Started Today</span>
+                <span>Get Custom Quote</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
@@ -660,4 +815,4 @@ export function ComprehensiveServicesShowcase2025() {
   );
 }
 
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensivePricingGuide2025;
