@@ -74,7 +74,7 @@ export function ChatBotPanel() {
                 setFailedAttempts(0)}
         }
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // // // // // console.error("Error in AI chat:", error);
             toast({
                 variant: "destructive",
                 title: "Communication Error",
@@ -109,7 +109,7 @@ export function ChatBotPanel() {
                 message: data.message
             }}
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // // // // // console.error("Error in AI chat:", error);
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
@@ -129,7 +129,7 @@ export function ChatBotPanel() {
         try {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system
-            console.log("Support escalation triggered", {
+            // // // // // console.log("Support escalation triggered", {
                 conversationHistory: messages.map(m => ({
                     content: m.content,
                     sender: m.sender,
@@ -137,7 +137,7 @@ export function ChatBotPanel() {
                 }))
             })}
         catch (error) {
-            console.error("Failed to log support escalation:", error)}
+            // // // // // console.error("Failed to log support escalation:", error)}
     };
     const handleQuickReply = (text) => {
         handleSendMessage(text)};

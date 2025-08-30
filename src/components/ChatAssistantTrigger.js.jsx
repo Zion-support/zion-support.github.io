@@ -21,7 +21,7 @@ export function ChatAssistantTrigger() {
                 throw new Error("Failed to get response from AI assistant")}
             return Promise.resolve()}
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // // // // // console.error("Error in AI chat:", error);
             return Promise.resolve()}
     };
     return (<>

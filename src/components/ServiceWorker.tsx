@@ -24,7 +24,7 @@ export function ServiceWorker() {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: ', registration);
+          // // // // // console.log('SW registered: ', registration);
           setSwState(prev => ({ ...prev, isInstalled: true }));
 
           // Check for updates
@@ -51,7 +51,7 @@ export function ServiceWorker() {
           });
         })
         .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
+          // // // // // console.log('SW registration failed: ', registrationError);
         });
     }
 

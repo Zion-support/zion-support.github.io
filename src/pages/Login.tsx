@@ -33,7 +33,7 @@ export default function Login(...args[]):  {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     // Here you would typically make an API call to authenticate
-    console.log('Login attempt:', formData);
+    // // // // // console.log('Login attempt:', formData);
     
     setIsLoading(false)};
 

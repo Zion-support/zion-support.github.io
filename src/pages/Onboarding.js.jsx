@@ -71,7 +71,7 @@ export default function Onboarding() {
             // Redirect to dashboard
             navigate(dashboardRoute)}
         catch (error) {
-            console.error('Error updating profile:', error);
+            // // // // // console.error('Error updating profile:', error);
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',

@@ -12,7 +12,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
             await mutate(() => true, undefined, { revalidate: true });
             resetErrorBoundary()}
         catch (retryError) {
-            console.error('Error during retry:', retryError);
+            // // // // // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError)}
     };
     return (<div className="flex items-center justify-center min-h-[400px] p-6">
@@ -47,7 +47,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
 export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
         // Log boundary errors to Sentry
-        console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
+        // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {

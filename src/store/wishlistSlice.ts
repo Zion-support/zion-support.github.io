@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { WishlistItem } from '@/types/listings';
 
-interface WishlistState {
+export interface WishlistState {
   items: WishlistItem[];
   itemCount: number;
 }

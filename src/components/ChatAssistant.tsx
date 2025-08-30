@@ -103,7 +103,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       };
 
       recognitionRef.current.onerror = (event) => {
-        console.error('Speech recognition error: ', event.error);
+        // // // // // console.error('Speech recognition error: ', event.error);
         setIsListening(false);
       };
     }
@@ -176,7 +176,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
       setMessages(prev => [...prev, aiResponse]);
     } catch (error) {
-      console.error('Error sending message:', error);
+      // // // // // console.error('Error sending message:', error);
       
       const errorMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),

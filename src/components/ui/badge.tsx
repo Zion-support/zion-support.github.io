@@ -47,4 +47,4 @@ function Badge(...args[]):  {
   )
 }
 
-export { Badge, badgeVariants }
+export { Badge, badgeVariants }  </div>

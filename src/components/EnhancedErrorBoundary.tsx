@@ -43,7 +43,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-    console.error('Error Boundary caught an error:', error, errorInfo);
+    // // // // // console.error('Error Boundary caught an error:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -85,7 +85,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       };
 
       // In production, send this to your error reporting service
-      console.log('Error Report:', errorReport);
+      // // // // // console.log('Error Report:', errorReport);
       
       // For now, just copy to clipboard
       navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2))

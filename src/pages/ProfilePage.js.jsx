@@ -28,7 +28,7 @@ export default function ProfilePage() {
                     throw error}
                 setProfileData(data)}
             catch (error) {
-                console.error("Error fetching profile:", error);
+                // // // // // console.error("Error fetching profile:", error);
                 setIsError(true);
                 toast({
                     title: "Error",

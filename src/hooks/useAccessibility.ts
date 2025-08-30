@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
-interface UseAccessibilityOptions {
+export interface UseAccessibilityOptions {
 
   enableKeyboardNavigation?: boolean;
   enableFocusManagement?: boolean;
@@ -9,7 +9,7 @@ interface UseAccessibilityOptions {
   enableReducedMotion?: boolean;
   enableLargeText?: boolean}
 
-interface AccessibilityFeatures {
+export interface AccessibilityFeatures {
 
   isHighContrast: boolean;
   isReducedMotion: boolean;

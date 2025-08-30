@@ -72,10 +72,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 setMetrics(prev => prev ? { ...prev, firstContentfulPaint: fcp } : null);
                 
                 if (logMetrics) {
-                  console.log('First Contentful Paint:', fcp, 'ms')}
+                  // // // // // console.log('First Contentful Paint:', fcp, 'ms')}
                 
                 if (fcp > threshold.firstContentfulPaint) {
-                  console.warn(`FCP (${fcp}ms) exceeds threshold (${threshold.firstContentfulPaint}ms)`)}
+                  // // // // // console.warn(`FCP (${fcp}ms) exceeds threshold (${threshold.firstContentfulPaint}ms)`)}
               }
             })});
           observerRef.current.observe({ entryTypes['paint'] });
@@ -89,10 +89,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               setMetrics(prev => prev ? { ...prev, largestContentfulPaint: lcp } : null);
               
               if (logMetrics) {
-                console.log('Largest Contentful Paint:', lcp, 'ms')}
+                // // // // // console.log('Largest Contentful Paint:', lcp, 'ms')}
               
               if (lcp > threshold.largestContentfulPaint) {
-                console.warn(`LCP (${lcp}ms) exceeds threshold (${threshold.largestContentfulPaint}ms)`)}
+                // // // // // console.warn(`LCP (${lcp}ms) exceeds threshold (${threshold.largestContentfulPaint}ms)`)}
             }
           });
           lcpObserver.observe({ entryTypes['largest-contentful-paint'] });
@@ -109,10 +109,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             setMetrics(prev => prev ? { ...prev, cumulativeLayoutShift: clsValue } : null);
             
             if (logMetrics) {
-              console.log('Cumulative Layout Shift:', clsValue)}
+              // // // // // console.log('Cumulative Layout Shift:', clsValue)}
             
             if (clsValue > threshold.cumulativeLayoutShift) {
-              console.warn(`CLS (${clsValue}) exceeds threshold (${threshold.cumulativeLayoutShift})`)}
+              // // // // // console.warn(`CLS (${clsValue}) exceeds threshold (${threshold.cumulativeLayoutShift})`)}
           });
           clsObserver.observe({ entryTypes['layout-shift'] });
 
@@ -124,13 +124,13 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               setMetrics(prev => prev ? { ...prev, firstInputDelay: fid } : null);
               
               if (logMetrics) {
-                console.log('First Input Delay:', fid, 'ms')}
+                // // // // // console.log('First Input Delay:', fid, 'ms')}
               
               if (fid > threshold.firstInputDelay) {
-                console.warn(`FID (${fid}ms) exceeds threshold (${threshold.firstInputDelay}ms)`)}
+                // // // // // console.warn(`FID (${fid}ms) exceeds threshold (${threshold.firstInputDelay}ms)`)}
             })});
           fidObserver.observe({ entryTypes['first-input'] })} catch (error) {
-          console.warn('Performance monitoring initialization failed:', error)}
+          // // // // // console.warn('Performance monitoring initialization failed:', error)}
       }
 
       // Monitor page load events
@@ -148,12 +148,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }));
 
         if (logMetrics) {
-          console.log('Page Load Time:', loadTime, 'ms');
-          console.log('DOM Content Loaded:', domContentLoaded, 'ms');
-          console.log('Window Load:', windowLoad, 'ms')}
+          // // // // // console.log('Page Load Time:', loadTime, 'ms');
+          // // // // // console.log('DOM Content Loaded:', domContentLoaded, 'ms');
+          // // // // // console.log('Window Load:', windowLoad, 'ms')}
 
         if (loadTime > threshold.pageLoadTime) {
-          console.warn(`Page load time (${loadTime}ms) exceeds threshold (${threshold.pageLoadTime}ms)`)}
+          // // // // // console.warn(`Page load time (${loadTime}ms) exceeds threshold (${threshold.pageLoadTime}ms)`)}
 
         // Send metrics to analytics
         if (sendToAnalytics) {
@@ -289,7 +289,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }).catch(()  => {
         // Silently fail if analytics endpoint is not available
       })} catch (error) {
-      console.warn('Failed to send performance metrics:', error)}
+      // // // // // console.warn('Failed to send performance metrics:', error)}
   }, [location.pathname, calculatePerformanceScore]);
 
   // Don't render thing visible

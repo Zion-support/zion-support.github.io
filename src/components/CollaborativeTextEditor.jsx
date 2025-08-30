@@ -145,7 +145,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             }));
             trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length)}
         catch (error) {
-            console.error('Failed to generate AI suggestions:', error);
+            // // // // // console.error('Failed to generate AI suggestions:', error);
             trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}

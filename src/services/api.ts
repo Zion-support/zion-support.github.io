@@ -1,8 +1,9 @@
+import { RequestInit } from 'node-fetch';
 // API base URL - will use proxy in development, direct URL in production
 const API_BASE_URL = import.meta.env.DEV ? '/api' : 'http://localhost:5000/api';
 
 // Generic API response type
-interface ApiResponse<T = any> {
+export interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
   error?: string;
@@ -50,7 +51,7 @@ async function apiRequest<T>(
   }
 }
 
-interface ApiClientOptions {
+export interface ApiClientOptions {
   method?: string;
   body?: string;
   headers?: Record<string, string>;
@@ -80,7 +81,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
     
     return await response.json();
   } catch (error) {
-    console.error('API request failed:', error);
+    // // // // // console.error('API request failed:', error);
     throw error;
   }
 }

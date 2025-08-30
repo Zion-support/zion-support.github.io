@@ -48,7 +48,7 @@ export const useLazyComponent = (importFn, options = {}) => {
                 .then((module) => {
                 setComponent(() => module.default)})
                 .catch((error) => {
-                console.error('Failed to load lazy component:', error)})
+                // // // // // console.error('Failed to load lazy component:', error)})
                 .finally(() => {
                 setIsLoading(false)})}
     }, [isVisible, Component, isLoading, importFn]);

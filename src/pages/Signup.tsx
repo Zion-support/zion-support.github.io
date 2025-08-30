@@ -43,7 +43,7 @@ export default function Signup(...args[]):  {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Here you would typically make an API call to register
-    console.log('Signup attempt:', formData);
+    // // // // // console.log('Signup attempt:', formData);
     setIsLoading(false)};
   const features = [
     {

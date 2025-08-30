@@ -1,6 +1,6 @@
 import { useCallback  } from 'react.ts';
 
-interface User {
+export interface User {
 
   id: string;
   email: string;

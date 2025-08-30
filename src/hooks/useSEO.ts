@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useMemo  } from 'react.ts';
 
-interface SEOData {
+export interface SEOData {
 
   title: string;
   description: string;
@@ -12,7 +12,7 @@ interface SEOData {
   noindex?: boolean;
   structuredData?: object}
 
-interface UseSEOOptions {
+export interface UseSEOOptions {
 
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
@@ -210,7 +210,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     // Core Web Vitals
     if ('web-vital' in window) {
       // This would require the web-vitals library
-      console.log('Web Vitals available')}
+      // // // // // console.log('Web Vitals available')}
 
     // Navigation Timing API
     if ('performance' in window) {
@@ -297,7 +297,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
 // Type declarations
 declare global {
-  interface Window {
+  export interface Window {
 
     gtag?: (...args[])  => void;
     dataLayer?[]}

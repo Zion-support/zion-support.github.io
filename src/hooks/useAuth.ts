@@ -1,6 +1,6 @@
 import { useState, useEffect  } from 'react.ts';
 
-interface User {
+export interface User {
 
   id: string;
   email: string;
@@ -10,7 +10,7 @@ interface User {
   displayName?: string;
   avatarUrl?: string}
 
-interface AuthState {
+export interface AuthState {
 
   user: User | null;
   isAuthenticated: boolean;
@@ -37,7 +37,7 @@ export function useAuth(...args[]):  {
             isAuthenticated: true,
             isLoading: false,
           })} catch (error) {
-          console.error('Error parsing stored user:', error);
+          // // // // // console.error('Error parsing stored user:', error);
           setAuthState({
             user: null,
             isAuthenticated: false,

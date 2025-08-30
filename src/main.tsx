@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
 	window.addEventListener('load', () => {
 		const swUrl = '/sw.js'
 		navigator.serviceWorker.register(swUrl).catch((error) => {
-			console.error('Service worker registration failed:', error)
+			// // // // // console.error('Service worker registration failed:', error)
 		})
 	})
 }

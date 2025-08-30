@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState  } from 'react.ts';
-interface PerformanceMetrics {
+export interface PerformanceMetrics {
 
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
@@ -9,16 +9,16 @@ interface PerformanceMetrics {
   domLoad: number | null; // DOM Content Loaded
   windowLoad: number | null; // Window Load
   navigationStart: number | null}
-interface PerformanceObserverEntry {
+export interface PerformanceObserverEntry {
 
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor'}
 // Extended interfaces for specific performance entry types
-interface FirstInputEntry extends PerformanceEntry {
+export interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
   startTime: number}
-interface LayoutShiftEntry extends PerformanceEntry {
+export interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number}
 export function usePerformance(...args[]):  {

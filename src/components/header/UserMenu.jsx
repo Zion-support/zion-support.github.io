@@ -18,7 +18,7 @@ export const UserMenu = () => {
             await logout();
             setIsOpen(false)}
         catch (error) {
-            console.error('Logout failed:', error)}
+            // // // // // console.error('Logout failed:', error)}
     };
     if (!user) {
         return null}

@@ -1,6 +1,6 @@
 import { useState, useEffect  } from 'react.ts';
 
-interface User {
+export interface User {
 
   id: string;
   email: string;
@@ -11,7 +11,7 @@ interface User {
   createdAt?: string;
   updatedAt?: string}
 
-interface AuthTokens {
+export interface AuthTokens {
 
   accessToken: string | null;
   refreshToken: string | null}
@@ -42,7 +42,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error)} finally {
+        // // // // // console.error('Error checking auth state:', error)} finally {
         setIsLoading(false)}
     };
 

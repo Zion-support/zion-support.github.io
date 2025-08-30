@@ -63,7 +63,7 @@ export function AdvancedDataVisualization() {
     }, [autoRefresh]);
     const downloadChart = (format) => {
         // Simulate chart download
-        console.log(`Downloading chart as ${format}`)};
+        // // // // // console.log(`Downloading chart as ${format}`)};
     const renderChart = () => {
         switch (selectedChartType) {
             case 'bar':

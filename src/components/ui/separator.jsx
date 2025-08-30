@@ -10,4 +10,4 @@ export function Separator({ className = '', orientation = 'horizontal', decorati
       className={`${baseClasses} bg-gray-300 ${className}`}
       {...props}
     />
-  )}
+  )}  </div>
