@@ -4,6 +4,9 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { ErrorBoundary } from 'react-error-boundary';
+import { SEOHead } from './components/SEOHead';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { EnhancedMobileNavigation } from './components/EnhancedMobileNavigation';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
@@ -63,8 +66,18 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 export default function App() {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
+      {/* SEO Head Component */}
+      <SEOHead />
+      
+      {/* Performance Monitor */}
+      <PerformanceMonitor />
+      
       <div className="min-h-screen bg-gray-900 text-white">
         <Header />
+        
+        {/* Enhanced Mobile Navigation */}
+        <EnhancedMobileNavigation />
+        
         <div className="flex pt-16">
           <Sidebar />
           <main className="flex-1 ml-64 min-h-screen">

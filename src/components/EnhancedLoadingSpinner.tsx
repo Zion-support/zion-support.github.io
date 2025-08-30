@@ -1,240 +1,245 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Loader2, Zap, Brain, Cloud, Atom } from 'lucide-react';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
+interface EnhancedLoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white' | 'custom';
+  customColor?: string;
   text?: string;
   showProgress?: boolean;
   progress?: number;
+  variant?: 'spinner' | 'dots' | 'pulse' | 'bars';
+  className?: string;
 }
 
-const iconVariants = {
-  animate: {
-    rotate: 360,
-    scale: [1, 1.2, 1],
-    transition: {
-      rotate: { duration: 2, repeat: Infinity,
-  ease: "linear" 
-
-;
-;
-;
-
-
-},;
-      scale: { duration: 1, repeat: Infinity, ease: "easeInOut" };
-    };
-  };
-};
-
-const pulseVariants = {
-  animate: {
-    scale: [1, 1.1, 1],
-    opacity: [0.5, 1, 0.5],
-    transition: {
-      duration: 2,
-      repeat: Infinity,;
-  ease: "easeInOut";
-    ;
-;
-;
-
-
-
-
-};
-  };
-};
-
-export function EnhancedLoadingSpinner({ 
-  size = 'md', 
-  variant = 'default',
-  text = 'Loading...',
+export function EnhancedLoadingSpinner({
+  size = 'md',
+  color = 'primary',
+  customColor,
+  text,
   showProgress = false,
-  progress = 0
-}: LoadingSpinnerProps) {
+  progress = 0,
+  variant = 'spinner',
+  className = ''
+}: EnhancedLoadingSpinnerProps) {
   const sizeClasses = {
-  sm: 'w-8 h-8',
-    md: 'w-12 h-12',;
-  ;
-  ;
-  ;
-  ;
-  lg: 'w-16 h-16';
-  ;
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
 
-
-
-
-
-
-};
+  const colorClasses = {
+    primary: 'text-cyan-500',
+    secondary: 'text-blue-500',
+    white: 'text-white',
+    custom: customColor ? '' : 'text-cyan-500'
+  };
 
   const textSizes = {
-  sm: 'text-sm',
-    md: 'text-base',;
-  ;
-  ;
-  ;
-  ;
-  lg: 'text-lg';
-  ;
-
-
-
-
-
-
-};
-
-  const getIcon = () => {;
-    switch (variant) {;
-      case 'ai':;
-        return <Brain className="w-full h-full text-cyan-400" />;
-      case 'quantum':
-        return <Atom className="w-full h-full text-purple-400" />;
-      case 'futuristic':
-        return <Zap className="w-full h-full text-blue-400" />;
-      default:
-        return <Loader2 className="w-full h-full text-gray-400" />;
-    }
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base',
+    xl: 'text-lg'
   };
 
-  const getBackground = () => {;
-    switch (variant) {;
-      case 'ai':;
-        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
-      case 'quantum':
-        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30';
-      case 'futuristic':
-        return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30';
-      default:
-        return 'bg-gray-100 border-gray-200';
-    }
-  };
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                className={`${sizeClasses[size]} ${colorClasses[color]}`}
+                style={customColor ? { backgroundColor: customColor } : {}}
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.5, 1, 0.5]
+                }}
+                transition={{
+                  duration: 1.4,
+                  repeat: Infinity,
+                  delay: i * 0.2
+                }}
+              />
+            ))}
+          </div>
+        );
 
-  return (
-    <div className = "flex flex-col items-center justify-center space-y-4 p-6">
-      {/* Main Spinner */}
-      <div className="relative">
-        <motion.div
-          className={`${sizeClasses[size]} ${getBackground()} border-2 rounded-full flex items-center justify-center`}
-          variants={pulseVariants}
-          animate="animate"
-        >
+      case 'pulse':
+        return (
           <motion.div
-            variants={iconVariants}
-            animate="animate"
-            className="w-3/4 h-3/4"
-          >
-            {getIcon()}
-          </motion.div>
-        </motion.div>
-        
-        {/* Orbiting particles for futuristic variants */}
-        {variant !== 'default' && (
-          <>
-            <motion.div
-              className="absolute inset-0 w-full h-full"
-              animate={{
-                rotate: 360
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-  ease: "linear"
-              
-
-
-
-
-
-
-}}
-            >
-              <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
-            </motion.div>
-            <motion.div
-              className="absolute inset-0 w-full h-full"
-              animate={{
-                rotate: -360
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-  ease: "linear"
-              
-
-
-
-
-
-
-}}
-            >
-              <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
-            </motion.div>
-          </>
-        )}
-      </div>
-
-      {/* Loading Text */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className={`text-center ${textSizes[size]} text-gray-600 dark:text-gray-300`}
-      >
-        {text}
-      </motion.div>
-
-      {/* Progress Bar */}
-      {showProgress && (
-        <motion.div
-          initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: '100%' }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-          className="w-full max-w-xs bg-gray-200 rounded-full h-2 overflow-hidden"
-        >
-          <motion.div
-            className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          />
-        </motion.div>
-      )}
-
-      {/* Loading Dots */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="flex space-x-1"
-      >
-        {[0, 1, 2].map((i) => (
-          <motion.div
-            key={i}
-            className="w-2 h-2 bg-gray-400 rounded-full"
+            className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full`}
+            style={customColor ? { backgroundColor: customColor } : {}}
             animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 1, 0.5]
+              scale: [1, 1.1, 1],
+              opacity: [0.7, 1, 0.7]
             }}
             transition={{
               duration: 1.5,
               repeat: Infinity,
-              delay: i * 0.2
+              ease: "easeInOut"
             }}
           />
-        ))}
-      </motion.div>
+        );
+
+      case 'bars':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                className={`w-1 ${colorClasses[color]}`}
+                style={customColor ? { backgroundColor: customColor } : {}}
+                animate={{
+                  height: ['20px', '40px', '20px']
+                }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  delay: i * 0.1
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      default: // spinner
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full`}
+            style={customColor ? { borderColor: customColor, borderTopColor: 'transparent' } : {}}
+            animate={{ rotate: 360 }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        );
+    }
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      {/* Loading Animation */}
+      <div className="relative">
+        {renderSpinner()}
+        
+        {/* Progress Ring (if showing progress) */}
+        {showProgress && (
+          <svg
+            className={`absolute inset-0 ${sizeClasses[size]} -rotate-90`}
+            viewBox="0 0 100 100"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="4"
+              strokeLinecap="round"
+              className="text-gray-700"
+            />
+            <motion.circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="4"
+              strokeLinecap="round"
+              className={colorClasses[color]}
+              style={customColor ? { stroke: customColor } : {}}
+              initial={{ strokeDasharray: 283, strokeDashoffset: 283 }}
+              animate={{ strokeDashoffset: 283 - (283 * progress) / 100 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            />
+          </svg>
+        )}
+      </div>
+
+      {/* Loading Text */}
+      {text && (
+        <motion.p
+          className={`${textSizes[size]} text-gray-400 text-center max-w-xs`}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          {text}
+        </motion.p>
+      )}
+
+      {/* Progress Text */}
+      {showProgress && (
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          <span className={`${textSizes[size]} font-medium ${colorClasses[color]}`}>
+            {Math.round(progress)}%
+          </span>
+        </motion.div>
+      )}
     </div>
   );
 }
 
-// Export as ZionLoadingSpinner for backward compatibility
-export const ZionLoadingSpinner = EnhancedLoadingSpinner;
+// Skeleton loading component for content
+export function LoadingSkeleton({
+  type = 'card',
+  className = ''
+}: {
+  type?: 'card' | 'text' | 'avatar' | 'button';
+  className?: string;
+}) {
+  const renderSkeleton = () => {
+    switch (type) {
+      case 'card':
+        return (
+          <div className="animate-pulse">
+            <div className="h-48 bg-gray-700 rounded-lg mb-4"></div>
+            <div className="h-4 bg-gray-700 rounded mb-2"></div>
+            <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+          </div>
+        );
+      
+      case 'text':
+        return (
+          <div className="animate-pulse space-y-3">
+            <div className="h-4 bg-gray-700 rounded"></div>
+            <div className="h-4 bg-gray-700 rounded w-5/6"></div>
+            <div className="h-4 bg-gray-700 rounded w-4/6"></div>
+          </div>
+        );
+      
+      case 'avatar':
+        return (
+          <div className="animate-pulse">
+            <div className="w-12 h-12 bg-gray-700 rounded-full"></div>
+          </div>
+        );
+      
+      case 'button':
+        return (
+          <div className="animate-pulse">
+            <div className="h-10 w-24 bg-gray-700 rounded-lg"></div>
+          </div>
+        );
+      
+      default:
+        return null;
+    }
+  };
 
-export default EnhancedLoadingSpinner;
+  return (
+    <div className={className}>
+      {renderSkeleton()}
+    </div>
+  );
+}

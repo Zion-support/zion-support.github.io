@@ -1,476 +1,357 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import {
-  Menu,
-  X,
-  ChevronDown,
+import { motion, AnimatePresence, PanInfo } from 'framer-motion';
+import { 
+  X, 
+  Menu, 
+  ChevronDown, 
   Home,
-  Users,
-  Briefcase,
-  Phone,
-  Info,
-  Settings,
-  HelpCircle,
-  FileText,
-  Globe,
   Zap,
-  Shield,
-  Cloud,
+  Target,
+  Users,
+  FileText,
+  Phone,
+  Search,
+  User,
+  Settings,
+  Bell,
+  Globe,
   Brain,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Lock,
-  Code,
+  Shield,
+  Cpu,
   Rocket,
-  Star,
-  TrendingUp,
-  Award,
-  BookOpen,
-  MessageCircle,
-  Mail,
-  MapPin,
-  Clock
- } from 'lucide-react';
+  Atom,
+  Activity,
+  BarChart3,
+  Building,
+  Briefcase,
+  Newspaper,
+  Network
+} from 'lucide-react';
 
 interface NavigationItem {
+  name: string;
+  href: string;
+  icon: React.ComponentType<any>;
+  dropdown?: NavigationItem[];
+}
 
-  label: string;
-  path: string;
-  icon: React.ComponentType<{ size?: number; className?: string 
-}>;
-  children?: NavigationItem[];
-  description?: string}
-
-const navigationItems: NavigationItem[] = [
-  {
-    label: 'Home',
-    path: '/',
-    icon: Home,
-    description: 'Welcome to Zion Tech Group'
-  },
-  {
-    label: 'About',
-    path: '/about',
-    icon: Info,
-    description: 'Learn about our comp and mission'
-  },
-  {
-    label: 'Services',
-    path: '/services',
-    icon: Briefcase,
-    children[
-      {
-        label: 'AI & Machine Learning',
-        path: '/services/ai',
-        icon: Brain,
-        description: 'Cutting-edge AI solutions'
-      },
-      {
-        label: 'Cybersecurity',
-        path: '/services/cybersecurity',
-        icon: Shield,
-        description: 'Advanced security services'
-      },
-      {
-        label: 'Cloud Services',
-        path: '/services/cloud',
-        icon: Cloud,
-        description: 'Scalable cloud solutions'
-      },
-      {
-        label: 'Digital Transformation',
-        path: '/services/transformation',
-        icon: Zap,
-        description: 'Business transformation services'
-      },
-      {
-        label: 'Infrastructure',
-        path: '/services/infrastructure',
-        icon: Server,
-        description: 'IT infrastructure solutions'
-      },
-      {
-        label: 'Consulting',
-        path: '/services/consulting',
-        icon: Users,
-        description: 'Strategic IT consulting'
-      }
-    ]
-  },
-  {
-    label: 'Solutions',
-    path: '/solutions',
-    icon: Rocket,
-    description: 'Industry-specific solutions'
-  },
-  {
-    label: 'Contact',
-    path: '/contact',
-    icon: Phone,
-    description: 'Get in touch with us'
-  }
-];
-
-const quickActions = [
-  {
-    label: 'Get Quote',
-    path: '/request-quote',
-    icon: MessageCircle,
-    color: 'bg-zion-cyan'
-  },
-  {
-    label: 'Support',
-    path: '/help',
-    icon: HelpCircle,
-    color: 'bg-zion-purple'
-  },;
-  {;
-    label: 'Documentation',;
-    path: '/docs',;
-    icon: FileText,;
-    color: 'bg-zion-blue';
-  };
-];
-
-<<<<<<< HEAD
-export const EnhancedMobileNavigation: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export function EnhancedMobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const [activePath, setActivePath] = useState('/');
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
   const location = useLocation();
-  const menuRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    setActivePath(location.pathname)}, [location]);
-
-  useEffect(() => {
-<<<<<<< HEAD
-    const handleClickOutside = (event: MouseEvent) => {;
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {;
-        setIsOpen(false);
-      }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    };
-
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'hidden'}
-;
-    return () => {;
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'unset'}}, [isOpen]);
-
-<<<<<<< HEAD
-  const toggleExpanded = (label: string) => {;
-    setExpandedItems(prev => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      const newSet = new Set(prev);
-      if (newSet.has(label)) {
-        newSet.delete(label)} else {
-        newSet.add(label)}
-      return newSet})};
-
-<<<<<<< HEAD
-  const handleNavigation = (path: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setIsOpen(false);
-    setExpandedItems(new Set())};
-
-<<<<<<< HEAD
-  const isActive = (path: string)  => {
-    if (path === '/') {;
-      return activePath === '/'};
-    return activePath.startsWith(path)};
-=======
-  const isActive = (path: string) => {;
-    if (path === '/') {;
-      return activePath === '/';
+  const navigation: NavigationItem[] = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: Home
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      dropdown: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin Solutions', href: '/solutions/digital-twin', icon: Activity },
+        { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield }
+      ]
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      dropdown: [
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Partners', href: '/partners', icon: Network },
+        { name: 'Press', href: '/press', icon: Newspaper }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      dropdown: [
+        { name: 'Blog', href: '/blog', icon: Newspaper },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Support', href: '/support', icon: FileText },
+        { name: 'Training', href: '/training', icon: FileText }
+      ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
     }
-    return activePath.startsWith(path);
+  ];
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+    setIsSearchOpen(false);
+  }, [location.pathname]);
+
+  // Focus search input when search is opened
+  useEffect(() => {
+    if (isSearchOpen && searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, [isSearchOpen]);
+
+  // Handle swipe gestures
+  const handleDragEnd = (event: any, info: PanInfo) => {
+    const swipeThreshold = 100;
+    if (Math.abs(info.offset.x) > swipeThreshold) {
+      if (info.offset.x > 0) {
+        // Swipe right - close menu
+        setIsOpen(false);
+        setSwipeDirection('right');
+      } else {
+        // Swipe left - open menu
+        setIsOpen(true);
+        setSwipeDirection('left');
+      }
+    }
+    
+    // Reset swipe direction after animation
+    setTimeout(() => setSwipeDirection(null), 300);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
-    const isExpanded = expandedItems.has(item.label);
-    const hasChildren = item.children && item.children.length > 0;
-    const isItemActive = isActive(item.path);
-
-    return (
-      <div key = {item.label} className="w-full">
-        <motion.div
-          initial={false}
-          animate = {
-  { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
-  0.1)' : 'transparent' 
-
-
-
-
-
-
-}}
-          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
-        >
-          <Link
-            to={item.path}
-            onClick={() => handleNavigation(item.path)}
-            className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${
-              isItemActive
-                ? 'text-zion-cyan border-l-2 border-zion-cyan'
-                : 'text-white hover:text-zion-cyan'
-            }`}
-          >
-            <div className="flex items-center gap-3">
-              <item.icon
-                size={20}
-                className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'}
-              />
-              <div>
-                <span className="font-medium">{item.label}</span>
-                {item.description && (
-                  <p className="text-sm text-zion-slate-light mt-1">{item.description}</p>
-                )}
-              </div>
-            </div>
-            {hasChildren && (
-              <ChevronDown
-                size={16}
-                className={`transition-transform duration-200 ${
-                  isExpanded ? 'rotate-180' : ''
-                }`}
-              />
-            )}
-          </Link>
-
-          {hasChildren && (
-            <button
-              onClick={() => toggleExpanded(item.label)}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
-              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
-            >
-              <ChevronDown
-                size={16}
-                className={`transition-transform duration-200 ${
-                  isExpanded ? 'rotate-180' : ''
-                }`}
-              />
-            </button>
-          )}
-        </motion.div>
-
-        {hasChildren && (
-          <AnimatePresence>
-            {isExpanded && (
-              <motion.div
-                initial = {
-  { height: 0,
-  opacity: 0 
-
-
-
-
-
-
-}}
-                animate = {
-  { height: 'auto',
-  opacity: 1 
-
-
-
-
-
-
-}}
-                exit = {
-  { height: 0,
-  opacity: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.3,
-  ease: 'easeInOut' 
-
-
-
-
-
-
-}}
-                className="overflow-hidden"
-              >
-                <div className="border-l border-zion-slate-light/20 ml-4">
-                  {item.children!.map(child => renderNavigationItem(child, depth + 1))}
-                </div>
-<<<<<<< HEAD
-              </motion.div>
-            )}
-          </AnimatePresence>
-        )};
-      </div>;
-    )};
-=======
-              </motion.div>;
-            )};
-          </AnimatePresence>;
-        )};
-      </div>;
-    );
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for:', searchQuery);
+      setIsSearchOpen(false);
+      setSearchQuery('');
+    }
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+  const toggleDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  };
+
+  const isActive = (href: string) => location.pathname === href;
 
   return (
     <>
-      {/* Mobile Menu Toggle */}
+      {/* Mobile Menu Button */}
       <button
-        onClick = {() => setIsOpen(true)}
-        className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
-        aria-label="Open mobile navigation menu"
+        onClick={() => setIsOpen(!isOpen)}
+        className="lg:hidden fixed top-4 right-4 z-50 p-3 bg-black/80 backdrop-blur-md rounded-full border border-white/20 text-white hover:text-cyan-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+        aria-label="Toggle mobile menu"
+        aria-expanded={isOpen}
       >
-        <Menu size={24} />
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </motion.div>
       </button>
 
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
-          >
+          <>
+            {/* Backdrop */}
             <motion.div
-              ref={menuRef}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+
+            {/* Navigation Panel */}
+            <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition = {
-  { duration: 0.3,
-  ease: 'easeOut' 
-
-
-
-
-
-
-}}
-              className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-gray-900/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden overflow-hidden"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.1}
+              onDragEnd={handleDragEnd}
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                    <Zap size={20} className="text-white" />
+              <div className="flex items-center justify-between p-6 border-b border-white/10">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                    <Zap className="w-5 h-5 text-white" />
                   </div>
-                  <div>
-                    <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
-                    <p className="text-sm text-zion-slate-light">Technology Solutions</p>
-                  </div>
+                  <span className="text-lg font-bold text-white">Zion Tech</span>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
-                  aria-label="Close mobile navigation menu"
+                  className="p-2 text-white hover:text-cyan-400 transition-colors rounded-lg hover:bg-white/10"
+                  aria-label="Close menu"
                 >
-                  <X size={24} />
+                  <X className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* Navigation Content */}
-              <div className="flex-1 overflow-y-auto">
-                {/* Quick Actions */}
-                <div className="p-6 border-b border-zion-slate-light/20">
-                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Quick Actions
-                  </h3>
-                  <div className="grid grid-cols-3 gap-3">
-                    {quickActions.map(action => (
-                      <Link
-                        key={action.label}
-                        to={action.path}
-                        onClick={() => handleNavigation(action.path)}
-                        className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}
-                      >
-                        <action.icon size={20} className="mx-auto mb-2" />
-                        <span className="text-xs font-medium">{action.label}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+              {/* Search Bar */}
+              <div className="p-4 border-b border-white/10">
+                <button
+                  onClick={() => setIsSearchOpen(!isSearchOpen)}
+                  className="w-full flex items-center space-x-3 p-3 bg-gray-800/50 rounded-lg text-gray-300 hover:bg-gray-800 transition-colors"
+                >
+                  <Search className="w-5 h-5" />
+                  <span>Search services, solutions...</span>
+                </button>
+                
+                <AnimatePresence>
+                  {isSearchOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="mt-3"
+                    >
+                      <form onSubmit={handleSearch}>
+                        <div className="relative">
+                          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                          <input
+                            ref={searchInputRef}
+                            type="text"
+                            placeholder="Search..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          />
+                        </div>
+                      </form>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
-                {/* Main Navigation */}
-                <nav className="p-6">
-                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Navigation
-                  </h3>
-                  <div className="space-y-1">
-                    {navigationItems.map(item => renderNavigationItem(item))}
-                  </div>
+              {/* Navigation Items */}
+              <div className="flex-1 overflow-y-auto py-4">
+                <nav className="space-y-2 px-4">
+                  {navigation.map((item) => (
+                    <div key={item.name}>
+                      {item.dropdown ? (
+                        <div>
+                          <button
+                            onClick={() => toggleDropdown(item.name)}
+                            className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                              isActive(item.href) 
+                                ? 'bg-cyan-500/20 text-cyan-400' 
+                                : 'text-white hover:bg-white/10'
+                            }`}
+                            aria-expanded={activeDropdown === item.name}
+                          >
+                            <div className="flex items-center space-x-3">
+                              <item.icon className="w-5 h-5" />
+                              <span className="font-medium">{item.name}</span>
+                            </div>
+                            <motion.div
+                              animate={{ rotate: activeDropdown === item.name ? 180 : 0 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              <ChevronDown className="w-4 h-4" />
+                            </motion.div>
+                          </button>
+                          
+                          <AnimatePresence>
+                            {activeDropdown === item.name && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="ml-6 mt-2 space-y-1"
+                              >
+                                {item.dropdown.map((subItem) => (
+                                  <Link
+                                    key={subItem.name}
+                                    to={subItem.href}
+                                    className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                                    onClick={() => setIsOpen(false)}
+                                  >
+                                    <subItem.icon className="w-4 h-4" />
+                                    <span className="text-sm">{subItem.name}</span>
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          to={item.href}
+                          className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
+                            isActive(item.href) 
+                              ? 'bg-cyan-500/20 text-cyan-400' 
+                              : 'text-white hover:bg-white/10'
+                          }`}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <item.icon className="w-5 h-5" />
+                          <span className="font-medium">{item.name}</span>
+                        </Link>
+                      )}
+                    </div>
+                  ))}
                 </nav>
-
-                {/* Contact Information */}
-                <div className="p-6 border-t border-zion-slate-light/20">
-                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Contact Info
-                  </h3>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Mail size={16} />
-                      <span>info@ziontechgroup.com</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Phone size={16} />
-                      <span>+1 (555) 123-4567</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-zion-slate-light">
-                      <MapPin size={16} />
-                      <span>123 Tech Street, Innovation City</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Clock size={16} />
-                      <span>Mon-Fri 9AM-6PM EST</span>
-                    </div>
-                  </div>
-                </div>
               </div>
 
-              {/* Footer */}
-              <div className="p-6 border-t border-zion-slate-light/20">
-                <div className="flex items-center justify-between text-sm text-zion-slate-light">
-                  <span>© 2024 Zion Tech Group</span>
-                  <div className="flex items-center gap-4">
-                    <Link to="/privacy" className="hover:text-white transition-colors">
-                      Privacy
-                    </Link>
-                    <Link to="/terms" className="hover:text-white transition-colors">
-                      Terms
-                    </Link>
-                  </div>
+              {/* Footer Actions */}
+              <div className="p-4 border-t border-white/10 space-y-3">
+                <Link
+                  to="/contact"
+                  className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
+                
+                <div className="flex space-x-2">
+                  <button className="flex-1 p-3 bg-gray-800/50 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                    <User className="w-5 h-5 mx-auto" />
+                  </button>
+                  <button className="flex-1 p-3 bg-gray-800/50 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                    <Settings className="w-5 h-5 mx-auto" />
+                  </button>
+                  <button className="flex-1 p-3 bg-gray-800/50 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                    <Bell className="w-5 h-5 mx-auto" />
+                  </button>
                 </div>
               </div>
-<<<<<<< HEAD
             </motion.div>
-          </motion.div>
+          </>
         )}
-      </AnimatePresence>;
-    </>;
-  )};
-=======
-            </motion.div>;
-          </motion.div>;
-        )};
-      </AnimatePresence>;
-    </>;
+      </AnimatePresence>
+    </>
   );
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+}
