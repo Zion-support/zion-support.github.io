@@ -105,6 +105,27 @@ export function AppHeader() {
           icon: Target, 
           description: 'Intelligent Marketing Solutions',
           featured: true
+        },
+        { 
+          name: 'AI Quantum Hybrid Platform', 
+          href: '/services/ai-quantum-hybrid-platform', 
+          icon: Atom, 
+          description: 'Quantum-AI Integration',
+          featured: true
+        },
+        { 
+          name: 'AI Autonomous Research Assistant', 
+          href: '/services/ai-autonomous-research-assistant', 
+          icon: Search, 
+          description: 'Research Automation',
+          featured: true
+        },
+        { 
+          name: 'AI Cybersecurity Threat Intelligence', 
+          href: '/services/ai-cybersecurity-threat-intelligence', 
+          icon: Shield, 
+          description: 'AI-Powered Security',
+          featured: true
         }
       ]
     },
