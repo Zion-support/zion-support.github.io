@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
@@ -6,7 +5,7 @@ import {
   Globe, 
   Star, 
   ArrowRight, 
-  Handshake, 
+  HandshakeIcon, 
   Award, 
   TrendingUp,
   Shield,

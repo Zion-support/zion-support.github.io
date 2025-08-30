@@ -1,6 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Zap, 
   Target, 
@@ -188,7 +186,6 @@ export default function DigitalTransformation() {
       description: 'Track transformation progress and measure ROI'
     }
   ];
-
   const benefits = [
     'Increase operational efficiency by 40%',
     'Reduce costs by 30% through automation',
@@ -375,7 +372,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -463,7 +459,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

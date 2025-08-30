@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -377,7 +377,7 @@ const Cookies: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

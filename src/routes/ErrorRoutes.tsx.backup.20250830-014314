@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+// Next.js routing - no need for react-router-dom
+import NotFound from '@/pages/NotFound';
+
+=======
+>>>>>>> e220500ccca44de2253ff84a9759db22263da039
+import { Route, Routes } from "react-router-dom";
+import NotFound from "@/pages/NotFound";
+
+const ErrorRoutes = () => {
+  return (
+    <Routes>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
+
+export default ErrorRoutes;

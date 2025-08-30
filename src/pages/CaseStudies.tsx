@@ -180,6 +180,13 @@ export default function CaseStudies() {
     return matchesIndustry && matchesService && matchesSearch;
   });
 
+  const stats = [
+    { label: 'Projects Completed', value: '150+', icon: CheckCircle },
+    { label: 'Client Satisfaction', value: '98%', icon: Star },
+    { label: 'Average ROI', value: '340%', icon: TrendingUp },
+    { label: 'Time to Value', value: '6 months', icon: Clock }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
@@ -397,7 +404,7 @@ export default function CaseStudies() {
                 href="/services"
                 className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
               >
-                Explore Our Services
+                Request a Quote
               </a>
             </div>
           </div>

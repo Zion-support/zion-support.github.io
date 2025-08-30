@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Eye, 
   EyeOff, 
   Volume2, 
   VolumeX, 
@@ -14,9 +13,10 @@ import {
   X,
   Check,
   AlertTriangle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -25,11 +25,12 @@ interface AccessibilitySettings {
   focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'extra-large';
+
 }
 
-export const EnhancedAccessibilityPanel: React.FC = () => {
+export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -40,7 +41,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     fontSize: 'medium'
   });
 
-  const [announcements, setAnnouncements] = useState<string[]>([]);
+  const [announcements, setAnnouncements] = useState<any>([]);
   const [isAnnouncing, setIsAnnouncing] = useState(false);
 
   // Load settings from localStorage
@@ -58,7 +59,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, []);
 
   // Apply accessibility settings to the document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applySettings = useCallback((newSettings: anyAccessibilitySettings)  => {
     const root = document.documentElement;
     
     // High contrast mode
@@ -130,7 +131,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, []);
 
   // Handle keyboard navigation
-  const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
+  const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)  => {
     const focusableElements = document.querySelectorAll(
       'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
     );
@@ -165,7 +166,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, []);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
+  const announceToScreenReader = useCallback((message: anystring)  => {
     if (!settings.screenReader) return;
 
     const announcement = document.createElement('div');
@@ -189,7 +190,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, [settings.screenReader]);
 
   // Update settings
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback((key: anykeyof AccessibilitySettings, value: any)  => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
@@ -235,7 +236,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
 
   // Handle escape key
   useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
+    const handleEscape = (event: anyKeyboardEvent)  => {
       if (event.key === 'Escape' && isOpen) {
         setIsOpen(false);
         announceToScreenReader('Accessibility panel closed');

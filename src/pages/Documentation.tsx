@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, BookOpen, Code, Database, Api, Download, ExternalLink, ChevronRight, FileText, Users, Globe, Shield, Zap, Brain, Cloud, Lock } from 'lucide-react';
+import { Search, BookOpen, Code, Database, Download, ExternalLink, ChevronRight, FileText, Users, Globe, Shield, Zap, Brain, Cloud, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface DocSection {
@@ -287,6 +287,18 @@ const Documentation: React.FC = () => {
       default: return <FileText className="w-4 h-4" />;
     }
   };
+
+  const filteredCategories = selectedCategory === 'all' 
+    ? docCategories 
+    : docCategories.filter(category => category.id === selectedCategory);
+
+  const searchResults = searchQuery 
+    ? docCategories.flatMap(category => 
+        category.articles.filter(article => 
+          article.title.toLowerCase().includes(searchQuery.toLowerCase())
+        ).map(article => ({ ...category, article }))
+      )
+    : [];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

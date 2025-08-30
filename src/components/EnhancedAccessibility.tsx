@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;

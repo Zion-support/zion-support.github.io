@@ -1,43 +1,47 @@
-import React, { useState, useRef } from 'react';
-import { X, Send } from 'lucide-react';
+import React, { useState, useRef } from 'react.ts';
+import { X, Send  } from 'lucide-react.ts';
 export interface Message {
-  id: string;
+
+  id: anystring;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
   read?: boolean;
+
 }
-export interface ChatAssistantProps {
+export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
+
   isOpen?: boolean;
-  onClose?: () => void;
+  onClose?: ()  => void;
+
 }
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
+export function ChatAssistant(...args: any[]): any {
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const handleSendMessage = async (message: string) => {
+  const handleSendMessage = async (message: anystring)  => {
     if (!message.trim()) return;
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: anyDate.now().toString(),
       role: 'user',
       message: message.trim(),
       timestamp: new Date(),
     };
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev  => [...prev, userMessage]);
     setInputMessage('');
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
-        id: (Date.now() + 1).toString(),
+        id: any(Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
         timestamp: new Date(),
       };
-      setMessages(prev => [...prev, aiMessage]);
+      setMessages(prev  => [...prev, aiMessage]);
     }, 1000);
   };
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     handleSendMessage(inputMessage);
   };

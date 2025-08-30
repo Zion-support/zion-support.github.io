@@ -385,4 +385,6 @@ export default function InnovativeServicesShowcase2025() {
       </section>
     </div>
   );
-}
+};
+
+export default InnovativeServicesShowcase2025;

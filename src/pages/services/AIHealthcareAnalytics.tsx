@@ -1,6 +1,6 @@
 import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
 
-export default function AIHealthcareAnalytics() {
+const AIHealthcareAnalytics = () => {
   const features = [
     'AI-powered patient outcome prediction',
     'Real-time health monitoring and alerts',
@@ -21,6 +21,41 @@ export default function AIHealthcareAnalytics() {
     'Reduce readmission rates by 30%',
     'Optimize resource allocation by 45%',
     'Enhance patient satisfaction by 50%'
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Emily Rodriguez",
+      role: "Chief Medical Officer",
+      company: "Metro General Hospital",
+      content: "AI Healthcare Analytics has transformed our diagnostic accuracy. We've improved early detection rates by 30% and reduced misdiagnoses significantly.",
+      rating: 5
+    },
+    {
+      name: "Dr. Michael Chen",
+      role: "Research Director",
+      company: "National Medical Research Institute",
+      content: "The population health analytics have revealed patterns we never would have discovered manually. Our research has accelerated dramatically.",
+      rating: 5
+    },
+    {
+      name: "Sarah Johnson",
+      role: "Healthcare Administrator",
+      company: "Community Health Network",
+      content: "Our operational efficiency has improved by 40% thanks to AI optimization. We're serving more patients with better outcomes.",
+      rating: 5
+    }
+  ];
+
+  const complianceFeatures = [
+    "HIPAA Compliance",
+    "HITECH Act Support",
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR Compliance",
+    "FDA Guidelines",
+    "Clinical Validation",
+    "Data Encryption"
   ];
 
   const useCases = [
@@ -256,4 +291,6 @@ export default function AIHealthcareAnalytics() {
       </section>
     </div>
   );
-}
+};
+
+export default AIHealthcareAnalytics;

@@ -1,8 +1,3 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
-import { 
-  Home, 
   Briefcase, 
   Users, 
   Settings, 
@@ -232,14 +227,16 @@ import {
   Leaf,
   HardDrive,
   RefreshCw
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface MainSidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface MainSidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyboolean;
+  onClose: ()  => void;
+
 }
 
-export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
+export function MainSidebar(...args: any[]): any {
   const location = useLocation();
 
   const navigationItems = [

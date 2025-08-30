@@ -597,6 +597,105 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
       ]
     }
   }
+};
+
+// BlockchainForge Pricing
+export const blockchainForgePricing: ServicePricing = {
+  serviceId: 3,
+  serviceName: "BlockchainForge",
+  category: "Blockchain Development",
+  pricingTiers: [
+    {
+      name: "Creator",
+      price: 999,
+      billingCycle: "monthly",
+      features: [
+        "Basic smart contract generator",
+        "Up to 5 contracts/month",
+        "Standard templates",
+        "Community support",
+        "Basic security audit"
+      ],
+      limitations: [
+        "Limited contract count",
+        "Basic templates only",
+        "Community support"
+      ],
+      targetAudience: ["Small projects", "Individual developers", "Startups"],
+      roi: "200% within 3 months",
+      setupTime: "1 week",
+      support: "Community support",
+      marketComparison: "50% below market average",
+      volumeDiscounts: ["20% off annual billing"]
+    },
+    {
+      name: "Professional",
+      price: 2499,
+      billingCycle: "monthly",
+      features: [
+        "Advanced contract generator",
+        "Unlimited contracts",
+        "Advanced templates",
+        "Priority support",
+        "Advanced security audit",
+        "Multi-chain support",
+        "API access"
+      ],
+      limitations: [
+        "Advanced features require approval",
+        "Custom features limited"
+      ],
+      targetAudience: ["Fintech companies", "Medium enterprises", "DeFi projects"],
+      roi: "400% within 6 months",
+      setupTime: "2-3 weeks",
+      support: "Priority support (6h response)",
+      marketComparison: "30% below market average",
+      volumeDiscounts: ["25% off annual billing", "Volume discounts available"]
+    },
+    {
+      name: "Enterprise",
+      price: 7999,
+      billingCycle: "monthly",
+      features: [
+        "Full blockchain platform",
+        "Custom everything",
+        "Advanced security",
+        "Dedicated support",
+        "Custom integrations",
+        "White-label options",
+        "Regulatory compliance",
+        "SLA guarantees"
+      ],
+      limitations: [
+        "None - fully customizable"
+      ],
+      targetAudience: ["Large enterprises", "Banks", "Insurance companies"],
+      roi: "600% within 8 months",
+      setupTime: "3-5 weeks",
+      support: "Dedicated support (1h response)",
+      marketComparison: "Market leading pricing",
+      volumeDiscounts: ["30% off annual billing", "Custom enterprise pricing"]
+    }
+  ],
+  marketAnalysis: {
+    averagePrice: "$4,800/month",
+    priceRange: "$1,500 - $12,000/month",
+    competitors: ["OpenZeppelin Enterprise: $8,000/month", "Truffle Enterprise: $6,500/month", "Hardhat Enterprise: $7,000/month"],
+    valueProposition: "90% faster blockchain development with automated security and compliance"
+  },
+  specialOffers: {
+    annualDiscount: "30% off annual billing",
+    enterpriseDiscount: "Up to 45% off for enterprise contracts",
+    startupProgram: "70% off for qualified startups (first year)",
+    referralProgram: "25% commission for successful referrals"
+  }
+};
+
+// Export all pricing guides
+export const ALL_PRICING_GUIDES_2026 = [
+  quantumFlowProPricing,
+  neuroSyncAIPricing,
+  blockchainForgePricing
 ];
 
 export const PRICING_SUMMARY_2026 = {

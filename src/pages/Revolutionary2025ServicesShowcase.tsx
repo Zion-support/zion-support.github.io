@@ -90,7 +90,7 @@ import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
 const Revolutionary2025ServicesShowcase: React.FC = () => {
-  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+  const [services, setServices] = useStateg<div[]>(ALL_SERVICES);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');

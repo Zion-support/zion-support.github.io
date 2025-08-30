@@ -38,8 +38,6 @@ interface SEOProps {
     crossorigin?: boolean;
   }>;
   prefetch?: string[];
-  dnsPrefetch?: string[];
-  preconnect?: string[];
 }
 
 export function SEO({

@@ -1,14 +1,15 @@
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Workflow, Calendar, Database, Network, BarChart3, Wifi, HeartPulse, User, Award, Lightbulb, Handshake, BookOpen as BookOpenIcon, FileText as FileTextIcon, Users as UsersIcon, Code as CodeIcon, HelpCircle as HelpCircleIcon, DollarSign as DollarSignIcon, Users as UsersIcon2, Calendar as CalendarIcon, Shield as ShieldIcon, BookOpen as BookOpenIcon2, Factory } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
+import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
-  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
@@ -34,12 +35,12 @@ export function AppHeader() {
     }
   };
 
-  const navigation = [
+  const mainNavigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
-    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
-    { name: 'About', href: '/about', current: false },
+    { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'Company', href: '/about', current: false, hasDropdown: true },
+    { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
@@ -104,6 +105,27 @@ export function AppHeader() {
           href: '/services/ai-marketing-automation', 
           icon: Target, 
           description: 'Intelligent Marketing Solutions',
+          featured: true
+        },
+        { 
+          name: 'AI Quantum Hybrid Platform', 
+          href: '/services/ai-quantum-hybrid-platform', 
+          icon: Atom, 
+          description: 'Quantum-AI Integration',
+          featured: true
+        },
+        { 
+          name: 'AI Autonomous Research Assistant', 
+          href: '/services/ai-autonomous-research-assistant', 
+          icon: Search, 
+          description: 'Research Automation',
+          featured: true
+        },
+        { 
+          name: 'AI Cybersecurity Threat Intelligence', 
+          href: '/services/ai-cybersecurity-threat-intelligence', 
+          icon: Shield, 
+          description: 'AI-Powered Security',
           featured: true
         }
       ]
@@ -639,8 +661,8 @@ export function AppHeader() {
                 to="/contact"
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >
-                Get Started
-              </Link>
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
             </div>
 
             {/* Mobile menu button */}

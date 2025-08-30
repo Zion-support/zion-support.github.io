@@ -26,7 +26,7 @@ export default function Webinars() {
     { id: 'live', name: 'Live Now', count: 0 }
   ];
 
-  const webinars = [
+  const upcomingWebinars = [
     {
       id: 1,
       title: 'AI-Powered Business Transformation: Real-World Success Stories',
@@ -115,13 +115,19 @@ export default function Webinars() {
     return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
   };
 
+  const contactInfo = {
+    email: 'webinars@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown DE 19709'
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

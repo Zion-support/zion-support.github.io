@@ -197,6 +197,24 @@ export default function AIBusinessIntelligence() {
               quantifiable improvements across all aspects of your business.
             </p>
           </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                <p className="text-zion-slate-light text-lg">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
@@ -302,6 +320,7 @@ export default function AIBusinessIntelligence() {
               Join hundreds of businesses that have already revolutionized their operations 
               with our AI Business Intelligence solutions.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}

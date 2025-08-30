@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Home,
+import React, { useState } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Home,
   Brain,
   Cloud,
   Server,
@@ -106,11 +105,11 @@ import {
   MailIcon as MailIcon2
 } from 'lucide-react';
 
-export const EnhancedSidebar: React.FC = () => {
+export const EnhancedSidebar: React.FC = (): JSX.Element => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: anystring)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
@@ -120,7 +119,7 @@ export const EnhancedSidebar: React.FC = () => {
     setExpandedSections(newExpanded);
   };
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: anystring)  => location.pathname === path;
 
   const navigationSections = [
     {

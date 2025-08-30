@@ -14,14 +14,16 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-interface Props {
-  children: ReactNode;
+interface Props extends React.PropsWithChildren<{}> {
+
+  children: anyReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
+
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
@@ -177,6 +179,14 @@ User Agent: ${navigator.userAgent}
                 </div>
               </div>
             </div>
+            
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+            </p>
 
             {/* Error Details */}
             <div className="p-6">

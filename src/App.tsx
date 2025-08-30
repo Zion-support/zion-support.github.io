@@ -247,6 +247,8 @@ function App() {
                 {/* Additional innovative AI services */}
                 <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
                 <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+                <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                 {/* <Route path="/services/ai-autonomous-threat-intelligence" element={<AIAutonomousThreatIntelligence />} /> */}
                 
                 {/* Additional innovative AI service routes */}

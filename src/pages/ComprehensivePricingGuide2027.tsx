@@ -116,6 +116,10 @@ import {
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
+import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';
+import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
 
 export default function ComprehensivePricingGuide2027() {
   const serviceCategories = [
@@ -232,7 +236,7 @@ export default function ComprehensivePricingGuide2027() {
         }
       ]
     }
-  ];
+  };
 
   const enterprisePackages = [
     {
@@ -646,4 +650,6 @@ export default function ComprehensivePricingGuide2027() {
       </div>
     </div>
   );
-}
+};
+
+export default ComprehensivePricingGuide2027;

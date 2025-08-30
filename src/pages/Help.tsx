@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
 import { 
   Search, 
-  BookOpen, 
+  HelpCircle, 
   MessageCircle, 
   Phone, 
   Mail, 
@@ -397,7 +398,7 @@ export default function Help() {
                   </motion.div>
                 )}
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>

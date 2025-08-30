@@ -1,0 +1,47 @@
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  Shield, 
+  Lock, 
+  Eye, 
+  CheckCircle, 
+  AlertTriangle, 
+  Server, 
+  Network, 
+  Database, 
+  Key, 
+  Fingerprint,
+  Globe,
+  Users,
+  Clock,
+  Award,
+  FileText,
+  Security,
+  Encryption,
+  Shield,
+  AlertTriangle,
+  AlertCircle,
+  Code,
+  Monitor,
+  Smartphone,
+  Cloud,
+  Zap,
+  Search,
+  Phone,
+  Mail
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+=======
+import React from 'react';
+>>>>>>> e220500ccca44de2253ff84a9759db22263da039
+
+const Security: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+		<div className="text-center text-white">
+			<h1 className="text-4xl font-bold mb-4">Security</h1>
+			<p className="text-xl text-gray-300">Our commitment to security and compliance.</p>
+		</div>
+	</div>
+);
+
+export default Security;

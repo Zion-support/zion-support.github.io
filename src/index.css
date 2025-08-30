@@ -878,7 +878,7 @@
   z-index: 1000;
 }
 
-.skip-link:focus {
+.skip-to-content:focus {
   top: 6px;
 }
 

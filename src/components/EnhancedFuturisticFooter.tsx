@@ -125,7 +125,7 @@ import {
   BookOpen as BookOpenIcon5
 } from 'lucide-react';
 
-export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -280,6 +280,39 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },
     { name: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-orange-500 to-red-500' }
   ];
+
+  const supportLinks = [
+    { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
+    { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
+    { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+    { name: 'Documentation', href: '/docs', description: 'Technical guides' },
+    { name: 'Training', href: '/training', description: 'Learning resources' },
+    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+  ];
+
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
+    { name: 'Security', href: '/security', description: 'Security practices' },
+    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
+  ];
+
+  // Create missing pages for broken links
+  const createMissingPage = (name: anystring, href: string)  => {
+    // For now, we'll create placeholder pages for missing routes
+    // These will be created as separate components
+    return (
+      <Link
+        key={name}
+        to={href}
+        className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
+      >
+        {name}
+      </Link>
+    );
+  };
 
   return (
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">

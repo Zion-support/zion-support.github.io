@@ -1,80 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Satellite, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  BarChart3,
-  TrendingUp,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
-  Brain,
-  Compass,
-  Shield,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun
-} from 'lucide-react';
 
 const SpaceTech = () => {
   const features = [
@@ -187,7 +110,6 @@ const SpaceTech = () => {
               Pioneer the future with our cutting-edge space technology solutions 
               that enable satellite operations, space communications, and Earth observation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -366,6 +288,46 @@ const SpaceTech = () => {
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose Space Technology?
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                Space technology provides unprecedented opportunities to explore, 
+                monitor, and understand our world and beyond.
+              </p>
+              <ul className="space-y-3">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
+              <div className="text-center">
+                <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
+                <h3 className="text-2xl font-bold text-white mb-2">Space Innovation</h3>
+                <p className="text-gray-300 mb-6">
+                  Our team has deep expertise in space technology and 
+                  is committed to advancing the frontiers of exploration.
+                </p>
+                <div className="text-sm text-gray-400">
+                  <p>• Space technology experts</p>
+                  <p>• Innovation leadership</p>
+                  <p>• Proven methodologies</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@ import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } fro
 import { GradientHeading } from './ui/GradientHeading';
 
 interface Benefit {
+
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -11,6 +12,7 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
+
 }
 
 const benefits: Benefit[] = [
@@ -69,13 +71,13 @@ const benefits: Benefit[] = [
       "Bulk discount options",
       "Transparent cost structure"
     ]
-  }
+  },
 ];
 
 
 
-export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+export function BenefitsSection(...args: any[]): any {
+  const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -86,6 +88,16 @@ export function BenefitsSection() {
         delayChildren: 0.1
       }
     }
+  };
+
+  const statsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 }
   };
 
   const stats = [
@@ -156,9 +168,9 @@ export function BenefitsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: anytrue }}
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat, index)  => (
             <motion.div 
               key={index} 
               variants={statsVariants}
@@ -186,8 +198,8 @@ export function BenefitsSection() {
           </div>
 
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 max-w-5xl mx-auto">
+            {benefits.map((benefit, index)  => (
               <motion.div 
                 key={index} 
                 variants={itemVariants}
@@ -225,9 +237,9 @@ export function BenefitsSection() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: any0.3 }}
                       >
-                        {benefit.features.map((feature, idx) => (
+                        {benefit.features.map((feature, idx)  => (
                           <motion.div 
                             key={idx} 
                             className="flex items-center gap-2 text-zion-slate-light/80 text-sm"
@@ -265,8 +277,8 @@ export function BenefitsSection() {
             <p className="text-gray-300 text-lg">Real results that speak for themselves</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

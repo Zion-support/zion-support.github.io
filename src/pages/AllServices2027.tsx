@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from "../components/SEOHead";
-import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
+import { innovativeServices2027 } from '../data/innovativeServices2027';
 import { 
   Brain, 
   Shield, 
@@ -38,24 +38,24 @@ const AllServices2027: React.FC = () => {
     { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' }
   ];
 
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => 
+  const filteredServices = innovativeServices2027.filter(service => 
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
   const getCategoryStats = (categoryId: string) => {
     if (categoryId === 'All') {
       return {
-        count: INNOVATIVE_SERVICES_2027.length,
-        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),
-        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10
+              count: innovativeServices2027.length,
+      avgPrice: Math.round(innovativeServices2027.reduce((sum, s) => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
+      avgRating: Math.round((innovativeServices2027.reduce((sum, s) => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10
       };
     }
-    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
-    return {
-      count: services.length,
-      avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length),
-      avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
-    };
+    const services = innovativeServices2027.filter(s => s.category === categoryId);
+          return {
+        count: services.length,
+        avgPrice: Math.round(services.reduce((sum, s) => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
+        avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
+      };
   };
 
   const containerVariants = {

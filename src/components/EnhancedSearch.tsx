@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '@/hooks/useDebounce';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -17,9 +18,11 @@ interface SearchResult {
 }
 
 interface SearchFilter {
+
   type: string[];
   category: string[];
   tags: string[];
+
 }
 
 interface SearchSuggestion {
@@ -169,7 +172,7 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: anyMouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -182,7 +185,7 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
       if (event.key === 'Escape') {
         setIsOpen(false);
         setSelectedIndex(-1);

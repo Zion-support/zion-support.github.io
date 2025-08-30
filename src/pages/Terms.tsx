@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
 import { 
-  FileText, 
   Shield, 
   Users, 
   Globe, 

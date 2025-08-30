@@ -29,6 +29,7 @@ export type ServicePricing = {
     email: string;
     address: string;
     website: string;
+    address: string;
   };
 };
 

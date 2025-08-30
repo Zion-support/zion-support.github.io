@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, 
@@ -70,6 +70,7 @@ import {
 
 interface SearchResult {
   id: string;
+  type: 'service' | 'talent' | 'equipment' | 'company';
   title: string;
   description: string;
   url: string;
@@ -289,6 +290,25 @@ export default function SearchPage() {
 
     setSearchResults(filtered);
     setIsSearching(false);
+  };
+
+  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
+    setActiveFilters(prev => ({
+      ...prev,
+      [filterType]: prev[filterType].includes(value)
+        ? prev[filterType].filter(v => v !== value)
+        : [...prev[filterType], value]
+    }));
+  };
+
+  const clearAllFilters = () => {
+    setActiveFilters({
+      type: [],
+      category: [],
+      location: [],
+      priceRange: [],
+      rating: []
+    });
   };
 
   const handleSearch = (e: React.FormEvent) => {

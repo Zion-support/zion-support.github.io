@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
+import React, { useState, useEffect, memo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, 
   Play, 
   Star, 
   CheckCircle, 
@@ -18,6 +17,7 @@ import {
 } from 'lucide-react';
 
 interface HeroSlide {
+
   title: string;
   subtitle: string;
   description: string;
@@ -26,17 +26,15 @@ interface HeroSlide {
   path: string;
   features: string[];
   gradient: string;
-  icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
 }
 
-export default function EnhancedHeroSection() {
+const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const heroSlides: HeroSlide[] = [
     {
-      title: "AI-Powered Business Solutions",
+      title: any"AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
@@ -85,7 +83,7 @@ export default function EnhancedHeroSection() {
     }
   ];
 
-  useEffect(() => {
+  useEffect(()  => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -105,7 +103,7 @@ export default function EnhancedHeroSection() {
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: number) => {
+  const goToSlide = (index: anynumber)  => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
@@ -378,4 +376,6 @@ export default function EnhancedHeroSection() {
       </motion.div>
     </section>
   );
-}
+});
+
+export default EnhancedHeroSection;

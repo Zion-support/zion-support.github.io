@@ -1,0 +1,233 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Users, 
+  Target, 
+  Award, 
+  Globe, 
+  Zap, 
+  Shield,
+  TrendingUp,
+  Lightbulb,
+  Code,
+  Database
+} from 'lucide-react';
+const About: React.FC = () => {
+  const stats = [
+    { label: 'Years of Experience', value: '15+', icon: Award },
+    { label: 'Global Clients', value: '500+', icon: Globe },
+    { label: 'Team Members', value: '100+', icon: Users },
+    { label: 'Projects Delivered', value: '1000+', icon: Target },
+  ];
+  const values = [
+    {
+      icon: Zap,
+      title: 'Innovation First',
+      description: 'We push the boundaries of technology to deliver cutting-edge solutions that transform businesses.'
+    },
+    {
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'Your data and systems are protected with enterprise-grade security and compliance standards.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Sustainable Growth',
+      description: 'We help businesses scale efficiently while maintaining operational excellence and cost optimization.'
+    },
+    {
+      icon: Lightbulb,
+      title: 'Creative Solutions',
+      description: 'Our team thinks outside the box to solve complex challenges with innovative approaches.'
+    }
+  ];
+  const technologies = [
+    { name: 'Artificial Intelligence', icon: Code },
+    { name: 'Cloud Computing', icon: Database },
+    { name: 'Cybersecurity', icon: Shield },
+    { name: 'IoT & Edge Computing', icon: Zap },
+    { name: 'Quantum Computing', icon: Lightbulb },
+    { name: 'Blockchain', icon: Globe },
+  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              About <span className="text-zion-cyan">Zion Tech Group</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Pioneering the future of technology through innovation, expertise, and unwavering commitment to excellence.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Mission & Vision */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-lg text-zion-slate-light leading-relaxed mb-6">
+                To empower organizations with cutting-edge technology solutions that drive innovation, 
+                efficiency, and sustainable growth in an ever-evolving digital landscape.
+              </p>
+              <p className="text-lg text-zion-slate-light leading-relaxed">
+                We believe that technology should be an enabler, not a barrier, and we work tirelessly 
+                to make advanced solutions accessible and practical for businesses of all sizes.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">Our Vision</h2>
+              <p className="text-lg text-zion-slate-light leading-relaxed mb-6">
+                To be the global leader in transformative technology solutions, setting new standards 
+                for innovation, reliability, and customer success in the digital age.
+              </p>
+              <p className="text-lg text-zion-slate-light leading-relaxed">
+                We envision a world where technology seamlessly integrates with human potential, 
+                creating unprecedented opportunities for growth and advancement.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
+            <p className="text-lg text-zion-slate-light">Delivering results that speak for themselves</p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-zion-slate/50 rounded-lg p-6 border border-zion-cyan/20">
+                  <stat.icon className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-zion-slate-light">{stat.label}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Values Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
+            <p className="text-lg text-zion-slate-light">The principles that guide everything we do</p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <value.icon className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{value.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Technologies Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Technologies We Master</h2>
+            <p className="text-lg text-zion-slate-light">Cutting-edge solutions across the technology spectrum</p>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={tech.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate/30 rounded-lg p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 text-center"
+              >
+                <tech.icon className="w-10 h-10 text-zion-cyan mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white">{tech.name}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg text-zion-slate-light mb-8">
+              Let's discuss how Zion Tech Group can help you achieve your technology goals and drive innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-zion-cyan text-zion-slate-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan/80 transition-all duration-300">
+                Get Started Today
+              </button>
+              <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+export default About;

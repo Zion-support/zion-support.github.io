@@ -32,8 +32,8 @@ import {
   Globe as GlobeIcon
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES } from "@/data/additionalServices2025";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/innovativeMicroSaasServices2025";
+import { ADDITIONAL_MICRO_SAAS_SERVICES_2025 } from "@/data/additionalServices2025";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -72,9 +72,7 @@ export default function ServicesPage() {
   // Filter and sort services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...SPECIALIZED_SERVICES,
-    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_SPECIALIZED_SERVICES
+    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025
   ];
   
   const filteredServices = allServices.filter(service => {

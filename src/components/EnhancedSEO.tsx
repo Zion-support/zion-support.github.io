@@ -1,7 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
 
-interface SEOProps {
+interface SEOProps extends React.PropsWithChildren<{}> {
+
   title: string;
   description: string;
   keywords?: string[];

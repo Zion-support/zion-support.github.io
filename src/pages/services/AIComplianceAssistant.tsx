@@ -1,30 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  CheckCircle, 
-  AlertTriangle, 
-  FileText, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  BarChart3,
-  TrendingUp,
-  Clock,
-  Award,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2
-} from 'lucide-react';
 
 export default function AIComplianceAssistant() {
+  const frameworks = [
+    'SOC 2',
+    'ISO 27001',
+    'HIPAA',
+    'GDPR',
+    'PCI DSS',
+    'NIST CSF',
+  ];
+
   const features = [
     {
       icon: Shield,
@@ -444,7 +428,46 @@ export default function AIComplianceAssistant() {
                 Schedule Demo
               </button>
             </div>
-          </motion.div>
+            <ul className="space-y-3">
+              {features.map((f) => (
+                <li key={f} className="flex items-center text-slate-300">
+                  <CheckCircle className="h-5 w-5 text-rose-400 mr-3" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
+            <div className="flex items-center mb-4">
+              <div className="p-3 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg">
+                <Scale className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="ml-3 text-xl font-semibold text-white">Frameworks</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {frameworks.map((fw) => (
+                <span key={fw} className="px-3 py-1 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">{fw}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
+            <div className="flex items-center mb-4">
+              <div className="p-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg">
+                <BookOpen className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
+            </div>
+            <ul className="space-y-3 text-slate-300">
+              {pricing.map((p) => (<li key={p}>{p}</li>))}
+            </ul>
+            <div className="mt-6 text-sm text-slate-400">
+              References: {links.map((l, i) => (
+                <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ? ',' : ''}</a>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </div>

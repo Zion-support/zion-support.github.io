@@ -1,6 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { Link } from 'react-router-dom';
 import { 
   Users, 
   TrendingUp, 
@@ -29,8 +27,9 @@ import {
   DollarSign,
   Heart
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-export default function AISalesCopilot() {
+const AISalesCopilot = () => {
   const features = [
     {
       icon: Users,
@@ -169,7 +168,7 @@ export default function AISalesCopilot() {
         title="AI Sales Copilot - Zion Tech Group"
         description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20"></div>
@@ -227,7 +226,11 @@ export default function AISalesCopilot() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Features */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful AI Features</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -455,5 +458,7 @@ export default function AISalesCopilot() {
       </section>
     </div>
   );
-}
+};
+
+export default AISalesCopilot;
 
