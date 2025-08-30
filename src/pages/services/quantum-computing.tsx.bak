@@ -1,7 +1,9 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud const QuantumComputing: React.FC = () => {
+import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud } from 'lucide-react';
+
+const QuantumComputing: React.FC = () => {
   const features = [
     {
       icon: Zap,
@@ -16,23 +18,12 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
     {
       icon: Shield,
       title: 'Quantum Cryptography',
-<<<<<<< HEAD
       description: 'Unbreakable encryption for next-generation security'
     },
     {
       icon: Cpu,
       title: 'Quantum Simulation',
       description: 'Model complex molecular and physical systems'
-
-=======
-      description: 'Unbreakable encryption for next-generation security';
-    },;
-    {;
-      icon: Cpu,;
-      title: 'Quantum Simulation',;
-      description: 'Model complex molecular and physical systems';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -49,42 +40,26 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
     {
       title: 'Climate Research',
       description: 'Advanced climate modeling and prediction',
-<<<<<<< HEAD
       icon: '🌍'
     },
     {
       title: 'Logistics Optimization',
       description: 'Solve complex routing and supply chain problems',
       icon: '🚚'
-
-=======
-      icon: '🌍';
-    },;
-    {;
-      title: 'Logistics Optimization',;
-      description: 'Solve complex routing and supply chain problems',;
-      icon: '🚚';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const benefits = [;
-    'Exponential speedup for specific algorithms',;
-    'Unprecedented computational power',;
-    'Breakthrough capabilities in cryptography',;
-    'Revolutionary AI and machine learning',;
-    'Advanced scientific research capabilities',;
-    'Competitive advantage in innovation';
+  const benefits = [
+    'Exponential speedup for specific algorithms',
+    'Unprecedented computational power',
+    'Breakthrough capabilities in cryptography',
+    'Revolutionary AI and machine learning',
+    'Advanced scientific research capabilities',
+    'Competitive advantage in innovation'
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
-=======
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for AI, cryptography, and scientific research. Achieve quantum supremacy with our cutting-edge technology."
       />
@@ -93,26 +68,14 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{
+              opacity: 0,
+              y: 20
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
             transition={{ duration: 0.6 }}
             className="text-center"
 

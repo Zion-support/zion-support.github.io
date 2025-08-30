@@ -1,7 +1,9 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database const SustainableTechnology: React.FC = () => {
+import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database } from 'lucide-react';
+
+const SustainableTechnology: React.FC = () => {
   const features = [
     {
       icon: Leaf,
@@ -16,23 +18,13 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
     {
       icon: Recycle,
       title: 'Circular Economy',
-<<<<<<< HEAD
       description: 'Waste reduction and resource optimization'
     },
     {
       icon: Globe,
       title: 'Carbon Neutral',
       description: 'Carbon footprint reduction and offsetting'
-
-=======
-      description: 'Waste reduction and resource optimization';
-    },;
-    {;
-      icon: Globe,;
-      title: 'Carbon Neutral',;
-      description: 'Carbon footprint reduction and offsetting';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   const solutions = [
@@ -49,42 +41,27 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
     {
       title: 'IoT Environmental Monitoring',
       description: 'Real-time environmental data collection',
-<<<<<<< HEAD
       icon: '🌱'
     },
     {
       title: 'Sustainable Software',
       description: 'Eco-friendly application development',
       icon: '💻'
-
-=======
-      icon: '🌱';
-    },;
-    {;
-      title: 'Sustainable Software',;
-      description: 'Eco-friendly application development',;
-      icon: '💻';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
-  const benefits = [;
-    'Reduce energy consumption and costs',;
-    'Minimize environmental impact',;
-    'Meet sustainability goals and compliance',;
-    'Improve brand reputation and ESG scores',;
-    'Future-proof your technology infrastructure',;
-    'Attract environmentally conscious customers';
+  const benefits = [
+    'Reduce energy consumption and costs',
+    'Minimize environmental impact',
+    'Meet sustainability goals and compliance',
+    'Improve brand reputation and ESG scores',
+    'Future-proof your technology infrastructure',
+    'Attract environmentally conscious customers'
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
-=======
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Sustainable Technology Services - Zion Tech Group"
         description="Transform your business with sustainable technology solutions. Reduce environmental impact while improving efficiency and cost savings."
       />
@@ -93,29 +70,17 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{
+              opacity: 0,
+              y: 20
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
+          >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
               <Leaf className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">Sustainable Technology</span>

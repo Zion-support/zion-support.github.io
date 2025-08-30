@@ -1,7 +1,9 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor const IoTEdgeComputing: React.FC = () => {
+import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor } from 'lucide-react';
+
+const IoTEdgeComputing: React.FC = () => {
   const features = [
     {
       icon: Cpu,
@@ -16,23 +18,12 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
     {
       icon: Database,
       title: 'Local Storage',
-<<<<<<< HEAD
       description: 'Store and manage data at the edge'
     },
     {
       icon: Cloud,
       title: 'Hybrid Cloud',
       description: 'Seamless integration with cloud services'
-
-=======
-      description: 'Store and manage data at the edge';
-    },;
-    {;
-      icon: Cloud,;
-      title: 'Hybrid Cloud',;
-      description: 'Seamless integration with cloud services';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const applications = [
@@ -49,23 +40,12 @@ import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCir
     {
       title: 'Healthcare',
       description: 'Remote monitoring and telemedicine',
-<<<<<<< HEAD
       icon: '🏥'
     },
     {
       title: 'Retail',
       description: 'Smart inventory and customer analytics',
       icon: '🛍️'
-
-=======
-      icon: '🏥';
-    },;
-    {;
-      title: 'Retail',;
-      description: 'Smart inventory and customer analytics',;
-      icon: '🛍️';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;

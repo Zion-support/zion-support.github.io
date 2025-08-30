@@ -111,13 +111,13 @@ const AIIoTEdgeComputing = createLazyComponent(() => import('./pages/services/AI
 // const AIPredictiveMaintenance = createLazyComponent(() => import('./pages/services/AIPredictiveMaintenance'));
 // const AISustainableTechnology = createLazyComponent(() => import('./pages/services/AISustainableTechnology'));
 // const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AIQuantumMachineLearning'));
-const AICybersecurity = createLazyComponent(() => import('./pages/services/AICybersecurity'));
+// const AICybersecurity = createLazyComponent(() => import('./pages/services/AICybersecurity'));
 const AIHRPlatform = createLazyComponent(() => import('./pages/services/AIHRPlatform'));
-const SustainableTechnology = createLazyComponent(() => import('./pages/services/sustainable-technology'));
+// const SustainableTechnology = createLazyComponent(() => import('./pages/services/sustainable-technology'));
 // const QuantumMachineLearning = createLazyComponent(() => import('./pages/services/quantum-machine-learning'));
 // const AIContentCreation = createLazyComponent(() => import('./pages/services/ai-content-creation'));
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/iot-edge-computing'));
-const QuantumComputing = createLazyComponent(() => import('./pages/services/quantum-computing'));
+// const QuantumComputing = createLazyComponent(() => import('./pages/services/quantum-computing'));
 const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));
 // const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));
 const API = createLazyComponent(() => import('./pages/API'));
@@ -358,11 +358,11 @@ function App() {
                     <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
                     <Route path="/services/digital-twin" element={<DigitalTwin />} />
                     <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-                    <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                    {/* <Route path="/services/quantum-computing" element={<QuantumComputing />} /> */}
                     <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                     <Route path="/services/space-tech" element={<SpaceTech />} />
-                    <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                    {/* <Route path="/services/data-analytics" element={<DataAnalytics />} /> */}
                     <Route path="/services/micro-crm" element={<MicroCRM />} />
                     <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
                     <Route path="/services/website-analytics" element={<WebsiteAnalytics />} />
@@ -393,9 +393,9 @@ function App() {
                     <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
 
                     {/* Additional Service Routes */}
-                    <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                    {/* <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} /> */}
                     <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
-                    <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
+                    {/* <Route path="/services/sustainable-technology" element={<SustainableTechnology />} /> */}
                     {/* <Route path="/services/ai-content-creation" element={<AIContentCreation />} /> */}
                     {/* <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} /> */}
 

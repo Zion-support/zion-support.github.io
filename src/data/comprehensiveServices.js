@@ -6,7 +6,7 @@ export const comprehensiveServices = [
     description: 'Complete IT infrastructure setup, maintenance, and optimization',
     basePrice: 2500,
     pricingModel: 'monthly',
-    features[
+    features: [
       'Network infrastructure design and implementation',
       'Server setup and configuration',
       'Cloud infrastructure management',
@@ -16,7 +16,7 @@ export const comprehensiveServices = [
       'Security hardening',
       'Compliance management'
     ],
-    included[
+    included: [
       'Unlimited support tickets',
       'Monthly health reports',
       'Quarterly security audits',
@@ -24,7 +24,7 @@ export const comprehensiveServices = [
       'Emergency response (4hr)',
       'Remote and on-site support'
     ],
-    notIncluded[
+    notIncluded: [
       'Hardware procurement',
       'Software licensing',
       'Custom development',
@@ -42,7 +42,7 @@ export const comprehensiveServices = [
     description: 'Comprehensive cybersecurity protection and compliance',
     basePrice: 1800,
     pricingModel: 'monthly',
-    features[
+    features: [
       'Threat detection and prevention',
       'Vulnerability assessments',
       'Penetration testing',
@@ -52,7 +52,7 @@ export const comprehensiveServices = [
       'Security policy development',
       'Regular security updates'
     ],
-    included[
+    included: [
       '24/7 security monitoring',
       'Monthly security reports',
       'Quarterly penetration tests',
@@ -60,7 +60,7 @@ export const comprehensiveServices = [
       'Emergency incident response',
       'Compliance documentation'
     ],
-    notIncluded[
+    notIncluded: [
       'Hardware security appliances',
       'Third-party security tools',
       'Legal compliance fees',
@@ -78,7 +78,7 @@ export const comprehensiveServices = [
     description: 'Cloud migration, management, and optimization services',
     basePrice: 3200,
     pricingModel: 'monthly',
-    features[
+    features: [
       'Cloud strategy and planning',
       'Migration services',
       'Multi-cloud management',
@@ -88,7 +88,7 @@ export const comprehensiveServices = [
       'Backup and recovery',
       'Auto-scaling setup'
     ],
-    included[
+    included: [
       'Cloud architecture design',
       'Migration project management',
       'Ongoing optimization',
@@ -96,7 +96,7 @@ export const comprehensiveServices = [
       'Performance reports',
       'Security reviews'
     ],
-    notIncluded[
+    notIncluded: [
       'Cloud platform costs',
       'Third-party tools',
       'Data transfer fees',
@@ -114,7 +114,7 @@ export const comprehensiveServices = [
     description: 'Data backup, recovery, and management solutions',
     basePrice: 1200,
     pricingModel: 'monthly',
-    features[
+    features: [
       'Automated backup systems',
       'Data recovery services',
       'Archive management',
@@ -124,7 +124,7 @@ export const comprehensiveServices = [
       'Disaster recovery planning',
       'Regular testing and validation'
     ],
-    included[
+    included: [
       'Unlimited data backup',
       'Daily backup verification',
       'Monthly recovery testing',
@@ -132,7 +132,7 @@ export const comprehensiveServices = [
       'Annual compliance audits',
       '24/7 emergency recovery'
     ],
-    notIncluded[
+    notIncluded: [
       'Storage hardware',
       'Cloud storage costs',
       'Data transfer fees',
@@ -150,7 +150,7 @@ export const comprehensiveServices = [
     description: 'Professional network design, implementation, and management',
     basePrice: 1600,
     pricingModel: 'monthly',
-    features[
+    features: [
       'Network design and planning',
       'Hardware installation',
       'Configuration and optimization',
@@ -160,7 +160,7 @@ export const comprehensiveServices = [
       'Capacity planning',
       'Documentation and training'
     ],
-    included[
+    included: [
       'Network health monitoring',
       'Monthly performance reports',
       'Quarterly capacity reviews',
@@ -168,7 +168,7 @@ export const comprehensiveServices = [
       'Emergency troubleshooting',
       'Hardware warranty support'
     ],
-    notIncluded[
+    notIncluded: [
       'Network hardware',
       'ISP services',
       'Third-party licenses',
@@ -186,7 +186,7 @@ export const comprehensiveServices = [
     description: 'Comprehensive IT help desk and user support services',
     basePrice: 800,
     pricingModel: 'monthly',
-    features[
+    features: [
       '24/7 help desk support',
       'Remote troubleshooting',
       'User training and guidance',
@@ -196,7 +196,7 @@ export const comprehensiveServices = [
       'Password resets',
       'Basic troubleshooting'
     ],
-    included[
+    included: [
       'Unlimited support tickets',
       'Phone and email support',
       'Remote desktop assistance',
@@ -204,7 +204,7 @@ export const comprehensiveServices = [
       'Monthly support reports',
       'User satisfaction surveys'
     ],
-    notIncluded[
+    notIncluded: [
       'On-site visits',
       'Hardware repairs',
       'Software licensing',
@@ -214,7 +214,7 @@ export const comprehensiveServices = [
     icon: '🎧',
     responseTime: '2 hours',
     sla: '95% first-call resolution'
-
+  }
 ];
 
 export const serviceCategories = [
@@ -253,7 +253,7 @@ export const serviceCategories = [
     description: 'Help desk and user support services',
     icon: '🎧',
     services: comprehensiveServices.filter(s => s.category === 'Support')
-
+  }
 ];
 
 export const pricingTiers = [
@@ -261,14 +261,14 @@ export const pricingTiers = [
     name: 'Starter',
     description: 'Perfect for small businesses',
     price: 800,
-    features[
+    features: [
       'Basic IT support',
       'Email and file sharing',
       'Basic security',
       'Monthly reports',
       'Phone support'
     ],
-    limitations[
+    limitations: [
       'Up to 10 users',
       'Basic monitoring',
       'Standard response time'
@@ -278,7 +278,7 @@ export const pricingTiers = [
     name: 'Professional',
     description: 'Ideal for growing businesses',
     price: 2000,
-    features[
+    features: [
       'Everything in Starter',
       'Advanced security',
       'Cloud backup',
@@ -286,7 +286,7 @@ export const pricingTiers = [
       'Priority support',
       'Quarterly reviews'
     ],
-    limitations[
+    limitations: [
       'Up to 50 users',
       'Business hours support',
       '4-hour response time'
@@ -296,7 +296,7 @@ export const pricingTiers = [
     name: 'Enterprise',
     description: 'For large organizations',
     price: 5000,
-    features[
+    features: [
       'Everything in Professional',
       '24/7 support',
       'Custom solutions',
@@ -304,39 +304,31 @@ export const pricingTiers = [
       'Advanced analytics',
       'Strategic consulting'
     ],
-    limitations[
+    limitations: [
       'Unlimited users',
       'Custom SLAs',
       '1-hour response time'
     ]
-
+  }
 ];
 
 export const getPopularServices = () => {
-  return comprehensiveServices.filter(service => service.popular)};
+  return comprehensiveServices.filter(service => service.popular);
+};
 
 export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {
   const service = getServiceById(serviceId);
   if (!service) return 0;
 
-<<<<<<< HEAD
-  const baseCost = service.basePrice * months;
-=======
   let baseCost = service.basePrice * months;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Add customization costs
   customizations.forEach(customization => {
     if (customization.type === 'addon') {
-<<<<<<< HEAD
       baseCost += customization.price * months;
     } else if (customization.type === 'oneTime') {
       baseCost += customization.price;
-
-=======
-      baseCost += customization.price * months} else if (customization.type === 'oneTime') {
-      baseCost += customization.price}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   });
 
   return baseCost;
@@ -354,20 +346,14 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
     recommendations = recommendations.filter(service =>
       ['Support', 'Data', 'Networking', 'Security'].includes(service.category)
     );
-<<<<<<< HEAD
-=======
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Filter by budget
   if (budget === 'low') {
     recommendations = recommendations.filter(service => service.basePrice <= 1500);
   } else if (budget === 'medium') {
     recommendations = recommendations.filter(service => service.basePrice <= 3000);
-<<<<<<< HEAD
-=======
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return recommendations;
 };
@@ -386,4 +372,4 @@ export const SERVICE_CATEGORIES = [
 
 // Alias exports for backward compatibility
 export const COMPREHENSIVE_SERVICES = comprehensiveServices;
-export const PRICING_TIERS = pricingTiers;}}}}}}
+export const PRICING_TIERS = pricingTiers;
