@@ -11,9 +11,7 @@ export interface EnterpriseItService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const enterpriseITServices2029: EnterpriseItService2029[] = [
   {
     id: "2029-enterprise-it",
@@ -21,7 +19,7 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [
     tagline: "Enterprise IT services for 2029",
     price: "$599/month",
     description: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    features: [
+    features[
       "Enterprise IT services",
       "Scalable solutions",
       "Advanced security",

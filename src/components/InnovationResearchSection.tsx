@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Lightbulb, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Lightbulb, 
   TestTube, 
   BookOpen, 
   Award, 
@@ -11,15 +10,15 @@ import {
   Brain, 
   Microscope, 
   Target 
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const InnovationResearchSection: React.FC = () => {
+export const InnovationResearchSection: React.FC = (): JSX.Element => {
   const researchAreas = [
     {
       icon: Brain,
       title: 'Artificial Intelligence',
       description: 'Advancing the frontiers of machine learning, neural networks, and cognitive computing.',
-      focus: ['Deep Learning', 'Natural Language Processing', 'Computer Vision', 'AI Ethics'],
+      focus['Deep Learning', 'Natural Language Processing', 'Computer Vision', 'AI Ethics'],
       publications: '25+',
       patents: '8'
     },
@@ -27,7 +26,7 @@ export const InnovationResearchSection: React.FC = () => {
       icon: TestTube,
       title: 'Quantum Computing',
       description: 'Exploring quantum algorithms and quantum-classical hybrid systems.',
-      focus: ['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Machine Learning', 'Error Correction'],
+      focus['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Machine Learning', 'Error Correction'],
       publications: '15+',
       patents: '5'
     },
@@ -35,7 +34,7 @@ export const InnovationResearchSection: React.FC = () => {
       icon: Rocket,
       title: 'Space Technology',
       description: 'Developing next-generation space exploration and satellite technologies.',
-      focus: ['Satellite Systems', 'Space Robotics', 'Propulsion Systems', 'Space Mining'],
+      focus['Satellite Systems', 'Space Robotics', 'Propulsion Systems', 'Space Mining'],
       publications: '20+',
       patents: '12'
     },
@@ -43,7 +42,7 @@ export const InnovationResearchSection: React.FC = () => {
       icon: Target,
       title: 'Biotechnology',
       description: 'Revolutionizing healthcare through genetic engineering and bioinformatics.',
-      focus: ['CRISPR Technology', 'Drug Discovery', 'Personalized Medicine', 'Bioinformatics'],
+      focus['CRISPR Technology', 'Drug Discovery', 'Personalized Medicine', 'Bioinformatics'],
       publications: '30+',
       patents: '15'
     },
@@ -51,7 +50,7 @@ export const InnovationResearchSection: React.FC = () => {
       icon: Microscope,
       title: 'Nanotechnology',
       description: 'Engineering materials and devices at the molecular and atomic scale.',
-      focus: ['Nano Materials', 'Molecular Electronics', 'Nano Medicine', 'Quantum Dots'],
+      focus['Nano Materials', 'Molecular Electronics', 'Nano Medicine', 'Quantum Dots'],
       publications: '18+',
       patents: '9'
     },
@@ -59,7 +58,7 @@ export const InnovationResearchSection: React.FC = () => {
       icon: TrendingUp,
       title: 'Sustainable Energy',
       description: 'Creating clean energy solutions for a sustainable future.',
-      focus: ['Solar Technology', 'Energy Storage', 'Smart Grids', 'Carbon Capture'],
+      focus['Solar Technology', 'Energy Storage', 'Smart Grids', 'Carbon Capture'],
       publications: '22+',
       patents: '11'
     }
@@ -95,9 +94,9 @@ export const InnovationResearchSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index) => {
+          {stats.map((stat, index)  => {
             const IconComponent = stat.icon;
             return (
               <div key={stat.label} className="text-center">
@@ -111,13 +110,12 @@ export const InnovationResearchSection: React.FC = () => {
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Research Areas Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {researchAreas.map((area, index) => {
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {researchAreas.map((area, index)  => {
             const IconComponent = area.icon;
             return (
               <motion.div
@@ -163,8 +161,7 @@ export const InnovationResearchSection: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* CTA Section */}
@@ -196,7 +193,6 @@ export const InnovationResearchSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default InnovationResearchSection;

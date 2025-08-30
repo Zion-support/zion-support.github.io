@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   TrendingUp, 
   Target, 
   Zap, 
@@ -18,54 +17,53 @@ import {
   Star,
   ArrowUpRight,
   RefreshCw
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface SEOAnalysis {
+
   score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
-  lastUpdated: Date;
-}
+  lastUpdated: Date}
 
 interface SEOIssue {
+
   id: string;
   type: 'error' | 'warning' | 'info';
   title: string;
   description: string;
   impact: 'high' | 'medium' | 'low';
   fixable: boolean;
-  category: 'content' | 'technical' | 'performance' | 'accessibility';
-}
+  category: 'content' | 'technical' | 'performance' | 'accessibility'}
 
 interface SEOSuggestion {
+
   id: string;
   title: string;
   description: string;
   priority: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
-  estimatedImpact: number;
-}
+  estimatedImpact: number}
 
 interface SEOMetrics {
+
   pageSpeed: number;
   mobileFriendliness: number;
   accessibility: number;
   bestPractices: number;
   seoScore: number;
-  coreWebVitals: {
+coreWebVitals: {
     lcp: number;
     fid: number;
-    cls: number;
-  };
-}
+    cls: number}}
 
-interface SEOOptimizerProps {
+interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
+
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
-  onAnalysisComplete?: (analysis: SEOAnalysis) => void;
-}
+  onAnalysisComplete?: (analysis: SEOAnalysis)  => void}
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
@@ -73,16 +71,16 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   showDetails = false,
   onAnalysisComplete
 }) => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+  const [analysis, setAnalysis] = useState<any>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   // Mock SEO analysis data (in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysis = useMemo(() => ({
     score: 87,
-    issues: [
+    issues[
       {
         id: '1',
         type: 'warning',
@@ -111,7 +109,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         category: 'accessibility'
       }
     ],
-    suggestions: [
+    suggestions[
       {
         id: '1',
         title: 'Optimize Images',
@@ -161,63 +159,54 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     
     setAnalysis(mockAnalysis);
     setIsAnalyzing(false);
-    onAnalysisComplete?.(mockAnalysis);
-  }, [mockAnalysis, onAnalysisComplete]);
+    onAnalysisComplete?.(mockAnalysis)}, [mockAnalysis, onAnalysisComplete]);
 
   // Auto-analyze on mount
   useEffect(() => {
     if (autoAnalyze) {
-      analyzeSEO();
-    }
+      analyzeSEO()}
   }, [autoAnalyze, analyzeSEO]);
 
   // Get score color
-  const getScoreColor = (score: number) => {
+  const getScoreColor = (score: number)  => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
-  };
+    return 'text-red-500'};
 
   // Get score background
-  const getScoreBackground = (score: number) => {
+  const getScoreBackground = (score: number)  => {
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100';
-  };
+    return 'bg-red-100'};
 
   // Get impact color
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (impact: string)  => {
     switch (impact) {
       case 'high': return 'text-red-500';
       case 'medium': return 'text-yellow-500';
       case 'low': return 'text-blue-500';
-      default: return 'text-zion-slate';
-    }
+      default: return 'text-zion-slate'}
   };
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priority: string)  => {
     switch (priority) {
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
       case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
-      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200';
-    }
+      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'}
   };
 
   // Filter issues by category
   const filteredIssues = useMemo(() => {
     if (selectedCategory === 'all') return analysis?.issues || [];
-    return analysis?.issues.filter(issue => issue.category === selectedCategory) || [];
-  }, [analysis, selectedCategory]);
+    return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]);
 
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
       const priorityOrder = { high: 3, medium: 2, low: 1 };
-      return priorityOrder[b.priority] - priorityOrder[a.priority];
-    }) || [];
-  }, [analysis]);
+      return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]);
 
   if (!analysis && !isAnalyzing) {
     return (
@@ -231,8 +220,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           Analyze SEO
         </button>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
@@ -496,24 +484,21 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         </>
       ) : null}
     </div>
-  );
-};
+  )};
 
 // Hook for using SEO optimization
-export const useSEOOptimization = () => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+export const useSEOOptimization[, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [analysis, setAnalysis] = useState<any>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   const optimizePage = useCallback(async () => {
     setIsOptimizing(true);
     // Implement actual optimization logic here
     await new Promise(resolve => setTimeout(resolve, 3000));
-    setIsOptimizing(false);
-  }, []);
+    setIsOptimizing(false)}, []);
 
   return {
     analysis,
     isOptimizing,
     optimizePage
-  };
-};
+  }};

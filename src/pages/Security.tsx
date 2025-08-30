@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Lock, 
   Eye, 
   CheckCircle, 
@@ -29,16 +28,16 @@ import {
   Search,
   Phone,
   Mail
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Security() {
+export default function Security(...args[]):  {
   const securityFeatures = [
     {
       category: 'Data Protection',
       icon: Lock,
       color: 'from-blue-500 to-cyan-600',
-      features: [
+      features[
         'End-to-end encryption for all data',
         'AES-256 encryption at rest and in transit',
         'Secure key management with HSM',
@@ -51,7 +50,7 @@ export default function Security() {
       category: 'Network Security',
       icon: Network,
       color: 'from-green-500 to-emerald-600',
-      features: [
+      features[
         'Zero-trust network architecture',
         'Advanced firewall protection',
         'DDoS mitigation and protection',
@@ -64,7 +63,7 @@ export default function Security() {
       category: 'Application Security',
       icon: Code,
       color: 'from-purple-500 to-pink-600',
-      features: [
+      features[
         'Secure software development lifecycle',
         'Regular security code reviews',
         'Automated vulnerability scanning',
@@ -77,7 +76,7 @@ export default function Security() {
       category: 'Access Control',
       icon: Key,
       color: 'from-orange-500 to-red-600',
-      features: [
+      features[
         'Multi-factor authentication (MFA)',
         'Role-based access control (RBAC)',
         'Single sign-on (SSO) integration',
@@ -165,7 +164,7 @@ export default function Security() {
       icon: Eye,
       color: 'from-blue-500 to-cyan-600',
       timeframe: 'Real-time',
-      tools: ['SIEM', 'EDR', 'Network monitoring']
+      tools['SIEM', 'EDR', 'Network monitoring']
     },
     {
       phase: 'Analysis',
@@ -173,7 +172,7 @@ export default function Security() {
       icon: MagnifyingGlass,
       color: 'from-green-500 to-emerald-600',
       timeframe: '< 15 minutes',
-      tools: ['Threat intelligence', 'Forensic analysis', 'Expert team']
+      tools['Threat intelligence', 'Forensic analysis', 'Expert team']
     },
     {
       phase: 'Containment',
@@ -181,7 +180,7 @@ export default function Security() {
       icon: Lock,
       color: 'from-purple-500 to-pink-600',
       timeframe: '< 30 minutes',
-      tools: ['Network segmentation', 'Access control', 'System isolation']
+      tools['Network segmentation', 'Access control', 'System isolation']
     },
     {
       phase: 'Recovery',
@@ -189,7 +188,7 @@ export default function Security() {
       icon: Zap,
       color: 'from-orange-500 to-red-600',
       timeframe: '< 2 hours',
-      tools: ['Backup systems', 'Redundancy', 'Failover procedures']
+      tools['Backup systems', 'Redundancy', 'Failover procedures']
     }
   ];
 
@@ -295,8 +294,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Multi-layered security approach protecting every aspect of your infrastructure</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {securityFeatures.map((category, index) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+              {securityFeatures.map((category, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -333,8 +332,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Meeting and exceeding international security standards</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {certifications.map((cert, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {certifications.map((cert, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -368,8 +367,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Proactive security measures and continuous improvement</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {securityPractices.map((practice, index) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+              {securityPractices.map((practice, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -413,8 +412,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Rapid response and recovery procedures for security incidents</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {incidentResponse.map((phase, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {incidentResponse.map((phase, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -451,8 +450,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Industry-leading security tools and platforms</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {securityTechnologies.map((tech, index) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+              {securityTechnologies.map((tech, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -494,7 +493,7 @@ export default function Security() {
                 Security Questions or Concerns?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
-                Our security team is available 24/7 to address any security-related questions or concerns you may have.
+                Our security team is available 24/7 to address  security-related questions or concerns you may have.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -525,5 +524,4 @@ export default function Security() {
         </section>
       </div>
     </>
-  );
-}
+  )}

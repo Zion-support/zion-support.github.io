@@ -18,8 +18,7 @@ export default function AIPoweredContent() {
     };
     const { markAiExplored } = useAdvancedOnboardingStatus();
     useEffect(() => {
-        markAiExplored();
-    }, [markAiExplored]);
+        markAiExplored()}, [markAiExplored]);
     return (<>
       <SEO title="AI Content Generation" description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT." keywords="AI content generation, ZionGPT, SEO tools" canonical="https://app.ziontechgroup.com/features/ai-content-generation"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -57,5 +56,4 @@ export default function AIPoweredContent() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>)}

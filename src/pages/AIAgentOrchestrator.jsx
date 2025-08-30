@@ -141,6 +141,5 @@ const AIAgentOrchestrator = () => {
           </div>
         </section>
       </div>
-    </>);
-};
+    </>)};
 export default AIAgentOrchestrator;

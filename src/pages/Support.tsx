@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  HelpCircle, 
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { HelpCircle, 
   MessageCircle, 
   Phone, 
   Mail, 
@@ -22,10 +21,10 @@ import {
   Lock,
   Cpu,
   Star
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Support() {
+export default function Support(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -89,7 +88,7 @@ export default function Support() {
       color: 'from-cyan-500 to-blue-600',
       availability: '24/7',
       responseTime: '< 2 minutes',
-      features: ['AI-powered responses', 'Human escalation', 'File sharing', 'Screen sharing']
+      features['AI-powered responses', 'Human escalation', 'File sharing', 'Screen sharing']
     },
     {
       title: 'Phone Support',
@@ -98,7 +97,7 @@ export default function Support() {
       color: 'from-green-500 to-emerald-600',
       availability: 'Mon-Fri 9AM-6PM EST',
       responseTime: 'Immediate',
-      features: ['Direct expert access', 'Complex issue resolution', 'Training support', 'Emergency response']
+      features['Direct expert access', 'Complex issue resolution', 'Training support', 'Emergency response']
     },
     {
       title: 'Email Support',
@@ -107,7 +106,7 @@ export default function Support() {
       color: 'from-purple-500 to-pink-600',
       availability: '24/7',
       responseTime: '< 4 hours',
-      features: ['Detailed documentation', 'Screenshot support', 'Code review', 'Long-form solutions']
+      features['Detailed documentation', 'Screenshot support', 'Code review', 'Long-form solutions']
     }
   ];
 
@@ -147,8 +146,7 @@ export default function Support() {
   ];
 
   const filteredIssues = selectedCategory === 'all' 
-    ? commonIssues 
-    : commonIssues.filter(issue => issue.category === selectedCategory);
+    ? commonIssues: commonIssues.filter(issue  => issue.category === selectedCategory);
 
   const filteredSearchIssues = searchQuery 
     ? filteredIssues.filter(issue => 
@@ -221,8 +219,8 @@ export default function Support() {
               <p className="text-xl text-slate-300">Choose the support channel that works best for your needs</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index) => (
+            <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+              {supportChannels.map((channel, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -293,8 +291,8 @@ export default function Support() {
             </div>
             
             {/* Issues Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {filteredSearchIssues.map((issue, index) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">
+              {filteredSearchIssues.map((issue, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -336,8 +334,8 @@ export default function Support() {
               <p className="text-xl text-slate-300">Access our comprehensive knowledge base and learning materials</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {resources.map((resource, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -377,7 +375,7 @@ export default function Support() {
                 Still Need Help?
               </h2>
               <p className="text-xl text-slate-300 mb-8">
-                Our expert support team is ready to assist you with any technical questions or issues.
+                Our expert support team is ready to assist you with  technical questions or issues.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -398,5 +396,4 @@ export default function Support() {
         </section>
       </div>
     </>
-  );
-}
+  )}

@@ -13,25 +13,20 @@ export default function CartPage() {
     useEffect(() => {
         if (reduxItems.length > 0) {
             setItems(reduxItems);
-            setCartLoading(false);
-        }
+            setCartLoading(false)}
         else {
             const stored = safeStorage.getItem('zion_cart');
             if (stored) {
                 try {
-                    dispatch(setItemsAction(JSON.parse(stored)));
-                }
+                    dispatch(setItemsAction(JSON.parse(stored)))}
                 catch {
-                    dispatch(setItemsAction([]));
-                }
+                    dispatch(setItemsAction([]))}
             }
             else {
-                dispatch(setItemsAction([]));
-            }
+                dispatch(setItemsAction([]))}
         }
         ;
-        load();
-    }, [user, dispatch]);
+        load()}, [user, dispatch]);
     const updateQuantity = async (id, qty) => {
         dispatch(updateQuantityAction({ id, quantity: qty }));
         if (user) {
@@ -40,39 +35,30 @@ export default function CartPage() {
                     method: 'PATCH',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id, quantity: qty }),
-                });
-            }
+                })}
             catch (err) {
-                console.error('Failed to update cart', err);
-            }
+                console.error('Failed to update cart', err)}
         }
-        setCartLoading(false);
-    }, [reduxItems];
+        setCartLoading(false)}, [reduxItems];
     useEffect(() => {
         if (!cartLoading && items.length === 0) {
-            setShowEmpty(true);
-        }
+            setShowEmpty(true)}
     }, [cartLoading, items]);
     const updateQuantity = (id, qty) => {
-        dispatch(updateQuantityAction({ id, quantity: qty }));
-    };
+        dispatch(updateQuantityAction({ id, quantity: qty }))};
     const removeItem = (id) => {
-        dispatch(removeItemAction(id));
-    };
+        dispatch(removeItemAction(id))};
     const handleCheckout = () => {
-        router.push('/checkout');
-    };
+        router.push('/checkout')};
     const applyCode = async () => {
         try {
             const res = await apiClient.post('/coupons/validate', {
                 code,
                 amount: subtotal,
             });
-            setDiscount(res.data.discount || 0);
-        }
+            setDiscount(res.data.discount || 0)}
         catch (e) {
-            setDiscount(0);
-        }
+            setDiscount(0)}
     };
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const total = subtotal - discount;
@@ -80,8 +66,7 @@ export default function CartPage() {
         return (<div className="container py-10 space-y-4">
         <Skeleton className="h-8 w-1/3"/>
         <Skeleton className="h-32 w-full"/>
-      </div>);
-    }
+      </div>)}
     if (showEmpty) {
         return (<div className="container py-10 text-center">
         <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
@@ -89,8 +74,7 @@ export default function CartPage() {
         <Button asChild className="mt-4">
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
-      </div>);
-    }
+      </div>)}
     const tax = subtotal * 0.1;
     const total = subtotal + tax;
     return (<div className="container max-w-2xl py-10">
@@ -122,5 +106,4 @@ export default function CartPage() {
       <Button className="mt-4 w-full" onClick={() => user ? navigate('/checkout') : navigate('/login?next=/checkout')}>
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
-    </div>);
-}
+    </div>)}

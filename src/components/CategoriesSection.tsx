@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from "lucide-react";
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight  } from 'lucide-react.ts';
 
 const categories = [
   {
@@ -57,11 +57,11 @@ const specialServices = [
   }
 ];
 
-interface CategoriesSectionProps {
-  showTitle?: boolean;
-}
+interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
 
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+  showTitle?: boolean}
+
+export function CategoriesSection(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -132,7 +132,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category, index)  => (
             <motion.div
               key={category.title}
               variants={itemVariants}
@@ -212,5 +212,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

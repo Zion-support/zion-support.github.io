@@ -1,227 +1,317 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
+import { useLocation  } from 'react-router-dom.ts';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-}
 
-export function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const componentRef = useRef<HTMLDivElement>(null);
+  pageLoadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  domContentLoaded: number;
+  windowLoad: number}
 
+interface PerformanceOptimizerProps extends React.PropsWithChildren<{}> {
+
+  enabled?: boolean;
+  logMetrics?: boolean;
+  sendToAnalytics?: boolean;
+threshold?: {
+    pageLoadTime: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    cumulativeLayoutShift: number;
+    firstInputDelay: number}}
+
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enabled = true,
+  logMetrics = true,
+  sendToAnalytics = true,
+  threshold = {
+    pageLoadTime: 3000,
+    firstContentfulPaint: 1800,
+    largestContentfulPaint: 2500,
+    cumulativeLayoutShift: 0.1,
+    firstInputDelay: 100,
+  },
+})  => {
+  const location = useLocation();
+  const [metrics, setMetrics] = useState<any>(null);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const observerRef = useRef<PerformanceObserver | null>(null);
+  const navigationStartRef = useRef<number>(0);
+
+  // Initialize performance monitoring
   useEffect(() => {
-    // Intersection Observer for lazy loading
-    if (componentRef.current) {
-      observerRef.current = new IntersectionObserver(
-        ([entry]) => {
-          setIsVisible(entry.isIntersecting);
-        },
-        {
-          threshold: 0.1,
-          rootMargin: '50px'
-        }
-      );
+    if (!enabled || typeof window === 'undefined') return;
 
-      observerRef.current.observe(componentRef.current);
-    }
+    const initPerformanceMonitoring = () => {
+      setIsMonitoring(true);
+      navigationStartRef.current = performance.now();
 
-    // Performance monitoring
-    if ('PerformanceObserver' in window) {
-      try {
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-          if (fcpEntry) {
-            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime } as PerformanceMetrics));
-          }
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+      // Monitor Core Web Vitals
+      if ('PerformanceObserver' in window) {
+        try {
+          // First Contentful Paint
+          observerRef.current = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+                const fcp = entry.startTime;
+                setMetrics(prev => prev ? { ...prev, firstContentfulPaint: fcp } : null);
+                
+                if (logMetrics) {
+                  console.log('First Contentful Paint:', fcp, 'ms')}
+                
+                if (fcp > threshold.firstContentfulPaint) {
+                  console.warn(`FCP (${fcp}ms) exceeds threshold (${threshold.firstContentfulPaint}ms)`)}
+              }
+            })});
+          observerRef.current.observe({ entryTypes['paint'] });
 
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lcpEntry = entries[entries.length - 1];
-          if (lcpEntry) {
-            setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime } as PerformanceMetrics));
-          }
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fidEntry = entries[entries.length - 1];
-          if (fidEntry) {
-            setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime } as PerformanceMetrics));
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // Cumulative Layout Shift
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!entry.hadRecentInput) {
-              clsValue += (entry as any).value;
+          // Largest Contentful Paint
+          const lcpObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1];
+            if (lastEntry) {
+              const lcp = lastEntry.startTime;
+              setMetrics(prev => prev ? { ...prev, largestContentfulPaint: lcp } : null);
+              
+              if (logMetrics) {
+                console.log('Largest Contentful Paint:', lcp, 'ms')}
+              
+              if (lcp > threshold.largestContentfulPaint) {
+                console.warn(`LCP (${lcp}ms) exceeds threshold (${threshold.largestContentfulPaint}ms)`)}
             }
-          }
-          setMetrics(prev => ({ ...prev, cls: clsValue } as PerformanceMetrics));
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+          });
+          lcpObserver.observe({ entryTypes['largest-contentful-paint'] });
 
-        // Time to First Byte
-        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigationEntry) {
-          setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart } as PerformanceMetrics));
-        }
+          // Cumulative Layout Shift
+          const clsObserver = new PerformanceObserver((list) => {
+            let clsValue = 0;
+            const entries = list.getEntries();
+            entries.forEach((entry)  => {
+              if (!entry.hadRecentInput) {
+                clsValue += entry.value}
+            });
+            
+            setMetrics(prev => prev ? { ...prev, cumulativeLayoutShift: clsValue } : null);
+            
+            if (logMetrics) {
+              console.log('Cumulative Layout Shift:', clsValue)}
+            
+            if (clsValue > threshold.cumulativeLayoutShift) {
+              console.warn(`CLS (${clsValue}) exceeds threshold (${threshold.cumulativeLayoutShift})`)}
+          });
+          clsObserver.observe({ entryTypes['layout-shift'] });
 
-        return () => {
-          fcpObserver.disconnect();
-          lcpObserver.disconnect();
-          fidObserver.disconnect();
-          clsObserver.disconnect();
-        };
-      } catch (error) {
-        console.warn('Performance monitoring not supported:', error);
+          // First Input Delay
+          const fidObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry)  => {
+              const fid = entry.processingStart - entry.startTime;
+              setMetrics(prev => prev ? { ...prev, firstInputDelay: fid } : null);
+              
+              if (logMetrics) {
+                console.log('First Input Delay:', fid, 'ms')}
+              
+              if (fid > threshold.firstInputDelay) {
+                console.warn(`FID (${fid}ms) exceeds threshold (${threshold.firstInputDelay}ms)`)}
+            })});
+          fidObserver.observe({ entryTypes['first-input'] })} catch (error) {
+          console.warn('Performance monitoring initialization failed:', error)}
       }
-    }
 
-    // Preload critical resources
-    const preloadLinks = [
-      { rel: 'preload', href: '/fonts/orbitron-v28-latin-700.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-      { rel: 'preload', href: '/fonts/rajdhani-v15-latin-500.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }
-    ];
+      // Monitor page load events
+      const handleLoad = () => {
+        const loadTime = performance.now() - navigationStartRef.current;
+        const domContentLoaded = performance.timing?.domContentLoadedEventEnd - performance.timing?.navigationStart || 0;
+        const windowLoad = performance.timing?.loadEventEnd - performance.timing?.navigationStart || 0;
 
-    preloadLinks.forEach(link => {
-      const linkElement = document.createElement('link');
-      Object.assign(linkElement, link);
-      document.head.appendChild(linkElement);
-    });
+        setMetrics(prev => ({
+          ...prev,
+          pageLoadTime: loadTime,
+          domContentLoaded,
+          windowLoad,
+          timeToInteractive: loadTime,
+        }));
 
-    // Service Worker registration for PWA capabilities
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('SW registered: ', registration);
-        })
-        .catch(registrationError => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    }
+        if (logMetrics) {
+          console.log('Page Load Time:', loadTime, 'ms');
+          console.log('DOM Content Loaded:', domContentLoaded, 'ms');
+          console.log('Window Load:', windowLoad, 'ms')}
+
+        if (loadTime > threshold.pageLoadTime) {
+          console.warn(`Page load time (${loadTime}ms) exceeds threshold (${threshold.pageLoadTime}ms)`)}
+
+        // Send metrics to analytics
+        if (sendToAnalytics) {
+          sendMetricsToAnalytics({
+            pageLoadTime: loadTime,
+            firstContentfulPaint: metrics?.firstContentfulPaint || 0,
+            largestContentfulPaint: metrics?.largestContentfulPaint || 0,
+            cumulativeLayoutShift: metrics?.cumulativeLayoutShift || 0,
+            firstInputDelay: metrics?.firstInputDelay || 0,
+            domContentLoaded,
+            windowLoad,
+            timeToInteractive: loadTime,
+          })}
+      };
+
+      // Use both load event and performance timing
+      if (document.readyState === 'complete') {
+        handleLoad()} else {
+        window.addEventListener('load', handleLoad);
+        return () => window.removeEventListener('load', handleLoad)}
+    };
+
+    initPerformanceMonitoring();
 
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, []);
+        observerRef.current.disconnect()}
+      setIsMonitoring(false)}}, [enabled, logMetrics, sendToAnalytics, threshold]);
+
+  // Reset metrics on route change
+  useEffect(() => {
+    setMetrics(null);
+    navigationStartRef.current = performance.now()}, [location.pathname]);
 
   // Performance optimization functions
-  const optimizeImages = () => {
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach(img => {
-      if (img instanceof HTMLImageElement && img.dataset.src) {
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
-      }
-    });
-  };
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add lazy loading
+      if (!img.loading) {
+        img.loading = 'lazy'}
+      
+      // Add decoding attribute
+      if (!img.decoding) {
+        img.decoding = 'async'}
+    })}, []);
 
-  const optimizeFonts = () => {
-    if ('fonts' in document) {
-      document.fonts.ready.then(() => {
-        document.documentElement.classList.add('fonts-loaded');
-      });
-    }
-  };
+  const optimizeFonts = useCallback(() => {
+    // Preload critical fonts
+    const criticalFonts = [
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+    ];
 
-  const debounce = (func: Function, wait: number) => {
-    let timeout: NodeJS.Timeout;
-    return function executedFunction(...args: any[]) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  };
+    criticalFonts.forEach((fontUrl) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = fontUrl;
+      link.as = 'style';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link)})}, []);
 
-  // Optimize scroll performance
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical CSS and JS
+    const criticalResources = [
+      '/css/critical.css',
+      '/js/critical.js',
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link)})}, []);
+
+  // Apply optimizations on mount
   useEffect(() => {
-    const handleScroll = debounce(() => {
-      // Add scroll optimization logic here
-      const scrolledElements = document.querySelectorAll('[data-scroll-optimize]');
-      scrolledElements.forEach(element => {
-        if (element instanceof HTMLElement) {
-          element.style.willChange = 'transform';
-        }
-      });
-    }, 16);
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Memory optimization
-  useEffect(() => {
-    const cleanup = () => {
-      // Clean up event listeners and references
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-
-    window.addEventListener('beforeunload', cleanup);
-    return () => {
-      window.removeEventListener('beforeunload', cleanup);
-      cleanup();
-    };
-  }, []);
+    if (enabled) {
+      optimizeImages();
+      optimizeFonts();
+      preloadCriticalResources()}
+  }, [enabled, optimizeImages, optimizeFonts, preloadCriticalResources]);
 
   // Performance score calculation
-  const getPerformanceScore = (metrics: PerformanceMetrics): number => {
+  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number  => {
     let score = 100;
-    
-    if (metrics.fcp > 1800) score -= 20;
-    if (metrics.lcp > 2500) score -= 25;
-    if (metrics.fid > 100) score -= 20;
-    if (metrics.cls > 0.1) score -= 25;
-    if (metrics.ttfb > 600) score -= 10;
-    
-    return Math.max(0, score);
-  };
 
-  return (
-    <div ref={componentRef} className="performance-optimizer">
-      {/* Performance metrics display (development only) */}
-      {process.env.NODE_ENV === 'development' && metrics && (
-        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
-          <div className="font-bold mb-2">Performance Metrics</div>
-          <div>FCP: {metrics.fcp?.toFixed(0)}ms</div>
-          <div>LCP: {metrics.lcp?.toFixed(0)}ms</div>
-          <div>FID: {metrics.fid?.toFixed(0)}ms</div>
-          <div>CLS: {metrics.cls?.toFixed(3)}</div>
-          <div>TTFB: {metrics.ttfb?.toFixed(0)}ms</div>
-          <div className="mt-2 font-bold">
-            Score: {getPerformanceScore(metrics)}/100
-          </div>
-        </div>
-      )}
-      
-      {/* Hidden performance optimization elements */}
-      <div className="sr-only">
-        <div data-scroll-optimize />
-        <img data-src="/images/placeholder.jpg" alt="" />
-      </div>
-    </div>
-  );
-}
+    // Deduct points for poor performance
+    if (metrics.pageLoadTime > threshold.pageLoadTime) {
+      score -= Math.min(30, (metrics.pageLoadTime - threshold.pageLoadTime) / 100)}
+    if (metrics.firstContentfulPaint > threshold.firstContentfulPaint) {
+      score -= Math.min(20, (metrics.firstContentfulPaint - threshold.firstContentfulPaint) / 100)}
+    if (metrics.largestContentfulPaint > threshold.largestContentfulPaint) {
+      score -= Math.min(25, (metrics.largestContentfulPaint - threshold.largestContentfulPaint) / 100)}
+    if (metrics.cumulativeLayoutShift > threshold.cumulativeLayoutShift) {
+      score -= Math.min(15, metrics.cumulativeLayoutShift * 100)}
+    if (metrics.firstInputDelay > threshold.firstInputDelay) {
+      score -= Math.min(10, (metrics.firstInputDelay - threshold.firstInputDelay) / 10)}
+
+    return Math.max(0, Math.round(score))}, [threshold]);
+
+  // Send metrics to analytics service
+  const sendMetricsToAnalytics = useCallback((metrics: PerformanceMetrics)  => {
+    try {
+      // Send to Google Analytics
+      if (typeof window !== 'undefined' && (window as ).gtag) {
+        (window as ).gtag('event', 'performance_metrics', {
+          event_category: 'Performance',
+          event_label: location.pathname,
+          value: calculatePerformanceScore(metrics),
+          custom_parameters: {
+            page_load_time: metrics.pageLoadTime,
+            first_contentful_paint: metrics.firstContentfulPaint,
+            largest_contentful_paint: metrics.largestContentfulPaint,
+            cumulative_layout_shift: metrics.cumulativeLayoutShift,
+            first_input_delay: metrics.firstInputDelay,
+          },
+        })}
+
+      // Send to custom analytics endpoint
+      fetch('/api/analytics/performance', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          url: location.pathname,
+          timestamp: new Date().toISOString(),
+          metrics,
+          score: calculatePerformanceScore(metrics),
+          userAgent: navigator.userAgent,
+        }),
+      }).catch(()  => {
+        // Silently fail if analytics endpoint is not available
+      })} catch (error) {
+      console.warn('Failed to send performance metrics:', error)}
+  }, [location.pathname, calculatePerformanceScore]);
+
+  // Don't render thing visible
+  return null};
+
+// Hook for accessing performance metrics
+export const usePerformanceMetrics[, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [metrics, setMetrics] = useState<any>(null);
+
+  useEffect(() => {
+    const updateMetrics = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          setMetrics({
+            pageLoadTime: navigation.loadEventEnd - navigation.startTime,
+            firstContentfulPaint: 0, // Will be updated by PerformanceObserver
+            largestContentfulPaint: 0, // Will be updated by PerformanceObserver
+            cumulativeLayoutShift: 0, // Will be updated by PerformanceObserver
+            firstInputDelay: 0, // Will be updated by PerformanceObserver
+            timeToInteractive: navigation.loadEventEnd - navigation.startTime,
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.startTime,
+            windowLoad: navigation.loadEventEnd - navigation.startTime,
+          })}
+      }
+    };
+
+    updateMetrics();
+    window.addEventListener('load', updateMetrics);
+    return ()  => window.removeEventListener('load', updateMetrics)}, []);
+
+  return metrics};
+
+// Export default component
+export default PerformanceOptimizer;

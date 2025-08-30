@@ -11,9 +11,7 @@ export interface VerifiedRealService2025Batch2 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
     id: "ai-quality-assurance",
@@ -21,7 +19,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     tagline: "Automated testing and quality control",
     price: "$79/month",
     description: "AI-powered quality assurance platform that automates testing and ensures software quality.",
-    features: [
+    features[
       "Automated testing",
       "AI defect detection",
       "Performance monitoring",

@@ -318,6 +318,5 @@ const ServicesMarketingPage = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ServicesMarketingPage;

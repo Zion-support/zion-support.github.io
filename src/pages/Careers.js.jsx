@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Careers() {
     // Sample job listings
     const jobs = {
-        engineering: [
+        engineering[
             {
                 title: "Senior Frontend Engineer",
                 location: "Remote",
@@ -29,7 +29,7 @@ export default function Careers() {
                 description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
             }
         ],
-        product: [
+        product[
             {
                 title: "Product Manager",
                 location: "New York, NY",
@@ -45,7 +45,7 @@ export default function Careers() {
                 description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
             }
         ],
-        marketing: [
+        marketing[
             {
                 title: "Growth Marketing Manager",
                 location: "Remote",
@@ -61,7 +61,7 @@ export default function Careers() {
                 description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
             }
         ],
-        operations: [
+        operations[
             {
                 title: "Community Manager",
                 location: "Remote",
@@ -201,5 +201,4 @@ export default function Careers() {
           </div>
         </div>
       </main>
-    </>);
-}
+    </>)}

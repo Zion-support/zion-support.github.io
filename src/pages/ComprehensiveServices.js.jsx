@@ -18,9 +18,7 @@ export default function ComprehensiveServicesPage() {
                 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
             const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
-            return matchesSearch && matchesCategory && matchesPricing;
-        });
-    }, [searchTerm, selectedCategory, selectedPricingTier]);
+            return matchesSearch && matchesCategory && matchesPricing})}, [searchTerm, selectedCategory, selectedPricingTier]);
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
@@ -163,8 +161,7 @@ export default function ComprehensiveServicesPage() {
                 setSearchTerm('');
                 setSelectedCategory('all');
                 setSelectedSubcategory('all');
-                setPriceRange('all');
-            }}>
+                setPriceRange('all')}}>
                 Clear Filters
               </Button>
             </div>)}
@@ -237,5 +234,4 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

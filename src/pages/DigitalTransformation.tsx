@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Rocket, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Rocket, 
   Zap, 
   Shield, 
   Users, 
@@ -25,9 +24,9 @@ import {
   Lock,
   Eye,
   Heart
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const DigitalTransformation = () => {
+const DigitalTransformation[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);
 
   const transformationServices = [
@@ -35,42 +34,42 @@ const DigitalTransformation = () => {
       title: "Strategy & Planning",
       description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
       icon: Rocket,
-      features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
+      features["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Process Automation",
       description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
       icon: Zap,
-      features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
+      features["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Technology Modernization",
       description: "Legacy system modernization and cloud-native architecture implementation.",
       icon: Cpu,
-      features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
+      features["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Data & Analytics",
       description: "Data-driven insights and business intelligence solutions for informed decision-making.",
       icon: Database,
-      features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
+      features["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
       color: "from-orange-500 to-red-500"
     },
     {
       title: "Customer Experience",
       description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
       icon: Users,
-      features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
+      features["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
       color: "from-indigo-500 to-purple-500"
     },
     {
       title: "Security & Compliance",
       description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
       icon: Shield,
-      features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
+      features["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
       color: "from-yellow-500 to-orange-500"
     }
   ];
@@ -81,7 +80,7 @@ const DigitalTransformation = () => {
       title: "Discovery & Assessment",
       description: "Evaluate current state, identify opportunities, and assess digital maturity",
       duration: "2-4 weeks",
-      activities: [
+      activities[
         "Current state analysis",
         "Digital maturity assessment",
         "Stakeholder interviews",
@@ -94,7 +93,7 @@ const DigitalTransformation = () => {
       title: "Strategy Development",
       description: "Create comprehensive digital transformation roadmap and business case",
       duration: "4-6 weeks",
-      activities: [
+      activities[
         "Digital strategy formulation",
         "Technology roadmap creation",
         "Change management planning",
@@ -107,7 +106,7 @@ const DigitalTransformation = () => {
       title: "Pilot & Validation",
       description: "Implement proof-of-concept and validate approach with stakeholders",
       duration: "6-8 weeks",
-      activities: [
+      activities[
         "Proof-of-concept development",
         "Pilot implementation",
         "Stakeholder validation",
@@ -120,7 +119,7 @@ const DigitalTransformation = () => {
       title: "Full Implementation",
       description: "Execute transformation plan with phased rollout and continuous optimization",
       duration: "6-18 months",
-      activities: [
+      activities[
         "Phased rollout execution",
         "Change management implementation",
         "Performance monitoring",
@@ -144,7 +143,7 @@ const DigitalTransformation = () => {
       rating: 5
     },
     {
-      content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
+      content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
       name: "Marcus Johnson",
       role: "CTO, DigitalFirst Inc",
       rating: 5
@@ -199,8 +198,8 @@ const DigitalTransformation = () => {
       {/* Stats Section */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -229,8 +228,8 @@ const DigitalTransformation = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {transformationServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {transformationServices.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -273,8 +272,8 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {transformationPhases.map((phase, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {transformationPhases.map((phase, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -309,8 +308,8 @@ const DigitalTransformation = () => {
                         transition={{ duration: 0.3 }}
                         className="space-y-2"
                       >
-                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities:</div>
-                        {phase.activities.map((activity, activityIndex) => (
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
+                        {phase.activities.map((activity, activityIndex)  => (
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />
                             {activity}
@@ -338,8 +337,8 @@ const DigitalTransformation = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -387,7 +386,6 @@ const DigitalTransformation = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default DigitalTransformation;

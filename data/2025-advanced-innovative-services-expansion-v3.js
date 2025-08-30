@@ -7,7 +7,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$1,299',
         period: '/month',
         description: 'Advanced AI platform that automates legal document creation, contract review, and compliance checking. Features GPT-4 integration, legal precedent analysis, and automated risk assessment.',
-        features: [
+        features[
             'AI-powered contract generation',
             'Legal precedent analysis',
             'Automated risk assessment',
@@ -30,11 +30,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '2-3 weeks',
         category: 'Legal Tech & Compliance',
         realService: true,
-        technology: ['GPT-4', 'Natural Language Processing', 'Machine Learning', 'Blockchain', 'Cloud Computing'],
-        integrations: ['DocuSign', 'Salesforce', 'Microsoft Office', 'Google Workspace', 'Legal research databases'],
-        useCases: ['Contract generation', 'Legal document review', 'Compliance checking', 'Risk assessment', 'Legal research'],
+        technology['GPT-4', 'Natural Language Processing', 'Machine Learning', 'Blockchain', 'Cloud Computing'],
+        integrations['DocuSign', 'Salesforce', 'Microsoft Office', 'Google Workspace', 'Legal research databases'],
+        useCases['Contract generation', 'Legal document review', 'Compliance checking', 'Risk assessment', 'Legal research'],
         roi: 'Law firms report 500% ROI through time savings and reduced errors.',
-        competitors: ['DocuSign', 'ContractPodAi', 'Kira Systems', 'Luminance'],
+        competitors['DocuSign', 'ContractPodAi', 'Kira Systems', 'Luminance'],
         marketSize: '$2.1B legal tech market',
         growthRate: '25% annual growth',
         variant: 'ai-legal-enterprise',
@@ -59,7 +59,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$2,499',
         period: '/month',
         description: 'Revolutionary quantum-secure communication platform that uses quantum key distribution (QKD) to provide unbreakable encryption. Future-proof against quantum computing attacks.',
-        features: [
+        features[
             'Quantum key distribution (QKD)',
             'Post-quantum cryptography',
             'Real-time encryption',
@@ -82,11 +82,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '4-6 weeks',
         category: 'Quantum Computing & Security',
         realService: true,
-        technology: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Random Number Generation', 'Fiber Optics', 'Quantum Networks'],
-        integrations: ['Enterprise messaging platforms', 'File sharing systems', 'API gateways', 'Security frameworks'],
-        useCases: ['Secure government communications', 'Financial transactions', 'Healthcare data exchange', 'Defense communications', 'Research collaboration'],
+        technology['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Random Number Generation', 'Fiber Optics', 'Quantum Networks'],
+        integrations['Enterprise messaging platforms', 'File sharing systems', 'API gateways', 'Security frameworks'],
+        useCases['Secure government communications', 'Financial transactions', 'Healthcare data exchange', 'Defense communications', 'Research collaboration'],
         roi: 'Critical infrastructure organizations report priceless value for national security.',
-        competitors: ['No direct competitors yet', 'Traditional encryption providers'],
+        competitors['No direct competitors yet', 'Traditional encryption providers'],
         marketSize: '$500M quantum security market',
         growthRate: '150% annual growth',
         variant: 'quantum-security-enterprise',
@@ -111,7 +111,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$3,999',
         period: '/month',
         description: 'Cutting-edge AI platform for medical imaging analysis, diagnostic assistance, and patient outcome prediction. FDA-cleared algorithms for various medical specialties.',
-        features: [
+        features[
             'AI-powered medical imaging analysis',
             'Diagnostic assistance',
             'Patient outcome prediction',
@@ -134,11 +134,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '6-8 weeks',
         category: 'Healthcare & Biotech',
         realService: true,
-        technology: ['Deep Learning', 'Computer Vision', 'Medical AI', 'Cloud Computing', 'HIPAA-compliant infrastructure'],
-        integrations: ['PACS systems', 'EHR platforms', 'Radiology information systems', 'Hospital information systems'],
-        useCases: ['Radiology diagnostics', 'Cardiology imaging', 'Oncology screening', 'Emergency imaging', 'Research studies'],
+        technology['Deep Learning', 'Computer Vision', 'Medical AI', 'Cloud Computing', 'HIPAA-compliant infrastructure'],
+        integrations['PACS systems', 'EHR platforms', 'Radiology information systems', 'Hospital information systems'],
+        useCases['Radiology diagnostics', 'Cardiology imaging', 'Oncology screening', 'Emergency imaging', 'Research studies'],
         roi: 'Hospitals report 300% ROI through improved diagnostic accuracy and workflow efficiency.',
-        competitors: ['Aidoc', 'Zebra Medical', 'Enlitic', 'Butterfly Network'],
+        competitors['Aidoc', 'Zebra Medical', 'Enlitic', 'Butterfly Network'],
         marketSize: '$4.2B medical AI market',
         growthRate: '40% annual growth',
         variant: 'ai-healthcare-enterprise',
@@ -163,7 +163,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$899',
         period: '/month',
         description: 'Comprehensive energy management platform that uses AI to optimize energy consumption, track sustainability metrics, and reduce carbon footprint for businesses and organizations.',
-        features: [
+        features[
             'AI energy consumption optimization',
             'Real-time energy monitoring',
             'Sustainability metrics tracking',
@@ -186,11 +186,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '2-4 weeks',
         category: 'Energy & Sustainability',
         realService: true,
-        technology: ['IoT Sensors', 'Machine Learning', 'Predictive Analytics', 'Cloud Computing', 'Energy Management Systems'],
-        integrations: ['Building management systems', 'Smart meters', 'Solar panel systems', 'HVAC systems', 'Lighting controls'],
-        useCases: ['Energy optimization', 'Sustainability tracking', 'Cost reduction', 'Compliance reporting', 'Predictive maintenance'],
+        technology['IoT Sensors', 'Machine Learning', 'Predictive Analytics', 'Cloud Computing', 'Energy Management Systems'],
+        integrations['Building management systems', 'Smart meters', 'Solar panel systems', 'HVAC systems', 'Lighting controls'],
+        useCases['Energy optimization', 'Sustainability tracking', 'Cost reduction', 'Compliance reporting', 'Predictive maintenance'],
         roi: 'Companies report 200% ROI through energy cost savings and sustainability compliance.',
-        competitors: ['Schneider Electric', 'Siemens', 'Honeywell', 'Johnson Controls'],
+        competitors['Schneider Electric', 'Siemens', 'Honeywell', 'Johnson Controls'],
         marketSize: '$1.8B energy management market',
         growthRate: '30% annual growth',
         variant: 'energy-management-enterprise',
@@ -215,7 +215,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$1,599',
         period: '/month',
         description: 'Comprehensive cybersecurity threat intelligence platform that provides real-time threat detection, vulnerability assessment, and proactive security recommendations using AI and machine learning.',
-        features: [
+        features[
             'Real-time threat detection',
             'AI-powered threat analysis',
             'Vulnerability assessment',
@@ -238,11 +238,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '3-4 weeks',
         category: 'Cybersecurity',
         realService: true,
-        technology: ['Machine Learning', 'Threat Intelligence', 'SIEM Integration', 'Endpoint Detection', 'Network Security'],
-        integrations: ['SIEM platforms', 'Firewalls', 'Endpoint protection', 'Identity management', 'Security orchestration'],
-        useCases: ['Threat detection', 'Incident response', 'Vulnerability management', 'Compliance monitoring', 'Security analytics'],
+        technology['Machine Learning', 'Threat Intelligence', 'SIEM Integration', 'Endpoint Detection', 'Network Security'],
+        integrations['SIEM platforms', 'Firewalls', 'Endpoint protection', 'Identity management', 'Security orchestration'],
+        useCases['Threat detection', 'Incident response', 'Vulnerability management', 'Compliance monitoring', 'Security analytics'],
         roi: 'Organizations report 400% ROI through reduced security incidents and faster response times.',
-        competitors: ['CrowdStrike', 'Palo Alto Networks', 'FireEye', 'Carbon Black'],
+        competitors['CrowdStrike', 'Palo Alto Networks', 'FireEye', 'Carbon Black'],
         marketSize: '$3.5B threat intelligence market',
         growthRate: '35% annual growth',
         variant: 'cybersecurity-enterprise',
@@ -267,7 +267,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$2,999',
         period: '/month',
         description: 'Advanced AI-powered financial trading platform that uses machine learning algorithms for market analysis, risk management, and automated trading strategies across multiple asset classes.',
-        features: [
+        features[
             'AI-powered market analysis',
             'Algorithmic trading strategies',
             'Risk management automation',
@@ -290,11 +290,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '1-2 weeks',
         category: 'Fintech & Trading',
         realService: true,
-        technology: ['Machine Learning', 'Quantitative Analysis', 'Algorithmic Trading', 'Risk Management', 'Real-time Data Processing'],
-        integrations: ['Major exchanges', 'Data providers', 'Risk management systems', 'Portfolio management tools'],
-        useCases: ['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis', 'Strategy backtesting'],
+        technology['Machine Learning', 'Quantitative Analysis', 'Algorithmic Trading', 'Risk Management', 'Real-time Data Processing'],
+        integrations['Major exchanges', 'Data providers', 'Risk management systems', 'Portfolio management tools'],
+        useCases['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis', 'Strategy backtesting'],
         roi: 'Trading firms report 200-300% ROI through improved trading performance and risk management.',
-        competitors: ['Alpaca', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE'],
+        competitors['Alpaca', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE'],
         marketSize: '$2.5B algorithmic trading market',
         growthRate: '45% annual growth',
         variant: 'ai-trading-enterprise',
@@ -319,7 +319,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$4,999',
         period: '/month',
         description: 'Revolutionary quantum machine learning platform that combines quantum computing principles with classical machine learning to solve complex optimization problems and accelerate AI training.',
-        features: [
+        features[
             'Quantum-enhanced ML algorithms',
             'Hybrid quantum-classical computing',
             'Optimization problem solving',
@@ -342,11 +342,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '6-8 weeks',
         category: 'Quantum Computing & AI',
         realService: true,
-        technology: ['Quantum Computing', 'Machine Learning', 'Quantum Algorithms', 'Hybrid Computing', 'Quantum Software'],
-        integrations: ['Classical ML frameworks', 'Quantum hardware', 'Cloud platforms', 'Research tools'],
-        useCases: ['Drug discovery', 'Financial modeling', 'Optimization problems', 'AI research', 'Scientific computing'],
+        technology['Quantum Computing', 'Machine Learning', 'Quantum Algorithms', 'Hybrid Computing', 'Quantum Software'],
+        integrations['Classical ML frameworks', 'Quantum hardware', 'Cloud platforms', 'Research tools'],
+        useCases['Drug discovery', 'Financial modeling', 'Optimization problems', 'AI research', 'Scientific computing'],
         roi: 'Research institutions report breakthrough capabilities for complex problem solving.',
-        competitors: ['No direct competitors yet', 'Classical ML platforms'],
+        competitors['No direct competitors yet', 'Classical ML platforms'],
         marketSize: '$300M quantum ML market',
         growthRate: '200% annual growth',
         variant: 'quantum-ml-enterprise',
@@ -371,7 +371,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$1,799',
         period: '/month',
         description: 'Comprehensive AI-powered supply chain optimization platform that provides end-to-end visibility, predictive analytics, and automated optimization for complex supply chain networks.',
-        features: [
+        features[
             'AI-powered demand forecasting',
             'Supply chain visibility',
             'Predictive analytics',
@@ -394,11 +394,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '4-6 weeks',
         category: 'Supply Chain & Logistics',
         realService: true,
-        technology: ['Machine Learning', 'Predictive Analytics', 'IoT Integration', 'Cloud Computing', 'Big Data Processing'],
-        integrations: ['ERP systems', 'WMS platforms', 'Transportation management', 'Supplier portals', 'E-commerce platforms'],
-        useCases: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management', 'Risk mitigation'],
+        technology['Machine Learning', 'Predictive Analytics', 'IoT Integration', 'Cloud Computing', 'Big Data Processing'],
+        integrations['ERP systems', 'WMS platforms', 'Transportation management', 'Supplier portals', 'E-commerce platforms'],
+        useCases['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management', 'Risk mitigation'],
         roi: 'Companies report 250% ROI through reduced costs and improved supply chain efficiency.',
-        competitors: ['SAP', 'Oracle', 'Manhattan Associates', 'JDA Software'],
+        competitors['SAP', 'Oracle', 'Manhattan Associates', 'JDA Software'],
         marketSize: '$2.8B supply chain management market',
         growthRate: '25% annual growth',
         variant: 'supply-chain-enterprise',
@@ -423,7 +423,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$1,299',
         period: '/month',
         description: 'Advanced edge computing AI platform that brings machine learning capabilities to edge devices, enabling real-time AI processing without cloud dependency for IoT and mobile applications.',
-        features: [
+        features[
             'Edge AI processing',
             'Real-time inference',
             'IoT device integration',
@@ -446,11 +446,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '2-3 weeks',
         category: 'Edge Computing & IoT',
         realService: true,
-        technology: ['Edge Computing', 'Machine Learning', 'IoT Integration', 'Mobile AI', 'Edge Security'],
-        integrations: ['IoT platforms', 'Mobile frameworks', 'Cloud services', 'Hardware accelerators'],
-        useCases: ['IoT intelligence', 'Mobile AI', 'Industrial automation', 'Smart cities', 'Autonomous vehicles'],
+        technology['Edge Computing', 'Machine Learning', 'IoT Integration', 'Mobile AI', 'Edge Security'],
+        integrations['IoT platforms', 'Mobile frameworks', 'Cloud services', 'Hardware accelerators'],
+        useCases['IoT intelligence', 'Mobile AI', 'Industrial automation', 'Smart cities', 'Autonomous vehicles'],
         roi: 'IoT companies report 300% ROI through improved device intelligence and reduced cloud costs.',
-        competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'IBM Edge Application Manager'],
+        competitors['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'IBM Edge Application Manager'],
         marketSize: '$1.2B edge AI market',
         growthRate: '60% annual growth',
         variant: 'edge-ai-enterprise',
@@ -475,7 +475,7 @@ export const advancedInnovativeServices2025V3 = [
         price: '$899',
         period: '/month',
         description: 'Comprehensive AI-powered marketing automation platform that provides intelligent customer segmentation, predictive analytics, and automated campaign optimization across all marketing channels.',
-        features: [
+        features[
             'AI customer segmentation',
             'Predictive analytics',
             'Multi-channel automation',
@@ -498,11 +498,11 @@ export const advancedInnovativeServices2025V3 = [
         setupTime: '2-3 weeks',
         category: 'Marketing & Automation',
         realService: true,
-        technology: ['Machine Learning', 'Predictive Analytics', 'Marketing Automation', 'Customer Data Platforms', 'AI Personalization'],
-        integrations: ['CRM systems', 'Email platforms', 'Social media', 'Advertising platforms', 'Analytics tools'],
-        useCases: ['Customer segmentation', 'Campaign automation', 'Lead nurturing', 'Personalization', 'ROI optimization'],
+        technology['Machine Learning', 'Predictive Analytics', 'Marketing Automation', 'Customer Data Platforms', 'AI Personalization'],
+        integrations['CRM systems', 'Email platforms', 'Social media', 'Advertising platforms', 'Analytics tools'],
+        useCases['Customer segmentation', 'Campaign automation', 'Lead nurturing', 'Personalization', 'ROI optimization'],
         roi: 'Marketing teams report 400% ROI through improved conversion rates and automation efficiency.',
-        competitors: ['HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign'],
+        competitors['HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign'],
         marketSize: '$3.2B marketing automation market',
         growthRate: '30% annual growth',
         variant: 'marketing-automation-enterprise',
@@ -530,7 +530,7 @@ export const advancedITServices2025 = [
         description: 'Complete quantum computing infrastructure design, implementation, and optimization for research institutions and enterprises exploring quantum applications.',
         hourlyRate: 150,
         projectRate: '$50,000 - $200,000',
-        features: [
+        features[
             'Quantum hardware selection',
             'Infrastructure design',
             'Quantum software stack',
@@ -540,14 +540,14 @@ export const advancedITServices2025 = [
             'Training and documentation',
             'Ongoing support'
         ],
-        benefits: [
+        benefits[
             'Early quantum advantage',
             'Research capabilities',
             'Competitive positioning',
             'Innovation leadership',
             'Future-proof infrastructure'
         ],
-        targetAudience: ['Research institutions', 'Technology companies', 'Financial institutions', 'Government agencies', 'Pharmaceutical companies'],
+        targetAudience['Research institutions', 'Technology companies', 'Financial institutions', 'Government agencies', 'Pharmaceutical companies'],
         contactInfo: {
             mobile: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
@@ -557,14 +557,14 @@ export const advancedITServices2025 = [
         marketPrice: '$75,000 - $300,000',
         responseTime: '24 hours',
         sla: '99.9% uptime guarantee',
-        certifications: ['Quantum Computing Certified', 'IBM Quantum Network Partner', 'Microsoft Quantum Partner'],
+        certifications['Quantum Computing Certified', 'IBM Quantum Network Partner', 'Microsoft Quantum Partner'],
         deliveryTime: '8-12 weeks',
         support: '24/7 technical support',
         realService: true,
-        technology: ['IBM Quantum', 'Microsoft Azure Quantum', 'Google Quantum', 'Rigetti Computing', 'D-Wave Systems'],
-        useCases: ['Research and development', 'Optimization problems', 'Cryptography research', 'Drug discovery', 'Financial modeling'],
+        technology['IBM Quantum', 'Microsoft Azure Quantum', 'Google Quantum', 'Rigetti Computing', 'D-Wave Systems'],
+        useCases['Research and development', 'Optimization problems', 'Cryptography research', 'Drug discovery', 'Financial modeling'],
         roi: 'Research institutions report breakthrough capabilities worth millions in research value.',
-        competitors: ['IBM Quantum', 'Microsoft Quantum', 'Google Quantum', 'D-Wave'],
+        competitors['IBM Quantum', 'Microsoft Quantum', 'Google Quantum', 'D-Wave'],
         marketSize: '$800M quantum computing market',
         growthRate: '120% annual growth'
     },
@@ -577,7 +577,7 @@ export const advancedITServices2025 = [
         description: 'Comprehensive AI infrastructure consulting services including hardware selection, cloud architecture, and optimization for enterprise AI workloads.',
         hourlyRate: 125,
         projectRate: '$25,000 - $100,000',
-        features: [
+        features[
             'AI infrastructure assessment',
             'Hardware recommendations',
             'Cloud architecture design',
@@ -587,14 +587,14 @@ export const advancedITServices2025 = [
             'Security implementation',
             'Monitoring setup'
         ],
-        benefits: [
+        benefits[
             'Optimized AI performance',
             'Cost-effective infrastructure',
             'Scalable architecture',
             'Reduced deployment time',
             'Expert guidance'
         ],
-        targetAudience: ['Enterprises', 'AI startups', 'Research institutions', 'Technology companies', 'Financial institutions'],
+        targetAudience['Enterprises', 'AI startups', 'Research institutions', 'Technology companies', 'Financial institutions'],
         contactInfo: {
             mobile: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
@@ -604,14 +604,14 @@ export const advancedITServices2025 = [
         marketPrice: '$35,000 - $150,000',
         responseTime: '48 hours',
         sla: '99.5% response time guarantee',
-        certifications: ['AWS Solutions Architect', 'Google Cloud Professional', 'Microsoft Azure Solutions Architect', 'NVIDIA Deep Learning Institute'],
+        certifications['AWS Solutions Architect', 'Google Cloud Professional', 'Microsoft Azure Solutions Architect', 'NVIDIA Deep Learning Institute'],
         deliveryTime: '4-8 weeks',
         support: 'Business hours support',
         realService: true,
-        technology: ['AWS', 'Google Cloud', 'Microsoft Azure', 'NVIDIA GPUs', 'Kubernetes', 'Docker'],
-        useCases: ['AI model training', 'Inference optimization', 'Data pipeline design', 'MLOps implementation', 'Performance tuning'],
+        technology['AWS', 'Google Cloud', 'Microsoft Azure', 'NVIDIA GPUs', 'Kubernetes', 'Docker'],
+        useCases['AI model training', 'Inference optimization', 'Data pipeline design', 'MLOps implementation', 'Performance tuning'],
         roi: 'Companies report 300% ROI through optimized AI infrastructure and reduced costs.',
-        competitors: ['Accenture', 'Deloitte', 'IBM', 'Capgemini'],
+        competitors['Accenture', 'Deloitte', 'IBM', 'Capgemini'],
         marketSize: '$2.1B AI infrastructure market',
         growthRate: '45% annual growth'
     },
@@ -624,7 +624,7 @@ export const advancedITServices2025 = [
         description: 'Comprehensive cybersecurity architecture design and implementation services for enterprises requiring advanced security frameworks and zero-trust architectures.',
         hourlyRate: 140,
         projectRate: '$40,000 - $150,000',
-        features: [
+        features[
             'Security architecture design',
             'Zero-trust implementation',
             'Threat modeling',
@@ -634,14 +634,14 @@ export const advancedITServices2025 = [
             'Security testing',
             'Documentation and training'
         ],
-        benefits: [
+        benefits[
             'Comprehensive security',
             'Compliance assurance',
             'Risk reduction',
             'Incident preparedness',
             'Long-term security strategy'
         ],
-        targetAudience: ['Enterprises', 'Financial institutions', 'Healthcare organizations', 'Government agencies', 'Educational institutions'],
+        targetAudience['Enterprises', 'Financial institutions', 'Healthcare organizations', 'Government agencies', 'Educational institutions'],
         contactInfo: {
             mobile: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
@@ -651,14 +651,14 @@ export const advancedITServices2025 = [
         marketPrice: '$50,000 - $200,000',
         responseTime: '24 hours',
         sla: '99.9% security guarantee',
-        certifications: ['CISSP', 'CISM', 'SANS GIAC', 'CompTIA Security+', 'ISO 27001 Lead Auditor'],
+        certifications['CISSP', 'CISM', 'SANS GIAC', 'CompTIA Security+', 'ISO 27001 Lead Auditor'],
         deliveryTime: '6-10 weeks',
         support: '24/7 security support',
         realService: true,
-        technology: ['Zero Trust Architecture', 'SIEM Systems', 'Endpoint Protection', 'Network Security', 'Identity Management'],
-        useCases: ['Enterprise security', 'Compliance frameworks', 'Incident response', 'Risk assessment', 'Security training'],
+        technology['Zero Trust Architecture', 'SIEM Systems', 'Endpoint Protection', 'Network Security', 'Identity Management'],
+        useCases['Enterprise security', 'Compliance frameworks', 'Incident response', 'Risk assessment', 'Security training'],
         roi: 'Organizations report 500% ROI through reduced security incidents and compliance costs.',
-        competitors: ['Accenture', 'Deloitte', 'PwC', 'KPMG'],
+        competitors['Accenture', 'Deloitte', 'PwC', 'KPMG'],
         marketSize: '$3.5B cybersecurity consulting market',
         growthRate: '35% annual growth'
     }
@@ -674,7 +674,7 @@ export const advancedAIServices2025 = [
         pricing: 'Subscription-based',
         price: 2499,
         pricingModel: 'monthly',
-        features: [
+        features[
             'AI-powered data analysis',
             'Predictive analytics',
             'Automated insights',
@@ -686,14 +686,14 @@ export const advancedAIServices2025 = [
             'Mobile app',
             'Collaboration tools'
         ],
-        benefits: [
+        benefits[
             'Faster insights',
             'Predictive capabilities',
             'Automated reporting',
             'Better decision making',
             'Cost savings'
         ],
-        targetAudience: ['Enterprises', 'Data analysts', 'Business users', 'Executives', 'Consultants'],
+        targetAudience['Enterprises', 'Data analysts', 'Business users', 'Executives', 'Consultants'],
         contactInfo: {
             mobile: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
@@ -701,17 +701,17 @@ export const advancedAIServices2025 = [
             website: 'https://ziontechgroup.com'
         },
         marketPrice: '$3,000 - $5,000/month',
-        aiModels: ['GPT-4', 'BERT', 'Transformer models', 'Custom ML models'],
+        aiModels['GPT-4', 'BERT', 'Transformer models', 'Custom ML models'],
         accuracy: '95% accuracy rate',
         trainingData: 'Enterprise datasets, industry benchmarks, real-time data',
-        compliance: ['GDPR', 'SOC 2', 'HIPAA', 'ISO 27001'],
+        compliance['GDPR', 'SOC 2', 'HIPAA', 'ISO 27001'],
         aiScore: 9.2,
-        useCases: ['Business analytics', 'Performance monitoring', 'Trend analysis', 'Forecasting', 'KPI tracking'],
+        useCases['Business analytics', 'Performance monitoring', 'Trend analysis', 'Forecasting', 'KPI tracking'],
         realService: true,
-        technology: ['Machine Learning', 'Natural Language Processing', 'Data Analytics', 'Cloud Computing', 'Big Data'],
-        integrations: ['ERP systems', 'CRM platforms', 'Data warehouses', 'Cloud databases', 'Business applications'],
+        technology['Machine Learning', 'Natural Language Processing', 'Data Analytics', 'Cloud Computing', 'Big Data'],
+        integrations['ERP systems', 'CRM platforms', 'Data warehouses', 'Cloud databases', 'Business applications'],
         roi: 'Companies report 400% ROI through improved decision making and operational efficiency.',
-        competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],
+        competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
         marketSize: '$4.8B business intelligence market',
         growthRate: '30% annual growth'
     },
@@ -725,7 +725,7 @@ export const advancedAIServices2025 = [
         pricing: 'Usage-based',
         price: 0.15,
         pricingModel: 'per interaction',
-        features: [
+        features[
             'AI chatbot automation',
             'Natural language processing',
             'Multi-language support',
@@ -737,14 +737,14 @@ export const advancedAIServices2025 = [
             'Analytics dashboard',
             'Custom integrations'
         ],
-        benefits: [
+        benefits[
             '24/7 support',
             'Instant responses',
             'Cost reduction',
             'Improved satisfaction',
             'Scalable support'
         ],
-        targetAudience: ['E-commerce businesses', 'SaaS companies', 'Customer service teams', 'Support organizations', 'Enterprises'],
+        targetAudience['E-commerce businesses', 'SaaS companies', 'Customer service teams', 'Support organizations', 'Enterprises'],
         contactInfo: {
             mobile: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
@@ -752,17 +752,17 @@ export const advancedAIServices2025 = [
             website: 'https://ziontechgroup.com'
         },
         marketPrice: '$0.20 - $0.50 per interaction',
-        aiModels: ['GPT-4', 'BERT', 'Custom NLP models', 'Intent classification models'],
+        aiModels['GPT-4', 'BERT', 'Custom NLP models', 'Intent classification models'],
         accuracy: '92% accuracy rate',
         trainingData: 'Customer service conversations, product knowledge, FAQ databases',
-        compliance: ['GDPR', 'CCPA', 'SOC 2', 'ISO 27001'],
+        compliance['GDPR', 'CCPA', 'SOC 2', 'ISO 27001'],
         aiScore: 8.9,
-        useCases: ['Customer support', 'FAQ automation', 'Order tracking', 'Product inquiries', 'Technical support'],
+        useCases['Customer support', 'FAQ automation', 'Order tracking', 'Product inquiries', 'Technical support'],
         realService: true,
-        technology: ['Natural Language Processing', 'Machine Learning', 'Chatbot Development', 'API Integration', 'Cloud Computing'],
-        integrations: ['CRM systems', 'Help desk platforms', 'E-commerce platforms', 'Social media', 'Messaging apps'],
+        technology['Natural Language Processing', 'Machine Learning', 'Chatbot Development', 'API Integration', 'Cloud Computing'],
+        integrations['CRM systems', 'Help desk platforms', 'E-commerce platforms', 'Social media', 'Messaging apps'],
         roi: 'Companies report 300% ROI through reduced support costs and improved customer satisfaction.',
-        competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Help Scout'],
+        competitors['Intercom', 'Zendesk', 'Freshdesk', 'Help Scout'],
         marketSize: '$2.8B customer service automation market',
         growthRate: '40% annual growth'
     }

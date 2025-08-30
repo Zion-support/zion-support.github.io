@@ -8,18 +8,16 @@ export type ServiceItem = {
 	features: string[];
 	ctaLabel: string;
 	href: string; // internal path or external URL
-	external?: boolean;
-};
+	external?: boolean};
 export type ServiceCategory = {
 	name: string;
 	slug: string;
-	items: ServiceItem[];
-};
+	items: ServiceItem[]};
 export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Micro SaaS',
 		slug: 'micro-saas',
-		items: [
+		items[
 			{
 				id: 'smart-contract-risk-scanner',
 				title: 'Smart Contract Risk Scanner',
@@ -27,7 +25,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Micro SaaS',
 				price: '$299',
 				billing: 'month',
-				features: [
+				features[
 					'Real-time vulnerability detection',
 					'Automated security scoring',
 					'Compliance reporting',
@@ -44,7 +42,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Micro SaaS',
 				price: '$199',
 				billing: 'month',
-				features: [
+				features[
 					'AI-powered SEO optimization',
 					'Content readability scoring',
 					'Multi-language support',
@@ -61,7 +59,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Micro SaaS',
 				price: '$499',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum-inspired algorithms',
 					'Complex process modeling',
 					'Real-time optimization',
@@ -78,7 +76,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Micro SaaS',
 				price: '$399',
 				billing: 'month',
-				features: [
+				features[
 					'Edge-optimized models',
 					'Low latency processing',
 					'Offline capability',
@@ -95,7 +93,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Micro SaaS',
 				price: '$599',
 				billing: 'month',
-				features: [
+				features[
 					'Autonomous lead scoring',
 					'Predictive customer behavior',
 					'Automated follow-ups',
@@ -112,7 +110,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Micro SaaS',
 				price: '$799',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum route optimization',
 					'Real-time inventory tracking',
 					'Predictive demand forecasting',
@@ -130,7 +128,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Micro SaaS',
 				price: '$249',
 				billing: 'month',
-				features: [
+				features[
 					'Automated evidence collection',
 					'Control health dashboards',
 					'Policy templates & mapping',
@@ -147,7 +145,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Micro SaaS',
 				price: '$299',
 				billing: 'month',
-				features: [
+				features[
 					'Latency, accuracy, bias metrics',
 					'Drift and anomaly alerts',
 					'Rollback and canary controls',
@@ -162,7 +160,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'AI Solutions',
 		slug: 'ai-solutions',
-		items: [
+		items[
 			{
 				id: 'autonomous-business-manager',
 				title: 'Autonomous Business Manager',
@@ -170,7 +168,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$2,999',
 				billing: 'month',
-				features: [
+				features[
 					'Autonomous decision making',
 					'Predictive business modeling',
 					'Resource optimization',
@@ -187,7 +185,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$5,999',
 				billing: 'month',
-				features: [
+				features[
 					'Neural network simulation',
 					'Consciousness modeling',
 					'Research tools',
@@ -204,7 +202,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$8,999',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum neural processing',
 					'Hybrid classical-quantum',
 					'Advanced training algorithms',
@@ -221,7 +219,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$4,999',
 				billing: 'month',
-				features: [
+				features[
 					'Autonomous navigation',
 					'Safety monitoring',
 					'Fleet management',
@@ -239,7 +237,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$3,499',
 				billing: 'month',
-				features: [
+				features[
 					'Hybrid vector + keyword search',
 					'PII redaction and access control',
 					'Grounding citations',
@@ -256,7 +254,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$4,999',
 				billing: 'month',
-				features: [
+				features[
 					'Guardrailed tool use',
 					'Human-in-the-loop approvals',
 					'Observability and audit trails',
@@ -271,7 +269,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'IT Services',
 		slug: 'it-services',
-		items: [
+		items[
 			{
 				id: 'zero-trust-architecture',
 				title: 'Zero Trust Network Architecture',
@@ -279,7 +277,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IT Services',
 				price: '$15,000',
 				billing: 'project',
-				features: [
+				features[
 					'Identity verification',
 					'Micro-segmentation',
 					'Continuous monitoring',
@@ -296,7 +294,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IT Services',
 				price: '$25,000',
 				billing: 'project',
-				features: [
+				features[
 					'Private 5G networks',
 					'Network slicing',
 					'Edge computing',
@@ -313,7 +311,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IT Services',
 				price: '$35,000',
 				billing: 'project',
-				features: [
+				features[
 					'Quantum edge processing',
 					'Real-time analytics',
 					'Distributed computing',
@@ -331,7 +329,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IT Services',
 				price: '$40,000',
 				billing: 'project',
-				features: [
+				features[
 					'Backstage developer portal',
 					'GitOps with Argo CD or Flux',
 					'Policy-as-code (OPA/Gatekeeper)',
@@ -348,7 +346,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IT Services',
 				price: '$12,000',
 				billing: 'project',
-				features: [
+				features[
 					'Cost anomaly detection',
 					'RI/Savings Plan strategy',
 					'Workload rightsizing',
@@ -363,7 +361,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Cybersecurity',
 		slug: 'cybersecurity',
-		items: [
+		items[
 			{
 				id: 'ai-threat-intelligence',
 				title: 'AI Threat Intelligence Suite',
@@ -371,7 +369,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cybersecurity',
 				price: '$3,999',
 				billing: 'month',
-				features: [
+				features[
 					'AI threat detection',
 					'Behavioral analysis',
 					'Automated response',
@@ -388,7 +386,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cybersecurity',
 				price: '$12,000',
 				billing: 'project',
-				features: [
+				features[
 					'Quantum key distribution',
 					'Post-quantum crypto',
 					'Secure communication',
@@ -406,7 +404,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cybersecurity',
 				price: '$3,499',
 				billing: 'month',
-				features: [
+				features[
 					'SIEM setup and tuning',
 					'Playbooks and automation',
 					'Phishing and EDR integration',
@@ -423,7 +421,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cybersecurity',
 				price: '$20,000',
 				billing: 'project',
-				features: [
+				features[
 					'Architecture and vendor selection',
 					'Pilot and phased migration',
 					'Policy baselines',
@@ -438,7 +436,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Data & Analytics',
 		slug: 'data-analytics',
-		items: [
+		items[
 			{
 				id: 'quantum-data-analytics',
 				title: 'Quantum Data Analytics Platform',
@@ -446,7 +444,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Data & Analytics',
 				price: '$6,999',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum pattern recognition',
 					'Complex data modeling',
 					'Real-time insights',
@@ -463,7 +461,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Data & Analytics',
 				price: '$2,499',
 				billing: 'month',
-				features: [
+				features[
 					'Automated insights',
 					'Natural language queries',
 					'Predictive modeling',
@@ -481,7 +479,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Data & Analytics',
 				price: '$1,499',
 				billing: 'month',
-				features: [
+				features[
 					'Column-level lineage',
 					'Great Expectations policies',
 					'Alerting and incident Mgmt',
@@ -498,7 +496,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Data & Analytics',
 				price: '$18,000',
 				billing: 'project',
-				features: [
+				features[
 					'dbt modeling and tests',
 					'Incremental loads',
 					'CI for analytics',
@@ -513,7 +511,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Cloud & DevOps',
 		slug: 'cloud-devops',
-		items: [
+		items[
 			{
 				id: 'autonomous-devops-platform',
 				title: 'Autonomous DevOps Platform',
@@ -521,7 +519,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$4,999',
 				billing: 'month',
-				features: [
+				features[
 					'Automated deployments',
 					'Self-healing infrastructure',
 					'Performance optimization',
@@ -538,7 +536,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$18,000',
 				billing: 'project',
-				features: [
+				features[
 					'Quantum cloud services',
 					'Hybrid infrastructure',
 					'Quantum optimization',
@@ -556,7 +554,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$16,000',
 				billing: 'project',
-				features: [
+				features[
 					'Patterns: EventBridge, Step Functions',
 					'IaC with CDK/Terraform',
 					'Observability baked-in',
@@ -573,7 +571,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$20,000',
 				billing: 'project',
-				features: [
+				features[
 					'Multi-region architectures',
 					'Automated chaos tests',
 					'Backup and restore pipelines',
@@ -588,7 +586,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Quantum Computing',
 		slug: 'quantum-computing',
-		items: [
+		items[
 			{
 				id: 'quantum-financial-trading',
 				title: 'Quantum Financial Trading Platform',
@@ -596,7 +594,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Quantum Computing',
 				price: '$25,000',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum portfolio optimization',
 					'Risk modeling',
 					'Real-time trading',
@@ -613,7 +611,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Quantum Computing',
 				price: '$45,000',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum molecular modeling',
 					'Drug design algorithms',
 					'Clinical trial optimization',
@@ -628,7 +626,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Blockchain & Web3',
 		slug: 'blockchain-web3',
-		items: [
+		items[
 			{
 				id: 'decentralized-ai-marketplace',
 				title: 'Decentralized AI Marketplace',
@@ -636,7 +634,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Blockchain & Web3',
 				price: '$1,999',
 				billing: 'month',
-				features: [
+				features[
 					'AI model marketplace',
 					'Decentralized governance',
 					'Smart contracts',
@@ -653,7 +651,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Blockchain & Web3',
 				price: '$8,999',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum-resistant crypto',
 					'Enhanced consensus',
 					'Scalable architecture',
@@ -668,7 +666,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'IoT & Edge',
 		slug: 'iot-edge',
-		items: [
+		items[
 			{
 				id: 'quantum-iot-platform',
 				title: 'Quantum IoT Platform',
@@ -676,7 +674,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IoT & Edge',
 				price: '$3,999',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum edge processing',
 					'Device optimization',
 					'Intelligent routing',
@@ -693,7 +691,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IoT & Edge',
 				price: '$2,999',
 				billing: 'month',
-				features: [
+				features[
 					'Autonomous optimization',
 					'Edge AI processing',
 					'Network intelligence',
@@ -711,7 +709,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IoT & Edge',
 				price: '$2,499',
 				billing: 'month',
-				features: [
+				features[
 					'Edge telemetry ingestion',
 					'ML failure prediction',
 					'Work order integration (EAM/CMMS)',
@@ -728,7 +726,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IoT & Edge',
 				price: '$14,000',
 				billing: 'project',
-				features: [
+				features[
 					'3D/graph models',
 					'Stream processing',
 					'Integration with PLC/SCADA',
@@ -743,7 +741,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Green Tech',
 		slug: 'green-tech',
-		items: [
+		items[
 			{
 				id: 'quantum-energy-optimization',
 				title: 'Quantum Energy Optimization',
@@ -751,7 +749,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Green Tech',
 				price: '$12,000',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum energy modeling',
 					'Renewable optimization',
 					'Grid management',
@@ -768,7 +766,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Green Tech',
 				price: '$7,999',
 				billing: 'month',
-				features: [
+				features[
 					'AI climate modeling',
 					'Quantum simulations',
 					'Real-time predictions',
@@ -786,7 +784,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Green Tech',
 				price: '$999',
 				billing: 'month',
-				features: [
+				features[
 					'GHG Protocol-aligned factors',
 					'Automated data pipelines',
 					'Supplier questionnaires',
@@ -801,7 +799,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Space Tech',
 		slug: 'space-tech',
-		items: [
+		items[
 			{
 				id: 'satellite-ai-orchestrator',
 				title: 'Satellite AI Orchestrator',
@@ -809,7 +807,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Space Tech',
 				price: '$15,000',
 				billing: 'month',
-				features: [
+				features[
 					'Autonomous orbital optimization',
 					'AI-powered data analysis',
 					'Real-time monitoring',
@@ -826,7 +824,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Space Tech',
 				price: '$25,000',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum entanglement',
 					'Unhackable encryption',
 					'Light-speed transmission',
@@ -844,7 +842,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Space Tech',
 				price: '$5,999',
 				billing: 'month',
-				features: [
+				features[
 					'Change detection',
 					'Crop yield estimation',
 					'Object and damage detection',
@@ -859,7 +857,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'BioTech & Health',
 		slug: 'biotech-health',
-		items: [
+		items[
 			{
 				id: 'ai-drug-discovery-platform',
 				title: 'AI Drug Discovery Platform',
@@ -867,7 +865,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'BioTech & Health',
 				price: '$35,000',
 				billing: 'month',
-				features: [
+				features[
 					'AI molecular modeling',
 					'Quantum simulations',
 					'Clinical trial optimization',
@@ -884,7 +882,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'BioTech & Health',
 				price: '$18,000',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum DNA sequencing',
 					'Personalized medicine',
 					'Disease prediction',
@@ -902,7 +900,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'BioTech & Health',
 				price: '$1,999',
 				billing: 'month',
-				features: [
+				features[
 					'Clinical safety guardrails',
 					'HL7/FHIR integration',
 					'Language and accessibility',
@@ -917,7 +915,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'FinTech & DeFi',
 		slug: 'fintech-defi',
-		items: [
+		items[
 			{
 				id: 'quantum-trading-algorithm',
 				title: 'Quantum Trading Algorithm',
@@ -925,7 +923,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'FinTech & DeFi',
 				price: '$45,000',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum market analysis',
 					'Microsecond trading',
 					'Risk management',
@@ -942,7 +940,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'FinTech & DeFi',
 				price: '$12,000',
 				billing: 'month',
-				features: [
+				features[
 					'Autonomous yield farming',
 					'Risk management',
 					'Strategy optimization',
@@ -960,7 +958,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'FinTech & DeFi',
 				price: '$2,499',
 				billing: 'month',
-				features: [
+				features[
 					'Entity resolution',
 					'Sanctions and watchlists',
 					'Graph analytics',
@@ -975,7 +973,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Metaverse & AR/VR',
 		slug: 'metaverse-ar-vr',
-		items: [
+		items[
 			{
 				id: 'quantum-metaverse-engine',
 				title: 'Quantum Metaverse Engine',
@@ -983,7 +981,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Metaverse & AR/VR',
 				price: '$28,000',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum rendering',
 					'Infinite scalability',
 					'Realistic physics',
@@ -1000,7 +998,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Metaverse & AR/VR',
 				price: '$8,500',
 				billing: 'month',
-				features: [
+				features[
 					'Real-time AR overlays',
 					'Autonomous navigation',
 					'Smart city integration',
@@ -1018,7 +1016,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Metaverse & AR/VR',
 				price: '$30,000',
 				billing: 'project',
-				features: [
+				features[
 					'Curriculum design',
 					'Multi-user scenarios',
 					'LMS integration and analytics',
@@ -1033,7 +1031,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Autonomous Systems',
 		slug: 'autonomous-systems',
-		items: [
+		items[
 			{
 				id: 'quantum-ai-controller',
 				title: 'Quantum AI Controller',
@@ -1041,7 +1039,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Autonomous Systems',
 				price: '$32,000',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum decision making',
 					'Autonomous learning',
 					'System optimization',
@@ -1058,7 +1056,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Autonomous Systems',
 				price: '$22,000',
 				billing: 'month',
-				features: [
+				features[
 					'Autonomous navigation',
 					'Task learning',
 					'Safety protocols',
@@ -1076,7 +1074,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Autonomous Systems',
 				price: '$9,999',
 				billing: 'month',
-				features: [
+				features[
 					'Task allocation and routing',
 					'3D digital twin monitoring',
 					'Workforce and robot collaboration',
@@ -1091,7 +1089,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'AI-Powered Business Intelligence',
 		slug: 'ai-business-intelligence',
-		items: [
+		items[
 			{
 				id: 'ai-predictive-analytics-platform',
 				title: 'AI Predictive Analytics Platform',
@@ -1099,7 +1097,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$1,299',
 				billing: 'month',
-				features: [
+				features[
 					'Real-time data processing',
 					'Advanced ML algorithms',
 					'Custom forecasting models',
@@ -1117,7 +1115,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$899',
 				billing: 'month',
-				features: [
+				features[
 					'Dynamic segmentation',
 					'Behavioral analysis',
 					'Predictive scoring',
@@ -1135,7 +1133,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$1,599',
 				billing: 'month',
-				features: [
+				features[
 					'Competitor monitoring',
 					'Market trend analysis',
 					'Opportunity identification',
@@ -1151,7 +1149,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Advanced Cybersecurity',
 		slug: 'advanced-cybersecurity',
-		items: [
+		items[
 			{
 				id: 'ai-threat-hunting-platform',
 				title: 'AI Threat Hunting Platform',
@@ -1159,7 +1157,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cybersecurity',
 				price: '$2,499',
 				billing: 'month',
-				features: [
+				features[
 					'AI-powered threat detection',
 					'Behavioral analysis',
 					'Automated response',
@@ -1177,7 +1175,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cybersecurity',
 				price: '$3,999',
 				billing: 'month',
-				features: [
+				features[
 					'Quantum-resistant algorithms',
 					'Post-quantum cryptography',
 					'Key management',
@@ -1195,7 +1193,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cybersecurity',
 				price: '$4,999',
 				billing: 'month',
-				features: [
+				features[
 					'24/7 AI monitoring',
 					'Automated incident response',
 					'Threat intelligence feeds',
@@ -1211,7 +1209,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Cloud-Native Development',
 		slug: 'cloud-native-development',
-		items: [
+		items[
 			{
 				id: 'kubernetes-orchestration-platform',
 				title: 'Kubernetes Orchestration Platform',
@@ -1219,7 +1217,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$1,899',
 				billing: 'month',
-				features: [
+				features[
 					'Multi-cluster management',
 					'Advanced scheduling',
 					'Resource optimization',
@@ -1237,7 +1235,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$1,299',
 				billing: 'month',
-				features: [
+				features[
 					'Function orchestration',
 					'Auto-scaling',
 					'Cost optimization',
@@ -1255,7 +1253,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$2,199',
 				billing: 'month',
-				features: [
+				features[
 					'Service discovery',
 					'Load balancing',
 					'Security policies',
@@ -1271,7 +1269,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Data Engineering & Analytics',
 		slug: 'data-engineering-analytics',
-		items: [
+		items[
 			{
 				id: 'real-time-data-pipeline-platform',
 				title: 'Real-Time Data Pipeline Platform',
@@ -1279,7 +1277,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Data & Analytics',
 				price: '$2,799',
 				billing: 'month',
-				features: [
+				features[
 					'Real-time streaming',
 					'Data transformation',
 					'Quality monitoring',
@@ -1297,7 +1295,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Data & Analytics',
 				price: '$1,599',
 				billing: 'month',
-				features: [
+				features[
 					'AI-powered data cleaning',
 					'Quality scoring',
 					'Automated validation',
@@ -1315,7 +1313,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Data & Analytics',
 				price: '$2,199',
 				billing: 'month',
-				features: [
+				features[
 					'Data cataloging',
 					'Lineage tracking',
 					'Governance policies',
@@ -1331,7 +1329,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'DevOps & Automation',
 		slug: 'devops-automation',
-		items: [
+		items[
 			{
 				id: 'ai-powered-devops-platform',
 				title: 'AI-Powered DevOps Platform',
@@ -1339,7 +1337,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$2,499',
 				billing: 'month',
-				features: [
+				features[
 					'AI-powered automation',
 					'Intelligent CI/CD',
 					'Infrastructure as code',
@@ -1357,7 +1355,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$1,799',
 				billing: 'month',
-				features: [
+				features[
 					'Git-based workflows',
 					'Declarative infrastructure',
 					'Automated deployments',
@@ -1375,7 +1373,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Cloud & DevOps',
 				price: '$1,299',
 				billing: 'month',
-				features: [
+				features[
 					'Automated testing',
 					'Resilience scoring',
 					'Failure injection',
@@ -1391,7 +1389,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Enterprise Integration',
 		slug: 'enterprise-integration',
-		items: [
+		items[
 			{
 				id: 'api-gateway-management-platform',
 				title: 'API Gateway Management Platform',
@@ -1399,7 +1397,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IT Services',
 				price: '$2,999',
 				billing: 'month',
-				features: [
+				features[
 					'Advanced routing',
 					'Security policies',
 					'Rate limiting',
@@ -1417,7 +1415,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'IT Services',
 				price: '$3,499',
 				billing: 'month',
-				features: [
+				features[
 					'Message routing',
 					'Service orchestration',
 					'Data transformation',
@@ -1435,7 +1433,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Data & Analytics',
 				price: '$2,199',
 				billing: 'month',
-				features: [
+				features[
 					'Multi-cloud sync',
 					'Real-time replication',
 					'Conflict resolution',
@@ -1451,7 +1449,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'AI Training & Customization',
 		slug: 'ai-training-customization',
-		items: [
+		items[
 			{
 				id: 'custom-ai-model-training',
 				title: 'Custom AI Model Training Platform',
@@ -1459,7 +1457,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$5,999',
 				billing: 'month',
-				features: [
+				features[
 					'Custom model training',
 					'Data preprocessing',
 					'Hyperparameter optimization',
@@ -1477,7 +1475,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$3,999',
 				billing: 'month',
-				features: [
+				features[
 					'Model fine-tuning',
 					'Domain adaptation',
 					'Performance optimization',
@@ -1495,7 +1493,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: '$4,499',
 				billing: 'month',
-				features: [
+				features[
 					'Model lifecycle management',
 					'Version control',
 					'Deployment automation',
@@ -1511,7 +1509,7 @@ export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Sustainability & Green Tech',
 		slug: 'sustainability-green-tech',
-		items: [
+		items[
 			{
 				id: 'carbon-footprint-tracking-platform',
 				title: 'Carbon Footprint Tracking Platform',
@@ -1519,7 +1517,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Green Tech',
 				price: '$1,299',
 				billing: 'month',
-				features: [
+				features[
 					'Carbon tracking',
 					'Emissions calculation',
 					'Reduction strategies',
@@ -1537,7 +1535,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Green Tech',
 				price: '$2,199',
 				billing: 'month',
-				features: [
+				features[
 					'Energy monitoring',
 					'AI optimization',
 					'Cost analysis',
@@ -1555,7 +1553,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'Green Tech',
 				price: '$1,899',
 				billing: 'month',
-				features: [
+				features[
 					'Waste tracking',
 					'Resource optimization',
 					'Circular design tools',

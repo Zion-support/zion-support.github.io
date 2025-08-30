@@ -19,67 +19,52 @@ const EnhancedAccessibility = () => {
             try {
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
-                applySettings({ ...settings, ...parsed });
-            }
+                applySettings({ ...settings, ...parsed })}
             catch (error) {
-                console.warn('Failed to load accessibility settings:', error);
-            }
+                console.warn('Failed to load accessibility settings:', error)}
         }
         // Check for user preferences
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (prefersReducedMotion) {
-            setSettings(prev => ({ ...prev, reducedMotion: true }));
-        }
+            setSettings(prev => ({ ...prev, reducedMotion: true }))}
     }, []);
     const applySettings = (newSettings) => {
         const root = document.documentElement;
         // High contrast mode
         if (newSettings.highContrast) {
-            root.classList.add('high-contrast');
-        }
+            root.classList.add('high-contrast')}
         else {
-            root.classList.remove('high-contrast');
-        }
+            root.classList.remove('high-contrast')}
         // Font size
         root.style.setProperty('--font-size-multiplier', (newSettings.fontSize / 16).toString());
         // Reduced motion
         if (newSettings.reducedMotion) {
-            root.classList.add('reduced-motion');
-        }
+            root.classList.add('reduced-motion')}
         else {
-            root.classList.remove('reduced-motion');
-        }
+            root.classList.remove('reduced-motion')}
         // Color blindness filters
         root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
         if (newSettings.colorBlindness !== 'none') {
-            root.classList.add(newSettings.colorBlindness);
-        }
+            root.classList.add(newSettings.colorBlindness)}
         // Focus indicators
         if (newSettings.focusIndicator) {
-            root.classList.add('show-focus-indicator');
-        }
+            root.classList.add('show-focus-indicator')}
         else {
-            root.classList.remove('show-focus-indicator');
-        }
+            root.classList.remove('show-focus-indicator')}
         // Save to localStorage
-        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-    };
+        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))};
     const updateSetting = (key, value) => {
         const newSettings = { ...settings, [key]: value };
         setSettings(newSettings);
-        applySettings(newSettings);
-    };
+        applySettings(newSettings)};
     const toggleHighContrast = () => {
-        updateSetting('highContrast', !settings.highContrast);
-    };
+        updateSetting('highContrast', !settings.highContrast)};
     const increaseFontSize = () => {
         const newSize = Math.min(settings.fontSize + 2, 24);
-        updateSetting('fontSize', newSize);
-    };
+        updateSetting('fontSize', newSize)};
     const decreaseFontSize = () => {
         const newSize = Math.max(settings.fontSize - 2, 12);
-        updateSetting('fontSize', newSize);
-    };
+        updateSetting('fontSize', newSize)};
     const resetSettings = () => {
         const defaultSettings = {
             highContrast: false,
@@ -91,19 +76,16 @@ const EnhancedAccessibility = () => {
             colorBlindness: 'none'
         };
         setSettings(defaultSettings);
-        applySettings(defaultSettings);
-    };
+        applySettings(defaultSettings)};
     const speakText = (text) => {
         if ('speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.rate = 0.9;
             utterance.pitch = 1;
-            speechSynthesis.speak(utterance);
-        }
+            speechSynthesis.speak(utterance)}
     };
     const announcePageChange = (pageName) => {
-        speakText(`Navigated to ${pageName}`);
-    };
+        speakText(`Navigated to ${pageName}`)};
     return (<>
       {/* Accessibility Toggle Button */}
       <button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" aria-label="Toggle accessibility settings" aria-expanded={isOpen} aria-controls="accessibility-panel">
@@ -259,6 +241,5 @@ const EnhancedAccessibility = () => {
 
       {/* Backdrop */}
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
-    </>);
-};
+    </>)};
 export default EnhancedAccessibility;

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Volume2, 
+import React, { useEffect, useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Volume2, 
   VolumeX, 
   Eye, 
   EyeOff, 
@@ -10,19 +9,19 @@ import {
   Accessibility,
   Settings,
   X
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   reducedMotion: boolean;
   largeText: boolean;
   screenReader: boolean;
-  keyboardNavigation: boolean;
-}
+  keyboardNavigation: boolean}
 
-export const EnhancedAccessibility: React.FC = () => {
+export const EnhancedAccessibility: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     reducedMotion: false,
     largeText: false,
@@ -30,49 +29,39 @@ export const EnhancedAccessibility: React.FC = () => {
     keyboardNavigation: false
   });
 
-  useEffect(() => {
+  useEffect(()  => {
     // Apply accessibility settings to document
     if (settings.highContrast) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-    }
+      document.documentElement.classList.add('high-contrast')} else {
+      document.documentElement.classList.remove('high-contrast')}
 
     if (settings.reducedMotion) {
-      document.documentElement.classList.add('reduced-motion');
-    } else {
-      document.documentElement.classList.remove('reduced-motion');
-    }
+      document.documentElement.classList.add('reduced-motion')} else {
+      document.documentElement.classList.remove('reduced-motion')}
 
     if (settings.largeText) {
-      document.documentElement.classList.add('large-text');
-    } else {
-      document.documentElement.classList.remove('large-text');
-    }
+      document.documentElement.classList.add('large-text')} else {
+      document.documentElement.classList.remove('large-text')}
 
     // Save settings to localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-  }, [settings]);
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
   useEffect(() => {
     // Load saved settings
     const saved = localStorage.getItem('accessibility-settings');
     if (saved) {
-      setSettings(JSON.parse(saved));
-    }
+      setSettings(JSON.parse(saved))}
   }, []);
 
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
+  const toggleSetting = (key: keyof AccessibilitySettings)  => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
-    }));
-  };
+    }))};
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent)  => {
     if (e.key === 'Escape') {
-      setIsOpen(false);
-    }
+      setIsOpen(false)}
   };
 
   return (
@@ -252,5 +241,4 @@ export const EnhancedAccessibility: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};

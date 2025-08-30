@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Phone, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone, 
   Mail, 
   MapPin, 
   Globe, 
@@ -59,9 +58,9 @@ import {
   Users,
   TrendingUp,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -69,7 +68,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'AI & Analytics Services',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
-      links: [
+      links[
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
@@ -85,7 +84,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Cloud & DevOps',
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
-      links: [
+      links[
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
@@ -98,7 +97,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Edge & IoT Services',
       icon: Server,
       color: 'from-blue-600 to-cyan-600',
-      links: [
+      links[
         { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
@@ -114,7 +113,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Quantum & Emerging Tech',
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
-      links: [
+      links[
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Space Technology', href: '/services/space-tech' },
@@ -137,7 +136,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Sitemap', href: '/sitemap' }
   ];
 
-  const companyLinks = [
+  const compLinks = [
     { name: 'About Us', href: '/about', description: 'Our story and mission' },
     { name: 'Team', href: '/team', description: 'Meet our experts' },
     { name: 'Careers', href: '/careers', description: 'Join our team' },
@@ -165,7 +164,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: string, href: string) => {
+  const createMissingPage = (name: string, href: string)  => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -176,8 +175,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       >
         {name}
       </Link>
-    );
-  };
+    )};
 
   return (
     <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-cyan-400/20">
@@ -195,8 +193,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             >
               Our Services
             </motion.h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {footerSections.slice(0, 2).map((section, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
+              {footerSections.slice(0, 2).map((section, index)  => (
                 <motion.div
                   key={section.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -236,8 +234,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             >
               Quick Access
             </motion.h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {quickLinks.map((link, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
+              {quickLinks.map((link, index)  => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -276,8 +274,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           >
             Complete Service Portfolio
           </motion.h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {footerSections.map((section, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {footerSections.map((section, index)  => (
               <motion.div
                 key={section.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -310,13 +308,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section - Company Info & Links */}
+        {/* Bottom Section - Comp Info & Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Company Links */}
+          {/* Comp Links */}
           <div>
             <h4 className="font-semibold text-white mb-4">Company</h4>
             <div className="space-y-2">
-              {companyLinks.map((link) => (
+              {compLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
@@ -394,7 +392,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       <div className="border-t border-slate-700/50">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -479,5 +477,4 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         <Shield className="w-8 h-8 text-purple-400 animate-bounce delay-1000" />
       </div>
     </footer>
-  );
-};
+  )};

@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,
@@ -56,26 +55,26 @@ import {
   Zap as ZapIcon,
   Grid,
   List
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 // Import our existing service data
-import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
-import { zion2026ComprehensiveServices } from '../data/zion2026ComprehensiveServices';
+import { ultimateInnovativeServices2026  } from '../data/ultimateInnovativeServices2026';
+import { zion2026ComprehensiveServices  } from '../data/zion2026ComprehensiveServices';
 
 interface Service {
+
   id: string;
   name: string;
   category: string;
   description: string;
   features: string[];
   benefits: string[];
-  pricing: {
+pricing: {
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string;
-  };
+    billingCycle: string};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -86,20 +85,18 @@ interface Service {
   contactInfo?: {
     phone: string;
     email: string;
-    address: string;
-  };
+    address: string};
   innovationLevel?: string;
   marketSize?: string;
   growthRate?: string;
-  roi?: string;
-}
+  roi?: string}
 
-const EnhancedComprehensiveServices2026: React.FC = () => {
+const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest' | 'innovation'>('name');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [sortBy, setSortBy] = useState<any>('name');
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [viewMode, setViewMode] = useState<any>('grid');
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
@@ -129,11 +126,10 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
         contactInfo: service.contactInfo
-      });
-    });
+      })});
 
     // Add services from zion2026ComprehensiveServices
-    zion2026ComprehensiveServices.forEach(service => {
+    zion2026ComprehensiveServices.forEach(service  => {
       services.push({
         id: service.id,
         name: service.name,
@@ -156,16 +152,13 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
         contactInfo: service.contactInfo
-      });
-    });
+      })});
 
-    return services;
-  }, []);
+    return services}, []);
 
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
-    return cats.sort();
-  }, [allServices]);
+    return cats.sort()}, [allServices]);
 
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
@@ -173,8 +166,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
+      return matchesSearch && matchesCategory});
 
     // Sort services
     switch (sortBy) {
@@ -193,13 +185,11 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'innovation':
         // Sort by innovation level if available, otherwise by rating
         filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
-        break;
-    }
+        break}
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Artificial Intelligence':
         return <Brain className="w-6 h-6" />;
@@ -222,11 +212,10 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'Space Technology':
         return <Satellite className="w-6 h-6" />;
       default:
-        return <Lightbulb className="w-6 h-6" />;
-    }
+        return <Lightbulb className="w-6 h-6" />}
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status.toLowerCase()) {
       case 'live':
         return 'bg-green-100 text-green-800';
@@ -237,18 +226,14 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'preview':
         return 'bg-purple-100 text-purple-800';
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800'}
   };
 
-  const getInnovationBadge = (service: Service) => {
+  const getInnovationBadge = (service: Service)  => {
     if (service.innovationLevel === 'Revolutionary') {
-      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
-    } else if (service.innovationLevel === 'Cutting-Edge') {
-      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
-    }
-    return null;
-  };
+      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>} else if (service.innovationLevel === 'Cutting-Edge') {
+      return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>}
+    return null};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -314,9 +299,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -326,7 +311,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
             <div className="flex-shrink-0">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>
@@ -351,7 +336,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`px-3 py-2 rounded-md transition-colors ${
-                    viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-white' : 'text-gray-300 hover:text-white'
+                    viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   <List className="w-4 h-4" />
@@ -365,9 +350,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {viewMode === 'grid' ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -712,7 +697,6 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default EnhancedComprehensiveServices2026;

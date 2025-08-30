@@ -2,21 +2,21 @@ import { useState } from 'react';
 export default function Support() {
     const [activeCategory, setActiveCategory] = useState('general');
     const faqCategories = {
-        general: [
+        general[
             {
                 question: 'How do I get started with Zion Tech Group services?',
                 answer: 'Getting started is easy! Simply contact our team through our contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions for your business.'
             },
             {
                 question: 'What industries do you serve?',
-                answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, and more. Our AI and technology solutions are designed to be industry-agnostic and can be customized for any sector.'
+                answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, and more. Our AI and technology solutions are designed to be industry-agnostic and can be customized for  sector.'
             },
             {
                 question: 'Do you offer remote support?',
-                answer: 'Yes, we provide comprehensive remote support for all our services. Our team can assist you from anywhere in the world, ensuring you get the help you need regardless of your location.'
+                answer: 'Yes, we provide comprehensive remote support for all our services. Our team can assist you from where in the world, ensuring you get the help you need regardless of your location.'
             }
         ],
-        technical: [
+        technical[
             {
                 question: 'What AI technologies do you use?',
                 answer: 'We utilize cutting-edge AI technologies including machine learning, natural language processing, computer vision, and autonomous systems. Our solutions are built on the latest frameworks and are continuously updated with the newest advancements.'
@@ -30,21 +30,21 @@ export default function Support() {
                 answer: 'Absolutely! We specialize in seamless integration with existing systems. Our team will assess your current infrastructure and ensure our solutions work perfectly with your existing technology stack.'
             }
         ],
-        billing: [
+        billing[
             {
                 question: 'What payment methods do you accept?',
                 answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment plans for enterprise clients. All payments are processed securely through our payment partners.'
             },
             {
                 question: 'Do you offer refunds?',
-                answer: 'We offer a 30-day satisfaction guarantee. If you\'re not completely satisfied with our services within the first 30 days, we\'ll work to resolve any issues or provide a full refund.'
+                answer: 'We offer a 30-day satisfaction guarantee. If you\'re not completely satisfied with our services within the first 30 days, we\'ll work to resolve  issues or provide a full refund.'
             },
             {
                 question: 'Can I change my plan mid-contract?',
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll prorate any billing adjustments and ensure a smooth transition between plans.'
+                answer: 'Yes, you can upgrade or downgrade your plan at  time. We\'ll prorate  billing adjustments and ensure a smooth transition between plans.'
             }
         ],
-        compliance: [
+        compliance[
             {
                 question: 'What compliance standards do you meet?',
                 answer: 'We maintain SOC2 Type II, ISO 27001, and GDPR compliance. Our solutions are designed to meet the highest security and privacy standards required by regulated industries.'
@@ -62,7 +62,7 @@ export default function Support() {
     const supportChannels = [
         {
             name: '24/7 Email Support',
-            description: 'Get help anytime via email',
+            description: 'Get help time via email',
             icon: '📧',
             response: 'Within 2 hours',
             link: '/contact'
@@ -124,5 +124,4 @@ export default function Support() {
             icon: '👥',
             link: '/community'
         }
-    ];
-}
+    ]}

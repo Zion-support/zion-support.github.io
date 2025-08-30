@@ -584,7 +584,7 @@ const soc2Solutions = [
     title: "SOC2 Compliance Monitoring",
     description: "Automated monitoring and tracking of SOC2 compliance requirements.",
     icon: Shield,
-    features: [
+    features[
       "Real-time monitoring",
       "Compliance tracking",
       "Automated alerts",
@@ -593,14 +593,14 @@ const soc2Solutions = [
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Monitoring",
-    technologies: ["AI Monitoring", "Compliance", "Automation", "Audit Trails"]
+    technologies["AI Monitoring", "Compliance", "Automation", "Audit Trails"]
   },
   {
     id: 2,
     title: "Automated Policy Management",
     description: "AI-powered system for managing and enforcing SOC2 policies.",
     icon: FileText,
-    features: [
+    features[
       "Policy automation",
       "Compliance checking",
       "Policy updates",
@@ -609,14 +609,14 @@ const soc2Solutions = [
     price: "From $120,000",
     timeline: "18-30 weeks",
     category: "Policy Management",
-    technologies: ["AI", "Policy Automation", "Compliance", "Enforcement"]
+    technologies["AI", "Policy Automation", "Compliance", "Enforcement"]
   },
   {
     id: 3,
     title: "Risk Assessment Automation",
     description: "Intelligent system for automated risk assessment and management.",
     icon: AlertTriangle,
-    features: [
+    features[
       "Risk identification",
       "Assessment automation",
       "Mitigation tracking",
@@ -625,14 +625,14 @@ const soc2Solutions = [
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Risk Management",
-    technologies: ["AI Risk Assessment", "Automation", "Risk Analysis", "Reporting"]
+    technologies["AI Risk Assessment", "Automation", "Risk Analysis", "Reporting"]
   },
   {
     id: 4,
     title: "Audit Preparation System",
     description: "AI-driven system for preparing and managing SOC2 audits.",
     icon: CheckCircle,
-    features: [
+    features[
       "Audit preparation",
       "Documentation automation",
       "Evidence collection",
@@ -641,14 +641,14 @@ const soc2Solutions = [
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Audit Preparation",
-    technologies: ["AI", "Audit Automation", "Documentation", "Compliance"]
+    technologies["AI", "Audit Automation", "Documentation", "Compliance"]
   },
   {
     id: 5,
     title: "Security Control Automation",
     description: "Automated implementation and monitoring of security controls.",
     icon: Lock,
-    features: [
+    features[
       "Control automation",
       "Security monitoring",
       "Compliance validation",
@@ -657,14 +657,14 @@ const soc2Solutions = [
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Security Controls",
-    technologies: ["AI Security", "Automation", "Monitoring", "Compliance"]
+    technologies["AI Security", "Automation", "Monitoring", "Compliance"]
   },
   {
     id: 6,
     title: "Compliance Reporting Platform",
     description: "Comprehensive platform for SOC2 compliance reporting and analytics.",
     icon: BarChart3,
-    features: [
+    features[
       "Automated reporting",
       "Compliance analytics",
       "Dashboard views",
@@ -673,7 +673,7 @@ const soc2Solutions = [
     price: "From $160,000",
     timeline: "20-32 weeks",
     category: "Reporting",
-    technologies: ["AI Reporting", "Analytics", "Dashboards", "Automation"]
+    technologies["AI Reporting", "Analytics", "Dashboards", "Automation"]
   }
 ];
 
@@ -711,7 +711,7 @@ const soc2Technologies = [
 const successStories = [
   {
     id: 1,
-    company: "Financial Services Corp",
+    comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Needed automated SOC2 compliance monitoring for regulatory requirements",
     solution: "Built comprehensive SOC2 compliance automation platform with monitoring and reporting",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Technology Ltd",
+    comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Required automated SOC2 policy management and enforcement",
     solution: "Implemented AI-driven SOC2 policy automation system",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Cloud Services Provider",
+    comp: "Cloud Services Provider",
     industry: "Technology",
     challenge: "Needed automated SOC2 audit preparation and security controls",
     solution: "Built AI-powered SOC2 audit preparation and security automation system",
@@ -774,25 +774,25 @@ const soc2Benefits = [
     title: "Automated Compliance",
     description: "AI-powered automation reduces manual compliance effort",
     icon: Zap,
-    examples: ["Automated monitoring", "Policy enforcement", "Compliance checking", "Audit preparation"]
+    examples["Automated monitoring", "Policy enforcement", "Compliance checking", "Audit preparation"]
   },
   {
     title: "Improved Security",
     description: "Automated security controls enhance overall security posture",
     icon: Shield,
-    examples: ["Security automation", "Control monitoring", "Threat detection", "Incident response"]
+    examples["Security automation", "Control monitoring", "Threat detection", "Incident response"]
   },
   {
     title: "Cost Reduction",
     description: "Automation reduces compliance costs and resource requirements",
     icon: TrendingUp,
-    examples: ["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"]
+    examples["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"]
   },
   {
     title: "Audit Success",
     description: "Automated systems improve audit preparation and success rates",
     icon: CheckCircle,
-    examples: ["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"]
+    examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"]
   }
 ];
 
@@ -1115,7 +1115,7 @@ export default function SOC2ComplianceAutomation() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1180,5 +1180,4 @@ export default function SOC2ComplianceAutomation() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

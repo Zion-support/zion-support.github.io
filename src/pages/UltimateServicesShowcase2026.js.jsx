@@ -47,8 +47,7 @@ const UltimateServicesShowcase2026 = () => {
                 return b.rating - a.rating;
             case 'name':
             default:
-                return a.name.localeCompare(b.name);
-        }
+                return a.name.localeCompare(b.name)}
     });
     const getCategoryIcon = (category) => {
         const icons = {
@@ -73,8 +72,7 @@ const UltimateServicesShowcase2026 = () => {
             'IT Asset Management': '📱',
             'Performance Monitoring': '📊'
         };
-        return icons[category] || '🚀';
-    };
+        return icons[category] || '🚀'};
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -325,6 +323,5 @@ const UltimateServicesShowcase2026 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default UltimateServicesShowcase2026;

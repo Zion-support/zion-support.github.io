@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Award, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Award, 
   Users, 
   Brain, 
   Shield, 
@@ -11,15 +10,15 @@ import {
   CheckCircle,
   Globe,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const TeamExpertiseSection: React.FC = () => {
+export const TeamExpertiseSection: React.FC = (): JSX.Element => {
   const expertise = [
     {
       icon: Brain,
       title: 'AI & Machine Learning',
       description: 'Deep expertise in neural networks, natural language processing, and predictive analytics.',
-      certifications: ['AWS Machine Learning', 'Google Cloud AI', 'Microsoft Azure AI'],
+      certifications['AWS Machine Learning', 'Google Cloud AI', 'Microsoft Azure AI'],
       experience: '8+ years',
       projects: '150+'
     },
@@ -27,7 +26,7 @@ export const TeamExpertiseSection: React.FC = () => {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Expert security professionals with certifications in ethical hacking and compliance.',
-      certifications: ['CISSP', 'CEH', 'CompTIA Security+', 'ISO 27001'],
+      certifications['CISSP', 'CEH', 'CompTIA Security+', 'ISO 27001'],
       experience: '10+ years',
       projects: '200+'
     },
@@ -35,7 +34,7 @@ export const TeamExpertiseSection: React.FC = () => {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Certified cloud architects specializing in multi-cloud and hybrid solutions.',
-      certifications: ['AWS Solutions Architect', 'Azure Solutions Architect', 'Google Cloud Architect'],
+      certifications['AWS Solutions Architect', 'Azure Solutions Architect', 'Google Cloud Architect'],
       experience: '12+ years',
       projects: '300+'
     },
@@ -43,7 +42,7 @@ export const TeamExpertiseSection: React.FC = () => {
       icon: Zap,
       title: 'Digital Transformation',
       description: 'Strategic consultants with proven track records in business transformation.',
-      certifications: ['PMP', 'ITIL', 'Six Sigma Black Belt', 'Change Management'],
+      certifications['PMP', 'ITIL', 'Six Sigma Black Belt', 'Change Management'],
       experience: '15+ years',
       projects: '500+'
     },
@@ -51,7 +50,7 @@ export const TeamExpertiseSection: React.FC = () => {
       icon: Globe,
       title: 'Web & Mobile Development',
       description: 'Full-stack developers with expertise in modern frameworks and technologies.',
-      certifications: ['React', 'Node.js', 'Flutter', 'AWS Developer'],
+      certifications['React', 'Node.js', 'Flutter', 'AWS Developer'],
       experience: '6+ years',
       projects: '100+'
     },
@@ -59,7 +58,7 @@ export const TeamExpertiseSection: React.FC = () => {
       icon: Rocket,
       title: 'Innovation & R&D',
       description: 'Research scientists and engineers pushing the boundaries of technology.',
-      certifications: ['PhD Computer Science', 'Patent Holders', 'Research Publications'],
+      certifications['PhD Computer Science', 'Patent Holders', 'Research Publications'],
       experience: '20+ years',
       projects: '50+'
     }
@@ -95,9 +94,9 @@ export const TeamExpertiseSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index) => {
+          {stats.map((stat, index)  => {
             const IconComponent = stat.icon;
             return (
               <div key={stat.label} className="text-center">
@@ -111,13 +110,12 @@ export const TeamExpertiseSection: React.FC = () => {
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
-            );
-          })}
+            )})}
         </motion.div>
 
         {/* Expertise Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {expertise.map((item, index) => {
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {expertise.map((item, index)  => {
             const IconComponent = item.icon;
             return (
               <motion.div
@@ -165,8 +163,7 @@ export const TeamExpertiseSection: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* CTA Section */}
@@ -198,7 +195,6 @@ export const TeamExpertiseSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default TeamExpertiseSection;

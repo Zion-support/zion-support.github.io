@@ -21,8 +21,7 @@ export function OnChainExport() {
                     description: "Please install MetaMask or another Ethereum wallet to use this feature",
                     variant: "destructive"
                 });
-                return;
-            }
+                return}
             // Request accounts
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             const address = accounts[0];
@@ -30,21 +29,19 @@ export function OnChainExport() {
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
                 method: 'personal_sign',
-                params: [address, message]
+                params[address, message]
             });
             setIsConnected(true);
             toast({
                 title: "Wallet connected",
                 description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
-            });
-        }
+            })}
         catch (error) {
             toast({
                 title: "Connection failed",
                 description: error.message || "Could not connect to wallet",
                 variant: "destructive"
-            });
-        }
+            })}
     };
     const handleExportTokens = async () => {
         setIsExporting(true);
@@ -56,19 +53,16 @@ export function OnChainExport() {
             toast({
                 title: "Tokens exported",
                 description: "Your ZION$ tokens have been exported to your wallet",
-            });
-        }
+            })}
         catch (error) {
             setExportStatus('error');
             toast({
                 title: "Export failed",
                 description: error.message || "Could not export tokens",
                 variant: "destructive"
-            });
-        }
+            })}
         finally {
-            setIsExporting(false);
-        }
+            setIsExporting(false)}
     };
     return (<Card>
       <CardHeader>
@@ -110,5 +104,4 @@ export function OnChainExport() {
             </Button>
           </div>)}
       </CardContent>
-    </Card>);
-}
+    </Card>)}

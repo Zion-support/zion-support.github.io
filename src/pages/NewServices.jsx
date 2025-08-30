@@ -20,8 +20,7 @@ export function NewServices() {
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             (('tags' in service && 'tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))) || false);
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch});
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -206,7 +205,7 @@ export function NewServices() {
 
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
-                    {('tags' in service ? service.tags : []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
+                    {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
                         {tag}
                       </span>))}
                   </div>)}
@@ -285,7 +284,7 @@ export function NewServices() {
 
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
-                    {('tags' in service ? service.tags : []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
+                    {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
                         {tag}
                       </span>))}
                   </div>)}
@@ -300,8 +299,7 @@ export function NewServices() {
             </div>
             <button onClick={() => {
                 setSearchTerm('');
-                setSelectedCategory('all');
-            }} className="px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors">
+                setSelectedCategory('all')}} className="px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors">
               Clear Filters
             </button>
           </motion.div>)}
@@ -312,7 +310,7 @@ export function NewServices() {
             Showing {filteredServices.length} of {allServices.length} revolutionary services
           </p>
           <p className="text-sm mt-2">
-            Contact us to learn more about any service or request a custom solution
+            Contact us to learn more about  service or request a custom solution
           </p>
         </motion.div>
 
@@ -447,6 +445,5 @@ export function NewServices() {
             </div>
           </motion.div>
         </div>)}
-    </div>);
-}
+    </div>)}
 export default NewServices;

@@ -7,7 +7,7 @@ export default function RequestQuote() {
         lastName: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         projectType: '',
         budget: '',
         timeline: '',
@@ -56,8 +56,7 @@ export default function RequestQuote() {
         setFormData(prev => ({
             ...prev,
             [name]: value
-        }));
-    };
+        }))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setSubmissionStatus('submitting');
@@ -71,17 +70,14 @@ export default function RequestQuote() {
                     lastName: '',
                     email: '',
                     phone: '',
-                    company: '',
+                    comp: '',
                     projectType: '',
                     budget: '',
                     timeline: '',
                     description: '',
                     urgency: 'medium'
                 });
-                setSubmissionStatus('idle');
-            }, 3000);
-        }, 2000);
-    };
+                setSubmissionStatus('idle')}, 3000)}, 2000)};
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType;
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -153,7 +149,7 @@ export default function RequestQuote() {
 
                   <div>
                     <label className="block text-white font-medium mb-2">Company</label>
-                    <input type="text" name="company" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your company name"/>
+                    <input type="text" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your comp name"/>
                   </div>
 
                   {/* Project Type */}
@@ -218,7 +214,7 @@ export default function RequestQuote() {
                   {/* Project Description */}
                   <div>
                     <label className="block text-white font-medium mb-2">Project Description *</label>
-                    <textarea name="description" value={formData.description} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Describe your project requirements, goals, and any specific features you need..."/>
+                    <textarea name="description" value={formData.description} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Describe your project requirements, goals, and  specific features you need..."/>
                   </div>
 
                   {/* Submit Button */}
@@ -349,5 +345,4 @@ export default function RequestQuote() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

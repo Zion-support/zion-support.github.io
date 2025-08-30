@@ -16,9 +16,7 @@ export function ITServiceRequestHero() {
             // Simulate API call
             setTimeout(() => {
                 setIsSubmitting(false);
-                navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-            }, 1000);
-        }
+                navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
     };
     const containerVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -70,7 +68,7 @@ export function ITServiceRequestHero() {
             </GradientHeading>
             
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
-              Request professional technicians anywhere in the world, anytime you need them. 
+              Request professional technicians where in the world, time you need them. 
               Fast, reliable, and secure IT solutions for your business.
             </p>
 
@@ -160,5 +158,4 @@ export function ITServiceRequestHero() {
           </motion.div>
         </div>
       </motion.div>
-    </section>);
-}
+    </section>)}

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Code, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Code, 
   Search, 
   Filter,
   ArrowRight,
@@ -24,7 +23,7 @@ import {
   Key,
   Database,
   Lock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const apiCategories = [
   {
@@ -96,8 +95,7 @@ const createInstance = async () => {
         size: 'medium',
         region: 'us-east-1'
     });
-    return response.data;
-};`,
+    return response.data};`,
     category: 'Cloud & DevOps'
   },
   {
@@ -120,7 +118,7 @@ def check_threat(ip_address):
   }
 ];
 
-export default function API() {
+export default function API(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -200,8 +198,8 @@ export default function API() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {apiCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {apiCategories.map((category, index)  => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -271,8 +269,8 @@ export default function API() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {quickStartExamples.map((example, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            {quickStartExamples.map((example, index)  => (
               <motion.div
                 key={example.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -351,5 +349,4 @@ export default function API() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

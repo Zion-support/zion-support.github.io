@@ -11,9 +11,7 @@ export interface CuttingEdgeMicroSaas2028 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {
     id: "2028-cutting-edge-micro-saas",
@@ -21,7 +19,7 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     tagline: "Cutting-edge micro SAAS for 2028",
     price: "$199/month",
     description: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.",
-    features: [
+    features[
       "Cutting-edge features",
       "Latest innovations",
       "Advanced technology",

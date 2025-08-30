@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Video, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Video, 
   Calendar, 
   Clock, 
   Users, 
@@ -26,9 +25,9 @@ import {
   MapPin,
   Mail,
   Phone
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Webinars() {
+export default function Webinars(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showPast, setShowPast] = useState(false);
@@ -56,7 +55,7 @@ export default function Webinars() {
       attendees: 450,
       maxAttendees: 500,
       summary: 'Learn how to implement AI-powered compliance automation to reduce manual work and improve accuracy.',
-      tags: ['AI', 'Compliance', 'Automation', 'Best Practices'],
+      tags['AI', 'Compliance', 'Automation', 'Best Practices'],
       registrationUrl: '/webinars/ai-compliance-automation-2024/register',
       watchUrl: null,
       isLive: false
@@ -72,7 +71,7 @@ export default function Webinars() {
       attendees: 320,
       maxAttendees: 400,
       summary: 'Deep dive into implementing zero trust security architecture in large enterprise environments.',
-      tags: ['Cybersecurity', 'Zero Trust', 'Enterprise', 'Security Architecture'],
+      tags['Cybersecurity', 'Zero Trust', 'Enterprise', 'Security Architecture'],
       registrationUrl: '/webinars/zero-trust-security-enterprise/register',
       watchUrl: null,
       isLive: false
@@ -88,7 +87,7 @@ export default function Webinars() {
       attendees: 280,
       maxAttendees: 350,
       summary: 'Discover strategies for optimizing cloud costs across multiple cloud providers using FinOps principles.',
-      tags: ['Cloud Computing', 'FinOps', 'Cost Optimization', 'Multi-Cloud'],
+      tags['Cloud Computing', 'FinOps', 'Cost Optimization', 'Multi-Cloud'],
       registrationUrl: '/webinars/cloud-finops-multi-cloud/register',
       watchUrl: null,
       isLive: false
@@ -104,7 +103,7 @@ export default function Webinars() {
       attendees: 195,
       maxAttendees: 300,
       summary: 'Explore practical applications of digital twin technology and how to measure return on investment.',
-      tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
+      tags['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
       registrationUrl: '/webinars/digital-twin-applications-roi/register',
       watchUrl: null,
       isLive: false
@@ -123,7 +122,7 @@ export default function Webinars() {
       attendees: 520,
       maxAttendees: 500,
       summary: 'Comprehensive overview of AI applications in healthcare, including ethical considerations and regulatory compliance.',
-      tags: ['Healthcare AI', 'Ethics', 'Regulatory Compliance', 'Medical Technology'],
+      tags['Healthcare AI', 'Ethics', 'Regulatory Compliance', 'Medical Technology'],
       registrationUrl: null,
       watchUrl: '/webinars/ai-healthcare-future-2024/watch',
       isLive: false,
@@ -141,7 +140,7 @@ export default function Webinars() {
       attendees: 480,
       maxAttendees: 450,
       summary: 'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.',
-      tags: ['Quantum Computing', 'Future Technology', 'Innovation', 'Strategic Planning'],
+      tags['Quantum Computing', 'Future Technology', 'Innovation', 'Strategic Planning'],
       registrationUrl: null,
       watchUrl: '/webinars/quantum-computing-future-2024/watch',
       isLive: false,
@@ -159,7 +158,7 @@ export default function Webinars() {
       attendees: 320,
       maxAttendees: 300,
       summary: 'Implementing sustainable technology practices to reduce environmental impact and operational costs.',
-      tags: ['Sustainability', 'Green IT', 'Environmental Impact', 'Cost Reduction'],
+      tags['Sustainability', 'Green IT', 'Environmental Impact', 'Cost Reduction'],
       registrationUrl: null,
       watchUrl: '/webinars/sustainable-technology-enterprise-2024/watch',
       isLive: false,
@@ -177,7 +176,7 @@ export default function Webinars() {
       attendees: 410,
       maxAttendees: 400,
       summary: 'Strategies for implementing edge computing and IoT solutions in enterprise environments.',
-      tags: ['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
+      tags['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
       registrationUrl: null,
       watchUrl: '/webinars/edge-computing-iot-enterprise-2024/watch',
       isLive: false,
@@ -187,22 +186,20 @@ export default function Webinars() {
   ];
 
   // Calculate category counts
-  React.useEffect(() => {
+  React.useEffect(()  => {
     const allWebinars = [...upcomingWebinars, ...pastWebinars];
     const categoryCounts = categories.map(cat => ({
       ...cat,
-      count: cat.id === 'all' ? allWebinars.length : allWebinars.filter(wp => wp.category === cat.id).length
-    }));
-  }, []);
+      count: cat.id === 'all' ? allWebinars.length: allWebinars.filter(wp  => wp.category === cat.id).length
+    }))}, []);
 
-  const filteredWebinars = (showPast ? pastWebinars : upcomingWebinars).filter(webinar => {
+  const filteredWebinars = (showPast ? pastWebinars: upcomingWebinars).filter(webinar  => {
     const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const stats = [
     { label: 'Webinars Delivered', value: '100+', icon: Video },
@@ -259,9 +256,9 @@ export default function Webinars() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
-            {stats.map((stat, index) => (
+            {stats.map((stat, index)  => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-white" />
@@ -297,9 +294,9 @@ export default function Webinars() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
                 >
-                  {categories.map((category) => (
+                  {categories.map((category)  => (
                     <option key={category.id} value={category.id}>
                       {category.name}
                     </option>
@@ -348,8 +345,8 @@ export default function Webinars() {
             {showPast ? 'Past Webinars' : 'Upcoming Webinars'}
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredWebinars.map((webinar, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {filteredWebinars.map((webinar, index)  => (
               <motion.article
                 key={webinar.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -491,8 +488,8 @@ export default function Webinars() {
             Webinar Categories
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.slice(1).map((category, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {categories.slice(1).map((category, index)  => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -577,5 +574,4 @@ export default function Webinars() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -10,7 +10,7 @@ const benefits = [
     stats: "50% Faster",
     color: "from-yellow-500 to-orange-500",
     bgColor: "from-yellow-500/20 to-orange-500/20",
-    features: [
+    features[
       "Agile development methodology",
       "Parallel development teams",
       "Automated testing pipeline",
@@ -24,7 +24,7 @@ const benefits = [
     stats: "99.9% Secure",
     color: "from-blue-500 to-cyan-500",
     bgColor: "from-blue-500/20 to-cyan-500/20",
-    features: [
+    features[
       "SOC 2 Type II compliant",
       "End-to-end encryption",
       "Regular security audits",
@@ -38,7 +38,7 @@ const benefits = [
     stats: "300% ROI",
     color: "from-green-500 to-emerald-500",
     bgColor: "from-green-500/20 to-emerald-500/20",
-    features: [
+    features[
       "Performance optimization",
       "Cost reduction strategies",
       "Revenue growth solutions",
@@ -52,7 +52,7 @@ const benefits = [
     stats: "100% Quality",
     color: "from-purple-500 to-pink-500",
     bgColor: "from-purple-500/20 to-pink-500/20",
-    features: [
+    features[
       "Comprehensive testing",
       "Code quality standards",
       "Performance benchmarks",
@@ -130,7 +130,7 @@ export function BenefitsSection() {
         />
         <motion.div 
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" 
-          animate={{ scale: [1, 1.2, 1] }} 
+          animate={{ scale[1, 1.2, 1] }} 
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
@@ -262,5 +262,4 @@ export function BenefitsSection() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

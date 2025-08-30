@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  ChevronDown, 
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { ChevronDown, 
   ChevronUp, 
   Search, 
   HelpCircle, 
@@ -17,28 +16,27 @@ import {
   Award,
   Globe,
   Lightbulb
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function FAQ() {
+export default function FAQ(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems, setOpenItems] = useState<any>([]);
 
-  const toggleItem = (index: number) => {
+  const toggleItem = (index: number)  => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
-  };
+        [...prev, index]
+    )};
 
   const faqCategories = [
     {
       name: 'General Questions',
       icon: HelpCircle,
-      questions: [
+      questions[
         {
           question: 'What is Zion Tech Group?',
-          answer: 'Zion Tech Group is a leading technology company specializing in AI-powered solutions, cloud services, cybersecurity, and digital transformation. We help businesses leverage cutting-edge technology to drive innovation and growth.'
+          answer: 'Zion Tech Group is a leading technology comp specializing in AI-powered solutions, cloud services, cybersecurity, and digital transformation. We help businesses leverage cutting-edge technology to drive innovation and growth.'
         },
         {
           question: 'Where is Zion Tech Group located?',
@@ -46,7 +44,7 @@ export default function FAQ() {
         },
         {
           question: 'What industries do you serve?',
-          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, technology, and government sectors. Our solutions are adaptable to any industry that can benefit from AI and digital transformation.'
+          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, technology, and government sectors. Our solutions are adaptable to  industry that can benefit from AI and digital transformation.'
         },
         {
           question: 'How long has Zion Tech Group been in business?',
@@ -57,7 +55,7 @@ export default function FAQ() {
     {
       name: 'AI & Technology Services',
       icon: Zap,
-      questions: [
+      questions[
         {
           question: 'What AI services do you offer?',
           answer: 'We offer comprehensive AI services including AI Business Intelligence, AI Sales Copilot, AI Compliance Assistant, LLM Content Studio, and custom AI solutions. Our AI services help automate processes, gain insights, and transform business operations.'
@@ -79,7 +77,7 @@ export default function FAQ() {
     {
       name: 'Cloud & DevOps',
       icon: Shield,
-      questions: [
+      questions[
         {
           question: 'What cloud platforms do you support?',
           answer: 'We support all major cloud platforms including AWS, Azure, Google Cloud, and hybrid cloud environments. Our team has certifications in multiple cloud platforms and can help you choose the best solution for your needs.'
@@ -101,7 +99,7 @@ export default function FAQ() {
     {
       name: 'Pricing & Billing',
       icon: Award,
-      questions: [
+      questions[
         {
           question: 'How do you price your services?',
           answer: 'We offer flexible pricing models including fixed-price projects, time and materials, and subscription-based services. Pricing depends on project scope, complexity, and requirements. Contact us for a custom quote.'
@@ -115,7 +113,7 @@ export default function FAQ() {
           answer: 'Our service packages include project planning, development, testing, deployment, training, and ongoing support. We also provide documentation, user guides, and maintenance services as part of our comprehensive packages.'
         },
         {
-          question: 'Are there any hidden costs?',
+          question: 'Are there  hidden costs?',
           answer: 'No hidden costs! We provide transparent pricing with detailed breakdowns of all services and costs. Any additional requirements or changes are discussed upfront and clearly communicated before implementation.'
         }
       ]
@@ -123,7 +121,7 @@ export default function FAQ() {
     {
       name: 'Support & Maintenance',
       icon: Users,
-      questions: [
+      questions[
         {
           question: 'What support do you provide after project completion?',
           answer: 'We provide comprehensive post-project support including bug fixes, updates, maintenance, and 24/7 emergency support for critical systems. Our support packages are customizable to meet your specific needs.'
@@ -145,7 +143,7 @@ export default function FAQ() {
     {
       name: 'Security & Compliance',
       icon: Shield,
-      questions: [
+      questions[
         {
           question: 'What security certifications do you have?',
           answer: 'We are ISO 27001 certified and SOC 2 Type II compliant. We also maintain certifications in various cloud platforms and security frameworks. Our security practices meet or exceed industry standards.'
@@ -168,7 +166,7 @@ export default function FAQ() {
 
   const filteredCategories = faqCategories.map(category => ({
     ...category,
-    questions: category.questions.filter(q =>
+    questions: category.questions.filter(q  =>
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -323,8 +321,7 @@ export default function FAQ() {
                           )}
                         </AnimatePresence>
                       </motion.div>
-                    );
-                  })}
+                    )})}
                 </div>
               </motion.div>
             ))}
@@ -346,12 +343,12 @@ export default function FAQ() {
               Still Have Questions?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our team is here to help. Get in touch with us through any of these channels.
+              Our team is here to help. Get in touch with us through  of these channels.
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((contact, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {contactInfo.map((contact, index)  => (
               <motion.div
                 key={contact.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -429,5 +426,4 @@ export default function FAQ() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

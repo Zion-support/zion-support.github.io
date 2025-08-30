@@ -88,6 +88,5 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           </Link>
         </motion.div>
       </motion.div>
-    </div>);
-};
+    </div>)};
 export default Enhanced404Page;

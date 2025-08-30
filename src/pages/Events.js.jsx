@@ -117,7 +117,6 @@ const Events: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Events;

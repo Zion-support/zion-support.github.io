@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Search, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Search, 
   Filter, 
   Calendar, 
   User, 
@@ -15,9 +14,9 @@ import {
   Cloud,
   Brain,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Blog() {
+export default function Blog(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -130,8 +129,7 @@ export default function Blog() {
   ];
 
   const filteredPosts = selectedCategory === 'all' 
-    ? recentPosts 
-    : recentPosts.filter(post => post.category === selectedCategory);
+    ? recentPosts: recentPosts.filter(post  => post.category === selectedCategory);
 
   const searchResults = searchQuery 
     ? [...featuredPosts, ...recentPosts].filter(post => 
@@ -139,7 +137,7 @@ export default function Blog() {
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.author.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : [];
+    [];
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -203,7 +201,7 @@ export default function Blog() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {categories.map((category) => (
+            {categories.map((category)  => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -243,8 +241,8 @@ export default function Blog() {
               </p>
             </motion.div>
             
-            <div className="grid lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post, index) => (
+            <div className="grid lg: grid-cols-3 gap-8">
+              {featuredPosts.map((post, index)  => (
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -336,8 +334,8 @@ export default function Blog() {
               </button>
             </motion.div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {(searchQuery ? searchResults : filteredPosts).map((post, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {(searchQuery ? searchResults : filteredPosts).map((post, index)  => (
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -419,7 +417,7 @@ export default function Blog() {
               </div>
               
               <p className="text-sm text-slate-400 mt-4">
-                No spam, unsubscribe at any time. We respect your privacy.
+                No spam, unsubscribe at  time. We respect your privacy.
               </p>
             </motion.div>
           </div>
@@ -470,5 +468,4 @@ export default function Blog() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

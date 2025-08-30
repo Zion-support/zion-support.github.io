@@ -107,8 +107,7 @@ export function ServicesShowcase() {
                     {MICRO_SAAS_SERVICES.filter(s => s.category === category.label).length} services available
                   </p>
                 </CardContent>
-              </Card>);
-        })}
+              </Card>)})}
         </div>
 
         {/* Featured Services */}
@@ -282,5 +281,4 @@ export function ServicesShowcase() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

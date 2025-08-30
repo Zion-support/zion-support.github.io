@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
 
-const AICodeReviewSecurity: React.FC = () => {
+const AICodeReviewSecurity: React.FC = (): JSX.Element => {
   return (
     <>
       <SEO
@@ -57,7 +57,7 @@ const AICodeReviewSecurity: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "AI-Powered Analysis",
@@ -89,7 +89,7 @@ const AICodeReviewSecurity: React.FC = () => {
                   description: "Instant feedback and continuous monitoring with configurable security policies and compliance checks.",
                   icon: "⚡"
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -125,7 +125,7 @@ const AICodeReviewSecurity: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {[
                 {
                   title: "Static Application Security Testing (SAST)",
@@ -147,7 +147,7 @@ const AICodeReviewSecurity: React.FC = () => {
                   description: "Combines SAST and DAST approaches to provide real-time security analysis during application execution.",
                   benefits: ["Real-time analysis", "Accurate vulnerability detection", "Minimal false positives"]
                 }
-              ].map((approach, index) => (
+              ].map((approach, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -190,7 +190,7 @@ const AICodeReviewSecurity: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { metric: "85%", description: "Reduction in security vulnerabilities" },
                 { metric: "70%", description: "Faster code review process" },
@@ -198,7 +198,7 @@ const AICodeReviewSecurity: React.FC = () => {
                 { metric: "60%", description: "Reduction in security incidents" },
                 { metric: "95%", description: "Code coverage accuracy" },
                 { metric: "50%", description: "Faster time to market" }
-              ].map((benefit, index) => (
+              ].map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -233,7 +233,7 @@ const AICodeReviewSecurity: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               {[
                 {
                   industry: "Financial Services",
@@ -255,7 +255,7 @@ const AICodeReviewSecurity: React.FC = () => {
                   description: "Secure government applications, citizen portals, and critical infrastructure systems.",
                   features: ["FedRAMP compliance", "FISMA compliance", "National security standards"]
                 }
-              ].map((useCase, index) => (
+              ].map((useCase, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -298,11 +298,11 @@ const AICodeReviewSecurity: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
               {[
                 "SonarQube", "Snyk", "CodeQL", "Veracode", "Checkmarx", "Fortify", "Coverity", "Bandit",
                 "ESLint", "SonarLint", "GitHub Security", "GitLab Security", "Bitbucket Security", "Jenkins", "GitLab CI/CD", "GitHub Actions"
-              ].map((tech, index) => (
+              ].map((tech, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -336,7 +336,7 @@ const AICodeReviewSecurity: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {[
                 {
                   name: "Developer",
@@ -387,7 +387,7 @@ const AICodeReviewSecurity: React.FC = () => {
                   ],
                   popular: false
                 }
-              ].map((plan, index) => (
+              ].map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

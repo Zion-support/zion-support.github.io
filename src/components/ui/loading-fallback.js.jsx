@@ -23,22 +23,20 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
       
       <motion.div className="flex space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.3 }}>
         {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.5, 1, 0.5]
+                scale[1, 1.2, 1],
+                opacity[0.5, 1, 0.5]
             }} transition={{
                 duration: 1.5,
                 repeat: Infinity,
                 delay: i * 0.2
             }}/>))}
       </motion.div>
-    </div>);
-}
+    </div>)}
 // Full screen loading fallback
 export function FullScreenLoading({ message = "Loading Zion..." }) {
     return (<div className="min-h-screen bg-zion-blue flex items-center justify-center">
       <LoadingFallback message={message} size="lg"/>
-    </div>);
-}
+    </div>)}
 // Inline loading fallback
 export function InlineLoading({ message = "Loading..." }) {
     return (<div className="flex items-center space-x-2 text-zion-slate-light">
@@ -46,5 +44,4 @@ export function InlineLoading({ message = "Loading..." }) {
         <Loader2 className="w-full h-full"/>
       </motion.div>
       <span className="text-sm">{message}</span>
-    </div>);
-}
+    </div>)}

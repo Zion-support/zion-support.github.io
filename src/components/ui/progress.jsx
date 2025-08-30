@@ -15,8 +15,7 @@ const Progress = React.forwardRef(({ className, value, max = 100, ...props }, re
         style={{ width: `${percentage}%` }}
       />
     </div>
-  );
-});
+  )});
 
 Progress.displayName = 'Progress';
 

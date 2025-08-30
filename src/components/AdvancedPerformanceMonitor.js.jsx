@@ -82,8 +82,8 @@ const mockPerformanceAlerts = [
         title: 'High CPU Usage Detected',
         description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',
         timestamp: '2024-01-15T10:00:00.000Z',
-        affected: ['Web Server 1', 'Application Server 2'],
-        recommendations: ['Scale horizontally', 'Optimize database queries', 'Review background processes'],
+        affected['Web Server 1', 'Application Server 2'],
+        recommendations['Scale horizontally', 'Optimize database queries', 'Review background processes'],
         status: 'active'
     },
     {
@@ -93,8 +93,8 @@ const mockPerformanceAlerts = [
         title: 'Database Connection Pool Near Capacity',
         description: 'Database connection pool is at 89% capacity, approaching the maximum limit.',
         timestamp: '2024-01-15T09:45:00.000Z',
-        affected: ['Database Cluster', 'Application Servers'],
-        recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
+        affected['Database Cluster', 'Application Servers'],
+        recommendations['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
         status: 'acknowledged'
     }
 ];
@@ -161,13 +161,11 @@ export function AdvancedPerformanceMonitor() {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false);
-    };
+        setIsRefreshing(false)};
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-            return () => clearInterval(interval);
-        }
+            return () => clearInterval(interval)}
     }, [autoRefresh]);
     const getStatusColor = (status) => {
         switch (status) {
@@ -176,8 +174,7 @@ export function AdvancedPerformanceMonitor() {
             case 'warning':
                 return 'bg-yellow-500 text-white';
             default:
-                return 'bg-green-500 text-white';
-        }
+                return 'bg-green-500 text-white'}
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -188,8 +185,7 @@ export function AdvancedPerformanceMonitor() {
             case 'medium':
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
-                return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300';
-        }
+                return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}
     };
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -198,8 +194,7 @@ export function AdvancedPerformanceMonitor() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-green-500 rotate-180"/>;
             default:
-                return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+                return <Activity className="w-4 h-4 text-gray-500"/>}
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -214,21 +209,18 @@ export function AdvancedPerformanceMonitor() {
             case 'Database':
                 return <Database className="w-5 h-5 text-cyan-500"/>;
             default:
-                return <Activity className="w-5 h-5 text-gray-500"/>;
-        }
+                return <Activity className="w-5 h-5 text-gray-500"/>}
     };
     const getUtilizationColor = (utilization) => {
         if (utilization >= 80)
             return 'text-red-600';
         if (utilization >= 60)
             return 'text-yellow-600';
-        return 'text-green-600';
-    };
+        return 'text-green-600'};
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Performance Monitor">
         <Activity className="w-6 h-6"/>
-      </button>);
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -238,8 +230,7 @@ export function AdvancedPerformanceMonitor() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 flex items-center justify-between">
@@ -313,8 +304,7 @@ export function AdvancedPerformanceMonitor() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
               <Icon className="w-4 h-4"/>
               {tab.label}
-            </button>);
-        })}
+            </button>)})}
       </div>
 
       {/* Content */}
@@ -531,5 +521,4 @@ export function AdvancedPerformanceMonitor() {
             </div>
           </div>)}
       </div>
-    </div>);
-}
+    </div>)}

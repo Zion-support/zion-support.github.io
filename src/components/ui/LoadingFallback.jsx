@@ -23,16 +23,15 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
       {/* Animated dots */}
       <motion.div className="flex space-x-1">
         {[0, 1, 2].map((index) => (<motion.div key={index} className="w-2 h-2 bg-zion-cyan rounded-full" animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.5, 1, 0.5]
+                scale[1, 1.5, 1],
+                opacity[0.5, 1, 0.5]
             }} transition={{
                 duration: 1.4,
                 repeat: Infinity,
                 delay: index * 0.2
             }}/>))}
       </motion.div>
-    </div>);
-}
+    </div>)}
 export function PageLoadingFallback() {
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
       <div className="text-center">
@@ -41,5 +40,4 @@ export function PageLoadingFallback() {
           Connecting to the future of tech...
         </motion.div>
       </div>
-    </div>);
-}
+    </div>)}

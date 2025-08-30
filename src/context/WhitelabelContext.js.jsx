@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 const defaultConfig = {
-    companyName: 'Zion Tech Group',
+    compName: 'Zion Tech Group',
     logo: '/logo.svg',
     primaryColor: '#1e40af',
     secondaryColor: '#7c3aed',
@@ -18,5 +18,4 @@ export const WhitelabelProvider = ({ children, config = {} }) => {
     const mergedConfig = { ...defaultConfig, ...config };
     return (<WhitelabelContext.Provider value={mergedConfig}>
       {children}
-    </WhitelabelContext.Provider>);
-};
+    </WhitelabelContext.Provider>)};

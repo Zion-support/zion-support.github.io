@@ -1,21 +1,21 @@
-// import { NextPage } from 'next'; // Removed
-import React from 'react'; // Ensure React is imported if not already for FC type
-import { AppLayout } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch'; // Added for new fields
-import { useForm, Controller, type SubmitHandler } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { Steps, Step } from '@/components/ui/steps'; // Assuming this is how steps are imported
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { useState } from 'react';
-import { ProjectBrief, TeamRecommendation } from '@/types'; // Import from barrel file
-import { toast } from 'sonner'; // Or use-toast if that's the project's standard
-import { Loader2 } from 'lucide-react';
-import { TeamRecommendationDisplay } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
+// import { NextPage  } from 'next.ts'; // Removed
+import React from 'react.ts'; // Ensure React is imported if not already for FC type
+import { AppLayout  } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea  } from '@/components/ui/textarea';
+import { Label  } from '@/components/ui/label';
+import { Switch  } from '@/components/ui/switch'; // Added for new fields
+import { useForm, Controller, type SubmitHandler  } from 'react-hook-form.ts';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import * as z from 'zod.ts';
+import { Steps, Step  } from '@/components/ui/steps'; // Assuming this is how steps are imported
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
+import { useState  } from 'react.ts';
+import { ProjectBrief, TeamRecommendation  } from '@/types'; // Import from barrel file
+import { toast  } from 'sonner.ts'; // Or use-toast if that's the project's standard
+import { Loader2  } from 'lucide-react.ts';
+import { TeamRecommendationDisplay  } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation
 const projectBriefSchema = z.object({
@@ -35,11 +35,11 @@ const projectBriefSchema = z.object({
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
 // const TeamBuilderPage: NextPage = () => { // Old
-const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
+const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference
   const [currentStep, setCurrentStep] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const [teamRecommendation, setTeamRecommendation] = useState<TeamRecommendation | null>(null);
-  const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<ProjectBrief | null>(null);
+  const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
+  const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
 
 
   const { control, handleSubmit, trigger, formState: { errors } } = useForm<ProjectBriefFormData>({
@@ -85,10 +85,10 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
       userId: 'current-user-id',
       createdAt: new Date().toISOString(),
       ...data,
-      techStack: data.techStack?.split(',').map(s => s.trim()).filter(s => s) || [],
+      techStack: data.techStack?.split(',').map(s  => s.trim()).filter(s => s) || [],
       talentFilters: { // Ensure talentFilters is structured correctly
         verifiedOnly: data.talentFilters?.verifiedOnly,
-        regions: data.talentFilters?.regions?.split(',').map(r => r.trim()).filter(r => r) || [],
+        regions: data.talentFilters?.regions?.split(',').map(r  => r.trim()).filter(r => r) || [],
       }
     };
     setProjectBriefSubmitted(projectBriefData);
@@ -109,7 +109,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
@@ -117,7 +117,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
     }
   };
 
-  const handleInviteTalent = async (talentId: string, roleTitle: string) => {
+  const handleInviteTalent = async (talentId: string, roleTitle: string)  => {
     if (!projectBriefSubmitted) {
       toast.error("Cannot send invite without a project context.");
       return;
@@ -150,7 +150,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }

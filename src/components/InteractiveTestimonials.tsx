@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star, 
   Quote, 
   ChevronLeft, 
   ChevronRight, 
@@ -10,9 +9,9 @@ import {
   Users,
   Award,
   TrendingUp
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const InteractiveTestimonials: React.FC = () => {
+export const InteractiveTestimonials: React.FC = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -21,7 +20,7 @@ export const InteractiveTestimonials: React.FC = () => {
       id: 1,
       name: 'Dr. Sarah Chen',
       role: 'Chief Technology Officer',
-      company: 'MedTech Innovations',
+      comp: 'MedTech Innovations',
       avatar: '👩‍⚕️',
       rating: 5,
       quote: 'Zion Tech Group revolutionized our healthcare platform with AI-powered diagnostics. We\'ve seen a 45% improvement in diagnostic accuracy and 60% reduction in processing time.',
@@ -37,7 +36,7 @@ export const InteractiveTestimonials: React.FC = () => {
       id: 2,
       name: 'Marcus Rodriguez',
       role: 'VP of Engineering',
-      company: 'FinFlow Solutions',
+      comp: 'FinFlow Solutions',
       avatar: '👨‍💼',
       rating: 5,
       quote: 'The cybersecurity implementation exceeded our expectations. We achieved SOC 2 compliance in record time and our security posture has never been stronger.',
@@ -53,7 +52,7 @@ export const InteractiveTestimonials: React.FC = () => {
       id: 3,
       name: 'Jennifer Kim',
       role: 'Founder & CEO',
-      company: 'EcoSmart Retail',
+      comp: 'EcoSmart Retail',
       avatar: '👩‍💻',
       rating: 5,
       quote: 'From concept to launch in just 10 weeks! The team\'s expertise in e-commerce and AI personalization helped us achieve 300% better conversion rates.',
@@ -69,7 +68,7 @@ export const InteractiveTestimonials: React.FC = () => {
       id: 4,
       name: 'David Thompson',
       role: 'Operations Director',
-      company: 'Global Manufacturing Co.',
+      comp: 'Global Manufacturing Co.',
       avatar: '👨‍🏭',
       rating: 5,
       quote: 'The IoT and predictive maintenance solutions have transformed our operations. We\'ve reduced downtime by 70% and increased productivity by 40%.',
@@ -84,31 +83,25 @@ export const InteractiveTestimonials: React.FC = () => {
   ];
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
 
   const previousTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
-  const goToTestimonial = (index: number) => {
-    setCurrentIndex(index);
-  };
+  const goToTestimonial = (index: number)  => {
+    setCurrentIndex(index)};
 
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+    setIsPlaying(!isPlaying)};
 
   // Auto-advance testimonials
   React.useEffect(() => {
     if (!isPlaying) return;
     
     const interval = setInterval(() => {
-      nextTestimonial();
-    }, 5000);
+      nextTestimonial()}, 5000);
 
-    return () => clearInterval(interval);
-  }, [isPlaying, currentIndex]);
+    return () => clearInterval(interval)}, [isPlaying, currentIndex]);
 
   const currentTestimonial = testimonials[currentIndex];
 
@@ -152,7 +145,7 @@ export const InteractiveTestimonials: React.FC = () => {
                   {currentTestimonial.name}
                 </h3>
                 <p className="text-gray-600 mb-1">{currentTestimonial.role}</p>
-                <p className="text-blue-600 font-semibold">{currentTestimonial.company}</p>
+                <p className="text-blue-600 font-semibold">{currentTestimonial.comp}</p>
                 <div className="flex items-center justify-center gap-4 mt-3 text-sm text-gray-500">
                   <span className="flex items-center">
                     <Users className="h-4 w-4 mr-1" />
@@ -172,8 +165,8 @@ export const InteractiveTestimonials: React.FC = () => {
                 </p>
               </blockquote>
 
-              <div className="grid md:grid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value]) => (
+              <div className="grid md: grid-cols-3 gap-6">
+                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}
@@ -266,7 +259,6 @@ export const InteractiveTestimonials: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default InteractiveTestimonials;

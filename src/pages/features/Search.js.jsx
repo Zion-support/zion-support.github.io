@@ -50,5 +50,4 @@ export default function SearchFeature() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>)}

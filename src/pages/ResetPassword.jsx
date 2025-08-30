@@ -20,23 +20,19 @@ export default function ResetPasswordPage() {
         }
     }, [token]);
     const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
+        setPassword(e.target.value)};
     const handleConfirmPasswordChange = (e) => {
-        setConfirmPassword(e.target.value);
-    };
+        setConfirmPassword(e.target.value)};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         if (password !== confirmPassword) {
             setError('Passwords do not match.');
-            return;
-        }
+            return}
         // Basic password strength check (can be enhanced)
         if (password.length < 8) {
             setError('Password must be at least 8 characters long.');
-            return;
-        }
+            return}
         setIsLoading(true);
         try {
             await resetPassword(token, password);
@@ -47,17 +43,14 @@ export default function ResetPasswordPage() {
             // Ensure err.message is a string.
             const errorMessage = err instanceof Error ? err.message : 'Failed to reset password. Please try again.';
             setError(errorMessage);
-            toast.error(errorMessage);
-        }
+            toast.error(errorMessage)}
         finally {
-            setIsLoading(false);
-        }
+            setIsLoading(false)}
     };
     if (error && !token) { // If token was invalid from the start
         return (<div className="flex min-h-screen items-center justify-center p-4 text-red-500">
         <p>{error}</p>
-      </div>);
-    }
+      </div>)}
     return (<div className="flex min-h-screen items-center justify-center p-4">
       <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">
         <h2 className="text-2xl font-bold text-center">Reset Your Password</h2>
@@ -72,5 +65,4 @@ export default function ResetPasswordPage() {
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
         </Button>
       </form>
-    </div>);
-}
+    </div>)}

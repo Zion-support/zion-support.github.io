@@ -7,7 +7,7 @@ const CloudDevOpsServices = () => {
             title: "Cloud Migration & Strategy",
             description: "Seamless migration to cloud platforms with strategic planning and execution.",
             icon: Cloud,
-            features: [
+            features[
                 "Multi-cloud Strategy",
                 "Legacy System Migration",
                 "Cost Optimization",
@@ -19,7 +19,7 @@ const CloudDevOpsServices = () => {
             title: "DevOps Implementation",
             description: "Streamline development and operations with modern DevOps practices and tools.",
             icon: GitBranch,
-            features: [
+            features[
                 "CI/CD Pipeline Setup",
                 "Infrastructure as Code",
                 "Automated Testing",
@@ -31,7 +31,7 @@ const CloudDevOpsServices = () => {
             title: "Container Orchestration",
             description: "Manage and scale containerized applications with Kubernetes and Docker.",
             icon: Server,
-            features: [
+            features[
                 "Kubernetes Deployment",
                 "Docker Containerization",
                 "Service Mesh",
@@ -43,7 +43,7 @@ const CloudDevOpsServices = () => {
             title: "Database Management",
             description: "Optimize and manage databases in cloud environments for performance and reliability.",
             icon: Database,
-            features: [
+            features[
                 "Database Migration",
                 "Performance Tuning",
                 "Backup & Recovery",
@@ -55,7 +55,7 @@ const CloudDevOpsServices = () => {
             title: "Security & Compliance",
             description: "Ensure cloud security and compliance with industry standards and best practices.",
             icon: Shield,
-            features: [
+            features[
                 "Identity & Access Management",
                 "Network Security",
                 "Data Encryption",
@@ -67,7 +67,7 @@ const CloudDevOpsServices = () => {
             title: "Monitoring & Observability",
             description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
             icon: Monitor,
-            features: [
+            features[
                 "Real-time Monitoring",
                 "Log Management",
                 "Performance Metrics",
@@ -96,17 +96,17 @@ const CloudDevOpsServices = () => {
         {
             name: "Amazon Web Services",
             description: "Leading cloud platform with comprehensive services",
-            features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
+            features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
         },
         {
             name: "Microsoft Azure",
             description: "Enterprise-grade cloud solutions for Windows environments",
-            features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
+            features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
         },
         {
             name: "Google Cloud Platform",
             description: "Innovative cloud services with AI and ML capabilities",
-            features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
+            features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -266,6 +266,5 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default CloudDevOpsServices;

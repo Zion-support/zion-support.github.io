@@ -1,24 +1,15 @@
-import React from 'react';
-interface ButtonProps {
+import React from 'react.ts';
+interface ButtonProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
-  onClick?: () => void;
+  onClick?: ()  => void;
   type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
-}
-export function Button({ 
-  children, 
-  variant = 'default', 
-  size = 'md',
-  asChild = false,
-  className = '', 
-  onClick,
-  type = 'button',
-  disabled = false
-}: ButtonProps) {
+  disabled?: boolean}
+export function Button(...args[]):  {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -34,8 +25,7 @@ export function Button({
   };
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
-    return <span className={classes}>{children}</span>;
-  }
+    return <span className={classes}>{children}</span>}
   return (
     <button
       type={type}
@@ -45,8 +35,7 @@ export function Button({
     >
       {children}
     </button>
-  );
-}
+  )}
 // Export button variants for use in other components
 export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',

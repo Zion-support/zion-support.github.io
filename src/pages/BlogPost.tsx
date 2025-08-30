@@ -1,9 +1,8 @@
 
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
+import React from 'react.ts';
+import { useParams, Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Calendar, 
   User, 
   Clock, 
   ArrowLeft,
@@ -14,9 +13,9 @@ import {
   Heart,
   Eye,
   ArrowRight
-} from "lucide-react";
+ } from 'lucide-react.ts';
 
-function BlogPost() {
+function BlogPost(...args[]):  {
   const { id } = useParams();
   
   // Mock blog post data - in a real app, this would come from an API
@@ -50,8 +49,8 @@ function BlogPost() {
     likes: "156",
     comments: "23",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-    tags: ["AI", "Business", "Technology", "Innovation"],
-    relatedPosts: [
+    tags["AI", "Business", "Technology", "Innovation"],
+    relatedPosts[
       {
         id: "2",
         title: "AI-Powered Cybersecurity: Protecting Your Business",
@@ -73,14 +72,13 @@ function BlogPost() {
     ]
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
-  };
+    })};
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">
@@ -227,8 +225,8 @@ function BlogPost() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {blogPost.relatedPosts.map((post, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {blogPost.relatedPosts.map((post, index)  => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -300,7 +298,6 @@ function BlogPost() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 
 export default BlogPost;

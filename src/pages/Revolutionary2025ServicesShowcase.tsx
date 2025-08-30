@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Star, 
   TrendingUp, 
@@ -84,20 +83,20 @@ import {
   SkipForward2,
   PlayCircle,
   PauseCircle
-} from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-2025-specialized-it-ai-services';
+ } from 'lucide-react.ts';
+import { revolutionary2025AdvancedMicroSaasServices  } from '../data/revolutionary-2025-advanced-micro-saas-v2';
+import { revolutionary2025SpecializedITAIServices  } from '../data/revolutionary-2025-specialized-it-ai-services';
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-const Revolutionary2025ServicesShowcase: React.FC = () => {
-  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
+  const [services, setServices] = useState<any>(ALL_SERVICES);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [selectedROI, setSelectedROI] = useState('all');
   const [sortBy, setSortBy] = useState('title');
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid');
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [selectedServices, setSelectedServices] = useState<any>([]);
   // Filter services based on search and filters
   useEffect(() => {
     let filtered = ALL_SERVICES;
@@ -106,31 +105,23 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
+      )}
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPriceRange !== 'all') {
       const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (max) {
-          return price >= min && price <= max;
-        }
-        return price >= min;
-      });
-    }
+          return price >= min && price <= max}
+        return price >= min})}
     if (selectedROI !== 'all') {
       const [min, max] = selectedROI.split('-').map(Number);
       filtered = filtered.filter(service => {
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');
         if (max) {
-          return roi >= min && roi <= max;
-        }
-        return roi >= min;
-      });
-    }
+          return roi >= min && roi <= max}
+        return roi >= min})}
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -141,19 +132,16 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         case 'customers':
           return b.customers - a.customers;
         default:
-          return a.name.localeCompare(b.name);
-      }
+          return a.name.localeCompare(b.name)}
     });
-    setServices(filtered);
-  }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
+    setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-  const handleServiceSelect = (serviceId: string) => {
+  const handleServiceSelect = (serviceId: string)  => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
-        : [...prev, serviceId]
-    );
-  };
+        [...prev, serviceId]
+    )};
   const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -304,7 +292,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <Brain className="w-8 h-8 text-blue-400 mr-3" />
                 <h3 className="text-xl font-semibold text-white">Business Size</h3>
               </div>
-              <p className="text-gray-300 mb-4">Select your company size to get tailored recommendations</p>
+              <p className="text-gray-300 mb-4">Select your comp size to get tailored recommendations</p>
               <select className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500">
                 <option>Startup (1-10 employees)</option>
                 <option>Small Business (11-50 employees)</option>
@@ -563,8 +551,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </p>
           </div>
           {viewMode === 'grid' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -1208,7 +1196,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             >
               <h3 className="text-xl font-semibold text-white mb-3">Europe & Asia</h3>
               <p className="text-gray-300 text-sm mb-4">Strategic partnerships and regional offices serving global enterprises</p>
-              <div className="text-orange-400 text-sm">UK • Germany • Japan • Singapore</div>
+              <div className="text-orange-400 text-sm">UK • Germ • Japan • Singapore</div>
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30"
@@ -1618,8 +1606,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 // Grid and List icons for the view mode toggle
 const Grid = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -3,10 +3,8 @@ const AccessibilityContext = createContext(undefined);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
-    }
-    return context;
-};
+        throw new Error('useAccessibility must be used within an AccessibilityProvider')}
+    return context};
 export const AccessibilityProvider = ({ children }) => {
     const [isHighContrast, setIsHighContrast] = useState(false);
     const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -31,30 +29,22 @@ export const AccessibilityProvider = ({ children }) => {
         contrastQuery.addEventListener('change', handleContrastChange);
         return () => {
             motionQuery.removeEventListener('change', handleMotionChange);
-            contrastQuery.removeEventListener('change', handleContrastChange);
-        };
-    }, []);
+            contrastQuery.removeEventListener('change', handleContrastChange)}}, []);
     // Apply accessibility classes to body
     useEffect(() => {
         const body = document.body;
         if (isHighContrast) {
-            body.classList.add('high-contrast');
-        }
+            body.classList.add('high-contrast')}
         else {
-            body.classList.remove('high-contrast');
-        }
+            body.classList.remove('high-contrast')}
         if (isReducedMotion) {
-            body.classList.add('reduced-motion');
-        }
+            body.classList.add('reduced-motion')}
         else {
-            body.classList.remove('reduced-motion');
-        }
+            body.classList.remove('reduced-motion')}
         if (isLargeText) {
-            body.classList.add('large-text');
-        }
+            body.classList.add('large-text')}
         else {
-            body.classList.remove('large-text');
-        }
+            body.classList.remove('large-text')}
     }, [isHighContrast, isReducedMotion, isLargeText]);
     // Focus trap functionality
     const focusTrap = (element) => {
@@ -70,23 +60,19 @@ export const AccessibilityProvider = ({ children }) => {
                 if (e.shiftKey) {
                     if (document.activeElement === firstElement) {
                         e.preventDefault();
-                        lastElement.focus();
-                    }
+                        lastElement.focus()}
                 }
                 else {
                     if (document.activeElement === lastElement) {
                         e.preventDefault();
-                        firstElement.focus();
-                    }
+                        firstElement.focus()}
                 }
             }
         };
         element.addEventListener('keydown', handleKeyDown);
         firstElement.focus();
         return () => {
-            element.removeEventListener('keydown', handleKeyDown);
-        };
-    };
+            element.removeEventListener('keydown', handleKeyDown)}};
     // Screen reader announcements
     const announceToScreenReader = (message) => {
         const announcement = document.createElement('div');
@@ -97,9 +83,7 @@ export const AccessibilityProvider = ({ children }) => {
         document.body.appendChild(announcement);
         // Remove after announcement
         setTimeout(() => {
-            document.body.removeChild(announcement);
-        }, 1000);
-    };
+            document.body.removeChild(announcement)}, 1000)};
     // Keyboard shortcuts
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -107,24 +91,20 @@ export const AccessibilityProvider = ({ children }) => {
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 toggleHighContrast();
-                announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`);
-            }
+                announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`)}
             // Ctrl/Cmd + M for reduced motion toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
                 e.preventDefault();
                 toggleReducedMotion();
-                announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`);
-            }
+                announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`)}
             // Ctrl/Cmd + L for large text toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'l') {
                 e.preventDefault();
                 toggleLargeText();
-                announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`);
-            }
+                announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`)}
         };
         document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [isHighContrast, isReducedMotion, isLargeText]);
+        return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
     const toggleHighContrast = () => setIsHighContrast(prev => !prev);
     const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
     const toggleLargeText = () => setIsLargeText(prev => !prev);
@@ -140,8 +120,7 @@ export const AccessibilityProvider = ({ children }) => {
     };
     return (<AccessibilityContext.Provider value={value}>
       {children}
-    </AccessibilityContext.Provider>);
-};
+    </AccessibilityContext.Provider>)};
 // Accessibility toolbar component
 export const AccessibilityToolbar = () => {
     const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText, } = useAccessibility();
@@ -174,11 +153,9 @@ export const AccessibilityToolbar = () => {
           <p>Ctrl/Cmd + L: Large Text</p>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 // Skip to main content link
 export const SkipToMainContent = () => {
     return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
       Skip to main content
-    </a>);
-};
+    </a>)};

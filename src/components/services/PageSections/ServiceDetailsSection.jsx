@@ -11,7 +11,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       description: 'Complete IT infrastructure design, implementation, and optimization',
       duration: '2-4 weeks',
       teamSize: '3-5 engineers',
-      features: [
+      features[
         'Network architecture design',
         'Server configuration and setup',
         'Security implementation',
@@ -19,14 +19,14 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         'Monitoring and alerting',
         'Documentation and training'
       ],
-      benefits: [
+      benefits[
         'Scalable and reliable infrastructure',
         'Enhanced security posture',
         'Improved performance and uptime',
         'Reduced operational costs',
         'Compliance-ready systems'
       ],
-      requirements: [
+      requirements[
         'Site survey and assessment',
         'Hardware specifications',
         'Network requirements',
@@ -44,7 +44,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       description: 'Comprehensive network security setup and monitoring',
       duration: '1-2 weeks',
       teamSize: '2-3 engineers',
-      features: [
+      features[
         'Firewall configuration',
         'Intrusion detection systems',
         'VPN setup and management',
@@ -52,14 +52,14 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         'Security monitoring',
         'Incident response planning'
       ],
-      benefits: [
+      benefits[
         'Protection against cyber threats',
         'Compliance with security standards',
         'Real-time threat detection',
         'Secure remote access',
         'Audit trail and reporting'
       ],
-      requirements: [
+      requirements[
         'Network topology review',
         'Security policy definition',
         'Compliance requirements',
@@ -77,7 +77,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       description: 'Seamless migration to cloud infrastructure',
       duration: '4-8 weeks',
       teamSize: '4-6 engineers',
-      features: [
+      features[
         'Cloud platform assessment',
         'Migration strategy planning',
         'Data migration and testing',
@@ -85,14 +85,14 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         'Performance optimization',
         'Cost optimization analysis'
       ],
-      benefits: [
+      benefits[
         'Reduced infrastructure costs',
         'Improved scalability',
         'Enhanced disaster recovery',
         'Better performance',
         'Simplified management'
       ],
-      requirements: [
+      requirements[
         'Current infrastructure audit',
         'Cloud platform selection',
         'Data classification',
@@ -109,8 +109,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
   const displayServices = services.length > 0 ? services : defaultServices;
 
   const toggleService = (serviceId) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
 
   const getComplexityColor = (complexity) => {
     switch (complexity.toLowerCase()) {
@@ -121,8 +120,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       case 'high':
         return 'text-red-600 bg-red-100';
       default:
-        return 'text-gray-600 bg-gray-100';
-    }
+        return 'text-gray-600 bg-gray-100'}
   };
 
   return (
@@ -277,7 +275,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
               Need a Custom Solution?
             </h3>
             <p className="text-blue-100 mb-6">
-              Our team can tailor any service to meet your specific business requirements.
+              Our team can tailor  service to meet your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -297,5 +295,4 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Wrench, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Wrench, 
   Clock, 
   Shield, 
   Users, 
@@ -18,45 +17,45 @@ import {
   Monitor,
   HardDrive,
   Router
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function OnsiteSupport() {
+export default function OnsiteSupport(...args[]):  {
   const services = [
     {
       icon: Server,
       title: 'Server Maintenance',
       description: 'Proactive server monitoring, updates, and optimization',
-      features: ['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification']
+      features['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification']
     },
     {
       icon: Network,
       title: 'Network Infrastructure',
       description: 'Complete network setup, troubleshooting, and optimization',
-      features: ['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security']
+      features['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security']
     },
     {
       icon: Database,
       title: 'Database Management',
       description: 'Database optimization, backup, and recovery services',
-      features: ['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
+      features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
     },
     {
       icon: Monitor,
       title: 'Workstation Support',
       description: 'Desktop and laptop setup, maintenance, and troubleshooting',
-      features: ['OS installation', 'Software deployment', 'Hardware upgrades', 'Virus removal']
+      features['OS installation', 'Software deployment', 'Hardware upgrades', 'Virus removal']
     },
     {
       icon: HardDrive,
       title: 'Storage Solutions',
       description: 'Storage system design, implementation, and maintenance',
-      features: ['RAID configuration', 'Backup systems', 'Cloud integration', 'Data recovery']
+      features['RAID configuration', 'Backup systems', 'Cloud integration', 'Data recovery']
     },
     {
       icon: Router,
       title: 'Security Implementation',
       description: 'Comprehensive security setup and monitoring',
-      features: ['Firewall configuration', 'VPN setup', 'Access control', 'Security audits']
+      features['Firewall configuration', 'VPN setup', 'Access control', 'Security audits']
     }
   ];
 
@@ -153,8 +152,8 @@ export default function OnsiteSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -199,8 +198,8 @@ export default function OnsiteSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -237,8 +236,8 @@ export default function OnsiteSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {responseTimes.map((item, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {responseTimes.map((item, index)  => (
               <motion.div
                 key={item.priority}
                 initial={{ opacity: 0, y: 20 }}
@@ -295,5 +294,4 @@ export default function OnsiteSupport() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

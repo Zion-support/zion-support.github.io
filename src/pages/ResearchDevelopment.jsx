@@ -5,22 +5,22 @@ const ResearchDevelopment = () => {
         {
             title: "Artificial Intelligence & Machine Learning",
             description: "Advancing the frontiers of AI with autonomous systems, neural networks, and intelligent automation.",
-            focus: ["Neural Networks", "Autonomous Systems", "Natural Language Processing", "Computer Vision"]
+            focus["Neural Networks", "Autonomous Systems", "Natural Language Processing", "Computer Vision"]
         },
         {
             title: "Quantum Computing",
             description: "Exploring quantum algorithms and applications for solving complex computational problems.",
-            focus: ["Quantum Algorithms", "Quantum Cryptography", "Financial Modeling", "Optimization"]
+            focus["Quantum Algorithms", "Quantum Cryptography", "Financial Modeling", "Optimization"]
         },
         {
             title: "Cybersecurity & Privacy",
             description: "Developing next-generation security solutions and privacy-preserving technologies.",
-            focus: ["Zero-Trust Architecture", "Threat Detection", "Privacy Engineering", "Compliance Automation"]
+            focus["Zero-Trust Architecture", "Threat Detection", "Privacy Engineering", "Compliance Automation"]
         },
         {
             title: "Cloud & Edge Computing",
             description: "Innovating distributed computing architectures and edge intelligence solutions.",
-            focus: ["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
+            focus["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -69,6 +69,5 @@ const ResearchDevelopment = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ResearchDevelopment;

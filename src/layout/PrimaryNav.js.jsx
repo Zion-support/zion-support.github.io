@@ -30,8 +30,7 @@ export function PrimaryNav() {
     let unreadCount = 0;
     try {
         const messaging = useMessaging();
-        unreadCount = messaging.unreadCount;
-    }
+        unreadCount = messaging.unreadCount}
     catch {
         // context not available
     }
@@ -41,8 +40,7 @@ export function PrimaryNav() {
         if (query.trim()) {
             console.log('PrimaryNav search submit:', query);
             router.push(`/search/${slugify(query)}`);
-            setQuery('');
-        }
+            setQuery('')}
     };
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
@@ -63,20 +61,16 @@ export function PrimaryNav() {
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
-                router.push(`/marketplace/listing/${sugg.id}`);
-            }
+                router.push(`/marketplace/listing/${sugg.id}`)}
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
-                router.push(sugg.slug);
-            }
+                router.push(sugg.slug)}
             else if (sugg.type === 'blog' && sugg.slug) {
                 // Blog posts navigate to blog detail page
-                router.push(`/blog/${sugg.slug}`);
-            }
+                router.push(`/blog/${sugg.slug}`)}
             else {
                 // Default: search results page with slug
-                router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
-            }
+                router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
             setQuery('');
             // Track analytics event
             if (typeof window !== 'undefined' && window.gtag) {
@@ -84,8 +78,7 @@ export function PrimaryNav() {
                     search_term: sugg.text,
                     suggestion_type: sugg.type,
                     suggestion_id: sugg.id || sugg.slug
-                });
-            }
+                })}
         }} searchSuggestions={suggestions}/>
             </form>
             
@@ -150,5 +143,4 @@ export function PrimaryNav() {
           </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
-    </>);
-}
+    </>)}

@@ -21,9 +21,7 @@ export default function ForgotPassword() {
         // Simulate API call
         setTimeout(() => {
             setIsSubmitted(true);
-            setIsLoading(false);
-        }, 2000);
-    };
+            setIsLoading(false)}, 2000)};
     if (isSubmitted) {
         return (<>
         <SEO title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password"/>
@@ -49,8 +47,7 @@ export default function ForgotPassword() {
             </div>
           </div>
         </div>
-      </>);
-    }
+      </>)}
     return (<>
       
       <div className="flex min-h-screen bg-zion-blue">
@@ -133,5 +130,4 @@ export default function ForgotPassword() {
         </div>
       </div>
       
-    </>);
-}
+    </>)}

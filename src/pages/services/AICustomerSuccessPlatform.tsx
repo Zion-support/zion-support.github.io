@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Users, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Users, 
   Heart, 
   MessageCircle, 
   TrendingUp, 
@@ -107,9 +106,9 @@ import {
   Chi,
   Psi,
   Omega
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AICustomerSuccessPlatform: React.FC = () => {
+const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -155,7 +154,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
       price: "$299",
       period: "/month",
       description: "Perfect for small teams getting started with customer success automation",
-      features: [
+      features[
         "Up to 1,000 customers",
         "Basic AI insights",
         "Standard communication templates",
@@ -172,7 +171,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
       price: "$899",
       period: "/month",
       description: "Advanced customer success platform for growing businesses",
-      features: [
+      features[
         "Up to 10,000 customers",
         "Advanced AI analytics",
         "Custom communication workflows",
@@ -190,7 +189,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
       price: "$2,999",
       period: "/month",
       description: "Comprehensive platform for large organizations with complex customer success needs",
-      features: [
+      features[
         "Unlimited customers",
         "Custom AI models",
         "Advanced automation",
@@ -359,8 +358,8 @@ const AICustomerSuccessPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -393,8 +392,8 @@ const AICustomerSuccessPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -426,8 +425,8 @@ const AICustomerSuccessPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {customerSuccessMetrics.map((metric, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {customerSuccessMetrics.map((metric, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -460,8 +459,8 @@ const AICustomerSuccessPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -499,8 +498,8 @@ const AICustomerSuccessPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -577,7 +576,6 @@ const AICustomerSuccessPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICustomerSuccessPlatform;

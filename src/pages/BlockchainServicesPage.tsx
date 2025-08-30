@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Link, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link, 
   Coins, 
   Shield, 
   Zap, 
@@ -24,9 +23,9 @@ import {
   Users,
   Clock,
   Check
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const BlockchainServicesPage = () => {
+const BlockchainServicesPage[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blockchainServices = [
@@ -37,7 +36,7 @@ const BlockchainServicesPage = () => {
       price: 3500,
       currency: "$",
       period: "/project",
-      features: [
+      features[
         "Custom smart contract development",
         "Security auditing & testing",
         "Gas optimization",
@@ -57,7 +56,7 @@ const BlockchainServicesPage = () => {
       price: 15000,
       currency: "$",
       period: "/platform",
-      features: [
+      features[
         "DEX development",
         "Lending protocols",
         "Yield farming",
@@ -77,7 +76,7 @@ const BlockchainServicesPage = () => {
       price: 8000,
       currency: "$",
       period: "/marketplace",
-      features: [
+      features[
         "NFT minting & trading",
         "Auction system",
         "Royalty distribution",
@@ -97,7 +96,7 @@ const BlockchainServicesPage = () => {
       price: 25000,
       currency: "$",
       period: "/solution",
-      features: [
+      features[
         "Private blockchain setup",
         "Consensus mechanisms",
         "Identity management",
@@ -117,7 +116,7 @@ const BlockchainServicesPage = () => {
       price: 5000,
       currency: "$",
       period: "/audit",
-      features: [
+      features[
         "Smart contract auditing",
         "Penetration testing",
         "Vulnerability assessment",
@@ -137,7 +136,7 @@ const BlockchainServicesPage = () => {
       price: 12000,
       currency: "$",
       period: "/solution",
-      features: [
+      features[
         "Bridge development",
         "Cross-chain messaging",
         "Asset interoperability",
@@ -154,17 +153,16 @@ const BlockchainServicesPage = () => {
 
   const categories = [
     { id: 'all', name: 'All Services', count: blockchainServices.length },
-    { id: 'Development', name: 'Development', count: blockchainServices.filter(s => s.category === 'Development').length },
-    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length },
-    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length },
-    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length },
-    { id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length },
-    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s => s.category === 'Interoperability').length }
+    { id: 'Development', name: 'Development', count: blockchainServices.filter(s  => s.category === 'Development').length },
+    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
+    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
+    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
+    { id: 'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },
+    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length }
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? blockchainServices 
-    : blockchainServices.filter(service => service.category === selectedCategory);
+    ? blockchainServices: blockchainServices.filter(service  => service.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -243,8 +241,8 @@ const BlockchainServicesPage = () => {
       {/* Services Grid */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -335,7 +333,7 @@ const BlockchainServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: Shield,
@@ -367,7 +365,7 @@ const BlockchainServicesPage = () => {
                 title: "Multi-Chain Support",
                 description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
               }
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -409,7 +407,6 @@ const BlockchainServicesPage = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default BlockchainServicesPage;

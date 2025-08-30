@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function AIComplianceCopilot() {
+export default function AIComplianceCopilot(...args[]):  {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
@@ -41,6 +41,5 @@ export default function AIComplianceCopilot() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 

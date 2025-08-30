@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Check, Star, Zap, Shield, Brain, Cloud } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react.ts';
 
-export const PricingSection: React.FC = () => {
+export const PricingSection: React.FC = (): JSX.Element => {
   const plans = [
     {
       name: 'Starter',
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [
+      features[
         'AI-powered content generation',
         'Basic SEO optimization',
         'Email support',
@@ -25,7 +25,7 @@ export const PricingSection: React.FC = () => {
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-      features: [
+      features[
         'Everything in Starter',
         'Advanced AI models',
         'Priority support',
@@ -42,7 +42,7 @@ export const PricingSection: React.FC = () => {
       price: '$799',
       period: '/month',
       description: 'For large organizations with complex needs',
-      features: [
+      features[
         'Everything in Professional',
         'Custom AI training',
         'Dedicated account manager',
@@ -74,8 +74,8 @@ export const PricingSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {plans.map((plan, index) => {
+        <div className="grid md: grid-cols-3 gap-8 mb-12">
+          {plans.map((plan, index)  => {
             const IconComponent = plan.icon;
             return (
               <motion.div
@@ -135,8 +135,7 @@ export const PricingSection: React.FC = () => {
                   Get Started
                 </Link>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         <motion.div
@@ -158,7 +157,6 @@ export const PricingSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )};
 
 export default PricingSection;

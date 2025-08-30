@@ -175,5 +175,4 @@ export default function AICodeReview() {
           </motion.div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

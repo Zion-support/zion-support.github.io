@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 
-const EnhancedServicesNavigation: React.FC = () => {
+const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<any>(null);
 
   const serviceCategories = [
     {
@@ -12,7 +12,7 @@ const EnhancedServicesNavigation: React.FC = () => {
       description: "Cutting-edge AI solutions",
       icon: "🤖",
       color: "from-blue-600 to-purple-600",
-      services: [
+      services[
         {
           title: "Code Review & Security",
           url: "/services/ai-code-review-security",
@@ -44,7 +44,7 @@ const EnhancedServicesNavigation: React.FC = () => {
       description: "Enterprise solutions",
       icon: "☁️",
       color: "from-green-600 to-blue-600",
-      services: [
+      services[
         {
           title: "Cloud DevOps",
           url: "/services/cloud-devops",
@@ -70,7 +70,7 @@ const EnhancedServicesNavigation: React.FC = () => {
       description: "Business intelligence",
       icon: "📊",
       color: "from-purple-600 to-pink-600",
-      services: [
+      services[
         {
           title: "Data Analytics",
           url: "/services/data-analytics",
@@ -96,7 +96,7 @@ const EnhancedServicesNavigation: React.FC = () => {
       description: "Enterprise security",
       icon: "🔒",
       color: "from-red-600 to-orange-600",
-      services: [
+      services[
         {
           title: "Zero Trust Architecture",
           url: "/services/zero-trust-network-architecture",
@@ -187,8 +187,8 @@ const EnhancedServicesNavigation: React.FC = () => {
               </div>
 
               {/* Service Categories Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                {serviceCategories.map((category, categoryIndex) => (
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">
+                {serviceCategories.map((category, categoryIndex)  => (
                   <motion.div
                     key={category.name}
                     initial={{ opacity: 0, x: categoryIndex % 2 === 0 ? -20 : 20 }}
@@ -236,8 +236,8 @@ const EnhancedServicesNavigation: React.FC = () => {
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">
                   Quick Access
                 </h4>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {quickLinks.map((link, index) => (
+                <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
+                  {quickLinks.map((link, index)  => (
                     <motion.div
                       key={link.title}
                       initial={{ opacity: 0, y: 20 }}
@@ -296,7 +296,6 @@ const EnhancedServicesNavigation: React.FC = () => {
         />
       )}
     </div>
-  );
-};
+  )};
 
 export default EnhancedServicesNavigation;

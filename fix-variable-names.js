@@ -11,11 +11,9 @@ function toCamelCase(str) {
         '1': 'One',
         '0': 'Zero'
       };
-      return numberWords[match] || match;
-    })
+      return numberWords[match] || match})
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())
-    .replace(/^(.)/, (match) => match.toUpperCase());
-}
+    .replace(/^(.)/, (match) => match.toUpperCase())}
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -57,14 +55,11 @@ function fixFile(filePath) {
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);
@@ -75,16 +70,13 @@ function findAndFixFiles(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      fixedCount += findAndFixFiles(filePath);
-    } else if (file.endsWith('.tsx') && file.includes('-')) {
+      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {
       if (fixFile(filePath)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
   }
   
-  return fixedCount;
-}
+  return fixedCount}
 // Start fixing files
 console.log('Fixing invalid variable names in TypeScript files...');
 const fixedCount = findAndFixFiles('./pages');

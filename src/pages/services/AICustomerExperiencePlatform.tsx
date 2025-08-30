@@ -1,8 +1,7 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Users, 
   Brain, 
   MessageSquare, 
   Heart, 
@@ -27,9 +26,9 @@ import {
   MessageCircle,
   Bot,
   Headphones
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AICustomerExperiencePlatform() {
+export default function AICustomerExperiencePlatform(...args[]):  {
   const features = [
     {
       icon: Brain,
@@ -74,25 +73,25 @@ export default function AICustomerExperiencePlatform() {
       title: 'Customer Experience Assessment',
       description: 'Comprehensive analysis of current customer journey and experience optimization opportunities',
       price: 'From $4,500',
-      features: ['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis']
+      features['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis']
     },
     {
       title: 'AI Platform Implementation',
       description: 'Full implementation of AI-powered customer experience platform',
       price: 'From $12,000',
-      features: ['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
+      features['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
     },
     {
       title: 'Ongoing Optimization',
       description: 'Continuous improvement and optimization of customer experience',
       price: 'From $3,500/month',
-      features: ['Performance monitoring', 'AI model updates', 'Journey optimization', 'Analytics reports']
+      features['Performance monitoring', 'AI model updates', 'Journey optimization', 'Analytics reports']
     },
     {
       title: 'Enterprise CX Suite',
       description: 'Complete enterprise customer experience management with advanced AI capabilities',
       price: 'From $20,000',
-      features: ['Multi-brand management', 'Advanced AI models', 'Custom integrations', '24/7 support']
+      features['Multi-brand management', 'Advanced AI models', 'Custom integrations', '24/7 support']
     }
   ];
 
@@ -100,22 +99,22 @@ export default function AICustomerExperiencePlatform() {
     {
       title: 'E-commerce Personalization',
       description: 'Personalized product recommendations and shopping experiences',
-      benefits: ['Increase conversion rates by 35%', 'Improve customer retention', 'Boost average order value']
+      benefits['Increase conversion rates by 35%', 'Improve customer retention', 'Boost average order value']
     },
     {
       title: 'Customer Support Enhancement',
       description: 'AI-powered support with intelligent routing and automated responses',
-      benefits: ['Reduce response time by 60%', 'Improve first-call resolution', 'Enhance customer satisfaction']
+      benefits['Reduce response time by 60%', 'Improve first-call resolution', 'Enhance customer satisfaction']
     },
     {
       title: 'Marketing Campaign Optimization',
       description: 'Data-driven marketing with personalized messaging and targeting',
-      benefits: ['Increase campaign ROI by 45%', 'Improve engagement rates', 'Reduce customer churn']
+      benefits['Increase campaign ROI by 45%', 'Improve engagement rates', 'Reduce customer churn']
     },
     {
       title: 'Product Development Insights',
       description: 'Customer feedback analysis and product improvement recommendations',
-      benefits: ['Faster product iteration', 'Better feature prioritization', 'Improved market fit']
+      benefits['Faster product iteration', 'Better feature prioritization', 'Improved market fit']
     }
   ];
 
@@ -216,8 +215,8 @@ export default function AICustomerExperiencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -253,8 +252,8 @@ export default function AICustomerExperiencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -296,8 +295,8 @@ export default function AICustomerExperiencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -338,8 +337,8 @@ export default function AICustomerExperiencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -375,8 +374,8 @@ export default function AICustomerExperiencePlatform() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -457,5 +456,4 @@ export default function AICustomerExperiencePlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

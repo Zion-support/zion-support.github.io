@@ -1,9 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Cloud, 
   Shield, 
   Rocket, 
@@ -27,9 +26,9 @@ import {
   Network,
   Smartphone,
   Server
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Services() {
+export default function Services(...args: []):  {
   const serviceCategories = [
     {
       name: 'AI & Analytics',
@@ -410,8 +409,8 @@ export default function Services() {
                   <p className="text-xl text-slate-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
                 
-                <div className="grid lg:grid-cols-2 gap-8">
-                  {category.services.map((service, serviceIndex) => (
+                <div className="grid lg: grid-cols-2 gap-8">
+                  {category.services.map((service, serviceIndex)  => (
                     <motion.div
                       key={service.name}
                       initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
@@ -481,8 +480,8 @@ export default function Services() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {emergingTechnologies.map((tech, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {emergingTechnologies.map((tech, index)  => (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -528,8 +527,8 @@ export default function Services() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((reason, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseUs.map((reason, index)  => (
               <motion.div
                 key={reason.title}
                 initial={{ opacity: 0, y: 30 }}

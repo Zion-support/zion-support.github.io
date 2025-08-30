@@ -36,14 +36,11 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
             });
             toast.success('Message sent!');
             form.reset();
-            onClose();
-        }
+            onClose()}
         catch (err) {
-            toast.error(err?.message || 'Failed to send message');
-        }
+            toast.error(err?.message || 'Failed to send message')}
         finally {
-            setIsSubmitting(false);
-        }
+            setIsSubmitting(false)}
     };
     return (<Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
@@ -82,5 +79,4 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
           </form>
         </Form>
       </DialogContent>
-    </Dialog>);
-}
+    </Dialog>)}

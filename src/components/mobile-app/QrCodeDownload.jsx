@@ -26,10 +26,8 @@ export const QrCodeDownload = () => {
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    }
+      setTimeout(() => setCopied(false), 2000)} catch (err) {
+      console.error('Failed to copy: ', err)}
   };
 
   const handleShare = async (platform) => {
@@ -42,14 +40,11 @@ export const QrCodeDownload = () => {
           title: 'Zion Mobile App',
           text: text,
           url: url
-        });
-      } catch (err) {
-        console.error('Error sharing:', err);
-      }
+        })} catch (err) {
+        console.error('Error sharing:', err)}
     } else {
       // Fallback for browsers that don't support Web Share API
-      handleCopyLink(url);
-    }
+      handleCopyLink(url)}
   };
 
   const currentPlatform = downloadLinks[activeTab];
@@ -91,7 +86,7 @@ export const QrCodeDownload = () => {
                 
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-400">
                   <Smartphone className="w-4 h-4" />
-                  <span>Works with any QR code scanner app</span>
+                  <span>Works with  QR code scanner app</span>
                 </div>
               </div>
             </div>
@@ -239,5 +234,4 @@ export const QrCodeDownload = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

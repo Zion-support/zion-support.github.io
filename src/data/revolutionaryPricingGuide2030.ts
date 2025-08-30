@@ -1,4 +1,5 @@
 export interface RevolutionaryPricingTier2030 {
+
   id: string;
   name: string;
   description: string;
@@ -11,10 +12,10 @@ export interface RevolutionaryPricingTier2030 {
   roi: string;
   marketComparison: string;
   includedSupport: string;
-  customOptions: string[];
-}
+  customOptions: string[]}
 
 export interface RevolutionaryPricingGuide2030 {
+
   serviceId: string;
   serviceTitle: string;
   category: string;
@@ -22,34 +23,29 @@ export interface RevolutionaryPricingGuide2030 {
   marketSize: string;
   competitors: string[];
   pricingTiers: RevolutionaryPricingTier2030[];
-  enterprisePricing: {
+enterprisePricing: {
     custom: string;
     features: string[];
     support: string[];
     sla: string;
-    roi: string;
-  };
+    roi: string};
   marketAnalysis: {
     averageMarketPrice: string;
     priceRange: string;
     valueProposition: string;
     costSavings: string;
-    competitiveAdvantage: string;
-  };
+    competitiveAdvantage: string};
   roiCalculator: {
     implementationCost: string;
     monthlySavings: string;
     paybackPeriod: string;
     threeYearROI: string;
-    fiveYearROI: string;
-  };
+    fiveYearROI: string};
   contactInfo: {
     email: string;
     phone: string;
     address: string;
-    website: string;
-  };
-}
+    website: string}}
 
 export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] = [
   // 1. Quantum AI Drug Discovery Platform
@@ -59,8 +55,8 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
     category: "AI Services",
     subcategory: "Healthcare & Drug Discovery",
     marketSize: "$45.2B by 2030",
-    competitors: ["Insilico Medicine", "Atomwise", "BenevolentAI", "Exscientia"],
-    pricingTiers: [
+    competitors["Insilico Medicine", "Atomwise", "BenevolentAI", "Exscientia"],
+    pricingTiers[
       {
         id: "starter",
         name: "Starter",
@@ -68,7 +64,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 15999,
         yearlyPrice: 159990,
         currency: "$",
-        features: [
+        features[
           "Quantum molecular dynamics simulation (up to 100 molecules/month)",
           "AI-powered drug target identification",
           "Basic predictive toxicity modeling",
@@ -78,13 +74,13 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "Email support",
           "Standard API access"
         ],
-        limitations: [
+        limitations[
           "Limited to 100 molecules per month",
           "Basic support only",
           "No custom algorithm development",
           "Limited integration options"
         ],
-        bestFor: [
+        bestFor[
           "Small biotech companies",
           "Academic research institutions",
           "Startup pharmaceutical companies",
@@ -93,7 +89,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "300-500% within 12 months",
         marketComparison: "40% below market average for comparable features",
         includedSupport: "Email support with 24-hour response time",
-        customOptions: ["Additional quantum computing credits", "Extended API limits", "Basic training"]
+        customOptions["Additional quantum computing credits", "Extended API limits", "Basic training"]
       },
       {
         id: "professional",
@@ -102,7 +98,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 29999,
         yearlyPrice: 299990,
         currency: "$",
-        features: [
+        features[
           "All Starter features",
           "Unlimited quantum molecular dynamics simulation",
           "Advanced predictive toxicity modeling",
@@ -115,12 +111,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "Advanced API access",
           "Custom drug design workflows"
         ],
-        limitations: [
+        limitations[
           "No custom algorithm development",
           "Limited research collaboration tools",
           "Standard training included"
         ],
-        bestFor: [
+        bestFor[
           "Mid-sized pharmaceutical companies",
           "Established biotech firms",
           "Research hospitals",
@@ -129,7 +125,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "500-800% within 12 months",
         marketComparison: "25% below market average for comparable features",
         includedSupport: "Priority support with 4-hour response time",
-        customOptions: ["Custom algorithm development", "Advanced training", "Dedicated support"]
+        customOptions["Custom algorithm development", "Advanced training", "Dedicated support"]
       },
       {
         id: "enterprise",
@@ -138,7 +134,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 49999,
         yearlyPrice: 499990,
         currency: "$",
-        features: [
+        features[
           "All Professional features",
           "Custom quantum algorithm development",
           "Advanced clinical trial optimization",
@@ -151,12 +147,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "Custom training programs",
           "White-label solutions"
         ],
-        limitations: [
+        limitations[
           "Requires enterprise infrastructure",
           "Minimum 12-month commitment",
           "Custom pricing for very large deployments"
         ],
-        bestFor: [
+        bestFor[
           "Large pharmaceutical companies",
           "Major research institutions",
           "Government agencies",
@@ -165,12 +161,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "800-1200% within 12 months",
         marketComparison: "15% below market average for comparable features",
         includedSupport: "24/7 premium support with dedicated account manager",
-        customOptions: ["Custom quantum hardware integration", "International deployment", "Regulatory consulting"]
+        customOptions["Custom quantum hardware integration", "International deployment", "Regulatory consulting"]
       }
     ],
     enterprisePricing: {
       custom: "Contact us for custom enterprise solutions with volume discounts and dedicated infrastructure",
-      features: [
+      features[
         "Custom quantum computing infrastructure",
         "Dedicated research teams",
         "International regulatory compliance",
@@ -178,7 +174,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         "White-label solutions",
         "Joint research partnerships"
       ],
-      support: [
+      support[
         "Dedicated account management",
         "24/7 premium support",
         "Custom training programs",
@@ -218,8 +214,8 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
     category: "AI Services",
     subcategory: "Financial Technology",
     marketSize: "$28.7B by 2030",
-    competitors: ["Alpaca", "QuantConnect", "MetaTrader", "Interactive Brokers"],
-    pricingTiers: [
+    competitors["Alpaca", "QuantConnect", "MetaTrader", "Interactive Brokers"],
+    pricingTiers[
       {
         id: "starter",
         name: "Starter",
@@ -227,7 +223,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 8999,
         yearlyPrice: 89990,
         currency: "$",
-        features: [
+        features[
           "Autonomous trading execution (up to 100 trades/day)",
           "Basic quantum portfolio optimization",
           "Real-time market sentiment analysis",
@@ -237,13 +233,13 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "Email support",
           "Standard API access"
         ],
-        limitations: [
+        limitations[
           "Limited to 100 trades per day",
           "Basic portfolio optimization",
           "Standard support only",
           "Limited customization options"
         ],
-        bestFor: [
+        bestFor[
           "Individual traders",
           "Small investment firms",
           "Startup hedge funds",
@@ -252,7 +248,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "200-400% within 6 months",
         marketComparison: "35% below market average for comparable features",
         includedSupport: "Email support with 12-hour response time",
-        customOptions: ["Additional trading capacity", "Extended API limits", "Basic training"]
+        customOptions["Additional trading capacity", "Extended API limits", "Basic training"]
       },
       {
         id: "professional",
@@ -261,7 +257,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 17999,
         yearlyPrice: 179990,
         currency: "$",
-        features: [
+        features[
           "All Starter features",
           "Unlimited autonomous trading execution",
           "Advanced quantum portfolio optimization",
@@ -274,12 +270,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "Priority support",
           "Advanced API access"
         ],
-        limitations: [
+        limitations[
           "No custom algorithm development",
           "Limited regulatory consulting",
           "Standard training included"
         ],
-        bestFor: [
+        bestFor[
           "Mid-sized investment firms",
           "Established hedge funds",
           "Family offices",
@@ -288,7 +284,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "400-600% within 6 months",
         marketComparison: "20% below market average for comparable features",
         includedSupport: "Priority support with 2-hour response time",
-        customOptions: ["Custom algorithm development", "Advanced training", "Dedicated support"]
+        customOptions["Custom algorithm development", "Advanced training", "Dedicated support"]
       },
       {
         id: "enterprise",
@@ -297,7 +293,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 29999,
         yearlyPrice: 299990,
         currency: "$",
-        features: [
+        features[
           "All Professional features",
           "Custom AI algorithm development",
           "Advanced regulatory compliance suite",
@@ -310,12 +306,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "White-label solutions",
           "Performance-based pricing options"
         ],
-        limitations: [
+        limitations[
           "Requires enterprise infrastructure",
           "Minimum 12-month commitment",
           "Custom pricing for very large deployments"
         ],
-        bestFor: [
+        bestFor[
           "Large investment banks",
           "Major hedge funds",
           "Institutional investment firms",
@@ -324,12 +320,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "600-1000% within 6 months",
         marketComparison: "10% below market average for comparable features",
         includedSupport: "24/7 premium support with dedicated account manager",
-        customOptions: ["Custom exchange integration", "International deployment", "Regulatory consulting"]
+        customOptions["Custom exchange integration", "International deployment", "Regulatory consulting"]
       }
     ],
     enterprisePricing: {
       custom: "Contact us for custom enterprise solutions with performance-based pricing and dedicated infrastructure",
-      features: [
+      features[
         "Custom trading infrastructure",
         "Dedicated trading teams",
         "International regulatory compliance",
@@ -337,7 +333,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         "White-label solutions",
         "Joint venture partnerships"
       ],
-      support: [
+      support[
         "Dedicated account management",
         "24/7 premium support",
         "Custom training programs",
@@ -377,8 +373,8 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
     category: "AI Services",
     subcategory: "Neural Technology",
     marketSize: "$3.7B by 2030",
-    competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
-    pricingTiers: [
+    competitors["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
+    pricingTiers[
       {
         id: "starter",
         name: "Starter",
@@ -386,7 +382,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 12999,
         yearlyPrice: 129990,
         currency: "$",
-        features: [
+        features[
           "Non-invasive brain signal processing",
           "Basic AI-powered thought-to-text conversion",
           "Emotional state analysis",
@@ -396,13 +392,13 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "Email support",
           "Basic API access"
         ],
-        limitations: [
+        limitations[
           "Limited to 5 concurrent users",
           "Basic signal processing",
           "Standard support only",
           "Limited customization options"
         ],
-        bestFor: [
+        bestFor[
           "Research institutions",
           "Small healthcare organizations",
           "Startup BCI companies",
@@ -411,7 +407,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "200-300% within 12 months",
         marketComparison: "45% below market average for comparable features",
         includedSupport: "Email support with 24-hour response time",
-        customOptions: ["Additional user licenses", "Extended API limits", "Basic training"]
+        customOptions["Additional user licenses", "Extended API limits", "Basic training"]
       },
       {
         id: "professional",
@@ -420,7 +416,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 24999,
         yearlyPrice: 249990,
         currency: "$",
-        features: [
+        features[
           "All Starter features",
           "Advanced AI-powered thought-to-text conversion",
           "Advanced emotional state analysis",
@@ -433,12 +429,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "Advanced API access",
           "Custom BCI applications"
         ],
-        limitations: [
+        limitations[
           "No custom hardware development",
           "Limited medical consultation",
           "Standard training included"
         ],
-        bestFor: [
+        bestFor[
           "Mid-sized healthcare organizations",
           "Established research institutions",
           "Medical device companies",
@@ -447,7 +443,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "300-500% within 12 months",
         marketComparison: "25% below market average for comparable features",
         includedSupport: "Priority support with 4-hour response time",
-        customOptions: ["Custom hardware development", "Advanced training", "Dedicated support"]
+        customOptions["Custom hardware development", "Advanced training", "Dedicated support"]
       },
       {
         id: "enterprise",
@@ -456,7 +452,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         monthlyPrice: 39999,
         yearlyPrice: 399990,
         currency: "$",
-        features: [
+        features[
           "All Professional features",
           "Custom BCI hardware development",
           "Advanced medical diagnosis assistance",
@@ -469,12 +465,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
           "Custom training programs",
           "White-label solutions"
         ],
-        limitations: [
+        limitations[
           "Requires enterprise infrastructure",
           "Minimum 12-month commitment",
           "Custom pricing for very large deployments"
         ],
-        bestFor: [
+        bestFor[
           "Large healthcare organizations",
           "Major research institutions",
           "Government agencies",
@@ -483,12 +479,12 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         roi: "500-800% within 12 months",
         marketComparison: "15% below market average for comparable features",
         includedSupport: "24/7 premium support with dedicated account manager",
-        customOptions: ["Custom hardware manufacturing", "International deployment", "Medical consulting"]
+        customOptions["Custom hardware manufacturing", "International deployment", "Medical consulting"]
       }
     ],
     enterprisePricing: {
       custom: "Contact us for custom enterprise solutions with volume discounts and dedicated infrastructure",
-      features: [
+      features[
         "Custom BCI hardware manufacturing",
         "Dedicated research teams",
         "International regulatory compliance",
@@ -496,7 +492,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         "White-label solutions",
         "Joint research partnerships"
       ],
-      support: [
+      support[
         "Dedicated account management",
         "24/7 premium support",
         "Custom training programs",
@@ -531,43 +527,35 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
 ];
 
 // Utility functions for pricing guide management
-export const getPricingGuideByServiceId = (serviceId: string): RevolutionaryPricingGuide2030 | undefined => {
-  return REVOLUTIONARY_PRICING_GUIDE_2030.find(guide => guide.serviceId === serviceId);
-};
+export const getPricingGuideByServiceId = (serviceId: string): RevolutionaryPricingGuide2030 | undefined  => {
+  return REVOLUTIONARY_PRICING_GUIDE_2030.find(guide => guide.serviceId === serviceId)};
 
-export const getPricingGuideByCategory = (category: string): RevolutionaryPricingGuide2030[] => {
-  return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => guide.category === category);
-};
+export const getPricingGuideByCategory = (category: string): RevolutionaryPricingGuide2030[]  => {
+  return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => guide.category === category)};
 
-export const getPricingGuideByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryPricingGuide2030[] => {
+export const getPricingGuideByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryPricingGuide2030[]  => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => {
     const minGuidePrice = Math.min(...guide.pricingTiers.map(tier => tier.monthlyPrice));
-    return minGuidePrice >= minPrice && minGuidePrice <= maxPrice;
-  });
-};
+    return minGuidePrice >= minPrice && minGuidePrice <= maxPrice})};
 
 export const getAllPricingGuides = (): RevolutionaryPricingGuide2030[] => {
-  return REVOLUTIONARY_PRICING_GUIDE_2030;
-};
+  return REVOLUTIONARY_PRICING_GUIDE_2030};
 
 export const getPricingGuideStats = () => {
   const totalServices = REVOLUTIONARY_PRICING_GUIDE_2030.length;
   const totalTiers = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => sum + guide.pricingTiers.length, 0);
   const averageStarterPrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {
     const starterTier = guide.pricingTiers.find(tier => tier.id === 'starter');
-    return sum + (starterTier?.monthlyPrice || 0);
-  }, 0) / totalServices;
+    return sum + (starterTier?.monthlyPrice || 0)}, 0) / totalServices;
   const averageEnterprisePrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {
     const enterpriseTier = guide.pricingTiers.find(tier => tier.id === 'enterprise');
-    return sum + (enterpriseTier?.monthlyPrice || 0);
-  }, 0) / totalServices;
+    return sum + (enterpriseTier?.monthlyPrice || 0)}, 0) / totalServices;
 
   return {
     totalServices,
     totalTiers,
     averageStarterPrice: Math.round(averageStarterPrice),
     averageEnterprisePrice: Math.round(averageEnterprisePrice),
-    categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide => guide.category))],
-    subcategories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide => guide.subcategory))]
-  };
-};
+    categories[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide  => guide.category))],
+    subcategories[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide  => guide.subcategory))]
+  }};

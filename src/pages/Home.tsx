@@ -1,12 +1,12 @@
 
-import React, { Suspense, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { Suspense, useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
 
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { SEO  } from '@/components/SEO';
+import { HeroSection  } from '@/components/HeroSection';
+import { LoadingSpinner  } from '@/components/ui/LoadingSpinner';
 
 // Lazy load components for better performance
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -33,7 +33,7 @@ const InteractiveTestimonials = React.lazy(() => import("@/components/Interactiv
 const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
 
 // Loading fallback component
-const LoadingFallback = ({ message }: { message: string }) => (
+const LoadingFallback = ({ message }: { message: string })  => (
   <div className="py-20 bg-slate-900">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
@@ -158,7 +158,7 @@ const aiServices = [
     title: "AI Business Intelligence",
     description: "Transform your data into actionable insights with our advanced AI analytics platform.",
     path: "/services/ai-business-intelligence",
-    features: [
+    features[
       "Predictive Analytics",
       "Real-time Dashboards",
       "Automated Reporting",
@@ -170,7 +170,7 @@ const aiServices = [
     title: "Cloud DevOps",
     description: "Streamline your development pipeline with automated cloud infrastructure.",
     path: "/services/cloud-devops",
-    features: [
+    features[
       "CI/CD Automation",
       "Infrastructure as Code",
       "Container Orchestration",
@@ -182,7 +182,7 @@ const aiServices = [
     title: "AI Cybersecurity",
     description: "Protect your business with intelligent threat detection and response systems.",
     path: "/services/ai-cybersecurity-suite",
-    features: [
+    features[
       "Threat Intelligence",
       "Automated Response",
       "Zero Trust Architecture",
@@ -239,12 +239,11 @@ const trustSignals = [
   }
 ];
 
-export default function Home() {
+export default function Home(...args[]):  {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
 
   return (
@@ -283,8 +282,8 @@ export default function Home() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {serviceCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {serviceCategories.map((category, index)  => (
               <motion.div
                 key={category.name}
                 initial={{ y: 30, opacity: 0 }}
@@ -525,5 +524,4 @@ export default function Home() {
         <FloatingCTA />
       </Suspense>
     </div>
-  );
-}
+  )}

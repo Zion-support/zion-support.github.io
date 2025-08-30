@@ -21,20 +21,16 @@ export default function BlogPost() {
             const related = BLOG_POSTS.filter(p => p.id !== currentPost.id &&
                 (p.category === currentPost.category ||
                     p.tags.some(tag => currentPost.tags.includes(tag)))).slice(0, 3);
-            setRelatedPosts(related);
-        }
+            setRelatedPosts(related)}
         else {
             // Post not found
-            navigate("/blog", { replace: true });
-        }
+            navigate("/blog", { replace: true })}
         // Scroll to top when post changes
-        window.scrollTo(0, 0);
-    }, [slug, navigate]);
+        window.scrollTo(0, 0)}, [slug, navigate]);
     if (!post) {
         return (<div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
-      </div>);
-    }
+      </div>)}
     // Helper function to get share URL
     const getShareUrl = (platform) => {
         const url = encodeURIComponent(window.location.href);
@@ -47,8 +43,7 @@ export default function BlogPost() {
             case 'linkedin':
                 return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
             default:
-                return '#';
-        }
+                return '#'}
     };
     return (<>
       <SEO title={post.title} description={post.excerpt} keywords={post.tags.join(", ")} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}/>
@@ -81,8 +76,7 @@ export default function BlogPost() {
               <div className="flex items-center mb-4 sm:mb-0">
                 <img src={post.author.avatarUrl} alt={post.author.name} className="w-12 h-12 rounded-full mr-3" onError={(e) => {
             const target = e.target;
-            target.src = "/images/blog-placeholder.svg";
-        }}/>
+            target.src = "/images/blog-placeholder.svg"}}/>
                 <div>
                   <p className="text-white font-medium">{post.author.name}</p>
                   <p className="text-sm text-zion-slate-light">{post.author.title}</p>
@@ -128,8 +122,7 @@ export default function BlogPost() {
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
               <img src={post.featuredImage} alt={post.title} className="object-cover w-full h-full" onError={(e) => {
             const target = e.target;
-            target.src = "/images/blog-placeholder.svg";
-        }}/>
+            target.src = "/images/blog-placeholder.svg"}}/>
             </div>
           </div>
           
@@ -154,8 +147,7 @@ export default function BlogPost() {
                       <div className="aspect-[16/9] relative">
                         <img src={relatedPost.featuredImage} alt={relatedPost.title} className="object-cover w-full h-full" onError={(e) => {
                     const target = e.target;
-                    target.src = "/images/blog-placeholder.svg";
-                }}/>
+                    target.src = "/images/blog-placeholder.svg"}}/>
                       </div>
                       <div className="p-4">
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
@@ -177,5 +169,4 @@ export default function BlogPost() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </>)}

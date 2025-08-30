@@ -390,5 +390,4 @@ export function ComprehensiveServicesShowcase() {
         )}
       </AnimatePresence>
     </section>
-  );
-}
+  )}

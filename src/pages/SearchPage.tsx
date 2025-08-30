@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { useSearchParams, Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Grid, 
   List, 
@@ -27,11 +26,12 @@ import {
   CheckCircle,
   X,
   SlidersHorizontal
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface SearchResult {
+
   id: string;
-  type: 'service' | 'talent' | 'equipment' | 'company';
+  type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
   description: string;
   category: string;
@@ -42,8 +42,7 @@ interface SearchResult {
   tags: string[];
   image?: string;
   path: string;
-  featured?: boolean;
-}
+  featured?: boolean}
 
 const mockSearchResults: SearchResult[] = [
   {
@@ -56,7 +55,7 @@ const mockSearchResults: SearchResult[] = [
     reviewCount: 127,
     price: '$2,500/mo',
     location: 'Remote',
-    tags: ['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
+    tags['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
     path: '/services/ai-analytics',
     featured: true
   },
@@ -70,7 +69,7 @@ const mockSearchResults: SearchResult[] = [
     reviewCount: 89,
     price: '$3,200/mo',
     location: 'Remote',
-    tags: ['Security', 'Threat Detection', 'Compliance', 'Monitoring'],
+    tags['Security', 'Threat Detection', 'Compliance', 'Monitoring'],
     path: '/services/cybersecurity',
     featured: true
   },
@@ -84,7 +83,7 @@ const mockSearchResults: SearchResult[] = [
     reviewCount: 45,
     price: '$150/hr',
     location: 'San Francisco, CA',
-    tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow', 'Remote'],
+    tags['AI', 'Machine Learning', 'Python', 'TensorFlow', 'Remote'],
     path: '/talent/ai-engineer'
   },
   {
@@ -95,7 +94,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Hardware',
     price: '$25,000',
     location: 'New York, NY',
-    tags: ['Quantum Computing', 'Hardware', 'Research', 'Development'],
+    tags['Quantum Computing', 'Hardware', 'Research', 'Development'],
     path: '/equipment/quantum-workstation'
   },
   {
@@ -108,7 +107,7 @@ const mockSearchResults: SearchResult[] = [
     reviewCount: 156,
     price: '$1,800/mo',
     location: 'Remote',
-    tags: ['Cloud', 'DevOps', 'Infrastructure', 'Scalability'],
+    tags['Cloud', 'DevOps', 'Infrastructure', 'Scalability'],
     path: '/services/cloud-devops'
   },
   {
@@ -121,7 +120,7 @@ const mockSearchResults: SearchResult[] = [
     reviewCount: 32,
     price: '$120/hr',
     location: 'Austin, TX',
-    tags: ['DevOps', 'AWS', 'Docker', 'Kubernetes', 'CI/CD'],
+    tags['DevOps', 'AWS', 'Docker', 'Kubernetes', 'CI/CD'],
     path: '/talent/devops-specialist'
   }
 ];
@@ -135,40 +134,38 @@ const categories = [
 ];
 
 const filters = {
-  type: ['service', 'talent', 'equipment', 'company'],
-  category: ['AI & Analytics', 'Cybersecurity', 'Cloud & DevOps', 'IoT & Edge', 'Quantum Computing', 'Blockchain'],
-  location: ['Remote', 'On-site', 'Hybrid'],
-  priceRange: ['$0-$100', '$100-$500', '$500-$1000', '$1000+'],
-  rating: ['4.5+', '4.0+', '3.5+']
+  type['service', 'talent', 'equipment', 'comp'],
+  category['AI & Analytics', 'Cybersecurity', 'Cloud & DevOps', 'IoT & Edge', 'Quantum Computing', 'Blockchain'],
+  location['Remote', 'On-site', 'Hybrid'],
+  priceRange['$0-$100', '$100-$500', '$500-$1000', '$1000+'],
+  rating['4.5+', '4.0+', '3.5+']
 };
 
-export default function SearchPage() {
+export default function SearchPage(...args[]):  {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('q') || '');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
+  const [results, setResults] = useState<any>([]);
+  const [filteredResults, setFilteredResults] = useState<any>([]);
   const [loading, setLoading] = useState(false);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [showFilters, setShowFilters] = useState(false);
   const [activeFilters, setActiveFilters] = useState({
-    type: [] as string[],
-    category: [] as string[],
-    location: [] as string[],
-    priceRange: [] as string[],
-    rating: [] as string[]
+    type[] as string[],
+    category[] as string[],
+    location[] as string[],
+    priceRange[] as string[],
+    rating[] as string[]
   });
 
-  useEffect(() => {
+  useEffect(()  => {
     if (query) {
-      performSearch(query);
-    }
+      performSearch(query)}
   }, [query]);
 
   useEffect(() => {
-    applyFilters();
-  }, [activeFilters, results]);
+    applyFilters()}, [activeFilters, results]);
 
-  const performSearch = async (searchQuery: string) => {
+  const performSearch = async (searchQuery: string)  => {
     setLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -181,74 +178,62 @@ export default function SearchPage() {
     
     setResults(filtered);
     setFilteredResults(filtered);
-    setLoading(false);
-  };
+    setLoading(false)};
 
   const applyFilters = () => {
     let filtered = [...results];
 
     if (activeFilters.type.length > 0) {
-      filtered = filtered.filter(item => activeFilters.type.includes(item.type));
-    }
+      filtered = filtered.filter(item => activeFilters.type.includes(item.type))}
 
     if (activeFilters.category.length > 0) {
-      filtered = filtered.filter(item => activeFilters.category.includes(item.category));
-    }
+      filtered = filtered.filter(item => activeFilters.category.includes(item.category))}
 
     if (activeFilters.location.length > 0) {
-      filtered = filtered.filter(item => activeFilters.location.includes(item.location || 'Remote'));
-    }
+      filtered = filtered.filter(item => activeFilters.location.includes(item.location || 'Remote'))}
 
     if (activeFilters.rating.length > 0) {
       filtered = filtered.filter(item => {
         if (!item.rating) return false;
         return activeFilters.rating.some(ratingFilter => {
           const minRating = parseFloat(ratingFilter.replace('+', ''));
-          return item.rating! >= minRating;
-        });
-      });
-    }
+          return item.rating! >= minRating})})}
 
-    setFilteredResults(filtered);
-  };
+    setFilteredResults(filtered)};
 
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
+  const toggleFilter = (filterType: keyof typeof activeFilters, value: string)  => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
         ? prev[filterType].filter(v => v !== value)
-        : [...prev[filterType], value]
-    }));
-  };
+        [...prev[filterType], value]
+    }))};
 
   const clearAllFilters = () => {
     setActiveFilters({
-      type: [],
-      category: [],
-      location: [],
-      priceRange: [],
-      rating: []
-    });
-  };
+      type[],
+      category[],
+      location[],
+      priceRange[],
+      rating[]
+    })};
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
-      setSearchParams({ q: query.trim() });
-    }
+      setSearchParams({ q: query.trim() })}
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: string)  => {
     switch (type) {
       case 'service': return Code;
       case 'talent': return Users;
       case 'equipment': return Cpu;
-      case 'company': return Building;
-      default: return Code;
-    }
+      case 'comp': return Building;
+      default: return Code}
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics': return Brain;
       case 'Cybersecurity': return Shield;
@@ -256,8 +241,7 @@ export default function SearchPage() {
       case 'IoT & Edge': return Zap;
       case 'Quantum Computing': return Rocket;
       case 'Blockchain': return Lock;
-      default: return Code;
-    }
+      default: return Code}
   };
 
   return (
@@ -477,9 +461,9 @@ export default function SearchPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid md:grid-cols-2 xl:grid-cols-3 gap-6"
+                    className="grid md: grid-cols-2 xl:grid-cols-3 gap-6"
                   >
-                    {filteredResults.map((result, index) => (
+                    {filteredResults.map((result, index)  => (
                       <motion.div
                         key={result.id}
                         initial={{ opacity: 0, y: 20 }}
@@ -660,5 +644,4 @@ export default function SearchPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

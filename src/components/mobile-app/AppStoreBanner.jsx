@@ -171,5 +171,4 @@ export const AppStoreBanner = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

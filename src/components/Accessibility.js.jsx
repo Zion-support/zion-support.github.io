@@ -6,10 +6,8 @@ const AccessibilityContext = createContext(undefined);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
-    }
-    return context;
-};
+        throw new Error('useAccessibility must be used within an AccessibilityProvider')}
+    return context};
 // Accessibility Provider Component
 export const AccessibilityProvider = ({ children }) => {
     const [highContrast, setHighContrast] = useState(false);
@@ -24,8 +22,7 @@ export const AccessibilityProvider = ({ children }) => {
             setHighContrast(settings.highContrast || false);
             setReducedMotion(settings.reducedMotion || false);
             setFontSize(settings.fontSize || 'medium');
-            setColorBlindMode(settings.colorBlindMode || 'none');
-        }
+            setColorBlindMode(settings.colorBlindMode || 'none')}
     }, []);
     // Save settings to localStorage
     useEffect(() => {
@@ -35,33 +32,27 @@ export const AccessibilityProvider = ({ children }) => {
             fontSize,
             colorBlindMode
         };
-        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
-    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
     // Apply accessibility settings to document
     useEffect(() => {
         const root = document.documentElement;
         // High contrast mode
         if (highContrast) {
-            root.classList.add('high-contrast');
-        }
+            root.classList.add('high-contrast')}
         else {
-            root.classList.remove('high-contrast');
-        }
+            root.classList.remove('high-contrast')}
         // Reduced motion
         if (reducedMotion) {
-            root.classList.add('reduced-motion');
-        }
+            root.classList.add('reduced-motion')}
         else {
-            root.classList.remove('reduced-motion');
-        }
+            root.classList.remove('reduced-motion')}
         // Font size
         root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
         // Color blind mode
         root.style.filter = colorBlindMode === 'none' ? 'none' :
             colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
                 colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
-                    'url(#tritanopia)';
-    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+                    'url(#tritanopia)'}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
     const toggleHighContrast = () => setHighContrast(!highContrast);
     const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
     const value = {
@@ -76,8 +67,7 @@ export const AccessibilityProvider = ({ children }) => {
     };
     return (<AccessibilityContext.Provider value={value}>
       {children}
-    </AccessibilityContext.Provider>);
-};
+    </AccessibilityContext.Provider>)};
 // Accessibility Panel Component
 export const AccessibilityPanel = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -88,22 +78,18 @@ export const AccessibilityPanel = () => {
             // Ctrl/Cmd + Shift + A to open accessibility panel
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
                 event.preventDefault();
-                setIsOpen(!isOpen);
-            }
+                setIsOpen(!isOpen)}
             // Ctrl/Cmd + Shift + H to toggle high contrast
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
                 event.preventDefault();
-                toggleHighContrast();
-            }
+                toggleHighContrast()}
             // Ctrl/Cmd + Shift + M to toggle reduced motion
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
                 event.preventDefault();
-                toggleReducedMotion();
-            }
+                toggleReducedMotion()}
         };
         window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [isOpen, toggleHighContrast, toggleReducedMotion]);
+        return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
     return (<>
       {/* Floating Accessibility Button */}
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">
@@ -201,8 +187,7 @@ export const AccessibilityPanel = () => {
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
-};
+    </>)};
 // Skip to Content Link
 export const SkipToContent = () => (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
     Skip to main content
@@ -224,21 +209,17 @@ export const useFocusTrap = (isActive) => {
                 if (e.shiftKey) {
                     if (document.activeElement === firstFocusableElement) {
                         e.preventDefault();
-                        lastFocusableElement.focus();
-                    }
+                        lastFocusableElement.focus()}
                 }
                 else {
                     if (document.activeElement === lastFocusableElement) {
                         e.preventDefault();
-                        firstFocusableElement.focus();
-                    }
+                        firstFocusableElement.focus()}
                 }
             }
         };
         document.addEventListener('keydown', handleTabKey);
-        return () => document.removeEventListener('keydown', handleTabKey);
-    }, [isActive]);
-};
+        return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};
 // Screen Reader Only Text
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
 export default AccessibilityPanel;

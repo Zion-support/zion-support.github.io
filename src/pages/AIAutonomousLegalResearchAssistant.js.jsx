@@ -40,7 +40,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             price: "$899",
             period: "/month",
             description: "Perfect for individual lawyers and small firms",
-            features: [
+            features[
                 "Up to 100 research queries/month",
                 "Basic case law analysis",
                 "Standard legal databases access",
@@ -53,7 +53,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             price: "$1,999",
             period: "/month",
             description: "Ideal for law firms and legal departments",
-            features: [
+            features[
                 "Up to 500 research queries/month",
                 "Advanced AI analysis",
                 "Premium legal databases",
@@ -69,7 +69,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             price: "$3,999",
             period: "/month",
             description: "For large law firms and corporations",
-            features: [
+            features[
                 "Unlimited research queries",
                 "Custom AI model training",
                 "Enterprise security features",
@@ -312,6 +312,5 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AIAutonomousLegalResearchAssistant;

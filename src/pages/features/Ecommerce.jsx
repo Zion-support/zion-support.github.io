@@ -50,5 +50,4 @@ export default function Ecommerce() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>)}

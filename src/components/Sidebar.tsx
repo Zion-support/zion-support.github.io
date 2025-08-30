@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  X, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { X, 
   Home, 
   Briefcase, 
   Users, 
@@ -65,49 +64,47 @@ import {
   GraduationCap,
   Activity,
   DollarSign as DollarSignIcon
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
+ } from 'lucide-react.ts';
+import { cn  } from '@/lib/utils';
 
-interface SidebarProps {
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
   isOpen: boolean;
-  onClose: () => void;
-  className?: string;
-}
+  onClose: ()  => void;
+  className?: string}
 
-export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
+export function Sidebar(...args[]):  {
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [expandedSections, setExpandedSections] = useState<any>([]);
 
   // Close sidebar when location changes
   React.useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
+    onClose()}, [location.pathname, onClose]);
 
-  const toggleSection = (sectionTitle: string) => {
+  const toggleSection = (sectionTitle: string)  => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)
-        : [...prev, sectionTitle]
-    );
-  };
+        [...prev, sectionTitle]
+    )};
 
   const navigationItems = [
     {
       title: 'Main Navigation',
       icon: Home,
-      items: [
+      items[
         { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
         { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' },
         { name: 'Pricing', path: '/pricing', icon: DollarSignIcon, description: 'Service plans and pricing' },
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
+        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our comp' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     },
     {
       title: 'AI & Autonomous Systems',
       icon: Brain,
-      items: [
+      items[
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Advanced AI solutions' },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered research' },
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain, description: 'Autonomous business management' },
@@ -132,7 +129,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
     {
       title: 'Cloud & Infrastructure',
       icon: Cloud,
-      items: [
+      items[
         { name: 'Cloud Infrastructure', path: '/services/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
         { name: 'DevOps & Automation', path: '/services/devops-automation', icon: Cpu, description: 'Streamlined development processes' },
         { name: 'Network Security', path: '/services/network-security', icon: Shield, description: 'Comprehensive network protection' },
@@ -146,7 +143,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
     {
       title: 'Cybersecurity & Compliance',
       icon: Shield,
-      items: [
+      items[
         { name: 'Threat Detection', path: '/services/threat-detection', icon: Shield, description: 'Advanced threat intelligence' },
         { name: 'SOC2 Compliance Automation', path: '/soc2-evidence-automation', icon: Lock, description: 'Automated compliance management' },
         { name: 'Zero Trust Security', path: '/zero-trust-network-architecture-2029', icon: Shield, description: 'Modern security architecture' },
@@ -160,7 +157,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
     {
       title: 'Data & Analytics',
       icon: Database,
-      items: [
+      items[
         { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' },
         { name: 'Vector Search Starter', path: '/vector-search-starter', icon: Search, description: 'AI-powered search' },
         { name: 'LLM Gateway', path: '/llm-gateway', icon: Brain, description: 'Language model gateway' },
@@ -171,7 +168,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
     {
       title: 'Monitoring & Observability',
       icon: Monitor,
-      items: [
+      items[
         { name: 'Domain DNS Monitor', path: '/domain-dns-monitor', icon: Globe, description: 'DNS monitoring' },
         { name: 'Status Pages & SLO', path: '/status-pages-slo', icon: Activity, description: 'Service level monitoring' },
         { name: 'Synthetic Monitor Recorder', path: '/synthetic-monitor-recorder', icon: Monitor, description: 'Synthetic monitoring' },
@@ -182,7 +179,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
     {
       title: 'Business Solutions',
       icon: Building,
-      items: [
+      items[
         { name: 'Sales Copilot', path: '/sales-copilot', icon: Users, description: 'AI sales assistant' },
         { name: 'SEO Automation', path: '/seo-automation', icon: TrendingUp, description: 'Automated SEO' },
         { name: 'Serverless Cron Manager', path: '/serverless-cron-manager', icon: Clock, description: 'Cron job management' },
@@ -193,7 +190,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
     {
       title: 'Quantum Technology',
       icon: Atom,
-      items: [
+      items[
         { name: 'Quantum Technology', path: '/quantum-technology', icon: Atom, description: 'Quantum computing solutions' },
         { name: 'Quantum Blockchain', path: '/quantum-blockchain', icon: Lock, description: 'Quantum-secure blockchain' },
         { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud, description: 'Quantum cloud services' },
@@ -210,7 +207,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
     {
       title: 'Space Technology',
       icon: Rocket,
-      items: [
+      items[
         { name: 'Space Technology', path: '/space-technology', icon: Rocket, description: 'Space tech solutions' },
         { name: 'Space Mining Platform', path: '/space-mining-autonomous-platform-2029', icon: Rocket, description: 'Space mining automation' },
         { name: 'Space Tech AI Platform', path: '/space-technology-ai-platform', icon: Brain, description: 'AI space platform' }
@@ -219,10 +216,10 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
     {
       title: 'Resources & Insights',
       icon: FileText,
-      items: [
+      items[
         { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' },
         { name: 'Case Studies', path: '/case-studies', icon: CheckCircle, description: 'Success stories' },
-        { name: 'News', path: '/news', icon: Newspaper, description: 'Company updates' },
+        { name: 'News', path: '/news', icon: Newspaper, description: 'Comp updates' },
         { name: 'Newsroom', path: '/newsroom', icon: Newspaper, description: 'Press releases' },
         { name: 'Reports', path: '/reports', icon: FileText, description: 'Industry reports' },
         { name: 'Research & Development', path: '/research-development', icon: TestTube, description: 'R&D projects' },
@@ -231,13 +228,13 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
       ]
     },
     {
-      title: 'Company & Team',
+      title: 'Comp & Team',
       icon: Users,
-      items: [
+      items[
         { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
         { name: 'Our Team', path: '/team', icon: Users, description: 'Meet our experts' },
         { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
-        { name: 'Company', path: '/company', icon: Building, description: 'Company information' },
+        { name: 'Comp', path: '/comp', icon: Building, description: 'Comp information' },
         { name: 'Innovation', path: '/innovation', icon: Lightbulb, description: 'Innovation initiatives' },
         { name: 'Talent', path: '/talent', icon: Users, description: 'Talent solutions' }
       ]
@@ -381,5 +378,4 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
         </>
       )}
     </AnimatePresence>
-  );
-}
+  )}

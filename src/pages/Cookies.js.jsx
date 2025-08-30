@@ -105,7 +105,7 @@ const Cookies: React.FC = () => {
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">6. Contact Us</h2>
               <p className="text-zion-slate-light">
-                If you have any questions about our use of cookies, please contact us at{' '}
+                If you have  questions about our use of cookies, please contact us at{' '}
                 <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">
                   kleber@ziontechgroup.com
                 </a>
@@ -116,7 +116,6 @@ const Cookies: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default Cookies;

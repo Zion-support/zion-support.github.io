@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Handshake, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Handshake, 
   Users, 
   Globe, 
   Award, 
@@ -18,15 +17,15 @@ import {
   CheckCircle,
   Building,
   Briefcase
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Partners() {
+export default function Partners(...args[]):  {
   const partnershipTypes = [
     {
       name: 'Technology Partners',
       icon: Brain,
       description: 'Integrate with leading technology platforms and tools',
-      benefits: [
+      benefits[
         'Joint product development',
         'Technical integration support',
         'Co-marketing opportunities',
@@ -38,7 +37,7 @@ export default function Partners() {
       name: 'Channel Partners',
       icon: Users,
       description: 'Resell and implement our solutions in your market',
-      benefits: [
+      benefits[
         'Competitive pricing',
         'Sales and technical training',
         'Marketing materials and support',
@@ -50,7 +49,7 @@ export default function Partners() {
       name: 'Strategic Partners',
       icon: Handshake,
       description: 'Long-term collaboration on major initiatives',
-      benefits: [
+      benefits[
         'Exclusive market access',
         'Joint go-to-market strategies',
         'Shared R&D investments',
@@ -62,7 +61,7 @@ export default function Partners() {
       name: 'Consulting Partners',
       icon: Briefcase,
       description: 'Deliver our solutions through your consulting practice',
-      benefits: [
+      benefits[
         'Implementation certification',
         'Technical expertise training',
         'Project delivery support',
@@ -239,8 +238,8 @@ export default function Partners() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {partnershipTypes.map((type, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {partnershipTypes.map((type, index)  => (
               <motion.div
                 key={type.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -297,8 +296,8 @@ export default function Partners() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {partnerBenefits.map((benefit, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {partnerBenefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -336,8 +335,8 @@ export default function Partners() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {existingPartners.map((partner, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {existingPartners.map((partner, index)  => (
               <motion.div
                 key={partner.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -387,8 +386,8 @@ export default function Partners() {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {partnershipProcess.map((step, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {partnershipProcess.map((step, index)  => (
                 <motion.div
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}
@@ -473,5 +472,4 @@ export default function Partners() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

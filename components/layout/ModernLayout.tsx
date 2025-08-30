@@ -1,23 +1,23 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react.ts';
+import Head from 'next/head.ts';
 import ModernHeader from './ModernHeader';
 import ModernFooter from './ModernFooter';
 
-interface ModernLayoutProps {
+interface ModernLayoutProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string;
-}
+  canonical?: string}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({ 
   children, 
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https://ziontechgroup.com'
-}) => {
+  canonical = 'https: any//ziontechgroup.com'
+})  => {
   return (
     <>
       <Head>
@@ -79,7 +79,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               },
-              "sameAs": [
+              "sameAs"[
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
@@ -97,7 +97,6 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <ModernFooter />
       </div>
     </>
-  );
-};
+  )};
 
 export default ModernLayout;

@@ -28,16 +28,15 @@ export default function TermsOfService() {
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">4. Limitations</h2>
           <p>
-            In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
+            In no event shall Zion Tech Group or its suppliers be liable for  damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">5. Revisions and Errata</h2>
           <p>
-            The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current.
+            The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that  of the materials on its website are accurate, complete or current.
           </p>
         </section>
       </div>
-    </div>);
-}
+    </div>)}

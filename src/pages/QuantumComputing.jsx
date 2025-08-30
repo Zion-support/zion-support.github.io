@@ -36,7 +36,7 @@ const quantumSolutions = [
     title: "Quantum Algorithm Development",
     description: "Custom quantum algorithms for specific computational problems and optimization challenges.",
     icon: Brain,
-    features: [
+    features[
       "Custom algorithm design",
       "Quantum circuit optimization",
       "Performance benchmarking",
@@ -45,14 +45,14 @@ const quantumSolutions = [
     price: "From $150,000",
     timeline: "24-48 weeks",
     category: "Algorithm Development",
-    technologies: ["Qiskit", "Cirq", "PennyLane", "Q#"]
+    technologies["Qiskit", "Cirq", "PennyLane", "Q#"]
   },
   {
     id: 2,
     title: "Quantum Cryptography",
     description: "Quantum-safe encryption solutions using quantum key distribution and post-quantum cryptography.",
     icon: Shield,
-    features: [
+    features[
       "Quantum key distribution",
       "Post-quantum algorithms",
       "Security auditing",
@@ -61,14 +61,14 @@ const quantumSolutions = [
     price: "From $200,000",
     timeline: "32-56 weeks",
     category: "Cryptography",
-    technologies: ["BB84", "E91", "Lattice-based", "Hash-based"]
+    technologies["BB84", "E91", "Lattice-based", "Hash-based"]
   },
   {
     id: 3,
     title: "Quantum Machine Learning",
     description: "Quantum-enhanced machine learning algorithms for pattern recognition and optimization.",
     icon: Brain,
-    features: [
+    features[
       "Quantum neural networks",
       "Quantum feature maps",
       "Hybrid classical-quantum",
@@ -77,14 +77,14 @@ const quantumSolutions = [
     price: "From $180,000",
     timeline: "28-44 weeks",
     category: "Machine Learning",
-    technologies: ["TensorFlow Quantum", "PennyLane", "Qiskit ML", "Variational circuits"]
+    technologies["TensorFlow Quantum", "PennyLane", "Qiskit ML", "Variational circuits"]
   },
   {
     id: 4,
     title: "Quantum Simulation",
     description: "Quantum simulation platforms for modeling complex quantum systems and materials.",
     icon: Atom,
-    features: [
+    features[
       "Molecular modeling",
       "Material properties",
       "Chemical reactions",
@@ -93,14 +93,14 @@ const quantumSolutions = [
     price: "From $120,000",
     timeline: "20-36 weeks",
     category: "Simulation",
-    technologies: ["VQE", "QAOA", "QPE", "Quantum chemistry"]
+    technologies["VQE", "QAOA", "QPE", "Quantum chemistry"]
   },
   {
     id: 5,
     title: "Quantum Optimization",
     description: "Quantum optimization solutions for complex combinatorial and constraint satisfaction problems.",
     icon: Target,
-    features: [
+    features[
       "Combinatorial optimization",
       "Constraint satisfaction",
       "Resource allocation",
@@ -109,14 +109,14 @@ const quantumSolutions = [
     price: "From $100,000",
     timeline: "16-32 weeks",
     category: "Optimization",
-    technologies: ["QAOA", "VQE", "Quantum annealing", "Hybrid algorithms"]
+    technologies["QAOA", "VQE", "Quantum annealing", "Hybrid algorithms"]
   },
   {
     id: 6,
     title: "Quantum Computing Infrastructure",
     description: "Quantum computing infrastructure and cloud access solutions for research and development.",
     icon: Server,
-    features: [
+    features[
       "Cloud quantum access",
       "Quantum hardware integration",
       "Development environment",
@@ -125,7 +125,7 @@ const quantumSolutions = [
     price: "From $80,000",
     timeline: "12-24 weeks",
     category: "Infrastructure",
-    technologies: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
+    technologies["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
   }
 ];
 
@@ -163,7 +163,7 @@ const quantumTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Pharmaceutical Research Lab",
+    comp: "Pharmaceutical Research Lab",
     industry: "Healthcare",
     challenge: "Needed to simulate complex molecular interactions for drug discovery",
     solution: "Built quantum simulation platform using VQE algorithms",
@@ -172,7 +172,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Corp",
+    comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Required quantum-safe encryption for secure communications",
     solution: "Implemented quantum key distribution and post-quantum cryptography",
@@ -181,7 +181,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Logistics Optimization",
+    comp: "Logistics Optimization",
     industry: "Transportation",
     challenge: "Complex route optimization for 1000+ delivery vehicles",
     solution: "Built quantum optimization system using QAOA algorithms",
@@ -226,25 +226,25 @@ const quantumAdvantages = [
     title: "Exponential Speedup",
     description: "Certain problems can be solved exponentially faster than classical computers",
     icon: Zap,
-    examples: ["Factoring large numbers", "Database search", "Quantum simulation"]
+    examples["Factoring large numbers", "Database search", "Quantum simulation"]
   },
   {
     title: "Quantum Entanglement",
     description: "Quantum correlations enable new computational paradigms",
     icon: Network,
-    examples: ["Quantum teleportation", "Superdense coding", "Quantum key distribution"]
+    examples["Quantum teleportation", "Superdense coding", "Quantum key distribution"]
   },
   {
     title: "Quantum Parallelism",
     description: "Quantum superposition allows parallel computation of multiple states",
     icon: Brain,
-    examples: ["Quantum Fourier transform", "Grover's algorithm", "Quantum walks"]
+    examples["Quantum Fourier transform", "Grover's algorithm", "Quantum walks"]
   },
   {
     title: "Quantum Tunneling",
     description: "Quantum effects enable optimization through energy landscape exploration",
     icon: Rocket,
-    examples: ["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
+    examples["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
   }
 ];
 
@@ -567,7 +567,7 @@ export default function QuantumComputing() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -632,5 +632,4 @@ export default function QuantumComputing() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

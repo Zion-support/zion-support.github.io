@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Lightbulb, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Lightbulb, 
   Target, 
   TrendingUp, 
   Users, 
@@ -15,33 +14,33 @@ import {
   Clock,
   Award,
   MessageSquare
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function ITConsulting() {
+export default function ITConsulting(...args[]):  {
   const consultingServices = [
     {
       icon: Target,
       title: "Strategic Planning",
       description: "Develop comprehensive technology roadmaps aligned with your business objectives",
-      features: ["Technology Assessment", "Digital Transformation Strategy", "Innovation Roadmap", "ROI Analysis"]
+      features["Technology Assessment", "Digital Transformation Strategy", "Innovation Roadmap", "ROI Analysis"]
     },
     {
       icon: TrendingUp,
       title: "Process Optimization",
       description: "Streamline operations and improve efficiency through technology-driven solutions",
-      features: ["Workflow Analysis", "Automation Strategy", "Performance Metrics", "Continuous Improvement"]
+      features["Workflow Analysis", "Automation Strategy", "Performance Metrics", "Continuous Improvement"]
     },
     {
       icon: Shield,
       title: "Cybersecurity Consulting",
       description: "Protect your business with comprehensive security assessments and strategies",
-      features: ["Security Audits", "Compliance Management", "Incident Response", "Security Training"]
+      features["Security Audits", "Compliance Management", "Incident Response", "Security Training"]
     },
     {
       icon: Zap,
       title: "Technology Implementation",
       description: "Expert guidance for successful technology adoption and integration",
-      features: ["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"]
+      features["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"]
     }
   ];
 
@@ -175,7 +174,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {consultingServices.map((service, index) => (
+            {consultingServices.map((service, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -229,7 +228,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index)  => (
               <motion.div 
                 key={index}
                 className="text-center"
@@ -272,7 +271,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {industries.map((industry, index) => (
+            {industries.map((industry, index)  => (
               <motion.div 
                 key={index}
                 className="bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -314,5 +313,4 @@ export default function ITConsulting() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

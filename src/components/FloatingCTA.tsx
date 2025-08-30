@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { MessageCircle, 
   X, 
   ArrowRight,
   Phone,
@@ -96,20 +95,18 @@ import {
   MicOff,
   Volume2,
   VolumeX
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const FloatingCTA: React.FC = () => {
+const FloatingCTA: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Show CTA after 5 seconds
     const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
+      setIsVisible(true)}, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)}, []);
 
   const contactMethods = [
     {
@@ -191,8 +188,8 @@ const FloatingCTA: React.FC = () => {
               </div>
 
               {/* Contact Methods */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                {contactMethods.map((method, index) => (
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">
+                {contactMethods.map((method, index)  => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -268,7 +265,6 @@ const FloatingCTA: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};
 
 export default FloatingCTA;

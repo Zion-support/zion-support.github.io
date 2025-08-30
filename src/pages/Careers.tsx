@@ -1,5 +1,7 @@
-import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe } from 'lucide-react';
-export default function Careers() {
+import React, { useState } from 'react.ts';
+import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Mail, Phone, MapPinIcon  } from 'lucide-react.ts';
+
+export default function Careers(...args[]):  {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
@@ -28,7 +30,7 @@ export default function Careers() {
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
+      requirements[
         'Advanced degree in Computer Science, AI, or related field',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with large language models and NLP',
@@ -43,7 +45,7 @@ export default function Careers() {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Protect our systems and clients with advanced security solutions.',
-      requirements: [
+      requirements[
         'Bachelor\'s degree in Cybersecurity or related field',
         'Certifications: CISSP, CEH, or similar',
         'Experience with penetration testing and vulnerability assessment',
@@ -58,7 +60,7 @@ export default function Careers() {
       type: 'Full-time',
       experience: '4+ years',
       description: 'Design and implement scalable cloud infrastructure solutions.',
-      requirements: [
+      requirements[
         'Bachelor\'s degree in Computer Science or related field',
         'AWS, Azure, or GCP certifications',
         'Experience with Kubernetes and Docker',
@@ -73,7 +75,7 @@ export default function Careers() {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Drive product strategy and development for our technology solutions.',
-      requirements: [
+      requirements[
         'Bachelor\'s degree in Business, Engineering, or related field',
         'Experience in B2B SaaS product management',
         'Strong analytical and communication skills',
@@ -174,8 +176,8 @@ export default function Careers() {
               We're building the future of technology, and we need brilliant minds to join us on this journey
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                   <div className="text-zion-cyan">
@@ -201,11 +203,11 @@ export default function Careers() {
               Our Values
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              These core principles guide everything we do and shape our company culture
+              These core principles guide everything we do and shape our comp culture
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {values.map((value, index)  => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">
                   {value.title}
@@ -379,5 +381,4 @@ export default function Careers() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

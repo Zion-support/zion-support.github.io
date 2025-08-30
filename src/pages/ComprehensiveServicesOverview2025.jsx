@@ -35,8 +35,7 @@ const ComprehensiveServicesOverview2025 = () => {
             'Energy & Sustainability': '⚡',
             'Logistics & Transportation': '🚚'
         };
-        return icons[category] || '🚀';
-    };
+        return icons[category] || '🚀'};
     const getCategoryColor = (category) => {
         const colors = {
             'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
@@ -52,8 +51,7 @@ const ComprehensiveServicesOverview2025 = () => {
             'Energy & Sustainability': 'from-green-500 to-teal-500',
             'Logistics & Transportation': 'from-orange-500 to-red-500'
         };
-        return colors[category] || 'from-gray-500 to-slate-500';
-    };
+        return colors[category] || 'from-gray-500 to-slate-500'};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -326,8 +324,7 @@ const ComprehensiveServicesOverview2025 = () => {
                         </div>
                       </div>
                     </div>
-                  </>);
-            })()}
+                  </>)})()}
             </div>
           </div>
         </div>)}
@@ -350,6 +347,5 @@ const ComprehensiveServicesOverview2025 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ComprehensiveServicesOverview2025;

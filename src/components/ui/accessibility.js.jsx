@@ -19,40 +19,32 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         const root = document.documentElement;
         // High contrast
         if (settings.highContrast) {
-            root.classList.add('high-contrast');
-        }
+            root.classList.add('high-contrast')}
         else {
-            root.classList.remove('high-contrast');
-        }
+            root.classList.remove('high-contrast')}
         // Large text
         if (settings.largeText) {
-            root.style.fontSize = '18px';
-        }
+            root.style.fontSize = '18px'}
         else {
-            root.style.fontSize = '16px';
-        }
+            root.style.fontSize = '16px'}
         // Reduced motion
         if (settings.reducedMotion) {
-            root.style.setProperty('--reduced-motion', 'reduce');
-        }
+            root.style.setProperty('--reduced-motion', 'reduce')}
         else {
-            root.style.setProperty('--reduced-motion', 'no-preference');
-        }
+            root.style.setProperty('--reduced-motion', 'no-preference')}
         // Font size
         root.style.setProperty('--font-size', `${settings.fontSize}px`);
         // Color blind mode
         root.setAttribute('data-color-blind', settings.colorBlindMode);
         // Notify parent component
-        onSettingsChange?.(settings);
-    }, [settings, enabled, onSettingsChange]);
+        onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]);
     // Load saved settings from localStorage
     useEffect(() => {
         const saved = localStorage.getItem('accessibility-settings');
         if (saved) {
             try {
                 const parsed = JSON.parse(saved);
-                setSettings(prev => ({ ...prev, ...parsed }));
-            }
+                setSettings(prev => ({ ...prev, ...parsed }))}
             catch {
                 // Silently handle parsing errors
             }
@@ -61,16 +53,14 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     // Save settings to localStorage
     const saveSettings = useCallback((newSettings) => {
         setSettings(newSettings);
-        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-    }, []);
+        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
     // Toggle settings
     const toggleSetting = useCallback((key, value) => {
         const newSettings = {
             ...settings,
             [key]: value !== undefined ? value : !settings[key]
         };
-        saveSettings(newSettings);
-    }, [settings, saveSettings]);
+        saveSettings(newSettings)}, [settings, saveSettings]);
     // Reset to defaults
     const resetSettings = useCallback(() => {
         const defaults = {
@@ -81,15 +71,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             fontSize: 16,
             colorBlindMode: 'normal'
         };
-        saveSettings(defaults);
-    }, [saveSettings]);
+        saveSettings(defaults)}, [saveSettings]);
     // Font size controls
     const increaseFontSize = useCallback(() => {
-        toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24));
-    }, [settings.fontSize, toggleSetting]);
+        toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, toggleSetting]);
     const decreaseFontSize = useCallback(() => {
-        toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12));
-    }, [settings.fontSize, toggleSetting]);
+        toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12))}, [settings.fontSize, toggleSetting]);
     // Screen reader announcement
     const announceToScreenReader = useCallback((message) => {
         if (settings.screenReader) {
@@ -100,9 +87,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             announcement.textContent = message;
             document.body.appendChild(announcement);
             setTimeout(() => {
-                document.body.removeChild(announcement);
-            }, 1000);
-        }
+                document.body.removeChild(announcement)}, 1000)}
     }, [settings.screenReader]);
     if (!enabled)
         return null;
@@ -251,8 +236,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
-            border: 0;
-          }
+            border: 0}
 
           .high-contrast {
             --zion-cyan: #00ffff;
@@ -262,43 +246,35 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-blue-light: #3399ff;
             --zion-cyan-light: #33ffff;
             --zion-purple-dark: #6600cc;
-            --zion-purple-light: #cc33ff;
-          }
+            --zion-purple-light: #cc33ff}
 
           [data-color-blind="protanopia"] {
-            filter: url('#protanopia-filter');
-          }
+            filter: url('#protanopia-filter')}
 
           [data-color-blind="deuteranopia"] {
-            filter: url('#deuteranopia-filter');
-          }
+            filter: url('#deuteranopia-filter')}
 
           [data-color-blind="tritanopia"] {
-            filter: url('#tritanopia-filter');
-          }
+            filter: url('#tritanopia-filter')}
 
           :root {
             --font-size: 16px;
-            --reduced-motion: no-preference;
-          }
+            --reduced-motion: no-preference}
 
           * {
-            font-size: var(--font-size);
-          }
+            font-size: var(--font-size)}
 
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.01ms !important;
               animation-iteration-count: 1 !important;
-              transition-duration: 0.01ms !important;
-            }
+              transition-duration: 0.01ms !important}
           }
 
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
+            transition-duration: 0.01ms !important}
         `
         }}/>
 
@@ -316,5 +292,4 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
           </filter>
         </defs>
       </svg>
-    </>);
-}
+    </>)}

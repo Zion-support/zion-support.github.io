@@ -20,5 +20,4 @@ export function SocialShareSection() {
             </a>))}
         </div>
       </div>
-    </section>);
-}
+    </section>)}

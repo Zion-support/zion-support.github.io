@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
   // AI-Powered Autonomous Business Operations Platform
@@ -10,9 +10,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Business Operations",
     price: 49999,
     currency: "$",
-    tags: ["Autonomous Operations", "Business AI", "Strategic Planning", "Resource Management", "Decision Making"],
+    tags["Autonomous Operations", "Business AI", "Strategic Planning", "Resource Management", "Decision Making"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-autonomous-business.jpg"],
+    images["https://ziontechgroup.com/images/ai-autonomous-business.jpg"],
     createdAt: "2024-12-01T10:00:00.000Z",
     rating: 5.0,
     reviewCount: 89,
@@ -27,10 +27,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$40,000-80,000",
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
+    competitors["UiPath", "Automation Anywhere", "Blue Prism"],
     roi: "800% within 18 months",
     setupTime: "12-16 weeks",
-    integrations: ["ERP Systems", "CRM Platforms", "Accounting Software", "HR Systems", "Supply Chain Management"]
+    integrations["ERP Systems", "CRM Platforms", "Accounting Software", "HR Systems", "Supply Chain Management"]
   },
 
   // Quantum AI Hybrid Computing Platform
@@ -42,9 +42,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Hybrid Systems",
     price: 89999,
     currency: "$",
-    tags: ["Quantum Computing", "AI Hybrid", "High Performance", "Scientific Computing", "Financial Modeling"],
+    tags["Quantum Computing", "AI Hybrid", "High Performance", "Scientific Computing", "Financial Modeling"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/quantum-ai-hybrid.jpg"],
+    images["https://ziontechgroup.com/images/quantum-ai-hybrid.jpg"],
     createdAt: "2024-12-02T10:00:00.000Z",
     rating: 5.0,
     reviewCount: 67,
@@ -59,10 +59,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$70,000-150,000",
-    competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
+    competitors["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
     roi: "1500% within 24 months",
     setupTime: "20-24 weeks",
-    integrations: ["Quantum Simulators", "AI Frameworks", "Scientific Libraries", "Cloud Platforms", "Research Tools"]
+    integrations["Quantum Simulators", "AI Frameworks", "Scientific Libraries", "Cloud Platforms", "Research Tools"]
   },
 
   // AI-Powered Metaverse Development Platform
@@ -74,9 +74,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Development Platform",
     price: 34999,
     currency: "$",
-    tags: ["Metaverse", "AI Development", "Virtual Reality", "Content Generation", "User Experience"],
+    tags["Metaverse", "AI Development", "Virtual Reality", "Content Generation", "User Experience"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-metaverse-platform.jpg"],
+    images["https://ziontechgroup.com/images/ai-metaverse-platform.jpg"],
     createdAt: "2024-12-03T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 156,
@@ -91,10 +91,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$25,000-60,000",
-    competitors: ["Unity", "Unreal Engine", "Roblox Studio"],
+    competitors["Unity", "Unreal Engine", "Roblox Studio"],
     roi: "600% within 12 months",
     setupTime: "8-12 weeks",
-    integrations: ["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Social Media APIs", "Payment Systems"]
+    integrations["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Social Media APIs", "Payment Systems"]
   },
 
   // AI-Powered Space Technology Platform
@@ -106,9 +106,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Space Operations",
     price: 79999,
     currency: "$",
-    tags: ["Space Technology", "Satellite Management", "Autonomous Navigation", "Mission Optimization", "Data Analysis"],
+    tags["Space Technology", "Satellite Management", "Autonomous Navigation", "Mission Optimization", "Data Analysis"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-space-tech.jpg"],
+    images["https://ziontechgroup.com/images/ai-space-tech.jpg"],
     createdAt: "2024-12-04T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 78,
@@ -123,10 +123,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$60,000-120,000",
-    competitors: ["SpaceX", "Blue Origin", "Lockheed Martin"],
+    competitors["SpaceX", "Blue Origin", "Lockheed Martin"],
     roi: "1200% within 20 months",
     setupTime: "16-20 weeks",
-    integrations: ["Satellite Systems", "Ground Stations", "Mission Control", "Data Centers", "Communication Networks"]
+    integrations["Satellite Systems", "Ground Stations", "Mission Control", "Data Centers", "Communication Networks"]
   },
 
   // AI-Powered Environmental Technology Platform
@@ -138,9 +138,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Environmental Monitoring",
     price: 24999,
     currency: "$",
-    tags: ["Environmental Tech", "Sustainability", "Climate Monitoring", "Real-time Data", "Impact Reduction"],
+    tags["Environmental Tech", "Sustainability", "Climate Monitoring", "Real-time Data", "Impact Reduction"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-environmental-tech.jpg"],
+    images["https://ziontechgroup.com/images/ai-environmental-tech.jpg"],
     createdAt: "2024-12-05T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 234,
@@ -155,10 +155,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$20,000-45,000",
-    competitors: ["IBM Environmental Intelligence", "Microsoft Planetary Computer", "Google Earth Engine"],
+    competitors["IBM Environmental Intelligence", "Microsoft Planetary Computer", "Google Earth Engine"],
     roi: "500% within 10 months",
     setupTime: "6-8 weeks",
-    integrations: ["IoT Sensors", "Weather APIs", "Satellite Data", "Analytics Platforms", "Reporting Systems"]
+    integrations["IoT Sensors", "Weather APIs", "Satellite Data", "Analytics Platforms", "Reporting Systems"]
   },
 
   // AI-Powered Education Technology Platform
@@ -170,9 +170,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Learning Platform",
     price: 19999,
     currency: "$",
-    tags: ["Education Tech", "Personalized Learning", "Adaptive Curriculum", "Intelligent Tutoring", "Performance Analytics"],
+    tags["Education Tech", "Personalized Learning", "Adaptive Curriculum", "Intelligent Tutoring", "Performance Analytics"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-education-tech.jpg"],
+    images["https://ziontechgroup.com/images/ai-education-tech.jpg"],
     createdAt: "2024-12-06T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 445,
@@ -187,10 +187,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$15,000-35,000",
-    competitors: ["Coursera", "Udemy", "Khan Academy"],
+    competitors["Coursera", "Udemy", "Khan Academy"],
     roi: "400% within 8 months",
     setupTime: "4-6 weeks",
-    integrations: ["LMS Systems", "Video Platforms", "Assessment Tools", "Analytics Dashboards", "Mobile Apps"]
+    integrations["LMS Systems", "Video Platforms", "Assessment Tools", "Analytics Dashboards", "Mobile Apps"]
   },
 
   // AI-Powered Entertainment Technology Platform
@@ -202,9 +202,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Content Platform",
     price: 29999,
     currency: "$",
-    tags: ["Entertainment Tech", "Content Creation", "AI Generation", "Personalization", "Interactive Storytelling"],
+    tags["Entertainment Tech", "Content Creation", "AI Generation", "Personalization", "Interactive Storytelling"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-entertainment-tech.jpg"],
+    images["https://ziontechgroup.com/images/ai-entertainment-tech.jpg"],
     createdAt: "2024-12-07T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 189,
@@ -219,10 +219,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$25,000-50,000",
-    competitors: ["Netflix", "Disney+", "HBO Max"],
+    competitors["Netflix", "Disney+", "HBO Max"],
     roi: "500% within 12 months",
     setupTime: "6-8 weeks",
-    integrations: ["Streaming Platforms", "Content Management", "Analytics Tools", "Social Media", "Payment Systems"]
+    integrations["Streaming Platforms", "Content Management", "Analytics Tools", "Social Media", "Payment Systems"]
   },
 
   // AI-Powered Research Technology Platform
@@ -234,9 +234,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Research Automation",
     price: 39999,
     currency: "$",
-    tags: ["Research Tech", "Data Analysis", "Hypothesis Generation", "Research Automation", "Predictive Modeling"],
+    tags["Research Tech", "Data Analysis", "Hypothesis Generation", "Research Automation", "Predictive Modeling"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-research-tech.jpg"],
+    images["https://ziontechgroup.com/images/ai-research-tech.jpg"],
     createdAt: "2024-12-08T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 123,
@@ -251,10 +251,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$30,000-70,000",
-    competitors: ["IBM Research", "Google Research", "Microsoft Research"],
+    competitors["IBM Research", "Google Research", "Microsoft Research"],
     roi: "700% within 15 months",
     setupTime: "8-12 weeks",
-    integrations: ["Research Databases", "Analytics Tools", "Publication Platforms", "Collaboration Tools", "Data Sources"]
+    integrations["Research Databases", "Analytics Tools", "Publication Platforms", "Collaboration Tools", "Data Sources"]
   },
 
   // AI-Powered Development Technology Platform
@@ -266,9 +266,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Development Automation",
     price: 24999,
     currency: "$",
-    tags: ["Development Tech", "Code Generation", "AI Testing", "Deployment Automation", "Code Quality"],
+    tags["Development Tech", "Code Generation", "AI Testing", "Deployment Automation", "Code Quality"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-development-tech.jpg"],
+    images["https://ziontechgroup.com/images/ai-development-tech.jpg"],
     createdAt: "2024-12-09T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 567,
@@ -283,10 +283,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$20,000-45,000",
-    competitors: ["GitHub Copilot", "Tabnine", "Kite"],
+    competitors["GitHub Copilot", "Tabnine", "Kite"],
     roi: "400% within 10 months",
     setupTime: "4-6 weeks",
-    integrations: ["Git Platforms", "IDEs", "CI/CD Tools", "Testing Frameworks", "Deployment Platforms"]
+    integrations["Git Platforms", "IDEs", "CI/CD Tools", "Testing Frameworks", "Deployment Platforms"]
   },
 
   // Blockchain & Web3 Development Platform
@@ -298,9 +298,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Development Platform",
     price: 34999,
     currency: "$",
-    tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFT Development"],
+    tags["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFT Development"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/blockchain-web3-platform.jpg"],
+    images["https://ziontechgroup.com/images/blockchain-web3-platform.jpg"],
     createdAt: "2024-12-10T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 234,
@@ -315,10 +315,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$25,000-60,000",
-    competitors: ["OpenZeppelin", "Hardhat", "Truffle"],
+    competitors["OpenZeppelin", "Hardhat", "Truffle"],
     roi: "600% within 12 months",
     setupTime: "8-12 weeks",
-    integrations: ["Blockchain Networks", "Wallet APIs", "DeFi Protocols", "NFT Standards", "Smart Contract Libraries"]
+    integrations["Blockchain Networks", "Wallet APIs", "DeFi Protocols", "NFT Standards", "Smart Contract Libraries"]
   },
 
   // Advanced Cybersecurity Suite with AI
@@ -330,9 +330,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "AI-Powered Security",
     price: 44999,
     currency: "$",
-    tags: ["Cybersecurity", "AI Security", "Threat Detection", "Behavioral Analysis", "Predictive Security"],
+    tags["Cybersecurity", "AI Security", "Threat Detection", "Behavioral Analysis", "Predictive Security"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/advanced-cybersecurity-ai.jpg"],
+    images["https://ziontechgroup.com/images/advanced-cybersecurity-ai.jpg"],
     createdAt: "2024-12-11T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 178,
@@ -347,10 +347,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$35,000-80,000",
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
+    competitors["CrowdStrike", "SentinelOne", "Darktrace"],
     roi: "800% within 16 months",
     setupTime: "10-14 weeks",
-    integrations: ["SIEM Systems", "EDR Solutions", "Firewall Platforms", "Identity Management", "Threat Intelligence"]
+    integrations["SIEM Systems", "EDR Solutions", "Firewall Platforms", "Identity Management", "Threat Intelligence"]
   },
 
   // Cloud & DevOps Automation Platform
@@ -362,9 +362,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Automation Platform",
     price: 29999,
     currency: "$",
-    tags: ["Cloud DevOps", "Infrastructure Automation", "Intelligent Scaling", "Automated Deployment", "Cost Optimization"],
+    tags["Cloud DevOps", "Infrastructure Automation", "Intelligent Scaling", "Automated Deployment", "Cost Optimization"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/cloud-devops-automation.jpg"],
+    images["https://ziontechgroup.com/images/cloud-devops-automation.jpg"],
     createdAt: "2024-12-12T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 345,
@@ -379,10 +379,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$25,000-55,000",
-    competitors: ["AWS DevOps", "Azure DevOps", "GitLab CI/CD"],
+    competitors["AWS DevOps", "Azure DevOps", "GitLab CI/CD"],
     roi: "500% within 12 months",
     setupTime: "6-8 weeks",
-    integrations: ["Cloud Providers", "Container Platforms", "CI/CD Tools", "Monitoring Systems", "Configuration Management"]
+    integrations["Cloud Providers", "Container Platforms", "CI/CD Tools", "Monitoring Systems", "Configuration Management"]
   },
 
   // IoT & Edge Computing Intelligence Platform
@@ -394,9 +394,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Intelligence Platform",
     price: 39999,
     currency: "$",
-    tags: ["IoT", "Edge Computing", "Device Management", "Real-time Analytics", "Autonomous Decision Making"],
+    tags["IoT", "Edge Computing", "Device Management", "Real-time Analytics", "Autonomous Decision Making"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/iot-edge-intelligence.jpg"],
+    images["https://ziontechgroup.com/images/iot-edge-intelligence.jpg"],
     createdAt: "2024-12-13T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 189,
@@ -411,10 +411,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$30,000-70,000",
-    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+    competitors["AWS IoT", "Azure IoT", "Google Cloud IoT"],
     roi: "600% within 15 months",
     setupTime: "8-12 weeks",
-    integrations: ["IoT Devices", "Edge Servers", "Cloud Platforms", "Analytics Tools", "Security Systems"]
+    integrations["IoT Devices", "Edge Servers", "Cloud Platforms", "Analytics Tools", "Security Systems"]
   },
 
   // Digital Twin & Simulation Platform
@@ -426,9 +426,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Simulation Platform",
     price: 54999,
     currency: "$",
-    tags: ["Digital Twin", "Simulation", "Predictive Modeling", "Autonomous Optimization", "Real-time Monitoring"],
+    tags["Digital Twin", "Simulation", "Predictive Modeling", "Autonomous Optimization", "Real-time Monitoring"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/digital-twin-simulation.jpg"],
+    images["https://ziontechgroup.com/images/digital-twin-simulation.jpg"],
     createdAt: "2024-12-14T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 134,
@@ -443,10 +443,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$45,000-100,000",
-    competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Digital Twin"],
+    competitors["Siemens Digital Twin", "GE Digital Twin", "Microsoft Digital Twin"],
     roi: "900% within 18 months",
     setupTime: "12-16 weeks",
-    integrations: ["IoT Sensors", "3D Modeling Tools", "Simulation Engines", "Analytics Platforms", "Visualization Tools"]
+    integrations["IoT Sensors", "3D Modeling Tools", "Simulation Engines", "Analytics Platforms", "Visualization Tools"]
   },
 
   // Sustainable Technology Solutions Platform
@@ -458,9 +458,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Solutions Platform",
     price: 19999,
     currency: "$",
-    tags: ["Sustainable Tech", "Energy Optimization", "Waste Reduction", "Carbon Tracking", "Environmental Impact"],
+    tags["Sustainable Tech", "Energy Optimization", "Waste Reduction", "Carbon Tracking", "Environmental Impact"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/sustainable-tech-solutions.jpg"],
+    images["https://ziontechgroup.com/images/sustainable-tech-solutions.jpg"],
     createdAt: "2024-12-15T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 267,
@@ -475,10 +475,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$15,000-40,000",
-    competitors: ["Carbon Trust", "Sustainalytics", "MSCI ESG"],
+    competitors["Carbon Trust", "Sustainalytics", "MSCI ESG"],
     roi: "400% within 10 months",
     setupTime: "4-6 weeks",
-    integrations: ["Energy Management Systems", "Waste Tracking", "Carbon Calculators", "Reporting Tools", "Analytics Platforms"]
+    integrations["Energy Management Systems", "Waste Tracking", "Carbon Calculators", "Reporting Tools", "Analytics Platforms"]
   },
 
   // IT Infrastructure Modernization Platform
@@ -490,9 +490,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Modernization Platform",
     price: 39999,
     currency: "$",
-    tags: ["IT Infrastructure", "Modernization", "Migration Planning", "Performance Optimization", "Automated Management"],
+    tags["IT Infrastructure", "Modernization", "Migration Planning", "Performance Optimization", "Automated Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/it-infrastructure-modernization.jpg"],
+    images["https://ziontechgroup.com/images/it-infrastructure-modernization.jpg"],
     createdAt: "2024-12-16T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 189,
@@ -507,10 +507,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$30,000-70,000",
-    competitors: ["VMware", "Red Hat", "Microsoft"],
+    competitors["VMware", "Red Hat", "Microsoft"],
     roi: "600% within 15 months",
     setupTime: "8-12 weeks",
-    integrations: ["Virtualization Platforms", "Cloud Services", "Monitoring Tools", "Automation Tools", "Security Systems"]
+    integrations["Virtualization Platforms", "Cloud Services", "Monitoring Tools", "Automation Tools", "Security Systems"]
   },
 
   // Emerging Technology Innovation Hub
@@ -522,9 +522,9 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     subcategory: "Innovation Hub",
     price: 24999,
     currency: "$",
-    tags: ["Emerging Tech", "Innovation Hub", "Technology Assessment", "Implementation Planning", "Risk Management"],
+    tags["Emerging Tech", "Innovation Hub", "Technology Assessment", "Implementation Planning", "Risk Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/emerging-tech-innovation-hub.jpg"],
+    images["https://ziontechgroup.com/images/emerging-tech-innovation-hub.jpg"],
     createdAt: "2024-12-17T10:00:00.000Z",
     rating: 4.7,
     reviewCount: 156,
@@ -539,10 +539,10 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$20,000-50,000",
-    competitors: ["Gartner", "Forrester", "IDC"],
+    competitors["Gartner", "Forrester", "IDC"],
     roi: "500% within 12 months",
     setupTime: "6-8 weeks",
-    integrations: ["Research Databases", "Technology Platforms", "Innovation Tools", "Collaboration Platforms", "Analytics Tools"]
+    integrations["Research Databases", "Technology Platforms", "Innovation Tools", "Collaboration Platforms", "Analytics Tools"]
   }
 ];
 
@@ -572,18 +572,18 @@ export const REVOLUTIONARY_SERVICE_STATISTICS = {
   totalServices: REVOLUTIONARY_SERVICES_2030.length,
   totalCategories: REVOLUTIONARY_SERVICE_CATEGORIES.length,
   averagePrice: Math.round(
-    REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.price, 0) / 
+    REVOLUTIONARY_SERVICES_2030.reduce((sum, service)  => sum + service.price, 0) / 
     REVOLUTIONARY_SERVICES_2030.length
   ),
   averageRating: Math.round(
-    (REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / 
+    (REVOLUTIONARY_SERVICES_2030.reduce((sum, service)  => sum + service.rating, 0) / 
     REVOLUTIONARY_SERVICES_2030.length) * 10
   ) / 10,
-  featuredServices: REVOLUTIONARY_SERVICES_2030.filter(service => service.featured).length,
-  aiServices: REVOLUTIONARY_SERVICES_2030.filter(service => 
+  featuredServices: REVOLUTIONARY_SERVICES_2030.filter(service  => service.featured).length,
+  aiServices: REVOLUTIONARY_SERVICES_2030.filter(service  => 
     service.category.includes('AI') || service.aiScore > 90
   ).length,
-  emergingTechServices: REVOLUTIONARY_SERVICES_2030.filter(service => 
+  emergingTechServices: REVOLUTIONARY_SERVICES_2030.filter(service  => 
     service.category === 'Emerging Technology'
   ).length
 };
@@ -596,17 +596,13 @@ export const HIGH_ROI_REVOLUTIONARY_SERVICES = REVOLUTIONARY_SERVICES_2030.filte
   const roi = service.roi;
   if (typeof roi === 'string') {
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-    return roiNumber > 500;
-  }
-  return false;
-});
+    return roiNumber > 500}
+  return false});
 
 // Quick Setup Revolutionary Services (< 8 weeks)
 export const QUICK_SETUP_REVOLUTIONARY_SERVICES = REVOLUTIONARY_SERVICES_2030.filter(service => {
   const setupTime = service.setupTime;
   if (typeof setupTime === 'string') {
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
-    return weeks < 8;
-  }
-  return false;
-});
+    return weeks < 8}
+  return false});

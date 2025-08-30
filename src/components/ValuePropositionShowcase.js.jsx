@@ -78,24 +78,24 @@ const competitiveAdvantages = [
 const marketComparison = [
   {
     category: "AI Business Intelligence",
-    competitors: ["Tableau", "Power BI", "Looker"],
-    competitorPricing: ["$70/user/month", "$9.99/user/month", "$30/user/month"],
+    competitors["Tableau", "Power BI", "Looker"],
+    competitorPricing["$70/user/month", "$9.99/user/month", "$30/user/month"],
     ourPricing: "$299/month",
     savings: "Up to 80%",
     advantage: "AI-powered insights, natural language queries, predictive analytics"
   },
   {
     category: "Customer Success Platform",
-    competitors: ["Gainsight", "Totango", "ChurnZero"],
-    competitorPricing: ["$500/user/month", "$500/user/month", "$500/user/month"],
+    competitors["Gainsight", "Totango", "ChurnZero"],
+    competitorPricing["$500/user/month", "$500/user/month", "$500/user/month"],
     ourPricing: "$349/month",
     savings: "Up to 90%",
     advantage: "AI-powered predictions, affordable pricing, easy setup"
   },
   {
     category: "Zero-Trust Security",
-    competitors: ["Palo Alto Networks", "CrowdStrike", "Zscaler"],
-    competitorPricing: ["$50,000/year", "$100,000/year", "$50,000/year"],
+    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],
+    competitorPricing["$50,000/year", "$100,000/year", "$50,000/year"],
     ourPricing: "$599/month",
     savings: "Up to 85%",
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
@@ -104,7 +104,7 @@ const marketComparison = [
 
 const successStories = [
   {
-    company: "TechCorp Solutions",
+    comp: "TechCorp Solutions",
     industry: "SaaS",
     challenge: "Manual customer onboarding taking 3+ weeks",
     solution: "AI Customer Success Hub",
@@ -112,7 +112,7 @@ const successStories = [
     roi: "280% in 8 months"
   },
   {
-    company: "Global Manufacturing Inc",
+    comp: "Global Manufacturing Inc",
     industry: "Manufacturing",
     challenge: "Inefficient supply chain causing 15% cost overruns",
     solution: "AI Supply Chain Optimizer",
@@ -120,7 +120,7 @@ const successStories = [
     roi: "320% in 12 months"
   },
   {
-    company: "FinTech Innovations",
+    comp: "FinTech Innovations",
     industry: "Financial Services",
     challenge: "Manual financial reporting taking 40+ hours weekly",
     solution: "AI Financial Analyst Pro",
@@ -315,7 +315,7 @@ export function ValuePropositionShowcase() {
                 whileHover={{ y: -5 }}
               >
                 <div className="mb-4">
-                  <h4 className="text-lg font-bold text-white mb-1">{story.company}</h4>
+                  <h4 className="text-lg font-bold text-white mb-1">{story.comp}</h4>
                   <span className="text-zion-cyan text-sm">{story.industry}</span>
                 </div>
                 
@@ -378,5 +378,4 @@ export function ValuePropositionShowcase() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

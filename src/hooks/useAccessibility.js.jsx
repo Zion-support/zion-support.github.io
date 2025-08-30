@@ -20,69 +20,55 @@ export const useAccessibility = () => {
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedPreferences) {
             try {
-                setPreferences(JSON.parse(savedPreferences));
-            }
+                setPreferences(JSON.parse(savedPreferences))}
             catch (error) {
-                console.warn('Failed to parse accessibility preferences:', error);
-            }
+                console.warn('Failed to parse accessibility preferences:', error)}
         }
         if (savedSettings) {
             try {
-                setSettings(JSON.parse(savedSettings));
-            }
+                setSettings(JSON.parse(savedSettings))}
             catch (error) {
-                console.warn('Failed to parse accessibility settings:', error);
-            }
+                console.warn('Failed to parse accessibility settings:', error)}
         }
     }, []);
     // Save preferences to localStorage
     const savePreferences = useCallback((newPreferences) => {
         const updatedPreferences = { ...preferences, ...newPreferences };
         setPreferences(updatedPreferences);
-        localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences));
-    }, [preferences]);
+        localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences))}, [preferences]);
     const saveSettings = useCallback((newSettings) => {
         const updatedSettings = { ...settings, ...newSettings };
         setSettings(updatedSettings);
-        localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings));
-    }, [settings]);
+        localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings))}, [settings]);
     // Apply accessibility features
     useEffect(() => {
         const root = document.documentElement;
         // Apply high contrast
         if (preferences.highContrast) {
             root.classList.add('high-contrast');
-            root.style.setProperty('--contrast-multiplier', '1.5');
-        }
+            root.style.setProperty('--contrast-multiplier', '1.5')}
         else {
             root.classList.remove('high-contrast');
-            root.style.removeProperty('--contrast-multiplier');
-        }
+            root.style.removeProperty('--contrast-multiplier')}
         // Apply large text
         if (preferences.largeText) {
             root.classList.add('large-text');
-            root.style.setProperty('--font-size-multiplier', '1.2');
-        }
+            root.style.setProperty('--font-size-multiplier', '1.2')}
         else {
             root.classList.remove('large-text');
-            root.style.removeProperty('--font-size-multiplier');
-        }
+            root.style.removeProperty('--font-size-multiplier')}
         // Apply reduced motion
         if (preferences.reducedMotion) {
             root.classList.add('reduced-motion');
-            root.style.setProperty('--motion-reduction', '0.5');
-        }
+            root.style.setProperty('--motion-reduction', '0.5')}
         else {
             root.classList.remove('reduced-motion');
-            root.style.removeProperty('--motion-reduction');
-        }
+            root.style.removeProperty('--motion-reduction')}
         // Apply focus indicator
         if (preferences.focusIndicator) {
-            root.classList.add('focus-visible');
-        }
+            root.classList.add('focus-visible')}
         else {
-            root.classList.remove('focus-visible');
-        }
+            root.classList.remove('focus-visible')}
     }, [preferences]);
     // Keyboard navigation support
     useEffect(() => {
@@ -94,23 +80,19 @@ export const useAccessibility = () => {
                 event.preventDefault();
                 const mainContent = document.querySelector('main');
                 if (mainContent) {
-                    mainContent.focus();
-                }
+                    mainContent.focus()}
             }
             // Toggle accessibility menu
             if (event.key === 'Escape') {
-                // Close any open modals or menus
+                // Close  open modals or menus
                 const modals = document.querySelectorAll('[role="dialog"]');
                 modals.forEach(modal => {
                     if (modal instanceof HTMLElement) {
-                        modal.style.display = 'none';
-                    }
-                });
-            }
+                        modal.style.display = 'none'}
+                })}
         };
         document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [preferences.keyboardNavigation]);
+        return () => document.removeEventListener('keydown', handleKeyDown)}, [preferences.keyboardNavigation]);
     // Screen reader announcements
     const announceToScreenReader = useCallback((message) => {
         if (preferences.screenReader) {
@@ -121,22 +103,18 @@ export const useAccessibility = () => {
             announcement.textContent = message;
             document.body.appendChild(announcement);
             setTimeout(() => {
-                document.body.removeChild(announcement);
-            }, 1000);
-        }
+                document.body.removeChild(announcement)}, 1000)}
     }, [preferences.screenReader]);
     // Focus management
     const focusFirstInteractive = useCallback((container) => {
         const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length > 0) {
-            focusableElements[0].focus();
-        }
+            focusableElements[0].focus()}
     }, []);
     const trapFocus = useCallback((container) => {
         const focusableElements = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => {
             const element = el;
-            return !element.disabled;
-        });
+            return !element.disabled});
         if (focusableElements.length === 0)
             return;
         const firstElement = focusableElements[0];
@@ -146,20 +124,17 @@ export const useAccessibility = () => {
                 if (event.shiftKey) {
                     if (document.activeElement === firstElement) {
                         event.preventDefault();
-                        lastElement.focus();
-                    }
+                        lastElement.focus()}
                 }
                 else {
                     if (document.activeElement === lastElement) {
                         event.preventDefault();
-                        firstElement.focus();
-                    }
+                        firstElement.focus()}
                 }
             }
         };
         container.addEventListener('keydown', handleTabKey);
-        return () => container.removeEventListener('keydown', handleTabKey);
-    }, []);
+        return () => container.removeEventListener('keydown', handleTabKey)}, []);
     return {
         preferences,
         settings,
@@ -168,5 +143,4 @@ export const useAccessibility = () => {
         announceToScreenReader,
         focusFirstInteractive,
         trapFocus
-    };
-};
+    }};

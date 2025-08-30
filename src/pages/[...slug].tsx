@@ -1,10 +1,10 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react.ts';
+import { useParams, Link  } from 'react-router-dom.ts';
+import { Helmet  } from 'react-helmet-async.ts';
 
-export default function GenericPage() {
+export default function GenericPage(...args[]):  {
   const { '*': slug } = useParams();
-  const slugParts = slug ? slug.split('/').filter(Boolean) : [];
+  const slugParts = slug ? slug.split('/').filter(Boolean) [];
   const path = '/' + slugParts.join('/');
   const title = slugParts.length === 0 ? 'Page' : slugParts.map(s => s.replace(/-/g, ' ')).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' / ');
   const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`;
@@ -33,5 +33,4 @@ export default function GenericPage() {
         <p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>
       </section>
     </main>
-  );
-}
+  )}

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Newspaper, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Newspaper, 
   Download, 
   Mail, 
   Phone, 
@@ -17,9 +16,9 @@ import {
   TrendingUp,
   Globe,
   Star
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Press() {
+export default function Press(...args[]):  {
   const pressReleases = [
     {
       title: 'Zion Tech Group Launches Revolutionary AI-Powered Compliance Platform',
@@ -32,15 +31,15 @@ export default function Press() {
       title: 'Zion Tech Group Secures $25M Series A Funding Round',
       date: '2023-12-10',
       summary: 'Strategic investment to accelerate AI innovation and expand global market presence.',
-      category: 'Company News',
+      category: 'Comp News',
       readMore: '/press/series-a-funding-announcement'
     },
     {
-      title: 'Zion Tech Group Named Top AI Company by TechCrunch',
+      title: 'Zion Tech Group Named Top AI Comp by TechCrunch',
       date: '2023-11-28',
       summary: 'Recognition for breakthrough innovations in AI-powered business solutions.',
       category: 'Awards',
-      readMore: '/press/techcrunch-top-ai-company'
+      readMore: '/press/techcrunch-top-ai-comp'
     },
     {
       title: 'Partnership with Microsoft Azure for Enterprise AI Solutions',
@@ -53,7 +52,7 @@ export default function Press() {
       title: 'Zion Tech Group Expands to European Market',
       date: '2023-09-20',
       summary: 'New office in London to serve growing European demand for AI solutions.',
-      category: 'Company News',
+      category: 'Comp News',
       readMore: '/press/european-expansion'
     },
     {
@@ -67,44 +66,44 @@ export default function Press() {
 
   const mediaResources = [
     {
-      title: 'Company Logo',
+      title: 'Comp Logo',
       description: 'High-resolution Zion Tech Group logo in various formats',
-      formats: ['PNG', 'SVG', 'EPS'],
+      formats['PNG', 'SVG', 'EPS'],
       download: '/media/zion-tech-group-logo.zip'
     },
     {
       title: 'Executive Headshots',
       description: 'Professional photos of leadership team members',
-      formats: ['JPG', 'PNG'],
+      formats['JPG', 'PNG'],
       download: '/media/executive-headshots.zip'
     },
     {
       title: 'Product Screenshots',
       description: 'High-quality screenshots of our AI platforms',
-      formats: ['PNG', 'JPG'],
+      formats['PNG', 'JPG'],
       download: '/media/product-screenshots.zip'
     },
     {
-      title: 'Company Fact Sheet',
+      title: 'Comp Fact Sheet',
       description: 'One-page overview of Zion Tech Group',
-      formats: ['PDF'],
+      formats['PDF'],
       download: '/media/company-fact-sheet.pdf'
     },
     {
       title: 'Brand Guidelines',
       description: 'Complete brand identity and usage guidelines',
-      formats: ['PDF'],
+      formats['PDF'],
       download: '/media/brand-guidelines.pdf'
     },
     {
       title: 'Product Brochures',
       description: 'Detailed product information and specifications',
-      formats: ['PDF'],
+      formats['PDF'],
       download: '/media/product-brochures.zip'
     }
   ];
 
-  const companyStats = [
+  const compStats = [
     { label: 'Years in Business', value: '8+', icon: Calendar },
     { label: 'Team Members', value: '150+', icon: Users },
     { label: 'Countries Served', value: '25+', icon: Globe },
@@ -129,7 +128,7 @@ export default function Press() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Press & Media - Zion Tech Group"
-        description="Press releases, media resources, and company information for journalists and media professionals."
+        description="Press releases, media resources, and comp information for journalists and media professionals."
       />
       
       {/* Hero Section */}
@@ -162,14 +161,14 @@ export default function Press() {
             We're transforming businesses through innovative AI and technology solutions.
           </motion.p>
           
-          {/* Company Stats */}
+          {/* Comp Stats */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
           >
-            {companyStats.map((stat, index) => (
+            {compStats.map((stat, index)  => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-white" />
@@ -194,8 +193,8 @@ export default function Press() {
             Latest Press Releases
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {pressReleases.map((release, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {pressReleases.map((release, index)  => (
               <motion.article
                 key={release.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -257,8 +256,8 @@ export default function Press() {
             Media Resources
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mediaResources.map((resource, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {mediaResources.map((resource, index)  => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -409,7 +408,7 @@ export default function Press() {
             <h2 className="text-3xl font-bold mb-6 text-white">Complete Press Kit</h2>
             <p className="text-slate-300 mb-8">
               Download our comprehensive press kit containing all media resources, 
-              company information, and press materials in one convenient package.
+              comp information, and press materials in one convenient package.
             </p>
             <a 
               href="/media/zion-tech-group-press-kit.zip"
@@ -422,5 +421,4 @@ export default function Press() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

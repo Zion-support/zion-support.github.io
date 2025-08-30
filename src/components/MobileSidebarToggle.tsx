@@ -1,30 +1,27 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
 
-export const MobileSidebarToggle: React.FC = () => {
+export const MobileSidebarToggle: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: string)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
-    } else {
-      newExpanded.add(section);
-    }
-    setExpandedSections(newExpanded);
-  };
+      newExpanded.delete(section)} else {
+      newExpanded.add(section)}
+    setExpandedSections(newExpanded)};
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string)  => location.pathname === path;
 
   const navigationSections = [
     {
       title: "Main",
       icon: Home,
-      items: [
+      items[
         { name: "Home", href: "/", icon: Home },
         { name: "About Us", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
@@ -35,7 +32,7 @@ export const MobileSidebarToggle: React.FC = () => {
     {
       title: "Services",
       icon: Zap,
-      items: [
+      items[
         { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },
         { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },
         { name: "IT Infrastructure", href: "/it-services", icon: Server },
@@ -45,7 +42,7 @@ export const MobileSidebarToggle: React.FC = () => {
     {
       title: "Solutions",
       icon: Target,
-      items: [
+      items[
         { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Rocket },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Cloud },
         { name: "Edge Computing", href: "/emerging-tech/edge", icon: Server },
@@ -55,7 +52,7 @@ export const MobileSidebarToggle: React.FC = () => {
     {
       title: "Resources",
       icon: BookOpen,
-      items: [
+      items[
         { name: "Documentation", href: "/docs", icon: FileText },
         { name: "API Reference", href: "/api", icon: FileText },
         { name: "Developer Portal", href: "/developer", icon: Server },
@@ -236,5 +233,4 @@ export const MobileSidebarToggle: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};

@@ -14,16 +14,13 @@ export function MobileNavigation() {
         setIsOpen(!isOpen);
         // Prevent body scroll when menu is open
         if (!isOpen) {
-            document.body.style.overflow = 'hidden';
-        }
+            document.body.style.overflow = 'hidden'}
         else {
-            document.body.style.overflow = 'unset';
-        }
+            document.body.style.overflow = 'unset'}
     };
     const closeMenu = () => {
         setIsOpen(false);
-        document.body.style.overflow = 'unset';
-    };
+        document.body.style.overflow = 'unset'};
     return (<div className="lg:hidden">
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-blue-dark" aria-label="Toggle mobile menu" aria-expanded={isOpen}>
@@ -87,5 +84,4 @@ export function MobileNavigation() {
             </div>
           </div>
         </div>)}
-    </div>);
-}
+    </div>)}

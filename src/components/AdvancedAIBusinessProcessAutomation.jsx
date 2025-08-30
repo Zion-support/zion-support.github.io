@@ -9,7 +9,7 @@ const mockBusinessProcesses = [
         status: 'active',
         priority: 'high',
         automationLevel: 'fully-automated',
-        aiInsights: [
+        aiInsights[
             'Pattern detected: 15% of invoices require manual review',
             'Optimization opportunity: Reduce approval time by 40%',
             'Cost savings potential: $12,000/month through automation'
@@ -17,22 +17,22 @@ const mockBusinessProcesses = [
         efficiency: 92,
         costSavings: 12000,
         timeReduction: 65,
-        stakeholders: ['Finance Team', 'AP Department', 'Vendors'],
+        stakeholders['Finance Team', 'AP Department', 'Vendors'],
         lastExecuted: new Date('2024-01-15T10:30:00Z'),
         nextExecution: new Date('2024-01-16T09:00:00Z'),
-        executionHistory: [
+        executionHistory[
             {
                 id: 'exec-001',
                 timestamp: new Date('2024-01-15T10:30:00Z'),
                 status: 'success',
                 duration: 45,
-                aiDecisions: ['Auto-approved 85% of invoices', 'Flagged 3 suspicious entries'],
+                aiDecisions['Auto-approved 85% of invoices', 'Flagged 3 suspicious entries'],
                 manualInterventions: 2,
                 cost: 150,
                 efficiency: 94
             }
         ],
-        rules: [
+        rules[
             {
                 id: 'rule-001',
                 name: 'Auto-approve under $1000',
@@ -45,7 +45,7 @@ const mockBusinessProcesses = [
                 triggerCount: 156
             }
         ],
-        dependencies: ['vendor_verification', 'budget_approval']
+        dependencies['vendor_verification', 'budget_approval']
     },
     {
         id: 'bp-002',
@@ -55,7 +55,7 @@ const mockBusinessProcesses = [
         status: 'active',
         priority: 'medium',
         automationLevel: 'semi-automated',
-        aiInsights: [
+        aiInsights[
             'Bottleneck identified: IT setup takes 3 days on average',
             'Recommendation: Implement parallel processing for faster onboarding',
             'Success rate: 98% completion within SLA'
@@ -63,22 +63,22 @@ const mockBusinessProcesses = [
         efficiency: 87,
         costSavings: 8000,
         timeReduction: 55,
-        stakeholders: ['HR Team', 'IT Department', 'New Employees'],
+        stakeholders['HR Team', 'IT Department', 'New Employees'],
         lastExecuted: new Date('2024-01-14T14:15:00Z'),
         nextExecution: new Date('2024-01-17T09:00:00Z'),
-        executionHistory: [
+        executionHistory[
             {
                 id: 'exec-002',
                 timestamp: new Date('2024-01-14T14:15:00Z'),
                 status: 'success',
                 duration: 120,
-                aiDecisions: ['Optimized task sequence', 'Identified resource conflicts'],
+                aiDecisions['Optimized task sequence', 'Identified resource conflicts'],
                 manualInterventions: 1,
                 cost: 200,
                 efficiency: 89
             }
         ],
-        rules: [
+        rules[
             {
                 id: 'rule-002',
                 name: 'Auto-assign IT tasks',
@@ -91,7 +91,7 @@ const mockBusinessProcesses = [
                 triggerCount: 23
             }
         ],
-        dependencies: ['background_check', 'document_verification']
+        dependencies['background_check', 'document_verification']
     },
     {
         id: 'bp-003',
@@ -101,7 +101,7 @@ const mockBusinessProcesses = [
         status: 'active',
         priority: 'critical',
         automationLevel: 'fully-automated',
-        aiInsights: [
+        aiInsights[
             'AI accuracy: 94% correct ticket classification',
             'Response time improved by 60%',
             'Customer satisfaction increased by 25%'
@@ -109,22 +109,22 @@ const mockBusinessProcesses = [
         efficiency: 96,
         costSavings: 15000,
         timeReduction: 70,
-        stakeholders: ['Support Team', 'Customers', 'Product Team'],
+        stakeholders['Support Team', 'Customers', 'Product Team'],
         lastExecuted: new Date('2024-01-15T16:45:00Z'),
         nextExecution: new Date('2024-01-15T17:00:00Z'),
-        executionHistory: [
+        executionHistory[
             {
                 id: 'exec-003',
                 timestamp: new Date('2024-01-15T16:45:00Z'),
                 status: 'success',
                 duration: 15,
-                aiDecisions: ['Classified 47 tickets by priority', 'Assigned to optimal agents'],
+                aiDecisions['Classified 47 tickets by priority', 'Assigned to optimal agents'],
                 manualInterventions: 0,
                 cost: 50,
                 efficiency: 98
             }
         ],
-        rules: [
+        rules[
             {
                 id: 'rule-003',
                 name: 'Priority-based routing',
@@ -137,7 +137,7 @@ const mockBusinessProcesses = [
                 triggerCount: 8
             }
         ],
-        dependencies: ['ticket_classification', 'agent_availability']
+        dependencies['ticket_classification', 'agent_availability']
     }
 ];
 export function AdvancedAIBusinessProcessAutomation() {
@@ -161,8 +161,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20';
             case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
             case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-        }
+            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -170,16 +169,14 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
-        }
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
     };
     const getAutomationLevelColor = (level) => {
         switch (level) {
             case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
-        }
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -189,8 +186,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'sales': return <TrendingUp className="w-4 h-4"/>;
             case 'marketing': return <Target className="w-4 h-4"/>;
             case 'it': return <Server className="w-4 h-4"/>;
-            default: return <FileText className="w-4 h-4"/>;
-        }
+            default: return <FileText className="w-4 h-4"/>}
     };
     const formatCurrency = (amount) => {
         return new Intl.NumberFormat('en-US', {
@@ -198,11 +194,9 @@ export function AdvancedAIBusinessProcessAutomation() {
             currency: 'USD',
             minimumFractionDigits: 0,
             maximumFractionDigits: 0
-        }).format(amount);
-    };
+        }).format(amount)};
     const formatPercentage = (value) => {
-        return `${value}%`;
-    };
+        return `${value}%`};
     const executeProcess = async (processId) => {
         setIsExecuting(true);
         // Simulate process execution
@@ -211,15 +205,13 @@ export function AdvancedAIBusinessProcessAutomation() {
         // Update process status
         setBusinessProcesses(prev => prev.map(p => p.id === processId
             ? { ...p, lastExecuted: new Date(), status: 'active' }
-            : p));
-    };
+            : p))};
     const filteredProcesses = businessProcesses.filter(process => {
         const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
         const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesStatus && matchesSearch;
-    });
+        return matchesCategory && matchesStatus && matchesSearch});
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-blue/50 transition-all duration-300 z-50 group">
         <div className="flex items-center gap-3">
@@ -229,8 +221,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         <div className="absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold">
           NEW
         </div>
-      </button>);
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center gap-3 p-3">
@@ -240,8 +231,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">
@@ -708,5 +698,4 @@ export function AdvancedAIBusinessProcessAutomation() {
             </div>
           </div>)}
       </div>
-    </div>);
-}
+    </div>)}

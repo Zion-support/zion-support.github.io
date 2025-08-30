@@ -17,16 +17,15 @@ const ComprehensiveServicesLanding2025 = () => {
         if (industry === 'all')
             return innovativeMicroSaasServices2025;
         const industryMap = {
-            'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
-            'healthcare': ['Healthcare & AI'],
-            'manufacturing': ['IoT & Edge Computing', 'Blockchain & Supply Chain'],
-            'energy': ['Energy & Sustainability'],
-            'logistics': ['Logistics & Transportation'],
-            'legal': ['Legal Tech & AI'],
-            'marketing': ['Marketing & AI']
+            'finance'['FinTech & AI', 'Cybersecurity & Quantum Computing'],
+            'healthcare'['Healthcare & AI'],
+            'manufacturing'['IoT & Edge Computing', 'Blockchain & Supply Chain'],
+            'energy'['Energy & Sustainability'],
+            'logistics'['Logistics & Transportation'],
+            'legal'['Legal Tech & AI'],
+            'marketing'['Marketing & AI']
         };
-        return innovativeMicroSaasServices2025.filter(service => industryMap[industry]?.includes(service.category));
-    };
+        return innovativeMicroSaasServices2025.filter(service => industryMap[industry]?.includes(service.category))};
     const filteredServices = getServicesByIndustry(selectedIndustry);
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -419,6 +418,5 @@ const ComprehensiveServicesLanding2025 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ComprehensiveServicesLanding2025;

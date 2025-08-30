@@ -584,7 +584,7 @@ const fiveGSolutions = [
     title: "5G Network Infrastructure",
     description: "Comprehensive 5G network design, deployment, and management solutions.",
     icon: Network,
-    features: [
+    features[
       "5G network design",
       "Core network deployment",
       "RAN optimization",
@@ -593,14 +593,14 @@ const fiveGSolutions = [
     price: "From $500,000",
     timeline: "32-48 weeks",
     category: "Network Infrastructure",
-    technologies: ["5G Core", "RAN", "Network Slicing", "Edge Computing"]
+    technologies["5G Core", "RAN", "Network Slicing", "Edge Computing"]
   },
   {
     id: 2,
     title: "5G Enterprise Applications",
     description: "Custom 5G applications for enterprise use cases and requirements.",
     icon: Code,
-    features: [
+    features[
       "Custom applications",
       "Enterprise integration",
       "API development",
@@ -609,14 +609,14 @@ const fiveGSolutions = [
     price: "From $200,000",
     timeline: "20-32 weeks",
     category: "Applications",
-    technologies: ["5G APIs", "Enterprise Apps", "Integration", "Optimization"]
+    technologies["5G APIs", "Enterprise Apps", "Integration", "Optimization"]
   },
   {
     id: 3,
     title: "5G IoT Solutions",
     description: "5G-powered IoT solutions for enterprise connectivity and management.",
     icon: Wifi,
-    features: [
+    features[
       "IoT connectivity",
       "Device management",
       "Data analytics",
@@ -625,14 +625,14 @@ const fiveGSolutions = [
     price: "From $150,000",
     timeline: "18-30 weeks",
     category: "IoT",
-    technologies: ["5G IoT", "Device Management", "Analytics", "Security"]
+    technologies["5G IoT", "Device Management", "Analytics", "Security"]
   },
   {
     id: 4,
     title: "5G Edge Computing",
     description: "Edge computing solutions leveraging 5G network capabilities.",
     icon: Server,
-    features: [
+    features[
       "Edge deployment",
       "Low latency",
       "High bandwidth",
@@ -641,14 +641,14 @@ const fiveGSolutions = [
     price: "From $300,000",
     timeline: "24-36 weeks",
     category: "Edge Computing",
-    technologies: ["Edge Computing", "5G Networks", "Low Latency", "High Bandwidth"]
+    technologies["Edge Computing", "5G Networks", "Low Latency", "High Bandwidth"]
   },
   {
     id: 5,
     title: "5G Security Solutions",
     description: "Comprehensive security solutions for 5G enterprise networks.",
     icon: Shield,
-    features: [
+    features[
       "Network security",
       "Threat protection",
       "Compliance",
@@ -657,14 +657,14 @@ const fiveGSolutions = [
     price: "From $250,000",
     timeline: "22-34 weeks",
     category: "Security",
-    technologies: ["5G Security", "Threat Protection", "Compliance", "Monitoring"]
+    technologies["5G Security", "Threat Protection", "Compliance", "Monitoring"]
   },
   {
     id: 6,
     title: "5G Analytics Platform",
     description: "Advanced analytics platform for 5G network and application insights.",
     icon: BarChart3,
-    features: [
+    features[
       "Network analytics",
       "Performance insights",
       "Predictive analytics",
@@ -673,7 +673,7 @@ const fiveGSolutions = [
     price: "From $180,000",
     timeline: "20-32 weeks",
     category: "Analytics",
-    technologies: ["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
+    technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
   }
 ];
 
@@ -711,7 +711,7 @@ const fiveGTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed 5G network infrastructure for smart factory operations",
     solution: "Built comprehensive 5G network with edge computing and IoT solutions",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Technology Ltd",
+    comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Required 5G solutions for remote patient monitoring and telemedicine",
     solution: "Implemented 5G network with custom healthcare applications",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Smart City Solutions",
+    comp: "Smart City Solutions",
     industry: "Government",
     challenge: "Needed 5G infrastructure for smart city applications",
     solution: "Built 5G network with IoT and analytics platform",
@@ -774,25 +774,25 @@ const fiveGBenefits = [
     title: "Ultra-Fast Connectivity",
     description: "5G provides unprecedented speed and bandwidth for enterprise operations",
     icon: Zap,
-    examples: ["High speed", "Low latency", "High bandwidth", "Better performance"]
+    examples["High speed", "Low latency", "High bandwidth", "Better performance"]
   },
   {
     title: "Network Slicing",
     description: "Custom network slices for different enterprise applications and requirements",
     icon: Layers,
-    examples: ["Custom networks", "Application isolation", "Better security", "Optimized performance"]
+    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"]
   },
   {
     title: "Edge Computing",
     description: "Local processing and reduced latency for enterprise applications",
     icon: Server,
-    examples: ["Local processing", "Reduced latency", "Better performance", "Cost optimization"]
+    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"]
   },
   {
     title: "IoT Integration",
     description: "Seamless integration of IoT devices and applications",
     icon: Wifi,
-    examples: ["Device connectivity", "Data collection", "Real-time monitoring", "Automation"]
+    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"]
   }
 ];
 
@@ -1115,7 +1115,7 @@ export default function FiveGEnterpriseSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -1180,5 +1180,4 @@ export default function FiveGEnterpriseSolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

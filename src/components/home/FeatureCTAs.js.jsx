@@ -118,5 +118,4 @@ export function FeatureCTAs() {
             </Card>))}
         </div>
       </div>
-    </section>);
-}
+    </section>)}

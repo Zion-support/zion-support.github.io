@@ -1,13 +1,13 @@
 export const cleanupAuthState = () => {
-  // Clean up any stored authentication state
+  // Clean up  stored authentication state
   try {
     if (typeof window !== 'undefined') {
-      // Clear any stored tokens or user data
+      // Clear  stored tokens or user data
       localStorage.removeItem('auth');
       sessionStorage.removeItem('auth');
     }
   } catch (error) {
-    console.error('Error cleaning up auth state:', error);
+    // // // // console.error('Error cleaning up auth state:', error);
   }
 };
 
@@ -19,7 +19,7 @@ export const isAuthenticated = (): boolean => {
     }
     return false;
   } catch (error) {
-    console.error('Error checking authentication status:', error);
+    // // // // console.error('Error checking authentication status:', error);
     return false;
   }
 };
@@ -35,7 +35,7 @@ export const getAuthToken = (): string | null => {
     }
     return null;
   } catch (error) {
-    console.error('Error getting auth token:', error);
+    // // // // console.error('Error getting auth token:', error);
     return null;
   }
 };
@@ -51,7 +51,7 @@ export const getUserData = (): any => {
     }
     return null;
   } catch (error) {
-    console.error('Error getting user data:', error);
+    // // // // console.error('Error getting user data:', error);
     return null;
   }
 };

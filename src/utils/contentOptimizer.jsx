@@ -248,13 +248,13 @@ export class ContentOptimizer {
       `,
             about: `
         <h1>About Zion Tech Group</h1>
-        <p>Comprehensive overview of our company, mission, and values.</p>
+        <p>Comprehensive overview of our comp, mission, and values.</p>
         
         <h2>Our Mission</h2>
         <p>Clear statement of our purpose and goals.</p>
         
         <h2>Our Story</h2>
-        <p>Company history and journey to success.</p>
+        <p>Comp history and journey to success.</p>
         
         <h2>Our Values</h2>
         <ul>
@@ -320,7 +320,7 @@ export class ContentOptimizer {
     static generateMetaDescription(page, contentType) {
         const baseDescriptions = {
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',
-            about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.',
+            about: 'Learn about our comp, mission, and values. Discover how we deliver innovative technology solutions.',
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',
             blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.'
         };

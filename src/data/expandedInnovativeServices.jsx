@@ -9,7 +9,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 399,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered content generation",
             "Multi-format content creation (blog, social, video)",
             "SEO optimization recommendations",
@@ -21,28 +21,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Plagiarism detection",
             "Content performance prediction"
         ],
-        benefits: [
+        benefits[
             "Reduce content creation time by 80%",
             "Increase engagement rates by 45%",
             "Improve SEO rankings by 60%",
             "Maintain consistent brand voice",
             "Scale content production efficiently"
         ],
-        useCases: [
+        useCases[
             "Digital marketing agencies",
             "E-commerce businesses",
             "Content creators",
             "Social media managers",
             "Brand managers"
         ],
-        targetAudience: [
+        targetAudience[
             "Marketing teams",
             "Content creators",
             "Social media managers",
             "Digital agencies",
             "Business owners"
         ],
-        tags: ["AI", "Content Creation", "Marketing Automation", "SEO", "Social Media"],
+        tags["AI", "Content Creation", "Marketing Automation", "SEO", "Social Media"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -51,11 +51,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"],
-        integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
-        compliance: ["GDPR", "CCPA", "SOC 2"],
+        technology["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"],
+        integrations["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
+        compliance["GDPR", "CCPA", "SOC 2"],
         roi: "400% within 8 months",
-        competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
+        competitors["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
         demoUrl: "https://ziontechgroup.com/demo/ai-content-suite",
         documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"
     },
@@ -69,7 +69,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 599,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Real-time object detection",
             "Facial recognition & analysis",
             "Behavior pattern analysis",
@@ -81,28 +81,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Cloud-based processing",
             "Real-time alerts & notifications"
         ],
-        benefits: [
+        benefits[
             "Reduce manual video review time by 90%",
             "Improve security monitoring efficiency",
             "Extract actionable insights from video data",
             "Automate compliance monitoring",
             "Enhance customer experience analysis"
         ],
-        useCases: [
+        useCases[
             "Retail analytics",
             "Security surveillance",
             "Traffic monitoring",
             "Quality control",
             "Customer behavior analysis"
         ],
-        targetAudience: [
+        targetAudience[
             "Security managers",
             "Retail analysts",
             "Traffic engineers",
             "Quality control managers",
             "Marketing analysts"
         ],
-        tags: ["AI", "Computer Vision", "Video Analytics", "Machine Learning", "Security"],
+        tags["AI", "Computer Vision", "Video Analytics", "Machine Learning", "Security"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -111,11 +111,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["TensorFlow", "OpenCV", "Python", "React", "AWS", "Docker"],
-        integrations: ["CCTV systems", "IP cameras", "Security platforms", "Analytics tools"],
-        compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
+        technology["TensorFlow", "OpenCV", "Python", "React", "AWS", "Docker"],
+        integrations["CCTV systems", "IP cameras", "Security platforms", "Analytics tools"],
+        compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"],
         roi: "350% within 12 months",
-        competitors: ["Vintra", "BriefCam", "Avigilon", "Milestone Systems"]
+        competitors["Vintra", "BriefCam", "Avigilon", "Milestone Systems"]
     },
     // AI-Powered Financial Planning Platform
     {
@@ -127,7 +127,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 299,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered investment recommendations",
             "Portfolio optimization algorithms",
             "Risk assessment & management",
@@ -139,28 +139,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Mobile app & web platform",
             "Integration with financial institutions"
         ],
-        benefits: [
+        benefits[
             "Improve investment returns by 15-25%",
             "Reduce financial planning costs by 60%",
             "Automate portfolio management",
             "Personalized financial advice",
             "Better risk management"
         ],
-        useCases: [
+        useCases[
             "Individual investors",
             "Financial advisors",
             "Wealth management firms",
             "Retirement planning",
             "Tax optimization"
         ],
-        targetAudience: [
+        targetAudience[
             "Individual investors",
             "Financial advisors",
             "Wealth managers",
             "Retirement planners",
             "Tax professionals"
         ],
-        tags: ["AI", "Financial Planning", "Wealth Management", "Investment", "FinTech"],
+        tags["AI", "Financial Planning", "Wealth Management", "Investment", "FinTech"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
@@ -169,11 +169,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        integrations: ["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"],
-        compliance: ["SEC", "FINRA", "SOC 2", "GDPR"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
+        integrations["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"],
+        compliance["SEC", "FINRA", "SOC 2", "GDPR"],
         roi: "500% within 18 months",
-        competitors: ["Betterment", "Wealthfront", "Personal Capital", "M1 Finance"]
+        competitors["Betterment", "Wealthfront", "Personal Capital", "M1 Finance"]
     },
     // AI-Powered Healthcare Diagnostics Platform
     {
@@ -185,7 +185,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 899,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered medical image analysis",
             "Disease detection algorithms",
             "Radiology report generation",
@@ -197,28 +197,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Mobile app for physicians",
             "Analytics dashboard"
         ],
-        benefits: [
+        benefits[
             "Improve diagnostic accuracy by 25%",
             "Reduce diagnosis time by 40%",
             "Lower healthcare costs",
             "Better patient outcomes",
             "Enhanced physician productivity"
         ],
-        useCases: [
+        useCases[
             "Hospitals & clinics",
             "Radiology departments",
             "Medical imaging centers",
             "Telemedicine platforms",
             "Medical research institutions"
         ],
-        targetAudience: [
+        targetAudience[
             "Radiologists",
             "Physicians",
             "Healthcare administrators",
             "Medical imaging technicians",
             "Healthcare IT managers"
         ],
-        tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning"],
+        tags["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$899 - $3,500/month",
@@ -227,11 +227,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["TensorFlow", "PyTorch", "Python", "React", "DICOM", "HL7"],
-        integrations: ["PACS systems", "EHR systems", "Radiology information systems"],
-        compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485"],
+        technology["TensorFlow", "PyTorch", "Python", "React", "DICOM", "HL7"],
+        integrations["PACS systems", "EHR systems", "Radiology information systems"],
+        compliance["HIPAA", "FDA", "SOC 2", "ISO 13485"],
         roi: "400% within 24 months",
-        competitors: ["Aidoc", "Zebra Medical Vision", "Butterfly Network", "Enlitic"]
+        competitors["Aidoc", "Zebra Medical Vision", "Butterfly Network", "Enlitic"]
     },
     // AI-Powered Supply Chain Optimization
     {
@@ -243,7 +243,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 799,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Demand forecasting algorithms",
             "Inventory optimization",
             "Route optimization",
@@ -255,28 +255,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Integration with ERP systems",
             "Predictive maintenance alerts"
         ],
-        benefits: [
+        benefits[
             "Reduce inventory costs by 20-30%",
             "Improve delivery times by 25%",
             "Reduce supply chain disruptions",
             "Optimize resource allocation",
             "Enhance sustainability"
         ],
-        useCases: [
+        useCases[
             "Manufacturing companies",
             "Retail chains",
             "E-commerce businesses",
             "Logistics providers",
             "Distribution centers"
         ],
-        targetAudience: [
+        targetAudience[
             "Supply chain managers",
             "Operations directors",
             "Logistics coordinators",
             "Inventory managers",
             "Procurement specialists"
         ],
-        tags: ["AI", "Supply Chain", "Optimization", "Predictive Analytics", "Logistics"],
+        tags["AI", "Supply Chain", "Optimization", "Predictive Analytics", "Logistics"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
@@ -285,11 +285,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
-        compliance: ["ISO 28000", "SOC 2", "GDPR"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
+        integrations["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
+        compliance["ISO 28000", "SOC 2", "GDPR"],
         roi: "450% within 15 months",
-        competitors: ["Llamasoft", "E2open", "Kinaxis", "Blue Yonder"]
+        competitors["Llamasoft", "E2open", "Kinaxis", "Blue Yonder"]
     },
     // AI-Powered Legal Research & Document Analysis
     {
@@ -301,7 +301,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 499,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered document analysis",
             "Legal research automation",
             "Case outcome prediction",
@@ -313,28 +313,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Integration with legal databases",
             "Compliance monitoring"
         ],
-        benefits: [
+        benefits[
             "Reduce research time by 70%",
             "Improve case preparation efficiency",
             "Enhance document accuracy",
             "Better client service",
             "Cost-effective legal research"
         ],
-        useCases: [
+        useCases[
             "Law firms",
             "Corporate legal departments",
             "Legal research institutions",
             "Compliance officers",
             "Legal consultants"
         ],
-        targetAudience: [
+        targetAudience[
             "Attorneys",
             "Legal researchers",
             "Paralegals",
             "Compliance officers",
             "Legal administrators"
         ],
-        tags: ["AI", "Legal Services", "Document Analysis", "Research", "Compliance"],
+        tags["AI", "Legal Services", "Document Analysis", "Research", "Compliance"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$499 - $2,000/month",
@@ -343,11 +343,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["NLP", "Python", "React", "Node.js", "Elasticsearch", "PostgreSQL"],
-        integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
-        compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"],
+        technology["NLP", "Python", "React", "Node.js", "Elasticsearch", "PostgreSQL"],
+        integrations["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
+        compliance["SOC 2", "GDPR", "CCPA", "ISO 27001"],
         roi: "350% within 12 months",
-        competitors: ["Casetext", "ROSS Intelligence", "Harvey", "DoNotPay"]
+        competitors["Casetext", "ROSS Intelligence", "Harvey", "DoNotPay"]
     },
     // AI-Powered Real Estate Analytics Platform
     {
@@ -359,7 +359,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 399,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Market trend analysis",
             "Property value prediction",
             "Investment opportunity scoring",
@@ -371,28 +371,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Mobile app for agents",
             "Integration with MLS systems"
         ],
-        benefits: [
+        benefits[
             "Improve investment decisions by 35%",
             "Reduce market research time by 60%",
             "Better pricing strategies",
             "Identify emerging opportunities",
             "Optimize portfolio performance"
         ],
-        useCases: [
+        useCases[
             "Real estate agents",
             "Property investors",
             "Real estate developers",
             "Property managers",
             "Mortgage brokers"
         ],
-        targetAudience: [
+        targetAudience[
             "Real estate agents",
             "Property investors",
             "Real estate developers",
             "Property managers",
             "Mortgage professionals"
         ],
-        tags: ["AI", "Real Estate", "Market Analytics", "Investment", "Predictive Analytics"],
+        tags["AI", "Real Estate", "Market Analytics", "Investment", "Predictive Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -401,11 +401,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        integrations: ["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
-        compliance: ["SOC 2", "GDPR", "CCPA"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
+        integrations["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
+        compliance["SOC 2", "GDPR", "CCPA"],
         roi: "400% within 18 months",
-        competitors: ["Zillow", "Redfin", "Realtor.com", "PropStream", "RealtyMogul"]
+        competitors["Zillow", "Redfin", "Realtor.com", "PropStream", "RealtyMogul"]
     },
     // AI-Powered HR & Talent Management Platform
     {
@@ -417,7 +417,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 299,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered candidate screening",
             "Skills assessment automation",
             "Employee performance analytics",
@@ -429,28 +429,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Integration with HRIS systems",
             "Mobile app for employees"
         ],
-        benefits: [
+        benefits[
             "Reduce hiring time by 50%",
             "Improve employee retention by 30%",
             "Better talent acquisition",
             "Enhanced employee experience",
             "Data-driven HR decisions"
         ],
-        useCases: [
+        useCases[
             "HR departments",
             "Recruitment agencies",
             "Talent acquisition teams",
             "Learning & development",
             "Employee engagement"
         ],
-        targetAudience: [
+        targetAudience[
             "HR managers",
             "Recruiters",
             "Talent acquisition specialists",
             "Learning & development managers",
             "HR directors"
         ],
-        tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics"],
+        tags["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
@@ -459,11 +459,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
-        integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack"],
-        compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"],
+        technology["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
+        integrations["Workday", "BambooHR", "Greenhouse", "Lever", "Slack"],
+        compliance["SOC 2", "GDPR", "CCPA", "ISO 27001"],
         roi: "350% within 12 months",
-        competitors: ["Workday", "BambooHR", "Greenhouse", "Lever", "Hired"]
+        competitors["Workday", "BambooHR", "Greenhouse", "Lever", "Hired"]
     },
     // AI-Powered Energy Management Platform
     {
@@ -475,7 +475,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 599,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Energy consumption monitoring",
             "Demand prediction algorithms",
             "Energy optimization recommendations",
@@ -487,28 +487,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Integration with IoT devices",
             "Analytics dashboard"
         ],
-        benefits: [
+        benefits[
             "Reduce energy costs by 20-30%",
             "Improve sustainability metrics",
             "Better energy efficiency",
             "Compliance with regulations",
             "Enhanced corporate responsibility"
         ],
-        useCases: [
+        useCases[
             "Commercial buildings",
             "Industrial facilities",
             "Data centers",
             "Retail chains",
             "Manufacturing plants"
         ],
-        targetAudience: [
+        targetAudience[
             "Facility managers",
             "Energy managers",
             "Sustainability officers",
             "Operations directors",
             "Building owners"
         ],
-        tags: ["AI", "Energy Management", "Sustainability", "IoT", "Predictive Analytics"],
+        tags["AI", "Energy Management", "Sustainability", "IoT", "Predictive Analytics"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -517,11 +517,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "React", "Node.js", "IoT protocols", "PostgreSQL"],
-        integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage"],
-        compliance: ["ISO 50001", "LEED", "SOC 2", "GDPR"],
+        technology["Python", "TensorFlow", "React", "Node.js", "IoT protocols", "PostgreSQL"],
+        integrations["Building management systems", "Smart meters", "Solar panels", "Battery storage"],
+        compliance["ISO 50001", "LEED", "SOC 2", "GDPR"],
         roi: "400% within 18 months",
-        competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"]
+        competitors["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"]
     },
     // AI-Powered Manufacturing Quality Control
     {
@@ -533,7 +533,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 799,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Real-time quality monitoring",
             "Defect detection algorithms",
             "Predictive maintenance alerts",
@@ -545,28 +545,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Integration with MES systems",
             "Real-time notifications"
         ],
-        benefits: [
+        benefits[
             "Reduce defects by 40-60%",
             "Improve equipment uptime by 25%",
             "Lower maintenance costs",
             "Better product quality",
             "Enhanced operational efficiency"
         ],
-        useCases: [
+        useCases[
             "Manufacturing plants",
             "Quality control departments",
             "Production managers",
             "Maintenance teams",
             "Supply chain managers"
         ],
-        targetAudience: [
+        targetAudience[
             "Manufacturing managers",
             "Quality control specialists",
             "Maintenance supervisors",
             "Production engineers",
             "Operations directors"
         ],
-        tags: ["AI", "Manufacturing", "Quality Control", "Predictive Maintenance", "IoT"],
+        tags["AI", "Manufacturing", "Quality Control", "Predictive Maintenance", "IoT"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
@@ -575,11 +575,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
-        integrations: ["MES systems", "ERP systems", "PLC controllers", "Quality control equipment"],
-        compliance: ["ISO 9001", "ISO 14001", "SOC 2", "GDPR"],
+        technology["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
+        integrations["MES systems", "ERP systems", "PLC controllers", "Quality control equipment"],
+        compliance["ISO 9001", "ISO 14001", "SOC 2", "GDPR"],
         roi: "450% within 15 months",
-        competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation"]
+        competitors["Siemens", "GE Digital", "PTC", "Rockwell Automation"]
     },
     // AI-Powered Education & Learning Platform
     {
@@ -591,7 +591,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 199,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Personalized learning paths",
             "Adaptive content delivery",
             "Student progress tracking",
@@ -603,28 +603,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Mobile app for students",
             "Integration with LMS systems"
         ],
-        benefits: [
+        benefits[
             "Improve learning outcomes by 35%",
             "Reduce learning time by 25%",
             "Personalized education experience",
             "Better student engagement",
             "Enhanced teacher productivity"
         ],
-        useCases: [
+        useCases[
             "K-12 schools",
             "Higher education institutions",
             "Corporate training",
             "Online learning platforms",
             "Tutoring services"
         ],
-        targetAudience: [
+        targetAudience[
             "Teachers",
             "Educational administrators",
             "Corporate trainers",
             "Students",
             "Parents"
         ],
-        tags: ["AI", "Education", "Personalized Learning", "Adaptive Learning", "Analytics"],
+        tags["AI", "Education", "Personalized Learning", "Adaptive Learning", "Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$199 - $800/month",
@@ -633,11 +633,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
-        integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
-        compliance: ["FERPA", "COPPA", "SOC 2", "GDPR"],
+        technology["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
+        integrations["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
+        compliance["FERPA", "COPPA", "SOC 2", "GDPR"],
         roi: "300% within 12 months",
-        competitors: ["Duolingo", "Khan Academy", "Coursera", "Udemy", "Pluralsight"]
+        competitors["Duolingo", "Khan Academy", "Coursera", "Udemy", "Pluralsight"]
     },
     // AI-Powered Agriculture & Precision Farming
     {
@@ -649,7 +649,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 499,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Crop health monitoring",
             "Yield prediction algorithms",
             "Soil analysis & recommendations",
@@ -661,28 +661,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Mobile app for farmers",
             "Integration with farm equipment"
         ],
-        benefits: [
+        benefits[
             "Increase crop yields by 20-30%",
             "Reduce water usage by 25%",
             "Lower fertilizer costs",
             "Better resource management",
             "Enhanced sustainability"
         ],
-        useCases: [
+        useCases[
             "Large-scale farming",
             "Greenhouse operations",
             "Vineyards & orchards",
             "Livestock management",
             "Agricultural research"
         ],
-        targetAudience: [
+        targetAudience[
             "Farmers",
             "Agricultural consultants",
             "Crop advisors",
             "Agricultural researchers",
             "Farm managers"
         ],
-        tags: ["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"],
+        tags["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$499 - $2,000/month",
@@ -691,11 +691,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
-        integrations: ["Weather APIs", "Satellite imagery", "Farm equipment", "Soil sensors"],
-        compliance: ["Organic certification", "SOC 2", "GDPR"],
+        technology["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
+        integrations["Weather APIs", "Satellite imagery", "Farm equipment", "Soil sensors"],
+        compliance["Organic certification", "SOC 2", "GDPR"],
         roi: "400% within 18 months",
-        competitors: ["John Deere", "Climate Corporation", "Farmers Edge", "Granular"]
+        competitors["John Deere", "Climate Corporation", "Farmers Edge", "Granular"]
     },
     // AI-Powered Transportation & Logistics Optimization
     {
@@ -707,7 +707,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 699,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "Route optimization algorithms",
             "Demand prediction",
             "Fleet management optimization",
@@ -719,28 +719,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Integration with TMS systems",
             "Mobile app for drivers"
         ],
-        benefits: [
+        benefits[
             "Reduce fuel costs by 15-25%",
             "Improve delivery times by 20%",
             "Optimize fleet utilization",
             "Better customer service",
             "Enhanced operational efficiency"
         ],
-        useCases: [
+        useCases[
             "Trucking companies",
             "Delivery services",
             "Logistics providers",
             "Fleet operators",
             "Supply chain managers"
         ],
-        targetAudience: [
+        targetAudience[
             "Fleet managers",
             "Logistics coordinators",
             "Transportation directors",
             "Operations managers",
             "Supply chain specialists"
         ],
-        tags: ["AI", "Transportation", "Logistics", "Route Optimization", "Fleet Management"],
+        tags["AI", "Transportation", "Logistics", "Route Optimization", "Fleet Management"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$699 - $2,800/month",
@@ -749,11 +749,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        integrations: ["TMS systems", "GPS tracking", "Fuel cards", "Maintenance systems"],
-        compliance: ["DOT", "FMCSA", "SOC 2", "GDPR"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
+        integrations["TMS systems", "GPS tracking", "Fuel cards", "Maintenance systems"],
+        compliance["DOT", "FMCSA", "SOC 2", "GDPR"],
         roi: "400% within 15 months",
-        competitors: ["Convoy", "KeepTruckin", "Samsara", "Verizon Connect"]
+        competitors["Convoy", "KeepTruckin", "Samsara", "Verizon Connect"]
     },
     // AI-Powered Insurance & Risk Assessment
     {
@@ -765,7 +765,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 599,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered risk assessment",
             "Automated underwriting",
             "Fraud detection algorithms",
@@ -777,28 +777,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Integration with insurance systems",
             "Mobile app for customers"
         ],
-        benefits: [
+        benefits[
             "Reduce fraud by 40-60%",
             "Improve underwriting accuracy by 30%",
             "Faster claims processing",
             "Better risk assessment",
             "Enhanced customer experience"
         ],
-        useCases: [
+        useCases[
             "Insurance companies",
             "Insurance agents",
             "Risk managers",
             "Claims adjusters",
             "Underwriters"
         ],
-        targetAudience: [
+        targetAudience[
             "Insurance agents",
             "Risk managers",
             "Claims adjusters",
             "Underwriters",
             "Insurance executives"
         ],
-        tags: ["AI", "Insurance", "Risk Assessment", "Fraud Detection", "Underwriting"],
+        tags["AI", "Insurance", "Risk Assessment", "Fraud Detection", "Underwriting"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -807,11 +807,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
-        integrations: ["Policy management systems", "Claims systems", "CRM systems", "Payment gateways"],
-        compliance: ["SOC 2", "GDPR", "CCPA", "Insurance regulations"],
+        technology["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
+        integrations["Policy management systems", "Claims systems", "CRM systems", "Payment gateways"],
+        compliance["SOC 2", "GDPR", "CCPA", "Insurance regulations"],
         roi: "450% within 18 months",
-        competitors: ["Lemonade", "Root Insurance", "Metromile", "Trov"]
+        competitors["Lemonade", "Root Insurance", "Metromile", "Trov"]
     },
     // AI-Powered Gaming & Entertainment Platform
     {
@@ -823,7 +823,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         price: 199,
         currency: "$",
         pricingModel: "monthly",
-        features: [
+        features[
             "AI-powered matchmaking",
             "Personalized content recommendations",
             "Gameplay optimization",
@@ -835,28 +835,28 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Multi-platform support",
             "Integration with game engines"
         ],
-        benefits: [
+        benefits[
             "Improve player engagement by 35%",
             "Reduce player churn by 25%",
             "Better gaming experiences",
             "Optimized monetization",
             "Enhanced community building"
         ],
-        useCases: [
+        useCases[
             "Game developers",
             "Gaming platforms",
             "Esports organizations",
             "Streaming services",
             "Gaming communities"
         ],
-        targetAudience: [
+        targetAudience[
             "Game developers",
             "Gaming platform managers",
             "Esports organizers",
             "Streaming service providers",
             "Gaming community managers"
         ],
-        tags: ["AI", "Gaming", "Entertainment", "Matchmaking", "Personalization"],
+        tags["AI", "Gaming", "Entertainment", "Matchmaking", "Personalization"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$199 - $800/month",
@@ -865,11 +865,11 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        integrations: ["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"],
-        compliance: ["COPPA", "SOC 2", "GDPR"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
+        integrations["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"],
+        compliance["COPPA", "SOC 2", "GDPR"],
         roi: "300% within 12 months",
-        competitors: ["Unity", "Epic Games", "Steam", "Twitch", "Discord"]
+        competitors["Unity", "Epic Games", "Steam", "Twitch", "Discord"]
     }
 ];
 export const EXPANDED_SERVICE_CATEGORIES = [

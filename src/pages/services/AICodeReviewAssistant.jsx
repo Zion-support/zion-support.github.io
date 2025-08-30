@@ -54,7 +54,7 @@ const AICodeReviewAssistant = () => {
             price: "$199",
             period: "/month",
             description: "Perfect for small development teams",
-            features: [
+            features[
                 "Up to 10 developers",
                 "Basic security scanning",
                 "GitHub integration",
@@ -68,7 +68,7 @@ const AICodeReviewAssistant = () => {
             price: "$399",
             period: "/month",
             description: "Ideal for growing development teams",
-            features: [
+            features[
                 "Up to 25 developers",
                 "Advanced security scanning",
                 "Multi-repo support",
@@ -83,7 +83,7 @@ const AICodeReviewAssistant = () => {
             price: "Custom",
             period: "",
             description: "For large organizations with complex needs",
-            features: [
+            features[
                 "Unlimited developers",
                 "Custom integrations",
                 "Advanced compliance",
@@ -301,6 +301,5 @@ const AICodeReviewAssistant = () => {
           </div>
         </section>
       </div>
-    </>);
-};
+    </>)};
 export default AICodeReviewAssistant;

@@ -11,9 +11,7 @@ const mockCodeSnippets = [
 interface UseApiOptions<T> {
   url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
-  body?: any;
-  headers?: Record<string, string>;
-}
+  body?;headers?: Record<string, string>}
 
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
   const [data, setData] = useState<T | null>(null);
@@ -35,27 +33,21 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       });
 
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+        throw new Error(\`HTTP error! status: \${response.status}\`)}
 
       const result = await response.json();
-      setData(result);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
+      setData(result)} catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred')} finally {
+      setLoading(false)}
   };
 
   useEffect(() => {
     if (method === 'GET') {
-      execute();
-    }
+      execute()}
   }, [url]);
 
-  return { data, loading, error, execute };
-}`,
-        tags: ['react', 'hooks', 'api', 'typescript'],
+  return { data, loading, error, execute }}`,
+        tags['react', 'hooks', 'api', 'typescript'],
         complexity: 'medium',
         rating: 4.8,
         usageCount: 1250,
@@ -68,12 +60,10 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         language: 'css',
         code: `@layer utilities {
   .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
+    animation: float 3s ease-in-out infinite}
   
   .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
+    animation: glow 2s ease-in-out infinite alternate}
   
   .animate-shimmer {
     background: linear-gradient(
@@ -83,25 +73,24 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       transparent
     );
     background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-  }
+    animation: shimmer 1.5s infinite}
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0px)}
+  50% { transform: translateY(-10px)}
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-  to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+  from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
+  to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% { background-position: -200% 0}
+  100% { background-position: 200% 0}
 }`,
-        tags: ['css', 'tailwind', 'animations', 'utilities'],
+        tags['css', 'tailwind', 'animations', 'utilities'],
         complexity: 'low',
         rating: 4.6,
         usageCount: 890,
@@ -124,15 +113,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     
     this.rules = new Map();
     this.errors = new Map();
-    this.init();
-  }
+    this.init()}
 
   addRule(field, rule) {
     if (!this.rules.has(field)) {
-      this.rules.set(field, []);
-    }
-    this.rules.get(field).push(rule);
-  }
+      this.rules.set(field, [])}
+    this.rules.get(field).push(rule)}
 
   validateField(field) {
     const value = this.form[field]?.value;
@@ -142,24 +128,20 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     for (const rule of fieldRules) {
       const result = rule(value, this.form);
       if (result !== true) {
-        fieldErrors.push(result);
-      }
+        fieldErrors.push(result)}
     }
 
     this.errors.set(field, fieldErrors);
     this.updateFieldUI(field);
-    return fieldErrors.length === 0;
-  }
+    return fieldErrors.length === 0}
 
   validateForm() {
     let isValid = true;
     for (const field of this.rules.keys()) {
       if (!this.validateField(field)) {
-        isValid = false;
-      }
+        isValid = false}
     }
-    return isValid;
-  }
+    return isValid}
 
   updateFieldUI(field) {
     const fieldElement = this.form[field];
@@ -167,11 +149,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     
     if (errors.length > 0) {
       fieldElement.classList.add('error');
-      this.showFieldErrors(field, errors);
-    } else {
+      this.showFieldErrors(field, errors)} else {
       fieldElement.classList.remove('error');
-      this.hideFieldErrors(field);
-    }
+      this.hideFieldErrors(field)}
   }
 
   showFieldErrors(field, errors) {
@@ -186,21 +166,17 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     if (this.options.validateOnBlur) {
       this.form.addEventListener('blur', (e) => {
         if (e.target.name) {
-          this.validateField(e.target.name);
-        }
-      }, true);
-    }
+          this.validateField(e.target.name)}
+      }, true)}
 
     if (this.options.validateOnSubmit) {
       this.form.addEventListener('submit', (e) => {
         if (!this.validateForm()) {
-          e.preventDefault();
-        }
-      });
-    }
+          e.preventDefault()}
+      })}
   }
 }`,
-        tags: ['javascript', 'forms', 'validation', 'class'],
+        tags['javascript', 'forms', 'validation', 'class'],
         complexity: 'high',
         rating: 4.9,
         usageCount: 2100,
@@ -215,12 +191,12 @@ const mockCodeAnalysis = [
         performance: 88,
         security: 95,
         maintainability: 90,
-        suggestions: [
+        suggestions[
             'Consider adding request timeout handling',
             'Add retry logic for failed requests',
             'Implement request cancellation with AbortController'
         ],
-        warnings: [
+        warnings[
             'No input validation for URL parameter',
             'Consider rate limiting for API calls'
         ],
@@ -233,12 +209,12 @@ const mockCodeAnalysis = [
         performance: 95,
         security: 100,
         maintainability: 88,
-        suggestions: [
+        suggestions[
             'Add vendor prefixes for better browser support',
             'Consider using CSS custom properties for colors',
             'Add animation performance optimizations'
         ],
-        warnings: [],
+        warnings[],
         timestamp: '2024-01-10T14:20:00Z'
     }
 ];
@@ -252,28 +228,23 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
+      return item ? JSON.parse(item) : initialValue} catch (error) {
       console.error(\`Error reading localStorage key "\${key}":\`, error);
-      return initialValue;
-    }
+      return initialValue}
   });
 
   const setValue = (value: T | ((val: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error);
-    }
+      window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
+      console.error(\`Error setting localStorage key "\${key}":\`, error)}
   };
 
-  return [storedValue, setValue] as const;
-}`,
+  return [storedValue, setValue] as const}`,
         language: 'typescript',
         confidence: 0.94,
-        alternatives: [
+        alternatives[
             'Alternative 1: With error boundaries',
             'Alternative 2: With event listeners',
             'Alternative 3: With custom serializer'
@@ -302,16 +273,14 @@ export function AdvancedAICodeGenerator() {
             case 'low': return 'text-green-500';
             case 'medium': return 'text-yellow-500';
             case 'high': return 'text-red-500';
-            default: return 'text-gray-500';
-        }
+            default: return 'text-gray-500'}
     };
     const getQualityColor = (score) => {
         if (score >= 90)
             return 'text-green-500';
         if (score >= 80)
             return 'text-yellow-500';
-        return 'text-red-500';
-    };
+        return 'text-red-500'};
     const generateCode = async () => {
         if (!aiPrompt.trim())
             return;
@@ -324,7 +293,7 @@ export function AdvancedAICodeGenerator() {
                 generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
-                alternatives: [
+                alternatives[
                     'Alternative 1: Functional approach',
                     'Alternative 2: Class-based approach',
                     'Alternative 3: Async/await pattern'
@@ -333,17 +302,13 @@ export function AdvancedAICodeGenerator() {
             };
             setAiGenerations(prev => [newGeneration, ...prev]);
             setGeneratedCode(newGeneration.generatedCode);
-            setIsGenerating(false);
-        }, 2000);
-    };
+            setIsGenerating(false)}, 2000)};
     const copyToClipboard = (text) => {
-        navigator.clipboard.writeText(text);
-    };
+        navigator.clipboard.writeText(text)};
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">
         <Code className="w-6 h-6"/>
-      </button>);
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">
@@ -360,8 +325,7 @@ export function AdvancedAICodeGenerator() {
             </button>
           </div>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -659,8 +623,7 @@ export function AdvancedAICodeGenerator() {
                             </li>))}
                         </ul>
                       </div>)}
-                  </div>);
-            })}
+                  </div>)})}
             </div>
           </div>)}
 
@@ -714,5 +677,4 @@ export function AdvancedAICodeGenerator() {
               </div>))}
           </div>)}
       </div>
-    </div>);
-}
+    </div>)}

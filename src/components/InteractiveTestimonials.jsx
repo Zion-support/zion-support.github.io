@@ -6,7 +6,7 @@ const testimonials = [
         id: '1',
         name: 'Sarah Chen',
         role: 'CTO',
-        company: 'TechFlow Solutions',
+        comp: 'TechFlow Solutions',
         avatar: 'SC',
         rating: 5,
         content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 300% improvement in our AI model performance.',
@@ -19,7 +19,7 @@ const testimonials = [
         id: '2',
         name: 'Marcus Rodriguez',
         role: 'Head of Engineering',
-        company: 'InnovateCorp',
+        comp: 'InnovateCorp',
         avatar: 'MR',
         rating: 5,
         content: 'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.',
@@ -32,7 +32,7 @@ const testimonials = [
         id: '3',
         name: 'Dr. Emily Watson',
         role: 'Research Director',
-        company: 'Quantum Labs',
+        comp: 'Quantum Labs',
         avatar: 'EW',
         rating: 5,
         content: 'Working with Zion\'s AI services has accelerated our research by months. The platform\'s capabilities and the team\'s expertise are unmatched in the industry.',
@@ -45,7 +45,7 @@ const testimonials = [
         id: '4',
         name: 'Alex Thompson',
         role: 'Product Manager',
-        company: 'StartupXYZ',
+        comp: 'StartupXYZ',
         avatar: 'AT',
         rating: 5,
         content: 'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.',
@@ -58,7 +58,7 @@ const testimonials = [
         id: '5',
         name: 'Lisa Park',
         role: 'VP of Operations',
-        company: 'GlobalTech Inc',
+        comp: 'GlobalTech Inc',
         avatar: 'LP',
         rating: 5,
         content: 'The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion\'s support team is always available when we need them.',
@@ -81,31 +81,22 @@ export function InteractiveTestimonials() {
         if (!isAutoPlaying)
             return;
         const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, [isAutoPlaying, filteredTestimonials.length]);
+            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)}, 5000);
+        return () => clearInterval(interval)}, [isAutoPlaying, filteredTestimonials.length]);
     const nextTestimonial = () => {
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
-    };
+        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};
     const prevTestimonial = () => {
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
-    };
+        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};
     const toggleLike = (testimonialId) => {
         setLikedTestimonials(prev => {
             const newSet = new Set(prev);
             if (newSet.has(testimonialId)) {
-                newSet.delete(testimonialId);
-            }
+                newSet.delete(testimonialId)}
             else {
-                newSet.add(testimonialId);
-            }
-            return newSet;
-        });
-    };
+                newSet.add(testimonialId)}
+            return newSet})};
     const renderStars = (rating) => {
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>));
-    };
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))};
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -195,7 +186,7 @@ export function InteractiveTestimonials() {
                       {filteredTestimonials[currentIndex]?.name}
                     </div>
                     <div className="text-zion-slate-light">
-                      {filteredTestimonials[currentIndex]?.role} at {filteredTestimonials[currentIndex]?.company}
+                      {filteredTestimonials[currentIndex]?.role} at {filteredTestimonials[currentIndex]?.comp}
                     </div>
                   </div>
                   {filteredTestimonials[currentIndex]?.verified && (<div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
@@ -321,5 +312,4 @@ export function InteractiveTestimonials() {
           </div>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

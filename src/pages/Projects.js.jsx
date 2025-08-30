@@ -16,7 +16,7 @@ function ProjectsContent() {
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
         </div>
-        {isLoading ? (<p>Loading projects...</p>) : projects.length === 0 ? (<p>You don't have any projects yet.</p>) : (<div className="grid gap-6">
+        {isLoading ? (<p>Loading projects...</p>) : projects.length === 0 ? (<p>You don't have  projects yet.</p>) : (<div className="grid gap-6">
             {projects.map((project) => (<Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -45,8 +45,6 @@ function ProjectsContent() {
           </div>)}
       </main>
       
-    </>);
-}
+    </>)}
 export default function Projects() {
-    return <ProjectsContent />;
-}
+    return <ProjectsContent />}

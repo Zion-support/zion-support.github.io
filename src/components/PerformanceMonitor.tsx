@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
+import React, { useEffect, useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Activity, 
   Zap, 
   Clock, 
   TrendingUp, 
@@ -12,24 +11,24 @@ import {
   BarChart3,
   Gauge,
   Monitor
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 interface PerformanceMetrics {
+
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
   domLoad: number | null;
-  windowLoad: number | null;
-}
+  windowLoad: number | null}
 interface PerformanceScore {
+
   score: number;
   grade: 'A' | 'B' | 'C' | 'D' | 'F';
-  color: string;
-}
-export const PerformanceMonitor: React.FC = () => {
+  color: string}
+export const PerformanceMonitor: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<any>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -38,16 +37,15 @@ export const PerformanceMonitor: React.FC = () => {
     domLoad: null,
     windowLoad: null
   });
-  const [scores, setScores] = useState<Record<string, PerformanceScore>>({});
+  const [scores, setScores] = useState<Record<string, any>>({});
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-  const calculateScore = useCallback((metric: number, thresholds: number[]): PerformanceScore => {
+  const calculateScore = useCallback((metric: number, thresholds: number[]): PerformanceScore  => {
     if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
     if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
     if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
     if (metric <= thresholds[3]) return { score: 40, grade: 'D', color: 'text-red-400' };
-    return { score: 20, grade: 'F', color: 'text-red-600' };
-  }, []);
+    return { score: 20, grade: 'F', color: 'text-red-600' }}, []);
   const updateMetrics = useCallback(() => {
     if ('performance' in window) {
       const perf = performance;
@@ -62,7 +60,7 @@ export const PerformanceMonitor: React.FC = () => {
       const fid = fidEntry ? fidEntry.processingStart - fidEntry.startTime : null;
       // Cumulative Layout Shift
       const clsEntry = perf.getEntriesByName('cumulative-layout-shift')[0] as PerformanceEntry;
-      const cls = clsEntry ? (clsEntry as any).value : null;
+      const cls = clsEntry ? (clsEntry as ).value : null;
       // Time to First Byte
       const navigationEntry = perf.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null;
@@ -88,8 +86,7 @@ export const PerformanceMonitor: React.FC = () => {
       if (issues.length > 0) {
         setAlertMessage(issues.join(', '));
         setShowAlert(true);
-        setTimeout(() => setShowAlert(false), 5000);
-      }
+        setTimeout(() => setShowAlert(false), 5000)}
     }
   };
   useEffect(() => {
@@ -102,26 +99,21 @@ export const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'largest-contentful-paint' || 
               entry.entryType === 'first-input-delay' || 
               entry.entryType === 'layout-shift') {
-            updateMetrics();
-          }
+            updateMetrics()}
         }
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
-      return () => observer.disconnect();
-    }
+      observer.observe({ entryTypes['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      return ()  => observer.disconnect()}
     // Update metrics periodically
     const interval = setInterval(updateMetrics, 10000);
-    return () => clearInterval(interval);
-  }, [updateMetrics]);
+    return () => clearInterval(interval)}, [updateMetrics]);
   const formatMetric = (value: number | null, unit: string = 'ms'): string => {
     if (value === null) return 'N/A';
     if (unit === 'ms') return `${Math.round(value)}ms`;
     if (unit === 's') return `${(value / 1000).toFixed(2)}s`;
-    return value.toFixed(3);
-  };
-  const getMetricColor = (score: PerformanceScore): string => {
-    return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700');
-  };
+    return value.toFixed(3)};
+  const getMetricColor = (score: PerformanceScore): string  => {
+    return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700')};
   return (
     <>
       {/* Performance Toggle Button */}
@@ -317,8 +309,7 @@ export const PerformanceMonitor: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};
 // Simple refresh icon component
 const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

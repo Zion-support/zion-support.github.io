@@ -40,7 +40,7 @@ const benefits = [
 const useCases = [
     {
         title: "Development Teams",
-        description: "Streamline code review processes for development teams of any size.",
+        description: "Streamline code review processes for development teams of  size.",
         icon: Users
     },
     {
@@ -133,8 +133,7 @@ export default function AIAutonomousCodeReview() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                </motion.div>);
-        })}
+                </motion.div>)})}
           </div>
         </div>
       </section>
@@ -181,8 +180,7 @@ export default function AIAutonomousCodeReview() {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
-                </motion.div>);
-        })}
+                </motion.div>)})}
           </div>
         </div>
       </section>
@@ -239,5 +237,4 @@ export default function AIAutonomousCodeReview() {
           </motion.div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

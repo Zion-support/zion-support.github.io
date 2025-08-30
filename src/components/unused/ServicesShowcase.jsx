@@ -124,5 +124,4 @@ export function ServicesShowcase() {
           </Link>
         </motion.div>
       </div>
-    </section>);
-}
+    </section>)}

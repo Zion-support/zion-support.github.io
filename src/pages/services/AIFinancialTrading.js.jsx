@@ -40,7 +40,7 @@ export default function AIFinancialTrading() {
             price: "$99",
             period: "/month",
             description: "Perfect for individual traders and beginners",
-            features: [
+            features[
                 "Basic AI trading signals",
                 "Up to 10 trades/day",
                 "Standard market data",
@@ -56,7 +56,7 @@ export default function AIFinancialTrading() {
             price: "$299",
             period: "/month",
             description: "Ideal for active traders and small funds",
-            features: [
+            features[
                 "Advanced AI algorithms",
                 "Up to 100 trades/day",
                 "Real-time market data",
@@ -74,7 +74,7 @@ export default function AIFinancialTrading() {
             price: "$1,999",
             period: "/month",
             description: "For hedge funds and large institutions",
-            features: [
+            features[
                 "Custom AI models",
                 "Unlimited trades",
                 "Institutional data feeds",
@@ -313,5 +313,4 @@ export default function AIFinancialTrading() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

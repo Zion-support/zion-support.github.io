@@ -193,5 +193,4 @@ export default function RequestQuote() {
       
       <Footer />
     </div>
-  );
-}
+  )}

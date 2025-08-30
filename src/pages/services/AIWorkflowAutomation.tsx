@@ -1,8 +1,7 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Zap, 
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Zap, 
   Brain, 
   Workflow, 
   Bot, 
@@ -18,9 +17,9 @@ import {
   Phone,
   Globe,
   ExternalLink
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIWorkflowAutomation() {
+export default function AIWorkflowAutomation(...args[]):  {
   const features = [
     {
       icon: Bot,
@@ -65,25 +64,25 @@ export default function AIWorkflowAutomation() {
       title: 'Workflow Assessment & Design',
       description: 'Comprehensive analysis of existing processes and custom workflow design',
       price: 'From $3,500',
-      features: ['Process mapping', 'Bottleneck identification', 'Automation strategy', 'ROI analysis']
+      features['Process mapping', 'Bottleneck identification', 'Automation strategy', 'ROI analysis']
     },
     {
       title: 'AI Workflow Implementation',
       description: 'Full implementation of AI-powered workflow automation',
       price: 'From $8,000',
-      features: ['Custom workflow design', 'AI model training', 'Integration setup', 'User training']
+      features['Custom workflow design', 'AI model training', 'Integration setup', 'User training']
     },
     {
       title: 'Workflow Optimization',
       description: 'Continuous improvement and optimization of existing workflows',
       price: 'From $2,500/month',
-      features: ['Performance monitoring', 'AI model updates', 'Process refinement', 'Analytics reports']
+      features['Performance monitoring', 'AI model updates', 'Process refinement', 'Analytics reports']
     },
     {
       title: 'Enterprise Workflow Suite',
       description: 'Complete enterprise workflow management with advanced AI capabilities',
       price: 'From $15,000',
-      features: ['Multi-department workflows', 'Advanced AI models', 'Custom integrations', '24/7 support']
+      features['Multi-department workflows', 'Advanced AI models', 'Custom integrations', '24/7 support']
     }
   ];
 
@@ -91,22 +90,22 @@ export default function AIWorkflowAutomation() {
     {
       title: 'Customer Service Automation',
       description: 'Automate ticket routing, response generation, and escalation processes',
-      benefits: ['Reduce response time by 70%', 'Improve customer satisfaction', 'Handle 5x more tickets']
+      benefits['Reduce response time by 70%', 'Improve customer satisfaction', 'Handle 5x more tickets']
     },
     {
       title: 'Sales Process Automation',
       description: 'Automate lead qualification, follow-up scheduling, and proposal generation',
-      benefits: ['Increase conversion rates by 40%', 'Reduce manual tasks by 80%', 'Improve sales efficiency']
+      benefits['Increase conversion rates by 40%', 'Reduce manual tasks by 80%', 'Improve sales efficiency']
     },
     {
       title: 'HR Process Automation',
       description: 'Streamline recruitment, onboarding, and employee management workflows',
-      benefits: ['Reduce hiring time by 50%', 'Improve compliance', 'Enhance employee experience']
+      benefits['Reduce hiring time by 50%', 'Improve compliance', 'Enhance employee experience']
     },
     {
       title: 'Financial Process Automation',
       description: 'Automate invoice processing, expense approval, and financial reporting',
-      benefits: ['Reduce processing time by 60%', 'Improve accuracy', 'Enhance compliance']
+      benefits['Reduce processing time by 60%', 'Improve accuracy', 'Enhance compliance']
     }
   ];
 
@@ -184,8 +183,8 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -221,8 +220,8 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -264,8 +263,8 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -306,8 +305,8 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -388,5 +387,4 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

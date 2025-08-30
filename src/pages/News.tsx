@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, User, ArrowRight, ExternalLink } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
+import { Calendar, Clock, User, ArrowRight, ExternalLink  } from 'lucide-react.ts';
 
-export default function News() {
+export default function News(...args[]):  {
   const newsArticles = [
     {
       id: 1,
@@ -12,7 +12,7 @@ export default function News() {
       date: '2024-01-15',
       readTime: '5 min read',
       category: 'Product Launch',
-      tags: ['AI', 'Cybersecurity', 'Innovation'],
+      tags['AI', 'Cybersecurity', 'Innovation'],
       featured: true,
       image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&h=400'
     },
@@ -24,8 +24,8 @@ export default function News() {
       author: 'Michael Chen',
       date: '2024-01-10',
       readTime: '3 min read',
-      category: 'Company News',
-      tags: ['Expansion', 'Global', 'Europe'],
+      category: 'Comp News',
+      tags['Expansion', 'Global', 'Europe'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=400'
     },
@@ -38,7 +38,7 @@ export default function News() {
       date: '2024-01-05',
       readTime: '7 min read',
       category: 'Research',
-      tags: ['Quantum Computing', 'Research', 'Innovation'],
+      tags['Quantum Computing', 'Research', 'Innovation'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=400'
     },
@@ -51,7 +51,7 @@ export default function News() {
       date: '2023-12-28',
       readTime: '4 min read',
       category: 'Awards',
-      tags: ['Awards', 'AI', 'Recognition'],
+      tags['Awards', 'AI', 'Recognition'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=400'
     },
@@ -64,7 +64,7 @@ export default function News() {
       date: '2023-12-20',
       readTime: '6 min read',
       category: 'Partnerships',
-      tags: ['Partnership', 'Cloud', 'Enterprise'],
+      tags['Partnership', 'Cloud', 'Enterprise'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=400'
     },
@@ -77,7 +77,7 @@ export default function News() {
       date: '2023-12-15',
       readTime: '5 min read',
       category: 'Sustainability',
-      tags: ['Sustainability', 'Green Tech', 'Environment'],
+      tags['Sustainability', 'Green Tech', 'Environment'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&h=400'
     }
@@ -86,21 +86,20 @@ export default function News() {
   const categories = [
     'All News',
     'Product Launch',
-    'Company News',
+    'Comp News',
     'Research',
     'Awards',
     'Partnerships',
     'Sustainability'
   ];
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
-  };
+    })};
 
   return (
     <div className="min-h-screen bg-white">
@@ -111,7 +110,7 @@ export default function News() {
             Latest News & Updates
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
-            Stay informed about our latest innovations, company updates, and industry insights
+            Stay informed about our latest innovations, comp updates, and industry insights
           </p>
         </div>
       </section>
@@ -229,8 +228,8 @@ export default function News() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsArticles.filter(article => !article.featured).map((article) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {newsArticles.filter(article  => !article.featured).map((article) => (
               <article key={article.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                 <div className="relative">
                   <img
@@ -308,7 +307,7 @@ export default function News() {
               </button>
             </div>
             <p className="text-sm text-white/70 mt-3">
-              We respect your privacy. Unsubscribe at any time.
+              We respect your privacy. Unsubscribe at  time.
             </p>
           </div>
         </div>
@@ -358,5 +357,4 @@ export default function News() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -1,14 +1,14 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const ComprehensiveServicesLanding: React.FC = () => {
+const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
       name: "AI-Powered Micro SAAS Services",
       description: "Cutting-edge AI solutions that transform business operations",
-      services: [
+      services[
         {
           title: "AI Code Review & Security",
           description: "Advanced vulnerability detection with 85% accuracy improvement",
@@ -42,7 +42,7 @@ const ComprehensiveServicesLanding: React.FC = () => {
     {
       name: "Cloud & Infrastructure",
       description: "Scalable cloud solutions and enterprise infrastructure",
-      services: [
+      services[
         {
           title: "Cloud DevOps",
           description: "Streamlined cloud deployment and management",
@@ -69,7 +69,7 @@ const ComprehensiveServicesLanding: React.FC = () => {
     {
       name: "Data & Analytics",
       description: "Transform data into actionable business intelligence",
-      services: [
+      services[
         {
           title: "Data Analytics",
           description: "Comprehensive data analysis and visualization",
@@ -96,7 +96,7 @@ const ComprehensiveServicesLanding: React.FC = () => {
     {
       name: "Security & Compliance",
       description: "Enterprise-grade security and regulatory compliance",
-      services: [
+      services[
         {
           title: "Zero Trust Architecture",
           description: "Modern security framework for enterprise",
@@ -201,8 +201,8 @@ const ComprehensiveServicesLanding: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {category.services.map((service, serviceIndex) => (
+                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+                    {category.services.map((service, serviceIndex)  => (
                       <motion.div
                         key={service.title}
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -254,12 +254,12 @@ const ComprehensiveServicesLanding: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {[
                 {
                   title: "AI-Powered Code Review & Security Analysis",
                   description: "Detect vulnerabilities with 85% accuracy improvement. Support for 50+ programming languages with comprehensive security testing.",
-                  benefits: ["85% vulnerability reduction", "50+ programming languages", "Real-time analysis", "Git integration"],
+                  benefits["85% vulnerability reduction", "50+ programming languages", "Real-time analysis", "Git integration"],
                   pricing: "$49 - $799/month",
                   url: "/services/ai-code-review-security",
                   cta: "Secure Your Code"
@@ -267,12 +267,12 @@ const ComprehensiveServicesLanding: React.FC = () => {
                 {
                   title: "AI-Powered Customer Experience Analytics",
                   description: "Transform customer insights into actionable intelligence. Boost satisfaction by 35% and reduce churn by 25%.",
-                  benefits: ["35% satisfaction increase", "25% churn reduction", "Real-time insights", "Predictive analytics"],
+                  benefits["35% satisfaction increase", "25% churn reduction", "Real-time insights", "Predictive analytics"],
                   pricing: "$299 - $1,999/month",
                   url: "/services/ai-customer-experience-analytics",
                   cta: "Analyze Customer Data"
                 }
-              ].map((service, index) => (
+              ].map((service, index)  => (
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -371,7 +371,6 @@ const ComprehensiveServicesLanding: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default ComprehensiveServicesLanding;

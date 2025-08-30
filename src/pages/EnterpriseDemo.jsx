@@ -181,5 +181,4 @@ export default function EnterpriseDemo() {
           </div>
         </div>
       </main>
-    </>);
-}
+    </>)}

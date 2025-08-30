@@ -1,33 +1,28 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react.ts';
+import { useNavigate, Link  } from 'react-router-dom.ts';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { ProductListing  } from '@/types/listings';
+import { DollarSign  } from 'lucide-react.ts';
+import { RatingStars  } from '@/components/RatingStars';
+import { FavoriteButton  } from '@/components/FavoriteButton';
+import { useDispatch  } from 'react-redux.ts';
 import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
-import Image from 'next/image'; // Import next/image
+import { addItem  } from '@/store/cartSlice';
+import Image from 'next/image.ts'; // Import next/image
 
-interface ProductListingCardProps {
+interface ProductListingCardProps extends React.PropsWithChildren<{}> {
+
   listing: ProductListing;
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  onRequestQuote?: (id: string)  => void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
-  detailBasePath?: string;
-}
+  detailBasePath?: string}
 
-export function ProductListingCard({
-  listing,
-  view = 'grid',
-  onRequestQuote,
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) {
+export function ProductListingCard(...args[]):  {
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -40,29 +35,24 @@ export function ProductListingCard({
     
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  };
+    return `${listing.currency}${listing.price.toLocaleString()}`};
 
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg');
-      setImageError(true);
-    }
+      setImageError(true)}
   };
   
   const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
-  };
+    navigate(`${detailBasePath}/${listing.id}`)};
   
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote = (e: React.MouseEvent)  => {
     e.preventDefault();
     e.stopPropagation();
     
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
-    } else {
-      navigate(`/request-quote?listing=${listing.id}`);
-    }
+      onRequestQuote(listing.id)} else {
+      navigate(`/request-quote?listing=${listing.id}`)}
   };
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
@@ -77,8 +67,7 @@ export function ProductListingCard({
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          handleViewListing();
-        }
+          handleViewListing()}
       }}
     >
       {/* Image */}
@@ -90,8 +79,7 @@ export function ProductListingCard({
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            handleViewListing();
-          }
+            handleViewListing()}
         }}
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
@@ -172,8 +160,7 @@ export function ProductListingCard({
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`${detailBasePath}/${listing.id}`);
-              }}
+                navigate(`${detailBasePath}/${listing.id}`)}}
               disabled={loading}
             >
               {loading ? (
@@ -202,7 +189,6 @@ export function ProductListingCard({
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default React.memo(ProductListingCard);

@@ -1,28 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket } from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket  } from 'lucide-react.ts'
 
 
-export default function ResearchDevelopment() {
+export default function ResearchDevelopment(...args[]):  {
 	const researchAreas = [
 		{
 			title: 'AI & Machine Learning',
 			description: 'Advancing autonomous systems, neural networks, and intelligent automation technologies.',
-			projects: ['Multi-agent AI systems', 'Federated learning', 'Explainable AI'],
+			projects['Multi-agent AI systems', 'Federated learning', 'Explainable AI'],
 			icon: FlaskConical,
 			color: 'blue'
 		},
 		{
 			title: 'Quantum Computing',
 			description: 'Exploring quantum algorithms and their applications in business and scientific computing.',
-			projects: ['Quantum neural networks', 'Quantum cryptography', 'Quantum optimization'],
+			projects['Quantum neural networks', 'Quantum cryptography', 'Quantum optimization'],
 			icon: Microscope,
 			color: 'purple'
 		},
 		{
 			title: 'Edge Computing',
 			description: 'Developing next-generation edge computing platforms for IoT and real-time applications.',
-			projects: ['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
+			projects['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
 			icon: Rocket,
 			color: 'green'
 		}
@@ -121,8 +121,8 @@ export default function ResearchDevelopment() {
 							We concentrate our efforts on technologies that will shape the future of business
 						</p>
 					</div>
-					<div className="grid gap-8 lg:grid-cols-3">
-						{researchAreas.map((area, index) => {
+					<div className="grid gap-8 lg: grid-cols-3">
+						{researchAreas.map((area, index)  => {
 							const IconComponent = area.icon
 							const colorClasses = {
 								blue: 'bg-blue-100 text-blue-600',

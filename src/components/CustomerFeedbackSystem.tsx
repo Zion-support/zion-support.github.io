@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star, 
   MessageCircle, 
   ThumbsUp, 
   ThumbsDown, 
@@ -16,9 +15,10 @@ import {
   Download,
   Filter,
   Search
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Feedback {
+
   id: string;
   customerName: string;
   rating: number;
@@ -29,39 +29,38 @@ interface Feedback {
   helpful: number;
   unhelpful: number;
   tags: string[];
-  verified: boolean;
-}
+  verified: boolean}
 
 interface FeedbackStats {
+
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
-  topCategories: Array<{ category: string; count: number; percentage: number }>;
-}
+  topCategories: Array<any>}
 
-interface CustomerFeedbackSystemProps {
+interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
+
   showStats?: boolean;
   showFilters?: boolean;
-  maxFeedback?: number;
-}
+  maxFeedback?: number}
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   showStats = true,
   showFilters = true,
   maxFeedback = 10
 }) => {
-  const [feedback, setFeedback] = useState<Feedback[]>([]);
-  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
-  const [stats, setStats] = useState<FeedbackStats>({
+  const [feedback, setFeedback] = useState<any>([]);
+  const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
+  const [stats, setStats] = useState<any>({
     totalFeedback: 0,
     averageRating: 0,
     positivePercentage: 0,
     responseRate: 0,
-    topCategories: []
+    topCategories[]
   });
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedRating, setSelectedRating] = useState<number>(0);
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedRating, setSelectedRating] = useState<any>(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
@@ -71,7 +70,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   });
 
   // Sample feedback data
-  useEffect(() => {
+  useEffect(()  => {
     const sampleFeedback: Feedback[] = [
       {
         id: '1',
@@ -83,7 +82,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-15',
         helpful: 24,
         unhelpful: 1,
-        tags: ['AI', 'Consulting', 'Machine Learning'],
+        tags['AI', 'Consulting', 'Machine Learning'],
         verified: true
       },
       {
@@ -96,7 +95,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-12',
         helpful: 18,
         unhelpful: 2,
-        tags: ['Cloud', 'Migration', 'Support'],
+        tags['Cloud', 'Migration', 'Support'],
         verified: true
       },
       {
@@ -109,7 +108,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-10',
         helpful: 31,
         unhelpful: 0,
-        tags: ['Digital Transformation', 'Infrastructure', 'ROI'],
+        tags['Digital Transformation', 'Infrastructure', 'ROI'],
         verified: true
       },
       {
@@ -122,7 +121,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-08',
         helpful: 12,
         unhelpful: 5,
-        tags: ['Security', 'Communication', 'Project Management'],
+        tags['Security', 'Communication', 'Project Management'],
         verified: true
       },
       {
@@ -135,17 +134,16 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-05',
         helpful: 28,
         unhelpful: 1,
-        tags: ['AI', 'Efficiency', 'Implementation'],
+        tags['AI', 'Efficiency', 'Implementation'],
         verified: true
       }
     ];
 
     setFeedback(sampleFeedback);
-    setFilteredFeedback(sampleFeedback);
-  }, []);
+    setFilteredFeedback(sampleFeedback)}, []);
 
   // Calculate stats
-  useEffect(() => {
+  useEffect(()  => {
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
@@ -154,8 +152,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
       const categoryCounts = feedback.reduce((acc, f) => {
         acc[f.category] = (acc[f.category] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>);
+        return acc}, {} as Record<string, any>);
 
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
@@ -163,7 +160,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           count,
           percentage: (count / totalFeedback) * 100
         }))
-        .sort((a, b) => b.count - a.count)
+        .sort((a, b)  => b.count - a.count)
         .slice(0, 4);
 
       setStats({
@@ -172,8 +169,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         positivePercentage,
         responseRate,
         topCategories
-      });
-    }
+      })}
   }, [feedback]);
 
   // Filter feedback
@@ -181,23 +177,19 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     let filtered = feedback;
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(f => f.category === selectedCategory);
-    }
+      filtered = filtered.filter(f => f.category === selectedCategory)}
 
     if (selectedRating > 0) {
-      filtered = filtered.filter(f => f.rating === selectedRating);
-    }
+      filtered = filtered.filter(f => f.rating === selectedRating)}
 
     if (searchQuery) {
       filtered = filtered.filter(f => 
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
+      )}
 
-    setFilteredFeedback(filtered.slice(0, maxFeedback));
-  }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
+    setFilteredFeedback(filtered.slice(0, maxFeedback))}, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
 
   // Handle feedback submission
   const handleSubmitFeedback = () => {
@@ -213,48 +205,42 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       date: new Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
-      tags: [],
+      tags[],
       verified: false
     };
 
-    setFeedback(prev => [feedback, ...prev]);
+    setFeedback(prev  => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
-    setShowFeedbackForm(false);
-  };
+    setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful') => {
+  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
     setFeedback(prev => prev.map(f => {
       if (f.id === feedbackId) {
         return {
           ...f,
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,
           unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful
-        };
-      }
-      return f;
-    }));
-  };
+        }}
+      return f}))};
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {
+  const getSentimentColor = (sentiment: string)  => {
     switch (sentiment) {
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
-      default: return 'text-yellow-400 bg-yellow-400/20';
-    }
+      default: return 'text-yellow-400 bg-yellow-400/20'}
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colors = {
       'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
       'support': 'text-purple-400 bg-purple-400/20',
       'overall': 'text-zion-cyan bg-zion-cyan/20'
     };
-    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20';
-  };
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
 
   return (
     <div className="w-full max-w-6xl mx-auto p-6">
@@ -324,8 +310,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.topCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
+            {stats.topCategories.map((category, index)  => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -601,5 +587,4 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         </motion.div>
       )}
     </div>
-  );
-};
+  )};

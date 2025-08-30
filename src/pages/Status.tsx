@@ -1,6 +1,5 @@
-import React from 'react';
-import { 
-  CheckCircle, 
+import React from 'react.ts';
+import { CheckCircle, 
   AlertTriangle, 
   XCircle, 
   Clock, 
@@ -10,9 +9,9 @@ import {
   Zap,
   Shield,
   Activity
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const Status: React.FC = () => {
+const Status: React.FC = (): JSX.Element => {
   const systemStatus = {
     overall: 'operational',
     uptime: '99.9%',
@@ -89,7 +88,7 @@ const Status: React.FC = () => {
     }
   ];
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string)  => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -98,11 +97,10 @@ const Status: React.FC = () => {
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
-    }
+        return <Clock className="w-5 h-5 text-gray-500" />}
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'operational':
         return 'text-green-500';
@@ -111,8 +109,7 @@ const Status: React.FC = () => {
       case 'outage':
         return 'text-red-500';
       default:
-        return 'text-gray-500';
-    }
+        return 'text-gray-500'}
   };
 
   return (
@@ -169,8 +166,8 @@ const Status: React.FC = () => {
           {/* Services Status */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Service Status</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-semibold text-white">{service.name}</h3>
@@ -263,7 +260,6 @@ const Status: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Status;

@@ -114,5 +114,4 @@ export default function EnterpriseIT() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

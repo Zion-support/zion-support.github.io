@@ -40,8 +40,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                 return a.category.localeCompare(b.category);
             case 'name':
             default:
-                return a.name.localeCompare(b.name);
-        }
+                return a.name.localeCompare(b.name)}
     });
     const getCategoryIcon = (category) => {
         const icons = {
@@ -60,8 +59,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             'AI & Analytics': '📊',
             'AI & Customer Experience': '💬'
         };
-        return icons[category] || '🚀';
-    };
+        return icons[category] || '🚀'};
     const getServiceTypeColor = (type) => {
         switch (type) {
             case 'Micro SAAS':
@@ -71,8 +69,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             case 'AI Service':
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:
-                return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+                return 'bg-gray-100 text-gray-800 border-gray-200'}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -292,6 +289,5 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default AdvancedInnovativeServicesShowcase2025;

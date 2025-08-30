@@ -1,14 +1,14 @@
-import React from 'react'
-import Link from 'next/link'
-import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database } from 'lucide-react'
+import React from 'react.ts'
+import Link from 'next/link.ts'
+import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database  } from 'lucide-react.ts'
 
-export default function Solutions() {
+export default function Solutions(...args[]):  {
   const solutions = [
     {
       icon: Brain,
       title: 'AI & Machine Learning',
       description: 'Advanced AI systems, autonomous agents, and intelligent automation platforms that transform business operations.',
-      features: ['Multi-agent AI systems', 'RAG-powered workflows', 'Predictive analytics', 'Natural language processing'],
+      features['Multi-agent AI systems', 'RAG-powered workflows', 'Predictive analytics', 'Natural language processing'],
       href: '/services#ai',
       color: 'from-blue-600 to-purple-600'
     },
@@ -16,7 +16,7 @@ export default function Solutions() {
       icon: Cloud,
       title: 'Cloud & Infrastructure',
       description: 'Scalable cloud platforms, serverless architectures, and modern infrastructure solutions.',
-      features: ['Cloud migration', 'Kubernetes orchestration', 'Serverless computing', 'Data pipelines'],
+      features['Cloud migration', 'Kubernetes orchestration', 'Serverless computing', 'Data pipelines'],
       href: '/services#cloud',
       color: 'from-cyan-500 to-blue-600'
     },
@@ -24,7 +24,7 @@ export default function Solutions() {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions including zero-trust architecture and threat detection.',
-      features: ['Zero-trust security', 'Threat intelligence', 'Compliance frameworks', 'Incident response'],
+      features['Zero-trust security', 'Threat intelligence', 'Compliance frameworks', 'Incident response'],
       href: '/services#cybersecurity',
       color: 'from-emerald-500 to-teal-600'
     },
@@ -32,7 +32,7 @@ export default function Solutions() {
       icon: Zap,
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation services to modernize legacy systems and processes.',
-      features: ['Legacy modernization', 'Process automation', 'Digital workflows', 'Change management'],
+      features['Legacy modernization', 'Process automation', 'Digital workflows', 'Change management'],
       href: '/services#transformation',
       color: 'from-orange-500 to-red-600'
     },
@@ -40,7 +40,7 @@ export default function Solutions() {
       icon: Users,
       title: 'Enterprise Solutions',
       description: 'Tailored enterprise-grade solutions for large organizations with complex requirements.',
-      features: ['Custom development', 'Integration services', 'Enterprise architecture', 'Scalability planning'],
+      features['Custom development', 'Integration services', 'Enterprise architecture', 'Scalability planning'],
       href: '/services#enterprise',
       color: 'from-purple-500 to-pink-600'
     },
@@ -48,7 +48,7 @@ export default function Solutions() {
       icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'Performance tuning, monitoring, and optimization for applications and infrastructure.',
-      features: ['Performance monitoring', 'Load testing', 'Optimization strategies', 'Capacity planning'],
+      features['Performance monitoring', 'Load testing', 'Optimization strategies', 'Capacity planning'],
       href: '/services#performance',
       color: 'from-yellow-500 to-orange-600'
     }
@@ -86,8 +86,8 @@ export default function Solutions() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {solutions.map((solution, index) => (
+          <div className="grid grid-cols-1 gap-8 md: grid-cols-2 lg:grid-cols-3">
+            {solutions.map((solution, index)  => (
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${solution.color} text-white mb-6`}>
                   <solution.icon className="h-6 w-6" />

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Server, 
   Zap, 
   Shield, 
@@ -26,22 +25,22 @@ import {
   Mail,
   Phone,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function ServicesOverview() {
+export default function ServicesOverview(...args[]):  {
   const serviceCategories = [
     {
       name: 'AI Services',
       description: 'Cutting-edge artificial intelligence solutions that transform business operations',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      services: [
+      services[
         {
           title: 'AI Workflow Automation',
           description: 'Intelligent process automation with AI-powered optimization',
           price: 'From $3,500',
-          features: ['Process mapping', 'AI implementation', 'Ongoing optimization'],
+          features['Process mapping', 'AI implementation', 'Ongoing optimization'],
           link: '/services/ai-workflow-automation',
           popular: true
         },
@@ -49,7 +48,7 @@ export default function ServicesOverview() {
           title: 'AI Customer Experience Platform',
           description: 'AI-powered personalization and customer journey optimization',
           price: 'From $4,500',
-          features: ['CX assessment', 'Platform implementation', 'Performance optimization'],
+          features['CX assessment', 'Platform implementation', 'Performance optimization'],
           link: '/services/ai-customer-experience-platform',
           popular: false
         },
@@ -57,7 +56,7 @@ export default function ServicesOverview() {
           title: 'AI Supply Chain Optimization',
           description: 'Intelligent supply chain management and logistics optimization',
           price: 'From $5,500',
-          features: ['Supply chain assessment', 'AI platform implementation', 'Continuous optimization'],
+          features['Supply chain assessment', 'AI platform implementation', 'Continuous optimization'],
           link: '/services/ai-supply-chain-optimization',
           popular: false
         },
@@ -65,7 +64,7 @@ export default function ServicesOverview() {
           title: 'AI Cybersecurity Suite',
           description: 'Advanced AI-powered threat detection and security automation',
           price: 'From $2,500/month',
-          features: ['Threat intelligence', 'SOC services', 'Compliance monitoring'],
+          features['Threat intelligence', 'SOC services', 'Compliance monitoring'],
           link: '/services/ai-cybersecurity-suite',
           popular: true
         },
@@ -73,7 +72,7 @@ export default function ServicesOverview() {
           title: 'AI Business Intelligence',
           description: 'Next-generation BI with AI-powered insights and analytics',
           price: 'From $2,999/month',
-          features: ['AI data analysis', 'Predictive analytics', 'Custom dashboards'],
+          features['AI data analysis', 'Predictive analytics', 'Custom dashboards'],
           link: '/services/ai-business-intelligence',
           popular: false
         },
@@ -81,7 +80,7 @@ export default function ServicesOverview() {
           title: 'AI Sales Copilot',
           description: 'AI-powered sales automation and lead optimization',
           price: 'From $1,999/month',
-          features: ['Lead scoring', 'Sales automation', 'Performance analytics'],
+          features['Lead scoring', 'Sales automation', 'Performance analytics'],
           link: '/services/ai-sales-copilot',
           popular: false
         }
@@ -92,12 +91,12 @@ export default function ServicesOverview() {
       description: 'Comprehensive IT infrastructure and digital transformation solutions',
       icon: Server,
       color: 'from-blue-500 to-cyan-500',
-      services: [
+      services[
         {
           title: 'Cloud DevOps',
           description: 'Cloud migration and DevOps transformation services',
           price: 'From $5,000',
-          features: ['Cloud migration', 'DevOps implementation', '24/7 managed services'],
+          features['Cloud migration', 'DevOps implementation', '24/7 managed services'],
           link: '/services/cloud-devops',
           popular: true
         },
@@ -105,7 +104,7 @@ export default function ServicesOverview() {
           title: 'IT Infrastructure',
           description: 'Modern infrastructure design and implementation',
           price: 'From $8,000',
-          features: ['Infrastructure design', 'Implementation', 'Ongoing support'],
+          features['Infrastructure design', 'Implementation', 'Ongoing support'],
           link: '/services/it-infrastructure',
           popular: false
         },
@@ -113,7 +112,7 @@ export default function ServicesOverview() {
           title: 'Digital Transformation',
           description: 'End-to-end digital transformation consulting and implementation',
           price: 'From $15,000',
-          features: ['Strategy development', 'Technology selection', 'Change management'],
+          features['Strategy development', 'Technology selection', 'Change management'],
           link: '/services/digital-transformation',
           popular: false
         },
@@ -121,7 +120,7 @@ export default function ServicesOverview() {
           title: 'IT Consulting',
           description: 'Strategic IT consulting and technology advisory services',
           price: 'From $3,500',
-          features: ['Technology assessment', 'Strategic planning', 'Vendor selection'],
+          features['Technology assessment', 'Strategic planning', 'Vendor selection'],
           link: '/services/it-consulting',
           popular: false
         },
@@ -129,7 +128,7 @@ export default function ServicesOverview() {
           title: 'Zero Trust Network Architecture',
           description: 'Advanced security architecture implementation',
           price: 'From $12,000',
-          features: ['Security assessment', 'Architecture design', 'Implementation'],
+          features['Security assessment', 'Architecture design', 'Implementation'],
           link: '/services/zero-trust-network-architecture',
           popular: false
         },
@@ -137,7 +136,7 @@ export default function ServicesOverview() {
           title: 'Green IT Solutions',
           description: 'Sustainable technology solutions and energy optimization',
           price: 'From $6,000',
-          features: ['Energy audit', 'Green technology', 'Sustainability reporting'],
+          features['Energy audit', 'Green technology', 'Sustainability reporting'],
           link: '/services/green-it',
           popular: false
         }
@@ -148,12 +147,12 @@ export default function ServicesOverview() {
       description: 'Specialized software-as-a-service solutions for specific business needs',
       icon: Zap,
       color: 'from-green-500 to-emerald-500',
-      services: [
+      services[
         {
           title: 'Cloud FinOps Optimizer',
           description: 'Cloud cost optimization and financial operations management',
           price: 'From $1,999/month',
-          features: ['Cost analysis', 'Optimization', 'Financial reporting'],
+          features['Cost analysis', 'Optimization', 'Financial reporting'],
           link: '/services/cloud-finops-optimizer',
           popular: true
         },
@@ -161,7 +160,7 @@ export default function ServicesOverview() {
           title: 'AI Compliance Assistant',
           description: 'Automated compliance monitoring and reporting',
           price: 'From $1,500/month',
-          features: ['Compliance monitoring', 'Automated reporting', 'Risk assessment'],
+          features['Compliance monitoring', 'Automated reporting', 'Risk assessment'],
           link: '/services/ai-compliance-assistant',
           popular: false
         },
@@ -169,7 +168,7 @@ export default function ServicesOverview() {
           title: 'LLM Content Studio',
           description: 'AI-powered content creation and management platform',
           price: 'From $999/month',
-          features: ['Content generation', 'AI editing', 'Multi-platform publishing'],
+          features['Content generation', 'AI editing', 'Multi-platform publishing'],
           link: '/services/llm-content-studio',
           popular: false
         },
@@ -177,7 +176,7 @@ export default function ServicesOverview() {
           title: 'Customer Feedback Surveys',
           description: 'Intelligent customer feedback collection and analysis',
           price: 'From $799/month',
-          features: ['Survey creation', 'AI analysis', 'Insight generation'],
+          features['Survey creation', 'AI analysis', 'Insight generation'],
           link: '/services/mobile-feedback-surveys',
           popular: false
         },
@@ -185,7 +184,7 @@ export default function ServicesOverview() {
           title: 'FinOps Advisor',
           description: 'Financial operations optimization and cost management',
           price: 'From $2,500/month',
-          features: ['Cost optimization', 'Financial planning', 'Performance analytics'],
+          features['Cost optimization', 'Financial planning', 'Performance analytics'],
           link: '/services/finops-advisor',
           popular: false
         }
@@ -290,8 +289,8 @@ export default function ServicesOverview() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.services.map((service, serviceIndex) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {category.services.map((service, serviceIndex)  => (
                 <motion.div
                   key={serviceIndex}
                   initial={{ opacity: 0, y: 20 }}
@@ -350,8 +349,8 @@ export default function ServicesOverview() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {emergingTechnologies.map((tech, index) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {emergingTechnologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -394,7 +393,7 @@ export default function ServicesOverview() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Star,
@@ -416,7 +415,7 @@ export default function ServicesOverview() {
                 title: 'Quality Assurance',
                 description: 'Rigorous testing and quality control for reliable solutions'
               }
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -500,5 +499,4 @@ export default function ServicesOverview() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

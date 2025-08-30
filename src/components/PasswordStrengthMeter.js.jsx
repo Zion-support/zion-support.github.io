@@ -7,5 +7,4 @@ export function PasswordStrengthMeter({ password }) {
     return (<div className="mt-2" aria-live="polite">
       <Progress value={value} className="h-2"/>
       <p className="text-xs text-zion-slate-light mt-1">{label}</p>
-    </div>);
-}
+    </div>)}

@@ -73,7 +73,7 @@ const mockInsights = [
         category: 'Financial',
         timestamp: '2024-01-15T10:00:00.000Z',
         actionable: true,
-        actions: ['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
+        actions['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
     },
     {
         id: 'insight-2',
@@ -85,7 +85,7 @@ const mockInsights = [
         category: 'Customer',
         timestamp: '2024-01-15T09:30:00.000Z',
         actionable: true,
-        actions: ['Investigate customer feedback', 'Review product updates', 'Enhance support response']
+        actions['Investigate customer feedback', 'Review product updates', 'Enhance support response']
     },
     {
         id: 'insight-3',
@@ -97,7 +97,7 @@ const mockInsights = [
         category: 'Growth',
         timestamp: '2024-01-15T08:45:00.000Z',
         actionable: true,
-        actions: ['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
+        actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
     }
 ];
 const mockModels = [
@@ -157,13 +157,11 @@ export function AdvancedBusinessIntelligence() {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false);
-    };
+        setIsRefreshing(false)};
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-            return () => clearInterval(interval);
-        }
+            return () => clearInterval(interval)}
     }, [autoRefresh]);
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -172,8 +170,7 @@ export function AdvancedBusinessIntelligence() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
-                return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+                return <Activity className="w-4 h-4 text-gray-500"/>}
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -182,8 +179,7 @@ export function AdvancedBusinessIntelligence() {
             case 'medium':
                 return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
             default:
-                return 'border-green-500 bg-green-50 dark:bg-green-900/20';
-        }
+                return 'border-green-500 bg-green-50 dark:bg-green-900/20'}
     };
     const getInsightIcon = (type) => {
         switch (type) {
@@ -196,8 +192,7 @@ export function AdvancedBusinessIntelligence() {
             case 'risk':
                 return <AlertTriangle className="w-5 h-5 text-orange-500"/>;
             default:
-                return <Zap className="w-5 h-5 text-purple-500"/>;
-        }
+                return <Zap className="w-5 h-5 text-purple-500"/>}
     };
     const formatValue = (value, unit) => {
         if (unit === 'USD') {
@@ -206,18 +201,14 @@ export function AdvancedBusinessIntelligence() {
                 currency: 'USD',
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
-            }).format(value);
-        }
+            }).format(value)}
         if (unit === '%') {
-            return `${value.toFixed(1)}%`;
-        }
-        return new Intl.NumberFormat('en-US').format(value);
-    };
+            return `${value.toFixed(1)}%`}
+        return new Intl.NumberFormat('en-US').format(value)};
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">
         <Brain className="w-6 h-6"/>
-      </button>);
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -227,8 +218,7 @@ export function AdvancedBusinessIntelligence() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-      </div>);
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">
@@ -301,8 +291,7 @@ export function AdvancedBusinessIntelligence() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
               <Icon className="w-4 h-4"/>
               {tab.label}
-            </button>);
-        })}
+            </button>)})}
       </div>
 
       {/* Content */}
@@ -352,8 +341,7 @@ export function AdvancedBusinessIntelligence() {
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">
                       <Icon className="w-4 h-4 mx-auto mb-2"/>
                       {item.label}
-                    </button>);
-            })}
+                    </button>)})}
               </div>
             </div>
           </div>)}
@@ -431,5 +419,4 @@ export function AdvancedBusinessIntelligence() {
             </div>
           </div>)}
       </div>
-    </div>);
-}
+    </div>)}

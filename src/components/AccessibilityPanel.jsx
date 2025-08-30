@@ -19,62 +19,49 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         if (savedSettings) {
             try {
                 const parsed = JSON.parse(savedSettings);
-                setSettings(prev => ({ ...prev, ...parsed }));
-            }
+                setSettings(prev => ({ ...prev, ...parsed }))}
             catch (error) {
-                console.error('Failed to parse accessibility settings:', error);
-            }
+                console.error('Failed to parse accessibility settings:', error)}
         }
     }, []);
     useEffect(() => {
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage
-        localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-    }, [settings]);
+        localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
     const applySettings = (newSettings) => {
         const root = document.documentElement;
         // High contrast
         if (newSettings.highContrast) {
             root.style.setProperty('--high-contrast', '1');
-            root.classList.add('high-contrast');
-        }
+            root.classList.add('high-contrast')}
         else {
             root.style.setProperty('--high-contrast', '0');
-            root.classList.remove('high-contrast');
-        }
+            root.classList.remove('high-contrast')}
         // Font size
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         // Reduced motion
         if (newSettings.reducedMotion) {
-            root.classList.add('reduced-motion');
-        }
+            root.classList.add('reduced-motion')}
         else {
-            root.style.setProperty('--reduced-motion', 'no-preference');
-        }
+            root.style.setProperty('--reduced-motion', 'no-preference')}
         // Apply focus indicator
         if (settings.focusIndicator) {
-            root.style.setProperty('--focus-visible', 'auto');
-        }
+            root.style.setProperty('--focus-visible', 'auto')}
         else {
-            root.style.setProperty('--focus-visible', 'none');
-        }
+            root.style.setProperty('--focus-visible', 'none')}
         // Color blindness
         root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
         if (newSettings.colorBlindness !== 'none') {
-            root.classList.add(newSettings.colorBlindness);
-        }
+            root.classList.add(newSettings.colorBlindness)}
         // Focus indicator
         if (newSettings.focusIndicator) {
-            root.classList.add('focus-visible');
-        }
+            root.classList.add('focus-visible')}
         else {
-            root.classList.remove('focus-visible');
-        }
+            root.classList.remove('focus-visible')}
     };
     const updateSetting = (key, value) => {
-        setSettings(prev => ({ ...prev, [key]: value }));
-    };
+        setSettings(prev => ({ ...prev, [key]: value }))};
     const resetSettings = () => {
         const defaultSettings = {
             highContrast: false,
@@ -85,8 +72,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             focusIndicator: true,
             colorBlindness: 'none'
         };
-        setSettings(defaultSettings);
-    };
+        setSettings(defaultSettings)};
     const tabs = [
         { id: 'general', label: 'General', icon: '⚙️' },
         { id: 'visual', label: 'Visual', icon: '👁️' },
@@ -98,8 +84,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             return 'text-green-400';
         if (score >= 70)
             return 'text-yellow-400';
-        return 'text-red-400';
-    };
+        return 'text-red-400'};
     const getScoreLabel = (score) => {
         if (score >= 90)
             return 'Excellent';
@@ -107,8 +92,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             return 'Good';
         if (score >= 50)
             return 'Needs Improvement';
-        return 'Poor';
-    };
+        return 'Poor'};
     if (!isVisible)
         return null;
     return (<>
@@ -273,6 +257,5 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
-};
+    </>)};
 export default AccessibilityPanel;

@@ -108,8 +108,7 @@ const QuantumNeuralNetworkPlatform = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>);
-        })}
+                </div>)})}
           </div>
         </div>
       </section>
@@ -136,8 +135,7 @@ const QuantumNeuralNetworkPlatform = () => {
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300 text-lg">{useCase.description}</p>
-                </div>);
-        })}
+                </div>)})}
           </div>
         </div>
       </section>
@@ -268,6 +266,5 @@ const QuantumNeuralNetworkPlatform = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default QuantumNeuralNetworkPlatform;

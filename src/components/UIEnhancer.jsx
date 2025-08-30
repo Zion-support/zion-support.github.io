@@ -10,64 +10,50 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         const detectDevice = () => {
             const width = window.innerWidth;
             if (width < 768) {
-                setDeviceType('mobile');
-            }
+                setDeviceType('mobile')}
             else if (width < 1024) {
-                setDeviceType('tablet');
-            }
+                setDeviceType('tablet')}
             else {
-                setDeviceType('desktop');
-            }
+                setDeviceType('desktop')}
         };
         detectDevice();
         window.addEventListener('resize', detectDevice);
         // Load saved theme
         const savedTheme = localStorage.getItem('ui-theme');
         if (savedTheme) {
-            setTheme(savedTheme);
-        }
+            setTheme(savedTheme)}
         // Apply theme
         applyTheme(savedTheme || 'dark');
         // Scroll to top visibility
         const handleScroll = () => {
-            setShowScrollToTop(window.scrollY > 300);
-        };
+            setShowScrollToTop(window.scrollY > 300)};
         if (enableScrollEffects) {
-            window.addEventListener('scroll', handleScroll);
-        }
+            window.addEventListener('scroll', handleScroll)}
         return () => {
             window.removeEventListener('resize', detectDevice);
             if (enableScrollEffects) {
-                window.removeEventListener('scroll', handleScroll);
-            }
-        };
-    }, [enableScrollEffects]);
+                window.removeEventListener('scroll', handleScroll)}
+        }}, [enableScrollEffects]);
     const applyTheme = (newTheme) => {
         const root = document.documentElement;
         if (newTheme === 'auto') {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             root.classList.toggle('dark', prefersDark);
-            root.classList.toggle('light', !prefersDark);
-        }
+            root.classList.toggle('light', !prefersDark)}
         else {
             root.classList.remove('light', 'dark');
-            root.classList.add(newTheme);
-        }
-        localStorage.setItem('ui-theme', newTheme);
-    };
+            root.classList.add(newTheme)}
+        localStorage.setItem('ui-theme', newTheme)};
     const handleThemeChange = (newTheme) => {
         setTheme(newTheme);
-        applyTheme(newTheme);
-    };
+        applyTheme(newTheme)};
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
-        });
-    };
+        })};
     const toggleParticleMode = () => {
-        setIsParticleMode(!isParticleMode);
-    };
+        setIsParticleMode(!isParticleMode)};
     return (<>
       {/* Floating Action Buttons */}
       {showFloatingActions && (<div className="fixed bottom-4 right-4 z-40 space-y-3">
@@ -114,7 +100,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
                 }} animate={{
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-                    scale: [0, 1, 0]
+                    scale[0, 1, 0]
                 }} transition={{
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,
@@ -147,6 +133,5 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           </div>
         </div>
       </motion.div>
-    </>);
-};
+    </>)};
 export default UIEnhancer;

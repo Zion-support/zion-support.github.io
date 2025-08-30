@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, Zap, Brain, Rocket, Globe } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Loader2, Zap, Brain, Rocket, Globe  } from 'lucide-react.ts';
 
-interface EnhancedLoadingSpinnerProps {
+interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   message?: string;
   showProgress?: boolean;
   progress?: number;
   variant?: 'default' | 'ai' | 'tech' | 'global';
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-}
+  className?: string}
 
 export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   message = 'Loading amazing experiences...',
@@ -38,15 +38,12 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   useEffect(() => {
     if (variant === 'ai' || variant === 'tech' || variant === 'global') {
       const interval = setInterval(() => {
-        setMessageIndex((prevIndex) => (prevIndex + 1) % loadingMessages.length);
-      }, 3000); // Change message every 3 seconds
-      return () => clearInterval(interval);
-    }
+        setMessageIndex((prevIndex) => (prevIndex + 1) % loadingMessages.length)}, 3000); // Change message every 3 seconds
+      return () => clearInterval(interval)}
   }, [variant, loadingMessages.length]);
 
   useEffect(() => {
-    setCurrentMessage(message);
-  }, [message]);
+    setCurrentMessage(message)}, [message]);
 
   const spinnerSizeClasses = {
     sm: 'h-4 w-4 border-2',
@@ -115,8 +112,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export const ZionLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
   <EnhancedLoadingSpinner {...props} variant="tech" />
@@ -126,12 +122,12 @@ export const TechLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'var
   <EnhancedLoadingSpinner {...props} variant="tech" />
 );
 
-interface LoadingOverlayProps {
+interface LoadingOverlayProps extends React.PropsWithChildren<{}> {
+
   isOpen: boolean;
   message?: string;
   progress?: number;
-  variant?: 'default' | 'ai' | 'tech' | 'global';
-}
+  variant?: 'default' | 'ai' | 'tech' | 'global'}
 
 export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   isOpen,
@@ -152,5 +148,4 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
         </motion.div>
       )}
     </AnimatePresence>
-  );
-};
+  )};

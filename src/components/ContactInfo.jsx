@@ -26,7 +26,7 @@ export function ContactInfo() {
                   Contact Details
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  Reach out to us through any of these channels
+                  Reach out to us through  of these channels
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -215,5 +215,4 @@ export function ContactInfo() {
           </div>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

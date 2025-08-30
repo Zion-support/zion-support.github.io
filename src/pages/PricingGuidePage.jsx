@@ -14,14 +14,11 @@ export default function PricingGuidePage() {
         const services = EXPANDED_SERVICES.filter(s => s.category === category);
         const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
         const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
-        return { count: services.length, avgPrice, avgRating };
-    };
+        return { count: services.length, avgPrice, avgRating }};
     const formatPrice = (price) => {
         if (price >= 1000) {
-            return `$${(price / 1000).toFixed(1)}K`;
-        }
-        return `$${price}`;
-    };
+            return `$${(price / 1000).toFixed(1)}K`}
+        return `$${price}`};
     const getServiceTier = (price) => {
         if (price < 2000)
             return { tier: "Starter", color: "bg-green-100 text-green-800" };
@@ -29,8 +26,7 @@ export default function PricingGuidePage() {
             return { tier: "Professional", color: "bg-blue-100 text-blue-800" };
         if (price < 10000)
             return { tier: "Enterprise", color: "bg-purple-100 text-purple-800" };
-        return { tier: "Premium", color: "bg-orange-100 text-orange-800" };
-    };
+        return { tier: "Premium", color: "bg-orange-100 text-orange-800" }};
     return (<div className="min-h-screen bg-background">
       <SEO title="Service Pricing Guide - Zion Tech Group" description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs." keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost" canonical="https://ziontechgroup.com/pricing"/>
 
@@ -100,8 +96,7 @@ export default function PricingGuidePage() {
             const stats = getCategoryStats(category.name);
             return (<Button key={category.id} variant={selectedCategory === category.name ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.name)} className={selectedCategory === category.name ? 'bg-zion-cyan text-white' : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}>
                   {category.name} ({stats.count})
-                </Button>);
-        })}
+                </Button>)})}
           </div>
         </div>
       </div>
@@ -198,8 +193,7 @@ export default function PricingGuidePage() {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>);
-        })}
+              </Card>)})}
         </div>
 
         {filteredServices.length === 0 && (<div className="text-center py-12">
@@ -323,5 +317,4 @@ export default function PricingGuidePage() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

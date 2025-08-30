@@ -31,7 +31,7 @@ const governmentSolutions = [
     title: "Citizen Portal Platform",
     description: "Comprehensive digital platform for citizen services and government interactions.",
     icon: Users,
-    features: [
+    features[
       "Service request management",
       "Document submission",
       "Payment processing",
@@ -40,14 +40,14 @@ const governmentSolutions = [
     price: "From $80,000",
     timeline: "20-32 weeks",
     category: "Citizen Services",
-    compliance: ["FISMA", "FedRAMP", "Section 508", "WCAG 2.1"]
+    compliance["FISMA", "FedRAMP", "Section 508", "WCAG 2.1"]
   },
   {
     id: 2,
     title: "Cybersecurity Framework",
     description: "Enterprise-grade security solutions meeting federal cybersecurity requirements.",
     icon: Shield,
-    features: [
+    features[
       "Threat detection",
       "Incident response",
       "Compliance monitoring",
@@ -56,14 +56,14 @@ const governmentSolutions = [
     price: "From $60,000",
     timeline: "16-24 weeks",
     category: "Security",
-    compliance: ["NIST", "FISMA", "FedRAMP", "CIS Controls"]
+    compliance["NIST", "FISMA", "FedRAMP", "CIS Controls"]
   },
   {
     id: 3,
     title: "Data Analytics Platform",
     description: "Advanced analytics and reporting tools for government decision-making.",
     icon: BarChart3,
-    features: [
+    features[
       "Real-time dashboards",
       "Predictive analytics",
       "Data visualization",
@@ -72,14 +72,14 @@ const governmentSolutions = [
     price: "From $50,000",
     timeline: "12-20 weeks",
     category: "Analytics",
-    compliance: ["FISMA", "FedRAMP", "Data Privacy", "Open Data"]
+    compliance["FISMA", "FedRAMP", "Data Privacy", "Open Data"]
   },
   {
     id: 4,
     title: "Legacy System Modernization",
     description: "Modernization of outdated government systems to improve efficiency and security.",
     icon: Server,
-    features: [
+    features[
       "System migration",
       "API development",
       "Cloud integration",
@@ -88,14 +88,14 @@ const governmentSolutions = [
     price: "From $100,000",
     timeline: "24-40 weeks",
     category: "System Modernization",
-    compliance: ["FISMA", "FedRAMP", "Section 508", "Cloud Security"]
+    compliance["FISMA", "FedRAMP", "Section 508", "Cloud Security"]
   },
   {
     id: 5,
     title: "Emergency Response System",
     description: "Integrated emergency management and response coordination platform.",
     icon: Activity,
-    features: [
+    features[
       "Real-time monitoring",
       "Alert systems",
       "Resource coordination",
@@ -104,14 +104,14 @@ const governmentSolutions = [
     price: "From $70,000",
     timeline: "16-28 weeks",
     category: "Emergency Management",
-    compliance: ["FISMA", "FedRAMP", "Emergency Protocols", "Interoperability"]
+    compliance["FISMA", "FedRAMP", "Emergency Protocols", "Interoperability"]
   },
   {
     id: 6,
     title: "Regulatory Compliance Platform",
     description: "Automated compliance monitoring and reporting for government regulations.",
     icon: FileText,
-    features: [
+    features[
       "Compliance tracking",
       "Automated reporting",
       "Audit trails",
@@ -120,7 +120,7 @@ const governmentSolutions = [
     price: "From $45,000",
     timeline: "12-20 weeks",
     category: "Compliance",
-    compliance: ["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
+    compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
   }
 ];
 
@@ -129,25 +129,25 @@ const complianceStandards = [
     name: "FISMA",
     description: "Federal Information Security Management Act",
     icon: Shield,
-    requirements: ["Risk Assessment", "Security Controls", "Continuous Monitoring", "Incident Response"]
+    requirements["Risk Assessment", "Security Controls", "Continuous Monitoring", "Incident Response"]
   },
   {
     name: "FedRAMP",
     description: "Federal Risk and Authorization Management Program",
     icon: Lock,
-    requirements: ["Cloud Security", "Authorization Process", "Continuous Monitoring", "Security Assessment"]
+    requirements["Cloud Security", "Authorization Process", "Continuous Monitoring", "Security Assessment"]
   },
   {
     name: "Section 508",
     description: "Accessibility requirements for federal electronic and information technology",
     icon: Users,
-    requirements: ["Web Accessibility", "Document Accessibility", "Software Accessibility", "Testing & Validation"]
+    requirements["Web Accessibility", "Document Accessibility", "Software Accessibility", "Testing & Validation"]
   },
   {
     name: "NIST",
     description: "National Institute of Standards and Technology Cybersecurity Framework",
     icon: Brain,
-    requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"]
+    requirements["Identify", "Protect", "Detect", "Respond", "Recover"]
   }
 ];
 
@@ -548,5 +548,4 @@ export default function GovernmentSolutions() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

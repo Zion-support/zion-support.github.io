@@ -102,7 +102,7 @@ export default function MicroSAASShowcase() {
                       per month
                     </div>
                     <div className="text-xs text-zion-cyan mt-1">
-                      No setup fees • Cancel anytime
+                      No setup fees • Cancel time
                     </div>
                   </div>
 
@@ -188,7 +188,7 @@ export default function MicroSAASShowcase() {
                 <Cloud className="w-8 h-8 text-white"/>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Cloud-Based</h3>
-              <p className="text-gray-600">Access from anywhere, anytime with automatic updates and backups</p>
+              <p className="text-gray-600">Access from where, time with automatic updates and backups</p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -233,7 +233,7 @@ export default function MicroSAASShowcase() {
                 <Smartphone className="w-8 h-8 text-zion-cyan"/>
                 <h3 className="text-xl font-semibold text-zion-blue">Mobile Responsive</h3>
               </div>
-              <p className="text-gray-600">Access your data and manage operations from any device, anywhere in the world.</p>
+              <p className="text-gray-600">Access your data and manage operations from  device, where in the world.</p>
             </div>
             <div className="p-6 border border-zion-blue-light rounded-lg">
               <div className="flex items-center gap-3 mb-4">
@@ -371,5 +371,4 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-    </div>);
-}
+    </div>)}

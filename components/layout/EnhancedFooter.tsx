@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { 
-  Twitter, 
+import React from 'react.ts';
+import Link from 'next/link.ts';
+import { Twitter, 
   Linkedin, 
   Facebook, 
   Instagram, 
@@ -22,12 +21,12 @@ import {
   HelpCircle,
   Lock,
   Award
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const footerNavigation = {
 	services: {
 		title: 'Services',
-		items: [
+		items[
 			{ name: 'AI Solutions', href: '/services/ai-solutions' },
 			{ name: 'Cloud & DevOps', href: '/services/cloud' },
 			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -38,7 +37,7 @@ const footerNavigation = {
 	},
 	solutions: {
 		title: 'Solutions',
-		items: [
+		items[
 			{ name: 'Enterprise', href: '/solutions/enterprise' },
 			{ name: 'SMB', href: '/solutions/smb' },
 			{ name: 'Startup', href: '/solutions/startup' },
@@ -47,9 +46,9 @@ const footerNavigation = {
 			{ name: 'Financial Services', href: '/solutions/financial' },
 		],
 	},
-	company: {
-		title: 'Company',
-		items: [
+	comp: {
+		title: 'Comp',
+		items[
 			{ name: 'About Us', href: '/about' },
 			{ name: 'Partners', href: '/partners' },
 			{ name: 'Careers', href: '/careers' },
@@ -60,7 +59,7 @@ const footerNavigation = {
 	},
 	support: {
 		title: 'Support & Resources',
-		items: [
+		items[
 			{ name: 'Help Center', href: '/help' },
 			{ name: 'Contact Support', href: '/contact' },
 			{ name: 'Documentation', href: '/docs' },
@@ -86,10 +85,9 @@ const quickLinks = [
 	{ name: 'Status', href: '/status', icon: Cloud },
 ];
 
-const EnhancedFooter: React.FC = () => {
+const EnhancedFooter: React.FC = (): JSX.Element => {
 	const scrollToTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
+		window.scrollTo({ top: 0, behavior: 'smooth' })};
 
 	return (
 		<footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
@@ -103,7 +101,7 @@ const EnhancedFooter: React.FC = () => {
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				{/* Main Footer Content */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-					{/* Company info */}
+					{/* Comp info */}
 					<div className="lg:col-span-2">
 						<div className="mb-6">
 							<div className="flex items-center gap-3 mb-4">
@@ -141,7 +139,7 @@ const EnhancedFooter: React.FC = () => {
 
 						{/* Social media */}
 						<div className="flex space-x-4">
-							{socialLinks.map(({ name, href, icon: Icon }) => (
+							{socialLinks.map(({ name, href, icon: Icon })  => (
 								<a
 									key={name}
 									href={href}
@@ -179,8 +177,8 @@ const EnhancedFooter: React.FC = () => {
 
 				{/* Quick Links Section */}
 				<div className="py-8 border-t border-zion-blue-light mb-8">
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-						{quickLinks.map((link) => (
+					<div className="grid grid-cols-2 md: grid-cols-4 gap-6">
+						{quickLinks.map((link)  => (
 							<Link
 								key={link.name}
 								href={link.href}
@@ -267,7 +265,6 @@ const EnhancedFooter: React.FC = () => {
 				<ArrowUp className="w-5 h-5" />
 			</button>
 		</footer>
-	);
-};
+	)};
 
 export default EnhancedFooter;

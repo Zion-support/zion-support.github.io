@@ -13,5 +13,4 @@ export function PartnersSection() {
           <a href="#register" className="text-zion-cyan underline">Become a Sponsor</a>
         </div>
       </div>
-    </section>);
-}
+    </section>)}

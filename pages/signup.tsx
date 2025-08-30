@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import {
-  User,
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion.ts'
+import { useState  } from 'react.ts'
+import { User,
   Mail,
   Lock,
   Eye,
@@ -16,16 +15,16 @@ import {
   Zap,
   Brain,
   Cloud
-} from 'lucide-react'
+ } from 'lucide-react.ts'
 
-export default function Signup() {
+export default function Signup(...args[]):  {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     password: '',
     confirmPassword: '',
-    company: '',
+    comp: '',
     phone: '',
     website: '',
     industry: '',
@@ -35,7 +34,7 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [errors, setErrors] = useState<Record<string, any>>({})
 
   const industries = [
     'Technology',
@@ -61,7 +60,7 @@ export default function Signup() {
     'Other'
   ]
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>)  => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -71,7 +70,7 @@ export default function Signup() {
   }
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = {}
+    const newErrors: Record<string, any> = {}
 
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required'
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required'
@@ -89,7 +88,7 @@ export default function Signup() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault()
     
     if (!validateForm()) return
@@ -101,10 +100,10 @@ export default function Signup() {
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       // Success - redirect or show success message
-      console.log('Signup successful:', formData)
+      // // // // console.log('Signup successful:', formData)
       
     } catch (error) {
-      console.error('Signup error:', error)
+      // // // // console.error('Signup error:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -340,22 +339,22 @@ export default function Signup() {
                     )}
                   </div>
 
-                  {/* Company Information */}
+                  {/* Comp Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                        Company Name
+                      <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Comp Name
                       </label>
                       <div className="relative">
                         <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
                         <input
                           type="text"
-                          id="company"
-                          name="company"
-                          value={formData.company}
+                          id="comp"
+                          name="comp"
+                          value={formData.comp}
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                          placeholder="Enter company name"
+                          placeholder="Enter comp name"
                         />
                       </div>
                     </div>

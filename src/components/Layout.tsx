@@ -1,14 +1,14 @@
-import React from 'react';
-import { ReactNode } from 'react';
-interface LayoutProps {
-  children: ReactNode;
-}
+import React from 'react.ts';
+import { ReactNode  } from 'react.ts';
+interface LayoutProps extends React.PropsWithChildren<{}> {
+
+  children: ReactNode}
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
   { 
     label: 'Services', 
     href: '/services',
-    children: [
+    children[
       { label: 'AI & Machine Learning', href: '/services#ai' },
       { label: 'Quantum Technology', href: '/services#quantum' },
       { label: 'Cybersecurity', href: '/services#cybersecurity' },
@@ -25,14 +25,13 @@ const navigation: NavItem[] = [
   },
   { label: 'Contact', href: '/contact' }
 ];
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+  const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
-  const isActive = (href: string) => location.pathname === href;
-  const toggleSidebarDropdown = (label: string) => {
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
-  };
+  const isActive = (href: string)  => location.pathname === href;
+  const toggleSidebarDropdown = (label: string)  => {
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -131,5 +130,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </main>
       </div>
     </div>
-  );
-}
+  )}

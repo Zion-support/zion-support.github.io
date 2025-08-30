@@ -16,13 +16,10 @@ export const MobileEmailCapture = () => {
       if (email.includes('@')) {
         setStatus('success');
         setEmail('');
-        setTimeout(() => setStatus('idle'), 3000);
-      } else {
+        setTimeout(() => setStatus('idle'), 3000)} else {
         setStatus('error');
-        setTimeout(() => setStatus('idle'), 3000);
-      }
-    }, 1000);
-  };
+        setTimeout(() => setStatus('idle'), 3000)}
+    }, 1000)};
 
   const getStatusIcon = () => {
     switch (status) {
@@ -31,8 +28,7 @@ export const MobileEmailCapture = () => {
       case 'error':
         return <AlertCircle className="h-5 w-5 text-red-400" />;
       default:
-        return <Mail className="h-5 w-5 text-blue-400" />;
-    }
+        return <Mail className="h-5 w-5 text-blue-400" />}
   };
 
   const getStatusText = () => {
@@ -42,8 +38,7 @@ export const MobileEmailCapture = () => {
       case 'error':
         return 'Please enter a valid email address.';
       default:
-        return 'Get early access and exclusive updates';
-    }
+        return 'Get early access and exclusive updates'}
   };
 
   return (
@@ -88,7 +83,7 @@ export const MobileEmailCapture = () => {
                 </button>
               </div>
               <p className="text-sm text-gray-400">
-                We respect your privacy. Unsubscribe at any time.
+                We respect your privacy. Unsubscribe at  time.
               </p>
             </form>
           )}
@@ -150,5 +145,4 @@ export const MobileEmailCapture = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )};

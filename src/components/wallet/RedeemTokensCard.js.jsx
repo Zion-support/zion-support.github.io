@@ -22,7 +22,7 @@ const REWARD_OPTIONS = [
     {
         id: 'platform-credit',
         title: '$5 Platform Credit',
-        description: 'Get $5 credit to use on any paid service',
+        description: 'Get $5 credit to use on  paid service',
         cost: 100,
         type: 'credit'
     }
@@ -34,8 +34,7 @@ export function RedeemTokensCard() {
         if (!wallet || wallet.balance < option.cost)
             return;
         await spendTokens(option.cost, `Redeemed: ${option.title}`);
-        setOpen(false);
-    };
+        setOpen(false)};
     return (<Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -78,5 +77,4 @@ export function RedeemTokensCard() {
           </DialogContent>
         </Dialog>
       </CardContent>
-    </Card>);
-}
+    </Card>)}

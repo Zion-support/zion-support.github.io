@@ -9,10 +9,8 @@ export default function UltimateHomepage2025() {
     useEffect(() => {
         setIsVisible(true);
         const interval = setInterval(() => {
-            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, []);
+            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length)}, 5000);
+        return () => clearInterval(interval)}, []);
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
     const allServices = ultimateInnovativeServices2025.slice(0, 9);
     const stats = [
@@ -352,5 +350,4 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>)}

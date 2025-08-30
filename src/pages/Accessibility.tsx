@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Accessibility, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Accessibility, 
   Eye, 
   Ear, 
   Hand, 
@@ -24,16 +23,16 @@ import {
   Type,
   ZoomIn,
   ZoomOut
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Accessibility() {
+export default function Accessibility(...args[]):  {
   const accessibilityFeatures = [
     {
       category: 'Visual Accessibility',
       icon: Eye,
       color: 'from-blue-500 to-cyan-600',
-      features: [
+      features[
         'High contrast mode support',
         'Adjustable font sizes (12px to 24px)',
         'Color-blind friendly color schemes',
@@ -46,7 +45,7 @@ export default function Accessibility() {
       category: 'Auditory Accessibility',
       icon: Ear,
       color: 'from-green-500 to-emerald-600',
-      features: [
+      features[
         'Closed captions for all video content',
         'Audio descriptions for visual content',
         'Volume controls for audio elements',
@@ -59,7 +58,7 @@ export default function Accessibility() {
       category: 'Motor Accessibility',
       icon: Hand,
       color: 'from-purple-500 to-pink-600',
-      features: [
+      features[
         'Full keyboard navigation',
         'Voice control support',
         'Switch device compatibility',
@@ -72,7 +71,7 @@ export default function Accessibility() {
       category: 'Cognitive Accessibility',
       icon: Brain,
       color: 'from-orange-500 to-red-600',
-      features: [
+      features[
         'Clear, simple language',
         'Consistent navigation structure',
         'Logical content organization',
@@ -119,25 +118,25 @@ export default function Accessibility() {
       name: 'Screen Readers',
       description: 'Compatible with JAWS, NVDA, VoiceOver, and TalkBack',
       icon: Monitor,
-      examples: ['JAWS', 'NVDA', 'VoiceOver', 'TalkBack', 'Narrator']
+      examples['JAWS', 'NVDA', 'VoiceOver', 'TalkBack', 'Narrator']
     },
     {
       name: 'Voice Control',
       description: 'Voice recognition software support for hands-free navigation',
       icon: Volume2,
-      examples: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Windows Speech Recognition']
+      examples['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Windows Speech Recognition']
     },
     {
       name: 'Switch Devices',
       description: 'Alternative input devices for users with limited mobility',
       icon: Mouse,
-      examples: ['Head switches', 'Eye tracking', 'Sip and puff devices', 'Foot pedals']
+      examples['Head switches', 'Eye tracking', 'Sip and puff devices', 'Foot pedals']
     },
     {
       name: 'Mobile Accessibility',
       description: 'Optimized for mobile assistive technologies',
       icon: Smartphone,
-      examples: ['iOS VoiceOver', 'Android TalkBack', 'Switch Control', 'AssistiveTouch']
+      examples['iOS VoiceOver', 'Android TalkBack', 'Switch Control', 'AssistiveTouch']
     }
   ];
 
@@ -239,8 +238,8 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Comprehensive accessibility features designed for all users</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {accessibilityFeatures.map((category, index) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+              {accessibilityFeatures.map((category, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -277,8 +276,8 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">We meet and exceed international accessibility standards</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {complianceStandards.map((standard, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {complianceStandards.map((standard, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -311,8 +310,8 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Compatible with a wide range of assistive technologies</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {assistiveTechnologies.map((tech, index) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+              {assistiveTechnologies.map((tech, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -354,8 +353,8 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Use these tools to customize your experience</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {accessibilityTools.map((tool, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {accessibilityTools.map((tool, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -458,5 +457,4 @@ export default function Accessibility() {
         </section>
       </div>
     </>
-  );
-}
+  )}

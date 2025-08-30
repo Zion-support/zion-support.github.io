@@ -5,10 +5,8 @@ var __rest = (this && this.__rest) || function (s, e) {
     if (s != null && typeof Object.getOwnPropertySymbols === "function")
         for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
             if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
+                t[p[i]] = s[p[i]]}
+    return t};
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
 import { cn } from '@/lib/utils';
@@ -19,7 +17,6 @@ const Badge = React.forwardRef((_a, ref) => {
             'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80': variant === 'secondary',
             'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80': variant === 'destructive',
             'text-foreground': variant === 'outline',
-        }, className) }, props)));
-});
+        }, className) }, props)))});
 Badge.displayName = 'Badge';
 export { Badge };

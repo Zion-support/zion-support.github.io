@@ -29,15 +29,13 @@ const ComprehensivePricing2026 = () => {
             case 'Specialized Industry':
                 return allServices.filter(service => ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category));
             default:
-                return allServices;
-        }
+                return allServices}
     };
     const filteredServices = getCategoryServices(selectedCategory);
     const getAnnualPrice = (monthlyPrice) => {
         const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
         const annualPrice = price * 12 * 0.8; // 20% discount for annual
-        return `$${annualPrice.toLocaleString()}`;
-    };
+        return `$${annualPrice.toLocaleString()}`};
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -311,6 +309,5 @@ const ComprehensivePricing2026 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ComprehensivePricing2026;

@@ -51,19 +51,19 @@ const AutonomousBusinessOperationsPlatform = () => {
                             title: "Intelligent Process Automation",
                             description: "AI-powered automation that learns and adapts to your business processes",
                             icon: Workflow,
-                            benefits: ["Smart workflows", "Adaptive learning", "Process optimization"]
+                            benefits["Smart workflows", "Adaptive learning", "Process optimization"]
                         },
                         {
                             title: "Real-time Analytics Dashboard",
                             description: "Comprehensive business intelligence with live data visualization",
                             icon: BarChart,
-                            benefits: ["Live insights", "Custom dashboards", "Predictive analytics"]
+                            benefits["Live insights", "Custom dashboards", "Predictive analytics"]
                         },
                         {
                             title: "Autonomous Decision Engine",
                             description: "AI-driven decision making for operational efficiency",
                             icon: Brain,
-                            benefits: ["Data-driven decisions", "Risk assessment", "Performance optimization"]
+                            benefits["Data-driven decisions", "Risk assessment", "Performance optimization"]
                         },
                         {
                             title: "Enterprise Security & Compliance",
@@ -391,8 +391,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>);
-                                                        })}
+                </div>)})}
           </div>
         </div>
       </section>
@@ -419,8 +418,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300 text-lg">{useCase.description}</p>
-                </div>);
-                                                        })}
+                </div>)})}
           </div>
         </div>
       </section>
@@ -1043,7 +1041,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
       <SEOHead customData={{
                                                             title: "Autonomous Business Operations Platform - Zion Tech Group",
                                                             description: "Revolutionary AI-powered platform that automates and optimizes your entire business operations. Streamline processes, reduce costs, and boost efficiency with intelligent automation.",
-                                                            keywords: ["business automation", "AI operations", "process automation", "business intelligence", "autonomous systems", "enterprise automation", "workflow automation"],
+                                                            keywords["business automation", "AI operations", "process automation", "business intelligence", "autonomous systems", "enterprise automation", "workflow automation"],
                                                             type: "website",
                                                             url: "https://ziontechgroup.com/autonomous-business-operations-platform"
                                                         }}/>
@@ -1167,8 +1165,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
         </section>
       </div>
     </>
-  );
-}
+  )}
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Free
@@ -1195,21 +1192,21 @@ export default function AutonomousBusinessOperationsPlatform() {}
   const testimonials = [
     {name}: "Operations Director",
       role: "Chief Operations Officer",
-      company: "Global Manufacturing Co.",
+      comp: "Global Manufacturing Co.",
       content: "The autonomous operations platform has transformed our business. We've achieved 60% efficiency gains and 24/7 operations.",
       rating: 5,
       avatar: "👨‍💼"
     },
     {name}: "Sarah Operations",
       role: "VP of Operations",
-      company: "Tech Solutions Inc.",
+      comp: "Tech Solutions Inc.",
       content: "The platform's autonomous decision-making capabilities have revolutionized how we manage our operations.",
       rating: 5,
       avatar: "👩‍💼"
     },
     {name}: "Michael Operations",
       role: "Operations Manager",
-      company: "Innovation Corp",
+      comp: "Innovation Corp",
       content: "We've seen unprecedented improvements in efficiency and cost reduction with this platform.",
       rating: 5,
       avatar: "👨‍💻"
@@ -1404,7 +1401,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   <div>
                     <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
                     <p className="text-green-400">{testimonial.role}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.comp}</p>
                   </div>
                 </div>
                 
@@ -1441,7 +1438,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
             </div>
             
             <p className="text-sm text-gray-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </div>
         </div>
@@ -1494,7 +1491,6 @@ export default function AutonomousBusinessOperationsPlatform() {}
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AutonomousBusinessOperationsPlatform;

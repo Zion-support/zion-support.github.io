@@ -8,10 +8,8 @@ export function ProjectCard({ project, onEdit, onDelete }) {
     const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
     const handleDelete = () => {
         if (project.id) {
-            onDelete(project.id);
-        }
-        setDeleteDialogOpen(false);
-    };
+            onDelete(project.id)}
+        setDeleteDialogOpen(false)};
     return (<Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (<img loading="lazy" src={project.image_url} alt={project.title} className="w-full h-full object-cover"/>) : (<div className="w-full h-full flex items-center justify-center bg-muted">
@@ -74,5 +72,4 @@ export function ProjectCard({ project, onEdit, onDelete }) {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </Card>);
-}
+    </Card>)}

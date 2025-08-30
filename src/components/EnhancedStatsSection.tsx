@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { 
-  Users, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, useAnimation  } from 'framer-motion.ts';
+import { useInView  } from 'react-intersection-observer.ts';
+import { Users, 
   Globe, 
   TrendingUp, 
   Star, 
@@ -10,17 +9,17 @@ import {
   Shield,
   Award,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Stat {
+
   id: string;
   icon: React.ComponentType<any>;
   value: string;
   label: string;
   description: string;
   color: string;
-  gradient: string;
-}
+  gradient: string}
 
 const stats: Stat[] = [
   {
@@ -79,18 +78,17 @@ const stats: Stat[] = [
   }
 ];
 
-export default function EnhancedStatsSection() {
-  const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({});
+export default function EnhancedStatsSection(...args[]):  {
+  const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true
   });
 
-  useEffect(() => {
+  useEffect(()  => {
     if (inView) {
-      controls.start('visible');
-    }
+      controls.start('visible')}
   }, [controls, inView]);
 
   const animateCount = (target: string, duration: number = 2000) => {
@@ -103,26 +101,20 @@ export default function EnhancedStatsSection() {
       current += increment;
       if (current >= numericValue) {
         current = numericValue;
-        clearInterval(timer);
-      }
+        clearInterval(timer)}
       setCountedValues(prev => ({
         ...prev,
         [target]: Math.floor(current)
-      }));
-    }, 16);
+      }))}, 16);
 
-    return timer;
-  };
+    return timer};
 
   useEffect(() => {
     if (inView) {
       stats.forEach((stat) => {
         const timer = setTimeout(() => {
-          animateCount(stat.value);
-        }, stats.indexOf(stat) * 200);
-        return () => clearTimeout(timer);
-      });
-    }
+          animateCount(stat.value)}, stats.indexOf(stat) * 200);
+        return () => clearTimeout(timer)})}
   }, [inView]);
 
   return (
@@ -160,8 +152,8 @@ export default function EnhancedStatsSection() {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.id}
               initial={{ opacity: 0, y: 30 }}
@@ -286,5 +278,4 @@ export default function EnhancedStatsSection() {
         </motion.div>
       </div>
     </section>
-  );
-}
+  )}

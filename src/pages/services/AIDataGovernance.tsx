@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Shield, 
   Database, 
   Lock, 
   Eye, 
@@ -42,9 +41,9 @@ import {
   EyeOn,
   LockOpen,
   LockClosed
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AIDataGovernance: React.FC = () => {
+const AIDataGovernance: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Shield,
@@ -90,7 +89,7 @@ const AIDataGovernance: React.FC = () => {
       price: "$499",
       period: "/month",
       description: "Essential data governance for small to medium organizations",
-      features: [
+      features[
         "Up to 10TB data management",
         "Basic AI classification",
         "Standard access controls",
@@ -107,7 +106,7 @@ const AIDataGovernance: React.FC = () => {
       price: "$1,299",
       period: "/month",
       description: "Advanced data governance for growing enterprises",
-      features: [
+      features[
         "Up to 100TB data management",
         "Advanced AI classification",
         "Custom access policies",
@@ -126,7 +125,7 @@ const AIDataGovernance: React.FC = () => {
       price: "$3,999",
       period: "/month",
       description: "Comprehensive data governance for large organizations",
-      features: [
+      features[
         "Unlimited data management",
         "Custom AI models",
         "Advanced security features",
@@ -295,8 +294,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -329,8 +328,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -362,8 +361,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -396,8 +395,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -435,8 +434,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -513,7 +512,6 @@ const AIDataGovernance: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIDataGovernance;

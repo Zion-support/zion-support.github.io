@@ -100,22 +100,17 @@ export default function SupportRequests() {
             !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-            return false;
-        }
+            return false}
         // Apply status filter
         if (statusFilter && request.status !== statusFilter) {
-            return false;
-        }
+            return false}
         // Apply priority filter
         if (priorityFilter && request.priority !== priorityFilter) {
-            return false;
-        }
+            return false}
         // Apply category filter
         if (categoryFilter && request.category !== categoryFilter) {
-            return false;
-        }
-        return true;
-    });
+            return false}
+        return true});
     // Count by status for the summary dashboard
     const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
     const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
@@ -125,8 +120,7 @@ export default function SupportRequests() {
         setSearchQuery("");
         setStatusFilter(null);
         setPriorityFilter(null);
-        setCategoryFilter(null);
-    };
+        setCategoryFilter(null)};
     return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"/>
         ,
             <div className="container mx-auto px-4 py-8">
@@ -319,5 +313,4 @@ export default function SupportRequests() {
             </div>
           </TabsContent>
         </Tabs>
-      </div>);
-}
+      </div>)}

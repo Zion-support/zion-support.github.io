@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { ArrowRight,
   ChevronLeft,
   ChevronRight,
   Mail as MailIcon,
@@ -43,11 +42,11 @@ import {
   Building,
   FlaskConical,
   X
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS } from '../data/revolutionaryServices2030';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS  } from '../data/revolutionaryServices2030';
 
-export default function RevolutionaryServices2030() {
+export default function RevolutionaryServices2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -61,8 +60,7 @@ export default function RevolutionaryServices2030() {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -75,8 +73,7 @@ export default function RevolutionaryServices2030() {
       case 'aiScore':
         return b.aiScore - a.aiScore;
       default:
-        return 0;
-    }
+        return 0}
   });
 
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
@@ -84,20 +81,17 @@ export default function RevolutionaryServices2030() {
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handlePageChange = (page: number) => {
+  const handlePageChange = (page: number)  => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
-  const handleServiceSelect = (service: any) => {
-    setSelectedService(service);
-  };
+  const handleServiceSelect = (service)  => {
+    setSelectedService(service)};
 
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null)};
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Brain className="w-6 h-6" />,
       'Quantum Computing': <Zap className="w-6 h-6" />,
@@ -117,10 +111,9 @@ export default function RevolutionaryServices2030() {
       'IT Infrastructure': <Server className="w-6 h-6" />,
       'Emerging Technology': <Lightbulb className="w-6 h-6" />
     };
-    return iconMap[category] || <Rocket className="w-6 h-6" />;
-  };
+    return iconMap[category] || <Rocket className="w-6 h-6" />};
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-purple-500 to-pink-500',
       'Quantum Computing': 'from-indigo-500 to-purple-500',
@@ -140,8 +133,7 @@ export default function RevolutionaryServices2030() {
       'IT Infrastructure': 'from-slate-500 to-gray-500',
       'Emerging Technology': 'from-violet-500 to-purple-500'
     };
-    return colorMap[category] || 'from-gray-500 to-slate-500';
-  };
+    return colorMap[category] || 'from-gray-500 to-slate-500'};
 
   return (
     <>
@@ -267,22 +259,22 @@ export default function RevolutionaryServices2030() {
                     className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                       activeCategory === 'all'
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                        : 'bg-white/10 backdrop-blur-sm text-white hover:bg-white/20'
+                        : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'
                     }`}
                   >
                     All Services ({REVOLUTIONARY_SERVICES_2030.length})
                   </button>
-                  {REVOLUTIONARY_SERVICE_CATEGORIES.map((category) => (
+                  {REVOLUTIONARY_SERVICE_CATEGORIES.map((category)  => (
                     <button
                       key={category}
                       onClick={() => setActiveCategory(category)}
                       className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                         activeCategory === category
                           ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                          : 'bg-white/10 backdrop-blur-sm text-white hover:bg-white/20'
+                          : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'
                       }`}
                     >
-                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s => s.category === category).length})
+                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s  => s.category === category).length})
                     </button>
                   ))}
                 </div>
@@ -290,8 +282,8 @@ export default function RevolutionaryServices2030() {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {currentServices.map((service)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -371,7 +363,7 @@ export default function RevolutionaryServices2030() {
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}
@@ -438,7 +430,7 @@ export default function RevolutionaryServices2030() {
                   title: "Expert Support",
                   description: "Dedicated support team with deep technical expertise and rapid response times"
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -717,5 +709,4 @@ export default function RevolutionaryServices2030() {
         </div>
       )}
     </>
-  );
-}
+  )}

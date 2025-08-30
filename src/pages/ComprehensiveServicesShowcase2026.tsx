@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Star, 
   Zap, 
@@ -18,15 +17,14 @@ import {
   Clock,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { 
-  revolutionaryMicroSaasServices2026,
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
+import { revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,
   revolutionaryAIServices2026,
   ALL_REVOLUTIONARY_SERVICES_2026
-} from '../data/comprehensiveServices2026';
-const ComprehensiveServicesShowcase2026: React.FC = () => {
+ } from '../data/comprehensiveServices2026';
+const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
@@ -40,17 +38,13 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         service.name.toLowerCase().includes(lowerQuery) ||
         service.description.toLowerCase().includes(lowerQuery) ||
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-      );
-    }
+      )}
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedInnovationLevel !== 'all') {
-      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
-    }
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
-  const getCategoryIcon = (category: string) => {
+      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel)}
+    return filtered}, [searchTerm, selectedCategory, selectedInnovationLevel]);
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
       case 'Neural Networks': return <Brain className="w-5 h-5" />;
@@ -59,16 +53,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       case 'Edge Computing': return <Network className="w-5 h-5" />;
       case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
       case 'Quantum AI': return <Zap className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />;
-    }
+      default: return <Zap className="w-5 h-5" />}
   };
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (level: string)  => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gray-600';
-    }
+      default: return 'bg-gray-600'}
   };
   return (
     <>
@@ -143,9 +135,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category} value={category} className="bg-zinc-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -155,9 +147,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <select
                   value={selectedInnovationLevel}
                   onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  {innovationLevels.map(level => (
+                  {innovationLevels.map(level  => (
                     <option key={level} value={level} className="bg-zinc-800 text-white">
                       {level === 'all' ? 'All Innovation Levels' : level}
                     </option>
@@ -170,8 +162,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         {/* Services Grid */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -293,8 +285,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
-                    setSelectedInnovationLevel('all');
-                  }}
+                    setSelectedInnovationLevel('all')}}
                   className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   Clear Filters
@@ -344,6 +335,5 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 export default ComprehensiveServicesShowcase2026;

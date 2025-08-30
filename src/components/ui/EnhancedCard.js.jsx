@@ -14,27 +14,22 @@ export function EnhancedCard({ children, className, variant = 'default', hover =
     if (href) {
         return (<a href={href} className={classes} onClick={onClick}>
         {children}
-      </a>);
-    }
+      </a>)}
     return (<Component className={classes} onClick={onClick}>
       {children}
-    </Component>);
-}
+    </Component>)}
 // Enhanced Card Header component
 export function EnhancedCardHeader({ children, className }) {
     return (<div className={cn('p-6 pb-0', className)}>
       {children}
-    </div>);
-}
+    </div>)}
 // Enhanced Card Content component
 export function EnhancedCardContent({ children, className }) {
     return (<div className={cn('p-6', className)}>
       {children}
-    </div>);
-}
+    </div>)}
 // Enhanced Card Footer component
 export function EnhancedCardFooter({ children, className }) {
     return (<div className={cn('p-6 pt-0', className)}>
       {children}
-    </div>);
-}
+    </div>)}

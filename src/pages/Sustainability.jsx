@@ -54,7 +54,7 @@ const sustainabilitySolutions = [
     title: "Renewable Energy Systems",
     description: "Solar, wind, and hydroelectric power solutions for sustainable energy generation.",
     icon: Sun,
-    features: [
+    features[
       "Solar panel installation",
       "Wind turbine systems",
       "Energy storage solutions",
@@ -63,14 +63,14 @@ const sustainabilitySolutions = [
     price: "From $200,000",
     timeline: "32-48 weeks",
     category: "Energy",
-    technologies: ["Solar PV", "Wind Power", "Battery Storage", "Smart Grid"]
+    technologies["Solar PV", "Wind Power", "Battery Storage", "Smart Grid"]
   },
   {
     id: 2,
     title: "Green Building Solutions",
     description: "Sustainable building design and construction for energy efficiency and environmental impact reduction.",
     icon: Building,
-    features: [
+    features[
       "LEED certification",
       "Energy-efficient design",
       "Green materials",
@@ -79,14 +79,14 @@ const sustainabilitySolutions = [
     price: "From $150,000",
     timeline: "24-40 weeks",
     category: "Buildings",
-    technologies: ["LEED Standards", "BIM Modeling", "IoT Sensors", "Energy Management"]
+    technologies["LEED Standards", "BIM Modeling", "IoT Sensors", "Energy Management"]
   },
   {
     id: 3,
     title: "Waste Management Systems",
     description: "Advanced waste reduction, recycling, and circular economy solutions.",
     icon: Recycle,
-    features: [
+    features[
       "Waste sorting automation",
       "Recycling optimization",
       "Circular economy design",
@@ -95,14 +95,14 @@ const sustainabilitySolutions = [
     price: "From $100,000",
     timeline: "20-32 weeks",
     category: "Waste Management",
-    technologies: ["AI Sorting", "IoT Monitoring", "Biogas", "Composting"]
+    technologies["AI Sorting", "IoT Monitoring", "Biogas", "Composting"]
   },
   {
     id: 4,
     title: "Sustainable Transportation",
     description: "Electric vehicles, public transit optimization, and green logistics solutions.",
     icon: Car,
-    features: [
+    features[
       "EV infrastructure",
       "Public transit optimization",
       "Green logistics",
@@ -111,14 +111,14 @@ const sustainabilitySolutions = [
     price: "From $120,000",
     timeline: "24-36 weeks",
     category: "Transportation",
-    technologies: ["EV Charging", "Smart Routing", "Fleet Management", "Carbon Analytics"]
+    technologies["EV Charging", "Smart Routing", "Fleet Management", "Carbon Analytics"]
   },
   {
     id: 5,
     title: "Water Conservation",
     description: "Smart water management and conservation systems for sustainable resource use.",
     icon: Droplets,
-    features: [
+    features[
       "Smart irrigation",
       "Water quality monitoring",
       "Leak detection",
@@ -127,14 +127,14 @@ const sustainabilitySolutions = [
     price: "From $80,000",
     timeline: "16-24 weeks",
     category: "Water Management",
-    technologies: ["IoT Sensors", "AI Analytics", "Smart Valves", "Water Quality"]
+    technologies["IoT Sensors", "AI Analytics", "Smart Valves", "Water Quality"]
   },
   {
     id: 6,
     title: "Carbon Management",
     description: "Comprehensive carbon footprint tracking and reduction strategies.",
     icon: Tree,
-    features: [
+    features[
       "Carbon footprint analysis",
       "Emissions tracking",
       "Offset strategies",
@@ -143,7 +143,7 @@ const sustainabilitySolutions = [
     price: "From $60,000",
     timeline: "12-20 weeks",
     category: "Carbon Management",
-    technologies: ["Carbon Analytics", "IoT Monitoring", "Blockchain", "AI Reporting"]
+    technologies["Carbon Analytics", "IoT Monitoring", "Blockchain", "AI Reporting"]
   }
 ];
 
@@ -181,7 +181,7 @@ const sustainabilityTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Green Manufacturing Corp",
+    comp: "Green Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed to reduce carbon footprint by 50% while maintaining production efficiency",
     solution: "Implemented comprehensive sustainability program with renewable energy, waste reduction, and circular economy practices",
@@ -190,7 +190,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Eco-City Initiative",
+    comp: "Eco-City Initiative",
     industry: "Municipal",
     challenge: "Required sustainable urban development with renewable energy and green infrastructure",
     solution: "Built smart city with solar power, green buildings, and sustainable transportation systems",
@@ -199,7 +199,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Sustainable Logistics",
+    comp: "Sustainable Logistics",
     industry: "Transportation",
     challenge: "Needed to reduce transportation carbon footprint by 70%",
     solution: "Implemented electric fleet, route optimization, and carbon tracking systems",
@@ -244,25 +244,25 @@ const sustainabilityBenefits = [
     title: "Environmental Impact",
     description: "Significant reduction in carbon footprint and environmental damage",
     icon: Leaf,
-    examples: ["Carbon reduction", "Resource conservation", "Biodiversity protection"]
+    examples["Carbon reduction", "Resource conservation", "Biodiversity protection"]
   },
   {
     title: "Cost Savings",
     description: "Long-term financial benefits through efficiency and resource optimization",
     icon: TrendingUp,
-    examples: ["Energy cost reduction", "Waste minimization", "Operational efficiency"]
+    examples["Energy cost reduction", "Waste minimization", "Operational efficiency"]
   },
   {
     title: "Regulatory Compliance",
     description: "Meet and exceed environmental regulations and standards",
     icon: Shield,
-    examples: ["Environmental compliance", "Sustainability reporting", "Green certifications"]
+    examples["Environmental compliance", "Sustainability reporting", "Green certifications"]
   },
   {
     title: "Brand Enhancement",
     description: "Improved reputation and competitive advantage in the market",
     icon: Award,
-    examples: ["Customer loyalty", "Market differentiation", "Stakeholder trust"]
+    examples["Customer loyalty", "Market differentiation", "Stakeholder trust"]
   }
 ];
 
@@ -585,7 +585,7 @@ export default function Sustainability() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -650,5 +650,4 @@ export default function Sustainability() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

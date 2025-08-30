@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Server, 
@@ -30,11 +29,11 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon
-} from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 
-export default function ServicesPage() {
+export default function ServicesPage(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -84,8 +83,7 @@ export default function ServicesPage() {
                         (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 5000);
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice});
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -97,19 +95,16 @@ export default function ServicesPage() {
       case 'newest':
         return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
       default:
-        return 0;
-    }
+        return 0}
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.icon : Zap;
-  };
+    return cat ? cat.icon : Zap};
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
   return (
     <>
@@ -204,7 +199,7 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {categories.map((category) => (
+            {categories.map((category)  => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -234,9 +229,9 @@ export default function ServicesPage() {
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {priceRanges.map((range) => (
+                  {priceRanges.map((range)  => (
                     <option key={range.id} value={range.id}>{range.name}</option>
                   ))}
                 </select>
@@ -248,9 +243,9 @@ export default function ServicesPage() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {sortOptions.map((option) => (
+                  {sortOptions.map((option)  => (
                     <option key={option.id} value={option.id}>{option.name}</option>
                   ))}
                 </select>
@@ -276,7 +271,7 @@ export default function ServicesPage() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                {sortedServices.map((service, index) => (
+                {sortedServices.map((service, index)  => (
                   <motion.div
                     key={service.id}
                     className="card-futuristic group"
@@ -289,7 +284,9 @@ export default function ServicesPage() {
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
-                          <getCategoryIcon(service.category) className="w-6 h-6 text-white" />
+                          {(() => {
+                            const IconComponent = getCategoryIcon(service.category);
+                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null})()}
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>
@@ -385,8 +382,7 @@ export default function ServicesPage() {
                   onClick={() => {
                     setSearchQuery('');
                     setSelectedCategory('all');
-                    setSelectedPriceRange('all');
-                  }}
+                    setSelectedPriceRange('all')}}
                   className="btn-futuristic px-6 py-3"
                 >
                   View All Services
@@ -414,8 +410,8 @@ export default function ServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SPECIALIZED_SERVICES.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {SPECIALIZED_SERVICES.map((service, index)  => (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"
@@ -495,5 +491,4 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

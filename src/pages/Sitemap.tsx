@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin } from 'lucide-react';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin  } from 'lucide-react.ts';
 
-export default function SitemapPage() {
+export default function SitemapPage(...args[]):  {
   const siteStructure = [
     {
       title: "Main Pages",
       icon: Home,
-      links: [
+      links[
         { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
-        { name: "About Us", path: "/about", description: "Learn about our company and mission" },
+        { name: "About Us", path: "/about", description: "Learn about our comp and mission" },
         { name: "Contact", path: "/contact", description: "Get in touch with our team" },
         { name: "Services Overview", path: "/services-overview", description: "Explore all our services" },
         { name: "Partners", path: "/partners", description: "Strategic partnerships and collaborations" },
@@ -21,7 +21,7 @@ export default function SitemapPage() {
     {
       title: "Core Services",
       icon: Settings,
-      links: [
+      links[
         { name: "AI Services", path: "/ai-services", description: "Comprehensive AI solutions" },
         { name: "IT Services", path: "/it-services", description: "Enterprise IT solutions" },
         { name: "Micro SaaS", path: "/micro-saas", description: "Scalable software solutions" },
@@ -35,7 +35,7 @@ export default function SitemapPage() {
     {
       title: "Specialized Services",
       icon: Brain,
-      links: [
+      links[
         { name: "AI Business Intelligence", path: "/services/ai-business-intelligence", description: "Machine Learning & Data Science" },
         { name: "AI Sales Copilot", path: "/services/ai-sales-copilot", description: "AI-powered sales automation" },
         { name: "AI Compliance Assistant", path: "/services/ai-compliance-assistant", description: "Regulatory compliance automation" },
@@ -49,7 +49,7 @@ export default function SitemapPage() {
     {
       title: "Advanced Solutions",
       icon: Rocket,
-      links: [
+      links[
         { name: "Quantum AI Platform", path: "/services/quantum-ai-platform", description: "Next-gen quantum computing" },
         { name: "AI Cybersecurity Suite", path: "/services/ai-cybersecurity-suite", description: "Advanced security solutions" },
         { name: "AI Healthcare Analytics", path: "/services/ai-healthcare-analytics", description: "Healthcare data insights" },
@@ -63,7 +63,7 @@ export default function SitemapPage() {
     {
       title: "Pricing & Solutions",
       icon: DollarSign,
-      links: [
+      links[
         { name: "Pricing Guide", path: "/pricing-guide", description: "Comprehensive pricing information" },
         { name: "Pricing 2027", path: "/pricing", description: "Current year pricing strategies" },
         { name: "Pricing 2030", path: "/pricing-2030", description: "Advanced pricing strategies" },
@@ -74,7 +74,7 @@ export default function SitemapPage() {
     {
       title: "Support & Resources",
       icon: HelpCircle,
-      links: [
+      links[
         { name: "Help Center", path: "/help", description: "Find answers to common questions" },
         { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
         { name: "Support Portal", path: "/support", description: "Technical support and assistance" },
@@ -88,7 +88,7 @@ export default function SitemapPage() {
     {
       title: "Legal & Compliance",
       icon: Shield,
-      links: [
+      links[
         { name: "Privacy Policy", path: "/privacy", description: "How we protect your data" },
         { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
         { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" },
@@ -151,8 +151,8 @@ export default function SitemapPage() {
             <h2 className="text-3xl font-bold text-white mb-4">Quick Actions</h2>
             <p className="text-xl text-slate-300">Get started quickly with these popular actions</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickLinks.map((link, index)  => (
               <Link
                 key={index}
                 to={link.path}
@@ -189,8 +189,8 @@ export default function SitemapPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-white ml-4">{section.title}</h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {section.links.map((link, linkIndex) => (
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+                  {section.links.map((link, linkIndex)  => (
                     <Link
                       key={linkIndex}
                       to={link.path}
@@ -219,8 +219,8 @@ export default function SitemapPage() {
             <h2 className="text-3xl font-bold text-white mb-4">Contact Information</h2>
             <p className="text-xl text-slate-300">Get in touch with our team</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {contactInfo.map((contact, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {contactInfo.map((contact, index)  => (
               <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
                   <contact.icon className="h-8 w-8 text-white" />
@@ -270,5 +270,4 @@ export default function SitemapPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

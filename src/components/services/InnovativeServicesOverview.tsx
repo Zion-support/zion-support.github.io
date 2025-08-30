@@ -1,11 +1,11 @@
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from '../../data/innovativeServices2025';
+import React, { useState, useMemo } from 'react.ts';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory  } from '../../data/innovativeServices2025';
 
-interface InnovativeServicesOverviewProps {
+interface InnovativeServicesOverviewProps extends React.PropsWithChildren<{}> {
+
   maxServices?: number;
   category?: string;
-  showViewAllButton?: boolean;
-}
+  showViewAllButton?: boolean}
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
   maxServices = 6,
@@ -27,8 +27,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
     let services = INNOVATIVE_SERVICES_2025;
     
     if (category) {
-      services = getServicesByCategory(category);
-    } else {
+      services = getServicesByCategory(category)} else {
       switch (activeTab) {
         case 'featured':
           services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
@@ -49,12 +48,10 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           services = getServicesByCategory('Development');
           break;
         default:
-          services = INNOVATIVE_SERVICES_2025;
-      }
+          services = INNOVATIVE_SERVICES_2025}
     }
     
-    return services.slice(0, maxServices);
-  }, [activeTab, category, maxServices]);
+    return services.slice(0, maxServices)}, [activeTab, category, maxServices]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
@@ -183,8 +180,8 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
         )}
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {filteredServices.map((service) => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {filteredServices.map((service)  => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
@@ -222,7 +219,6 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
         )}
       </div>
     </div>
-  );
-};
+  )};
 
 export default InnovativeServicesOverview;

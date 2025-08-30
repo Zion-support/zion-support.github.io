@@ -8,32 +8,32 @@ const AIBusinessIntelligence = () => {
             icon: Brain,
             title: "AI-Powered Analytics",
             description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data",
-            benefits: ["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]
+            benefits["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]
         },
         {
             icon: BarChart3,
             title: "Real-time Dashboards",
             description: "Interactive, customizable dashboards that provide instant visibility into key business metrics",
-            benefits: ["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]
+            benefits["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]
         },
         {
             icon: TrendingUp,
             title: "Predictive Analytics",
             description: "Forecast future trends and outcomes using historical data and advanced statistical models",
-            benefits: ["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]
+            benefits["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]
         },
         {
             icon: Target,
             title: "Performance Tracking",
             description: "Monitor and measure business performance against goals and benchmarks in real-time",
-            benefits: ["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]
+            benefits["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]
         }
     ];
     const solutions = [
         {
             category: "Sales & Marketing",
             icon: Users,
-            solutions: [
+            solutions[
                 "Customer behavior analysis",
                 "Lead scoring and qualification",
                 "Campaign performance optimization",
@@ -44,7 +44,7 @@ const AIBusinessIntelligence = () => {
         {
             category: "Operations & Supply Chain",
             icon: Activity,
-            solutions: [
+            solutions[
                 "Inventory optimization",
                 "Supply chain risk assessment",
                 "Operational efficiency analysis",
@@ -55,7 +55,7 @@ const AIBusinessIntelligence = () => {
         {
             category: "Financial Analytics",
             icon: TrendingUp,
-            solutions: [
+            solutions[
                 "Revenue forecasting",
                 "Cost analysis and optimization",
                 "Profitability analysis",
@@ -66,7 +66,7 @@ const AIBusinessIntelligence = () => {
         {
             category: "Human Resources",
             icon: Users,
-            solutions: [
+            solutions[
                 "Employee performance analytics",
                 "Talent acquisition insights",
                 "Workforce planning",
@@ -266,6 +266,5 @@ const AIBusinessIntelligence = () => {
           </motion.div>
         </div>
       </div>
-    </div>);
-};
+    </div>)};
 export default AIBusinessIntelligence;

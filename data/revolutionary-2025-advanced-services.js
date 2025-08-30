@@ -10,7 +10,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         subcategory: 'Financial Technology',
         price: '$2,999',
         period: '/month',
-        features: [
+        features[
             'Quantum algorithm-powered market prediction',
             'Real-time AI market analysis',
             'Automated trading strategy execution',
@@ -22,7 +22,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Real-time performance analytics',
             'API access for institutional clients'
         ],
-        benefits: [
+        benefits[
             'Up to 40% higher trading accuracy than traditional methods',
             'Real-time market prediction with 95% confidence intervals',
             'Automated compliance and risk management',
@@ -30,7 +30,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Reduced trading costs by 60%',
             '24/7 automated trading operations'
         ],
-        useCases: [
+        useCases[
             'Algorithmic trading',
             'Portfolio management',
             'Risk assessment',
@@ -38,7 +38,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Compliance monitoring',
             'Institutional trading'
         ],
-        targetAudience: [
+        targetAudience[
             'Hedge funds',
             'Investment banks',
             'Trading firms',
@@ -46,7 +46,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Institutional investors',
             'Quantitative analysts'
         ],
-        technology: [
+        technology[
             'Quantum Computing',
             'Machine Learning',
             'Blockchain',
@@ -54,7 +54,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Quantum-resistant Cryptography',
             'High-frequency Trading Systems'
         ],
-        integrations: [
+        integrations[
             'Bloomberg Terminal',
             'Reuters Eikon',
             'Trading APIs',
@@ -64,7 +64,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         ],
         marketPosition: 'First quantum-AI hybrid trading platform with institutional-grade security',
         roi: '300-500% ROI within 12 months for active traders',
-        competitors: ['Bloomberg Terminal', 'Thomson Reuters', 'Interactive Brokers Pro'],
+        competitors['Bloomberg Terminal', 'Thomson Reuters', 'Interactive Brokers Pro'],
         marketSize: '$15.2B algorithmic trading market',
         growthRate: '250% annual growth in quantum computing applications',
         contactInfo: {
@@ -77,7 +77,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/quantum-ai-trading/demo',
         trialDays: 30,
         setupTime: '2-3 weeks',
-        complianceStandards: ['SOX', 'Dodd-Frank', 'MiFID II', 'GDPR', 'SOC2'],
+        complianceStandards['SOX', 'Dodd-Frank', 'MiFID II', 'GDPR', 'SOC2'],
         supportLevel: 'enterprise'
     },
     // 2. Autonomous AI Content Creation Studio
@@ -90,7 +90,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         subcategory: 'Content Creation & Marketing',
         price: '$799',
         period: '/month',
-        features: [
+        features[
             'Autonomous content generation',
             'Multi-platform publishing automation',
             'AI-powered creative direction',
@@ -102,7 +102,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Social media automation',
             'Content calendar management'
         ],
-        benefits: [
+        benefits[
             '90% reduction in content creation time',
             'Consistent brand voice across all channels',
             'Automated SEO optimization',
@@ -110,7 +110,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Real-time performance tracking',
             'Scalable content operations'
         ],
-        useCases: [
+        useCases[
             'Marketing content creation',
             'Social media management',
             'Blog and article writing',
@@ -118,7 +118,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Product descriptions',
             'Brand storytelling'
         ],
-        targetAudience: [
+        targetAudience[
             'Marketing agencies',
             'E-commerce businesses',
             'Content creators',
@@ -126,7 +126,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Digital marketers',
             'Small to enterprise businesses'
         ],
-        technology: [
+        technology[
             'GPT-5',
             'Claude 3.5 Sonnet',
             'DALL-E 3',
@@ -134,7 +134,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Computer Vision',
             'Machine Learning'
         ],
-        integrations: [
+        integrations[
             'WordPress',
             'Shopify',
             'Mailchimp',
@@ -144,7 +144,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         ],
         marketPosition: 'First fully autonomous content creation platform with enterprise-grade capabilities',
         roi: '400% ROI through content automation and increased engagement',
-        competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],
+        competitors['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],
         marketSize: '$4.2B content creation market',
         growthRate: '180% annual growth in AI content creation',
         contactInfo: {
@@ -157,7 +157,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/autonomous-ai-content-studio/demo',
         trialDays: 14,
         setupTime: '1 hour',
-        complianceStandards: ['GDPR', 'CCPA', 'SOC2'],
+        complianceStandards['GDPR', 'CCPA', 'SOC2'],
         supportLevel: 'premium'
     },
     // 3. Quantum-Secure Healthcare Data Platform
@@ -170,7 +170,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         subcategory: 'Healthcare Technology',
         price: '$1,499',
         period: '/month',
-        features: [
+        features[
             'Quantum-resistant encryption',
             'Zero-trust security architecture',
             'HIPAA compliance automation',
@@ -182,7 +182,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'API security management',
             'Compliance reporting automation'
         ],
-        benefits: [
+        benefits[
             'Unbreakable quantum-resistant security',
             '100% HIPAA compliance guarantee',
             'Real-time threat detection and response',
@@ -190,7 +190,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Enhanced patient data privacy',
             'Audit-ready security framework'
         ],
-        useCases: [
+        useCases[
             'Electronic Health Records',
             'Medical research data',
             'Telemedicine platforms',
@@ -198,7 +198,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Clinical trial management',
             'Patient engagement systems'
         ],
-        targetAudience: [
+        targetAudience[
             'Hospitals and clinics',
             'Healthcare systems',
             'Medical research institutions',
@@ -206,7 +206,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Telemedicine providers',
             'Healthcare technology companies'
         ],
-        technology: [
+        technology[
             'Quantum Cryptography',
             'Zero-Trust Architecture',
             'Blockchain',
@@ -214,7 +214,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'HIPAA Compliance Tools',
             'Advanced Encryption Standards'
         ],
-        integrations: [
+        integrations[
             'Epic Systems',
             'Cerner',
             'Athenahealth',
@@ -224,7 +224,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         ],
         marketPosition: 'First quantum-secure healthcare platform with guaranteed HIPAA compliance',
         roi: '500% ROI through security compliance and risk reduction',
-        competitors: ['Epic Systems', 'Cerner', 'Athenahealth'],
+        competitors['Epic Systems', 'Cerner', 'Athenahealth'],
         marketSize: '$28.4B healthcare IT market',
         growthRate: '300% annual growth in quantum security applications',
         contactInfo: {
@@ -237,7 +237,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/quantum-secure-healthcare/demo',
         trialDays: 30,
         setupTime: '4-6 weeks',
-        complianceStandards: ['HIPAA', 'HITECH', 'SOC2', 'ISO 27001', 'GDPR'],
+        complianceStandards['HIPAA', 'HITECH', 'SOC2', 'ISO 27001', 'GDPR'],
         supportLevel: 'enterprise'
     },
     // ===== REVOLUTIONARY IT SERVICES =====
@@ -251,7 +251,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         subcategory: 'Cloud Computing & Infrastructure',
         price: '$5,999',
         period: '/month',
-        features: [
+        features[
             'Hybrid quantum-classical computing',
             'Quantum processing units (QPUs)',
             'Traditional cloud services integration',
@@ -263,7 +263,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'High-performance computing clusters',
             '24/7 quantum support'
         ],
-        benefits: [
+        benefits[
             '1000x faster computation for complex problems',
             'Hybrid quantum-classical processing',
             'Global quantum network access',
@@ -271,7 +271,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Scalable quantum resources',
             'Cost-effective quantum computing access'
         ],
-        useCases: [
+        useCases[
             'Drug discovery and molecular modeling',
             'Financial risk modeling',
             'Climate change simulation',
@@ -279,7 +279,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Cryptographic analysis',
             'Scientific research computing'
         ],
-        targetAudience: [
+        targetAudience[
             'Research institutions',
             'Pharmaceutical companies',
             'Financial institutions',
@@ -287,7 +287,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Government agencies',
             'Academic institutions'
         ],
-        technology: [
+        technology[
             'Quantum Computing',
             'Cloud Infrastructure',
             'Quantum-Classical Hybrid Systems',
@@ -295,7 +295,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Quantum Security',
             'High-Performance Computing'
         ],
-        integrations: [
+        integrations[
             'AWS',
             'Azure',
             'Google Cloud',
@@ -305,7 +305,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         ],
         marketPosition: 'First commercial quantum cloud infrastructure with global quantum network',
         roi: '1000% ROI for research and development applications',
-        competitors: ['IBM Quantum', 'Google Quantum AI', 'Amazon Braket'],
+        competitors['IBM Quantum', 'Google Quantum AI', 'Amazon Braket'],
         marketSize: '$8.6B quantum computing market',
         growthRate: '400% annual growth in quantum cloud services',
         contactInfo: {
@@ -318,7 +318,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/quantum-cloud-infrastructure/demo',
         trialDays: 14,
         setupTime: '2-4 weeks',
-        complianceStandards: ['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR'],
+        complianceStandards['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR'],
         supportLevel: 'enterprise'
     },
     // 5. Autonomous Cybersecurity Operations Center
@@ -331,7 +331,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         subcategory: 'Cybersecurity',
         price: '$3,999',
         period: '/month',
-        features: [
+        features[
             '24/7 autonomous threat monitoring',
             'AI-powered threat detection',
             'Automated incident response',
@@ -343,7 +343,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Security awareness training',
             'Compliance reporting'
         ],
-        benefits: [
+        benefits[
             '100% uptime security monitoring',
             'Real-time threat detection and response',
             'Reduced security incidents by 95%',
@@ -351,7 +351,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Predictive threat prevention',
             'Cost-effective enterprise security'
         ],
-        useCases: [
+        useCases[
             'Enterprise security operations',
             'Critical infrastructure protection',
             'Financial services security',
@@ -359,7 +359,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Government security',
             'Small business protection'
         ],
-        targetAudience: [
+        targetAudience[
             'Large enterprises',
             'Financial institutions',
             'Healthcare organizations',
@@ -367,7 +367,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Critical infrastructure',
             'Small to medium businesses'
         ],
-        technology: [
+        technology[
             'Artificial Intelligence',
             'Machine Learning',
             'Behavioral Analytics',
@@ -375,7 +375,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Automation Platforms',
             'Security Orchestration'
         ],
-        integrations: [
+        integrations[
             'SIEM Systems',
             'Firewall Management',
             'Endpoint Protection',
@@ -385,7 +385,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         ],
         marketPosition: 'First fully autonomous cybersecurity operations center with AI-powered protection',
         roi: '600% ROI through threat prevention and incident reduction',
-        competitors: ['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
+        competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
         marketSize: '$182.3B cybersecurity market',
         growthRate: '350% annual growth in autonomous security',
         contactInfo: {
@@ -398,7 +398,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/autonomous-cybersecurity-soc/demo',
         trialDays: 30,
         setupTime: '1-2 weeks',
-        complianceStandards: ['SOC2', 'ISO 27001', 'NIST', 'GDPR', 'HIPAA'],
+        complianceStandards['SOC2', 'ISO 27001', 'NIST', 'GDPR', 'HIPAA'],
         supportLevel: 'enterprise'
     },
     // ===== REVOLUTIONARY AI SOLUTIONS =====
@@ -412,7 +412,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         subcategory: 'Research & Analytics',
         price: '$1,299',
         period: '/month',
-        features: [
+        features[
             'Autonomous literature review',
             'Data analysis automation',
             'Research report generation',
@@ -424,7 +424,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Research collaboration tools',
             'Publication assistance'
         ],
-        benefits: [
+        benefits[
             '90% reduction in research time',
             'Comprehensive literature coverage',
             'Automated data analysis',
@@ -432,7 +432,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Multi-language research capability',
             'Collaborative research platform'
         ],
-        useCases: [
+        useCases[
             'Academic research',
             'Market research',
             'Competitive analysis',
@@ -440,7 +440,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Business intelligence',
             'Policy research'
         ],
-        targetAudience: [
+        targetAudience[
             'Research institutions',
             'Universities',
             'Businesses',
@@ -448,7 +448,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Government agencies',
             'Individual researchers'
         ],
-        technology: [
+        technology[
             'GPT-5',
             'Claude 3.5 Sonnet',
             'Natural Language Processing',
@@ -456,7 +456,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Data Analytics',
             'Knowledge Graphs'
         ],
-        integrations: [
+        integrations[
             'Research Databases',
             'Academic Libraries',
             'Data Sources',
@@ -466,7 +466,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         ],
         marketPosition: 'First autonomous AI research platform with comprehensive research capabilities',
         roi: '500% ROI through research automation and time savings',
-        competitors: ['Perplexity AI', 'Claude', 'ResearchGate'],
+        competitors['Perplexity AI', 'Claude', 'ResearchGate'],
         marketSize: '$2.1B research tools market',
         growthRate: '280% annual growth in AI research tools',
         contactInfo: {
@@ -479,7 +479,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/autonomous-ai-research-assistant/demo',
         trialDays: 14,
         setupTime: '1 hour',
-        complianceStandards: ['GDPR', 'CCPA', 'SOC2'],
+        complianceStandards['GDPR', 'CCPA', 'SOC2'],
         supportLevel: 'premium'
     },
     // 7. Quantum AI Drug Discovery Platform
@@ -492,7 +492,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         subcategory: 'Healthcare & Biotechnology',
         price: '$8,999',
         period: '/month',
-        features: [
+        features[
             'Quantum molecular modeling',
             'AI drug interaction prediction',
             'Clinical trial optimization',
@@ -504,7 +504,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Regulatory compliance',
             'Collaboration tools'
         ],
-        benefits: [
+        benefits[
             '10x faster drug discovery process',
             'Higher accuracy in drug prediction',
             'Reduced clinical trial costs',
@@ -512,7 +512,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Faster regulatory approval',
             'Cost-effective drug development'
         ],
-        useCases: [
+        useCases[
             'Pharmaceutical research',
             'Drug development',
             'Clinical trials',
@@ -520,7 +520,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Toxicity studies',
             'Regulatory submissions'
         ],
-        targetAudience: [
+        targetAudience[
             'Pharmaceutical companies',
             'Biotechnology firms',
             'Research institutions',
@@ -528,7 +528,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Government agencies',
             'Contract research organizations'
         ],
-        technology: [
+        technology[
             'Quantum Computing',
             'Machine Learning',
             'Molecular Dynamics',
@@ -536,7 +536,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'AI Drug Discovery',
             'Quantum Chemistry'
         ],
-        integrations: [
+        integrations[
             'Laboratory Information Systems',
             'Clinical Trial Platforms',
             'Regulatory Databases',
@@ -546,7 +546,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         ],
         marketPosition: 'First quantum-AI hybrid drug discovery platform with clinical validation',
         roi: '2000% ROI through accelerated drug development',
-        competitors: ['Atomwise', 'Insilico Medicine', 'BenevolentAI'],
+        competitors['Atomwise', 'Insilico Medicine', 'BenevolentAI'],
         marketSize: '$45.2B AI in drug discovery market',
         growthRate: '500% annual growth in quantum drug discovery',
         contactInfo: {
@@ -559,7 +559,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/quantum-ai-drug-discovery/demo',
         trialDays: 30,
         setupTime: '4-6 weeks',
-        complianceStandards: ['FDA', 'EMA', 'GMP', 'GLP', 'GCP'],
+        complianceStandards['FDA', 'EMA', 'GMP', 'GLP', 'GCP'],
         supportLevel: 'enterprise'
     },
     // 8. Autonomous AI Legal Assistant
@@ -572,7 +572,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         subcategory: 'Legal Technology',
         price: '$2,499',
         period: '/month',
-        features: [
+        features[
             'Autonomous legal research',
             'Contract analysis and review',
             'Case strategy development',
@@ -584,7 +584,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Case management',
             'Client communication tools'
         ],
-        benefits: [
+        benefits[
             '80% reduction in legal research time',
             'Automated contract review',
             'Enhanced case preparation',
@@ -592,7 +592,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Improved accuracy',
             '24/7 legal assistance'
         ],
-        useCases: [
+        useCases[
             'Contract review and analysis',
             'Legal research',
             'Case preparation',
@@ -600,7 +600,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Compliance checking',
             'Risk assessment'
         ],
-        targetAudience: [
+        targetAudience[
             'Law firms',
             'Corporate legal departments',
             'Legal consultants',
@@ -608,7 +608,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Non-profit organizations',
             'Individual lawyers'
         ],
-        technology: [
+        technology[
             'GPT-5',
             'Claude 3.5 Sonnet',
             'Natural Language Processing',
@@ -616,7 +616,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
             'Legal AI',
             'Machine Learning'
         ],
-        integrations: [
+        integrations[
             'Legal Research Databases',
             'Document Management Systems',
             'Case Management Software',
@@ -626,7 +626,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         ],
         marketPosition: 'First autonomous AI legal assistant with comprehensive legal capabilities',
         roi: '400% ROI through legal automation and time savings',
-        competitors: ['Casetext', 'ROSS Intelligence', 'Harvey AI'],
+        competitors['Casetext', 'ROSS Intelligence', 'Harvey AI'],
         marketSize: '$3.8B legal technology market',
         growthRate: '320% annual growth in AI legal technology',
         contactInfo: {
@@ -639,13 +639,13 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/autonomous-ai-legal-assistant/demo',
         trialDays: 14,
         setupTime: '1 week',
-        complianceStandards: ['GDPR', 'CCPA', 'SOC2', 'Legal Ethics'],
+        complianceStandards['GDPR', 'CCPA', 'SOC2', 'Legal Ethics'],
         supportLevel: 'premium'
     }
 ];
 // Additional specialized service categories
 export const SERVICE_CATEGORIES = {
-    'Micro SAAS': [
+    'Micro SAAS'[
         'Financial Technology',
         'Content Creation & Marketing',
         'Healthcare Technology',
@@ -657,7 +657,7 @@ export const SERVICE_CATEGORIES = {
         'Supply Chain Management',
         'Real Estate Technology'
     ],
-    'IT Services': [
+    'IT Services'[
         'Cloud Computing & Infrastructure',
         'Cybersecurity',
         'Data Analytics & Business Intelligence',
@@ -669,7 +669,7 @@ export const SERVICE_CATEGORIES = {
         'Managed IT Services',
         'Disaster Recovery'
     ],
-    'AI Solutions': [
+    'AI Solutions'[
         'Research & Analytics',
         'Healthcare & Biotechnology',
         'Legal Technology',
@@ -686,7 +686,7 @@ export const SERVICE_CATEGORIES = {
 export const MARKET_ANALYSIS = {
     totalMarketSize: '$2.8T',
     growthRate: '15.7% CAGR',
-    keyTrends: [
+    keyTrends[
         'Quantum computing integration',
         'Autonomous AI systems',
         'Zero-trust security',
@@ -694,7 +694,7 @@ export const MARKET_ANALYSIS = {
         'Sustainable technology',
         'Digital transformation acceleration'
     ],
-    competitiveAdvantages: [
+    competitiveAdvantages[
         'First-mover advantage in quantum-AI integration',
         'Proprietary autonomous systems',
         'Global quantum network access',

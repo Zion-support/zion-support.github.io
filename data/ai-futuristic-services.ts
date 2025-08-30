@@ -29,15 +29,13 @@ export interface AIFuturisticService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const aiFuturisticServices: AIFuturisticService[] = [
   // AI-Powered Quantum Blockchain Analytics
   {
@@ -47,7 +45,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary platform combining quantum computing with AI to analyze blockchain data at quantum speeds, providing predictive insights, fraud detection, and market analysis with unprecedented accuracy.',
-    features: [
+    features[
       'Quantum blockchain data analysis',
       'AI-powered fraud detection',
       'Predictive market insights',
@@ -70,11 +68,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '2-4 weeks',
     category: 'AI Blockchain Analytics',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Blockchain analytics', 'Machine learning', 'Big data processing', 'Predictive analytics'],
-    integrations: ['Ethereum', 'Bitcoin', 'Polygon', 'Solana', 'Binance Smart Chain', 'Major exchanges'],
-    useCases: ['Fraud detection', 'Market analysis', 'Risk assessment', 'Compliance monitoring', 'Investment research', 'Regulatory reporting'],
+    technology['Quantum computing', 'AI algorithms', 'Blockchain analytics', 'Machine learning', 'Big data processing', 'Predictive analytics'],
+    integrations['Ethereum', 'Bitcoin', 'Polygon', 'Solana', 'Binance Smart Chain', 'Major exchanges'],
+    useCases['Fraud detection', 'Market analysis', 'Risk assessment', 'Compliance monitoring', 'Investment research', 'Regulatory reporting'],
     roi: 'Blockchain companies see 800% ROI through improved security and market insights.',
-    competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Traditional blockchain analytics'],
+    competitors['Chainalysis', 'Elliptic', 'CipherTrace', 'Traditional blockchain analytics'],
     marketSize: '$2B blockchain analytics market, quantum AI segment growing 600% annually',
     growthRate: '600% annual growth',
     variant: 'quantum-cyberpunk',
@@ -99,7 +97,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary code review platform using quantum AI to analyze code at quantum speeds, identify bugs, security vulnerabilities, and provide optimization suggestions with 99% accuracy.',
-    features: [
+    features[
       'Quantum AI code analysis',
       'Real-time bug detection',
       'Security vulnerability scanning',
@@ -122,11 +120,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '1-2 weeks',
     category: 'AI Code Review',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Code analysis', 'Machine learning', 'Static analysis', 'Security scanning'],
-    integrations: ['VS Code', 'IntelliJ', 'GitHub', 'GitLab', 'Bitbucket', 'CI/CD platforms'],
-    useCases: ['Code review automation', 'Bug detection', 'Security scanning', 'Performance optimization', 'Code quality improvement', 'Team collaboration'],
+    technology['Quantum computing', 'AI algorithms', 'Code analysis', 'Machine learning', 'Static analysis', 'Security scanning'],
+    integrations['VS Code', 'IntelliJ', 'GitHub', 'GitLab', 'Bitbucket', 'CI/CD platforms'],
+    useCases['Code review automation', 'Bug detection', 'Security scanning', 'Performance optimization', 'Code quality improvement', 'Team collaboration'],
     roi: 'Development teams see 500% ROI through faster development and improved code quality.',
-    competitors: ['SonarQube', 'CodeClimate', 'GitHub Copilot', 'Traditional code review tools'],
+    competitors['SonarQube', 'CodeClimate', 'GitHub Copilot', 'Traditional code review tools'],
     marketSize: '$1.5B code review market, quantum AI segment growing 500% annually',
     growthRate: '500% annual growth',
     variant: 'ai-futuristic',
@@ -151,7 +149,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary data analytics platform using quantum AI to process massive datasets at quantum speeds, providing real-time insights, predictive analytics, and automated decision-making.',
-    features: [
+    features[
       'Quantum data processing',
       'Real-time analytics',
       'Predictive modeling',
@@ -174,11 +172,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '2-4 weeks',
     category: 'AI Data Analytics',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Big data processing', 'Machine learning', 'Predictive analytics', 'Real-time processing'],
-    integrations: ['Databases', 'Data warehouses', 'Cloud platforms', 'BI tools', 'CRM systems', 'ERP platforms'],
-    useCases: ['Business intelligence', 'Predictive analytics', 'Real-time monitoring', 'Research analysis', 'Performance optimization', 'Decision making'],
+    technology['Quantum computing', 'AI algorithms', 'Big data processing', 'Machine learning', 'Predictive analytics', 'Real-time processing'],
+    integrations['Databases', 'Data warehouses', 'Cloud platforms', 'BI tools', 'CRM systems', 'ERP platforms'],
+    useCases['Business intelligence', 'Predictive analytics', 'Real-time monitoring', 'Research analysis', 'Performance optimization', 'Decision making'],
     roi: 'Organizations see 600% ROI through improved insights and faster decision-making.',
-    competitors: ['Tableau', 'Power BI', 'Qlik', 'Traditional analytics tools'],
+    competitors['Tableau', 'Power BI', 'Qlik', 'Traditional analytics tools'],
     marketSize: '$25B data analytics market, quantum AI segment growing 700% annually',
     growthRate: '700% annual growth',
     variant: 'quantum-matrix',
@@ -203,7 +201,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary evaluation platform using quantum AI to assess performance, skills, and capabilities with unprecedented accuracy. Provides real-time feedback and personalized improvement recommendations.',
-    features: [
+    features[
       'Quantum AI assessment',
       'Real-time evaluation',
       'Personalized feedback',
@@ -226,11 +224,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '2-4 weeks',
     category: 'AI Evaluation',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Assessment tools', 'Machine learning', 'Psychometrics', 'Performance analytics'],
-    integrations: ['HR systems', 'LMS platforms', 'Assessment tools', 'Analytics platforms', 'CRM systems'],
-    useCases: ['Employee evaluation', 'Student assessment', 'Skill assessment', 'Performance review', 'Training evaluation', 'Competency mapping'],
+    technology['Quantum computing', 'AI algorithms', 'Assessment tools', 'Machine learning', 'Psychometrics', 'Performance analytics'],
+    integrations['HR systems', 'LMS platforms', 'Assessment tools', 'Analytics platforms', 'CRM systems'],
+    useCases['Employee evaluation', 'Student assessment', 'Skill assessment', 'Performance review', 'Training evaluation', 'Competency mapping'],
     roi: 'Organizations see 400% ROI through improved assessment accuracy and personalized development.',
-    competitors: ['Traditional assessment tools', 'HR platforms', 'LMS systems'],
+    competitors['Traditional assessment tools', 'HR platforms', 'LMS systems'],
     marketSize: '$8B assessment market, quantum AI segment growing 600% annually',
     growthRate: '600% annual growth',
     variant: 'neural-quantum',
@@ -255,7 +253,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$5,999',
     period: '/month',
     description: 'Revolutionary AI safety platform using quantum AI to monitor, control, and govern AI systems with unprecedented precision. Ensures AI systems operate safely and ethically.',
-    features: [
+    features[
       'Quantum AI monitoring',
       'Real-time safety control',
       'Ethical AI governance',
@@ -278,11 +276,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '3-6 weeks',
     category: 'AI Safety & Governance',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Safety systems', 'Machine learning', 'Ethics frameworks', 'Risk assessment'],
-    integrations: ['AI platforms', 'ML platforms', 'Cloud services', 'Monitoring tools', 'Compliance platforms'],
-    useCases: ['AI safety monitoring', 'Ethical AI governance', 'Bias detection', 'Risk assessment', 'Compliance monitoring', 'Incident response'],
+    technology['Quantum computing', 'AI algorithms', 'Safety systems', 'Machine learning', 'Ethics frameworks', 'Risk assessment'],
+    integrations['AI platforms', 'ML platforms', 'Cloud services', 'Monitoring tools', 'Compliance platforms'],
+    useCases['AI safety monitoring', 'Ethical AI governance', 'Bias detection', 'Risk assessment', 'Compliance monitoring', 'Incident response'],
     roi: 'AI companies see 700% ROI through improved safety and regulatory compliance.',
-    competitors: ['Traditional AI safety tools', 'Governance platforms', 'Monitoring tools'],
+    competitors['Traditional AI safety tools', 'Governance platforms', 'Monitoring tools'],
     marketSize: '$3B AI safety market, quantum AI segment growing 800% annually',
     growthRate: '800% annual growth',
     variant: 'quantum-advanced',
@@ -307,7 +305,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$1,999',
     period: '/month',
     description: 'Revolutionary HR recruitment platform using quantum AI to screen candidates, assess skills, and predict performance with 90% accuracy. Reduces hiring time by 80% and improves candidate quality.',
-    features: [
+    features[
       'Quantum AI screening',
       'Skill assessment',
       'Performance prediction',
@@ -330,11 +328,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '1-2 weeks',
     category: 'AI HR Recruitment',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'HR systems', 'Machine learning', 'Psychometrics', 'Predictive analytics'],
-    integrations: ['ATS systems', 'Job boards', 'Social media', 'Background check services', 'Analytics tools'],
-    useCases: ['Candidate screening', 'Skill assessment', 'Performance prediction', 'Cultural fit analysis', 'Diversity hiring', 'Compliance'],
+    technology['Quantum computing', 'AI algorithms', 'HR systems', 'Machine learning', 'Psychometrics', 'Predictive analytics'],
+    integrations['ATS systems', 'Job boards', 'Social media', 'Background check services', 'Analytics tools'],
+    useCases['Candidate screening', 'Skill assessment', 'Performance prediction', 'Cultural fit analysis', 'Diversity hiring', 'Compliance'],
     roi: 'HR departments see 500% ROI through faster hiring and improved candidate quality.',
-    competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Traditional HR tools'],
+    competitors['Workday', 'BambooHR', 'Greenhouse', 'Traditional HR tools'],
     marketSize: '$30B HR technology market, quantum AI segment growing 600% annually',
     growthRate: '600% annual growth',
     variant: 'ai-futuristic',
@@ -359,7 +357,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary IoT platform using quantum AI to manage connected devices, analyze sensor data, and optimize IoT networks with unprecedented efficiency and security.',
-    features: [
+    features[
       'Quantum IoT management',
       'Real-time data analysis',
       'Predictive maintenance',
@@ -382,11 +380,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '2-4 weeks',
     category: 'AI IoT Platform',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'IoT management', 'Machine learning', 'Sensor networks', 'Edge computing'],
-    integrations: ['IoT platforms', 'Cloud services', 'Device management tools', 'Analytics platforms', 'Security systems'],
-    useCases: ['Smart city management', 'Industrial IoT', 'Healthcare monitoring', 'Consumer IoT', 'Energy management', 'Security monitoring'],
+    technology['Quantum computing', 'AI algorithms', 'IoT management', 'Machine learning', 'Sensor networks', 'Edge computing'],
+    integrations['IoT platforms', 'Cloud services', 'Device management tools', 'Analytics platforms', 'Security systems'],
+    useCases['Smart city management', 'Industrial IoT', 'Healthcare monitoring', 'Consumer IoT', 'Energy management', 'Security monitoring'],
     roi: 'IoT companies see 600% ROI through improved efficiency and security.',
-    competitors: ['Traditional IoT platforms', 'Device management tools', 'Analytics platforms'],
+    competitors['Traditional IoT platforms', 'Device management tools', 'Analytics platforms'],
     marketSize: '$1.5T IoT market, quantum AI segment growing 700% annually',
     growthRate: '700% annual growth',
     variant: 'quantum-cyberpunk',
@@ -411,7 +409,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary legal contract analysis platform using quantum AI to review contracts, identify risks, and provide insights with 98% accuracy. Reduces legal review time by 90%.',
-    features: [
+    features[
       'Quantum AI contract review',
       'Risk identification',
       'Clause analysis',
@@ -434,11 +432,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '1-2 weeks',
     category: 'AI Legal Contract Analysis',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Legal analysis', 'Natural language processing', 'Machine learning', 'Document analysis'],
-    integrations: ['Document management systems', 'E-signature platforms', 'Legal research databases', 'Analytics tools'],
-    useCases: ['Contract review', 'Risk assessment', 'Compliance checking', 'Legal research', 'Document generation', 'Contract management'],
+    technology['Quantum computing', 'AI algorithms', 'Legal analysis', 'Natural language processing', 'Machine learning', 'Document analysis'],
+    integrations['Document management systems', 'E-signature platforms', 'Legal research databases', 'Analytics tools'],
+    useCases['Contract review', 'Risk assessment', 'Compliance checking', 'Legal research', 'Document generation', 'Contract management'],
     roi: 'Legal departments see 600% ROI through reduced review time and improved risk identification.',
-    competitors: ['DocuSign', 'ContractPodAi', 'Ironclad', 'Traditional legal tools'],
+    competitors['DocuSign', 'ContractPodAi', 'Ironclad', 'Traditional legal tools'],
     marketSize: '$20B legal technology market, quantum AI segment growing 700% annually',
     growthRate: '700% annual growth',
     variant: 'quantum-holographic',
@@ -463,7 +461,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$1,999',
     period: '/month',
     description: 'Revolutionary market research platform using quantum AI to analyze market trends, predict consumer behavior, and provide real-time insights. Reduces research time by 85%.',
-    features: [
+    features[
       'Quantum AI market analysis',
       'Trend prediction',
       'Consumer behavior analysis',
@@ -486,11 +484,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '1-2 weeks',
     category: 'AI Market Research',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Market analysis', 'Machine learning', 'Predictive analytics', 'Real-time processing'],
-    integrations: ['Social media APIs', 'News sources', 'Financial data', 'Analytics tools', 'CRM systems'],
-    useCases: ['Market analysis', 'Trend prediction', 'Consumer research', 'Competitive intelligence', 'Investment research', 'Strategic planning'],
+    technology['Quantum computing', 'AI algorithms', 'Market analysis', 'Machine learning', 'Predictive analytics', 'Real-time processing'],
+    integrations['Social media APIs', 'News sources', 'Financial data', 'Analytics tools', 'CRM systems'],
+    useCases['Market analysis', 'Trend prediction', 'Consumer research', 'Competitive intelligence', 'Investment research', 'Strategic planning'],
     roi: 'Businesses see 500% ROI through improved market insights and strategic decisions.',
-    competitors: ['Nielsen', 'Gartner', 'Forrester', 'Traditional research tools'],
+    competitors['Nielsen', 'Gartner', 'Forrester', 'Traditional research tools'],
     marketSize: '$75B market research market, quantum AI segment growing 600% annually',
     growthRate: '600% annual growth',
     variant: 'holographic-matrix',
@@ -515,7 +513,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary phone agent platform using quantum AI to handle customer calls with human-like conversations. Achieves 98% customer satisfaction and 24/7 availability.',
-    features: [
+    features[
       'Quantum AI phone conversations',
       'Natural language processing',
       'Multi-language support',
@@ -538,11 +536,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     setupTime: '1-2 weeks',
     category: 'AI Phone Agent',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Natural language processing', 'Voice recognition', 'Text-to-speech', 'Machine learning'],
-    integrations: ['Phone systems', 'CRM platforms', 'Analytics tools', 'Voice platforms', 'Communication tools'],
-    useCases: ['Customer service', 'Sales calls', 'Appointment scheduling', 'Order processing', 'Support calls', 'Lead qualification'],
+    technology['Quantum computing', 'AI algorithms', 'Natural language processing', 'Voice recognition', 'Text-to-speech', 'Machine learning'],
+    integrations['Phone systems', 'CRM platforms', 'Analytics tools', 'Voice platforms', 'Communication tools'],
+    useCases['Customer service', 'Sales calls', 'Appointment scheduling', 'Order processing', 'Support calls', 'Lead qualification'],
     roi: 'Businesses see 600% ROI through improved customer satisfaction and 24/7 availability.',
-    competitors: ['Twilio', 'RingCentral', '8x8', 'Traditional phone systems'],
+    competitors['Twilio', 'RingCentral', '8x8', 'Traditional phone systems'],
     marketSize: '$40B contact center market, quantum AI segment growing 700% annually',
     growthRate: '700% annual growth',
     variant: 'neural-quantum-cyberpunk',

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 
@@ -15,11 +14,11 @@ import {
   AlertTriangle,
   Info,
   Share
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const PrivacyPolicy: React.FC = () => {
+const PrivacyPolicy: React.FC = (): JSX.Element => {
   const lastUpdated = 'January 15, 2024';
-  const companyName = 'Zion Tech Group';
+  const compName = 'Zion Tech Group';
   const website = 'https://ziontechgroup.com';
   const email = 'privacy@ziontechgroup.com';
   const phone = '+1 (555) 123-4567';
@@ -78,13 +77,13 @@ const PrivacyPolicy: React.FC = () => {
               </h2>
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  {companyName} ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website {website} or use our services.
+                  {compName} ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website {website} or use our services.
                 </p>
                 <p>
                   By using our website and services, you consent to the data practices described in this policy. If you do not agree with our policies and practices, please do not use our website or services.
                 </p>
                 <p>
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
+                  We may update this Privacy Policy from time to time. We will notify you of  changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
                 </p>
               </div>
             </motion.div>
@@ -115,7 +114,7 @@ const PrivacyPolicy: React.FC = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Company name and job title
+                      Comp name and job title
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -419,7 +418,7 @@ const PrivacyPolicy: React.FC = () => {
                   We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.
                 </p>
                 <p>
-                  We will notify you of any material changes by:
+                  We will notify you of  material changes by:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -436,7 +435,7 @@ const PrivacyPolicy: React.FC = () => {
                   </li>
                 </ul>
                 <p>
-                  Your continued use of our website after any changes indicates your acceptance of the updated policy.
+                  Your continued use of our website after  changes indicates your acceptance of the updated policy.
                 </p>
               </div>
             </motion.div>
@@ -454,7 +453,7 @@ const PrivacyPolicy: React.FC = () => {
               </h2>
               
               <p className="text-zion-slate-light mb-6">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
+                If you have  questions about this Privacy Policy or our data practices, please contact us:
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -488,7 +487,6 @@ const PrivacyPolicy: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default PrivacyPolicy;

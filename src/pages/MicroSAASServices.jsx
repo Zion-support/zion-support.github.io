@@ -23,6 +23,5 @@ const MicroSAASServices = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default MicroSAASServices;

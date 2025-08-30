@@ -37,15 +37,13 @@ export const AICodeGenerator = () => {
             style: form.style,
             target: form.target,
             quality: form.quality
-        });
-    }, [form, generateCode, trackEvent]);
+        })}, [form, generateCode, trackEvent]);
     // Handle custom code analysis
     const handleAnalyzeCustomCode = useCallback(async () => {
         if (!customCode.trim())
             return;
         await analyzeCode(customCode, form.language);
-        trackEvent('ai_code_generator', 'custom_code_analyzed', form.language, customCode.length);
-    }, [customCode, form.language, analyzeCode, trackEvent]);
+        trackEvent('ai_code_generator', 'custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization
     const handleOptimizeCode = useCallback(async (focus) => {
         if (!generatedCode && !customCode)
@@ -56,8 +54,7 @@ export const AICodeGenerator = () => {
             // Update generated code
             // Note: In a real implementation, you'd want to update the state properly
         }
-        trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length);
-    }, [generatedCode, customCode, optimizeCode, trackEvent]);
+        trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation
     const handleGenerateTests = useCallback(async () => {
         if (!generatedCode && !customCode)
@@ -66,8 +63,7 @@ export const AICodeGenerator = () => {
         const testCode = await generateTests(codeToTest, form.language);
         // In a real implementation, you'd want to display the test code
         console.log('Generated tests:', testCode);
-        trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
-    }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
+        trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
     const handleGenerateDocs = useCallback(async () => {
         if (!generatedCode && !customCode)
@@ -76,19 +72,16 @@ export const AICodeGenerator = () => {
         const docs = await generateDocs(codeToDoc, form.language);
         // In a real implementation, you'd want to display the documentation
         console.log('Generated docs:', docs);
-        trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
-    }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
+        trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard
     const copyToClipboard = useCallback(async (code) => {
         try {
             await navigator.clipboard.writeText(code);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
-            trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
-        }
+            trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length)}
         catch (error) {
-            console.error('Failed to copy code:', error);
-        }
+            console.error('Failed to copy code:', error)}
     }, [trackEvent]);
     // Apply suggestion
     const handleApplySuggestion = useCallback((suggestion) => {
@@ -96,13 +89,11 @@ export const AICodeGenerator = () => {
         trackEvent('ai_code_generator', 'suggestion_applied', suggestion.type, undefined, {
             suggestionId: suggestion.id,
             impact: suggestion.impact
-        });
-    }, [applySuggestion, trackEvent]);
+        })}, [applySuggestion, trackEvent]);
     // Clear history
     const handleClearHistory = useCallback(() => {
         clearHistory();
-        trackEvent('ai_code_generator', 'history_cleared', 'manual');
-    }, [clearHistory, trackEvent]);
+        trackEvent('ai_code_generator', 'history_cleared', 'manual')}, [clearHistory, trackEvent]);
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">
@@ -310,10 +301,8 @@ export const AICodeGenerator = () => {
                               {value}/10
                             </div>
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
-                          </div>);
-                    }
-                    return null;
-                })}
+                          </div>)}
+                    return null})}
                   </div>
 
                   {/* Code Metrics */}
@@ -503,5 +492,4 @@ export const AICodeGenerator = () => {
             </div>
           </motion.div>)}
       </div>
-    </div>);
-};
+    </div>)};
