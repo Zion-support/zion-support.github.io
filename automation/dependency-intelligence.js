@@ -34,7 +34,7 @@ class DependencyIntelligence {
       highVulnerabilityThreshold: 2
     };
     
-    console.log('🧠 Dependency Intelligence Starting...');
+    // // // console.log('🧠 Dependency Intelligence Starting...');
     this.startIntelligence();
   }
 
@@ -49,7 +49,7 @@ class DependencyIntelligence {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(`[${level}] ${message}`);
+    // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logEntry);
   }
 

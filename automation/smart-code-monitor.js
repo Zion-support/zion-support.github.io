@@ -32,7 +32,7 @@ class SmartCodeMonitor {
       documentation: 70
     };
     
-    console.log('🧠 Smart Code Monitor Starting...');
+    // // // console.log('🧠 Smart Code Monitor Starting...');
     this.startMonitoring();
   }
 
@@ -47,7 +47,7 @@ class SmartCodeMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(`[${level}] ${message}`);
+    // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logEntry);
   }
 

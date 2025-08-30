@@ -183,7 +183,7 @@ class ProcessRecoverySystem {
     this.recoveryQueue.sort((a, b) => b.priority - a.priority);
     
     if (this.logRecovery) {
-      console.log(`🔄 Queued ${processName} for recovery (priority: ${priority})`);
+      // // // console.log(`🔄 Queued ${processName} for recovery (priority: ${priority})`);
     }
   }
 
@@ -254,7 +254,7 @@ class ProcessRecoverySystem {
           await this.attemptRecovery(recoveryItem);
           
           if (this.logRecovery) {
-            console.log(`✅ Successfully recovered process ${recoveryItem.processName}`);
+            // // // console.log(`✅ Successfully recovered process ${recoveryItem.processName}`);
           }
           
           this.recordRecoverySuccess(recoveryItem);

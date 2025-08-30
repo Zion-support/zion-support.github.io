@@ -214,7 +214,7 @@ class AlertingSystem {
 
     try {
       await Promise.allSettled(promises);
-      console.log(`✅ Notifications sent for alert: ${alert.id}`);
+      // // // console.log(`✅ Notifications sent for alert: ${alert.id}`);
     } catch (error) {
       console.error(`❌ Error sending notifications for alert ${alert.id}:`, error);
     }
@@ -237,7 +237,7 @@ class AlertingSystem {
         priority: alert.severity === 'high' ? 'high' : 'normal'
       });
       
-      console.log(`📧 Email alert sent for ${alert.process}`);
+      // // // console.log(`📧 Email alert sent for ${alert.process}`);
     } catch (error) {
       console.error(`❌ Failed to send email alert:`, error);
     }
@@ -253,7 +253,7 @@ class AlertingSystem {
     
     try {
       await axios.post(this.config.slack.webhookUrl, slackMessage);
-      console.log(`💬 Slack alert sent for ${alert.process}`);
+      // // // console.log(`💬 Slack alert sent for ${alert.process}`);
     } catch (error) {
       console.error(`❌ Failed to send Slack alert:`, error);
     }
@@ -280,7 +280,7 @@ class AlertingSystem {
         timeout: 10000
       });
       
-      console.log(`🌐 Webhook alert sent for ${alert.process}`);
+      // // // console.log(`🌐 Webhook alert sent for ${alert.process}`);
     } catch (error) {
       console.error(`❌ Failed to send webhook alert:`, error);
     }

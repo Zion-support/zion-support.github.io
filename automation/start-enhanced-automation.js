@@ -22,8 +22,8 @@ class EnhancedAutomationSystem {
     // Load environment-specific configuration
     this.loadEnvironmentConfig();
     
-    console.log('🚀 Starting Enhanced PM2 Automation System...');
-    console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
+    // // // console.log('🚀 Starting Enhanced PM2 Automation System...');
+    // // // console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
   }
 
   /**
@@ -36,7 +36,7 @@ class EnhancedAutomationSystem {
     // Merge environment config with base config
     this.config = this.mergeConfig(config, envConfig);
     
-    console.log(`⚙️ Loaded configuration for environment: ${env}`);
+    // // // console.log(`⚙️ Loaded configuration for environment: ${env}`);
   }
 
   /**
@@ -61,7 +61,7 @@ class EnhancedAutomationSystem {
    */
   async start() {
     try {
-      console.log('🔄 Initializing automation systems...');
+      // // // console.log('🔄 Initializing automation systems...');
       
       // Start alerting system
       if (this.config.alerting.enabled) {
@@ -91,8 +91,8 @@ class EnhancedAutomationSystem {
       this.isRunning = true;
       this.startTime = Date.now();
       
-      console.log('✅ Enhanced Automation System started successfully!');
-      console.log(`📊 Dashboard available at: http://localhost:${this.config.dashboard.port}`);
+      // // // console.log('✅ Enhanced Automation System started successfully!');
+      // // // console.log(`📊 Dashboard available at: http://localhost:${this.config.dashboard.port}`);
       
       // Setup graceful shutdown
       this.setupGracefulShutdown();
@@ -111,7 +111,7 @@ class EnhancedAutomationSystem {
    */
   async startAlertingSystem() {
     try {
-      console.log('🔔 Starting Alerting System...');
+      // // // console.log('🔔 Starting Alerting System...');
       
       this.alerting = new AlertingSystem({
         email: this.config.alerting.email,
@@ -122,7 +122,7 @@ class EnhancedAutomationSystem {
         maxAlerts: this.config.alerting.maxAlerts
       });
       
-      console.log('✅ Alerting System started');
+      // // // console.log('✅ Alerting System started');
       
     } catch (error) {
       console.error('❌ Failed to start Alerting System:', error);
@@ -135,7 +135,7 @@ class EnhancedAutomationSystem {
    */
   async startRecoverySystem() {
     try {
-      console.log('🔄 Starting Process Recovery System...');
+      // // // console.log('🔄 Starting Process Recovery System...');
       
       this.recovery = new ProcessRecoverySystem({
         maxRetries: this.config.recovery.maxRetries,
@@ -150,7 +150,7 @@ class EnhancedAutomationSystem {
         logRecovery: true
       });
       
-      console.log('✅ Process Recovery System started');
+      // // // console.log('✅ Process Recovery System started');
       
     } catch (error) {
       console.error('❌ Failed to start Process Recovery System:', error);
@@ -163,7 +163,7 @@ class EnhancedAutomationSystem {
    */
   async startDashboard() {
     try {
-      console.log('📊 Starting Monitoring Dashboard...');
+      // // // console.log('📊 Starting Monitoring Dashboard...');
       
       // Override dashboard config with environment settings
       const dashboardConfig = {
@@ -178,7 +178,7 @@ class EnhancedAutomationSystem {
         setTimeout(resolve, 2000);
       });
       
-      console.log('✅ Monitoring Dashboard started');
+      // // // console.log('✅ Monitoring Dashboard started');
       
     } catch (error) {
       console.error('❌ Failed to start Monitoring Dashboard:', error);
@@ -191,7 +191,7 @@ class EnhancedAutomationSystem {
    */
   startMaintenanceScheduler() {
     try {
-      console.log('🛠️ Starting Maintenance Scheduler...');
+      // // // console.log('🛠️ Starting Maintenance Scheduler...');
       
       const cron = require('node-cron');
       
@@ -216,7 +216,7 @@ class EnhancedAutomationSystem {
         });
       }
       
-      console.log('✅ Maintenance Scheduler started');
+      // // // console.log('✅ Maintenance Scheduler started');
       
     } catch (error) {
       console.error('❌ Failed to start Maintenance Scheduler:', error);
@@ -228,13 +228,13 @@ class EnhancedAutomationSystem {
    */
   startMetricsCollection() {
     try {
-      console.log('📈 Starting Metrics Collection...');
+      // // // console.log('📈 Starting Metrics Collection...');
       
       setInterval(() => {
         this.collectMetrics();
       }, this.config.monitoring.metrics.collectionInterval);
       
-      console.log('✅ Metrics Collection started');
+      // // // console.log('✅ Metrics Collection started');
       
     } catch (error) {
       console.error('❌ Failed to start Metrics Collection:', error);
@@ -297,7 +297,7 @@ class EnhancedAutomationSystem {
    */
   async performMaintenance(type) {
     try {
-      console.log(`🛠️ Starting ${type} maintenance...`);
+      // // // console.log(`🛠️ Starting ${type} maintenance...`);
       
       const tasks = this.config.maintenance.tasks;
       
@@ -313,7 +313,7 @@ class EnhancedAutomationSystem {
         await this.cleanupAlerts();
       }
       
-      console.log(`✅ ${type} maintenance completed`);
+      // // // console.log(`✅ ${type} maintenance completed`);
       
     } catch (error) {
       console.error(`❌ ${type} maintenance failed:`, error);
@@ -325,7 +325,7 @@ class EnhancedAutomationSystem {
    */
   async rotateLogs() {
     // Implementation for log rotation
-    console.log('📝 Rotating log files...');
+    // // // console.log('📝 Rotating log files...');
   }
 
   /**
@@ -333,7 +333,7 @@ class EnhancedAutomationSystem {
    */
   async cleanupMetrics() {
     // Implementation for metrics cleanup
-    console.log('🧹 Cleaning up old metrics...');
+    // // // console.log('🧹 Cleaning up old metrics...');
   }
 
   /**
@@ -342,7 +342,7 @@ class EnhancedAutomationSystem {
   async cleanupAlerts() {
     if (this.alerting) {
       // Clean up old alerts
-      console.log('🧹 Cleaning up old alerts...');
+      // // // console.log('🧹 Cleaning up old alerts...');
     }
   }
 
@@ -401,7 +401,7 @@ class EnhancedAutomationSystem {
    */
   setupGracefulShutdown() {
     const shutdown = async (signal) => {
-      console.log(`\n🛑 Received ${signal}, shutting down gracefully...`);
+      // // // console.log(`\n🛑 Received ${signal}, shutting down gracefully...`);
       
       try {
         // Stop all systems
@@ -415,7 +415,7 @@ class EnhancedAutomationSystem {
         
         this.isRunning = false;
         
-        console.log('✅ Graceful shutdown completed');
+        // // // console.log('✅ Graceful shutdown completed');
         process.exit(0);
         
       } catch (error) {
@@ -455,7 +455,7 @@ class EnhancedAutomationSystem {
    * Stop the system
    */
   async stop() {
-    console.log('🛑 Stopping Enhanced Automation System...');
+    // // // console.log('🛑 Stopping Enhanced Automation System...');
     
     if (this.dashboard) {
       this.dashboard.stop();
@@ -467,7 +467,7 @@ class EnhancedAutomationSystem {
     
     this.isRunning = false;
     
-    console.log('✅ Enhanced Automation System stopped');
+    // // // console.log('✅ Enhanced Automation System stopped');
   }
 }
 

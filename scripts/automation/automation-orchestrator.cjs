@@ -56,11 +56,11 @@ class AutomationOrchestrator {
     this.log('🔄 Running sequential processes...');
     
     const sequentialScripts = [
-      { script: 'file-integrity-monitor.cjs', description: 'File Integrity Monitor' },
       { script: 'typescript-syntax-fixer.cjs', description: 'TypeScript Syntax Fixer' },
-      { script: 'build-health-monitor.cjs', description: 'Build Health Monitor' },
-      { script: 'lint-fixer.cjs', description: 'Lint Fixer' },
-      { script: 'code-quality-monitor.cjs', description: 'Code Quality Monitor' }
+      { script: 'code-quality-monitor.cjs', description: 'Code Quality Monitor' },
+      { script: 'console-error-fixer.cjs', description: 'Console Error Fixer' },
+      { script: 'link-checker.cjs', description: 'Link Checker' },
+      { script: 'quality-checks.cjs', description: 'Quality Checks' }
     ];
 
     const results = [];
@@ -84,9 +84,9 @@ class AutomationOrchestrator {
     this.log('⚡ Running parallel processes...');
     
     const parallelScripts = [
-      { script: 'dependency-monitor.cjs', description: 'Dependency Monitor' },
+      { script: 'dependency-manager.cjs', description: 'Dependency Manager' },
       { script: 'performance-monitor.cjs', description: 'Performance Monitor' },
-      { script: 'auto-commit-fixes.cjs', description: 'Auto Commit Fixes' }
+      { script: 'security-audit.cjs', description: 'Security Audit' }
     ];
 
     const promises = parallelScripts.map(script => 

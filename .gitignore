@@ -89,3 +89,9 @@ continuous-improvement-report.json
 daily-build-test-report.json
 console-error-fixer-report.json
 automation-health-report.txt
+
+# Log files and build artifacts
+logs/
+*.log
+*.txt
+ci-cd-reports/

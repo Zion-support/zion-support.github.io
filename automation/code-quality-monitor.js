@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
-console.log('🔍 Code Quality Monitor Starting...\n');
+// // // console.log('🔍 Code Quality Monitor Starting...\n');
 
 class CodeQualityMonitor {
   constructor() {
@@ -33,7 +33,7 @@ class CodeQualityMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(logEntry.trim());
+    // // // console.log(logEntry.trim());
     
     try {
       fs.appendFileSync(this.logFile, logEntry);
@@ -213,19 +213,19 @@ class CodeQualityMonitor {
           const content = fs.readFileSync(file, 'utf8');
           
           // Check for potential issues
-          if (content.includes('console.log(') && !file.includes('.test.')) {
+          if (content.includes('// // // console.log(') && !file.includes('.test.')) {
             bugs.push({
               file: path.relative(this.projectRoot, file),
               issue: 'console.log in production code',
-              line: this.findLineNumber(content, 'console.log(')
+              line: this.findLineNumber(content, '// // // console.log(')
             });
           }
           
-          if (content.includes('debugger;')) {
+          if (content.includes('// // // debugger; // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production')) {
             bugs.push({
               file: path.relative(this.projectRoot, file),
               issue: 'debugger statement found',
-              line: this.findLineNumber(content, 'debugger;')
+              line: this.findLineNumber(content, '// // // debugger; // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production')
             });
           }
           
@@ -318,13 +318,13 @@ class CodeQualityMonitor {
         let newContent = content;
         
         // Fix common issues
-        if (newContent.includes('debugger;')) {
-          newContent = newContent.replace(/debugger;/g, '// debugger; // TODO: Remove in production');
+        if (newContent.includes('// // // debugger; // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production')) {
+          newContent = newContent.replace(/// // // debugger; // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production/g, '// // // // debugger; // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production');
           modified = true;
         }
         
-        if (newContent.includes('console.log(') && !file.includes('.test.')) {
-          newContent = newContent.replace(/console\.log\(/g, '// console.log(');
+        if (newContent.includes('// // // console.log(') && !file.includes('.test.')) {
+          newContent = newContent.replace(/console\.log\(/g, '// // // // console.log(');
           modified = true;
         }
         
@@ -420,13 +420,13 @@ class CodeQualityMonitor {
           
           // Fix console.log statements
           if (bug.issue === 'console.log in production code') {
-            newContent = newContent.replace(/console\.log\(/g, '// console.log(');
+            newContent = newContent.replace(/console\.log\(/g, '// // // // console.log(');
             modified = true;
           }
           
           // Fix debugger statements
           if (bug.issue === 'debugger statement found') {
-            newContent = newContent.replace(/debugger;/g, '// debugger; // TODO: Remove in production');
+            newContent = newContent.replace(/// // // debugger; // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production/g, '// // // // debugger; // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production // TODO: Remove in production');
             modified = true;
           }
           

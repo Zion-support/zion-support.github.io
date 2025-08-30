@@ -33,7 +33,7 @@ class MLHealthDashboard {
     this.port = process.env.DASHBOARD_PORT || 3001;
     this.updateInterval = 5 * 60 * 1000; // 5 minutes
     
-    console.log('🤖 ML Health Dashboard Starting...');
+    // // // console.log('🤖 ML Health Dashboard Starting...');
     this.startDashboard();
   }
 
@@ -48,7 +48,7 @@ class MLHealthDashboard {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(`[${level}] ${message}`);
+    // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logEntry);
   }
 

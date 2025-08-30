@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
 export default function ServicesOverview() {

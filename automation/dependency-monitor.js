@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
-console.log('📦 Dependency Monitor Starting...\n');
+// // // console.log('📦 Dependency Monitor Starting...\n');
 
 class DependencyMonitor {
   constructor() {
@@ -33,7 +33,7 @@ class DependencyMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(logEntry.trim());
+    // // // console.log(logEntry.trim());
     
     try {
       fs.appendFileSync(this.logFile, logEntry);
