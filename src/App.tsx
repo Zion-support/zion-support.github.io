@@ -423,7 +423,7 @@ export default function App() {
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.3 }}
                           className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-
+                        >
                           <div className="text-center text-white">
                             <h1 className="text-6xl font-bold mb-4">404</h1>
                             <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
