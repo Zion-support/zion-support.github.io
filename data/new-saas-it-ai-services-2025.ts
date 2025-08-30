@@ -1,20 +1,9 @@
 import { EnhancedRealMicroSaasService } from "./enhanced-real-micro-saas-services";
 const contact = {
   mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',;
-  ;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-
-
-
-
-
-
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
 export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 	{
@@ -24,7 +13,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$99',
 		period: '/month',
 		description: 'Manage affiliate programs with cross-device attribution, fraud prevention, commission rules, and automated payouts. Integrates with Shopify, WooCommerce, Stripe, and HubSpot.',
-		features[
+		features: [
 			'Cross-device attribution and UTM stitching',
 			'Fraud heuristics and anomaly detection',
 			'Tiered commissions and coupon attribution',

@@ -75,7 +75,8 @@ export function Footer() {
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
         { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
-        { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom }
+        { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
+        { name: 'New Services 2025', path: '/new-services-2025', icon: Star }
       ]
     },
     {

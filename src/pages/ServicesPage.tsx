@@ -28,7 +28,160 @@ import {
   Globe,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Car,
+  Plane,
+  Ship,
+  Leaf,
+  Sun,
+  Wind,
+  Zap as Lightning,
+  Shield as Security,
+  Globe as Web,
+  Smartphone,
+  Watch,
+  Headphones,
+  Printer,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Telescope,
+  Microscope,
+  Flask,
+  Pill,
+  Stethoscope,
+  Calculator,
+  BookOpen,
+  GraduationCap,
+  DollarSign,
+  CreditCard,
+  ShoppingCart,
+  Truck,
+  Warehouse,
+  Factory,
+  Building2,
+  Home,
+  Store,
+  Bank,
+  Insurance,
+  Law,
+  Gavel,
+  FileText,
+  Calendar,
+  Clock,
+  Timer,
+  Stopwatch,
+  Thermometer,
+  Gauge,
+  Compass,
+  Map,
+  Navigation,
+  Search,
+  Filter,
+  Sort,
+  Download,
+  Upload,
+  Share,
+  Link,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Plus,
+  Minus,
+  X,
+  Check,
+  AlertTriangle,
+  Info,
+  HelpCircle,
+  Settings,
+  User,
+  LogOut,
+  LogIn,
+  UserPlus,
+  UserMinus,
+  Key,
+  Unlock,
+  Lock as LockIcon,
+  EyeOff,
+  Eye as EyeIcon,
+  RefreshCw,
+  RotateCcw,
+  Power,
+  PowerOff,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Volume,
+  VolumeX,
+  Volume1,
+  Volume2,
+  Mic,
+  MicOff,
+  Video as VideoIcon,
+  VideoOff,
+  Image,
+  File,
+  Folder,
+  HardDrive,
+  MemoryStick,
+  Usb,
+  Cable,
+  Wifi as WifiIcon,
+  WifiOff,
+  Signal,
+  SignalHigh,
+  SignalMedium,
+  SignalLow,
+  Battery,
+  BatteryCharging,
+  BatteryFull,
+  BatteryLow,
+  Plug,
+  Charging,
+  Flash,
+  Thunder,
+  Rain,
+  Snow,
+  Cloud as CloudIcon,
+  CloudRain,
+  CloudLightning,
+  CloudSnow,
+  Moon,
+  Sunrise,
+  Sunset,
+  Star as StarIcon,
+  Planet,
+  Galaxy,
+  Universe,
+  Infinity,
+  Pi,
+  Sigma,
+  Alpha,
+  Beta,
+  Gamma,
+  Delta,
+  Omega,
+  Theta,
+  Lambda,
+  Mu,
+  Nu,
+  Xi,
+  Omicron,
+  Rho,
+  Tau,
+  Upsilon,
+  Phi,
+  Chi,
+  Psi,
+  Omega as OmegaIcon
 } from 'lucide-react';
 
 export function ServicesPage() {
@@ -39,22 +192,27 @@ export function ServicesPage() {
     {
       id: 'ai-solutions',
       title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions',
       icon: Brain,
       color: 'from-purple-500 to-pink-600',
+      price: '$2,500 - $15,000/month',
       features: [
         'Machine Learning & Deep Learning',
         'Natural Language Processing',
         'Computer Vision & Image Recognition',
         'Predictive Analytics & Forecasting',
         'AI-Powered Automation',
-        'Intelligent Decision Support'
+        'Intelligent Decision Support',
+        'AI Chatbots & Virtual Assistants',
+        'Recommendation Systems'
       ],
       benefits: [
         'Increase operational efficiency by up to 40%',
         'Reduce costs through intelligent automation',
         'Improve decision-making with data-driven insights',
-        'Enhance customer experience with personalized solutions'
+        'Enhance customer experience with personalized solutions',
+        '24/7 AI-powered customer support',
+        'Real-time data analysis and insights'
       ],
       useCases: [
         'Customer Service Chatbots',
@@ -62,28 +220,35 @@ export function ServicesPage() {
         'Fraud Detection',
         'Recommendation Systems',
         'Process Automation',
-        'Quality Control'
+        'Quality Control',
+        'Sales Forecasting',
+        'Customer Segmentation'
       ]
     },
     {
       id: 'quantum-computing',
       title: 'Quantum Computing',
-      description: 'Harness the power of quantum mechanics for unprecedented computational capabilities',
+      description: 'Harness the power of quantum mechanics for unprecedented computational capabilities and optimization',
       icon: Atom,
       color: 'from-blue-500 to-cyan-600',
+      price: '$5,000 - $25,000/month',
       features: [
         'Quantum Algorithm Development',
         'Quantum AI Hybrid Systems',
         'Quantum Cryptography',
         'Quantum Optimization',
         'Quantum Machine Learning',
-        'Quantum Simulation'
+        'Quantum Simulation',
+        'Quantum Error Correction',
+        'Quantum-Classical Hybrid Computing'
       ],
       benefits: [
         'Solve complex problems exponentially faster',
         'Breakthrough computational capabilities',
         'Enhanced security with quantum encryption',
-        'Revolutionary optimization algorithms'
+        'Revolutionary optimization algorithms',
+        'Unprecedented simulation accuracy',
+        'Future-proof technology investment'
       ],
       useCases: [
         'Financial Modeling',
@@ -91,28 +256,35 @@ export function ServicesPage() {
         'Climate Modeling',
         'Supply Chain Optimization',
         'Cryptography',
-        'Machine Learning'
+        'Machine Learning',
+        'Material Science',
+        'Logistics Optimization'
       ]
     },
     {
       id: 'cybersecurity',
       title: 'Cybersecurity',
-      description: 'Protect your digital assets with AI-powered security solutions',
+      description: 'Protect your digital assets with AI-powered security solutions and zero-trust architecture',
       icon: Shield,
       color: 'from-red-500 to-orange-600',
+      price: '$1,500 - $10,000/month',
       features: [
         'Zero Trust Security Architecture',
         'AI-Powered Threat Detection',
         'Security Headers & CSP Management',
         'Compliance & Risk Management',
         'Incident Response & Recovery',
-        'Security Training & Awareness'
+        'Security Training & Awareness',
+        'Penetration Testing',
+        'Vulnerability Assessment'
       ],
       benefits: [
         'Real-time threat detection and response',
         'Comprehensive compliance management',
         'Reduced security incidents by 90%',
-        '24/7 security monitoring and support'
+        '24/7 security monitoring and support',
+        'Proactive threat prevention',
+        'Regulatory compliance assurance'
       ],
       useCases: [
         'Network Security',
@@ -120,28 +292,35 @@ export function ServicesPage() {
         'Data Protection',
         'Identity & Access Management',
         'Cloud Security',
-        'IoT Security'
+        'IoT Security',
+        'Endpoint Protection',
+        'Security Operations Center'
       ]
     },
     {
       id: 'cloud-devops',
       title: 'Cloud & DevOps',
-      description: 'Modernize your infrastructure with cloud-native solutions and DevOps practices',
+      description: 'Modernize your infrastructure with cloud-native solutions and DevOps practices for scalability',
       icon: Cloud,
       color: 'from-green-500 to-teal-600',
+      price: '$1,000 - $8,000/month',
       features: [
         'Cloud Migration & Strategy',
         'DevOps Automation',
         'Container Orchestration',
         'Infrastructure as Code',
         'Continuous Integration/Deployment',
-        'Monitoring & Observability'
+        'Monitoring & Observability',
+        'Serverless Architecture',
+        'Multi-Cloud Management'
       ],
       benefits: [
         'Reduce infrastructure costs by 30-50%',
         'Faster time to market',
         'Improved reliability and scalability',
-        'Enhanced security and compliance'
+        'Enhanced security and compliance',
+        'Automated deployment pipelines',
+        'Real-time monitoring and alerting'
       ],
       useCases: [
         'Application Modernization',
@@ -149,28 +328,35 @@ export function ServicesPage() {
         'Data Center Migration',
         'Disaster Recovery',
         'Performance Optimization',
-        'Cost Optimization'
+        'Cost Optimization',
+        'Auto-scaling Solutions',
+        'DevOps Transformation'
       ]
     },
     {
       id: 'digital-transformation',
       title: 'Digital Transformation',
-      description: 'Transform your business processes and customer experience for the digital age',
+      description: 'Transform your business processes and customer experience for the digital age with comprehensive solutions',
       icon: Rocket,
       color: 'from-indigo-500 to-purple-600',
+      price: '$3,000 - $20,000/month',
       features: [
         'Process Automation & Optimization',
         'Customer Experience Design',
         'Data Strategy & Analytics',
         'Change Management',
         'Technology Roadmapping',
-        'Digital Culture Development'
+        'Digital Culture Development',
+        'Legacy System Modernization',
+        'Digital Workplace Solutions'
       ],
       benefits: [
         'Improved operational efficiency',
         'Enhanced customer satisfaction',
         'Increased revenue growth',
-        'Competitive advantage in digital markets'
+        'Competitive advantage in digital markets',
+        'Reduced operational costs',
+        'Improved employee productivity'
       ],
       useCases: [
         'Business Process Automation',
@@ -178,28 +364,35 @@ export function ServicesPage() {
         'Data-Driven Decision Making',
         'Employee Experience Enhancement',
         'Supply Chain Digitalization',
-        'E-commerce Transformation'
+        'E-commerce Transformation',
+        'Digital Marketing Automation',
+        'Workflow Optimization'
       ]
     },
     {
       id: 'data-analytics',
       title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights for better decision-making',
+      description: 'Transform raw data into actionable insights for better decision-making and business intelligence',
       icon: BarChart3,
       color: 'from-yellow-500 to-orange-600',
+      price: '$1,200 - $8,500/month',
       features: [
         'Data Strategy & Architecture',
         'Business Intelligence & Reporting',
         'Advanced Analytics & Modeling',
         'Data Visualization',
         'Data Quality & Governance',
-        'Real-time Analytics'
+        'Real-time Analytics',
+        'Predictive Analytics',
+        'Data Lake & Warehouse Solutions'
       ],
       benefits: [
         'Data-driven decision making',
         'Improved operational efficiency',
         'Enhanced customer insights',
-        'Competitive market intelligence'
+        'Competitive market intelligence',
+        'Real-time business monitoring',
+        'Predictive business insights'
       ],
       useCases: [
         'Business Performance Monitoring',
@@ -207,7 +400,729 @@ export function ServicesPage() {
         'Predictive Analytics',
         'Risk Assessment',
         'Market Research',
-        'Operational Optimization'
+        'Operational Optimization',
+        'Financial Analytics',
+        'Supply Chain Analytics'
+      ]
+    },
+    {
+      id: 'iot-edge-computing',
+      title: 'IoT & Edge Computing',
+      description: 'Connect and manage IoT devices with edge computing for real-time processing and analytics',
+      icon: Activity,
+      color: 'from-emerald-500 to-green-600',
+      price: '$800 - $6,000/month',
+      features: [
+        'IoT Device Management',
+        'Edge Computing Infrastructure',
+        'Real-time Data Processing',
+        'IoT Security & Privacy',
+        'Sensor Data Analytics',
+        'Edge AI & Machine Learning',
+        'IoT Platform Development',
+        'Device Connectivity Solutions'
+      ],
+      benefits: [
+        'Real-time data processing at the edge',
+        'Reduced latency and bandwidth costs',
+        'Enhanced privacy and security',
+        'Scalable IoT deployments',
+        'Improved operational efficiency',
+        'Cost-effective data processing'
+      ],
+      useCases: [
+        'Smart Manufacturing',
+        'Connected Healthcare',
+        'Smart Cities',
+        'Industrial IoT',
+        'Connected Vehicles',
+        'Smart Agriculture',
+        'Energy Management',
+        'Environmental Monitoring'
+      ]
+    },
+    {
+      id: 'space-technology',
+      title: 'Space Technology',
+      description: 'Leverage space technology for satellite communications, Earth observation, and space exploration',
+      icon: Rocket,
+      color: 'from-violet-500 to-purple-600',
+      price: '$5,000 - $30,000/month',
+      features: [
+        'Satellite Communications',
+        'Earth Observation Systems',
+        'Space Data Analytics',
+        'Satellite Navigation',
+        'Space Mission Planning',
+        'Satellite Constellation Management',
+        'Space Weather Monitoring',
+        'Astronomical Data Processing'
+      ],
+      benefits: [
+        'Global connectivity solutions',
+        'Real-time Earth monitoring',
+        'Advanced navigation systems',
+        'Space exploration capabilities',
+        'Environmental monitoring',
+        'Scientific research support'
+      ],
+      useCases: [
+        'Global Communications',
+        'Environmental Monitoring',
+        'Navigation & Positioning',
+        'Weather Forecasting',
+        'Disaster Management',
+        'Agricultural Monitoring',
+        'Maritime Operations',
+        'Scientific Research'
+      ]
+    },
+    {
+      id: 'ai-healthcare-platform',
+      title: 'AI Healthcare Platform',
+      description: 'Revolutionize healthcare with AI-powered diagnostics, patient care, and medical research',
+      icon: Heart,
+      color: 'from-pink-500 to-rose-600',
+      price: '$3,500 - $18,000/month',
+      features: [
+        'AI-Powered Diagnostics',
+        'Patient Care Management',
+        'Medical Image Analysis',
+        'Drug Discovery Support',
+        'Predictive Healthcare',
+        'Telemedicine Solutions',
+        'Health Data Analytics',
+        'Clinical Decision Support'
+      ],
+      benefits: [
+        'Improved diagnostic accuracy',
+        'Enhanced patient outcomes',
+        'Reduced healthcare costs',
+        'Faster drug discovery',
+        'Personalized medicine',
+        '24/7 medical support'
+      ],
+      useCases: [
+        'Medical Imaging',
+        'Patient Monitoring',
+        'Drug Development',
+        'Clinical Trials',
+        'Healthcare Analytics',
+        'Preventive Care',
+        'Remote Patient Care',
+        'Medical Research'
+      ]
+    },
+    {
+      id: 'ai-sales-copilot',
+      title: 'AI Sales Copilot',
+      description: 'Boost sales performance with AI-powered sales automation, lead scoring, and customer insights',
+      icon: Users,
+      color: 'from-blue-500 to-indigo-600',
+      price: '$500 - $3,000/month',
+      features: [
+        'Lead Scoring & Qualification',
+        'Sales Process Automation',
+        'Customer Behavior Analysis',
+        'Sales Forecasting',
+        'Email & Communication Automation',
+        'CRM Integration',
+        'Performance Analytics',
+        'Sales Training Support'
+      ],
+      benefits: [
+        'Increased sales conversion rates',
+        'Improved lead quality',
+        'Automated sales processes',
+        'Better customer insights',
+        'Enhanced sales team productivity',
+        'Data-driven sales strategies'
+      ],
+      useCases: [
+        'Lead Generation',
+        'Sales Process Optimization',
+        'Customer Relationship Management',
+        'Sales Performance Tracking',
+        'Email Marketing Automation',
+        'Sales Training',
+        'Customer Segmentation',
+        'Revenue Optimization'
+      ]
+    },
+    {
+      id: 'ai-marketing-automation',
+      title: 'AI Marketing Automation',
+      description: 'Automate marketing campaigns with AI-powered personalization, analytics, and optimization',
+      icon: TrendingUp,
+      color: 'from-green-500 to-emerald-600',
+      price: '$400 - $2,500/month',
+      features: [
+        'Campaign Automation',
+        'Personalized Content',
+        'Customer Segmentation',
+        'Marketing Analytics',
+        'A/B Testing Automation',
+        'Social Media Management',
+        'Email Marketing Automation',
+        'ROI Optimization'
+      ],
+      benefits: [
+        'Increased marketing ROI',
+        'Personalized customer experiences',
+        'Automated campaign management',
+        'Better customer engagement',
+        'Data-driven marketing decisions',
+        'Reduced manual workload'
+      ],
+      useCases: [
+        'Email Marketing',
+        'Social Media Marketing',
+        'Content Marketing',
+        'Customer Journey Optimization',
+        'Marketing Analytics',
+        'Campaign Management',
+        'Lead Nurturing',
+        'Customer Retention'
+      ]
+    },
+    {
+      id: 'ai-project-management',
+      title: 'AI Project Management',
+      description: 'Streamline project management with AI-powered planning, resource allocation, and risk management',
+      icon: Target,
+      color: 'from-orange-500 to-red-600',
+      price: '$300 - $2,000/month',
+      features: [
+        'Project Planning & Scheduling',
+        'Resource Allocation',
+        'Risk Assessment & Management',
+        'Progress Tracking',
+        'Team Collaboration Tools',
+        'Automated Reporting',
+        'Performance Analytics',
+        'Integration Capabilities'
+      ],
+      benefits: [
+        'Improved project success rates',
+        'Better resource utilization',
+        'Reduced project delays',
+        'Enhanced team collaboration',
+        'Automated project monitoring',
+        'Data-driven project decisions'
+      ],
+      useCases: [
+        'Software Development',
+        'Construction Projects',
+        'Marketing Campaigns',
+        'Product Development',
+        'Event Planning',
+        'Research Projects',
+        'Infrastructure Projects',
+        'Business Transformations'
+      ]
+    },
+    {
+      id: 'quantum-ai-hybrid-platform',
+      title: 'Quantum AI Hybrid Platform',
+      description: 'Combine quantum computing with AI for revolutionary problem-solving capabilities',
+      icon: Atom,
+      color: 'from-cyan-500 to-blue-600',
+      price: '$8,000 - $40,000/month',
+      features: [
+        'Quantum-Classical Hybrid Computing',
+        'Quantum AI Algorithms',
+        'Hybrid Optimization',
+        'Quantum Machine Learning',
+        'Quantum Neural Networks',
+        'Hybrid Problem Solving',
+        'Quantum Simulation',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Revolutionary problem-solving',
+        'Future-proof technology',
+        'Competitive advantage',
+        'Scientific breakthrough potential',
+        'Unprecedented optimization'
+      ],
+      useCases: [
+        'Financial Modeling',
+        'Drug Discovery',
+        'Climate Science',
+        'Material Science',
+        'Logistics Optimization',
+        'Cryptography',
+        'Machine Learning',
+        'Scientific Research'
+      ]
+    },
+    {
+      id: 'ai-cybersecurity-platform',
+      title: 'AI Cybersecurity Platform',
+      description: 'Advanced AI-powered cybersecurity with real-time threat detection and automated response',
+      icon: Shield,
+      color: 'from-red-600 to-pink-600',
+      price: '$2,000 - $12,000/month',
+      features: [
+        'AI Threat Detection',
+        'Behavioral Analysis',
+        'Automated Incident Response',
+        'Zero Trust Architecture',
+        'Threat Intelligence',
+        'Vulnerability Management',
+        'Compliance Monitoring',
+        'Security Analytics'
+      ],
+      benefits: [
+        'Real-time threat detection',
+        'Automated security response',
+        'Reduced false positives',
+        '24/7 security monitoring',
+        'Proactive threat prevention',
+        'Compliance automation'
+      ],
+      useCases: [
+        'Network Security',
+        'Endpoint Protection',
+        'Cloud Security',
+        'Application Security',
+        'Data Protection',
+        'Identity Management',
+        'Security Operations',
+        'Compliance Management'
+      ]
+    },
+    {
+      id: 'quantum-ai-trading-platform',
+      title: 'Quantum AI Trading Platform',
+      description: 'Revolutionary trading platform combining quantum computing with AI for financial markets',
+      icon: DollarSign,
+      color: 'from-green-600 to-emerald-600',
+      price: '$10,000 - $50,000/month',
+      features: [
+        'Quantum Algorithm Trading',
+        'AI Market Analysis',
+        'Real-time Risk Assessment',
+        'Portfolio Optimization',
+        'Market Prediction Models',
+        'Automated Trading',
+        'Compliance Management',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Superior trading performance',
+        'Real-time risk management',
+        'Automated trading strategies',
+        'Enhanced market insights',
+        'Portfolio optimization',
+        'Regulatory compliance'
+      ],
+      useCases: [
+        'Algorithmic Trading',
+        'Risk Management',
+        'Portfolio Management',
+        'Market Analysis',
+        'Compliance Monitoring',
+        'Performance Tracking',
+        'Strategy Optimization',
+        'Financial Modeling'
+      ]
+    },
+    {
+      id: 'space-tech',
+      title: 'Space Technology Solutions',
+      description: 'Comprehensive space technology solutions for satellite operations and space exploration',
+      icon: Satellite,
+      color: 'from-purple-600 to-violet-600',
+      price: '$6,000 - $35,000/month',
+      features: [
+        'Satellite Operations',
+        'Space Mission Control',
+        'Earth Observation',
+        'Space Communications',
+        'Satellite Navigation',
+        'Space Weather',
+        'Astronomical Research',
+        'Space Data Analytics'
+      ],
+      benefits: [
+        'Global connectivity',
+        'Real-time monitoring',
+        'Scientific advancement',
+        'Commercial applications',
+        'Environmental insights',
+        'Technological innovation'
+      ],
+      useCases: [
+        'Satellite Communications',
+        'Earth Monitoring',
+        'Navigation Systems',
+        'Weather Forecasting',
+        'Disaster Management',
+        'Scientific Research',
+        'Commercial Applications',
+        'Space Exploration'
+      ]
+    },
+    {
+      id: 'digital-twin',
+      title: 'Digital Twin Solutions',
+      description: 'Create virtual replicas of physical systems for simulation, monitoring, and optimization',
+      icon: Eye,
+      color: 'from-blue-600 to-indigo-600',
+      price: '$2,500 - $15,000/month',
+      features: [
+        '3D Modeling & Visualization',
+        'Real-time Monitoring',
+        'Predictive Analytics',
+        'Simulation & Testing',
+        'IoT Integration',
+        'Performance Optimization',
+        'Maintenance Planning',
+        'Data Analytics'
+      ],
+      benefits: [
+        'Improved operational efficiency',
+        'Reduced maintenance costs',
+        'Enhanced decision making',
+        'Risk mitigation',
+        'Performance optimization',
+        'Predictive maintenance'
+      ],
+      useCases: [
+        'Manufacturing',
+        'Smart Cities',
+        'Healthcare',
+        'Energy Management',
+        'Transportation',
+        'Buildings',
+        'Infrastructure',
+        'Product Development'
+      ]
+    },
+    {
+      id: 'green-it',
+      title: 'Green IT Solutions',
+      description: 'Sustainable technology solutions for reducing environmental impact and energy consumption',
+      icon: Leaf,
+      color: 'from-green-600 to-emerald-600',
+      price: '$800 - $5,000/month',
+      features: [
+        'Energy-Efficient Computing',
+        'Sustainable Data Centers',
+        'Green Cloud Solutions',
+        'Carbon Footprint Tracking',
+        'Renewable Energy Integration',
+        'Waste Reduction',
+        'Environmental Monitoring',
+        'Sustainability Reporting'
+      ],
+      benefits: [
+        'Reduced energy costs',
+        'Environmental compliance',
+        'Corporate social responsibility',
+        'Improved brand reputation',
+        'Regulatory compliance',
+        'Sustainable operations'
+      ],
+      useCases: [
+        'Data Center Optimization',
+        'Cloud Computing',
+        'Energy Management',
+        'Waste Management',
+        'Environmental Monitoring',
+        'Sustainability Reporting',
+        'Green Building Design',
+        'Corporate Sustainability'
+      ]
+    },
+    {
+      id: 'zero-trust-network-access',
+      title: 'Zero Trust Network Access',
+      description: 'Implement zero trust security architecture for comprehensive network protection',
+      icon: Lock,
+      color: 'from-red-600 to-orange-600',
+      price: '$1,500 - $8,000/month',
+      features: [
+        'Identity Verification',
+        'Access Control',
+        'Network Segmentation',
+        'Continuous Monitoring',
+        'Threat Detection',
+        'Compliance Management',
+        'Security Analytics',
+        'Incident Response'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Compliance assurance',
+        'Real-time monitoring',
+        'Automated response',
+        'Risk mitigation'
+      ],
+      useCases: [
+        'Enterprise Networks',
+        'Cloud Environments',
+        'Remote Work',
+        'IoT Networks',
+        'Critical Infrastructure',
+        'Financial Services',
+        'Healthcare',
+        'Government'
+      ]
+    },
+    {
+      id: 'ai-powered-business-intelligence',
+      title: 'AI-Powered Business Intelligence',
+      description: 'Transform your data into actionable insights with advanced AI analytics and predictive modeling',
+      icon: Brain,
+      color: 'from-violet-600 to-purple-700',
+      price: '$2,000 - $12,000/month',
+      features: [
+        'Advanced Analytics & ML',
+        'Predictive Modeling',
+        'Natural Language Queries',
+        'Real-time Dashboards',
+        'Automated Insights',
+        'Data Storytelling',
+        'Collaborative Analytics',
+        'Mobile BI Access'
+      ],
+      benefits: [
+        'Data-driven decision making',
+        'Predictive business insights',
+        'Reduced analysis time by 80%',
+        'Improved forecasting accuracy',
+        'Real-time business monitoring',
+        'Enhanced collaboration'
+      ],
+      useCases: [
+        'Financial Planning',
+        'Sales Forecasting',
+        'Customer Analytics',
+        'Operational Intelligence',
+        'Risk Management',
+        'Performance Tracking',
+        'Market Analysis',
+        'Strategic Planning'
+      ]
+    },
+    {
+      id: 'blockchain-enterprise-solutions',
+      title: 'Blockchain Enterprise Solutions',
+      description: 'Leverage blockchain technology for secure, transparent, and efficient business operations',
+      icon: Link,
+      color: 'from-emerald-600 to-teal-700',
+      price: '$3,000 - $20,000/month',
+      features: [
+        'Smart Contract Development',
+        'DeFi Protocol Integration',
+        'Cross-chain Interoperability',
+        'Digital Asset Management',
+        'Supply Chain Tracking',
+        'Identity Verification',
+        'Token Economics',
+        'Regulatory Compliance'
+      ],
+      benefits: [
+        'Enhanced security and transparency',
+        'Reduced operational costs',
+        'Automated trust mechanisms',
+        'Global accessibility',
+        'Immutable audit trails',
+        'Innovative business models'
+      ],
+      useCases: [
+        'Supply Chain Management',
+        'Financial Services',
+        'Healthcare Records',
+        'Real Estate',
+        'Voting Systems',
+        'Intellectual Property',
+        'Cross-border Payments',
+        'Digital Identity'
+      ]
+    },
+    {
+      id: 'quantum-machine-learning',
+      title: 'Quantum Machine Learning',
+      description: 'Harness quantum computing power for revolutionary machine learning capabilities',
+      icon: Atom,
+      color: 'from-indigo-600 to-blue-700',
+      price: '$8,000 - $50,000/month',
+      features: [
+        'Quantum Neural Networks',
+        'Quantum Feature Selection',
+        'Quantum Optimization',
+        'Hybrid Classical-Quantum',
+        'Quantum Error Correction',
+        'Quantum Simulation',
+        'Quantum Cryptography',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Exponential computational speed',
+        'Revolutionary ML capabilities',
+        'Enhanced optimization',
+        'Future-proof technology',
+        'Competitive advantage',
+        'Scientific breakthroughs'
+      ],
+      useCases: [
+        'Drug Discovery',
+        'Financial Modeling',
+        'Climate Prediction',
+        'Material Science',
+        'Logistics Optimization',
+        'Cryptography',
+        'AI Research',
+        'Scientific Computing'
+      ]
+    },
+    {
+      id: 'edge-ai-computing',
+      title: 'Edge AI Computing',
+      description: 'Deploy AI models at the edge for real-time processing and reduced latency',
+      icon: Cpu,
+      color: 'from-orange-600 to-red-700',
+      price: '$1,500 - $10,000/month',
+      features: [
+        'Edge Model Deployment',
+        'Real-time Inference',
+        'Offline Processing',
+        'Model Optimization',
+        'Edge Device Management',
+        'Data Synchronization',
+        'Security & Privacy',
+        'Performance Monitoring'
+      ],
+      benefits: [
+        'Reduced latency',
+        'Lower bandwidth costs',
+        'Enhanced privacy',
+        'Offline capabilities',
+        'Scalable deployment',
+        'Real-time responsiveness'
+      ],
+      useCases: [
+        'Autonomous Vehicles',
+        'Smart Manufacturing',
+        'IoT Devices',
+        'Mobile Applications',
+        'Healthcare Monitoring',
+        'Retail Analytics',
+        'Security Systems',
+        'Smart Cities'
+      ]
+    },
+    {
+      id: 'ai-ethics-governance',
+      title: 'AI Ethics & Governance',
+      description: 'Ensure responsible AI development with comprehensive ethics and governance frameworks',
+      icon: Shield,
+      color: 'from-pink-600 to-rose-700',
+      price: '$2,500 - $15,000/month',
+      features: [
+        'AI Ethics Framework',
+        'Bias Detection & Mitigation',
+        'Explainable AI',
+        'Fairness Assessment',
+        'Privacy Protection',
+        'Compliance Monitoring',
+        'Stakeholder Engagement',
+        'Audit & Reporting'
+      ],
+      benefits: [
+        'Responsible AI development',
+        'Regulatory compliance',
+        'Reduced bias and discrimination',
+        'Enhanced transparency',
+        'Stakeholder trust',
+        'Risk mitigation'
+      ],
+      useCases: [
+        'AI Development Teams',
+        'Regulatory Compliance',
+        'Risk Management',
+        'Corporate Governance',
+        'Public Policy',
+        'Research Institutions',
+        'Healthcare AI',
+        'Financial AI'
+      ]
+    },
+    {
+      id: 'neuromorphic-computing',
+      title: 'Neuromorphic Computing',
+      description: 'Revolutionary brain-inspired computing for next-generation AI applications',
+      icon: Brain,
+      color: 'from-cyan-600 to-blue-700',
+      price: '$10,000 - $60,000/month',
+      features: [
+        'Brain-inspired Architecture',
+        'Spiking Neural Networks',
+        'Low-power Computing',
+        'Real-time Learning',
+        'Adaptive Processing',
+        'Neuromorphic Chips',
+        'Cognitive Computing',
+        'Bio-inspired Algorithms'
+      ],
+      benefits: [
+        'Ultra-low power consumption',
+        'Real-time learning capabilities',
+        'Brain-like processing',
+        'Adaptive intelligence',
+        'Revolutionary performance',
+        'Future computing paradigm'
+      ],
+      useCases: [
+        'Autonomous Systems',
+        'Cognitive Computing',
+        'Brain-computer Interfaces',
+        'Robotics',
+        'Sensor Networks',
+        'Medical Devices',
+        'IoT Applications',
+        'Scientific Research'
+      ]
+    },
+    {
+      id: 'ai-powered-cybersecurity',
+      title: 'AI-Powered Cybersecurity',
+      description: 'Advanced threat detection and response using artificial intelligence and machine learning',
+      icon: Shield,
+      color: 'from-red-600 to-pink-700',
+      price: '$2,500 - $15,000/month',
+      features: [
+        'AI Threat Detection',
+        'Behavioral Analysis',
+        'Automated Response',
+        'Threat Intelligence',
+        'Vulnerability Assessment',
+        'Incident Management',
+        'Security Analytics',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Real-time threat detection',
+        'Reduced false positives',
+        'Automated incident response',
+        '24/7 security monitoring',
+        'Proactive threat prevention',
+        'Enhanced security posture'
+      ],
+      useCases: [
+        'Enterprise Security',
+        'Cloud Security',
+        'Network Protection',
+        'Endpoint Security',
+        'Application Security',
+        'Data Protection',
+        'Identity Management',
+        'Security Operations'
       ]
     }
   ];
@@ -238,9 +1153,15 @@ export function ServicesPage() {
                 </div>
               </div>
               <h1 className="text-5xl font-bold text-white mb-4">{currentServiceData.title}</h1>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-6">
                 {currentServiceData.description}
               </p>
+              
+              {/* Pricing Badge */}
+              <div className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl">
+                <DollarSign className="w-6 h-6 text-cyan-400" />
+                <span className="text-cyan-400 font-bold text-xl">{currentServiceData.price}</span>
+              </div>
             </motion.div>
           </div>
 
@@ -391,7 +1312,15 @@ export function ServicesPage() {
                 </div>
               </div>
               
-              <p className="text-gray-400 mb-6 leading-relaxed">{service.description}</p>
+              <p className="text-gray-400 mb-4 leading-relaxed">{service.description}</p>
+              
+              {/* Pricing */}
+              <div className="mb-4">
+                <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg">
+                  <DollarSign className="w-4 h-4 text-cyan-400" />
+                  <span className="text-cyan-400 font-semibold text-sm">{service.price}</span>
+                </div>
+              </div>
               
               <div className="space-y-3 mb-6">
                 {service.features.slice(0, 3).map((feature, featureIndex) => (

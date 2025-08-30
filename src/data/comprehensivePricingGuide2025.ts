@@ -1,623 +1,773 @@
-export interface ComprehensivePricingGuide {
-  id: string;
-  title: string;
+export interface PricingTier {
+  name: string;
+  price: number;
+  currency: string;
+  billingCycle: string;
+  description: string;
+  features: string[];
+  limitations: string[];
+  bestFor: string[];
+  roi: string;
+  implementationTime: string;
+  supportLevel: string;
+}
+
+export interface ServicePricing {
+  serviceId: string;
+  serviceName: string;
   category: string;
-  pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    setup: string;
-    marketPrice: string;
-    roi: string;
-    paybackPeriod: string;
-  };
-  features: {
-    starter: string[];
-    professional: string[];
-    enterprise: string[];
-  };
-  marketAnalysis: {
-    marketSize: string;
-    growthRate: string;
-    competition: string;
-    marketPosition: string;
-  };
-  technicalSpecs: {
-    technology: string[];
-    integrations: string[];
-    uptime: string;
-    security: string[];
-    compliance: string[];
-  };
-  useCases: string[];
-  targetAudience: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+  description: string;
+  pricingTiers: PricingTier[];
+  marketComparison: {
+    competitor: string;
+    competitorPrice: string;
+    ourPrice: string;
+    savings: string;
+  }[];
+  volumeDiscounts: {
+    users: string;
+    discount: string;
+    additionalBenefits: string[];
+  }[];
+  customEnterprise: {
+    features: string[];
+    benefits: string[];
+    contactInfo: {
+      phone: string;
+      email: string;
+      website: string;
+    };
   };
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-export const comprehensivePricingGuide2025: ComprehensivePricingGuide[] = [
+export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
+  // AI Content Generation Platform
   {
-    id: 'ai-customer-churn-predictor',
-    title: 'AI Customer Churn Predictor Pro',
-    category: 'AI Services',
-    pricing: {
-      starter: '$299/month',
-      professional: '$599/month',
-      enterprise: '$1,299/month',
-      setup: '$499 one-time',
-      marketPrice: '$299 - $1,299/month',
-      roi: '300% within 6 months',
-      paybackPeriod: '2-3 months'
-    },
-    features: {
-      starter: [
-        'Real-time churn risk scoring',
-        'Basic retention campaigns',
-        'CRM integration (1 platform)',
-        'Email support',
-        'Standard analytics'
+    serviceId: "ai-content-generation-platform",
+    serviceName: "AI Content Generation Platform",
+    category: "AI & Content Creation",
+    description: "Advanced AI-powered content creation platform for blogs, social media, and marketing campaigns",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 99,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Perfect for small businesses and content creators",
+        features: [
+          "Up to 50 content pieces per month",
+          "Basic AI models (GPT-3.5)",
+          "5 brand voice profiles",
+          "Basic SEO optimization",
+          "Email support",
+          "Standard templates"
+        ],
+        limitations: [
+          "Limited to 3 team members",
+          "Basic analytics",
+          "Standard response time"
+        ],
+        bestFor: [
+          "Small businesses",
+          "Content creators",
+          "Startups",
+          "Individual marketers"
+        ],
+        roi: "200-300%",
+        implementationTime: "1-2 weeks",
+        supportLevel: "Email support"
+      },
+      {
+        name: "Professional",
+        price: 299,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Ideal for growing businesses and marketing teams",
+        features: [
+          "Up to 200 content pieces per month",
+          "Advanced AI models (GPT-4, Claude)",
+          "Unlimited brand voice profiles",
+          "Advanced SEO optimization",
+          "Priority support",
+          "Custom templates",
+          "Team collaboration",
+          "Advanced analytics",
+          "API access"
+        ],
+        limitations: [
+          "Limited to 10 team members",
+          "Standard SLA"
+        ],
+        bestFor: [
+          "Growing businesses",
+          "Marketing agencies",
+          "E-commerce companies",
+          "Medium-sized teams"
+        ],
+        roi: "300-500%",
+        implementationTime: "2-3 weeks",
+        supportLevel: "Priority support + chat"
+      },
+      {
+        name: "Enterprise",
+        price: 999,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "For large organizations with advanced content needs",
+        features: [
+          "Unlimited content generation",
+          "Premium AI models + custom training",
+          "Advanced brand consistency",
+          "Multi-language support (50+ languages)",
+          "White-label options",
+          "Dedicated account manager",
+          "Custom integrations",
+          "Advanced security features",
+          "SLA guarantees"
+        ],
+        limitations: [
+          "Annual contract required",
+          "Minimum 50 team members"
+        ],
+        bestFor: [
+          "Large enterprises",
+          "Global brands",
+          "Publishing companies",
+          "Multinational corporations"
+        ],
+        roi: "500-800%",
+        implementationTime: "3-4 weeks",
+        supportLevel: "24/7 dedicated support"
+      }
+    ],
+    marketComparison: [
+      {
+        competitor: "Jasper",
+        competitorPrice: "$39-125/month",
+        ourPrice: "$99-999/month",
+        savings: "Better value with advanced features"
+      },
+      {
+        competitor: "Copy.ai",
+        competitorPrice: "$49-99/month",
+        ourPrice: "$99-999/month",
+        savings: "Superior AI models and brand consistency"
+      },
+      {
+        competitor: "Writesonic",
+        competitorPrice: "$19-199/month",
+        ourPrice: "$99-999/month",
+        savings: "Enterprise-grade features and support"
+      }
+    ],
+    volumeDiscounts: [
+      {
+        users: "10-25",
+        discount: "15% off",
+        additionalBenefits: ["Priority support", "Custom onboarding"]
+      },
+      {
+        users: "26-50",
+        discount: "25% off",
+        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
+      },
+      {
+        users: "50+",
+        discount: "35% off",
+        additionalBenefits: ["White-label options", "Custom AI training"]
+      }
+    ],
+    customEnterprise: {
+      features: [
+        "Custom AI model training",
+        "On-premise deployment",
+        "Advanced security compliance",
+        "Custom integrations",
+        "Dedicated infrastructure",
+        "White-label solutions"
       ],
-      professional: [
-        'All Starter features',
-        'Advanced behavioral analysis',
-        'Multi-CRM integration',
-        'Automated retention campaigns',
-        'Priority support',
-        'Advanced analytics dashboard',
-        'Custom retention strategies'
+      benefits: [
+        "Maximum ROI potential",
+        "Complete customization",
+        "Highest security standards",
+        "Exclusive features",
+        "Strategic partnership"
       ],
-      enterprise: [
-        'All Professional features',
-        'AI-powered predictive modeling',
-        'Unlimited integrations',
-        'Custom AI model training',
-        'Dedicated account manager',
-        'White-label solutions',
-        'API access',
-        'Custom reporting'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$2.5B global customer success market',
-      growthRate: '23.4% CAGR',
-      competition: 'ChurnZero, Gainsight, Intercom',
-      marketPosition: 'Leading AI-powered platform with highest accuracy'
-    },
-    technicalSpecs: {
-      technology: ['Machine Learning', 'Predictive Analytics', 'NLP', 'Cloud Computing'],
-      integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Intercom', 'Stripe'],
-      uptime: '99.9%',
-      security: ['SOC 2 Type II', 'GDPR compliant', 'End-to-end encryption'],
-      compliance: ['GDPR', 'CCPA', 'SOC 2', 'ISO 27001']
-    },
-    useCases: ['SaaS companies', 'E-commerce platforms', 'Subscription services', 'B2B software'],
-    targetAudience: 'SaaS companies, E-commerce businesses, Subscription services, Customer success teams'
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/ai-content-generation"
+      }
+    }
   },
 
+  // AI Customer Service Automation
   {
-    id: 'ai-seo-optimizer-pro',
-    title: 'AI SEO Optimizer Pro',
-    category: 'AI Services',
-    pricing: {
-      starter: '$199/month',
-      professional: '$399/month',
-      enterprise: '$899/month',
-      setup: '$299 one-time',
-      marketPrice: '$199 - $899/month',
-      roi: '250% within 4 months',
-      paybackPeriod: '1-2 months'
-    },
-    features: {
-      starter: [
-        'AI content analysis',
-        'Basic keyword research',
-        'SEO auditing (10 pages)',
-        'Email support',
-        'Standard reports'
+    serviceId: "ai-customer-service-automation",
+    serviceName: "AI Customer Service Automation",
+    category: "AI & Customer Service",
+    description: "Intelligent customer service automation with AI chatbots and automated support",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 99,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Basic automation for small support teams",
+        features: [
+          "Up to 1,000 conversations/month",
+          "Basic AI chatbot",
+          "Email and chat support",
+          "Basic integrations",
+          "Standard templates",
+          "Email support"
+        ],
+        limitations: [
+          "Limited to 3 support agents",
+          "Basic analytics",
+          "Standard response time"
+        ],
+        bestFor: [
+          "Small businesses",
+          "Startups",
+          "Small support teams"
+        ],
+        roi: "250-400%",
+        implementationTime: "2-3 weeks",
+        supportLevel: "Email support"
+      },
+      {
+        name: "Professional",
+        price: 199,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Advanced automation for growing support teams",
+        features: [
+          "Up to 10,000 conversations/month",
+          "Advanced AI with sentiment analysis",
+          "Multi-channel support",
+          "Advanced integrations",
+          "Custom workflows",
+          "Priority support",
+          "Advanced analytics",
+          "API access"
+        ],
+        limitations: [
+          "Limited to 15 support agents",
+          "Standard SLA"
+        ],
+        bestFor: [
+          "Growing businesses",
+          "Medium support teams",
+          "E-commerce companies"
+        ],
+        roi: "400-600%",
+        implementationTime: "3-4 weeks",
+        supportLevel: "Priority support + chat"
+      },
+      {
+        name: "Enterprise",
+        price: 799,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Full automation for large support operations",
+        features: [
+          "Unlimited conversations",
+          "Premium AI with custom training",
+          "Omnichannel support",
+          "Advanced integrations",
+          "Custom workflows",
+          "Dedicated account manager",
+          "Advanced analytics",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        limitations: [
+          "Annual contract required",
+          "Minimum 25 support agents"
+        ],
+        bestFor: [
+          "Large enterprises",
+          "Global support teams",
+          "High-volume operations"
+        ],
+        roi: "600-1000%",
+        implementationTime: "4-6 weeks",
+        supportLevel: "24/7 dedicated support"
+      }
+    ],
+    marketComparison: [
+      {
+        competitor: "Intercom",
+        competitorPrice: "$74-1,200/month",
+        ourPrice: "$99-799/month",
+        savings: "More affordable with better AI capabilities"
+      },
+      {
+        competitor: "Zendesk",
+        competitorPrice: "$49-215/month",
+        ourPrice: "$99-799/month",
+        savings: "Superior AI automation and analytics"
+      },
+      {
+        competitor: "Freshdesk",
+        competitorPrice: "$15-79/month",
+        ourPrice: "$99-799/month",
+        savings: "Advanced AI features and enterprise support"
+      }
+    ],
+    volumeDiscounts: [
+      {
+        users: "15-30",
+        discount: "20% off",
+        additionalBenefits: ["Priority support", "Custom onboarding"]
+      },
+      {
+        users: "31-50",
+        discount: "30% off",
+        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
+      },
+      {
+        users: "50+",
+        discount: "40% off",
+        additionalBenefits: ["White-label options", "Custom AI training"]
+      }
+    ],
+    customEnterprise: {
+      features: [
+        "Custom AI training",
+        "On-premise deployment",
+        "Advanced security compliance",
+        "Custom integrations",
+        "Dedicated infrastructure",
+        "White-label solutions"
       ],
-      professional: [
-        'All Starter features',
-        'Advanced keyword tracking',
-        'Competitor analysis',
-        'Content optimization',
-        'Priority support',
-        'Advanced analytics',
-        'Local SEO optimization'
+      benefits: [
+        "Maximum automation efficiency",
+        "Complete customization",
+        "Highest security standards",
+        "Exclusive features",
+        "Strategic partnership"
       ],
-      enterprise: [
-        'All Professional features',
-        'Unlimited page analysis',
-        'Custom AI training',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced reporting'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$1.2B global SEO tools market',
-      growthRate: '18.7% CAGR',
-      competition: 'SEMrush, Ahrefs, Moz, Yoast SEO',
-      marketPosition: 'Advanced AI-powered SEO platform with automated optimization'
-    },
-    technicalSpecs: {
-      technology: ['NLP', 'Machine Learning', 'Web Scraping', 'Data Analytics'],
-      integrations: ['WordPress', 'Shopify', 'WooCommerce', 'Google Analytics'],
-      uptime: '99.8%',
-      security: ['SSL encryption', 'GDPR compliance', 'Regular security audits'],
-      compliance: ['GDPR', 'CCPA', 'SOC 2']
-    },
-    useCases: ['E-commerce websites', 'Blog platforms', 'Business websites', 'Content marketing'],
-    targetAudience: 'Digital marketers, SEO agencies, E-commerce businesses, Content creators'
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/ai-customer-service"
+      }
+    }
   },
 
+  // AI Sales Intelligence Platform
   {
-    id: 'quantum-ai-trading-platform',
-    title: 'Quantum AI Trading Platform',
-    category: 'Quantum Computing',
-    pricing: {
-      starter: '$5,000/month',
-      professional: '$15,000/month',
-      enterprise: '$50,000/month',
-      setup: '$15,000 one-time',
-      marketPrice: '$5,000 - $50,000/month',
-      roi: '500% within 12 months',
-      paybackPeriod: '2-3 months'
-    },
-    features: {
-      starter: [
-        'Basic quantum algorithms',
-        'Real-time market data',
-        'Standard risk assessment',
-        'Email support',
-        'Basic analytics'
+    serviceId: "ai-sales-intelligence-platform",
+    serviceName: "AI Sales Intelligence Platform",
+    category: "AI & Sales",
+    description: "Advanced sales intelligence with AI-powered insights and predictive analytics",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 199,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Basic sales intelligence for small sales teams",
+        features: [
+          "Up to 5 sales users",
+          "Basic lead scoring",
+          "Sales analytics",
+          "CRM integrations",
+          "Email support",
+          "Standard reports"
+        ],
+        limitations: [
+          "Limited analytics depth",
+          "Basic predictive models",
+          "Standard response time"
+        ],
+        bestFor: [
+          "Small sales teams",
+          "Startups",
+          "Individual sales professionals"
+        ],
+        roi: "300-500%",
+        implementationTime: "3-4 weeks",
+        supportLevel: "Email support"
+      },
+      {
+        name: "Professional",
+        price: 399,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Advanced intelligence for growing sales organizations",
+        features: [
+          "Up to 25 sales users",
+          "Advanced lead scoring",
+          "Predictive analytics",
+          "Competitor intelligence",
+          "Priority support",
+          "Advanced reports",
+          "API access",
+          "Custom dashboards"
+        ],
+        limitations: [
+          "Limited to 25 users",
+          "Standard SLA"
+        ],
+        bestFor: [
+          "Growing sales teams",
+          "Medium businesses",
+          "B2B companies"
+        ],
+        roi: "500-800%",
+        implementationTime: "4-5 weeks",
+        supportLevel: "Priority support + chat"
+      },
+      {
+        name: "Enterprise",
+        price: 1299,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Full intelligence platform for large sales organizations",
+        features: [
+          "Unlimited sales users",
+          "Premium predictive models",
+          "Advanced competitor intelligence",
+          "Custom AI training",
+          "Dedicated account manager",
+          "Advanced analytics",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        limitations: [
+          "Annual contract required",
+          "Minimum 50 sales users"
+        ],
+        bestFor: [
+          "Large sales organizations",
+          "Enterprise companies",
+          "Global sales teams"
+        ],
+        roi: "800-1200%",
+        implementationTime: "5-6 weeks",
+        supportLevel: "24/7 dedicated support"
+      }
+    ],
+    marketComparison: [
+      {
+        competitor: "Gong",
+        competitorPrice: "$1,200-1,800/month",
+        ourPrice: "$199-1,299/month",
+        savings: "Significantly more affordable with better features"
+      },
+      {
+        competitor: "Chorus",
+        competitorPrice: "$1,000-1,500/month",
+        ourPrice: "$199-1,299/month",
+        savings: "Better value with advanced AI capabilities"
+      },
+      {
+        competitor: "SalesLoft",
+        competitorPrice: "$50-1,000/month",
+        ourPrice: "$199-1,299/month",
+        savings: "Superior AI intelligence and analytics"
+      }
+    ],
+    volumeDiscounts: [
+      {
+        users: "25-50",
+        discount: "25% off",
+        additionalBenefits: ["Priority support", "Custom onboarding"]
+      },
+      {
+        users: "51-100",
+        discount: "35% off",
+        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
+      },
+      {
+        users: "100+",
+        discount: "45% off",
+        additionalBenefits: ["White-label options", "Custom AI training"]
+      }
+    ],
+    customEnterprise: {
+      features: [
+        "Custom AI training",
+        "On-premise deployment",
+        "Advanced security compliance",
+        "Custom integrations",
+        "Dedicated infrastructure",
+        "White-label solutions"
       ],
-      professional: [
-        'All Starter features',
-        'Advanced quantum optimization',
-        'AI-powered risk management',
-        'Portfolio optimization',
-        'Priority support',
-        'Advanced analytics',
-        'Custom trading strategies'
+      benefits: [
+        "Maximum sales intelligence",
+        "Complete customization",
+        "Highest security standards",
+        "Exclusive features",
+        "Strategic partnership"
       ],
-      enterprise: [
-        'All Professional features',
-        'Custom quantum algorithms',
-        'White-label solutions',
-        'Dedicated quantum engineers',
-        'Custom integrations',
-        'API access',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$15B global algorithmic trading market',
-      growthRate: '31.2% CAGR',
-      competition: 'None (first mover)', 'Traditional trading platforms',
-      marketPosition: 'First-to-market quantum AI trading platform with revolutionary capabilities'
-    },
-    technicalSpecs: {
-      technology: ['Quantum Computing', 'AI/ML', 'High-Performance Computing', 'Blockchain'],
-      integrations: ['Bloomberg Terminal', 'Reuters', 'Interactive Brokers', 'TD Ameritrade'],
-      uptime: '99.99%',
-      security: ['Quantum encryption', 'Multi-factor authentication', 'SOC 2 compliance'],
-      compliance: ['SOC 2', 'PCI DSS', 'Financial regulations']
-    },
-    useCases: ['Hedge funds', 'Investment banks', 'Trading firms', 'Asset management'],
-    targetAudience: 'Financial institutions, Hedge funds, Investment banks, Professional traders'
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/ai-sales-intelligence"
+      }
+    }
   },
 
+  // AI Financial Analytics Platform
   {
-    id: 'ai-smart-contract-auditor',
-    title: 'AI Smart Contract Auditor Pro',
-    category: 'Blockchain & Web3',
-    pricing: {
-      starter: '$399/month',
-      professional: '$799/month',
-      enterprise: '$1,999/month',
-      setup: '$599 one-time',
-      marketPrice: '$399 - $1,999/month',
-      roi: '400% within 6 months',
-      paybackPeriod: '1-2 months'
-    },
-    features: {
-      starter: [
-        'Basic vulnerability detection',
-        'Single blockchain support',
-        'Standard security checks',
-        'Email support',
-        'Basic reporting'
+    serviceId: "ai-financial-analytics-platform",
+    serviceName: "AI Financial Analytics Platform",
+    category: "AI & Finance",
+    description: "Advanced financial analytics with AI-powered insights and portfolio optimization",
+    pricingTiers: [
+      {
+        name: "Professional",
+        price: 599,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Advanced analytics for financial professionals",
+        features: [
+          "Up to 10 users",
+          "Advanced financial modeling",
+          "Portfolio optimization",
+          "Risk assessment",
+          "Priority support",
+          "Advanced reports",
+          "API access",
+          "Custom dashboards"
+        ],
+        limitations: [
+          "Limited to 10 users",
+          "Standard SLA",
+          "Basic compliance features"
+        ],
+        bestFor: [
+          "Financial advisors",
+          "Small investment firms",
+          "Family offices"
+        ],
+        roi: "600-1000%",
+        implementationTime: "6-8 weeks",
+        supportLevel: "Priority support + chat"
+      },
+      {
+        name: "Enterprise",
+        price: 2999,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Full platform for large financial institutions",
+        features: [
+          "Unlimited users",
+          "Premium AI models",
+          "Advanced compliance",
+          "Custom AI training",
+          "Dedicated account manager",
+          "Advanced analytics",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        limitations: [
+          "Annual contract required",
+          "Minimum 100 users"
+        ],
+        bestFor: [
+          "Large investment firms",
+          "Banks",
+          "Hedge funds",
+          "Institutional investors"
+        ],
+        roi: "1000-1500%",
+        implementationTime: "8-12 weeks",
+        supportLevel: "24/7 dedicated support"
+      }
+    ],
+    marketComparison: [
+      {
+        competitor: "Bloomberg Terminal",
+        competitorPrice: "$24,000/year",
+        ourPrice: "$599-2,999/month",
+        savings: "Significantly more affordable with better AI capabilities"
+      },
+      {
+        competitor: "FactSet",
+        competitorPrice: "$12,000-36,000/year",
+        ourPrice: "$599-2,999/month",
+        savings: "Better value with advanced AI analytics"
+      },
+      {
+        competitor: "Refinitiv",
+        competitorPrice: "$15,000-45,000/year",
+        ourPrice: "$599-2,999/month",
+        savings: "Superior AI features and affordability"
+      }
+    ],
+    volumeDiscounts: [
+      {
+        users: "50-100",
+        discount: "30% off",
+        additionalBenefits: ["Priority support", "Custom onboarding"]
+      },
+      {
+        users: "101-250",
+        discount: "40% off",
+        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
+      },
+      {
+        users: "250+",
+        discount: "50% off",
+        additionalBenefits: ["White-label options", "Custom AI training"]
+      }
+    ],
+    customEnterprise: {
+      features: [
+        "Custom AI training",
+        "On-premise deployment",
+        "Advanced security compliance",
+        "Custom integrations",
+        "Dedicated infrastructure",
+        "White-label solutions"
       ],
-      professional: [
-        'All Starter features',
-        'Advanced AI analysis',
-        'Multi-blockchain support',
-        'Gas optimization',
-        'Priority support',
-        'Advanced reporting',
-        'Custom rules engine'
+      benefits: [
+        "Maximum financial intelligence",
+        "Complete customization",
+        "Highest security standards",
+        "Exclusive features",
+        "Strategic partnership"
       ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$1.8B global blockchain security market',
-      growthRate: '42.1% CAGR',
-      competition: 'MythX, Slither, Manticore, Echidna',
-      marketPosition: 'Leading AI-powered smart contract security platform'
-    },
-    technicalSpecs: {
-      technology: ['AI/ML', 'Blockchain Analysis', 'Static Code Analysis', 'NLP'],
-      integrations: ['Ethereum', 'Binance Smart Chain', 'Polygon', 'Solana'],
-      uptime: '99.9%',
-      security: ['End-to-end encryption', 'Multi-factor authentication', 'Regular security audits'],
-      compliance: ['SOC 2', 'GDPR', 'Blockchain security standards']
-    },
-    useCases: ['DeFi protocols', 'NFT marketplaces', 'DAO governance', 'Smart contract development'],
-    targetAudience: 'Blockchain developers, DeFi protocols, NFT projects, DAOs'
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/ai-financial-analytics"
+      }
+    }
   },
 
+  // AI Healthcare Analytics Platform
   {
-    id: 'ai-healthcare-diagnostics',
-    title: 'AI Healthcare Diagnostics Platform',
-    category: 'HealthTech & BioTech',
-    pricing: {
-      starter: '$2,500/month',
-      professional: '$5,000/month',
-      enterprise: '$15,000/month',
-      setup: '$5,000 one-time',
-      marketPrice: '$2,500 - $15,000/month',
-      roi: '300% within 18 months',
-      paybackPeriod: '6-8 months'
-    },
-    features: {
-      starter: [
-        'Basic medical image analysis',
-        'Standard disease detection',
-        'Email support',
-        'Basic reporting',
-        'Standard integrations'
+    serviceId: "ai-healthcare-analytics-platform",
+    serviceName: "AI Healthcare Analytics Platform",
+    category: "AI & Healthcare",
+    description: "Advanced healthcare analytics with AI-powered patient insights and predictive modeling",
+    pricingTiers: [
+      {
+        name: "Professional",
+        price: 799,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Advanced analytics for healthcare organizations",
+        features: [
+          "Up to 25 users",
+          "Advanced patient analytics",
+          "Predictive modeling",
+          "HIPAA compliance",
+          "Priority support",
+          "Advanced reports",
+          "API access",
+          "Custom dashboards"
+        ],
+        limitations: [
+          "Limited to 25 users",
+          "Standard SLA",
+          "Basic compliance features"
+        ],
+        bestFor: [
+          "Hospitals",
+          "Clinics",
+          "Healthcare systems"
+        ],
+        roi: "400-700%",
+        implementationTime: "8-10 weeks",
+        supportLevel: "Priority support + chat"
+      },
+      {
+        name: "Enterprise",
+        price: 3999,
+        currency: "$",
+        billingCycle: "monthly",
+        description: "Full platform for large healthcare organizations",
+        features: [
+          "Unlimited users",
+          "Premium AI models",
+          "Advanced compliance",
+          "Custom AI training",
+          "Dedicated account manager",
+          "Advanced analytics",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        limitations: [
+          "Annual contract required",
+          "Minimum 100 users"
+        ],
+        bestFor: [
+          "Large health systems",
+          "Academic medical centers",
+          "Government agencies"
+        ],
+        roi: "700-1000%",
+        implementationTime: "10-12 weeks",
+        supportLevel: "24/7 dedicated support"
+      }
+    ],
+    marketComparison: [
+      {
+        competitor: "Epic",
+        competitorPrice: "$1,200-2,000/month",
+        ourPrice: "$799-3,999/month",
+        savings: "Better value with advanced AI capabilities"
+      },
+      {
+        competitor: "Cerner",
+        competitorPrice: "$1,000-1,800/month",
+        ourPrice: "$799-3,999/month",
+        savings: "Superior AI analytics and affordability"
+      },
+      {
+        competitor: "IBM Watson Health",
+        competitorPrice: "$2,000-5,000/month",
+        ourPrice: "$799-3,999/month",
+        savings: "More affordable with better features"
+      }
+    ],
+    volumeDiscounts: [
+      {
+        users: "50-100",
+        discount: "25% off",
+        additionalBenefits: ["Priority support", "Custom onboarding"]
+      },
+      {
+        users: "101-250",
+        discount: "35% off",
+        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
+      },
+      {
+        users: "250+",
+        discount: "45% off",
+        additionalBenefits: ["White-label options", "Custom AI training"]
+      }
+    ],
+    customEnterprise: {
+      features: [
+        "Custom AI training",
+        "On-premise deployment",
+        "Advanced security compliance",
+        "Custom integrations",
+        "Dedicated infrastructure",
+        "White-label solutions"
       ],
-      professional: [
-        'All Starter features',
-        'Advanced AI diagnostics',
-        'Patient outcome prediction',
-        'Priority support',
-        'Advanced analytics',
-        'Custom models',
-        'Multi-modality support'
+      benefits: [
+        "Maximum healthcare intelligence",
+        "Complete customization",
+        "Highest security standards",
+        "Exclusive features",
+        "Strategic partnership"
       ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI model training',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Regulatory compliance tools'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$45B global AI in healthcare market',
-      growthRate: '38.7% CAGR',
-      competition: 'IBM Watson Health', 'Google Health', 'Microsoft Healthcare',
-      marketPosition: 'Leading AI-powered healthcare diagnostics platform with FDA clearance'
-    },
-    technicalSpecs: {
-      technology: ['Deep Learning', 'Computer Vision', 'NLP', 'Machine Learning'],
-      integrations: ['Epic', 'Cerner', 'Allscripts', 'PACS systems'],
-      uptime: '99.95%',
-      security: ['HIPAA compliance', 'SOC 2 Type II', 'End-to-end encryption'],
-      compliance: ['HIPAA', 'FDA', 'SOC 2', 'ISO 27001']
-    },
-    useCases: ['Hospitals', 'Medical clinics', 'Diagnostic centers', 'Research institutions'],
-    targetAudience: 'Healthcare providers, Hospitals, Medical clinics, Diagnostic centers'
-  },
-
-  {
-    id: 'ai-financial-fraud-detection',
-    title: 'AI Financial Fraud Detection Suite',
-    category: 'FinTech',
-    pricing: {
-      starter: '$1,500/month',
-      professional: '$3,500/month',
-      enterprise: '$8,500/month',
-      setup: '$2,500 one-time',
-      marketPrice: '$1,500 - $8,500/month',
-      roi: '350% within 8 months',
-      paybackPeriod: '2-3 months'
-    },
-    features: {
-      starter: [
-        'Basic fraud detection',
-        'Real-time monitoring',
-        'Standard risk scoring',
-        'Email support',
-        'Basic reporting'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI algorithms',
-        'Multi-channel detection',
-        'Priority support',
-        'Advanced analytics',
-        'Custom rules engine',
-        'Compliance reporting'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$8.5B global fraud detection market',
-      growthRate: '25.3% CAGR',
-      competition: 'Sift', 'Signifyd', 'Riskified', 'Forter',
-      marketPosition: 'Leading AI-powered financial fraud detection platform'
-    },
-    technicalSpecs: {
-      technology: ['Machine Learning', 'Real-time Analytics', 'Big Data Processing', 'API Integration'],
-      integrations: ['Stripe', 'PayPal', 'Square', 'Adyen', 'Banking APIs'],
-      uptime: '99.99%',
-      security: ['PCI DSS compliance', 'SOC 2 Type II', 'End-to-end encryption'],
-      compliance: ['PCI DSS', 'SOC 2', 'GDPR', 'Financial regulations']
-    },
-    useCases: ['Banks', 'Credit unions', 'Payment processors', 'E-commerce platforms'],
-    targetAudience: 'Financial institutions, Payment processors, E-commerce businesses, Fintech startups'
-  },
-
-  {
-    id: 'ai-personalized-learning',
-    title: 'AI Personalized Learning Platform',
-    category: 'EduTech',
-    pricing: {
-      starter: '$299/month',
-      professional: '$599/month',
-      enterprise: '$1,499/month',
-      setup: '$499 one-time',
-      marketPrice: '$299 - $1,499/month',
-      roi: '250% within 12 months',
-      paybackPeriod: '4-6 months'
-    },
-    features: {
-      starter: [
-        'Basic content personalization',
-        'Standard progress tracking',
-        'Email support',
-        'Basic analytics',
-        'Standard integrations'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI algorithms',
-        'Adaptive learning paths',
-        'Priority support',
-        'Advanced analytics',
-        'Custom content creation',
-        'Multi-modal support'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$20B global edtech market',
-      growthRate: '19.8% CAGR',
-      competition: 'Duolingo', 'Khan Academy', 'Coursera', 'Udemy',
-      marketPosition: 'Leading AI-powered personalized learning platform'
-    },
-    technicalSpecs: {
-      technology: ['Machine Learning', 'NLP', 'Adaptive Algorithms', 'Data Analytics'],
-      integrations: ['LMS systems', 'Google Classroom', 'Canvas', 'Blackboard'],
-      uptime: '99.8%',
-      security: ['FERPA compliance', 'Data encryption', 'Regular security audits'],
-      compliance: ['FERPA', 'COPPA', 'SOC 2', 'GDPR']
-    },
-    useCases: ['K-12 schools', 'Universities', 'Corporate training', 'Online education'],
-    targetAudience: 'Educational institutions, Corporate training departments, Online learning platforms'
-  },
-
-  {
-    id: 'ai-marketing-automation',
-    title: 'AI Marketing Automation Suite',
-    category: 'MarTech',
-    pricing: {
-      starter: '$399/month',
-      professional: '$799/month',
-      enterprise: '$1,999/month',
-      setup: '$599 one-time',
-      marketPrice: '$399 - $1,999/month',
-      roi: '300% within 6 months',
-      paybackPeriod: '2-3 months'
-    },
-    features: {
-      starter: [
-        'Basic campaign automation',
-        'Standard personalization',
-        'Email support',
-        'Basic analytics',
-        'Standard integrations'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI optimization',
-        'Multi-channel automation',
-        'Priority support',
-        'Advanced analytics',
-        'Custom workflows',
-        'A/B testing automation'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$25B global marketing automation market',
-      growthRate: '22.1% CAGR',
-      competition: 'HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign',
-      marketPosition: 'Advanced AI-powered marketing automation platform'
-    },
-    technicalSpecs: {
-      technology: ['Machine Learning', 'Predictive Analytics', 'Marketing Automation', 'Data Integration'],
-      integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Facebook Ads', 'Google Ads'],
-      uptime: '99.9%',
-      security: ['SOC 2 compliance', 'Data encryption', 'Regular security audits'],
-      compliance: ['SOC 2', 'GDPR', 'CCPA', 'CAN-SPAM']
-    },
-    useCases: ['E-commerce businesses', 'B2B companies', 'Marketing agencies', 'SaaS companies'],
-    targetAudience: 'Marketing teams, E-commerce businesses, B2B companies, Marketing agencies'
-  },
-
-  {
-    id: 'ai-satellite-data-analytics',
-    title: 'AI Satellite Data Analytics Platform',
-    category: 'Space Tech',
-    pricing: {
-      starter: '$2,000/month',
-      professional: '$5,000/month',
-      enterprise: '$15,000/month',
-      setup: '$3,000 one-time',
-      marketPrice: '$2,000 - $15,000/month',
-      roi: '400% within 18 months',
-      paybackPeriod: '4-6 months'
-    },
-    features: {
-      starter: [
-        'Basic image analysis',
-        'Standard monitoring',
-        'Email support',
-        'Basic analytics',
-        'Standard data access'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI algorithms',
-        'Real-time processing',
-        'Priority support',
-        'Advanced analytics',
-        'Custom dashboards',
-        'Multi-satellite support'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$3.5B global satellite data analytics market',
-      growthRate: '28.9% CAGR',
-      competition: 'Planet Labs', 'Maxar', 'Airbus Defence and Space', 'DigitalGlobe',
-      marketPosition: 'Leading AI-powered satellite data analytics platform'
-    },
-    technicalSpecs: {
-      technology: ['Computer Vision', 'Machine Learning', 'Satellite Data Processing', 'Big Data Analytics'],
-      integrations: ['NASA APIs', 'ESA data', 'Commercial satellite providers', 'GIS systems'],
-      uptime: '99.8%',
-      security: ['Government-grade security', 'Data encryption', 'Access controls'],
-      compliance: ['Government security standards', 'Data protection regulations']
-    },
-    useCases: ['Agriculture', 'Urban planning', 'Environmental monitoring', 'Climate research'],
-    targetAudience: 'Government agencies, Research institutions, Agricultural companies, Urban planners'
-  },
-
-  {
-    id: 'ai-iot-edge-computing',
-    title: 'AI IoT Edge Computing Platform',
-    category: 'Emerging Tech',
-    pricing: {
-      starter: '$599/month',
-      professional: '$1,299/month',
-      enterprise: '$3,999/month',
-      setup: '$999 one-time',
-      marketPrice: '$599 - $3,999/month',
-      roi: '350% within 12 months',
-      paybackPeriod: '3-4 months'
-    },
-    features: {
-      starter: [
-        'Basic edge AI processing',
-        'Standard device management',
-        'Email support',
-        'Basic analytics',
-        'Standard protocols'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI algorithms',
-        'Real-time processing',
-        'Priority support',
-        'Advanced analytics',
-        'Custom workflows',
-        'Multi-protocol support'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$12B global edge computing market',
-      growthRate: '37.4% CAGR',
-      competition: 'AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn',
-      marketPosition: 'Leading AI-powered edge computing platform for IoT'
-    },
-    technicalSpecs: {
-      technology: ['Edge Computing', 'Machine Learning', 'IoT Protocols', 'Real-time Processing'],
-      integrations: ['MQTT', 'CoAP', 'HTTP/HTTPS', 'AWS IoT', 'Azure IoT', 'Google Cloud IoT'],
-      uptime: '99.9%',
-      security: ['End-to-end encryption', 'Device authentication', 'Secure boot'],
-      compliance: ['SOC 2', 'ISO 27001', 'IoT security standards']
-    },
-    useCases: ['Smart cities', 'Industrial IoT', 'Smart homes', 'Connected vehicles'],
-    targetAudience: 'Manufacturing companies, Smart city projects, IoT device manufacturers, Industrial companies'
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/ai-healthcare-analytics"
+      }
+    }
   }
 ];
 
-export default comprehensivePricingGuide2025;
+export default COMPREHENSIVE_PRICING_GUIDE_2025;

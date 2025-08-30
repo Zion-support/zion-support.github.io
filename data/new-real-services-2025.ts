@@ -1,20 +1,9 @@
 import { EnhancedRealMicroSaasService } from "./enhanced-real-micro-saas-services";
 const contact = {
   mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',;
-  ;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-
-
-
-
-
-
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
 export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 	{
@@ -25,7 +14,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Production monitoring for AI agents. Detect tool-call failures, long-running chains, and hallucination spikes. Alert to Slack, auto-open Jira with traces.',
-		features[
+		features: [
 			'Latency, error and hallucination tracking',
 			'Workflow heatmaps and slow-step detection',
 			'PII guardrail violations dashboard',
@@ -43,11 +32,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: 'Same day',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology['Next.js', 'OpenTelemetry', 'Postgres', 'Redis'],
-		integrations['Slack', 'PagerDuty', 'Jira', 'Linear'],
-		useCases['Agent reliability', 'SLO tracking', 'Incident reduction'],
+		technology: ['Next.js', 'OpenTelemetry', 'Postgres', 'Redis'],
+		integrations: ['Slack', 'PagerDuty', 'Jira', 'Linear'],
+		useCases: ['Agent reliability', 'SLO tracking', 'Incident reduction'],
 		roi: 'Reduce AI agent failures by 30–60%',
-		competitors['Langfuse', 'Arize', 'WhyLabs'],
+		competitors: ['Langfuse', 'Arize', 'WhyLabs'],
 		marketSize: '$3B AI Observability',
 		growthRate: 'High',
 		variant: 'monitoring-futuristic',
@@ -67,7 +56,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Scan object stores and warehouses for PII/PHI with classifiers and regex+ML. Map owners, file tickets, and track remediation SLAs.',
-		features[
+		features: [
 			'Prebuilt PII detectors (SSN, CCN, PHI)',
 			'Custom rules and dictionaries',
 			'Owners and data lineage lookups',
@@ -85,11 +74,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '2–5 days',
 		category: 'Security & Compliance',
 		realService: true,
-		technology['Node.js', 'Python', 'Snowflake', 'S3'],
-		integrations['AWS', 'GCP', 'Snowflake', 'BigQuery', 'Jira'],
-		useCases['GDPR/CCPA scans', 'Access reviews', 'Audit readiness'],
+		technology: ['Node.js', 'Python', 'Snowflake', 'S3'],
+		integrations: ['AWS', 'GCP', 'Snowflake', 'BigQuery', 'Jira'],
+		useCases: ['GDPR/CCPA scans', 'Access reviews', 'Audit readiness'],
 		roi: 'Cut privacy review time by 50–70%',
-		competitors['BigID', 'OneTrust'],
+		competitors: ['BigID', 'OneTrust'],
 		marketSize: '$8B Data Privacy',
 		growthRate: 'High',
 		variant: 'security-futuristic',
@@ -109,7 +98,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Benchmark Pinecone, Weaviate, Qdrant or pgvector using your corpus. Get query plans, ANN configs and recall/latency trade-offs with recommendations.',
-		features[
+		features: [
 			'Corpus sampling and ground-truth evals',
 			'Latency/recall trade-off explorer',
 			'ANN/hnsw/ivf config generator',
@@ -127,11 +116,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1–2 days',
 		category: 'Observability',
 		realService: true,
-		technology['Typescript', 'Docker', 'Python'],
-		integrations['Pinecone', 'Weaviate', 'Qdrant', 'Postgres'],
-		useCases['RAG tuning', 'Cost optimization', 'Latency SLOs'],
+		technology: ['Typescript', 'Docker', 'Python'],
+		integrations: ['Pinecone', 'Weaviate', 'Qdrant', 'Postgres'],
+		useCases: ['RAG tuning', 'Cost optimization', 'Latency SLOs'],
 		roi: 'Improve recall 10–30% with same budget',
-		competitors['Self-built harnesses'],
+		competitors: ['Self-built harnesses'],
 		marketSize: '$1B Vector DB Tools',
 		growthRate: 'Strong',
 		variant: 'data-futuristic',
@@ -151,7 +140,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Scan prompts, tools and context windows for injection vectors. Generate red-team prompts and propose mitigations with policy diffs.',
-		features[
+		features: [
 			'Prompt injection pattern library',
 			'Content policy diffing',
 			'Automatic test corpus generation',
@@ -169,11 +158,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: 'Same day',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology['Node.js', 'OpenAI', 'Anthropic'],
-		integrations['GitHub', 'GitLab', 'Jenkins', 'Vercel'],
-		useCases['Pre-prod safety testing', 'Policy hardening', 'Regulatory readiness'],
+		technology: ['Node.js', 'OpenAI', 'Anthropic'],
+		integrations: ['GitHub', 'GitLab', 'Jenkins', 'Vercel'],
+		useCases: ['Pre-prod safety testing', 'Policy hardening', 'Regulatory readiness'],
 		roi: 'Reduce safety incidents 40%',
-		competitors['Promptfoo', 'Guardrails libraries'],
+		competitors: ['Promptfoo', 'Guardrails libraries'],
 		marketSize: '$1B AI Safety',
 		growthRate: 'Emerging',
 		variant: 'security-futuristic',
@@ -193,7 +182,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Upload RFP PDFs, map to knowledge base, and generate answers with citations and policy references. Export clean DOCX/Google Docs.',
-		features[
+		features: [
 			'Document parsing and mapping',
 			'Policy/KB grounding with citations',
 			'Gaps highlighting and follow-ups',
@@ -211,11 +200,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1–3 days',
 		category: 'AI & Data',
 		realService: true,
-		technology['Next.js', 'OpenAI', 'Pinecone'],
-		integrations['Google Drive', 'Confluence', 'Notion'],
-		useCases['Security questionnaires', 'RFPs', 'DDQs'],
+		technology: ['Next.js', 'OpenAI', 'Pinecone'],
+		integrations: ['Google Drive', 'Confluence', 'Notion'],
+		useCases: ['Security questionnaires', 'RFPs', 'DDQs'],
 		roi: 'Cut response time 60–80%',
-		competitors['Loopio', 'Responsive'],
+		competitors: ['Loopio', 'Responsive'],
 		marketSize: '$2B RFP Tech',
 		growthRate: 'Strong',
 		variant: 'ai-futuristic',
@@ -235,7 +224,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Continuously attack your AI stack with curated jailbreak prompts and tool abuse scenarios. Track regressions, export reports for auditors.',
-		features[
+		features: [
 			'Curated jailbreak corpora',
 			'Tool-abuse and exfiltration scenarios',
 			'Scoring and trend reports',
@@ -253,11 +242,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '2–7 days',
 		category: 'Security & Compliance',
 		realService: true,
-		technology['Node.js', 'Docker', 'OpenAI'],
-		integrations['GitHub', 'GitLab', 'Jenkins'],
-		useCases['Regressions', 'Risk scoring', 'Audit evidence'],
+		technology: ['Node.js', 'Docker', 'OpenAI'],
+		integrations: ['GitHub', 'GitLab', 'Jenkins'],
+		useCases: ['Regressions', 'Risk scoring', 'Audit evidence'],
 		roi: 'Reduce time-to-fix 30%',
-		competitors['External red team services'],
+		competitors: ['External red team services'],
 		marketSize: '$1B AI Security',
 		growthRate: 'High',
 		variant: 'security-futuristic',
@@ -277,7 +266,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Ingest call recordings or live streams, transcribe, detect topics and sentiment, and score QA with dashboards. Coach agents with snippets.',
-		features[
+		features: [
 			'Accurate transcription with diarization',
 			'Sentiment and topic mining',
 			'QA auto-scoring and calibration',
@@ -295,11 +284,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '3–7 days',
 		category: 'Customer Support & Success',
 		realService: true,
-		technology['Whisper', 'VAD', 'Next.js'],
-		integrations['Twilio', 'Amazon Connect', 'Five9'],
-		useCases['QA automation', 'Churn detection', 'Upsell triggers'],
+		technology: ['Whisper', 'VAD', 'Next.js'],
+		integrations: ['Twilio', 'Amazon Connect', 'Five9'],
+		useCases: ['QA automation', 'Churn detection', 'Upsell triggers'],
 		roi: 'Improve CSAT and AHT 10–20%',
-		competitors['Gong', 'Chorus', 'Observe.AI'],
+		competitors: ['Gong', 'Chorus', 'Observe.AI'],
 		marketSize: '$6B Speech Analytics',
 		growthRate: 'High',
 		variant: 'ai-futuristic',
@@ -319,7 +308,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Create class-balanced datasets with differentially private generators. Export to parquet/CSV and seed sandboxes for testing.',
-		features[
+		features: [
 			'DP and k-anonymity options',
 			'Imbalance correction and sampling',
 			'Drift detection on synthetic sets',
@@ -337,11 +326,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '3–7 days',
 		category: 'AI & Data',
 		realService: true,
-		technology['Python', 'JAX/PyTorch', 'Postgres'],
-		integrations['S3', 'GCS', 'Snowflake'],
-		useCases['Privacy-safe analytics', 'Model pretraining', 'QA sandboxes'],
+		technology: ['Python', 'JAX/PyTorch', 'Postgres'],
+		integrations: ['S3', 'GCS', 'Snowflake'],
+		useCases: ['Privacy-safe analytics', 'Model pretraining', 'QA sandboxes'],
 		roi: 'Reduce manual data prep 50%',
-		competitors['Gretel.ai', 'Mostly AI'],
+		competitors: ['Gretel.ai', 'Mostly AI'],
 		marketSize: '$2B Synthetic Data',
 		growthRate: 'High',
 		variant: 'data-futuristic',
@@ -361,7 +350,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Bootstrap an offline+online feature store with transformations, point-in-time joins and approvals. Ship faster with templates.',
-		features[
+		features: [
 			'Point-in-time correctness',
 			'Transformation registry',
 			'Approval workflows',
@@ -379,11 +368,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1–3 weeks',
 		category: 'AI & Data',
 		realService: true,
-		technology['Kafka', 'Postgres', 'Redis'],
-		integrations['dbt', 'Airflow', 'Spark'],
-		useCases['Realtime personalization', 'Fraud', 'Recommendations'],
+		technology: ['Kafka', 'Postgres', 'Redis'],
+		integrations: ['dbt', 'Airflow', 'Spark'],
+		useCases: ['Realtime personalization', 'Fraud', 'Recommendations'],
 		roi: 'Accelerate feature shipping 2×',
-		competitors['Feast', 'Tecton (enterprise)'],
+		competitors: ['Feast', 'Tecton (enterprise)'],
 		marketSize: '$1B Feature Platforms',
 		growthRate: 'Growing',
 		variant: 'data-futuristic',
@@ -403,7 +392,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Lightweight model registry with artifacts, metrics and stage transitions. Webhooks to CI for canary rollouts.',
-		features[
+		features: [
 			'Artifacts and signatures',
 			'Metrics and evals',
 			'Stage transitions and approvals',
@@ -421,11 +410,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '3–7 days',
 		category: 'AI & Data',
 		realService: true,
-		technology['S3', 'Postgres', 'Next.js'],
-		integrations['MLflow', 'Weights & Biases', 'Arize'],
-		useCases['Governance', 'Rollouts', 'Compliance'],
+		technology: ['S3', 'Postgres', 'Next.js'],
+		integrations: ['MLflow', 'Weights & Biases', 'Arize'],
+		useCases: ['Governance', 'Rollouts', 'Compliance'],
 		roi: 'Reduce release risk 20–40%',
-		competitors['MLflow (self-hosted)'],
+		competitors: ['MLflow (self-hosted)'],
 		marketSize: '$1B MLOps',
 		growthRate: 'High',
 		variant: 'ai-futuristic',
@@ -445,7 +434,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Monitor tables, streams and ML features for freshness, volume and validity. Alert owners and auto-create issues with owners preset.',
-		features[
+		features: [
 			'Freshness and volume checks',
 			'Anomaly detection on metrics',
 			'Schema drift notifications',
@@ -463,11 +452,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '3–7 days',
 		category: 'Observability',
 		realService: true,
-		technology['dbt', 'Airflow', 'OpenTelemetry'],
-		integrations['Snowflake', 'BigQuery', 'Redshift'],
-		useCases['Pipeline reliability', 'Trust in metrics', 'ML health'],
+		technology: ['dbt', 'Airflow', 'OpenTelemetry'],
+		integrations: ['Snowflake', 'BigQuery', 'Redshift'],
+		useCases: ['Pipeline reliability', 'Trust in metrics', 'ML health'],
 		roi: 'Reduce incidents and firefighting 30%',
-		competitors['Monte Carlo', 'Bigeye'],
+		competitors: ['Monte Carlo', 'Bigeye'],
 		marketSize: '$2B Data Reliability',
 		growthRate: 'High',
 		variant: 'monitoring-futuristic',
@@ -487,7 +476,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Automate data subject access requests across SaaS and data stores. Identity verification, redact/export, and audit-ready logs.',
-		features[
+		features: [
 			'Identity verification and portals',
 			'Connector library for SaaS and data',
 			'Redaction and export pipelines',
@@ -505,11 +494,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1–2 weeks',
 		category: 'Security & Compliance',
 		realService: true,
-		technology['Node.js', 'Workers', 'Queues'],
-		integrations['Google Workspace', 'Salesforce', 'HubSpot'],
-		useCases['DSAR automation', 'Deletion workflows', 'Export compliance'],
+		technology: ['Node.js', 'Workers', 'Queues'],
+		integrations: ['Google Workspace', 'Salesforce', 'HubSpot'],
+		useCases: ['DSAR automation', 'Deletion workflows', 'Export compliance'],
 		roi: 'Reduce manual work 70%',
-		competitors['Transcend', 'OneTrust'],
+		competitors: ['Transcend', 'OneTrust'],
 		marketSize: '$4B Privacy Ops',
 		growthRate: 'High',
 		variant: 'security-futuristic',
@@ -529,7 +518,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Ingest web/app events, stitch identities, and build segments for activation with basic RT engagement dashboards.',
-		features[
+		features: [
 			'Event schema and SDKs',
 			'Identity stitching and dedupe',
 			'Segments and audiences',
@@ -547,11 +536,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1–3 weeks',
 		category: 'AI & Data',
 		realService: true,
-		technology['Next.js', 'Kafka', 'Snowflake'],
-		integrations['Segment', 'RudderStack', 'HubSpot'],
-		useCases['Personalization', 'Lifecycle marketing', 'Attribution'],
+		technology: ['Next.js', 'Kafka', 'Snowflake'],
+		integrations: ['Segment', 'RudderStack', 'HubSpot'],
+		useCases: ['Personalization', 'Lifecycle marketing', 'Attribution'],
 		roi: 'Increase conversion 5–15%',
-		competitors['Twilio Segment', 'mParticle'],
+		competitors: ['Twilio Segment', 'mParticle'],
 		marketSize: '$5B CDP',
 		growthRate: 'High',
 		variant: 'data-futuristic',
@@ -571,7 +560,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Run experiments with CUPED/Sequential testing, guardrail metrics and sample ratio checks. SDKs for web and backend.',
-		features[
+		features: [
 			'Bucketing and targeting',
 			'CUPED/Sequential methods',
 			'Guardrails and SRM detection',
@@ -589,11 +578,11 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1–3 weeks',
 		category: 'Developer Tools',
 		realService: true,
-		technology['Typescript', 'Postgres', 'ClickHouse'],
-		integrations['Segment', 'RudderStack', 'Snowplow'],
-		useCases['Feature rollout', 'Experimentation', 'Optimization'],
+		technology: ['Typescript', 'Postgres', 'ClickHouse'],
+		integrations: ['Segment', 'RudderStack', 'Snowplow'],
+		useCases: ['Feature rollout', 'Experimentation', 'Optimization'],
 		roi: 'Ship safer and faster',
-		competitors['Optimizely', 'VWO'],
+		competitors: ['Optimizely', 'VWO'],
 		marketSize: '$2B Experimentation',
 		growthRate: 'Strong',
 		variant: 'cloud-futuristic',
