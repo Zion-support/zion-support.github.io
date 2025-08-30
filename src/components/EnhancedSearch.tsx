@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { useDebounce } from '@/hooks/useDebounce';
+import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield  } from 'lucide-react.ts';
+import { useNavigate  } from 'react-router-dom.ts';
+import { useDebounce  } from '@/hooks/useDebounce';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -13,12 +14,15 @@ interface SearchResult {
   category: string;
   tags: string[];
   relevance: number;
+
 }
 
 interface SearchFilter {
+
   type: string[];
   category: string[];
   tags: string[];
+
 }
 
 const searchData: SearchResult[] = [
@@ -95,17 +99,17 @@ const categories = [
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' }
 ];
 
-export const EnhancedSearch: React.FC = () => {
+export const EnhancedSearch: React.FC = (): JSX.Element => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
+  const [results, setResults] = useState<any>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [filters, setFilters] = useState<SearchFilter>({
+  const [filters, setFilters] = useState<any>({
     type: [],
     category: [],
     tags: []
   });
   const [showFilters, setShowFilters] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [recentSearches, setRecentSearches] = useState<any>([]);
   const [popularSearches] = useState([
     'AI Solutions', 'Cloud Services', 'Cybersecurity', 'Digital Transformation'
   ]);
@@ -150,7 +154,7 @@ export const EnhancedSearch: React.FC = () => {
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: anyMouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -162,7 +166,7 @@ export const EnhancedSearch: React.FC = () => {
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
       if (event.key === 'Escape') {
         setIsOpen(false);
       } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
@@ -176,7 +180,7 @@ export const EnhancedSearch: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleSearch = useCallback((searchQuery: string) => {
+  const handleSearch = useCallback((searchQuery: anystring)  => {
     if (searchQuery.trim()) {
       // Add to recent searches
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -189,14 +193,14 @@ export const EnhancedSearch: React.FC = () => {
     }
   }, [recentSearches]);
 
-  const handleResultClick = (result: SearchResult) => {
+  const handleResultClick = (result: anySearchResult)  => {
     handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
     setQuery('');
   };
 
-  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
+  const toggleFilter = (filterType: anykeyof SearchFilter, value: string)  => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -209,7 +213,7 @@ export const EnhancedSearch: React.FC = () => {
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: anystring)  => {
     switch (type) {
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;

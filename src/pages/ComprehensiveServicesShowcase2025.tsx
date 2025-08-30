@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { servicesCatalog } from '../data/servicesCatalog';
-import { MICRO_SAAS_SERVICES } from '../data/microSaasServices';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { servicesCatalog  } from '../data/servicesCatalog';
+import { MICRO_SAAS_SERVICES  } from '../data/microSaasServices';
 
-const ComprehensiveServicesShowcase2025: React.FC = () => {
+const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -81,8 +81,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
           </div>
 
           {/* Service Categories */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {servicesCatalog.map((category) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {servicesCatalog.map((category)  => (
               <div key={category.slug} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all">
                 <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
                 <div className="space-y-4">
@@ -128,8 +128,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0, 6).map((service) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {MICRO_SAAS_SERVICES.filter(service  => service.featured).slice(0, 6).map((service) => (
               <div key={service.id} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all">
                 <div className="flex items-center justify-between mb-4">
                   <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Grid3X3, 
   List, 
@@ -56,22 +55,21 @@ import {
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { 
-  ALL_EXPANDED_SERVICES_2027, 
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_2027, 
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027 
-} from '@/data/expandedInnovativeServices2027';
+ } from '@/data/expandedInnovativeServices2027';
 
-const ExpandedServicesShowcase2027: React.FC = () => {
+const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
+  const [filteredServices, setFilteredServices] = useState<any>(ALL_EXPANDED_SERVICES_2027);
 
   useEffect(() => {
     let services = getExpandedServicesByCategory(selectedCategory);
@@ -81,7 +79,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     setFilteredServices(services);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
@@ -100,7 +98,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     }
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
@@ -119,14 +117,14 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     }
   };
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {
+  const formatPrice = (pricing: anyExpandedService2027['pricing'])  => {
     if (pricing.model === 'Transaction Fees + Governance') {
       return 'Free + Transaction Fees';
     }
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: ExpandedService2027) => {
+  const renderServiceCard = (service: anyExpandedService2027)  => {
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -305,7 +303,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     );
   };
 
-  const renderServiceList = (service: ExpandedService2027) => {
+  const renderServiceList = (service: anyExpandedService2027)  => {
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -485,9 +483,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {EXPANDED_SERVICE_CATEGORIES.map((category) => (
+                {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -530,8 +528,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {
 
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service) => 
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            {filteredServices.map((service)  => 
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>

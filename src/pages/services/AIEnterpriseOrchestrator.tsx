@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Zap, 
   Shield, 
   TrendingUp, 
@@ -24,9 +23,9 @@ import {
   Target,
   Rocket,
   Sparkles
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIEnterpriseOrchestrator() {
+export default function AIEnterpriseOrchestrator(...args: any[]): any {
   const features = [
     {
       title: "Intelligent Process Orchestration",
@@ -238,8 +237,8 @@ export default function AIEnterpriseOrchestrator() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -288,8 +287,8 @@ export default function AIEnterpriseOrchestrator() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -362,8 +361,8 @@ export default function AIEnterpriseOrchestrator() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

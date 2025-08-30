@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
 
-export default function GovernedAIAgents() {
+export default function GovernedAIAgents(...args: any[]): any {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>

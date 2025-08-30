@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function AIComplianceCopilot() {
+export default function AIComplianceCopilot(...args: any[]): any {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO

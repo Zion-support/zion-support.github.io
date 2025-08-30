@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Atom, 
   Lock, 
   Wifi, 
@@ -21,9 +20,9 @@ import {
   Lightbulb,
   Target,
   Award
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const InnovativeServices: React.FC = () => {
+const InnovativeServices: React.FC = (): JSX.Element => {
   const innovations = [
     {
       id: 'ai-automation',
@@ -188,8 +187,8 @@ const InnovativeServices: React.FC = () => {
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -226,8 +225,8 @@ const InnovativeServices: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {innovations.map((innovation, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {innovations.map((innovation, index)  => (
               <motion.div
                 key={innovation.id}
                 initial={{ opacity: 0, y: 20 }}

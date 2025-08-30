@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 } from 'lucide-react'
+import React, { useState } from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2  } from 'lucide-react.ts'
 
-import { additionalEnhancedServices } from '../data/additional-real-services'
+import { additionalEnhancedServices  } from '../data/additional-real-services'
 
-export default function Services() {
+export default function Services(...args: any[]): any {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('all')
 	const [sortBy, setSortBy] = useState('popularity')
@@ -90,9 +90,9 @@ export default function Services() {
 							<select
 								value={selectedCategory}
 								onChange={(e) => setSelectedCategory(e.target.value)}
-								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+								className="px-3 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
 							>
-								{categories.map(category => (
+								{categories.map(category  => (
 									<option key={category} value={category}>
 										{category === 'all' ? 'All Categories' : category}
 									</option>
@@ -163,8 +163,8 @@ export default function Services() {
 					</div>
 
 					{/* Services Grid */}
-					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-						{filteredServices.map((service) => (
+					<div className="grid gap-8 md: anygrid-cols-2 lg:grid-cols-3">
+						{filteredServices.map((service)  => (
 							<div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 								{/* Popular Badge */}
 								{service.popular && (

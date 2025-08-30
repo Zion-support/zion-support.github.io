@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { servicesCatalog } from '../data/servicesCatalog';
-import { MICRO_SAAS_SERVICES } from '../data/microSaasServices';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { servicesCatalog  } from '../data/servicesCatalog';
+import { MICRO_SAAS_SERVICES  } from '../data/microSaasServices';
 
-const ComprehensivePricingGuide2025: React.FC = () => {
+const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -128,8 +128,8 @@ const ComprehensivePricingGuide2025: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
               <div 
                 key={tier.name}
                 className={`relative rounded-xl p-8 ${
@@ -204,8 +204,8 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                   </span>
                 </div>
                 
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                  {category.items.map((service) => (
+                <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-6">
+                  {category.items.map((service)  => (
                     <div key={service.id} className="bg-slate-700/50 rounded-lg p-6">
                       <h4 className="text-lg font-semibold text-white mb-3">{service.title}</h4>
                       <p className="text-gray-300 text-sm mb-4">{service.description}</p>

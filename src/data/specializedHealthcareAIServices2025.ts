@@ -2,6 +2,7 @@
 // Advanced AI-powered healthcare technology solutions
 
 export interface HealthcareAIService {
+
   id: number;
   name: string;
   category: string;
@@ -22,12 +23,13 @@ export interface HealthcareAIService {
   clinicalValidation: string[];
   useCases: string[];
   technologies: string[];
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
     address: string;
-  };
+  
+};
 }
 
 // Zion Tech Group Contact Information

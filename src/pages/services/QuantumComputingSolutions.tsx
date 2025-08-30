@@ -1,9 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { 
-  Atom, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO  } from '@/components/SEO';
+import { Atom, 
   Zap, 
   Brain, 
   Shield, 
@@ -23,7 +22,7 @@ import {
   BarChart3,
   Target,
   Globe
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const QuantumComputingSolutions = () => {
   const features = [
@@ -211,8 +210,8 @@ const QuantumComputingSolutions = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
@@ -260,8 +259,8 @@ const QuantumComputingSolutions = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {applications.map((app, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {applications.map((app, index)  => (
               <motion.div
                 key={app.industry}
                 className="bg-slate-700/50 rounded-xl p-6 border border-slate-600 hover:border-blue-400 transition-all duration-300"
@@ -308,8 +307,8 @@ const QuantumComputingSolutions = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}
                 className={`bg-slate-800/50 rounded-xl p-8 border ${

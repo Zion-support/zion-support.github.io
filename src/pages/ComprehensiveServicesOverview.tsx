@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Server, 
@@ -31,10 +30,10 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-const ComprehensiveServicesOverview: React.FC = () => {
+const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
@@ -193,9 +192,9 @@ const ComprehensiveServicesOverview: React.FC = () => {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400/50"
+                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-blue-400/50"
                   >
-                    {categories.map(category => (
+                    {categories.map(category  => (
                       <option key={category.id} value={category.id}>{category.name}</option>
                     ))}
                   </select>
@@ -203,9 +202,9 @@ const ComprehensiveServicesOverview: React.FC = () => {
                   <select
                     value={selectedPricing}
                     onChange={(e) => setSelectedPricing(e.target.value)}
-                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400/50"
+                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-blue-400/50"
                   >
-                    {pricingModels.map(pricing => (
+                    {pricingModels.map(pricing  => (
                       <option key={pricing.id} value={pricing.id}>{pricing.name}</option>
                     ))}
                   </select>
@@ -218,8 +217,8 @@ const ComprehensiveServicesOverview: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

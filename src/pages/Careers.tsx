@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Mail, Phone, MapPinIcon } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Mail, Phone, MapPinIcon  } from 'lucide-react.ts';
 
-export default function Careers() {
+export default function Careers(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
@@ -176,8 +176,8 @@ export default function Careers() {
               We're building the future of technology, and we need brilliant minds to join us on this journey
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                   <div className="text-zion-cyan">
@@ -206,8 +206,8 @@ export default function Careers() {
               These core principles guide everything we do and shape our company culture
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {values.map((value, index)  => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">
                   {value.title}

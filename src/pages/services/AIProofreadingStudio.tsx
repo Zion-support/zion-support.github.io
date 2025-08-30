@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-const AIProofreadingStudio: React.FC = () => (
+const AIProofreadingStudio: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">
     <SEO title="AI Proofreading Studio - Zion Tech Group" description="AI-powered proofreading, tone, and localization for marketing and technical content." />
     <section className="container mx-auto px-4 py-12">

@@ -1,6 +1,6 @@
 
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Route, Routes  } from 'react-router-dom.ts';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
 import TalentDashboard from "@/pages/TalentDashboard";

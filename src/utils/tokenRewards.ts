@@ -1,6 +1,6 @@
 
 
-export async function rewardOnboarding(userId: string) {
+export async function rewardOnboarding(...args: any[]): any {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -8,7 +8,7 @@ export async function rewardOnboarding(userId: string) {
   });
 }
 
-export async function rewardReferral(userId: string) {
+export async function rewardReferral(...args: any[]): any {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -16,7 +16,7 @@ export async function rewardReferral(userId: string) {
   });
 }
 
-export async function rewardFiveStarReview(userId: string) {
+export async function rewardFiveStarReview(...args: any[]): any {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

@@ -1,8 +1,9 @@
-import React, { useEffect, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useMemo } from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { useLocation  } from 'react-router-dom.ts';
 
-interface SEOProps {
+interface SEOProps extends React.PropsWithChildren<{}> {
+
   title?: string;
   description?: string;
   keywords?: string[];
@@ -21,15 +22,18 @@ interface SEOProps {
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   twitterCreator?: string;
   twitterSite?: string;
+
 }
 
 interface PageMetadata {
+
   title: string;
   description: string;
   keywords: string[];
   image: string;
   type: string;
   section: string;
+
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -57,7 +61,7 @@ export const SEO: React.FC<SEOProps> = ({
   const currentImage = image || `${window.location.origin}/og-image.jpg`;
 
   // Default metadata for different routes
-  const defaultMetadata: Record<string, PageMetadata> = {
+  const defaultMetadata: Record<string, any> = {
     '/': {
       title: 'Zion Tech Group - Innovative Technology Solutions & AI Services',
       description: 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation. Expert consulting, development, and innovation services.',
@@ -224,14 +228,14 @@ export const SEO: React.FC<SEOProps> = ({
     // Add article-specific meta tags
     if (type === 'article' && publishedTime) {
       metaTags.push(
-        { property: 'article:published_time', content: publishedTime },
+        { property: any'article:published_time', content: publishedTime },
         { property: 'article:modified_time', content: modifiedTime || publishedTime },
         { property: 'article:author', content: author || 'Zion Tech Group' },
         { property: 'article:section', content: finalMetadata.section }
       );
 
       // Add article tags
-      tags.forEach(tag => {
+      tags.forEach(tag  => {
         metaTags.push({ property: 'article:tag', content: tag });
       });
     }
@@ -243,7 +247,7 @@ export const SEO: React.FC<SEOProps> = ({
   const generateLinkTags = () => {
     const linkTags = [
       // Canonical URL
-      { rel: 'canonical', href: canonical || currentUrl },
+      { rel: any'canonical', href: canonical || currentUrl },
       
       // Alternate languages (if you have multiple language versions)
       { rel: 'alternate', hreflang: 'en', href: currentUrl },
@@ -273,7 +277,7 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   // Update page title and meta tags when route changes
-  useEffect(() => {
+  useEffect(()  => {
     // Update document title
     document.title = finalMetadata.title;
     
@@ -305,7 +309,7 @@ export const SEO: React.FC<SEOProps> = ({
     canonicalLink.setAttribute('href', canonical || currentUrl);
 
     // Update Open Graph tags
-    const updateOGTag = (property: string, content: string) => {
+    const updateOGTag = (property: anystring, content: string)  => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -322,7 +326,7 @@ export const SEO: React.FC<SEOProps> = ({
     updateOGTag('og:type', finalMetadata.type);
 
     // Update Twitter tags
-    const updateTwitterTag = (name: string, content: string) => {
+    const updateTwitterTag = (name: anystring, content: string)  => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');

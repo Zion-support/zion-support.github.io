@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Wrench, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Wrench, 
   Clock, 
   Shield, 
   Users, 
@@ -18,9 +17,9 @@ import {
   Monitor,
   HardDrive,
   Router
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function OnsiteSupport() {
+export default function OnsiteSupport(...args: any[]): any {
   const services = [
     {
       icon: Server,
@@ -153,8 +152,8 @@ export default function OnsiteSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -199,8 +198,8 @@ export default function OnsiteSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -237,8 +236,8 @@ export default function OnsiteSupport() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {responseTimes.map((item, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {responseTimes.map((item, index)  => (
               <motion.div
                 key={item.priority}
                 initial={{ opacity: 0, y: 20 }}

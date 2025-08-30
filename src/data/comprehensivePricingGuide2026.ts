@@ -2,6 +2,7 @@
 // Detailed pricing structures for revolutionary micro SAAS, IT, and AI services
 
 export interface PricingTier {
+
   name: string;
   price: number;
   billingCycle: string;
@@ -13,19 +14,22 @@ export interface PricingTier {
   support: string;
   marketComparison: string;
   volumeDiscounts: string[];
+
 }
 
 export interface ServicePricing {
+
   serviceId: number;
   serviceName: string;
   category: string;
   pricingTiers: PricingTier[];
-  marketAnalysis: {
+marketAnalysis: {;
     averagePrice: string;
     priceRange: string;
     competitors: string[];
     valueProposition: string;
-  };
+  
+};
   specialOffers: {
     annualDiscount: string;
     enterpriseDiscount: string;

@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Star, 
   Zap, 
@@ -18,15 +17,14 @@ import {
   Clock,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { 
-  revolutionaryMicroSaasServices2026,
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
+import { revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,
   revolutionaryAIServices2026,
   ALL_REVOLUTIONARY_SERVICES_2026
-} from '../data/comprehensiveServices2026';
-const ComprehensiveServicesShowcase2026: React.FC = () => {
+ } from '../data/comprehensiveServices2026';
+const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
@@ -50,7 +48,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     }
     return filtered;
   }, [searchTerm, selectedCategory, selectedInnovationLevel]);
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
       case 'Neural Networks': return <Brain className="w-5 h-5" />;
@@ -62,7 +60,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       default: return <Zap className="w-5 h-5" />;
     }
   };
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (level: anystring)  => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -143,9 +141,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category} value={category} className="bg-zinc-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -155,9 +153,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <select
                   value={selectedInnovationLevel}
                   onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  {innovationLevels.map(level => (
+                  {innovationLevels.map(level  => (
                     <option key={level} value={level} className="bg-zinc-800 text-white">
                       {level === 'all' ? 'All Innovation Levels' : level}
                     </option>
@@ -170,8 +168,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         {/* Services Grid */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Check, Star, Brain, Cpu, Database, Network, Shield, Zap, 
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Check, Star, Brain, Cpu, Database, Network, Shield, Zap, 
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
-} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
+ } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
 
-export default function ComprehensivePricing2027() {
+export default function ComprehensivePricing2027(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState<'price' | 'aiScore' | 'rating'>('price');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [sortBy, setSortBy] = useState<any>('price');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
   
@@ -76,13 +75,13 @@ export default function ComprehensivePricing2027() {
     }
   };
 
-  const getPriceColor = (price: number) => {
+  const getPriceColor = (price: anynumber)  => {
     if (price < 1000) return 'text-green-400';
     if (price < 2500) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getPriceTier = (price: number) => {
+  const getPriceTier = (price: anynumber)  => {
     if (price < 1000) return 'Starter';
     if (price < 2500) return 'Professional';
     return 'Enterprise';
@@ -140,14 +139,14 @@ export default function ComprehensivePricing2027() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: any0.8, delay: 0.6 }}
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s) => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' }
-            ].map((stat, index) => (
+              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s  => s.price))}`, icon: anyDollarSign, color: 'from-green-500 to-emerald-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyBrain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyStar, color: 'from-yellow-500 to-orange-600' }
+            ].map((stat, index)  => (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-8 h-8 text-white" />
@@ -189,9 +188,9 @@ export default function ComprehensivePricing2027() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -248,9 +247,9 @@ export default function ComprehensivePricing2027() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: any0.3 }}
               >
-                {filteredServices.map((service, index) => (
+                {filteredServices.map((service, index)  => (
                   <motion.div
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : {}}

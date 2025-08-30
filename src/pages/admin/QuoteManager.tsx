@@ -1,28 +1,26 @@
 
-import React, { useState } from "react";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  Card,
+import React, { useState } from 'react.ts';
+import { useAdminQuotes  } from '@/hooks/useAdminQuotes';
+import { useAuth  } from '@/hooks/useAuth';
+import { Card,
   CardContent
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigate } from "react-router-dom";
+ } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { Navigate  } from 'react-router-dom.ts';
 import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
-import {
-  QuoteStatusCards,
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { QuoteDetails  } from '@/components/quotes/QuoteDetails';
+import { ExportToCSV  } from '@/components/quotes/ExportToCSV';
+import { QuoteStatusCards,
   QuotesFilter,
   QuotesTable
-} from "@/components/admin/quotes";
+ } from '@/components/admin/quotes';
 
-export default function QuoteManager() {
+export default function QuoteManager(...args: any[]): any {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [selectedQuote, setSelectedQuote] = useState<any>(null);
   const [showDetails, setShowDetails] = useState(false);
 
   const {
@@ -44,14 +42,14 @@ export default function QuoteManager() {
 
   // Count quotes by status
   const statusCounts = {
-    new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
-    in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,
-    accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,
-    responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,
-    closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
+    new: anyquotes.filter((q: QuoteRequest)  => q.status === 'new').length,
+    in_review: anyquotes.filter((q: QuoteRequest)  => q.status === 'in_review').length,
+    accepted: anyquotes.filter((q: QuoteRequest)  => q.status === 'accepted').length,
+    responded: anyquotes.filter((q: QuoteRequest)  => q.status === 'responded').length,
+    closed: anyquotes.filter((q: QuoteRequest)  => q.status === 'closed').length
   };
 
-  const handleViewDetails = (quote: QuoteRequest) => {
+  const handleViewDetails = (quote: anyQuoteRequest)  => {
     setSelectedQuote(quote);
     setShowDetails(true);
   };
@@ -108,7 +106,7 @@ export default function QuoteManager() {
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: QuoteRequest) => !quote.is_archived)}
+                    quotes={quotes.filter((quote: anyQuoteRequest)  => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -121,7 +119,7 @@ export default function QuoteManager() {
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: QuoteRequest) => quote.is_archived)}
+                    quotes={quotes.filter((quote: anyQuoteRequest)  => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
                     updateStatus={updateStatus}

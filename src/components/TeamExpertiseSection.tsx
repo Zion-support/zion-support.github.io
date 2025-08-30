@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Award, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Award, 
   Users, 
   Brain, 
   Shield, 
@@ -11,9 +10,9 @@ import {
   CheckCircle,
   Globe,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const TeamExpertiseSection: React.FC = () => {
+export const TeamExpertiseSection: React.FC = (): JSX.Element => {
   const expertise = [
     {
       icon: Brain,
@@ -95,9 +94,9 @@ export const TeamExpertiseSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index) => {
+          {stats.map((stat, index)  => {
             const IconComponent = stat.icon;
             return (
               <div key={stat.label} className="text-center">
@@ -116,8 +115,8 @@ export const TeamExpertiseSection: React.FC = () => {
         </motion.div>
 
         {/* Expertise Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {expertise.map((item, index) => {
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {expertise.map((item, index)  => {
             const IconComponent = item.icon;
             return (
               <motion.div

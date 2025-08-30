@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function EmployeeSchedulingSaaS() {
+export default function EmployeeSchedulingSaaS(...args: any[]): any {
   const features = [
     {
       icon: Calendar,
@@ -236,8 +236,8 @@ export default function EmployeeSchedulingSaaS() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -268,8 +268,8 @@ export default function EmployeeSchedulingSaaS() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {schedulingCapabilities.map((capability, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {schedulingCapabilities.map((capability, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -300,8 +300,8 @@ export default function EmployeeSchedulingSaaS() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -332,8 +332,8 @@ export default function EmployeeSchedulingSaaS() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md: anygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -366,8 +366,8 @@ export default function EmployeeSchedulingSaaS() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid md: anygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

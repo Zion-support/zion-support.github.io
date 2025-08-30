@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   CheckCircle, 
   Award, 
   FileText, 
@@ -37,10 +36,10 @@ import {
   Gauge,
   TrendingUp,
   BarChart3
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Compliance() {
+export default function Compliance(...args: any[]): any {
   const complianceFrameworks = [
     {
       name: 'ISO 27001',
@@ -383,8 +382,8 @@ export default function Compliance() {
               <p className="text-xl text-slate-300">International standards and industry-specific compliance</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {complianceFrameworks.map((framework, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {complianceFrameworks.map((framework, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -454,8 +453,8 @@ export default function Compliance() {
               <p className="text-xl text-slate-300">Meeting the unique requirements of different industries</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {industryCompliance.map((industry, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {industryCompliance.map((industry, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -502,8 +501,8 @@ export default function Compliance() {
               <p className="text-xl text-slate-300">Systematic approach to achieving and maintaining compliance</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {complianceProcesses.map((phase, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {complianceProcesses.map((phase, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -555,8 +554,8 @@ export default function Compliance() {
               <p className="text-xl text-slate-300">Track our compliance performance and continuous improvement</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {complianceMetrics.map((metric, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {complianceMetrics.map((metric, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -593,8 +592,8 @@ export default function Compliance() {
               <p className="text-xl text-slate-300">Advanced tools and platforms for effective compliance management</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {complianceTools.map((tool, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {complianceTools.map((tool, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

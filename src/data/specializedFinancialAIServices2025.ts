@@ -2,6 +2,7 @@
 // Advanced AI-powered financial technology solutions
 
 export interface FinancialAIService {
+
   id: number;
   name: string;
   category: string;
@@ -22,12 +23,13 @@ export interface FinancialAIService {
   regulatoryApproval: string[];
   useCases: string[];
   technologies: string[];
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
     address: string;
-  };
+  
+};
 }
 
 // Zion Tech Group Contact Information

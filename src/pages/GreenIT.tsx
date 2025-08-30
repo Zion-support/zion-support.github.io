@@ -1,5 +1,5 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 const GreenIT = () => {
   return (
     <>

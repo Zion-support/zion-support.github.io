@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
+import { useLocation  } from 'react-router-dom.ts';
 
 interface PerformanceMetrics {
+
   pageLoadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -10,19 +11,22 @@ interface PerformanceMetrics {
   timeToInteractive: number;
   domContentLoaded: number;
   windowLoad: number;
+
 }
 
-interface PerformanceOptimizerProps {
+interface PerformanceOptimizerProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
   logMetrics?: boolean;
   sendToAnalytics?: boolean;
-  threshold?: {
+threshold?: {;
     pageLoadTime: number;
     firstContentfulPaint: number;
     largestContentfulPaint: number;
     cumulativeLayoutShift: number;
     firstInputDelay: number;
-  };
+  
+};
 }
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -30,15 +34,15 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   logMetrics = true,
   sendToAnalytics = true,
   threshold = {
-    pageLoadTime: 3000,
+    pageLoadTime: any3000,
     firstContentfulPaint: 1800,
     largestContentfulPaint: 2500,
     cumulativeLayoutShift: 0.1,
     firstInputDelay: 100,
   },
-}) => {
+})  => {
   const location = useLocation();
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics, setMetrics] = useState<any>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
   const navigationStartRef = useRef<number>(0);
@@ -97,7 +101,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           const clsObserver = new PerformanceObserver((list) => {
             let clsValue = 0;
             const entries = list.getEntries();
-            entries.forEach((entry: any) => {
+            entries.forEach((entry: anyany)  => {
               if (!entry.hadRecentInput) {
                 clsValue += entry.value;
               }
@@ -118,7 +122,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           // First Input Delay
           const fidObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
-            entries.forEach((entry: any) => {
+            entries.forEach((entry: anyany)  => {
               const fid = entry.processingStart - entry.startTime;
               setMetrics(prev => prev ? { ...prev, firstInputDelay: fid } : null);
               
@@ -260,7 +264,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enabled, optimizeImages, optimizeFonts, preloadCriticalResources]);
 
   // Performance score calculation
-  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
+  const calculatePerformanceScore = useCallback((metrics: anyPerformanceMetrics): number  => {
     let score = 100;
 
     // Deduct points for poor performance
@@ -284,12 +288,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [threshold]);
 
   // Send metrics to analytics service
-  const sendMetricsToAnalytics = useCallback((metrics: PerformanceMetrics) => {
+  const sendMetricsToAnalytics = useCallback((metrics: anyPerformanceMetrics)  => {
     try {
       // Send to Google Analytics
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'performance_metrics', {
-          event_category: 'Performance',
+          event_category: any'Performance',
           event_label: location.pathname,
           value: calculatePerformanceScore(metrics),
           custom_parameters: {
@@ -315,7 +319,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           score: calculatePerformanceScore(metrics),
           userAgent: navigator.userAgent,
         }),
-      }).catch(() => {
+      }).catch(()  => {
         // Silently fail if analytics endpoint is not available
       });
     } catch (error) {
@@ -328,8 +332,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 };
 
 // Hook for accessing performance metrics
-export const usePerformanceMetrics = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+export const usePerformanceMetrics: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [metrics, setMetrics] = useState<any>(null);
 
   useEffect(() => {
     const updateMetrics = () => {
@@ -337,7 +341,7 @@ export const usePerformanceMetrics = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           setMetrics({
-            pageLoadTime: navigation.loadEventEnd - navigation.startTime,
+            pageLoadTime: anynavigation.loadEventEnd - navigation.startTime,
             firstContentfulPaint: 0, // Will be updated by PerformanceObserver
             largestContentfulPaint: 0, // Will be updated by PerformanceObserver
             cumulativeLayoutShift: 0, // Will be updated by PerformanceObserver
@@ -352,7 +356,7 @@ export const usePerformanceMetrics = () => {
 
     updateMetrics();
     window.addEventListener('load', updateMetrics);
-    return () => window.removeEventListener('load', updateMetrics);
+    return ()  => window.removeEventListener('load', updateMetrics);
   }, []);
 
   return metrics;

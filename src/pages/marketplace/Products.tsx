@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ShoppingCart, Search, Filter, Star, Heart, ArrowRight, Zap, Shield, Cloud, Database, Cpu, Users } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { ShoppingCart, Search, Filter, Star, Heart, ArrowRight, Zap, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react.ts';
 
-export default function Products() {
+export default function Products(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -165,8 +165,8 @@ export default function Products() {
           </motion.div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProducts.map((product, index)  => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, y: 20 }}

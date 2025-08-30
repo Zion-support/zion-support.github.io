@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import {
-  CheckCircle,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import Link from 'next/link.ts';
+import { CheckCircle,
   TrendingUp,
   Users,
   DollarSign,
@@ -16,7 +15,7 @@ import {
   Cloud,
   Brain,
   Globe
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const caseStudies = [
   {
@@ -168,7 +167,7 @@ const caseStudies = [
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
 
-export default function CaseStudies() {
+export default function CaseStudies(...args: any[]): any {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -234,9 +233,9 @@ export default function CaseStudies() {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {industries.map(industry => (
+                  {industries.map(industry  => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -247,9 +246,9 @@ export default function CaseStudies() {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {technologies.map(tech => (
+                  {technologies.map(tech  => (
                     <option key={tech} value={tech}>{tech}</option>
                   ))}
                 </select>
@@ -262,8 +261,8 @@ export default function CaseStudies() {
       {/* Case Studies Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {filteredCaseStudies.map((study, index)  => (
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Grid3X3, 
   List, 
@@ -60,18 +59,17 @@ import {
   Info,
   AlertTriangle,
   Zap
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { 
-  ALL_EXPANDED_SERVICES_PRICING,
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing 
-} from '@/data/expandedServicesPricing2027';
+ } from '@/data/expandedServicesPricing2027';
 
-const ExpandedServicesPricingGuide2027: React.FC = () => {
+const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING);
+  const [expandedService, setExpandedService] = useState<any>(null);
+  const [filteredPricing, setFilteredPricing] = useState<any>(ALL_EXPANDED_SERVICES_PRICING);
 
   const categories = ['All', 'Cybersecurity', 'Data Analytics', 'Cloud & DevOps', 'IoT & Edge Computing', 'Financial Technology', 'Healthcare Technology'];
 
@@ -90,7 +88,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
@@ -109,7 +107,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     }
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
@@ -128,7 +126,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     }
   };
 
-  const getMarketPositionColor = (position: string) => {
+  const getMarketPositionColor = (position: anystring)  => {
     switch (position) {
       case 'leader':
         return 'bg-green-100 text-green-800';
@@ -143,7 +141,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     }
   };
 
-  const renderPricingCard = (pricing: ExpandedServicePricing) => {
+  const renderPricingCard = (pricing: anyExpandedServicePricing)  => {
     const CategoryIcon = getCategoryIcon(pricing.category);
     const categoryColor = getCategoryColor(pricing.category);
 
@@ -531,9 +529,9 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {categories.map((category) => (
+                {categories.map((category)  => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -552,8 +550,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
 
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredPricing.map((pricing) => renderPricingCard(pricing))}
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">

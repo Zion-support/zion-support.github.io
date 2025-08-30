@@ -1,15 +1,12 @@
-// import type { NextApiRequest, NextApiResponse } from 'next'; // Removed
-import { supabase } from '@/integrations/supabase/client';
-import { TeamInvite } from '@/types';
+// import type { NextApiRequest, NextApiResponse } from 'next.ts'; // Removed
+import { supabase  } from '@/integrations/supabase/client';
+import { TeamInvite  } from '@/types';
 
 // TODO: This API route was written for a Next.js environment.
 // This project uses Vite. This logic needs to be refactored,
 // potentially into a Supabase Function or a backend handler compatible with Vite.
 /*
-export default async function handler(
-  req: any, // Placeholder
-  res: any  // Placeholder
-) {
+export default async function handler(...args: any[]): any {
   if (req.method !== 'POST') {
     // res.setHeader('Allow', ['POST']); // Placeholder
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });

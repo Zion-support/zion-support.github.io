@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  ChevronDown, 
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { ChevronDown, 
   ChevronUp, 
   Search, 
   HelpCircle, 
@@ -17,13 +16,13 @@ import {
   Award,
   Globe,
   Lightbulb
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function FAQ() {
+export default function FAQ(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems, setOpenItems] = useState<any>([]);
 
-  const toggleItem = (index: number) => {
+  const toggleItem = (index: anynumber)  => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
@@ -168,7 +167,7 @@ export default function FAQ() {
 
   const filteredCategories = faqCategories.map(category => ({
     ...category,
-    questions: category.questions.filter(q =>
+    questions: anycategory.questions.filter(q  =>
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -350,8 +349,8 @@ export default function FAQ() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((contact, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {contactInfo.map((contact, index)  => (
               <motion.div
                 key={contact.title}
                 initial={{ opacity: 0, y: 30 }}

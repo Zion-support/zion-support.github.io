@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  BookOpen, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { BookOpen, 
   FileText, 
   Video, 
   HelpCircle, 
@@ -33,9 +32,9 @@ import {
   Play,
   Pause,
   Stop
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const Resources: React.FC = () => {
+const Resources: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -205,7 +204,7 @@ const Resources: React.FC = () => {
   const featuredResources = resources.filter(resource => resource.featured);
   const regularResources = filteredResources.filter(resource => !resource.featured);
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -214,7 +213,7 @@ const Resources: React.FC = () => {
     });
   };
 
-  const getResourceIcon = (type: string) => {
+  const getResourceIcon = (type: anystring)  => {
     switch (type) {
       case 'White Paper':
       case 'Research Paper':
@@ -318,8 +317,8 @@ const Resources: React.FC = () => {
               <p className="text-zion-slate-light">Our most popular and valuable resources</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredResources.map((resource, index) => {
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {featuredResources.map((resource, index)  => {
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
                   <motion.article
@@ -413,8 +412,8 @@ const Resources: React.FC = () => {
             <p className="text-zion-slate-light">Browse our complete library of knowledge resources</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularResources.map((resource, index) => {
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {regularResources.map((resource, index)  => {
               const ResourceIcon = getResourceIcon(resource.type);
               return (
                 <motion.article

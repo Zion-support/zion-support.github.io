@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react.ts';
 
-export default function ApiPlayground() {
+export default function ApiPlayground(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -156,7 +156,7 @@ export default function ApiPlayground() {
       ],
       requestExample: {
         query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10",
-        format: "json",
+        format: any"json",
         timeout: 30
       },
       responseExample: {
@@ -213,7 +213,7 @@ export default function ApiPlayground() {
   ];
 
   // Update counts
-  categories.forEach(cat => {
+  categories.forEach(cat  => {
     cat.count = apis.filter(api => api.category === cat.id).length;
   });
 
@@ -231,15 +231,15 @@ export default function ApiPlayground() {
     return matchesSearch && matchesCategory && matchesMethod;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: anystring)  => {
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
   };
 
-  const getMethodColor = (method: string) => {
+  const getMethodColor = (method: anystring)  => {
     return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: anystring)  => {
     switch (status) {
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400';
@@ -248,7 +248,7 @@ export default function ApiPlayground() {
     }
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect = (api: anyany)  => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
@@ -267,7 +267,7 @@ export default function ApiPlayground() {
     }, 1500);
   };
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (text: anystring)  => {
     navigator.clipboard.writeText(text);
   };
 

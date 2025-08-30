@@ -1,27 +1,31 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info } from 'lucide-react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info  } from 'lucide-react.ts';
 
 interface PerformanceMetrics {
+
   fps: number;
   memory: number;
   loadTime: number;
   networkLatency: number;
   cpuUsage: number;
   timestamp: number;
+
 }
 
 interface PerformanceAlert {
+
   id: string;
   type: 'warning' | 'error' | 'info' | 'success';
   message: string;
   metric: string;
   value: number;
   timestamp: number;
+
 }
 
-export const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
+  const [metrics, setMetrics] = useState<any>({
     fps: 0,
     memory: 0,
     loadTime: 0,
@@ -30,7 +34,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     timestamp: Date.now()
   });
 
-  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
+  const [alerts, setAlerts] = useState<any>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -83,10 +87,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       await fetch('/api/health', { method: 'HEAD' });
       const end = performance.now();
       const latency = end - start;
-      setMetrics(prev => ({ ...prev, networkLatency: latency }));
+      setMetrics(prev => ({ ...prev, networkLatency: anylatency }));
     } catch (error) {
       // If health check fails, use a default value
-      setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+      setMetrics(prev  => ({ ...prev, networkLatency: 0 }));
     }
   }, []);
 
@@ -113,12 +117,12 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   // Performance alerts
-  const checkPerformanceAlerts = useCallback((metrics: PerformanceMetrics) => {
+  const checkPerformanceAlerts = useCallback((metrics: anyPerformanceMetrics)  => {
     const newAlerts: PerformanceAlert[] = [];
 
     if (metrics.fps < 30) {
       newAlerts.push({
-        id: `fps-${Date.now()}`,
+        id: any`fps-${Date.now()}`,
         type: 'error',
         message: `Low FPS detected: ${metrics.fps}`,
         metric: 'fps',
@@ -170,7 +174,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     }
 
     if (newAlerts.length > 0) {
-      setAlerts(prev => [...prev, ...newAlerts]);
+      setAlerts(prev  => [...prev, ...newAlerts]);
     }
   }, []);
 
@@ -219,13 +223,13 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     return Math.max(0, score);
   }, [metrics]);
 
-  const getScoreColor = (score: number) => {
+  const getScoreColor = (score: anynumber)  => {
     if (score >= 80) return 'text-green-400';
     if (score >= 60) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getScoreIcon = (score: number) => {
+  const getScoreIcon = (score: anynumber)  => {
     if (score >= 80) return <CheckCircle className="w-4 h-4" />;
     if (score >= 60) return <AlertTriangle className="w-4 h-4" />;
     return <XCircle className="w-4 h-4" />;

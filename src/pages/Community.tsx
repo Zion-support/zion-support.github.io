@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { Users, MessageSquare, BookOpen, Star, TrendingUp, Award } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { Users, MessageSquare, BookOpen, Star, TrendingUp, Award  } from 'lucide-react.ts';
 
-export default function Community() {
+export default function Community(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 

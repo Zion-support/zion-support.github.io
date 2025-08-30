@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Volume2, 
+import React, { useEffect, useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Volume2, 
   VolumeX, 
   Eye, 
   EyeOff, 
@@ -10,21 +9,23 @@ import {
   MousePointer,
   Keyboard,
   Accessibility
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
+
 }
 
-export function AccessibilityEnhancer() {
+export function AccessibilityEnhancer(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
+  const [settings, setSettings] = useState<any>({
+    highContrast: anyfalse,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
@@ -32,7 +33,7 @@ export function AccessibilityEnhancer() {
     focusIndicator: false
   });
 
-  useEffect(() => {
+  useEffect(()  => {
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -43,7 +44,7 @@ export function AccessibilityEnhancer() {
     applyAccessibilitySettings(settings);
   }, []);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+  const applyAccessibilitySettings = (newSettings: anyAccessibilitySettings)  => {
     const root = document.documentElement;
     
     // High contrast
@@ -78,13 +79,13 @@ export function AccessibilityEnhancer() {
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
+  const toggleSetting = (key: anykeyof AccessibilitySettings)  => {
     const newSettings = { ...settings, [key]: !settings[key] };
     setSettings(newSettings);
     applyAccessibilitySettings(newSettings);
   };
 
-  const announceToScreenReader = (message: string) => {
+  const announceToScreenReader = (message: anystring)  => {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -101,7 +102,7 @@ export function AccessibilityEnhancer() {
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
       if (!settings.keyboardNavigation) return;
 
       switch (event.key) {
@@ -166,11 +167,11 @@ export function AccessibilityEnhancer() {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zion-blue focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-zion-cyan';
+    skipLink.className = 'skip-link sr-only focus: anynot-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zion-blue focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-zion-cyan';
     
     document.body.insertBefore(skipLink, document.body.firstChild);
     
-    return () => {
+    return ()  => {
       if (document.body.contains(skipLink)) {
         document.body.removeChild(skipLink);
       }

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink  } from 'lucide-react.ts';
 
-export default function SystemStatus() {
+export default function SystemStatus(...args: any[]): any {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -130,7 +130,7 @@ export default function SystemStatus() {
     }
   ];
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: anystring)  => {
     switch (status) {
       case 'operational':
         return 'text-green-500';
@@ -145,7 +145,7 @@ export default function SystemStatus() {
     }
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: anystring)  => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -160,7 +160,7 @@ export default function SystemStatus() {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (severity: anystring)  => {
     switch (severity) {
       case 'critical':
         return 'bg-red-500';
@@ -175,7 +175,7 @@ export default function SystemStatus() {
     }
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     return new Date(dateString).toLocaleString('en-US', {
       year: 'numeric',
       month: 'short',
@@ -266,8 +266,8 @@ export default function SystemStatus() {
             Service Status
           </h2>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index)  => (
                 <div
                   key={index}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"

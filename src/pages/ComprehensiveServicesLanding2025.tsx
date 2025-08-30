@@ -1,10 +1,10 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Heart, Globe, Cpu, Lock, Users, DollarSign, Clock, Target, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, ChevronRight, Sparkles, Flame, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Heart, Globe, Cpu, Lock, Users, DollarSign, Clock, Target, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, ChevronRight, Sparkles, Flame, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-const ComprehensiveServicesLanding2025: React.FC = () => {
+const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -263,8 +263,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {featuredCategories.map((category, index) => (
+          <div className="grid gap-8 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
+            {featuredCategories.map((category, index)  => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -328,8 +328,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {filteredCategories.map((category, index) => (
+          <div className="grid gap-6 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
+            {filteredCategories.map((category, index)  => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}

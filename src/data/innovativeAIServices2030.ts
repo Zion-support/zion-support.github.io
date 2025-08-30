@@ -2,19 +2,21 @@
 // Cutting-edge AI solutions for modern businesses
 
 export interface AIService {
+
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+pricing: {;
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
     pricingModel: string;
     marketPrice: string;
-  };
+  
+};
   features: string[];
   benefits: string[];
   useCases: string[];

@@ -1,10 +1,13 @@
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
   address: string;
+
 }
 export interface MicroSaasService {
+
   id: number;
   name: string;
   category: string;
@@ -25,8 +28,10 @@ export interface MicroSaasService {
   integrations: string[];
   freeTier: boolean;
   trialPeriod: string;
+
 }
 export interface ITService {
+
   id: number;
   name: string;
   category: string;
@@ -44,8 +49,10 @@ export interface ITService {
   certifications: string[];
   deliveryTime: string;
   support: string;
+
 }
 export interface AIService {
+
   id: number;
   name: string;
   category: string;
@@ -65,6 +72,7 @@ export interface AIService {
   compliance: string[];
   aiScore: number;
   useCases: string[];
+
 }
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services

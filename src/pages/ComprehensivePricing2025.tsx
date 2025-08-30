@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Download, 
   Play, 
   Phone, 
@@ -19,15 +18,15 @@ import {
   Lock,
   Globe,
   Rocket
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-const ComprehensivePricing2025: React.FC = () => {
+const ComprehensivePricing2025: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [sortBy, setSortBy] = useState('price');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const [billingCycle, setBillingCycle] = useState<any>('monthly');
 
   const categories = ['all', 'AI Services', 'IT Solutions', 'Cybersecurity', 'Cloud Services', 'Data Analytics'];
   const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Technology'];
@@ -189,7 +188,7 @@ const ComprehensivePricing2025: React.FC = () => {
     }
   });
 
-  const getDiscountedPrice = (price: number, discount: number) => {
+  const getDiscountedPrice = (price: anynumber, discount: number)  => {
     return Math.round(price * (1 - discount / 100));
   };
 
@@ -306,9 +305,9 @@ const ComprehensivePricing2025: React.FC = () => {
               <select 
                 value={selectedCategory} 
                 onChange={(e) => setSelectedCategory(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-green-400"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -317,9 +316,9 @@ const ComprehensivePricing2025: React.FC = () => {
               <select 
                 value={selectedIndustry} 
                 onChange={(e) => setSelectedIndustry(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-green-400"
               >
-                {industries.map(industry => (
+                {industries.map(industry  => (
                   <option key={industry} value={industry} className="bg-slate-800 text-white">
                     {industry === 'all' ? 'All Industries' : industry}
                   </option>
@@ -342,8 +341,8 @@ const ComprehensivePricing2025: React.FC = () => {
         {/* Pricing Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

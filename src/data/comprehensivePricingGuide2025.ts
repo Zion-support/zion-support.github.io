@@ -1,4 +1,5 @@
 export interface ComprehensivePricingGuide {
+
   id: string;
   title: string;
   description: string;
@@ -14,12 +15,13 @@ export interface ComprehensivePricingGuide {
   useCases: string[];
   targetAudience: string[];
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
     address: string;
-  };
+  
+};
   competitors: string[];
   marketSize: string;
   growthRate: string;

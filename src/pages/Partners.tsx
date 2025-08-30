@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Handshake, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Handshake, 
   Users, 
   Globe, 
   Award, 
@@ -18,9 +17,9 @@ import {
   CheckCircle,
   Building,
   Briefcase
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Partners() {
+export default function Partners(...args: any[]): any {
   const partnershipTypes = [
     {
       name: 'Technology Partners',
@@ -239,8 +238,8 @@ export default function Partners() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {partnershipTypes.map((type, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {partnershipTypes.map((type, index)  => (
               <motion.div
                 key={type.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -297,8 +296,8 @@ export default function Partners() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {partnerBenefits.map((benefit, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {partnerBenefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -336,8 +335,8 @@ export default function Partners() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {existingPartners.map((partner, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {existingPartners.map((partner, index)  => (
               <motion.div
                 key={partner.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -387,8 +386,8 @@ export default function Partners() {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {partnershipProcess.map((step, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {partnershipProcess.map((step, index)  => (
                 <motion.div
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}

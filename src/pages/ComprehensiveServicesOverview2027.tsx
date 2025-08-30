@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Shield, 
   TrendingUp, 
   Zap, 
@@ -99,17 +98,17 @@ import {
   List,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
-import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
+ } from 'lucide-react.ts';
+import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Badge  } from '@/components/ui/badge';
 const categories = [
   { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s => s.category === 'AI Services').length },
-  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s => s.category === 'IT Services').length },
-  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s => s.category === 'Business Solutions').length }
+  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },
+  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'IT Services').length },
+  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'Business Solutions').length }
 ];
 const pricingModels = [
   { id: 'all', name: 'All Pricing' },
@@ -118,14 +117,14 @@ const pricingModels = [
   { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
-export default function ComprehensiveServicesOverview2027() {
+export default function ComprehensiveServicesOverview2027(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
-  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [sortBy, setSortBy] = useState<any>('rating');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
@@ -159,7 +158,7 @@ export default function ComprehensiveServicesOverview2027() {
     });
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-  const ServiceCard = ({ service }: { service: any }) => (
+  const ServiceCard = ({ service }: { service: anyany })  => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -242,7 +241,7 @@ export default function ComprehensiveServicesOverview2027() {
               exit={{ opacity: 0, height: 0 }}
               className="space-y-2"
             >
-              {service.benefits.map((benefit: string, index: number) => (
+              {service.benefits.map((benefit: anystring, index: number)  => (
                 <div key={index} className="flex items-start space-x-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <span className="text-zion-slate-light text-sm">{benefit}</span>
@@ -428,10 +427,10 @@ export default function ComprehensiveServicesOverview2027() {
           {/* Services Grid */}
           <div className={`grid gap-8 ${
             viewMode === 'grid' 
-              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+              ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}>
-            {filteredServices.map((service) => (
+            {filteredServices.map((service)  => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>

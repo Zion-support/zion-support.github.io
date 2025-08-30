@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock } from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock  } from 'lucide-react.ts'
 
 
-export default function Index() {
+export default function Index(...args: any[]): any {
 	const features = [
 		{
 			icon: Brain,
@@ -64,8 +64,8 @@ export default function Index() {
 							We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
 						</p>
 					</div>
-					<div className="grid gap-8 lg:grid-cols-3">
-						{features.map((feature) => (
+					<div className="grid gap-8 lg: anygrid-cols-3">
+						{features.map((feature)  => (
 							<div key={feature.title} className="text-center">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6">
 									<feature.icon className="h-8 w-8 text-blue-600" />

@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const AIServicesShowcase: React.FC = () => {
+const AIServicesShowcase: React.FC = (): JSX.Element => {
   const aiServices = [
     {
       id: 'ai-code-review-security',
@@ -114,8 +114,8 @@ const AIServicesShowcase: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {aiServices.map((service, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {aiServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -206,7 +206,7 @@ const AIServicesShowcase: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "AI-First Approach",
@@ -238,7 +238,7 @@ const AIServicesShowcase: React.FC = () => {
                   description: "Dedicated support team available around the clock for enterprise customers.",
                   icon: "🛟"
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

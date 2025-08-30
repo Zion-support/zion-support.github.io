@@ -1,16 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Globe, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Globe, 
   MapPin, 
   Users, 
   Clock, 
   Star,
   Award,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const GlobalPresenceSection: React.FC = () => {
+export const GlobalPresenceSection: React.FC = (): JSX.Element => {
   const locations = [
     {
       city: 'New York',
@@ -100,9 +99,9 @@ export const GlobalPresenceSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
+          className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6 mb-16"
         >
-          {globalStats.map((stat, index) => {
+          {globalStats.map((stat, index)  => {
             const IconComponent = stat.icon;
             return (
               <div key={stat.label} className="text-center">
@@ -121,8 +120,8 @@ export const GlobalPresenceSection: React.FC = () => {
         </motion.div>
 
         {/* Locations Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {locations.map((location, index) => (
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {locations.map((location, index)  => (
             <motion.div
               key={location.city}
               initial={{ opacity: 0, y: 20 }}

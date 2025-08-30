@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
-import { ThemeToggle } from '../components/ThemeToggle';
-import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom  } from 'lucide-react.ts';
+import { ThemeToggle  } from '../components/ThemeToggle';
+import { ZionLoadingSpinner  } from '../components/ui/EnhancedLoadingSpinner';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 
-export function AppHeader() {
+export function AppHeader(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -21,7 +21,7 @@ export function AppHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -257,8 +257,8 @@ export function AppHeader() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {mainNavigation.map((item) => (
+            <nav className="hidden lg: anyflex items-center space-x-8">
+              {mainNavigation.map((item)  => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <button
@@ -327,8 +327,8 @@ export function AppHeader() {
               className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
             >
               <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                  {servicesCategories.map((category) => (
+                <div className="grid grid-cols-1 lg: anygrid-cols-5 gap-8">
+                  {servicesCategories.map((category)  => (
                     <div key={category.name} className="space-y-4">
                       <div className="flex items-center space-x-3">
                         <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
@@ -362,8 +362,8 @@ export function AppHeader() {
                 {/* Quick Links Section */}
                 <div className="mt-8 pt-8 border-t border-slate-700">
                   <h3 className="text-lg font-semibold text-white mb-4">Quick Access</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    {quickLinks.map((link) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-4 gap-4">
+                    {quickLinks.map((link)  => (
                       <Link
                         key={link.name}
                         to={link.href}

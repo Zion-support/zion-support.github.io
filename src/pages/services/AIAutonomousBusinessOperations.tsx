@@ -1,9 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Zap, 
   TrendingUp, 
   Shield, 
@@ -170,7 +169,7 @@ import {
   Expressionless,
   Husk,
   RollingEyes,
-          } from 'lucide-react';
+           } from 'lucide-react.ts';
 
 const AIAutonomousBusinessOperations = () => {
   const features = [
@@ -389,7 +388,7 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Clock,
@@ -421,7 +420,7 @@ const AIAutonomousBusinessOperations = () => {
                 title: "Data-Driven Decisions",
                 description: "Make informed decisions based on real-time data and AI insights"
               }
-            ].map((benefit, index) => (
+            ].map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
@@ -519,8 +518,8 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
@@ -567,8 +566,8 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}
                 className={`bg-slate-800/50 rounded-xl p-8 border ${

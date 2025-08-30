@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react.ts';
 
-export default function Training() {
+export default function Training(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeLevel, setActiveLevel] = useState('all');
@@ -36,7 +36,7 @@ export default function Training() {
 
   const trainingPrograms = [
     {
-      id: 1,
+      id: any1,
       title: 'AI Fundamentals for Business Leaders',
       description: 'Essential AI concepts and strategies for business leaders to drive digital transformation and innovation.',
       category: 'ai-ml',
@@ -200,7 +200,7 @@ export default function Training() {
   ];
 
   // Update counts
-  categories.forEach(cat => {
+  categories.forEach(cat  => {
     cat.count = trainingPrograms.filter(p => p.category === cat.id).length;
   });
 
@@ -224,11 +224,11 @@ export default function Training() {
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: anystring)  => {
     return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
   };
 
-  const getLevelColor = (level: string) => {
+  const getLevelColor = (level: anystring)  => {
     switch (level) {
       case 'beginner': return 'text-green-400';
       case 'intermediate': return 'text-yellow-400';
@@ -238,7 +238,7 @@ export default function Training() {
     }
   };
 
-  const getFormatIcon = (format: string) => {
+  const getFormatIcon = (format: anystring)  => {
     switch (format) {
       case 'online': return <Globe className="w-4 h-4" />;
       case 'in-person': return <MapPin className="w-4 h-4" />;
@@ -248,7 +248,7 @@ export default function Training() {
     }
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -345,7 +345,7 @@ export default function Training() {
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeFormat === format.id
                           ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover: anybg-zion-slate-light hover:text-white'
                       }`}
                     >
                       {format.name} ({format.count})
@@ -359,14 +359,14 @@ export default function Training() {
       </div>
 
       {/* Featured Programs */}
-      {trainingPrograms.filter(p => p.featured).length > 0 && (
+      {trainingPrograms.filter(p  => p.featured).length > 0 && (
         <div className="py-12 bg-zion-slate-dark">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Training Programs
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {trainingPrograms.filter(p => p.featured).map((program) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {trainingPrograms.filter(p  => p.featured).map((program) => (
                 <div
                   key={program.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
@@ -442,8 +442,8 @@ export default function Training() {
           </h2>
           
           {filteredPrograms.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredPrograms.map((program) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredPrograms.map((program)  => (
                 <div
                   key={program.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"

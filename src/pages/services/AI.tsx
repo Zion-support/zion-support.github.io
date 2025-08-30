@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cpu, 
   Zap, 
   Target, 
@@ -22,9 +21,9 @@ import {
   DollarSign,
   Factory,
   ShoppingCart
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIServices() {
+export default function AIServices(...args: any[]): any {
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
@@ -164,8 +163,8 @@ export default function AIServices() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-2 gap-8">
+            {aiServices.map((service, index)  => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -219,8 +218,8 @@ export default function AIServices() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {aiTechnologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
+            {aiTechnologies.map((tech, index)  => (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -248,8 +247,8 @@ export default function AIServices() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)  => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
