@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
-  Zap, 
   Shield, 
   TrendingUp, 
   Users, 
@@ -10,7 +9,6 @@ import {
   Cpu, 
   Database,
   ArrowRight,
-  Star,
   CheckCircle,
   Rocket
 } from 'lucide-react';
