@@ -54,7 +54,8 @@ export const PerformanceOptimizer = ({ children }) => {
     }, []);
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [handleScroll]);
     // Service Worker registration for caching
     useEffect(() => {
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
@@ -90,60 +91,38 @@ export const PerformanceOptimizer = ({ children }) => {
                         if (target.dataset.src) {
                             target.src = target.dataset.src;
                             target.removeAttribute('data-src');
-<<<<<<< HEAD
                             observer.unobserve(target);
-
-
+                        }
+                    }
                 });
             }, {
-=======
-                            observer.unobserve(target)}
-                    }
-                })}, {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 rootMargin: '50px',
                 threshold: 0.1,
             });
             // Observe all images with data-src
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
-<<<<<<< HEAD
             return () => observer.disconnect();
-
-=======
-            return () => observer.disconnect()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+        });
     }, [location.pathname]);
-    return <>{optimizedChildren}</>};
+    return <>{optimizedChildren}</>;
+}
 // Add global performance optimizations
 if (typeof window !== 'undefined') {
     // Optimize long tasks
     if ('scheduler' in window && 'postTask' in window.scheduler) {
         window.scheduler.postTask(() => {
             // Run non-critical tasks during idle time
-<<<<<<< HEAD
         }, { priority: 'background' });
-
-=======
-        }, { priority: 'background' })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Optimize memory usage
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB
         if (performance.memory.usedJSHeapSize > memoryThreshold) {
             // Trigger garbage collection if available
             if ('gc' in window) {
-<<<<<<< HEAD
                 window.gc();
-
-
-
-
-=======
-                window.gc()}
+            }
         }
     }
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default PerformanceOptimizer;
-}}}}}}}}}}}}}}}
