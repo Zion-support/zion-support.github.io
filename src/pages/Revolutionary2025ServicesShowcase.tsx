@@ -146,7 +146,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
     setServices(filtered);
   }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-  const handleServiceSelect = (serviceId: anystring)  => {
+  const handleServiceSelect = (serviceId: string)  => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)

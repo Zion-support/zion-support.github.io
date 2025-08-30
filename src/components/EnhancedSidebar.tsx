@@ -48,7 +48,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: anyanystring)   => {
+  const toggleSection = (section: string)   => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
@@ -58,7 +58,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
     setExpandedSections(newExpanded);
   };
 
-  const isActive = (path: anyanystring)   => location.pathname === path;
+  const isActive = (path: string)   => location.pathname === path;
 
   const navigationSections = [
     {

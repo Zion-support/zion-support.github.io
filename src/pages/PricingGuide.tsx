@@ -147,7 +147,7 @@ export default function PricingGuide(...args: any[]): any {
     }
   ];
 
-  const calculatePrice = (price: anynumber)  => {
+  const calculatePrice = (price: number)  => {
     const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
     const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
     const adjustedPrice = selectedPeriod === 'yearly' ? price * 0.9 : price;

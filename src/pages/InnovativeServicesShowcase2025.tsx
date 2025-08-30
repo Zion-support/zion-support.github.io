@@ -121,7 +121,7 @@ const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(allServices.map(s => s.innovationLevel)))];
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI Security': return <Shield className="w-5 h-5" />;
       case 'AI Finance': return <DollarSign className="w-5 h-5" />;
@@ -138,7 +138,7 @@ const InnovativeServicesShowcase2025: React.FC = (): JSX.Element => {
     }
   };
 
-  const getInnovationLevelColor = (level: anystring)  => {
+  const getInnovationLevelColor = (level: string)  => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Cutting-edge': return 'bg-gradient-to-r from-blue-600 to-cyan-600';

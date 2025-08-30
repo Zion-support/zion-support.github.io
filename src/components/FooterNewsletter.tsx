@@ -6,7 +6,7 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: anyanyReact.FormEvent)   => {
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     if (!email.trim()) return;
 

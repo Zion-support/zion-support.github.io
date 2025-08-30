@@ -204,7 +204,7 @@ const Resources: React.FC = (): JSX.Element => {
   const featuredResources = resources.filter(resource => resource.featured);
   const regularResources = filteredResources.filter(resource => !resource.featured);
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: string)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -213,7 +213,7 @@ const Resources: React.FC = (): JSX.Element => {
     });
   };
 
-  const getResourceIcon = (type: anystring)  => {
+  const getResourceIcon = (type: string)  => {
     switch (type) {
       case 'White Paper':
       case 'Research Paper':

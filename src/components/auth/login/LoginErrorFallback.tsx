@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { AlertTriangle, RefreshCw   } from 'lucide-react.ts';
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
 
-  error: anyanyError;
+  error: anyError;
   resetErrorBoundary: ()   => void;
 
 }

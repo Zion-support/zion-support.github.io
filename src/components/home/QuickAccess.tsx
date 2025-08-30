@@ -176,7 +176,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
         </div>
 
         {/* Quick Links Grid */}
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {quickLinks.map((link, index)   => (
             <motion.div
               key={index}
@@ -227,7 +227,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
             <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
           </div>
           
-          <div className="grid grid-cols-2 md: anyanygrid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category, index)   => (
               <motion.div
                 key={index}

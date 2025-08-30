@@ -183,10 +183,10 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
   }, []);
 
   const filteredServices = selectedCategory === 'All Services' 
-    ? services: anyanyservices.filter(service   => service.category === selectedCategory);
+    ? services: anyservices.filter(service   => service.category === selectedCategory);
 
-  const renderStars = (rating: anyanynumber)   => {
-    return Array.from({ length: anyany5 }, (_, i)   => (
+  const renderStars = (rating: number)   => {
+    return Array.from({ length: any5 }, (_, i)   => (
       <Star
         key={i}
         className={`w-4 h-4 ${

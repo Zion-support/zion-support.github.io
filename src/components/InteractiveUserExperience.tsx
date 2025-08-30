@@ -72,7 +72,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
   useEffect(() => {
     const initialPreferences: UserPreference[] = [
       {
-        id: anyany'1',
+        id: any'1',
         name: 'Theme',
         value: 'light',
         type: 'select',
@@ -130,7 +130,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
   useEffect(()   => {
     const features: AccessibilityFeature[] = [
       {
-        id: anyany'1',
+        id: any'1',
         name: 'Screen Reader Support',
         enabled: true,
         description: 'Full compatibility with screen readers and assistive technologies',
@@ -209,7 +209,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     setUserActivities(activities);
   }, []);
 
-  const updatePreference = useCallback((id: anyanystring, value: string | boolean | number)   => {
+  const updatePreference = useCallback((id: string, value: string | boolean | number)   => {
     setPreferences(prev => prev.map(pref => 
       pref.id === id ? { ...pref, value } : pref
     ));
@@ -238,13 +238,13 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     }
   }, [preferences]);
 
-  const toggleAccessibilityFeature = useCallback((id: anyanystring)   => {
+  const toggleAccessibilityFeature = useCallback((id: string)   => {
     setAccessibilityFeatures(prev => prev.map(feature => 
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
     ));
   }, []);
 
-  const getActivityIcon = (category: anyanyUserActivity['category'])   => {
+  const getActivityIcon = (category: anyUserActivity['category'])   => {
     switch (category) {
       case 'navigation': return <MousePointer className="h-4 w-4" />;
       case 'interaction': return <User className="h-4 w-4" />;
@@ -254,7 +254,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     }
   };
 
-  const getImpactColor = (impact: anyanyAccessibilityFeature['impact'])   => {
+  const getImpactColor = (impact: anyAccessibilityFeature['impact'])   => {
     switch (impact) {
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-yellow-500';

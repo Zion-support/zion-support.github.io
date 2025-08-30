@@ -169,7 +169,7 @@ export default function SearchPage(...args: any[]): any {
     applyFilters();
   }, [activeFilters, results]);
 
-  const performSearch = async (searchQuery: anystring)  => {
+  const performSearch = async (searchQuery: string)  => {
     setLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -213,7 +213,7 @@ export default function SearchPage(...args: any[]): any {
     setFilteredResults(filtered);
   };
 
-  const toggleFilter = (filterType: anykeyof typeof activeFilters, value: string)  => {
+  const toggleFilter = (filterType: keyof typeof activeFilters, value: string)  => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -232,14 +232,14 @@ export default function SearchPage(...args: any[]): any {
     });
   };
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
       setSearchParams({ q: query.trim() });
     }
   };
 
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: string)  => {
     switch (type) {
       case 'service': return Code;
       case 'talent': return Users;
@@ -249,7 +249,7 @@ export default function SearchPage(...args: any[]): any {
     }
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics': return Brain;
       case 'Cybersecurity': return Shield;

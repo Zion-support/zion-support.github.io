@@ -329,7 +329,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
     }
   ];
 
-  const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number)  => {
+  const calculateSavings = (monthlyPrice: number, yearlyPrice: number)  => {
     const monthlyTotal = monthlyPrice * 12;
     const yearlyTotal = yearlyPrice * 12;
     const savings = monthlyTotal - yearlyTotal;

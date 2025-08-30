@@ -100,12 +100,12 @@ export default function ServicesPage(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };

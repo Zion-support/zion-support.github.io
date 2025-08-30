@@ -20,7 +20,7 @@ import { Search,
 interface SearchResult {
 
 
-  id: anyanystring;
+  id: string;
   title: string;
   description: string;
   category: string;
@@ -79,8 +79,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     }, {} as Record<string, any>);
 
     return {
-      categories: anyanyObject.entries(categories).map(([key, count])   => ({
-        id: anyanykey,
+      categories: anyObject.entries(categories).map(([key, count])   => ({
+        id: anykey,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
         count
@@ -134,7 +134,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       case 'name':
         results = results.sort((a, b) => a.title.localeCompare(b.title));
         break;
-      default: anyany// relevance
+      default: any// relevance
         // Keep original order for relevance
         break;
     }
@@ -148,7 +148,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   }, [filteredResults, onResultsChange]);
 
   // Toggle filter
-  const toggleFilter = (filterId: anyanystring)   => {
+  const toggleFilter = (filterId: string)   => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -166,7 +166,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get icon for type
-  const getTypeIcon = (type: anyanystring)   => {
+  const getTypeIcon = (type: string)   => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
       case 'article': return <Tag className="w-4 h-4" />;
@@ -177,7 +177,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: anyanystring)   => {
+  const getCategoryColor = (category: string)   => {
     const colors = {
       'ai': 'text-purple-400',
       'cloud': 'text-blue-400',

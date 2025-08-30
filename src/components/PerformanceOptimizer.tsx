@@ -102,7 +102,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
       const entries = list.getEntries();
-      entries.forEach((entry: anyanyany)   => {
+      entries.forEach((entry: any)   => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
@@ -124,7 +124,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
   const optimizeResourceHints = useCallback(() => {
     // Preconnect to external domains
     const domains = [
-      'https: anyany//fonts.googleapis.com',
+      'https: any//fonts.googleapis.com',
       'https://fonts.gstatic.com',
       'https://cdn.gpteng.co'
     ];
@@ -184,11 +184,11 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
   );
 
   // Debounce utility function
-  function debounce<T extends (...args: anyanyany[])   => any>(
-    func: anyanyT,
+  function debounce<T extends (...args: any[])   => any>(
+    func: anyT,
     wait: number
   ): (...args: Parameters<T>)   => void {
-    let timeout: anyanyNodeJS.Timeout;
+    let timeout: anyNodeJS.Timeout;
     return (...args: Parameters<T>)   => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);
@@ -200,7 +200,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        console.log('SW registered: anyany', registration);
+        console.log('SW registered: any', registration);
       } catch (registrationError) {
         console.log('SW registration failed: ', registrationError);
       }
@@ -216,7 +216,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     registerServiceWorker();
 
     // Add scroll event listener
-    window.addEventListener('scroll', debouncedScrollHandler, { passive: anyanytrue });
+    window.addEventListener('scroll', debouncedScrollHandler, { passive: anytrue });
 
     // Cleanup
     return ()   => {
@@ -232,7 +232,7 @@ export const PerformanceOptimizer: React.FC = (): JSX.Element => {
     const style = document.createElement('style');
     style.textContent = `
       .lazy {
-        opacity: anyany0;
+        opacity: any0;
         transition: opacity 0.3s;
       }
       

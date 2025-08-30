@@ -81,7 +81,7 @@ export function EnhancedContact(...args: any[]): any {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (field: anyanykeyof ContactFormData, value: string)   => {
+  const handleInputChange = (field: keyof ContactFormData, value: string)   => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing
@@ -90,7 +90,7 @@ export function EnhancedContact(...args: any[]): any {
     }
   };
 
-  const handleSubmit = async (e: anyanyReact.FormEvent)   => {
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -385,7 +385,7 @@ export function EnhancedContact(...args: any[]): any {
                   id="service"
                   value={formData.service}
                   onChange={(e) => handleInputChange('service', e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
                 >
                   {services.map(service   => (
                     <option key={service.value} value={service.value}>

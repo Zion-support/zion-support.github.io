@@ -74,7 +74,7 @@ export const PricingSection: React.FC = (): JSX.Element => {
           </p>
         </motion.div>
 
-        <div className="grid md: anyanygrid-cols-3 gap-8 mb-12">
+        <div className="grid md: anygrid-cols-3 gap-8 mb-12">
           {plans.map((plan, index)   => {
             const IconComponent = plan.icon;
             return (

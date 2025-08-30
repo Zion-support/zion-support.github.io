@@ -79,7 +79,7 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anyanygrid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16"
         >
           {securityMetrics.map((metric, index)   => {
             const IconComponent = metric.icon;
@@ -100,7 +100,7 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
         </motion.div>
 
         {/* Security Features Grid */}
-        <div className="grid md: anyanygrid-cols-2 gap-8 mb-16">
+        <div className="grid md: anygrid-cols-2 gap-8 mb-16">
           {securityFeatures.map((feature, index)   => {
             const IconComponent = feature.icon;
             return (
@@ -147,7 +147,7 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
           <h3 className="text-2xl font-bold text-center mb-8">
             Compliance & Certifications
           </h3>
-          <div className="grid md: anyanygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">
             {complianceFrameworks.map((framework, index)   => {
               const IconComponent = framework.icon;
               return (

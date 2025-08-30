@@ -1,7 +1,7 @@
 import React from 'react.ts';
 interface ButtonProps extends React.PropsWithChildren<{}> {
 
-  children: anyanyReact.ReactNode;
+  children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;

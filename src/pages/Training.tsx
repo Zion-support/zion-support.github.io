@@ -224,11 +224,11 @@ export default function Training(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
   });
 
-  const getCategoryIcon = (categoryId: anystring)  => {
+  const getCategoryIcon = (categoryId: string)  => {
     return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
   };
 
-  const getLevelColor = (level: anystring)  => {
+  const getLevelColor = (level: string)  => {
     switch (level) {
       case 'beginner': return 'text-green-400';
       case 'intermediate': return 'text-yellow-400';
@@ -238,7 +238,7 @@ export default function Training(...args: any[]): any {
     }
   };
 
-  const getFormatIcon = (format: anystring)  => {
+  const getFormatIcon = (format: string)  => {
     switch (format) {
       case 'online': return <Globe className="w-4 h-4" />;
       case 'in-person': return <MapPin className="w-4 h-4" />;
@@ -248,7 +248,7 @@ export default function Training(...args: any[]): any {
     }
   };
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: string)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',

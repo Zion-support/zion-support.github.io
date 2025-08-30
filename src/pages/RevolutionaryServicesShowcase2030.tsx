@@ -106,12 +106,12 @@ export default function RevolutionaryServicesShowcase2030(...args: any[]): any {
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handlePageChange = (page: anynumber)  => {
+  const handlePageChange = (page: number)  => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleServiceSelect = (service: anyany)  => {
+  const handleServiceSelect = (service: any)  => {
     setSelectedService(service);
   };
 
@@ -119,7 +119,7 @@ export default function RevolutionaryServicesShowcase2030(...args: any[]): any {
     setSelectedService(null);
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -154,7 +154,7 @@ export default function RevolutionaryServicesShowcase2030(...args: any[]): any {
     return iconMap[category] || <Rocket className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
@@ -189,7 +189,7 @@ export default function RevolutionaryServicesShowcase2030(...args: any[]): any {
     return colorMap[category] || 'from-gray-500 to-slate-500';
   };
 
-  const getROIColor = (roi: anystring)  => {
+  const getROIColor = (roi: string)  => {
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     if (roiNumber >= 800) return 'text-green-400';
     if (roiNumber >= 500) return 'text-blue-400';
@@ -197,7 +197,7 @@ export default function RevolutionaryServicesShowcase2030(...args: any[]): any {
     return 'text-red-400';
   };
 
-  const getSetupTimeColor = (setupTime: anystring)  => {
+  const getSetupTimeColor = (setupTime: string)  => {
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     if (weeks <= 8) return 'text-green-400';
     if (weeks <= 16) return 'text-yellow-400';

@@ -16,14 +16,14 @@ const Contact: React.FC = (): JSX.Element => {
     timeline: ''
   });
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: anyReact.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent)  => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);

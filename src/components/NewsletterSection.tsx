@@ -7,7 +7,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: anyanyReact.FormEvent)   => {
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     if (!email) return;
 

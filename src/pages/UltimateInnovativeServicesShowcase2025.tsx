@@ -91,7 +91,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args: any[]): 
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Automation': return <Brain className="w-6 h-6" />;
       case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
@@ -107,7 +107,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args: any[]): 
     }
   };
 
-  const getInnovationBadge = (level: anystring)  => {
+  const getInnovationBadge = (level: string)  => {
     const type = level.split(' - ')[0];
     switch (type) {
       case 'Revolutionary':

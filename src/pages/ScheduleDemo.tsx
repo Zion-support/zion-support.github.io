@@ -51,7 +51,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' }
   ];
 
-  const handleServiceToggle = (serviceId: anystring)  => {
+  const handleServiceToggle = (serviceId: string)  => {
     setFormData(prev => ({
       ...prev,
       services: anyprev.services.includes(serviceId)
@@ -60,7 +60,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     }));
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     

@@ -158,7 +158,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: anyanyMouseEvent)   => {
+    const handleClickOutside = (event: anyMouseEvent)   => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -170,7 +170,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: anyanyKeyboardEvent)   => {
+    const handleKeyDown = (event: anyKeyboardEvent)   => {
       if (event.key === 'Escape') {
         setIsOpen(false);
       } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
@@ -184,7 +184,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleSearch = useCallback((searchQuery: anyanystring)   => {
+  const handleSearch = useCallback((searchQuery: string)   => {
     if (searchQuery.trim()) {
       // Add to recent searches
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -197,14 +197,14 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     }
   }, [recentSearches]);
 
-  const handleResultClick = (result: anyanySearchResult)   => {
+  const handleResultClick = (result: anySearchResult)   => {
     handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
     setQuery('');
   };
 
-  const toggleFilter = (filterType: anyanykeyof SearchFilter, value: string)   => {
+  const toggleFilter = (filterType: keyof SearchFilter, value: string)   => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -217,7 +217,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: anyanystring)   => {
+  const getTypeIcon = (type: string)   => {
     switch (type) {
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;

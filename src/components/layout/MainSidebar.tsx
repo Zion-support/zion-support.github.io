@@ -235,7 +235,7 @@ import { Home,
 
 interface MainSidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyanyboolean;
+  isOpen: boolean;
   onClose: ()   => void;
 
 }

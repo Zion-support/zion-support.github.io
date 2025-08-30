@@ -128,14 +128,14 @@ export default function Search(...args: any[]): any {
     setLoading(false);
   };
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
     }
   };
 
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: string)  => {
     switch (type) {
       case 'service':
         return <Server className="w-5 h-5 text-zion-cyan" />;
@@ -148,7 +148,7 @@ export default function Search(...args: any[]): any {
     }
   };
 
-  const getTypeLabel = (type: anystring)  => {
+  const getTypeLabel = (type: string)  => {
     switch (type) {
       case 'service':
         return 'Service';

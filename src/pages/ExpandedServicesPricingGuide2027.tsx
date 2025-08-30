@@ -88,7 +88,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
@@ -107,7 +107,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
@@ -126,7 +126,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getMarketPositionColor = (position: anystring)  => {
+  const getMarketPositionColor = (position: string)  => {
     switch (position) {
       case 'leader':
         return 'bg-green-100 text-green-800';

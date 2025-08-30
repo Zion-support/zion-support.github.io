@@ -52,7 +52,7 @@ export default function EnhancedServicesPage(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category.toLowerCase()) {
       case 'ai automation':
       case 'ai & machine learning':
@@ -86,7 +86,7 @@ export default function EnhancedServicesPage(...args: any[]): any {
     }
   };
 
-  const getPriceRange = (price: anynumber)  => {
+  const getPriceRange = (price: number)  => {
     if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     if (price <= 25000) return 'enterprise';

@@ -31,8 +31,8 @@ export default function Layout(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
-  const isActive = (href: anyanystring)   => location.pathname === href;
-  const toggleSidebarDropdown = (label: anyanystring)   => {
+  const isActive = (href: string)   => location.pathname === href;
+  const toggleSidebarDropdown = (label: string)   => {
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 

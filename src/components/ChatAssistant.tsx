@@ -75,7 +75,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: anyany'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: any'smooth' });
   }, []);
 
   useEffect(()   => {
@@ -88,7 +88,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: anyanyMediaQueryListEvent)   => {
+      const handleChange = (e: anyMediaQueryListEvent)   => {
         setCurrentTheme(e.matches ? 'dark' : 'light');
       };
       
@@ -108,14 +108,14 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: anyanyany)   => {
+      recognitionRef.current.onresult = (event: any)   => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: anyanyany)   => {
-        console.error('Speech recognition error: anyany', event.error);
+      recognitionRef.current.onerror = (event: any)   => {
+        console.error('Speech recognition error: any', event.error);
         setIsListening(false);
       };
     }
@@ -156,11 +156,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, [isListening]);
 
   // Send message
-  const sendMessage = useCallback(async (content: anyanystring)   => {
+  const sendMessage = useCallback(async (content: string)   => {
     if (!content.trim()) return;
 
     const userMessage: ChatMessage = {
-      id: anyanyDate.now().toString(),
+      id: anyDate.now().toString(),
       type: 'user',
       content: content.trim(),
       timestamp: new Date(),
@@ -205,7 +205,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, []);
 
   // Generate AI response (replace with actual AI integration)
-  const generateAIResponse = (userInput: anyanystring): string   => {
+  const generateAIResponse = (userInput: string): string   => {
     const responses = [
       'I understand you\'re asking about that. Let me help you with some information.',
       'That\'s a great question! Here\'s what I can tell you about that topic.',
@@ -218,7 +218,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   // Generate suggestions based on user input
-  const generateSuggestions = (userInput: anyanystring): string[]   => {
+  const generateSuggestions = (userInput: string): string[]   => {
     const suggestions = [
       'Tell me more',
       'Can you explain that differently?',
@@ -231,11 +231,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   // Handle file upload
-  const handleFileUpload = useCallback((event: anyanyReact.ChangeEvent<HTMLInputElement>)   => {
+  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>)   => {
     const file = event.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessage = {
-        id: anyanyDate.now().toString(),
+        id: anyDate.now().toString(),
         type: 'user',
         content: `Uploaded file: ${file.name}`,
         timestamp: new Date(),
@@ -248,12 +248,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, []);
 
   // Handle suggestion click
-  const handleSuggestionClick = useCallback((suggestion: anyanystring)   => {
+  const handleSuggestionClick = useCallback((suggestion: string)   => {
     sendMessage(suggestion);
   }, [sendMessage]);
 
   // Handle enter key
-  const handleKeyPress = useCallback((e: anyanyReact.KeyboardEvent)   => {
+  const handleKeyPress = useCallback((e: React.KeyboardEvent)   => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       sendMessage(inputValue);

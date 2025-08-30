@@ -50,7 +50,7 @@ export default function ServicesPricingPage(...args: any[]): any {
   const filteredServices = selectedCategory === 'all' 
     ? EXPANDED_SERVICES 
     : servicesByCategory[selectedCategory] || [];
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
       'Customer Intelligence': <Users className="h-5 w-5" />,

@@ -108,7 +108,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: anynumber)   => {
+  const goToSlide = (index: number)   => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };

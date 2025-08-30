@@ -105,7 +105,7 @@ export function FeaturedListingsSection(...args: any[]): any {
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredListings = selectedCategory === "All" 
-    ? featuredListings: anyanyfeaturedListings.filter(listing   => listing.category === selectedCategory);
+    ? featuredListings: anyfeaturedListings.filter(listing   => listing.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -118,8 +118,8 @@ export function FeaturedListingsSection(...args: any[]): any {
     }
   };
 
-  const renderStars = (rating: anyanynumber)   => {
-    return Array.from({ length: anyany5 }, (_, i)   => (
+  const renderStars = (rating: number)   => {
+    return Array.from({ length: any5 }, (_, i)   => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
@@ -138,7 +138,7 @@ export function FeaturedListingsSection(...args: any[]): any {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
           {featuredServices.map((service, index)   => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
               <div className="p-6">

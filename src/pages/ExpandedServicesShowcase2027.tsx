@@ -79,7 +79,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
     setFilteredServices(services);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
@@ -98,7 +98,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';

@@ -95,12 +95,12 @@ export default function UltimateInnovativeServices2026(...args: any[]): any {
     { id: 'roi', name: 'ROI Potential' }
   ];
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
@@ -139,7 +139,7 @@ export default function UltimateInnovativeServices2026(...args: any[]): any {
     }
   });
 
-  const toggleServiceExpansion = (serviceId: anystring)  => {
+  const toggleServiceExpansion = (serviceId: string)  => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 

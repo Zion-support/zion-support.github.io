@@ -71,7 +71,7 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
           </p>
         </motion.div>
 
-        <div className="grid lg: anyanygrid-cols-3 gap-8 mb-12">
+        <div className="grid lg: anygrid-cols-3 gap-8 mb-12">
           {caseStudies.map((study, index)   => (
             <motion.div
               key={study.company}

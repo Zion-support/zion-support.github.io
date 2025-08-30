@@ -209,12 +209,12 @@ export default function SupportRequests(...args: any[]): any {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: anyany)  => setSearchQuery(e.target.value)}
+                  onChange={(e: any)  => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
               
-              <Select value={statusFilter || ""} onValueChange={(value: anystring)  => setStatusFilter(value || null)}>
+              <Select value={statusFilter || ""} onValueChange={(value: string)  => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -226,7 +226,7 @@ export default function SupportRequests(...args: any[]): any {
                 </SelectContent>
               </Select>
               
-              <Select value={priorityFilter || ""} onValueChange={(value: anystring)  => setPriorityFilter(value || null)}>
+              <Select value={priorityFilter || ""} onValueChange={(value: string)  => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -238,7 +238,7 @@ export default function SupportRequests(...args: any[]): any {
                 </SelectContent>
               </Select>
               
-              <Select value={categoryFilter || ""} onValueChange={(value: anystring)  => setCategoryFilter(value || null)}>
+              <Select value={categoryFilter || ""} onValueChange={(value: string)  => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>

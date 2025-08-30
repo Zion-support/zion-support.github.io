@@ -69,7 +69,7 @@ import { cn   } from '@/lib/utils';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyanyboolean;
+  isOpen: boolean;
   onClose: ()   => void;
   className?: string;
 
@@ -84,7 +84,7 @@ export function Sidebar(...args: any[]): any {
     onClose();
   }, [location.pathname, onClose]);
 
-  const toggleSection = (sectionTitle: anyanystring)   => {
+  const toggleSection = (sectionTitle: string)   => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)

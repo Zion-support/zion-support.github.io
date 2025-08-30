@@ -241,11 +241,11 @@ export default function Research(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
 
-  const getCategoryIcon = (categoryId: anystring)  => {
+  const getCategoryIcon = (categoryId: string)  => {
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400';
@@ -255,7 +255,7 @@ export default function Research(...args: any[]): any {
     }
   };
 
-  const getImpactColor = (impact: anystring)  => {
+  const getImpactColor = (impact: string)  => {
     switch (impact) {
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400';
@@ -265,14 +265,14 @@ export default function Research(...args: any[]): any {
     }
   };
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: string)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short'
     });
   };
 
-  const formatFunding = (amount: anynumber)  => {
+  const formatFunding = (amount: number)  => {
     if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {

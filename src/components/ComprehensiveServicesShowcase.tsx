@@ -95,7 +95,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
       return matchesCategory && matchesInnovationLevel && matchesSearch;
     });
   }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: anyanystring)   => {
+  const getCategoryIcon = (category: string)   => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Customer Experience':
@@ -136,7 +136,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
         return <Star className="h-6 w-6" />;
     }
   };
-  const getInnovationLevelColor = (level: anyanystring)   => {
+  const getInnovationLevelColor = (level: string)   => {
     switch (level) {
       case 'Cutting-edge':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
@@ -232,7 +232,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category   => (
                   <option key={category} value={category}>
@@ -247,7 +247,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {innovationLevels.map(level   => (
                   <option key={level} value={level}>
@@ -262,7 +262,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}

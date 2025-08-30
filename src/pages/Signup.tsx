@@ -26,13 +26,13 @@ export default function Signup(...args: any[]): any {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (!agreedToTerms) {
       alert('Please agree to the terms and conditions');

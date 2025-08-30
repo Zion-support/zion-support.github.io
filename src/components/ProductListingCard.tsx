@@ -13,7 +13,7 @@ import Image from 'next/image.ts'; // Import next/image
 
 interface ProductListingCardProps extends React.PropsWithChildren<{}> {
 
-  listing: anyanyProductListing;
+  listing: anyProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string)   => void;
   /**
@@ -51,7 +51,7 @@ export function ProductListingCard(...args: any[]): any {
     navigate(`${detailBasePath}/${listing.id}`);
   };
   
-  const handleRequestQuote = (e: anyanyReact.MouseEvent)   => {
+  const handleRequestQuote = (e: React.MouseEvent)   => {
     e.preventDefault();
     e.stopPropagation();
     

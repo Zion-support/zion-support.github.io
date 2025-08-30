@@ -32,7 +32,7 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES   } from '@/d
 export function ServicesOverview(...args: any[]): any {
   const serviceCategories = [
     {
-      id: anyany'ai-analytics',
+      id: any'ai-analytics',
       name: 'AI & Analytics',
       icon: Brain,
       color: 'from-zion-cyan to-zion-purple',
@@ -40,7 +40,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('AI'))
     },
     {
-      id: anyany'quantum-computing',
+      id: any'quantum-computing',
       name: 'Quantum Computing',
       icon: Rocket,
       color: 'from-zion-blue to-zion-cyan',
@@ -48,7 +48,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Quantum'))
     },
     {
-      id: anyany'blockchain',
+      id: any'blockchain',
       name: 'Blockchain & Web3',
       icon: Lock,
       color: 'from-zion-purple to-zion-blue',
@@ -56,7 +56,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Blockchain'))
     },
     {
-      id: anyany'iot-edge',
+      id: any'iot-edge',
       name: 'IoT & Edge Computing',
       icon: Cpu,
       color: 'from-zion-green to-zion-cyan',
@@ -64,7 +64,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('IoT'))
     },
     {
-      id: anyany'cybersecurity',
+      id: any'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
       color: 'from-zion-purple to-zion-red',
@@ -72,7 +72,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Cybersecurity'))
     },
     {
-      id: anyany'digital-twin',
+      id: any'digital-twin',
       name: 'Digital Twin',
       icon: Server,
       color: 'from-zion-blue to-zion-purple',
@@ -80,7 +80,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Digital Twin'))
     },
     {
-      id: anyany'sustainability',
+      id: any'sustainability',
       name: 'Sustainability',
       icon: Globe,
       color: 'from-zion-green to-zion-blue',
@@ -88,7 +88,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Sustainability'))
     },
     {
-      id: anyany'hr-talent',
+      id: any'hr-talent',
       name: 'HR & Talent',
       icon: Users,
       color: 'from-zion-pink to-zion-purple',
@@ -96,7 +96,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('HR'))
     },
     {
-      id: anyany'content-creation',
+      id: any'content-creation',
       name: 'Content Creation',
       icon: Code,
       color: 'from-zion-orange to-zion-purple',
@@ -104,7 +104,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Content'))
     },
     {
-      id: anyany'legal-tech',
+      id: any'legal-tech',
       name: 'Legal Tech',
       icon: FileText,
       color: 'from-zion-purple to-zion-cyan',
@@ -112,7 +112,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Legal'))
     },
     {
-      id: anyany'fintech',
+      id: any'fintech',
       name: 'FinTech',
       icon: BarChart3,
       color: 'from-zion-green to-zion-blue',
@@ -120,7 +120,7 @@ export function ServicesOverview(...args: any[]): any {
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('FinTech'))
     },
     {
-      id: anyany'healthcare-ai',
+      id: any'healthcare-ai',
       name: 'Healthcare AI',
       icon: Heart,
       color: 'from-zion-pink to-zion-purple',
@@ -157,7 +157,7 @@ export function ServicesOverview(...args: any[]): any {
         </motion.div>
 
         {/* Service Categories Grid */}
-        <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
           {serviceCategories.map((category, index)   => (
             <motion.div
               key={category.id}
@@ -214,7 +214,7 @@ export function ServicesOverview(...args: any[]): any {
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
           
-          <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index)   => (
               <motion.div
                 key={service.id}

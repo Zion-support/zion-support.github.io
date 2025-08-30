@@ -91,7 +91,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       await fetch('/api/health', { method: 'HEAD' });
       const end = performance.now();
       const latency = end - start;
-      setMetrics(prev => ({ ...prev, networkLatency: anyanylatency }));
+      setMetrics(prev => ({ ...prev, networkLatency: anylatency }));
     } catch (error) {
       // If health check fails, use a default value
       setMetrics(prev   => ({ ...prev, networkLatency: 0 }));
@@ -121,12 +121,12 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   }, []);
 
   // Performance alerts
-  const checkPerformanceAlerts = useCallback((metrics: anyanyPerformanceMetrics)   => {
+  const checkPerformanceAlerts = useCallback((metrics: anyPerformanceMetrics)   => {
     const newAlerts: PerformanceAlert[] = [];
 
     if (metrics.fps < 30) {
       newAlerts.push({
-        id: anyany`fps-${Date.now()}`,
+        id: any`fps-${Date.now()}`,
         type: 'error',
         message: `Low FPS detected: ${metrics.fps}`,
         metric: 'fps',
@@ -227,13 +227,13 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
     return Math.max(0, score);
   }, [metrics]);
 
-  const getScoreColor = (score: anyanynumber)   => {
+  const getScoreColor = (score: number)   => {
     if (score >= 80) return 'text-green-400';
     if (score >= 60) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getScoreIcon = (score: anyanynumber)   => {
+  const getScoreIcon = (score: number)   => {
     if (score >= 80) return <CheckCircle className="w-4 h-4" />;
     if (score >= 60) return <AlertTriangle className="w-4 h-4" />;
     return <XCircle className="w-4 h-4" />;

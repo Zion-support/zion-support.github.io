@@ -176,7 +176,7 @@ export default function Events(...args: any[]): any {
   const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
   const pastEvents = filteredEvents.filter(event => event.status === 'past');
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: string)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
@@ -186,7 +186,7 @@ export default function Events(...args: any[]): any {
     });
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & ML': return Brain;
       case 'Cybersecurity': return Shield;
@@ -198,7 +198,7 @@ export default function Events(...args: any[]): any {
     }
   };
 
-  const getStatusBadge = (status: anystring)  => {
+  const getStatusBadge = (status: string)  => {
     if (status === 'upcoming') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
     } else {

@@ -48,7 +48,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
   const [scores, setScores] = useState<Record<string, any>>({});
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-  const calculateScore = useCallback((metric: anyanynumber, thresholds: number[]): PerformanceScore   => {
+  const calculateScore = useCallback((metric: number, thresholds: number[]): PerformanceScore   => {
     if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
     if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
     if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
@@ -113,7 +113,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
           }
         }
       });
-      observer.observe({ entryTypes: anyany['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      observer.observe({ entryTypes: any['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
       return ()   => observer.disconnect();
     }
     // Update metrics periodically
@@ -126,7 +126,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
     if (unit === 's') return `${(value / 1000).toFixed(2)}s`;
     return value.toFixed(3);
   };
-  const getMetricColor = (score: anyanyPerformanceScore): string   => {
+  const getMetricColor = (score: anyPerformanceScore): string   => {
     return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700');
   };
   return (

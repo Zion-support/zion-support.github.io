@@ -65,14 +65,14 @@ export const EnhancedAccessibility: React.FC = (): JSX.Element => {
     }
   }, []);
 
-  const toggleSetting = (key: anykeyof AccessibilitySettings)   => {
+  const toggleSetting = (key: keyof AccessibilitySettings)   => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
   };
 
-  const handleKeyDown = (e: anyReact.KeyboardEvent)   => {
+  const handleKeyDown = (e: React.KeyboardEvent)   => {
     if (e.key === 'Escape') {
       setIsOpen(false);
     }

@@ -4,7 +4,7 @@ import { Filter, X   } from 'lucide-react.ts';
 interface FilterOption {
 
 
-  value: anyanystring;
+  value: string;
   label: string;
   count?: number;
 
@@ -27,8 +27,8 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
   onFilterChange: (key: string, value: string, checked: boolean)   => void;
-  onClearFilters: anyany()   => void;
-  isOpen: anyanyboolean;
+  onClearFilters: any()   => void;
+  isOpen: boolean;
   onClose: ()   => void;
 
 }
@@ -68,7 +68,7 @@ export function FilterSidebar(...args: any[]): any {
             <span className="text-sm text-zion-slate-light">Active filters</span>
             <button
               onClick={onClearFilters}
-              className="text-sm text-zion-cyan hover: anyanytext-zion-cyan-light transition-colors underline"
+              className="text-sm text-zion-cyan hover: anytext-zion-cyan-light transition-colors underline"
             >
               Clear all
             </button>

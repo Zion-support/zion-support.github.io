@@ -73,7 +73,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
-    rating: anyany0,
+    rating: any0,
     comment: '',
     category: 'overall' as Feedback['category']
   });
@@ -82,7 +82,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   useEffect(()   => {
     const sampleFeedback: Feedback[] = [
       {
-        id: anyany'1',
+        id: any'1',
         customerName: 'Sarah Johnson',
         rating: 5,
         comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',
@@ -167,7 +167,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
-          category: anyanycategory.charAt(0).toUpperCase() + category.slice(1),
+          category: anycategory.charAt(0).toUpperCase() + category.slice(1),
           count,
           percentage: (count / totalFeedback) * 100
         }))
@@ -218,7 +218,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       comment: newFeedback.comment,
       category: newFeedback.category,
       sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
-      date: anyanynew Date().toISOString().split('T')[0],
+      date: anynew Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
       tags: [],
@@ -231,7 +231,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: anyanystring, type: 'helpful' | 'unhelpful')   => {
+  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')   => {
     setFeedback(prev => prev.map(f => {
       if (f.id === feedbackId) {
         return {
@@ -245,7 +245,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: anyanystring)   => {
+  const getSentimentColor = (sentiment: string)   => {
     switch (sentiment) {
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
@@ -254,7 +254,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: anyanystring)   => {
+  const getCategoryColor = (category: string)   => {
     const colors = {
       'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
@@ -332,7 +332,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-4">
             {stats.topCategories.map((category, index)   => (
               <motion.div
                 key={category.category}

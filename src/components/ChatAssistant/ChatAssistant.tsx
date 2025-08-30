@@ -3,7 +3,7 @@ import { X, Send   } from 'lucide-react.ts';
 export interface Message {
 
 
-  id: anyanystring;
+  id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
@@ -22,10 +22,10 @@ export function ChatAssistant(...args: any[]): any {
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const handleSendMessage = async (message: anyanystring)   => {
+  const handleSendMessage = async (message: string)   => {
     if (!message.trim()) return;
     const userMessage: Message = {
-      id: anyanyDate.now().toString(),
+      id: anyDate.now().toString(),
       role: 'user',
       message: message.trim(),
       timestamp: new Date(),
@@ -43,7 +43,7 @@ export function ChatAssistant(...args: any[]): any {
       setMessages(prev   => [...prev, aiMessage]);
     }, 1000);
   };
-  const handleSubmit = (e: anyanyReact.FormEvent)   => {
+  const handleSubmit = (e: React.FormEvent)   => {
     e.preventDefault();
     handleSendMessage(inputMessage);
   };

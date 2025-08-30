@@ -83,12 +83,12 @@ export default function RevolutionaryServices2030(...args: any[]): any {
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handlePageChange = (page: anynumber)  => {
+  const handlePageChange = (page: number)  => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleServiceSelect = (service: anyany)  => {
+  const handleServiceSelect = (service: any)  => {
     setSelectedService(service);
   };
 
@@ -96,7 +96,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
     setSelectedService(null);
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Brain className="w-6 h-6" />,
       'Quantum Computing': <Zap className="w-6 h-6" />,
@@ -119,7 +119,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
     return iconMap[category] || <Rocket className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-purple-500 to-pink-500',
       'Quantum Computing': 'from-indigo-500 to-purple-500',

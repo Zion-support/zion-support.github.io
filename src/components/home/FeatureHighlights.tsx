@@ -188,7 +188,7 @@ export function FeatureHighlights(...args: any[]): any {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg: anyanygrid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 mb-20"
         >
           {highlights.map((highlight, index)   => (
             <motion.div
@@ -241,7 +241,7 @@ export function FeatureHighlights(...args: any[]): any {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
           {features.map((feature, index)   => (
             <motion.div
@@ -283,7 +283,7 @@ export function FeatureHighlights(...args: any[]): any {
             Trusted by Industry Leaders
           </h3>
           
-          <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
             {achievements.map((achievement, index)   => (
               <motion.div
                 key={index}

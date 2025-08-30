@@ -385,17 +385,17 @@ export default function ResearchDevelopment(...args: any[]): any {
     return matchesArea && matchesStatus && matchesSearch;
   });
 
-  const getAreaIcon = (areaName: anystring)  => {
+  const getAreaIcon = (areaName: string)  => {
     const area = researchAreas.find(a => a.name === areaName);
     return area ? area.icon : FlaskConical;
   };
 
-  const getAreaColor = (areaName: anystring)  => {
+  const getAreaColor = (areaName: string)  => {
     const area = researchAreas.find(a => a.name === areaName);
     return area ? area.color : 'from-gray-500 to-slate-600';
   };
 
-  const getStatusBadge = (status: anystring)  => {
+  const getStatusBadge = (status: string)  => {
     if (status === 'Active') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
     } else if (status === 'Completed') {

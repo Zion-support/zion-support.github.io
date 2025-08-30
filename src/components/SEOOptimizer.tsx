@@ -22,7 +22,7 @@ import { Search,
 interface SEOAnalysis {
 
 
-  score: anyanynumber;
+  score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
@@ -189,21 +189,21 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [autoAnalyze, analyzeSEO]);
 
   // Get score color
-  const getScoreColor = (score: anyanynumber)   => {
+  const getScoreColor = (score: number)   => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
   // Get score background
-  const getScoreBackground = (score: anyanynumber)   => {
+  const getScoreBackground = (score: number)   => {
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
     return 'bg-red-100';
   };
 
   // Get impact color
-  const getImpactColor = (impact: anyanystring)   => {
+  const getImpactColor = (impact: string)   => {
     switch (impact) {
       case 'high': return 'text-red-500';
       case 'medium': return 'text-yellow-500';
@@ -213,7 +213,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anyanystring)   => {
+  const getPriorityColor = (priority: string)   => {
     switch (priority) {
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
       case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';

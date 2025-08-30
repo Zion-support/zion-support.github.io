@@ -188,7 +188,7 @@ export default function RequestQuote(...args: any[]): any {
 
   const totalSteps = 4;
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -196,7 +196,7 @@ export default function RequestQuote(...args: any[]): any {
     }));
   };
 
-  const handleServiceToggle = (service: anystring)  => {
+  const handleServiceToggle = (service: string)  => {
     setFormData(prev => ({
       ...prev,
       services: anyprev.services.includes(service)
@@ -205,7 +205,7 @@ export default function RequestQuote(...args: any[]): any {
     }));
   };
 
-  const toggleSection = (section: anystring)  => {
+  const toggleSection = (section: string)  => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
@@ -221,7 +221,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -264,7 +264,7 @@ export default function RequestQuote(...args: any[]): any {
     }, 2000);
   };
 
-  const isStepValid = (step: anynumber)  => {
+  const isStepValid = (step: number)  => {
     switch (step) {
       case 1:
         return formData.companyName && formData.industry && formData.firstName && formData.lastName && formData.email;
@@ -279,7 +279,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const getStepIcon = (step: anynumber)  => {
+  const getStepIcon = (step: number)  => {
     switch (step) {
       case 1: return <Building className="h-5 w-5" />;
       case 2: return <Target className="h-5 w-5" />;
@@ -289,7 +289,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const getStepTitle = (step: anynumber)  => {
+  const getStepTitle = (step: number)  => {
     switch (step) {
       case 1: return 'Company & Contact';
       case 2: return 'Project Details';

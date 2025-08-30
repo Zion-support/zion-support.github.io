@@ -5,7 +5,7 @@ type Theme = 'light' | 'dark' | 'system';
 interface ThemeContextType {
 
 
-  theme: anyanyTheme;
+  theme: anyTheme;
   setTheme: (theme: Theme)   => void;
   isDark: boolean;
 
@@ -67,7 +67,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     updateTheme();
     
     if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanydark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
       mediaQuery.addEventListener('change', updateTheme);
       return ()   => mediaQuery.removeEventListener('change', updateTheme);
     }

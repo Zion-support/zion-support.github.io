@@ -88,7 +88,7 @@ const Status: React.FC = (): JSX.Element => {
     }
   ];
 
-  const getStatusIcon = (status: anystring)  => {
+  const getStatusIcon = (status: string)  => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -101,7 +101,7 @@ const Status: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'operational':
         return 'text-green-500';

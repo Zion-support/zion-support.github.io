@@ -226,7 +226,7 @@ export default function HelpCenter(...args: any[]): any {
   const [expandedFAQ, setExpandedFAQ] = useState<any>(null);
   const [filteredFAQs, setFilteredFAQs] = useState<any>(faqData);
 
-  const handleSearch = (query: anystring)  => {
+  const handleSearch = (query: string)  => {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
@@ -241,11 +241,11 @@ export default function HelpCenter(...args: any[]): any {
     setFilteredFAQs(filtered);
   };
 
-  const toggleFAQ = (id: anystring)  => {
+  const toggleFAQ = (id: string)  => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'getting-started': return BookOpen;
       case 'services': return Code;
@@ -257,7 +257,7 @@ export default function HelpCenter(...args: any[]): any {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'getting-started': return 'text-blue-500';
       case 'services': return 'text-purple-500';

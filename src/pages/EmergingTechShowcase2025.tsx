@@ -63,12 +63,12 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {
     }
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-blue-500 to-purple-600';
   };

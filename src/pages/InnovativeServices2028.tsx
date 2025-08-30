@@ -56,7 +56,7 @@ export default function InnovativeServices2028(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (categoryName: anystring)  => {
+  const getCategoryIcon = (categoryName: string)  => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
     
@@ -74,7 +74,7 @@ export default function InnovativeServices2028(...args: any[]): any {
     return iconMap[category.icon] || Brain;
   };
 
-  const getCategoryColor = (categoryName: anystring)  => {
+  const getCategoryColor = (categoryName: string)  => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     return category?.color || 'from-purple-500 to-pink-500';
   };

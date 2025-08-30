@@ -77,7 +77,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   useEffect(() => {
     const sampleThreats: SecurityThreat[] = [
       {
-        id: anyany'1',
+        id: any'1',
         type: 'xss',
         severity: 'high',
         description: 'Potential XSS vulnerability in user input field',
@@ -174,7 +174,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     setIsScanning(false);
   }, []);
 
-  const mitigateThreat = useCallback((threatId: anyanystring)   => {
+  const mitigateThreat = useCallback((threatId: string)   => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'mitigated' as const }
@@ -182,7 +182,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     ));
   }, []);
 
-  const resolveThreat = useCallback((threatId: anyanystring)   => {
+  const resolveThreat = useCallback((threatId: string)   => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'resolved' as const }
@@ -190,7 +190,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     ));
   }, []);
 
-  const getThreatIcon = (type: anyanySecurityThreat['type'])   => {
+  const getThreatIcon = (type: anySecurityThreat['type'])   => {
     switch (type) {
       case 'xss': return <Bug className="h-4 w-4" />;
       case 'csrf': return <Network className="h-4 w-4" />;
@@ -202,7 +202,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     }
   };
 
-  const getSeverityColor = (severity: anyanySecurityThreat['severity'])   => {
+  const getSeverityColor = (severity: anySecurityThreat['severity'])   => {
     switch (severity) {
       case 'critical': return 'bg-red-500';
       case 'high': return 'bg-orange-500';
@@ -212,7 +212,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anyanySecurityThreat['status'])   => {
+  const getStatusColor = (status: anySecurityThreat['status'])   => {
     switch (status) {
       case 'active': return 'bg-red-100 text-red-800';
       case 'mitigated': return 'bg-yellow-100 text-yellow-800';
@@ -221,7 +221,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCheckStatusIcon = (status: anyanySecurityCheck['status'])   => {
+  const getCheckStatusIcon = (status: anySecurityCheck['status'])   => {
     switch (status) {
       case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
       case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
@@ -230,7 +230,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     }
   };
 
-  const getSecurityScoreColor = (score: anyanynumber)   => {
+  const getSecurityScoreColor = (score: number)   => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     if (score >= 50) return 'text-orange-600';

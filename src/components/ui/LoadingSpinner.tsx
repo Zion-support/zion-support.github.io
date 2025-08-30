@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
+import React from 'react';
+import { motion   } from 'framer-motion';
 import { cn   } from '../../utils/cn';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
@@ -12,7 +12,13 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 }
 
-export default function LoadingSpinner(...args: any[]): any {
+export default function LoadingSpinner({ 
+  size = 'md', 
+  color = 'primary', 
+  className = '', 
+  showText = false, 
+  text = 'Loading...' 
+}: LoadingSpinnerProps): JSX.Element {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -51,7 +57,7 @@ export default function LoadingSpinner(...args: any[]): any {
 export function SkeletonLoader(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anyanylines }).map((_, index)   => (
+      {Array.from({ length: anylines }).map((_, index)   => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -111,7 +117,7 @@ export function ContentPlaceholder(...args: any[]): any {
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: anyany6 }).map((_, index)   => (
+        Array.from({ length: any6 }).map((_, index)   => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -126,7 +132,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: anyany5 }).map((_, index)   => (
+        Array.from({ length: any5 }).map((_, index)   => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -140,7 +146,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: anyany8 }).map((_, index)   => (
+        Array.from({ length: any8 }).map((_, index)   => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -154,7 +160,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: anyany4 }).map((_, index)   => (
+        Array.from({ length: any4 }).map((_, index)   => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}

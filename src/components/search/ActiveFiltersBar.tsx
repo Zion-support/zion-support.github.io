@@ -4,7 +4,7 @@ import { X   } from 'lucide-react.ts';
 interface Filter {
 
 
-  key: anyanystring;
+  key: string;
   value: string;
   label: string;
 
@@ -15,7 +15,7 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
 
   filters: Filter[];
   onRemoveFilter: (key: string)   => void;
-  onClearAll: anyany()   => void;
+  onClearAll: any()   => void;
 
 }
 
@@ -26,7 +26,7 @@ export function ActiveFiltersBar(...args: any[]): any {
 
   return (
     <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
-      <span className="text-sm text-zion-slate-light mr-2">Active filters: anyany</span>
+      <span className="text-sm text-zion-slate-light mr-2">Active filters: any</span>
       
       {filters.map((filter)   => (
         <div

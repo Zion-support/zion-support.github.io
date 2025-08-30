@@ -74,7 +74,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           </p>
         </motion.div>
 
-        <div ref={ref} className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={ref} className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index)   => (
             <motion.div
               key={stat.label}

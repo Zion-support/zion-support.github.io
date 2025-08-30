@@ -388,7 +388,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   }, []);
 
   // Get status color and icon
-  const getStatusDisplay = (status: anyanystring)   => {
+  const getStatusDisplay = (status: string)   => {
     switch (status) {
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
       case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
@@ -399,7 +399,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get project status color
-  const getProjectStatusColor = (status: anyanystring)   => {
+  const getProjectStatusColor = (status: string)   => {
     switch (status) {
       case 'planning': return 'text-blue-400 bg-blue-400/20';
       case 'active': return 'text-green-400 bg-green-400/20';
@@ -411,7 +411,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anyanystring)   => {
+  const getPriorityColor = (priority: string)   => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -422,7 +422,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get file type icon
-  const getFileTypeIcon = (type: anyanystring)   => {
+  const getFileTypeIcon = (type: string)   => {
     switch (type) {
       case 'document': return <FileText className="w-5 h-5" />;
       case 'image': return <Image className="w-5 h-5" />;
@@ -434,19 +434,19 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Format file size
-  const formatFileSize = (size: anyanynumber)   => {
+  const formatFileSize = (size: number)   => {
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
     return `${(size / 1024).toFixed(1)} GB`;
   };
 
   // Handle project selection
-  const handleProjectSelect = (project: anyanyProject)   => {
+  const handleProjectSelect = (project: anyProject)   => {
     setSelectedProject(project);
   };
 
   // Handle message reactions
-  const handleMessageReaction = (messageId: anyanystring, reactionType: string)   => {
+  const handleMessageReaction = (messageId: string, reactionType: string)   => {
     setMessages(prev => prev.map(msg => {
       if (msg.id === messageId) {
         const existingReaction = msg.reactions.find(r => r.type === reactionType);
@@ -549,7 +549,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md: anyanygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
             {teamMembers.map((member, index)   => (
               <motion.div
                 key={member.id}

@@ -187,7 +187,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
               </div>
 
               {/* Service Categories Grid */}
-              <div className="grid grid-cols-1 lg: anyanygrid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-6 mb-8">
                 {serviceCategories.map((category, categoryIndex)   => (
                   <motion.div
                     key={category.name}
@@ -236,7 +236,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">
                   Quick Access
                 </h4>
-                <div className="grid grid-cols-2 md: anyanygrid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
                   {quickLinks.map((link, index)   => (
                     <motion.div
                       key={link.title}

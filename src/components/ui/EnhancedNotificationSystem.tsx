@@ -7,7 +7,7 @@ export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 export interface Notification {
 
 
-  id: anyanystring;
+  id: string;
   type: NotificationType;
   title: string;
   message: string;
@@ -23,7 +23,7 @@ action?: {;
 interface NotificationContextType {
 
 
-  notifications: anyanyNotification[];
+  notifications: anyNotification[];
   addNotification: (notification: Omit<Notification, 'id'>)   => void;
   removeNotification: (id: string)   => void;
   clearAll: ()   => void;
@@ -50,7 +50,7 @@ interface NotificationProviderProps extends React.PropsWithChildren<{}> {
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<any>([]);
 
-  const addNotification = (notification: anyanyOmit<Notification, 'id'>)   => {
+  const addNotification = (notification: anyOmit<Notification, 'id'>)   => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
     setNotifications(prev => [...prev, newNotification]);
@@ -63,7 +63,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     }
   };
 
-  const removeNotification = (id: anyanystring)   => {
+  const removeNotification = (id: string)   => {
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
@@ -123,13 +123,13 @@ const NotificationContainer: React.FC = (): JSX.Element => {
 
 interface NotificationItemProps extends React.PropsWithChildren<{}> {
 
-  notification: anyanyNotification;
+  notification: anyNotification;
   onRemove: (id: string)   => void;
 
 }
 
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
-  const getIcon = (type: anyanyNotificationType)   => {
+  const getIcon = (type: anyNotificationType)   => {
     switch (type) {
       case 'success':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
@@ -142,7 +142,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
     }
   };
 
-  const getBorderColor = (type: anyanyNotificationType)   => {
+  const getBorderColor = (type: anyNotificationType)   => {
     switch (type) {
       case 'success':
         return 'border-green-500/30';
@@ -155,7 +155,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
     }
   };
 
-  const getBackgroundColor = (type: anyanyNotificationType)   => {
+  const getBackgroundColor = (type: anyNotificationType)   => {
     switch (type) {
       case 'success':
         return 'bg-green-500/10';
@@ -211,13 +211,13 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>)   => {
     // This would be used with the context
-    console.log('Success notification: anyany', { title, message, ...options });
+    console.log('Success notification: any', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>)   => {
-    console.log('Error notification: anyany', { title, message, ...options });
+    console.log('Error notification: any', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>)   => {
-    console.log('Warning notification: anyany', { title, message, ...options });
+    console.log('Warning notification: any', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>)   => {
     console.log('Info notification:', { title, message, ...options });

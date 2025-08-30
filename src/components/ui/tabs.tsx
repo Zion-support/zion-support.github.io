@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react.ts'
 interface TabsContextType {
 
 
-  activeTab: anyanystring;
+  activeTab: string;
   setActiveTab: (tab: string)   => void;
 
 
@@ -13,7 +13,7 @@ const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps extends React.PropsWithChildren<{}> {
 
-  children: anyanyReactNode;
+  children: ReactNode;
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string)   => void;
@@ -24,7 +24,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
 export function Tabs(...args: any[]): any {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: anyanystring)   => {
+  const handleTabChange = (tab: string)   => {
     setActiveTab(tab);
     if (onValueChange) {
       onValueChange(tab);

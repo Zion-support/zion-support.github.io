@@ -30,7 +30,7 @@ export function ThemeToggle(...args: any[]): any {
     localStorage.setItem('zion-theme', theme);
   }, [theme, mounted]);
 
-  const toggleTheme = (newTheme: anyanyTheme)   => {
+  const toggleTheme = (newTheme: anyTheme)   => {
     setTheme(newTheme);
   };
 

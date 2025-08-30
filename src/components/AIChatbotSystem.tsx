@@ -82,7 +82,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       const welcomeMessage: ChatMessage = {
-        id: anyany'welcome',
+        id: any'welcome',
         content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
         sender: 'bot',
         timestamp: new Date(),
@@ -107,7 +107,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   }, [messages, autoScroll]);
 
   // Simulate AI response
-  const simulateAIResponse = async (userMessage: anyanystring)   => {
+  const simulateAIResponse = async (userMessage: string)   => {
     setIsTyping(true);
     
     // Simulate processing time
@@ -139,7 +139,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
     
     const botMessage: ChatMessage = {
-      id: anyanyDate.now().toString(),
+      id: anyDate.now().toString(),
       content: randomResponse.content,
       sender: 'bot',
       timestamp: new Date(),
@@ -158,12 +158,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Handle message submission
-  const handleSubmit = async (e: anyanyReact.FormEvent)   => {
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 
     const userMessage: ChatMessage = {
-      id: anyanyDate.now().toString(),
+      id: anyDate.now().toString(),
       content: inputValue,
       sender: 'user',
       timestamp: new Date(),
@@ -185,11 +185,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Handle file upload
-  const handleFileUpload = (e: anyanyReact.ChangeEvent<HTMLInputElement>)   => {
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>)   => {
     const file = e.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessage = {
-        id: anyanyDate.now().toString(),
+        id: anyDate.now().toString(),
         content: `Uploaded: ${file.name}`,
         sender: 'user',
         timestamp: new Date(),
@@ -201,12 +201,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Handle suggestion click
-  const handleSuggestionClick = (event: anyReact.MouseEvent<HTMLElement>): void  => {
+  const handleSuggestionClick = (event: React.MouseEvent<HTMLElement>): void  => {
     setInputValue(suggestion);
   };
 
   // Rate response
-  const rateResponse = (messageId: anyanystring, rating: 'positive' | 'negative')   => {
+  const rateResponse = (messageId: string, rating: 'positive' | 'negative')   => {
     setMessages(prev => prev.map(msg => 
       msg.id === messageId 
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }

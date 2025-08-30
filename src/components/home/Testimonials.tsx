@@ -71,7 +71,7 @@ const Testimonials: React.FC = (): JSX.Element => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: anyanynumber)   => {
+  const goToTestimonial = (index: number)   => {
     setCurrentIndex(index);
   };
 
