@@ -2,7 +2,7 @@ import React, { createContext, useContext } from 'react.ts';
 
 interface User {
 
-  id: anystring;
+  id: string;
   email: string;
   displayName?: string;
   avatar?: string;

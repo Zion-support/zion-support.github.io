@@ -28,7 +28,7 @@ class AIBuildMonitor {
     this.learningRate = 0.1;
     this.predictionWindow = 5; // Number of builds to analyze for patterns
     
-    // // // console.log('🤖 AI Build Monitor Starting...');
+    // // // // // // console.log('🤖 AI Build Monitor Starting...');
     this.startMonitoring();
   }
 
@@ -43,7 +43,7 @@ class AIBuildMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    // // // console.log(`[${level}] ${message}`);
+    // // // // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logEntry);
   }
 

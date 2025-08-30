@@ -21,7 +21,7 @@ class LintErrorFixer {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    // // // console.log(message);
+    // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
   async fixUnusedImports(filePath) {
@@ -185,13 +185,13 @@ switch (command) {
     if (filePath) {
       fixer.fixFile(filePath);
     } else {
-      // // // console.log('Usage: node lint-error-fixer.js file <filepath>');
+      // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>');
     }
     break;
   case 'all':
     fixer.fixAllFiles();
     break;
   default:
-    // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
+    // // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
     process.exit(1);
 }

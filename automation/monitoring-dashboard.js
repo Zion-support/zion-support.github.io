@@ -127,7 +127,7 @@ class AutomationDashboard {
 
   setupSocketIO() {
     this.io.on('connection', (socket) => {
-      // // // console.log('Client connected to dashboard');
+      // // // // // // console.log('Client connected to dashboard');
       
       // Send initial data
       socket.emit('processes', Array.from(this.processes.values()));
@@ -135,7 +135,7 @@ class AutomationDashboard {
       socket.emit('alerts', this.alerts);
 
       socket.on('disconnect', () => {
-        // // // console.log('Client disconnected from dashboard');
+        // // // // // // console.log('Client disconnected from dashboard');
       });
     });
   }
@@ -154,8 +154,8 @@ class AutomationDashboard {
 
       // Start server
       this.server.listen(this.port, () => {
-        // // // console.log(`🚀 Automation Dashboard running on http://localhost:${this.port}`);
-        // // // console.log(`📊 Monitoring ${this.processes.size} PM2 processes`);
+        // // // // // // console.log(`🚀 Automation Dashboard running on http://localhost:${this.port}`);
+        // // // // // // console.log(`📊 Monitoring ${this.processes.size} PM2 processes`);
       });
 
     } catch (error) {
@@ -170,7 +170,7 @@ class AutomationDashboard {
         if (err) {
           reject(err);
         } else {
-          // // // console.log('✅ Connected to PM2');
+          // // // // // // console.log('✅ Connected to PM2');
           resolve();
         }
       });
@@ -294,13 +294,13 @@ class AutomationDashboard {
     }
     pm2.disconnect();
     this.server.close();
-    // // // console.log('🛑 Dashboard stopped');
+    // // // // // // console.log('🛑 Dashboard stopped');
   }
 }
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
-  // // // console.log('\n🛑 Shutting down dashboard...');
+  // // // // // // console.log('\n🛑 Shutting down dashboard...');
   if (global.dashboard) {
     global.dashboard.stop();
   }
@@ -308,7 +308,7 @@ process.on('SIGINT', () => {
 });
 
 process.on('SIGTERM', () => {
-  // // // console.log('\n🛑 Shutting down dashboard...');
+  // // // // // // console.log('\n🛑 Shutting down dashboard...');
   if (global.dashboard) {
     global.dashboard.stop();
   }

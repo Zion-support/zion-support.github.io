@@ -1,21 +1,17 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Star, 
-  MessageCircle, 
-  ThumbsUp, 
-  ThumbsDown, 
-  Send, 
-  Heart,
-  Award,
-  TrendingUp,
-  Users,
-  Clock,
-  Flag,
-  Share2,
-  Download,
-  Filter,
-  Search
- } from 'lucide-react.ts';
+import { AnimatePresence, motion } from 'framer-motion.ts';
+import {
+    Award,
+    Clock,
+    Flag,
+    MessageCircle,
+    Search,
+    Send,
+    Share2,
+    Star,
+    ThumbsDown,
+    ThumbsUp
+} from 'lucide-react.ts';
+import React, { useEffect, useState } from 'react.ts';
 
 interface Feedback {
 
@@ -214,7 +210,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       comment: newFeedback.comment,
       category: newFeedback.category,
       sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
-      date: anynew Date().toISOString().split('T')[0],
+      date: new Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
       tags: [],
@@ -227,7 +223,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: anystring, type: 'helpful' | 'unhelpful')  => {
+  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
     setFeedback(prev => prev.map(f => {
       if (f.id === feedbackId) {
         return {
@@ -241,7 +237,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: anystring)  => {
+  const getSentimentColor = (sentiment: string)  => {
     switch (sentiment) {
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
@@ -250,7 +246,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const colors = {
       'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',

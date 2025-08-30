@@ -281,7 +281,7 @@ class TypeScriptSyntaxFixer {
       
       return { success: true, errors: 0 };
     } catch (error) {
-      const output = error.stdout || error.stderr || '';
+      const output = String(error.stdout || error.stderr || '');
       const errorCount = (output.match(/error TS/g) || []).length;
       
       return { success: false, errors: errorCount, output };

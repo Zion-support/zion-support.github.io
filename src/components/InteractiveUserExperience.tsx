@@ -203,7 +203,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     setUserActivities(activities);
   }, []);
 
-  const updatePreference = useCallback((id: anystring, value: string | boolean | number)  => {
+  const updatePreference = useCallback((id: string, value: string | boolean | number)  => {
     setPreferences(prev => prev.map(pref => 
       pref.id === id ? { ...pref, value } : pref
     ));
@@ -232,7 +232,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     }
   }, [preferences]);
 
-  const toggleAccessibilityFeature = useCallback((id: anystring)  => {
+  const toggleAccessibilityFeature = useCallback((id: string)  => {
     setAccessibilityFeatures(prev => prev.map(feature => 
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
     ));

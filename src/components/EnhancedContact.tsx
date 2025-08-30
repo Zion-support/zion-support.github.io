@@ -77,7 +77,7 @@ export function EnhancedContact(...args: any[]): any {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (field: anykeyof ContactFormData, value: string)  => {
+  const handleInputChange = (field: keyof ContactFormData, value: string)  => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing

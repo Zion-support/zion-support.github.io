@@ -34,7 +34,7 @@ class PerformanceEngine {
       renderTime: 1000 // 1 second
     };
     
-    // // // console.log('⚡ Performance Engine Starting...');
+    // // // // // // console.log('⚡ Performance Engine Starting...');
     this.startEngine();
   }
 
@@ -49,7 +49,7 @@ class PerformanceEngine {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    // // // console.log(`[${level}] ${message}`);
+    // // // // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logEntry);
   }
 
