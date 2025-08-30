@@ -63,9 +63,12 @@ export function Header() {
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Blockchain & Web3', href: '/services/blockchain-enterprise-solutions', icon: Link },
+        { name: 'Metaverse & VR/AR', href: '/services/metaverse-development-platform', icon: Globe },
+        { name: 'Autonomous Vehicles', href: '/services/ai-autonomous-vehicles-platform', icon: Car },
+        { name: 'Robotics & Automation', href: '/services/ai-robotics-automation-platform', icon: Bot },
         { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
-        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
-        { name: 'New Services 2025', href: '/new-services-2025', icon: Star },
+        { name: 'Cutting Edge 2026', href: '/cutting-edge-services-2026', icon: Sparkles },
         { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]
     },

@@ -93,6 +93,7 @@ const MicroCRM = createLazyComponent(() => import('./pages/services/MicroCRM'));
 // Additional showcase pages
 const ComprehensiveServicesShowcase2025Page = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensiveServicesLanding2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesLanding2025'));
+const CuttingEdgeServices2026 = createLazyComponent(() => import('./pages/CuttingEdgeServices2026'));
 
 // New innovative services
 const AIMicroSaaSPlatform = createLazyComponent(() => import('./pages/services/ai-micro-saas-platform').then(module => ({ default: module.AIMicroSaaSPlatform })));
@@ -236,6 +237,7 @@ function App() {
                     <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+                    <Route path="/cutting-edge-services-2026" element={<CuttingEdgeServices2026 />} />
 
                     {/* 404 Page */}
                     <Route

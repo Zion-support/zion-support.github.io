@@ -1042,6 +1042,169 @@ const FeaturedServices = React.memo(() => {
         </div>
       </Suspense>
 
+      {/* Cutting Edge Services 2026 Section */}
+      <motion.section 
+        className="py-24 bg-gradient-to-b from-white/5 to-white/10 backdrop-blur-sm relative"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-cyan-600/10" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div className="text-center mb-20" variants={itemVariants}>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                Cutting Edge Services 2026
+              </span>
+            </h2>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Experience the future of technology with our revolutionary services. From quantum computing to autonomous vehicles, 
+              we're pushing the boundaries of what's possible.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            {/* Quantum Computing */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/cutting-edge-services-2026" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">⚛️</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+                      Quantum Computing
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Revolutionary quantum solutions for complex problem-solving, cryptography, and financial modeling
+                    </p>
+                    <div className="text-purple-400 text-sm font-medium">From $8,999</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Blockchain & Web3 */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/cutting-edge-services-2026" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">🔗</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
+                      Blockchain & Web3
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Next-generation blockchain solutions, smart contracts, and decentralized applications
+                    </p>
+                    <div className="text-green-400 text-sm font-medium">From $6,999</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Metaverse & VR/AR */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/cutting-edge-services-2026" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">🌍</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors duration-300">
+                      Metaverse & VR/AR
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Immersive virtual worlds and augmented reality experiences for business and entertainment
+                    </p>
+                    <div className="text-indigo-400 text-sm font-medium">From $5,999</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Space Technology */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/cutting-edge-services-2026" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">🚀</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                      Space Technology
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Satellite communication, space data analytics, and space-based services
+                    </p>
+                    <div className="text-blue-400 text-sm font-medium">From $14,999</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Autonomous Vehicles */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/cutting-edge-services-2026" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">🚗</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                      Autonomous Vehicles
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      AI-powered self-driving technology for cars, trucks, and industrial vehicles
+                    </p>
+                    <div className="text-orange-400 text-sm font-medium">From $19,999</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Neural Technology */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/cutting-edge-services-2026" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">🧠</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors duration-300">
+                      Neural Technology
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Brain-computer interfaces and neural technology for medical and research applications
+                    </p>
+                    <div className="text-pink-400 text-sm font-medium">From $24,999</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <motion.div className="text-center mt-12" variants={itemVariants}>
+            <Link
+              to="/cutting-edge-services-2026"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              Explore All Cutting Edge Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </motion.div>
+        </div>
+      </motion.section>
+
       {/* Additional Sections */}
       <CategoriesSection />
       <BenefitsSection />

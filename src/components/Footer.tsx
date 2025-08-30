@@ -90,7 +90,8 @@ export function Footer() {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: TrendingUp },
         { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: DollarSign },
         { name: 'AI IoT Edge Computing', path: '/services/ai-iot-edge-computing', icon: Cpu },
-        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics-platform', icon: Heart },
+        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Network },
         { name: 'AI Services Overview', path: '/ai-services', icon: Brain }
       ]
     },
@@ -98,6 +99,32 @@ export function Footer() {
       title: 'Quantum & Emerging Tech',
       icon: AtomIcon,
       links: [
+        { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning-platform', icon: Atom },
+        { name: 'Quantum Cryptography', path: '/services/quantum-cryptography-platform', icon: Lock },
+        { name: 'Quantum Financial Modeling', path: '/services/quantum-financial-modeling', icon: DollarSign },
+        { name: 'Quantum Drug Discovery', path: '/services/quantum-drug-discovery-platform', icon: Heart },
+        { name: 'Quantum Internet', path: '/services/quantum-internet-platform', icon: Globe },
+        { name: 'Quantum Optimization', path: '/services/quantum-optimization-platform', icon: Target },
+        { name: 'Space Technology', path: '/services/space-technology-platform', icon: Satellite },
+        { name: 'Autonomous Vehicles', path: '/services/ai-autonomous-vehicles-platform', icon: Car },
+        { name: 'Brain-Computer Interface', path: '/services/ai-brain-computer-interface', icon: Brain },
+        { name: 'Synthetic Biology', path: '/services/ai-synthetic-biology-platform', icon: Leaf },
+        { name: 'Robotics & Automation', path: '/services/ai-robotics-automation-platform', icon: Bot },
+        { name: 'Climate Modeling', path: '/services/ai-climate-modeling-platform', icon: Cloud }
+      ]
+    },
+    {
+      title: 'Blockchain & Web3',
+      icon: LinkIcon,
+      links: [
+        { name: 'Blockchain Enterprise Solutions', path: '/services/blockchain-enterprise-solutions', icon: Link },
+        { name: 'Metaverse Development', path: '/services/metaverse-development-platform', icon: Globe },
+        { name: 'Smart Contracts', path: '/services/blockchain-enterprise-solutions', icon: FileText },
+        { name: 'DeFi Solutions', path: '/services/blockchain-enterprise-solutions', icon: DollarSign },
+        { name: 'NFT Platforms', path: '/services/blockchain-enterprise-solutions', icon: Image },
+        { name: 'Web3 Integration', path: '/services/blockchain-enterprise-solutions', icon: Globe }
+      ]
+    },
         { name: 'Quantum AI Hybrid Platform', path: '/services/quantum-ai-hybrid-platform', icon: Atom },
         { name: 'Blockchain Enterprise Solutions', path: '/services/blockchain-enterprise-solutions', icon: LinkIcon },
         { name: 'Space Technology Solutions', path: '/services/space-technology-solutions', icon: Satellite },
