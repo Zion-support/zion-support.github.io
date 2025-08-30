@@ -1,4 +1,3 @@
-import React, { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Activity,
@@ -15,6 +14,7 @@ import {
   X,
   Zap
 } from 'lucide-react';
+import { useCallback, useEffect, useState } from 'react';
 
 interface AnalyticsData {
   pageViews: number;
