@@ -1,428 +1,429 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import { 
+  Brain, 
+  Cpu, 
+  Target, 
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Users,
+  Clock,
+  DollarSign,
+  Star,
+  Globe,
+  Award,
   Zap,
   Shield,
-  TrendingUp,
-  Users,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Play,
-  BarChart3,
-  Cpu,
-  Eye,
-  MessageSquare,
-  Database,
-  Network,
   Rocket,
-  Target,
-  Award,
-  Clock,
-  Star,
-  Heart
+  Search,
+  Filter
 } from 'lucide-react';
-import SEO from '../components/SEO';
+import { revolutionaryAIServices2030 } from '../data/revolutionaryServices2030';
 
-const AIServices = [
-    {
-        title: "AI Strategy Consulting",
-        description: "Strategic guidance for implementing AI solutions in your business",
-        price: "$2,500 - $15,000",
-        features: ["AI readiness assessment", "ROI analysis", "Implementation roadmap", "Team training"],
-        icon: <Brain className="h-8 w-8 text-zion-cyan"/>,
-        category: "Strategy",
-        badge: "Popular",
-        link: "/request-quote?service=ai-strategy"
-    },
-    {
-<<<<<<< HEAD
-        title: "Custom AI Model Development",
-        description: "Tailored machine learning models for your specific use case",
-        price: "$5,000 - $50,000",
-        features: ["Data preprocessing", "Model training", "Performance optimization", "Deployment support"],
-        icon: <Server className="h-8 w-8 text-zion-purple"/>,
-        category: "Development",
-        badge: "Premium",
-        link: "/request-quote?service=custom-ai-models"
-    },
-    {
-        title: "Data Labeling & Annotation",
-        description: "High-quality data preparation for machine learning projects",
-        price: "$0.50 - $5.00 per item",
-        features: ["Image annotation", "Text labeling", "Quality assurance", "Scalable workforce"],
-        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
-        category: "Data",
-        link: "/request-quote?service=data-labeling"
-    },
-    {
-        title: "AI-Powered Analytics",
-        description: "Advanced business intelligence with machine learning insights",
-        price: "$1,500 - $8,000/month",
-        features: ["Predictive analytics", "Real-time dashboards", "Custom reports", "API integration"],
-        icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,
-        category: "Analytics",
-        badge: "New",
-        link: "/request-quote?service=ai-analytics"
-    },
-    {
-        title: "Computer Vision Solutions",
-        description: "Image and video analysis for automation and quality control",
-        price: "$3,000 - $25,000",
-        features: ["Object detection", "Image classification", "Video processing", "Edge deployment"],
-        icon: <Eye className="h-8 w-8 text-zion-purple"/>,
-        category: "Vision",
-        link: "/request-quote?service=computer-vision"
-    },
-    {
-        title: "Natural Language Processing",
-        description: "Text analysis, chatbots, and language understanding systems",
-        price: "$2,000 - $20,000",
-        features: ["Sentiment analysis", "Text generation", "Language translation", "Chatbot development"],
-        icon: <MessageSquare className="h-8 w-8 text-zion-blue"/>,
-        category: "NLP",
-        link: "/request-quote?service=nlp"
-    },
-    {
-        title: "AI Ethics & Compliance",
-        description: "Ensure your AI systems are fair, transparent, and compliant",
-        price: "$1,500 - $10,000",
-        features: ["Bias detection", "Explainability", "Privacy compliance", "Audit reports"],
-        icon: <Shield className="h-8 w-8 text-zion-cyan"/>,
-        category: "Compliance",
-        link: "/request-quote?service=ai-ethics"
-    },
-    {
-        title: "AI Model Optimization",
-        description: "Improve performance and efficiency of existing AI models",
-        price: "$1,000 - $15,000",
-        features: ["Performance tuning", "Model compression", "Inference optimization", "Cost reduction"],
-        icon: <Zap className="h-8 w-8 text-zion-purple"/>,
-        category: "Optimization",
-        link: "/request-quote?service=model-optimization"
-    },
-    {
-        title: "AI Training & Workshops",
-        description: "Custom training programs for your team on AI technologies",
-        price: "$500 - $3,000 per person",
-        features: ["Hands-on workshops", "Custom curriculum", "Certification", "Ongoing support"],
-        icon: <Users className="h-8 w-8 text-zion-blue"/>,
-        category: "Training",
-        link: "/request-quote?service=ai-training"
-    },
-    {
-        title: "AI Integration Services",
-        description: "Seamlessly integrate AI solutions into existing systems",
-        price: "$2,000 - $20,000",
-        features: ["API development", "System integration", "Testing", "Maintenance"],
-        icon: <Code className="h-8 w-8 text-zion-cyan"/>,
-        category: "Integration",
-        link: "/request-quote?service=ai-integration"
-    },
-    {
-        title: "AI Security & Testing",
-        description: "Comprehensive security testing for AI systems",
-        price: "$1,500 - $12,000",
-        features: ["Adversarial testing", "Vulnerability assessment", "Security hardening", "Compliance checks"],
-        icon: <Lock className="h-8 w-8 text-zion-purple"/>,
-        category: "Security",
-        link: "/request-quote?service=ai-security"
-    },
-    {
-        title: "AI Content Generation",
-        description: "Automated content creation for marketing and communication",
-        price: "$500 - $5,000/month",
-        features: ["Blog posts", "Social media content", "Product descriptions", "Multilingual support"],
-        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
-        category: "Content",
-        link: "/request-quote?service=ai-content";
-    };
-];
-=======
-      id: 'quantum-emotion-processor',
-      name: 'Quantum Emotion Processor',
-      tagline: 'Process and analyze emotions using quantum computing',
-      price: '$12,999',
-      period: '/month',
-      description: 'Revolutionary quantum-powered emotional intelligence platform that processes human emotions with unprecedented accuracy and speed.',
-      features: [
-        'Quantum emotion recognition',
-        'Real-time emotional analysis',
-        'Multi-modal emotion processing',
-        'Emotional pattern prediction',
-        'Cross-cultural emotion mapping',
-        'Emotional health monitoring',
-        'Therapeutic intervention suggestions',
-        'Emotional intelligence training',
-        'Sentiment analysis at scale',
-        'Emotional data visualization'
-      ],
-      popular: false,
-      icon: Heart,
-      color: 'from-pink-600 to-red-700',
-      textColor: 'text-pink-400',
-      link: '/ai-services/quantum-emotion',
-      marketPosition: 'Leading quantum emotion processing platform with advanced AI algorithms and quantum computing capabilities.',
-      targetAudience: 'Healthcare providers, Mental health professionals, HR departments, Customer service teams, Educational institutions, Research organizations',
-      trialDays: 21,
-      setupTime: '1-2 weeks',
-      category: 'Quantum AI & Emotional Intelligence',
-      realService: true,
-      technology: ['Quantum computing', 'Advanced AI algorithms', 'Emotion recognition', 'Natural language processing', 'Machine learning'],
-      integrations: ['Healthcare systems', 'CRM platforms', 'HR software', 'Educational platforms', 'Research tools'],
-      useCases: ['Mental health assessment', 'Customer sentiment analysis', 'HR decision support', 'Educational personalization', 'Research studies'],
-      roi: 'Healthcare providers achieve 400% ROI through improved patient outcomes and operational efficiency.',
-      competitors: ['Traditional emotion analysis tools', 'AI sentiment platforms', 'Healthcare AI solutions'],
-      marketSize: '$2.1B emotional AI market',
-      growthRate: '180% annual growth',;
-      rating: 4.8,;
-      reviews: 32,;
-      customers: 67;
-    };
+export function AIServicesPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+
+  const aiServices = revolutionaryAIServices2030;
+
+  const categories = [
+    { id: 'all', name: 'All AI Services', icon: Brain },
+    { id: 'AI-Powered Workflow Automation', name: 'Workflow Automation', icon: Zap },
+    { id: 'Biotechnology AI Solutions', name: 'Biotech AI', icon: Target },
+    { id: 'AI Business Intelligence', name: 'Business Intelligence', icon: TrendingUp },
+    { id: 'AI Cybersecurity Platform', name: 'Cybersecurity AI', icon: Shield },
+    { id: 'AI Healthcare Platform', name: 'Healthcare AI', icon: Users },
+    { id: 'AI Project Management', name: 'Project Management AI', icon: Rocket }
   ];
 
-  const aiSolutions = [
-    {
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent customer service automation',
-      benefits: ['24/7 Availability', 'Multi-language Support', 'Seamless Integration']
-    },
-    {
-      title: 'Intelligent Document Processing',
-      description: 'Automated data extraction and analysis',
-      benefits: ['Faster Processing', 'Reduced Errors', 'Cost Savings']
-    },
-    {
-      title: 'Predictive Maintenance',
-      description: 'Prevent equipment failures with AI insights',
-      benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety'];
-    },;
-    {;
-      title: 'AI-Driven Marketing',;
-      description: 'Personalized campaigns and customer insights',;
-      benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization'];
-    };
+  const filteredServices = aiServices.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+        return a.price - b.price;
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'category':
+        return a.category.localeCompare(b.category);
+      case 'aiScore':
+        return b.aiScore - a.aiScore;
+      default:
+        return 0;
+    }
+  });
+
+  const stats = [
+    { label: 'AI Services', value: aiServices.length.toString(), icon: Brain },
+    { label: 'AI Models', value: '50+', icon: Cpu },
+    { label: 'Accuracy Rate', value: '99.2%', icon: Target },
+    { label: 'Client Success', value: '4.9/5', icon: Star }
   ];
 
-  const caseStudies = [
+  const aiCapabilities = [
     {
-      company: 'TechCorp Industries',
-      industry: 'Manufacturing',
-      challenge: 'Quality control inefficiencies',
-      solution: 'Computer vision system for defect detection',
-      results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
+      icon: Brain,
+      title: 'Advanced Machine Learning',
+      description: 'State-of-the-art ML algorithms for complex problem-solving and pattern recognition.',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      company: 'Global Finance Ltd',
-      industry: 'Financial Services',
-      challenge: 'Fraud detection complexity',
-      solution: 'ML-powered risk assessment',
-      results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
+      icon: Cpu,
+      title: 'Neural Networks',
+      description: 'Deep learning architectures that mimic human brain function for superior performance.',
+      color: 'from-blue-500 to-cyan-500'
     },
-    {;
-      company: 'HealthTech Solutions',;
-      industry: 'Healthcare',;
-      challenge: 'Patient data analysis',;
-      solution: 'NLP for medical records',;
-      results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
-    };
+    {
+      icon: Target,
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting and trend analysis for data-driven decision making.',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Shield,
+      title: 'AI Security',
+      description: 'Intelligent threat detection and automated security response systems.',
+      color: 'from-red-500 to-orange-500'
+    },
+    {
+      icon: Zap,
+      title: 'Process Automation',
+      description: 'Intelligent automation that learns and adapts to optimize business processes.',
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      icon: Rocket,
+      title: 'Innovation Acceleration',
+      description: 'AI-driven research and development to accelerate breakthrough innovations.',
+      color: 'from-indigo-500 to-purple-500'
+    }
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-const AIServicesPage: React.FC = () => {
   return (
     <>
-      <SEO
-        title="AI Services - Zion Tech Group"
-        description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
-        keywords="AI services, machine learning, natural language processing, intelligent automation"
-      />
+      <Helmet>
+        <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
+        <meta name="description" content="Zion Tech Group delivers cutting-edge AI services including machine learning, neural networks, predictive analytics, and AI-powered business solutions." />
+        <meta name="keywords" content="AI services, machine learning, neural networks, predictive analytics, AI automation, business intelligence, cybersecurity AI" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
+      </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
+      {/* Hero Section */}
+      <section className="relative py-20 bg-futuristic-enhanced">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Revolutionary
+              <span className="block bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                AI Solutions
+              </span>
+              for the Future
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive artificial intelligence solutions for modern businesses
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Experience the power of next-generation artificial intelligence with our cutting-edge 
+              AI services that transform businesses and drive innovation across industries.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-black/20 backdrop-blur-sm">
+        <div className="container-responsive">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="flex justify-center mb-3">
+                  <stat.icon className="w-8 h-8 text-purple-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400 text-sm">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* AI Capabilities Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              AI Capabilities & Technologies
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI services leverage the most advanced technologies to deliver exceptional results and drive business transformation.
+            </p>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
-              <p className="text-gray-300 mb-4">Advanced ML algorithms and predictive analytics</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
-              <div className="text-4xl mb-4">💬</div>
-              <h3 className="text-xl font-semibold text-white mb-3">NLP Solutions</h3>
-              <p className="text-gray-300 mb-4">Natural language processing and understanding</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Intelligent Automation</h3>
-              <p className="text-gray-300 mb-4">Smart automation and process optimization</p>
-            </div>
+            {aiCapabilities.map((capability, index) => (
+              <motion.div
+                key={capability.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10"
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${capability.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <capability.icon className="w-full h-full text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{capability.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{capability.description}</p>
+              </motion.div>
+            ))}
           </div>
-<<<<<<< HEAD
         </div>
-      </div>
-    </>
-=======
+      </section>
 
-          {/* AI Solutions Grid */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">AI Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {aiSolutions.map((solution, index) => (
-                <motion.div
-                  key={index}
-                  initial = {
-  { opacity: 0,
-  y: 20 
+      {/* Search and Filter Section */}
+      <section className="py-16 bg-black/20 backdrop-blur-sm">
+        <div className="container-responsive">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-6 mb-8">
+              {/* Search */}
+              <div className="flex-1 relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search AI services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
+                />
+              </div>
 
+              {/* Category Filter */}
+              <div className="flex gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-3 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
+                      selectedCategory === category.id
+                        ? 'bg-purple-500 border-purple-500 text-white'
+                        : 'bg-gray-900/50 border-gray-700 text-gray-300 hover:border-purple-500'
+                    }`}
+                  >
+                    <category.icon className="w-4 h-4" />
+                    {category.name}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-
-
-
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                  transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300"
-                >
-                  <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{solution.description}</p>
-                  <ul className="space-y-2">
-                    {solution.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
+            {/* Sort Options */}
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-gray-400">Sort by:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-purple-500"
+              >
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="category">Category</option>
+                <option value="aiScore">AI Score</option>
+              </select>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Case Studies */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {caseStudies.map((study, index) => (
-                <motion.div
-                  key={index}
-                  initial = {
-  { opacity: 0,
-  y: 20 
+      {/* AI Services Grid */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10"
+              >
+                {/* AI Score Badge */}
+                <div className="absolute top-4 right-4">
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full border border-purple-500/30">
+                    AI Score: {service.aiScore}/10
+                  </span>
+                </div>
 
+                {/* Category */}
+                <div className="mb-4">
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full border border-purple-500/30">
+                    {service.category}
+                  </span>
+                </div>
 
+                {/* Service Name */}
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                  {service.name}
+                </h3>
 
+                {/* Description */}
+                <p className="text-gray-300 text-sm mb-6 line-clamp-3">
+                  {service.description}
+                </p>
 
+                {/* Pricing */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-2">
+                    <DollarSign className="w-5 h-5 text-purple-400" />
+                    <span className="text-2xl font-bold text-white">
+                      ${service.price.toLocaleString()}
+                    </span>
+                    <span className="text-gray-400 text-sm">/{service.pricingModel}</span>
+                  </div>
+                </div>
 
+                {/* AI Models */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3">AI Models:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.aiModels.slice(0, 3).map((model, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-purple-500/10 text-purple-400 text-xs rounded border border-purple-500/20">
+                        {model}
+                      </span>
+                    ))}
+                    {service.aiModels.length > 3 && (
+                      <span className="text-purple-400 text-xs">+{service.aiModels.length - 3} more</span>
+                    )}
+                  </div>
+                </div>
 
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                  transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
-                  <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
-                  <div className="space-y-3">
+                {/* Accuracy & Training */}
+                <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <h4 className="text-white font-medium">Challenge:</h4>
-                      <p className="text-gray-300 text-sm">{study.challenge}</p>
+                      <span className="text-gray-400">Accuracy:</span>
+                      <div className="text-emerald-400 font-medium">{service.accuracy}</div>
                     </div>
                     <div>
-                      <h4 className="text-white font-medium">Solution:</h4>
-                      <p className="text-gray-300 text-sm">{study.solution}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-medium">Results:</h4>
-                      <ul className="text-gray-300 text-sm space-y-1">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-center">
-                            <CheckCircle className="w-3 h-3 text-purple-400 mr-2" />
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
+                      <span className="text-gray-400">Training Data:</span>
+                      <div className="text-blue-400 font-medium">{service.trainingData}</div>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                </div>
+
+                {/* Use Cases */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Use Cases:</h4>
+                  <div className="space-y-2">
+                    {service.useCases.slice(0, 2).map((useCase, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <Target className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{useCase}</span>
+                      </div>
+                    ))}
+                    {service.useCases.length > 2 && (
+                      <span className="text-purple-400 text-sm">+{service.useCases.length - 2} more use cases</span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Market Info */}
+                <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <span className="text-gray-400">Market Price:</span>
+                      <div className="text-purple-400 font-medium">{service.marketPrice}</div>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Innovation Level:</span>
+                      <div className="text-cyan-400 font-medium">{service.innovationLevel}</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </motion.div>
+            ))}
           </div>
 
-          {/* CTA Section */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our AI experts help you implement intelligent solutions that drive growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+          {/* No Results */}
+          {sortedServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-gray-400 text-lg mb-4">No AI services found matching your criteria</div>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('all');
+                }}
+                className="px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
               >
-                Get Started Today
-              </Link>
-              <Link 
-                to="/services" 
-                className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
-                View All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  );
-};
+                Clear Filters
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
 
-export default AIServicesPage;
+      {/* CTA Section */}
+      <section className="py-20 bg-black/20 backdrop-blur-sm">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Harness the Power of AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your business with our cutting-edge artificial intelligence solutions. 
+              Get started today and experience the future of technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold text-lg flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+              >
+                Start AI Transformation
+                <ArrowRight className="w-5 h-5" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
+              >
+                Schedule AI Demo
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </>
+  );
+}

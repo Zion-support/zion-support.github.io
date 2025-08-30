@@ -2,50 +2,48 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
+  Zap, 
   Cpu, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Database, 
-  Network, 
-  Code, 
-  Rocket, 
-  Search,
+  Target, 
+  TrendingUp,
   CheckCircle,
   ArrowRight,
   Users,
   Clock,
   DollarSign,
-  Target,
-  TrendingUp,
-  Globe,
   Star,
+  Globe,
   Award,
-  Zap,
-  Building,
+  Brain,
+  Shield,
+  Rocket,
+  Search,
+  Filter,
+  Cloud,
+  Database,
   Lock,
   Activity
 } from 'lucide-react';
-import { revolutionaryITServices2030 } from '../data/revolutionaryServices2030';
+import { revolutionaryMicroSaasServices2030 } from '../data/revolutionaryServices2030';
 
-export function ITServicesPage() {
+export function MicroSaasPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
 
-  const itServices = revolutionaryITServices2030;
+  const microSaasServices = revolutionaryMicroSaasServices2030;
 
   const categories = [
-    { id: 'all', name: 'All IT Services', icon: Cpu },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'Infrastructure', name: 'Infrastructure', icon: Server },
-    { id: 'Data & Analytics', name: 'Data & Analytics', icon: Database },
-    { id: 'Digital Transformation', name: 'Digital Transformation', icon: Rocket },
-    { id: 'Software Development', name: 'Software Development', icon: Code }
+    { id: 'all', name: 'All Micro SaaS', icon: Zap },
+    { id: 'AI-Powered Workflow Automation', name: 'Workflow Automation', icon: Brain },
+    { id: 'Quantum Computing Integration', name: 'Quantum Computing', icon: Cpu },
+    { id: 'Biotechnology AI Solutions', name: 'Biotech AI', icon: Target },
+    { id: 'Space Technology Solutions', name: 'Space Tech', icon: Rocket },
+    { id: 'Sustainable Technology', name: 'Green Tech', icon: Shield },
+    { id: 'Financial Technology', name: 'FinTech', icon: DollarSign }
   ];
 
-  const filteredServices = itServices.filter(service => {
+  const filteredServices = microSaasServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
@@ -55,59 +53,61 @@ export function ITServicesPage() {
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
-      case 'hourlyRate':
-        return a.hourlyRate - b.hourlyRate;
+      case 'price':
+        return a.price - b.price;
       case 'name':
         return a.name.localeCompare(b.name);
       case 'category':
         return a.category.localeCompare(b.category);
+      case 'innovationLevel':
+        return a.innovationLevel.localeCompare(b.innovationLevel);
       default:
         return 0;
     }
   });
 
   const stats = [
-    { label: 'IT Services', value: itServices.length.toString(), icon: Cpu },
-    { label: 'Certifications', value: '25+', icon: Award },
-    { label: 'Response Time', value: '<2hrs', icon: Clock },
-    { label: 'Client Satisfaction', value: '4.9/5', icon: Star }
+    { label: 'Micro SaaS Platforms', value: microSaasServices.length.toString(), icon: Zap },
+    { label: 'Innovation Level', value: 'Revolutionary', icon: Award },
+    { label: 'Success Rate', value: '98%', icon: Star },
+    { label: 'Client ROI', value: '300%+', icon: TrendingUp }
   ];
 
-  const itCapabilities = [
+  const saasCapabilities = [
     {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions with zero-trust architecture and threat detection.',
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      icon: Server,
-      title: 'Infrastructure',
-      description: 'Robust IT infrastructure design, implementation, and management services.',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Database,
-      title: 'Data Management',
-      description: 'Comprehensive data analytics, warehousing, and business intelligence solutions.',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Code,
-      title: 'Software Development',
-      description: 'Custom software solutions and application development for business needs.',
+      icon: Zap,
+      title: 'Rapid Deployment',
+      description: 'Quick setup and deployment of micro SaaS solutions in weeks, not months.',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+      icon: Cpu,
+      title: 'Scalable Architecture',
+      description: 'Built to grow with your business from startup to enterprise scale.',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Brain,
+      title: 'AI Integration',
+      description: 'Seamless AI capabilities built into every micro SaaS platform.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud-Native',
+      description: 'Modern cloud-native architecture for reliability and performance.',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security and compliance built into every platform.',
+      color: 'from-red-500 to-orange-500'
+    },
+    {
       icon: Rocket,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business.',
+      title: 'Innovation Focus',
+      description: 'Cutting-edge technology that keeps you ahead of the competition.',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
@@ -115,10 +115,10 @@ export function ITServicesPage() {
   return (
     <>
       <Helmet>
-        <title>IT Services - Zion Tech Group | Infrastructure, Cloud & Cybersecurity Solutions</title>
-        <meta name="description" content="Zion Tech Group delivers comprehensive IT services including cloud solutions, cybersecurity, infrastructure management, and digital transformation." />
-        <meta name="keywords" content="IT services, cloud solutions, cybersecurity, infrastructure, digital transformation, DevOps, data analytics" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
+        <title>Micro SaaS Platforms - Zion Tech Group | Revolutionary Software Solutions</title>
+        <meta name="description" content="Zion Tech Group delivers innovative micro SaaS platforms including AI workflow automation, quantum computing, and biotechnology solutions." />
+        <meta name="keywords" content="micro SaaS, software platforms, workflow automation, quantum computing, biotechnology AI, space technology, sustainable tech" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
       </Helmet>
 
       {/* Hero Section */}
@@ -131,15 +131,15 @@ export function ITServicesPage() {
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive
-              <span className="block bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                IT Solutions
+              Revolutionary
+              <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                Micro SaaS Platforms
               </span>
-              for Modern Business
+              for Tomorrow
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              From cloud infrastructure to cybersecurity, our expert IT services team delivers 
-              robust solutions that keep your business running smoothly and securely.
+              Experience the future of software with our cutting-edge micro SaaS solutions that 
+              combine AI, quantum computing, and innovative technologies to transform your business.
             </p>
           </motion.div>
         </div>
@@ -158,7 +158,7 @@ export function ITServicesPage() {
                 className="text-center"
               >
                 <div className="flex justify-center mb-3">
-                  <stat.icon className="w-8 h-8 text-blue-400" />
+                  <stat.icon className="w-8 h-8 text-yellow-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -168,7 +168,7 @@ export function ITServicesPage() {
         </div>
       </section>
 
-      {/* IT Capabilities Section */}
+      {/* SaaS Capabilities Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -178,22 +178,22 @@ export function ITServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              IT Capabilities & Expertise
+              Micro SaaS Capabilities & Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IT services cover the full spectrum of technology needs, from infrastructure 
-              to cutting-edge digital solutions.
+              Our micro SaaS platforms are designed with cutting-edge technology and user experience 
+              in mind, delivering powerful solutions that scale with your business.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itCapabilities.map((capability, index) => (
+            {saasCapabilities.map((capability, index) => (
               <motion.div
                 key={capability.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10"
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/10"
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${capability.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <capability.icon className="w-full h-full text-white" />
@@ -216,10 +216,10 @@ export function ITServicesPage() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search IT services..."
+                  placeholder="Search micro SaaS platforms..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
                 />
               </div>
 
@@ -231,8 +231,8 @@ export function ITServicesPage() {
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-4 py-3 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
                       selectedCategory === category.id
-                        ? 'bg-blue-500 border-blue-500 text-white'
-                        : 'bg-gray-900/50 border-gray-700 text-gray-300 hover:border-blue-500'
+                        ? 'bg-yellow-500 border-yellow-500 text-white'
+                        : 'bg-gray-900/50 border-gray-700 text-gray-300 hover:border-yellow-500'
                     }`}
                   >
                     <category.icon className="w-4 h-4" />
@@ -248,18 +248,19 @@ export function ITServicesPage() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500"
+                className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-500"
               >
                 <option value="name">Name</option>
-                <option value="hourlyRate">Hourly Rate</option>
+                <option value="price">Price</option>
                 <option value="category">Category</option>
+                <option value="innovationLevel">Innovation Level</option>
               </select>
             </div>
           </div>
         </div>
       </section>
 
-      {/* IT Services Grid */}
+      {/* Micro SaaS Platforms Grid */}
       <section className="py-16">
         <div className="container-responsive">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -269,24 +270,24 @@ export function ITServicesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10"
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/10"
               >
                 {/* Innovation Level Badge */}
                 <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-500/30">
+                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-sm rounded-full border border-yellow-500/30">
                     {service.innovationLevel}
                   </span>
                 </div>
 
                 {/* Category */}
                 <div className="mb-4">
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-500/30">
+                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-sm rounded-full border border-yellow-500/30">
                     {service.category}
                   </span>
                 </div>
 
                 {/* Service Name */}
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
                   {service.name}
                 </h3>
 
@@ -296,16 +297,21 @@ export function ITServicesPage() {
                 </p>
 
                 {/* Pricing */}
-                <div className="mb-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-3 bg-gray-800/30 rounded-lg">
-                      <div className="text-sm text-gray-400 mb-1">Hourly Rate</div>
-                      <div className="text-xl font-bold text-white">${service.hourlyRate}</div>
-                    </div>
-                    <div className="text-center p-3 bg-gray-800/30 rounded-lg">
-                      <div className="text-sm text-gray-400 mb-1">Project Rate</div>
-                      <div className="text-xl font-bold text-white">${service.projectRate.toLocaleString()}</div>
-                    </div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-2">
+                    <DollarSign className="w-5 h-5 text-yellow-400" />
+                    <span className="text-2xl font-bold text-white">
+                      ${service.price.toLocaleString()}
+                    </span>
+                    <span className="text-gray-400 text-sm">/{service.pricingModel}</span>
+                  </div>
+                </div>
+
+                {/* User Limit */}
+                <div className="mb-6 p-3 bg-gray-800/30 rounded-lg">
+                  <div className="text-center">
+                    <span className="text-gray-400 text-sm">User Limit</span>
+                    <div className="text-yellow-400 font-medium">{service.userLimit}</div>
                   </div>
                 </div>
 
@@ -315,12 +321,12 @@ export function ITServicesPage() {
                   <div className="space-y-2">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{feature}</span>
                       </div>
                     ))}
                     {service.features.length > 3 && (
-                      <span className="text-blue-400 text-sm">+{service.features.length - 3} more features</span>
+                      <span className="text-yellow-400 text-sm">+{service.features.length - 3} more features</span>
                     )}
                   </div>
                 </div>
@@ -338,40 +344,40 @@ export function ITServicesPage() {
                   </div>
                 </div>
 
-                {/* Service Details */}
+                {/* Platform Details */}
                 <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <span className="text-gray-400">Response Time:</span>
-                      <div className="text-blue-400 font-medium">{service.responseTime}</div>
+                      <span className="text-gray-400">Setup Time:</span>
+                      <div className="text-yellow-400 font-medium">{service.setupTime}</div>
                     </div>
                     <div>
-                      <span className="text-gray-400">SLA:</span>
-                      <div className="text-cyan-400 font-medium">{service.sla}</div>
+                      <span className="text-gray-400">Trial Period:</span>
+                      <div className="text-cyan-400 font-medium">{service.trialPeriod}</div>
                     </div>
                     <div>
-                      <span className="text-gray-400">Delivery Time:</span>
-                      <div className="text-green-400 font-medium">{service.deliveryTime}</div>
+                      <span className="text-gray-400">Free Tier:</span>
+                      <div className="text-green-400 font-medium">{service.freeTier ? 'Yes' : 'No'}</div>
                     </div>
                     <div>
-                      <span className="text-gray-400">Support:</span>
-                      <div className="text-purple-400 font-medium">{service.support}</div>
+                      <span className="text-gray-400">ROI:</span>
+                      <div className="text-emerald-400 font-medium">{service.roi}</div>
                     </div>
                   </div>
                 </div>
 
-                {/* Certifications */}
-                {service.certifications && service.certifications.length > 0 && (
+                {/* Integrations */}
+                {service.integrations && service.integrations.length > 0 && (
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Certifications:</h4>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Integrations:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.certifications.slice(0, 3).map((cert, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded border border-blue-500/20">
-                          {cert}
+                      {service.integrations.slice(0, 3).map((integration, idx) => (
+                        <span key={idx} className="px-2 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded border border-yellow-500/20">
+                          {integration}
                         </span>
                       ))}
-                      {service.certifications.length > 3 && (
-                        <span className="text-blue-400 text-xs">+{service.certifications.length - 3} more</span>
+                      {service.integrations.length > 3 && (
+                        <span className="text-yellow-400 text-xs">+{service.integrations.length - 3} more</span>
                       )}
                     </div>
                   </div>
@@ -382,17 +388,25 @@ export function ITServicesPage() {
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <span className="text-gray-400">Market Price:</span>
-                      <div className="text-blue-400 font-medium">{service.marketPrice}</div>
+                      <div className="text-yellow-400 font-medium">{service.marketPrice}</div>
                     </div>
                     <div>
                       <span className="text-gray-400">Market Size:</span>
                       <div className="text-cyan-400 font-medium">{service.marketSize}</div>
                     </div>
+                    <div>
+                      <span className="text-gray-400">Growth Rate:</span>
+                      <div className="text-green-400 font-medium">{service.growthRate}</div>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Competitors:</span>
+                      <div className="text-purple-400 font-medium">{service.competitors.length}</div>
+                    </div>
                   </div>
                 </div>
 
                 {/* CTA Button */}
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105">
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -403,13 +417,13 @@ export function ITServicesPage() {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className="text-center py-16">
-              <div className="text-gray-400 text-lg mb-4">No IT services found matching your criteria</div>
+              <div className="text-gray-400 text-lg mb-4">No micro SaaS platforms found matching your criteria</div>
               <button
                 onClick={() => {
                   setSearchQuery('');
                   setSelectedCategory('all');
                 }}
-                className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                className="px-6 py-3 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
               >
                 Clear Filters
               </button>
@@ -428,27 +442,27 @@ export function ITServicesPage() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your IT Infrastructure?
+              Ready to Launch Your Micro SaaS Platform?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our expert IT team help you build a robust, secure, and scalable technology foundation 
-              that drives business growth and innovation.
+              Transform your business idea into a powerful micro SaaS platform with our cutting-edge 
+              technology and expert development team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-semibold text-lg flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white rounded-lg font-semibold text-lg flex items-center gap-2 hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300"
               >
-                Get IT Consultation
+                Start Building
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-yellow-500 text-yellow-400 rounded-lg font-semibold text-lg hover:bg-yellow-500 hover:text-white transition-all duration-300"
               >
-                Schedule Assessment
+                Schedule Demo
               </motion.button>
             </div>
           </motion.div>

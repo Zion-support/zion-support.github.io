@@ -1,28 +1,56 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-
-function Placeholder() {
-  return (
-    <div className="min-h-screen flex items-center justify-center p-8 text-center">
-      <div>
-        <h1 className="text-3xl font-bold mb-4">Zion Tech Group</h1>
-        <p className="text-gray-600 mb-6">Visit our main site for the full experience.</p>
-        <a href="https://ziontechgroup.com" className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg">Go to ziontechgroup.com</a>
-      </div>
-    </div>
-  );
-}
+import { EnhancedHeader } from './components/EnhancedHeader';
+import { Footer } from './components/Footer';
+import { HomePage } from './pages/HomePage';
+import { ServicesPage } from './pages/ServicesPage';
+import { AIServicesPage } from './pages/AIServicesPage';
+import { ITServicesPage } from './pages/ITServicesPage';
+import { MicroSaasPage } from './pages/MicroSaasPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+import { BlogPage } from './pages/BlogPage';
+import { CareersPage } from './pages/CareersPage';
+import { PartnersPage } from './pages/PartnersPage';
+import { NewsPage } from './pages/NewsPage';
+import { CaseStudiesPage } from './pages/CaseStudiesPage';
+import { PricingPage } from './pages/PricingPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { TermsOfServicePage } from './pages/TermsOfServicePage';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
   return (
-    <Routes>
-      <Route path="*" element={<Placeholder />} />
-    </Routes>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <div className="min-h-screen bg-futuristic">
+          <EnhancedHeader />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/micro-saas" element={<MicroSaasPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+              <Route path="*" element={<HomePage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 
-export default App;
-export default App;
-export default App;
-export default App;
 export default App;
