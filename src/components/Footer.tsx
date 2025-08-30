@@ -33,7 +33,7 @@ import { Twitter,
   Activity,
   Cpu,
   GraduationCap
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export function Footer(...args[]):  {
   const scrollToTop = () => {

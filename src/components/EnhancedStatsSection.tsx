@@ -9,7 +9,7 @@ import { Users,
   Shield,
   Award,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Stat {
 

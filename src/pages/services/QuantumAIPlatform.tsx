@@ -20,7 +20,7 @@ import { Atom,
   TrendingUp,
   Users,
   Shield
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 const QuantumAIPlatform = () => {

@@ -17,7 +17,7 @@ import { Users,
   Zap,
   Crown,
   Star
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function Team(...args[]):  {
   const teamMembers = [

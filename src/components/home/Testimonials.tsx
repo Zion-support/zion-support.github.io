@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react.ts';
+import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
 
 interface Testimonial {
 

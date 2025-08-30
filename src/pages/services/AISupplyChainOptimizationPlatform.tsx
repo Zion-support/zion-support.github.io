@@ -4,7 +4,7 @@ import { GradientHeading  } from '../../components/ui/GradientHeading';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '../../components/ui/card';
 import { Badge  } from '../../components/ui/badge';
 import { Button  } from '../../components/ui/button';
-import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3  } from 'lucide-react.ts';
+import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3  } from 'lucide-react';
 
 const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
   const features = [

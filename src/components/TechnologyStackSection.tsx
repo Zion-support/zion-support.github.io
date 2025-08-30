@@ -10,7 +10,7 @@ import { Code,
   Server,
   Cpu,
   Network
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const TechnologyStackSection: React.FC = (): JSX.Element => {
   const techCategories = [

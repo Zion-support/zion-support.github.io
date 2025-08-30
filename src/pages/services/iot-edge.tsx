@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react.ts';
+import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 
 export default function IoTEdge(...args: []):  {

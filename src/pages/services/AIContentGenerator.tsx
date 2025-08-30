@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Edit3, Type, Image, Video, Music  } from 'lucide-react.ts';
+import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Edit3, Type, Image, Video, Music  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 export default function AIContentGenerator(...args[]):  {
@@ -204,7 +204,7 @@ export default function AIContentGenerator(...args[]):  {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence. 
-                Generate articles, images, videos, and more for any platform.
+                Generate articles, images, videos, and more for  platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">

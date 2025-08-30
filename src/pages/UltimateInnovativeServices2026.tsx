@@ -54,7 +54,7 @@ import { Brain,
   Smartphone,
   Globe2,
   Leaf
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
 

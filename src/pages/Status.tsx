@@ -9,7 +9,7 @@ import { CheckCircle,
   Zap,
   Shield,
   Activity
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const Status: React.FC = (): JSX.Element => {
   const systemStatus = {

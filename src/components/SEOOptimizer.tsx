@@ -17,7 +17,7 @@ import { Search,
   Star,
   ArrowUpRight,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface SEOAnalysis {
 

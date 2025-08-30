@@ -24,7 +24,7 @@ import { Rocket,
   Lock,
   Eye,
   Heart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const DigitalTransformation[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);

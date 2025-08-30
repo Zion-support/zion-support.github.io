@@ -9,7 +9,7 @@ import { Volume2,
   MousePointer,
   Keyboard,
   Accessibility
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface AccessibilitySettings {
 

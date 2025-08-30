@@ -31,7 +31,7 @@ import { Brain,
   Award,
   Heart,
   Building
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIHRPlatform(...args[]):  {
   const features = [

@@ -21,7 +21,7 @@ import { Code,
   Star,
   ArrowRight,
   Brain
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function MicroSAASSolutions(...args[]):  {
   const services = [

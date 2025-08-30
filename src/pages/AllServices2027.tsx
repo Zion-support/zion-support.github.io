@@ -23,7 +23,7 @@ import { Brain,
   Lock,
   Cloud,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AllServices2027: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState<any>('All');

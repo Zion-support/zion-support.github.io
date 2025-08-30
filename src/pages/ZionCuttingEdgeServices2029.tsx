@@ -354,7 +354,7 @@ export default function ZionCuttingEdgeServices2029() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're not just another technology company. We're pioneers, innovators, and visionaries 
+              We're not just another technology comp. We're pioneers, innovators, and visionaries 
               who are building the future, one breakthrough at a time.
             </p>
           </div>

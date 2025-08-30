@@ -61,7 +61,7 @@ import { Cpu,
   Droplets,
   Umbrella,
   MapPin
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const EdgeComputingPlatform: React.FC = (): JSX.Element => {
   const features = [

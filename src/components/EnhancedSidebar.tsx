@@ -42,7 +42,7 @@ import { Home,
   Leaf,
   Building,
   User
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const EnhancedSidebar: React.FC = (): JSX.Element => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));

@@ -34,7 +34,7 @@ import { Calculator,
   Square,
   Info,
   HelpCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface QuoteForm {
 
@@ -458,7 +458,7 @@ export default function RequestQuote(...args[]):  {
                       value={formData.website}
                       onChange={handleInputChange}
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                      placeholder="https://yourcompany.com"
+                      placeholder="https://yourcomp.com"
                     />
                   </div>
 

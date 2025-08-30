@@ -15,7 +15,7 @@ import { Brain,
   Target,
   PieChart,
   Activity
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
 const AIEnterpriseResourcePlanning = () => {

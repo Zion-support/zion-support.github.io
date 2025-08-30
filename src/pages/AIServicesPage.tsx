@@ -22,7 +22,7 @@ import { Brain,
   Clock,
   Star,
   Heart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 const aiServices = [
   {
     id: 'ai-consciousness-simulator',
@@ -270,7 +270,7 @@ const aiServices = [
     reviews: 89,
     customers: 156
   }
-import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search  } from 'lucide-react.ts';
+import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search  } from 'lucide-react';
 const AIServices = [
     {
         title: "AI Strategy Consulting",
@@ -583,21 +583,21 @@ const AIServicesPage = () => {
 
   const caseStudies = [
     {
-      company: 'TechCorp Industries',
+      comp: 'TechCorp Industries',
       industry: 'Manufacturing',
       challenge: 'Quality control inefficiencies',
       solution: 'Computer vision system for defect detection',
       results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
     },
     {
-      company: 'Global Finance Ltd',
+      comp: 'Global Finance Ltd',
       industry: 'Financial Services',
       challenge: 'Fraud detection complexity',
       solution: 'ML-powered risk assessment',
       results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
     },
     {
-      company: 'HealthTech Solutions',
+      comp: 'HealthTech Solutions',
       industry: 'Healthcare',
       challenge: 'Patient data analysis',
       solution: 'NLP for medical records',

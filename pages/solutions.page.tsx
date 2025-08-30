@@ -32,7 +32,7 @@ import { Brain,
   DollarSign,
   Search,
   Filter
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const solutionCategories = [
   {

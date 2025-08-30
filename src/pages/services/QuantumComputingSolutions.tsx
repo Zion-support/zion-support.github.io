@@ -15,7 +15,7 @@ import { Atom,
   Rocket,
   Target,
   Globe
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function QuantumComputingSolutions() {
   const features = [

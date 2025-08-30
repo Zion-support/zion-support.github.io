@@ -21,7 +21,7 @@ import { Shield,
   Cpu,
   Brain,
   Users
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AICybersecurityThreatDetection(...args: []):  {
   const features = [

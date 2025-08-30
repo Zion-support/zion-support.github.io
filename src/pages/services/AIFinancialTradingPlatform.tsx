@@ -33,7 +33,7 @@ import { Brain,
   Lock,
   Eye,
   AlertTriangle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIFinancialTradingPlatform(...args[]):  {
   const features = [

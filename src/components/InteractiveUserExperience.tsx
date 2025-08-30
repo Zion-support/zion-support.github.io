@@ -18,7 +18,7 @@ import { User,
   TrendingUp,
   Accessibility,
   Languages
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface UserPreference {
 

@@ -55,7 +55,7 @@ import { Brain,
   Zap as ZapIcon,
   Grid,
   List
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 // Import our existing service data
 import { ultimateInnovativeServices2026  } from '../data/ultimateInnovativeServices2026';

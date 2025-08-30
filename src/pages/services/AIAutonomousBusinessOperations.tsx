@@ -169,7 +169,7 @@ import { Brain,
   Expressionless,
   Husk,
   RollingEyes,
-           } from 'lucide-react.ts';
+           } from 'lucide-react';
 
 const AIAutonomousBusinessOperations = () => {
   const features = [

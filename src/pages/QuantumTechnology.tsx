@@ -23,7 +23,7 @@ import { Atom,
   Cloud,
   Lock,
   Eye
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function QuantumTechnology(...args[]):  {
   const [selectedApplication, setSelectedApplication] = useState('all');

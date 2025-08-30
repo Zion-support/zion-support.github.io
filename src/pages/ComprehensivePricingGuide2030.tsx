@@ -34,7 +34,7 @@ import { CheckCircle,
   Lock,
   Heart,
   Sparkles
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
 import { SEO  } from '@/components/SEO';
 

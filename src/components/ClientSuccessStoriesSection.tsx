@@ -8,7 +8,7 @@ import { Star,
   CheckCircle,
   ArrowRight,
   Heart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
   const testimonials = [

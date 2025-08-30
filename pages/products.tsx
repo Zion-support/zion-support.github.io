@@ -20,7 +20,7 @@ import { Brain,
   Target,
   Users,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const Products: NextPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');

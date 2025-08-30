@@ -80,7 +80,7 @@ import { Brain,
   List,
   ChevronDown,
   ChevronUp
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
 import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
@@ -323,7 +323,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
               >
                 <option value="rating">Sort by Rating</option>

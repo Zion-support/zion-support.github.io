@@ -21,7 +21,7 @@ import { Brain,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {

@@ -14,7 +14,7 @@ import { Rocket,
 	Star,
 	Play,
 	Pause
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 interface ServiceShowcase {
 
 	id: string;

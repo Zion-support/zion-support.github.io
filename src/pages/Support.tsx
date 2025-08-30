@@ -21,7 +21,7 @@ import { HelpCircle,
   Lock,
   Cpu,
   Star
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 
 export default function Support() {

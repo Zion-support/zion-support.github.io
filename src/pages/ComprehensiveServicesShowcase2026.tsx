@@ -17,7 +17,7 @@ import { Search,
   Clock,
   CheckCircle,
   ArrowRight
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 import { revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,

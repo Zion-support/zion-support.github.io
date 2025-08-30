@@ -251,7 +251,7 @@ const Home2026: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            {/* Logo and Company Name */}
+            {/* Logo and Comp Name */}
             <div className="mb-8">
               <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl mb-6 shadow-2xl shadow-cyan-400/30">
                 <Zap className="w-12 h-12 text-white" />
@@ -516,7 +516,7 @@ const Home2026: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              We're not just a technology company – we're your innovation partner for the future
+              We're not just a technology comp – we're your innovation partner for the future
             </p>
           </motion.div>
 

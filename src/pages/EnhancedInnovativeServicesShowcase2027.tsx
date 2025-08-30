@@ -14,7 +14,7 @@ import { Brain,
   Search,
   Grid3X3,
   List
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from '../data/enhancedInnovativeServices2027';
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Web3 Solutions': Globe,

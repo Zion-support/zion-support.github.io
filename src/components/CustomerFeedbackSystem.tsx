@@ -15,7 +15,7 @@ import { Star,
   Download,
   Filter,
   Search
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Feedback {
 

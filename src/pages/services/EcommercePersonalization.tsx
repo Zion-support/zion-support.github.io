@@ -2,7 +2,7 @@
 
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react.ts';
+import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
 
 const EcommercePersonalization: React.FC = (): JSX.Element => {
   return (

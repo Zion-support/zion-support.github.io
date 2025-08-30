@@ -64,7 +64,7 @@ import { Home,
   Leaf,
   Sun,
   Wind
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 

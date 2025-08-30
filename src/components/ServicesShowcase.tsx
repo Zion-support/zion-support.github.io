@@ -24,7 +24,7 @@ import { Brain,
   Globe as GlobeIcon,
   ChevronDown,
   ChevronUp
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '@/data/innovativeMicroSaasServices2025';
 
 interface ServiceShowcaseProps extends React.PropsWithChildren<{}> {

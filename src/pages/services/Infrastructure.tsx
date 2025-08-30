@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3  } from 'lucide-react.ts';
+import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3  } from 'lucide-react';
 
 const InfrastructureServices = () => {
   const infrastructureServices = [

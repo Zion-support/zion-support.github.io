@@ -28,7 +28,7 @@ import { Shield,
   Search,
   Phone,
   Mail
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 
 export default function Security() {

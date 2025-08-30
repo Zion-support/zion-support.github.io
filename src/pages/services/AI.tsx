@@ -21,7 +21,7 @@ import { Brain,
   DollarSign,
   Factory,
   ShoppingCart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIServices(...args[]):  {
   const aiServices = [

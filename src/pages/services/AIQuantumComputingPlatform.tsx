@@ -15,7 +15,7 @@ import { Brain,
   BarChart3,
   Network,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
 const AIQuantumComputingPlatform = () => {

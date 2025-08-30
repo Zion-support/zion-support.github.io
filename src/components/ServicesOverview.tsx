@@ -26,7 +26,7 @@ import { Brain,
   Star,
   CheckCircle,
   Clock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 
 export function ServicesOverview(...args[]):  {

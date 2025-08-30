@@ -148,7 +148,7 @@ import { Users,
   Server4,
   Rocket,
   Building2
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function ITConsulting(...args: []):  {
   const services = [

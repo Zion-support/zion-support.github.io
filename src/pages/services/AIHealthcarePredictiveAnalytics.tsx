@@ -41,7 +41,7 @@ import { Heart,
   UserCheck,
   Clipboard,
   TestTube
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
 export default function AIHealthcarePredictiveAnalytics(...args[]):  {

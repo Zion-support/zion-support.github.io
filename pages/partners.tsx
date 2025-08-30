@@ -12,7 +12,7 @@ import { Handshake,
   Database,
   Lock,
   Rocket
- } from 'lucide-react.ts'
+ } from 'lucide-react'
 
 export default function Partners(...args[]):  {
   const title = 'Partners — Zion Tech Group'

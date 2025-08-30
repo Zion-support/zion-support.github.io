@@ -7,7 +7,7 @@ import { Globe,
   Star,
   Award,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const GlobalPresenceSection: React.FC = (): JSX.Element => {
   const locations = [

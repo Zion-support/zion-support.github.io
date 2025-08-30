@@ -24,7 +24,7 @@ import { Shield,
   Bot,
   Sparkles,
   Clock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 const CybersecurityServicesPage: React.FC = (): JSX.Element => {

@@ -13,7 +13,7 @@ import { Shield,
   AlertTriangle,
   Info,
   Share
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const PrivacyPolicy: React.FC = (): JSX.Element => {
   const lastUpdated = 'January 15, 2024';

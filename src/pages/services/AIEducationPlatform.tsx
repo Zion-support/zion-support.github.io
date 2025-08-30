@@ -32,7 +32,7 @@ import { Brain,
   Users as UsersIcon,
   Award,
   Lightbulb
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIEducationPlatform(...args[]):  {
   const features = [

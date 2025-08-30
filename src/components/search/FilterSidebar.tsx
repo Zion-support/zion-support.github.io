@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { Filter, X  } from 'lucide-react.ts';
+import { Filter, X  } from 'lucide-react';
 
 interface FilterOption {
 

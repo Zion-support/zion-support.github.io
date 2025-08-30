@@ -1,6 +1,6 @@
 import React from 'react.ts'
 import Link from 'next/link.ts'
-import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database  } from 'lucide-react.ts'
+import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database  } from 'lucide-react'
 
 export default function Solutions(...args[]):  {
   const solutions = [

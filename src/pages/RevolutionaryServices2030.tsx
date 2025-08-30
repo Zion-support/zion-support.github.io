@@ -42,7 +42,7 @@ import { ArrowRight,
   Building,
   FlaskConical,
   X
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS  } from '../data/revolutionaryServices2030';
 
@@ -403,7 +403,7 @@ export default function RevolutionaryServices2030(...args[]):  {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're your strategic partner in digital transformation, 
+                We're not just another technology comp. We're your strategic partner in digital transformation, 
                 offering cutting-edge solutions with proven results and exceptional support.
               </p>
             </motion.div>

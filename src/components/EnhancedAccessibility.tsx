@@ -14,7 +14,7 @@ import { Volume2,
   Accessibility,
   Settings,
   X
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface AccessibilitySettings {
 

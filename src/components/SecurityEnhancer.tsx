@@ -16,7 +16,7 @@ import { Shield,
   Bug,
   Network,
   Database
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface SecurityThreat {
 

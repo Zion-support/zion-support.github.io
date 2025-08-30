@@ -91,7 +91,7 @@ export default function About() {
   const milestones = [
     {
       year: '2018',
-      title: 'Company Founded',
+      title: 'Comp Founded',
       description: 'Zion Tech Group established with a vision to democratize AI technology.'
     },
     {

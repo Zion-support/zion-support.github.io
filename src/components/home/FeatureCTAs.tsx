@@ -32,7 +32,7 @@ import { ArrowRight,
   PenTool,
   Shield,
   Cloud
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export function FeatureCTAs(...args[]):  {
   const features = [

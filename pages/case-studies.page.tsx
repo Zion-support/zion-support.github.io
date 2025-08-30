@@ -15,7 +15,7 @@ import { CheckCircle,
   Cloud,
   Brain,
   Globe
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const caseStudies = [
   {
@@ -177,7 +177,7 @@ export default function CaseStudies(...args[]):  {
     const matchesTechnology = selectedTechnology === 'All' || 
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesIndustry && matchesTechnology && matchesSearch});

@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import Link from 'next/link.ts';
 import { motion  } from 'framer-motion.ts';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock  } from 'lucide-react.ts';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock  } from 'lucide-react';
 
 const ModernFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();

@@ -365,7 +365,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
               <form className="space-y-4">
                 <input
                   type="text"
-                  placeholder="Company Name"
+                  placeholder="Comp Name"
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                 />
                 <input

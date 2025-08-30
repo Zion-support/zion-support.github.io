@@ -13,7 +13,7 @@ import { CheckCircle,
   MessageSquare,
   Shield,
   Clock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 

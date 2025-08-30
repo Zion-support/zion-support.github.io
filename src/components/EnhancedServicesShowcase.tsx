@@ -14,7 +14,7 @@ import { Brain,
   Clock,
   CheckCircle,
   Search
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Service {
 

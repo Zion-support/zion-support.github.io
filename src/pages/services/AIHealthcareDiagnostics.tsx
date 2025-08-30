@@ -15,7 +15,7 @@ import { Brain,
   Heart,
   Stethoscope,
   Microscope
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
 const AIHealthcareDiagnostics = () => {

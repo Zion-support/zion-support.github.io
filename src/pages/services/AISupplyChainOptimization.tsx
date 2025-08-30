@@ -26,7 +26,7 @@ import { Truck,
   Gauge,
   Shield,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AISupplyChainOptimization(...args[]):  {
   const features = [

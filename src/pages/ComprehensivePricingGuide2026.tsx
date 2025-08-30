@@ -14,7 +14,7 @@ import { DollarSign,
   Shield,
   Cpu,
   Brain
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 import { ALL_PRICING_GUIDES_2026, marketSummary2026  } from '../data/comprehensivePricingGuide2026';
 

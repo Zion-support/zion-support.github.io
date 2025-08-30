@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu  } from 'lucide-react.ts';
+import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu  } from 'lucide-react';
 
 export default function GreenIT() {
   const features = [

@@ -28,7 +28,7 @@ import { Brain,
   Mail,
   MapPin,
   ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { INNOVATIVE_SERVICES  } from '../data/servicesData';
 export default function InnovativeServicesShowcase2026(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
-import { Building, Users, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react.ts';
+import { Building, Users, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react';
 
 export default function EnterpriseSolutions(...args: []):  {
   const solutions = [

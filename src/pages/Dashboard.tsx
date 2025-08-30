@@ -15,7 +15,7 @@ import { BarChart3,
   MessageSquare,
   Star,
   ArrowRight
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function Dashboard(...args[]):  {
   const stats = [

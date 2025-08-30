@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react.ts';
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react';
 
 export default function AIAnalytics(...args[]):  {
   const features = [

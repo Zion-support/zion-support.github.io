@@ -39,7 +39,7 @@ import { Users,
   Database,
   Lock,
   Unlock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Resource {
 

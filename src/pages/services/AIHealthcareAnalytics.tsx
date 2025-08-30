@@ -22,7 +22,7 @@ import { Heart,
   Target,
   Eye,
   AlertTriangle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 const AIHealthcareAnalytics = () => {

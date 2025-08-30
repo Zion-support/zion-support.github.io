@@ -16,7 +16,7 @@ import { ChevronDown,
   Cloud,
   Code,
   BarChart3
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface NavigationLink {
 

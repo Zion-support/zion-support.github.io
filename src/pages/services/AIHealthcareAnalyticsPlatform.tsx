@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
-import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp  } from 'lucide-react.ts';
+import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp  } from 'lucide-react';
 
 const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
   const features = [

@@ -147,7 +147,7 @@ import { Brain,
   Space,
   Handshake,
   Calendar
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const microSAASServices2028 = [
   // AI-Powered Content Creation

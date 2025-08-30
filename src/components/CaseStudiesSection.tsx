@@ -8,7 +8,7 @@ import { TrendingUp,
   ArrowRight,
   Star,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const CaseStudiesSection: React.FC = (): JSX.Element => {
   const caseStudies = [

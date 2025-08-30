@@ -19,7 +19,7 @@ import { Shield,
   Server,
   Monitor,
   CreditCard
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 export default function CybersecurityServices(...args[]):  {
   const cyberServices = [
     {

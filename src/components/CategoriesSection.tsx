@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight  } from 'lucide-react.ts';
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight  } from 'lucide-react';
 
 const categories = [
   {

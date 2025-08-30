@@ -15,7 +15,7 @@ import { Brain,
   Activity,
   BarChart3,
   Network
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
 const AIBlockchainSupplyChain = () => {

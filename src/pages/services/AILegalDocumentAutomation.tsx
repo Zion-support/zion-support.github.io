@@ -15,7 +15,7 @@ import { FileText,
   Users,
   BarChart3,
   Lock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AILegalDocumentAutomation(...args[]):  {
   const features = [

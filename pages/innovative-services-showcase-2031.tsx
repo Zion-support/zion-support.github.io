@@ -18,7 +18,7 @@ import { Brain,
   Target,
   Award,
   Clock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
   const scrollToContact = () => {
@@ -372,7 +372,7 @@ const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
                     <input 
                       type="email" 
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                      placeholder="your.email@company.com"
+                      placeholder="your.email@comp.com"
                     />
                   </div>
                   

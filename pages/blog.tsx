@@ -1,6 +1,6 @@
 import React from 'react.ts'
 import Link from 'next/link.ts'
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react.ts'
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react'
 
 export default function Blog(...args[]):  {
   const blogPosts = [

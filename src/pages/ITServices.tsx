@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
-import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building  } from 'lucide-react.ts';
+import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building  } from 'lucide-react';
 
 const ITServices: React.FC = (): JSX.Element => {
   const offerings = [

@@ -11,7 +11,7 @@ import { Mail,
   Cloud,
   Zap,
   ArrowRight
- } from 'lucide-react.ts'
+ } from 'lucide-react'
 
 export default function Login(...args[]):  {
   const [formData, setFormData] = useState({

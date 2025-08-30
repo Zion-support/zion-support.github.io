@@ -20,7 +20,7 @@ import { Brain,
   Lightbulb,
   Target,
   Award
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const InnovativeServices: React.FC = (): JSX.Element => {
   const innovations = [

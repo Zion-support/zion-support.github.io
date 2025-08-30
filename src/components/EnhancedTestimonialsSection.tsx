@@ -8,7 +8,7 @@ import { Star,
   Building,
   Users,
   Award
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Testimonial {
 

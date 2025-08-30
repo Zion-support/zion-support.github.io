@@ -282,7 +282,7 @@ export default function InnovativeServicesLanding2025() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're not just another technology company - we're your innovation partner for the future
+              We're not just another technology comp - we're your innovation partner for the future
             </p>
           </motion.div>
 

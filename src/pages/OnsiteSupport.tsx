@@ -17,7 +17,7 @@ import { Wrench,
   Monitor,
   HardDrive,
   Router
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function OnsiteSupport(...args[]):  {
   const services = [

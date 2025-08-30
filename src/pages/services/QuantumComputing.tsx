@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { Rocket, Atom, Zap, Brain, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu  } from 'lucide-react.ts';
+import { Rocket, Atom, Zap, Brain, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu  } from 'lucide-react';
 
 export default function QuantumComputing(...args: []):  {
   const features = [

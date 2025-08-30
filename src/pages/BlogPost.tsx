@@ -13,7 +13,7 @@ import { Calendar,
   Heart,
   Eye,
   ArrowRight
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 function BlogPost(...args[]):  {
   const { id } = useParams();

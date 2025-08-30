@@ -41,7 +41,7 @@ import { Shield,
   EyeOn,
   LockOpen,
   LockClosed
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIDataGovernance: React.FC = (): JSX.Element => {
   const features = [

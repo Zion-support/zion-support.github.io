@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react.ts';
-import { X, Send  } from 'lucide-react.ts';
+import { X, Send  } from 'lucide-react';
 export interface Message {
 
   id: string;

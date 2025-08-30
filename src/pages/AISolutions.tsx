@@ -20,7 +20,7 @@ import { Brain,
   Globe,
   Smartphone,
   Monitor
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AISolutions(...args[]):  {
   const [activeTab, setActiveTab] = useState('overview');

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { Sun, Moon, Monitor  } from 'lucide-react.ts';
+import { Sun, Moon, Monitor  } from 'lucide-react';
 
 type Theme = 'dark' | 'light' | 'system';
 

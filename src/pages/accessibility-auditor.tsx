@@ -16,7 +16,7 @@ import { Eye,
   Smartphone,
   Tablet,
   Laptop
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AccessibilityAuditor: React.FC = (): JSX.Element => {
   const features = [

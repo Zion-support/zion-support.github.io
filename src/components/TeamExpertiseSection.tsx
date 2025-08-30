@@ -10,7 +10,7 @@ import { Award,
   CheckCircle,
   Globe,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const TeamExpertiseSection: React.FC = (): JSX.Element => {
   const expertise = [

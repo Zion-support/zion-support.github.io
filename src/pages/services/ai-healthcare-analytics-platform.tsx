@@ -21,7 +21,7 @@ import { Heart,
   PieChart,
   TrendingUp,
   AlertTriangle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIHealthcareAnalyticsPlatform(...args: []):  {
   const features = [

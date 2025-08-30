@@ -23,7 +23,7 @@ import { Accessibility,
   Type,
   ZoomIn,
   ZoomOut
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 
 export default function Accessibility() {

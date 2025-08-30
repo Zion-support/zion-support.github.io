@@ -13,7 +13,7 @@ import { Eye,
   X,
   Check,
   AlertTriangle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface AccessibilitySettings {
 

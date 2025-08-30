@@ -25,7 +25,7 @@ import { Brain,
   Shield,
   Headphones,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIContentMarketingAutomation(...args[]):  {
   const features = [

@@ -31,7 +31,7 @@ import { Rocket,
   BarChart3,
   Globe2,
   ShieldCheck
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const InnovativeServicesHub: React.FC = (): JSX.Element => {
   const serviceCategories = [

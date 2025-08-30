@@ -23,7 +23,7 @@ import { Code,
   Building2,
   Cpu,
   Network
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function CustomDevelopment(...args[]):  {
   const services = [

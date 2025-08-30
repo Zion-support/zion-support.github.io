@@ -217,7 +217,7 @@ import { Menu,
   Chi,
   Psi,
   Omega
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

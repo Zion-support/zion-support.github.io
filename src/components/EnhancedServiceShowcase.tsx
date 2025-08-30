@@ -17,7 +17,7 @@ import { Brain,
   Target,
   Award,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Service {
 

@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database  } from 'lucide-react.ts';
+import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database  } from 'lucide-react';
 
 const SpaceTech = () => {
   const spaceServices = [

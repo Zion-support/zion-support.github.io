@@ -14,7 +14,7 @@ import { Brain,
   Clock,
   DollarSign,
   Lightbulb
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIBusinessIntelligence: React.FC = (): JSX.Element => {
   const features = [

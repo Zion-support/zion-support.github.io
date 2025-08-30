@@ -21,7 +21,7 @@ import { Twitter,
   HelpCircle,
   Lock,
   Award
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const footerNavigation = {
 	services: {

@@ -33,7 +33,7 @@ import { User,
   Brain,
   Cloud,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface UserProfile {
 

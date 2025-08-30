@@ -23,7 +23,7 @@ import { Brain,
   Target,
   Rocket,
   Sparkles
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIEnterpriseOrchestrator(...args[]):  {
   const features = [

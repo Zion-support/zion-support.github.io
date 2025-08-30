@@ -1,6 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock  } from 'lucide-react.ts'
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock  } from 'lucide-react'
 
 
 export default function Index(...args[]):  {

@@ -17,7 +17,7 @@ import { Users,
   Shield,
   Cpu,
   Filter
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
   const features = [

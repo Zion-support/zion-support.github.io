@@ -16,7 +16,7 @@ import { Newspaper,
   TrendingUp,
   Globe,
   Star
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function Press(...args[]):  {
   const pressReleases = [

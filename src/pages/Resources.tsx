@@ -34,7 +34,7 @@ import { BookOpen,
   Play,
   Pause,
   Stop
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const Resources: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -28,7 +28,7 @@ import { ArrowRight,
   Sparkles,
   BarChart3,
   Smartphone
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function Index(...args[]):  {
   const { t } = useTranslation();

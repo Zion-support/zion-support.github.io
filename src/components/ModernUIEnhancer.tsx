@@ -8,7 +8,7 @@ import { Sparkles,
   Layers,
   Settings,
   X
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface UISettings {
 

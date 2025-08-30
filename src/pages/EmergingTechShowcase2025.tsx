@@ -26,7 +26,7 @@ import { Brain,
   Play,
   Pause,
   RotateCcw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
 
 const EmergingTechShowcase2025: React.FC = (): JSX.Element => {

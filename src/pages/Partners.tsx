@@ -17,7 +17,7 @@ import { Handshake,
   CheckCircle,
   Building,
   Briefcase
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function Partners() {
   const partnershipTypes = [

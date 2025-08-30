@@ -31,7 +31,7 @@ import { Brain,
   Library,
   Briefcase,
   Award
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AILegalResearchPlatform(...args[]):  {
   const features = [

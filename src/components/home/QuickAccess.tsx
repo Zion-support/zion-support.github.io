@@ -90,7 +90,7 @@ import { Brain,
   MicOff,
   Volume2,
   VolumeX
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const QuickAccess: React.FC = (): JSX.Element => {
   const quickLinks = [

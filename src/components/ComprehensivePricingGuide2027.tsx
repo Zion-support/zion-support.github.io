@@ -21,7 +21,7 @@ import { DollarSign,
   Shield,
   Brain,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { servicesCatalog  } from '../data/servicesCatalog';
 import { innovativeServices2027  } from '../data/innovativeServices2027';
 

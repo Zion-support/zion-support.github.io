@@ -29,7 +29,7 @@ import { Shield,
   Settings,
   Users,
   TrendingUp
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function SmartContractRiskScanner(...args: []):  {
   const features = [

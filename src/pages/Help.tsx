@@ -21,7 +21,7 @@ import { Search,
   Video,
   Download,
   ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function Help(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');

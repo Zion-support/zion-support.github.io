@@ -21,7 +21,7 @@ import { Brain,
   Mail,
   MapPin,
   ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2026  } from '../data/advancedInnovativeServices2026';
 
 const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {

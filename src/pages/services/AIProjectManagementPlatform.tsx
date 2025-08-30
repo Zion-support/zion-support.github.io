@@ -31,7 +31,7 @@ import { Brain,
   Users as UsersIcon,
   PieChart,
   Activity
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIProjectManagementPlatform(...args[]):  {
   const features = [

@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { SEO  } from '../components/SEO';
-import { Users, MessageSquare, BookOpen, Star, TrendingUp, Award  } from 'lucide-react.ts';
+import { Users, MessageSquare, BookOpen, Star, TrendingUp, Award  } from 'lucide-react';
 
 export default function Community(...args[]):  {
   return (

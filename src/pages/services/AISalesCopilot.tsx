@@ -16,7 +16,7 @@ import { TrendingUp,
   Clock,
   DollarSign,
   ArrowRight
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 const AISalesCopilot = () => {

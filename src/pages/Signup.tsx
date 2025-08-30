@@ -12,7 +12,7 @@ import { Mail,
   Zap,
   Users,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 export default function Signup(...args[]):  {
   const [formData, setFormData] = useState({
     firstName: '',

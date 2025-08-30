@@ -27,7 +27,7 @@ import { Search,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 import { ADVANCED_AI_SERVICES_2025  } from '../data/advancedAIServices2025';
 import { INNOVATIVE_IT_INFRASTRUCTURE_2025  } from '../data/innovativeITInfrastructure2025';

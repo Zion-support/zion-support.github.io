@@ -30,7 +30,7 @@ import { Code,
   Target,
   Award,
   Lightbulb
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

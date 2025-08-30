@@ -15,7 +15,7 @@ import { BarChart3,
   Download,
   Share2,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface ChartData {
 

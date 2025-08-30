@@ -25,7 +25,7 @@ import { Brain,
   Search,
   ChevronDown,
   ChevronUp
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo  } from '../data/innovativeServices2028';
 
 export default function InnovativeServices2028(...args[]):  {

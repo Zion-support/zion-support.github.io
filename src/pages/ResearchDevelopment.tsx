@@ -16,7 +16,7 @@ import { Flask,
   Users,
   Award,
   ArrowRight
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const ResearchDevelopment: React.FC = (): JSX.Element => {
   const [selectedArea, setSelectedArea] = useState('all');

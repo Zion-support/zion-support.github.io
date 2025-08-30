@@ -19,7 +19,7 @@ import { Zap,
   Rocket,
   Target,
   Globe
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 const MicroSAASPage = () => {
   const saasServices = [
     {

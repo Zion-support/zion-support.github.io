@@ -1,6 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { Shield, Eye, Lock, Database, Users, ArrowRight  } from 'lucide-react.ts'
+import { Shield, Eye, Lock, Database, Users, ArrowRight  } from 'lucide-react'
 
 
 export default function Privacy(...args[]):  {

@@ -27,7 +27,7 @@ import { Brain,
   Eye,
   Heart,
   Zap as Lightning
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 import { emergingTechServices2030  } from '../data/emergingTechServices2030';
 

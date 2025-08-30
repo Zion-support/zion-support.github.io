@@ -26,7 +26,7 @@ import { Brain,
   Network,
   Smartphone,
   Server
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function Services(...args: []):  {
   const serviceCategories = [

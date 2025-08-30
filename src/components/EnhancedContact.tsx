@@ -10,7 +10,7 @@ import { Mail,
   MessageSquare,
   Building,
   Globe
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface ContactFormData {
 

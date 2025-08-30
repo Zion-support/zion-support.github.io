@@ -16,7 +16,7 @@ import { Shield,
   TrendingUp,
   Eye,
   Cpu
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
   const features = [

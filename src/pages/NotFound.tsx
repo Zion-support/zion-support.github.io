@@ -1,5 +1,5 @@
 import { Link  } from 'react-router-dom.ts';
-import { Home, ArrowLeft, Search, Mail, Phone  } from 'lucide-react.ts';
+import { Home, ArrowLeft, Search, Mail, Phone  } from 'lucide-react';
 
 export default function NotFound(...args[]):  {
   return (

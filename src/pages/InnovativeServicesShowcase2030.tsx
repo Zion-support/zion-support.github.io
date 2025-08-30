@@ -17,7 +17,7 @@ import { Brain,
   Clock,
   DollarSign,
   Search
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { innovativeAIServices2030  } from '../data/innovativeAIServices2030';
 import { innovativeCybersecurityServices2030  } from '../data/innovativeCybersecurityServices2030';
 import { innovativeCloudDevOpsServices2030  } from '../data/innovativeCloudDevOpsServices2030';

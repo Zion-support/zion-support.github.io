@@ -24,7 +24,7 @@ import { Shield,
   Clock,
   BarChart3,
   CreditCard
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function CybersecuritySolutions(...args[]):  {
   const [selectedThreat, setSelectedThreat] = useState('all');

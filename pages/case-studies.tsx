@@ -1,6 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react.ts'
+import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react'
 
 
 export default function CaseStudies(...args[]):  {

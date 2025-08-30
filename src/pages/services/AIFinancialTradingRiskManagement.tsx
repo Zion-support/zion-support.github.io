@@ -19,7 +19,7 @@ import { TrendingUp,
   Activity,
   AlertTriangle,
   Target
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIFinancialTradingRiskManagement(...args[]):  {
   const features = [

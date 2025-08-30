@@ -23,7 +23,7 @@ import { Shield,
   Database,
   Cpu,
   Fingerprint
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AICybersecurityThreatIntelligence(...args[]):  {
   const features = [

@@ -26,7 +26,7 @@ import { TrendingUp,
   Zap,
   BarChart3,
   ShoppingCart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function CaseStudies(...args[]):  {
   const [selectedIndustry, setSelectedIndustry] = useState('all');

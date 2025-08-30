@@ -171,7 +171,7 @@ export default function InnovativeServices2027() {
               />
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
               >
                 <option value="innovation">Sort by Innovation</option>

@@ -1,6 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react.ts'
+import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react'
 
 
 export default function News(...args[]):  {

@@ -14,7 +14,7 @@ import { Lightbulb,
   Clock,
   Award,
   MessageSquare
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function ITConsulting(...args[]):  {
   const consultingServices = [

@@ -23,7 +23,7 @@ import { Code,
   Key,
   Database,
   Lock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const API: React.FC = () => {
   const endpoints = [

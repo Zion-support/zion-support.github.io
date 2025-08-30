@@ -20,7 +20,7 @@ import { Users,
   Cloud,
   Lock,
   Database
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function About(...args[]):  {
   const stats = [

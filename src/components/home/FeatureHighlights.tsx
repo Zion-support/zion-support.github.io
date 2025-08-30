@@ -13,7 +13,7 @@ import { Brain,
   Award,
   Clock,
   Heart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const highlights = [
   {

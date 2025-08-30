@@ -25,7 +25,7 @@ import { X,
   GraduationCap,
   Activity,
   DollarSign as DollarSignIcon
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { cn  } from '@/lib/utils';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {

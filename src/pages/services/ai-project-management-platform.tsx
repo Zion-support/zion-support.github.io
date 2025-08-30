@@ -21,7 +21,7 @@ import { Brain,
   Globe,
   Smartphone,
   Cloud
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIProjectManagementPlatform(...args: []):  {
   const features = [

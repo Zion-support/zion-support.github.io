@@ -10,7 +10,7 @@ import { Loader2,
   Database,
   Network,
   Shield
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 

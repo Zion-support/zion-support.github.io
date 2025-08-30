@@ -1,6 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
-import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield  } from 'lucide-react.ts'
+import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield  } from 'lucide-react'
 
 
 export default function About(...args[]):  {

@@ -12,7 +12,7 @@ import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
   Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const pricingData2028 = {
   aiServices[

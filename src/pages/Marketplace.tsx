@@ -17,7 +17,7 @@ import { ShoppingCart,
   TrendingUp,
   Award,
   Zap
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const Marketplace: React.FC = () => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">

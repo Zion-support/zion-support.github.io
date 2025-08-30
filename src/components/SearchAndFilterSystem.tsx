@@ -15,7 +15,7 @@ import { Search,
   Cloud,
   Shield,
   Globe
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface SearchResult {
 

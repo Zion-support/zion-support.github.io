@@ -13,7 +13,7 @@ import { Mail,
   Rocket,
   ArrowRight,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const ForgotPassword: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('');

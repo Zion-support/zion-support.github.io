@@ -14,7 +14,7 @@ import { Check,
   Brain,
   Cloud,
   Lock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function Pricing(...args[]):  {
   const [billingCycle, setBillingCycle] = useState<any>('annual');

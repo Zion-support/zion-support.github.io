@@ -38,7 +38,7 @@ import { FlaskConical,
   Atom,
   Satellite,
   Telescope
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const researchAreas = [
   {

@@ -264,7 +264,7 @@ import { Brain,
   AVLTree,
   SplayTree,
   Treap,
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const workflowSolutions = [
   {

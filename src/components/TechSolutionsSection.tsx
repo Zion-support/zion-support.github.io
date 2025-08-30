@@ -13,7 +13,7 @@ import { Brain,
   Network,
   Code,
   Server
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const TechSolutionsSection: React.FC = (): JSX.Element => {
   const solutions = [

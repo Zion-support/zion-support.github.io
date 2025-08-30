@@ -90,7 +90,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   // Voice recognition setup
   useEffect(() => {
     if (enableVoice && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition;
+      const SpeechRecognition = (window as ).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;

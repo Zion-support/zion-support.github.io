@@ -15,7 +15,7 @@ import { User,
   Zap,
   Brain,
   Cloud
- } from 'lucide-react.ts'
+ } from 'lucide-react'
 
 export default function Signup(...args[]):  {
   const [formData, setFormData] = useState({
@@ -393,7 +393,7 @@ export default function Signup(...args[]):  {
                           value={formData.website}
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                          placeholder="https://yourcompany.com"
+                          placeholder="https://yourcomp.com"
                         />
                       </div>
                     </div>

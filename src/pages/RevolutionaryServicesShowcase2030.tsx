@@ -43,7 +43,7 @@ import { ArrowRight,
   SortAsc,
   SortDesc,
   X
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030  } from '../data/revolutionaryServices2030';
 

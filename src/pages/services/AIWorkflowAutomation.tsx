@@ -17,7 +17,7 @@ import { Zap,
   Phone,
   Globe,
   ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIWorkflowAutomation(...args[]):  {
   const features = [

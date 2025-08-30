@@ -32,7 +32,7 @@ import { Menu,
   Mail,
   MapPin,
   Clock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface NavigationItem {
 

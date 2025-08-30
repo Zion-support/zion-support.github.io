@@ -24,7 +24,7 @@ import { AlertTriangle,
   Mail,
   MapPin,
   Server
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
 export default function AIIncidentPostmortems(...args[]):  {

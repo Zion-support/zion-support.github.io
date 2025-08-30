@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import Link from 'next/link.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock  } from 'lucide-react.ts';
+import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock  } from 'lucide-react';
 
 const ModernHeader: React.FC = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

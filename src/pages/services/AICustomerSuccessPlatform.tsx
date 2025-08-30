@@ -106,7 +106,7 @@ import { Users,
   Chi,
   Psi,
   Omega
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
   const features = [

@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { Phone, Mail, MapPin, ArrowRight  } from 'lucide-react.ts';
+import { Phone, Mail, MapPin, ArrowRight  } from 'lucide-react';
 export function ContactSection(...args[]):  {
   const contactInfo = [
     {

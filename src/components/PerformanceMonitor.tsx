@@ -11,7 +11,7 @@ import { Activity,
   BarChart3,
   Gauge,
   Monitor
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 interface PerformanceMetrics {
 
   fcp: number | null;

@@ -10,7 +10,7 @@ import { Lightbulb,
   Brain, 
   Microscope, 
   Target 
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const InnovationResearchSection: React.FC = (): JSX.Element => {
   const researchAreas = [

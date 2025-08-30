@@ -446,7 +446,7 @@ export default function UltimateServicesShowcase2025() {
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-2">
               <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
               <p className="text-gray-300 mb-6 max-w-md">

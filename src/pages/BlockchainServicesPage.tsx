@@ -23,7 +23,7 @@ import { Link,
   Users,
   Clock,
   Check
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const BlockchainServicesPage[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

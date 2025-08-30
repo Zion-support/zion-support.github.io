@@ -26,7 +26,7 @@ import { Users,
   MessageCircle,
   Bot,
   Headphones
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AICustomerExperiencePlatform(...args[]):  {
   const features = [

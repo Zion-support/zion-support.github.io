@@ -19,7 +19,7 @@ import { Brain,
   DollarSign,
   Truck,
   Target
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 
 export default function ComprehensiveAIServicesShowcase2025(...args[]):  {

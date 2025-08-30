@@ -89,10 +89,10 @@ export const api = {
   get: (endpoint: string, headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'GET', headers }),
   
-  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
+  post: (endpoint: string, data: , headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers }),
   
-  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
+  put: (endpoint: string, data: , headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
   
   delete: (endpoint: string, headers?: Record<string, string>) => 

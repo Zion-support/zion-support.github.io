@@ -28,7 +28,7 @@ import { Brain,
   GitBranch,
   Calendar,
   DollarSign
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
   const features = [

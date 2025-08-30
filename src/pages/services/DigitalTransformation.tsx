@@ -105,7 +105,7 @@ import { Rocket,
   UserHeart2,
   Monitor,
   Smartphone
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 export default function DigitalTransformation(...args: []):  {
   const services = [
     {

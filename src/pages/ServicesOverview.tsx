@@ -25,7 +25,7 @@ import { Brain,
   Mail,
   Phone,
   ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 
 export default function ServicesOverview(...args[]):  {

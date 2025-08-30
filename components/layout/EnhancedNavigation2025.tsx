@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import Link from 'next/link.ts';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react.ts';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react';
 
 export default function EnhancedNavigation2025(...args[]):  {
 	const [isOpen, setIsOpen] = useState(false);

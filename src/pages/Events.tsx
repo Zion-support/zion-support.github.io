@@ -21,7 +21,7 @@ import { Calendar,
   MessageCircle,
   BookOpen,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const events = [
   {

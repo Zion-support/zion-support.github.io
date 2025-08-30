@@ -63,7 +63,7 @@ import { Users,
   Target,
   BarChart3,
   PieChart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface TeamMember {
 

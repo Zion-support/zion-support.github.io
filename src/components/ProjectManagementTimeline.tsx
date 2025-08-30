@@ -23,7 +23,7 @@ import { Calendar,
   Trash2,
   Eye,
   Settings
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Project {
 

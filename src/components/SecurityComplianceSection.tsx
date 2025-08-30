@@ -10,7 +10,7 @@ import { Shield,
   Globe,
   Server,
   Eye
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const SecurityComplianceSection: React.FC = (): JSX.Element => {
   const securityFeatures = [

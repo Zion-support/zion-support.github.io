@@ -29,7 +29,7 @@ import { Brain,
   DollarSign,
   Clock,
   Shield as ShieldIcon
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from '../data/ultimateInnovativeServices2025';
 
 export default function UltimateInnovativeServicesShowcase2025(...args[]):  {

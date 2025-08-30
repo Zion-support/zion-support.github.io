@@ -30,7 +30,7 @@ import { Brain,
   ShoppingCart,
   Eye,
   MousePointer
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIMarketingAutomation(...args[]):  {
   const features = [

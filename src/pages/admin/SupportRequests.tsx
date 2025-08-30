@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components/ui/table';
 import { Badge  } from '@/components/ui/badge';
-import { Search, Filter  } from 'lucide-react.ts';
+import { Search, Filter  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 // Mock data for support requests
@@ -25,7 +25,7 @@ const MOCK_SUPPORT_REQUESTS = [
   },
   {
     id: "SR-1002",
-    user: "sarah.smith@company.co",
+    user: "sarah.smith@comp.co",
     userId: "user-456",
     issue: "Payment failed but funds were deducted",
     status: "in-progress",
@@ -69,7 +69,7 @@ const MOCK_SUPPORT_REQUESTS = [
   },
   {
     id: "SR-1006",
-    user: "alex.wong@datacompany.com",
+    user: "alex.wong@datacomp.com",
     userId: "user-890",
     issue: "Profile verification pending for over 7 days",
     status: "resolved",

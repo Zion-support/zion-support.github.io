@@ -14,7 +14,7 @@ import { ArrowRight,
   Rocket,
   Target,
   TrendingUp
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface HeroSlide {
 

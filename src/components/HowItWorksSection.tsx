@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield  } from 'lucide-react.ts';
+import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield  } from 'lucide-react';
 
 const steps = [
   {

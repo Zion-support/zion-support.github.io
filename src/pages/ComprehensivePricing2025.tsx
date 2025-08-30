@@ -18,7 +18,7 @@ import { Search,
   Lock,
   Globe,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 const ComprehensivePricing2025: React.FC = (): JSX.Element => {

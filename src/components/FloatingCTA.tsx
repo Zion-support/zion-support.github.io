@@ -95,7 +95,7 @@ import { MessageCircle,
   MicOff,
   Volume2,
   VolumeX
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const FloatingCTA: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);

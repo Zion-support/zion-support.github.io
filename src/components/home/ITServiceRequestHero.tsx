@@ -4,7 +4,7 @@ import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { useNavigate  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react.ts';
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
 
 export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("");

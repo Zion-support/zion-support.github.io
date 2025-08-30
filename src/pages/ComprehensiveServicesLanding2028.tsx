@@ -48,7 +48,7 @@ import { Brain,
   Play,
   ChevronRight,
   ChevronLeft
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 

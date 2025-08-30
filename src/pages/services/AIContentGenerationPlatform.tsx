@@ -21,7 +21,7 @@ import { PenTool,
   DollarSign,
   Target,
   Award
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AIContentGenerationPlatform(...args[]):  {
   const features = [

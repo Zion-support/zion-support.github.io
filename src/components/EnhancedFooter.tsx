@@ -82,7 +82,7 @@ export function EnhancedFooter() {
       ]
     },
     {
-      title: 'Company',
+      title: 'Comp',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
         { name: 'Our Mission', href: '/mission', icon: Target },
@@ -135,7 +135,7 @@ export function EnhancedFooter() {
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">

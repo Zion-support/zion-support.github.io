@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
-import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight  } from 'lucide-react.ts';
+import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight  } from 'lucide-react';
 
 export default function CloudFinOpsOptimizer(...args[]):  {
   const capabilities = [

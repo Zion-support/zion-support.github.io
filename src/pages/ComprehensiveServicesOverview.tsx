@@ -30,7 +30,7 @@ import { Brain,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {

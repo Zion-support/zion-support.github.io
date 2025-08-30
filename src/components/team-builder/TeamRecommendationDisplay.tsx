@@ -2,7 +2,7 @@ import { TeamRecommendation, ProjectBrief  } from '@/types';
 import { RoleCard  } from './RoleCard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase  } from 'lucide-react.ts'; // Target changed to Bullseye
+import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase  } from 'lucide-react'; // Target changed to Bullseye
 import { BudgetStatusDisplay  } from './BudgetStatusDisplay'; // New import
 
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {

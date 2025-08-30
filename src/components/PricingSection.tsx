@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
 
 export const PricingSection: React.FC = (): JSX.Element => {
   const plans = [

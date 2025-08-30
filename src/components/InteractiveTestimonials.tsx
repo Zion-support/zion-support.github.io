@@ -9,7 +9,7 @@ import { Star,
   Users,
   Award,
   TrendingUp
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const InteractiveTestimonials: React.FC = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);

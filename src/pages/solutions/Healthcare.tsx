@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
-import { Heart, Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react.ts';
+import { Heart, Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react';
 
 export default function HealthcareSolutions(...args: []):  {
   const solutions = [

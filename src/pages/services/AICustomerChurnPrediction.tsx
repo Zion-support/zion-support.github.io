@@ -13,7 +13,7 @@ import { TrendingDown,
   Star,
   Clock,
   DollarSign
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
   const features = [

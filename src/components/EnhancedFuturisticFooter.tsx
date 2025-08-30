@@ -58,7 +58,7 @@ import { Phone,
   Users,
   TrendingUp,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();

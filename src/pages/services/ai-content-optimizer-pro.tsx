@@ -21,7 +21,7 @@ import { CheckCircle,
   PenTool,
   Eye,
   Share2
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   const contactInfo = {

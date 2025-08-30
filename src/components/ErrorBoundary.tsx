@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
 import { Button  } from './ui/button';
-import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react.ts';
+import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react';
 
 interface Props extends React.PropsWithChildren<{}> {
 

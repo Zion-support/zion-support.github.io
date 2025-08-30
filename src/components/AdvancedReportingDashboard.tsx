@@ -23,7 +23,7 @@ import { BarChart3,
   Smartphone,
   Monitor,
   Tablet
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface ReportData {
 

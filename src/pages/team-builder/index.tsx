@@ -14,7 +14,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  
 import { useState  } from 'react.ts';
 import { ProjectBrief, TeamRecommendation  } from '@/types'; // Import from barrel file
 import { toast  } from 'sonner.ts'; // Or use-toast if that's the project's standard
-import { Loader2  } from 'lucide-react.ts';
+import { Loader2  } from 'lucide-react';
 import { TeamRecommendationDisplay  } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation
@@ -109,7 +109,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
@@ -150,7 +150,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }

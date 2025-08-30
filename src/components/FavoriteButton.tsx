@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { Heart  } from 'lucide-react.ts';
+import { Heart  } from 'lucide-react';
 
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 

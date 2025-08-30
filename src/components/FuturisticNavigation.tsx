@@ -177,7 +177,7 @@ import { Menu,
   Shuffle2Dodecagon,
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 export const FuturisticNavigation: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);

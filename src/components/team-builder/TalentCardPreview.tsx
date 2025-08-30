@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/co
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { DollarSign, Briefcase, User  } from 'lucide-react.ts';
+import { DollarSign, Briefcase, User  } from 'lucide-react';
 
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
 

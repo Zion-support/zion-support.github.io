@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
 import Link from 'next/link.ts';
-import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2  } from 'lucide-react.ts';
+import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2  } from 'lucide-react';
 
 const Tutorials = () => {
   const tutorialCategories = [

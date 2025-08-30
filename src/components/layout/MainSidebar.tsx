@@ -231,7 +231,7 @@ import { Home,
   Leaf,
   HardDrive,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface MainSidebarProps extends React.PropsWithChildren<{}> {
 

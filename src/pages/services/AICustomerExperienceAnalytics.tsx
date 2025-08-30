@@ -23,7 +23,7 @@ import { Users,
   Cpu,
   PieChart,
   LineChart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AICustomerExperienceAnalytics(...args[]):  {
   const features = [

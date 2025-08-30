@@ -8,7 +8,7 @@ import { Cookie,
   CheckCircle,
   XCircle,
   Info
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 const Cookies: React.FC = (): JSX.Element => {

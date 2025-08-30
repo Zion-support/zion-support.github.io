@@ -23,7 +23,7 @@ import { Shield,
   FileText,
   Monitor,
   Activity
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function AICybersecuritySuite(...args[]):  {
   const features = [

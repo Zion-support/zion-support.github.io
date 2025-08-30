@@ -26,7 +26,7 @@ import { Search,
   Info,
   Clock,
   MapPin
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface FAQItem {
 

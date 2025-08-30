@@ -14,7 +14,7 @@ import { slugify  } from '@/lib/slugify';
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu  } from '@/components/header/MobileMenu';
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart  } from 'lucide-react.ts';
+import { Menu, X, ShoppingCart  } from 'lucide-react';
 import { HoverCard, HoverCardContent, HoverCardTrigger  } from '@/components/ui/hover-card';
 import { useTranslation  } from 'react-i18next.ts';
 import { useSelector  } from 'react-redux.ts';

@@ -23,7 +23,7 @@ import { Phone,
   HelpCircle,
   MessageCircle,
   Zap as ZapIcon
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 export const FuturisticFooter: React.FC = (): JSX.Element => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })};

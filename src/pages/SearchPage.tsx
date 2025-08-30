@@ -26,7 +26,7 @@ import { Search,
   CheckCircle,
   X,
   SlidersHorizontal
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface SearchResult {
 

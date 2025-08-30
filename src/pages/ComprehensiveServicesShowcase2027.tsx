@@ -49,7 +49,7 @@ import { Brain,
   Gauge,
   ShieldCheck,
   X
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '../data/ultimateInnovativeServices2026';
