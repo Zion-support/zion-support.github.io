@@ -104,67 +104,7 @@ module.exports = {
       cron_restart: '0 */3 * * *'
     },
 
-<<<<<<< HEAD
     // Console Error Fixer - Fixes console and runtime errors
-=======
-    // 🤖 NEW: AI Code Optimizer - runs every hour
-    {
-      name: 'ai-code-optimizer',
-      script: './scripts/automation/ai-code-optimizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-
-    // 📦 NEW: Smart Dependency Manager - runs every 6 hours
-    {
-      name: 'smart-dependency-manager',
-      script: './scripts/automation/smart-dependency-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // 🚨 NEW: Comprehensive Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
-    {
-      name: 'comprehensive-error-fixer',
-      script: './scripts/automation/comprehensive-error-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
-    },
-
-    // 🔧 NEW: Error Fixer Automation - runs every 15 minutes
-    {
-      name: 'error-fixer-automation',
-      script: './scripts/automation/error-fixer-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
-
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',
