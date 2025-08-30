@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Workflow, Truck, BarChart3, MessageSquare, Monitor } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -61,6 +61,17 @@ export function AppHeader() {
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    // Add new innovative services
+    { name: 'AI Churn Predictor', href: '/services/ai-powered-customer-churn-predictor', icon: TrendingUp, description: '95% accurate churn prediction' },
+    { name: 'Quantum Inventory Manager', href: '/services/quantum-optimized-inventory-manager', icon: Truck, description: 'Quantum-optimized inventory' },
+    { name: 'AI Sales Forecasting', href: '/services/ai-powered-sales-forecasting-engine', icon: BarChart3, description: 'Advanced sales predictions' },
+    { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain-tracker', icon: Lock, description: 'End-to-end transparency' },
+    { name: 'AI HR Recruitment', href: '/services/ai-powered-hr-recruitment-assistant', icon: Users, description: 'Intelligent candidate matching' },
+    { name: 'Quantum Risk Analyzer', href: '/services/quantum-financial-risk-analyzer', icon: Shield, description: 'Quantum financial risk assessment' },
+    { name: 'AI Support Automation', href: '/services/ai-powered-customer-support-automation', icon: MessageSquare, description: 'Intelligent support automation' },
+    { name: 'Edge Performance Monitor', href: '/services/edge-computing-performance-monitor', icon: Monitor, description: 'Real-time edge monitoring' },
+    { name: 'AI Marketing Suite', href: '/services/ai-powered-marketing-automation-suite', icon: TrendingUp, description: 'AI-powered marketing automation' },
+    { name: 'Quantum Cybersecurity', href: '/services/quantum-cybersecurity-threat-detector', icon: Shield, description: 'Next-gen threat detection' }
   ];
 
   const servicesCategories = [
@@ -72,7 +83,8 @@ export function AppHeader() {
         { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
         { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
         { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
+        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
+        { name: 'Comprehensive Showcase', href: '/comprehensive-services-showcase-2025', description: 'All innovative services' }
       ]
     },
     {
@@ -86,7 +98,12 @@ export function AppHeader() {
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Churn Predictor', href: '/services/ai-powered-customer-churn-predictor', description: '95% accurate churn prediction' },
+        { name: 'AI Sales Forecasting', href: '/services/ai-powered-sales-forecasting-engine', description: 'Advanced sales predictions' },
+        { name: 'AI HR Recruitment', href: '/services/ai-powered-hr-recruitment-assistant', description: 'Intelligent candidate matching' },
+        { name: 'AI Support Automation', href: '/services/ai-powered-customer-support-automation', description: 'Intelligent support automation' },
+        { name: 'AI Marketing Suite', href: '/services/ai-powered-marketing-automation-suite', description: 'AI-powered marketing automation' }
       ]
     },
     {
@@ -96,7 +113,9 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
+        { name: 'Quantum Cloud Migration', href: '/services/quantum-cloud-migration-platform', description: 'Quantum-optimized migration' },
+        { name: 'Autonomous Data Center', href: '/services/autonomous-data-center-management', description: 'AI-powered data center management' }
       ]
     },
     {
@@ -106,7 +125,8 @@ export function AppHeader() {
       services: [
         { name: 'IoT & Edge Computing', href: '/services/iot-edge', description: 'Smart Devices & Networks' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Ultra-Low Latency Processing' },
-        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' }
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
+        { name: 'Edge Performance Monitor', href: '/services/edge-computing-performance-monitor', description: 'Real-time edge monitoring' }
       ]
     },
     {
@@ -116,7 +136,9 @@ export function AppHeader() {
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain-tracker', description: 'End-to-end transparency' },
+        { name: 'Quantum Inventory Manager', href: '/services/quantum-optimized-inventory-manager', description: 'Quantum-optimized inventory' }
       ]
     },
     {
@@ -125,7 +147,23 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'Quantum Network Security', href: '/services/quantum-network-security-architecture', description: 'Quantum cryptography' },
+        { name: 'AI Cyber Threat Intelligence', href: '/services/ai-powered-cyber-threat-intelligence-platform', description: 'Advanced threat detection' },
+        { name: 'Quantum Cybersecurity', href: '/services/quantum-cybersecurity-threat-detector', description: 'Next-gen threat detection' }
+      ]
+    },
+    {
+      name: 'Innovation & Research',
+      icon: Star,
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', description: 'AI-powered medical diagnostics' },
+        { name: 'AI Drug Discovery', href: '/services/quantum-ai-drug-discovery-platform', description: 'Quantum AI drug discovery' },
+        { name: 'Climate Change Predictor', href: '/services/ai-powered-climate-change-predictor', description: 'AI climate modeling' },
+        { name: 'Autonomous Manufacturing', href: '/services/ai-powered-autonomous-manufacturing-controller', description: 'AI manufacturing control' }
       ]
     }
   ];

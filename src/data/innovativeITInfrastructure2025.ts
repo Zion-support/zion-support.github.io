@@ -359,3 +359,247 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     marketSize: "$667.9 billion by 2025"
   }
 ];
+
+// Add new innovative IT infrastructure services
+export const newInnovativeITInfrastructureServices = [
+  {
+    id: 'quantum-network-security-architecture',
+    title: 'Quantum Network Security Architecture',
+    description: 'Next-generation network security using quantum cryptography and AI-powered threat detection for enterprise-grade protection.',
+    category: 'IT Services',
+    price: '$25,000',
+    billing: 'project',
+    features: [
+      'Quantum key distribution',
+      'AI threat detection',
+      'Zero-trust architecture',
+      'Real-time monitoring',
+      'Compliance automation',
+      '24/7 security operations'
+    ],
+    benefits: [
+      'Unbreakable encryption',
+      'Real-time threat prevention',
+      'Regulatory compliance',
+      'Reduced security incidents'
+    ],
+    marketPrice: '$30,000-50,000/project',
+    ctaLabel: 'Secure Network',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'autonomous-data-center-management',
+    title: 'Autonomous Data Center Management',
+    description: 'Intelligent data center management system that autonomously optimizes performance, energy usage, and resource allocation.',
+    category: 'IT Services',
+    price: '$15,000',
+    billing: 'project',
+    features: [
+      'AI-powered optimization',
+      'Energy efficiency management',
+      'Predictive maintenance',
+      'Resource allocation',
+      'Performance monitoring',
+      'Automated scaling'
+    ],
+    benefits: [
+      'Reduce energy costs by 40%',
+      'Improve performance by 60%',
+      'Reduce downtime by 80%',
+      'Optimize resource usage'
+    ],
+    marketPrice: '$18,000-35,000/project',
+    ctaLabel: 'Optimize Data Center',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'quantum-cloud-migration-platform',
+    title: 'Quantum Cloud Migration Platform',
+    description: 'Revolutionary cloud migration platform using quantum algorithms for optimal resource allocation and cost optimization.',
+    category: 'IT Services',
+    price: '$20,000',
+    billing: 'project',
+    features: [
+      'Quantum optimization algorithms',
+      'Automated migration planning',
+      'Cost optimization',
+      'Performance testing',
+      'Security validation',
+      'Post-migration support'
+    ],
+    benefits: [
+      'Reduce migration time by 50%',
+      'Lower migration costs',
+      'Improved performance',
+      'Enhanced security'
+    ],
+    marketPrice: '$25,000-45,000/project',
+    ctaLabel: 'Migrate to Cloud',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-powered-disaster-recovery-system',
+    title: 'AI-Powered Disaster Recovery System',
+    description: 'Intelligent disaster recovery system that automatically detects failures and orchestrates recovery processes.',
+    category: 'IT Services',
+    price: '$18,000',
+    billing: 'project',
+    features: [
+      'AI failure detection',
+      'Automated recovery orchestration',
+      'Real-time monitoring',
+      'Compliance reporting',
+      'Testing automation',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Reduce recovery time by 90%',
+      'Automated failover',
+      '24/7 monitoring',
+      'Regulatory compliance'
+    ],
+    marketPrice: '$22,000-40,000/project',
+    ctaLabel: 'Protect Business',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'quantum-network-performance-optimizer',
+    title: 'Quantum Network Performance Optimizer',
+    description: 'Advanced network performance optimization using quantum algorithms for maximum throughput and minimal latency.',
+    category: 'IT Services',
+    price: '$22,000',
+    billing: 'project',
+    features: [
+      'Quantum routing optimization',
+      'Real-time performance monitoring',
+      'Traffic analysis',
+      'Bandwidth optimization',
+      'Quality of service management',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Increase network speed by 300%',
+      'Reduce latency by 80%',
+      'Optimize bandwidth usage',
+      'Improve user experience'
+    ],
+    marketPrice: '$28,000-50,000/project',
+    ctaLabel: 'Optimize Network',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'autonomous-it-infrastructure-monitor',
+    title: 'Autonomous IT Infrastructure Monitor',
+    description: 'Intelligent infrastructure monitoring system that autonomously detects issues and optimizes performance.',
+    category: 'IT Services',
+    price: '$12,000',
+    billing: 'project',
+    features: [
+      'AI-powered monitoring',
+      'Predictive analytics',
+      'Automated issue resolution',
+      'Performance optimization',
+      'Capacity planning',
+      'Cost analysis'
+    ],
+    benefits: [
+      'Proactive issue detection',
+      'Automated problem resolution',
+      'Improved performance',
+      'Reduced operational costs'
+    ],
+    marketPrice: '$15,000-30,000/project',
+    ctaLabel: 'Monitor Infrastructure',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'quantum-storage-optimization-platform',
+    title: 'Quantum Storage Optimization Platform',
+    description: 'Revolutionary storage optimization platform using quantum algorithms for maximum efficiency and cost reduction.',
+    category: 'IT Services',
+    price: '$16,000',
+    billing: 'project',
+    features: [
+      'Quantum storage algorithms',
+      'Data deduplication',
+      'Compression optimization',
+      'Tiered storage management',
+      'Performance analytics',
+      'Cost optimization'
+    ],
+    benefits: [
+      'Reduce storage costs by 60%',
+      'Improve access speed',
+      'Optimize storage usage',
+      'Enhanced data protection'
+    ],
+    marketPrice: '$20,000-35,000/project',
+    ctaLabel: 'Optimize Storage',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-powered-it-compliance-automation',
+    title: 'AI-Powered IT Compliance Automation',
+    description: 'Intelligent compliance automation system that ensures regulatory compliance across all IT infrastructure.',
+    category: 'IT Services',
+    price: '$14,000',
+    billing: 'project',
+    features: [
+      'Automated compliance checking',
+      'Regulatory updates',
+      'Audit preparation',
+      'Policy management',
+      'Risk assessment',
+      'Reporting automation'
+    ],
+    benefits: [
+      'Automated compliance',
+      'Reduce audit time',
+      'Lower compliance costs',
+      'Risk mitigation'
+    ],
+    marketPrice: '$18,000-32,000/project',
+    ctaLabel: 'Automate Compliance',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];

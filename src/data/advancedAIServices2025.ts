@@ -359,3 +359,247 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketSize: "$25.8 billion by 2025"
   }
 ];
+
+// Add new advanced AI services
+export const newAdvancedAIServices = [
+  {
+    id: 'ai-powered-predictive-maintenance-platform',
+    title: 'AI-Powered Predictive Maintenance Platform',
+    description: 'Revolutionary predictive maintenance using AI to prevent equipment failures and optimize maintenance schedules.',
+    category: 'AI Solutions',
+    price: '$1,299',
+    billing: 'month',
+    features: [
+      'Real-time equipment monitoring',
+      'AI failure prediction',
+      'Maintenance optimization',
+      'Cost reduction analytics',
+      'Integration with IoT sensors',
+      'Predictive analytics dashboard'
+    ],
+    benefits: [
+      'Reduce unplanned downtime by 70%',
+      'Lower maintenance costs by 40%',
+      'Extend equipment lifespan',
+      'Improve operational efficiency'
+    ],
+    marketPrice: '$1,500-2,500/month',
+    ctaLabel: 'Prevent Failures',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'quantum-ai-drug-discovery-platform',
+    title: 'Quantum AI Drug Discovery Platform',
+    description: 'Breakthrough drug discovery platform combining quantum computing with AI for pharmaceutical research.',
+    category: 'AI Solutions',
+    price: '$3,999',
+    billing: 'month',
+    features: [
+      'Quantum molecular modeling',
+      'AI drug candidate screening',
+      'Clinical trial optimization',
+      'Drug interaction prediction',
+      'Regulatory compliance tools',
+      'Research collaboration platform'
+    ],
+    benefits: [
+      'Accelerate drug discovery by 10x',
+      'Reduce research costs significantly',
+      'Improve drug efficacy prediction',
+      'Faster time to market'
+    ],
+    marketPrice: '$4,500-7,000/month',
+    ctaLabel: 'Discover Drugs',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-powered-climate-change-predictor',
+    title: 'AI-Powered Climate Change Predictor',
+    description: 'Advanced climate modeling and prediction using AI to forecast environmental changes and optimize sustainability strategies.',
+    category: 'AI Solutions',
+    price: '$2,499',
+    billing: 'month',
+    features: [
+      'Climate pattern analysis',
+      'Predictive modeling',
+      'Sustainability optimization',
+      'Carbon footprint tracking',
+      'Environmental impact assessment',
+      'Policy recommendation engine'
+    ],
+    benefits: [
+      'Accurate climate predictions',
+      'Optimize sustainability efforts',
+      'Reduce environmental impact',
+      'Compliance with regulations'
+    ],
+    marketPrice: '$3,000-5,000/month',
+    ctaLabel: 'Predict Climate',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-powered-autonomous-logistics-orchestrator',
+    title: 'AI-Powered Autonomous Logistics Orchestrator',
+    description: 'Intelligent logistics management system that autonomously optimizes routes, schedules, and resource allocation.',
+    category: 'AI Solutions',
+    price: '$1,799',
+    billing: 'month',
+    features: [
+      'Autonomous route optimization',
+      'Real-time traffic analysis',
+      'Resource allocation optimization',
+      'Predictive demand forecasting',
+      'Multi-modal transportation',
+      'Cost optimization engine'
+    ],
+    benefits: [
+      'Reduce logistics costs by 35%',
+      'Improve delivery times',
+      'Optimize resource usage',
+      'Enhanced customer satisfaction'
+    ],
+    marketPrice: '$2,200-3,800/month',
+    ctaLabel: 'Optimize Logistics',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'quantum-ai-financial-trading-platform',
+    title: 'Quantum AI Financial Trading Platform',
+    description: 'Revolutionary trading platform using quantum AI for ultra-fast market analysis and automated trading strategies.',
+    category: 'AI Solutions',
+    price: '$4,999',
+    billing: 'month',
+    features: [
+      'Quantum market analysis',
+      'AI trading strategies',
+      'Real-time risk management',
+      'Portfolio optimization',
+      'Regulatory compliance',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Execute trades 1000x faster',
+      'Improve trading accuracy',
+      'Reduce market risk',
+      'Maximize returns'
+    ],
+    marketPrice: '$6,000-10,000/month',
+    ctaLabel: 'Start Trading',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-powered-cyber-threat-intelligence-platform',
+    title: 'AI-Powered Cyber Threat Intelligence Platform',
+    description: 'Advanced threat intelligence platform using AI to detect, analyze, and respond to cybersecurity threats in real-time.',
+    category: 'AI Solutions',
+    price: '$1,599',
+    billing: 'month',
+    features: [
+      'Real-time threat detection',
+      'AI behavioral analysis',
+      'Automated response systems',
+      'Threat intelligence sharing',
+      'Compliance reporting',
+      'Security analytics dashboard'
+    ],
+    benefits: [
+      'Detect threats 100x faster',
+      'Reduce false positives',
+      'Automated threat response',
+      'Enhanced security posture'
+    ],
+    marketPrice: '$2,000-3,500/month',
+    ctaLabel: 'Protect Assets',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-powered-energy-optimization-engine',
+    title: 'AI-Powered Energy Optimization Engine',
+    description: 'Intelligent energy management system that optimizes consumption, reduces costs, and improves sustainability.',
+    category: 'AI Solutions',
+    price: '$899',
+    billing: 'month',
+    features: [
+      'Real-time energy monitoring',
+      'AI consumption optimization',
+      'Predictive maintenance',
+      'Cost analysis and reporting',
+      'Sustainability metrics',
+      'Integration with smart grids'
+    ],
+    benefits: [
+      'Reduce energy costs by 25%',
+      'Improve energy efficiency',
+      'Reduce carbon footprint',
+      'Compliance with regulations'
+    ],
+    marketPrice: '$1,100-1,800/month',
+    ctaLabel: 'Optimize Energy',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-powered-autonomous-manufacturing-controller',
+    title: 'AI-Powered Autonomous Manufacturing Controller',
+    description: 'Intelligent manufacturing control system that autonomously optimizes production processes and quality control.',
+    category: 'AI Solutions',
+    price: '$2,199',
+    billing: 'month',
+    features: [
+      'Autonomous process optimization',
+      'Real-time quality control',
+      'Predictive maintenance',
+      'Production planning',
+      'Quality analytics',
+      'Integration with IoT devices'
+    ],
+    benefits: [
+      'Increase production efficiency by 40%',
+      'Reduce defects by 60%',
+      'Lower operational costs',
+      'Improve product quality'
+    ],
+    marketPrice: '$2,700-4,500/month',
+    ctaLabel: 'Optimize Production',
+    href: 'https://ziontechgroup.com/contact',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];

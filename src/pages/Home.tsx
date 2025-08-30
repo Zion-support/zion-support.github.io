@@ -2,6 +2,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Star, Phone, Mail, MapPin } from 'lucide-react';
 
 
 import { SEO } from "@/components/SEO";
@@ -54,7 +55,7 @@ const serviceCategories = [
     description: "Cutting-edge artificial intelligence services for business transformation",
     icon: "🤖",
     href: "/ai-services",
-    count: 20,
+    count: 25,
     color: "from-cyan-500 to-blue-600"
   },
   {
@@ -62,7 +63,7 @@ const serviceCategories = [
     description: "Ultra-low latency edge computing and IoT platform solutions",
     icon: "⚡",
     href: "/services/edge-computing-platform",
-    count: 8,
+    count: 12,
     color: "from-blue-500 to-purple-600"
   },
   {
@@ -70,7 +71,7 @@ const serviceCategories = [
     description: "Scalable cloud infrastructure and automated deployment solutions",
     icon: "☁️",
     href: "/services/cloud-devops",
-    count: 12,
+    count: 18,
     color: "from-green-500 to-emerald-600"
   },
   {
@@ -78,7 +79,7 @@ const serviceCategories = [
     description: "Advanced security protocols and threat protection systems",
     icon: "🔒",
     href: "/services/ai-compliance-copilot",
-    count: 10,
+    count: 15,
     color: "from-red-500 to-orange-600"
   },
   {
@@ -86,7 +87,7 @@ const serviceCategories = [
     description: "AI-powered data protection and compliance management",
     icon: "🛡️",
     href: "/services/ai-data-governance",
-    count: 6,
+    count: 8,
     color: "from-purple-500 to-pink-600"
   },
   {
@@ -94,10 +95,98 @@ const serviceCategories = [
     description: "AI-driven customer engagement and retention platforms",
     icon: "💝",
     href: "/services/ai-customer-success-platform",
-    count: 5,
+    count: 10,
     color: "from-yellow-500 to-orange-600"
+  },
+  {
+    name: "Micro SaaS",
+    description: "Innovative software-as-a-service solutions for niche markets",
+    icon: "🚀",
+    href: "/micro-saas",
+    count: 20,
+    color: "from-indigo-500 to-purple-600"
+  },
+  {
+    name: "Quantum Computing",
+    description: "Next-generation quantum computing and AI platforms",
+    icon: "⚛️",
+    href: "/services/quantum-ai-platform",
+    count: 6,
+    color: "from-pink-500 to-rose-600"
   }
 ];
+
+// New innovative services showcase
+const innovativeServices = [
+  {
+    name: "AI-Powered Customer Churn Predictor",
+    description: "Predict customer churn with 95% accuracy using advanced AI algorithms",
+    price: "$399/month",
+    marketPrice: "$500-800/month",
+    benefits: ["Reduce churn by 40%", "Increase customer lifetime value", "Proactive retention"],
+    href: "/services/ai-powered-customer-churn-predictor",
+    icon: "📊",
+    category: "AI Solutions"
+  },
+  {
+    name: "Quantum-Optimized Inventory Manager",
+    description: "Revolutionary inventory optimization using quantum algorithms",
+    price: "$599/month",
+    marketPrice: "$700-1200/month",
+    benefits: ["Reduce costs by 30%", "Improve turnover by 50%", "Eliminate stockouts"],
+    href: "/services/quantum-optimized-inventory-manager",
+    icon: "📦",
+    category: "Micro SaaS"
+  },
+  {
+    name: "AI-Powered Sales Forecasting Engine",
+    description: "Accurate sales forecasting using AI and market intelligence",
+    price: "$299/month",
+    marketPrice: "$400-700/month",
+    benefits: ["85% forecast accuracy", "Better resource planning", "Data-driven decisions"],
+    href: "/services/ai-powered-sales-forecasting-engine",
+    icon: "📈",
+    category: "AI Solutions"
+  },
+  {
+    name: "Blockchain Supply Chain Tracker",
+    description: "End-to-end supply chain visibility using blockchain technology",
+    price: "$499/month",
+    marketPrice: "$600-1000/month",
+    benefits: ["100% transparency", "Reduce fraud", "Automated compliance"],
+    href: "/services/blockchain-supply-chain-tracker",
+    icon: "🔗",
+    category: "Micro SaaS"
+  },
+  {
+    name: "AI-Powered HR Recruitment Assistant",
+    description: "Intelligent recruitment automation with AI candidate matching",
+    price: "$349/month",
+    marketPrice: "$450-800/month",
+    benefits: ["Reduce time-to-hire by 60%", "Improve candidate quality", "Lower costs"],
+    href: "/services/ai-powered-hr-recruitment-assistant",
+    icon: "👥",
+    category: "AI Solutions"
+  },
+  {
+    name: "Quantum Financial Risk Analyzer",
+    description: "Advanced financial risk assessment using quantum computing",
+    price: "$799/month",
+    marketPrice: "$900-1500/month",
+    benefits: ["Improve risk-adjusted returns", "Better diversification", "Real-time monitoring"],
+    href: "/services/quantum-financial-risk-analyzer",
+    icon: "💰",
+    category: "AI Solutions"
+  }
+];
+
+// Contact information
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  website: "https://ziontechgroup.com"
+};
 
 // Animation variants for smooth performance
 const containerVariants = {
@@ -416,37 +505,127 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* CTA Section */}
-      <motion.section 
-        className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Join hundreds of businesses that have already revolutionized their operations with our AI-powered solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+      {/* Innovative Services Showcase */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Innovative Services Showcase
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our cutting-edge portfolio of AI-powered solutions, quantum computing platforms, and innovative Micro SaaS services designed to transform your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {innovativeServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10"
+              >
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-2">{service.icon}</div>
+                  <span className="inline-block px-3 py-1 bg-slate-700 text-cyan-400 text-xs font-medium rounded-full">
+                    {service.category}
+                  </span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 text-center">
+                  {service.name}
+                </h3>
+                
+                <p className="text-gray-300 text-sm mb-4 text-center">
+                  {service.description}
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400 text-sm">Our Price:</span>
+                    <span className="text-cyan-400 font-bold">{service.price}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400 text-sm">Market Price:</span>
+                    <span className="text-green-400 text-sm">{service.marketPrice}</span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">
+                    Key Benefits
+                  </h4>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-gray-400">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="text-center">
+                  <a
+                    href={service.href}
+                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a
+              href="/comprehensive-services-showcase-2025"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
             >
-              Start Your Journey
-            </Link>
-            <Link 
-              to="/services" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              Explore Services
-            </Link>
+              <Star className="w-5 h-5 mr-2" />
+              View All Innovative Services
+            </a>
           </div>
         </div>
-      </motion.section>
+      </section>
+
+      {/* Contact Information Banner */}
+      <section className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-t border-b border-blue-500/30 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <h3 className="text-blue-400 font-semibold mb-2 flex items-center justify-center">
+                <Phone className="w-4 h-4 mr-2" />
+                Mobile
+              </h3>
+              <a href={`tel:${contactInfo.phone}`} className="text-white hover:text-blue-300 transition-colors">
+                {contactInfo.phone}
+              </a>
+            </div>
+            <div>
+              <h3 className="text-blue-400 font-semibold mb-2 flex items-center justify-center">
+                <Mail className="w-4 h-4 mr-2" />
+                Email
+              </h3>
+              <a href={`mailto:${contactInfo.email}`} className="text-white hover:text-blue-300 transition-colors">
+                {contactInfo.email}
+              </a>
+            </div>
+            <div>
+              <h3 className="text-blue-400 font-semibold mb-2 flex items-center justify-center">
+                <MapPin className="w-4 h-4 mr-2" />
+                Address
+              </h3>
+              <p className="text-white">{contactInfo.address}</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Lazy Loaded Sections */}
       <Suspense fallback={<LoadingFallback message="Loading services..." />}>

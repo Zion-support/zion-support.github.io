@@ -58,7 +58,9 @@ import {
   Award,
   Users,
   TrendingUp,
-  CheckCircle
+  CheckCircle,
+  ShoppingCart,
+  Server
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -78,7 +80,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        // Add new AI services
+        { name: 'AI Churn Predictor', href: '/services/ai-powered-customer-churn-predictor' },
+        { name: 'AI Sales Forecasting', href: '/services/ai-powered-sales-forecasting-engine' },
+        { name: 'AI HR Recruitment', href: '/services/ai-powered-hr-recruitment-assistant' },
+        { name: 'AI Support Automation', href: '/services/ai-powered-customer-support-automation' },
+        { name: 'AI Marketing Suite', href: '/services/ai-powered-marketing-automation-suite' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics' },
+        { name: 'AI Drug Discovery', href: '/services/quantum-ai-drug-discovery-platform' },
+        { name: 'Climate Change Predictor', href: '/services/ai-powered-climate-change-predictor' },
+        { name: 'Autonomous Manufacturing', href: '/services/ai-powered-autonomous-manufacturing-controller' }
       ]
     },
     {
@@ -91,7 +104,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        // Add new cloud services
+        { name: 'Quantum Cloud Migration', href: '/services/quantum-cloud-migration-platform' },
+        { name: 'Autonomous Data Center', href: '/services/autonomous-data-center-management' }
       ]
     },
     {
@@ -102,25 +118,76 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        // Add new edge services
+        { name: 'Edge Performance Monitor', href: '/services/edge-computing-performance-monitor' }
       ]
     },
     {
-      title: 'Quantum & Emerging Tech',
-      icon: Crown,
+      title: 'Innovation & Research',
+      icon: Star,
+      color: 'from-yellow-600 to-orange-600',
+      links: [
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning' },
+        { name: 'AI Quantum Financial Trading', href: '/services/ai-quantum-financial-trading' },
+        { name: 'AI Blockchain Supply Chain', href: '/services/ai-blockchain-supply-chain' },
+        { name: 'AI Cyber Threat Intelligence', href: '/services/ai-cyber-threat-intelligence' },
+        { name: 'AI Quantum Computing Platform', href: '/services/ai-quantum-computing-platform' },
+        // Add new innovation services
+        { name: 'Quantum Inventory Manager', href: '/services/quantum-optimized-inventory-manager' },
+        { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain-tracker' },
+        { name: 'Quantum Risk Analyzer', href: '/services/quantum-financial-risk-analyzer' },
+        { name: 'Quantum Cybersecurity', href: '/services/quantum-cybersecurity-threat-detector' },
+        { name: 'Quantum Network Security', href: '/services/quantum-network-security-architecture' },
+        { name: 'Quantum Storage Optimization', href: '/services/quantum-storage-optimization-platform' }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Cyber Threat Intelligence', href: '/services/ai-cyber-threat-intelligence' },
+        { name: 'AI Quantum Computing Platform', href: '/services/ai-quantum-computing-platform' },
+        // Add new security services
+        { name: 'AI Cyber Threat Intelligence Platform', href: '/services/ai-powered-cyber-threat-intelligence-platform' },
+        { name: 'AI IT Compliance Automation', href: '/services/ai-powered-it-compliance-automation' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-green-600 to-emerald-600',
+      links: [
+        { name: 'Smart Contract Risk Scanner', href: '/services/smart-contract-risk-scanner' },
+        { name: 'AI Content Optimizer Pro', href: '/services/ai-content-optimizer' },
+        { name: 'Quantum Workflow Automation', href: '/services/quantum-workflow-automation' },
+        { name: 'Edge AI Inference Engine', href: '/services/edge-ai-inference-engine' },
+        { name: 'Autonomous CRM Optimizer', href: '/services/autonomous-crm-optimizer' },
+        { name: 'Quantum Supply Chain Optimizer', href: '/services/quantum-supply-chain-optimizer' },
+        { name: 'SOC 2 Compliance Automation', href: '/services/soc2-compliance-automation-saas' },
+        { name: 'MLOps Observability', href: '/services/mlops-observability' },
+        // Add new micro SaaS services
+        { name: 'AI Churn Predictor', href: '/services/ai-powered-customer-churn-predictor' },
+        { name: 'Quantum Inventory Manager', href: '/services/quantum-optimized-inventory-manager' },
+        { name: 'AI Sales Forecasting', href: '/services/ai-powered-sales-forecasting-engine' },
+        { name: 'Blockchain Supply Chain Tracker', href: '/services/blockchain-supply-chain-tracker' },
+        { name: 'AI HR Recruitment Assistant', href: '/services/ai-powered-hr-recruitment-assistant' },
+        { name: 'Quantum Financial Risk Analyzer', href: '/services/quantum-financial-risk-analyzer' },
+        { name: 'AI Customer Support Automation', href: '/services/ai-powered-customer-support-automation' },
+        { name: 'Edge Computing Performance Monitor', href: '/services/edge-computing-performance-monitor' },
+        { name: 'AI Marketing Automation Suite', href: '/services/ai-powered-marketing-automation-suite' },
+        { name: 'Quantum Cybersecurity Threat Detector', href: '/services/quantum-cybersecurity-threat-detector' }
       ]
     }
   ];
