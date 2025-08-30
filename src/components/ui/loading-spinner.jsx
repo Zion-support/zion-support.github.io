@@ -38,50 +38,26 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
 
 
 }>
-      <motion.div className = {
-  cn('animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size],
-  variantClasses[variant])
-
-
-
-
-
-
-} role="status" aria-label="Loading">
+      <motion.div 
+        className={cn('animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size], variantClasses[variant])}
+        role="status" 
+        aria-label="Loading"
+      >
         <span className="sr-only">Loading...</span>
       </motion.div>
-<<<<<<< HEAD
 
-      {text && (<motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-zion-slate-light font-medium text-sm">
+      {text && (
+        <motion.p 
+          initial={{ opacity: 0, y: 10 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ delay: 0.2 }} 
+          className="text-zion-slate-light font-medium text-sm"
+        >
           {text}
-        </motion.p>)}
-    </div>);
-
-=======
-      
-      {text && (<motion.p initial = {
-  { opacity: 0,
-  y: 10 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.2 }} className="text-zion-slate-light font-medium text-sm">
-          {text}
-        </motion.p>)}
-    </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+        </motion.p>
+      )}
+    </div>
+  );
 // Page loading component
 export function PageLoader() {
     return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">
@@ -90,20 +66,13 @@ export function PageLoader() {
         <h1 className="text-2xl font-bold">Loading Zion Tech Group...</h1>
         <p className="mt-2 text-blue-200">Please wait while we prepare your experience.</p>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
-    </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    </div>
+  );
 // Inline loading component
 export function InlineLoader({ size = 'sm', variant = 'default' }) {
     return (<div className="inline-flex items-center">
       <LoadingSpinner size={size} variant={variant} className="mr-2"/>
       <span className="text-sm text-gray-600">Loading...</span>
-<<<<<<< HEAD
-    </div>);
-}}}
-=======
-    </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    </div>
+  );
+}
