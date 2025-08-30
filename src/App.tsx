@@ -60,8 +60,8 @@ const AffiliateTracking = lazy(() => import('./pages/services/AffiliateTracking'
 const MobileSurvey = lazy(() => import('./pages/services/MobileSurvey'));
 
 // Additional innovative services
-const AIAutonomousCodeReviewer = lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
-const ZeroTrustNetworkAccess = lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
+// const AIAutonomousCodeReviewer = lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
+// const ZeroTrustNetworkAccess = lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
 
 // Additional new service pages
 const AIPoweredSEO = lazy(() => import('./pages/services/AIPoweredSEO'));
@@ -75,7 +75,7 @@ const AIProjectManagement = lazy(() => import('./pages/services/AIProjectManagem
 const AICustomerSupportAutomation = lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
+// const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
@@ -84,14 +84,14 @@ const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServices
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
 const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
-const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+// const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
 // Comprehensive improvements components
-const AdvancedAIServicesHub = lazy(() => import('./components/AdvancedAIServicesHub'));
-const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
-const EnhancedSEOManager = lazy(() => import('./components/EnhancedSEOManager'));
+// const AdvancedAIServicesHub = lazy(() => import('./components/AdvancedAIServicesHub'));
+// const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
+// const EnhancedSEOManager = lazy(() => import('./components/EnhancedSEOManager'));
 const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveImprovements2025'));
 
 // New innovative AI services
