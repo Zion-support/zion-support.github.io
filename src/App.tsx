@@ -95,6 +95,9 @@ const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 // const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
+// Comprehensive Expanded Services 2025
+const ComprehensiveExpandedServices2025 = lazy(() => import('./pages/ComprehensiveExpandedServices2025'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -325,6 +328,13 @@ function App() {
                     <Route path="/enhanced-services-showcase-2025" element={
                       <Suspense fallback={<div className="loading-spinner mx-auto mt-20"></div>}>
                         {/* <EnhancedServicesShowcase2025 /> */}
+                      </Suspense>
+                    } />
+
+                    {/* Comprehensive Expanded Services 2025 */}
+                    <Route path="/comprehensive-expanded-services-2025" element={
+                      <Suspense fallback={<div className="loading-spinner mx-auto mt-20"></div>}>
+                        <ComprehensiveExpandedServices2025 />
                       </Suspense>
                     } />
 
