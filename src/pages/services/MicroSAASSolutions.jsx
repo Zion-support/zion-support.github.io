@@ -33,7 +33,7 @@ export default function MicroSAASSolutions() {
             description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
             icon: TrendingUp,
             features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
-
+        }
     ];
     const benefits = [
         {
@@ -55,7 +55,7 @@ export default function MicroSAASSolutions() {
             title: "Security",
             description: "Enterprise-grade security and compliance standards",
             icon: Shield
-
+        }
     ];
     const industries = [
         {
@@ -77,7 +77,7 @@ export default function MicroSAASSolutions() {
             name: "Real Estate",
             description: "Property management and client portals",
             icon: Building
-
+        }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO title="Micro SAAS Solutions - Zion Tech Group" description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries." keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software" canonical="https://ziontechgroup.com/services/micro-saas-solutions"/>
