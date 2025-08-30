@@ -84,21 +84,62 @@ export function Footer() {
               Transforming businesses through cutting-edge technology and expert consulting.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://facebook.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://instagram.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://youtube.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://youtube.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Youtube className="w-5 h-5" />
               </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Services</h3>
+            <div className="space-y-2">
+              <Link to="/ai-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">AI & Machine Learning</Link>
+              <Link to="/micro-saas" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Micro SAAS Solutions</Link>
+              <Link to="/it-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">IT Infrastructure</Link>
+              <Link to="/services/blockchain-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Blockchain Solutions</Link>
+              <Link to="/services/quantum-computing" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Quantum Computing</Link>
+              <Link to="/services/cloud-migration" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Cloud Migration</Link>
+            </div>
+          </div>
+
+          {/* Solutions */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Solutions</h3>
+            <div className="space-y-2">
+              <Link to="/solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Industry Solutions</Link>
+              <Link to="/case-studies" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Case Studies</Link>
+              <Link to="/white-papers" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">White Papers</Link>
+              <Link to="/webinars" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Webinars</Link>
+              <Link to="/training" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Training Programs</Link>
+              <Link to="/support" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Technical Support</Link>
+            </div>
+          </div>
+
+          {/* Company */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Company</h3>
+            <div className="space-y-2">
+              <Link to="/about" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">About Us</Link>
+              <Link to="/team" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Our Team</Link>
+              <Link to="/careers" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Careers</Link>
+              <Link to="/contact" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Contact</Link>
+              <Link to="/blog" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">Blog</Link>
+              <Link to="/news" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">News</Link>
+            </div>
+          </div>
               <a href="https://github.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 <Github className="w-5 h-5" />
               </a>

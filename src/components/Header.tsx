@@ -125,7 +125,105 @@ export function Header({ className }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <MainNavigation />
+            <nav className="flex items-center space-x-8">
+              {/* Main Services */}
+              <div className="relative group">
+                <button className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors py-2">
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-xl shadow-zion-purple/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="p-4 grid grid-cols-2 gap-4">
+                    <div>
+                      <h3 className="text-zion-cyan font-semibold mb-2">AI & ML</h3>
+                      <div className="space-y-1">
+                        <Link to="/ai-services" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link>
+                        <Link to="/ai-solutions" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link>
+                        <Link to="/services/ai-business-intelligence" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Business Intelligence</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-zion-cyan font-semibold mb-2">Micro SAAS</h3>
+                      <div className="space-y-1">
+                        <Link to="/micro-saas" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link>
+                        <Link to="/services/project-management-saas" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Project Management</Link>
+                        <Link to="/services/hr-management-saas" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">HR Management</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Solutions */}
+              <div className="relative group">
+                <button className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors py-2">
+                  <span>Solutions</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-xl shadow-zion-purple/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="p-4 grid grid-cols-2 gap-4">
+                    <div>
+                      <h3 className="text-zion-cyan font-semibold mb-2">IT Infrastructure</h3>
+                      <div className="space-y-1">
+                        <Link to="/it-services" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link>
+                        <Link to="/services/cloud-migration" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud Migration</Link>
+                        <Link to="/services/cybersecurity-audit" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-zion-cyan font-semibold mb-2">Emerging Tech</h3>
+                      <div className="space-y-1">
+                        <Link to="/services/blockchain-solutions" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain</Link>
+                        <Link to="/services/quantum-computing" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link>
+                        <Link to="/services/iot-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">IoT Platform</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Company */}
+              <div className="relative group">
+                <button className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors py-2">
+                  <span>Company</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-xl shadow-zion-purple/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="p-4 space-y-2">
+                    <Link to="/about" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link>
+                    <Link to="/team" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Our Team</Link>
+                    <Link to="/careers" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link>
+                    <Link to="/contact" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Resources */}
+              <div className="relative group">
+                <button className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors py-2">
+                  <span>Resources</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-xl shadow-zion-purple/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="p-4 space-y-2">
+                    <Link to="/blog" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link>
+                    <Link to="/case-studies" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Case Studies</Link>
+                    <Link to="/white-papers" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">White Papers</Link>
+                    <Link to="/webinars" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">Webinars</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Pricing */}
+              <Link to="/pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors py-2">
+                Pricing
+              </Link>
+
+              {/* Support */}
+              <Link to="/support" className="text-zion-slate-light hover:text-zion-cyan transition-colors py-2">
+                Support
+              </Link>
+            </nav>
           </div>
 
           {/* Right Side Actions */}
