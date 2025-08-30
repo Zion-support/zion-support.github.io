@@ -65,9 +65,9 @@ export const useAICodeGeneration = () => {
 
         catch (error) {
 <<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
+            // // // // // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
 =======
-            // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
+            // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -79,7 +79,7 @@ export const useAICodeGeneration = () => {
 =======
             })}
         catch (error) {
-            // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
+            // // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
@@ -123,9 +123,9 @@ export const useAICodeGeneration = () => {
 
         catch (error) {
 <<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
+            // // // // // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
 =======
-            // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
+            // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -137,7 +137,7 @@ export const useAICodeGeneration = () => {
 =======
             })}
         catch (error) {
-            // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
+            // // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
@@ -179,9 +179,9 @@ export const useAICodeGeneration = () => {
 
         catch (error) {
 <<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // console.error('Failed to optimize code:', error);
+            // // // // // // // // // // // // // // // // // // // console.error('Failed to optimize code:', error);
 =======
-            // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to optimize code:', error);
+            // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to optimize code:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -193,7 +193,7 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation', 'code_optimized', focus, optimizedCode.length);
             return optimizedCode}
         catch (error) {
-            // // // // // // // // // // // // // // // console.error('Failed to optimize code:', error);
+            // // // // // // // // // // // // // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -221,9 +221,9 @@ export const useAICodeGeneration = () => {
 
         catch (error) {
 <<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // console.error('Failed to generate tests:', error);
+            // // // // // // // // // // // // // // // // // // // console.error('Failed to generate tests:', error);
 =======
-            // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate tests:', error);
+            // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate tests:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -239,7 +239,7 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation', 'tests_generated', language, testCode.length);
             return testCode}
         catch (error) {
-            // // // // // // // // // // // // // // // console.error('Failed to generate tests:', error);
+            // // // // // // // // // // // // // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -267,9 +267,9 @@ export const useAICodeGeneration = () => {
 
         catch (error) {
 <<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
+            // // // // // // // // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
 =======
-            // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
+            // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -285,7 +285,7 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation', 'docs_generated', language, docs.length);
             return docs}
         catch (error) {
-            // // // // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
+            // // // // // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -401,9 +401,9 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
 <<<<<<< HEAD
-  // // // // // // // // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
+  // // // // // // // // // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
 =======
-  // // // // // // // // // // // // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
+  // // // // // // // // // // // // // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 });`;
     };
@@ -449,19 +449,19 @@ if __name__ == "__main__":
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-// // // // // // // // // // // // // // // // // // console.log("Generated code placeholder");
-// // // // // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`;
+// // // // // // // // // // // // // // // // // // // console.log("Generated code placeholder");
+// // // // // // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
+// // // // // // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`;
 =======
-// // // // // // // // // // // // // // // // // // // // // // console.log("Generated code placeholder");
-// // // // // // // // // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`;
+// // // // // // // // // // // // // // // // // // // // // // // console.log("Generated code placeholder");
+// // // // // // // // // // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
+// // // // // // // // // // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`;
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
 =======
-// // // // // // // // // // // // // // // console.log("Generated code placeholder");
-// // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`};
+// // // // // // // // // // // // // // // // console.log("Generated code placeholder");
+// // // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
+// // // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Helper functions for code analysis
 <<<<<<< HEAD
