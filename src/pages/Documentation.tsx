@@ -17,7 +17,8 @@ import { Search,
   Brain,
   Cloud,
   Shield,
-  Rocket
+  Rocket,
+  Api
  } from 'lucide-react';
 
 export default function Documentation() {
@@ -152,7 +153,7 @@ export default function Documentation() {
   };
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories: docCategories.filter(category  => category.id === selectedCategory);
+    ? docCategories : docCategories.filter(category => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 

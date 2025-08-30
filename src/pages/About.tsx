@@ -1,8 +1,9 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { SEO  } from '@/components/SEO';
-import { Users, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { 
+  Users, 
   Target, 
   Award, 
   Globe, 
@@ -20,7 +21,7 @@ import { Users,
   Cloud,
   Lock,
   Database
- } from 'lucide-react';
+} from 'lucide-react';
 
 export default function About() {
   const stats = [
@@ -32,25 +33,25 @@ export default function About() {
 
   const values = [
     {
-      icon: Innovation,
+      icon: Lightbulb,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Excellence,
+      icon: Award,
       title: 'Excellence in Execution',
       description: 'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Partnership,
+      icon: Users,
       title: 'Partnership Approach',
       description: 'We work as an extension of your team, building long-term relationships based on trust and mutual success.',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Security,
+      icon: Shield,
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
       color: 'from-red-500 to-orange-500'
@@ -116,7 +117,6 @@ export default function About() {
     }
   ];
 
-const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
@@ -410,8 +410,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  )}
-
-export default About;
+  );
+}

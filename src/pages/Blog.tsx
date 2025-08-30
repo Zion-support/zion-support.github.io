@@ -287,8 +287,9 @@ export default function Blog() {
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
-                  </motion.article>
-                ))}
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </div>
         </section>
