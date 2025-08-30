@@ -1,441 +1,358 @@
 #!/usr/bin/env node
 
-const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class ESLintErrorCleaner {
-    constructor() {
-        this.projectRoot = process.cwd();
-        this.logsDir = path.join(this.projectRoot, 'logs');
-        this.reportsDir = path.join(this.projectRoot, 'reports');
-        this.ensureDirectories();
-    }
+  constructor() {
+    this.workspacePath = process.cwd();
+    this.logsPath = path.join(this.workspacePath, 'logs');
+    this.reportsPath = path.join(this.workspacePath, 'automation-reports');
+    this.ensureDirectories();
+    this.errorHistory = new Map();
+    this.fixAttempts = new Map();
+  }
 
-    ensureDirectories() {
-        if (!fs.existsSync(this.logsDir)) {
-            fs.mkdirSync(this.logsDir, { recursive: true });
-        }
-        if (!fs.existsSync(this.reportsDir)) {
-            fs.mkdirSync(this.reportsDir, { recursive: true });
-        }
-    }
-
-    async checkESLintConfiguration() {
-        try {
-            // Check if eslint.config.js exists (ESLint v9+ format)
-            const newConfigPath = path.join(this.projectRoot, 'eslint.config.js');
-            const oldConfigPath = path.join(this.projectRoot, '.eslintrc.cjs');
-            
-            if (fs.existsSync(newConfigPath)) {
-                console.log('✅ ESLint v9+ configuration found');
-                return { isValid: true, configType: 'v9' };
-            }
-            
-            if (fs.existsSync(oldConfigPath)) {
-                console.log('⚠️  ESLint v8 configuration found, needs migration to v9');
-                return { isValid: false, configType: 'v8', needsMigration: true };
-            }
-            
-            console.log('❌ No ESLint configuration found');
-            return { isValid: false, configType: 'none' };
-            
-        } catch (error) {
-            console.error('Error checking ESLint configuration:', error);
-            return { isValid: false, configType: 'error', error: error.message };
-        }
-    }
-
-    async migrateESLintConfig() {
-        try {
-            const oldConfigPath = path.join(this.projectRoot, '.eslintrc.cjs');
-            const newConfigPath = path.join(this.projectRoot, 'eslint.config.js');
-            
-            if (!fs.existsSync(oldConfigPath)) {
-                console.log('No old ESLint config to migrate');
-                return false;
-            }
-            
-            console.log('🔄 Migrating ESLint configuration from v8 to v9...');
-            
-            // Create new ESLint v9 config
-            const newConfig = this.createESLintV9Config();
-            
-            // Write new config
-            fs.writeFileSync(newConfigPath, newConfig);
-            
-            // Backup old config
-            const backupPath = oldConfigPath + '.backup';
-            fs.renameSync(oldConfigPath, backupPath);
-            
-            console.log('✅ ESLint configuration migrated successfully');
-            console.log(`📁 Old config backed up to: ${backupPath}`);
-            
-            return true;
-            
-        } catch (error) {
-            console.error('Error migrating ESLint config:', error);
-            return false;
-        }
-    }
-
-    createESLintV9Config() {
-        // Create a working ESLint v9 configuration
-        const newConfig = `import js from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-
-export default [
-  js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: tsparser,
-      parserOptions: {
-        ecmaVersion: 2021,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly'
+  ensureDirectories() {
+    [this.logsPath, this.reportsPath].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
       }
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      react: react,
-      'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y
-    },
-    rules: {
-      // TypeScript rules
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      
-      // React rules
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      
-      // General rules
-      'no-console': 'warn',
-      'no-unused-vars': 'off', // Use TypeScript version instead
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'no-undef': 'off', // TypeScript handles this
-      
-      // JSX accessibility
-      'jsx-a11y/alt-text': 'warn',
-      'jsx-a11y/anchor-is-valid': 'warn'
-    },
-    settings: {
-      react: {
-        version: 'detect'
+    });
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(logMessage);
+    
+    const logFile = path.join(this.logsPath, 'eslint-error-cleaner.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+
+  async runESLintCheck() {
+    try {
+      this.log('🔍 Running ESLint check...');
+      const result = execSync('npm run lint', { 
+        cwd: this.workspacePath, 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      this.log('✅ ESLint check passed - no errors found');
+      return { success: true, output: result, errors: [] };
+    } catch (error) {
+      if (error.stdout) {
+        const errors = this.parseESLintErrors(error.stdout);
+        this.log(`❌ ESLint check failed with ${errors.length} errors`);
+        return { success: false, output: error.stdout, errors };
       }
+      return { success: false, output: error.message, errors: [] };
     }
   }
-];`;
-        
-        return newConfig;
+
+  parseESLintErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('error') || line.includes('warning')) {
+        const match = line.match(/(.+):(\d+):(\d+)\s*(\w+)\s+(.+)/);
+        if (match) {
+          errors.push({
+            file: match[1].trim(),
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            severity: match[4],
+            message: match[5].trim()
+          });
+        }
+      }
+    }
+    
+    return errors;
+  }
+
+  async fixESLintError(error) {
+    const filePath = path.resolve(this.workspacePath, error.file);
+    
+    if (!fs.existsSync(filePath)) {
+      this.log(`⚠️ File not found: ${filePath}`, 'WARN');
+      return false;
     }
 
-    async checkESLintErrors() {
-        return new Promise((resolve, reject) => {
-            const eslint = spawn('npx', ['eslint', '.', '--format=json'], {
-                cwd: this.projectRoot,
-                stdio: ['pipe', 'pipe', 'pipe']
-            });
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      const lineIndex = error.line - 1;
+      
+      if (lineIndex < 0 || lineIndex >= lines.length) {
+        return false;
+      }
 
-            let output = '';
-            let errorOutput = '';
+      const originalLine = lines[lineIndex];
+      let fixedLine = originalLine;
+      let fixed = false;
 
-            eslint.stdout.on('data', (data) => {
-                output += data.toString();
-            });
+      // Apply fixes based on error message
+      if (error.message.includes('no-unused-vars')) {
+        fixedLine = await this.fixUnusedVariableError(error, lines, lineIndex);
+        fixed = fixedLine !== originalLine;
+      } else if (error.message.includes('no-console')) {
+        fixedLine = await this.fixConsoleStatementError(error, lines, lineIndex);
+        fixed = fixedLine !== originalLine;
+      } else if (error.message.includes('no-undef')) {
+        fixedLine = await this.fixUndefinedVariableError(error, lines, lineIndex);
+        fixed = fixedLine !== originalLine;
+      } else if (error.message.includes('no-extra-semi')) {
+        fixedLine = await this.fixExtraSemicolonError(error, lines, lineIndex);
+        fixed = fixedLine !== originalLine;
+      } else if (error.message.includes('no-prototype-builtins')) {
+        fixedLine = await this.fixPrototypeBuiltinsError(error, lines, lineIndex);
+        fixed = fixedLine !== originalLine;
+      } else if (error.message.includes('no-useless-escape')) {
+        fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
+        fixed = fixedLine !== originalLine;
+      } else {
+        // Generic fix attempt
+        fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
+        fixed = fixedLine !== originalLine;
+      }
 
-            eslint.stderr.on('data', (data) => {
-                errorOutput += data.toString();
-            });
+      if (fixed) {
+        lines[lineIndex] = fixedLine;
+        fs.writeFileSync(filePath, lines.join('\n'));
+        this.log(`✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})`);
+        return true;
+      }
 
-            eslint.on('close', (code) => {
-                if (code === 0) {
-                    console.log('✅ No ESLint errors found');
-                    resolve({ hasErrors: false, errors: [] });
-                } else {
-                    console.log('❌ ESLint errors found');
-                    try {
-                        const errors = JSON.parse(output);
-                        resolve({ hasErrors: true, errors });
-                    } catch (parseError) {
-                        console.error('Error parsing ESLint output:', parseError);
-                        resolve({ hasErrors: true, errors: [], rawOutput: output });
-                    }
-                }
-            });
+      return false;
+    } catch (fixError) {
+      this.log(`❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`, 'ERROR');
+      return false;
+    }
+  }
 
-            eslint.on('error', (error) => {
-                console.error('Error running ESLint:', error);
-                reject(error);
-            });
+  async fixUnusedVariableError(error, lines, lineIndex) {
+    const line = lines[lineIndex];
+    
+    // Comment out unused variables
+    if (line.includes('import') || line.includes('const') || line.includes('let') || line.includes('var')) {
+      return '// ' + line;
+    }
+    
+    // For function parameters, add underscore prefix
+    if (line.includes('function') || line.includes('=>')) {
+      return line.replace(/(\w+)(?=\s*[,\)])/g, '_$1');
+    }
+    
+    return line;
+  }
+
+  async fixConsoleStatementError(error, lines, lineIndex) {
+    const line = lines[lineIndex];
+    
+    // Comment out console statements
+    if (line.includes('console.log') || line.includes('console.error') || line.includes('console.warn')) {
+      return '// ' + line;
+    }
+    
+    return line;
+  }
+
+  async fixUndefinedVariableError(error, lines, lineIndex) {
+    const line = lines[lineIndex];
+    
+    // Try to find the variable definition
+    const variableMatch = line.match(/(\w+)/);
+    if (variableMatch) {
+      const variable = variableMatch[1];
+      
+      // Look for variable definition in previous lines
+      for (let i = lineIndex - 1; i >= Math.max(0, lineIndex - 10); i--) {
+        const prevLine = lines[i];
+        if (prevLine.includes(`const ${variable}`) || prevLine.includes(`let ${variable}`) || prevLine.includes(`var ${variable}`)) {
+          // Variable is defined, this might be a scope issue
+          return line;
+        }
+      }
+      
+      // Variable not found, add declaration
+      if (line.includes('=')) {
+        return `const ${line}`;
+      }
+    }
+    
+    return line;
+  }
+
+  async fixExtraSemicolonError(error, lines, lineIndex) {
+    const line = lines[lineIndex];
+    
+    // Remove extra semicolons
+    return line.replace(/;;+/g, ';');
+  }
+
+  async fixPrototypeBuiltinsError(error, lines, lineIndex) {
+    const line = lines[lineIndex];
+    
+    // Replace direct prototype access with safer alternatives
+    if (line.includes('.hasOwnProperty(')) {
+      return line.replace(/\.hasOwnProperty\(/g, '.hasOwnProperty.call(this, ');
+    }
+    
+    return line;
+  }
+
+  async fixUselessEscapeError(error, lines, lineIndex) {
+    const line = lines[lineIndex];
+    
+    // Remove unnecessary escape characters
+    return line.replace(/\\([^\\])/g, '$1');
+  }
+
+  async fixGenericESLintError(error, lines, lineIndex) {
+    const line = lines[lineIndex];
+    
+    // Generic fixes for common issues
+    let fixedLine = line;
+    
+    // Fix missing semicolons
+    if (line.trim() && !line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {
+      fixedLine = line + ';';
+    }
+    
+    // Fix extra spaces
+    fixedLine = fixedLine.replace(/\s+/g, ' ');
+    
+    // Fix trailing spaces
+    fixedLine = fixedLine.replace(/\s+$/, '');
+    
+    return fixedLine;
+  }
+
+  async attemptFixes(errors) {
+    this.log(`🔧 Attempting to fix ${errors.length} ESLint errors...`);
+    
+    let fixedCount = 0;
+    const fixResults = [];
+
+    for (const error of errors) {
+      try {
+        const fixed = await this.fixESLintError(error);
+        if (fixed) {
+          fixedCount++;
+        }
+        
+        fixResults.push({
+          error,
+          fixed,
+          timestamp: new Date().toISOString()
         });
-    }
-
-    async fixESLintErrors() {
-        return new Promise((resolve, reject) => {
-            console.log('🔧 Running ESLint with --fix...');
-            
-            const eslint = spawn('npx', ['eslint', '.', '--fix'], {
-                cwd: this.projectRoot,
-                stdio: ['pipe', 'pipe', 'pipe']
-            });
-
-            let output = '';
-            let errorOutput = '';
-
-            eslint.stdout.on('data', (data) => {
-                output += data.toString();
-            });
-
-            eslint.stderr.on('data', (data) => {
-                errorOutput += data.toString();
-            });
-
-            eslint.on('close', (code) => {
-                if (code === 0) {
-                    console.log('✅ ESLint auto-fix completed successfully');
-                    resolve({ success: true, output });
-                } else {
-                    console.log('⚠️  ESLint auto-fix completed with some issues');
-                    resolve({ success: true, output, warnings: errorOutput });
-                }
-            });
-
-            eslint.on('error', (error) => {
-                console.error('Error running ESLint fix:', error);
-                reject(error);
-            });
+        
+        // Track fix attempts
+        const errorKey = `${error.file}:${error.line}:${error.message}`;
+        this.fixAttempts.set(errorKey, (this.fixAttempts.get(errorKey) || 0) + 1);
+        
+      } catch (fixError) {
+        this.log(`❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`, 'ERROR');
+        fixResults.push({
+          error,
+          fixed: false,
+          error: fixError.message,
+          timestamp: new Date().toISOString()
         });
+      }
     }
 
-    async fixSpecificESLintErrors(errors) {
-        let fixedCount = 0;
-        
-        for (const fileError of errors) {
-            try {
-                const filePath = fileError.filePath;
-                if (!fs.existsSync(filePath)) {
-                    continue;
-                }
-                
-                const content = fs.readFileSync(filePath, 'utf8');
-                const lines = content.split('\n');
-                let fileModified = false;
-                
-                for (const error of fileError.messages) {
-                    const fixed = this.fixSpecificError(error, lines);
-                    if (fixed) {
-                        fileModified = true;
-                        fixedCount++;
-                    }
-                }
-                
-                if (fileModified) {
-                    fs.writeFileSync(filePath, lines.join('\n'));
-                    console.log(`✅ Fixed ${fileError.messages.length} errors in ${filePath}`);
-                }
-                
-            } catch (err) {
-                console.error(`Error fixing errors in ${fileError.filePath}:`, err);
-            }
-        }
-        
-        return fixedCount;
+    this.log(`✅ Fixed ${fixedCount} out of ${errors.length} ESLint errors`);
+    return { fixedCount, totalErrors: errors.length, results: fixResults };
+  }
+
+  async runAutoFix() {
+    try {
+      this.log('🔧 Running ESLint auto-fix...');
+      const result = execSync('npm run lint:fix', { 
+        cwd: this.workspacePath, 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      this.log('✅ ESLint auto-fix completed');
+      return { success: true, output: result };
+    } catch (error) {
+      this.log('❌ ESLint auto-fix failed, will attempt manual fixes', 'WARN');
+      return { success: false, output: error.message };
     }
+  }
 
-    fixSpecificError(error, lines) {
-        const lineIndex = error.line - 1;
-        if (lineIndex >= lines.length) return false;
-        
-        const currentLine = lines[lineIndex];
-        
-        switch (error.ruleId) {
-            case 'no-unused-vars':
-                return this.fixUnusedVariable(lines, lineIndex, currentLine, error);
-            case 'no-console':
-                return this.fixConsoleStatement(lines, lineIndex, currentLine, error);
-            case 'prefer-const':
-                return this.fixPreferConst(lines, lineIndex, currentLine, error);
-            case 'no-var':
-                return this.fixNoVar(lines, lineIndex, currentLine, error);
-            default:
-                return false;
-        }
+  async generateReport(fixResults) {
+    this.log('📊 Generating ESLint error cleaning report...');
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalErrors: fixResults.totalErrors,
+        fixedErrors: fixResults.fixedCount,
+        successRate: fixResults.totalErrors > 0 ? (fixResults.fixedCount / fixResults.totalErrors * 100).toFixed(2) : 100
+      },
+      fixResults: fixResults.results,
+      recommendations: [
+        'Review any remaining errors manually',
+        'Consider adding ESLint disable comments for intentional violations',
+        'Run npm run lint to verify fixes',
+        'Monitor for recurring error patterns'
+      ]
+    };
+
+    const reportFile = path.join(this.reportsPath, 'eslint-error-cleaner-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    
+    this.log(`📄 Report generated: ${reportFile}`);
+    return report;
+  }
+
+  async run() {
+    this.log('🚀 Starting ESLint Error Cleaner...');
+    
+    try {
+      // Step 1: Try auto-fix first
+      const autoFixResult = await this.runAutoFix();
+      
+      // Step 2: Run ESLint check to see remaining errors
+      const checkResult = await this.runESLintCheck();
+      
+      if (checkResult.success) {
+        this.log('🎉 No ESLint errors found after auto-fix!');
+        return { success: true, errors: [], fixed: 0 };
+      }
+      
+      // Step 3: Attempt manual fixes for remaining errors
+      const fixResults = await this.attemptFixes(checkResult.errors);
+      
+      // Step 4: Generate report
+      const report = await this.generateReport(fixResults);
+      
+      this.log('🎉 ESLint Error Cleaner completed!');
+      this.log(`📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`);
+      
+      return {
+        success: fixResults.fixedCount > 0,
+        errors: checkResult.errors,
+        fixed: fixResults.fixedCount,
+        report
+      };
+      
+    } catch (error) {
+      this.log(`💥 ESLint Error Cleaner failed: ${error.message}`, 'ERROR');
+      throw error;
     }
-
-    fixUnusedVariable(lines, lineIndex, currentLine, error) {
-        // Add underscore prefix to unused variables
-        if (error.message.includes('is assigned a value but never used')) {
-            const varMatch = currentLine.match(/(\w+)\s*=/);
-            if (varMatch) {
-                const varName = varMatch[1];
-                const newVarName = '_' + varName;
-                lines[lineIndex] = currentLine.replace(new RegExp(`\\b${varName}\\b`, 'g'), newVarName);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    fixConsoleStatement(lines, lineIndex, currentLine, error) {
-        // Comment out console statements
-        if (currentLine.includes('console.')) {
-            lines[lineIndex] = '// ' + currentLine;
-            return true;
-        }
-        return false;
-    }
-
-    fixPreferConst(lines, lineIndex, currentLine, error) {
-        // Change let to const if variable is never reassigned
-        if (currentLine.includes('let ') && !currentLine.includes('=')) {
-            lines[lineIndex] = currentLine.replace('let ', 'const ');
-            return true;
-        }
-        return false;
-    }
-
-    fixNoVar(lines, lineIndex, currentLine, error) {
-        // Change var to const or let
-        if (currentLine.includes('var ')) {
-            if (currentLine.includes('=')) {
-                lines[lineIndex] = currentLine.replace('var ', 'const ');
-            } else {
-                lines[lineIndex] = currentLine.replace('var ', 'let ');
-            }
-            return true;
-        }
-        return false;
-    }
-
-    generateReport(errors, fixedCount, configStatus) {
-        const report = {
-            timestamp: new Date().toISOString(),
-            configStatus,
-            totalErrors: errors.length,
-            fixedErrors: fixedCount,
-            remainingErrors: errors.length - fixedCount,
-            errors: errors,
-            summary: {
-                totalErrors: errors.length,
-                fixedErrors: fixedCount,
-                remainingErrors: errors.length - fixedCount
-            }
-        };
-
-        const reportPath = path.join(this.reportsDir, `eslint-fix-report-${Date.now()}.json`);
-        fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-        
-        console.log(`📊 Report generated: ${reportPath}`);
-        return report;
-    }
-
-    async runErrorCleanup() {
-        try {
-            console.log('🔍 Checking ESLint configuration...');
-            
-            const configStatus = await this.checkESLintConfiguration();
-            
-            if (!configStatus.isValid) {
-                if (configStatus.needsMigration) {
-                    console.log('🔄 ESLint configuration needs migration to v9...');
-                    const migrated = await this.migrateESLintConfig();
-                    if (!migrated) {
-                        console.log('❌ Failed to migrate ESLint configuration');
-                        return;
-                    }
-                } else {
-                    console.log('❌ ESLint configuration is invalid');
-                    return;
-                }
-            }
-            
-            console.log('🔍 Checking ESLint errors...');
-            
-            const { hasErrors, errors } = await this.checkESLintErrors();
-            
-            if (!hasErrors) {
-                console.log('✅ No ESLint errors to fix');
-                return;
-            }
-
-            console.log(`Found ${errors.length} ESLint errors`);
-            
-            console.log('🔧 Running ESLint auto-fix...');
-            const fixResult = await this.fixESLintErrors();
-            
-            if (fixResult.success) {
-                console.log('✅ ESLint auto-fix completed');
-                
-                // Check for remaining errors
-                console.log('🔍 Checking for remaining errors after auto-fix...');
-                const { hasErrors: hasRemainingErrors, errors: remainingErrors } = await this.checkESLintErrors();
-                
-                if (hasRemainingErrors) {
-                    console.log(`⚠️  ${remainingErrors.length} errors remain after auto-fix`);
-                    console.log('🔧 Attempting to fix specific errors...');
-                    const specificFixedCount = await this.fixSpecificESLintErrors(remainingErrors);
-                    console.log(`Fixed ${specificFixedCount} specific errors`);
-                } else {
-                    console.log('🎉 All ESLint errors have been fixed!');
-                }
-                
-                // Generate final report
-                this.generateReport(errors, errors.length - (remainingErrors?.length || 0), configStatus);
-            }
-            
-        } catch (error) {
-            console.error('Error during ESLint error cleanup:', error);
-        }
-    }
-
-    startContinuousCleaning() {
-        console.log('🚀 Starting continuous ESLint error cleaning...');
-        
-        // Run immediately
-        this.runErrorCleanup();
-        
-        // Then run every 20 minutes
-        setInterval(() => {
-            this.runErrorCleanup();
-        }, 20 * 60 * 1000);
-    }
-
-    start() {
-        if (process.argv.includes('--continuous')) {
-            this.startContinuousCleaning();
-        } else {
-            this.runErrorCleanup();
-        }
-    }
+  }
 }
 
-// Run the cleaner
-const cleaner = new ESLintErrorCleaner();
-cleaner.start();
+// Run the automation if called directly
+if (require.main === module) {
+  const cleaner = new ESLintErrorCleaner();
+  cleaner.run().catch(console.error);
+}
+
+module.exports = ESLintErrorCleaner;
