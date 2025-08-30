@@ -36,6 +36,13 @@ const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 
+// Missing pages that need to be added to routing
+const Team = React.lazy(() => import('./pages/Team'));
+const Press = React.lazy(() => import('./pages/Press'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
@@ -224,6 +231,13 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/partners" element={<Partners />} />
+              
+              {/* Missing page routes */}
+              <Route path="/team" element={<Team />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
