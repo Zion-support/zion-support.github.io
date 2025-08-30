@@ -6,6 +6,7 @@ import { ChatAssistant  } from './components/ChatAssistant';
 import { LoadingSpinner  } from './components/ui/LoadingSpinner';
 import { SEO  } from './components/SEO';
 import { PerformanceOptimizer  } from './components/PerformanceOptimizer';
+import Performance from './pages/Performance';
 import { EnhancedAccessibilityEnhancer  } from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer';
 import { ErrorBoundary  } from './components/ErrorBoundary';
@@ -195,6 +196,7 @@ function App(...args[]):  {
               <Route path="/docs" element={<Documentation />} />
               <Route path="/training" element={<Training />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/performance" element={<Performance />} />
               <Route path="/security" element={<Security />} />
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/careers" element={<Careers />} />

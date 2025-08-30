@@ -1,5 +1,5 @@
 
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect, useMemo } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 
@@ -19,6 +19,24 @@ const FuturisticBackground = React.memo(() => {
       duration: 5 + i * 0.3
     })), []
   );
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {particles.map((particle) => (
+        <div
+          key={particle.id}
+          className="absolute w-1 h-1 bg-cyan-400/30 rounded-full animate-pulse"
+          style={{
+            left: particle.left,
+            top: particle.top,
+            animationDelay: `${particle.delay}s`,
+            animationDuration: `${particle.duration}s`
+          }}
+        />
+      ))}
+    </div>
+  );
+});
 
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string })  => (

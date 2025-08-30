@@ -504,6 +504,7 @@ const Contact: React.FC = () => {
         </section>
       </div>
     </>
-  )};
+  );
+};
 
 export default Contact;
