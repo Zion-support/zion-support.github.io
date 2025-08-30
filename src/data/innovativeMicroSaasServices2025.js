@@ -8,7 +8,7 @@ export const innovativeMicroSaasServices2025 = [
         pricing: "Enterprise",
         price: 25000,
         pricingModel: "monthly",
-        features[
+        features: [
             "Quantum algorithm optimization",
             "AI model quantum acceleration",
             "Hybrid classical-quantum workflows",
@@ -18,7 +18,7 @@ export const innovativeMicroSaasServices2025 = [
             "Quantum machine learning models",
             "Secure quantum communication"
         ],
-        benefits[
+        benefits: [
             "1000x faster AI training",
             "Unbreakable quantum encryption",
             "Revolutionary drug discovery",
@@ -26,7 +26,7 @@ export const innovativeMicroSaasServices2025 = [
             "Climate change simulation",
             "Quantum advantage in optimization"
         ],
-        targetAudience[
+        targetAudience: [
             "Pharmaceutical companies",
             "Financial institutions",
             "Research institutions",
@@ -34,7 +34,7 @@ export const innovativeMicroSaasServices2025 = [
             "Tech giants",
             "Quantum startups"
         ],
-        tags["Quantum Computing", "AI", "Machine Learning", "Optimization", "Encryption", "Simulation"],
+        tags: ["Quantum Computing", "AI", "Machine Learning", "Optimization", "Encryption", "Simulation"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -42,14 +42,14 @@ export const innovativeMicroSaasServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$25,000/month (Industry average: $50,000/month)",
-        competitors["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
+        competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
         roi: "500% ROI within 12 months",
         setupTime: "4-6 weeks",
-        integrations["Python", "Qiskit", "Cirq", "TensorFlow", "PyTorch", "AWS", "Azure", "GCP"],
+        integrations: ["Python", "Qiskit", "Cirq", "TensorFlow", "PyTorch", "AWS", "Azure", "GCP"],
         freeTier: false,
         trialPeriod: "30 days",
         aiScore: 98,
-        useCases[
+        useCases: [
             "Drug discovery and molecular modeling",
             "Financial portfolio optimization",
             "Climate change prediction",
@@ -57,7 +57,7 @@ export const innovativeMicroSaasServices2025 = [
             "Supply chain optimization",
             "Machine learning acceleration"
         ],
-        compliance["ISO 27001", "SOC 2", "GDPR", "HIPAA", "FedRAMP"],
+        compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "FedRAMP"],
         scalability: "Unlimited quantum qubits",
         support: "24/7 quantum expert support"
     },
@@ -70,7 +70,7 @@ export const innovativeMicroSaasServices2025 = [
         pricing: "Premium",
         price: 15000,
         pricingModel: "monthly",
-        features[
+        features: [
             "Spiking neural networks",
             "Event-driven processing",
             "Adaptive learning algorithms",
@@ -80,7 +80,7 @@ export const innovativeMicroSaasServices2025 = [
             "Brain-computer interfaces",
             "Cognitive computing capabilities"
         ],
-        benefits[
+        benefits: [
             "90% reduction in power consumption",
             "100x faster pattern recognition",
             "Continuous learning capabilities",
@@ -88,7 +88,7 @@ export const innovativeMicroSaasServices2025 = [
             "Scalable neural architecture",
             "Energy-efficient AI deployment"
         ],
-        targetAudience[
+        targetAudience: [
             "IoT device manufacturers",
             "Edge computing companies",
             "Robotics companies",
@@ -96,7 +96,7 @@ export const innovativeMicroSaasServices2025 = [
             "Autonomous vehicle companies",
             "Smart city developers"
         ],
-        tags["Neuromorphic", "AI", "Neural Networks", "Edge Computing", "IoT", "Robotics"],
+        tags: ["Neuromorphic", "AI", "Neural Networks", "Edge Computing", "IoT", "Robotics"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -104,14 +104,14 @@ export const innovativeMicroSaasServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$15,000/month (Industry average: $30,000/month)",
-        competitors["Intel Loihi", "IBM TrueNorth", "BrainChip", "SynSense"],
+        competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "SynSense"],
         roi: "400% ROI within 8 months",
         setupTime: "3-4 weeks",
-        integrations["TensorFlow", "PyTorch", "ROS", "Arduino", "Raspberry Pi", "AWS IoT", "Azure IoT"],
+        integrations: ["TensorFlow", "PyTorch", "ROS", "Arduino", "Raspberry Pi", "AWS IoT", "Azure IoT"],
         freeTier: true,
         trialPeriod: "60 days",
         aiScore: 95,
-        useCases[
+        useCases: [
             "Autonomous robotics",
             "Smart sensors",
             "Edge AI processing",
@@ -119,7 +119,7 @@ export const innovativeMicroSaasServices2025 = [
             "IoT device intelligence",
             "Real-time monitoring"
         ],
-        compliance["ISO 27001", "SOC 2", "GDPR", "FDA", "CE"],
+        compliance: ["ISO 27001", "SOC 2", "GDPR", "FDA", "CE"],
         scalability: "Up to 1M neurons",
         support: "Expert neuromorphic support"
     },
@@ -132,7 +132,7 @@ export const innovativeMicroSaasServices2025 = [
         pricing: "Professional",
         price: 8000,
         pricingModel: "monthly",
-        features[
+        features: [
             "Federated learning algorithms",
             "Differential privacy",
             "Secure aggregation protocols",
@@ -142,7 +142,7 @@ export const innovativeMicroSaasServices2025 = [
             "Distributed model training",
             "Privacy-preserving analytics"
         ],
-        benefits[
+        benefits: [
             "100% data privacy compliance",
             "Collaborative AI without data sharing",
             "Regulatory compliance",
@@ -150,7 +150,7 @@ export const innovativeMicroSaasServices2025 = [
             "Enhanced model accuracy",
             "Cross-organization collaboration"
         ],
-        targetAudience[
+        targetAudience: [
             "Healthcare organizations",
             "Financial institutions",
             "Government agencies",
@@ -158,7 +158,7 @@ export const innovativeMicroSaasServices2025 = [
             "Multi-national corporations",
             "Privacy-focused companies"
         ],
-        tags["Federated Learning", "Privacy", "AI", "Security", "Compliance", "Collaboration"],
+        tags: ["Federated Learning", "Privacy", "AI", "Security", "Compliance", "Collaboration"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -166,14 +166,14 @@ export const innovativeMicroSaasServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$8,000/month (Industry average: $15,000/month)",
-        competitors["OpenMined", "TensorFlow Federated", "PySyft", "IBM Federated Learning"],
+        competitors: ["OpenMined", "TensorFlow Federated", "PySyft", "IBM Federated Learning"],
         roi: "300% ROI within 6 months",
         setupTime: "2-3 weeks",
-        integrations["TensorFlow", "PyTorch", "Kubernetes", "Docker", "AWS", "Azure", "GCP"],
+        integrations: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "AWS", "Azure", "GCP"],
         freeTier: true,
         trialPeriod: "45 days",
         aiScore: 92,
-        useCases[
+        useCases: [
             "Healthcare data collaboration",
             "Financial fraud detection",
             "Cross-border research",
@@ -181,7 +181,7 @@ export const innovativeMicroSaasServices2025 = [
             "Multi-tenant AI models",
             "Regulatory compliance"
         ],
-        compliance["GDPR", "HIPAA", "CCPA", "SOC 2", "ISO 27001"],
+        compliance: ["GDPR", "HIPAA", "CCPA", "SOC 2", "ISO 27001"],
         scalability: "Unlimited participants",
         support: "Privacy expert support"
     },
@@ -194,7 +194,7 @@ export const innovativeMicroSaasServices2025 = [
         pricing: "Enterprise",
         price: 12000,
         pricingModel: "monthly",
-        features[
+        features: [
             "Intelligent workload distribution",
             "Real-time resource optimization",
             "Edge device management",
@@ -204,7 +204,7 @@ export const innovativeMicroSaasServices2025 = [
             "Edge security management",
             "Performance monitoring"
         ],
-        benefits[
+        benefits: [
             "50% reduction in latency",
             "80% cost savings on cloud",
             "Real-time AI processing",
@@ -212,7 +212,7 @@ export const innovativeMicroSaasServices2025 = [
             "Improved reliability",
             "Bandwidth optimization"
         ],
-        targetAudience[
+        targetAudience: [
             "IoT platform providers",
             "Edge computing companies",
             "5G network operators",
@@ -220,7 +220,7 @@ export const innovativeMicroSaasServices2025 = [
             "Industrial IoT companies",
             "Autonomous vehicle companies"
         ],
-        tags["Edge Computing", "AI", "Orchestration", "IoT", "5G", "Real-time"],
+        tags: ["Edge Computing", "AI", "Orchestration", "IoT", "5G", "Real-time"],
         contactInfo: {
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
@@ -228,14 +228,14 @@ export const innovativeMicroSaasServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"
         },
         marketPrice: "$12,000/month (Industry average: $25,000/month)",
-        competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "EdgeX Foundry"],
+        competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "EdgeX Foundry"],
         roi: "350% ROI within 7 months",
         setupTime: "3-4 weeks",
-        integrations["Kubernetes", "Docker", "TensorFlow Lite", "ONNX", "MQTT", "CoAP", "AWS", "Azure"],
+        integrations: ["Kubernetes", "Docker", "TensorFlow Lite", "ONNX", "MQTT", "CoAP", "AWS", "Azure"],
         freeTier: true,
         trialPeriod: "30 days",
         aiScore: 94,
-        useCases[
+        useCases: [
             "Smart city infrastructure",
             "Industrial IoT monitoring",
             "Autonomous vehicles",
